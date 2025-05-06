@@ -127,16 +127,16 @@
             <div type="level1">
                 <head xml:id="OxygenXML">Oxygen</head>
                 <p>Es folgt der Export. Um von Transkribus zu XML/TEI zu gelangen, ist eine <ref
-                        type="https://github.com/arthur-schnitzler/arthur-schnitzler-arbeit/tree/main/transkribus-transformationen_action"
+                        type="https://github.com/arthur-schnitzler/schnitzler-briefe-arbeit/tree/main/transkribus-transformationen_action"
                         >Kaskade</ref> von XSL-Transformationen notwendig. Diese kann über eine <ref
-                        target="https://github.com/arthur-schnitzler/arthur-schnitzler-arbeit/blob/main/.github/workflows/download_work.yml"
+                            target="https://github.com/arthur-schnitzler/schnitzler-briefe-arbeit/blob/main/.github/workflows/download_work.yml"
                         >GitHub-Action</ref> ausgeführt werden. In <code>split-files-neu.xsl</code>
                     können davor bestimmte Parameter, die für alle zu exportierenden Briefe gelten
                     (z. B. die Archivsignatur), gesetzt werden. Es ist aber meistens einfacher, die
                     Transformationen lokal laufen zu lassen, da sich häufig noch ›&amp;‹ oder
                     ähnliche Sonderzeichen im Text finden, die bei der Umwandlung Probleme machen.
                     Jedenfalls wird die exportierte METS-Datei zuerst mit dem im <ref
-                        target="https://github.com/arthur-schnitzler/arthur-schnitzler-arbeit/blob/main/asbw-projekt.xpr"
+                        target="https://github.com/arthur-schnitzler/schnitzler-briefe-arbeit/blob/main/asbw-projekt.xpr"
                         >Oxygen-Projekt</ref> angelegten Transformationsszenario
                         <code>page2tei-1</code>, das Ergebnis dann mit <code>page2tei-2</code>
                     umgewandelt. Nun stehen die Einzeldateien mit korrekten Dateinamen und IDs im
@@ -147,7 +147,7 @@
                 <p>Das Ergebnis sind einzelne Briefdateien im Format XML, bei denen der
                         <code>&lt;teiHeader/&gt;</code> schon weitgehend ausgefüllt ist. Die Dateien
                     validieren noch nicht gegen das <ref
-                        target="https://github.com/arthur-schnitzler/arthur-schnitzler-arbeit/blob/main/meta/asbwschema.xsd"
+                        target="https://github.com/arthur-schnitzler/schnitzler-briefe-arbeit/blob/main/meta/asbwschema.xsd"
                         >Schema</ref> und es gibt mehrere Probleme, die mit händischer Nacharbeit
                     behoben werden müssen.</p>
                 <p>Wichtig ist im ersten Schritt, dass das Datum des Briefs (auch im Format ISO) im
@@ -178,7 +178,7 @@
                 <p>Nun können die Korrespondenzstücke bereits auf die Webseite geladen werden, ihr
                     Entwurfszustand ist aber noch deutlich erkennbar. Zuerst werden die Briefe
                     automatisch aus dem <ref
-                        target="https://github.com/arthur-schnitzler/arthur-schnitzler-arbeit"
+                        target="https://github.com/arthur-schnitzler/schnitzler-briefe-arbeit"
                         >Arbeitsrepositorium</ref> in das Repositorium für die Webseite, <ref
                         type="https://github.com/arthur-schnitzler/schnitzler-briefe-data/"
                         >schnitzler-briefe-data</ref>, kopiert. Das geschieht über eine <ref
@@ -196,9 +196,9 @@
                 um. Dadurch kann auf eine eigene Datenbank verzichtet werden. Für die Suche kommt <ref target="https://typesense.org/">Typesense</ref> zum Einsatz.</p>
                 <p>Es folgen mehrere Sichtungen den Korrespondenzstücke. Dafür rechnen wir mit den beiden Transformationen
                         <ref
-                        target="https://github.com/arthur-schnitzler/arthur-schnitzler-arbeit/blob/main/xslts/einzel-1-remove-namespaces.xsl"
+                        target="https://github.com/arthur-schnitzler/schnitzler-briefe-arbeit/blob/main/xslts/einzel-1-remove-namespaces.xsl"
                         >einzel-1-remove-namespaces.xsl</ref> und <ref
-                        target="https://github.com/arthur-schnitzler/arthur-schnitzler-arbeit/blob/main/xslts/einzel-6-korrektur-nach-TeX.xsl"
+                        target="https://github.com/arthur-schnitzler/schnitzler-briefe-arbeit/blob/main/xslts/einzel-6-korrektur-nach-TeX.xsl"
                         >einzel-6-korrektur-nach-TeX.xsl</ref> PDFs der Briefe in kritischer
                     Ansicht. Die TeX-Dateien finden sich in einem eigenen Repositorium, <ref
                         target="https://github.com/arthur-schnitzler/schnitzler-briefe-tex/"
