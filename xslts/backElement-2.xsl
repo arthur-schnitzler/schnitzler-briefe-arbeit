@@ -21,7 +21,7 @@
         <xsl:element name="listPerson" namespace="http://www.tei-c.org/ns/1.0">
             <xsl:for-each select="distinct-values(tei:person/@xml:id)">
                 <xsl:choose>
-                    <xsl:when test=". = '2121'">
+                    <xsl:when test=". = '2121' or .='pmb2121' or . = '#pmb2121'">
                         <person xml:id="pmb2121">
                             <!-- Sonderregel für Schnitzler -->
                             <tei:persName>
