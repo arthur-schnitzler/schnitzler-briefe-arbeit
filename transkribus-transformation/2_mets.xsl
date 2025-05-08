@@ -4,14 +4,6 @@
     xmlns:tei="http://www.tei-c.org/ns/1.0" version="3.0">
     <xsl:mode on-no-match="shallow-copy"/>
     <xsl:output method="xml" indent="yes"/>
-
-    <xsl:template match="//tei:seite">
-        <xsl:apply-templates/>
-    </xsl:template>
-    
-    <xsl:template match="//tei:page">
-        <xsl:apply-templates/>
-    </xsl:template>
     
     <xsl:template match="//text()">
         <xsl:analyze-string select="." regex="¬[\n]\s*(.*)¬[\n]\s*">

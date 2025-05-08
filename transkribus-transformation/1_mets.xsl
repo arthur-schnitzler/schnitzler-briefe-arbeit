@@ -9,7 +9,10 @@
   version="3.0">
 
   <xsl:output indent="0"/>
-
+  
+  <!--<xsl:param name="facs-doc" select="document('../img/image_name.xml')"/>-->
+  <!--<xsl:key name="facs-name" match="*:item" use="@n"/>-->
+  
   <xd:doc>
     <xd:desc>Whether to create `rs type="..."` for person/place/org (default) or `persName` etc.
       (false())</xd:desc>
@@ -186,18 +189,17 @@
     <xsl:param name="imageName"/>
     <xsl:param name="numCurr" tunnel="true"/>
 
-    <xsl:variable name="coords" select="tokenize(p:PrintSpace/p:Coords/@points, ' ')"/>
-    <xsl:variable name="type" select="substring-after(@imageFilename, '.')"/>
+    <!--<xsl:variable name="coords" select="tokenize(p:PrintSpace/p:Coords/@points, ' ')"/>-->
+    <!--<xsl:variable name="type" select="substring-before(@imageFilename, '.')"/>-->
 
     <!-- NOTE: up to now, lry and lry were mixed up. This is fiex here. -->
-    <surface ulx="0" uly="0" lrx="{@imageWidth}" lry="{@imageHeight}" xml:id="facs_{$numCurr}">
-      <graphic
-        width="{@imageWidth}px" height="{@imageHeight}px" facs="{encode-for-uri(substring-before($imageName, '.'))||'.'||$type}"/>
+    <!--<surface ulx="0" uly="0" lrx="{@imageWidth}" lry="{@imageHeight}" xml:id="facs_{$numCurr}">
+      <graphic url="{encode-for-uri(substring-before($imageName, '.'))||'.'||$type}"
+        width="{@imageWidth}px" height="{@imageHeight}px"/>
       <xsl:apply-templates
         select="p:PrintSpace | p:TextRegion | p:SeparatorRegion | p:GraphicRegion | p:TableRegion"
         mode="facsimile"/>
-    </surface>
-
+    </surface>-->
   </xsl:template>
 
   <xd:doc>
@@ -283,6 +285,7 @@
 
     <xsl:variable name="coords" select="tokenize(p:PrintSpace/p:Coords/@points, ' ')"/>
     <xsl:variable name="type" select="@imageFilename"/>
+    <!--<xsl:variable name="type" select="parent::*:PcGts/*:Metadata/*:TranskribusMetadata/@pageNr"/>-->
     <xsl:element name="page" namespace="http://www.tei-c.org/ns/1.0">
       <xsl:choose>
         <xsl:when test="descendant::*:TextLine[@custom/contains(., 'letter-begin')][1] and descendant::*:TextLine[@custom/contains(., 'letter-end')][1]">
@@ -301,7 +304,32 @@
           </xsl:attribute>
         </xsl:when>
       </xsl:choose>
-    <pb facs="{substring-before($type, '.jpg')}"/>
+      <xsl:variable name="facsname" as="xs:string">
+        <xsl:choose>
+          <xsl:when test="ends-with($type, '.jpg')">
+            <xsl:value-of select="substring-before($type, '.jpg')"/>
+          </xsl:when>
+          <xsl:when test="ends-with($type, '.tiff')">
+            <xsl:value-of select="substring-before($type, '.tiff')"/>
+          </xsl:when>
+          <xsl:when test="ends-with($type, '.tif')">
+            <xsl:value-of select="substring-before($type, '.tif')"/>
+          </xsl:when>
+          <xsl:when test="ends-with($type, '.jp2')">
+            <xsl:value-of select="substring-before($type, '.jp2')"/>
+          </xsl:when>
+          <xsl:otherwise>
+            <xsl:value-of select="@type"/>
+          </xsl:otherwise>
+        </xsl:choose>
+      </xsl:variable>
+      <pb facs="{$facsname}"/>
+<!--    <xsl:variable name="facs-id" select="key('facs-name', $pb-position, $facs-doc)" as="node()?"/>-->
+<!--    <xsl:variable name="img-num" select=""/>-->
+    <!--<xsl:variable name="facs-id" select="key('facs-name', $type, $facs-doc)/text()" as="node()?"/>-->
+<!--    <pb facs="{substring-before($facs-id, '.jpg')}"/>-->
+<!--    <pb facs="{substring-before($type, '.jpg')}"/>-->
+    <!--<pb facs="{replace(replace($facs-id, '.jpg', ''), '.tif', '')}"/>-->
     <xsl:apply-templates select="p:TextRegion | p:SeparatorRegion | p:GraphicRegion | p:TableRegion"
       mode="text"/>
     </xsl:element>
@@ -373,9 +401,9 @@
         </note>
       </xsl:when>
       <xsl:when test="@type = ('other', 'paragraph')">
-<!--        <p facs="#facs_{$numCurr}_{@id}">-->
+        <p facs="#facs_{$numCurr}_{@id}">
           <xsl:apply-templates select="p:TextLine"/>
-        <!--</p>-->
+        </p>
       </xsl:when>
       <!-- the fallback option should be a semantically open element such as <ab> -->
       <xsl:otherwise>
@@ -699,7 +727,7 @@
           </xsl:when>
         </xsl:choose>
         <xsl:choose>
-          <xsl:when test="@o[contains(., 'smallCaps')]">
+          <xsl:when test="@o[contains(., 'smallCaps') or contains(., 'small-caps')]">
             <hi rend="small_caps">
               <xsl:call-template name="elem">
                 <xsl:with-param name="elem" select="$elem"/>
@@ -727,11 +755,11 @@
       </xsl:when>
 
       <xsl:when test="@type = 'Address'">
-        <address>
+        <addrLine>
           <xsl:call-template name="elem">
             <xsl:with-param name="elem" select="$elem"/>
           </xsl:call-template>
-        </address>
+        </addrLine>
       </xsl:when>
 
       <xsl:when test="@type = 'foreign'">
@@ -815,12 +843,33 @@
       </xsl:when>
 
 
-      <xsl:when test="@type = 'pre-print'">
+      <xsl:when test="@type = 'pre-print' or @type='preprint'">
         <hi rend="pre-print">
           <xsl:call-template name="elem">
             <xsl:with-param name="elem" select="$elem"/>
           </xsl:call-template>
         </hi>
+      </xsl:when>
+      <xsl:when test="@type = 'stamp'">
+        <hi rend="stamp">
+          <xsl:call-template name="elem">
+            <xsl:with-param name="elem" select="$elem"/>
+          </xsl:call-template>
+        </hi>
+      </xsl:when>
+      <xsl:when test="@type = 'capitals'">
+        <hi rend="capitals">
+          <xsl:call-template name="elem">
+            <xsl:with-param name="elem" select="$elem"/>
+          </xsl:call-template>
+        </hi>
+      </xsl:when>
+      <xsl:when test="@type = 'postscript'">
+        <postscript>
+          <xsl:call-template name="elem">
+            <xsl:with-param name="elem" select="$elem"/>
+          </xsl:call-template>
+        </postscript>
       </xsl:when>
 
       <xsl:when test="@type = 'salute'">
@@ -873,15 +922,15 @@
       <!--<xsl:when test="@type = 'paragraph-inbetween'">
         <xsl:text>&lt;p&gt;&lt;&#47;p&gt;</xsl:text>
       </xsl:when>-->
-
-     <!-- <xsl:when test="@type = 'letter-begin'">
+<!--
+      <xsl:when test="@type = 'letter-begin'">
         <xsl:text>&lt;letter&gt;</xsl:text>
       </xsl:when>
 
       <xsl:when test="@type = 'letter-end'">
         <xsl:text>&lt;&#47;letter&gt;</xsl:text>
-      </xsl:when>-->
-
+      </xsl:when>
+-->
       <xsl:when test="@type = 'date'">
         <date>
           <!--<xsl:variable name="year" select="if(map:keys($custom) = 'year') then format-number(xs:integer(map:get($custom, 'year')), '0000') else '00'"/>
