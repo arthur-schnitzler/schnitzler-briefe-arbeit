@@ -21,17 +21,9 @@ so dass danach die neuen dateien im unterordner temp sind
 
 ## III - temp/*.xml (alle neuen Dateien verarbeiten)
 
-- Transformation der neuen XML-Dateien mit strip-letter.xsl (Ausgabedatei: ${currentFileURL})
-
-- Transformation der neuen XML-Dateien mit p-correction1.xsl (Ausgabedatei: ${currentFileURL})
-
-- Transformation der neuen XML-Dateien mit p-correction2.xsl (Ausgabedatei: ${currentFileURL})
-
-- Transformation der neuen XML-Dateien mit de-escape.xsl (Ausgabedatei: ${currentFileURL})
-
-## IV - back-element-hinzufügen (alle neuen Dateien in editions markieren)
-
-- Transformation der neuen xml-Dateien mit back-element-hinzufügen-Transformation
+    - 4_strip-letter.xsl
+    - 5_create-paragraphs.xsl
+    - 6_combine-closer-opener.xsl
 
 ## Code
 
