@@ -20,6 +20,26 @@
                                     <String>text/any</String>
                                 </field>
                                 <field name="unparsedInsertString">
+                                    <String>&lt;change who="MAM" when="${date(yyyy-MM-dd)}">Index check&lt;/change></String>
+                                </field>
+                                <field name="descriptionString">
+                                    <String></String>
+                                </field>
+                                <field name="renderString">
+                                    <String>&lt;change> Index check</String>
+                                </field>
+                                <field name="enabled">
+                                    <Boolean>true</Boolean>
+                                </field>
+                                <field name="accelerator">
+                                    <null/>
+                                </field>
+                            </codeTemplateItem>
+                            <codeTemplateItem>
+                                <field name="contentType">
+                                    <String>text/any</String>
+                                </field>
+                                <field name="unparsedInsertString">
                                     <String>&lt;change who="LU" when="${date(yyyy-MM-dd)}">Durchsicht&lt;/change></String>
                                 </field>
                                 <field name="descriptionString">
@@ -67,30 +87,6 @@
                                 </field>
                                 <field name="renderString">
                                     <String>Auslassungspunkte (dots)</String>
-                                </field>
-                                <field name="enabled">
-                                    <Boolean>true</Boolean>
-                                </field>
-                                <field name="accelerator">
-                                    <null/>
-                                </field>
-                            </codeTemplateItem>
-                            <codeTemplateItem>
-                                <field name="contentType">
-                                    <String>text/any</String>
-                                </field>
-                                <field name="unparsedInsertString">
-                                    <String>&lt;additions>
-    &lt;incident type="archival" rend="bleistift">
-        &lt;desc>von unbekannter Hand Blattzählung: »&lt;quote>x&lt;/quote>«&lt;/desc>
-    &lt;/incident>
-&lt;/additions></String>
-                                </field>
-                                <field name="descriptionString">
-                                    <String></String>
-                                </field>
-                                <field name="renderString">
-                                    <String>Blattzählung (additions)</String>
                                 </field>
                                 <field name="enabled">
                                     <Boolean>true</Boolean>
@@ -232,46 +228,6 @@
                                     <String>text/any</String>
                                 </field>
                                 <field name="unparsedInsertString">
-                                    <String>&lt;rs type="person" ref="#pmb11485">Goldmann&lt;/rs></String>
-                                </field>
-                                <field name="descriptionString">
-                                    <String></String>
-                                </field>
-                                <field name="renderString">
-                                    <String>Goldmann</String>
-                                </field>
-                                <field name="enabled">
-                                    <Boolean>true</Boolean>
-                                </field>
-                                <field name="accelerator">
-                                    <null/>
-                                </field>
-                            </codeTemplateItem>
-                            <codeTemplateItem>
-                                <field name="contentType">
-                                    <String>text/any</String>
-                                </field>
-                                <field name="unparsedInsertString">
-                                    <String>&lt;change who="MAM" when="${date(yyyy-MM-dd)}">Index check&lt;/change></String>
-                                </field>
-                                <field name="descriptionString">
-                                    <String></String>
-                                </field>
-                                <field name="renderString">
-                                    <String>Index check</String>
-                                </field>
-                                <field name="enabled">
-                                    <Boolean>true</Boolean>
-                                </field>
-                                <field name="accelerator">
-                                    <null/>
-                                </field>
-                            </codeTemplateItem>
-                            <codeTemplateItem>
-                                <field name="contentType">
-                                    <String>text/any</String>
-                                </field>
-                                <field name="unparsedInsertString">
                                     <String>&lt;anchor type="commentary" xml:id="K_${cfn}-"/>${selection}&lt;note type='commentary' xml:id="K_${cfn}-h">&lt;/note></String>
                                 </field>
                                 <field name="descriptionString">
@@ -392,26 +348,6 @@
                                     <String>text/any</String>
                                 </field>
                                 <field name="unparsedInsertString">
-                                    <String>&lt;rs type="person" ref="#pmb2167">Salten&lt;/rs></String>
-                                </field>
-                                <field name="descriptionString">
-                                    <String></String>
-                                </field>
-                                <field name="renderString">
-                                    <String>Salten</String>
-                                </field>
-                                <field name="enabled">
-                                    <Boolean>true</Boolean>
-                                </field>
-                                <field name="accelerator">
-                                    <null/>
-                                </field>
-                            </codeTemplateItem>
-                            <codeTemplateItem>
-                                <field name="contentType">
-                                    <String>text/any</String>
-                                </field>
-                                <field name="unparsedInsertString">
                                     <String>&lt;rs type="person" ref="#pmb2121">Schnitzler&lt;/rs></String>
                                 </field>
                                 <field name="descriptionString">
@@ -425,35 +361,6 @@
                                 </field>
                                 <field name="accelerator">
                                     <String>alt shift S</String>
-                                </field>
-                            </codeTemplateItem>
-                            <codeTemplateItem>
-                                <field name="contentType">
-                                    <String>text/any</String>
-                                </field>
-                                <field name="unparsedInsertString">
-                                    <String>&lt;incident type="postal">
-    &lt;desc>
-        &lt;stamp n="1">
-            &lt;placeName ref="">&lt;/placeName>
-            &lt;date when="">&lt;/date>
-            &lt;time>&lt;/time>
-            &lt;addSpan>&lt;/addSpan>
-        &lt;/stamp>
-    &lt;/desc>
-&lt;/incident></String>
-                                </field>
-                                <field name="descriptionString">
-                                    <String></String>
-                                </field>
-                                <field name="renderString">
-                                    <String>Stempel (incident postal)</String>
-                                </field>
-                                <field name="enabled">
-                                    <Boolean>true</Boolean>
-                                </field>
-                                <field name="accelerator">
-                                    <null/>
                                 </field>
                             </codeTemplateItem>
                             <codeTemplateItem>
@@ -549,7 +456,7 @@
                                     <String></String>
                                 </field>
                                 <field name="renderString">
-                                    <String>datiert (incident receiver)</String>
+                                    <String>incdident receiver datiert</String>
                                 </field>
                                 <field name="enabled">
                                     <Boolean>true</Boolean>
@@ -563,17 +470,16 @@
                                     <String>text/any</String>
                                 </field>
                                 <field name="unparsedInsertString">
-                                    <String>&lt;additions>
-    &lt;incident type="archival" rend="bleistift">
+                                    <String>    &lt;incident type="archival" rend="bleistift">
         &lt;desc>von unbekannter Hand nummeriert: »&lt;quote>x&lt;/quote>«&lt;/desc>
     &lt;/incident>
-&lt;/additions></String>
+</String>
                                 </field>
                                 <field name="descriptionString">
                                     <String></String>
                                 </field>
                                 <field name="renderString">
-                                    <String>nummeriert (additions)</String>
+                                    <String>incident nummeriert</String>
                                 </field>
                                 <field name="enabled">
                                     <Boolean>true</Boolean>
@@ -587,17 +493,45 @@
                                     <String>text/any</String>
                                 </field>
                                 <field name="unparsedInsertString">
-                                    <String>&lt;additions>
-    &lt;incident type="archival" rend="bleistift">
+                                    <String>    &lt;incident type="archival" rend="bleistift">
         &lt;desc>von unbekannter Hand paginiert: »&lt;quote>x&lt;/quote>«&lt;/desc>
     &lt;/incident>
-&lt;/additions></String>
+</String>
                                 </field>
                                 <field name="descriptionString">
                                     <String></String>
                                 </field>
                                 <field name="renderString">
-                                    <String>paginiert (additions)</String>
+                                    <String>incident paginiert</String>
+                                </field>
+                                <field name="enabled">
+                                    <Boolean>true</Boolean>
+                                </field>
+                                <field name="accelerator">
+                                    <null/>
+                                </field>
+                            </codeTemplateItem>
+                            <codeTemplateItem>
+                                <field name="contentType">
+                                    <String>text/any</String>
+                                </field>
+                                <field name="unparsedInsertString">
+                                    <String>&lt;incident type="postal">
+    &lt;desc>
+        &lt;stamp n="1">
+            &lt;placeName ref="">&lt;/placeName>
+            &lt;date when="">&lt;/date>
+            &lt;time>&lt;/time>
+            &lt;addSpan>&lt;/addSpan>
+        &lt;/stamp>
+    &lt;/desc>
+&lt;/incident></String>
+                                </field>
+                                <field name="descriptionString">
+                                    <String></String>
+                                </field>
+                                <field name="renderString">
+                                    <String>incident postal Stempel</String>
                                 </field>
                                 <field name="enabled">
                                     <Boolean>true</Boolean>
@@ -7672,11 +7606,54 @@ ${caret}</String>
                         <scenarioAssociation-array>
                             <scenarioAssociation>
                                 <field name="url">
-                                    <String>transkribus-transformation/transkribus-export/mets.xml</String>
+                                    <String>editions/L03615.xml</String>
                                 </field>
                                 <field name="scenarioIds">
                                     <list>
-                                        <String>transkribus-export_mets-zu-einzeldateien</String>
+                                        <String>back-element-hinzufuegen_facs-normalisieren</String>
+                                        <String>tex-korrekturansicht</String>
+                                    </list>
+                                </field>
+                                <field name="scenarioTypes">
+                                    <list>
+                                        <String>XSL</String>
+                                        <String>XSL</String>
+                                    </list>
+                                </field>
+                                <field name="scenarioStorageLocations">
+                                    <list>
+                                        <Byte>2</Byte>
+                                        <Byte>2</Byte>
+                                    </list>
+                                </field>
+                            </scenarioAssociation>
+                            <scenarioAssociation>
+                                <field name="url">
+                                    <String>temp/L03615.xml</String>
+                                </field>
+                                <field name="scenarioIds">
+                                    <list>
+                                        <String>back-element-hinzufuegen_facs-normalisieren</String>
+                                    </list>
+                                </field>
+                                <field name="scenarioTypes">
+                                    <list>
+                                        <String>XSL</String>
+                                    </list>
+                                </field>
+                                <field name="scenarioStorageLocations">
+                                    <list>
+                                        <Byte>2</Byte>
+                                    </list>
+                                </field>
+                            </scenarioAssociation>
+                            <scenarioAssociation>
+                                <field name="url">
+                                    <String>editions/L02642.xml</String>
+                                </field>
+                                <field name="scenarioIds">
+                                    <list>
+                                        <String>back-element-hinzufuegen_facs-normalisieren</String>
                                     </list>
                                 </field>
                                 <field name="scenarioTypes">
@@ -7696,7 +7673,27 @@ ${caret}</String>
                                 </field>
                                 <field name="scenarioIds">
                                     <list>
-                                        <String>punkt nach cf see</String>
+                                        <String>back-element-hinzufuegen_facs-normalisieren</String>
+                                    </list>
+                                </field>
+                                <field name="scenarioTypes">
+                                    <list>
+                                        <String>XSL</String>
+                                    </list>
+                                </field>
+                                <field name="scenarioStorageLocations">
+                                    <list>
+                                        <Byte>2</Byte>
+                                    </list>
+                                </field>
+                            </scenarioAssociation>
+                            <scenarioAssociation>
+                                <field name="url">
+                                    <String>transkribus-transformation/transkribus-export/mets.xml</String>
+                                </field>
+                                <field name="scenarioIds">
+                                    <list>
+                                        <String>transkribus-export_mets-zu-einzeldateien</String>
                                     </list>
                                 </field>
                                 <field name="scenarioTypes">
@@ -7893,26 +7890,6 @@ ${caret}</String>
                             <scenarioAssociation>
                                 <field name="url">
                                     <String>editions/L01391.xml</String>
-                                </field>
-                                <field name="scenarioIds">
-                                    <list>
-                                        <String>back-element-hinzufuegen_facs-normalisieren</String>
-                                    </list>
-                                </field>
-                                <field name="scenarioTypes">
-                                    <list>
-                                        <String>XSL</String>
-                                    </list>
-                                </field>
-                                <field name="scenarioStorageLocations">
-                                    <list>
-                                        <Byte>2</Byte>
-                                    </list>
-                                </field>
-                            </scenarioAssociation>
-                            <scenarioAssociation>
-                                <field name="url">
-                                    <String>editions/L02642.xml</String>
                                 </field>
                                 <field name="scenarioIds">
                                     <list>
@@ -8429,66 +8406,6 @@ ${caret}</String>
                                 <field name="scenarioStorageLocations">
                                     <list>
                                         <Byte>2</Byte>
-                                        <Byte>2</Byte>
-                                    </list>
-                                </field>
-                            </scenarioAssociation>
-                            <scenarioAssociation>
-                                <field name="url">
-                                    <String>editions/L00503.xml</String>
-                                </field>
-                                <field name="scenarioIds">
-                                    <list>
-                                        <String>punkt nach cf see</String>
-                                    </list>
-                                </field>
-                                <field name="scenarioTypes">
-                                    <list>
-                                        <String>XSL</String>
-                                    </list>
-                                </field>
-                                <field name="scenarioStorageLocations">
-                                    <list>
-                                        <Byte>2</Byte>
-                                    </list>
-                                </field>
-                            </scenarioAssociation>
-                            <scenarioAssociation>
-                                <field name="url">
-                                    <String>editions/L00330.xml</String>
-                                </field>
-                                <field name="scenarioIds">
-                                    <list>
-                                        <String>punkt nach cf see</String>
-                                    </list>
-                                </field>
-                                <field name="scenarioTypes">
-                                    <list>
-                                        <String>XSL</String>
-                                    </list>
-                                </field>
-                                <field name="scenarioStorageLocations">
-                                    <list>
-                                        <Byte>2</Byte>
-                                    </list>
-                                </field>
-                            </scenarioAssociation>
-                            <scenarioAssociation>
-                                <field name="url">
-                                    <String>editions/L00890.xml</String>
-                                </field>
-                                <field name="scenarioIds">
-                                    <list>
-                                        <String>punkt nach cf see</String>
-                                    </list>
-                                </field>
-                                <field name="scenarioTypes">
-                                    <list>
-                                        <String>XSL</String>
-                                    </list>
-                                </field>
-                                <field name="scenarioStorageLocations">
-                                    <list>
                                         <Byte>2</Byte>
                                     </list>
                                 </field>
@@ -10497,26 +10414,6 @@ ${caret}</String>
                             </scenarioAssociation>
                             <scenarioAssociation>
                                 <field name="url">
-                                    <String>editions/L02881.xml</String>
-                                </field>
-                                <field name="scenarioIds">
-                                    <list>
-                                        <String>punkt nach cf see</String>
-                                    </list>
-                                </field>
-                                <field name="scenarioTypes">
-                                    <list>
-                                        <String>XSL</String>
-                                    </list>
-                                </field>
-                                <field name="scenarioStorageLocations">
-                                    <list>
-                                        <Byte>2</Byte>
-                                    </list>
-                                </field>
-                            </scenarioAssociation>
-                            <scenarioAssociation>
-                                <field name="url">
                                     <String>editions/L02786.xml</String>
                                 </field>
                                 <field name="scenarioIds">
@@ -10640,66 +10537,6 @@ ${caret}</String>
                                 <field name="scenarioStorageLocations">
                                     <list>
                                         <Byte>2</Byte>
-                                        <Byte>2</Byte>
-                                    </list>
-                                </field>
-                            </scenarioAssociation>
-                            <scenarioAssociation>
-                                <field name="url">
-                                    <String>editions/L01335.xml</String>
-                                </field>
-                                <field name="scenarioIds">
-                                    <list>
-                                        <String>punkt nach cf see</String>
-                                    </list>
-                                </field>
-                                <field name="scenarioTypes">
-                                    <list>
-                                        <String>XSL</String>
-                                    </list>
-                                </field>
-                                <field name="scenarioStorageLocations">
-                                    <list>
-                                        <Byte>2</Byte>
-                                    </list>
-                                </field>
-                            </scenarioAssociation>
-                            <scenarioAssociation>
-                                <field name="url">
-                                    <String>editions/L00917.xml</String>
-                                </field>
-                                <field name="scenarioIds">
-                                    <list>
-                                        <String>punkt nach cf see</String>
-                                    </list>
-                                </field>
-                                <field name="scenarioTypes">
-                                    <list>
-                                        <String>XSL</String>
-                                    </list>
-                                </field>
-                                <field name="scenarioStorageLocations">
-                                    <list>
-                                        <Byte>2</Byte>
-                                    </list>
-                                </field>
-                            </scenarioAssociation>
-                            <scenarioAssociation>
-                                <field name="url">
-                                    <String>editions/L00025.xml</String>
-                                </field>
-                                <field name="scenarioIds">
-                                    <list>
-                                        <String>punkt nach cf see</String>
-                                    </list>
-                                </field>
-                                <field name="scenarioTypes">
-                                    <list>
-                                        <String>XSL</String>
-                                    </list>
-                                </field>
-                                <field name="scenarioStorageLocations">
-                                    <list>
                                         <Byte>2</Byte>
                                     </list>
                                 </field>
@@ -11024,26 +10861,6 @@ ${caret}</String>
                                 <field name="scenarioStorageLocations">
                                     <list>
                                         <Byte>2</Byte>
-                                        <Byte>2</Byte>
-                                    </list>
-                                </field>
-                            </scenarioAssociation>
-                            <scenarioAssociation>
-                                <field name="url">
-                                    <String>editions/L03291.xml</String>
-                                </field>
-                                <field name="scenarioIds">
-                                    <list>
-                                        <String>punkt nach cf see</String>
-                                    </list>
-                                </field>
-                                <field name="scenarioTypes">
-                                    <list>
-                                        <String>XSL</String>
-                                    </list>
-                                </field>
-                                <field name="scenarioStorageLocations">
-                                    <list>
                                         <Byte>2</Byte>
                                     </list>
                                 </field>
@@ -12264,7 +12081,7 @@ ${caret}</String>
                                         <String>${pdu}/xslts/Diverse%20XSLT/umschreiben-alter-tags/1-kommentar-textconst-ids-umschreiben.xsl</String>
                                         <String>${pdu}/xslts/Diverse%20XSLT/umschreiben-alter-tags/2-kommentar-textconst-ids-umschreiben.xsl</String>
                                         <String>${pdu}/xslts/Diverse%20XSLT/Tausenderpunkt-in-bibl.xsl</String>
-                                        <String>file:/Users/oldfiche/git/arthur-schnitzler-arbeit/xslts/Diverse%20XSLT/s-nach-rs-ins-element.xsl</String>
+                                        <String>${pdu}/xslts/s-nach-rs-ins-element.xsl</String>
                                     </String-array>
                                 </field>
                                 <field name="xslTransformer">
@@ -13523,89 +13340,6 @@ ${caret}</String>
                                         <String>${pdu}/transkribus-transformationen_action/p-correction2.xsl</String>
                                         <String>${pdu}/transkribus-transformationen_action/de-escape.xsl</String>
                                     </String-array>
-                                </field>
-                                <field name="xslTransformer">
-                                    <String>Saxon-PE</String>
-                                </field>
-                                <field name="extensionURLs">
-                                    <String-array/>
-                                </field>
-                            </scenario>
-                            <scenario>
-                                <field name="advancedOptionsMap">
-                                    <null/>
-                                </field>
-                                <field name="name">
-                                    <String>punkt nach cf see</String>
-                                </field>
-                                <field name="baseURL">
-                                    <String></String>
-                                </field>
-                                <field name="footerURL">
-                                    <String></String>
-                                </field>
-                                <field name="fOPMethod">
-                                    <String>pdf</String>
-                                </field>
-                                <field name="fOProcessorName">
-                                    <String>Apache FOP</String>
-                                </field>
-                                <field name="headerURL">
-                                    <String></String>
-                                </field>
-                                <field name="inputXSLURL">
-                                    <String>file:/Users/oldfiche/git/arthur-schnitzler-arbeit/xslts/Diverse%20XSLT/change-daten-chronologisch.xsl</String>
-                                </field>
-                                <field name="inputXMLURL">
-                                    <String>${currentFileURL}</String>
-                                </field>
-                                <field name="defaultScenario">
-                                    <Boolean>false</Boolean>
-                                </field>
-                                <field name="isFOPPerforming">
-                                    <Boolean>false</Boolean>
-                                </field>
-                                <field name="type">
-                                    <String>XSL</String>
-                                </field>
-                                <field name="saveAs">
-                                    <Boolean>true</Boolean>
-                                </field>
-                                <field name="openInBrowser">
-                                    <Boolean>false</Boolean>
-                                </field>
-                                <field name="outputResource">
-                                    <String>${cfne}</String>
-                                </field>
-                                <field name="openOtherLocationInBrowser">
-                                    <Boolean>false</Boolean>
-                                </field>
-                                <field name="locationToOpenInBrowserURL">
-                                    <null/>
-                                </field>
-                                <field name="openInEditor">
-                                    <Boolean>false</Boolean>
-                                </field>
-                                <field name="showInHTMLPane">
-                                    <Boolean>false</Boolean>
-                                </field>
-                                <field name="showInXMLPane">
-                                    <Boolean>false</Boolean>
-                                </field>
-                                <field name="showInSVGPane">
-                                    <Boolean>false</Boolean>
-                                </field>
-                                <field name="showInResultSetPane">
-                                    <Boolean>false</Boolean>
-                                </field>
-                                <field name="useXSLTInput">
-                                    <Boolean>true</Boolean>
-                                </field>
-                                <field name="xsltParams">
-                                    <list/>
-                                </field>
-                                <field name="cascadingStylesheets">
-                                    <String-array/>
                                 </field>
                                 <field name="xslTransformer">
                                     <String>Saxon-PE</String>

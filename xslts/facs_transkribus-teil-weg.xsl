@@ -23,7 +23,7 @@
             <xsl:element name="idno" namespace="http://www.tei-c.org/ns/1.0">
                 <xsl:variable name="wert" select="substring-after($dateiname, 'L')"/>
                 <xsl:attribute name="type">
-                    <xsl:text>asbw</xsl:text>
+                    <xsl:text>schnitzler-briefe</xsl:text>
                 </xsl:attribute>
                 <xsl:attribute name="n">
                     <xsl:value-of select="$wert"/>
