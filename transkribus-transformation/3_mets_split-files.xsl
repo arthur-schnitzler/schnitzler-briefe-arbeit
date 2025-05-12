@@ -60,14 +60,14 @@
                                     <xsl:value-of select="$sender-in_name"/>
                                 </author>
                                 <editor>
+                                    <name>Jahnke, Selma</name>
                                     <name>Müller, Martin Anton</name>
-                                    <name>Untner, Laura</name>
                                 </editor>
                                 <funder>
-                                    <name>FWF - Der Wissenschaftsfonds</name>
+                                    <name>Österreichischer Wissenschaftsfonds FWF</name>
                                     <address>
-                                        <street>Sensengasse 1</street>
-                                        <postCode>1090 Wien</postCode>
+                                        <street>Georg-Coch-Platz 2</street>
+                                        <postCode>1010 Wien</postCode>
                                         <placeName>
                                             <country>A</country>
                                             <settlement>Wien</settlement>
@@ -76,7 +76,7 @@
                                 </funder>
                             </titleStmt>
                             <editionStmt>
-                                <edition>ASBW</edition>
+                                <edition>schnitzler-briefe</edition>
                                 <respStmt>
                                     <resp>Transkription und Kommentierung</resp>
                                     <name>Jahnke, Selma</name>
