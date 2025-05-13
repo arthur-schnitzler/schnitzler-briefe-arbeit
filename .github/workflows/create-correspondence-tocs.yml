@@ -17,16 +17,17 @@ jobs:
           distribution: 'temurin'
           java-version: '17'
 
-      - name: ⬇️ Saxon JARs laden (inkl. CLI)
+      - name: ⬇️ Saxon + XMLResolver JARs laden
         run: |
           mkdir saxon
           curl -L -o saxon/saxon-he.jar https://repo1.maven.org/maven2/net/sf/saxon/Saxon-HE/11.6/Saxon-HE-11.6.jar
           curl -L -o saxon/saxon-he-cli.jar https://repo1.maven.org/maven2/net/sf/saxon/Saxon-HE/11.6/Saxon-HE-11.6-cli.jar
+          curl -L -o saxon/xmlresolver.jar https://repo1.maven.org/maven2/org/xmlresolver/xmlresolver/4.5.0/xmlresolver-4.5.0.jar
 
       - name: 🛠 TOCs generieren
         run: |
           mkdir -p tocs
-          java -cp saxon/saxon-he.jar:saxon/saxon-he-cli.jar net.sf.saxon.Transform \
+          java -cp "saxon/*" net.sf.saxon.Transform \
             -xsl:xslts/toc/correspondences/01_create-correspondence-tocs.xsl \
             -it:main
 
