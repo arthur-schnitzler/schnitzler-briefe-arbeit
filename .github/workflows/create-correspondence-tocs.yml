@@ -1,7 +1,7 @@
 name: TOCs neu generieren
 
 on:
-  workflow_dispatch:  # Nur manuell starten, niemals automatisch
+  workflow_dispatch:  # Nur manuell starten
 
 jobs:
   regenerate-tocs:
@@ -17,14 +17,15 @@ jobs:
           distribution: 'temurin'
           java-version: '17'
 
-      - name: ⬇️ Saxon HE (fat JAR) herunterladen
+      - name: ⬇️ Saxon CLI herunterladen (mit Transform.class)
         run: |
-          curl -L -o saxon.jar https://repo1.maven.org/maven2/net/sf/saxon/Saxon-HE/11.6/Saxon-HE-11.6-fat.jar
+          curl -L -o saxon.zip https://www.saxonica.com/download/java/SaxonHE11-6J.zip
+          unzip saxon.zip -d saxon
 
       - name: 🛠 XSLT ausführen
         run: |
           mkdir -p tocs
-          java -cp saxon.jar net.sf.saxon.Transform \
+          java -cp saxon/saxon-he-11.6/saxon-he-11.6.jar net.sf.saxon.Transform \
             -xsl:xslts/toc/correspondences/01_create-correspondence-tocs.xsl \
             -it:main
 
