@@ -40,26 +40,6 @@
                                     <String>text/any</String>
                                 </field>
                                 <field name="unparsedInsertString">
-                                    <String>&lt;change who="LU" when="${date(yyyy-MM-dd)}">Durchsicht&lt;/change></String>
-                                </field>
-                                <field name="descriptionString">
-                                    <String></String>
-                                </field>
-                                <field name="renderString">
-                                    <String>&lt;change> LU</String>
-                                </field>
-                                <field name="enabled">
-                                    <Boolean>true</Boolean>
-                                </field>
-                                <field name="accelerator">
-                                    <null/>
-                                </field>
-                            </codeTemplateItem>
-                            <codeTemplateItem>
-                                <field name="contentType">
-                                    <String>text/any</String>
-                                </field>
-                                <field name="unparsedInsertString">
                                     <String>&lt;change who="MAM" when="${date(yyyy-MM-dd)}">Durchsicht&lt;/change></String>
                                 </field>
                                 <field name="descriptionString">
@@ -80,13 +60,13 @@
                                     <String>text/any</String>
                                 </field>
                                 <field name="unparsedInsertString">
-                                    <String>&lt;c rendition="#dots" n="3"/></String>
+                                    <String>&lt;change who="SJ" when="${date(yyyy-MM-dd)}">Durchsicht&lt;/change></String>
                                 </field>
                                 <field name="descriptionString">
                                     <String></String>
                                 </field>
                                 <field name="renderString">
-                                    <String>Auslassungspunkte (dots)</String>
+                                    <String>&lt;change> SJ</String>
                                 </field>
                                 <field name="enabled">
                                     <Boolean>true</Boolean>
@@ -100,21 +80,13 @@
                                     <String>text/any</String>
                                 </field>
                                 <field name="unparsedInsertString">
-                                    <String>&lt;opener>&lt;p>&lt;pb facs=""/>&lt;hi rend="pre-print">&lt;rs type="org" ref="#pmb29442">Frankfurter Zeitung&lt;/rs>.&lt;/hi>&lt;/p>
-    &lt;p>&lt;hi rend="pre-print">(&lt;rs type="org" ref="#pmb29442">Gazette de Francfort&lt;/rs>.)&lt;/hi>&lt;/p>
-    &lt;p>&lt;hi rend="pre-print">Directeur &lt;hi rend="bold">M. &lt;rs type="person" ref="#pmb87771">L. Sonnemann&lt;/rs>&lt;/hi>.&lt;/hi>&lt;/p>
-    &lt;p>&lt;hi rend="pre-print">&lt;foreign xml:lang="fra">Journal politique, financier,&lt;/foreign>&lt;/hi>&lt;/p>
-    &lt;p>&lt;hi rend="pre-print">&lt;foreign xml:lang="fra">commercial et litteraire.&lt;/foreign>&lt;/hi>&lt;/p>
-    &lt;p>&lt;hi rend="pre-print">&lt;foreign xml:lang="fra">&lt;hi rend="bold">Paraissant trois fois par jour&lt;/hi>&lt;/foreign>&lt;/hi>&lt;/p>
-    &lt;p>&lt;hi rend="pre-print">–&lt;/hi>&lt;/p>
-    &lt;p>&lt;hi rend="pre-print">&lt;foreign xml:lang="fra">&lt;hi rend="bold">Bureaux à &lt;rs type="place" ref="#pmb18">Paris&lt;/rs>:&lt;/hi>&lt;/foreign>&lt;/hi>&lt;/p>
-    &lt;p>&lt;hi rend="pre-print">&lt;foreign xml:lang="fra">&lt;rs type="place" ref="#pmb34187">rue Richelieu&amp;#160;75&lt;/rs>.&lt;/foreign>&lt;/hi>&lt;/p>&lt;/opener></String>
+                                    <String>&lt;c rendition="#dots" n="3"/></String>
                                 </field>
                                 <field name="descriptionString">
                                     <String></String>
                                 </field>
                                 <field name="renderString">
-                                    <String>Briefkopf Frankfurter Zeitung Paris</String>
+                                    <String>Auslassungspunkte (dots)</String>
                                 </field>
                                 <field name="enabled">
                                     <Boolean>true</Boolean>
@@ -532,6 +504,28 @@
                                 </field>
                                 <field name="renderString">
                                     <String>incident postal Stempel</String>
+                                </field>
+                                <field name="enabled">
+                                    <Boolean>true</Boolean>
+                                </field>
+                                <field name="accelerator">
+                                    <null/>
+                                </field>
+                            </codeTemplateItem>
+                            <codeTemplateItem>
+                                <field name="contentType">
+                                    <String>text/any</String>
+                                </field>
+                                <field name="unparsedInsertString">
+                                    <String>&lt;incident type="receiver" rend="roter-buntstift">
+    &lt;desc>XXXX Unterstreichungen&lt;/desc>
+&lt;/incident></String>
+                                </field>
+                                <field name="descriptionString">
+                                    <String></String>
+                                </field>
+                                <field name="renderString">
+                                    <String>incident rote unterstreichung</String>
                                 </field>
                                 <field name="enabled">
                                     <Boolean>true</Boolean>
