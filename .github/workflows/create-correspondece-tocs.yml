@@ -17,14 +17,30 @@ jobs:
           distribution: 'temurin'
           java-version: '17'
 
-      - name: Download Saxon HE
+      - name: Set up Saxon via Maven
         run: |
-          curl -L -o saxon.jar https://repo1.maven.org/maven2/net/sf/saxon/Saxon-HE/11.6/Saxon-HE-11.6.jar
+          mkdir saxon-project
+          cd saxon-project
+          echo '<project xmlns="http://maven.apache.org/POM/4.0.0"
+                        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+                        xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+                  <modelVersion>4.0.0</modelVersion>
+                  <groupId>temp</groupId>
+                  <artifactId>run-saxon</artifactId>
+                  <version>1.0</version>
+                  <dependencies>
+                    <dependency>
+                      <groupId>net.sf.saxon</groupId>
+                      <artifactId>Saxon-HE</artifactId>
+                      <version>11.6</version>
+                    </dependency>
+                  </dependencies>
+                </project>' > pom.xml
+          mvn dependency:copy-dependencies -DoutputDirectory=lib
 
-      - name: Run XSLT to regenerate TOCs via named template
+      - name: Run XSLT with Saxon (resolved dependencies)
         run: |
-          mkdir -p tocs
-          java -cp saxon.jar net.sf.saxon.Transform \
+          java -cp "saxon-project/lib/*" net.sf.saxon.Transform \
             -xsl:xslts/toc/correspondences/01_create-correspondence-tocs.xsl \
             -it:main
 
