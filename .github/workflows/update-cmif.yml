@@ -22,9 +22,9 @@ jobs:
           distribution: 'temurin'
           java-version: '17'
 
-      - name: Download Saxon HE
+      - name: Download Saxon HE 10.8 (monolithic)
         run: |
-          curl -L -o saxon.jar https://repo1.maven.org/maven2/net/sf/saxon/Saxon-HE/12.4/Saxon-HE-12.4.jar
+          curl -L -o saxon.jar https://repo1.maven.org/maven2/net/sf/saxon/Saxon-HE/10.8/Saxon-HE-10.8.jar
 
       - name: Create output directory
         run: mkdir -p indices
