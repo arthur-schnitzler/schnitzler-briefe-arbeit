@@ -6,7 +6,7 @@
     version="3.0" exclude-result-prefixes="tei">
     <xsl:output method="xml" indent="true"/>
     <xsl:mode on-no-match="shallow-skip"/>
-    <xsl:param name="listcorrespondence" select="document('./indices/listcorrespondence.xml')"/>
+    <xsl:param name="listcorrespondence" select="document('https://raw.githubusercontent.com/arthur-schnitzler/schnitzler-briefe-arbeit/refs/heads/main/indices/listcorrespondence.xml')"/>
     <xsl:template match="main">
         <xsl:variable name="folderURI" select="resolve-uri('.', base-uri())"/>
         <xsl:for-each
