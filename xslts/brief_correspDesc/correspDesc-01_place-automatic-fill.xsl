@@ -5,7 +5,7 @@
     <xsl:mode on-no-match="shallow-copy"/>
     <xsl:output method="xml" indent="yes"/>
     <xsl:param name="places"
-        select="document('../../schnitzler-orte/editions/schnitzler_places.xml')"/>
+        select="document('https://raw.githubusercontent.com/arthur-schnitzler/schnitzler-orte/refs/heads/main/editions/schnitzler_places.xml')"/>
     <xsl:key name="place-lookup" match="tei:event" use="@when"/>
     <!-- Dieses XSLT macht folgendes:
         
