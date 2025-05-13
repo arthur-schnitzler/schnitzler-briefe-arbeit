@@ -1,0 +1,41 @@
+name: Manuell: TOCs neu generieren
+
+on:
+  workflow_dispatch:  # Nur manuell starten, niemals automatisch
+
+jobs:
+  regenerate-tocs:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: 📦 Repository auschecken
+        uses: actions/checkout@v4
+
+      - name: ☕ Java installieren (für Saxon)
+        uses: actions/setup-java@v3
+        with:
+          distribution: 'temurin'
+          java-version: '17'
+
+      - name: ⬇️ Saxon HE (fat JAR) herunterladen
+        run: |
+          curl -L -o saxon.jar https://repo1.maven.org/maven2/net/sf/saxon/Saxon-HE/11.6/Saxon-HE-11.6-fat.jar
+
+      - name: 🛠 XSLT ausführen
+        run: |
+          mkdir -p tocs
+          java -cp saxon.jar net.sf.saxon.Transform \
+            -xsl:xslts/toc/correspondences/01_create-correspondence-tocs.xsl \
+            -it:main
+
+      - name: 📝 Änderungen committen (wenn vorhanden)
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add tocs/
+          if ! git diff --cached --quiet; then
+            git commit -m "🔄 TOCs aktualisiert (via GitHub Actions)"
+            git push
+          else
+            echo "Keine Änderungen – Commit wird übersprungen."
+          fi
