@@ -39,6 +39,7 @@
                                     <name>Martin Anton Müller</name>
                                     <name>Gerd-Hermann Susen</name>
                                     <name>Laura Untner</name>
+                                    <name>Selma Jahnke</name>
                                 </respStmt>
                                 <respStmt>
                                     <resp>converted to XML encoding</resp>
