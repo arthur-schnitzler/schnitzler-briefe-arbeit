@@ -1,0 +1,54 @@
+name: Generate CMIF
+
+on:
+  workflow_dispatch:
+  push:
+    paths:
+      - 'editions/**'
+      - 'xslts/cmif/**'
+      - '.github/workflows/cmif-generate.yml'
+
+jobs:
+  generate-cmif:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v3
+
+      - name: Set up Java
+        uses: actions/setup-java@v3
+        with:
+          distribution: 'temurin'
+          java-version: '17'
+
+      - name: Download Saxon HE
+        run: |
+          curl -L -o saxon.jar https://repo1.maven.org/maven2/net/sf/saxon/Saxon-HE/12.4/Saxon-HE-12.4.jar
+
+      - name: Create output directory
+        run: mkdir -p indices
+
+      - name: Apply XSLT transformations
+        run: |
+          java -jar saxon.jar -s:create-cmif.xml -xsl:xslts/cmif/01_asbwzusammenkopieren-CMIF.xsl -o:temp2.xml
+          java -jar saxon.jar -s:temp2.xml -xsl:xslts/cmif/02_normalize.xsl -o:temp3.xml
+          java -jar saxon.jar -s:temp3.xml -xsl:xslts/cmif/03_sort.xsl -o:temp4.xml
+          java -jar saxon.jar -s:temp4.xml -xsl:xslts/cmif/04_doppelte-daten.xsl -o:temp5.xml
+          java -jar saxon.jar -s:temp5.xml -xsl:xslts/cmif/05_correspContext_prev-next.xsl -o:indices/schnitzler-briefe_cmif.xml
+          rm -f temp2.xml temp3.xml temp4.xml temp5.xml saxon.jar
+
+      - name: Commit and push if changed
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+
+          if git status --porcelain | grep indices/schnitzler-briefe_cmif.xml; then
+            git add indices/schnitzler-briefe_cmif.xml
+            git commit -m "Update schnitzler-briefe_cmif.xml via workflow"
+            git push
+          else
+            echo "No changes to commit."
+          fi
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
