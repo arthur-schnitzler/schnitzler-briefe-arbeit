@@ -11,12 +11,12 @@ jobs:
       - name: 📦 Repository auschecken
         uses: actions/checkout@v4
 
-      - name: 🛠 XSLT ausführen mit Docker (Saxon HE)
+      - name: 🛠 XSLT ausführen mit Docker + Saxon (öffentliches Image)
         run: |
           mkdir -p tocs
           docker run --rm \
             -v ${{ github.workspace }}:/data \
-            ghcr.io/saxonica/saxon-he:11.6 \
+            klakegg/saxon:11.6 \
             -xsl:/data/xslts/toc/correspondences/01_create-correspondence-tocs.xsl \
             -it:main
 
