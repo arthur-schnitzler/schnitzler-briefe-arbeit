@@ -28,8 +28,8 @@ jobs:
         run: |
           mkdir -p tocs
           java -cp "saxon/*" net.sf.saxon.Transform \
-            -xsl:xslts/toc-correspondences/01_create-correspondence-tocs.xsl \
-            -it:main
+                -s:xslts/toc-correspondences/create-correspondences-toc.xml \
+                -xsl:xslts/toc-correspondences/01_create-correspondence-tocs.xsl
 
       - name: 📝 Änderungen committen (wenn vorhanden)
         run: |
