@@ -1,7 +1,7 @@
-name: Update Correspondences Tables of Contents
+name: Update TOCs
 
 on:
-  workflow_dispatch:  # Manuell auslösbar
+  workflow_dispatch:
   push:
     paths:
       - 'xslts/toc/correspondences/**'
@@ -26,12 +26,12 @@ jobs:
         run: |
           curl -L -o saxon.jar https://repo1.maven.org/maven2/net/sf/saxon/Saxon-HE/11.6/Saxon-HE-11.6.jar
 
-      - name: Run XSLT to regenerate TOCs
+      - name: Run XSLT to regenerate TOCs via named template
         run: |
-          mkdir -p tocs  # Falls nicht vorhanden
+          mkdir -p tocs
           java -cp saxon.jar net.sf.saxon.Transform \
-            -s:xslts/toc/correspondences/create-correspondences-toc.xml \
-            -xsl:xslts/toc/correspondences/01_create-correspondence-tocs.xsl
+            -xsl:xslts/toc/correspondences/01_create-correspondence-tocs.xsl \
+            -it:main
 
       - name: Commit updated TOCs
         run: |
