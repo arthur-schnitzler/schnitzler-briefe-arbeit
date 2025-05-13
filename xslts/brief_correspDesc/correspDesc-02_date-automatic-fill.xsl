@@ -17,7 +17,7 @@
             select="preceding-sibling::tei:correspAction[@type = 'sent']/tei:date/@when"
             as="xs:date"/>
         <xsl:element name="correspAction" namespace="http://www.tei-c.org/ns/1.0">
-            <xsl:copy-of select="@* | *"/>
+            <xsl:copy-of select="@* | *[not(name()='placeName')]"/>
             <xsl:choose>
                 <xsl:when
                     test="tei:placeName/@ref = preceding-sibling::tei:correspAction[@type = 'sent']/tei:placeName/@ref">
@@ -60,6 +60,7 @@
                     </xsl:element>
                 </xsl:otherwise>
             </xsl:choose>
+            <xsl:copy-of select="*[(name()='placeName')]"/>
         </xsl:element>
     </xsl:template>
     <!-- ein Telegramm kommt am gleichen Tag an, also correspDesc ergänzen-->
@@ -69,7 +70,7 @@
             <xsl:attribute name="type">
                 <xsl:text>received</xsl:text>
             </xsl:attribute>
-            <xsl:copy-of select="tei:*"/>
+            <xsl:copy-of select="*[not(name()='placeName')]"/>
             <xsl:element name="date" namespace="http://www.tei-c.org/ns/1.0">
                 <xsl:attribute name="evidence">
                     <xsl:text>conjecture</xsl:text>
@@ -79,6 +80,7 @@
                     as="node()"/>
                 <xsl:copy-of select="$correspvorher/@*[not(name() = 'n')]"/>
                 <xsl:value-of select="$correspvorher"/>
+                <xsl:copy-of select="@* | *[not(name()='placeName')]"/>
             </xsl:element>
         </xsl:element>
     </xsl:template>
