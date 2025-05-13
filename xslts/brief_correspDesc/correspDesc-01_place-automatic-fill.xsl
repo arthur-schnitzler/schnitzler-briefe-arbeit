@@ -18,6 +18,7 @@
     Folgetags, ob er sich drei Tage lang am gleichen Ort aufhält-->
     <xsl:template
         match="tei:correspAction[tei:persName[@ref = 'https://d-nb.info/gnd/118609807' or @ref = '#pmb2121'] and not(tei:placeName) and tei:date]">
+        
         <xsl:variable name="sendedatum" as="xs:date?">
             <xsl:variable name="treffer" select="tei:date/@when"/>
             <xsl:choose>
@@ -94,8 +95,15 @@
                                     />
                                 </xsl:when>
                                 <xsl:otherwise>
-                                    <xsl:variable name="pmb-wert"
-                                        select="substring-after(substring-before($aufenthaltsort-am-sendedatum/tei:idno[@type = 'pmb'][1], '/detail'), 'https://pmb.acdh.oeaw.ac.at/apis/entities/entity/place/')"/>
+                                    <xsl:variable name="pmb-wert">
+                                        
+                                            <xsl:analyze-string select="$aufenthaltsort-am-sendedatum/tei:idno[@type = 'pmb' or @subtype='pmb'][1]" regex="/(\d+)/">
+                                                <xsl:matching-substring>
+                                                    <xsl:value-of select="regex-group(1)"/>
+                                                </xsl:matching-substring>
+                                            </xsl:analyze-string>
+                                        
+                                    </xsl:variable>
                                     <xsl:value-of select="concat('#pmb', $pmb-wert)"/>
                                 </xsl:otherwise>
                             </xsl:choose>
@@ -117,8 +125,14 @@
                                     />
                                 </xsl:when>
                                 <xsl:otherwise>
-                                    <xsl:variable name="pmb-wert"
-                                        select="substring-after(substring-before($aufenthaltsort-am-sendedatum/tei:idno[@type = 'pmb'][1], '/detail'), 'https://pmb.acdh.oeaw.ac.at/apis/entities/entity/place/')"/>
+                                    
+                                    <xsl:variable name="pmb-wert">
+                                        <xsl:analyze-string select="$aufenthaltsort-am-sendedatum/tei:idno[@type = 'pmb' or @subtype='pmb'][1]" regex="/(\d+)/">
+                                            <xsl:matching-substring>
+                                                <xsl:value-of select="regex-group(1)"/>
+                                            </xsl:matching-substring>
+                                        </xsl:analyze-string>
+                                    </xsl:variable>
                                     <xsl:value-of select="concat('#pmb', $pmb-wert)"/>
                                 </xsl:otherwise>
                             </xsl:choose>
@@ -188,8 +202,15 @@
                                             />
                                         </xsl:when>
                                         <xsl:otherwise>
-                                            <xsl:variable name="pmb-wert"
-                                                select="substring-after(substring-before($eintrag/tei:place/tei:idno[@type = 'pmb' and . = $aktuell][1], '/detail'), 'https://pmb.acdh.oeaw.ac.at/apis/entities/entity/place/')"/>
+                                            <xsl:variable name="pmb-wert">
+                                                
+                                                <xsl:analyze-string select="$eintrag/tei:place/tei:idno[@type = 'pmb' and . = $aktuell][1]" regex="/(\d+)/">
+                                                        <xsl:matching-substring>
+                                                            <xsl:value-of select="regex-group(1)"/>
+                                                        </xsl:matching-substring>
+                                                    </xsl:analyze-string>
+                                                
+                                            </xsl:variable>
                                             <xsl:value-of select="concat('#pmb', $pmb-wert)"/>
                                         </xsl:otherwise>
                                     </xsl:choose>
