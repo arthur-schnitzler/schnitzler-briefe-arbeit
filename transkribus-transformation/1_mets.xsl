@@ -323,7 +323,15 @@
           </xsl:otherwise>
         </xsl:choose>
       </xsl:variable>
-      <pb facs="{$facsname}"/>
+      <xsl:variable name="facsname-ohne-transkribus-beginn" >
+        <xsl:analyze-string select="$facsname" regex="^\d{{4}}_">
+          <xsl:non-matching-substring>
+            <xsl:value-of select="."/>
+          </xsl:non-matching-substring>
+        </xsl:analyze-string>
+        
+      </xsl:variable>
+      <pb facs="{$facsname-ohne-transkribus-beginn}"/>
 <!--    <xsl:variable name="facs-id" select="key('facs-name', $pb-position, $facs-doc)" as="node()?"/>-->
 <!--    <xsl:variable name="img-num" select=""/>-->
     <!--<xsl:variable name="facs-id" select="key('facs-name', $type, $facs-doc)/text()" as="node()?"/>-->
