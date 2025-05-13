@@ -1,0 +1,42 @@
+name: Update Correspondences Tables of Contents
+
+on:
+  workflow_dispatch:  # Manuell auslösbar
+  push:
+    paths:
+      - 'xslts/toc/correspondences/**'
+      - 'indices/listcorrespondence.xml'
+      - 'editions/**'
+
+jobs:
+  regenerate-tocs:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v4
+
+      - name: Set up Java (for Saxon)
+        uses: actions/setup-java@v3
+        with:
+          distribution: 'temurin'
+          java-version: '17'
+
+      - name: Download Saxon HE
+        run: |
+          curl -L -o saxon.jar https://repo1.maven.org/maven2/net/sf/saxon/Saxon-HE/11.6/Saxon-HE-11.6.jar
+
+      - name: Run XSLT to regenerate TOCs
+        run: |
+          mkdir -p tocs  # Falls nicht vorhanden
+          java -cp saxon.jar net.sf.saxon.Transform \
+            -s:xslts/toc/correspondences/create-correspondences-toc.xml \
+            -xsl:xslts/toc/correspondences/01_create-correspondence-tocs.xsl
+
+      - name: Commit updated TOCs
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add tocs/
+          git diff --quiet && echo "No changes" || git commit -m "Update TOCs via workflow"
+          git push
