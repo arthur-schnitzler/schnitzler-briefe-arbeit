@@ -7,7 +7,7 @@
     <xsl:output method="xml" indent="true"/>
     <xsl:mode on-no-match="shallow-skip"/>
     <xsl:param name="listcorrespondence" select="document('../../indices/listcorrespondence.xml')"/>
-    <xsl:template match="root">
+    <xsl:template match="main">
         <xsl:variable name="folderURI" select="resolve-uri('.', base-uri())"/>
         <xsl:for-each
             select="$listcorrespondence/descendant::tei:listPerson/tei:personGrp[not(@xml:id = 'correspondence_null')]">
