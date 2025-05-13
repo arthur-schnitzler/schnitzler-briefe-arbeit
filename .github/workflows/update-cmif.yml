@@ -31,7 +31,7 @@ jobs:
 
       - name: Apply XSLT transformations
         run: |
-          java -jar saxon.jar -s:create-cmif.xml -xsl:xslts/cmif/01_asbwzusammenkopieren-CMIF.xsl -o:temp2.xml
+          java -jar saxon.jar -s:./xslts/cmif/create-cmif.xml -xsl:xslts/cmif/01_asbwzusammenkopieren-CMIF.xsl -o:temp2.xml
           java -jar saxon.jar -s:temp2.xml -xsl:xslts/cmif/02_normalize.xsl -o:temp3.xml
           java -jar saxon.jar -s:temp3.xml -xsl:xslts/cmif/03_sort.xsl -o:temp4.xml
           java -jar saxon.jar -s:temp4.xml -xsl:xslts/cmif/04_doppelte-daten.xsl -o:temp5.xml
