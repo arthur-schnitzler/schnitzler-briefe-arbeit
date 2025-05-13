@@ -1,7 +1,7 @@
 name: TOCs neu generieren
 
 on:
-  workflow_dispatch:  # Nur manuell starten
+  workflow_dispatch:
 
 jobs:
   regenerate-tocs:
@@ -11,22 +11,13 @@ jobs:
       - name: 📦 Repository auschecken
         uses: actions/checkout@v4
 
-      - name: ☕ Java installieren (für Saxon)
-        uses: actions/setup-java@v3
-        with:
-          distribution: 'temurin'
-          java-version: '17'
-
-      - name: ⬇️ Saxon CLI herunterladen (mit Transform.class)
-        run: |
-          curl -L -o saxon.zip https://www.saxonica.com/download/java/SaxonHE11-6J.zip
-          unzip saxon.zip -d saxon
-
-      - name: 🛠 XSLT ausführen
+      - name: 🛠 XSLT ausführen mit Docker (Saxon HE)
         run: |
           mkdir -p tocs
-          java -cp saxon/saxon-he-11.6/saxon-he-11.6.jar net.sf.saxon.Transform \
-            -xsl:xslts/toc/correspondences/01_create-correspondence-tocs.xsl \
+          docker run --rm \
+            -v ${{ github.workspace }}:/data \
+            ghcr.io/saxonica/saxon-he:11.6 \
+            -xsl:/data/xslts/toc/correspondences/01_create-correspondence-tocs.xsl \
             -it:main
 
       - name: 📝 Änderungen committen (wenn vorhanden)
