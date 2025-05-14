@@ -16,6 +16,12 @@
                             CMIF</title>
                         <editor>Martin Anton Müller<email>martin.anton.mueller@oeaw.ac.at</email>
                         </editor>
+                        
+                            <editor>Martin Anton Müller</editor>
+                            <editor>Gerd-Hermann Susen</editor>
+                            <editor>Laura Untner</editor>
+                            <editor>Selma Jahnke</editor>
+                        
                     </titleStmt>
                     <publicationStmt>
                         <publisher>

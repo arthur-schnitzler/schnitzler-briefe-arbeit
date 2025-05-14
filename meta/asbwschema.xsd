@@ -184,7 +184,7 @@
       <xs:complexType mixed="true">
          <xs:all minOccurs="1">
             <xs:element ref="tei:correspAction" minOccurs="1" maxOccurs="6"/>
-            <xs:element ref="tei:correspContext" minOccurs="0" maxOccurs="unbounded"/>
+            <xs:element ref="tei:correspContext" minOccurs="1" maxOccurs="1"/>
          </xs:all>
          <xs:assert
             test="not(descendant::tei:supplied) and descendant::tei:correspAction/tei:date/@n and not(descendant::tei:correspAction[not(position() = 1)]/tei:date/@n)"

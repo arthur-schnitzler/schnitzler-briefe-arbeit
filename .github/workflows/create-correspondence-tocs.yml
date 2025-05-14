@@ -1,0 +1,44 @@
+name: TOCs neu generieren
+
+on:
+  workflow_dispatch:
+
+jobs:
+  regenerate-tocs:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: 📦 Repository auschecken
+        uses: actions/checkout@v4
+
+      - name: ☕ Java installieren
+        uses: actions/setup-java@v3
+        with:
+          distribution: 'temurin'
+          java-version: '17'
+
+      - name: ⬇️ Saxon + XMLResolver JARs laden
+        run: |
+          mkdir saxon
+          curl -L -o saxon/saxon-he.jar https://repo1.maven.org/maven2/net/sf/saxon/Saxon-HE/11.6/Saxon-HE-11.6.jar
+          curl -L -o saxon/saxon-he-cli.jar https://repo1.maven.org/maven2/net/sf/saxon/Saxon-HE/11.6/Saxon-HE-11.6-cli.jar
+          curl -L -o saxon/xmlresolver.jar https://repo1.maven.org/maven2/org/xmlresolver/xmlresolver/4.5.0/xmlresolver-4.5.0.jar
+
+      - name: 🛠 TOCs generieren
+        run: |
+          mkdir -p tocs
+          java -cp "saxon/*" net.sf.saxon.Transform \
+                -s:xslts/toc-correspondences/create-correspondences-toc.xml \
+                -xsl:xslts/toc-correspondences/01_create-correspondence-tocs.xsl
+
+      - name: 📝 Änderungen committen (wenn vorhanden)
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add tocs/
+          if ! git diff --cached --quiet; then
+            git commit -m "🔄 TOCs aktualisiert (via GitHub Actions)"
+            git push
+          else
+            echo "Keine Änderungen – Commit wird übersprungen."
+          fi
