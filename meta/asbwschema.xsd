@@ -861,6 +861,7 @@
          <xs:assert test="not(descendant::tei:ref[normalize-space(.) != ''])"/>
          <xs:assert test="not(descendant::tei:note[preceding-sibling::*[1]=text()[1][not(normalize-space(.)='') and ends-with(., ' ')]])"/> <!-- keine Leerzeichen vor note -->
          <xs:assert test="not(descendant::tei:anchor[not(@type='label') and following-sibling::text()[1][not(normalize-space(.)='') and starts-with(., ' ')]])"/> <!-- keine Leerzeichen nach kommentar-anchor -->
+         <xs:assert test="(@type='image' and child::tei:p or child::tei:figure) or not(@type='image')"/>
       </xs:complexType>
    </xs:element>
    <xs:element name="lg">
@@ -919,6 +920,7 @@
             <xs:element minOccurs="0" ref="tei:salute" maxOccurs="1"/>
          </xs:choice>
          <xs:assert test="not(preceding-sibling::*[1])"/>
+         <xs:assert test="child::*[1]"/>
       </xs:complexType>
    </xs:element>
    <xs:element name="seg">
