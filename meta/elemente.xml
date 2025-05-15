@@ -1090,12 +1090,25 @@
                         <item><code>div[@type="writingSession" n="1"] </code></item>
                         <item><code>div[@type="image"] </code></item>
                     </list>
-                    <p><code>address</code> darf nur einmal vorkommen und muss an erster Stelle
-                        stehen. <code>writingSession</code>-Elemente kann es mehrere geben, diese
-                        sind dann durch den Zähler <code>@n</code> zu unterscheiden.
-                            <code>image</code> ist ein Erbe aus dem Vorprojekt Bahr/Schnitzler und
-                        eigentlich durch die Aufnahme der Faksimile-Namen in <code>pb/@facs</code>
-                        obsolet. </p>
+                    <p><code>div[@type="address"]</code> kommt maximal einmal vor und muss an erster Stelle
+                        stehen. Leider ist hier die TEI-Konformität nicht gegeben. Wir werden uns bemühen, eine
+                        den Richtlinien entsprechende Lösung herzustellen.</p>
+                    <p><code>writingSession</code>-Elemente kann es mehrere geben, diese
+                        sind dann durch den Zähler <code>@n</code> zu unterscheiden.</p>
+                    <p><code>image</code> erlaubt die Einbindung von Bildern in die Edition. Da aber ohnedies
+                        versucht wird, alle edierten Objekte durch Faksimiles abzubilden, wird hier nur in
+                        Ausnahmefällen ein tatsächliches Bild eingebunden. Ein solcher Ausnahmefall wäre
+                        etwa eine Zeichnung auf dem Briefblatt. Ansonsten finden sich Informationen über die
+                        Abbildungen in <code>pb/@facs</code>. 
+                        Die häufigste Verwendung von <code>div[@type="image"]</code>
+                        stellt die Bildbeschreibung einer Bildpostkarte dar. Im gewöhnlichen Fall wird dazu auf
+                        einen Text zurückgegriffen, der bereits auf der Postkarte gedruckt vorliegt. Besondere Aufmerksamkeit
+                        gilt der Regel, dass die Bildbeschreibung als Platzhalter für das Bild verstanden wird. Daraus
+                        leitet sich ab, dass es gleichgültig ist, ob sich die deskriptive Bildbeschreibung (»Schloss Schönbrunn«) tatsächlich
+                        auf der Bildseite befindet oder umseitig auf der Textseite. Das Element <code>pb</code> bekommt
+                        stets im Attribut <code>@facs</code> den Wert der Bildseite. 
+                    
+                    </p>
                     <div type="level3">
                         <head xml:id="div_address">div[@type="address"]</head>
                         <p>Enthält Absende- und Empfangsadresse, jeweils in einem Element
