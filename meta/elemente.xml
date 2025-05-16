@@ -375,14 +375,19 @@
                             ansonsten unbeschriebenen Umschlagseite befindet. Sofern die Seite im
                             Fließtext bereits vorkommt, wird auf die Erwähnung in
                                 <code>physDesc</code> verzichtet. </p>
-                        <p>Innerhalb eines Abschnitts <code>&lt;div&gt;</code> sollten alle 
-                            <code>@facs</code> vorkommen, die für diesen Abschnitt relevante Inhalte haben. An einem
-                            Beispiel erklärt: Eine Postkarte besteht aus dem Faksimile bildseite.jpg und textseite.jpg.  Wenn sich
-                            auf der Bildseite auch noch Text befindet, muss  <code>&lt;pb facs="bildseite"&gt;</code><space unit="chars" quantity="1"/>
-                            im Element <code>&lt;div type="writingSession"&gt;</code> stehen, es genügt nicht, wenn es
-                            in <code>&lt;div type="image"&gt;</code> steht. 
-                           
-                        </p>
+                        <p>Der Seitenbeginn wird im ersten Absatzbildenden Element
+                                (<code>&lt;p&gt;</code>, <code>&lt;dateline&gt;</code>,
+                                <code>&lt;closer&gt;</code>, <code>&lt;seg&gt;</code>) markiert –
+                            und ohne Leerraum zum folgenden Text (»Wort
+                            <code>&lt;pb/&gt;</code>Text«). </p>
+                        <p>Innerhalb eines Abschnitts <code>&lt;div&gt;</code> sollten alle
+                                <code>@facs</code> vorkommen, die für diesen Abschnitt relevante
+                            Inhalte haben. An einem Beispiel erklärt: Eine Postkarte besteht aus dem
+                            Faksimile bildseite.jpg und textseite.jpg. Wenn sich auf der Bildseite
+                            auch noch Text befindet, muss <code>&lt;pb
+                                facs="bildseite"&gt;</code><space unit="chars" quantity="1"/> im
+                            Element <code>&lt;div type="writingSession"&gt;</code> stehen, es genügt
+                            nicht, wenn es in <code>&lt;div type="image"&gt;</code> steht. </p>
                     </div>
                     <div type="level3">
                         <head xml:id="rs">rs</head>
@@ -987,6 +992,34 @@
                             </list>
                             <p>Die Angabe erfolgt im ISO-Format (»1862-05-15«). Auf diesen Wert wird
                                 von verschiedensten Stellen zugegriffen. </p>
+                            <p>Sowohl die Datums-, wie auch die Ortsangaben werden häufig ermittelt
+                                und sind nicht unmittelbar aus dem vorliegenden Korrespondenzstück
+                                ableitbar. Dafür wird das Attribut <code>@evidence</code> verwendet,
+                                das die erlaubten Werte: »internal«, »external«, »conjecture« hat.
+                                Der Wert »internal« kommt in der Praxis nicht vor, er ist eigentlich
+                                implizit dadurch gesetzt, dass kein Attribut <code>@evidence</code>
+                                verwendet wird. Ein Wert »external« ist zu setzen, wenn er aus anderen
+                                Quellen (dem Antwortschreiben, dem Tagebuch, …) ermittelbar ist.
+                                Schließlich wird »conjecture« eingesetzt, wenn eine naheliegende
+                                ›Logik‹ angewandt werden kann. Beispielsweise würde jemand, der
+                                beschließt, mit Schnitzler Kontakt aufnehmen, seinen Brief mit
+                                weitgehender Sicherheit nach Wien schicken, weil er ja von dessen
+                                Reisen und jeweiligen Aufenthaltsorten keine Ahnung haben kann.
+                                Folglich könnte man <code>evidence="conjecture"</code> setzen.
+                                Begründungen und Quellen, wie es zu einer Schlussfolgerung kam,
+                                werden nicht vermerkt.</p>
+                            <p>Es wird versucht, auch einen Empfangszeitraum für jedes
+                                Korrespondenzstück zu ermitteln. Wenn es innerhalb des gleichen
+                                Ortes versandt wird, ist naheliegend, dass es am gleichen Tag oder
+                                innerhalb der darauffolgenden Woche am Ziel angekommen ist. Wenn es
+                                zwischen zwei Orten in Europa geschickt wurde, ist eine Zustellung
+                                frühestens am Folgetag wahrscheinlich, der Zeitraum wird, je
+                                nachdem, wieder mit einer Woche bis zehn Tage angenommen. Die
+                                Konstruktion dieses Elements wird natürlich auch im Textinhalt
+                                selbst durch Fragezeichen markiert, beispielsweise: »&lt;code&gt;
+                                &lt;date evidence="conjecture" notBefore="1903-08-29"
+                                notAfter="1903-09-04"&gt;[29. 8. 1903 –
+                                4. 9. 1903?]&lt;/date&gt;&lt;/code&gt;« </p>
                             <div type="level5">
                                 <head xml:id="correspaction_date_n">correspAction/date/@n</head>
                                 <p>Weiters hat <code>date/@type="sent"</code> ein zusätzliches
