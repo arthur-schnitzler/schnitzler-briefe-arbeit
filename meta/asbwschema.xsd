@@ -827,6 +827,7 @@
             <xs:element maxOccurs="unbounded" minOccurs="1" ref="tei:div"/>
          </xs:sequence>
          <xs:assert test="not(descendant::tei:date/@evidence)"/>
+         <xs:assert test="not(child::tei:div[@n=1][2])"/>
       </xs:complexType>
    </xs:element>
    <xs:element name="div">
@@ -862,6 +863,8 @@
          <xs:assert test="not(descendant::tei:note[preceding-sibling::*[1]=text()[1][not(normalize-space(.)='') and ends-with(., ' ')]])"/> <!-- keine Leerzeichen vor note -->
          <xs:assert test="not(descendant::tei:anchor[not(@type='label') and following-sibling::text()[1][not(normalize-space(.)='') and starts-with(., ' ')]])"/> <!-- keine Leerzeichen nach kommentar-anchor -->
          <xs:assert test="(@type='image' and child::tei:p or child::tei:figure) or not(@type='image')"/>
+         <xs:assert test="(@type='address' and descendant::tei:pb[1]) or not(@type='address')"/>
+         <xs:assert test="(@n=1 and descendant::tei:pb[1]) or not(@n=1)"/>
       </xs:complexType>
    </xs:element>
    <xs:element name="lg">
