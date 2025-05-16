@@ -1464,6 +1464,8 @@
          <xs:assert test="child::* or text()[normalize-space(.) != '']"/>
          <xs:assert test="not(contains(., '&amp;'))"/>
          <xs:assert test="child::tei:salute[not(@*)] or not(child::tei:salute)"/>
+         <xs:assert test="not(child::tei:salute/tei:pb)"/>
+         <xs:assert test="not(ends-with(child::tei:salute/text()[last()], ' ')) or not(child::tei:salute) or (normalize-space(child::tei:salute/text()[last()])='')"/>
       </xs:complexType>
    </xs:element>
    <xs:element name="salute">
