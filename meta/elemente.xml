@@ -442,7 +442,16 @@
                             rechtsbündig in die selbe Zeile zu stellen. Der Aufbau sieht so aus:
                                 <code>&lt;p&gt;&lt;seg rend="left"&gt;Linksbündiger Text&lt;/seg&gt;
                                 &lt;seg rend="right"&gt;Rechtsbündiger Text&lt;/seg&gt;&lt;/p&gt;
-                            </code></p>
+                            </code>. (Innerhalb von <code>opener</code> wird <code>seg</code> auch
+                            für die Auszeichnung von Briefköpfen und Textinhalten verwendet, siehe
+                            dort.)</p>
+                    </div>
+                    <div type="level3">
+                        <head xml:id="space">space</head>
+                        <p>Nur behutsam sollten Leerzeilen eingefügt werden – etwa zum Absetzen von
+                            unterschiedlichen Textteilen voneinander. Dafür wird das Element
+                                <code>&lt;space dim="vertical" unit="line" quantity="1"/&gt;</code>
+                            eingesetzt. </p>
                     </div>
                     <div type="level3">
                         <head xml:id="subst">subst</head>
@@ -998,14 +1007,14 @@
                                 das die erlaubten Werte: »internal«, »external«, »conjecture« hat.
                                 Der Wert »internal« kommt in der Praxis nicht vor, er ist eigentlich
                                 implizit dadurch gesetzt, dass kein Attribut <code>@evidence</code>
-                                verwendet wird. Ein Wert »external« ist zu setzen, wenn er aus anderen
-                                Quellen (dem Antwortschreiben, dem Tagebuch, …) ermittelbar ist.
-                                Schließlich wird »conjecture« eingesetzt, wenn eine naheliegende
-                                ›Logik‹ angewandt werden kann. Beispielsweise würde jemand, der
-                                beschließt, mit Schnitzler Kontakt aufnehmen, seinen Brief mit
-                                weitgehender Sicherheit nach Wien schicken, weil er ja von dessen
-                                Reisen und jeweiligen Aufenthaltsorten keine Ahnung haben kann.
-                                Folglich könnte man <code>evidence="conjecture"</code> setzen.
+                                verwendet wird. Ein Wert »external« ist zu setzen, wenn er aus
+                                anderen Quellen (dem Antwortschreiben, dem Tagebuch, …) ermittelbar
+                                ist. Schließlich wird »conjecture« eingesetzt, wenn eine
+                                naheliegende ›Logik‹ angewandt werden kann. Beispielsweise würde
+                                jemand, der beschließt, mit Schnitzler Kontakt aufnehmen, seinen
+                                Brief mit weitgehender Sicherheit nach Wien schicken, weil er ja von
+                                dessen Reisen und jeweiligen Aufenthaltsorten keine Ahnung haben
+                                kann. Folglich könnte man <code>evidence="conjecture"</code> setzen.
                                 Begründungen und Quellen, wie es zu einer Schlussfolgerung kam,
                                 werden nicht vermerkt.</p>
                             <p>Es wird versucht, auch einen Empfangszeitraum für jedes
@@ -1199,13 +1208,30 @@
                                 sein: Briefkopf, Datumszeile, abgesetzte Begrüßungsformel.</p>
                             <p>Folgende Kind-Elemente sind zulässig: </p>
                             <list>
-                                <item><code>p</code>
-                                </item>
-                                <item><code>salute</code>
+                                <item><code>seg</code>
                                 </item>
                                 <item><code>dateline</code>
                                 </item>
+                                <item><code>salute</code>
+                                </item>
                             </list>
+                            <div type="level5">
+                                <head xml:id="segT">seg</head>
+                                <p>Das dient zur Auszeichnung von Textblöcken innerhalb von
+                                        <code>opener</code>. Der häufigste Fall ist ein gedruckter
+                                    Briefkopf, der zusätzlich noch mit dem Attribut
+                                        <code>@type='letterhead'</code> gekennzeichnet wird. Beide
+                                    Varianten, nämlich ein über mehrere Zeilen reichendes
+                                        <code>seg</code>-Element, das mit <code>&lt;lb/&gt;</code>
+                                    umbrochen wird, sowie die mehrfache Reihung von
+                                    <code>seg</code>-Elementen hintereinander sind erlaubt. Während
+                                    der Briefkopf für gewöhnlich gedruckt ist, werden auch kleine
+                                    handschriftliche Ergänzungen innerhalb eines formularhaften
+                                    Teils – zumeist Datumsangaben – zum Briefkopf gezählt. Es ist
+                                    also im Detail nicht so, dass unter
+                                        <code>@type='letterhead'</code> nur vorgedruckter Text
+                                    steht.</p>
+                            </div>
                         </div>
                         <div type="level4">
                             <head xml:id="closer">closer</head>

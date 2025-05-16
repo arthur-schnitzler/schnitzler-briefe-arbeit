@@ -924,7 +924,6 @@
          </xs:choice>
          <xs:assert test="not(preceding-sibling::*[1]) or (not(preceding-sibling::*[2]) and preceding-sibling::tei:space[@dim='vertical'])"/>
          <xs:assert test="child::*[1]"/>
-         <xs:assert test="every $s in tei:seg satisfies $s[@type = 'letter-head']"/>
       </xs:complexType>
    </xs:element>
    <xs:element name="seg">
@@ -959,13 +958,14 @@
                   <xs:enumeration value="right"/>
                   <xs:enumeration value="left"/>
                   <xs:enumeration value="center"/>
+                  <xs:enumeration value="inline"/>
                </xs:restriction>
             </xs:simpleType>
          </xs:attribute>
          <xs:attribute name="type" use="optional">
             <xs:simpleType>
                <xs:restriction base="xs:NCName">
-                  <xs:enumeration value="letter-head"/>
+                  <xs:enumeration value="letterhead"/>
                </xs:restriction>
             </xs:simpleType>
          </xs:attribute>
@@ -1055,6 +1055,7 @@
             <xs:element minOccurs="0" maxOccurs="unbounded" ref="tei:lg"/>
             <xs:element minOccurs="0" ref="tei:frame" maxOccurs="unbounded"/>
             <xs:element minOccurs="0" ref="tei:table" maxOccurs="unbounded"/>
+            <xs:element minOccurs="0" ref="tei:space" maxOccurs="unbounded"/>
             <xs:element ref="tei:dateline" maxOccurs="unbounded" minOccurs="0"/>
          </xs:choice>
       </xs:complexType>
