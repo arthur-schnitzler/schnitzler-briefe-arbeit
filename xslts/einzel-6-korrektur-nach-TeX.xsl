@@ -3285,14 +3285,14 @@
          </xsl:when>
       </xsl:choose>
    </xsl:template>
-   <xsl:template match="seg">
+   <xsl:template match="*:seg[parent::*:seg]">
       <xsl:apply-templates/>
       <xsl:if test="@rend = 'left'">
          <xsl:text>\hfill </xsl:text>
       </xsl:if>
    </xsl:template>
    <xsl:template
-      match="p[ancestor::body and not(ancestor::TEI[starts-with(@id, 'E')]) and not(child::space[@dim] and not(child::*[2]) and empty(text())) and not(ancestor::div[@type = 'biographical']) and not(parent::note[@type = 'footnote'])] | closer | dateline">
+      match="p[ancestor::body and not(ancestor::TEI[starts-with(@id, 'E')]) and not(child::space[@dim] and not(child::*[2]) and empty(text())) and not(ancestor::div[@type = 'biographical']) and not(parent::note[@type = 'footnote'])] | closer | dateline | seg[not(parent::seg)]">
       <!--     <xsl:if test="self::closer">\leftskip=1em{}</xsl:if>
 -->
       <xsl:if test="self::p[@rend = 'inline']">
@@ -3989,7 +3989,7 @@
       <xsl:text>}\noindent{}</xsl:text>
    </xsl:template>
    <xsl:template
-      match="div[@type = 'writingSession' and not(ancestor::*[self::text[@type = 'dedication']])]">
+      match="div[(@type = 'writingSession' or @type='image') and not(ancestor::*[self::text[@type = 'dedication']])]">
       <xsl:variable name="language"
          select="substring(ancestor::TEI//profileDesc/langUsage/language/@ident, 1, 2)"/>
       <xsl:choose>
@@ -4025,7 +4025,7 @@
       <xsl:text>\end{minipage}}</xsl:text>
    </xsl:template>
    <xsl:template match="div[@type = 'image']">
-      <xsl:apply-templates select="figure"/>
+      <xsl:apply-templates/>
    </xsl:template>
    <xsl:template match="address">
       <xsl:apply-templates/>
