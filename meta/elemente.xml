@@ -1143,26 +1143,6 @@
                         uns bemühen, eine den Richtlinien entsprechende Lösung herzustellen.</p>
                     <p><code>writingSession</code>-Elemente kann es mehrere geben, diese sind dann
                         durch den Zähler <code>@n</code> zu unterscheiden.</p>
-                    <p><code>image</code> erlaubt die Einbindung von Bildern in die Edition. Da aber
-                        ohnedies versucht wird, alle edierten Objekte durch Faksimiles abzubilden,
-                        wird hier nur in Ausnahmefällen ein tatsächliches Bild eingebunden. Ein
-                        solcher Ausnahmefall wäre etwa eine Zeichnung auf dem Briefblatt. Ansonsten
-                        finden sich Informationen über die Abbildungen in <code>pb/@facs</code>. Die
-                        häufigste Verwendung von <code>div[@type="image"]</code> stellt die
-                        Bildbeschreibung einer Bildpostkarte dar. Im gewöhnlichen Fall wird dazu auf
-                        einen Text zurückgegriffen, der bereits auf der Postkarte gedruckt vorliegt.
-                        Ein solcher Fall wird mit <code>&lt;hi rend="pre-print"/&gt;</code> in einem
-                        Absatz <code>&lt;p&gt; … &lt;/p&gt;</code> ausgezeichnet. Sollte die
-                        Bildbeschreibung mehr als einmal auf der Karte gedruckt sein, wird sie
-                        trotzdem nur einmal aufgenommen. Sollte keine vorgedruckte Bildbeschreibung
-                        vorhanden sein, wird im Absatzelement ein möglichst knapper deskriptiver
-                        Text mittels <code>&lt;supplied type="image-description"/&gt;</code>
-                        ergänzt. Besondere Aufmerksamkeit gilt der Regel, dass die Bildbeschreibung
-                        als Platzhalter für das Bild verstanden wird. Daraus leitet sich ab, dass es
-                        gleichgültig ist, ob sich die deskriptive Bildbeschreibung (»Schloss
-                        Schönbrunn«) tatsächlich auf der Bildseite befindet oder umseitig auf der
-                        Textseite. Das Element <code>pb</code> bekommt stets im Attribut
-                            <code>@facs</code> den Wert der Bildseite. </p>
                     <div type="level3">
                         <head xml:id="div_address">div[@type="address"]</head>
                         <p>Enthält Absende- und Empfangsadresse, jeweils in einem Element
@@ -1178,6 +1158,31 @@
                                 <code>hi[@rend="latintype"]</code>, wenn Teile der Adressierung in
                             Lateinschrift sind. Wenn der ganze Text in Lateinschrift ist, ist das
                             hingegen in <code>handNote</code> vermerkt. </p>
+                    </div>
+                    <div type="level3">
+                        <head xml:id="div_figure">div[@type="image"]</head>
+                        <p>Visuelles Material, das in die Korrespondenzen eingefügt ist, wird für
+                            gewöhnlich durch die Faksimiles ausreichend visualisiert und es genügt
+                            im Normalfall, eine textuelle Beschreibung statt einer separaten
+                            Abbildung zu erfassen. Ein solcher Ausnahmefall wäre etwa eine Zeichnung
+                            auf dem Briefblatt. Ansonsten finden sich Informationen über die
+                            Abbildungen in <code>pb/@facs</code>. Die häufigste Verwendung von
+                                <code>div[@type="image"]</code> stellt die Bildbeschreibung einer
+                            Bildpostkarte dar. Im gewöhnlichen Fall wird dazu auf einen Text
+                            zurückgegriffen, der bereits auf der Postkarte gedruckt vorliegt. Ein
+                            solcher Fall wird mit <code>&lt;hi rend="pre-print"/&gt;</code> in einem
+                            Absatz <code>&lt;p&gt; … &lt;/p&gt;</code> ausgezeichnet. Sollte die
+                            Bildbeschreibung mehr als einmal auf der Karte gedruckt sein, wird sie
+                            trotzdem nur einmal aufgenommen. Sollte keine vorgedruckte
+                            Bildbeschreibung vorhanden sein, wird im Absatzelement ein möglichst
+                            knapper deskriptiver Text mittels <code>&lt;supplied
+                                type="image-description"/&gt;</code> ergänzt. Besondere
+                            Aufmerksamkeit gilt der Regel, dass die Bildbeschreibung als Platzhalter
+                            für das Bild verstanden wird. Daraus leitet sich ab, dass es
+                            gleichgültig ist, ob sich die deskriptive Bildbeschreibung (»Schloss
+                            Schönbrunn«) tatsächlich auf der Bildseite befindet oder umseitig auf
+                            der Textseite. Das Element <code>pb</code> bekommt stets im Attribut
+                                <code>@facs</code> den Wert der Bildseite. </p>
                     </div>
                     <div type="level3">
                         <head xml:id="div_writingsession">div[@type="writingSession" @n="1"]</head>
