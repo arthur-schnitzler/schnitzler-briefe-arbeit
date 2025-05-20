@@ -48,7 +48,7 @@ entstehen Duplikate! -->
                 <xsl:variable name="partner" as="node()">
                     <xsl:choose>
                         <xsl:when
-                            test="tei:correspAction[@type = 'sent']/tei:persName/@ref = '#pmb2121' or tei:correspAction[@type = 'sent']/tei:persName/@ref = '#pmb2173'">
+                            test="tei:correspAction[@type = 'sent']/tei:persName/@ref = '#pmb2121' or tei:correspAction[@type = 'sent']/tei:persName/@ref = '#pmb2173' or tei:correspAction[@type = 'sent']/tei:persName/@ref = '#pmb12695'">
                             <xsl:copy-of select="tei:correspAction[@type = 'received']"/>
                         </xsl:when>
                         <xsl:otherwise>
