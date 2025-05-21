@@ -5,7 +5,7 @@
     
     <xsl:param name="dateiname" select="substring-before(tokenize(document-uri(/), '/')[last()], '.xml')" as="xs:string"/>
     
-   <xsl:template match="tei:pb/@facs[contains(.,' HS.')]">
+   <xsl:template match="tei:pb/@facs[contains(.,' ')]">
        <xsl:attribute name="facs">
            <xsl:value-of select="substring-after(., ' ')"/>
        </xsl:attribute>
