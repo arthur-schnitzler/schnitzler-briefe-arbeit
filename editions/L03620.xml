@@ -92,6 +92,28 @@
                         <handDesc>
                            <handNote medium="schwarze-tinte" style="deutsche-kurrent" corresp="#pmb7218"/>
                         </handDesc>
+                        <additions>
+                           <incident type="postal">
+                              <desc>
+                                 <stamp n="1">
+                                    <placeName ref="#pmb168">Berl<supplied>lin</supplied>
+                                       10</placeName>
+                                    <date when="1900-09-08">8. 9. 00</date>
+                                    <time>8–9</time>
+                                 </stamp>
+                              </desc>
+                           </incident>
+                           <incident type="postal">
+                              <desc>
+                                 <stamp n="2">
+                                    <placeName ref="#pmb59">Wien 9/3</placeName>
+                                    <date when="1900-09-10">10. 9. 00</date>
+                                    <time>8.V</time>
+                                    <addSpan>Bestellt</addSpan>
+                                 </stamp>
+                              </desc>
+                           </incident>
+                        </additions>
                      </physDesc>
                   </msDesc>
                </witness>
@@ -110,9 +132,8 @@
             </correspAction>
             <correspAction type="received">
                <persName ref="#pmb2121">Schnitzler, Arthur</persName>
-               <date evidence="conjecture" notBefore="1900-09-09" notAfter="1900-09-13">[9. 9. 1900
-                  – 13. 9. 1900?]</date>
-               <placeName ref="#pmb50" evidence="conjecture">Wien</placeName>
+               <date when="1900-09-10">10. 9. 1900</date>
+               <placeName ref="#pmb50">Wien</placeName>
             </correspAction>
             <correspContext>
                <ref type="belongsToCorrespondence" target="correspondence_7218">Franzos, Karl Emil</ref>
@@ -125,9 +146,11 @@
             </correspContext>
          </correspDesc>
       </profileDesc>
-      <revisionDesc status="proposed">
+      <revisionDesc status="candidate">
          <change who="MAM" when="2025-05-13">Export aus Transkribus</change>
          <change when="2025-05-13" who="SJ">Durchsicht</change>
+         <change who="MAM" when="2025-05-26">Durchsicht</change>
+         <change who="MAM" when="2025-05-26">Index check</change>
       </revisionDesc>
    </teiHeader>
    <facsimile>
@@ -144,8 +167,9 @@
                </addrLine>
                <addrLine>
                   <rs type="place" ref="#pmb59">Wien IX</rs>
-                  <space unit="chars" quantity="1"/>
-                  <rs type="place" ref="#pmb168934">Frankgasse 1</rs>.</addrLine>
+               </addrLine>
+               <addrLine>
+                  <rs type="place" ref="#pmb168934">Frankgasse 1</rs>.</addrLine>
             </address>
          </div>
          <div type="writingSession" n="1">
@@ -157,20 +181,30 @@
                </seg>
                <dateline rend="right">
                   <hi rend="pre-print">
-                     <rs type="place" ref="#pmb56710">Berlin W. 10</rs>,</hi>
+                     <hi rend="bold">
+                        <hi rend="italics">
+                           <rs type="place" ref="#pmb56710">Berlin W. 10</rs>
+                        </hi>
+                     </hi>,</hi>
                   <space unit="chars" quantity="1"/>
-                  <date>8. IX <hi rend="pre-print">1<del rend="strikethrough">8</del>9</hi>00</date>
+                  <date>
+                     <subst>
+                        <del rend="overwritten">9</del>
+                        <add place="inline">8</add>
+                     </subst>. IX <hi rend="pre-print">1<del rend="strikethrough">8</del>9</hi>00</date>
                </dateline>
                <seg rend="right" type="letterhead">
                   <hi rend="pre-print">
-                     <rs type="place" ref="#pmb293081">Friedrich Wilhelm-Strasse 6</rs>.</hi>
+                     <hi rend="italics">
+                        <rs type="place" ref="#pmb293081">Friedrich Wilhelm-Strasse 6</rs>
+                     </hi>.</hi>
                </seg>
                <salute>Verehrter Herr Doctor!</salute>
             </opener>
             <p>Es thut mir ſehr leid, daß zunächſt nichts von Ihnen zu haben ist, doch hoffe ich auf
                Ihre freundliche Zuſage, beim Nächſten an mich zu denken. Wir kö<c rendition="#gemination-n"/>en Längeres und Kürzeres brauchen; haben Sie was, ſo
-               ſchicken Sie s und fügen Sie Ihren Honorar-Anspruch bei; wir ko<c rendition="#gemination-m"/>en da<c rendition="#gemination-n"/> schon zu einem
-               Gehalt etc<supplied>.</supplied> Am liebſten brächte ich ein Drama von Ihnen; da
+               ſchicken Sies und fügen Sie Ihren Honorar-Anspruch bei; wir ko<c rendition="#gemination-m"/>en da<c rendition="#gemination-n"/> schon zu einem
+               Gehalt et<unclear>c</unclear>. Am liebſten brächte ich ein Drama von Ihnen; da
                Ihnen dadurch weder die Bühnen-Tantième noch das Honorar der Buchgausgabe irgend
                tangirt wär, ſo iſt dies vielleicht auch Ihnen das Genehmſte!</p>
             <closer>Mit beſten Empfehlungen Ihr ſehr ergebner<lb/>
@@ -179,8 +213,7 @@
                </signed>
             </closer>
             <postscript>
-               <p>
-                  <hi rend="latintype">Herrn Dr. A. Schnitzler, <rs type="place" ref="#pmb59">Wien
+               <p>Herrn <hi rend="latintype">Dr. A. Schnitzler, <rs type="place" ref="#pmb59">Wien
                         IX.</rs>
                      <rs type="place" ref="#pmb168934">Frankgasse 1</rs>.</hi>
                </p>
