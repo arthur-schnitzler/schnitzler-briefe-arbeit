@@ -5492,7 +5492,7 @@
          </xsl:choose>
          <xsl:text>A.&#8239;S.: \emph{»Das Zeitlose ist von kürzester Dauer«}, </xsl:text>
       </xsl:if>
-      <xsl:value-of select="normalize-space(document(concat('https://raw.githubusercontent.com/arthur-schnitzler/schnitzler-interviews-static/main/data/editions/', replace(@target, '.html', ''), '.xml'))/descendant::tei:titleStmt/tei:title[@level='a'])"/>
+      <xsl:value-of select="normalize-space(document(concat('https://raw.githubusercontent.com/arthur-schnitzler/schnitzler-interviews-data/main/data/editions/', replace(@target, '.html', ''), '.xml'))/descendant::tei:titleStmt/tei:title[@level='a'])"/>
    </xsl:template>
    <xsl:template match="ref[@type = 'url']">
       <xsl:text>\uline{\url{</xsl:text>
