@@ -3977,6 +3977,7 @@
    </xsl:template>
    <xsl:template match="opener">
       <xsl:apply-templates/>
+      <xsl:text>\vspace{0.5em}</xsl:text>
    </xsl:template>
    <xsl:template match="encodingDesc/refsDecl/ab"/>
    <!-- Titel -->
@@ -4065,7 +4066,13 @@
          <xsl:when test="$language = 'dk'">
             <xsl:text>\selectlanguage{danish}</xsl:text>
          </xsl:when>
+         <xsl:when test="$language = 'jp'">
+            <xsl:text>\selectlanguage{japanese}</xsl:text>
+         </xsl:when>
       </xsl:choose>
+      <xsl:if test="preceding-sibling::*[1]/name()[.='div']">
+         <xsl:text>\vspace{1em}</xsl:text>
+      </xsl:if>
       <xsl:apply-templates/>
       <xsl:if test="not($language = 'de') or @xml:lang = 'de-AT'">
          <xsl:text>\selectlanguage{ngerman}</xsl:text>
