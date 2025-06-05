@@ -1873,6 +1873,9 @@
       </xsl:choose>
    </xsl:template>
    <xsl:template match="*:measure[@unit='zeichenanzahl']">
+      <xsl:if test="not(parent::*:extent/*:measure[2])">
+         <xsl:text>, </xsl:text>
+      </xsl:if>
       <xsl:value-of select="@quantity"/>
       <xsl:text>&#160;Zeichen</xsl:text>
    </xsl:template>
