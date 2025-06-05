@@ -2931,7 +2931,7 @@
       <xsl:text>}</xsl:text>
    </xsl:template>
    <!-- eigentlicher Fließtext root -->
-   <xsl:template match="body">
+   <xsl:template match="body[not(ancestor::TEI[starts-with(@id, 'E_')])]">
       <xsl:variable name="correspAction-date" as="node()">
          <xsl:choose>
             <xsl:when
@@ -3144,7 +3144,7 @@
             <xsl:text>\toendnotes[C]{\smallbreak}</xsl:text>
          </xsl:when>
       </xsl:choose>
-      <xsl:apply-templates/>
+      <xsl:apply-templates select="child::*:div|child::*:image"/>
       <xsl:text>\endnumbering</xsl:text>
       <xsl:if
          test="starts-with(ancestor::TEI/teiHeader/fileDesc/titleStmt/title[@level = 'a']/@ref, 'A0')">
@@ -3183,8 +3183,10 @@
             </xsl:otherwise>
          </xsl:choose>
       </xsl:if>
-      <xsl:apply-templates select="body"/>
    </xsl:template>
+   
+   
+   
    <!-- Das ist speziell für die Behandlung von Bildern, der eigentliche body für alles andere kommt danach -->
    <xsl:template match="image">
       <xsl:apply-templates/>
@@ -3928,6 +3930,7 @@
    </xsl:template>
    <xsl:template match="opener">
       <xsl:apply-templates/>
+      <xsl:text>\vspace{0.5em}</xsl:text>
    </xsl:template>
    <xsl:template match="encodingDesc/refsDecl/ab"/>
    <!-- Titel -->
@@ -4017,6 +4020,9 @@
             <xsl:text>\selectlanguage{japanese}</xsl:text>
          </xsl:when>
       </xsl:choose>
+      <xsl:if test="preceding-sibling::*[1]/name()[.='div']">
+         <xsl:text>\vspace{1em}</xsl:text>
+      </xsl:if>
       <xsl:apply-templates/>
       <xsl:if test="not($language = 'de') or @xml:lang = 'de-AT'">
          <xsl:text>\selectlanguage{ngerman}</xsl:text>
