@@ -267,10 +267,15 @@
     <!-- anchor -->
     <sch:pattern id="anchor-rules">
         <sch:rule context="tei:anchor">
+            <sch:let name="anchortype" value="@type"/> 
+            <sch:let name="anchorxmlid" value="@xml:id"/>
             <sch:assert
                 test="((@type = 'commentary' or @type = 'textConst') and matches(@xml:id, '^((T_|K_)(L\d{5}-\d+))$')) or not(@type = 'commentary' or @type = 'textConst')"
                 > anchor-Elemente vom Typ commentary oder textConst müssen eine xml:id mit Format
                 T_L00000-0 oder K_L00000-0 haben. </sch:assert>
+            <sch:assert test="(@type = 'commentary' or @type = 'textConst') and following-sibling::tei:note[@type=$anchortype]/@corresp=$anchorxmlid">
+                Jeder "anchor" vom @typ "commentary" oder "textConst" muss ein folgendes Element "note" haben, das die @xml:id des "anchors" im @corresp hat
+            </sch:assert>
         </sch:rule>
     </sch:pattern>
     <!-- normalNote -->
