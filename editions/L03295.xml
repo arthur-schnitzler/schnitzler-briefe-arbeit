@@ -1,8 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<?xml-model href="../meta/schnitzler-briefe-schematron.sch" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
 <TEI xmlns="http://www.tei-c.org/ns/1.0"
      xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-     xsi:schemaLocation="http://www.tei-c.org/ns/1.0 ../meta/schnitzler-briefe-schema.xsd"
+     xsi:schemaLocation="http://www.tei-c.org/ns/1.0 ../meta/asbwschema.xsd"
      xml:id="L03295"
      xml:base="https://id.acdh.oeaw.ac.at/schnitzler/schnitzler-briefe/editions">
    <teiHeader>
@@ -161,8 +160,8 @@
                <salute>Lieber Freund,</salute> ich war jetzt ein paar Tage in <rs type="place" ref="#pmb877">Unterach</rs>, wo die <rs type="person" ref="#pmb23918">Otti</rs>
                wohnt. Nun bin ich wieder hier, und plage mich mit der <anchor type="commentary" xml:id="K_L03295-1"/>
                <rs type="work" ref="#pmb167898">W<hi rend="superscript">r</hi> Allg Rundschau</rs>
-               <note type="commentary" xml:id="K_L03295-1h" corresp="K_L03295-1">
-                  <ref type="schnitzler-briefe" target="L03293" subtype="See"/>
+               <note type="commentary" xml:id="K_L03295-1h">
+                  <ref type="schnitzler-briefe" target="L03293" subtype="See"/>.
                </note>, die weder mir, noch dem D<hi rend="superscript">r</hi>
                <space unit="chars" quantity="1"/>
                <rs type="person" ref="#pmb25798">Szeps</rs> noch den Abonnenten Freude macht. Den
@@ -174,10 +173,11 @@
                <rs type="person" ref="#pmb28530" cert="low">Geiringer</rs> ist es nichts. Es ist ganz
                wirr und nicht einen Menschen, der für <rs type="person" ref="#pmb28530" cert="low">Geirin<pb facs="MS-SCHNITZLER-B-00089-A-00002-000-00037i-R-1"/>gers</rs> Ideen
                Geld verlieren möchte. Deshalb sein Plan mit <rs type="person" ref="#pmb10863">Beer-Hofmann</rs>
-               <note type="commentary" xml:id="K_L03295-2h" corresp="K_L03295-2">
-                  <rs type="person" ref="#pmb28530">Leopold Geiringer</rs>
-                  <rs type="person" ref="#pmb10863">Beer-Hofmann</rs>
-               </note>! Von mir verlangt
+               <note type="commentary" xml:id="K_L03295-2h">Eventuell ist der Schriftsteller und Dramaturg 
+                  <rs type="person" ref="#pmb28530">Leopold Geiringer</rs>gemeint. Womöglich sollte
+                  mit 
+                  <rs type="person" ref="#pmb10863">Beer-Hofmann</rs> ein Finanzier für ein neues Zeitschriftenprojekt
+                  gewonnen werden.</note>! Von mir verlangt
                er, ich solle ihm einen Capitalisten schaffen. Dann will er mir eine Redactionsstelle gegen – Gewinnstantheil –
                verleihen!!</p>
             <p>Ich arbeite wenig, denn die <rs type="work" subtype="implied" ref="#pmb143251 #pmb39950">Zeitung</rs> macht mir viel Kopfzerbrechen und auch
@@ -185,50 +185,25 @@
                wieder nach <rs type="place" ref="#pmb877">Unterach</rs>. Schreiben Sie mir aber
                   imm<unclear>er</unclear>hin nur hierher. Das <anchor type="commentary" xml:id="K_L03295-3"/>
                <rs type="work" ref="#pmb146069" subtype="implied">Feuilleton</rs> über <rs type="person" ref="#pmb11485">Goldmann</rs>
-               <note type="commentary" xml:id="K_L03295-3h" corresp="K_L03295-3">
-                  <rs type="work" ref="#pmb143251">Wiener
-                  Allgemeinen Montags-Zeitung</rs>
-                  <rs type="person" ref="#pmb11485">Goldmann</rs>
-                  <date when="1899-11">November</date>
-                  <date when="1899-12">Dezember 1899</date>
-                  <rs type="person" ref="#pmb11485">Goldmanns</rs>
-                  <rs type="work" ref="#pmb33346">Ein Sommer in
-                     China</rs>
-                  <rs type="person" ref="#pmb11485">Goldmann</rs>
-                  <quote>über</quote>
-                  <rs type="person" ref="#pmb11485">Goldmann</rs>
-                  <date when="1899-08-07">7. 8. 1899</date>
-                  <rs type="person" ref="#pmb4216">Dreyfus</rs>
-                  <rs type="person" ref="#pmb11485">Goldmann</rs>
-                  <rs type="work" subtype="implied" ref="#pmb143251">Blatt</rs>
-                  <rs type="place" subtype="implied" ref="#pmb166">fran</rs>
-                  <rs type="person" ref="#pmb11485">Goldmann</rs>
-                  <date when="1893">1893</date>
-                  <date when="1894">1894</date>
-                  <rs type="work" ref="#pmb36344">Frankfurter
-                     Zeitung</rs>
-                  <rs type="work" ref="#pmb118028">Neue
-                     französische Humoristen</rs>
-                  <ref type="schnitzler-briefe" target="L02784" subtype="see"/>
-               </note> erscheint in den nächsten Tagen. Ich
+               <note type="commentary" xml:id="K_L03295-3h">In der <rs type="work" ref="#pmb143251">Wiener
+                  Allgemeinen Montags-Zeitung</rs> erschien kein Feuilleton über <rs type="person" ref="#pmb11485">Goldmann</rs>. Im <date when="1899-11">November</date> und <date when="1899-12">Dezember 1899</date>
+                  sind zwei längere Auszüge aus <rs type="person" ref="#pmb11485">Goldmanns</rs> Reisebericht <rs type="work" ref="#pmb33346">Ein Sommer in
+                     China</rs> erschienen, aber diese dürften hier nicht gemeint sein. Mutmaßlich
+                  hat <rs type="person" ref="#pmb11485">Goldmann</rs> sich auf eine
+                  Vermittlungsposition beschränkt und das »<quote>über</quote>« ist als ›ein über
+                  Vermittlung von <rs type="person" ref="#pmb11485">Goldmann</rs> erhaltenes
+                  Feuilleton‹ zu lesen. Die Ausgabe vom <date when="1899-08-07">7. 8. 1899</date>
+                  behandelte etwa ausführlich den aktuellen Stand der <rs type="person" ref="#pmb4216">Dreyfus</rs>-Affäre, über die auch <rs type="person" ref="#pmb11485">Goldmann</rs> berichtet hat. Auch sind in dem <rs type="work" subtype="implied" ref="#pmb143251">Blatt</rs> in der kurzen Zeit seines
+                  Bestehens mehrere Texte von <rs type="place" subtype="implied" ref="#pmb166">fran</rs>zösischen Autoren erschienen, mit denen <rs type="person" ref="#pmb11485">Goldmann</rs> bereits <date when="1893">1893</date>/<date when="1894">1894</date> in der <rs type="work" ref="#pmb36344">Frankfurter
+                     Zeitung</rs> die Feuilletonreihe <rs type="work" ref="#pmb118028">Neue
+                     französische Humoristen</rs> bestritten hatte (<ref type="schnitzler-briefe" target="L02784" subtype="see"/>).</note> erscheint in den nächsten Tagen. Ich
                sende <pb facs="MS-SCHNITZLER-B-00089-A-00002-000-00037i-R-0"/>
                <rs type="work" ref="#pmb146069" subtype="implied">es</rs> Ihnen gleich.</p>
             <p>Auf Wiedersehen: hoffentlich bald. <anchor type="commentary" xml:id="K_L03295-4"/>Grüßen Sie <rs type="person" ref="#pmb13055">Wassermann</rs> und den emsigen <rs type="person" ref="#pmb10863">Richard</rs>
-               <note type="commentary" xml:id="K_L03295-4h" corresp="K_L03295-4">
-                  <rs type="person" ref="#pmb13055">Jakob Wassermann</rs>
-                  <rs type="person" ref="#pmb2121">Schnitzler</rs>
-                  <rs type="place" ref="#pmb909">Velden am Wörthersee</rs>
-                  <ref type="schnitzler-tagebuch" target="1899-07-28" subtype="date-only"/>
-                  <rs type="place" ref="#pmb40454">Villach</rs>
-                  <rs type="person" ref="#pmb10863">Richard Beer-Hofmann</rs>
-                  <rs type="place" ref="#pmb34824">Seeboden</rs>
-                  <rs type="person" ref="#pmb2121">Schnitzler</rs>
-                  <ref type="schnitzler-tagebuch" target="1899-08-05" subtype="date-only"/>
-                  <rs type="person" ref="#pmb2121">Schnitzler</rs>
-                  <rs type="person" ref="#pmb13055">Wassermann</rs>
-                  <rs type="person" ref="#pmb10863">Beer-Hofmann</rs>
-                  <rs type="place" ref="#pmb91350">Niederdorf</rs>
-               </note>. Frl. <rs type="person" ref="#pmb23918">Metzl</rs> grüßt
+               <note type="commentary" xml:id="K_L03295-4h">
+                  <rs type="person" ref="#pmb13055">Jakob Wassermann</rs> hielt sich gemeinsam mit
+                     <rs type="person" ref="#pmb2121">Schnitzler</rs> in <rs type="place" ref="#pmb909">Velden am Wörthersee</rs> auf. Am <ref type="schnitzler-tagebuch" target="1899-07-28" subtype="date-only"/> reisten sie weiter nach <rs type="place" ref="#pmb40454">Villach</rs>. <rs type="person" ref="#pmb10863">Richard Beer-Hofmann</rs> hielt sich im nahegelegenen <rs type="place" ref="#pmb34824">Seeboden</rs> auf und traf <rs type="person" ref="#pmb2121">Schnitzler</rs> in dieser Zeit ebenso. Am <ref type="schnitzler-tagebuch" target="1899-08-05" subtype="date-only"/> starteten <rs type="person" ref="#pmb2121">Schnitzler</rs>, <rs type="person" ref="#pmb13055">Wassermann</rs> und <rs type="person" ref="#pmb10863">Beer-Hofmann</rs> in <rs type="place" ref="#pmb91350">Niederdorf</rs> eine mehrtätige gemeinsame
+                  Wanderung.</note>. Frl. <rs type="person" ref="#pmb23918">Metzl</rs> grüßt
                Sie.</p>
             <closer>Herzlichst <lb/>Ihr <lb/>
                <signed>Salten</signed>
