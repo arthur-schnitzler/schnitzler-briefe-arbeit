@@ -281,12 +281,14 @@
     <!-- normalNote -->
     <sch:pattern id="normalNote-rules">
         <sch:rule context="tei:note[@type = 'commentary' or @type = 'textConst']">
+            <sch:let name="notetype" value="@type"/> 
+            <sch:let name="notecorresp" value="@corresp"/>
             <sch:assert
                 test="not(descendant::tei:note[@type = 'textConst' or @type = 'commentary'])">
                 commentary- oder textConst-Noten dürfen keine geschachtelten Noten dieses Typs
                 enthalten. </sch:assert>
-            <sch:assert test="matches(@xml:id, '^((T_|K_)(L\d{5}-\d+h))$')"> commentary- oder
-                textConst-Noten müssen xml:id wie T_L00000-0h oder K_L00000-0h besitzen.
+            <sch:assert test="(@type = 'commentary' or @type = 'textConst') and preceding-sibling::tei:anchor[@type=$notetype]/@xml:id=$notecorresp">
+                Jedes "note" vom @typ "commentary" oder "textConst" muss ein vorangehendes Element "anchor" haben, das eine zum Attribut @corresp passende @xml:id hat
             </sch:assert>
         </sch:rule>
         <sch:rule context="tei:note[@type = 'footnote']">
