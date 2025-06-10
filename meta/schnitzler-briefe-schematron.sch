@@ -304,8 +304,21 @@
                 > Referenzen in Notizen dürfen nur bestimmte subtype/type-Kombinationen haben.
             </sch:assert>
         </sch:rule>
+        
+        
+        
     </sch:pattern>
     
-    
+    <sch:pattern>
+        <sch:rule context="tei:pb">
+            <sch:assert test="following-sibling::node()[1][self::text() and normalize-space(.) = ''] and following-sibling::node()[2][self::*]
+                or
+                following-sibling::node()[1][self::text() and not(starts-with(., ' '))]">
+                Auf das Element &lt;pb/&gt; muss unmittelbar der Text kommen. Oder ein Element. 
+                Beispiele für Erlaubtes: &lt;pb/&gt;hier, &lt;pb/&gt; &lt;element/&gt;
+                Beispiel für Nicht-Erlaubtes: &lt;pb/&gt; hier
+            </sch:assert>
+        </sch:rule>
+    </sch:pattern>
     
 </sch:schema>
