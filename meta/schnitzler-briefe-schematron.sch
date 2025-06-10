@@ -270,11 +270,22 @@
             <sch:let name="anchortype" value="@type"/> 
             <sch:let name="anchorxmlid" value="@xml:id"/>
             <sch:assert
-                test="((@type = 'commentary' or @type = 'textConst') and matches(@xml:id, '^((T_|K_)(L\d{5}-\d+))$')) or not(@type = 'commentary' or @type = 'textConst')"
-                > anchor-Elemente vom Typ commentary oder textConst müssen eine xml:id mit Format
-                T_L00000-0 oder K_L00000-0 haben. </sch:assert>
+                test="(@type = 'commentary' and matches(@xml:id, '^((K_)(L\d{5}-\d+))$')) or not(@type = 'commentary')"
+                > anchor-Elemente vom Typ commentary müssen eine xml:id mit Format
+                K_L00000-0 haben. </sch:assert>
+            <sch:assert
+                test="(@type = 'textConst' and matches(@xml:id, '^((T_)(L\d{5}-\d+))$')) or not(@type = 'textConst')"
+                > anchor-Elemente vom Typ textConst müssen eine xml:id mit Format
+                T_L00000-0 haben. </sch:assert>
             <sch:assert test="((@type = 'commentary' or @type = 'textConst') and (following-sibling::tei:note[@type=$anchortype]/@corresp=$anchorxmlid)) or not((@type = 'commentary' or @type = 'textConst'))">
                 Jeder "anchor" vom @typ "commentary" oder "textConst" muss ein folgendes Element "note" haben, das die @xml:id des "anchors" im @corresp hat
+            </sch:assert>
+            <sch:assert test="following-sibling::node()[1][self::text() and normalize-space(.) = ''] and following-sibling::node()[2][self::*]
+                or
+                following-sibling::node()[1][self::text() and not(starts-with(., ' '))]">
+                Auf das Element &lt;anchor/&gt; muss unmittelbar der Text kommen. Oder ein Element. 
+                Beispiele für Erlaubtes: &lt;anchor/&gt;hier, &lt;anchor/&gt; &lt;element/&gt;
+                Beispiel für Nicht-Erlaubtes: &lt;anchor/&gt; hier
             </sch:assert>
         </sch:rule>
     </sch:pattern>
