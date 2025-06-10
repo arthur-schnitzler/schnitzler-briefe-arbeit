@@ -1,0 +1,2067 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns="http://www.tei-c.org/ns/1.0" xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+   xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:tei="http://www.tei-c.org/ns/1.0"
+   xmlns:vc="http://www.w3.org/2007/XMLSchema-versioning" elementFormDefault="qualified"
+   targetNamespace="http://www.tei-c.org/ns/1.0" vc:minVersion="1.1">
+   <xs:import namespace="http://www.w3.org/XML/1998/namespace"
+      schemaLocation="http://www.w3.org/2001/xml.xsd"/>
+   <!-- Schema der XML-Dateien für https://schnitzler-briefe.acdh.oeaw.ac.at/ 
+   -->
+   <xs:element name="TEI">
+      <xs:complexType mixed="true">
+         <xs:choice minOccurs="2" maxOccurs="unbounded">
+            <xs:element ref="tei:facsimile" maxOccurs="1" minOccurs="0"/>
+            <xs:element ref="tei:teiHeader" maxOccurs="1" minOccurs="1"/>
+            <xs:element ref="tei:text" maxOccurs="1" minOccurs="1"/>
+         </xs:choice>
+         <xs:attribute ref="xml:id" use="required"/>
+         <xs:attribute ref="xml:base" use="required"/>
+      </xs:complexType>
+      <xs:unique name="unique-xmlid">
+         <xs:selector xpath=".//*"/>
+         <xs:field xpath="@xml:id"/>
+      </xs:unique>
+   </xs:element>
+   <xs:element name="back">
+      <xs:complexType mixed="true">
+         <xs:choice minOccurs="0" maxOccurs="unbounded">
+            <xs:element ref="tei:listPerson" maxOccurs="1" minOccurs="0"/>
+            <xs:element ref="tei:listBibl" maxOccurs="1" minOccurs="0"/>
+            <xs:element ref="tei:listOrg" maxOccurs="1" minOccurs="0"/>
+            <xs:element ref="tei:listPlace" maxOccurs="1" minOccurs="0"/>
+         </xs:choice>
+         <xs:attribute ref="xml:id" use="optional"/>
+      </xs:complexType>
+   </xs:element>
+   <xs:element name="facsimile">
+      <xs:complexType>
+         <xs:sequence>
+            <xs:element maxOccurs="unbounded" ref="tei:graphic"/>
+         </xs:sequence>
+      </xs:complexType>
+   </xs:element>
+   <xs:element name="teiHeader">
+      <xs:complexType>
+         <xs:sequence>
+            <xs:element ref="tei:fileDesc"/>
+            <xs:element ref="tei:profileDesc"/>
+            <xs:element ref="tei:revisionDesc"/>
+         </xs:sequence>
+      </xs:complexType>
+   </xs:element>
+   <xs:element name="refsDecl">
+      <xs:complexType>
+         <xs:sequence>
+            <xs:element ref="tei:ab"/>
+         </xs:sequence>
+      </xs:complexType>
+   </xs:element>
+   <xs:element name="ab"/>
+   <xs:element name="ref">
+      <xs:complexType mixed="true">
+         <xs:attribute name="type" use="required">
+            <xs:simpleType>
+               <xs:restriction base="xs:string">
+                  <xs:enumeration value="schnitzler-tagebuch"/>
+                  <xs:enumeration value="schnitzler-briefe"/>
+                  <xs:enumeration value="schnitzler-interviews"/>
+                  <xs:enumeration value="schnitzler-lektueren"/>
+                  <xs:enumeration value="schnitzler-bahr"/>
+                  <xs:enumeration value="withinCorrespondence"/>
+                  <xs:enumeration value="withinCollection"/>
+                  <xs:enumeration value="belongsToCorrespondence"/>
+               </xs:restriction>
+            </xs:simpleType>
+         </xs:attribute>
+         <xs:attribute name="source" use="optional">
+            <xs:simpleType>
+               <xs:restriction base="xs:string"/>
+            </xs:simpleType>
+         </xs:attribute>
+         <xs:attribute name="subtype" use="optional">
+            <xs:simpleType>
+               <xs:restriction base="xs:NCName">
+                  <xs:enumeration value="previous_letter"/>
+                  <xs:enumeration value="next_letter"/>
+                  <xs:enumeration value="see"/>
+                  <xs:enumeration value="cf"/>
+                  <xs:enumeration value="Cf"/>
+                  <xs:enumeration value="See"/>
+                  <xs:enumeration value="date-only"/>
+               </xs:restriction>
+            </xs:simpleType>
+         </xs:attribute>
+         <xs:attribute name="target" use="required" xml:base="xs:string"/>
+      </xs:complexType>
+   </xs:element>
+   <xs:element name="fileDesc">
+      <xs:complexType>
+         <xs:sequence>
+            <xs:element ref="tei:titleStmt"/>
+            <xs:element ref="tei:editionStmt"/>
+            <xs:element ref="tei:publicationStmt"/>
+            <xs:element ref="tei:seriesStmt"/>
+            <xs:element ref="tei:sourceDesc"/>
+         </xs:sequence>
+      </xs:complexType>
+   </xs:element>
+   <xs:element name="titleStmt">
+      <xs:complexType>
+         <xs:sequence>
+            <xs:element maxOccurs="unbounded" ref="tei:title"/>
+            <xs:element maxOccurs="unbounded" ref="tei:author"/>
+            <xs:element ref="tei:editor"/>
+            <xs:element ref="tei:funder"/>
+         </xs:sequence>
+      </xs:complexType>
+   </xs:element>
+   <xs:element name="funder">
+      <xs:complexType>
+         <xs:sequence>
+            <xs:element ref="tei:name"/>
+            <xs:element ref="tei:address"/>
+         </xs:sequence>
+      </xs:complexType>
+   </xs:element>
+   <xs:element name="editionStmt">
+      <xs:complexType>
+         <xs:sequence>
+            <xs:element ref="tei:edition"/>
+            <xs:element ref="tei:respStmt"/>
+         </xs:sequence>
+      </xs:complexType>
+   </xs:element>
+   <xs:element name="edition" type="xs:NCName"/>
+   <xs:element name="publicationStmt">
+      <xs:complexType>
+         <xs:sequence>
+            <xs:element ref="tei:publisher"/>
+            <xs:element ref="tei:pubPlace" maxOccurs="unbounded" minOccurs="0"/>
+            <xs:element ref="tei:date" minOccurs="0" maxOccurs="unbounded"/>
+            <xs:element ref="tei:availability"/>
+            <xs:element ref="tei:idno" minOccurs="0" maxOccurs="1"/>
+         </xs:sequence>
+      </xs:complexType>
+   </xs:element>
+   <xs:element name="pubPlace" type="xs:string"/>
+   <xs:element name="licence">
+      <xs:complexType>
+         <xs:sequence>
+            <xs:element ref="tei:p" maxOccurs="unbounded" minOccurs="0"/>
+         </xs:sequence>
+         <xs:attribute name="target" use="required" type="xs:anyURI"/>
+      </xs:complexType>
+   </xs:element>
+   <xs:element name="availability">
+      <xs:complexType>
+         <xs:sequence>
+            <xs:element ref="tei:licence"/>
+         </xs:sequence>
+      </xs:complexType>
+   </xs:element>
+   <xs:element name="seriesStmt">
+      <xs:complexType>
+         <xs:sequence>
+            <xs:element ref="tei:p"/>
+         </xs:sequence>
+      </xs:complexType>
+   </xs:element>
+   <xs:element name="sourceDesc">
+      <xs:complexType>
+         <xs:sequence>
+            <xs:element ref="tei:listWit" maxOccurs="1" minOccurs="0"/>
+            <xs:element ref="tei:listBibl" minOccurs="0" maxOccurs="1"/>
+         </xs:sequence>
+      </xs:complexType>
+   </xs:element>
+   <xs:element name="correspDesc">
+      <xs:complexType mixed="true">
+         <xs:all minOccurs="1">
+            <xs:element ref="tei:correspAction" minOccurs="1" maxOccurs="6"/>
+            <xs:element ref="tei:correspContext" minOccurs="1" maxOccurs="1"/>
+         </xs:all>
+      </xs:complexType>
+   </xs:element>
+   <xs:element name="correspContext">
+      <xs:complexType>
+         <xs:choice>
+            <xs:element ref="tei:note" maxOccurs="unbounded" minOccurs="0"/>
+            <xs:element ref="tei:ref" minOccurs="0" maxOccurs="unbounded"/>
+            <xs:element ref="tei:p" maxOccurs="unbounded" minOccurs="0"/>
+         </xs:choice>
+      </xs:complexType>
+   </xs:element>
+   <xs:element name="correspAction">
+      <xs:complexType>
+         <xs:sequence>
+            <xs:element ref="tei:persName" minOccurs="0" maxOccurs="unbounded"/>
+            <xs:element ref="tei:date" minOccurs="0" maxOccurs="1"/>
+            <xs:element ref="tei:placeName" minOccurs="0" maxOccurs="1"/>
+         </xs:sequence>
+         <xs:attribute name="type" use="required">
+            <xs:simpleType>
+               <xs:restriction base="xs:string">
+                  <xs:enumeration value="sent"/>
+                  <xs:enumeration value="received"/>
+                  <xs:enumeration value="transmitted"/>
+                  <xs:enumeration value="redirected"/>
+                  <xs:enumeration value="forwarded"/>
+                  <xs:enumeration value="delivered"/>
+               </xs:restriction>
+            </xs:simpleType>
+         </xs:attribute>
+      </xs:complexType>
+   </xs:element>
+   <xs:element name="addressee">
+      <xs:complexType>
+         <xs:sequence>
+            <xs:element ref="tei:persName"/>
+         </xs:sequence>
+         <xs:attribute name="full" type="xs:NCName"/>
+      </xs:complexType>
+   </xs:element>
+   <xs:element name="context">
+      <xs:complexType/>
+   </xs:element>
+   <xs:element name="dateSender">
+      <xs:complexType>
+         <xs:sequence>
+            <xs:element ref="tei:date"/>
+         </xs:sequence>
+      </xs:complexType>
+   </xs:element>
+   <xs:element name="placeAddressee">
+      <xs:complexType mixed="true">
+         <xs:sequence>
+            <xs:element minOccurs="0" maxOccurs="unbounded" ref="tei:placeName"/>
+         </xs:sequence>
+         <xs:attribute name="ref" type="xs:string"/>
+      </xs:complexType>
+   </xs:element>
+   <xs:element name="placeSender">
+      <xs:complexType mixed="true">
+         <xs:sequence>
+            <xs:element minOccurs="0" maxOccurs="unbounded" ref="tei:placeName"/>
+         </xs:sequence>
+         <xs:attribute name="ref" type="xs:string"/>
+      </xs:complexType>
+   </xs:element>
+   <xs:element name="sender">
+      <xs:complexType>
+         <xs:sequence>
+            <xs:element maxOccurs="unbounded" ref="tei:persName"/>
+         </xs:sequence>
+         <xs:attribute name="full" type="xs:NCName"/>
+      </xs:complexType>
+   </xs:element>
+   <xs:element name="listWit">
+      <xs:complexType>
+         <xs:sequence>
+            <xs:element maxOccurs="unbounded" ref="tei:witness"/>
+         </xs:sequence>
+      </xs:complexType>
+   </xs:element>
+   <xs:element name="witness">
+      <xs:complexType>
+         <xs:all>
+            <xs:element ref="tei:objectType" maxOccurs="1" minOccurs="0"/>
+            <xs:element ref="tei:msDesc" minOccurs="0" maxOccurs="1"/>
+         </xs:all>
+         <xs:attribute name="n" use="required" type="xs:integer"/>
+      </xs:complexType>
+   </xs:element>
+   <xs:simpleType name="objectTypeCorresp">
+      <xs:restriction base="xs:NCName">
+         <xs:enumeration value="karte"/>
+         <xs:enumeration value="bild"/>
+         <xs:enumeration value="kartenbrief"/>
+         <xs:enumeration value="brief"/>
+         <xs:enumeration value="telegramm"/>
+         <xs:enumeration value="widmung"/>
+         <xs:enumeration value="anderes"/>
+      </xs:restriction>
+   </xs:simpleType>
+   <xs:simpleType name="objectTypeAna">
+      <xs:restriction base="xs:NCName">
+         <xs:enumeration value="bildpostkarte"/>
+         <xs:enumeration value="postkarte"/>
+         <xs:enumeration value="briefkarte"/>
+         <xs:enumeration value="visitenkarte"/>
+         <xs:enumeration value="fotografie"/>
+         <xs:enumeration value="entwurf"/>
+         <xs:enumeration value="widmung_umschlag"/>
+         <xs:enumeration value="widmung_vorsatzblatt"/>
+         <xs:enumeration value="widmung_schmutztitel"/>
+         <xs:enumeration value="widmung_reihentitelblatt"/>
+         <xs:enumeration value="widmung_titelblatt"/>
+         <xs:enumeration value="widmung_einlegeblatt"/>
+      </xs:restriction>
+   </xs:simpleType>
+   <!-- Define the 'objectType' element -->
+   <xs:element name="objectType">
+      <xs:complexType>
+         <xs:simpleContent>
+            <xs:extension base="xs:string">
+               <!-- 'corresp' attribute with possible values -->
+               <xs:attribute name="corresp" type="objectTypeCorresp" use="required"/>
+               <!-- 'ana' attribute is optional -->
+               <xs:attribute name="ana" type="objectTypeAna" use="optional"/>
+            </xs:extension>
+         </xs:simpleContent>
+      </xs:complexType>
+   </xs:element>
+   <xs:element name="msDesc">
+      <xs:complexType>
+         <xs:sequence>
+            <xs:element ref="tei:msIdentifier"/>
+            <xs:element ref="tei:physDesc"/>
+         </xs:sequence>
+      </xs:complexType>
+   </xs:element>
+   <xs:element name="msIdentifier">
+      <xs:complexType>
+         <xs:sequence>
+            <xs:element ref="tei:country"/>
+            <xs:element ref="tei:settlement"/>
+            <xs:element ref="tei:repository"/>
+            <xs:element ref="tei:idno"/>
+         </xs:sequence>
+      </xs:complexType>
+   </xs:element>
+   <xs:element name="repository" type="xs:string"/>
+   <xs:element name="physDesc">
+      <xs:complexType>
+         <xs:all>
+            <xs:element ref="tei:objectDesc" minOccurs="1" maxOccurs="1"/>
+            <xs:element ref="tei:handDesc" minOccurs="0" maxOccurs="1"/>
+            <xs:element ref="tei:typeDesc" minOccurs="0" maxOccurs="1"/>
+            <xs:element ref="tei:additions" minOccurs="0" maxOccurs="1"/>
+         </xs:all>
+      </xs:complexType>
+   </xs:element>
+   <xs:element name="handDesc">
+      <xs:complexType>
+         <xs:all>
+            <xs:element ref="tei:handNote" minOccurs="0" maxOccurs="unbounded"/>
+         </xs:all>
+         <xs:attribute name="hands" use="optional" type="xs:integer"/>
+      </xs:complexType>
+   </xs:element>
+   <xs:element name="typeDesc">
+      <xs:complexType>
+         <xs:all>
+            <xs:element ref="tei:typeNote" minOccurs="1" maxOccurs="1"/>
+         </xs:all>
+      </xs:complexType>
+   </xs:element>
+   <xs:element name="typeNote">
+      <xs:complexType mixed="false">
+         <xs:all>
+            <xs:element ref="tei:p" minOccurs="0" maxOccurs="1"/>
+         </xs:all>
+         <xs:attribute name="medium" use="required">
+            <xs:simpleType>
+               <xs:restriction base="xs:NCName">
+                  <xs:enumeration value="schreibmaschine"/>
+                  <xs:enumeration value="maschinell"/>
+                  <xs:enumeration value="druck"/>
+                  <xs:enumeration value="anderes"/>
+               </xs:restriction>
+            </xs:simpleType>
+         </xs:attribute>
+      </xs:complexType>
+   </xs:element>
+   <xs:simpleType name="measureUnits">
+      <xs:restriction base="xs:NCName">
+         <xs:enumeration value="blatt"/>
+         <xs:enumeration value="seite"/>
+         <xs:enumeration value="zeichenanzahl"/>
+         <xs:enumeration value="umschlag"/>
+         <xs:enumeration value="karte"/>
+         <xs:enumeration value="kartenbrief"/>
+         <xs:enumeration value="telegramm"/>
+         <xs:enumeration value="widmung"/>
+      </xs:restriction>
+   </xs:simpleType>
+   <!-- Define the 'measure' element with attributes 'unit' and 'quantity' -->
+   <xs:element name="measure">
+      <xs:complexType>
+         <xs:attribute name="unit" type="measureUnits" use="required"/>
+         <xs:attribute name="quantity" type="xs:positiveInteger" use="required"/>
+      </xs:complexType>
+   </xs:element>
+   <!-- Define the 'extent' element with 'measure' as its child -->
+   <xs:element name="extent">
+      <xs:complexType>
+         <xs:all>
+            <xs:element ref="tei:measure" maxOccurs="unbounded" minOccurs="1"/>
+         </xs:all>
+      </xs:complexType>
+   </xs:element>
+   <!-- Define the 'supportDesc' element with 'extent' as its child -->
+   <xs:element name="supportDesc">
+      <xs:complexType>
+         <xs:all>
+            <xs:element ref="tei:support" minOccurs="0" maxOccurs="1"/>
+            <xs:element ref="tei:extent" maxOccurs="1" minOccurs="1"/>
+            <xs:element ref="tei:condition" maxOccurs="1" minOccurs="0"/>
+         </xs:all>
+      </xs:complexType>
+   </xs:element>
+   <xs:element name="condition">
+      <xs:complexType>
+         <xs:simpleContent>
+            <xs:extension base="xs:string">
+               <xs:attribute name="ana" type="anaValueType"/>
+            </xs:extension>
+         </xs:simpleContent>
+      </xs:complexType>
+   </xs:element>
+   <xs:simpleType name="anaValueType">
+      <xs:restriction base="xs:string">
+         <xs:enumeration value="fragment"/>
+      </xs:restriction>
+   </xs:simpleType>
+   <xs:element name="support">
+      <xs:complexType mixed="true">
+         <xs:all>
+            <!-- 'rs' element as child -->
+            <xs:element ref="tei:rs" minOccurs="0" maxOccurs="unbounded"/>
+            <xs:element ref="tei:quote" minOccurs="0" maxOccurs="unbounded"/>
+            <xs:element ref="tei:space" minOccurs="0" maxOccurs="unbounded"/>
+            <xs:element ref="tei:date" minOccurs="0" maxOccurs="unbounded"/>
+            <xs:element ref="tei:pb" minOccurs="0" maxOccurs="unbounded"/>
+         </xs:all>
+         <!-- 'support' element can have text content -->
+      </xs:complexType>
+   </xs:element>
+   <xs:element name="objectDesc">
+      <xs:complexType>
+         <xs:all>
+            <xs:element minOccurs="1" maxOccurs="1" ref="tei:supportDesc"/>
+         </xs:all>
+         <xs:attribute name="form">
+            <xs:simpleType>
+               <xs:restriction base="xs:string">
+                  <xs:enumeration value="fotografie"/>
+                  <xs:enumeration value="fotokopie"/>
+                  <xs:enumeration value="fotografische_vervielfaeltigung"/>
+                  <xs:enumeration value="ms_abschrift"/>
+                  <xs:enumeration value="hs_abschrift"/>
+                  <xs:enumeration value="durchschlag"/>
+               </xs:restriction>
+            </xs:simpleType>
+         </xs:attribute>
+      </xs:complexType>
+   </xs:element>
+   <xs:element name="handNote">
+      <xs:complexType mixed="false">
+         <xs:all>
+            <xs:element ref="tei:p" minOccurs="0" maxOccurs="1"/>
+         </xs:all>
+         <xs:attribute name="medium" use="required">
+            <xs:simpleType>
+               <xs:restriction base="xs:NCName">
+                  <xs:enumeration value="bleistift"/>
+                  <xs:enumeration value="roter-buntstift"/>
+                  <xs:enumeration value="blauer-buntstift"/>
+                  <xs:enumeration value="gruener-buntstift"/>
+                  <xs:enumeration value="blaue-tinte"/>
+                  <xs:enumeration value="gruene-tinte"/>
+                  <xs:enumeration value="lila-tinte"/>
+                  <xs:enumeration value="rote-tinte"/>
+                  <xs:enumeration value="schwarze-tinte"/>
+                  <xs:enumeration value="anderes"/>
+               </xs:restriction>
+            </xs:simpleType>
+         </xs:attribute>
+         <xs:attribute name="style" use="required">
+            <xs:simpleType>
+               <xs:restriction base="xs:NCName">
+                  <xs:enumeration value="deutsche-kurrent"/>
+                  <xs:enumeration value="lateinische-kurrent"/>
+                  <xs:enumeration value="nicht-anzuwenden"/>
+                  <xs:enumeration value="gabelsberger"/>
+               </xs:restriction>
+            </xs:simpleType>
+         </xs:attribute>
+         <xs:attribute name="corresp" type="xs:string" use="optional"/>
+      </xs:complexType>
+   </xs:element>
+   <xs:element name="stamp">
+      <xs:complexType>
+         <xs:sequence>
+            <xs:choice minOccurs="1" maxOccurs="4">
+               <xs:element ref="tei:placeName" minOccurs="0" maxOccurs="1"/>
+               <xs:element ref="tei:date" minOccurs="0" maxOccurs="1"/>
+               <xs:element ref="tei:time" minOccurs="0" maxOccurs="1"/>
+               <xs:element ref="tei:addSpan" minOccurs="0" maxOccurs="1"/>
+            </xs:choice>
+         </xs:sequence>
+         <xs:attribute name="n" use="required" type="xs:integer"/>
+      </xs:complexType>
+   </xs:element>
+   <xs:element name="addSpan">
+      <xs:complexType mixed="true">
+         <xs:all>
+            <xs:element ref="tei:unclear" maxOccurs="unbounded" minOccurs="0"/>
+            <xs:element ref="tei:orgName" maxOccurs="unbounded" minOccurs="0"/>
+            <xs:element ref="tei:supplied" maxOccurs="unbounded" minOccurs="0"/>
+            <xs:element ref="tei:damage" maxOccurs="unbounded" minOccurs="0"/>
+            <xs:element ref="tei:rs" maxOccurs="unbounded" minOccurs="0"/>
+            <xs:element ref="tei:pb" maxOccurs="unbounded" minOccurs="0"/>
+            <xs:element ref="tei:hi" maxOccurs="unbounded" minOccurs="0"/>
+            <xs:element ref="tei:foreign" maxOccurs="unbounded" minOccurs="0"/>
+            <xs:element ref="tei:space" maxOccurs="unbounded" minOccurs="0"/>
+         </xs:all>
+      </xs:complexType>
+   </xs:element>
+   <xs:complexType name="listBibl_in_teiHeaader">
+      <xs:sequence>
+         <xs:element maxOccurs="unbounded" ref="tei:biblStruct"/>
+      </xs:sequence>
+   </xs:complexType>
+   <xs:complexType name="listBibl_in_back">
+      <xs:sequence minOccurs="0">
+         <xs:element maxOccurs="unbounded" ref="tei:bibl" minOccurs="1"/>
+      </xs:sequence>
+   </xs:complexType>
+   <xs:element name="listBibl">
+      <xs:alternative test="child::tei:bibl" type="listBibl_in_back"/>
+      <xs:alternative test="child::tei:biblStruct" type="listBibl_in_teiHeaader"/>
+   </xs:element>
+   <xs:element name="biblStruct">
+      <xs:complexType>
+         <xs:all>
+            <xs:element ref="tei:analytic" minOccurs="0" maxOccurs="1"/>
+            <xs:element ref="tei:monogr" minOccurs="1" maxOccurs="1"/>
+            <xs:element ref="tei:series" minOccurs="0" maxOccurs="1"/>
+            <xs:element ref="tei:note" minOccurs="0" maxOccurs="1"/>
+         </xs:all>
+         <xs:attribute name="corresp" type="xs:NCName"/>
+      </xs:complexType>
+   </xs:element>
+   <xs:element name="analytic">
+      <xs:complexType>
+         <xs:all>
+            <xs:element minOccurs="0" ref="tei:date"/>
+            <xs:element ref="tei:author" minOccurs="0" maxOccurs="unbounded"/>
+            <xs:element ref="tei:title" maxOccurs="1"/>
+            <xs:element ref="tei:editor" minOccurs="0" maxOccurs="unbounded"/>
+         </xs:all>
+      </xs:complexType>
+   </xs:element>
+   <xs:element name="monogr">
+      <xs:complexType mixed="true">
+         <xs:all minOccurs="0">
+            <xs:element ref="tei:author" minOccurs="0" maxOccurs="unbounded"/>
+            <xs:element ref="tei:biblScope" minOccurs="0" maxOccurs="unbounded"/>
+            <xs:element ref="tei:editor" minOccurs="0" maxOccurs="unbounded"/>
+            <xs:element ref="tei:imprint" minOccurs="0" maxOccurs="1"/>
+            <xs:element ref="tei:title" minOccurs="0" maxOccurs="1"/>
+         </xs:all>
+      </xs:complexType>
+   </xs:element>
+   <xs:element name="series">
+      <xs:complexType>
+         <xs:sequence>
+            <xs:element ref="tei:title"/>
+            <xs:element ref="tei:biblScope"/>
+         </xs:sequence>
+      </xs:complexType>
+   </xs:element>
+   <xs:element name="profileDesc">
+      <xs:complexType>
+         <xs:sequence minOccurs="1" maxOccurs="2">
+            <xs:element ref="tei:langUsage"/>
+            <xs:element ref="tei:correspDesc"/>
+         </xs:sequence>
+      </xs:complexType>
+   </xs:element>
+   <xs:element name="langUsage">
+      <xs:complexType>
+         <xs:sequence>
+            <xs:element ref="tei:language"/>
+         </xs:sequence>
+      </xs:complexType>
+   </xs:element>
+   <xs:element name="language">
+      <xs:complexType>
+         <xs:simpleContent>
+            <xs:extension base="xs:NCName">
+               <xs:attribute name="ident" use="required" type="xs:NCName"/>
+            </xs:extension>
+         </xs:simpleContent>
+      </xs:complexType>
+   </xs:element>
+   <xs:element name="revisionDesc">
+      <xs:complexType>
+         <xs:sequence>
+            <xs:element minOccurs="0" maxOccurs="unbounded" ref="tei:change"/>
+         </xs:sequence>
+         <xs:attribute name="status" use="required">
+            <xs:simpleType>
+               <xs:restriction base="xs:NCName">
+                  <xs:enumeration value="proposed"/>
+                  <xs:enumeration value="candidate"/>
+                  <xs:enumeration value="approved"/>
+               </xs:restriction>
+            </xs:simpleType>
+         </xs:attribute>
+         <!-- Hier ist die Assert-Bedingung, die prüft, dass jedes 'when'-Attribut nach dem des vorherigen 'change'-Elements liegt -->
+      </xs:complexType>
+   </xs:element>
+   <xsd:simpleType name="date-or-gyear-or-gyearmonth">
+      <xsd:union memberTypes="xs:date xs:gYearMonth xs:gYear"/>
+   </xsd:simpleType>
+   <xs:element name="change">
+      <xs:complexType mixed="true">
+         <xs:attribute name="when" type="date-or-gyear-or-gyearmonth"/>
+         <xs:attribute name="who" use="required">
+            <xs:simpleType>
+               <xs:restriction base="xs:string">
+                  <xs:enumeration value="MAM"/>
+                  <xs:enumeration value="SJ"/>
+                  <xs:enumeration value="SJ MAM"/>
+                  <xs:enumeration value="LU"/>
+                  <xs:enumeration value="GHS"/>
+                  <xs:enumeration value="GHS MAM"/>
+                  <xs:enumeration value="KSK"/>
+                  <xs:enumeration value="KI MAM"/>
+                  <xs:enumeration value="KI"/>
+               </xs:restriction>
+            </xs:simpleType>
+         </xs:attribute>
+      </xs:complexType>
+   </xs:element>
+   <xs:complexType name="objectDesc_desc_type" mixed="true">
+      <xs:all minOccurs="0">
+         <xs:element ref="tei:pb" maxOccurs="unbounded" minOccurs="0"/>
+         <xs:element ref="tei:anchor" maxOccurs="unbounded" minOccurs="0"/>
+         <xs:element ref="tei:damage" maxOccurs="unbounded" minOccurs="0"/>
+         <xs:element ref="tei:handShift" maxOccurs="unbounded" minOccurs="0"/>
+         <xs:element ref="tei:hi" maxOccurs="unbounded" minOccurs="0"/>
+         <xs:element ref="tei:note" maxOccurs="unbounded" minOccurs="0"/>
+         <xs:element ref="tei:rs" maxOccurs="unbounded" minOccurs="0"/>
+         <xs:element ref="tei:space" maxOccurs="unbounded" minOccurs="0"/>
+         <xs:element ref="tei:supplied" maxOccurs="unbounded" minOccurs="0"/>
+         <xs:element ref="tei:c" maxOccurs="unbounded" minOccurs="0"/>
+         <xs:element ref="tei:del" maxOccurs="unbounded" minOccurs="0"/>
+         <xs:element ref="tei:quote" maxOccurs="unbounded" minOccurs="0"/>
+         <xs:element ref="tei:stamp" maxOccurs="unbounded" minOccurs="0"/>
+         <xs:element ref="tei:date" maxOccurs="unbounded" minOccurs="0"/>
+         <xs:element ref="tei:bibl" maxOccurs="unbounded" minOccurs="0"/>
+         <xs:element ref="tei:ref" maxOccurs="unbounded" minOccurs="0"/>
+      </xs:all>
+      <xs:attribute name="subtype">
+         <xs:simpleType>
+            <xs:restriction base="xs:NCName">
+               <xs:enumeration value="bildpostkarte"/>
+               <xs:enumeration value="postkarte"/>
+               <xs:enumeration value="briefkarte"/>
+               <xs:enumeration value="visitenkarte"/>
+               <xs:enumeration value="widmung_umschlag"/>
+               <xs:enumeration value="widmung_vorsatzblatt"/>
+               <xs:enumeration value="widmung_schmutztitel"/>
+               <xs:enumeration value="widmung_reihentitelblatt"/>
+               <xs:enumeration value="widmung_titelblatt"/>
+               <xs:enumeration value="widmung_einlegeblatt"/>
+            </xs:restriction>
+         </xs:simpleType>
+      </xs:attribute>
+      <xs:attribute name="n">
+         <xs:simpleType>
+            <xs:restriction base="xs:integer"/>
+         </xs:simpleType>
+      </xs:attribute>
+   </xs:complexType>
+   <xs:complexType name="back_desc_type">
+      <xs:simpleContent>
+         <xs:extension base="xs:string">
+            <xs:attribute name="type" type="xs:string" use="required"/>
+         </xs:extension>
+      </xs:simpleContent>
+   </xs:complexType>
+   <xs:complexType name="incident_desc_type" mixed="true">
+      <xs:all minOccurs="0">
+         <xs:element ref="tei:pb" maxOccurs="unbounded" minOccurs="0"/>
+         <xs:element ref="tei:anchor" maxOccurs="unbounded" minOccurs="0"/>
+         <xs:element ref="tei:damage" maxOccurs="unbounded" minOccurs="0"/>
+         <xs:element ref="tei:handShift" maxOccurs="unbounded" minOccurs="0"/>
+         <xs:element ref="tei:hi" maxOccurs="unbounded" minOccurs="0"/>
+         <xs:element ref="tei:note" maxOccurs="unbounded" minOccurs="0"/>
+         <xs:element ref="tei:rs" maxOccurs="unbounded" minOccurs="0"/>
+         <xs:element ref="tei:space" maxOccurs="unbounded" minOccurs="0"/>
+         <xs:element ref="tei:supplied" maxOccurs="unbounded" minOccurs="0"/>
+         <xs:element ref="tei:c" maxOccurs="unbounded" minOccurs="0"/>
+         <xs:element ref="tei:del" maxOccurs="unbounded" minOccurs="0"/>
+         <xs:element ref="tei:quote" maxOccurs="unbounded" minOccurs="0"/>
+         <xs:element ref="tei:stamp" maxOccurs="unbounded" minOccurs="0"/>
+         <xs:element ref="tei:date" maxOccurs="unbounded" minOccurs="0"/>
+         <xs:element ref="tei:bibl" maxOccurs="unbounded" minOccurs="0"/>
+         <xs:element ref="tei:ref" maxOccurs="unbounded" minOccurs="0"/>
+      </xs:all>
+   </xs:complexType>
+   <xs:element name="desc">
+      <xs:alternative type="back_desc_type" test="@type = 'entity_type' or @type = 'entity_type_id'"/>
+      <xs:alternative type="incident_desc_type" test="not(@type)"/>
+      <xs:alternative type="objectDesc_desc_type"/>
+   </xs:element>
+   <xs:element name="incident">
+      <xs:complexType>
+         <xs:sequence>
+            <xs:element maxOccurs="1" minOccurs="1" ref="tei:desc"/>
+         </xs:sequence>
+         <xs:attribute name="type" use="required">
+            <xs:simpleType>
+               <xs:restriction base="xs:NCName">
+                  <xs:enumeration value="archival"/>
+                  <xs:enumeration value="supplement"/>
+                  <xs:enumeration value="postal"/>
+                  <xs:enumeration value="receiver"/>
+                  <xs:enumeration value="editorial"/>
+                  <xs:enumeration value="additional-information"/>
+               </xs:restriction>
+            </xs:simpleType>
+         </xs:attribute>
+         <xs:attribute name="rend" use="optional">
+            <xs:simpleType>
+               <xs:restriction base="xs:NCName">
+                  <xs:enumeration value="bleistift"/>
+                  <xs:enumeration value="roter-buntstift"/>
+                  <xs:enumeration value="blauer-buntstift"/>
+                  <xs:enumeration value="gruener-buntstift"/>
+                  <xs:enumeration value="blaue-tinte"/>
+                  <xs:enumeration value="gruene-tinte"/>
+                  <xs:enumeration value="lila-tinte"/>
+                  <xs:enumeration value="rote-tinte"/>
+                  <xs:enumeration value="schwarze-tinte"/>
+                  <xs:enumeration value="anderes"/>
+               </xs:restriction>
+            </xs:simpleType>
+         </xs:attribute>
+      </xs:complexType>
+   </xs:element>
+   <xs:element name="additions">
+      <xs:complexType>
+         <xs:sequence>
+            <xs:element minOccurs="1" maxOccurs="unbounded" ref="tei:incident"/>
+         </xs:sequence>
+      </xs:complexType>
+   </xs:element>
+   <xs:element name="text">
+      <xs:complexType>
+         <xs:sequence>
+            <xs:element ref="tei:body" maxOccurs="1" minOccurs="1"/>
+            <xs:element ref="tei:back" maxOccurs="1" minOccurs="1"/>
+         </xs:sequence>
+         <xs:attribute name="type" use="optional">
+            <xs:simpleType>
+               <xs:restriction base="xs:NCName">
+                  <xs:enumeration value="letter"/>
+                  <xs:enumeration value="letter-card"/>
+                  <xs:enumeration value="card"/>
+                  <xs:enumeration value="telegram"/>
+                  <xs:enumeration value="book"/>
+                  <xs:enumeration value="dedication"/>
+               </xs:restriction>
+            </xs:simpleType>
+         </xs:attribute>
+      </xs:complexType>
+   </xs:element>
+   <xs:element name="body">
+      <xs:complexType>
+         <xs:sequence>
+            <xs:element maxOccurs="unbounded" minOccurs="1" ref="tei:div"/>
+         </xs:sequence>
+      </xs:complexType>
+   </xs:element>
+   <xs:element name="div">
+      <xs:complexType>
+         <xs:all>
+            <xs:element minOccurs="0" maxOccurs="unbounded" ref="tei:figure"/>
+            <xs:element minOccurs="0" maxOccurs="unbounded" ref="tei:address"/>
+            <xs:element minOccurs="0" maxOccurs="1" ref="tei:opener"/>
+            <xs:element minOccurs="0" maxOccurs="unbounded" ref="tei:lg"/>
+            <xs:element minOccurs="0" maxOccurs="unbounded" ref="tei:p"/>
+            <xs:element maxOccurs="unbounded" minOccurs="0" ref="tei:space"/>
+            <xs:element minOccurs="0" maxOccurs="1" ref="tei:closer"/>
+            <xs:element minOccurs="0" maxOccurs="unbounded" ref="tei:postscript"/>
+            <xs:element ref="tei:milestone" maxOccurs="unbounded" minOccurs="0"/>
+            <xs:element minOccurs="0" maxOccurs="unbounded" ref="tei:table"/>
+         </xs:all>
+         <xs:attribute name="n" type="xs:integer"/>
+         <xs:attribute name="type" use="required">
+            <xs:simpleType>
+               <xs:restriction base="xs:NCName">
+                  <xs:enumeration value="writingSession"/>
+                  <xs:enumeration value="address"/>
+                  <xs:enumeration value="image"/>
+               </xs:restriction>
+            </xs:simpleType>
+         </xs:attribute>
+         <!-- keine Leerzeichen vor note -->
+         <!-- keine Leerzeichen nach kommentar-anchor -->
+      </xs:complexType>
+   </xs:element>
+   <xs:element name="lg">
+      <xs:complexType>
+         <xs:all>
+            <xs:element ref="tei:lg" minOccurs="0" maxOccurs="unbounded"/>
+            <xs:element ref="tei:l" minOccurs="0" maxOccurs="unbounded"/>
+            <xs:element ref="tei:anchor" maxOccurs="unbounded" minOccurs="0"/>
+            <xs:element ref="tei:note" maxOccurs="unbounded" minOccurs="0"/>
+         </xs:all>
+         <xs:attribute name="type" use="required">
+            <xs:simpleType>
+               <xs:restriction base="xs:NCName">
+                  <xs:enumeration value="poem"/>
+                  <xs:enumeration value="stanza"/>
+               </xs:restriction>
+            </xs:simpleType>
+         </xs:attribute>
+      </xs:complexType>
+   </xs:element>
+   <xs:element name="l">
+      <xs:complexType mixed="true">
+         <xs:all minOccurs="0">
+            <xs:element ref="tei:pb" maxOccurs="unbounded" minOccurs="0"/>
+            <xs:element ref="tei:anchor" maxOccurs="unbounded" minOccurs="0"/>
+            <xs:element ref="tei:damage" maxOccurs="unbounded" minOccurs="0"/>
+            <xs:element ref="tei:handShift" maxOccurs="unbounded" minOccurs="0"/>
+            <xs:element ref="tei:hi" maxOccurs="unbounded" minOccurs="0"/>
+            <xs:element ref="tei:note" maxOccurs="unbounded" minOccurs="0"/>
+            <xs:element ref="tei:rs" maxOccurs="unbounded" minOccurs="0"/>
+            <xs:element ref="tei:space" maxOccurs="unbounded" minOccurs="0"/>
+            <xs:element ref="tei:supplied" maxOccurs="unbounded" minOccurs="0"/>
+            <xs:element ref="tei:c" maxOccurs="unbounded" minOccurs="0"/>
+            <xs:element ref="tei:del" maxOccurs="unbounded" minOccurs="0"/>
+            <xs:element ref="tei:unclear" maxOccurs="unbounded" minOccurs="0"/>
+            <xs:element ref="tei:subst" maxOccurs="unbounded" minOccurs="0"/>
+            <xs:element ref="tei:date" maxOccurs="unbounded" minOccurs="0"/>
+            <xs:element ref="tei:time" maxOccurs="unbounded" minOccurs="0"/>
+         </xs:all>
+      </xs:complexType>
+   </xs:element>
+   <xs:element name="opener">
+      <xs:complexType>
+         <xs:choice minOccurs="0" maxOccurs="unbounded">
+            <xs:element ref="tei:seg" minOccurs="0" maxOccurs="unbounded"/>
+            <xs:element ref="tei:dateline" minOccurs="0" maxOccurs="1"/>
+            <xs:element ref="tei:space" maxOccurs="unbounded" minOccurs="0"/>
+            <xs:element minOccurs="0" ref="tei:salute" maxOccurs="1"/>
+         </xs:choice>
+      </xs:complexType>
+   </xs:element>
+   <xs:element name="seg">
+      <xs:complexType mixed="true">
+         <xs:choice minOccurs="0" maxOccurs="unbounded">
+            <xs:element ref="tei:seg" maxOccurs="unbounded" minOccurs="0"/>
+            <xs:element ref="tei:add" maxOccurs="unbounded" minOccurs="0"/>
+            <xs:element ref="tei:rs" maxOccurs="unbounded" minOccurs="0"/>
+            <xs:element ref="tei:del" maxOccurs="unbounded" minOccurs="0"/>
+            <xs:element ref="tei:anchor" maxOccurs="unbounded" minOccurs="0"/>
+            <xs:element ref="tei:damage" maxOccurs="unbounded" minOccurs="0"/>
+            <xs:element ref="tei:date" maxOccurs="unbounded" minOccurs="0"/>
+            <xs:element ref="tei:hi" maxOccurs="unbounded" minOccurs="0"/>
+            <xs:element ref="tei:lb" maxOccurs="unbounded" minOccurs="0"/>
+            <xs:element ref="tei:note" maxOccurs="unbounded" minOccurs="0"/>
+            <xs:element ref="tei:space" maxOccurs="unbounded" minOccurs="0"/>
+            <xs:element ref="tei:pb" maxOccurs="unbounded" minOccurs="0"/>
+            <xs:element ref="tei:handShift" maxOccurs="unbounded" minOccurs="0"/>
+            <xs:element ref="tei:time" maxOccurs="unbounded" minOccurs="0"/>
+            <xs:element ref="tei:subst" maxOccurs="unbounded" minOccurs="0"/>
+            <xs:element ref="tei:gap" maxOccurs="unbounded" minOccurs="0"/>
+            <xs:element ref="tei:c" maxOccurs="unbounded" minOccurs="0"/>
+            <xs:element ref="tei:supplied" maxOccurs="unbounded" minOccurs="0"/>
+            <xs:element ref="tei:signed" maxOccurs="unbounded" minOccurs="0"/>
+            <xs:element ref="tei:foreign" maxOccurs="unbounded" minOccurs="0"/>
+            <xs:element ref="tei:unclear" maxOccurs="unbounded" minOccurs="0"/>
+            <xs:element ref="tei:salute" maxOccurs="unbounded" minOccurs="0"/>
+         </xs:choice>
+         <xs:attribute name="rend" use="optional">
+            <xs:simpleType>
+               <xs:restriction base="xs:NCName">
+                  <xs:enumeration value="right"/>
+                  <xs:enumeration value="left"/>
+                  <xs:enumeration value="center"/>
+                  <xs:enumeration value="inline"/>
+               </xs:restriction>
+            </xs:simpleType>
+         </xs:attribute>
+         <xs:attribute name="type" use="optional">
+            <xs:simpleType>
+               <xs:restriction base="xs:NCName">
+                  <xs:enumeration value="letterhead"/>
+               </xs:restriction>
+            </xs:simpleType>
+         </xs:attribute>
+      </xs:complexType>
+   </xs:element>
+   <xs:element name="dateline">
+      <xs:complexType mixed="true">
+         <xs:choice minOccurs="0" maxOccurs="unbounded">
+            <xs:element ref="tei:rs" maxOccurs="unbounded" minOccurs="0"/>
+            <xs:element ref="tei:add" maxOccurs="unbounded" minOccurs="0"/>
+            <xs:element ref="tei:anchor" maxOccurs="unbounded" minOccurs="0"/>
+            <xs:element ref="tei:damage" maxOccurs="unbounded" minOccurs="0"/>
+            <xs:element ref="tei:date" maxOccurs="unbounded" minOccurs="0"/>
+            <xs:element ref="tei:hi" maxOccurs="unbounded" minOccurs="0"/>
+            <xs:element ref="tei:lb" maxOccurs="unbounded" minOccurs="0"/>
+            <xs:element ref="tei:note" maxOccurs="unbounded" minOccurs="0"/>
+            <xs:element ref="tei:placeName" maxOccurs="unbounded" minOccurs="0"/>
+            <xs:element ref="tei:orgName" maxOccurs="unbounded" minOccurs="0"/>
+            <xs:element ref="tei:space" maxOccurs="unbounded" minOccurs="0"/>
+            <xs:element ref="tei:pb" maxOccurs="unbounded" minOccurs="0"/>
+            <xs:element ref="tei:subst" maxOccurs="unbounded" minOccurs="0"/>
+            <xs:element ref="tei:handShift" maxOccurs="unbounded" minOccurs="0"/>
+            <xs:element ref="tei:time" maxOccurs="unbounded" minOccurs="0"/>
+            <xs:element ref="tei:seg" maxOccurs="2" minOccurs="0"/>
+            <xs:element ref="tei:supplied" maxOccurs="unbounded" minOccurs="0"/>
+            <xs:element ref="tei:c" maxOccurs="unbounded" minOccurs="0"/>
+            <xs:element ref="tei:del" minOccurs="0" maxOccurs="unbounded"/>
+            <xs:element ref="tei:gap" maxOccurs="unbounded" minOccurs="0"/>
+            <xs:element ref="tei:ref" maxOccurs="unbounded" minOccurs="0"/>
+            <xs:element ref="tei:unclear" maxOccurs="unbounded" minOccurs="0"/>
+            <xs:element ref="tei:foreign" maxOccurs="unbounded" minOccurs="0"/>
+         </xs:choice>
+         <xs:attribute name="rend" use="optional">
+            <xs:simpleType>
+               <xs:restriction base="xs:NCName">
+                  <xs:enumeration value="right"/>
+                  <xs:enumeration value="left"/>
+                  <xs:enumeration value="center"/>
+                  <xs:enumeration value="inline"/>
+               </xs:restriction>
+            </xs:simpleType>
+         </xs:attribute>
+      </xs:complexType>
+   </xs:element>
+   <xs:element name="figure">
+      <xs:complexType>
+         <xs:sequence>
+            <xs:element ref="tei:graphic"/>
+         </xs:sequence>
+      </xs:complexType>
+   </xs:element>
+   <xs:element name="closer">
+      <xs:complexType mixed="true">
+         <xs:choice minOccurs="0" maxOccurs="unbounded">
+            <xs:element ref="tei:anchor" maxOccurs="unbounded" minOccurs="0"/>
+            <xs:element ref="tei:damage" maxOccurs="unbounded" minOccurs="0"/>
+            <xs:element ref="tei:handShift" maxOccurs="unbounded" minOccurs="0"/>
+            <xs:element ref="tei:hi" maxOccurs="unbounded" minOccurs="0"/>
+            <xs:element ref="tei:lb" maxOccurs="unbounded" minOccurs="0"/>
+            <xs:element ref="tei:del" maxOccurs="unbounded" minOccurs="0"/>
+            <xs:element ref="tei:add" maxOccurs="unbounded" minOccurs="0"/>
+            <xs:element ref="tei:note" maxOccurs="unbounded" minOccurs="0"/>
+            <xs:element ref="tei:pb" maxOccurs="unbounded" minOccurs="0"/>
+            <xs:element ref="tei:unclear" maxOccurs="unbounded" minOccurs="0"/>
+            <xs:element ref="tei:rs" maxOccurs="unbounded" minOccurs="0"/>
+            <xs:element ref="tei:signed" maxOccurs="unbounded" minOccurs="0"/>
+            <xs:element ref="tei:space" maxOccurs="unbounded" minOccurs="0"/>
+            <xs:element ref="tei:supplied" maxOccurs="unbounded" minOccurs="0"/>
+            <xs:element ref="tei:subst" maxOccurs="unbounded" minOccurs="0"/>
+            <xs:element ref="tei:date" maxOccurs="unbounded" minOccurs="0"/>
+            <xs:element ref="tei:time" maxOccurs="unbounded" minOccurs="0"/>
+            <xs:element ref="tei:gap" minOccurs="0" maxOccurs="unbounded"/>
+            <xs:element ref="tei:c" minOccurs="0" maxOccurs="unbounded"/>
+            <xs:element ref="tei:foreign" minOccurs="0" maxOccurs="unbounded"/>
+         </xs:choice>
+      </xs:complexType>
+   </xs:element>
+   <xs:element name="postscript">
+      <xs:complexType>
+         <xs:choice minOccurs="1" maxOccurs="unbounded">
+            <xs:element maxOccurs="unbounded" ref="tei:p" minOccurs="0"/>
+            <xs:element minOccurs="0" maxOccurs="unbounded" ref="tei:lg"/>
+            <xs:element minOccurs="0" ref="tei:frame" maxOccurs="unbounded"/>
+            <xs:element minOccurs="0" ref="tei:table" maxOccurs="unbounded"/>
+            <xs:element minOccurs="0" ref="tei:space" maxOccurs="unbounded"/>
+            <xs:element ref="tei:dateline" maxOccurs="unbounded" minOccurs="0"/>
+         </xs:choice>
+      </xs:complexType>
+   </xs:element>
+   <xs:element name="frame">
+      <xs:complexType>
+         <xs:sequence>
+            <xs:element ref="tei:p"/>
+         </xs:sequence>
+      </xs:complexType>
+   </xs:element>
+   <xs:element name="placeName">
+      <xs:complexType mixed="true">
+         <xs:all>
+            <xs:element ref="tei:country" maxOccurs="unbounded" minOccurs="0"/>
+            <xs:element ref="tei:foreign" maxOccurs="unbounded" minOccurs="0"/>
+            <xs:element ref="tei:hi" maxOccurs="unbounded" minOccurs="0"/>
+            <xs:element ref="tei:pb" maxOccurs="unbounded" minOccurs="0"/>
+            <xs:element ref="tei:settlement" maxOccurs="unbounded" minOccurs="0"/>
+            <xs:element ref="tei:space" maxOccurs="unbounded" minOccurs="0"/>
+            <xs:element ref="tei:supplied" maxOccurs="unbounded" minOccurs="0"/>
+            <xs:element ref="tei:unclear" maxOccurs="unbounded" minOccurs="0"/>
+            <xs:element ref="tei:c" maxOccurs="unbounded" minOccurs="0"/>
+            <xs:element ref="tei:gap" maxOccurs="unbounded" minOccurs="0"/>
+            <xs:element ref="tei:del" maxOccurs="unbounded" minOccurs="0"/>
+            <xs:element ref="tei:add" maxOccurs="unbounded" minOccurs="0"/>
+            <xs:element ref="tei:subst" maxOccurs="unbounded" minOccurs="0"/>
+            <xs:element ref="tei:damage" maxOccurs="unbounded" minOccurs="0"/>
+         </xs:all>
+         <xs:attribute name="ref" type="xs:string" use="optional"/>
+         <xs:attribute name="type" type="xs:string" use="optional"/>
+         <xs:attribute name="cert" use="optional">
+            <xs:simpleType>
+               <xs:restriction base="xs:NCName">
+                  <xs:enumeration value="low"/>
+                  <xs:enumeration value="medium"/>
+                  <xs:enumeration value="strong"/>
+               </xs:restriction>
+            </xs:simpleType>
+         </xs:attribute>
+         <xs:attribute name="evidence" use="optional">
+            <xs:simpleType>
+               <xs:restriction base="xs:NCName">
+                  <xs:enumeration value="conjecture"/>
+                  <xs:enumeration value="internal"/>
+                  <xs:enumeration value="external"/>
+               </xs:restriction>
+            </xs:simpleType>
+         </xs:attribute>
+      </xs:complexType>
+   </xs:element>
+   <xs:element name="space">
+      <xs:complexType>
+         <xs:attribute name="unit" use="required" type="xs:NCName"/>
+         <xs:attribute name="quantity" use="required" type="xs:integer"/>
+         <xs:attribute name="dim" use="optional">
+            <xs:simpleType>
+               <xs:restriction base="xs:NCName">
+                  <xs:enumeration value="vertical"/>
+                  <xs:enumeration value="horizontal"/>
+               </xs:restriction>
+            </xs:simpleType>
+         </xs:attribute>
+      </xs:complexType>
+   </xs:element>
+   <xs:element name="anchor">
+      <xs:complexType mixed="true">
+         <xs:choice minOccurs="0" maxOccurs="unbounded">
+            <xs:element ref="tei:add" maxOccurs="unbounded" minOccurs="0"/>
+            <xs:element ref="tei:anchor" maxOccurs="unbounded" minOccurs="0"/>
+            <xs:element ref="tei:bibl" maxOccurs="unbounded" minOccurs="0"/>
+            <xs:element ref="tei:date" maxOccurs="unbounded" minOccurs="0"/>
+            <xs:element ref="tei:hi" maxOccurs="unbounded" minOccurs="0"/>
+            <xs:element ref="tei:note" maxOccurs="unbounded" minOccurs="0"/>
+            <xs:element ref="tei:orgName" maxOccurs="unbounded" minOccurs="0"/>
+            <xs:element ref="tei:pb" maxOccurs="unbounded" minOccurs="0"/>
+            <xs:element ref="tei:persName" maxOccurs="unbounded" minOccurs="0"/>
+            <xs:element ref="tei:placeName" maxOccurs="unbounded" minOccurs="0"/>
+            <xs:element ref="tei:quote" maxOccurs="unbounded" minOccurs="0"/>
+            <xs:element ref="tei:rs" maxOccurs="unbounded" minOccurs="0"/>
+            <xs:element ref="tei:space" maxOccurs="unbounded" minOccurs="0"/>
+            <xs:element ref="tei:subst" maxOccurs="unbounded" minOccurs="0"/>
+            <xs:element ref="tei:workName" maxOccurs="unbounded" minOccurs="0"/>
+            <xs:element ref="tei:del" maxOccurs="unbounded" minOccurs="0"/>
+         </xs:choice>
+         <xs:attribute name="type" use="required">
+            <xs:simpleType>
+               <xs:restriction base="xs:NCName">
+                  <xs:enumeration value="label"/>
+                  <xs:enumeration value="commentary"/>
+                  <xs:enumeration value="textConst"/>
+               </xs:restriction>
+            </xs:simpleType>
+         </xs:attribute>
+         <xs:attribute ref="xml:id" use="required"/>
+      </xs:complexType>
+   </xs:element>
+   <xs:element name="lb">
+      <xs:complexType/>
+   </xs:element>
+   <xs:complexType mixed="true" name="normalNote">
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+         <xs:element ref="tei:anchor" maxOccurs="unbounded" minOccurs="0"/>
+         <xs:element ref="tei:bibl" maxOccurs="unbounded" minOccurs="0"/>
+         <xs:element ref="tei:date" maxOccurs="unbounded" minOccurs="0"/>
+         <xs:element ref="tei:time" maxOccurs="unbounded" minOccurs="0"/>
+         <xs:element ref="tei:hi" maxOccurs="unbounded" minOccurs="0"/>
+         <xs:element ref="tei:orgName" maxOccurs="unbounded" minOccurs="0"/>
+         <xs:element ref="tei:persName" maxOccurs="unbounded" minOccurs="0"/>
+         <xs:element ref="tei:placeName" maxOccurs="unbounded" minOccurs="0"/>
+         <xs:element ref="tei:quote" maxOccurs="unbounded" minOccurs="0"/>
+         <xs:element ref="tei:rs" maxOccurs="unbounded" minOccurs="0"/>
+         <xs:element ref="tei:space" maxOccurs="unbounded" minOccurs="0"/>
+         <xs:element ref="tei:workName" maxOccurs="unbounded" minOccurs="0"/>
+         <xs:element ref="tei:Lemma" maxOccurs="unbounded" minOccurs="0"/>
+         <xs:element ref="tei:ref" maxOccurs="unbounded" minOccurs="0"/>
+         <xs:element ref="tei:foreign" maxOccurs="unbounded" minOccurs="0"/>
+         <xs:element ref="tei:c" maxOccurs="unbounded" minOccurs="0"/>
+         <xs:element ref="tei:supplied" maxOccurs="unbounded" minOccurs="0"/>
+         <xs:element ref="tei:p" maxOccurs="unbounded" minOccurs="0"/>
+      </xs:choice>
+      <xs:attribute name="type" use="required">
+         <xs:simpleType>
+            <xs:restriction base="xs:NCName">
+               <xs:enumeration value="commentary"/>
+               <xs:enumeration value="textConst"/>
+               <xs:enumeration value="footnote"/>
+               <xs:enumeration value="zeichenanzahl"/>
+            </xs:restriction>
+         </xs:simpleType>
+      </xs:attribute>
+      <xs:attribute ref="xml:id" use="required"/>
+   </xs:complexType>
+   <xs:complexType name="backNote_type-org">
+      <xs:sequence minOccurs="0">
+         <xs:element ref="tei:date" minOccurs="0" maxOccurs="1"/>
+      </xs:sequence>
+      <xs:attribute name="type" type="xs:string" use="required"/>
+   </xs:complexType>
+   <xs:complexType name="backNote_type_image">
+      <xs:sequence minOccurs="0">
+         <xs:element ref="tei:figure" minOccurs="0" maxOccurs="1"/>
+      </xs:sequence>
+      <xs:attribute name="type" type="xs:string" use="required"/>
+   </xs:complexType>
+   <xs:complexType name="biblStruct_type-measure">
+      <xs:sequence minOccurs="1">
+         <xs:element ref="tei:measure" minOccurs="1" maxOccurs="1"/>
+      </xs:sequence>
+      <xs:attribute name="type" type="xs:string" use="required"/>
+   </xs:complexType>
+   <xs:complexType name="backNote_type">
+      <!-- Element mit Textinhalt und Attributen, aber keinen Kindern -->
+      <xs:simpleContent>
+         <xs:extension base="xs:string">
+            <xs:attribute name="type" type="xs:string" use="required"/>
+         </xs:extension>
+      </xs:simpleContent>
+   </xs:complexType>
+   <xs:element name="note">
+      <xs:alternative type="backNote_type"
+         test="@type = 'work_kind' or @type = 'uri_worklink' or @type = 'bibliografische_angabe' or @type = 'references'"/>
+      <xs:alternative type="backNote_type-org" test="@type = 'apis_dates'"/>
+      <xs:alternative type="backNote_type_image" test="@type = 'image'"/>
+      <xs:alternative type="biblStruct_type-measure" test="@type = 'zeichenanzahl'"/>
+      <xs:alternative type="normalNote"/>
+   </xs:element>
+   <xs:element name="Lemma" type="xs:string"/>
+   <xs:element name="hi">
+      <xs:complexType mixed="true">
+         <xs:choice minOccurs="0" maxOccurs="unbounded">
+            <xs:element ref="tei:anchor" maxOccurs="unbounded" minOccurs="0"/>
+            <xs:element ref="tei:del" maxOccurs="unbounded" minOccurs="0"/>
+            <xs:element ref="tei:damage" maxOccurs="unbounded" minOccurs="0"/>
+            <xs:element ref="tei:date" maxOccurs="unbounded" minOccurs="0"/>
+            <xs:element ref="tei:time" maxOccurs="unbounded" minOccurs="0"/>
+            <xs:element ref="tei:hi" maxOccurs="unbounded" minOccurs="0"/>
+            <xs:element ref="tei:gap" maxOccurs="unbounded" minOccurs="0"/>
+            <xs:element ref="tei:note" maxOccurs="unbounded" minOccurs="0"/>
+            <xs:element ref="tei:orgName" maxOccurs="unbounded" minOccurs="0"/>
+            <xs:element ref="tei:pb" maxOccurs="unbounded" minOccurs="0"/>
+            <xs:element ref="tei:rs" maxOccurs="unbounded" minOccurs="0"/>
+            <xs:element ref="tei:placeName" maxOccurs="unbounded" minOccurs="0"/>
+            <xs:element ref="tei:unclear" maxOccurs="unbounded" minOccurs="0"/>
+            <xs:element ref="tei:workName" maxOccurs="unbounded" minOccurs="0"/>
+            <xs:element ref="tei:c" maxOccurs="unbounded" minOccurs="0"/>
+            <xs:element ref="tei:add" maxOccurs="unbounded" minOccurs="0"/>
+            <xs:element ref="tei:space" maxOccurs="unbounded" minOccurs="0"/>
+            <xs:element ref="tei:foreign" maxOccurs="unbounded" minOccurs="0"/>
+            <xs:element ref="tei:supplied" maxOccurs="unbounded" minOccurs="0"/>
+         </xs:choice>
+         <xs:attribute name="rend" use="required">
+            <xs:simpleType>
+               <xs:restriction base="xs:NCName">
+                  <xs:enumeration value="latintype"/>
+                  <xs:enumeration value="underline"/>
+                  <xs:enumeration value="italics"/>
+                  <xs:enumeration value="superscript"/>
+                  <xs:enumeration value="subscript"/>
+                  <xs:enumeration value="bold"/>
+                  <xs:enumeration value="pre-print"/>
+                  <xs:enumeration value="stamp"/>
+                  <xs:enumeration value="small-caps"/>
+                  <xs:enumeration value="antiqua"/>
+                  <xs:enumeration value="spaced-out"/>
+                  <xs:enumeration value="capitals"/>
+               </xs:restriction>
+            </xs:simpleType>
+         </xs:attribute>
+         <xs:attribute name="n" type="xs:integer"/>
+      </xs:complexType>
+   </xs:element>
+   <xs:element name="damage">
+      <xs:complexType>
+         <xs:choice minOccurs="1" maxOccurs="unbounded">
+            <xs:element ref="tei:supplied" minOccurs="0" maxOccurs="unbounded"/>
+            <xs:element ref="tei:unclear" minOccurs="0" maxOccurs="unbounded"/>
+            <xs:element ref="tei:space" minOccurs="0" maxOccurs="unbounded"/>
+            <xs:element ref="tei:gap" minOccurs="0" maxOccurs="unbounded"/>
+         </xs:choice>
+         <xs:attribute name="agent">
+            <xs:simpleType>
+               <xs:restriction base="xs:NCName">
+                  <xs:enumeration value="ink"/>
+                  <xs:enumeration value="water"/>
+                  <xs:enumeration value="paperloss"/>
+                  <xs:enumeration value="hole"/>
+                  <xs:enumeration value="other"/>
+               </xs:restriction>
+            </xs:simpleType>
+         </xs:attribute>
+      </xs:complexType>
+   </xs:element>
+   <xs:element name="date">
+      <xs:complexType mixed="true">
+         <xs:choice minOccurs="0" maxOccurs="unbounded">
+            <xs:element ref="tei:anchor" maxOccurs="unbounded" minOccurs="0"/>
+            <xs:element ref="tei:damage" maxOccurs="unbounded" minOccurs="0"/>
+            <xs:element ref="tei:foreign" maxOccurs="unbounded" minOccurs="0"/>
+            <xs:element ref="tei:gap" maxOccurs="unbounded" minOccurs="0"/>
+            <xs:element ref="tei:hi" maxOccurs="unbounded" minOccurs="0"/>
+            <xs:element ref="tei:lb" maxOccurs="unbounded" minOccurs="0"/>
+            <xs:element ref="tei:note" maxOccurs="unbounded" minOccurs="0"/>
+            <xs:element ref="tei:space" maxOccurs="unbounded" minOccurs="0"/>
+            <xs:element ref="tei:subst" maxOccurs="unbounded" minOccurs="0"/>
+            <xs:element ref="tei:supplied" maxOccurs="unbounded" minOccurs="0"/>
+            <xs:element ref="tei:unclear" maxOccurs="unbounded" minOccurs="0"/>
+            <xs:element ref="tei:c" maxOccurs="unbounded" minOccurs="0"/>
+            <xs:element ref="tei:del" maxOccurs="unbounded" minOccurs="0"/>
+            <xs:element ref="tei:time" maxOccurs="unbounded" minOccurs="0"/>
+         </xs:choice>
+         <xs:attribute name="n" type="xs:integer"/>
+         <xs:attribute name="when" type="date-or-gyear-or-gyearmonth"/>
+         <xs:attribute name="notBefore" type="date-or-gyear-or-gyearmonth"/>
+         <xs:attribute name="notAfter" type="date-or-gyear-or-gyearmonth"/>
+         <xs:attribute name="from" type="date-or-gyear-or-gyearmonth"/>
+         <xs:attribute name="to" type="date-or-gyear-or-gyearmonth"/>
+         <xs:attribute name="evidence" use="optional">
+            <xs:simpleType>
+               <xs:restriction base="xs:NCName">
+                  <xs:enumeration value="conjecture"/>
+                  <xs:enumeration value="internal"/>
+                  <xs:enumeration value="external"/>
+               </xs:restriction>
+            </xs:simpleType>
+         </xs:attribute>
+      </xs:complexType>
+   </xs:element>
+   <xs:element name="add">
+      <xs:complexType mixed="true">
+         <xs:choice minOccurs="0" maxOccurs="unbounded">
+            <xs:element ref="tei:damage" maxOccurs="unbounded" minOccurs="0"/>
+            <xs:element ref="tei:date" maxOccurs="unbounded" minOccurs="0"/>
+            <xs:element ref="tei:hi" maxOccurs="unbounded" minOccurs="0"/>
+            <xs:element ref="tei:del" maxOccurs="unbounded" minOccurs="0"/>
+            <xs:element ref="tei:rs" maxOccurs="unbounded" minOccurs="0"/>
+            <xs:element ref="tei:subst" maxOccurs="unbounded" minOccurs="0"/>
+            <xs:element ref="tei:unclear" maxOccurs="unbounded" minOccurs="0"/>
+            <xs:element ref="tei:c" maxOccurs="unbounded" minOccurs="0"/>
+            <xs:element ref="tei:anchor" maxOccurs="unbounded" minOccurs="0"/>
+            <xs:element ref="tei:note" maxOccurs="unbounded" minOccurs="0"/>
+            <xs:element ref="tei:supplied" maxOccurs="unbounded" minOccurs="0"/>
+            <xs:element ref="tei:space" maxOccurs="unbounded" minOccurs="0"/>
+            <xs:element ref="tei:gap" maxOccurs="unbounded" minOccurs="0"/>
+            <xs:element ref="tei:time" maxOccurs="unbounded" minOccurs="0"/>
+            <xs:element ref="tei:handShift" maxOccurs="unbounded" minOccurs="0"/>
+         </xs:choice>
+         <xs:attribute name="place" use="required">
+            <xs:simpleType>
+               <xs:restriction base="xs:NCName">
+                  <xs:enumeration value="above"/>
+                  <xs:enumeration value="below"/>
+                  <xs:enumeration value="inline"/>
+                  <xs:enumeration value="margin"/>
+                  <xs:enumeration value="mixed"/>
+               </xs:restriction>
+            </xs:simpleType>
+         </xs:attribute>
+      </xs:complexType>
+   </xs:element>
+   <xs:element name="table">
+      <xs:complexType>
+         <xs:choice minOccurs="1" maxOccurs="unbounded">
+            <xs:element ref="tei:row" maxOccurs="unbounded" minOccurs="1"/>
+         </xs:choice>
+      </xs:complexType>
+   </xs:element>
+   <xs:element name="row">
+      <xs:complexType>
+         <xs:choice minOccurs="1" maxOccurs="unbounded">
+            <xs:element ref="tei:cell" maxOccurs="unbounded" minOccurs="1"/>
+         </xs:choice>
+      </xs:complexType>
+   </xs:element>
+   <xs:element name="cell">
+      <xs:complexType mixed="true">
+         <xs:choice minOccurs="0" maxOccurs="unbounded">
+            <xs:element ref="tei:gap" maxOccurs="unbounded" minOccurs="0"/>
+            <xs:element ref="tei:add" maxOccurs="unbounded" minOccurs="0"/>
+            <xs:element ref="tei:anchor" maxOccurs="unbounded" minOccurs="0"/>
+            <xs:element ref="tei:c" maxOccurs="unbounded" minOccurs="0"/>
+            <xs:element ref="tei:damage" maxOccurs="unbounded" minOccurs="0"/>
+            <xs:element ref="tei:date" maxOccurs="unbounded" minOccurs="0"/>
+            <xs:element ref="tei:del" maxOccurs="unbounded" minOccurs="0"/>
+            <xs:element ref="tei:foreign" maxOccurs="unbounded" minOccurs="0"/>
+            <xs:element ref="tei:handShift" maxOccurs="unbounded" minOccurs="0"/>
+            <xs:element ref="tei:hi" maxOccurs="unbounded" minOccurs="0"/>
+            <xs:element ref="tei:lb" maxOccurs="unbounded" minOccurs="0"/>
+            <xs:element ref="tei:note" maxOccurs="unbounded" minOccurs="0"/>
+            <xs:element ref="tei:pb" maxOccurs="unbounded" minOccurs="0"/>
+            <xs:element ref="tei:quote" maxOccurs="unbounded" minOccurs="0"/>
+            <xs:element ref="tei:rs" maxOccurs="unbounded" minOccurs="0"/>
+            <xs:element ref="tei:salute" maxOccurs="unbounded" minOccurs="0"/>
+            <xs:element ref="tei:signed" maxOccurs="unbounded" minOccurs="0"/>
+            <xs:element ref="tei:space" maxOccurs="unbounded" minOccurs="0"/>
+            <xs:element ref="tei:subst" maxOccurs="unbounded" minOccurs="0"/>
+            <xs:element ref="tei:supplied" maxOccurs="unbounded" minOccurs="0"/>
+            <xs:element ref="tei:time" maxOccurs="unbounded" minOccurs="0"/>
+            <xs:element ref="tei:unclear" maxOccurs="unbounded" minOccurs="0"/>
+            <xs:element ref="tei:workName" maxOccurs="unbounded" minOccurs="0"/>
+            <xs:element ref="tei:bibl" maxOccurs="unbounded" minOccurs="0"/>
+            <xs:element ref="tei:seg" maxOccurs="2" minOccurs="0"/>
+         </xs:choice>
+      </xs:complexType>
+   </xs:element>
+   <xs:element name="p">
+      <xs:complexType mixed="true">
+         <xs:choice minOccurs="0" maxOccurs="unbounded">
+            <xs:element ref="tei:gap" maxOccurs="unbounded" minOccurs="0"/>
+            <xs:element ref="tei:add" maxOccurs="unbounded" minOccurs="0"/>
+            <xs:element ref="tei:anchor" maxOccurs="unbounded" minOccurs="0"/>
+            <xs:element ref="tei:c" maxOccurs="unbounded" minOccurs="0"/>
+            <xs:element ref="tei:damage" maxOccurs="unbounded" minOccurs="0"/>
+            <xs:element ref="tei:date" maxOccurs="unbounded" minOccurs="0"/>
+            <xs:element ref="tei:del" maxOccurs="unbounded" minOccurs="0"/>
+            <xs:element ref="tei:foreign" maxOccurs="unbounded" minOccurs="0"/>
+            <xs:element ref="tei:handShift" maxOccurs="unbounded" minOccurs="0"/>
+            <xs:element ref="tei:hi" maxOccurs="unbounded" minOccurs="0"/>
+            <xs:element ref="tei:lb" maxOccurs="unbounded" minOccurs="0"/>
+            <xs:element ref="tei:note" maxOccurs="unbounded" minOccurs="0"/>
+            <xs:element ref="tei:orgName" maxOccurs="unbounded" minOccurs="0"/>
+            <xs:element ref="tei:pb" maxOccurs="unbounded" minOccurs="0"/>
+            <xs:element ref="tei:persName" maxOccurs="unbounded" minOccurs="0"/>
+            <xs:element ref="tei:placeName" maxOccurs="unbounded" minOccurs="0"/>
+            <xs:element ref="tei:quote" maxOccurs="unbounded" minOccurs="0"/>
+            <xs:element ref="tei:rs" maxOccurs="unbounded" minOccurs="0"/>
+            <xs:element ref="tei:salute" maxOccurs="unbounded" minOccurs="0"/>
+            <xs:element ref="tei:signed" maxOccurs="unbounded" minOccurs="0"/>
+            <xs:element ref="tei:space" maxOccurs="unbounded" minOccurs="0"/>
+            <xs:element ref="tei:subst" maxOccurs="unbounded" minOccurs="0"/>
+            <xs:element ref="tei:supplied" maxOccurs="unbounded" minOccurs="0"/>
+            <xs:element ref="tei:time" maxOccurs="unbounded" minOccurs="0"/>
+            <xs:element ref="tei:unclear" maxOccurs="unbounded" minOccurs="0"/>
+            <xs:element ref="tei:workName" maxOccurs="unbounded" minOccurs="0"/>
+            <xs:element ref="tei:bibl" maxOccurs="unbounded" minOccurs="0"/>
+            <xs:element ref="tei:seg" maxOccurs="2" minOccurs="0"/>
+            <xs:element ref="tei:ref" maxOccurs="unbounded" minOccurs="0"/>
+            <xs:element ref="tei:desc" maxOccurs="unbounded" minOccurs="0"/>
+         </xs:choice>
+         <xs:attribute name="rend" use="optional">
+            <xs:simpleType>
+               <xs:restriction base="xs:NCName">
+                  <xs:enumeration value="right"/>
+                  <xs:enumeration value="left"/>
+                  <xs:enumeration value="center"/>
+                  <xs:enumeration value="inline"/>
+               </xs:restriction>
+            </xs:simpleType>
+         </xs:attribute>
+      </xs:complexType>
+   </xs:element>
+   <xs:element name="salute">
+      <xs:complexType mixed="true">
+         <xs:all minOccurs="0">
+            <xs:element ref="tei:hi" minOccurs="0" maxOccurs="unbounded"/>
+            <xs:element ref="tei:pb" minOccurs="0" maxOccurs="unbounded"/>
+            <xs:element ref="tei:damage" minOccurs="0" maxOccurs="unbounded"/>
+            <xs:element ref="tei:unclear" minOccurs="0" maxOccurs="unbounded"/>
+            <xs:element ref="tei:anchor" minOccurs="0" maxOccurs="unbounded"/>
+            <xs:element ref="tei:note" maxOccurs="unbounded" minOccurs="0"/>
+            <xs:element ref="tei:c" maxOccurs="unbounded" minOccurs="0"/>
+            <xs:element ref="tei:rs" maxOccurs="unbounded" minOccurs="0"/>
+            <xs:element ref="tei:handShift" maxOccurs="unbounded" minOccurs="0"/>
+            <xs:element ref="tei:add" maxOccurs="unbounded" minOccurs="0"/>
+            <xs:element ref="tei:subst" maxOccurs="unbounded" minOccurs="0"/>
+            <xs:element ref="tei:space" maxOccurs="unbounded" minOccurs="0"/>
+            <xs:element ref="tei:foreign" maxOccurs="unbounded" minOccurs="0"/>
+            <xs:element ref="tei:del" maxOccurs="unbounded" minOccurs="0"/>
+            <xs:element ref="tei:supplied" maxOccurs="unbounded" minOccurs="0"/>
+         </xs:all>
+         <xs:attribute name="rend" use="optional">
+            <xs:simpleType>
+               <xs:restriction base="xs:NCName">
+                  <xs:enumeration value="right"/>
+                  <xs:enumeration value="left"/>
+                  <xs:enumeration value="center"/>
+                  <xs:enumeration value="inline"/>
+               </xs:restriction>
+            </xs:simpleType>
+         </xs:attribute>
+      </xs:complexType>
+   </xs:element>
+   <xs:element name="graphic">
+      <xs:complexType>
+         <xs:attribute name="facs" use="optional"/>
+         <xs:attribute name="url" use="required"/>
+         <xs:attribute name="width" type="xs:NMTOKEN" use="optional"/>
+      </xs:complexType>
+   </xs:element>
+   <xs:element name="address">
+      <xs:complexType>
+         <xs:choice>
+            <xs:element maxOccurs="unbounded" ref="tei:addrLine" minOccurs="0"/>
+            <xs:sequence>
+               <xs:element ref="tei:street"/>
+               <xs:element ref="tei:postCode"/>
+               <xs:element ref="tei:placeName"/>
+            </xs:sequence>
+         </xs:choice>
+      </xs:complexType>
+   </xs:element>
+   <xs:element name="addrLine">
+      <xs:complexType mixed="true">
+         <xs:choice minOccurs="0" maxOccurs="unbounded">
+            <xs:element ref="tei:foreign" maxOccurs="unbounded" minOccurs="0"/>
+            <xs:element ref="tei:hi" maxOccurs="unbounded" minOccurs="0"/>
+            <xs:element ref="tei:pb" maxOccurs="unbounded" minOccurs="0"/>
+            <xs:element ref="tei:rs" maxOccurs="unbounded" minOccurs="0"/>
+            <xs:element ref="tei:space" maxOccurs="unbounded" minOccurs="0"/>
+            <xs:element ref="tei:handShift" maxOccurs="unbounded" minOccurs="0"/>
+            <xs:element ref="tei:note" maxOccurs="unbounded" minOccurs="0"/>
+            <xs:element ref="tei:anchor" maxOccurs="unbounded" minOccurs="0"/>
+            <xs:element ref="tei:subst" maxOccurs="unbounded" minOccurs="0"/>
+            <xs:element minOccurs="0" maxOccurs="unbounded" ref="tei:damage"/>
+            <xs:element ref="tei:add" maxOccurs="unbounded" minOccurs="0"/>
+            <xs:element ref="tei:del" maxOccurs="unbounded" minOccurs="0"/>
+            <xs:element ref="tei:supplied" maxOccurs="unbounded" minOccurs="0"/>
+            <xs:element ref="tei:unclear" maxOccurs="unbounded" minOccurs="0"/>
+            <xs:element ref="tei:c" maxOccurs="unbounded" minOccurs="0"/>
+         </xs:choice>
+      </xs:complexType>
+   </xs:element>
+   <xs:element name="street" type="xs:string"/>
+   <xs:element name="postCode" type="xs:string"/>
+   <xs:element name="persName">
+      <xs:complexType mixed="true">
+         <xs:all minOccurs="0">
+            <xs:element ref="tei:hi" minOccurs="0"/>
+            <xs:element ref="tei:unclear" minOccurs="0"/>
+            <xs:element ref="tei:c" minOccurs="0" maxOccurs="unbounded"/>
+            <xs:element ref="tei:pb" minOccurs="0"/>
+            <xs:element ref="tei:rs" maxOccurs="unbounded" minOccurs="0"/>
+            <xs:element ref="tei:del" minOccurs="0" maxOccurs="unbounded"/>
+            <xs:element ref="tei:subst" minOccurs="0" maxOccurs="unbounded"/>
+            <xs:element ref="tei:add" minOccurs="0" maxOccurs="unbounded"/>
+            <xs:element ref="tei:forename" minOccurs="0" maxOccurs="1"/>
+            <xs:element ref="tei:surname" minOccurs="0" maxOccurs="1"/>
+         </xs:all>
+         <xs:attribute name="ref" type="xs:string" use="optional"/>
+         <xs:attribute name="cert" use="optional">
+            <xs:simpleType>
+               <xs:restriction base="xs:NCName">
+                  <xs:enumeration value="low"/>
+                  <xs:enumeration value="medium"/>
+                  <xs:enumeration value="strong"/>
+               </xs:restriction>
+            </xs:simpleType>
+         </xs:attribute>
+         <xs:attribute name="type" type="xs:string" use="optional"/>
+      </xs:complexType>
+   </xs:element>
+   <xs:element name="pb">
+      <xs:complexType>
+         <xs:attribute name="facs" type="xs:string"/>
+      </xs:complexType>
+   </xs:element>
+   <xs:element name="signed">
+      <xs:complexType mixed="true">
+         <xs:choice minOccurs="0" maxOccurs="unbounded">
+            <xs:element ref="tei:anchor" maxOccurs="unbounded" minOccurs="0"/>
+            <xs:element ref="tei:damage" maxOccurs="unbounded" minOccurs="0"/>
+            <xs:element ref="tei:handShift" maxOccurs="unbounded" minOccurs="0"/>
+            <xs:element ref="tei:note" maxOccurs="unbounded" minOccurs="0"/>
+            <xs:element ref="tei:pb" maxOccurs="unbounded" minOccurs="0"/>
+            <xs:element ref="tei:rs" maxOccurs="unbounded" minOccurs="0"/>
+            <xs:element ref="tei:gap" maxOccurs="unbounded" minOccurs="0"/>
+            <xs:element ref="tei:space" maxOccurs="unbounded" minOccurs="0"/>
+            <xs:element ref="tei:unclear" maxOccurs="unbounded" minOccurs="0"/>
+            <xs:element ref="tei:hi" maxOccurs="unbounded" minOccurs="0"/>
+            <xs:element ref="tei:subst" maxOccurs="unbounded" minOccurs="0"/>
+            <xs:element ref="tei:del" maxOccurs="unbounded" minOccurs="0"/>
+            <xs:element ref="tei:c" maxOccurs="unbounded" minOccurs="0"/>
+            <xs:element ref="tei:supplied" maxOccurs="unbounded" minOccurs="0"/>
+         </xs:choice>
+      </xs:complexType>
+   </xs:element>
+   <xs:element name="supplied">
+      <xs:complexType mixed="true">
+         <xs:choice minOccurs="0" maxOccurs="unbounded">
+            <xs:element maxOccurs="unbounded" minOccurs="0" ref="tei:c"/>
+            <xs:element maxOccurs="unbounded" minOccurs="0" ref="tei:space"/>
+            <xs:element minOccurs="0" maxOccurs="unbounded" ref="tei:del"/>
+            <xs:element minOccurs="0" maxOccurs="unbounded" ref="tei:anchor"/>
+            <xs:element maxOccurs="unbounded" minOccurs="0" ref="tei:note"/>
+            <xs:element maxOccurs="unbounded" minOccurs="0" ref="tei:date"/>
+            <xs:element maxOccurs="unbounded" minOccurs="0" ref="tei:gap"/>
+            <xs:element maxOccurs="unbounded" minOccurs="0" ref="tei:rs"/>
+            <xs:element maxOccurs="unbounded" minOccurs="0" ref="tei:ref"/>
+         </xs:choice>
+         <xs:attribute name="type" use="optional">
+            <xs:simpleType>
+               <xs:restriction base="xs:string">
+                  <xs:enumeration value="image-description"/>
+               </xs:restriction>
+            </xs:simpleType>
+         </xs:attribute>
+      </xs:complexType>
+   </xs:element>
+   <xs:element name="milestone">
+      <xs:complexType>
+         <xs:attribute name="rend" use="required">
+            <xs:simpleType>
+               <xs:restriction base="xs:NCName">
+                  <xs:enumeration value="line"/>
+               </xs:restriction>
+            </xs:simpleType>
+         </xs:attribute>
+      </xs:complexType>
+   </xs:element>
+   <xs:element name="rs">
+      <xs:complexType mixed="true">
+         <xs:choice minOccurs="0" maxOccurs="unbounded">
+            <xs:element ref="tei:anchor" maxOccurs="unbounded" minOccurs="0"/>
+            <xs:element ref="tei:bibl" maxOccurs="unbounded" minOccurs="0"/>
+            <xs:element ref="tei:damage" maxOccurs="unbounded" minOccurs="0"/>
+            <xs:element ref="tei:note" maxOccurs="unbounded" minOccurs="0"/>
+            <xs:element ref="tei:foreign" maxOccurs="unbounded" minOccurs="0"/>
+            <xs:element ref="tei:date" maxOccurs="unbounded" minOccurs="0"/>
+            <xs:element ref="tei:lb" maxOccurs="unbounded" minOccurs="0"/>
+            <xs:element ref="tei:space" maxOccurs="unbounded" minOccurs="0"/>
+            <xs:element ref="tei:hi" minOccurs="0" maxOccurs="unbounded"/>
+            <xs:element ref="tei:unclear" minOccurs="0" maxOccurs="unbounded"/>
+            <xs:element ref="tei:c" minOccurs="0" maxOccurs="unbounded"/>
+            <xs:element ref="tei:supplied" minOccurs="0" maxOccurs="unbounded"/>
+            <xs:element ref="tei:pb" minOccurs="0" maxOccurs="unbounded"/>
+            <xs:element ref="tei:rs" maxOccurs="unbounded" minOccurs="0"/>
+            <xs:element ref="tei:del" minOccurs="0" maxOccurs="unbounded"/>
+            <xs:element ref="tei:subst" minOccurs="0" maxOccurs="unbounded"/>
+            <xs:element ref="tei:add" minOccurs="0" maxOccurs="unbounded"/>
+         </xs:choice>
+         <xs:attribute name="ref" type="xs:string" use="optional"/>
+         <xs:attribute name="cert">
+            <xs:simpleType>
+               <xs:restriction base="xs:NCName">
+                  <xs:enumeration value="low"/>
+                  <xs:enumeration value="medium"/>
+                  <xs:enumeration value="strong"/>
+               </xs:restriction>
+            </xs:simpleType>
+         </xs:attribute>
+         <xs:attribute name="subtype">
+            <xs:simpleType>
+               <xs:restriction base="xs:string">
+                  <xs:enumeration value="implied"/>
+               </xs:restriction>
+            </xs:simpleType>
+         </xs:attribute>
+         <xs:attribute name="type" use="required">
+            <xs:simpleType>
+               <xs:restriction base="xs:string">
+                  <xs:enumeration value="person"/>
+                  <xs:enumeration value="work"/>
+                  <xs:enumeration value="place"/>
+                  <xs:enumeration value="org"/>
+               </xs:restriction>
+            </xs:simpleType>
+         </xs:attribute>
+      </xs:complexType>
+   </xs:element>
+   <xs:element name="handShift">
+      <xs:complexType>
+         <xs:attribute name="medium" use="optional">
+            <xs:simpleType>
+               <xs:restriction base="xs:string">
+                  <xs:enumeration value="typewriter"/>
+               </xs:restriction>
+            </xs:simpleType>
+         </xs:attribute>
+         <xs:attribute name="scribe" type="xs:string" use="optional"/>
+      </xs:complexType>
+   </xs:element>
+   <xs:element name="title">
+      <xs:complexType mixed="true">
+         <xs:choice>
+            <xs:element ref="tei:c" maxOccurs="unbounded" minOccurs="0"/>
+         </xs:choice>
+         <xs:attribute name="ref" type="xs:string"/>
+         <xs:attribute name="level" use="optional">
+            <xs:simpleType>
+               <xs:restriction base="xs:NCName">
+                  <xs:enumeration value="m"/>
+                  <xs:enumeration value="a"/>
+                  <xs:enumeration value="s"/>
+                  <xs:enumeration value="j"/>
+               </xs:restriction>
+            </xs:simpleType>
+         </xs:attribute>
+         <xs:attribute name="type" type="xs:string"/>
+      </xs:complexType>
+   </xs:element>
+   <xs:element name="author">
+      <xs:complexType mixed="true">
+         <xs:attribute name="ref" type="xs:string"/>
+         <xs:attribute name="role" type="xs:string"/>
+      </xs:complexType>
+   </xs:element>
+   <xs:element name="editor">
+      <xs:complexType mixed="true">
+         <xs:all>
+            <xs:element maxOccurs="unbounded" minOccurs="0" ref="tei:persName"/>
+            <xs:element minOccurs="0" maxOccurs="unbounded" ref="tei:name"/>
+         </xs:all>
+      </xs:complexType>
+   </xs:element>
+   <xs:element name="name">
+      <xs:complexType mixed="true">
+         <xs:attribute name="full" type="xs:NCName"/>
+         <xs:attribute name="instant" type="xs:boolean"/>
+      </xs:complexType>
+   </xs:element>
+   <xs:element name="respStmt">
+      <xs:complexType mixed="true">
+         <xs:choice minOccurs="0" maxOccurs="unbounded">
+            <xs:element ref="tei:name" maxOccurs="unbounded" minOccurs="0"/>
+            <xs:element ref="tei:resp" maxOccurs="unbounded" minOccurs="0"/>
+         </xs:choice>
+      </xs:complexType>
+   </xs:element>
+   <xs:element name="resp" type="xs:string"/>
+   <xs:element name="publisher">
+      <xs:complexType mixed="true">
+         <xs:choice maxOccurs="unbounded" minOccurs="0">
+            <xs:element ref="tei:c" maxOccurs="unbounded" minOccurs="0"/>
+         </xs:choice>
+      </xs:complexType>
+   </xs:element>
+   <xs:element name="idno">
+      <xs:complexType mixed="true">
+         <xs:attribute name="n" type="xs:integer" use="optional"/>
+         <xs:attribute name="type" use="optional"/>
+         <xs:attribute name="subtype" use="optional"/>
+      </xs:complexType>
+   </xs:element>
+   <xs:element name="country">
+      <xs:complexType mixed="true">
+         <xs:choice minOccurs="0" maxOccurs="unbounded">
+            <xs:element ref="tei:hi" maxOccurs="unbounded" minOccurs="0"/>
+            <xs:element ref="tei:unclear" maxOccurs="unbounded" minOccurs="0"/>
+         </xs:choice>
+      </xs:complexType>
+   </xs:element>
+   <xs:element name="settlement">
+      <xs:complexType mixed="true">
+         <xs:choice minOccurs="0" maxOccurs="unbounded">
+            <xs:element minOccurs="0" maxOccurs="unbounded" ref="tei:placeName"/>
+            <xs:element minOccurs="0" maxOccurs="unbounded" ref="tei:location"/>
+         </xs:choice>
+         <xs:attribute name="ref" type="xs:string" use="optional"/>
+      </xs:complexType>
+   </xs:element>
+   <xs:element name="time">
+      <xs:complexType mixed="true">
+         <xs:choice minOccurs="0" maxOccurs="unbounded">
+            <xs:element ref="tei:hi" maxOccurs="unbounded" minOccurs="0"/>
+            <xs:element ref="tei:unclear" maxOccurs="unbounded" minOccurs="0"/>
+            <xs:element ref="tei:space" maxOccurs="unbounded" minOccurs="0"/>
+            <xs:element ref="tei:supplied" maxOccurs="unbounded" minOccurs="0"/>
+            <xs:element ref="tei:gap" maxOccurs="unbounded" minOccurs="0"/>
+            <xs:element ref="tei:foreign" maxOccurs="unbounded" minOccurs="0"/>
+            <xs:element ref="tei:subst" maxOccurs="unbounded" minOccurs="0"/>
+            <xs:element ref="tei:pb" maxOccurs="unbounded" minOccurs="0"/>
+            <xs:element ref="tei:c" maxOccurs="unbounded" minOccurs="0"/>
+         </xs:choice>
+      </xs:complexType>
+   </xs:element>
+   <xs:element name="biblScope">
+      <xs:complexType mixed="true">
+         <xs:attribute name="unit" use="required">
+            <xs:simpleType>
+               <xs:restriction base="xs:NCName">
+                  <xs:enumeration value="pp"/>
+                  <xs:enumeration value="vol"/>
+                  <xs:enumeration value="jg"/>
+                  <xs:enumeration value="col"/>
+                  <xs:enumeration value="nr"/>
+                  <xs:enumeration value="sec"/>
+               </xs:restriction>
+            </xs:simpleType>
+         </xs:attribute>
+      </xs:complexType>
+   </xs:element>
+   <xs:element name="imprint">
+      <xs:complexType>
+         <xs:all>
+            <xs:element ref="tei:pubPlace" maxOccurs="unbounded" minOccurs="0"/>
+            <xs:element ref="tei:publisher" minOccurs="0"/>
+            <xs:element ref="tei:date"/>
+         </xs:all>
+      </xs:complexType>
+   </xs:element>
+   <xs:element name="foreign">
+      <xs:complexType mixed="true">
+         <xs:choice minOccurs="0" maxOccurs="unbounded">
+            <xs:element ref="tei:anchor" maxOccurs="unbounded" minOccurs="0"/>
+            <xs:element ref="tei:gap" maxOccurs="unbounded" minOccurs="0"/>
+            <xs:element ref="tei:hi" maxOccurs="unbounded" minOccurs="0"/>
+            <xs:element ref="tei:note" maxOccurs="unbounded" minOccurs="0"/>
+            <xs:element ref="tei:rs" maxOccurs="unbounded" minOccurs="0"/>
+            <xs:element ref="tei:c" minOccurs="0" maxOccurs="unbounded"/>
+            <xs:element ref="tei:date" minOccurs="0" maxOccurs="unbounded"/>
+            <xs:element ref="tei:unclear" maxOccurs="unbounded" minOccurs="0"/>
+            <xs:element ref="tei:supplied" maxOccurs="unbounded" minOccurs="0"/>
+            <xs:element ref="tei:space" maxOccurs="unbounded" minOccurs="0"/>
+            <xs:element ref="tei:del" maxOccurs="unbounded" minOccurs="0"/>
+            <xs:element ref="tei:lb" maxOccurs="unbounded" minOccurs="0"/>
+            <xs:element ref="tei:pb" maxOccurs="unbounded" minOccurs="0"/>
+         </xs:choice>
+         <xs:attribute ref="xml:lang" use="required"/>
+      </xs:complexType>
+   </xs:element>
+   <xs:element name="unclear">
+      <xs:complexType mixed="true">
+         <xs:choice minOccurs="0" maxOccurs="unbounded">
+            <xs:element ref="tei:anchor" maxOccurs="unbounded" minOccurs="0"/>
+            <xs:element ref="tei:hi" maxOccurs="unbounded" minOccurs="0"/>
+            <xs:element ref="tei:note" maxOccurs="unbounded" minOccurs="0"/>
+            <xs:element ref="tei:rs" maxOccurs="unbounded" minOccurs="0"/>
+            <xs:element ref="tei:c" minOccurs="0" maxOccurs="unbounded"/>
+            <xs:element ref="tei:date" minOccurs="0" maxOccurs="unbounded"/>
+         </xs:choice>
+      </xs:complexType>
+   </xs:element>
+   <xs:complexType name="bibl_in_note" mixed="true">
+      <xs:all>
+         <xs:element ref="tei:date" maxOccurs="unbounded" minOccurs="0"/>
+         <xs:element ref="tei:orgName" maxOccurs="unbounded" minOccurs="0"/>
+         <xs:element ref="tei:persName" maxOccurs="unbounded" minOccurs="0"/>
+         <xs:element ref="tei:space" maxOccurs="unbounded" minOccurs="0"/>
+         <xs:element ref="tei:supplied" maxOccurs="unbounded" minOccurs="0"/>
+         <xs:element ref="tei:workName" maxOccurs="unbounded" minOccurs="0"/>
+         <xs:element ref="tei:c" maxOccurs="unbounded" minOccurs="0"/>
+         <xs:element ref="tei:rs" maxOccurs="unbounded" minOccurs="0"/>
+         <xs:element ref="tei:title" maxOccurs="unbounded" minOccurs="0"/>
+         <xs:element ref="tei:publisher" maxOccurs="unbounded" minOccurs="0"/>
+         <xs:element ref="tei:pubPlace" maxOccurs="unbounded" minOccurs="0"/>
+         <xs:element ref="tei:hi" maxOccurs="unbounded" minOccurs="0"/>
+      </xs:all>
+      <xs:attribute ref="xml:id" use="optional"/>
+   </xs:complexType>
+   <xs:complexType name="bibl_in_back_listBibl">
+      <xs:all>
+         <xs:element ref="tei:date" maxOccurs="unbounded" minOccurs="0"/>
+         <xs:element ref="tei:author" maxOccurs="unbounded" minOccurs="0"/>
+         <xs:element ref="tei:idno" maxOccurs="unbounded" minOccurs="0"/>
+         <xs:element ref="tei:title" maxOccurs="unbounded" minOccurs="1"/>
+         <xs:element ref="tei:note" maxOccurs="unbounded" minOccurs="0"/>
+      </xs:all>
+      <xs:attribute ref="xml:id" use="required"/>
+   </xs:complexType>
+   <xs:element name="bibl">
+      <xs:alternative test="@xml:id" type="bibl_in_back_listBibl"/>
+      <xs:alternative test="not(@xml:id)" type="bibl_in_note"/>
+   </xs:element>
+   <xs:element name="quote">
+      <xs:complexType mixed="true">
+         <xs:choice minOccurs="0" maxOccurs="unbounded">
+            <xs:element ref="tei:c" maxOccurs="unbounded" minOccurs="0"/>
+            <xs:element ref="tei:date" maxOccurs="unbounded" minOccurs="0"/>
+            <xs:element ref="tei:foreign" maxOccurs="unbounded" minOccurs="0"/>
+            <xs:element ref="tei:hi" maxOccurs="unbounded" minOccurs="0"/>
+            <xs:element ref="tei:subst" maxOccurs="unbounded" minOccurs="0"/>
+            <xs:element ref="tei:gap" maxOccurs="unbounded" minOccurs="0"/>
+            <xs:element ref="tei:rs" maxOccurs="unbounded" minOccurs="0"/>
+            <xs:element ref="tei:lb" maxOccurs="unbounded" minOccurs="0"/>
+            <xs:element ref="tei:space" maxOccurs="unbounded" minOccurs="0"/>
+            <xs:element ref="tei:supplied" maxOccurs="unbounded" minOccurs="0"/>
+            <xs:element ref="tei:time" maxOccurs="unbounded" minOccurs="0"/>
+            <xs:element ref="tei:unclear" maxOccurs="unbounded" minOccurs="0"/>
+            <xs:element ref="tei:damage" maxOccurs="unbounded" minOccurs="0"/>
+            <xs:element ref="tei:add" maxOccurs="unbounded" minOccurs="0"/>
+            <xs:element ref="tei:del" maxOccurs="unbounded" minOccurs="0"/>
+            <xs:element ref="tei:p" maxOccurs="unbounded" minOccurs="0"/>
+            <xs:element ref="tei:pb" maxOccurs="unbounded" minOccurs="0"/>
+         </xs:choice>
+      </xs:complexType>
+   </xs:element>
+   <xs:element name="workName">
+      <xs:complexType mixed="true">
+         <xs:choice minOccurs="0" maxOccurs="unbounded">
+            <xs:element ref="tei:damage" maxOccurs="unbounded" minOccurs="0"/>
+            <xs:element ref="tei:supplied" maxOccurs="unbounded" minOccurs="0"/>
+            <xs:element ref="tei:date" maxOccurs="unbounded" minOccurs="0"/>
+            <xs:element ref="tei:hi" maxOccurs="unbounded" minOccurs="0"/>
+            <xs:element ref="tei:pb" maxOccurs="unbounded" minOccurs="0"/>
+            <xs:element ref="tei:c" maxOccurs="unbounded" minOccurs="0"/>
+            <xs:element ref="tei:rs" maxOccurs="unbounded" minOccurs="0"/>
+            <xs:element ref="tei:del" minOccurs="0" maxOccurs="unbounded"/>
+            <xs:element ref="tei:subst" minOccurs="0" maxOccurs="unbounded"/>
+            <xs:element ref="tei:add" minOccurs="0" maxOccurs="unbounded"/>
+         </xs:choice>
+         <xs:attribute name="ref" type="xs:string"/>
+         <xs:attribute name="cert">
+            <xs:simpleType>
+               <xs:restriction base="xs:NCName">
+                  <xs:enumeration value="low"/>
+                  <xs:enumeration value="medium"/>
+                  <xs:enumeration value="strong"/>
+               </xs:restriction>
+            </xs:simpleType>
+         </xs:attribute>
+      </xs:complexType>
+   </xs:element>
+   <xs:element name="subst">
+      <xs:complexType>
+         <xs:sequence>
+            <xs:element ref="tei:del"/>
+            <xs:element ref="tei:add"/>
+         </xs:sequence>
+      </xs:complexType>
+   </xs:element>
+   <xs:element name="orgName" type="orgAttr"/>
+   <xs:complexType name="orgAttr">
+      <!-- Element mit Textinhalt und Attributen, aber keinen Kindern -->
+      <xs:simpleContent>
+         <xs:extension base="xs:string">
+            <xs:attribute name="ref" type="xs:string" use="optional"/>
+            <xs:attribute name="type" type="xs:string" use="optional"/>
+            <xs:attribute name="cert" use="optional">
+               <xs:simpleType>
+                  <xs:restriction base="xs:NCName">
+                     <xs:enumeration value="low"/>
+                     <xs:enumeration value="medium"/>
+                     <xs:enumeration value="strong"/>
+                  </xs:restriction>
+               </xs:simpleType>
+            </xs:attribute>
+         </xs:extension>
+      </xs:simpleContent>
+   </xs:complexType>
+   <xs:element name="gap">
+      <xs:complexType>
+         <xs:attribute name="reason" use="required">
+            <xs:simpleType>
+               <xs:restriction base="xs:NCName">
+                  <xs:enumeration value="illegible"/>
+                  <xs:enumeration value="outOfScope"/>
+               </xs:restriction>
+            </xs:simpleType>
+         </xs:attribute>
+         <xs:attribute name="unit" use="required">
+            <xs:simpleType>
+               <xs:restriction base="xs:NCName">
+                  <xs:enumeration value="chars"/>
+                  <xs:enumeration value="lines"/>
+               </xs:restriction>
+            </xs:simpleType>
+         </xs:attribute>
+         <xs:attribute name="quantity" use="required" type="xs:integer"/>
+      </xs:complexType>
+   </xs:element>
+   <xs:element name="del">
+      <xs:complexType mixed="true">
+         <xs:choice maxOccurs="unbounded" minOccurs="0">
+            <xs:element ref="tei:gap" maxOccurs="unbounded" minOccurs="0"/>
+            <xs:element ref="tei:space" maxOccurs="unbounded" minOccurs="0"/>
+            <xs:element ref="tei:unclear" maxOccurs="unbounded" minOccurs="0"/>
+            <xs:element ref="tei:hi" maxOccurs="unbounded" minOccurs="0"/>
+            <xs:element ref="tei:anchor" maxOccurs="unbounded" minOccurs="0"/>
+            <xs:element ref="tei:note" maxOccurs="unbounded" minOccurs="0"/>
+            <xs:element ref="tei:rs" maxOccurs="unbounded" minOccurs="0"/>
+            <xs:element ref="tei:date" maxOccurs="unbounded" minOccurs="0"/>
+            <xs:element ref="tei:time" maxOccurs="unbounded" minOccurs="0"/>
+            <xs:element ref="tei:c" maxOccurs="unbounded" minOccurs="0"/>
+            <xs:element ref="tei:add" maxOccurs="unbounded" minOccurs="0"/>
+            <xs:element ref="tei:del" maxOccurs="unbounded" minOccurs="0"/>
+         </xs:choice>
+         <xs:attribute name="rend" use="required">
+            <xs:simpleType>
+               <xs:restriction base="xs:NCName">
+                  <xs:enumeration value="strikethrough"/>
+                  <xs:enumeration value="overwritten"/>
+                  <xs:enumeration value="erased"/>
+                  <xs:enumeration value="unmarked"/>
+               </xs:restriction>
+            </xs:simpleType>
+         </xs:attribute>
+      </xs:complexType>
+   </xs:element>
+   <xs:element name="c">
+      <xs:complexType>
+         <xs:attribute name="n" type="xs:integer"/>
+         <xs:attribute name="rendition" use="required">
+            <xs:simpleType>
+               <xs:restriction base="xs:string">
+                  <xs:enumeration value="#kaufmannsund"/>
+                  <xs:enumeration value="#tilde"/>
+                  <xs:enumeration value="#prozent"/>
+                  <xs:enumeration value="#gemination-m"/>
+                  <xs:enumeration value="#gemination-n"/>
+                  <xs:enumeration value="#dots"/>
+                  <xs:enumeration value="#geschwungene-klammer-zu"/>
+                  <xs:enumeration value="#geschwungene-klammer-auf"/>
+                  <xs:enumeration value="#langesS"/>
+               </xs:restriction>
+            </xs:simpleType>
+         </xs:attribute>
+      </xs:complexType>
+   </xs:element>
+   <!-- Ergänzungen für das Back-Element -->
+   <xs:element name="listOrg">
+      <xs:complexType>
+         <xs:sequence>
+            <xs:element maxOccurs="unbounded" ref="tei:org"/>
+         </xs:sequence>
+      </xs:complexType>
+   </xs:element>
+   <xs:element name="org">
+      <xs:complexType>
+         <xs:all>
+            <xs:element maxOccurs="unbounded" ref="tei:orgName"/>
+            <xs:element minOccurs="0" maxOccurs="unbounded" ref="tei:location"/>
+            <xs:element minOccurs="0" maxOccurs="unbounded" ref="tei:idno"/>
+            <xs:element minOccurs="0" maxOccurs="unbounded" ref="tei:desc"/>
+            <xs:element ref="tei:listBibl" minOccurs="0" maxOccurs="1"/>
+            <xs:element minOccurs="0" maxOccurs="unbounded" ref="tei:note"/>
+         </xs:all>
+         <xs:attribute ref="xml:id" use="required"/>
+      </xs:complexType>
+   </xs:element>
+   <xs:element name="listPerson">
+      <xs:complexType>
+         <xs:sequence>
+            <xs:element maxOccurs="unbounded" ref="tei:person"/>
+         </xs:sequence>
+      </xs:complexType>
+   </xs:element>
+   <xs:element name="person">
+      <xs:complexType>
+         <xs:sequence>
+            <xs:element maxOccurs="unbounded" ref="tei:persName"/>
+            <xs:element minOccurs="0" ref="tei:birth"/>
+            <xs:element minOccurs="0" ref="tei:death"/>
+            <xs:element ref="tei:sex"/>
+            <xs:element minOccurs="0" maxOccurs="unbounded" ref="tei:occupation"/>
+            <xs:element maxOccurs="unbounded" ref="tei:idno"/>
+            <xs:element minOccurs="0" maxOccurs="unbounded" ref="tei:affiliation"/>
+            <xs:element minOccurs="0" ref="tei:listEvent"/>
+            <xs:element minOccurs="0" ref="tei:listBibl"/>
+            <xs:element minOccurs="0" ref="tei:note"/>
+         </xs:sequence>
+         <xs:attribute ref="xml:id" use="required"/>
+      </xs:complexType>
+   </xs:element>
+   <xs:element name="forename" type="xs:string"/>
+   <xs:element name="surname" type="xs:string"/>
+   <xs:element name="birth">
+      <xs:complexType>
+         <xs:sequence>
+            <xs:element ref="tei:date"/>
+            <xs:element minOccurs="0" maxOccurs="unbounded" ref="tei:settlement"/>
+         </xs:sequence>
+      </xs:complexType>
+   </xs:element>
+   <xs:element name="death">
+      <xs:complexType>
+         <xs:sequence>
+            <xs:element ref="tei:date"/>
+            <xs:element minOccurs="0" maxOccurs="unbounded" ref="tei:settlement"/>
+         </xs:sequence>
+      </xs:complexType>
+   </xs:element>
+   <xs:element name="sex">
+      <xs:complexType>
+         <xs:attribute name="value" use="required" type="xs:NCName"/>
+      </xs:complexType>
+   </xs:element>
+   <xs:element name="occupation">
+      <xs:complexType mixed="true">
+         <xs:attribute name="ref" use="required" type="xs:NCName"/>
+      </xs:complexType>
+   </xs:element>
+   <xs:element name="affiliation">
+      <xs:complexType>
+         <xs:sequence>
+            <xs:element ref="tei:term"/>
+            <xs:element ref="tei:orgName"/>
+            <xs:element maxOccurs="unbounded" ref="tei:idno"/>
+         </xs:sequence>
+         <xs:attribute name="when" type="xs:date"/>
+         <xs:attribute name="notAfter" type="xs:date"/>
+         <xs:attribute name="notBefore" type="xs:date"/>
+         <xs:attribute name="from" type="xs:date"/>
+         <xs:attribute name="to" type="xs:date"/>
+      </xs:complexType>
+   </xs:element>
+   <xs:element name="term">
+      <xs:complexType mixed="true">
+         <xs:attribute name="ref" use="required" type="xs:NCName"/>
+      </xs:complexType>
+   </xs:element>
+   <xs:element name="listEvent">
+      <xs:complexType>
+         <xs:sequence>
+            <xs:element maxOccurs="unbounded" ref="tei:event"/>
+         </xs:sequence>
+      </xs:complexType>
+   </xs:element>
+   <xs:element name="event">
+      <xs:complexType>
+         <xs:sequence>
+            <xs:element ref="tei:desc"/>
+            <xs:element ref="tei:label"/>
+            <xs:element maxOccurs="unbounded" ref="tei:idno"/>
+         </xs:sequence>
+         <xs:attribute name="ref" use="required" type="xs:NCName"/>
+         <xs:attribute name="notAfter" type="xs:date"/>
+         <xs:attribute name="notBefore" type="xs:date"/>
+         <xs:attribute name="when" type="xs:date"/>
+         <xs:attribute name="from" type="xs:date"/>
+         <xs:attribute name="to" type="xs:date"/>
+      </xs:complexType>
+   </xs:element>
+   <xs:element name="label" type="xs:string"/>
+   <xs:element name="listPlace">
+      <xs:complexType>
+         <xs:sequence>
+            <xs:element maxOccurs="unbounded" ref="tei:place"/>
+         </xs:sequence>
+      </xs:complexType>
+   </xs:element>
+   <xs:element name="place">
+      <xs:complexType>
+         <xs:all>
+            <xs:element maxOccurs="unbounded" minOccurs="1" ref="tei:placeName"/>
+            <xs:element maxOccurs="unbounded" minOccurs="0" ref="tei:desc"/>
+            <xs:element minOccurs="0" maxOccurs="unbounded" ref="tei:location"/>
+            <xs:element maxOccurs="unbounded" minOccurs="0" ref="tei:idno"/>
+            <xs:element minOccurs="0" maxOccurs="1" ref="tei:listBibl"/>
+            <xs:element minOccurs="0" maxOccurs="unbounded" ref="tei:note"/>
+            <xs:element minOccurs="0" maxOccurs="unbounded" ref="tei:figure"/>
+            <xs:element maxOccurs="unbounded" minOccurs="0" ref="tei:gap"/>
+         </xs:all>
+         <xs:attribute ref="xml:id" use="required"/>
+      </xs:complexType>
+   </xs:element>
+   <xs:element name="location">
+      <xs:complexType>
+         <xs:all>
+            <xs:element minOccurs="0" maxOccurs="1" ref="tei:geo"/>
+            <xs:element minOccurs="0" maxOccurs="1" ref="tei:placeName"/>
+            <xs:element minOccurs="0" maxOccurs="unbounded" ref="tei:idno"/>
+         </xs:all>
+         <xs:attribute name="type" type="xs:NCName"/>
+      </xs:complexType>
+   </xs:element>
+   <xs:element name="geo" type="xs:string"/>
+</xs:schema>
