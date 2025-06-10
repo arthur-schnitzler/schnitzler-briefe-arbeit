@@ -1,7 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="../meta/schnitzler-briefe-schematron.sch" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
 <TEI xmlns="http://www.tei-c.org/ns/1.0"
      xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-     xsi:schemaLocation="http://www.tei-c.org/ns/1.0 ../meta/asbwschema.xsd"
+     xsi:schemaLocation="http://www.tei-c.org/ns/1.0 ../meta/schnitzler-briefe-schema.xsd"
      xml:id="L02630"
      xml:base="https://id.acdh.oeaw.ac.at/schnitzler/schnitzler-briefe/editions">
    <teiHeader>
@@ -220,9 +221,13 @@
                <hi rend="latintype">
                   <rs ref="#pmb12816" type="person">Speidel</rs>
                </hi>
-               <note type="commentary" xml:id="K_L02630-1h">Zum positiven Urteil <rs ref="#pmb12816" type="person">Ludwig Speidels</rs> über <rs type="work" ref="#pmb29917">Liebelei</rs>
+               <note type="commentary" xml:id="K_L02630-1h" corresp="K_L02630-1">
+                  <rs ref="#pmb12816" type="person">Ludwig Speidels</rs>
+                  <rs type="work" ref="#pmb29917">Liebelei</rs>
                   <space unit="chars" quantity="1"/>
-                  <ref target="1894-12-14" subtype="cf" type="schnitzler-tagebuch"/>, <ref target="1894-12-17" type="schnitzler-tagebuch" subtype="date-only"/> und <ref target="1894-12-18" type="schnitzler-tagebuch" subtype="date-only"/>.
+                  <ref target="1894-12-14" subtype="cf" type="schnitzler-tagebuch"/>
+                  <ref target="1894-12-17" type="schnitzler-tagebuch" subtype="date-only"/>
+                  <ref target="1894-12-18" type="schnitzler-tagebuch" subtype="date-only"/>
                </note> beſonders iſt eine förmliche Überraſchung. Der Mann, der <subst>
                   <del rend="strikethrough">
                      <gap reason="illegible" unit="chars" quantity="2"/>
@@ -233,32 +238,45 @@
                das Neue mit uns verwechſelt, die wir neu waren? Das Urtheil, das er über Dich fällt,
                ſpricht ſehr zu Ehren <pb facs="HS.NZ85.1.3164_0089-0"/>ſeines Kunſtverſtändniſſes.
                Nun kann es doch unmöglich mehr fehlen. Wo ſoviel Mächtige dafür ſind, wird das
-               Theater-Geſindel nichts mehr ausrichten können. Daß <rs ref="#pmb11036" type="person">B.</rs> Dich <anchor type="commentary" xml:id="K_L02630-2"/>beſucht<note type="commentary" xml:id="K_L02630-2h">
-                  <ref target="1894-12-18" type="schnitzler-tagebuch" subtype="Cf"/>.
+               Theater-Geſindel nichts mehr ausrichten können. Daß <rs ref="#pmb11036" type="person">B.</rs> Dich <anchor type="commentary" xml:id="K_L02630-2"/>beſucht<note type="commentary" xml:id="K_L02630-2h" corresp="K_L02630-2">
+                  <ref target="1894-12-18" type="schnitzler-tagebuch" subtype="Cf"/>
                </note>, imponirt mir beſonders. Welchen Weg haſt Du durchlaufen <del rend="strikethrough">zwiſchen</del> von drei Jahren bis auf <date>heut</date>! Mir
                kommt ſo vor, als ſei jetzt nur noch ein tüchtiger Ruck zu geben, und dann am Ziel!
                Wenn ſich die <hi rend="latintype">
                   <rs ref="#pmb12618" type="person">Sandrock</rs>
                </hi> vom <anchor type="commentary" xml:id="K_L02630-3"/>
-               <rs ref="#pmb36430" type="org">Volkstheater</rs> jetzt ſchon losmachen<note type="commentary" xml:id="K_L02630-3h">Der Wechsel von <rs ref="#pmb12618" type="person">Adele Sandrock</rs> ans <rs type="org" ref="#pmb36247">Burgtheater</rs> war schon im <date>Sommer 1894</date> für die
-                  Saison <date>1895</date>/<date>1896</date> fixiert worden. Durch neuerliche
-                  Verhandlungen fand der Übertritt bereits zum <date>1. 2. 1895</date> statt. Sie
-                  war also in Erwartung ihrer Verfügbarkeit für die Rolle der <rs type="work" subtype="implied" ref="#pmb29917">Christine</rs> vorgesehen.</note> könnte, ſo
+               <rs ref="#pmb36430" type="org">Volkstheater</rs> jetzt ſchon losmachen<note type="commentary" xml:id="K_L02630-3h" corresp="K_L02630-3">
+                  <rs ref="#pmb12618" type="person">Adele Sandrock</rs>
+                  <rs type="org" ref="#pmb36247">Burgtheater</rs>
+                  <date>Sommer 1894</date>
+                  <date>1895</date>
+                  <date>1896</date>
+                  <date>1. 2. 1895</date>
+                  <rs type="work" subtype="implied" ref="#pmb29917">Christine</rs>
+               </note> könnte, ſo
                wäre es wohl gut (Warum ſpielt übrigens die <hi rend="latintype">
                   <rs ref="#pmb2850" type="person">Hohenfels</rs>
                </hi> nicht die Rolle?). Wenn nicht, ſo warteſt Du ruhig bis zum nächſten Jahr. Der
-                  <anchor type="commentary" xml:id="K_L02630-4"/>Titel »<rs ref="#pmb29917" type="work">Liebelei</rs>« mißfällt<note type="commentary" xml:id="K_L02630-4h">Ein Erfolgsstück des Jahres <date>1893</date> war <rs type="work" ref="#pmb32630">Das arme Mädel</rs> von <rs type="person" ref="#pmb20456">Karl Lindau</rs> und
-                     <rs type="person" ref="#pmb11999">Leopold Krenn</rs>. Das dürfte <rs type="person" ref="#pmb2121">Schnitzler</rs> gezwungen haben, Ersatz für seinen
-                  Arbeitstitel »Armes Mädl« zu suchen, mit dem <rs type="person" ref="#pmb11485">Goldmann</rs> bis dahin vertraut war. In einem Interview nahm <rs type="person" ref="#pmb2121">Schnitzler</rs>
+                  <anchor type="commentary" xml:id="K_L02630-4"/>Titel »<rs ref="#pmb29917" type="work">Liebelei</rs>« mißfällt<note type="commentary" xml:id="K_L02630-4h" corresp="K_L02630-4">
+                  <date>1893</date>
+                  <rs type="work" ref="#pmb32630">Das arme Mädel</rs>
+                  <rs type="person" ref="#pmb20456">Karl Lindau</rs>
+                  <rs type="person" ref="#pmb11999">Leopold Krenn</rs>
+                  <rs type="person" ref="#pmb2121">Schnitzler</rs>
+                  <rs type="person" ref="#pmb11485">Goldmann</rs>
+                  <rs type="person" ref="#pmb2121">Schnitzler</rs>
                   <space unit="chars" quantity="1"/>
-                  <date>1912</date> dazu Stellung: »<quote>Hätte das Stück nicht den Titel ›<rs type="work" ref="#pmb29917">Liebelei</rs>‹, also die Bezeichnung für das
+                  <date>1912</date>
+                  <quote>Hätte das Stück nicht den Titel ›<rs type="work" ref="#pmb29917">Liebelei</rs>‹, also die Bezeichnung für das
                      leichte, flüchtige Gefühl bar jeder Verantwortung, das ein junger Mann hegt,
                      dem ein sorgenbelastetes, ernsthaft verliebtes Mädchen gegenübersteht, sondern
                      hieße, sagen wir ›Die große Liebe der Christine‹ – also die Bezeichnung für das
                      Gefühl des Mädchens –, so hätte das Publikum dem Stück ganz gewiß nicht
-                     dasselbe Interesse entgegengebracht, wie beim Titel ›<rs type="work" ref="#pmb29917">Liebelei</rs>‹.</quote>« (<bibl>
-                     <rs type="person" ref="#pmb23760">Ifj. B. Gy [ = Georg Ruttkay]</rs>: <title level="a" ref="#pmb33211">Schnitzler Arthurnál</title>. In: <rs type="work" ref="#pmb56283">Az est</rs>, Jg. 3, Nr. 112, <date when="1912-05-10" n="1">10. 5. 1912</date>, S. 8</bibl>. <ref type="schnitzler-interviews" target="I067" subtype="See"/>);
-                     <ref type="schnitzler-briefe" target="L02726" subtype="see"/>.
+                     dasselbe Interesse entgegengebracht, wie beim Titel ›<rs type="work" ref="#pmb29917">Liebelei</rs>‹.</quote>
+                  <bibl>
+                     <rs type="person" ref="#pmb23760">Ifj. B. Gy [ = Georg Ruttkay]</rs>: <title level="a" ref="#pmb33211">Schnitzler Arthurnál</title>. In: <rs type="work" ref="#pmb56283">Az est</rs>, Jg. 3, Nr. 112, <date when="1912-05-10" n="1">10. 5. 1912</date>, S. 8</bibl>
+                  <ref type="schnitzler-interviews" target="I067" subtype="See"/>
+                  <ref type="schnitzler-briefe" target="L02726" subtype="see"/>
                </note> mir. <pb facs="HS.NZ85.1.3164_0089-1"/>Er klingt maniriert, unliterariſch und
                verkleinert die Arbeit. Ich möchte, daß Du auf die kleine <hi rend="latintype">Nuance</hi> verzichteſt und einfach gerade heraus »Eine Liebſchaft« ſagſt. Das
                klingt mehr nach bürgerlichem Drama. Und nun werde ich endlich ungeduldig. Alle Welt
@@ -281,10 +299,11 @@
                   <rs ref="#pmb34301" type="org">Mercure de France</rs>
                </hi>« kommt ein <anchor type="commentary" xml:id="K_L02630-5"/>
                <rs ref="#pmb30441" subtype="implied" type="work">Aufſatz</rs>
-               <note type="commentary" xml:id="K_L02630-5h">Der Text erschien mit einer gewissen
-                  Verzögerung in einer anderen Zeitschrift: <bibl>
+               <note type="commentary" xml:id="K_L02630-5h" corresp="K_L02630-5">
+                  <bibl>
                      <rs ref="#pmb2801" type="person">Henri Albert</rs>: <rs type="work" ref="#pmb30441">Les Jeunes Viennois</rs>. In: <rs type="work" ref="#pmb88096">Revue des revues</rs>, Bd. 13, <date>1. 4. 1895</date>,
-                     S. 8–13</bibl>.</note> von <hi rend="latintype">
+                     S. 8–13</bibl>
+               </note> von <hi rend="latintype">
                   <rs ref="#pmb2801" type="person">Albert</rs>
                </hi> über Euch. Leider hat er mich nicht um Rath <pb facs="HS.NZ85.1.3164_0090-1"/>beim Schreiben gefragt. Es ſtehen alſo offenbar einige Stiefel drin. Aber die
                Hauptſache iſt doch, daß etwas geſchrieben wird. Auch will er nächſtens etwas von Dir
@@ -307,15 +326,16 @@
                </hi> habe ich endlich geſchrieben. Es war keine Kleinigkeit. Ich ſollte meine
                Anſicht über das Leben mittheilen. Das iſt nicht leicht, wenn man viel zu thun hat.
                Ich habe ein idiotiſches Zeug abgeſchickt, <hi rend="latintype">
-                  <anchor type="commentary" xml:id="K_L02630-6"/>mais enfin<note type="commentary" xml:id="K_L02630-6h">französisch: aber
-                     zuletzt</note>
+                  <anchor type="commentary" xml:id="K_L02630-6"/>mais enfin<note type="commentary" xml:id="K_L02630-6h" corresp="K_L02630-6"/>
                </hi>, ich habe geantwortet.</p>
             <p>Ich möchte ein wenig wiſſen, wie Du lebſt? Geſellſchaft? Freundſchaſt? Abenteuer?</p>
             <p>
                <anchor type="commentary" xml:id="K_L02630-7"/>
                <hi rend="latintype">
                   <rs ref="#pmb10815" type="person">Bahr</rs>
-               </hi> hat mich neulich in ſehr liebenswürdiger Weiſe citirt<note type="commentary" xml:id="K_L02630-7h">Sein <rs type="work" subtype="implied" ref="#pmb88119">Text</rs> beginnt mit: »<quote>Als ich diesen <date>Mai</date>
+               </hi> hat mich neulich in ſehr liebenswürdiger Weiſe citirt<note type="commentary" xml:id="K_L02630-7h" corresp="K_L02630-7">
+                  <rs type="work" subtype="implied" ref="#pmb88119">Text</rs>
+                  <quote>Als ich diesen <date>Mai</date>
                      in <rs type="place" ref="#pmb182">Paris</rs> mit <rs type="person" ref="#pmb11485">Paul Goldmann</rs>, dem <rs type="person" subtype="implied" ref="#pmb11485">Correspondenten</rs> der <rs type="org" ref="#pmb29442">Frankfurter Zeitung</rs>, plauderte und um jeden Preis ein neues Talent
                      wissen wollte, sagte er mir: ›Ein Talent? Ein neues Talent? Ein ernstes,
                      sicheres, wirkliches Talent? Nicht bloß so eine geschwinde und vergängliche
@@ -323,15 +343,17 @@
                      niemand als <rs type="person" ref="#pmb4464">Camille Mauclair</rs>. Sonst wüßte
                      ich keinen. Er hat freilich eigentlich noch nichts geschrieben; aber alle
                      hoffen viel von ihm. Er verspricht mehr, als er bis jetzt gehalten hätte; aber
-                     er scheint mir sicher. Stellen Sie sich etwa, ins <rs type="place" ref="#pmb182">Paris</rs>erische übersetzt, Ihren kleinen <rs type="person" ref="#pmb11740">Hofmannsthal</rs> vor.‹</quote>« (<bibl>
+                     er scheint mir sicher. Stellen Sie sich etwa, ins <rs type="place" ref="#pmb182">Paris</rs>erische übersetzt, Ihren kleinen <rs type="person" ref="#pmb11740">Hofmannsthal</rs> vor.‹</quote>
+                  <bibl>
                      <rs ref="#pmb10815" type="person">Hermann Bahr</rs>: <rs type="work" ref="#pmb88119">Camille Mauclair</rs>. In: <rs type="work" ref="#pmb36340">Die Zeit</rs>, Bd. 1, H. 10, <date>8. 12. 1894</date>,
-                  S. 154–155</bibl>.)</note>. Warum hat er das gethan?</p>
+                  S. 154–155</bibl>
+               </note>. Warum hat er das gethan?</p>
             <p>Ich mache mir Vorwürſe, daß ich Dich zum Abonnement auf das <pb facs="HS.NZ85.1.3164_0090-0"/>»<rs ref="#pmb87844" type="org" subtype="implied">Journal</rs>« aufgefordert habe. Es wird niederträchtig ſchlecht. Vielleicht
                verſuchſt Du es fortan mit der Abendausgabe des »<hi rend="latintype">
                   <rs ref="#pmb29221" type="org">Journal des Débats</rs>
                </hi>«. Die politiſchen Artikel brauchſt Du ja nicht zu leſen; aber es ſind köſtliche
                   <hi rend="latintype">
-                  <anchor type="commentary" xml:id="K_L02630-8"/>chroniqueurs<note type="commentary" xml:id="K_L02630-8h">französisch: Kolumnisten</note>
+                  <anchor type="commentary" xml:id="K_L02630-8"/>chroniqueurs<note type="commentary" xml:id="K_L02630-8h" corresp="K_L02630-8"/>
                </hi> darin, höhere literariſche Leute: <hi rend="latintype">
                   <rs type="person" ref="#pmb88124">Hallays</rs>, <rs type="person" ref="#pmb88128">Bazin</rs>, <rs type="person" ref="#pmb88134">Filon</rs>, <rs type="person" ref="#pmb88138">Lemaître</rs>
                   <space unit="chars" quantity="1"/>
@@ -340,10 +362,12 @@
                   <rs ref="#pmb10863" type="person">Richard</rs>
                </hi> den »<anchor type="commentary" xml:id="K_L02630-9"/>
                <rs ref="#pmb88148" type="work">Courrier Français</rs>
-               <note type="commentary" xml:id="K_L02630-9h">illustrierte <rs ref="#pmb88148" subtype="implied" type="work">Satirezeitschrift</rs>, die zwischen
-                     <date>1884</date> und <date>1914</date> erschien</note>« abonnirt? Sonſt
-               ſchicke ich ihn Dir. Anbei ſchicke ich Dir wieder ein paar <anchor type="commentary" xml:id="K_L02630-10"/>Artikel<note type="commentary" xml:id="K_L02630-10h">Die Beilagen sind nicht
-               überliefert.</note>, Kraut und Rüben durcheinander. <hi rend="latintype">
+               <note type="commentary" xml:id="K_L02630-9h" corresp="K_L02630-9">
+                  <rs ref="#pmb88148" subtype="implied" type="work">Satirezeitschrift</rs>
+                  <date>1884</date>
+                  <date>1914</date>
+               </note>« abonnirt? Sonſt
+               ſchicke ich ihn Dir. Anbei ſchicke ich Dir wieder ein paar <anchor type="commentary" xml:id="K_L02630-10"/>Artikel<note type="commentary" xml:id="K_L02630-10h" corresp="K_L02630-10"/>, Kraut und Rüben durcheinander. <hi rend="latintype">
                   <rs ref="#pmb88149" type="person">Drumont</rs>
                </hi> iſt ein großer <pb facs="HS.NZ85.1.3164_0092-1"/>Polemiſt, nur ſtark irrſinnig.
                In Bezug auf Juden und Deutſche leidet er an Verfolgungswahn. Aber in erſterer
@@ -370,8 +394,9 @@
             </closer>
             <postscript>
                <p>
-                  <pb facs="HS.NZ85.1.3164_0093-1"/>Bitte, empfiehl’ mich Deiner Frau <rs subtype="implied" ref="#pmb12701" type="person">Mutter</rs> und richte <anchor type="textConst" xml:id="T_L02630-1"/>ihr<note type="textConst" xml:id="T_L02630-1h">Goldmann schreibt
-                        »<quote>Ihr</quote>«.</note> meine ergebenſten Neujahrs-Wünſche aus.</p>
+                  <pb facs="HS.NZ85.1.3164_0093-1"/>Bitte, empfiehl’ mich Deiner Frau <rs subtype="implied" ref="#pmb12701" type="person">Mutter</rs> und richte <anchor type="textConst" xml:id="T_L02630-1"/>ihr<note type="textConst" xml:id="T_L02630-1h" corresp="T_L02630-1">
+                     <quote>Ihr</quote>
+                  </note> meine ergebenſten Neujahrs-Wünſche aus.</p>
                <p>Was lieſt Du jetzt?</p>
             </postscript>
          </div>

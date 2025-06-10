@@ -1,7 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="../meta/schnitzler-briefe-schematron.sch" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
 <TEI xmlns="http://www.tei-c.org/ns/1.0"
      xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-     xsi:schemaLocation="http://www.tei-c.org/ns/1.0 ../meta/asbwschema.xsd"
+     xsi:schemaLocation="http://www.tei-c.org/ns/1.0 ../meta/schnitzler-briefe-schema.xsd"
      xml:id="L03139"
      xml:base="https://id.acdh.oeaw.ac.at/schnitzler/schnitzler-briefe/editions">
    <teiHeader>
@@ -160,18 +161,19 @@
          <div type="writingSession" n="1">
             <p>
                <pb facs="MS-SCHNITZLER-B-00089-A-00001-000-00040-R"/>
-               <salute>Lieber Freund!</salute> Um <anchor type="commentary" xml:id="K_L03139-1"/>¼ ½<note type="commentary" xml:id="K_L03139-1h">15 Minuten,
-                  30 Minuten nach der vollen Stunde</note> kann ich leider nicht <anchor type="commentary" xml:id="K_L03139-2"/>wegfahren<note type="commentary" xml:id="K_L03139-2h">vermutlich Bezug auf die gemeinsame Radtour am <ref type="schnitzler-tagebuch" target="1894-07-01" subtype="date-only"/>
+               <salute>Lieber Freund!</salute> Um <anchor type="commentary" xml:id="K_L03139-1"/>¼ ½<note type="commentary" xml:id="K_L03139-1h" corresp="K_L03139-1"/> kann ich leider nicht <anchor type="commentary" xml:id="K_L03139-2"/>wegfahren<note type="commentary" xml:id="K_L03139-2h" corresp="K_L03139-2">
+                  <ref type="schnitzler-tagebuch" target="1894-07-01" subtype="date-only"/>
                </note>, und um <time>
                   <subst>
                      <del rend="overwritten">½</del>
                      <add place="inline">2</add>
-                  </subst> U.</time>? Sie wissen ja, ich habe <anchor type="commentary" xml:id="K_L03139-3"/>keine N<hi rend="superscript">o</hi>,<note type="commentary" xml:id="K_L03139-3h">
-                  <ref type="schnitzler-briefe" target="L03133" subtype="See"/>.
+                  </subst> U.</time>? Sie wissen ja, ich habe <anchor type="commentary" xml:id="K_L03139-3"/>keine N<hi rend="superscript">o</hi>,<note type="commentary" xml:id="K_L03139-3h" corresp="K_L03139-3">
+                  <ref type="schnitzler-briefe" target="L03133" subtype="See"/>
                </note> wie soll ich da nach <anchor type="textConst" xml:id="T_L03139-1"/>
                <rs type="place" ref="#pmb173">Rodaun</rs>
-               <note type="textConst" xml:id="T_L03139-1h">Er 
-               schreibt »<quote>Rodaum</quote>«</note> kommen.
+               <note type="textConst" xml:id="T_L03139-1h" corresp="T_L03139-1">
+                  <quote>Rodaum</quote>
+               </note> kommen.
                Ausserdem <pb facs="MS-SCHNITZLER-B-00089-A-00001-000-00040-V"/>ist es <subst>
                   <del rend="strikethrough">kein</del>
                   <add place="inline">nic</add>
@@ -180,11 +182,13 @@
                   fahren<unclear>.</unclear> Ich habe mir vorgestellt, dass Sie frei sein werden u.
                dass wir um <time>4 Uhr</time> abfahren, <rs type="place" ref="#pmb41239">Tulln</rs>,
                oder <unclear>ir.</unclear> etwas. Sind Sie <pb facs="MS-SCHNITZLER-B-00089-A-00001-000-00040i-R"/>
-               <time>Abends</time> eventuell im <anchor type="commentary" xml:id="K_L03139-4"/>Café<note type="commentary" xml:id="K_L03139-4h">
-                  <rs type="person" ref="#pmb2121">Schnitzler</rs> hielt sich am <time>Nachmittag</time>
-                  des <ref type="schnitzler-tagebuch" target="1894-06-29" subtype="date-only"/> in
-                     <rs type="place" ref="#pmb173">Rodaun</rs> auf. Den Abend verbrachte er mit
-                  <rs type="person" ref="#pmb12618">Adele Sandrock</rs>.</note>?</p>
+               <time>Abends</time> eventuell im <anchor type="commentary" xml:id="K_L03139-4"/>Café<note type="commentary" xml:id="K_L03139-4h" corresp="K_L03139-4">
+                  <rs type="person" ref="#pmb2121">Schnitzler</rs>
+                  <time>Nachmittag</time>
+                  <ref type="schnitzler-tagebuch" target="1894-06-29" subtype="date-only"/>
+                  <rs type="place" ref="#pmb173">Rodaun</rs>
+                  <rs type="person" ref="#pmb12618">Adele Sandrock</rs>
+               </note>?</p>
             <closer>Herzlichst <lb/>Ihr <lb/>
                <signed>Salten</signed>
             </closer>

@@ -1,7 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="../meta/schnitzler-briefe-schematron.sch" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
 <TEI xmlns="http://www.tei-c.org/ns/1.0"
      xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-     xsi:schemaLocation="http://www.tei-c.org/ns/1.0 ../meta/asbwschema.xsd"
+     xsi:schemaLocation="http://www.tei-c.org/ns/1.0 ../meta/schnitzler-briefe-schema.xsd"
      xml:id="L01134"
      xml:base="https://id.acdh.oeaw.ac.at/schnitzler/schnitzler-briefe/editions">
    <teiHeader>
@@ -222,7 +223,8 @@
    <text>
       <body>
          <div type="writingSession" n="1">
-            <p><pb facs="https://www.theatermuseum.at/de/object/80fa6e083d/"/>
+            <p>
+               <pb facs="https://www.theatermuseum.at/de/object/80fa6e083d/"/>
                <salute>mein lieber
                   Hermann,</salute> ich danke dir herzlich für den neuen Beweis von Sympathie, den
                du mir mit deinem lieben Brief vom <date>22.</date> gegeben haſt. Über die Sache
@@ -230,19 +232,26 @@
                ſie haben meinen <rs ref="#pmb29853" type="work">Lieutenant Guſtl</rs> nicht
                verdient! Ich ſeh es ein. Haſt du vielleicht neulich den  <anchor type="commentary" xml:id="K_L01134-1"/>
                <rs type="work" ref="#pmb32031" subtype="implied">Artikel</rs>
-               <note xml:id="K_L01134-1h" type="commentary">Obwohl ohne Verfasserangabe erschienen,
-                  ist <rs ref="#pmb32031" type="work">»Lieutenant Gustl«</rs> (<bibl>
+               <note xml:id="K_L01134-1h" type="commentary" corresp="K_L01134-1">
+                  <rs ref="#pmb32031" type="work">»Lieutenant Gustl«</rs>
+                  <bibl>
                      <rs ref="#pmb29304" type="org">Reichswehr</rs>, Jg. 14, Nr. 2645, Morgenblatt,
-                     S. 1–2</bibl>) durch die Position als Editorial dem Herausgeber <rs ref="#pmb2207" type="person">Davis</rs> zuzuschreiben, was <rs ref="#pmb10815" type="person">Bahr</rs> auch in der Folge tut (<ref type="schnitzler-briefe" target="L01143"/>).</note> in der <rs ref="#pmb29304" type="org">Reichswehr</rs> geleſen? Ich glaube, in dem ſteht das großartigſte an Dummheit,
+                     S. 1–2</bibl>
+                  <rs ref="#pmb2207" type="person">Davis</rs>
+                  <rs ref="#pmb10815" type="person">Bahr</rs>
+                  <ref type="schnitzler-briefe" target="L01143"/>
+               </note> in der <rs ref="#pmb29304" type="org">Reichswehr</rs> geleſen? Ich glaube, in dem ſteht das großartigſte an Dummheit,
                was in dieser Affaire geleiſtet wurde. Nemlich: ich hätte meine <pb facs="https://www.theatermuseum.at/de/object/80fa6e083d/"/>Charge nur deshalb
                nicht vor 5 Jahren (wie es mein Recht geweſen) nieder gelegt – <subst>
                   <del rend="overwritten">,</del>
                   <add place="inline">weil</add>
                </subst> ich eben doch gern gelegentlich in Uniform <add place="below">u</add> mit
-               dem <anchor type="commentary" xml:id="K_L01134-2"/>Stürmer<note xml:id="K_L01134-2h" type="commentary">Mütze, die durch unterschiedliche Ausprägungen über die
-                  Zugehörigkeit zu einer bestimmten Burschenschaft Auskunft gab; <rs ref="#pmb2121" type="person">Schnitzler</rs> gibt den <rs type="work" ref="#pmb32031" subtype="implied">Artikel</rs> jedoch in diesem Detail falsch wieder, darin
-                  wird von »<quote>Federhut, Säbel und Porte-<hi rend="antiqua">épée</hi>
-                  </quote>« gesprochen.</note> paradirt! – Ich wollte einen Preis von einer Million
+               dem <anchor type="commentary" xml:id="K_L01134-2"/>Stürmer<note xml:id="K_L01134-2h" type="commentary" corresp="K_L01134-2">
+                  <rs ref="#pmb2121" type="person">Schnitzler</rs>
+                  <rs type="work" ref="#pmb32031" subtype="implied">Artikel</rs>
+                  <quote>Federhut, Säbel und Porte-<hi rend="antiqua">épée</hi>
+                  </quote>
+               </note> paradirt! – Ich wollte einen Preis von einer Million
                ausſchreiben für den, der mich ſeit meinem letzten Hauptrapport in Uniform geſehen –
                aber wer weiſs – unter dieſen Leuten findet ſich am Ende auch einer, der es
                beſchwören kann.</p>

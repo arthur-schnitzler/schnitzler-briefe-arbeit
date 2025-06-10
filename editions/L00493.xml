@@ -1,7 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="../meta/schnitzler-briefe-schematron.sch" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
 <TEI xmlns="http://www.tei-c.org/ns/1.0"
      xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-     xsi:schemaLocation="http://www.tei-c.org/ns/1.0 ../meta/asbwschema.xsd"
+     xsi:schemaLocation="http://www.tei-c.org/ns/1.0 ../meta/schnitzler-briefe-schema.xsd"
      xml:id="L00493"
      xml:base="https://id.acdh.oeaw.ac.at/schnitzler/schnitzler-briefe/editions">
    <teiHeader>
@@ -212,16 +213,18 @@
                   <pb facs="HS.NZ85.1.5713_0001"/>
                   <anchor type="commentary" xml:id="K_L00493-1"/>
                   <date>24. 9. 95</date>
-                  <note xml:id="K_L00493-1h" type="commentary">Am <ref target="L00494" subtype="date-only" type="schnitzler-briefe"/> hat <rs type="person" ref="#pmb2121">Schnitzler</rs> auf den ersten Brief vom <ref target="L00492" subtype="date-only" type="schnitzler-briefe"/> geantwortet, nicht aber auf diesen. Da er
-                     nicht im Original erhalten ist, ist die Möglichkeit gegeben, dass er zu einem
-                     anderen Zeitpunkt verfasst wurde.</note>.</dateline>
+                  <note xml:id="K_L00493-1h" type="commentary" corresp="K_L00493-1">
+                     <ref target="L00494" subtype="date-only" type="schnitzler-briefe"/>
+                     <rs type="person" ref="#pmb2121">Schnitzler</rs>
+                     <ref target="L00492" subtype="date-only" type="schnitzler-briefe"/>
+                  </note>.</dateline>
             </opener>
             <p>
                <salute>Lieber Arthur!</salute> Dies schreib ich Ihnen, im Boote liegend, während man
                mich zu einer Insel rudert, auf der ein Jupitertempel stand, aus dem der heilige <rs ref="#pmb4504" type="person">Franciscus von <pb facs="HS.NZ85.1.5713_0002"/>Assisi</rs> – mein <rs ref="#pmb4504" type="person">Franciscus</rs> – ein
                Kloster gemacht hat. Zugleich lese ich in einem <anchor type="commentary" xml:id="K_L00493-2"/>
                <rs type="work" ref="#pmb30275" subtype="implied">Buch</rs>
-               <note xml:id="K_L00493-2h" type="commentary">
+               <note xml:id="K_L00493-2h" type="commentary" corresp="K_L00493-2">
                   <bibl>
                      <rs ref="#pmb30275" type="work">Anthologie lyrischer und epigrammatischer
                         Dichtungen der alten Griechen</rs>. Herausgegeben von <rs ref="#pmb28679" type="person">Edmund Boesel</rs>. Stuttgart: <rs ref="#pmb29666" type="org">Philipp
@@ -230,18 +233,22 @@
                      <supplied>
                         <date>1884</date>
                      </supplied>
-                  </bibl>.</note> wunderschöne Sachen – wie das <rs type="work" ref="#pmb30275" subtype="implied">Buch</rs> aber heisst schreibe ich hier nicht, denn der Name
+                  </bibl>
+               </note> wunderschöne Sachen – wie das <rs type="work" ref="#pmb30275" subtype="implied">Buch</rs> aber heisst schreibe ich hier nicht, denn der Name
                könnte Ihnen entgleiten, und der <rs ref="#pmb10815" type="person">B</rs>
                <c rendition="#dots" n="3"/> mittelst 3–4 Ausschrotartikeln es einem ruinieren und
                verekeln, aber es ist sehr schön. Im dritten Jahrhundert vor Christi Geburt schreibt
-               ein Herr <rs ref="#pmb4508" type="person">Posidippus</rs> – ohne »<rs ref="#pmb29823" type="work">Märchen</rs>« und »<rs ref="#pmb31965" type="work">Elixire</rs>«-Schmerzen – heiter <anchor type="commentary" xml:id="K_L00493-3"/>konstatirend<note xml:id="K_L00493-3h" type="commentary">Das Gedicht findet sich
-                  in <rs ref="#pmb28679" type="person">Boesels</rs>
+               ein Herr <rs ref="#pmb4508" type="person">Posidippus</rs> – ohne »<rs ref="#pmb29823" type="work">Märchen</rs>« und »<rs ref="#pmb31965" type="work">Elixire</rs>«-Schmerzen – heiter <anchor type="commentary" xml:id="K_L00493-3"/>konstatirend<note xml:id="K_L00493-3h" type="commentary" corresp="K_L00493-3">
+                  <rs ref="#pmb28679" type="person">Boesels</rs>
                   <space unit="chars" quantity="1"/>
-                  <rs ref="#pmb30275" type="work">Anthologie</rs> auf den <bibl>S. 298–299</bibl>.</note>:</p>
+                  <rs ref="#pmb30275" type="work">Anthologie</rs>
+                  <bibl>S. 298–299</bibl>
+               </note>:</p>
             <lg type="poem">
                <l>
-                  <rs type="work" ref="#pmb38920" subtype="implied">»Wähne, <anchor type="textConst" xml:id="T_L00493-1"/>Philänis<note xml:id="T_L00493-1h" type="textConst">Die Abschrift hat »<quote>Philanis</quote>«, nach der
-                        gedruckten Zitatvorlage korrigiert.</note>, nicht mich durch lockende
+                  <rs type="work" ref="#pmb38920" subtype="implied">»Wähne, <anchor type="textConst" xml:id="T_L00493-1"/>Philänis<note xml:id="T_L00493-1h" type="textConst" corresp="T_L00493-1">
+                        <quote>Philanis</quote>
+                     </note>, nicht mich durch lockende
                      Thränen zu täuschen!</rs>
                </l>
                <l>
@@ -259,10 +266,12 @@
             <p>Sollten Ihnen <rs ref="#pmb18523" type="person">Paul Hörne</rs> die »<rs ref="#pmb31975" type="work">kleine Comödie</rs>«, verheirathete Frauen mit dem
                Schmerz anständig zu sein, das »kleine Mädel« der »<rs ref="#pmb29917" type="work">Liebelei</rs>« (um Gotteswillen, wie ist die <rs ref="#pmb12618" type="person">Sandrock</rs> im ersten Akt?) und mir das Dienstmädchen im »<rs ref="#pmb30437" type="work">Kind</rs>« (mit Unrecht, denn die schildere ich selbst ja nicht als
                hervorragend begehrenswert) vorwerfen, dann wer<pb facs="HS.NZ85.1.5713_0003"/>den
-               wir mit Ihnen sagen »lasst uns lächeln« und folgende schöne <anchor type="commentary" xml:id="K_L00493-4"/>Verse<note xml:id="K_L00493-4h" type="commentary">Das Gedicht findet sich in <rs ref="#pmb28679" type="person">Boesels</rs>
+               wir mit Ihnen sagen »lasst uns lächeln« und folgende schöne <anchor type="commentary" xml:id="K_L00493-4"/>Verse<note xml:id="K_L00493-4h" type="commentary" corresp="K_L00493-4">
+                  <rs ref="#pmb28679" type="person">Boesels</rs>
                   <space unit="chars" quantity="1"/>
-                  <rs ref="#pmb30275" type="work">Anthologie</rs> auf den
-                     <bibl>S. 299–300</bibl>.</note> zitieren:</p>
+                  <rs ref="#pmb30275" type="work">Anthologie</rs>
+                  <bibl>S. 299–300</bibl>
+               </note> zitieren:</p>
             <lg type="poem">
                <l>
                   <rs type="work" ref="#pmb38912" subtype="implied">Statt hoffärtiger Frauen
@@ -298,7 +307,8 @@
             <p>Das ist von <rs ref="#pmb38918" type="person">Rufinus</rs>. »<anchor type="commentary" xml:id="K_L00493-5"/>
                <rs type="work" ref="#pmb38920" subtype="implied">Zur Bestimmung der Lebenszeit des
                      <rs ref="#pmb38918" type="person">Rufinus</rs> fehlt uns jeder Anhalt.</rs>
-               <note xml:id="K_L00493-5h" type="commentary">Das Zitat findet sich auf <bibl>S. 247</bibl>.
+               <note xml:id="K_L00493-5h" type="commentary" corresp="K_L00493-5">
+                  <bibl>S. 247</bibl>
                </note>« –</p>
             <p>Ich war auf der Insel und wir fahren im Abendwind (man hat sechs geläutet) zurück.
                Die Insel ist herrlich. Seitdem ich <rs ref="#pmb40306" type="place">Italien</rs> und

@@ -1,7 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="../meta/schnitzler-briefe-schematron.sch" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
 <TEI xmlns="http://www.tei-c.org/ns/1.0"
      xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-     xsi:schemaLocation="http://www.tei-c.org/ns/1.0 ../meta/asbwschema.xsd"
+     xsi:schemaLocation="http://www.tei-c.org/ns/1.0 ../meta/schnitzler-briefe-schema.xsd"
      xml:id="L03165"
      xml:base="https://id.acdh.oeaw.ac.at/schnitzler/schnitzler-briefe/editions">
    <teiHeader>
@@ -177,8 +178,7 @@
                   <cell>
                      <hi rend="pre-print">
                         <rs type="work" ref="#pmb29917">
-                           <anchor type="commentary" xml:id="K_L03165-1"/>Liebelei<note type="commentary" xml:id="K_L03165-1h">mit einem Pfeil
-                              markiert</note>
+                           <anchor type="commentary" xml:id="K_L03165-1"/>Liebelei<note type="commentary" xml:id="K_L03165-1h" corresp="K_L03165-1"/>
                         </rs>
                      </hi>
                   </cell>
@@ -189,9 +189,12 @@
             <p>
                <salute>lieber Arthur!</salute> Wenn Sie schon <anchor type="commentary" xml:id="K_L03165-2"/>
                <rs type="place" subtype="implied" ref="#pmb50">hier</rs>
-               <note type="commentary" xml:id="K_L03165-2h">
-                  <rs type="person" ref="#pmb2121">Schnitzler</rs> kehrte an diesem Tag nach <rs type="place" ref="#pmb50">Wien</rs> zurück. Nachweislich sah er <rs type="person" ref="#pmb2167">Salten</rs> erst am <ref type="schnitzler-tagebuch" target="1895-09-12" subtype="date-only"/>
-                  wieder.</note> sind, laßen Sie michs für <date>Nachmittg</date> wissen</p>
+               <note type="commentary" xml:id="K_L03165-2h" corresp="K_L03165-2">
+                  <rs type="person" ref="#pmb2121">Schnitzler</rs>
+                  <rs type="place" ref="#pmb50">Wien</rs>
+                  <rs type="person" ref="#pmb2167">Salten</rs>
+                  <ref type="schnitzler-tagebuch" target="1895-09-12" subtype="date-only"/>
+               </note> sind, laßen Sie michs für <date>Nachmittg</date> wissen</p>
             <closer>herzl. Ihr <lb/>
                <signed>Salten.</signed>
             </closer>

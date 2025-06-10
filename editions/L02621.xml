@@ -1,7 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="../meta/schnitzler-briefe-schematron.sch" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
 <TEI xmlns="http://www.tei-c.org/ns/1.0"
      xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-     xsi:schemaLocation="http://www.tei-c.org/ns/1.0 ../meta/asbwschema.xsd"
+     xsi:schemaLocation="http://www.tei-c.org/ns/1.0 ../meta/schnitzler-briefe-schema.xsd"
      xml:id="L02621"
      xml:base="https://id.acdh.oeaw.ac.at/schnitzler/schnitzler-briefe/editions">
    <teiHeader>
@@ -224,12 +225,14 @@
             <p>Ich war acht Tage in <rs type="place" ref="#pmb146">Frankfurt</rs>; Krankheit meines
                   <rs type="person" subtype="implied" cert="strong" ref="#pmb4986">Onkels</rs> und
                meiner <rs type="person" subtype="implied" ref="#pmb17163">Mutter</rs>. Bei meiner
-               Rückkehr fand ich Deine Briefe. <anchor type="commentary" xml:id="K_L02621-1"/>Miniſterſturz und Miniſter-Kriſis<note type="commentary" xml:id="K_L02621-1h">Gemeint war der am <date>22. 5. 1894</date> vollzogene (erzwungene) Rücktritt des
-                  Kabinetts von <rs type="person" ref="#pmb88076">Jean Casimir-Perier</rs>.</note>
+               Rückkehr fand ich Deine Briefe. <anchor type="commentary" xml:id="K_L02621-1"/>Miniſterſturz und Miniſter-Kriſis<note type="commentary" xml:id="K_L02621-1h" corresp="K_L02621-1">
+                  <date>22. 5. 1894</date>
+                  <rs type="person" ref="#pmb88076">Jean Casimir-Perier</rs>
+               </note>
                geben Tauſenderlei zu thun. So komme ich erſt <date when="1894-05-29">heut</date>
                dazu, Dir zu antworten.</p>
-            <p>Ich habe das <anchor type="commentary" xml:id="K_L02621-2"/>Geld<note type="commentary" xml:id="K_L02621-2h">
-                  <ref target="L02619" type="schnitzler-briefe" subtype="See"/>.
+            <p>Ich habe das <anchor type="commentary" xml:id="K_L02621-2"/>Geld<note type="commentary" xml:id="K_L02621-2h" corresp="K_L02621-2">
+                  <ref target="L02619" type="schnitzler-briefe" subtype="See"/>
                </note> ſofort an <hi rend="latintype">
                   <rs type="person" ref="#pmb2801">Albert</rs>
                </hi> übergeben. Es iſt blödſinnig: aber ich kam mir vor, als wenn ich einen Raub an
@@ -239,28 +242,37 @@
                   <rs type="person" ref="#pmb2801">Albert</rs>
                </hi> bewährt ſich ſehr als mein Freund, folglich auch als Deiner. Gutes, feines,
                anſchmiegendes, liebes Naturell! Wir machen große Schlachtpläne für Dich. Ich glaube,
-               er hat Dir <anchor type="commentary" xml:id="K_L02621-3"/>darüber geſchrieben<note type="commentary" xml:id="K_L02621-3h">
-                  <rs type="person" ref="#pmb2801">Alberts</rs> Brief vom <date>23. 5. 1894</date>
-                  enthält neben dem Vorhaben, das ›<rs type="work" ref="#pmb30005">Abschiedsouper</rs>‹ bei einer Freien Bühne aufführen zu lassen, mehrere
-                  Textvorhaben: <rs type="work" ref="#pmb30145">Denksteine</rs> und von ihm noch
-                  nicht gelesene Textmanuskripte (<rs type="work" ref="#pmb30391" cert="strong">Die
-                     überspannte Person</rs> und <rs type="work" ref="#pmb30389" cert="strong">Halb Zwei</rs>, <ref target="L02621" type="schnitzler-briefe" subtype="cf"/>) möchte er gegen Ende des Sommers im <rs type="work" ref="#pmb36349">Mercure de France</rs> gedruckt sehen. Zusätzlich zu seiner
-                  bevorstehenden <rs subtype="implied" ref="#pmb88064" type="work">Rezension</rs>
-                  von <rs type="work" ref="#pmb29823">Das Märchen</rs> in der <rs type="work" ref="#pmb88057">Revue Blanche</rs> plante er, in derselben Zeitschrift über die
-                     »<quote>Jungen <rs type="place" ref="#pmb50">Wien</rs>er</quote>« zu
-                  schreiben.</note>. Vielleicht gelingt es gar, Dich <anchor type="commentary" xml:id="K_L02621-4"/>aufführen<note type="commentary" xml:id="K_L02621-4h">Aus
-                  dieser Zeit sind keine Aufführungen in <rs type="place" ref="#pmb182">Paris</rs>
-                  bekannt.</note> zu laſſen. Ich denke, im nächſten Heft des »<hi rend="latintype">
+               er hat Dir <anchor type="commentary" xml:id="K_L02621-3"/>darüber geſchrieben<note type="commentary" xml:id="K_L02621-3h" corresp="K_L02621-3">
+                  <rs type="person" ref="#pmb2801">Alberts</rs>
+                  <date>23. 5. 1894</date>
+                  <rs type="work" ref="#pmb30005">Abschiedsouper</rs>
+                  <rs type="work" ref="#pmb30145">Denksteine</rs>
+                  <rs type="work" ref="#pmb30391" cert="strong">Die
+                     überspannte Person</rs>
+                  <rs type="work" ref="#pmb30389" cert="strong">Halb Zwei</rs>
+                  <ref target="L02621" type="schnitzler-briefe" subtype="cf"/>
+                  <rs type="work" ref="#pmb36349">Mercure de France</rs>
+                  <rs subtype="implied" ref="#pmb88064" type="work">Rezension</rs>
+                  <rs type="work" ref="#pmb29823">Das Märchen</rs>
+                  <rs type="work" ref="#pmb88057">Revue Blanche</rs>
+                  <quote>Jungen <rs type="place" ref="#pmb50">Wien</rs>er</quote>
+               </note>. Vielleicht gelingt es gar, Dich <anchor type="commentary" xml:id="K_L02621-4"/>aufführen<note type="commentary" xml:id="K_L02621-4h" corresp="K_L02621-4">
+                  <rs type="place" ref="#pmb182">Paris</rs>
+               </note> zu laſſen. Ich denke, im nächſten Heft des »<hi rend="latintype">
                   <rs type="work" ref="#pmb36349">Mercure</rs>
                </hi>« wird <anchor type="commentary" xml:id="K_L02621-5"/>
                <hi rend="latintype">
                   <rs type="person" ref="#pmb2801">Albert</rs>
-               </hi> Dein »<rs type="work" ref="#pmb29823">Märchen</rs>« beſprechen<note type="commentary" xml:id="K_L02621-5h">
+               </hi> Dein »<rs type="work" ref="#pmb29823">Märchen</rs>« beſprechen<note type="commentary" xml:id="K_L02621-5h" corresp="K_L02621-5">
                   <rs type="person" ref="#pmb2801">Alberts</rs>
                   <space unit="chars" quantity="1"/>
-                  <rs type="work" subtype="implied" ref="#pmb88064">Rezension</rs> erschien nicht im <rs type="work" ref="#pmb36349">Mercure de France</rs>, sondern in der <rs type="work" ref="#pmb88057">Revue Blanche</rs>: <bibl>
+                  <rs type="work" subtype="implied" ref="#pmb88064">Rezension</rs>
+                  <rs type="work" ref="#pmb36349">Mercure de France</rs>
+                  <rs type="work" ref="#pmb88057">Revue Blanche</rs>
+                  <bibl>
                      <rs type="person" ref="#pmb2801">Henri Albert</rs>: <rs type="work" ref="#pmb88064">Les Lettres allemandes. Drames Nouveaux</rs>. In: <rs type="work" ref="#pmb88057">La Revue Blanche</rs>, Jg. 6, Nr. 32,
-                        <date>Juni 1894</date>, S. 556–560, hier: S. 560</bibl>.</note>. Von den
+                        <date>Juni 1894</date>, S. 556–560, hier: S. 560</bibl>
+               </note>. Von den
                zwei <rs type="work" subtype="implied" ref="#pmb30391 #pmb30389">Manuſkripten</rs>,
                insbeſondere von der »<rs type="work" subtype="implied" ref="#pmb30391">Überſpannten
                   Perſon</rs>« ſind wir Alle hoch entzückt. Unterſchied zwiſchen Dir und <hi rend="latintype">
@@ -278,21 +290,27 @@
                ſchön, ich weiß nicht einmal, ob ſympathiſch, aber derzeit unſere gute <rs type="person" subtype="implied" ref="#pmb10762">Freundin</rs>. Intime <rs type="person" subtype="implied" ref="#pmb10762">Freundin</rs> von <hi rend="latintype">
                   <rs type="person" ref="#pmb12358">Nietzsche</rs>
                </hi>. <anchor type="commentary" xml:id="K_L02621-6"/>Geſchlechtsloſe
-                  Freundſchaft<note type="commentary" xml:id="K_L02621-6h">Rein freundschaftlich war
-                  die Beziehung zwischen <rs type="person" ref="#pmb12358">Nietzsche</rs> und <rs type="person" ref="#pmb10762">Andreas-Salomé</rs> wahrscheinlich nicht. Wie <rs type="person" ref="#pmb10762">Andreas-Salomés</rs>
+                  Freundſchaft<note type="commentary" xml:id="K_L02621-6h" corresp="K_L02621-6">
+                  <rs type="person" ref="#pmb12358">Nietzsche</rs>
+                  <rs type="person" ref="#pmb10762">Andreas-Salomé</rs>
+                  <rs type="person" ref="#pmb10762">Andreas-Salomés</rs>
                   <space unit="chars" quantity="1"/>
-                  <rs type="work" ref="#pmb88322">Lebensrückblick</rs> zu entnehmen ist, soll ihr <rs type="person" ref="#pmb12358">Nietzsche</rs>
+                  <rs type="work" ref="#pmb88322">Lebensrückblick</rs>
+                  <rs type="person" ref="#pmb12358">Nietzsche</rs>
                   <space unit="chars" quantity="1"/>
-                  <date>1892</date> vergeblich einen Heiratsantrag gemacht haben. Es ist umstritten,
-                  ob dieser Bericht wahr ist.</note>, wie ich glaube. Hat vier Jahre lang mit ihm
+                  <date>1892</date>
+               </note>, wie ich glaube. Hat vier Jahre lang mit ihm
                gelebt und gearbeitet. Ungeheures Wiſſen, <rs type="person" subtype="implied" ref="#pmb10762">Philo<pb facs="HS.NZ85.1.3164_0023-0"/>ſophin</rs> vom Fach. Hat
                ein merkwürdiges <rs type="work" subtype="implied" ref="#pmb78577">Buch</rs> über <hi rend="latintype">
                   <rs type="person" ref="#pmb12358">Nietzsche</rs>
                </hi> veröffentlicht. Specialität: Religions-Philosophie. Nun gut: Sie weilt ſeit
                einigen Wochen in <hi rend="latintype">
                   <rs type="place" ref="#pmb182">Paris</rs>
-               </hi>, und ſie ſchickt Dir dieſen <anchor type="commentary" xml:id="K_L02621-7"/>Brief<note type="commentary" xml:id="K_L02621-7h">Womöglich handelt es sich um
-                  den Brief <rs type="person" ref="#pmb10762">Andreas-Salomés</rs> an <rs type="person" ref="#pmb2121">Schnitzler</rs> vom <ref target="L00325" type="schnitzler-briefe" subtype="date-only"/>.</note>. Willſt Du ihr
+               </hi>, und ſie ſchickt Dir dieſen <anchor type="commentary" xml:id="K_L02621-7"/>Brief<note type="commentary" xml:id="K_L02621-7h" corresp="K_L02621-7">
+                  <rs type="person" ref="#pmb10762">Andreas-Salomés</rs>
+                  <rs type="person" ref="#pmb2121">Schnitzler</rs>
+                  <ref target="L00325" type="schnitzler-briefe" subtype="date-only"/>
+               </note>. Willſt Du ihr
                antworten, ſo thus durch mich.</p>
             <p>Alſo es <del rend="strikethrough">
                   <unclear>wa</unclear>
@@ -342,24 +360,35 @@
                <space unit="chars" quantity="1"/>
                <rs type="work" subtype="implied" ref="#pmb32832">Buch</rs> abſolut nicht <anchor type="commentary" xml:id="K_L02621-8"/>
                <rs type="work" ref="#pmb88709" subtype="implied">ver<pb facs="HS.NZ85.1.3164_0025-0"/>ſtanden</rs>
-               <note type="commentary" xml:id="K_L02621-8h">
+               <note type="commentary" xml:id="K_L02621-8h" corresp="K_L02621-8">
                   <bibl>
                      <rs type="person" ref="#pmb12244">Leo Hildeck</rs> [ = <rs type="person" ref="#pmb12244">Leonie Meyerhof</rs>]: <rs type="work" ref="#pmb88709">Neue
                         Romane und Novellen</rs>. In: <rs type="work" ref="#pmb36344">Frankfurter
                         Zeitung</rs>, Jg. 38, Nr. 142, <date>24. 5. 1894</date>, Erstes Morgenblatt,
-                     S. 1–2</bibl>.</note>. Dafür kann ich nichts, und ich kann es nur bedauern. Ich
-               habe das Ehrenwort meines <rs type="person" subtype="implied" ref="#pmb4986">Onkels</rs>, daß Dein neuer <anchor type="commentary" xml:id="K_L02621-9"/>Roman<note type="commentary" xml:id="K_L02621-9h">Nicht identifiziert.
-                  Möglicherweise ging es um Schnitzlers Erzählung <rs type="work" ref="#pmb30453">Blumen</rs>, deren Abdruck in der <rs type="work" ref="#pmb36344">Frankfurter
+                     S. 1–2</bibl>
+               </note>. Dafür kann ich nichts, und ich kann es nur bedauern. Ich
+               habe das Ehrenwort meines <rs type="person" subtype="implied" ref="#pmb4986">Onkels</rs>, daß Dein neuer <anchor type="commentary" xml:id="K_L02621-9"/>Roman<note type="commentary" xml:id="K_L02621-9h" corresp="K_L02621-9">
+                  <rs type="work" ref="#pmb30453">Blumen</rs>
+                  <rs type="work" ref="#pmb36344">Frankfurter
                      Zeitung</rs>
                   <space unit="chars" quantity="1"/>
-                  <rs type="person" ref="#pmb4986">Mamroth</rs> jedenfalls am <ref target="L00311" type="schnitzler-briefe" subtype="date-only"/> freundlich abgelehnt hattee.</note>
+                  <rs type="person" ref="#pmb4986">Mamroth</rs>
+                  <ref target="L00311" type="schnitzler-briefe" subtype="date-only"/>
+               </note>
                beſprochen wird, ſobald er in Buchform erſchienen iſt.</p>
             <p>Wenn ich keinen ſchweren Krankheitsanfall bekomme, will ich von meinem
                vierwöchentlichen Urlaub drei auf eine Reiſe verwenden. Ich habe keinen höheren
                Wunſch, als dieſe drei Wochen mit Dir zu verbringen. Aber das muß im <anchor type="commentary" xml:id="K_L02621-10"/>
                <date when="1894-08">Auguſt</date>
-               <note type="commentary" xml:id="K_L02621-10h">Vom <ref target="1894-08-23" type="schnitzler-tagebuch" subtype="date-only"/> bis <ref target="1894-09-03" type="schnitzler-tagebuch" subtype="date-only"/> verbrachten <rs type="person" ref="#pmb2121">Schnitzler</rs> und <rs type="person" ref="#pmb11485">Goldmann</rs> einige Zeit gemeinsam in <rs type="place" ref="#pmb213">Bad
-                     Ischl</rs> und <rs type="place" ref="#pmb415">Bad Aussee</rs>.</note> ſein.
+               <note type="commentary" xml:id="K_L02621-10h" corresp="K_L02621-10">
+                  <ref target="1894-08-23" type="schnitzler-tagebuch" subtype="date-only"/>
+                  <ref target="1894-09-03" type="schnitzler-tagebuch" subtype="date-only"/>
+                  <rs type="person" ref="#pmb2121">Schnitzler</rs>
+                  <rs type="person" ref="#pmb11485">Goldmann</rs>
+                  <rs type="place" ref="#pmb213">Bad
+                     Ischl</rs>
+                  <rs type="place" ref="#pmb415">Bad Aussee</rs>
+               </note> ſein.
                Kannſt du fort? Und wohin? Bitte, ſchreib’ mir bald darüber.</p>
             <p>
                <pb facs="HS.NZ85.1.3164_0027-1"/>Oh dieſe Hypochondrie in Deinem letzten Briefe!
@@ -379,8 +408,7 @@
                <hi rend="latintype">
                   <foreign xml:lang="fra">c’est une destinée toute faite</foreign>
                </hi>
-               <note type="commentary" xml:id="K_L02621-11h">französisch, etwa: das Schicksal ist
-                  vorbestimmt</note>. Und wenn er, wie bei Dir, nicht mit Infamie verbunden iſt (wie
+               <note type="commentary" xml:id="K_L02621-11h" corresp="K_L02621-11"/>. Und wenn er, wie bei Dir, nicht mit Infamie verbunden iſt (wie
                bei mir), ſo ſollte man ihn <pb facs="HS.NZ85.1.3164_0028-1"/>ruhig tragen, zumal
                wenn man dabei auch noch graduieren kann. Wer weiß, ob nicht gerade in Deiner Abſcheu
                davor, ein ärztlicher <del rend="strikethrough">ban</del> Banauſe zu werden, ein
@@ -396,16 +424,24 @@
                      <rs type="person" ref="#pmb87962">Christensen</rs>
                   </rs>
                </hi>
-               <note type="commentary" xml:id="K_L02621-12h">
+               <note type="commentary" xml:id="K_L02621-12h" corresp="K_L02621-12">
                   <bibl>
                      <rs type="person" ref="#pmb87962">Hjalmar Christensen</rs>: <rs type="work" ref="#pmb87965">Der Dekadent</rs>. In: <rs type="work" ref="#pmb36344">Frankfurter Zeitung</rs>, Jg. 38, Nr. 103, <date>14. 4. 1894</date>, Erstes
-                     Morgenblatt, S. 1–2</bibl>. Eine unmittelbare Reaktion auf diesen Text lässt
-                  sich nicht nachweisen, sehr wohl aber eine wohlwollende <rs type="work" subtype="implied" ref="#pmb93773">Erwähnung</rs> in der <rs type="work" ref="#pmb36152">Neuen deutschen Rundschau</rs> vom <date>Mai 1894</date>
-                     (<bibl>Jg. 5, Nr. 5, S. 522–523</bibl>). In der <rs type="work" ref="#pmb36152">Neuen deutschen Rundschau</rs> findet sich auch ein Hinweis auf eine kritische
-                  Einordnung von jüngeren <rs type="place" ref="#pmb50">Wien</rs>er Autoren –
-                  darunter <rs type="person" ref="#pmb2121">Schnitzler</rs>, <rs type="person" ref="#pmb11740">Hofmannstal</rs> und <rs type="person" ref="#pmb10815">Bahr</rs> – durch <rs type="person" ref="#pmb12823">Stauf von der March</rs> (<bibl>
-                     <rs type="person" ref="#pmb12823">Ottokar Stauf von der March</rs>: <rs type="work" ref="#pmb93770">Décadence. Randglossen</rs>. In: <rs type="work" ref="#pmb35919">Die Gesellschaft</rs>, Jg. 10, H. 4, April 1894, S.                      526–533</bibl>). Über <rs type="person" ref="#pmb2121">Schnitzler</rs> steht
-                  darin: »<quote>Der hervorragendste aller Dekadenten ist der schon öfter erwähnte
+                     Morgenblatt, S. 1–2</bibl>
+                  <rs type="work" subtype="implied" ref="#pmb93773">Erwähnung</rs>
+                  <rs type="work" ref="#pmb36152">Neuen deutschen Rundschau</rs>
+                  <date>Mai 1894</date>
+                  <bibl>Jg. 5, Nr. 5, S. 522–523</bibl>
+                  <rs type="work" ref="#pmb36152">Neuen deutschen Rundschau</rs>
+                  <rs type="place" ref="#pmb50">Wien</rs>
+                  <rs type="person" ref="#pmb2121">Schnitzler</rs>
+                  <rs type="person" ref="#pmb11740">Hofmannstal</rs>
+                  <rs type="person" ref="#pmb10815">Bahr</rs>
+                  <rs type="person" ref="#pmb12823">Stauf von der March</rs>
+                  <bibl>
+                     <rs type="person" ref="#pmb12823">Ottokar Stauf von der March</rs>: <rs type="work" ref="#pmb93770">Décadence. Randglossen</rs>. In: <rs type="work" ref="#pmb35919">Die Gesellschaft</rs>, Jg. 10, H. 4, April 1894, S.                      526–533</bibl>
+                  <rs type="person" ref="#pmb2121">Schnitzler</rs>
+                  <quote>Der hervorragendste aller Dekadenten ist der schon öfter erwähnte
                         <rs type="place" ref="#pmb50">Wien</rs>er <rs type="person" ref="#pmb2121">Arthur Schnitzler</rs>. Obgleich seine Dichtungen, vornehmlich:
                      Scenenbilder (›<rs type="work" ref="#pmb29935">Anatol</rs>‹), vom denkbar
                      stärksten Décadence-Kolorit durchsättigt sind und darum den Leser in die
@@ -416,8 +452,9 @@
                      Körperstellen. An Geist vermag sich mit ihm kein einziger Dekadent zu messen.
                         <rs type="person" ref="#pmb2121">Schnitzlers</rs> Werke sprühen förmlich von
                      genialen Gedanken und Sentenzen. Er ist gewissermaßen der Klassiker der
-                     Décadence, aber darum nicht minder krank, als die übrigen.</quote>«
-                     (<bibl>S. 531</bibl>.)</note> habe ich nirgends entdecken können. Könnteſt Du
+                     Décadence, aber darum nicht minder krank, als die übrigen.</quote>
+                  <bibl>S. 531</bibl>
+               </note> habe ich nirgends entdecken können. Könnteſt Du
                mir nicht die Nummer oder nur die ungefähre Erſcheinungs-Zeit angeben?</p>
             <p>Und <hi rend="latintype">
                   <rs type="person" ref="#pmb10863">Richard</rs>
@@ -437,8 +474,8 @@
             <p>Mein <rs type="person" subtype="implied" ref="#pmb23593">Schwager</rs> iſt
                hochbeglückt mit Deiner <anchor type="commentary" xml:id="K_L02621-13"/>
                <rs subtype="implied" ref="#pmb36063" type="work">Zeitſchrift</rs>
-               <note type="commentary" xml:id="K_L02621-13h">
-                  <ref type="schnitzler-briefe" subtype="See" target="L02719"/>.
+               <note type="commentary" xml:id="K_L02621-13h" corresp="K_L02621-13">
+                  <ref type="schnitzler-briefe" subtype="See" target="L02719"/>
                </note> und dankt Dir noch vielmals.</p>
             <closer>Viele treue Grüße! <lb/>Dein <lb/>
                <signed>Paul Goldmann</signed>

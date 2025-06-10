@@ -1,7 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="../meta/schnitzler-briefe-schematron.sch" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
 <TEI xmlns="http://www.tei-c.org/ns/1.0"
      xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-     xsi:schemaLocation="http://www.tei-c.org/ns/1.0 ../meta/asbwschema.xsd"
+     xsi:schemaLocation="http://www.tei-c.org/ns/1.0 ../meta/schnitzler-briefe-schema.xsd"
      xml:id="L02889"
      xml:base="https://id.acdh.oeaw.ac.at/schnitzler/schnitzler-briefe/editions">
    <teiHeader>
@@ -183,9 +184,14 @@
             </opener>
             <p>
                <salute>Mein lieber Freund,</salute> Ich habe lange unentſchloſſen hin
-               und her geſchwankt, ob ich <anchor type="commentary" xml:id="K_L02889-1"/>nach <rs type="place" ref="#pmb50">Wien</rs> kommen<note type="commentary" xml:id="K_L02889-1h">
-                  <rs type="person" ref="#pmb11485">Goldmann</rs> kam am <ref type="schnitzler-tagebuch" target="1899-10-13" subtype="date-only"/> (dem
-                  besagten <date when="1899-10-13">Freitag</date>) nach <rs type="place" ref="#pmb50">Wien</rs> und blieb bis zum <ref type="schnitzler-tagebuch" target="1899-10-21" subtype="date-only"/>. Er wohnte bei <rs type="person" ref="#pmb2121">Schnitzler</rs>.</note> ſoll. Der Abſchied von <rs type="place" ref="#pmb263">Florenz</rs> fällt mir unſagbar ſchwer, und ich wäre gern noch acht
+               und her geſchwankt, ob ich <anchor type="commentary" xml:id="K_L02889-1"/>nach <rs type="place" ref="#pmb50">Wien</rs> kommen<note type="commentary" xml:id="K_L02889-1h" corresp="K_L02889-1">
+                  <rs type="person" ref="#pmb11485">Goldmann</rs>
+                  <ref type="schnitzler-tagebuch" target="1899-10-13" subtype="date-only"/>
+                  <date when="1899-10-13">Freitag</date>
+                  <rs type="place" ref="#pmb50">Wien</rs>
+                  <ref type="schnitzler-tagebuch" target="1899-10-21" subtype="date-only"/>
+                  <rs type="person" ref="#pmb2121">Schnitzler</rs>
+               </note> ſoll. Der Abſchied von <rs type="place" ref="#pmb263">Florenz</rs> fällt mir unſagbar ſchwer, und ich wäre gern noch acht
                Tage geblieben. Der Wunſch, Dich noch einmal wiederzuſehen, ehe ich wieder in der
                großen Arbeit untertauche, hat <del rend="strikethrough">
                   <unclear>f</unclear>
@@ -205,11 +211,20 @@
                Deinigen nicht ſtören?</p>
             <p>Bitte, ſchreibe an <hi rend="latintype">
                   <rs type="person" ref="#pmb10863">Richard</rs>
-               </hi>, daß auch er <anchor type="commentary" xml:id="K_L02889-2"/>nach <rs type="place" ref="#pmb50">Wien</rs> kommt<note type="commentary" xml:id="K_L02889-2h">
-                  <rs type="person" ref="#pmb10863">Beer-Hofmann</rs> hielt sich ab dem <date when="1899-10-16">16. 10. 1899</date> wieder in <rs type="place" ref="#pmb50">Wien</rs> auf (<ref type="schnitzler-briefe" target="L00991" subtype="cf"/>).
-                     <rs type="person" ref="#pmb2121">Schnitzler</rs> traf ihn während <rs type="person" ref="#pmb11485">Goldmanns</rs> Anwesenheit am <ref type="schnitzler-tagebuch" target="1899-10-17" subtype="date-only"/> und <ref type="schnitzler-tagebuch" target="1899-10-19" subtype="date-only"/>. Am <ref type="schnitzler-briefe" target="L00992" subtype="date-only"/> besuchte <rs type="person" ref="#pmb11485">Goldmann</rs>
+               </hi>, daß auch er <anchor type="commentary" xml:id="K_L02889-2"/>nach <rs type="place" ref="#pmb50">Wien</rs> kommt<note type="commentary" xml:id="K_L02889-2h" corresp="K_L02889-2">
+                  <rs type="person" ref="#pmb10863">Beer-Hofmann</rs>
+                  <date when="1899-10-16">16. 10. 1899</date>
+                  <rs type="place" ref="#pmb50">Wien</rs>
+                  <ref type="schnitzler-briefe" target="L00991" subtype="cf"/>
+                  <rs type="person" ref="#pmb2121">Schnitzler</rs>
+                  <rs type="person" ref="#pmb11485">Goldmanns</rs>
+                  <ref type="schnitzler-tagebuch" target="1899-10-17" subtype="date-only"/>
+                  <ref type="schnitzler-tagebuch" target="1899-10-19" subtype="date-only"/>
+                  <ref type="schnitzler-briefe" target="L00992" subtype="date-only"/>
+                  <rs type="person" ref="#pmb11485">Goldmann</rs>
                   <space unit="chars" quantity="1"/>
-                  <rs type="person" ref="#pmb10863">Beer-Hofmann</rs>.</note>, falls er nicht ſchon
+                  <rs type="person" ref="#pmb10863">Beer-Hofmann</rs>
+               </note>, falls er nicht ſchon
                zurück ſein ſollte.</p>
             <p>Mir droht ein ſchweres Unheil: Wie ich aus <rs type="place" ref="#pmb146">Frankfurt</rs> höre, wird <hi rend="latintype">
                   <rs type="person" ref="#pmb9598">Rottenberg</rs>
@@ -217,19 +232,34 @@
                <hi rend="latintype">
                   <rs type="person" ref="#pmb140824">Fuchs</rs>
                </hi>
-               <note type="commentary" xml:id="K_L02889-3h">
-                  <rs type="person" ref="#pmb11485">Goldmann</rs> bezog sich höchstwahrscheinlich
-                  auf <rs type="person" ref="#pmb140824">Johann Nepomuk Fuchs</rs>, seit <date when="1894">1894</date> Vizehofkapellmeister an der <rs type="org" ref="#pmb36689">Wiener Hofoper</rs>, der zu dieser Zeit bereits erkrankt war.
-                  Am <date when="1899-10-15">15. 10. 1899</date> verstarb er. <rs type="person" ref="#pmb9598">Ludwig Rottenberg</rs> war seit <date when="1892">1892</date>
-                  Erster Kapellmeister an der <rs type="org" ref="#pmb46954">Frankfurter Oper</rs>
-                  und gastierte zwischen <date when="1899-10-15">15. 10. 1899</date> und <date when="1899-11-21">21. 11. 1899</date>, als die <rs type="org" ref="#pmb36689">Hofoper</rs> Personalmangel verzeichnete, in <rs type="place" ref="#pmb50">Wien</rs>.</note> nach <rs type="org" subtype="implied" ref="#pmb36689">
+               <note type="commentary" xml:id="K_L02889-3h" corresp="K_L02889-3">
+                  <rs type="person" ref="#pmb11485">Goldmann</rs>
+                  <rs type="person" ref="#pmb140824">Johann Nepomuk Fuchs</rs>
+                  <date when="1894">1894</date>
+                  <rs type="org" ref="#pmb36689">Wiener Hofoper</rs>
+                  <date when="1899-10-15">15. 10. 1899</date>
+                  <rs type="person" ref="#pmb9598">Ludwig Rottenberg</rs>
+                  <date when="1892">1892</date>
+                  <rs type="org" ref="#pmb46954">Frankfurter Oper</rs>
+                  <date when="1899-10-15">15. 10. 1899</date>
+                  <date when="1899-11-21">21. 11. 1899</date>
+                  <rs type="org" ref="#pmb36689">Hofoper</rs>
                   <rs type="place" ref="#pmb50">Wien</rs>
-               </rs> berufen. <anchor type="commentary" xml:id="K_L02889-4"/>Das wäre das Ende<note type="commentary" xml:id="K_L02889-4h">Bezug auf die Beziehung <rs type="person" ref="#pmb11485">Goldmanns</rs> mit <rs type="person" ref="#pmb9598">Rottenbergs</rs> Ehefrau <rs type="person" ref="#pmb23674">Theodore</rs>.
-                  Diese war, mit Unterbrechungen, von <date when="1899">Herbst 1899</date> bis
-                  mindestens <date when="1905-07-31">Ende Juli 1905</date>
+               </note> nach <rs type="org" subtype="implied" ref="#pmb36689">
+                  <rs type="place" ref="#pmb50">Wien</rs>
+               </rs> berufen. <anchor type="commentary" xml:id="K_L02889-4"/>Das wäre das Ende<note type="commentary" xml:id="K_L02889-4h" corresp="K_L02889-4">
+                  <rs type="person" ref="#pmb11485">Goldmanns</rs>
+                  <rs type="person" ref="#pmb9598">Rottenbergs</rs>
+                  <rs type="person" ref="#pmb23674">Theodore</rs>
+                  <date when="1899">Herbst 1899</date>
+                  <date when="1905-07-31">Ende Juli 1905</date>
                   <space unit="chars" quantity="1"/>
-                  <rs type="person" ref="#pmb11485">Goldmanns</rs> Geliebte. Aller
-                  Wahrscheinlichkeit nach entsprang dieser außerehelichen Beziehung <rs type="person" ref="#pmb23674">Theodore Rottenbergs</rs> zweite Tochter, <rs type="person" ref="#pmb140820">Gertrud Rottenberg</rs>, verheiratete <rs type="person" subtype="implied" ref="#pmb140820">Hindemith</rs> (<ref type="schnitzler-briefe" target="L02895" subtype="see"/>).</note>.</p>
+                  <rs type="person" ref="#pmb11485">Goldmanns</rs>
+                  <rs type="person" ref="#pmb23674">Theodore Rottenbergs</rs>
+                  <rs type="person" ref="#pmb140820">Gertrud Rottenberg</rs>
+                  <rs type="person" subtype="implied" ref="#pmb140820">Hindemith</rs>
+                  <ref type="schnitzler-briefe" target="L02895" subtype="see"/>
+               </note>.</p>
             <p>Viele treue Grüße! Und auf baldiges Wiederſehen!</p>
             <closer>Dein <lb/>
                <signed>Paul Goldmann.</signed>
@@ -237,8 +267,8 @@
             <postscript>
                <p>Meine Ankunft zeige ich Dir nach <rs type="place" ref="#pmb50">Wien</rs>
                   <space unit="chars" quantity="1"/>
-                  <anchor type="commentary" xml:id="K_L02889-5"/>telegraphiſch<note type="commentary" xml:id="K_L02889-5h">
-                     <ref type="schnitzler-briefe" target="L02683" subtype="See"/>.
+                  <anchor type="commentary" xml:id="K_L02889-5"/>telegraphiſch<note type="commentary" xml:id="K_L02889-5h" corresp="K_L02889-5">
+                     <ref type="schnitzler-briefe" target="L02683" subtype="See"/>
                   </note> an.</p>
             </postscript>
          </div>

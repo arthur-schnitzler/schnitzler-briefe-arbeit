@@ -1,7 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="../meta/schnitzler-briefe-schematron.sch" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
 <TEI xmlns="http://www.tei-c.org/ns/1.0"
      xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-     xsi:schemaLocation="http://www.tei-c.org/ns/1.0 ../meta/asbwschema.xsd"
+     xsi:schemaLocation="http://www.tei-c.org/ns/1.0 ../meta/schnitzler-briefe-schema.xsd"
      xml:id="L03072"
      xml:base="https://id.acdh.oeaw.ac.at/schnitzler/schnitzler-briefe/editions">
    <teiHeader>
@@ -167,12 +168,12 @@
                <salute rend="center">Mein lieber Freund,</salute>
             </opener>
             <p>Endlich zieht Vernunft in Eure Reiſepläne ein, und ich freue mich ſehr darüber und
-               über die Ausſicht, Euch doch zu <anchor type="commentary" xml:id="K_L03072-1"/>ſehen<note type="commentary" xml:id="K_L03072-1h">
-                  <ref type="schnitzler-briefe" target="L03064" subtype="See"/>.
+               über die Ausſicht, Euch doch zu <anchor type="commentary" xml:id="K_L03072-1"/>ſehen<note type="commentary" xml:id="K_L03072-1h" corresp="K_L03072-1">
+                  <ref type="schnitzler-briefe" target="L03064" subtype="See"/>
                </note>. Ich gehe ſo zwiſchen dem <date when="1901-07-20">20.</date> u. <date when="1901-07-25">25.</date> von hier fort, bleibe einen oder zwei Tage in <rs type="place" ref="#pmb866">Dresden</rs> und <rs type="place" ref="#pmb50">Wien</rs>, gehe dann meinetwegen nach dem <anchor type="commentary" xml:id="K_L03072-2"/>
                <rs type="place" ref="#pmb430">Wörtherſee</rs>
-               <note type="commentary" xml:id="K_L03072-2h">
-                  <ref type="schnitzler-briefe" target="L03066" subtype="See"/>.
+               <note type="commentary" xml:id="K_L03072-2h" corresp="K_L03072-2">
+                  <ref type="schnitzler-briefe" target="L03066" subtype="See"/>
                </note> und komme von da aus ſehr gern zu Euch. <rs type="place" ref="#pmb91969">
                   <hi rend="latintype">St. Ulrich</hi>
                </rs> im <pb facs="DLA_85.1.3171_00051-0"/>
@@ -180,9 +181,16 @@
                Denn ſeit Jahren wünſche ich, das <rs type="place" ref="#pmb65733">Grödener Thal</rs>
                kennen zu lernen. Bitte, halt’ alſo dieſes Projekt feſt. Vielleicht können wir dann
                auch von dort aus ein paar Tage in die Berge ſteigen.</p>
-            <p>Ich höre, daß die »<rs type="org" ref="#pmb29626 #pmb29209">Zeit</rs>« von <date when="1901-10-01">1. Oktober</date> ab <anchor type="commentary" xml:id="K_L03072-3"/>Tagesblatt<note type="commentary" xml:id="K_L03072-3h">
-                  <rs type="work" ref="#pmb35935">Die Zeit</rs> wurde erst ab dem <date when="1902-09-27">27. 9. 1902</date> (bis <date when="1919-08-31">31. 8. 1919</date>) als Tageszeitung von <rs type="person" ref="#pmb11867">Heinrich Kanner</rs> und <rs type="person" ref="#pmb12790">Isidor Singer</rs>
-                  herausgegeben. Bis zum <date when="1904-10-29">29. 10. 1904</date> erschien <rs type="work" ref="#pmb36340">Die Zeit</rs> parallel als Wochenschrift. Die <rs type="work" ref="#pmb36374">Neue Freie Presse</rs> ersetzte sie nicht.</note>
+            <p>Ich höre, daß die »<rs type="org" ref="#pmb29626 #pmb29209">Zeit</rs>« von <date when="1901-10-01">1. Oktober</date> ab <anchor type="commentary" xml:id="K_L03072-3"/>Tagesblatt<note type="commentary" xml:id="K_L03072-3h" corresp="K_L03072-3">
+                  <rs type="work" ref="#pmb35935">Die Zeit</rs>
+                  <date when="1902-09-27">27. 9. 1902</date>
+                  <date when="1919-08-31">31. 8. 1919</date>
+                  <rs type="person" ref="#pmb11867">Heinrich Kanner</rs>
+                  <rs type="person" ref="#pmb12790">Isidor Singer</rs>
+                  <date when="1904-10-29">29. 10. 1904</date>
+                  <rs type="work" ref="#pmb36340">Die Zeit</rs>
+                  <rs type="work" ref="#pmb36374">Neue Freie Presse</rs>
+               </note>
                wird mit 1 Million <hi rend="latintype">Kronen</hi> Capital. Weißt Du etwas davon?
                Kommt es dazu, ſo bedeutet <pb facs="DLA_85.1.3171_00051-1"/>das, nach meiner
                Überzeugung, den Anfang vom Ende der <rs type="org" ref="#pmb29351">N. Fr. Pr.</rs>
@@ -194,9 +202,7 @@
             </closer>
          </div>
          <div type="writingSession" n="2">
-            
-               <space dim="vertical" unit="line" quantity="1"/>
-            
+            <space dim="vertical" unit="line" quantity="1"/>
             <p>
                <salute>Liebes Fräulein <hi rend="latintype">Olga</hi>,</salute> Ich
                danke Ihnen für Ihren lieben und guten Brief. Jetzt, bitte, ſetzen Sie noch durch,

@@ -1,7 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="../meta/schnitzler-briefe-schematron.sch" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
 <TEI xmlns="http://www.tei-c.org/ns/1.0"
      xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-     xsi:schemaLocation="http://www.tei-c.org/ns/1.0 ../meta/asbwschema.xsd"
+     xsi:schemaLocation="http://www.tei-c.org/ns/1.0 ../meta/schnitzler-briefe-schema.xsd"
      xml:id="L00550"
      xml:base="https://id.acdh.oeaw.ac.at/schnitzler/schnitzler-briefe/editions">
    <teiHeader>
@@ -168,15 +169,18 @@
                <dateline>
                   <anchor type="commentary" xml:id="K_L00550-1"/>
                   <date>6/VI.</date>
-                  <note xml:id="K_L00550-1h" type="commentary">Die Datierung des Jahres beruht auf
-                     dem unsicher gelesenen Zusatz »<quote>
+                  <note xml:id="K_L00550-1h" type="commentary" corresp="K_L00550-1">
+                     <quote>
                         <date>96</date>
-                     </quote>« durch <rs ref="#pmb2121" type="person">Schnitzler</rs>. Zusätzliche
-                     Argumente für die Datierung in dieser Zeit liefern der Eintrag im <rs ref="#pmb33243" type="work">Tagebuch</rs>
+                     </quote>
+                     <rs ref="#pmb2121" type="person">Schnitzler</rs>
+                     <rs ref="#pmb33243" type="work">Tagebuch</rs>
                      <space unit="chars" quantity="1"/>
-                     <rs ref="#pmb2121" type="person">Schnitzlers</rs> vom <ref type="schnitzler-tagebuch" target="1905-11-10" subtype="date-only"/>, in dem
-                     er seine Bekanntschaft mit <rs ref="#pmb2989" type="person">Polgar</rs> Revue
-                     passieren lässt, sowie der Umstand, dass die Unterschrift auf den späteren <hi rend="italics">nom de plume</hi> verzichtet.</note>
+                     <rs ref="#pmb2121" type="person">Schnitzlers</rs>
+                     <ref type="schnitzler-tagebuch" target="1905-11-10" subtype="date-only"/>
+                     <rs ref="#pmb2989" type="person">Polgar</rs>
+                     <hi rend="italics">nom de plume</hi>
+                  </note>
                </dateline>
             </postscript>
          </div>

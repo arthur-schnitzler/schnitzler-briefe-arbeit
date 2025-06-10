@@ -1,7 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="../meta/schnitzler-briefe-schematron.sch" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
 <TEI xmlns="http://www.tei-c.org/ns/1.0"
      xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-     xsi:schemaLocation="http://www.tei-c.org/ns/1.0 ../meta/asbwschema.xsd"
+     xsi:schemaLocation="http://www.tei-c.org/ns/1.0 ../meta/schnitzler-briefe-schema.xsd"
      xml:id="L02931"
      xml:base="https://id.acdh.oeaw.ac.at/schnitzler/schnitzler-briefe/editions">
    <teiHeader>
@@ -166,20 +167,21 @@
                   <rs type="place" ref="#pmb168">Berlin</rs>, <date when="1900-09-19">19. September</date>.</dateline>
                <salute rend="center">Mein lieber <anchor type="commentary" xml:id="K_L02931-1"/>
                   <rs type="person" subtype="implied" ref="#pmb4986">Onkel</rs>
-                  <note type="commentary" xml:id="K_L02931-1h">Unachtsamkeit und Verwechslung der
-                     Anrede mit jener für <rs type="person" ref="#pmb4986">Fedor Mamroth</rs> oder,
-                     innerhalb der Korrespondenz untypisch, Witz</note>,</salute>
+                  <note type="commentary" xml:id="K_L02931-1h" corresp="K_L02931-1">
+                     <rs type="person" ref="#pmb4986">Fedor Mamroth</rs>
+                  </note>,</salute>
             </opener>
             <p>Den <anchor type="commentary" xml:id="K_L02931-2"/>
-               <rs type="work" subtype="implied" ref="#pmb142429">Artikel</rs> des »<rs type="work" ref="#pmb41531">Berliner Tageblatt</rs>«<note type="commentary" xml:id="K_L02931-2h">
+               <rs type="work" subtype="implied" ref="#pmb142429">Artikel</rs> des »<rs type="work" ref="#pmb41531">Berliner Tageblatt</rs>«<note type="commentary" xml:id="K_L02931-2h" corresp="K_L02931-2">
                   <bibl>[O. V.]: <rs type="work" ref="#pmb142429">Paul Schlenther und die Wiener
                         Kritik</rs>. In: <rs type="work" ref="#pmb41531">Berliner Tageblatt</rs>,
                      Jg. 29, Nr. 470, <date when="1900-09-15">15. 9. 1900</date>, Abend-Ausgabe,
-                     S. 1–2</bibl>.</note> hatte ich natürlich, unter Hervorhebung der Dir günſtigen
+                     S. 1–2</bibl>
+               </note> hatte ich natürlich, unter Hervorhebung der Dir günſtigen
                Stellen, telegraphirt; die <rs type="org" subtype="implied" ref="#pmb29351">Redaktion</rs> hat mein Telegramm, wie ich <date when="1900-09-19">heut</date>
                ſehe, nicht veröffentlicht (was ich Dir im Vertrauen mittheile).</p>
-            <p>Im Übrigen iſt die <anchor type="commentary" xml:id="K_L02931-3"/>Affaire<note type="commentary" xml:id="K_L02931-3h">
-                  <ref type="schnitzler-briefe" target="L01073" subtype="See"/>.
+            <p>Im Übrigen iſt die <anchor type="commentary" xml:id="K_L02931-3"/>Affaire<note type="commentary" xml:id="K_L02931-3h" corresp="K_L02931-3">
+                  <ref type="schnitzler-briefe" target="L01073" subtype="See"/>
                </note> ſehr günſtig für Dich und ſehr ungünſtig für Herrn <hi rend="latintype">
                   <rs type="person" ref="#pmb12671">Schlenther</rs>
                </hi>. Selbſt in <rs type="place" ref="#pmb168">Berlin</rs> war man genöthigt, ihm
@@ -197,25 +199,37 @@
                <rs type="work" subtype="implied" ref="#pmb31345">Preisgebung des <hi rend="latintype">
                      <rs type="person" ref="#pmb12671">Schlenther</rs>
                   </hi>’ſchen Briefes</rs>
-               <note type="commentary" xml:id="K_L02931-4h">In die <rs type="work" ref="#pmb31345">Erklärung</rs> war auch ein Brief <rs type="person" ref="#pmb12671">Paul
-                     Schlenthers</rs> an <rs type="person" ref="#pmb2121">Schnitzler</rs>
-                  aufgenommen worden, dessen Publikation nicht autorisiert war. <bibl>Vgl. <rs type="person" ref="#pmb10815">Hermann Bahr</rs>, <rs type="person" ref="#pmb2150">Julius Bauer</rs>, <rs type="person" ref="#pmb2416">J. J.
+               <note type="commentary" xml:id="K_L02931-4h" corresp="K_L02931-4">
+                  <rs type="work" ref="#pmb31345">Erklärung</rs>
+                  <rs type="person" ref="#pmb12671">Paul
+                     Schlenthers</rs>
+                  <rs type="person" ref="#pmb2121">Schnitzler</rs>
+                  <bibl>Vgl. <rs type="person" ref="#pmb10815">Hermann Bahr</rs>, <rs type="person" ref="#pmb2150">Julius Bauer</rs>, <rs type="person" ref="#pmb2416">J. J.
                         David</rs>, <rs type="person" ref="#pmb11707">Robert Hirschfeld</rs>, <rs type="person" ref="#pmb2167">Felix Salten</rs> und <rs type="person" ref="#pmb12816">Ludwig Speidel</rs>: <rs type="work" ref="#pmb31345">Erklärung</rs>. In: <rs type="work" ref="#pmb41321">Neues Wiener
-                        Tagblatt</rs> [u. a.], Jg. 34, Nr. 252, <date when="1900-09-14">14. 9. 1900</date>, S. 9–10, hier: S. 9</bibl>.</note> als inkorrekt <rs type="work" subtype="implied" ref="#pmb142429">bezeichnet</rs> hat, ſo geſchieht
+                        Tagblatt</rs> [u. a.], Jg. 34, Nr. 252, <date when="1900-09-14">14. 9. 1900</date>, S. 9–10, hier: S. 9</bibl>
+               </note> als inkorrekt <rs type="work" subtype="implied" ref="#pmb142429">bezeichnet</rs> hat, ſo geſchieht
                dies wohl hauptſächlich darum, <del rend="strikethrough">d<unclear>a</unclear>
                </del> weil ſich die <rs type="place" ref="#pmb168">Berlin</rs>er über <anchor type="commentary" xml:id="K_L02931-5"/>den das »<rs type="org" ref="#pmb35597">Deutſche Theater</rs>« betreffenden <rs type="work" subtype="implied" ref="#pmb142429">Paſſus</rs>
-               <note type="commentary" xml:id="K_L02931-5h">In dem erwähnten, abgedruckten <rs type="work" subtype="implied" ref="#pmb31345">Brief</rs>
+               <note type="commentary" xml:id="K_L02931-5h" corresp="K_L02931-5">
+                  <rs type="work" subtype="implied" ref="#pmb31345">Brief</rs>
                   <space unit="chars" quantity="1"/>
-                  <rs type="person" ref="#pmb12671">Paul Schlenthers</rs> warnt dieser <rs type="person" ref="#pmb2121">Schnitzler</rs> vor dem <rs type="org" ref="#pmb35597">Deutschen Theater</rs>, da dieses der
-                     »<quote>Riesenaufgabe</quote>« einer Aufführung von <rs type="work" ref="#pmb29857">Der Schleier der Beatrice</rs> »<quote>nicht gewachsen</quote>«
-                  sei.</note> ärgern.</p>
+                  <rs type="person" ref="#pmb12671">Paul Schlenthers</rs>
+                  <rs type="person" ref="#pmb2121">Schnitzler</rs>
+                  <rs type="org" ref="#pmb35597">Deutschen Theater</rs>
+                  <quote>Riesenaufgabe</quote>
+                  <rs type="work" ref="#pmb29857">Der Schleier der Beatrice</rs>
+                  <quote>nicht gewachsen</quote>
+               </note> ärgern.</p>
             <p>Daß ich <anchor type="commentary" xml:id="K_L02931-6"/>
                <hi rend="latintype">
                   <rs type="person" ref="#pmb10863">Richard</rs>
-               </hi> verfehlt<note type="commentary" xml:id="K_L02931-6h">
-                  <ref type="schnitzler-briefe" target="L01071" subtype="See"/>.
+               </hi> verfehlt<note type="commentary" xml:id="K_L02931-6h" corresp="K_L02931-6">
+                  <ref type="schnitzler-briefe" target="L01071" subtype="See"/>
                </note> habe, thut mir unendlich leid. Anderſeits war ich ja über <pb facs="HS.NZ85.1.3170_0065-0"/>eine Woche in <rs type="place" ref="#pmb50">Wien</rs>; und wenn er wirklich das Bedürfniß gehabt hätte, mit mir zuſammen zu
-               ſein, ſo hätte er auch etwas früher <anchor type="commentary" xml:id="K_L02931-7"/>zurückkommen<note type="commentary" xml:id="K_L02931-7h">aus <rs type="place" ref="#pmb34401">Altaussee</rs>, <ref type="schnitzler-briefe" target="L01073" subtype="see"/>.</note> können. Grüße ihn recht herzlich von mir und ſage ihm, daß ich ihm eine der
+               ſein, ſo hätte er auch etwas früher <anchor type="commentary" xml:id="K_L02931-7"/>zurückkommen<note type="commentary" xml:id="K_L02931-7h" corresp="K_L02931-7">
+                  <rs type="place" ref="#pmb34401">Altaussee</rs>
+                  <ref type="schnitzler-briefe" target="L01073" subtype="see"/>
+               </note> können. Grüße ihn recht herzlich von mir und ſage ihm, daß ich ihm eine der
                wenigen freundlichen <del rend="strikethrough">Erin</del> Erinnerungen an <del rend="strikethrough">
                   <unclear>u</unclear>
                </del> meine diesjährige Urlaubsreiſe danke. Und er ſoll mir <rs type="work" subtype="implied" ref="#pmb39783">
@@ -236,8 +250,13 @@
                       cert="strong"
                       ref="#pmb2173 #pmb2315">Fräulein</rs> aus der <anchor type="commentary" xml:id="K_L02931-8"/>
                   <rs type="place" ref="#pmb92494">Rothe-Stern-Gaſſe</rs>
-                  <note type="commentary" xml:id="K_L02931-8h">Wohnadresse von <rs type="person" ref="#pmb2121">Schnitzlers</rs> Partnerin und zukünftiger Ehefrau <rs type="person" ref="#pmb2173">Olga Gussmann</rs> und ihrer Schwester <rs type="person" ref="#pmb2315">Elisabeth</rs> (nachmalig <rs type="person" subtype="implied" ref="#pmb2315">Steinrück</rs>), <ref type="schnitzler-tagebuch" target="1920-12-21" subtype="cf"/>.</note>!<note type="textConst" xml:id="T_L02931-1h">kopfüber am oberen Rand der
-                     ersten Seite</note>
+                  <note type="commentary" xml:id="K_L02931-8h" corresp="K_L02931-8">
+                     <rs type="person" ref="#pmb2121">Schnitzlers</rs>
+                     <rs type="person" ref="#pmb2173">Olga Gussmann</rs>
+                     <rs type="person" ref="#pmb2315">Elisabeth</rs>
+                     <rs type="person" subtype="implied" ref="#pmb2315">Steinrück</rs>
+                     <ref type="schnitzler-tagebuch" target="1920-12-21" subtype="cf"/>
+                  </note>!<note type="textConst" xml:id="T_L02931-1h" corresp="T_L02931-1"/>
                </p>
             </postscript>
          </div>

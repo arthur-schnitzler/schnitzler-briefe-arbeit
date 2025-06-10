@@ -1,7 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="../meta/schnitzler-briefe-schematron.sch" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
 <TEI xmlns="http://www.tei-c.org/ns/1.0"
      xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-     xsi:schemaLocation="http://www.tei-c.org/ns/1.0 ../meta/asbwschema.xsd"
+     xsi:schemaLocation="http://www.tei-c.org/ns/1.0 ../meta/schnitzler-briefe-schema.xsd"
      xml:id="L03445"
      xml:base="https://id.acdh.oeaw.ac.at/schnitzler/schnitzler-briefe/editions">
    <teiHeader>
@@ -170,8 +171,8 @@
                <salute rend="center">Mein lieber Freund,</salute>
             </opener>
             <p>Ich habe mich ſehr gefreut, zu erſehen, daß Ihr, Du und Deine <rs type="person" subtype="implied" ref="#pmb2173">Frau</rs>, wohlbehalten zurückgekommen ſeid und
-               daß Eure <anchor type="commentary" xml:id="K_L03445-1"/>Reiſe<note type="commentary" xml:id="K_L03445-1h">
-                  <ref type="schnitzler-briefe" target="L03440" subtype="See"/>.
+               daß Eure <anchor type="commentary" xml:id="K_L03445-1"/>Reiſe<note type="commentary" xml:id="K_L03445-1h" corresp="K_L03445-1">
+                  <ref type="schnitzler-briefe" target="L03440" subtype="See"/>
                </note> ſo ſchön verlaufen iſt. Und bei der Rückkehr aus <hi rend="latintype">
                   <rs type="place" ref="#pmb906">Taormina</rs>
                </hi> und <hi rend="latintype">
@@ -179,30 +180,47 @@
                </hi> zu Hauſe einen blondlockigen <rs type="person" subtype="implied" ref="#pmb12692">Sohn</rs> vorzufinden, iſt auch nicht übel.</p>
             <p>Ob mich mein Weg dieſes Jahr nach <anchor type="commentary" xml:id="K_L03445-2"/>
                <rs type="place" ref="#pmb50">Wien</rs>
-               <note type="commentary" xml:id="K_L03445-2h">
-                  <rs type="person" ref="#pmb11485">Goldmann</rs> war jedenfalls am <date when="1904-08-10">10. 8. 1904</date> und am <ref type="schnitzler-tagebuch" target="1904-08-11" subtype="date-only"/> in <rs type="place" ref="#pmb50">Wien</rs>. Am <ref type="schnitzler-tagebuch" target="1904-08-11" subtype="date-only"/> besuchte er <rs type="person" ref="#pmb2121">Arthur</rs>
-                  und <rs type="person" ref=" #pmb2173">Olga Schnitzler</rs>. Im <date when="1904-09">September</date> war er noch einmal in <rs type="place" ref="#pmb50">Wien</rs>, <ref type="schnitzler-tagebuch" target="1904-09-21" subtype="cf"/>.</note> führen wird, iſt fraglich. Sollte es der Fall ſein, ſo
+               <note type="commentary" xml:id="K_L03445-2h" corresp="K_L03445-2">
+                  <rs type="person" ref="#pmb11485">Goldmann</rs>
+                  <date when="1904-08-10">10. 8. 1904</date>
+                  <ref type="schnitzler-tagebuch" target="1904-08-11" subtype="date-only"/>
+                  <rs type="place" ref="#pmb50">Wien</rs>
+                  <ref type="schnitzler-tagebuch" target="1904-08-11" subtype="date-only"/>
+                  <rs type="person" ref="#pmb2121">Arthur</rs>
+                  <rs type="person" ref=" #pmb2173">Olga Schnitzler</rs>
+                  <date when="1904-09">September</date>
+                  <rs type="place" ref="#pmb50">Wien</rs>
+                  <ref type="schnitzler-tagebuch" target="1904-09-21" subtype="cf"/>
+               </note> führen wird, iſt fraglich. Sollte es der Fall ſein, ſo
                wird es mir natürlich eine große Freude ſein, Dich dort wiederzuſehen. <pb facs="HS.NZ85.1.3174_0015-0"/>Bei <rs type="place" ref="#pmb772">Marienbad</rs>
                bleibt es wahrſcheinlich. Was hinterher noch geſchehen wird, iſt ganz ungewiß. Sobald
                ich Genaueres weiß, theile ich es Dir mit; und es wäre ſehr ſchön, wenn ſich eine
                Möglichkeit finden ließe, Dich unterwegs zu treffen.</p>
             <p>Jetzt im Sommer werden ſich wohl wieder alle Vorzüge Eurer prachtvoll gelegenen <rs type="place" subtype="implied" ref="#pmb168940">Wohnung</rs> entfalten, und ich
-               wünſche Dir eine Reihe guter Arbeitsſtunden auf Deiner Veranda mit dem Blick ins <pb facs="HS.NZ85.1.3174_0015-1"/>Grüne. Schreibſt Du ein <anchor type="commentary" xml:id="K_L03445-3"/>neues Stück<note type="commentary" xml:id="K_L03445-3h">Das
-                  nächste große dramatische Werk, an dem <rs type="person" ref="#pmb2121">Schnitzler</rs> arbeitete, war die Komödie <rs type="work" ref="#pmb29903">Zwischenspiel</rs>. Im <rs type="work" ref="#pmb33243">Tagebuch</rs> ist die
-                  Arbeit daran aber erst ab dem <ref type="schnitzler-tagebuch" target="1904-08-01" subtype="date-only"/> vermerkt, die Idee datierte er auf den <date when="1904-07-31">31. 7. 1904</date>.</note>? Und gedenkſt Du Dich <subst>
+               wünſche Dir eine Reihe guter Arbeitsſtunden auf Deiner Veranda mit dem Blick ins <pb facs="HS.NZ85.1.3174_0015-1"/>Grüne. Schreibſt Du ein <anchor type="commentary" xml:id="K_L03445-3"/>neues Stück<note type="commentary" xml:id="K_L03445-3h" corresp="K_L03445-3">
+                  <rs type="person" ref="#pmb2121">Schnitzler</rs>
+                  <rs type="work" ref="#pmb29903">Zwischenspiel</rs>
+                  <rs type="work" ref="#pmb33243">Tagebuch</rs>
+                  <ref type="schnitzler-tagebuch" target="1904-08-01" subtype="date-only"/>
+                  <date when="1904-07-31">31. 7. 1904</date>
+               </note>? Und gedenkſt Du Dich <subst>
                   <del rend="strikethrough">damit</del>
                   <add place="above">damit</add>
                </subst> an dem <anchor type="commentary" xml:id="K_L03445-4"/>Wettkampf der
-                  Theater<note type="commentary" xml:id="K_L03445-4h">Mit der kommenden
-                  Theatersaison übernahm <rs type="person" ref="#pmb10986">Otto Brahm</rs> die
-                     Leitung des <rs type="org" ref="#pmb35053">Lessing-Theaters</rs>. Das <rs type="org" ref="#pmb35597">Deutsche Theater</rs>, das er bisher geleitet hatte,
-                  wurde von <rs type="person" ref="#pmb12078">Paul Lindau</rs> übernommen. In Folge
-                  kam es zu einem Wettstreit, ob <rs type="person" ref="#pmb10986">Brahm</rs> das
-                  neue <rs type="org" subtype="implied" ref="#pmb35053">Haus</rs> auf das Niveau des
-                     <rs type="org" subtype="implied" ref="#pmb35597">alten</rs> bringen konnte und
-                  ob das alte seine Qualität zu halten in der Lage war. <rs type="person" ref="#pmb12078">Lindau</rs> verlor, er konnte das <rs type="org" subtype="implied" ref="#pmb35597">Theater</rs> nur eine Saison lang führen. Ab
-                  der Theatersaison <date when="1905">1905</date>/<date when="1906">1906</date>
-                  übernahm es <rs type="person" ref="#pmb12504">Max Reinhardt</rs>.</note> zu
+                  Theater<note type="commentary" xml:id="K_L03445-4h" corresp="K_L03445-4">
+                  <rs type="person" ref="#pmb10986">Otto Brahm</rs>
+                  <rs type="org" ref="#pmb35053">Lessing-Theaters</rs>
+                  <rs type="org" ref="#pmb35597">Deutsche Theater</rs>
+                  <rs type="person" ref="#pmb12078">Paul Lindau</rs>
+                  <rs type="person" ref="#pmb10986">Brahm</rs>
+                  <rs type="org" subtype="implied" ref="#pmb35053">Haus</rs>
+                  <rs type="org" subtype="implied" ref="#pmb35597">alten</rs>
+                  <rs type="person" ref="#pmb12078">Lindau</rs>
+                  <rs type="org" subtype="implied" ref="#pmb35597">Theater</rs>
+                  <date when="1905">1905</date>
+                  <date when="1906">1906</date>
+                  <rs type="person" ref="#pmb12504">Max Reinhardt</rs>
+               </note> zu
                betheiligen, der im kommenden Winter in <rs type="place" ref="#pmb168">Berlin</rs>
                mit noch nicht dageweſener Heftigkeit entbrennen wird?</p>
             <p>Meine <rs type="person" subtype="implied" ref="#pmb23674">Freundin</rs> erwidert
@@ -220,15 +238,22 @@
                </hi> in der <anchor type="commentary" xml:id="K_L03445-5"/>
                <hi rend="latintype">
                   <rs type="person" ref="#pmb12071">Liliencron</rs>
-               </hi>-Affaire<note type="commentary" xml:id="K_L03445-5h">
-                  <ref type="schnitzler-briefe" target="L01406" subtype="See"/> und <ref type="schnitzler-tagebuch" target="1904-06-02"/>.
+               </hi>-Affaire<note type="commentary" xml:id="K_L03445-5h" corresp="K_L03445-5">
+                  <ref type="schnitzler-briefe" target="L01406" subtype="See"/>
+                  <ref type="schnitzler-tagebuch" target="1904-06-02"/>
                </note> Unrecht gebt, erfreut mich ebenſoſehr, wie es mich überraſcht.</p>
             <p>Ich fahre <date when="1904-06-23">heut</date>
                <space unit="chars" quantity="1"/>
                <time>Mittag</time> nach <hi rend="latintype">
                   <rs type="place" ref="#pmb907">Kiel</rs>
                </hi>, um über die <anchor type="commentary" xml:id="K_L03445-6"/>
-               <rs type="person" subtype="implied" ref="#pmb15665 #pmb2566">Monarchen</rs>-Zuſammenkunft<note type="commentary" xml:id="K_L03445-6h">Anlässlich der »<rs type="place" ref="#pmb907">Kiel</rs>er Woche« trafen der <rs type="place" subtype="implied" ref="#pmb254">engl</rs>ische König <rs type="person" ref="#pmb15665">Eduard VII.</rs> und sein Neffe, der <rs type="place" subtype="implied" ref="#pmb151">deutsch</rs>e Kaiser <rs type="person" ref="#pmb2566">Wilhelm II.</rs>, aufeinander.</note> zu
+               <rs type="person" subtype="implied" ref="#pmb15665 #pmb2566">Monarchen</rs>-Zuſammenkunft<note type="commentary" xml:id="K_L03445-6h" corresp="K_L03445-6">
+                  <rs type="place" ref="#pmb907">Kiel</rs>
+                  <rs type="place" subtype="implied" ref="#pmb254">engl</rs>
+                  <rs type="person" ref="#pmb15665">Eduard VII.</rs>
+                  <rs type="place" subtype="implied" ref="#pmb151">deutsch</rs>
+                  <rs type="person" ref="#pmb2566">Wilhelm II.</rs>
+               </note> zu
                berichten.</p>
             <closer>Herzliche Grüße an Dich und Deine <rs type="person" subtype="implied" ref="#pmb2173">Frau</rs> von Deinem getreuen <lb/>
                <signed>Paul Goldmann</signed>

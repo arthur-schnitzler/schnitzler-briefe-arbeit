@@ -1,7 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="../meta/schnitzler-briefe-schematron.sch" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
 <TEI xmlns="http://www.tei-c.org/ns/1.0"
      xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-     xsi:schemaLocation="http://www.tei-c.org/ns/1.0 ../meta/asbwschema.xsd"
+     xsi:schemaLocation="http://www.tei-c.org/ns/1.0 ../meta/schnitzler-briefe-schema.xsd"
      xml:id="L02941"
      xml:base="https://id.acdh.oeaw.ac.at/schnitzler/schnitzler-briefe/editions">
    <teiHeader>
@@ -178,17 +179,21 @@
                <date when="1900-12-01">heut</date>
                <space unit="chars" quantity="1"/>
                <time>Abend</time>
-               <note type="commentary" xml:id="K_L02941-1h">zur Uraufführung von <rs type="work" ref="#pmb29857">Der Schleier der Beatrice</rs>
+               <note type="commentary" xml:id="K_L02941-1h" corresp="K_L02941-1">
+                  <rs type="work" ref="#pmb29857">Der Schleier der Beatrice</rs>
                </note> nur mit allen guten Wünſchen begleiten. Wenn Du dieſen Brief erhältſt, biſt
                Du hoffentlich wieder um einen <rs type="work" subtype="implied" ref="#pmb29857">Erfolg</rs> reicher.</p>
             <p>Beifolgenden <anchor type="commentary" xml:id="K_L02941-2"/>
                <rs type="work" subtype="implied" ref="#pmb142582">Artikel</rs>
-               <note type="commentary" xml:id="K_L02941-2h">
+               <note type="commentary" xml:id="K_L02941-2h" corresp="K_L02941-2">
                   <bibl>[O. V.]: <rs type="work" ref="#pmb142582">Die Geschichte des Marschalls von
                         Bassompierre</rs>. In: <rs type="work" ref="#pmb36344">Frankfurter
                         Zeitung</rs>, Jg. 45, Nr. 331, <date when="1900-11-30">30. 11. 1900</date>,
-                     Abendblatt, S. 1</bibl>. <rs type="person" ref="#pmb2121">Schnitzler</rs>
-                  teilte das Unverständnis gegenüber <rs type="person" ref="#pmb11740">Hofmannsthals</rs> fehlender Bekanntmachung der literarischen Aneignung, <ref type="schnitzler-tagebuch" target="1902-12-12" subtype="cf"/>.</note>, der
+                     Abendblatt, S. 1</bibl>
+                  <rs type="person" ref="#pmb2121">Schnitzler</rs>
+                  <rs type="person" ref="#pmb11740">Hofmannsthals</rs>
+                  <ref type="schnitzler-tagebuch" target="1902-12-12" subtype="cf"/>
+               </note>, der
                Deinen Freund <hi rend="latintype">
                   <rs type="person" ref="#pmb11740">Hoffmannsthal</rs>
                </hi> betrifft, finde ich <date when="1900-12-02">heut</date> in der <pb facs="HS.NZ85.1.3170_0089-1"/>»<rs type="work" ref="#pmb36344">Frankfurter
@@ -196,13 +201,11 @@
             <closer>Viele treue Grüße! <lb/> Dein <lb/>
                <signed>Paul Goldmn.</signed>
             </closer>
-            
-               <space dim="vertical" unit="line" quantity="1"/>
-            
+            <space dim="vertical" unit="line" quantity="1"/>
             <p>
                <pb facs="HS.NZ85.1.3170_0088-1"/>
                <hi rend="pre-print">= <hi rend="bold">
-                     <anchor type="textConst" xml:id="T_L02941-1"/>[<rs type="work" ref="#pmb76476">Die Geſchichte des Marſchalls von Baſſompierre</rs>.]<note type="textConst" xml:id="T_L02941-1h">eckige Klammern in der Druckvorlage</note>
+                     <anchor type="textConst" xml:id="T_L02941-1"/>[<rs type="work" ref="#pmb76476">Die Geſchichte des Marſchalls von Baſſompierre</rs>.]<note type="textConst" xml:id="T_L02941-1h" corresp="T_L02941-1"/>
                   </hi>
                </hi>
             </p>
@@ -227,15 +230,19 @@
                   Zweifel unterliegen, daß <rs type="person" subtype="implied" ref="#pmb11461 #pmb11740">Beide</rs>, der <rs type="person" subtype="implied" ref="#pmb11461">Alte</rs> wie der <rs type="person" subtype="implied" ref="#pmb11740">Junge</rs>, aus der gleichen Quellen geſchöpft haben. Und <rs type="person" subtype="implied" ref="#pmb11461 #pmb11740">Beide</rs> lehnen
                   ſich ſo deutlich an das <anchor type="commentary" xml:id="K_L02941-3"/>
                   <rs type="place" subtype="implied" ref="#pmb166">fran</rs>zöſiſche <rs type="work" subtype="implied" ref="#pmb142591">Original</rs>
-                  <note type="commentary" xml:id="K_L02941-3h">Gemeint sind <rs type="person" ref="#pmb117740">François Bassompierres</rs>
+                  <note type="commentary" xml:id="K_L02941-3h" corresp="K_L02941-3">
+                     <rs type="person" ref="#pmb117740">François Bassompierres</rs>
                      <space unit="chars" quantity="1"/>
-                     <rs type="work" ref="#pmb142591">Memoires du mareschal de Bassompierre</rs> (<date when="1665">1665</date>, 2 Bde.), wobei <rs type="person" ref="#pmb11461">Goethes</rs>
+                     <rs type="work" ref="#pmb142591">Memoires du mareschal de Bassompierre</rs>
+                     <date when="1665">1665</date>
+                     <rs type="person" ref="#pmb11461">Goethes</rs>
                      <space unit="chars" quantity="1"/>
-                     <rs type="work" subtype="implied" ref="#pmb142587">Rahmenhandlung</rs> an <rs type="person" ref="#pmb60111">Giovanni
+                     <rs type="work" subtype="implied" ref="#pmb142587">Rahmenhandlung</rs>
+                     <rs type="person" ref="#pmb60111">Giovanni
                         Boccaccios</rs>
                      <space unit="chars" quantity="1"/>
-                     <rs type="work" ref="#pmb142595">Decamerone</rs> angelehnt
-                     ist.</note> an, daß ihre Schilderungen in ganzen Sätzen übereinſtimmen, aber
+                     <rs type="work" ref="#pmb142595">Decamerone</rs>
+                  </note> an, daß ihre Schilderungen in ganzen Sätzen übereinſtimmen, aber
                   ſich auch untereinander im Ton des Vortrags außerordentlich ähneln. Daß <rs type="person" ref="#pmb11461">Goethe</rs>, in deſſen <rs type="work" subtype="implied" ref="#pmb142587">
                      <rs type="work" ref="#pmb142595">Decamerone</rs>-Nachbildung</rs> das Abenteuer
                   des Marſchalls eine raſch vorübergehende Epiſode, gewiſſermaßen nur ein

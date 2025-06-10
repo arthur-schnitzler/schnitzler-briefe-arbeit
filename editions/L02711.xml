@@ -1,7 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="../meta/schnitzler-briefe-schematron.sch" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
 <TEI xmlns="http://www.tei-c.org/ns/1.0"
      xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-     xsi:schemaLocation="http://www.tei-c.org/ns/1.0 ../meta/asbwschema.xsd"
+     xsi:schemaLocation="http://www.tei-c.org/ns/1.0 ../meta/schnitzler-briefe-schema.xsd"
      xml:id="L02711"
      xml:base="https://id.acdh.oeaw.ac.at/schnitzler/schnitzler-briefe/editions">
    <teiHeader>
@@ -238,8 +239,8 @@
                die übliche Arbeit gethan.</p>
             <p>Ich habe mich mit Deinem letzten Briefe unendlich gefreut, wochenlang! Und doch habe
                ich Dir nicht geantwortet. Warum? Weil ich gelähmt bin – moraliſch und geiſtig, weil
-                  dieſe<del rend="strikethrough">s</del> grauenhafte <anchor type="commentary" xml:id="K_L02711-1"/>Krankheit<note type="commentary" xml:id="K_L02711-1h">
-                  <ref type="schnitzler-briefe" target="L02626" subtype="See"/>.
+                  dieſe<del rend="strikethrough">s</del> grauenhafte <anchor type="commentary" xml:id="K_L02711-1"/>Krankheit<note type="commentary" xml:id="K_L02711-1h" corresp="K_L02711-1">
+                  <ref type="schnitzler-briefe" target="L02626" subtype="See"/>
                </note> mein ganzes Sein in einen Nebel hüllt, weil ich am Leben und an der Zukunft
                verzweifle, weil mein Leben <pb facs="HS.NZ85.1.3163_0047-0"/>in zwei Abſchnitte
                zerfällt, die geſunde und die kranke Zeit, weil ich an die geſunde Zeit kein Anrecht
@@ -266,11 +267,17 @@
                </subst> Entschluß faſſen können, auf Urlaub zu gehen. <pb facs="HS.NZ85.1.3163_0048-0"/>Ich fürchte mich vor der arbeitsloſen Zeit. Von
                Hauſe drängen ſie mich aber. Mein <rs type="person" subtype="implied" ref="#pmb4986">Onkel</rs> iſt im <date when="1893-09">September</date> in <hi rend="latintype">
                   <rs type="place" ref="#pmb30">Salzburg</rs>
-               </hi>, und ich ſoll durchaus <anchor type="commentary" xml:id="K_L02711-2"/>hinkommen<note type="commentary" xml:id="K_L02711-2h">
-                  <rs type="person" ref="#pmb11485">Goldmann</rs> reiste im <date when="1893-09">September 1893</date> tatsächlich nach <rs type="place" ref="#pmb30">Salzburg</rs>. Vom <ref type="schnitzler-tagebuch" target="1893-09-17" subtype="date-only"/> ist ein gemeinsamer Abend in <rs type="place" ref="#pmb31">Hellbrunn</rs> mit <rs type="person" ref="#pmb2121">Schnitzler</rs> und <rs type="person" ref="#pmb4986">Fedor Mamroth</rs>, vom
-                     <ref type="schnitzler-tagebuch" target="1893-09-18" subtype="date-only"/> ein
-                  Konzertbesuch mit <rs type="person" ref="#pmb2121">Schnitzler</rs>
-               bekannt.</note>. Er malt mir all’ die Herrlichkeiten von <rs type="place" ref="#pmb30">
+               </hi>, und ich ſoll durchaus <anchor type="commentary" xml:id="K_L02711-2"/>hinkommen<note type="commentary" xml:id="K_L02711-2h" corresp="K_L02711-2">
+                  <rs type="person" ref="#pmb11485">Goldmann</rs>
+                  <date when="1893-09">September 1893</date>
+                  <rs type="place" ref="#pmb30">Salzburg</rs>
+                  <ref type="schnitzler-tagebuch" target="1893-09-17" subtype="date-only"/>
+                  <rs type="place" ref="#pmb31">Hellbrunn</rs>
+                  <rs type="person" ref="#pmb2121">Schnitzler</rs>
+                  <rs type="person" ref="#pmb4986">Fedor Mamroth</rs>
+                  <ref type="schnitzler-tagebuch" target="1893-09-18" subtype="date-only"/>
+                  <rs type="person" ref="#pmb2121">Schnitzler</rs>
+               </note>. Er malt mir all’ die Herrlichkeiten von <rs type="place" ref="#pmb30">
                   <hi rend="latintype">Salzburg</hi>
                </rs> aus, wie man einem ſtörriſchen Kinde zuredet. Da iſt beſonders eine Verheißung:
                   <hi rend="latintype">Arthur Schnitzler</hi>. Ach, ich habe ein ſolches Heimweh
@@ -285,7 +292,7 @@
                Dich vor, mich ſehr zum Nachtheil verändert zu finden, und geh’ nicht zu ſtreng mit
                mir in’s Gericht.</p>
             <p>Dann ſprechen wir auch über alles Übrige. Ich halte zum Beiſpiel eine <anchor type="commentary" xml:id="K_L02711-3"/>Reiſe nach <rs type="place" ref="#pmb168">Berlin</rs>
-               <unclear>,</unclear> zur Betreibung Deiner dramatiſchen Angelegenheiten<note type="commentary" xml:id="K_L02711-3h">nicht erfolgt</note> für unerläßlich.
+               <unclear>,</unclear> zur Betreibung Deiner dramatiſchen Angelegenheiten<note type="commentary" xml:id="K_L02711-3h" corresp="K_L02711-3"/> für unerläßlich.
                Ebenſo ließe ſich vielleicht hier etwas mit <hi rend="latintype">
                   <rs type="person" ref="#pmb2211">Antoine</rs>
                </hi> machen, wenn Du eines der <hi rend="latintype">
@@ -295,30 +302,46 @@
                   <hi rend="latintype">
                   <rs type="person" ref="#pmb11617">Gerhart Hauptmanns</rs>
                </hi>
-               <note type="commentary" xml:id="K_L02711-4h">
+               <note type="commentary" xml:id="K_L02711-4h" corresp="K_L02711-4">
                   <rs type="person" ref="#pmb11617">Gerhart Hauptmanns</rs>
                   <space unit="chars" quantity="1"/>
-                  <rs type="work" ref="#pmb29827">Die Weber</rs> feierte als <rs type="work" ref="#pmb92910">Les
-                     Tisserands</rs> am <date when="1893-05-29">29. 5. 1893</date> am <rs type="org" ref="#pmb88609">Théâtre Libre</rs> Premiere. Wegen des Erfolgs fand am
-                     <date>1. 2. 1894</date> die nächste Premiere in Anwesenheit des <rs type="person" subtype="implied" ref="#pmb11617">Autors</rs> statt: <rs type="work" ref="#pmb92918">L’Assomption de Hannele Mattern. Drame de rêve en
-                     deux parties</rs>, neuerlich am <rs type="org" ref="#pmb88609">Théâtre
-                     Libre</rs>.</note> ſind ſie dort wie ich höre nicht unzugänglich <pb facs="HS.NZ85.1.3163_0049-0"/>für <rs type="place" ref="#pmb151">Deutſch</rs>es
+                  <rs type="work" ref="#pmb29827">Die Weber</rs>
+                  <rs type="work" ref="#pmb92910">Les
+                     Tisserands</rs>
+                  <date when="1893-05-29">29. 5. 1893</date>
+                  <rs type="org" ref="#pmb88609">Théâtre Libre</rs>
+                  <date>1. 2. 1894</date>
+                  <rs type="person" subtype="implied" ref="#pmb11617">Autors</rs>
+                  <rs type="work" ref="#pmb92918">L’Assomption de Hannele Mattern. Drame de rêve en
+                     deux parties</rs>
+                  <rs type="org" ref="#pmb88609">Théâtre
+                     Libre</rs>
+               </note> ſind ſie dort wie ich höre nicht unzugänglich <pb facs="HS.NZ85.1.3163_0049-0"/>für <rs type="place" ref="#pmb151">Deutſch</rs>es
                und <rs type="place" ref="#pmb41240">Öſterreich</rs>iſches<unclear>.</unclear> Mit
                dem, was <rs type="person" subtype="implied" cert="strong" ref="#pmb7331">Trottel</rs> in <rs type="work" subtype="implied" cert="strong" ref="#pmb41264">Saublättern</rs>
                <space unit="chars" quantity="1"/>
-               <anchor type="commentary" xml:id="K_L02711-5"/>über Dich ſchreiben<note type="commentary" xml:id="K_L02711-5h">Am <date when="1893-08-03">3. 8. 1893</date> war ein von <rs type="person" ref="#pmb7331">Florentine
-                  Galliny</rs> unter dem Pseudonym <rs type="person" subtype="implied" ref="#pmb7331">Bruno Walden</rs> verfasster <rs type="work" subtype="implied" ref="#pmb89826">Verriss</rs> des <rs type="work" ref="#pmb29935">Anatol</rs>-Zyklus erschienen: <bibl>
+               <anchor type="commentary" xml:id="K_L02711-5"/>über Dich ſchreiben<note type="commentary" xml:id="K_L02711-5h" corresp="K_L02711-5">
+                  <date when="1893-08-03">3. 8. 1893</date>
+                  <rs type="person" ref="#pmb7331">Florentine
+                  Galliny</rs>
+                  <rs type="person" subtype="implied" ref="#pmb7331">Bruno Walden</rs>
+                  <rs type="work" subtype="implied" ref="#pmb89826">Verriss</rs>
+                  <rs type="work" ref="#pmb29935">Anatol</rs>
+                  <bibl>
                      <rs type="person" ref="#pmb7331">Bruno Walden</rs> [ = <rs type="person" ref="#pmb7331">Florentine Galliny</rs>]: <rs type="work" ref="#pmb89826">Feuilleton. Literatur</rs>. In: <rs type="work" ref="#pmb41264">Wiener
                         Abendpost</rs>, Jg. 190, Nr. 176, <date when="1893-08-03">3. 8. 1893</date>,
-                     S. 1–2</bibl>. Sie schrieb: »<quote>Bei <rs type="person" ref="#pmb2121">Arthur
+                     S. 1–2</bibl>
+                  <quote>Bei <rs type="person" ref="#pmb2121">Arthur
                         Schnitzlers</rs> ›<rs type="work" ref="#pmb29935">Anatol</rs>‹ hat ganz und
                      gar die ›<hi rend="antiqua">Vie <rs type="place" ref="#pmb182">Paris</rs>ienne</hi>‹ Pathin gestanden, und hier tritt das Nachtreterthum
                      noch viel unangenehmer und plumper zu Tage <supplied>
                         <c rendition="#dots" n="3"/>
                      </supplied>. Was dem <rs type="place" ref="#pmb182">Paris</rs>er Blatte
                      petillante Frivolität, iſt hier crüder Cynismus, der sich in der <rs type="work" subtype="implied" ref="#pmb29935">Schlußszene</rs> zum
-                     Höhenpunkte des Anwidernden potencirt.</quote>« Über <rs type="person" ref="#pmb11740">Hugo von Hofmannsthals</rs> einleitende <rs type="work" subtype="implied" ref="#pmb29935">Verse</rs> steht außerdem geschrieben:
-                     »<quote>Die Leichtbeschwingtheit dieser <rs type="work" subtype="implied" ref="#pmb29935">Verse</rs> gebricht der vorgeführten <rs type="work" subtype="implied" ref="#pmb29935">Scenenreihe</rs>, und damit entfällt die
+                     Höhenpunkte des Anwidernden potencirt.</quote>
+                  <rs type="person" ref="#pmb11740">Hugo von Hofmannsthals</rs>
+                  <rs type="work" subtype="implied" ref="#pmb29935">Verse</rs>
+                  <quote>Die Leichtbeschwingtheit dieser <rs type="work" subtype="implied" ref="#pmb29935">Verse</rs> gebricht der vorgeführten <rs type="work" subtype="implied" ref="#pmb29935">Scenenreihe</rs>, und damit entfällt die
                      ›hübsche Formel böſer Dinge‹, deren Abstoßendes in Folge dessen ungemildert
                      bleibt, was, wenn auch ethisch ganz nützlich, doch kaum beabsichtigt gewesen
                      sein dürfte. Die introspectiven Grübeleien – ein echt deutscher Zug – dieses
@@ -330,9 +353,13 @@
                      entrüstete Freundeswort seines so langmüthig verständnißvollen Vertrauten in
                      der Schlußscene ›<rs type="work" subtype="implied" ref="#pmb30033">Anatols
                         Hochzeitstag</rs>‹: ›So was thut man nicht!‹ läßt sich für dieselbe dahin
-                     variiren: So was schreibt man nicht.</quote>« (S. 2) Am <ref type="schnitzler-tagebuch" target="1893-08-04" subtype="date-only"/> notierte
-                   <rs type="person" ref="#pmb2121">Schnitzler</rs> im <rs type="work" ref="#pmb33243">Tagebuch</rs>: »<quote>In der <rs type="work" ref="#pmb41264">Abendpost</rs> von <rs type="person" subtype="implied" ref="#pmb7331">Bruno
-                        Walden</rs> eine alberne und niederträchtige <rs type="work" ref="#pmb89826" subtype="implied">Kritik</rs> über <rs type="work" ref="#pmb29935">Anatol</rs>, die mich verstimmte.</quote>«</note>, ſollſt Du Dir Dein <hi rend="latintype">cabinet</hi> tapezieren und ruhig weiterſchaffen, auch von
+                     variiren: So was schreibt man nicht.</quote>
+                  <ref type="schnitzler-tagebuch" target="1893-08-04" subtype="date-only"/>
+                  <rs type="person" ref="#pmb2121">Schnitzler</rs>
+                  <rs type="work" ref="#pmb33243">Tagebuch</rs>
+                  <quote>In der <rs type="work" ref="#pmb41264">Abendpost</rs> von <rs type="person" subtype="implied" ref="#pmb7331">Bruno
+                        Walden</rs> eine alberne und niederträchtige <rs type="work" ref="#pmb89826" subtype="implied">Kritik</rs> über <rs type="work" ref="#pmb29935">Anatol</rs>, die mich verstimmte.</quote>
+               </note>, ſollſt Du Dir Dein <hi rend="latintype">cabinet</hi> tapezieren und ruhig weiterſchaffen, auch von
                vorübergehenden Muthloſigkeiten unbeirrt, wie ſie die alltäglichen Erſcheinungsformen
                aller <del rend="strikethrough">p<unclear>rh</unclear>
                </del> producirenden Thätigkeit ſind, wenn etwas zuviel Gehirnſchmalz verbraucht iſt.
@@ -355,8 +382,7 @@
                kritiſirenden Pinſel nicht erſchüttern. Deine letzten Werke kenne ich nicht. Mein <rs type="person" subtype="implied" ref="#pmb4986">Onkel</rs> nennt Deinen <rs type="work" subtype="implied" ref="#pmb30117">Roman</rs> »bedeutend«. Das iſt ein
                   <anchor type="commentary" xml:id="K_L02711-6"/>
                <hi rend="latintype">Epitheton</hi>
-               <note type="commentary" xml:id="K_L02711-6h">sprachlicher Zusatz in der Form eines
-                  Attributs</note>, das ich von ihm nur auf die bewunderten Meiſter bisher anwenden
+               <note type="commentary" xml:id="K_L02711-6h" corresp="K_L02711-6"/>, das ich von ihm nur auf die bewunderten Meiſter bisher anwenden
                gehört und ich nehme es als erfreuliches Zeugniß.</p>
             <p>Sei von Herzen gegrüßt, mein lieber Arthur!</p>
             <closer>Dein <signed>Paul Goldmnn</signed>

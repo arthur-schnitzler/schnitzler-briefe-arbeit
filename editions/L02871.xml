@@ -1,7 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="../meta/schnitzler-briefe-schematron.sch" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
 <TEI xmlns="http://www.tei-c.org/ns/1.0"
      xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-     xsi:schemaLocation="http://www.tei-c.org/ns/1.0 ../meta/asbwschema.xsd"
+     xsi:schemaLocation="http://www.tei-c.org/ns/1.0 ../meta/schnitzler-briefe-schema.xsd"
      xml:id="L02871"
      xml:base="https://id.acdh.oeaw.ac.at/schnitzler/schnitzler-briefe/editions">
    <teiHeader>
@@ -157,7 +158,7 @@
             <p>Gerade in dieſen Tagen werde ich herumgehetzt, wie ein Hund. Miſſionen nach <rs type="place" ref="#pmb44119">Mainz</rs>, <rs type="place" ref="#pmb871">Karlsruhe</rs>, <rs type="place" ref="#pmb834">Darmſtadt</rs>, – hier berichten,
                dort berichten. Ich habe keinen Augenblick freie Zeit und habe den heutigen <anchor type="commentary" xml:id="K_L02871-1"/>
                <date when="1899-03-31">Feiertag</date>
-               <note type="commentary" xml:id="K_L02871-1h">
+               <note type="commentary" xml:id="K_L02871-1h" corresp="K_L02871-1">
                   <date when="1899-03-31">Karfreitag</date>
                </note> abwarten müſſen, um Dir endlich einmal auch ein Wort zu ſchreiben, nachdem
                ich <del rend="strikethrough">
@@ -166,15 +167,21 @@
                   <gap quantity="3" reason="illegible" unit="chars"/>
                </del>
                <space unit="chars" quantity="1"/>
-               <anchor type="commentary" xml:id="K_L02871-2"/>bekümmert<note type="commentary" xml:id="K_L02871-2h">Er trauerte um <rs type="person" ref="#pmb2378">Marie
-                     Reinhard</rs>, die am <ref type="schnitzler-tagebuch" target="1899-03-18" subtype="date-only"/> gestorben war. </note> Deiner gedacht.</p>
+               <anchor type="commentary" xml:id="K_L02871-2"/>bekümmert<note type="commentary" xml:id="K_L02871-2h" corresp="K_L02871-2">
+                  <rs type="person" ref="#pmb2378">Marie
+                     Reinhard</rs>
+                  <ref type="schnitzler-tagebuch" target="1899-03-18" subtype="date-only"/>
+               </note> Deiner gedacht.</p>
             <p>Dein Brief, in dem Du das Fürchterliche ſchilderſt, hat mich tief ergriffen. Es iſt
                ein wahres <anchor type="commentary" xml:id="K_L02871-3"/>
                <foreign xml:lang="fra">Raffinement</foreign>
-               <note type="commentary" xml:id="K_L02871-3h">französisch: Vervollkommnung</note> von
+               <note type="commentary" xml:id="K_L02871-3h" corresp="K_L02871-3"/> von
                Qual geweſen. Das Herz preßt ſich zuſammen, wenn man das lieſt. Und nun gar das
-                  <anchor type="commentary" xml:id="K_L02871-4"/>miterleben<note type="commentary" xml:id="K_L02871-4h">
-                  <rs type="person" ref="#pmb2121">Schnitzler</rs> war beim Tod von <rs type="person" ref="#pmb2378">Marie Reinhard</rs> anwesend, <ref type="schnitzler-tagebuch" target="1899-03-18" subtype="cf"/>.</note>! Du
+                  <anchor type="commentary" xml:id="K_L02871-4"/>miterleben<note type="commentary" xml:id="K_L02871-4h" corresp="K_L02871-4">
+                  <rs type="person" ref="#pmb2121">Schnitzler</rs>
+                  <rs type="person" ref="#pmb2378">Marie Reinhard</rs>
+                  <ref type="schnitzler-tagebuch" target="1899-03-18" subtype="cf"/>
+               </note>! Du
                Ärmſter, was mußt Du gelitten haben! Ich will auch gar nicht verſuchen, Dir Troſt zu
                ſpenden. Es gibt <del rend="strikethrough">d<unclear>a</unclear>
                </del> da nichts zu tröſten. Und außer der Zeit kann nichts und Niemand helfen. Auf
@@ -200,7 +207,7 @@
                dringend nöthig, und ich komme immer wieder darauf zurück: <pb facs="HS.NZ85.1.3169_0013-1"/>Du müßteſt fort aus <rs type="place" ref="#pmb50">Wien</rs>, ſo raſch als möglich, – ein paar Wochen reiſen. Komm’ auf einige Tage
                nach <anchor type="commentary" xml:id="K_L02871-5"/>
                <rs type="place" ref="#pmb146">Frankfurt</rs>
-               <note type="commentary" xml:id="K_L02871-5h">Dazu kam es nicht.</note>! Wenn nicht, ſo
+               <note type="commentary" xml:id="K_L02871-5h" corresp="K_L02871-5"/>! Wenn nicht, ſo
                gehe anderswohin, – irgendwohin, wo Du Geſellſchaft haſt. Allein reiſen dürfteſt Du
                auch nicht.</p>
             <p>Bitte, lieber Freund, ſchreib’ mir bald einmal, wenigſtens eine Zeile, <del rend="strikethrough">d<unclear>a</unclear>
@@ -208,9 +215,10 @@
                Lebenszeichen.</p>
             <p>Mit meinem <rs type="person" subtype="implied" ref="#pmb23593">Schwager</rs> habe ich
                über einiges Mediziniſche geſprochen. Er meint, ob es denn nicht möglich geweſen
-               wäre, noch eine Operation zu verſuchen? Dein <anchor type="commentary" xml:id="K_L02871-6"/>Ohrenleiden<note type="commentary" xml:id="K_L02871-6h">
-                  <rs type="person" ref="#pmb2121">Schnitzler</rs> litt seit <date when="1896">Herbst 1896</date> an Otosklerose – einer Verknöcherung des Innenohrs mit
-                  zunehmender Schwerhörigkeit.</note> aber kann er ſich abſolut nicht entſchließen
+               wäre, noch eine Operation zu verſuchen? Dein <anchor type="commentary" xml:id="K_L02871-6"/>Ohrenleiden<note type="commentary" xml:id="K_L02871-6h" corresp="K_L02871-6">
+                  <rs type="person" ref="#pmb2121">Schnitzler</rs>
+                  <date when="1896">Herbst 1896</date>
+               </note> aber kann er ſich abſolut nicht entſchließen
                ernſtzunehmen. Er hat ſich viel mit dieſen Dingen beſchäftigt und vermag in allen
                Symptomen, die ich ihm ſchildere, nichts Bedenkliches zu entdecken. Er, meine <rs type="person" subtype="implied" ref="#pmb34971">Schweſter</rs> und mein <rs type="person" subtype="implied" ref="#pmb4986">Onkel</rs>, denen ich von dem
                Schlage, der Dich betroffen, Mittheilung gemacht habe, nehmen warmen Antheil an
@@ -219,20 +227,26 @@
             <p>Daß Dir der <anchor type="commentary" xml:id="K_L02871-7"/>
                <rs type="org" ref="#pmb29675">
                   <hi rend="latintype">Bauernfeld</hi>-Preis</rs>
-               <note type="commentary" xml:id="K_L02871-7h">Der <rs type="org" ref="#pmb29675">Bauernfeld-Preis</rs>, dotiert als Ehrengabe von 1000 Gulden, wurde <rs type="person" ref="#pmb2121">Schnitzler</rs> am <date when="1899-03-27">27. 3. 1899</date> für seine Dramen und Novellen verliehen. Den gleichen
-                  Betrag erhielten im selben Jahr auch <rs type="person" ref="#pmb12602">Ferdinand
-                     von Saar</rs> und <rs type="person" ref="#pmb13082">Carl Karlweis</rs>, 500
-                  Gulden gingen an <rs type="person" ref="#pmb18308">Leo Feld</rs>. Das war der
-                  erste Literaturpreis, den <rs type="person" ref="#pmb2121">Schnitzler</rs>
-                  erhielt.</note> zu Theil geworden, hat uns Alle hier ſehr gefreut. Das iſt ſchön
+               <note type="commentary" xml:id="K_L02871-7h" corresp="K_L02871-7">
+                  <rs type="org" ref="#pmb29675">Bauernfeld-Preis</rs>
+                  <rs type="person" ref="#pmb2121">Schnitzler</rs>
+                  <date when="1899-03-27">27. 3. 1899</date>
+                  <rs type="person" ref="#pmb12602">Ferdinand
+                     von Saar</rs>
+                  <rs type="person" ref="#pmb13082">Carl Karlweis</rs>
+                  <rs type="person" ref="#pmb18308">Leo Feld</rs>
+                  <rs type="person" ref="#pmb2121">Schnitzler</rs>
+               </note> zu Theil geworden, hat uns Alle hier ſehr gefreut. Das iſt ſchön
                und ehrenvoll<c rendition="#dots" n="5"/>
             </p>
             <p>Liebſter Freund, Du mußt ſtark ſein und mußt Dich in das Unabänderliche fügen! Es iſt
                viel verloren, <hi rend="underline" n="1">und doch iſt nichts zu Ende</hi>! Und dann
-               haſt Du <anchor type="commentary" xml:id="K_L02871-8"/>vier Jahre<note type="commentary" xml:id="K_L02871-8h">
-                  <rs type="person" ref="#pmb2121">Schnitzler</rs> hatte <rs type="person" ref="#pmb2378">Marie Reinhard</rs> am <ref type="schnitzler-tagebuch" target="1894-07-12" subtype="date-only"/> kennengelernt, als sie seine
-                  Patientin war. Bereits im darauffolgenden Herbst begann ihre intime Beziehung, die
-                  bis zu <rs type="person" ref="#pmb2378">Reinhards</rs> Tod anhielt.</note>
+               haſt Du <anchor type="commentary" xml:id="K_L02871-8"/>vier Jahre<note type="commentary" xml:id="K_L02871-8h" corresp="K_L02871-8">
+                  <rs type="person" ref="#pmb2121">Schnitzler</rs>
+                  <rs type="person" ref="#pmb2378">Marie Reinhard</rs>
+                  <ref type="schnitzler-tagebuch" target="1894-07-12" subtype="date-only"/>
+                  <rs type="person" ref="#pmb2378">Reinhards</rs>
+               </note>
                glücklich ſein dürfen, wie Wenige. Ich verſichere Dich: wenn das Schickſal mir vier
                Jahre ſolchen Glückes geben wollte, um den Preis, daß ich dann einen Schmerz
                durchmachen müßte, wie Du ihn jetzt erlebſt, – ich würde ohneweiters zuſtimmen. Dieſe

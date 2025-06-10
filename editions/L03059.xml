@@ -1,7 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="../meta/schnitzler-briefe-schematron.sch" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
 <TEI xmlns="http://www.tei-c.org/ns/1.0"
      xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-     xsi:schemaLocation="http://www.tei-c.org/ns/1.0 ../meta/asbwschema.xsd"
+     xsi:schemaLocation="http://www.tei-c.org/ns/1.0 ../meta/schnitzler-briefe-schema.xsd"
      xml:id="L03059"
      xml:base="https://id.acdh.oeaw.ac.at/schnitzler/schnitzler-briefe/editions">
    <teiHeader>
@@ -172,12 +173,12 @@
                   <rs type="person" ref="#pmb14953">Mizzi Gl.</rs>
                </hi>, ehe ſie ins <anchor type="commentary" xml:id="K_L03059-1"/>
                <rs type="place" subtype="implied" ref="#pmb144036">Sanatorium</rs>
-               <note type="commentary" xml:id="K_L03059-1h">nicht ermittelt</note> ging. Seither
+               <note type="commentary" xml:id="K_L03059-1h" corresp="K_L03059-1"/> ging. Seither
                keine Nachricht. Auch ich verſtehe abſolut nicht, was ſie hat, bin aber feſt
                überzeugt, daß es nicht <anchor type="commentary" xml:id="K_L03059-2"/>
                <hi rend="latintype">Neuralgie</hi>
-               <note type="commentary" xml:id="K_L03059-2h">
-                  <ref type="schnitzler-briefe" target="L03057" subtype="See"/>.
+               <note type="commentary" xml:id="K_L03059-2h" corresp="K_L03059-2">
+                  <ref type="schnitzler-briefe" target="L03057" subtype="See"/>
                </note> ſein kann. Das arme <rs type="person" subtype="implied" ref="#pmb14953">Mädel</rs> iſt ſehr heruntergekommen. Ich habe immer eine Blutkrankheit
                vermuthet, und aus den vagen Andeutungen, die <hi rend="latintype">
                   <rs type="person" ref="#pmb144032">Renvers</rs>
@@ -188,11 +189,14 @@
                <foreign xml:lang="fra">
                   <hi rend="latintype">À quel titre</hi>
                </foreign>
-               <note type="commentary" xml:id="K_L03059-3h">französisch: auf welcher Grundlage, mit
-                  welchem Recht</note>? Aber ich hoffe doch noch einen Weg zu finden, um mich an
+               <note type="commentary" xml:id="K_L03059-3h" corresp="K_L03059-3"/>? Aber ich hoffe doch noch einen Weg zu finden, um mich an
                mediziniſcher Quelle zu informiren.</p>
-            <p>Daß Du den <anchor type="commentary" xml:id="K_L03059-4"/>Plan haſt herzukommen<note type="commentary" xml:id="K_L03059-4h">
-                  <rs type="person" ref="#pmb2121">Schnitzler</rs> war zwischen <ref type="schnitzler-tagebuch" target="1901-03-03" subtype="date-only"/> und <ref type="schnitzler-tagebuch" target="1901-03-10" subtype="date-only"/> in <rs type="place" ref="#pmb168">Berlin</rs>.</note>, iſt ſehr ſchön. Ich hoffe, Du
+            <p>Daß Du den <anchor type="commentary" xml:id="K_L03059-4"/>Plan haſt herzukommen<note type="commentary" xml:id="K_L03059-4h" corresp="K_L03059-4">
+                  <rs type="person" ref="#pmb2121">Schnitzler</rs>
+                  <ref type="schnitzler-tagebuch" target="1901-03-03" subtype="date-only"/>
+                  <ref type="schnitzler-tagebuch" target="1901-03-10" subtype="date-only"/>
+                  <rs type="place" ref="#pmb168">Berlin</rs>
+               </note>, iſt ſehr ſchön. Ich hoffe, Du
                führſt ihn aus.</p>
             <p>
                <pb facs="DLA_85.1.3171_00016-0"/>Es iſt nicht unmöglich, daß ich für <hi rend="latintype">
@@ -201,37 +205,54 @@
                <hi rend="latintype">
                   <rs type="person" ref="#pmb12078">Lindau</rs>
                </hi>
-               <note type="commentary" xml:id="K_L03059-5h">
-                  <rs type="person" ref="#pmb12078">Paul Lindau</rs> leitete das <rs type="org" ref="#pmb29380">Berliner Theater</rs>. <rs type="person" ref="#pmb2121">Schnitzler</rs> versuchte für seine Partnerin (und zukünftige Ehefrau) <rs type="person" ref="#pmb2173">Olga</rs> ein Engagement zu finden.</note> thun
+               <note type="commentary" xml:id="K_L03059-5h" corresp="K_L03059-5">
+                  <rs type="person" ref="#pmb12078">Paul Lindau</rs>
+                  <rs type="org" ref="#pmb29380">Berliner Theater</rs>
+                  <rs type="person" ref="#pmb2121">Schnitzler</rs>
+                  <rs type="person" ref="#pmb2173">Olga</rs>
+               </note> thun
                könnte. Aber Du müßteſt auch eingreifen, Dein Wort würde mehr ins Gewicht fallen als
                meines. <anchor type="commentary" xml:id="K_L03059-6"/>
                <hi rend="latintype">
                   <rs type="person" ref="#pmb13169">Wolzogen</rs>
                </hi>
-               <note type="commentary" xml:id="K_L03059-6h">
-                  <rs type="person" ref="#pmb13169">Ernst von Wolzogen</rs>, der <date when="1901">1901</date> das literarische Kabarett <rs type="org" ref="#pmb144041">Überbrettl</rs> (auch bekannt als <rs type="org" subtype="implied" ref="#pmb144041">Wolzogen-Theater</rs> und <rs type="org" subtype="implied" ref="#pmb144041">Buntes Theater</rs>) in <rs type="place" ref="#pmb168">Berlin</rs> gegründet hatte</note> kenne ich perſönlich. Auch bei ihm könnteſt
+               <note type="commentary" xml:id="K_L03059-6h" corresp="K_L03059-6">
+                  <rs type="person" ref="#pmb13169">Ernst von Wolzogen</rs>
+                  <date when="1901">1901</date>
+                  <rs type="org" ref="#pmb144041">Überbrettl</rs>
+                  <rs type="org" subtype="implied" ref="#pmb144041">Wolzogen-Theater</rs>
+                  <rs type="org" subtype="implied" ref="#pmb144041">Buntes Theater</rs>
+                  <rs type="place" ref="#pmb168">Berlin</rs>
+               </note> kenne ich perſönlich. Auch bei ihm könnteſt
                Du viel ausrichten, ich könnte nur mithelfen. Aber wäre das <rs type="org" ref="#pmb144041">Überbrettl</rs> denn eine Exiſtenz? Und <del rend="strikethrough">
                   <unclear>biſt</unclear>
                   <space unit="chars" quantity="1"/>
                   <gap quantity="1" reason="illegible" unit="chars"/>
                </del> iſt die <anchor type="commentary" xml:id="K_L03059-7"/>
                <rs type="person" subtype="implied" ref="#pmb2315">Kleine</rs>
-               <note type="commentary" xml:id="K_L03059-7h">Hier dürfte ein Wechsel in der Rede von
-                     <rs type="person" subtype="implied" ref="#pmb2173">Olga</rs> zu ihrer jüngeren
-                  Schwester <rs type="person" ref="#pmb2315">Elisabeth Gussmann</rs> stattfinden, da
-                  sich <rs type="person" ref="#pmb11485">Goldmann</rs> für eine Anstellung von <rs type="person" ref="#pmb2315">Elisabeth Gussmann</rs> einsetzte. <ref type="schnitzler-briefe" target="L03063" subtype="Cf"/> und die Korrespondenz
-                  zwischen <rs type="person" ref="#pmb11485">Goldmann</rs> und <rs type="person" ref="#pmb2315">Elisabeth Gussmann</rs>: <bibl>
-                     <publisher>DLA</publisher>, HS.1985.1.5246</bibl>.</note> mit ihren Studien
+               <note type="commentary" xml:id="K_L03059-7h" corresp="K_L03059-7">
+                  <rs type="person" subtype="implied" ref="#pmb2173">Olga</rs>
+                  <rs type="person" ref="#pmb2315">Elisabeth Gussmann</rs>
+                  <rs type="person" ref="#pmb11485">Goldmann</rs>
+                  <rs type="person" ref="#pmb2315">Elisabeth Gussmann</rs>
+                  <ref type="schnitzler-briefe" target="L03063" subtype="Cf"/>
+                  <rs type="person" ref="#pmb11485">Goldmann</rs>
+                  <rs type="person" ref="#pmb2315">Elisabeth Gussmann</rs>
+                  <bibl>
+                     <publisher>DLA</publisher>, HS.1985.1.5246</bibl>
+               </note> mit ihren Studien
                ſchon fertig?</p>
             <p>
                <hi rend="latintype">
                   <rs type="person" ref="#pmb7597">Yvette Guilbert</rs>
                </hi>, deren <rs type="person" subtype="implied" ref="#pmb24181">Mann</rs> Dich kennt
-               und liebt (Deine Werke nämlich), läßt Dich fragen, ob Du ihr nicht einen <anchor type="commentary" xml:id="K_L03059-8"/>Einakter ſchreiben<note type="commentary" xml:id="K_L03059-8h">Dazu kam es nicht.</note> möchteſt? Eine <anchor type="commentary" xml:id="K_L03059-9"/>
+               und liebt (Deine Werke nämlich), läßt Dich fragen, ob Du ihr nicht einen <anchor type="commentary" xml:id="K_L03059-8"/>Einakter ſchreiben<note type="commentary" xml:id="K_L03059-8h" corresp="K_L03059-8"/> möchteſt? Eine <anchor type="commentary" xml:id="K_L03059-9"/>
                <hi rend="latintype">Pierrot</hi>
-               <note type="commentary" xml:id="K_L03059-9h">männlicher Komödienfigurentyp, der
-                  insbesondere durch den <rs type="place" subtype="implied" ref="#pmb166">fran</rs>zösischen Pantomimen <rs type="person" ref="#pmb144048">Jean-Gaspard
-                     Deburau</rs> berühmt wurde</note>-Komödie, und zwar einen revolutionären <hi rend="latintype">Pierrot</hi>. Keine <hi rend="latintype">Pantomime</hi>. Die
+               <note type="commentary" xml:id="K_L03059-9h" corresp="K_L03059-9">
+                  <rs type="place" subtype="implied" ref="#pmb166">fran</rs>
+                  <rs type="person" ref="#pmb144048">Jean-Gaspard
+                     Deburau</rs>
+               </note>-Komödie, und zwar einen revolutionären <hi rend="latintype">Pierrot</hi>. Keine <hi rend="latintype">Pantomime</hi>. Die
                Komödie ſoll von einem großen <rs type="place" subtype="implied" ref="#pmb166">fran</rs>zöſiſchen Componiſten (vielleicht <hi rend="latintype">
                   <rs type="person" ref="#pmb3702">Saint-Saëns</rs>
                </hi>) <pb facs="DLA_85.1.3171_00016-1"/>in Muſik geſetzt werden. Bitte, antworte mir
@@ -239,23 +260,26 @@
                </hi> noch Beſcheid geben möchte, ſolange ſie <rs type="place" subtype="implied" ref="#pmb168">hier</rs> iſt.</p>
             <p>Den <anchor type="commentary" xml:id="K_L03059-10"/>
                <rs type="work" subtype="implied" ref="#pmb30486">Roman</rs>
-               <note type="commentary" xml:id="K_L03059-10h">
+               <note type="commentary" xml:id="K_L03059-10h" corresp="K_L03059-10">
                   <bibl>
                      <rs type="person" ref="#pmb2121">Arthur Schnitzler</rs>: <rs type="work" ref="#pmb30486">Frau Bertha Garlan. Roman</rs>. In: <rs type="work" ref="#pmb36152">Neue Deutsche Rundschau</rs>, Jg. 12, H. 1, <date when="1901-01">Januar 1901</date>, S. 41–64; H. 2, <date when="1901-02">Februar 1901</date>, S. 181–206; H. 3, <date when="1901-03">März
-                        1901</date>, S. 237–272</bibl>.</note> in der <rs type="work" ref="#pmb36152">N. D. Rundſchau</rs> leſe ich nicht, weil ich mir das <rs type="work" subtype="implied" ref="#pmb30486">Werk</rs> nicht will in
+                        1901</date>, S. 237–272</bibl>
+               </note> in der <rs type="work" ref="#pmb36152">N. D. Rundſchau</rs> leſe ich nicht, weil ich mir das <rs type="work" subtype="implied" ref="#pmb30486">Werk</rs> nicht will in
                Fortſetzungen zerhacken laſſen. Sehr reizend war der <anchor type="commentary" xml:id="K_L03059-11"/>
                <rs type="work" subtype="implied" ref="#pmb32203">Dialog</rs>
-               <note type="commentary" xml:id="K_L03059-11h">
+               <note type="commentary" xml:id="K_L03059-11h" corresp="K_L03059-11">
                   <bibl>
-                     <rs type="person" ref="#pmb2121">Arthur Schnitzler</rs>: <rs type="work" ref="#pmb32203">Sylvesternacht. Ein Dialog</rs>. In: <rs type="work" ref="#pmb44080">Jugend</rs>, Jg. 6, Nr. 8, <date when="1901-02-18">18. 2. 1901</date>, S. 118–119, 121–122</bibl>.</note> in der »<rs type="work" ref="#pmb44080">Jugend</rs>«. Weniger gefallen hat mir der »<anchor type="commentary" xml:id="K_L03059-12"/>
+                     <rs type="person" ref="#pmb2121">Arthur Schnitzler</rs>: <rs type="work" ref="#pmb32203">Sylvesternacht. Ein Dialog</rs>. In: <rs type="work" ref="#pmb44080">Jugend</rs>, Jg. 6, Nr. 8, <date when="1901-02-18">18. 2. 1901</date>, S. 118–119, 121–122</bibl>
+               </note> in der »<rs type="work" ref="#pmb44080">Jugend</rs>«. Weniger gefallen hat mir der »<anchor type="commentary" xml:id="K_L03059-12"/>
                <rs type="work" ref="#pmb30649">Blinde <hi rend="latintype">Hieronymo</hi>
                </rs>
-               <note type="commentary" xml:id="K_L03059-12h">
+               <note type="commentary" xml:id="K_L03059-12h" corresp="K_L03059-12">
                   <bibl>
-                     <rs type="person" ref="#pmb2121">Arthur Schnitzler</rs>: <rs type="work" ref="#pmb30649">Der blinde Geronimo und sein Bruder</rs>. In: <rs type="work" ref="#pmb36340">Die Zeit</rs>, Bd. 25, Nr. 325, <date when="1900-12-22">22. 12. 1900</date>, S. 190–191; Nr. 326, <date when="1900-12-29">29. 12. 1900</date>, S. 207–208; Bd. 26, Nr. 327, <date when="1901-01-05">5. 1. 1901</date>, S. 15–16; Nr. 328, <date when="1901-01-12">12. 1. 1901</date>, S. 31–32</bibl>.</note>«. Die
+                     <rs type="person" ref="#pmb2121">Arthur Schnitzler</rs>: <rs type="work" ref="#pmb30649">Der blinde Geronimo und sein Bruder</rs>. In: <rs type="work" ref="#pmb36340">Die Zeit</rs>, Bd. 25, Nr. 325, <date when="1900-12-22">22. 12. 1900</date>, S. 190–191; Nr. 326, <date when="1900-12-29">29. 12. 1900</date>, S. 207–208; Bd. 26, Nr. 327, <date when="1901-01-05">5. 1. 1901</date>, S. 15–16; Nr. 328, <date when="1901-01-12">12. 1. 1901</date>, S. 31–32</bibl>
+               </note>«. Die
                Geſchichte iſt geiſtvoll ausgedacht, bleibt aber weit zurück hinter der wilden Tragik
-               des <anchor type="commentary" xml:id="K_L03059-13"/>Originals<note type="commentary" xml:id="K_L03059-13h">
-                  <ref type="schnitzler-briefe" target="L02928" subtype="See"/>.
+               des <anchor type="commentary" xml:id="K_L03059-13"/>Originals<note type="commentary" xml:id="K_L03059-13h" corresp="K_L03059-13">
+                  <ref type="schnitzler-briefe" target="L02928" subtype="See"/>
                </note>.</p>
             <p>
                <hi rend="latintype">

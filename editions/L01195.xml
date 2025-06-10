@@ -1,7 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="../meta/schnitzler-briefe-schematron.sch" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
 <TEI xmlns="http://www.tei-c.org/ns/1.0"
      xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-     xsi:schemaLocation="http://www.tei-c.org/ns/1.0 ../meta/asbwschema.xsd"
+     xsi:schemaLocation="http://www.tei-c.org/ns/1.0 ../meta/schnitzler-briefe-schema.xsd"
      xml:id="L01195"
      xml:base="https://id.acdh.oeaw.ac.at/schnitzler/schnitzler-briefe/editions">
    <teiHeader>
@@ -218,8 +219,8 @@
                er nicht nach <rs ref="#pmb506" type="place">Hamburg</rs> ko<c rendition="#gemination-m"/>t, vielleicht beſuchst du ihn auf der Hin- oder
                Rückfahrt? – </p>
             <p>
-               <anchor type="commentary" xml:id="K_L01195-1"/>Dieſer Tage<note xml:id="K_L01195-1h" type="commentary">
-                  <ref type="schnitzler-tagebuch" target="1902-01-01" subtype="Cf"/>.
+               <anchor type="commentary" xml:id="K_L01195-1"/>Dieſer Tage<note xml:id="K_L01195-1h" type="commentary" corresp="K_L01195-1">
+                  <ref type="schnitzler-tagebuch" target="1902-01-01" subtype="Cf"/>
                </note>
                <space unit="chars" quantity="1"/>ſprach ich <hi rend="latintype">
                   <rs ref="#pmb11581" type="person">Harden</rs>
@@ -234,11 +235,14 @@
                   <hi rend="latintype">
                   <rs ref="#pmb29967" type="work">veine</rs>
                </hi>
-               <note xml:id="K_L01195-2h" type="commentary">
+               <note xml:id="K_L01195-2h" type="commentary" corresp="K_L01195-2">
                   <rs ref="#pmb11988" type="person">Kraus</rs>
-                  <space unit="chars" quantity="1"/>schreibt in der <rs ref="#pmb41244" type="work">Fackel</rs> (<rs type="work" ref="#pmb29969" subtype="implied">
+                  <space unit="chars" quantity="1"/>
+                  <rs ref="#pmb41244" type="work">Fackel</rs>
+                  <rs type="work" ref="#pmb29969" subtype="implied">
                      <bibl>Bd. 10, H. 82, Anfang October, S. 19</bibl>
-                  </rs>): »<quote>Herr <rs ref="#pmb10815" type="person">Bahr</rs>, der wiederum das
+                  </rs>
+                  <quote>Herr <rs ref="#pmb10815" type="person">Bahr</rs>, der wiederum das
                      Referat über das <rs ref="#pmb20" type="place">Deutsche Volkstheater</rs>
                      übernommen hat, berichtet, dass in dem neuen <rs type="work" ref="#pmb29967" subtype="implied">Stücke</rs> von <rs ref="#pmb2408" type="person">Capus</rs> ein ›mit zwei Strichen wunderbar gezeichneter‹ Journalist
                      vorkomme, der sich nicht verkauft, weil ›ihm das nie so viel tragen kann wie
@@ -246,22 +250,27 @@
                      nicht überprüfen –, dass diese Stelle, die Herr <rs ref="#pmb10815" type="person">Bahr</rs> mit so munterem Behagen citiert, nachträglich in die
                      Uebersetzung der <rs ref="#pmb166" type="place">französischen</rs> Comödie
                      hineingeflickt worden sei und dass Herr <rs ref="#pmb10815" type="person">Bahr</rs>
-                     <space unit="chars" quantity="1"/>sich selbst citiere.</quote>« <rs ref="#pmb10815" type="person">Bahrs</rs> Besprechung, in der sich das Zitat
-                  findet: <bibl>
+                     <space unit="chars" quantity="1"/>sich selbst citiere.</quote>
+                  <rs ref="#pmb10815" type="person">Bahrs</rs>
+                  <bibl>
                      <rs ref="#pmb32468" type="work">Das Glück. (La veine. Komödie in vier Aufzügen
                         von <rs ref="#pmb2408" type="person">Alfred Capus</rs>. Deutsch von <rs ref="#pmb13163" type="person">Theodor Wolff</rs>. Zum erstenmal
                         aufgeführt im <rs ref="#pmb20" type="place">Deutschen Volkstheater</rs> am
                            <date>28. September 1901</date>)</rs>. In: <rs ref="#pmb41321" type="work">Neues Wiener Tagblatt</rs>, Jg. 35, Nr. 267,
-                        <date>29. 9. 1901</date>, S. 2–4</bibl>.</note>, in der <rs ref="#pmb11988" type="person">Kr.</rs> von einer angeblich extra von dir <add place="inline">(?)</add> gegen ihn hineingedichteten Stelle erzählte, hat er ihm (<hi rend="latintype">
+                        <date>29. 9. 1901</date>, S. 2–4</bibl>
+               </note>, in der <rs ref="#pmb11988" type="person">Kr.</rs> von einer angeblich extra von dir <add place="inline">(?)</add> gegen ihn hineingedichteten Stelle erzählte, hat er ihm (<hi rend="latintype">
                   <rs ref="#pmb11581" type="person">Harden</rs>
                </hi> dem <rs ref="#pmb11988" type="person">Kraus</rs>) eine Karte geſchrieben, er
                müſſe gelegentlich diesen Irrthum richtigſtellen, da die betreffende Stelle ſich
-                  <anchor type="commentary" xml:id="K_L01195-3"/>im Original<note xml:id="K_L01195-3h" type="commentary">»<quote>Car pourquoi se vendrait-il? Ça ne
-                     lui rapporterait jamais autant que d’être incorruptible.</quote>« <bibl>
+                  <anchor type="commentary" xml:id="K_L01195-3"/>im Original<note xml:id="K_L01195-3h" type="commentary" corresp="K_L01195-3">
+                  <quote>Car pourquoi se vendrait-il? Ça ne
+                     lui rapporterait jamais autant que d’être incorruptible.</quote>
+                  <bibl>
                      <rs ref="#pmb2408" type="person">Alfred Capus</rs>: <rs ref="#pmb29967" type="work">La veine. Comédie en quatre actes</rs>. Paris:
                         <publisher>Éditions de la Revue Blanche</publisher>
                      <space unit="chars" quantity="1"/>
-                     <supplied>1901?</supplied>, S. 149 (III, 9)</bibl>.</note> fände; – <rs ref="#pmb11988" type="person">Kraus</rs>
+                     <supplied>1901?</supplied>, S. 149 (III, 9)</bibl>
+               </note> fände; – <rs ref="#pmb11988" type="person">Kraus</rs>
                <space unit="chars" quantity="1"/>ſoll es auch zugeſagt <del rend="erased">
                   <unclear>haben</unclear>, aber</del> bisher nicht <pb facs="https://www.theatermuseum.at/de/object/2e28e76ec7/"/>gethan haben. – </p>
             <p>Heute war Generalprobe der <rs ref="#pmb29863" type="work">Lebendigen Stunden</rs>.
@@ -287,10 +296,12 @@
                </rs> als <rs type="work" ref="#pmb29971" subtype="implied">
                   <hi rend="latintype">Gregers Werle</hi>
                </rs>
-               <note xml:id="K_L01195-4h" type="commentary">Am <date>30. 12. 1901</date> spielte er
-                  in <rs ref="#pmb11798" type="person">Ibsens</rs>
+               <note xml:id="K_L01195-4h" type="commentary" corresp="K_L01195-4">
+                  <date>30. 12. 1901</date>
+                  <rs ref="#pmb11798" type="person">Ibsens</rs>
                   <space unit="chars" quantity="1"/>
-                  <rs ref="#pmb29971" type="work">Wildente</rs>.</note>; ich habe ſelten ſo ſtarke
+                  <rs ref="#pmb29971" type="work">Wildente</rs>
+               </note>; ich habe ſelten ſo ſtarke
                ſchauſpieleriſche Eindrücke erlebt. Die <rs ref="#pmb12977" type="person">Trieſch</rs>
                <space unit="chars" quantity="1"/>
                <pb facs="https://www.theatermuseum.at/de/object/2e28e76ec7/"/>kann überraſchend

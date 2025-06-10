@@ -1,7 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="../meta/schnitzler-briefe-schematron.sch" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
 <TEI xmlns="http://www.tei-c.org/ns/1.0"
      xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-     xsi:schemaLocation="http://www.tei-c.org/ns/1.0 ../meta/asbwschema.xsd"
+     xsi:schemaLocation="http://www.tei-c.org/ns/1.0 ../meta/schnitzler-briefe-schema.xsd"
      xml:id="L02794"
      xml:base="https://id.acdh.oeaw.ac.at/schnitzler/schnitzler-briefe/editions">
    <teiHeader>
@@ -232,8 +233,7 @@
             </opener>
             <p>Mir ſcheint, in meinen letzten Brief hat ſich ſehr gegen meinen Willen ein falſcher
                Ton eingeſchlichen. Du haſt etwas vom »Berühmtwerden« herausgehört? Ich ſchwöre Dir,
-               ich bin durchdrungen von der Nichtigkeit und <anchor type="commentary" xml:id="K_L02794-1"/>Unbedeutenheit<note type="commentary" xml:id="K_L02794-1h">zu der Zeit längst veraltete Form von
-                  »Unbedeutendheit«</note> aller jener Vorgänge. Ich habe mich ſogar im Verdacht,
+               ich bin durchdrungen von der Nichtigkeit und <anchor type="commentary" xml:id="K_L02794-1"/>Unbedeutenheit<note type="commentary" xml:id="K_L02794-1h" corresp="K_L02794-1"/> aller jener Vorgänge. Ich habe mich ſogar im Verdacht,
                daß ich ein <del rend="strikethrough">we<unclear>n</unclear>
                </del> wenig Komödie geſpielt habe. Ich <del rend="strikethrough">
                   <gap quantity="1" reason="illegible" unit="chars"/>
@@ -255,20 +255,30 @@
                </hi> erhielt, worin er mir, zu meiner freudigen Überraſchung, ſchreibt, er habe mich
                   <anchor type="commentary" xml:id="K_L02794-2"/>in <hi rend="latintype">
                   <rs type="place" ref="#pmb36300">Kopenhagen</rs>
-               </hi> liebgewonnen<note type="commentary" xml:id="K_L02794-2h">Im Rahmen der <rs type="place" subtype="implied" ref="#pmb43570 #pmb44335 #pmb64465">Skandinavien</rs>-Reise im Sommer <date when="1896">1896</date> waren sich auch  <rs type="person" ref="#pmb11485">Goldmann</rs> und <rs type="person" ref="#pmb10992">Georg Brandes</rs> begegnet, jedenfalls am <ref type="schnitzler-tagebuch" target="1896-08-21" subtype="date-only"/>.</note>;
+               </hi> liebgewonnen<note type="commentary" xml:id="K_L02794-2h" corresp="K_L02794-2">
+                  <rs type="place" subtype="implied" ref="#pmb43570 #pmb44335 #pmb64465">Skandinavien</rs>
+                  <date when="1896">1896</date>
+                  <rs type="person" ref="#pmb11485">Goldmann</rs>
+                  <rs type="person" ref="#pmb10992">Georg Brandes</rs>
+                  <ref type="schnitzler-tagebuch" target="1896-08-21" subtype="date-only"/>
+               </note>;
                will Dir außerdem ſagen, daß ich <anchor type="commentary" xml:id="K_L02794-3"/>
                <hi rend="latintype">
                   <rs type="person" ref="#pmb11673">Herzls</rs>
-               </hi> Art, mich jetzt zu <pb facs="HS.NZ85.1.3166_0130-0"/>überſchätzen<note type="commentary" xml:id="K_L02794-3h">Gemeint ist wohl: nach dem Pistolenduell; <ref type="schnitzler-briefe" target="L02684" subtype="see"/>.</note>, ebenſo
+               </hi> Art, mich jetzt zu <pb facs="HS.NZ85.1.3166_0130-0"/>überſchätzen<note type="commentary" xml:id="K_L02794-3h" corresp="K_L02794-3">
+                  <ref type="schnitzler-briefe" target="L02684" subtype="see"/>
+               </note>, ebenſo
                lächerlich finde, wie ſeine bisherige Art, mich zu unterſchätzen (der Mann iſt immer
                urtheilslos, ſo oder ſo); und will Dich erſuchen, dem <anchor type="commentary" xml:id="K_L02794-4"/>
                <rs type="work" subtype="implied" ref="#pmb118052">Artikel</rs> des »<hi rend="latintype">
                   <rs type="work" ref="#pmb88803">Figaro</rs>
                </hi>«, den Du im <del rend="strikethrough">Bo</del>
                <space unit="chars" quantity="1"/>
-               <rs type="work" subtype="implied" ref="#pmb54745">Börſen-Courier</rs> gefunden<note type="commentary" xml:id="K_L02794-4h">
+               <rs type="work" subtype="implied" ref="#pmb54745">Börſen-Courier</rs> gefunden<note type="commentary" xml:id="K_L02794-4h" corresp="K_L02794-4">
                   <bibl>
-                     <rs type="person" ref="#pmb112502">Maurice Leudet</rs>: <rs type="work" ref="#pmb112498">L’Affaire Millevoye–Goldmann</rs>. In: <rs type="work" ref="#pmb88803">Le Figaro</rs>, Jg. 42, Nr. 326, <date when="1896-11-21">21. 11. 1896</date>, S. 1–2</bibl>. <bibl>[O. V.]: <rs type="work" ref="#pmb118052">Verschiedenes</rs>. In: <rs type="work" ref="#pmb54745">Berliner Börsen-Zeitung</rs>, Jg. 42, Nr. 531, <date when="1896-11-24">24. 11. 1896</date>, Morgen-Ausgabe, S. 12</bibl>.</note>, nicht das
+                     <rs type="person" ref="#pmb112502">Maurice Leudet</rs>: <rs type="work" ref="#pmb112498">L’Affaire Millevoye–Goldmann</rs>. In: <rs type="work" ref="#pmb88803">Le Figaro</rs>, Jg. 42, Nr. 326, <date when="1896-11-21">21. 11. 1896</date>, S. 1–2</bibl>
+                  <bibl>[O. V.]: <rs type="work" ref="#pmb118052">Verschiedenes</rs>. In: <rs type="work" ref="#pmb54745">Berliner Börsen-Zeitung</rs>, Jg. 42, Nr. 531, <date when="1896-11-24">24. 11. 1896</date>, Morgen-Ausgabe, S. 12</bibl>
+               </note>, nicht das
                mindeſte Gewicht beizulegen. Im »<hi rend="latintype">
                   <rs type="work" ref="#pmb88803">Figaro</rs>
                </hi>« werden ſolche Dinge nur gedruckt, wenn man ſie bezahlt. Der <rs type="person" subtype="implied" ref="#pmb112502">Mann</rs>, der dieſen <rs type="work" subtype="implied" ref="#pmb118052">Artikel</rs> geſchrieben, iſt ein erbärmliches
@@ -287,47 +297,63 @@
                <space unit="chars" quantity="1"/>
                <rs type="person" subtype="implied" ref="#pmb4216">Verurtheilten</rs>. Und nun wollen
                wir kein Wort mehr von der ganzen Geſchichte reden, nicht wahr?</p>
-            <p>Nach <del rend="strikethrough">alle</del> Allem, was in den letzten Wochen <anchor type="commentary" xml:id="K_L02794-5"/>zwiſchen mir und mir<note type="commentary" xml:id="K_L02794-5h">vermutlich eine wörtliche Übersetzung von
-                     »<quote>entre moi et moi-même</quote>«</note> geſtanden, bin ich jetzt wieder
+            <p>Nach <del rend="strikethrough">alle</del> Allem, was in den letzten Wochen <anchor type="commentary" xml:id="K_L02794-5"/>zwiſchen mir und mir<note type="commentary" xml:id="K_L02794-5h" corresp="K_L02794-5">
+                  <quote>entre moi et moi-même</quote>
+               </note> geſtanden, bin ich jetzt wieder
                allein <anchor type="commentary" xml:id="K_L02794-6"/>
                <foreign xml:lang="fra">
                   <hi rend="latintype">en tête-à-tête avec moi-même</hi>
                </foreign>
-               <note type="commentary" xml:id="K_L02794-6h">französisch: mit mir selbst von
-                  Angesicht zu Angesicht</note>. Und da ſehe ich erſt ganz deutlich, daß alles
+               <note type="commentary" xml:id="K_L02794-6h" corresp="K_L02794-6"/>. Und da ſehe ich erſt ganz deutlich, daß alles
                Äußere Schwindel war, und daß ich unfähig bin <pb facs="HS.NZ85.1.3166_0133-0"/>zur
                wahren Leiſtung: ein gutes Buch, ein gutes Stück. Und nicht einmal die Liebe will
-               kommen. Nie, nie ein geliebtes Weſen in die Arme geſchloſſen! Und <anchor type="commentary" xml:id="K_L02794-7"/>morgen iſt die Jugend zu Ende<note type="commentary" xml:id="K_L02794-7h">metaphorisch gemeint, <rs type="person" ref="#pmb11485">Goldmann</rs> hatte nicht
-                  Geburtstag</note>! Und es will nicht kommen! Das iſt troſtlos; und dann gehts
+               kommen. Nie, nie ein geliebtes Weſen in die Arme geſchloſſen! Und <anchor type="commentary" xml:id="K_L02794-7"/>morgen iſt die Jugend zu Ende<note type="commentary" xml:id="K_L02794-7h" corresp="K_L02794-7">
+                  <rs type="person" ref="#pmb11485">Goldmann</rs>
+               </note>! Und es will nicht kommen! Das iſt troſtlos; und dann gehts
                recht ſchlimm mit meinen Augen, und ich fürchte, blind zu werden<c rendition="#dots" n="3"/>
             </p>
             <p>Entſchuldige, daß ich Dir gar ſo viel von mir ſpreche. Ich freue mich, zu hören, daß
                Du wieder arbeiteſt und daß Dir die Arbeit ſeeliſch gut thut. Die <anchor type="commentary" xml:id="K_L02794-8"/>
                <rs type="work" subtype="implied" ref="#pmb29855">Sachen</rs>, mit denen Du
-               beſchäftigt biſt<note type="commentary" xml:id="K_L02794-8h">Am <ref type="schnitzler-tagebuch" target="1896-11-23" subtype="date-only"/> hatte <rs type="person" ref="#pmb2121">Schnitzler</rs> am <rs type="work" ref="#pmb29855">Reigen</rs> zu schreiben begonnen. Enthusiasmus für dieses neue <rs type="work" subtype="implied" ref="#pmb29855">Stück</rs> klingt etwa im <rs type="work" ref="#pmb33243">Tagebuch</rs>-Eintrag vom <ref type="schnitzler-tagebuch" target="1896-11-27" subtype="date-only"/> durch: »<quote>Schrieb mit Laune
-                        die <rs type="work" subtype="implied" ref="#pmb29855">4. Scene</rs> des <rs type="work" subtype="implied" ref="#pmb29855">Hemic</rs>.</quote>«</note>,
+               beſchäftigt biſt<note type="commentary" xml:id="K_L02794-8h" corresp="K_L02794-8">
+                  <ref type="schnitzler-tagebuch" target="1896-11-23" subtype="date-only"/>
+                  <rs type="person" ref="#pmb2121">Schnitzler</rs>
+                  <rs type="work" ref="#pmb29855">Reigen</rs>
+                  <rs type="work" subtype="implied" ref="#pmb29855">Stück</rs>
+                  <rs type="work" ref="#pmb33243">Tagebuch</rs>
+                  <ref type="schnitzler-tagebuch" target="1896-11-27" subtype="date-only"/>
+                  <quote>Schrieb mit Laune
+                        die <rs type="work" subtype="implied" ref="#pmb29855">4. Scene</rs> des <rs type="work" subtype="implied" ref="#pmb29855">Hemic</rs>.</quote>
+               </note>,
                dürften <pb facs="HS.NZ85.1.3166_0133-1"/>Dir ſehr »liegen«. Wie denkſt Du aber doch
                über das hiſtoriſche <del rend="strikethrough">Wie</del>
                <space unit="chars" quantity="1"/>
                <anchor type="commentary" xml:id="K_L02794-9"/>
-               <rs type="place" ref="#pmb50">Wien</rs>er Stück<note type="commentary" xml:id="K_L02794-9h">
-                  <ref type="schnitzler-tagebuch" target="1896-11-22" subtype="See"/>.
+               <rs type="place" ref="#pmb50">Wien</rs>er Stück<note type="commentary" xml:id="K_L02794-9h" corresp="K_L02794-9">
+                  <ref type="schnitzler-tagebuch" target="1896-11-22" subtype="See"/>
                </note>? Vielleicht mit einem jungen Componiſten, der ein Bischen alte und neue <rs type="place" ref="#pmb50">Wien</rs>er Muſik dazu machen würde? Würde Dich dieſe
                Abwechſelung nicht einmal reizen? Oder willſt Du fürs Erſte überhaupt kein größeres
                Stück ſchreiben? Auch das würde ich ſehr billigen. Und wann kommt Dein <anchor type="commentary" xml:id="K_L02794-10"/>
                <rs type="work" subtype="implied" ref="#pmb32460">Buch</rs> bei <hi rend="latintype">
                   <rs type="org" ref="#pmb29639">Fischer</rs>
                </hi>
-               <note type="commentary" xml:id="K_L02794-10h">Im <date when="1896-08">August 1896</date> vereinbarten <rs type="person" ref="#pmb11324">S.
-                     Fischer</rs> und <rs type="person" ref="#pmb2121">Schnitzler</rs>, eine Sammlung
-                  seiner Novelletten als Buch zu veröffentlichen. <rs type="work" ref="#pmb32460">Die Frau des Weisen</rs> erschien aber erst am <date when="1898-05-03">3. 5. 1898</date>.</note>?</p>
+               <note type="commentary" xml:id="K_L02794-10h" corresp="K_L02794-10">
+                  <date when="1896-08">August 1896</date>
+                  <rs type="person" ref="#pmb11324">S.
+                     Fischer</rs>
+                  <rs type="person" ref="#pmb2121">Schnitzler</rs>
+                  <rs type="work" ref="#pmb32460">Die Frau des Weisen</rs>
+                  <date when="1898-05-03">3. 5. 1898</date>
+               </note>?</p>
             <p>Wer iſt dieſer <hi rend="latintype">
                   <rs type="person" ref="#pmb11527">Stephan Grossmann</rs>
-               </hi>, den Du mir geſchickt haſt? Ich habe mich für ihn verwendet, und <date when="1896-12-02">heut</date> wird mir ein <anchor type="commentary" xml:id="K_L02794-11"/>Zeitungs-Ausſchnitt<note type="commentary" xml:id="K_L02794-11h">Mehrere Tageszeitungen berichteten über die Verhaftung des
-                  Anarchisten und Journalisten <rs type="person" ref="#pmb11527">Stephan
-                     Großmann</rs> in <rs type="place" ref="#pmb168">Berlin</rs>. Siehe etwa
-                     <bibl>[O. V.]: <rs type="work" ref="#pmb118058">Verhaftung eines Wiener
-                        Anarchisten in Berlin</rs>. In: <rs type="work" ref="#pmb41202">Arbeiter-Zeitung</rs>, Jg. 8, Nr. 297, <date when="1896-10-28">28. 10. 1896</date>, Morgenblatt, S. 5–6</bibl>.</note> geſchickt, worin
+               </hi>, den Du mir geſchickt haſt? Ich habe mich für ihn verwendet, und <date when="1896-12-02">heut</date> wird mir ein <anchor type="commentary" xml:id="K_L02794-11"/>Zeitungs-Ausſchnitt<note type="commentary" xml:id="K_L02794-11h" corresp="K_L02794-11">
+                  <rs type="person" ref="#pmb11527">Stephan
+                     Großmann</rs>
+                  <rs type="place" ref="#pmb168">Berlin</rs>
+                  <bibl>[O. V.]: <rs type="work" ref="#pmb118058">Verhaftung eines Wiener
+                        Anarchisten in Berlin</rs>. In: <rs type="work" ref="#pmb41202">Arbeiter-Zeitung</rs>, Jg. 8, Nr. 297, <date when="1896-10-28">28. 10. 1896</date>, Morgenblatt, S. 5–6</bibl>
+               </note> geſchickt, worin
                ſteht, daß <pb facs="HS.NZ85.1.3166_0132-0"/>er ſich der <rs type="place" ref="#pmb168">Berlin</rs>er <rs type="org" subtype="implied" ref="#pmb36860">Polizei</rs> als Spitzel angeboten habe. <del rend="strikethrough">H<gap unit="chars" reason="illegible" quantity="2"/>
                </del> Ich habe <rs type="person" subtype="implied" ref="#pmb11527">ihm</rs> geſagt,
                daß er, da er mit einer Empfehlung von Dir bei mir erſchienen iſt, <del rend="strikethrough">v<unclear>o</unclear>n v<unclear>o</unclear>
@@ -336,14 +362,21 @@
                   <unclear>m</unclear>i<unclear>s</unclear>
                </del> ungeſchickt gerechtfertigt; das kann freilich auch Befangenheit ſein; <del rend="strikethrough">imm<unclear>e</unclear>
                </del> darum möchte ich gern in zwei Worten hören, wie Du über den Fall denkſt?</p>
-            <p>Iſt es wahr, daß die <anchor type="commentary" xml:id="K_L02794-12"/>»<rs type="org" subtype="implied" ref="#pmb29670">Allgemeine Zeitung</rs>« in andere Hände<note type="commentary" xml:id="K_L02794-12h">Mit <date>Jahresende 1896</date> übergab
-                  der mit einer <rs type="person" subtype="implied" ref="#pmb16902">Cousine</rs>
+            <p>Iſt es wahr, daß die <anchor type="commentary" xml:id="K_L02794-12"/>»<rs type="org" subtype="implied" ref="#pmb29670">Allgemeine Zeitung</rs>« in andere Hände<note type="commentary" xml:id="K_L02794-12h" corresp="K_L02794-12">
+                  <date>Jahresende 1896</date>
+                  <rs type="person" subtype="implied" ref="#pmb16902">Cousine</rs>
                   <space unit="chars" quantity="1"/>
-                  <rs type="person" ref="#pmb2121">Schnitzlers</rs> verheiratete <rs type="person" ref="#pmb11406">Julius Gans-Ludassy</rs> die Herausgabe der <rs type="org" ref="#pmb29670">Wiener Allgemeinen Zeitung</rs> an <rs type="person" ref="#pmb112764">August Krawani</rs>, der zu diesem Zeitpunkt beinahe siebzig
-                  Jahre alt war. <rs type="person" ref="#pmb3021">Julian Sternberg</rs> war seit
-                  einem Jahr als Chefredakteur im Amt und wurde am <date when="1897-06-30">30. 6. 1897</date> von <rs type="person" ref="#pmb118062">Josef Münz</rs>
-                  abgelöst. Die Personalwechsel bedeuteten für <rs type="person" ref="#pmb2167">Salten</rs>, der seit <date when="1894">1894</date> am <rs type="org" subtype="implied" ref="#pmb29670">Blatt</rs> mitarbeitete, zu verschiedenen
-                  Zeiten unterschiedliche Aufgaben, er verlor aber seine Stelle nicht.</note>
+                  <rs type="person" ref="#pmb2121">Schnitzlers</rs>
+                  <rs type="person" ref="#pmb11406">Julius Gans-Ludassy</rs>
+                  <rs type="org" ref="#pmb29670">Wiener Allgemeinen Zeitung</rs>
+                  <rs type="person" ref="#pmb112764">August Krawani</rs>
+                  <rs type="person" ref="#pmb3021">Julian Sternberg</rs>
+                  <date when="1897-06-30">30. 6. 1897</date>
+                  <rs type="person" ref="#pmb118062">Josef Münz</rs>
+                  <rs type="person" ref="#pmb2167">Salten</rs>
+                  <date when="1894">1894</date>
+                  <rs type="org" subtype="implied" ref="#pmb29670">Blatt</rs>
+               </note>
                übergeht? Was wird aus <hi rend="latintype">
                   <rs type="person" ref="#pmb2167">Salten</rs>
                </hi>? <c rendition="#dots" n="3"/>
@@ -356,31 +389,29 @@
                   <rs type="person" ref="#pmb10863">Richard</rs>
                </hi> und <hi rend="latintype">
                   <rs type="person" ref="#pmb26392">Leo</rs>
-               </hi>! Und schreib’ mir recht bald!<note type="textConst" xml:id="T_L02794-1h">seitlich am linken Rand</note>
+               </hi>! Und schreib’ mir recht bald!<note type="textConst" xml:id="T_L02794-1h" corresp="T_L02794-1"/>
             </p>
             <p>
-               <anchor type="textConst" xml:id="T_L02794-2"/>Die <anchor type="commentary" xml:id="K_L02794-13"/>Kritiken<note type="commentary" xml:id="K_L02794-13h">Rezensionen der Uraufführung von <rs type="work" ref="#pmb29899">Freiwild</rs>
-               </note> ſende ich Dir demnächſt zurück<note type="textConst" xml:id="T_L02794-2h">kopfüber am oberen Rand</note>
+               <anchor type="textConst" xml:id="T_L02794-2"/>Die <anchor type="commentary" xml:id="K_L02794-13"/>Kritiken<note type="commentary" xml:id="K_L02794-13h" corresp="K_L02794-13">
+                  <rs type="work" ref="#pmb29899">Freiwild</rs>
+               </note> ſende ich Dir demnächſt zurück<note type="textConst" xml:id="T_L02794-2h" corresp="T_L02794-2"/>
             </p>
          </div>
          <div type="writingSession" n="2">
-            
-               <space dim="vertical" unit="line" quantity="1"/>
-            
+            <space dim="vertical" unit="line" quantity="1"/>
             <p>
                <pb facs="HS.NZ85.1.3166_0128"/>
-               <anchor type="commentary" xml:id="K_L02794-14"/>Dies iſt ein Ausſchnitt<note type="commentary" xml:id="K_L02794-14h">Die Ergänzung dieses undatierten Blattes
-                  zu diesem Brief muss gerechtfertigt werden. Als eigenes Korrespondenzstück wirkt
-                  es zu zusammenhanglos. Es entspricht auch nicht den sonstigen Usancen der
-                  Korrespondenz, derartige Petitessen separat zu senden. Die inhärente Datierung des
-                  Briefs von <rs type="person" ref="#pmb118064">Recha Wolff</rs> auf den Tag nach
-                  einer <rs type="place" ref="#pmb168">Berlin</rs>er Aufführung von <rs type="work" ref="#pmb29899">Freiwild</rs> erlaubt, ihren Brief zeitlich einzugrenzen: Das
-                     <rs type="work" subtype="implied" ref="#pmb29899">Stück</rs> stand zwischen
-                  <date when="1896-11-03">3. 11. 1896</date> und <date when="1896-11-16">16. 11. 1896</date> am <rs type="org" ref="#pmb35597">Deutschen Theater</rs> auf dem
-                  Programm. Entsprechend könnte der Ausschnitt jedem der Briefstücke des <date when="1896-11">Novembers 1896</date> zugeordnet werden. Markant ist jedoch der
-                  divergierende Farbton der von <rs type="person" ref="#pmb11485">Goldmann</rs>
-                  verwendeten Tinte. Am meisten stimmt er mit dem vorliegenden Brief überein, womit
-                  die Zuordnung vorgenommen werden konnte.</note> aus einem Briefe, den mein College
+               <anchor type="commentary" xml:id="K_L02794-14"/>Dies iſt ein Ausſchnitt<note type="commentary" xml:id="K_L02794-14h" corresp="K_L02794-14">
+                  <rs type="person" ref="#pmb118064">Recha Wolff</rs>
+                  <rs type="place" ref="#pmb168">Berlin</rs>
+                  <rs type="work" ref="#pmb29899">Freiwild</rs>
+                  <rs type="work" subtype="implied" ref="#pmb29899">Stück</rs>
+                  <date when="1896-11-03">3. 11. 1896</date>
+                  <date when="1896-11-16">16. 11. 1896</date>
+                  <rs type="org" ref="#pmb35597">Deutschen Theater</rs>
+                  <date when="1896-11">Novembers 1896</date>
+                  <rs type="person" ref="#pmb11485">Goldmann</rs>
+               </note> aus einem Briefe, den mein College
                   <hi rend="latintype">
                   <rs type="person" ref="#pmb13163">Th. Wolff</rs>
                </hi> dieſer Tage von ſeiner <rs type="person" subtype="implied" ref="#pmb118064">Mutter</rs> erhalten hat:</p>

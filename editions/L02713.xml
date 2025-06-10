@@ -1,7 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="../meta/schnitzler-briefe-schematron.sch" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
 <TEI xmlns="http://www.tei-c.org/ns/1.0"
      xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-     xsi:schemaLocation="http://www.tei-c.org/ns/1.0 ../meta/asbwschema.xsd"
+     xsi:schemaLocation="http://www.tei-c.org/ns/1.0 ../meta/schnitzler-briefe-schema.xsd"
      xml:id="L02713"
      xml:base="https://id.acdh.oeaw.ac.at/schnitzler/schnitzler-briefe/editions">
    <teiHeader>
@@ -224,8 +225,14 @@
                <hi rend="latintype">
                   <rs type="place" ref="#pmb724">Pusterthal</rs>
                </hi>
-               <note type="commentary" xml:id="K_L02713-1h">Zu einem gemeinsamen Aufenthalt in der
-                     <rs type="place" ref="#pmb43435">Schweiz</rs> kam es nicht. <rs type="person" ref="#pmb2121">Schnitzler</rs> und <rs type="person" ref="#pmb11485">Goldmann</rs> sahen sich erst am <ref type="schnitzler-tagebuch" target="1893-09-17" subtype="date-only"/> und <ref type="schnitzler-tagebuch" target="1893-09-18" subtype="date-only"/> in <rs type="place" ref="#pmb30">Salzburg</rs> wieder.</note>, alſo nicht allzuweit davon. Könnten wir nicht
+               <note type="commentary" xml:id="K_L02713-1h" corresp="K_L02713-1">
+                  <rs type="place" ref="#pmb43435">Schweiz</rs>
+                  <rs type="person" ref="#pmb2121">Schnitzler</rs>
+                  <rs type="person" ref="#pmb11485">Goldmann</rs>
+                  <ref type="schnitzler-tagebuch" target="1893-09-17" subtype="date-only"/>
+                  <ref type="schnitzler-tagebuch" target="1893-09-18" subtype="date-only"/>
+                  <rs type="place" ref="#pmb30">Salzburg</rs>
+               </note>, alſo nicht allzuweit davon. Könnten wir nicht
                die nächſte Woche mitſammen <pb facs="HS.NZ85.1.3163_0054-1"/>in der <rs type="place" ref="#pmb43435">Schweiz</rs> verbringen? Wir träfen uns z. B. an einem der Tage
                der nächſten Woche irgendwo da unten, und ich reiſte am Ende mit Dir nach <rs type="place" ref="#pmb30">Salzburg</rs> in der Richtung <hi rend="latintype">
                   <rs type="place" ref="#pmb50">Wien</rs>
@@ -243,7 +250,7 @@
                </subst> da ich nicht <pb facs="HS.NZ85.1.3163_0055-0"/>weiß, ob Du meinen Brief
                rechtzeitig erhältſt. In einem Tage können alle Verabredungen getroffen ſein.</p>
             <p>Folgendes iſt ein Gerücht, für das ich nicht die mindeſte Bürgſchaft übernehme, da
-               mein <anchor type="commentary" xml:id="K_L02713-2"/>Gewährsmann<note type="commentary" xml:id="K_L02713-2h">nicht identifiziert</note> ebenſogut
+               mein <anchor type="commentary" xml:id="K_L02713-2"/>Gewährsmann<note type="commentary" xml:id="K_L02713-2h" corresp="K_L02713-2"/> ebenſogut
                gelogen haben kann, um mir ein Vergnügen zu machen. Anderſeits möchte ich es Dir doch
                nicht vorenthalten: Ein von <rs type="place" ref="#pmb168">Berlin</rs>
                zurückkommender College ſagte auf meine Frage, er habe dort gehört, <anchor type="commentary" xml:id="K_L02713-3"/>
@@ -255,12 +262,22 @@
                      <rs type="person" ref="#pmb2827">Skowronek</rs>
                   </rs>
                </hi>
-               <note type="commentary" xml:id="K_L02713-4h">
-                  <rs type="person" ref="#pmb2827">Richard Skowronneks</rs> vieraktiges Lustspiel
-                     <rs type="work" ref="#pmb93031">Der erste seines Stammes</rs> feierte am <rs type="place" ref="#pmb168">Berlin</rs>er <rs type="org" ref="#pmb35053">Lessing-Theater</rs> am <date>11. 11. 1893</date> seine Uraufführung.</note>
-                  aufführen<note type="commentary" xml:id="K_L02713-3h">
-                  <rs type="person" ref="#pmb14328">Oskar Blumenthal</rs>, <rs type="person" subtype="implied" ref="#pmb14328">Leiter</rs> des <rs type="org" ref="#pmb35053">Lessing-Theaters</rs> in <rs type="place" ref="#pmb168">Berlin</rs>, hatte <rs type="person" ref="#pmb2121">Schnitzler</rs> am <ref type="schnitzler-briefe" target="L00253" subtype="date-only"/> bereits
-                  brieflich mitgeteilt, dass das Gerücht nicht wahr sei (vgl. <ref type="schnitzler-briefe" target="L00253"/>).</note>. Nochmals: ohne <hi rend="underline" n="1">jede</hi>
+               <note type="commentary" xml:id="K_L02713-4h" corresp="K_L02713-4">
+                  <rs type="person" ref="#pmb2827">Richard Skowronneks</rs>
+                  <rs type="work" ref="#pmb93031">Der erste seines Stammes</rs>
+                  <rs type="place" ref="#pmb168">Berlin</rs>
+                  <rs type="org" ref="#pmb35053">Lessing-Theater</rs>
+                  <date>11. 11. 1893</date>
+               </note>
+                  aufführen<note type="commentary" xml:id="K_L02713-3h" corresp="K_L02713-3">
+                  <rs type="person" ref="#pmb14328">Oskar Blumenthal</rs>
+                  <rs type="person" subtype="implied" ref="#pmb14328">Leiter</rs>
+                  <rs type="org" ref="#pmb35053">Lessing-Theaters</rs>
+                  <rs type="place" ref="#pmb168">Berlin</rs>
+                  <rs type="person" ref="#pmb2121">Schnitzler</rs>
+                  <ref type="schnitzler-briefe" target="L00253" subtype="date-only"/>
+                  <ref type="schnitzler-briefe" target="L00253"/>
+               </note>. Nochmals: ohne <hi rend="underline" n="1">jede</hi>
                <space unit="chars" quantity="1"/>
                <pb facs="HS.NZ85.1.3163_0055-1"/>Garantie. Nur ein Möglichkeits-Spahn, um ihn mit
                Urlaubshoffnungen zu umſpinnen<c rendition="#dots" n="4"/>

@@ -1,7 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="../meta/schnitzler-briefe-schematron.sch" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
 <TEI xmlns="http://www.tei-c.org/ns/1.0"
      xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-     xsi:schemaLocation="http://www.tei-c.org/ns/1.0 ../meta/asbwschema.xsd"
+     xsi:schemaLocation="http://www.tei-c.org/ns/1.0 ../meta/schnitzler-briefe-schema.xsd"
      xml:id="L02890"
      xml:base="https://id.acdh.oeaw.ac.at/schnitzler/schnitzler-briefe/editions">
    <teiHeader>
@@ -190,10 +191,14 @@
                <space unit="chars" quantity="1"/>
                <time>Mittag um 2</time> von hier wegfahren und bin dann <anchor type="commentary" xml:id="K_L02890-1"/>
                <date when="1899-10-14">Samſtag</date>
-               <note type="commentary" xml:id="K_L02890-1h">
-                  <rs type="person" ref="#pmb11485">Goldmann</rs> kam bereits am <date when="1899-10-13">Freitag</date>
+               <note type="commentary" xml:id="K_L02890-1h" corresp="K_L02890-1">
+                  <rs type="person" ref="#pmb11485">Goldmann</rs>
+                  <date when="1899-10-13">Freitag</date>
                   <space unit="chars" quantity="1"/>
-                  <time>Abend</time>, <ref type="schnitzler-tagebuch" target="1899-10-13" subtype="date-only"/>, in <rs type="place" ref="#pmb50">Wien</rs> an.</note>
+                  <time>Abend</time>
+                  <ref type="schnitzler-tagebuch" target="1899-10-13" subtype="date-only"/>
+                  <rs type="place" ref="#pmb50">Wien</rs>
+               </note>
                <space unit="chars" quantity="1"/>
                <add place="mixed">
                   <del rend="strikethrough">fr<unclear>ü</unclear>
@@ -210,11 +215,12 @@
                Dich, mich ſchon im Voraus bei Deiner Frau <rs type="person" subtype="implied" ref="#pmb12701">Mutter</rs> zu entſchuldigen.</p>
             <p>Ich muß ſo lange hierbleiben, weil ich Depeſchen aus <rs type="place" ref="#pmb146">Frankfurt</rs> erwarte. Dort gehen fürchterliche Dinge vor. <anchor type="commentary" xml:id="K_L02890-2"/>
                <rs type="person" subtype="implied" ref="#pmb140830">Eines</rs> der infamſten und
-               gemeinſten Klatſchweiber<note type="commentary" xml:id="K_L02890-2h">nicht
-                  identifiziert</note> der <rs type="place" subtype="implied" ref="#pmb146">Stadt</rs> hat dem <anchor type="commentary" xml:id="K_L02890-3"/>
+               gemeinſten Klatſchweiber<note type="commentary" xml:id="K_L02890-2h" corresp="K_L02890-2"/> der <rs type="place" subtype="implied" ref="#pmb146">Stadt</rs> hat dem <anchor type="commentary" xml:id="K_L02890-3"/>
                <rs type="person" subtype="implied" ref="#pmb9598">Gemahl</rs>
-               <note type="commentary" xml:id="K_L02890-3h">
-                  <rs type="person" ref="#pmb9598">Ludwig Rottenberg</rs>, Ehemann von <rs type="person" ref="#pmb11485">Goldmanns</rs> Geliebter <rs type="person" ref="#pmb23674">Theodore Rottenberg</rs>
+               <note type="commentary" xml:id="K_L02890-3h" corresp="K_L02890-3">
+                  <rs type="person" ref="#pmb9598">Ludwig Rottenberg</rs>
+                  <rs type="person" ref="#pmb11485">Goldmanns</rs>
+                  <rs type="person" ref="#pmb23674">Theodore Rottenberg</rs>
                </note> Alles hinterbracht, und Alles ſcheint zu Ende zu gehen. Ich laufe hier herum
                wie ein Verzweifelter und weiß nicht, was ich anfangen ſoll.</p>
             <closer>Viele treue Grüße! <lb/>Dein <lb/>

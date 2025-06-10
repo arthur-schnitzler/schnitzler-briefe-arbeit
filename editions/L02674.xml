@@ -1,7 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="../meta/schnitzler-briefe-schematron.sch" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
 <TEI xmlns="http://www.tei-c.org/ns/1.0"
      xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-     xsi:schemaLocation="http://www.tei-c.org/ns/1.0 ../meta/asbwschema.xsd"
+     xsi:schemaLocation="http://www.tei-c.org/ns/1.0 ../meta/schnitzler-briefe-schema.xsd"
      xml:id="L02674"
      xml:base="https://id.acdh.oeaw.ac.at/schnitzler/schnitzler-briefe/editions">
    <teiHeader>
@@ -189,7 +190,7 @@
                      <rs type="work" subtype="implied" ref="#pmb29823">Wittes</rs>
                </hi> guter dramatiſcher <anchor type="commentary" xml:id="K_L02674-1"/>
                <hi rend="latintype">Truc</hi>
-               <note type="commentary" xml:id="K_L02674-1h">französisch: Kniff, Trick</note>. <hi rend="latintype">Fr. <rs type="work" subtype="implied" ref="#pmb29823">Witte</rs>
+               <note type="commentary" xml:id="K_L02674-1h" corresp="K_L02674-1"/>. <hi rend="latintype">Fr. <rs type="work" subtype="implied" ref="#pmb29823">Witte</rs>
                </hi>
                <space unit="chars" quantity="1"/>ſelbſt<supplied>,</supplied> verſtändlich für Dich,
                mich und die gewiſſen drei oder vier Andern; für das große Publicum zu ſehr im
@@ -203,21 +204,19 @@
                <hi rend="latintype">
                   <foreign xml:lang="fra">On doit avoir le temps de se moucher</foreign>
                </hi>
-               <note type="commentary" xml:id="K_L02674-2h">französisch: man muss Zeit haben, um
-                  sich die Nase zu putzen</note>«, ſagt<unclear>e</unclear> er. Letzte Scene
+               <note type="commentary" xml:id="K_L02674-2h" corresp="K_L02674-2"/>«, ſagt<unclear>e</unclear> er. Letzte Scene
                zwiſchen <rs type="work" subtype="implied" ref="#pmb29823">Fedor</rs> und <rs type="work" subtype="implied" ref="#pmb29823">Fanny</rs>. Da beginnt das <anchor type="commentary" xml:id="K_L02674-3"/>
                <hi rend="latintype">
                   <foreign xml:lang="fra">embrouillement</foreign>
                </hi>
-               <note type="commentary" xml:id="K_L02674-3h">französisch: Verwirrung,
-                  Verworrenheit</note>. Der Zuſchauer kennt ſich nicht mehr aus. Das Geſicht des <rs type="work" subtype="implied" ref="#pmb29823">Stückes</rs> wechſelt plötzlich;
-               ſtatt der <anchor type="commentary" xml:id="K_L02674-4"/>Gefallenen<note type="commentary" xml:id="K_L02674-4h">Gemeint ist damit die Figur der <rs type="work" subtype="implied" ref="#pmb29823">Fanny</rs>, die bereits vor ihrer
-                  Beziehung zu <rs type="work" subtype="implied" ref="#pmb29823">Fedor</rs> sexuell
-                  aktiv war.</note> tritt auf einmal der <anchor type="commentary" xml:id="K_L02674-5"/>junge Mann, die Analyſe, die Seelenzerfleiſchung<note type="commentary" xml:id="K_L02674-5h">
-                  <rs type="work" subtype="implied" ref="#pmb29823">Fedor</rs> gelingt es nicht, das
-                  sexuelle Vorleben von <rs type="work" subtype="implied" ref="#pmb29823">Fanny</rs>
-                  zu akzeptieren, obwohl er mit dem Verstand die Idealisierung der
-                  Jungfräulichkeit als »Märchen« abtut.</note> in den <pb facs="HS.NZ85.1.3162_0083-1"/>Vordergrund. Es kommen Motive in’s Spiel, mit einem
+               <note type="commentary" xml:id="K_L02674-3h" corresp="K_L02674-3"/>. Der Zuſchauer kennt ſich nicht mehr aus. Das Geſicht des <rs type="work" subtype="implied" ref="#pmb29823">Stückes</rs> wechſelt plötzlich;
+               ſtatt der <anchor type="commentary" xml:id="K_L02674-4"/>Gefallenen<note type="commentary" xml:id="K_L02674-4h" corresp="K_L02674-4">
+                  <rs type="work" subtype="implied" ref="#pmb29823">Fanny</rs>
+                  <rs type="work" subtype="implied" ref="#pmb29823">Fedor</rs>
+               </note> tritt auf einmal der <anchor type="commentary" xml:id="K_L02674-5"/>junge Mann, die Analyſe, die Seelenzerfleiſchung<note type="commentary" xml:id="K_L02674-5h" corresp="K_L02674-5">
+                  <rs type="work" subtype="implied" ref="#pmb29823">Fedor</rs>
+                  <rs type="work" subtype="implied" ref="#pmb29823">Fanny</rs>
+               </note> in den <pb facs="HS.NZ85.1.3162_0083-1"/>Vordergrund. Es kommen Motive in’s Spiel, mit einem
                Ruck, unvermittelt, welche zu fein und zu atomiſch zerfaſert ſind, als daß das
                Publicum mit ſeinen groben Werktagshänden ihnen nachtaſten könnte. Das iſt
                pſychologiſch, aber nicht mehr dramatiſch. Und wenn die Scene doch einen Erfolg hat,
@@ -229,8 +228,11 @@
                doch in die Arme. Dritter <rs type="work" subtype="implied" ref="#pmb29823">Act</rs>.
                Der hätte ſein ſollen wie der erſte: Perſonenmehrheiten, feſtes Zuſammenhalten der
                Handlung und Steigerung <del rend="strikethrough">der H</del> auf einen Punkt hin, wo
-               die Entladung mit mächtigem Ruck erfolgt; und dann Vorhang. Der <anchor type="commentary" xml:id="K_L02674-6"/>Contract<note type="commentary" xml:id="K_L02674-6h">Ein Arbeitsvertrag, der <rs type="work" subtype="implied" ref="#pmb29823">Fanny</rs>, wenn sie ihn unterzeichnet, an ein Theater in <rs type="place" ref="#pmb433">St. Petersburg</rs> engagiert und damit auch einen
-                  Ausweg aus der Beziehung zu <rs type="work" subtype="implied" ref="#pmb29823">Fedor</rs> ermöglicht.</note>
+               die Entladung mit mächtigem Ruck erfolgt; und dann Vorhang. Der <anchor type="commentary" xml:id="K_L02674-6"/>Contract<note type="commentary" xml:id="K_L02674-6h" corresp="K_L02674-6">
+                  <rs type="work" subtype="implied" ref="#pmb29823">Fanny</rs>
+                  <rs type="place" ref="#pmb433">St. Petersburg</rs>
+                  <rs type="work" subtype="implied" ref="#pmb29823">Fedor</rs>
+               </note>
                <space unit="chars" quantity="1"/>
                <pb facs="HS.NZ85.1.3162_0082-0"/>vortreffliche Idee. Aber am Schluß, nachdem man den
                ganzen <rs type="work" subtype="implied" ref="#pmb29823">Act</rs> mit all’ ſeinen
@@ -276,8 +278,13 @@
                </hi> und <hi rend="latintype">
                   <rs type="person" ref="#pmb11617">Hauptmann</rs>
                </hi> zu nennen. Dramatiſch, unter dem <pb facs="HS.NZ85.1.3162_0085-1"/>Geſichtspunkte der Aufführbarkeit ein <rs type="work" subtype="implied" ref="#pmb29823">Unvollendetes</rs>, das in Kürze Vollendetes verſpricht. Ich rathe
-               Dir entſchieden ab, das »<rs type="work" ref="#pmb29823">Märchen</rs>« <anchor type="commentary" xml:id="K_L02674-7"/>aufführen<note type="commentary" xml:id="K_L02674-7h">
-                  <rs type="work" ref="#pmb29823">Das Märchen</rs> wurde am <ref target="1893-12-01" type="schnitzler-tagebuch" subtype="date-only"/> am <rs type="org" ref="#pmb36430">Deutschen Volkstheater</rs> in <rs type="place" ref="#pmb50">Wien</rs> uraufgeführt, mit einem von <rs type="person" ref="#pmb2121">Schnitzler</rs> modifizierten Schluss.</note> zu laſſen; es gibt nur einen Weg
+               Dir entſchieden ab, das »<rs type="work" ref="#pmb29823">Märchen</rs>« <anchor type="commentary" xml:id="K_L02674-7"/>aufführen<note type="commentary" xml:id="K_L02674-7h" corresp="K_L02674-7">
+                  <rs type="work" ref="#pmb29823">Das Märchen</rs>
+                  <ref target="1893-12-01" type="schnitzler-tagebuch" subtype="date-only"/>
+                  <rs type="org" ref="#pmb36430">Deutschen Volkstheater</rs>
+                  <rs type="place" ref="#pmb50">Wien</rs>
+                  <rs type="person" ref="#pmb2121">Schnitzler</rs>
+               </note> zu laſſen; es gibt nur einen Weg
                für Dich: weiterſchreiben. Das thut weh; aber Du haſt noch keine Berechtigung, Dich
                auszuruhen; denke, ſeit wie kurzer Zeit Du erſt auf dem Wege biſt. Und der Erfolg
                beſteht für Leute wie Dich, deren Berufung außer Zweifel ſteht, nur in der Frage, ob
@@ -287,17 +294,16 @@
                Dialog von <hi rend="latintype">A</hi> bis <hi rend="latintype">Z</hi> voll iſt der
                entzückendſten Sachen habe ich <del rend="strikethrough">
                   <gap reason="illegible" quantity="1" unit="chars"/>
-               </del> wohl ſchon geſagt. Kein einziger unter den <anchor type="commentary" xml:id="K_L02674-8"/>Jungdeutschen<note type="commentary" xml:id="K_L02674-8h">hier als Synonym für deutschsprachige Autorinnen und Autoren am Beginn ihrer
-                  Karriere</note> in <rs type="place" ref="#pmb168">Berlin</rs> oder <rs type="place" ref="#pmb50">Wien</rs> iſt Dir das <pb facs="HS.NZ85.1.3162_0084-0"/>nachzuthun imſtande. Wie hoch ſteht das »<rs type="work" ref="#pmb29823">Märchen</rs>« mit allen ſeinen Fehlern z. B. über <hi rend="latintype">
+               </del> wohl ſchon geſagt. Kein einziger unter den <anchor type="commentary" xml:id="K_L02674-8"/>Jungdeutschen<note type="commentary" xml:id="K_L02674-8h" corresp="K_L02674-8"/> in <rs type="place" ref="#pmb168">Berlin</rs> oder <rs type="place" ref="#pmb50">Wien</rs> iſt Dir das <pb facs="HS.NZ85.1.3162_0084-0"/>nachzuthun imſtande. Wie hoch ſteht das »<rs type="work" ref="#pmb29823">Märchen</rs>« mit allen ſeinen Fehlern z. B. über <hi rend="latintype">
                   <rs type="person" ref="#pmb11673">Herzl</rs>
                </hi>’s Sachen! <c rendition="#dots" n="4"/>
             </p>
             <p>Im Vertrauen auf Deine Freundſchaft, mein lieber Arthur, habe ich Dir geſagt, was ich
                denke, ohne ein <anchor type="commentary" xml:id="K_L02674-9"/>
                <hi rend="latintype">Jota</hi>
-               <note type="commentary" xml:id="K_L02674-9h">Redewendung: Ohne die kleinste
-                  Abänderung. (»<quote>Jota</quote>« bezeichnet den kleinsten Buchstaben im
-                  griechischen Alphabet.)</note> zu ändern. Es war unklug von mir, denn eine
+               <note type="commentary" xml:id="K_L02674-9h" corresp="K_L02674-9">
+                  <quote>Jota</quote>
+               </note> zu ändern. Es war unklug von mir, denn eine
                Bitterkeit wird bei Dir doch zurückbleiben. Ich habe Dir vielleicht noch nie ſo weh
                gethan. Aber ich mußte wohl. Freundespflicht! Wenn <hi rend="underline" n="1">ich</hi> Dir nicht die Wahrheit ſagen ſollte – wer <del rend="strikethrough">da<unclear>n</unclear>
                </del> denn ſonſt? Und ſo bin ich wieder einmal das Opfer meiner Pflicht geworden,

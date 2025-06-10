@@ -1,7 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="../meta/schnitzler-briefe-schematron.sch" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
 <TEI xmlns="http://www.tei-c.org/ns/1.0"
      xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-     xsi:schemaLocation="http://www.tei-c.org/ns/1.0 ../meta/asbwschema.xsd"
+     xsi:schemaLocation="http://www.tei-c.org/ns/1.0 ../meta/schnitzler-briefe-schema.xsd"
      xml:id="L03637"
      xml:base="https://id.acdh.oeaw.ac.at/schnitzler/schnitzler-briefe/editions">
    <teiHeader>
@@ -97,26 +98,25 @@
                   </msDesc>
                </witness>
             </listWit>
-
-         <listBibl>
-            <biblStruct>
-               <monogr>
-                  <author ref="#pmb13212">Zweig, Stefan</author>
-                  <title level="m">Briefwechsel mit Hermann Bahr, Sigmund Freud, Rainer Maria
+            <listBibl>
+               <biblStruct>
+                  <monogr>
+                     <author ref="#pmb13212">Zweig, Stefan</author>
+                     <title level="m">Briefwechsel mit Hermann Bahr, Sigmund Freud, Rainer Maria
                      Rilke und Arthur Schnitzler</title>
-                  <editor>Berlin, Jeffrey B.</editor>
-                  <editor>Lindken, Hans-Ulrich</editor>
-                  <editor>Prater, Donald A.</editor>
-                  <imprint>
-                     <date when="1987">1987</date>
-                     <pubPlace>Frankfurt am Main</pubPlace>
-                     <publisher>S. Fischer</publisher>
-                  </imprint>
-                  <biblScope unit="pp">367</biblScope>
-               </monogr>
-            </biblStruct>
-            
-         </listBibl>         </sourceDesc>
+                     <editor>Berlin, Jeffrey B.</editor>
+                     <editor>Lindken, Hans-Ulrich</editor>
+                     <editor>Prater, Donald A.</editor>
+                     <imprint>
+                        <date when="1987">1987</date>
+                        <pubPlace>Frankfurt am Main</pubPlace>
+                        <publisher>S. Fischer</publisher>
+                     </imprint>
+                     <biblScope unit="pp">367</biblScope>
+                  </monogr>
+               </biblStruct>
+            </listBibl>
+         </sourceDesc>
       </fileDesc>
       <profileDesc>
          <langUsage>
@@ -173,18 +173,34 @@
                <salute>Sehr verehrter Herr Doktor,</salute> für das <rs type="person" ref="#pmb52643">Gautier</rs> Denkmal habe ich gar nichts gezeichnet, sondern nur
                unterzeichnet, weil ich nicht glaube, dass sich in <rs type="place" ref="#pmb166">Frankreich</rs> drei Francs für ein <add place="above">deutsches</add>
                <rs type="person" ref="#pmb2404">Hebbel</rs> oder <rs type="person" ref="#pmb11933">Kleist­</rs>-Denkmal zusa<c rendition="#gemination-m"/>enfinden würden. <rs type="place" ref="#pmb166">Frankreich</rs> braucht uns wahrhaftig nicht. </p>
-            <p>Noch eines: ich bitte Sie, officiell von meiner Mitteitung <anchor type="commentary" xml:id="K_L03637-1"/>wegen Ihres Buches<note type="commentary" xml:id="K_L03637-1h">Der Verleger <rs type="person" ref="#pmb11324">Samuel Fischer</rs> plante die Herausgabe einer Monografie über <rs type="person" ref="#pmb2121">Schnitzlers</rs> Werk anläßliche des 50. Geburtstages des Autors und suchte dafür einen Verfasser, <ref type="schnitzler-bahr" target="L041564" subtype="cf"/>.</note> bei <rs type="person" ref="#pmb11324">Fischer</rs>
-               nichts zu wissen. Ich hatte nur eine Art Schuldgefühl, dass ich selbst dieses Buch nicht übernahm (ich stecke in einer <anchor type="commentary" xml:id="K_L03637-2"/>Arbeit<note type="commentary" xml:id="K_L03637-2h">Möglicherweise ist <rs type="person" ref="#pmb13212">Zweigs</rs> Novellenband <rs type="work" ref="#pmb293988">Erstes Erlebnis</rs> gemeint,
-                     der im <date>November 1911</date> bei <rs type="org" ref="#pmb29639">Fischer</rs> erschien.</note>, fühle mich übrigens nicht ganz
+            <p>Noch eines: ich bitte Sie, officiell von meiner Mitteitung <anchor type="commentary" xml:id="K_L03637-1"/>wegen Ihres Buches<note type="commentary" xml:id="K_L03637-1h" corresp="K_L03637-1">
+                  <rs type="person" ref="#pmb11324">Samuel Fischer</rs>
+                  <rs type="person" ref="#pmb2121">Schnitzlers</rs>
+                  <ref type="schnitzler-bahr" target="L041564" subtype="cf"/>
+               </note> bei <rs type="person" ref="#pmb11324">Fischer</rs>
+               nichts zu wissen. Ich hatte nur eine Art Schuldgefühl, dass ich selbst dieses Buch nicht übernahm (ich stecke in einer <anchor type="commentary" xml:id="K_L03637-2"/>Arbeit<note type="commentary" xml:id="K_L03637-2h" corresp="K_L03637-2">
+                  <rs type="person" ref="#pmb13212">Zweigs</rs>
+                  <rs type="work" ref="#pmb293988">Erstes Erlebnis</rs>
+                  <date>November 1911</date>
+                  <rs type="org" ref="#pmb29639">Fischer</rs>
+               </note>, fühle mich übrigens nicht ganz
                zulänglich) und suchte dies zu tilgen, indem ich den empfahl, der mir der Beste
                dünkte: <rs type="person" ref="#pmb10788">Auernheimer</rs>. Ich hoffe, es wird bald
                zustandekommen. Auch die <anchor type="commentary" xml:id="K_L03637-3"/>Feier der
-               Fünfzigjährigen<note type="commentary" xml:id="K_L03637-3h">
-                  <rs type="person" ref="#pmb13212">Stefan Zweig</rs> hatte angeregt, die Generation wichtiger Schriftsteller, die sich in diesen Jahren in der Lebensmitte befanden, zu ehren, indem im gesamten deutschsprachigen Raum am jeweiligen 50. Geburtstag eines Autors dessen Stücke aufgeführt werden sollten, vgl. <bibl>
+               Fünfzigjährigen<note type="commentary" xml:id="K_L03637-3h" corresp="K_L03637-3">
+                  <rs type="person" ref="#pmb13212">Stefan Zweig</rs>
+                  <bibl>
                      <rs type="person" ref="#pmb13212">Stefan Zweig</rs>: <rs type="work" ref="#pmb293985">Den Fünfzigjährigen! Eine öffentliche Anregung</rs>. In: <rs type="work" ref="#pmb41531">Berliner Tageblatt</rs>, Jg. 40, Nr. 464,
-                     <date>12. 9. 1911</date>, S. [2–3]</bibl>.  Namentlich erwähnt werden in dem Artikel <rs type="person" ref="#pmb11617">Gerhart Hauptmann</rs>, <rs type="person" ref="#pmb2121">Arthur Schnitzler</rs>, <rs type="person" ref="#pmb11148">Richard Dehmel</rs>, <rs type="person" ref="#pmb12156">Maurice Maeterlinck</rs> und <rs type="person" ref="#pmb28849">Hermann Bahr</rs>. Besonders im Blick hatte <rs type="person" ref="#pmb13212">Zweig</rs>
+                     <date>12. 9. 1911</date>, S. [2–3]</bibl>
+                  <rs type="person" ref="#pmb11617">Gerhart Hauptmann</rs>
+                  <rs type="person" ref="#pmb2121">Arthur Schnitzler</rs>
+                  <rs type="person" ref="#pmb11148">Richard Dehmel</rs>
+                  <rs type="person" ref="#pmb12156">Maurice Maeterlinck</rs>
+                  <rs type="person" ref="#pmb28849">Hermann Bahr</rs>
+                  <rs type="person" ref="#pmb13212">Zweig</rs>
                   <space unit="chars" quantity="1"/>
-                  <rs type="person" ref="#pmb2121">Schnitzlers</rs> 50. Geburtstag am <date>15. 5. 1912</date>.
+                  <rs type="person" ref="#pmb2121">Schnitzlers</rs>
+                  <date>15. 5. 1912</date>
                </note> wird organisiert
                werden. </p>
             <p>Ich bin <date>Ende November</date> wieder in <rs type="place" ref="#pmb50">Wien</rs>

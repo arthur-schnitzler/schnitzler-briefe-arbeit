@@ -1,7 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="../meta/schnitzler-briefe-schematron.sch" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
 <TEI xmlns="http://www.tei-c.org/ns/1.0"
      xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-     xsi:schemaLocation="http://www.tei-c.org/ns/1.0 ../meta/asbwschema.xsd"
+     xsi:schemaLocation="http://www.tei-c.org/ns/1.0 ../meta/schnitzler-briefe-schema.xsd"
      xml:id="L01780"
      xml:base="https://id.acdh.oeaw.ac.at/schnitzler/schnitzler-briefe/editions">
    <teiHeader>
@@ -212,20 +213,18 @@
             </address>
          </div>
          <div type="image">
-            <p rend="center"><pb facs="https://www.theatermuseum.at/de/object/f400c4d583/"/>
+            <p rend="center">
+               <pb facs="https://www.theatermuseum.at/de/object/f400c4d583/"/>
                <hi rend="pre-print">
-                  
                   <rs ref="#pmb467" type="place">Tirol: <anchor type="textConst" xml:id="T_L01780-1"/>
                      <hi rend="underline" n="1">Villa Heufler, Seis am Schlern</hi>
-                     <note xml:id="T_L01780-1h" type="textConst">Unterstreichung mit schwarzer
-                        Tinte</note>
+                     <note xml:id="T_L01780-1h" type="textConst" corresp="T_L01780-1"/>
                   </rs>, 1000m. Nach dem <rs type="work" ref="#pmb51884" subtype="implied">Aquarell</rs> von <rs type="person" ref="#pmb27687">F. A. C. M.
                      Reisch</rs>, <rs type="place" ref="#pmb43520">Meran</rs>.</hi>
             </p>
          </div>
          <div type="writingSession" n="1">
             <opener>
-               
                <dateline rend="right">
                   <pb facs="https://www.theatermuseum.at/de/object/f400c4d583/"/>
                   <date>6. Juli<lb/>08</date>.</dateline>
@@ -236,12 +235,14 @@
                   <anchor type="commentary" xml:id="K_L01780-1"/>
                <rs type="work" ref="#pmb30023" subtype="implied">Feuilleton über <rs ref="#pmb2309" type="person">Moppchen</rs>
                </rs>
-               <note xml:id="K_L01780-1h" type="commentary">
+               <note xml:id="K_L01780-1h" type="commentary" corresp="K_L01780-1">
                   <bibl>
                      <rs ref="#pmb10815" type="person">Hermann Bahr</rs>: <rs ref="#pmb30023" type="work">Moppchen</rs>. In: <rs ref="#pmb36374" type="work">Neue Freie
                         Presse</rs>, Nr. 15.757, <date>4. 7. 1908</date>. Morgenblatt, S. 1–5</bibl>
-                  (»Moppchen« war der Spitzname von <rs ref="#pmb11605" type="person">Otto Erich
-                     Hartlebens</rs> Ehefrau <rs ref="#pmb2309" type="person">Selma</rs>).</note>
+                  <rs ref="#pmb11605" type="person">Otto Erich
+                     Hartlebens</rs>
+                  <rs ref="#pmb2309" type="person">Selma</rs>
+               </note>
                mit Ergriffenheit gelesen, schicken Ihnen die herzlichsten Grüsse und viel gute
                Wünsche für den Sommer.</p>
             <closer>
@@ -260,7 +261,7 @@
             <p>
                <pb facs="https://www.theatermuseum.at/de/object/f400c4d583/"/>
                <handShift scribe="#pmb2173"/>
-               <anchor type="textConst" xml:id="T_L01780-2"/>Unser Balcon.<note xml:id="T_L01780-2h" type="textConst">auf dem Motiv mit einem Pfeil markiert</note>
+               <anchor type="textConst" xml:id="T_L01780-2"/>Unser Balcon.<note xml:id="T_L01780-2h" type="textConst" corresp="T_L01780-2"/>
             </p>
          </div>
       </body>

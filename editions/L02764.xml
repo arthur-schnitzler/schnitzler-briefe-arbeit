@@ -1,7 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="../meta/schnitzler-briefe-schematron.sch" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
 <TEI xmlns="http://www.tei-c.org/ns/1.0"
      xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-     xsi:schemaLocation="http://www.tei-c.org/ns/1.0 ../meta/asbwschema.xsd"
+     xsi:schemaLocation="http://www.tei-c.org/ns/1.0 ../meta/schnitzler-briefe-schema.xsd"
      xml:id="L02764"
      xml:base="https://id.acdh.oeaw.ac.at/schnitzler/schnitzler-briefe/editions">
    <teiHeader>
@@ -231,9 +232,10 @@
                   <rs type="person" ref="#pmb3966">Thorel</rs>
                </hi> die <rs type="work" ref="#pmb36344">Frankf. Zeit.</rs> mit dem <anchor type="commentary" xml:id="K_L02764-1"/>
                <rs type="work" subtype="implied" ref="#pmb92950">Referat</rs>
-               <note type="commentary" xml:id="K_L02764-1h">
+               <note type="commentary" xml:id="K_L02764-1h" corresp="K_L02764-1">
                   <bibl>
-                     <rs type="person" subtype="implied" ref="#pmb4986">m.</rs> [ = <rs type="person" ref="#pmb4986">Fedor Mamroth</rs>]: <rs type="work" ref="#pmb92950">Schauspielhaus</rs>. In: <rs type="work" ref="#pmb36344">Frankfurter Zeitung</rs>, Jg. 40, Nr. 12, <date when="1896-01-12">12. 1. 1896</date>, Zweites Morgenblatt, S. 1</bibl>.</note> geſchickt, um
+                     <rs type="person" subtype="implied" ref="#pmb4986">m.</rs> [ = <rs type="person" ref="#pmb4986">Fedor Mamroth</rs>]: <rs type="work" ref="#pmb92950">Schauspielhaus</rs>. In: <rs type="work" ref="#pmb36344">Frankfurter Zeitung</rs>, Jg. 40, Nr. 12, <date when="1896-01-12">12. 1. 1896</date>, Zweites Morgenblatt, S. 1</bibl>
+               </note> geſchickt, um
                ihn zur raſcheren Erledigung anzutreiben. Das hat auch gewirkt. <date when="1896-01-16">Heut</date> erhalte ich beifolgenden Brief. Das iſt der erſte
                kleine Erfolg Deines <rs type="work" subtype="implied" ref="#pmb29917">Stück</rs>es
                in <rs type="place" ref="#pmb166">Frankreich</rs>; mögen größere nachkommen! <hi rend="latintype">
@@ -281,11 +283,9 @@
                <foreign xml:lang="fra">Je viens – enfin – de lire »<rs type="work" ref="#pmb29917">Liebelei</rs>«<supplied>.</supplied> C’est un pur bijou<del rend="strikethrough">x</del>, d’une délicateſse, d’une fraîcheur, et d’une
                   harmonie parfaites. Il faudra absolument que nous reparlions de cela. Auſsitôt que
                   je vais avoir un instant, je vous demanderai rendez-vous.</foreign>
-               <note type="commentary" xml:id="K_L02764-2h">französisch: Ich habe – endlich – die
-                  Lektüre von <rs type="work" ref="#pmb29917">Liebelei</rs> abgeschlossen. Es ist
-                  ein reines Juwel, von perfekter Zartheit, Frische und Harmonie. Wir müssen
-                  unbedingt einmal darüber sprechen. Sobald ich einen Moment Zeit habe, werde ich
-                  Sie um ein Treffen bitten.</note>
+               <note type="commentary" xml:id="K_L02764-2h" corresp="K_L02764-2">
+                  <rs type="work" ref="#pmb29917">Liebelei</rs>
+               </note>
             </p>
             <closer>
                <foreign xml:lang="fra">Votre dévoué</foreign>
@@ -296,7 +296,11 @@
             </closer>
             <postscript>
                <p>
-                  <anchor type="commentary" xml:id="K_L02764-3"/>J’écris dès <date when="1896-01">aujourd’hui</date> à <rs type="person" ref="#pmb3966">Thorel</rs> et <rs type="person" ref="#pmb14876">Carré</rs>!<note type="commentary" xml:id="K_L02764-3h">französisch: Ich schreibe schon <date when="1896-01">heute</date> an <rs type="person" ref="#pmb3966">Thorel</rs> und <rs type="person" ref="#pmb14876">Carré</rs>!</note>
+                  <anchor type="commentary" xml:id="K_L02764-3"/>J’écris dès <date when="1896-01">aujourd’hui</date> à <rs type="person" ref="#pmb3966">Thorel</rs> et <rs type="person" ref="#pmb14876">Carré</rs>!<note type="commentary" xml:id="K_L02764-3h" corresp="K_L02764-3">
+                     <date when="1896-01">heute</date>
+                     <rs type="person" ref="#pmb3966">Thorel</rs>
+                     <rs type="person" ref="#pmb14876">Carré</rs>
+                  </note>
                </p>
             </postscript>
          </div>

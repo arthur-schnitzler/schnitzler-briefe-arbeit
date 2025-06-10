@@ -1,7 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="../meta/schnitzler-briefe-schematron.sch" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
 <TEI xmlns="http://www.tei-c.org/ns/1.0"
      xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-     xsi:schemaLocation="http://www.tei-c.org/ns/1.0 ../meta/asbwschema.xsd"
+     xsi:schemaLocation="http://www.tei-c.org/ns/1.0 ../meta/schnitzler-briefe-schema.xsd"
      xml:id="L03086"
      xml:base="https://id.acdh.oeaw.ac.at/schnitzler/schnitzler-briefe/editions">
    <teiHeader>
@@ -161,8 +162,8 @@
                   <rs type="place" ref="#pmb168">Berlin</rs>, <date when="1901-09-27">27. September</date>.</dateline>
                <salute>Mein lieber Freund,</salute>
             </opener>
-            <p>Bitte übermittle dieſen Brief an ſeine Adreſſe, da Du mir auf meine <anchor type="commentary" xml:id="K_L03086-1"/>Frage<note type="commentary" xml:id="K_L03086-1h">
-                  <ref type="schnitzler-briefe" target="L03085" subtype="See"/>.
+            <p>Bitte übermittle dieſen Brief an ſeine Adreſſe, da Du mir auf meine <anchor type="commentary" xml:id="K_L03086-1"/>Frage<note type="commentary" xml:id="K_L03086-1h" corresp="K_L03086-1">
+                  <ref type="schnitzler-briefe" target="L03085" subtype="See"/>
                </note>, wo die Mädeln jetzt wohnen, noch nicht geantwortet haſt.</p>
             <closer>Herzlichſt Dein <lb/>
                <signed>Paul Goldmnn</signed>
@@ -172,10 +173,11 @@
                   <hi rend="latintype">
                      <rs type="person" ref="#pmb10863">Richard</rs>
                   </hi>
-                  <note type="commentary" xml:id="K_L03086-2h">vermutlich gemeint: aus dessen
-                     Sommerquartier in <rs type="place" ref="#pmb44278">Pörtschach</rs>, von wo er
-                        <date>Mitte September</date> nach <rs type="place" ref="#pmb50">Wien</rs>
-                     zurückgekehrt war</note> ſchon in <rs type="place" ref="#pmb50">Wien</rs>? </p>
+                  <note type="commentary" xml:id="K_L03086-2h" corresp="K_L03086-2">
+                     <rs type="place" ref="#pmb44278">Pörtschach</rs>
+                     <date>Mitte September</date>
+                     <rs type="place" ref="#pmb50">Wien</rs>
+                  </note> ſchon in <rs type="place" ref="#pmb50">Wien</rs>? </p>
             </postscript>
          </div>
          <div type="writingSession" n="2">
@@ -200,15 +202,19 @@
                ich Ihnen hier noch einmal.</p>
             <p>Liebes Fräulein <hi rend="latintype">Olga</hi> (jetzt in der Einzahl): Daß Sie keine
                Berichte über <anchor type="commentary" xml:id="K_L03086-3"/>
-               <rs type="person" subtype="implied" ref="#pmb2566 #pmb2996">Kaiſer</rs>zuſammenkünfte<note type="commentary" xml:id="K_L03086-3h">Bezug auf
-                  die Zusammenkunft von <rs type="person" ref="#pmb2566">Wilhelm II.</rs> und <rs type="person" ref="#pmb2996">Nikolaus II.</rs> am <date when="1901-09-13">13. 9. 1901</date> in <rs type="place" ref="#pmb42763">Danzig</rs>
+               <rs type="person" subtype="implied" ref="#pmb2566 #pmb2996">Kaiſer</rs>zuſammenkünfte<note type="commentary" xml:id="K_L03086-3h" corresp="K_L03086-3">
+                  <rs type="person" ref="#pmb2566">Wilhelm II.</rs>
+                  <rs type="person" ref="#pmb2996">Nikolaus II.</rs>
+                  <date when="1901-09-13">13. 9. 1901</date>
+                  <rs type="place" ref="#pmb42763">Danzig</rs>
                </note>
                leſen, thut mir leid. Erſtens war mein <anchor type="commentary" xml:id="K_L03086-4"/>
                <rs type="work" subtype="implied" ref="#pmb147979">Bericht</rs>
-               <note type="commentary" xml:id="K_L03086-4h">Vermutlich <bibl>[<rs type="person" ref="#pmb11485">Paul Goldmann</rs>]: <rs type="work" ref="#pmb147979">Kaiser
+               <note type="commentary" xml:id="K_L03086-4h" corresp="K_L03086-4">
+                  <bibl>[<rs type="person" ref="#pmb11485">Paul Goldmann</rs>]: <rs type="work" ref="#pmb147979">Kaiser
                         Wilhelm in Danzig</rs>. In: <rs type="work" ref="#pmb36374">Neue Freie
                         Presse</rs>, Nr. 13.311, <date when="1901-09-15">15. 9. 1901</date>,
-                     Morgenblatt, S. 10</bibl>.
+                     Morgenblatt, S. 10</bibl>
                </note> hübſch. Zweitens iſt die Nichtachtung <pb facs="DLA_85.1.5247_00030-0"/>der
                Politik, wie ſie unter unſeren <rs type="place" ref="#pmb50">Wien</rs>er Freunden
                beſteht, ein Fehler. Alles Menſchliche iſt intereſſant; und <del rend="strikethrough">
@@ -224,31 +230,34 @@
                <rs type="work" ref="#pmb145462" subtype="implied">Feuilleton</rs> von <rs type="person" ref="#pmb28151">
                   <hi rend="latintype">Lesser</hi>
                </rs>
-               <note type="commentary" xml:id="K_L03086-5h">
+               <note type="commentary" xml:id="K_L03086-5h" corresp="K_L03086-5">
                   <bibl>
                      <rs type="person" ref="#pmb28151">Max Lesser</rs>: <rs type="work" ref="#pmb145462">Götterdämmerung</rs>. In: <rs type="work" ref="#pmb41321">Neues Wiener Tagblatt</rs>, Jg. 35, Nr. 243, <date>5. 9. 1901</date>,
-                     S. 1–3</bibl>. Darin heißt es: »<quote>Wir haben <rs type="person" ref="#pmb11617">Gerhart Hauptmann</rs> und <rs type="person" ref="#pmb14762">Helene Böhlau</rs>, wir haben <rs type="person" ref="#pmb11740">Hugo v.
+                     S. 1–3</bibl>
+                  <quote>Wir haben <rs type="person" ref="#pmb11617">Gerhart Hauptmann</rs> und <rs type="person" ref="#pmb14762">Helene Böhlau</rs>, wir haben <rs type="person" ref="#pmb11740">Hugo v.
                         Hofmannsthal</rs> und <rs type="person" ref="#pmb2147">Peter
-                     Altenberg</rs>.</quote>« Das wurde von der Redaktion mit einer Fußnote ergänzt:
-                     »<quote>Der Verfaſſer gibt mit dieſer Auswahl einer perſönlichen Vorliebe
+                     Altenberg</rs>.</quote>
+                  <quote>Der Verfaſſer gibt mit dieſer Auswahl einer perſönlichen Vorliebe
                      Ausdruck, die zum Theil wohl auf ſtarken Widerſpruch ſtoßen
-                  wird.</quote>«</note> habe ich nicht geleſen. Er iſt perſönlich ein braver Menſch.
+                  wird.</quote>
+               </note> habe ich nicht geleſen. Er iſt perſönlich ein braver Menſch.
                Meinetwegen alſo ſoll er für <rs type="person" ref="#pmb2147">
                   <hi rend="latintype">Altenberg</hi>
                </rs> ſchwärmen und ſogar für <rs type="person" ref="#pmb11740">
                   <hi rend="latintype">Hoffmannsthal</hi>
                </rs>. Von Letzterem werden wir im <anchor type="commentary" xml:id="K_L03086-6"/>»<rs type="org" ref="#pmb35597">Deutſchen Theater</rs>« ein <rs type="work" ref="#pmb33722" subtype="implied">Versdrama</rs>
-               <note type="commentary" xml:id="K_L03086-6h">Dazu kam es nicht. Gemeint sein dürfte
-                  die Bearbeitung von <rs type="person" ref="#pmb11068">Calderón de la Barcas</rs>
+               <note type="commentary" xml:id="K_L03086-6h" corresp="K_L03086-6">
+                  <rs type="person" ref="#pmb11068">Calderón de la Barcas</rs>
                   <space unit="chars" quantity="1"/>
-                  <rs type="work" ref="#pmb33720">Das Leben ein Traum</rs>, die Jahrzehnte später
-                  zu <rs type="work" ref="#pmb33722">Der Turm</rs> werden sollte.</note> zu ſehen
+                  <rs type="work" ref="#pmb33720">Das Leben ein Traum</rs>
+                  <rs type="work" ref="#pmb33722">Der Turm</rs>
+               </note> zu ſehen
                bekommen. Ich freue mich ſchon rieſig.</p>
             <p>
                <pb facs="DLA_85.1.5247_00030-1"/>Daß Ihr <anchor type="commentary" xml:id="K_L03086-7"/>
                <rs type="person" ref="#pmb17554" subtype="implied">Vater</rs> ſich ſo abſcheulich
-                  benimmt<note type="commentary" xml:id="K_L03086-7h">
-                  <ref type="schnitzler-tagebuch" target="1901-09-06" subtype="See"/>.
+                  benimmt<note type="commentary" xml:id="K_L03086-7h" corresp="K_L03086-7">
+                  <ref type="schnitzler-tagebuch" target="1901-09-06" subtype="See"/>
                </note>, thut mir unendlich leid. Kann man da gar nichts machen? <hi rend="latintype">Arthur</hi> ſoll den Prozeß nur jedenfalls einleiten. Ich bedaure namentlich, daß
                   <hi rend="underline" n="1">ich</hi> in der Angelegenheit ſo gar nicht zu Hilfe
                kommen kann. Zum Beiſpiel, wenn ich eine Million hätte, wäre das ſehr einfach. Bitte,
@@ -259,8 +268,8 @@
                <hi rend="latintype">
                   <rs type="place" ref="#pmb428">Welsberg</rs>
                </hi>
-               <note type="commentary" xml:id="K_L03086-8h">
-                  <ref type="schnitzler-briefe" target="L03064" subtype="See"/>.
+               <note type="commentary" xml:id="K_L03086-8h" corresp="K_L03086-8">
+                  <ref type="schnitzler-briefe" target="L03064" subtype="See"/>
                </note> liegt fern. Ich lebe wieder mein elendes Leben und bin unbeſchreiblich einſam
                in dieſer kalten <rs type="place" ref="#pmb168" subtype="implied">Stadt</rs>, in der
                Niemand mich mag, Keiner und Keine.</p>

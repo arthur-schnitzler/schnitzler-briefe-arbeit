@@ -1,7 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="../meta/schnitzler-briefe-schematron.sch" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
 <TEI xmlns="http://www.tei-c.org/ns/1.0"
      xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-     xsi:schemaLocation="http://www.tei-c.org/ns/1.0 ../meta/asbwschema.xsd"
+     xsi:schemaLocation="http://www.tei-c.org/ns/1.0 ../meta/schnitzler-briefe-schema.xsd"
      xml:id="L03300"
      xml:base="https://id.acdh.oeaw.ac.at/schnitzler/schnitzler-briefe/editions">
    <teiHeader>
@@ -157,18 +158,29 @@
                <dateline rend="right">
                   <pb facs="MS-SCHNITZLER-B-00089-A-00002-000-00042-R"/>
                   <date when="1899-10-03">3/10 <anchor type="commentary" xml:id="K_L03300-1"/>9<unclear>9</unclear>
-                     <note type="commentary" xml:id="K_L03300-1h">Obzwar die Jahresziffer nicht mit
-                        letzter Sicherheit zu lesen ist, lässt sich nur für das Jahr <date when="1899">1899</date> eine zeitliche Nähe zwischen <rs type="person" ref="#pmb2121">Schnitzlers</rs> Aufenthalt in <rs type="place" ref="#pmb883">Wiesbaden</rs> und dem 3. Oktober feststellen – <rs type="person" ref="#pmb2121">Schnitzler</rs> war dort zwischen <ref type="schnitzler-tagebuch" target="1899-09-24" subtype="date-only"/> und
-                           <ref type="schnitzler-tagebuch" target="1899-10-03" subtype="date-only"/>.</note>
+                     <note type="commentary" xml:id="K_L03300-1h" corresp="K_L03300-1">
+                        <date when="1899">1899</date>
+                        <rs type="person" ref="#pmb2121">Schnitzlers</rs>
+                        <rs type="place" ref="#pmb883">Wiesbaden</rs>
+                        <rs type="person" ref="#pmb2121">Schnitzler</rs>
+                        <ref type="schnitzler-tagebuch" target="1899-09-24" subtype="date-only"/>
+                        <ref type="schnitzler-tagebuch" target="1899-10-03" subtype="date-only"/>
+                     </note>
                   </date>
                </dateline>
             </opener>
             <p>
                <salute>Lieber,</salute> bitte theilen Sie mir mit, wie lange Sie wegbleiben, und
                wohin Sie von <anchor type="commentary" xml:id="K_L03300-2"/>
-               <rs type="place" ref="#pmb883">Wiesbaden</rs> aus reisen<note type="commentary" xml:id="K_L03300-2h">
-                  <rs type="person" ref="#pmb2121">Schnitzler</rs> hatte <rs type="place" ref="#pmb883">Wiesbaden</rs> am <ref type="schnitzler-tagebuch" target="1899-10-03" subtype="date-only"/> verlassen und war nach <rs type="place" ref="#pmb168">Berlin</rs> gereist. Am <ref type="schnitzler-tagebuch" target="1899-10-11" subtype="date-only"/> nahm er
-                     <time>Abends</time> den Nachtzug nach <rs type="place" ref="#pmb50">Wien</rs>.</note>.</p>
+               <rs type="place" ref="#pmb883">Wiesbaden</rs> aus reisen<note type="commentary" xml:id="K_L03300-2h" corresp="K_L03300-2">
+                  <rs type="person" ref="#pmb2121">Schnitzler</rs>
+                  <rs type="place" ref="#pmb883">Wiesbaden</rs>
+                  <ref type="schnitzler-tagebuch" target="1899-10-03" subtype="date-only"/>
+                  <rs type="place" ref="#pmb168">Berlin</rs>
+                  <ref type="schnitzler-tagebuch" target="1899-10-11" subtype="date-only"/>
+                  <time>Abends</time>
+                  <rs type="place" ref="#pmb50">Wien</rs>
+               </note>.</p>
             <p>Ich arbeite und lebe mühsam, das ist der Auszug meiner Tage. Mehr hab ich wirklich
                nicht zu sagen, wenigstens im Augenblick nicht.</p>
             <p>

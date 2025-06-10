@@ -1,7 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="../meta/schnitzler-briefe-schematron.sch" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
 <TEI xmlns="http://www.tei-c.org/ns/1.0"
      xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-     xsi:schemaLocation="http://www.tei-c.org/ns/1.0 ../meta/asbwschema.xsd"
+     xsi:schemaLocation="http://www.tei-c.org/ns/1.0 ../meta/schnitzler-briefe-schema.xsd"
      xml:id="L01622"
      xml:base="https://id.acdh.oeaw.ac.at/schnitzler/schnitzler-briefe/editions">
    <teiHeader>
@@ -183,8 +184,7 @@
             <p rend="center">
                <pb facs="MS-SCHNITZLER-B-0008-B-00002-000-00102"/>
                <hi rend="pre-print">
-                  <rs type="place" ref="#pmb734">Bayreuth</rs>, <rs ref="#pmb51375" type="place">Kgl. <anchor type="textConst" xml:id="T_L01622-1"/>Opern<note xml:id="T_L01622-1h" type="textConst">Umrahmt, ein Pfeil weist auf »Das
-                        andere«.</note>haus</rs>.</hi>
+                  <rs type="place" ref="#pmb734">Bayreuth</rs>, <rs ref="#pmb51375" type="place">Kgl. <anchor type="textConst" xml:id="T_L01622-1"/>Opern<note xml:id="T_L01622-1h" type="textConst" corresp="T_L01622-1"/>haus</rs>.</hi>
             </p>
             <p rend="center">
                <hi rend="pre-print">Trompeterloge</hi>
@@ -192,11 +192,15 @@
          </div>
          <div type="writingSession" n="1">
             <opener>
-               <dateline><pb facs="MS-SCHNITZLER-B-0008-B-00002-000-00102"/>
+               <dateline>
+                  <pb facs="MS-SCHNITZLER-B-0008-B-00002-000-00102"/>
                   <date when="1906-08-05">5/VIII 06</date>
                </dateline>
             </opener>
-            <p>Das <rs type="place" ref="#pmb51377" subtype="implied">andere</rs> ist <anchor type="commentary" xml:id="K_L01622-1"/>auch eins<note xml:id="K_L01622-1h" type="commentary">Er spielt auf das <rs type="place" ref="#pmb51377">Festspielhaus</rs> an, in dem die <rs type="person" ref="#pmb13024">Wagner</rs>-Inszenierungen stattfinden.</note>. Ich war gestern <hi n="2" rend="underline">im</hi>
+            <p>Das <rs type="place" ref="#pmb51377" subtype="implied">andere</rs> ist <anchor type="commentary" xml:id="K_L01622-1"/>auch eins<note xml:id="K_L01622-1h" type="commentary" corresp="K_L01622-1">
+                  <rs type="place" ref="#pmb51377">Festspielhaus</rs>
+                  <rs type="person" ref="#pmb13024">Wagner</rs>
+               </note>. Ich war gestern <hi n="2" rend="underline">im</hi>
                <space unit="chars" quantity="1"/>
                <rs type="work" ref="#pmb33031">Parsifal</rs>.</p>
             <closer>

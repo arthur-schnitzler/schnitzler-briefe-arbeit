@@ -1,7 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="../meta/schnitzler-briefe-schematron.sch" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
 <TEI xmlns="http://www.tei-c.org/ns/1.0"
      xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-     xsi:schemaLocation="http://www.tei-c.org/ns/1.0 ../meta/asbwschema.xsd"
+     xsi:schemaLocation="http://www.tei-c.org/ns/1.0 ../meta/schnitzler-briefe-schema.xsd"
      xml:id="L03039"
      xml:base="https://id.acdh.oeaw.ac.at/schnitzler/schnitzler-briefe/editions">
    <teiHeader>
@@ -161,23 +162,25 @@
                <salute>lieber,</salute> wollen Sie <date when="1895-10-15">heut</date>
                <space unit="chars" quantity="1"/>
                <time>Abend</time> mit mir in eine verborgne <rs type="place" subtype="implied" ref="#pmb14" cert="medium">Loge</rs> jener <anchor type="commentary" xml:id="K_L03039-1"/>
-               <rs type="work" ref="#pmb29917">Liebelei</rs>-Auffühg<note type="commentary" xml:id="K_L03039-1h">Drei Dienstage, an denen <rs type="person" ref="#pmb2121">Schnitzler</rs> in <rs type="work" ref="#pmb29917">Liebelei</rs>-Aufführungen
-                  war, bieten sich zur Datierung dieses Korrespondenzstücks an. Bei der am <ref type="schnitzler-tagebuch" target="1901-01-15" subtype="date-only"/> handelte
-                  es sich um eine Inszenierung von Schauspielschülerinnen im <rs type="place" ref="#pmb143138">Kaufmännischen Verein</rs>. Hier scheint die Existenz einer
-                     »<quote>geheimen Loge</quote>« abwegig. Zur Aufführung, die <rs type="person" ref="#pmb2121">Schnitzler</rs>
-                  am <ref type="schnitzler-tagebuch" target="1896-06-09" subtype="date-only"/> besuchte,
-                  gibt es einen Brief, den <rs type="person" ref="#pmb2167">Salten</rs> an diesem Tag <rs type="person" ref="#pmb2121">Schnitzler</rs> sandte, <ref type="schnitzler-briefe" target="L03172"/>. Darin deutete er an, am <time>Abend</time>
-                  möglicherweise verhindert zu sein, doch sind nicht alle Fragen des vorliegenden Schreibens
-                  beantwortet, so dass dieser Brief unabhängig vom vorliegenden Schreiben entstanden sein dürfte und 
-                  sich nicht zwingend eine Datierung daraus ergibt. Am wahrscheinlichsten scheint es, dass
-                  <rs type="person" ref="#pmb2121">Schnitzler</rs> unmittelbar nach der Uraufführung die 4. Aufführung
-                  besuchte und sich nicht zuletzt deshalb nicht zeigen wollte, weil er bereits nach dem 2. Akt
-                  die Vorstellung verließ.</note> gehen <add place="above">(<anchor type="commentary" xml:id="K_L03039-2"/>
+               <rs type="work" ref="#pmb29917">Liebelei</rs>-Auffühg<note type="commentary" xml:id="K_L03039-1h" corresp="K_L03039-1">
+                  <rs type="person" ref="#pmb2121">Schnitzler</rs>
+                  <rs type="work" ref="#pmb29917">Liebelei</rs>
+                  <ref type="schnitzler-tagebuch" target="1901-01-15" subtype="date-only"/>
+                  <rs type="place" ref="#pmb143138">Kaufmännischen Verein</rs>
+                  <quote>geheimen Loge</quote>
+                  <rs type="person" ref="#pmb2121">Schnitzler</rs>
+                  <ref type="schnitzler-tagebuch" target="1896-06-09" subtype="date-only"/>
+                  <rs type="person" ref="#pmb2167">Salten</rs>
+                  <rs type="person" ref="#pmb2121">Schnitzler</rs>
+                  <ref type="schnitzler-briefe" target="L03172"/>
+                  <time>Abend</time>
+                  <rs type="person" ref="#pmb2121">Schnitzler</rs>
+               </note> gehen <add place="above">(<anchor type="commentary" xml:id="K_L03039-2"/>
                   <time>½ 8</time>
-                  <note type="commentary" xml:id="K_L03039-2h">Die Aufführung war zwar für 7 Uhr
-                     angesetzt, aber zwischen <rs type="work" ref="#pmb31711">Rechte der Seele</rs>
-                     und <rs type="work" ref="#pmb29917">Liebelei</rs> fand eine längere Pause
-                     statt.</note>)</add>, ſo laſſen Sie michs gütigſt am <time>frühen
+                  <note type="commentary" xml:id="K_L03039-2h" corresp="K_L03039-2">
+                     <rs type="work" ref="#pmb31711">Rechte der Seele</rs>
+                     <rs type="work" ref="#pmb29917">Liebelei</rs>
+                  </note>)</add>, ſo laſſen Sie michs gütigſt am <time>frühen
                   Nachmittg</time> wiſſen. Ich hole <subst>
                   <del rend="overwritten">
                      <unclear>ſ</unclear>
@@ -186,7 +189,7 @@
                </subst>ie da<c rendition="#gemination-n"/>, we<c rendition="#gemination-n"/>s Ihnen
                   <pb facs="Wienbibliothek_AS_FS_2823323"/>recht iſt, um <anchor type="commentary" xml:id="K_L03039-3"/>
                <time>¼ 8</time>
-               <note type="commentary" xml:id="K_L03039-3h">19 Uhr 15</note> oder <time>½</time> in
+               <note type="commentary" xml:id="K_L03039-3h" corresp="K_L03039-3"/> oder <time>½</time> in
                Ihrer <rs type="place" subtype="implied" ref="#pmb417">Wohnung</rs> ab?</p>
             <closer>Herzlichſt <lb/>Ihr <lb/>
                <signed>Arth</signed>
@@ -195,16 +198,21 @@
                <p>
                   <pb facs="Wienbibliothek_AS_FS_2823324"/>Und noch eins: ich habe <anchor type="commentary" xml:id="K_L03039-4"/>
                   <date when="1896-06-08">geſtern</date>
-                  <note type="commentary" xml:id="K_L03039-4h">Wieso <rs type="person" ref="#pmb2121">Schnitzler</rs> für den Vorabend ein Alibi benötigte,
-                     erschließt sich aus dem <rs type="work" ref="#pmb33243">Tagebuch</rs>
-                     nicht.</note> mit Ihnen im <anchor type="commentary" xml:id="K_L03039-5"/>
+                  <note type="commentary" xml:id="K_L03039-4h" corresp="K_L03039-4">
+                     <rs type="person" ref="#pmb2121">Schnitzler</rs>
+                     <rs type="work" ref="#pmb33243">Tagebuch</rs>
+                  </note> mit Ihnen im <anchor type="commentary" xml:id="K_L03039-5"/>
                   <rs type="org" ref="#pmb29752" subtype="implied" cert="low">Club</rs>
-                  <note type="commentary" xml:id="K_L03039-5h">Welcher Klub gemeint war, lässt sich
-                     nicht mit Sicherheit bestimmen. Da <rs type="person" ref="#pmb2121">Schnitzler</rs> seit zumindest <ref type="schnitzler-tagebuch" subtype="date-only" target="1889-10-13"/> Veranstaltungen des Clubs der <rs type="org" ref="#pmb29752">Concordia</rs> besuchte, könnte dieser gemeint
-                     sein. In den <rs type="org" ref="#pmb43143">Wiener Schachclub</rs> trat er erst
-                        <date>Ende 1899</date> ein, was sich mit der gegenwärtigen Datierung nicht
-                     vereinbaren lässt. Die Unsicherheit, welche Clubs <rs type="person" ref="#pmb2121">Schnitzler</rs> frequentierte, kann auch als Hinweis auf die
-                     durchaus beträchtlichen Lücken im verfügbaren Wissen über <rs type="person" ref="#pmb2121">Schnitzler</rs> genommen werden, die trotz des <rs type="work" ref="#pmb33243">Tagebuchs</rs> exisitieren.</note> soupirt.</p>
+                  <note type="commentary" xml:id="K_L03039-5h" corresp="K_L03039-5">
+                     <rs type="person" ref="#pmb2121">Schnitzler</rs>
+                     <ref type="schnitzler-tagebuch" subtype="date-only" target="1889-10-13"/>
+                     <rs type="org" ref="#pmb29752">Concordia</rs>
+                     <rs type="org" ref="#pmb43143">Wiener Schachclub</rs>
+                     <date>Ende 1899</date>
+                     <rs type="person" ref="#pmb2121">Schnitzler</rs>
+                     <rs type="person" ref="#pmb2121">Schnitzler</rs>
+                     <rs type="work" ref="#pmb33243">Tagebuchs</rs>
+                  </note> soupirt.</p>
             </postscript>
          </div>
       </body>

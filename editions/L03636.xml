@@ -1,7 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="../meta/schnitzler-briefe-schematron.sch" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
 <TEI xmlns="http://www.tei-c.org/ns/1.0"
      xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-     xsi:schemaLocation="http://www.tei-c.org/ns/1.0 ../meta/asbwschema.xsd"
+     xsi:schemaLocation="http://www.tei-c.org/ns/1.0 ../meta/schnitzler-briefe-schema.xsd"
      xml:id="L03636"
      xml:base="https://id.acdh.oeaw.ac.at/schnitzler/schnitzler-briefe/editions">
    <teiHeader>
@@ -123,7 +124,6 @@
                      <biblScope unit="pp">363</biblScope>
                   </monogr>
                </biblStruct>
-               
             </listBibl>
          </sourceDesc>
       </fileDesc>
@@ -166,10 +166,12 @@
                   <rs type="place" ref="#pmb50">Vienne (Autriche)</rs>
                </addrLine>
                <addrLine>
-                  <rs type="place" ref="#pmb168815">XVIII. <anchor type="commentary" xml:id="K_L03636-1"/>Sternwartestrasse 72<note type="commentary" xml:id="K_L03636-1h">
-                        <rs type="person" ref="#pmb13212">Zweig</rs> wechselt
-                        bei der Adressierung seiner Schreiben an <rs type="person" ref="#pmb2121">Schnitzler</rs> immer wieder zwischen der falschen Hausnummer
-                           »<quote>72</quote>« und der richtigen »<quote>71</quote>«.</note>
+                  <rs type="place" ref="#pmb168815">XVIII. <anchor type="commentary" xml:id="K_L03636-1"/>Sternwartestrasse 72<note type="commentary" xml:id="K_L03636-1h" corresp="K_L03636-1">
+                        <rs type="person" ref="#pmb13212">Zweig</rs>
+                        <rs type="person" ref="#pmb2121">Schnitzler</rs>
+                        <quote>72</quote>
+                        <quote>71</quote>
+                     </note>
                   </rs>
                </addrLine>
             </address>
@@ -189,17 +191,31 @@
                <salute>Verehrter Herr Doktor,</salute>
                ich sende Ihnen und Ihrer werten Frau <rs type="person" ref="#pmb2173" subtype="implied">Gemahlin</rs> von hier aus die herzlichsten Abschiedsgrüsse vor
                meiner <anchor type="commentary" xml:id="K_L03636-2"/>
-               <rs type="place" ref="#pmb175">Amerika</rs>fahrt<note type="commentary" xml:id="K_L03636-2h">Vom
-                     <date>22. 2.</date> bis zum <date>21. 4. 1911</date> unternahm <rs type="person" ref="#pmb13212">Stefan Zweig</rs> eine <rs type="place" ref="#pmb175">amerikanische</rs> Reise, beginnend in <rs type="place" ref="#pmb44053">New York</rs>. Von dort reiste er in mehrere Städte an der <rs type="place" ref="#pmb91362">nordamerikanischen</rs> Ostküste, dann nach <rs type="place" ref="#pmb880">Chicago</rs> und <rs type="place" ref="#pmb45794">Kanada</rs>, um über <rs type="place" ref="#pmb46765">Bermuda</rs> und <rs type="place" ref="#pmb39943">Kuba</rs> bis nach <rs type="place" ref="#pmb57051">Südamerika</rs> zu gelangen.</note>: Gestern sprach ich <rs type="person" ref="#pmb156849">Paul Morisse</rs>, den Secretär des »<rs type="org" ref="#pmb34301">Mercure de France</rs>«, der sehr gerne – ich erzählte ihm davon –
+               <rs type="place" ref="#pmb175">Amerika</rs>fahrt<note type="commentary" xml:id="K_L03636-2h" corresp="K_L03636-2">
+                  <date>22. 2.</date>
+                  <date>21. 4. 1911</date>
+                  <rs type="person" ref="#pmb13212">Stefan Zweig</rs>
+                  <rs type="place" ref="#pmb175">amerikanische</rs>
+                  <rs type="place" ref="#pmb44053">New York</rs>
+                  <rs type="place" ref="#pmb91362">nordamerikanischen</rs>
+                  <rs type="place" ref="#pmb880">Chicago</rs>
+                  <rs type="place" ref="#pmb45794">Kanada</rs>
+                  <rs type="place" ref="#pmb46765">Bermuda</rs>
+                  <rs type="place" ref="#pmb39943">Kuba</rs>
+                  <rs type="place" ref="#pmb57051">Südamerika</rs>
+               </note>: Gestern sprach ich <rs type="person" ref="#pmb156849">Paul Morisse</rs>, den Secretär des »<rs type="org" ref="#pmb34301">Mercure de France</rs>«, der sehr gerne – ich erzählte ihm davon –
                das <rs type="work" ref="#pmb30207">Weite Land</rs> übersetzen möchte und sich an Sie
                wenden will. Ich kann ihn <hi rend="underline" n="1">aufrichtigst</hi>
                   empfehlen<supplied>:</supplied>
                <space unit="chars" quantity="1"/>
                <pb facs="MS-SCHNITZLER-B-00118-000-00032"/>er ist sehr tüchtig und hat auch die
                nötigen Verbindungen mit den Theatern. Es  ist mir leid, dass ich über den <anchor type="commentary" xml:id="K_L03636-3"/>
-               <rs type="place" ref="#pmb168">Berliner</rs> Erfolg<note type="commentary" xml:id="K_L03636-3h">Am
-                     <date>23. 2. 1911</date> gab <rs type="person" ref="#pmb2173">Olga
-                     Schnitzler</rs> ein Gesangskonzert im <rs type="place" ref="#pmb92337">Klindworth-Scharwenka-Saal</rs>.</note> Ihrer Frau <rs type="person" ref="#pmb2173" subtype="implied">Gemahlin</rs> nicht mehr hören kann, hoffentlich
+               <rs type="place" ref="#pmb168">Berliner</rs> Erfolg<note type="commentary" xml:id="K_L03636-3h" corresp="K_L03636-3">
+                  <date>23. 2. 1911</date>
+                  <rs type="person" ref="#pmb2173">Olga
+                     Schnitzler</rs>
+                  <rs type="place" ref="#pmb92337">Klindworth-Scharwenka-Saal</rs>
+               </note> Ihrer Frau <rs type="person" ref="#pmb2173" subtype="implied">Gemahlin</rs> nicht mehr hören kann, hoffentlich
                dann bald in <rs type="place" ref="#pmb50">Wien</rs>!</p>
             <closer>In Treue Ihr ergebener<lb/>
                <signed>Stefan Zweig</signed>

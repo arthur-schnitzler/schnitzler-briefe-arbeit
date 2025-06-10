@@ -1,7 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="../meta/schnitzler-briefe-schematron.sch" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
 <TEI xmlns="http://www.tei-c.org/ns/1.0"
      xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-     xsi:schemaLocation="http://www.tei-c.org/ns/1.0 ../meta/asbwschema.xsd"
+     xsi:schemaLocation="http://www.tei-c.org/ns/1.0 ../meta/schnitzler-briefe-schema.xsd"
      xml:id="L02917"
      xml:base="https://id.acdh.oeaw.ac.at/schnitzler/schnitzler-briefe/editions">
    <teiHeader>
@@ -173,19 +174,30 @@
             <p>Unſere Briefe haben ſich wieder einmal gekreuzt. Es iſt ſchön, daß Du in den <rs type="place" subtype="implied" ref="#pmb117">Bergen</rs> biſt, in guter Luft und
                in Ruhe. Wie der <anchor type="commentary" xml:id="K_L02917-1"/>
                <rs type="place" subtype="implied" ref="#pmb48761">Ort</rs> am Fuße des <rs type="place" ref="#pmb27068">Schneebergs</rs>
-               <note type="commentary" xml:id="K_L02917-1h">Es handelte sich wohl um <rs type="place" ref="#pmb48761">Puchberg am Schneeberg</rs>. <rs type="person" ref="#pmb2121">Schnitzler</rs>
-                  hielt sich dort vom <ref type="schnitzler-tagebuch" target="1900-05-24" subtype="date-only"/> bis zum <ref type="schnitzler-tagebuch" target="1900-05-27" subtype="date-only"/> auf.</note> heißt, habe ich nicht enziffern können. Über
+               <note type="commentary" xml:id="K_L02917-1h" corresp="K_L02917-1">
+                  <rs type="place" ref="#pmb48761">Puchberg am Schneeberg</rs>
+                  <rs type="person" ref="#pmb2121">Schnitzler</rs>
+                  <ref type="schnitzler-tagebuch" target="1900-05-24" subtype="date-only"/>
+                  <ref type="schnitzler-tagebuch" target="1900-05-27" subtype="date-only"/>
+               </note> heißt, habe ich nicht enziffern können. Über
                   <anchor type="commentary" xml:id="K_L02917-2"/>
                <hi rend="latintype">
                   <rs type="person" ref="#pmb12671">Schlenther</rs>
                </hi>
-               <note type="commentary" xml:id="K_L02917-2h">
-                  <rs type="person" ref="#pmb2121">Schnitzler</rs> hatte geglaubt, durch die Erfüllung aller Forderungen
-                  von <rs type="person" ref="#pmb12671">Schlenther</rs> die Annahme von <rs type="work" ref="#pmb29857">Der Schleier der Beatrice</rs>
-                  erwirkt zu haben. <rs type="person" ref="#pmb12671">Schlenther</rs> zögerte, und von <rs type="person" ref="#pmb2121">Schnitzler</rs>
-                  zunehmend unter Druck gesetzt, gab er das Stück im <date>September 1900</date> zurück. <ref type="schnitzler-bahr" target="T030017" subtype="Cf"/>.</note> ärgere Dich nicht. Aufführen muß er <rs type="work" subtype="implied" cert="strong" ref="#pmb29857">Dich</rs> ja doch, ob er will oder nicht. <del rend="strikethrough">Üb</del> Im Übrigen iſt er ein erbärmlicher Kerl und wird
-                  <anchor type="commentary" xml:id="K_L02917-3"/>nicht mehr lange das <rs type="org" ref="#pmb36247">Burgtheater</rs> dirigiren<note type="commentary" xml:id="K_L02917-3h">
-                  <rs type="person" ref="#pmb12671">Paul Schlenther</rs> blieb bis <date when="1910">1910</date> Direktor des <rs type="org" ref="#pmb36247">Burgtheaters</rs>.</note>. Daß <hi rend="latintype">
+               <note type="commentary" xml:id="K_L02917-2h" corresp="K_L02917-2">
+                  <rs type="person" ref="#pmb2121">Schnitzler</rs>
+                  <rs type="person" ref="#pmb12671">Schlenther</rs>
+                  <rs type="work" ref="#pmb29857">Der Schleier der Beatrice</rs>
+                  <rs type="person" ref="#pmb12671">Schlenther</rs>
+                  <rs type="person" ref="#pmb2121">Schnitzler</rs>
+                  <date>September 1900</date>
+                  <ref type="schnitzler-bahr" target="T030017" subtype="Cf"/>
+               </note> ärgere Dich nicht. Aufführen muß er <rs type="work" subtype="implied" cert="strong" ref="#pmb29857">Dich</rs> ja doch, ob er will oder nicht. <del rend="strikethrough">Üb</del> Im Übrigen iſt er ein erbärmlicher Kerl und wird
+                  <anchor type="commentary" xml:id="K_L02917-3"/>nicht mehr lange das <rs type="org" ref="#pmb36247">Burgtheater</rs> dirigiren<note type="commentary" xml:id="K_L02917-3h" corresp="K_L02917-3">
+                  <rs type="person" ref="#pmb12671">Paul Schlenther</rs>
+                  <date when="1910">1910</date>
+                  <rs type="org" ref="#pmb36247">Burgtheaters</rs>
+               </note>. Daß <hi rend="latintype">
                   <rs type="person" ref="#pmb10986">Brahm</rs>
                </hi>
                <space unit="chars" quantity="1"/>
@@ -199,9 +211,12 @@
             <p>Der <rs type="person" subtype="implied" ref="#pmb3554">Leiter</rs> der <rs type="place" ref="#pmb677">Breslau</rs>er <rs type="org" ref="#pmb141698">Freien
                   Literariſchen Vereinigung</rs>, <hi rend="latintype">Dr. <rs type="person" ref="#pmb3554">Erich Freund</rs>
                </hi>, der, wie Du weißt, ein Jugendfreund von mir iſt, weilt gegenwärtig in <rs type="place" ref="#pmb168">Berlin</rs> und hat mich gebeten, Dich <pb facs="HS.NZ85.1.3170_0041-0"/>zu fragen, ob Du nicht in dieſem Winter einmal
-                  <anchor type="commentary" xml:id="K_L02917-4"/>in <rs type="place" ref="#pmb677">Breslau</rs> leſen<note type="commentary" xml:id="K_L02917-4h">In dieser Saison
-                  wurde das nicht umgesetzt. Am <ref type="schnitzler-tagebuch" subtype="date-only" target="1905-12-31"/> trafen sich jedoch <rs type="person" ref="#pmb3554">Freund</rs> und <rs type="person" ref="#pmb2121">Schnitzler</rs>, um über eine
-                  solche Lesung zu sprechen, die dann am <ref type="schnitzler-tagebuch" subtype="date-only" target="1906-01-22"/> stattfand.</note> möchteſt? Die <rs type="org" subtype="implied" ref="#pmb141698">Leute</rs> haben ein ſehr vornehmes
+                  <anchor type="commentary" xml:id="K_L02917-4"/>in <rs type="place" ref="#pmb677">Breslau</rs> leſen<note type="commentary" xml:id="K_L02917-4h" corresp="K_L02917-4">
+                  <ref type="schnitzler-tagebuch" subtype="date-only" target="1905-12-31"/>
+                  <rs type="person" ref="#pmb3554">Freund</rs>
+                  <rs type="person" ref="#pmb2121">Schnitzler</rs>
+                  <ref type="schnitzler-tagebuch" subtype="date-only" target="1906-01-22"/>
+               </note> möchteſt? Die <rs type="org" subtype="implied" ref="#pmb141698">Leute</rs> haben ein ſehr vornehmes
                Vortrags-Programm, zahlen von 150 <hi rend="latintype">MK</hi> aufwärts und wären
                ſehr glücklich, Dich einmal zu haben.</p>
             <p>Sommerpläne? Wie ich Dir ſchon geſchrieben habe: Ich wüßte mir natürlich nichts
@@ -214,8 +229,12 @@
                lieb von Dir, daß Du mir etwas borgen willſt. Aber ich ſehe keine Möglichkeit, wie
                ich Dir das wiedergeben ſoll, und überdies ſchulde ich Dir noch 100 <hi rend="latintype">Kronen</hi> von <anchor type="commentary" xml:id="K_L02917-5"/>
                <rs type="place" ref="#pmb36300">Kopenhagen</rs>
-               <note type="commentary" xml:id="K_L02917-5h">Bezug auf die gemeinsame <rs type="place" ref="#pmb43570">Dänemark</rs>-Reise im <date when="1896">Sommer
-                     1896</date>, <ref type="schnitzler-briefe" target="L02784" subtype="see"/>.</note> her. Wenn alſo bis zum <date when="1900-08">Auguſt</date> nicht ein Wunder
+               <note type="commentary" xml:id="K_L02917-5h" corresp="K_L02917-5">
+                  <rs type="place" ref="#pmb43570">Dänemark</rs>
+                  <date when="1896">Sommer
+                     1896</date>
+                  <ref type="schnitzler-briefe" target="L02784" subtype="see"/>
+               </note> her. Wenn alſo bis zum <date when="1900-08">Auguſt</date> nicht ein Wunder
                geſchieht, werde ich in <rs type="place" ref="#pmb168">Berlin</rs> bleiben
                müſſen.</p>
             <p>Schreib’ mir bald und ſei von Herzen gegrüßt!</p>

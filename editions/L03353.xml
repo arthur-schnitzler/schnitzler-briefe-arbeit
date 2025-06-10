@@ -1,7 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="../meta/schnitzler-briefe-schematron.sch" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
 <TEI xmlns="http://www.tei-c.org/ns/1.0"
      xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-     xsi:schemaLocation="http://www.tei-c.org/ns/1.0 ../meta/asbwschema.xsd"
+     xsi:schemaLocation="http://www.tei-c.org/ns/1.0 ../meta/schnitzler-briefe-schema.xsd"
      xml:id="L03353"
      xml:base="https://id.acdh.oeaw.ac.at/schnitzler/schnitzler-briefe/editions">
    <teiHeader>
@@ -161,9 +162,14 @@
                   <pb facs="MS-SCHNITZLER-B-00089-A-00002-000-00097-R"/>
                   <anchor type="commentary" xml:id="K_L03353-1"/>
                   <date when="1903-11-09">Montag</date>
-                  <note type="commentary" xml:id="K_L03353-1h">Da der Brief <rs type="person" ref="#pmb2121">Schnitzlers</rs>, auf den <rs type="person" ref="#pmb2167">Salten</rs> hier reagierte, auf den <ref type="schnitzler-briefe" target="L02988" subtype="date-only"/> datiert und <rs type="person" ref="#pmb2121">Schnitzler</rs> bereits am <ref type="schnitzler-briefe" target="L02989" subtype="date-only"/> antwortete, ist dieser Brief auf den
-                        <ref type="schnitzler-briefe" target="L03353" subtype="date-only"/>
-                     datierbar.</note>
+                  <note type="commentary" xml:id="K_L03353-1h" corresp="K_L03353-1">
+                     <rs type="person" ref="#pmb2121">Schnitzlers</rs>
+                     <rs type="person" ref="#pmb2167">Salten</rs>
+                     <ref type="schnitzler-briefe" target="L02988" subtype="date-only"/>
+                     <rs type="person" ref="#pmb2121">Schnitzler</rs>
+                     <ref type="schnitzler-briefe" target="L02989" subtype="date-only"/>
+                     <ref type="schnitzler-briefe" target="L03353" subtype="date-only"/>
+                  </note>
                   <space unit="chars" quantity="1"/>
                   <time>Abds</time>
                </dateline>
@@ -229,11 +235,12 @@
                <anchor type="commentary" xml:id="K_L03353-2"/>
                <rs type="work" ref="#pmb143996" subtype="implied">schrieb ich</rs> dann in der »<rs type="work" ref="#pmb39950">W<hi rend="superscript">r</hi> Allg. Ztg</rs>« über
                die <rs type="work" ref="#pmb29857">Beatrice</rs>
-               <note type="commentary" xml:id="K_L03353-2h">
+               <note type="commentary" xml:id="K_L03353-2h" corresp="K_L03353-2">
                   <bibl>
                      <rs type="person" ref="#pmb2167">Felix Salten</rs>: <rs type="work" ref="#pmb143996">»Der Schleier der Beatrice«. (Zum erstenmale aufgeführt im
                         Lobe-Theater zu Breslau)</rs>. In: <rs type="work" ref="#pmb39950">Wiener
-                        Allgemeine Zeitung. 6 Uhr-Blatt</rs>, Nr. 6832, <date when="1900-12-16">16. 12. 1900</date>, S. 10</bibl>.</note>: »<rs type="work" subtype="implied" ref="#pmb143996">Und demnach kann auch der ›<rs type="work" ref="#pmb29857">Schl. d. B.</rs>‹ nach der eingangs erwähnten Formel declinirt
+                        Allgemeine Zeitung. 6 Uhr-Blatt</rs>, Nr. 6832, <date when="1900-12-16">16. 12. 1900</date>, S. 10</bibl>
+               </note>: »<rs type="work" subtype="implied" ref="#pmb143996">Und demnach kann auch der ›<rs type="work" ref="#pmb29857">Schl. d. B.</rs>‹ nach der eingangs erwähnten Formel declinirt
                   werden: ›Schnitzler – Vorstadt – süßes Mädel‹. Der <hi rend="underline" n="1">ganze Ideenkreis</hi>, der <rs type="work" ref="#pmb29935" subtype="implied">Anatol</rs> und seine Mädchen, der die <rs type="work" subtype="implied" ref="#pmb29917">Christine</rs> der <rs type="work" ref="#pmb29917">Liebelei</rs>, der alle die <hi rend="underline" n="1">kleinen und großen</hi>
                   Dialoge, Novellen und Stücke Schnitzlers erfüllt, <hi rend="underline" n="1">erfüllt auch dieses <rs type="work" subtype="implied" ref="#pmb29857">Drama</rs>
                   </hi>. <rs type="work" subtype="implied" ref="#pmb29935">Anatol</rs>
@@ -305,33 +312,51 @@
                <space unit="chars" quantity="1"/>
                <rs type="person" ref="#pmb10815">Bahr</rs> hat <rs type="work" ref="#pmb134137" subtype="implied">geschrieben</rs>: <anchor type="commentary" xml:id="K_L03353-3"/>
                <rs type="work" subtype="implied" ref="#pmb134137">Schnitzler ist ein Virtuos</rs> –
-               auf <hi rend="underline" n="1">einer</hi> Saite.<note type="commentary" xml:id="K_L03353-3h">Wörtlich lautet die Stelle: »<quote>
+               auf <hi rend="underline" n="1">einer</hi> Saite.<note type="commentary" xml:id="K_L03353-3h" corresp="K_L03353-3">
+                  <quote>
                      <rs type="work" subtype="implied" ref="#pmb134137">Er ist ein großer Virtuose,
                         aber einer kleinen Note.</rs>
-                  </quote>« <bibl>
-                     <rs type="person" ref="#pmb10815">Hermann Bahr</rs>: <rs type="work" ref="#pmb134137">Das junge Oesterreich. II</rs>. In: <rs type="work" ref="#pmb41471">Deutsche Zeitung</rs>, Jg. 23, Nr. 7813, <date when="1893-09-27">27. 9. 1893</date>, Morgenausgabe, S. 1–3</bibl>. <ref type="schnitzler-bahr" target="T030009" subtype="See"/>. <rs type="person" ref="#pmb2121">Schnitzler</rs> hatte sich damals sehr wohl darüber geärgert,
-                     <ref type="schnitzler-tagebuch" target="1893-09-27" subtype="cf"/>.</note> Und
+                  </quote>
+                  <bibl>
+                     <rs type="person" ref="#pmb10815">Hermann Bahr</rs>: <rs type="work" ref="#pmb134137">Das junge Oesterreich. II</rs>. In: <rs type="work" ref="#pmb41471">Deutsche Zeitung</rs>, Jg. 23, Nr. 7813, <date when="1893-09-27">27. 9. 1893</date>, Morgenausgabe, S. 1–3</bibl>
+                  <ref type="schnitzler-bahr" target="T030009" subtype="See"/>
+                  <rs type="person" ref="#pmb2121">Schnitzler</rs>
+                  <ref type="schnitzler-tagebuch" target="1893-09-27" subtype="cf"/>
+               </note> Und
                   <anchor type="commentary" xml:id="K_L03353-4"/>
                <rs type="person" ref="#pmb11673">
                   <rs type="work" subtype="implied" ref="#pmb118777">Herzl</rs>
                </rs>
-               <note type="commentary" xml:id="K_L03353-4h">»<quote>
+               <note type="commentary" xml:id="K_L03353-4h" corresp="K_L03353-4">
+                  <quote>
                      <rs type="work" subtype="implied" ref="#pmb118777">Daß es noch größere Fragen
                         gebe, als ob die Mitzi mit dem Rudi vom Ferdl plötzlich verlassen worden
                         sei, scheint er in seinen Werken nicht zu wissen.</rs>
-                  </quote>« <bibl>
+                  </quote>
+                  <bibl>
                      <rs type="person" ref="#pmb11673">H.</rs> [ = <rs type="person" ref="#pmb11673">Theodor Herzl</rs>]: <rs type="work" ref="#pmb118777">Feuilleton.
-                        Carl-Theater. (»Freiwild«, Schauspiel von Arthur Schnitzler)</rs>. In: <rs type="work" ref="#pmb36374">Neue Freie Presse</rs>, Nr. 12.024, <date when="1898-02-13">13. 2. 1898</date>, S. 1–2</bibl>. <rs type="person" ref="#pmb2121">Schnitzler</rs> hatte sich auch über dieses <rs type="work" subtype="implied" ref="#pmb118777">Feuilleton</rs> geärgert, <ref type="schnitzler-tagebuch" target="1898-02-13" subtype="cf"/> und <ref type="schnitzler-briefe" target="L02841"/>.</note> und <anchor type="commentary" xml:id="K_L03353-5"/>
+                        Carl-Theater. (»Freiwild«, Schauspiel von Arthur Schnitzler)</rs>. In: <rs type="work" ref="#pmb36374">Neue Freie Presse</rs>, Nr. 12.024, <date when="1898-02-13">13. 2. 1898</date>, S. 1–2</bibl>
+                  <rs type="person" ref="#pmb2121">Schnitzler</rs>
+                  <rs type="work" subtype="implied" ref="#pmb118777">Feuilleton</rs>
+                  <ref type="schnitzler-tagebuch" target="1898-02-13" subtype="cf"/>
+                  <ref type="schnitzler-briefe" target="L02841"/>
+               </note> und <anchor type="commentary" xml:id="K_L03353-5"/>
                <rs type="person" ref="#pmb11485">
                   <rs type="work" subtype="implied" ref="#pmb144087">Goldmann</rs>
                </rs>
-               <note type="commentary" xml:id="K_L03353-5h">
+               <note type="commentary" xml:id="K_L03353-5h" corresp="K_L03353-5">
                   <rs type="person" ref="#pmb11485">Goldmanns</rs>
                   <space unit="chars" quantity="1"/>
-                  <rs type="work" subtype="implied" ref="#pmb144087">Kritik</rs> an der <rs type="place" ref="#pmb168">Berlin</rs>er Aufführung von <rs type="work" ref="#pmb29857">Der Schleier der
-                     Beatrice</rs> endete damit, dass er das <rs type="work" ref="#pmb29857">Stück</rs> als »<quote>
+                  <rs type="work" subtype="implied" ref="#pmb144087">Kritik</rs>
+                  <rs type="place" ref="#pmb168">Berlin</rs>
+                  <rs type="work" ref="#pmb29857">Der Schleier der
+                     Beatrice</rs>
+                  <rs type="work" ref="#pmb29857">Stück</rs>
+                  <quote>
                      <rs type="work" subtype="implied" ref="#pmb144087">verfehlt</rs>
-                  </quote>« bezeichnete und über <rs type="person" ref="#pmb2121">Schnitzlers</rs> Zukunft als großer Dichter schrieb: »<quote>
+                  </quote>
+                  <rs type="person" ref="#pmb2121">Schnitzlers</rs>
+                  <quote>
                      <rs type="work" subtype="implied" ref="#pmb144087">Und die Frage, ob es ihm
                         gelingen wird, das hohe Ziel zu erreichen, nach dem er mit so schönem
                         Bemühen strebt, hängt ab von der Frage, ob er die Kraft haben wird, aus der
@@ -339,11 +364,14 @@
                         hauptsächlich bewegt hat und in der die Stimmungen – die Stimmungen, die aus
                         den kleinen Gefühlen hervorgehen – eine allzu wichtige Rolle spielen, den
                         Weg zu finden ins große Leben hinein […].</rs>
-                  </quote>« <bibl>
+                  </quote>
+                  <bibl>
                      <rs type="person" ref="#pmb11485">Paul Goldmann</rs>: <rs type="work" ref="#pmb144087">Berliner Theater. (»Der Schleier der Beatrice« von Arthur
                         Schnitzler)</rs>. In: <rs type="work" ref="#pmb36374">Neue Freie
                         Presse</rs>, Nr. 13.851, <date when="1903-03-19">19. 3. 1903</date>,
-                     Morgenblatt, S. 1–5</bibl>. <ref type="schnitzler-tagebuch" target="1903-03-19" subtype="See"/>.</note> schrieben, Schnitzler kann nichts als das süße Mädel.
+                     Morgenblatt, S. 1–5</bibl>
+                  <ref type="schnitzler-tagebuch" target="1903-03-19" subtype="See"/>
+               </note> schrieben, Schnitzler kann nichts als das süße Mädel.
                   <hi rend="underline" n="1">Nichts</hi> davon steht in meinem <rs type="work" ref="#pmb31401" subtype="implied">Feuilleton</rs>, wie nichts davon in meinem
                Urtheil über Sie <subst>
                   <del rend="overwritten">
@@ -435,9 +463,9 @@
                   <rs type="work" subtype="implied" ref="#pmb29855">Buch</rs> zu Hilfe zu kommen. Es
                erschien in der Verbotswoche, und unter dem Widerstand <hi rend="underline" n="1">aller</hi>
                <space unit="chars" quantity="1"/>
-               <anchor type="commentary" xml:id="K_L03353-6"/>Faktoren<note type="commentary" xml:id="K_L03353-6h">Geschäftsführer</note>. Erinnern Sie sich, dass Ihr <anchor type="commentary" xml:id="K_L03353-7"/>eigener <rs type="person" ref="#pmb2284" subtype="implied">Schwager</rs>
-               <note type="commentary" xml:id="K_L03353-7h">
-                  <ref type="schnitzler-tagebuch" target="1903-04-05" subtype="See"/>.
+               <anchor type="commentary" xml:id="K_L03353-6"/>Faktoren<note type="commentary" xml:id="K_L03353-6h" corresp="K_L03353-6"/>. Erinnern Sie sich, dass Ihr <anchor type="commentary" xml:id="K_L03353-7"/>eigener <rs type="person" ref="#pmb2284" subtype="implied">Schwager</rs>
+               <note type="commentary" xml:id="K_L03353-7h" corresp="K_L03353-7">
+                  <ref type="schnitzler-tagebuch" target="1903-04-05" subtype="See"/>
                </note> erklärt hat, (was er <date when="1903-11-09">heute</date> wieder beim
                   Prof. <rs type="person" ref="#pmb12790">Singer</rs> that) »über so eine
                Schweinerei« schreibt man nicht. Diese Worte waren die Parole in allen <rs type="place" ref="#pmb50">Wien</rs>er Redactionen<unclear>,</unclear> und Niemand
@@ -470,10 +498,12 @@
                   <unclear>m</unclear>i<unclear>r</unclear>, ich hätte Sie in ein Kastel
                gesperrt!</p>
             <p>Ich frage mich, sehr betroffen, wie ich Ihnen gestehen will, ob denn die zwölf Jahre
-               intimer Gemeinschaft nicht bei Ihnen standen, als <anchor type="commentary" xml:id="K_L03353-8"/>Sie<note type="commentary" xml:id="K_L03353-8h">In der
-                  Vorlage steht: »<quote>sie</quote>«.</note> diese Zeilen lasen, und ob sie so
-               schwach waren, <del rend="strikethrough">Ihnen</del> dass <anchor type="commentary" xml:id="K_L03353-9"/>sie<note type="commentary" xml:id="K_L03353-9h">In der
-                  Vorlage steht: »<quote>Sie</quote>«.</note> Ihnen nicht helfen konnten, de<subst>
+               intimer Gemeinschaft nicht bei Ihnen standen, als <anchor type="commentary" xml:id="K_L03353-8"/>Sie<note type="commentary" xml:id="K_L03353-8h" corresp="K_L03353-8">
+                  <quote>sie</quote>
+               </note> diese Zeilen lasen, und ob sie so
+               schwach waren, <del rend="strikethrough">Ihnen</del> dass <anchor type="commentary" xml:id="K_L03353-9"/>sie<note type="commentary" xml:id="K_L03353-9h" corresp="K_L03353-9">
+                  <quote>Sie</quote>
+               </note> Ihnen nicht helfen konnten, de<subst>
                   <del rend="strikethrough">m</del>
                   <add place="inline">n</add>
                </subst> Sinn dieser Worte zu entziffern, die wahre Meinung, den wahren Sinn, wenn
@@ -508,8 +538,8 @@
                und zum Überdruß gewesen, wie jetzt, seit ich Ihren Brief empfing.</p>
             <p>Ich weiß nach dem Vorgefallenen nicht, ob ich Sie durch diesen langen Brief auch nur
                in einem Punct überzeugt habe. Ich weiß ja jetzt auch garnichts mehr, und ich
-               überlege mir, ob es einen Werth für Sie haben kann, wenn ich jetzt noch Ihrer <anchor type="commentary" xml:id="K_L03353-10"/>Vorlesung<note type="commentary" xml:id="K_L03353-10h">
-                  <ref type="schnitzler-tagebuch" subtype="See" target="1903-11-12"/>.
+               überlege mir, ob es einen Werth für Sie haben kann, wenn ich jetzt noch Ihrer <anchor type="commentary" xml:id="K_L03353-10"/>Vorlesung<note type="commentary" xml:id="K_L03353-10h" corresp="K_L03353-10">
+                  <ref type="schnitzler-tagebuch" subtype="See" target="1903-11-12"/>
                </note> beiwohne. Nicht als ob mein Urtheil über Sie befangen oder schwankend gemacht
                werden könnte, aber wie ich Ihnen nun meine Meinung formuliren soll, und wie Sie sie
                aufnehmen, dessen bin ich jetzt nicht mehr sicher, und glaube, wir wollen es diesmal

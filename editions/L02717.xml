@@ -1,7 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="../meta/schnitzler-briefe-schematron.sch" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
 <TEI xmlns="http://www.tei-c.org/ns/1.0"
      xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-     xsi:schemaLocation="http://www.tei-c.org/ns/1.0 ../meta/asbwschema.xsd"
+     xsi:schemaLocation="http://www.tei-c.org/ns/1.0 ../meta/schnitzler-briefe-schema.xsd"
      xml:id="L02717"
      xml:base="https://id.acdh.oeaw.ac.at/schnitzler/schnitzler-briefe/editions">
    <teiHeader>
@@ -227,14 +228,19 @@
                    ref="#pmb29823 #pmb29935"
                    subtype="implied"
                    cert="low">Bücher</rs>
-               <note type="commentary" xml:id="K_L02717-1h">Es könnte sich um Exemplare von <rs type="work" ref="#pmb29823">Das Märchen</rs> und <rs type="work" ref="#pmb29935">Anatol</rs> handeln, die von <rs type="person" ref="#pmb11485">Goldmann</rs> in <rs type="place" ref="#pmb182">Paris</rs> bei Theatern
-                  eingereicht werden sollten (<ref type="schnitzler-briefe" target="L02719" subtype="cf"/>).</note>. Und noch beſonders danke ich Dir für die paar frohen
+               <note type="commentary" xml:id="K_L02717-1h" corresp="K_L02717-1">
+                  <rs type="work" ref="#pmb29823">Das Märchen</rs>
+                  <rs type="work" ref="#pmb29935">Anatol</rs>
+                  <rs type="person" ref="#pmb11485">Goldmann</rs>
+                  <rs type="place" ref="#pmb182">Paris</rs>
+                  <ref type="schnitzler-briefe" target="L02719" subtype="cf"/>
+               </note>. Und noch beſonders danke ich Dir für die paar frohen
                Stunden in <hi rend="latintype">
                   <rs type="place" ref="#pmb30">Salzburg</rs>
                </hi>. Mir hat das eine Zeit lang die Empfindung der Heimatloſigkeit genommen. Damit
                haſt Du eine gute That für einen <del rend="strikethrough">
                   <unclear>ar</unclear>
-               </del> armen Verlaſſenen gethan, und dieſes Bewußtſein ſoll Dich Deinen <anchor type="commentary" xml:id="K_L02717-2"/>Katarrh<note type="commentary" xml:id="K_L02717-2h">Entzündung von Schleimhäuten der Atmungsorgane</note>
+               </del> armen Verlaſſenen gethan, und dieſes Bewußtſein ſoll Dich Deinen <anchor type="commentary" xml:id="K_L02717-2"/>Katarrh<note type="commentary" xml:id="K_L02717-2h" corresp="K_L02717-2"/>
                leichter tragen laſſen, dem ich übrigens von Herzen ein baldiges Ende wünſche.</p>
             <p>In <hi rend="latintype">
                   <rs type="place" ref="#pmb45258">Muenchen</rs>
@@ -276,8 +282,8 @@
                   <rs type="place" ref="#pmb182">Paris</rs>
                </hi> für Dich thun läßt. In <hi rend="latintype">
                   <rs type="place" ref="#pmb45258">Muenchen</rs>
-               </hi> war vorläufig nichts zu machen; aber ich habe eine <anchor type="commentary" xml:id="K_L02717-3"/>Verſprechung<note type="commentary" xml:id="K_L02717-3h">nicht rekonstruierbar</note>. Nochmals: Vergiß’ nicht, mich <hi rend="underline" n="2">ſofort</hi> zu <anchor type="commentary" xml:id="K_L02717-4"/>benachrichtigen, wenn dein <rs type="work" subtype="implied" ref="#pmb29823">Stück</rs> zur Aufführung angeſetzt<note type="commentary" xml:id="K_L02717-4h">
-                  <ref type="schnitzler-briefe" target="L02719" subtype="See"/>.
+               </hi> war vorläufig nichts zu machen; aber ich habe eine <anchor type="commentary" xml:id="K_L02717-3"/>Verſprechung<note type="commentary" xml:id="K_L02717-3h" corresp="K_L02717-3"/>. Nochmals: Vergiß’ nicht, mich <hi rend="underline" n="2">ſofort</hi> zu <anchor type="commentary" xml:id="K_L02717-4"/>benachrichtigen, wenn dein <rs type="work" subtype="implied" ref="#pmb29823">Stück</rs> zur Aufführung angeſetzt<note type="commentary" xml:id="K_L02717-4h" corresp="K_L02717-4">
+                  <ref type="schnitzler-briefe" target="L02719" subtype="See"/>
                </note> iſt. Sei von Herzen begrüßt, Du und die lieben Freunde!</p>
             <closer>Dein <lb/>
                <signed>Paul Goldmann</signed>
@@ -290,8 +296,7 @@
                   </hi>.</p>
                <p>Wichtig: Denk’ an die Empfehlung, bitte. Ich bin ſo einſam hier!</p>
                <p>
-                  <anchor type="textConst" xml:id="T_L02717-1"/>Schreibe mir sehr bald!<note type="textConst" xml:id="T_L02717-1h">seitlich am linken Rand entlang des
-                     Mittelfalzes</note>
+                  <anchor type="textConst" xml:id="T_L02717-1"/>Schreibe mir sehr bald!<note type="textConst" xml:id="T_L02717-1h" corresp="T_L02717-1"/>
                </p>
                <p>
                   <pb facs="HS.NZ85.1.3163_0061-0"/>
@@ -300,32 +305,47 @@
                   <hi rend="latintype">
                      <rs type="person" subtype="implied" ref="#pmb20914">Mandel</rs>
                   </hi>
-                  <note type="commentary" xml:id="K_L02717-5h">
-                     <rs type="person" ref="#pmb20914">Richard Mandl</rs> (nicht »<quote>
+                  <note type="commentary" xml:id="K_L02717-5h" corresp="K_L02717-5">
+                     <rs type="person" ref="#pmb20914">Richard Mandl</rs>
+                     <quote>
                         <rs type="person" subtype="implied" ref="#pmb20914">Mandel</rs>
-                     </quote>«) war ein <rs type="person" subtype="implied" ref="#pmb20914">Komponist</rs>, der zwischen <date when="1883">1883</date> und <date when="1900">1900</date> in <rs type="place" ref="#pmb182">Paris</rs> lebte.
-                     Am <ref type="schnitzler-tagebuch" target="1893-09-26" subtype="date-only"/>
-                     fand bei <rs type="person" ref="#pmb2121">Schnitzler</rs> zu Hause eine private
-                     Lesung von <rs type="work"
+                     </quote>
+                     <rs type="person" subtype="implied" ref="#pmb20914">Komponist</rs>
+                     <date when="1883">1883</date>
+                     <date when="1900">1900</date>
+                     <rs type="place" ref="#pmb182">Paris</rs>
+                     <ref type="schnitzler-tagebuch" target="1893-09-26" subtype="date-only"/>
+                     <rs type="person" ref="#pmb2121">Schnitzler</rs>
+                     <rs type="work"
                          subtype="implied"
                          ref="#pmb30033 #pmb30005 #pmb30159 #pmb76533">Werken</rs>
                      <space unit="chars" quantity="1"/>
-                     <rs type="person" ref="#pmb2121">Schnitzlers</rs> statt, <rs type="person" ref="#pmb20914">Mandl</rs> spielte eigene Kompositionen. Von diesem
-                     anstehenden Treffen dürfte <rs type="person" ref="#pmb2121">Schnitzler</rs> in
-                     seinem letzten Brief gesprochen und dabei die Frage gestellt haben, ob
-                        <rs type="person" ref="#pmb11485">Goldmann</rs> ihn kenne.</note> kenne ich
+                     <rs type="person" ref="#pmb2121">Schnitzlers</rs>
+                     <rs type="person" ref="#pmb20914">Mandl</rs>
+                     <rs type="person" ref="#pmb2121">Schnitzler</rs>
+                     <rs type="person" ref="#pmb11485">Goldmann</rs>
+                  </note> kenne ich
                   nicht ebenſo wenig wie den <anchor type="commentary" xml:id="K_L02717-6"/>
                   <rs type="org" ref="#pmb89961">deutschen Quartettverein</rs>
-                  <note type="commentary" xml:id="K_L02717-6h">Der <rs type="org" ref="#pmb89961">Deutsche Quartettverein in Paris</rs>, von vier Musikern um
-                        <date>1850</date> gegründet, widmete sich ursprünglich dem Werk von <rs type="person" ref="#pmb10866">Ludwig van Beethoven</rs>. </note>. Er
+                  <note type="commentary" xml:id="K_L02717-6h" corresp="K_L02717-6">
+                     <rs type="org" ref="#pmb89961">Deutsche Quartettverein in Paris</rs>
+                     <date>1850</date>
+                     <rs type="person" ref="#pmb10866">Ludwig van Beethoven</rs>
+                  </note>. Er
                   verwechselt mich wahrſcheinlich mit meinem <anchor type="commentary" xml:id="K_L02717-7"/>
                   <rs type="person" cert="low" subtype="implied" ref="#pmb89857">Vorgänger</rs>
-                  <note type="commentary" xml:id="K_L02717-7h">Der letzte nachweisbare <rs type="place" ref="#pmb182">Paris</rs>er <rs type="person" subtype="implied" ref="#pmb89857">Korrespondent</rs> der <rs type="org" ref="#pmb29442">Frankfurter Zeitung</rs> vor <rs type="person" ref="#pmb11485">Goldmann</rs> war <rs type="person" ref="#pmb89857">Karl Mühling</rs>
-                     zwischen <date when="1887">1887</date> und <date when="1889">1889</date>. Es
-                     ist nicht sicher, ob <rs type="person" ref="#pmb11485">Goldmann</rs>
+                  <note type="commentary" xml:id="K_L02717-7h" corresp="K_L02717-7">
+                     <rs type="place" ref="#pmb182">Paris</rs>
+                     <rs type="person" subtype="implied" ref="#pmb89857">Korrespondent</rs>
+                     <rs type="org" ref="#pmb29442">Frankfurter Zeitung</rs>
+                     <rs type="person" ref="#pmb11485">Goldmann</rs>
+                     <rs type="person" ref="#pmb89857">Karl Mühling</rs>
+                     <date when="1887">1887</date>
+                     <date when="1889">1889</date>
+                     <rs type="person" ref="#pmb11485">Goldmann</rs>
                      <space unit="chars" quantity="1"/>
-                     <rs type="person" ref="#pmb89857">Mühling</rs> meinte oder ob es zwischen den
-                     beiden einen weiteren Korrespondenten gegeben hatte.</note>.<note type="textConst" xml:id="T_L02717-2h">kopfüber am oberen Rand der ersten Seite</note>
+                     <rs type="person" ref="#pmb89857">Mühling</rs>
+                  </note>.<note type="textConst" xml:id="T_L02717-2h" corresp="T_L02717-2"/>
                </p>
             </postscript>
          </div>

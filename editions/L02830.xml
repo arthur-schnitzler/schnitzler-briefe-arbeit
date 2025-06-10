@@ -1,7 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="../meta/schnitzler-briefe-schematron.sch" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
 <TEI xmlns="http://www.tei-c.org/ns/1.0"
      xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-     xsi:schemaLocation="http://www.tei-c.org/ns/1.0 ../meta/asbwschema.xsd"
+     xsi:schemaLocation="http://www.tei-c.org/ns/1.0 ../meta/schnitzler-briefe-schema.xsd"
      xml:id="L02830"
      xml:base="https://id.acdh.oeaw.ac.at/schnitzler/schnitzler-briefe/editions">
    <teiHeader>
@@ -224,7 +225,7 @@
                <rs type="work" subtype="implied" ref="#pmb118616">Artikel</rs> von <hi rend="latintype">
                   <rs type="person" ref="#pmb23481">Rochefort</rs>
                </hi>
-               <note type="commentary" xml:id="K_L02830-1h">nicht ermittelt</note>, welcher von
+               <note type="commentary" xml:id="K_L02830-1h" corresp="K_L02830-1"/>, welcher von
                unſerem <rs type="person" subtype="implied" ref="#pmb5539">Glaubensgenoſſen</rs>
                handelt, der am Kreuz geſtorben iſt<c rendition="#dots" n="3"/>
             </p>
@@ -236,9 +237,14 @@
                   <rs type="person" ref="#pmb2211">Antoine</rs>
                </hi> hat ſich die Antwort vorbehalten, ſcheint aber nicht ſehr geneigt zur <anchor type="commentary" xml:id="K_L02830-2"/>
                <rs type="work" subtype="implied" ref="#pmb92876">Aufführung</rs>
-               <note type="commentary" xml:id="K_L02830-2h">
-                  <rs type="person" ref="#pmb3966">Jean Thorel</rs> versuchte (erfolglos) seine <rs type="work" subtype="implied" ref="#pmb92876">
-                     <rs type="work" ref="#pmb29917">Liebelei</rs>-Übersetzung</rs> dem <rs type="org" ref="#pmb88613">Théâtre Antoine</rs> (von <rs type="person" ref="#pmb2211">André Antoine</rs> geleitet) oder dem <rs type="org" ref="#pmb93494">Odéon</rs> zu vermitteln.</note>.</p>
+               <note type="commentary" xml:id="K_L02830-2h" corresp="K_L02830-2">
+                  <rs type="person" ref="#pmb3966">Jean Thorel</rs>
+                  <rs type="work" subtype="implied" ref="#pmb92876">
+                     <rs type="work" ref="#pmb29917">Liebelei</rs>-Übersetzung</rs>
+                  <rs type="org" ref="#pmb88613">Théâtre Antoine</rs>
+                  <rs type="person" ref="#pmb2211">André Antoine</rs>
+                  <rs type="org" ref="#pmb93494">Odéon</rs>
+               </note>.</p>
             <p>
                <pb facs="HS.NZ85.1.3167_0065-1"/>Willſt Du Dich mit <hi rend="latintype">
                   <rs type="person" ref="#pmb3272">Molière</rs>
@@ -246,11 +252,15 @@
                ſeinen <hi rend="latintype">
                   <rs type="work" subtype="implied" ref="#pmb118619">Don Juan</rs>
                </hi>
-               <note type="commentary" xml:id="K_L02830-3h">Lektüre nicht nachweisbar, jedoch sah
-                     <rs type="person" ref="#pmb2121">Schnitzler</rs> in späteren Jahren mehrere
-                  Inszenierungen von <rs type="person" ref="#pmb3272">Molières</rs>
+               <note type="commentary" xml:id="K_L02830-3h" corresp="K_L02830-3">
+                  <rs type="person" ref="#pmb2121">Schnitzler</rs>
+                  <rs type="person" ref="#pmb3272">Molières</rs>
                   <space unit="chars" quantity="1"/>
-                  <rs type="work" ref="#pmb118619">Don Juan</rs> (<ref type="schnitzler-tagebuch" target="1915-10-21" subtype="cf"/>, <ref type="schnitzler-tagebuch" target="1916-02-02" subtype="date-only"/> und <ref type="schnitzler-tagebuch" target="1919-09-27" subtype="date-only"/>).</note>, von ihm genannt »<hi rend="latintype">
+                  <rs type="work" ref="#pmb118619">Don Juan</rs>
+                  <ref type="schnitzler-tagebuch" target="1915-10-21" subtype="cf"/>
+                  <ref type="schnitzler-tagebuch" target="1916-02-02" subtype="date-only"/>
+                  <ref type="schnitzler-tagebuch" target="1919-09-27" subtype="date-only"/>
+               </note>, von ihm genannt »<hi rend="latintype">
                   <rs type="work" ref="#pmb118619">Le festin de Pierre</rs>
                </hi>.«</p>
             <p>Ich weiß Dir nichts mehr zu ſchreiben, als daß ich namenloſes Heimweh habe nach <rs type="place" ref="#pmb50">Wien</rs>, nach Freundſchaſt, nach Heimlichkeit und

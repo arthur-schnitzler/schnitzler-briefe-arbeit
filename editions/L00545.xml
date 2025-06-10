@@ -1,7 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="../meta/schnitzler-briefe-schematron.sch" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
 <TEI xmlns="http://www.tei-c.org/ns/1.0"
      xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-     xsi:schemaLocation="http://www.tei-c.org/ns/1.0 ../meta/asbwschema.xsd"
+     xsi:schemaLocation="http://www.tei-c.org/ns/1.0 ../meta/schnitzler-briefe-schema.xsd"
      xml:id="L00545"
      xml:base="https://id.acdh.oeaw.ac.at/schnitzler/schnitzler-briefe/editions">
    <teiHeader>
@@ -201,8 +202,9 @@
                   <rs ref="#pmb636" type="place">
                      <anchor type="commentary" xml:id="K_L00545-1"/>
                      <hi rend="latintype">Tłumacz</hi>
-                     <note xml:id="K_L00545-1h" type="commentary">Hugo von Hofmannsthal leistete im
-                           <date>Mai 1896</date> seinen Militärdienst in Tłumacz ab.</note> bei <hi rend="latintype">Stanislau</hi>
+                     <note xml:id="K_L00545-1h" type="commentary" corresp="K_L00545-1">
+                        <date>Mai 1896</date>
+                     </note> bei <hi rend="latintype">Stanislau</hi>
                   </rs>
                   <space unit="chars" quantity="1"/>
                   <hi rend="latintype">(<rs ref="#pmb644" type="place">Galizien</rs>)</hi>
@@ -229,11 +231,13 @@
                und von <rs ref="#pmb10815" type="person">Bahr</rs> erzählt hat, das ganze kleine
                <anchor type="commentary" xml:id="K_L00545-2"/>
                <rs type="org" ref="#pmb29698" subtype="implied">Redactionszimmer</rs>
-               <note xml:id="K_L00545-2h" type="commentary">
-                  <rs ref="#pmb11485" type="person">Goldmann</rs> war bis <date>1890</date>
-                  verantwortlicher Redakteur der Zeitschrift <rs ref="#pmb35860" type="work">An der schönen blauen
-                     Donau</rs> gewesen, in der <rs ref="#pmb2121" type="person">Schnitzler</rs> einige
-                  frühe Texte publiziert hatte.</note> und unſre <pb facs="MS-SCHNITZLER-B-00043-B-00001-000-00002"/>erſten Begegnungen, und alles
+               <note xml:id="K_L00545-2h" type="commentary" corresp="K_L00545-2">
+                  <rs ref="#pmb11485" type="person">Goldmann</rs>
+                  <date>1890</date>
+                  <rs ref="#pmb35860" type="work">An der schönen blauen
+                     Donau</rs>
+                  <rs ref="#pmb2121" type="person">Schnitzler</rs>
+               </note> und unſre <pb facs="MS-SCHNITZLER-B-00043-B-00001-000-00002"/>erſten Begegnungen, und alles
                kommt mir ſo unglaublich vergangen vor und ſo nett und altmodiſch wie eine Geſchichte
                aus der <rs ref="#pmb4332" type="person">Jean Paul</rs>-Zeit. <hi rend="underline" n="1">Wir haben doch in dieſen paar Jahren ſehr viele ſchöne Stunden gehabt.</hi>
                Wir haben ſehr oft das Leben reich und groß geſehen und waren im Stande, viele Dinge

@@ -1,7 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="../meta/schnitzler-briefe-schematron.sch" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
 <TEI xmlns="http://www.tei-c.org/ns/1.0"
      xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-     xsi:schemaLocation="http://www.tei-c.org/ns/1.0 ../meta/asbwschema.xsd"
+     xsi:schemaLocation="http://www.tei-c.org/ns/1.0 ../meta/schnitzler-briefe-schema.xsd"
      xml:id="L02280"
      xml:base="https://id.acdh.oeaw.ac.at/schnitzler/schnitzler-briefe/editions">
    <teiHeader>
@@ -221,27 +222,35 @@
                   <space unit="chars" quantity="1"/>
                   <anchor type="commentary" xml:id="K_L02280-1"/>
                   <date>12 XI</date>
-                  <note xml:id="K_L02280-1h" type="commentary">Hier ist ein Irrtum des Verfassers
-                     anzunehmen. Sowohl der Poststempel als auch der Verweis auf die »morgige«
-                     Uraufführung verweisen auf den <date>13. 11. 1917</date> als Tag der
-                     Abfassung.</note>
+                  <note xml:id="K_L02280-1h" type="commentary" corresp="K_L02280-1">
+                     <date>13. 11. 1917</date>
+                  </note>
                </dateline>
             </opener>
             <p>
                <salute>mein lieber Arthur</salute>
-               <space unit="chars" quantity="3"/>der <anchor type="commentary" xml:id="K_L02280-2"/>dritte<note xml:id="K_L02280-2h" type="commentary">Der erste erschien
-                     <date>1907</date>, der zweite <date>1914</date>, der dritte <date>Ende November
-                     1917</date>.</note> Band meiner <rs ref="#pmb34260" type="work">Proſaarbeiten</rs> wird in dieſen Tagen durch <rs ref="#pmb11324" type="person">Fiſcher</rs> an Sie geſchickt werden, bitte nehmen Sie ihn wie aus meiner Hand,
+               <space unit="chars" quantity="3"/>der <anchor type="commentary" xml:id="K_L02280-2"/>dritte<note xml:id="K_L02280-2h" type="commentary" corresp="K_L02280-2">
+                  <date>1907</date>
+                  <date>1914</date>
+                  <date>Ende November
+                     1917</date>
+               </note> Band meiner <rs ref="#pmb34260" type="work">Proſaarbeiten</rs> wird in dieſen Tagen durch <rs ref="#pmb11324" type="person">Fiſcher</rs> an Sie geſchickt werden, bitte nehmen Sie ihn wie aus meiner Hand,
                ich habe den Auftrag gegeben, diesmal direct zu ſchicken, weil man ja weder Papier
                noch Spagat mehr hat, um von Haus Bücher zu verſenden. Und ſo iſt man ſchließlich
                auch voneinander abgeſchnitten, durch die Einſchränkung der Verkehrsmittel u. die
                Unmöglichkeit, eine Abendmahlzeit herzuſtellen.</p>
-            <p>Wenn ich <anchor type="commentary" xml:id="K_L02280-3"/>aus <rs ref="#pmb151" type="place">Deutſchland</rs> zurückkomme<note xml:id="K_L02280-3h" type="commentary">Die Reise dauerte vom <date>20. 11. 1917</date> bis zum
-                     <date>8. 12. 1917</date>.</note>, <date>Mitte December</date>, ſo hoffe ich
+            <p>Wenn ich <anchor type="commentary" xml:id="K_L02280-3"/>aus <rs ref="#pmb151" type="place">Deutſchland</rs> zurückkomme<note xml:id="K_L02280-3h" type="commentary" corresp="K_L02280-3">
+                  <date>20. 11. 1917</date>
+                  <date>8. 12. 1917</date>
+               </note>, <date>Mitte December</date>, ſo hoffe ich
                daſs Sie u. <rs ref="#pmb2173" type="person">Olga</rs> einmal gegen Abend in unſere
-               kleine <rs type="place" ref="#pmb34024" subtype="implied">Stadtwohnung</rs> ko<c rendition="#gemination-m"/>en werden. Indeſſen freue ich mich auf <anchor type="commentary" xml:id="K_L02280-4"/>morgen Abend<note xml:id="K_L02280-4h" type="commentary">Uraufführung von <rs ref="#pmb30881" type="work">Fink und
-                     Fliederbusch</rs> am <ref target="1917-11-14" type="schnitzler-tagebuch" subtype="date-only"/> im <rs ref="#pmb20" type="place">Deutschen
-                     Volkstheater</rs>.</note>, und werde für das Ernſte u. für den Spaß in Ihrer
+               kleine <rs type="place" ref="#pmb34024" subtype="implied">Stadtwohnung</rs> ko<c rendition="#gemination-m"/>en werden. Indeſſen freue ich mich auf <anchor type="commentary" xml:id="K_L02280-4"/>morgen Abend<note xml:id="K_L02280-4h" type="commentary" corresp="K_L02280-4">
+                  <rs ref="#pmb30881" type="work">Fink und
+                     Fliederbusch</rs>
+                  <ref target="1917-11-14" type="schnitzler-tagebuch" subtype="date-only"/>
+                  <rs ref="#pmb20" type="place">Deutschen
+                     Volkstheater</rs>
+               </note>, und werde für das Ernſte u. für den Spaß in Ihrer
                   <rs type="work" ref="#pmb30881" subtype="implied">Comödie</rs> ein guter Zuhörer
                ſein.</p>
             <closer>Herzlich Ihr<signed>Hugo</signed>

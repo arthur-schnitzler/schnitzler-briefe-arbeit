@@ -1,7 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="../meta/schnitzler-briefe-schematron.sch" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
 <TEI xmlns="http://www.tei-c.org/ns/1.0"
      xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-     xsi:schemaLocation="http://www.tei-c.org/ns/1.0 ../meta/asbwschema.xsd"
+     xsi:schemaLocation="http://www.tei-c.org/ns/1.0 ../meta/schnitzler-briefe-schema.xsd"
      xml:id="L02780"
      xml:base="https://id.acdh.oeaw.ac.at/schnitzler/schnitzler-briefe/editions">
    <teiHeader>
@@ -218,8 +219,13 @@
             </opener>
             <p>Alſo ſchön willkommen in <anchor type="commentary" xml:id="K_L02780-1"/>
                <rs type="place" ref="#pmb506">Hamburg</rs>
-               <note type="commentary" xml:id="K_L02780-1h">
-                  <rs type="person" ref="#pmb2121">Schnitzler</rs> hielt sich vom <ref type="schnitzler-tagebuch" target="1896-07-04" subtype="date-only"/> bis zum <ref type="schnitzler-tagebuch" target="1896-07-07" subtype="date-only"/> in <rs type="place" ref="#pmb506">Hamburg</rs> auf, bevor er das Schiff nach <rs type="place" ref="#pmb64465">Norwegen</rs> bestieg.</note> und von Herzen frohe
+               <note type="commentary" xml:id="K_L02780-1h" corresp="K_L02780-1">
+                  <rs type="person" ref="#pmb2121">Schnitzler</rs>
+                  <ref type="schnitzler-tagebuch" target="1896-07-04" subtype="date-only"/>
+                  <ref type="schnitzler-tagebuch" target="1896-07-07" subtype="date-only"/>
+                  <rs type="place" ref="#pmb506">Hamburg</rs>
+                  <rs type="place" ref="#pmb64465">Norwegen</rs>
+               </note> und von Herzen frohe
                Fahrt!</p>
             <p>Dieſer Brief ſoll Dir nur einen Gruß von mir <del rend="strikethrough">
                   <gap reason="illegible" quantity="3" unit="chars"/>
@@ -231,7 +237,8 @@
                <hi rend="latintype">
                   <rs type="place" ref="#pmb112436">Palais Bourbon</rs>
                </hi>
-               <note type="commentary" xml:id="K_L02780-2h">Sitz der <rs type="org" ref="#pmb93192">französischen Nationalversammlung</rs>
+               <note type="commentary" xml:id="K_L02780-2h" corresp="K_L02780-2">
+                  <rs type="org" ref="#pmb93192">französischen Nationalversammlung</rs>
                </note> machen keiner<unclear>l</unclear>lei Anſtalten, in die Ferien zu gehen. Auch
                ſonſt erſcheint mir meine Reiſe im dunkelſten Nebel.</p>
             <p>Ich ſchreibe Dir <del rend="strikethrough">
@@ -245,8 +252,11 @@
                überhaupt in dieſem <rs type="place" subtype="implied" ref="#pmb44335">Lande</rs>,
                das ſeit <anchor type="commentary" xml:id="K_L02780-3"/>
                <rs type="person" ref="#pmb5629">Guſtav Adolph</rs>
-               <note type="commentary" xml:id="K_L02780-3h">
-                  <rs type="place" subtype="implied" ref="#pmb44335">schwed</rs>ischer <rs type="person" subtype="implied" ref="#pmb5629">König</rs> zwischen <date when="1611">1611</date> und <date when="1632">1632</date>
+               <note type="commentary" xml:id="K_L02780-3h" corresp="K_L02780-3">
+                  <rs type="place" subtype="implied" ref="#pmb44335">schwed</rs>
+                  <rs type="person" subtype="implied" ref="#pmb5629">König</rs>
+                  <date when="1611">1611</date>
+                  <date when="1632">1632</date>
                </note> jede Exiſtenzberechtigung verloren hat, ſo etwas gibt, wie einen Himmel).</p>
             <closer>Viele treue Grüße! <lb/>Dein <lb/>
                <signed>Paul Goldmann</signed>

@@ -1,7 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="../meta/schnitzler-briefe-schematron.sch" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
 <TEI xmlns="http://www.tei-c.org/ns/1.0"
      xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-     xsi:schemaLocation="http://www.tei-c.org/ns/1.0 ../meta/asbwschema.xsd"
+     xsi:schemaLocation="http://www.tei-c.org/ns/1.0 ../meta/schnitzler-briefe-schema.xsd"
      xml:id="L02858"
      xml:base="https://id.acdh.oeaw.ac.at/schnitzler/schnitzler-briefe/editions">
    <teiHeader>
@@ -183,16 +184,20 @@
                <hi rend="latintype">
                   <rs type="place" ref="#pmb30">Salzburg</rs>
                </hi>
-               <note type="commentary" xml:id="K_L02858-1h">
-                  <ref type="schnitzler-tagebuch" target="1898-07-28" subtype="See"/>.
+               <note type="commentary" xml:id="K_L02858-1h" corresp="K_L02858-1">
+                  <ref type="schnitzler-tagebuch" target="1898-07-28" subtype="See"/>
                </note> vom <date when="1898-07-28">28. Juli</date> erhalten. Inzwiſchen biſt Du ja
                längſt glücklich heimgekehrt; und wenn Du meinen Brief erhältſt, iſt wohl auch ſchon
                die <anchor type="commentary" xml:id="K_L02858-2"/>
                <foreign xml:lang="fra">
                   <hi rend="latintype">Première</hi>
                </foreign>
-               <space unit="chars" quantity="1"/>Deines neuen <rs type="work" subtype="implied" ref="#pmb30219">Stück</rs>es<note type="commentary" xml:id="K_L02858-2h">
-                  <rs type="work" ref="#pmb30219">Das Vermächtnis</rs> war am <ref type="schnitzler-tagebuch" target="1898-10-08" subtype="date-only"/> am <rs type="place" ref="#pmb3">Deutschen Theater</rs> in <rs type="place" ref="#pmb168">Berlin</rs> uraufgeführt worden.</note> vorüber und Du biſt um einen
+               <space unit="chars" quantity="1"/>Deines neuen <rs type="work" subtype="implied" ref="#pmb30219">Stück</rs>es<note type="commentary" xml:id="K_L02858-2h" corresp="K_L02858-2">
+                  <rs type="work" ref="#pmb30219">Das Vermächtnis</rs>
+                  <ref type="schnitzler-tagebuch" target="1898-10-08" subtype="date-only"/>
+                  <rs type="place" ref="#pmb3">Deutschen Theater</rs>
+                  <rs type="place" ref="#pmb168">Berlin</rs>
+               </note> vorüber und Du biſt um einen
                neuen Erfolg reicher.</p>
             <p>
                <pb facs="HS.NZ85.1.3168_0055-0"/>Es iſt <date when="1898-09-25">heut</date> wieder
@@ -201,7 +206,7 @@
                dieſem <rs type="place" subtype="implied" ref="#pmb1108">Lande</rs> mache? Noch dazu
                bin ich ſeit einigen Wochen recht elend. Die <anchor type="commentary" xml:id="K_L02858-3"/>
                <hi rend="latintype">Dysenterie</hi>
-               <note type="commentary" xml:id="K_L02858-3h">Darmentzündung</note> iſt mir in den
+               <note type="commentary" xml:id="K_L02858-3h" corresp="K_L02858-3"/> iſt mir in den
                Leib gefahren<subst>
                   <del rend="strikethrough">
                      <unclear>,</unclear>
@@ -216,122 +221,176 @@
                <pb facs="HS.NZ85.1.3168_0055-1"/>Ich danke Dir von Herzen für die Aufmerkſamkeit,
                mit der Du meine <anchor type="commentary" xml:id="K_L02858-4"/>
                <rs type="work" subtype="implied" ref="#pmb142270">Arbeiten</rs>
-               <note type="commentary" xml:id="K_L02858-4h">
-                  <rs type="person" ref="#pmb2121">Schnitzler</rs> dürfte regelmäßig die <rs type="work" ref="#pmb36344">Frankfurter Zeitung</rs> gelesen haben, in der <rs type="person" ref="#pmb11485">Goldmanns</rs>
+               <note type="commentary" xml:id="K_L02858-4h" corresp="K_L02858-4">
+                  <rs type="person" ref="#pmb2121">Schnitzler</rs>
+                  <rs type="work" ref="#pmb36344">Frankfurter Zeitung</rs>
+                  <rs type="person" ref="#pmb11485">Goldmanns</rs>
                   <space unit="chars" quantity="1"/>
-                  <rs type="work" subtype="implied" ref="#pmb142270">Feuilletons</rs> (unter Angabe des vollen Namens) mit dem
-                  Titel <rs type="work" ref="#pmb142270">In Ostasien. Reiseskizzen</rs> erschienen.
-                  Die Texte erschienen an den folgenden Tagen: <rs type="work" subtype="implied" ref="#pmb142222">
+                  <rs type="work" subtype="implied" ref="#pmb142270">Feuilletons</rs>
+                  <rs type="work" ref="#pmb142270">In Ostasien. Reiseskizzen</rs>
+                  <rs type="work" subtype="implied" ref="#pmb142222">
                      <date when="1898-04-24">24. 4. 1898</date>
-                  </rs>, <rs type="work" subtype="implied" ref="#pmb142225">
+                  </rs>
+                  <rs type="work" subtype="implied" ref="#pmb142225">
                      <date when="1898-05-01">1. 5. 1898</date>
-                  </rs>, <rs type="work" subtype="implied" ref="#pmb142186">
+                  </rs>
+                  <rs type="work" subtype="implied" ref="#pmb142186">
                      <date when="1898-05-19">19. 5. 1898</date>
-                  </rs>, <rs type="work" subtype="implied" ref="#pmb142189">
+                  </rs>
+                  <rs type="work" subtype="implied" ref="#pmb142189">
                      <date when="1898-05-22">22. 5. 1898</date>
-                  </rs>, <rs type="work" subtype="implied" ref="#pmb142195">
+                  </rs>
+                  <rs type="work" subtype="implied" ref="#pmb142195">
                      <date when="1898-06-12">12. 6. 1898</date>
-                  </rs>, <rs type="work" subtype="implied" ref="#pmb142198">
+                  </rs>
+                  <rs type="work" subtype="implied" ref="#pmb142198">
                      <date when="1898-06-16">16. 6. 1898</date>
-                  </rs>, <rs type="work" subtype="implied" ref="#pmb142201">
+                  </rs>
+                  <rs type="work" subtype="implied" ref="#pmb142201">
                      <date when="1898-06-17">17. 6. 1898</date>
-                  </rs>, <rs type="work" subtype="implied" ref="#pmb142207">
+                  </rs>
+                  <rs type="work" subtype="implied" ref="#pmb142207">
                      <date when="1898-06-23">23. 6. 1898</date>
-                  </rs>, <rs type="work" subtype="implied" ref="#pmb142213">
+                  </rs>
+                  <rs type="work" subtype="implied" ref="#pmb142213">
                      <date when="1898-06-24">24. 6. 1898</date>
-                  </rs>, <rs type="work" subtype="implied" ref="#pmb142216">
+                  </rs>
+                  <rs type="work" subtype="implied" ref="#pmb142216">
                      <date when="1898-06-29">29. 6. 1898</date>
-                  </rs>, <rs type="work" subtype="implied" ref="#pmb142219">
+                  </rs>
+                  <rs type="work" subtype="implied" ref="#pmb142219">
                      <date when="1898-06-30">30. 6. 1898</date>
-                  </rs>, <rs type="work" subtype="implied" ref="#pmb142110">
+                  </rs>
+                  <rs type="work" subtype="implied" ref="#pmb142110">
                      <date when="1898-07-14">14. 7. 1898</date>
-                  </rs>, <rs type="work" subtype="implied" ref="#pmb142113">
+                  </rs>
+                  <rs type="work" subtype="implied" ref="#pmb142113">
                      <date when="1898-07-15">15. 7. 1898</date>
-                  </rs>, <rs type="work" subtype="implied" ref="#pmb142122">
+                  </rs>
+                  <rs type="work" subtype="implied" ref="#pmb142122">
                      <date when="1898-07-24">24. 7. 1898</date>
-                  </rs>, <rs type="work" subtype="implied" ref="#pmb142125">
+                  </rs>
+                  <rs type="work" subtype="implied" ref="#pmb142125">
                      <date when="1898-07-26">26. 7. 1898</date>
-                  </rs>, <rs type="work" subtype="implied" ref="#pmb142134">
+                  </rs>
+                  <rs type="work" subtype="implied" ref="#pmb142134">
                      <date when="1898-08-07">7. 8. 1898</date>
-                  </rs>, <rs type="work" subtype="implied" ref="#pmb142137">
+                  </rs>
+                  <rs type="work" subtype="implied" ref="#pmb142137">
                      <date when="1898-08-09">9. 8. 1898</date>
-                  </rs>, <rs type="work" subtype="implied" ref="#pmb142143">
+                  </rs>
+                  <rs type="work" subtype="implied" ref="#pmb142143">
                      <date when="1898-08-21">21. 8. 1898</date>
-                  </rs>, <rs type="work" subtype="implied" ref="#pmb142146">
+                  </rs>
+                  <rs type="work" subtype="implied" ref="#pmb142146">
                      <date when="1898-08-22">22. 8. 1898</date>
-                  </rs>, <rs type="work" subtype="implied" ref="#pmb142152">
+                  </rs>
+                  <rs type="work" subtype="implied" ref="#pmb142152">
                      <date when="1898-08-28">28. 8. 1898</date>
-                  </rs>, <rs type="work" subtype="implied" ref="#pmb142155">
+                  </rs>
+                  <rs type="work" subtype="implied" ref="#pmb142155">
                      <date when="1898-08-30">30. 8. 1898</date>
-                  </rs>, <rs type="work" subtype="implied" ref="#pmb142158">
+                  </rs>
+                  <rs type="work" subtype="implied" ref="#pmb142158">
                      <date when="1898-08-31">31. 8. 1898</date>
-                  </rs>, <rs type="work" subtype="implied" ref="#pmb142243">
+                  </rs>
+                  <rs type="work" subtype="implied" ref="#pmb142243">
                      <date when="1898-10-05">5. 10. 1898</date>
-                  </rs>, <rs type="work" subtype="implied" ref="#pmb142246">
+                  </rs>
+                  <rs type="work" subtype="implied" ref="#pmb142246">
                      <date when="1898-10-06">6. 10. 1898</date>
-                  </rs>, <rs type="work" subtype="implied" ref="#pmb142249">
+                  </rs>
+                  <rs type="work" subtype="implied" ref="#pmb142249">
                      <date when="1898-10-08">8. 10. 1898</date>
-                  </rs>, <rs type="work" subtype="implied" ref="#pmb142252">
+                  </rs>
+                  <rs type="work" subtype="implied" ref="#pmb142252">
                      <date when="1898-10-09">9. 10. 1898</date>
-                  </rs>, <rs type="work" subtype="implied" ref="#pmb142255">
+                  </rs>
+                  <rs type="work" subtype="implied" ref="#pmb142255">
                      <date when="1898-10-16">16. 10. 1898</date>
-                  </rs>, <rs type="work" subtype="implied" ref="#pmb142258">
+                  </rs>
+                  <rs type="work" subtype="implied" ref="#pmb142258">
                      <date when="1898-10-18">18. 10. 1898</date>
-                  </rs>, <rs type="work" subtype="implied" ref="#pmb142264">
+                  </rs>
+                  <rs type="work" subtype="implied" ref="#pmb142264">
                      <date when="1898-10-30">30. 10. 1898</date>
-                  </rs>, <rs type="work" subtype="implied" ref="#pmb142267">
+                  </rs>
+                  <rs type="work" subtype="implied" ref="#pmb142267">
                      <date when="1898-10-31">31. 10. 1898</date>
-                  </rs>, <rs type="work" ref="#pmb145520" subtype="implied">
+                  </rs>
+                  <rs type="work" ref="#pmb145520" subtype="implied">
                      <date>13. 11. 1898</date>
-                  </rs>, <rs type="work" ref="#pmb145514" subtype="implied">
+                  </rs>
+                  <rs type="work" ref="#pmb145514" subtype="implied">
                      <date>14. 11. 1898</date>
-                  </rs>, <rs type="work" ref="#pmb145517" subtype="implied">
+                  </rs>
+                  <rs type="work" ref="#pmb145517" subtype="implied">
                      <date>15. 11. 1898</date>
-                  </rs>, <rs type="work" ref="#pmb145505" subtype="implied">
+                  </rs>
+                  <rs type="work" ref="#pmb145505" subtype="implied">
                      <date>18. 12. 1898</date>
-                  </rs>, <rs type="work" ref="#pmb145502" subtype="implied">
+                  </rs>
+                  <rs type="work" ref="#pmb145502" subtype="implied">
                      <date>20. 12. 1898</date>
-                  </rs>, <rs type="work" ref="#pmb145508" subtype="implied">
+                  </rs>
+                  <rs type="work" ref="#pmb145508" subtype="implied">
                      <date>25. 12. 1898</date>
-                  </rs> und am <rs type="work" ref="#pmb145511" subtype="implied">
+                  </rs>
+                  <rs type="work" ref="#pmb145511" subtype="implied">
                      <date>28. 12. 1898</date>
-                  </rs>. Am <rs type="work" ref="#pmb145524" subtype="implied">
+                  </rs>
+                  <rs type="work" ref="#pmb145524" subtype="implied">
                      <date>30. 4. 1899</date>
-                  </rs> erschien mit <rs type="work" ref="#pmb145524">Heimkehr</rs> noch ein
-                  Schlussartikel, der womöglich bereits für die Buchausgabe der Feuilletons – <rs type="work" ref="#pmb33346">Ein Sommer in China</rs> – verfasst war. Zusätzlich zu den
-                  allgemeineren Reiseschilderungen
-                  erschienen tagesaktuelle <rs type="work"
+                  </rs>
+                  <rs type="work" ref="#pmb145524">Heimkehr</rs>
+                  <rs type="work" ref="#pmb33346">Ein Sommer in China</rs>
+                  <rs type="work"
                       subtype="implied"
-                      ref="#pmb142192 #pmb142204 #pmb142210 #pmb142116 #pmb142119 #pmb142128 #pmb142131 #pmb142140 #pmb142149 #pmb142228 #pmb142231 #pmb142234 #pmb142237 #pmb142240 #pmb142261">Berichterstattungen</rs> unter dem Kürzel »<rs type="person" subtype="implied" ref="#pmb11485">G</rs>«
-                   am <rs type="work" subtype="implied" ref="#pmb142192">
+                      ref="#pmb142192 #pmb142204 #pmb142210 #pmb142116 #pmb142119 #pmb142128 #pmb142131 #pmb142140 #pmb142149 #pmb142228 #pmb142231 #pmb142234 #pmb142237 #pmb142240 #pmb142261">Berichterstattungen</rs>
+                  <rs type="person" subtype="implied" ref="#pmb11485">G</rs>
+                  <rs type="work" subtype="implied" ref="#pmb142192">
                      <date when="1898-06-08">8. 6. 1898</date>
-                  </rs>, <rs type="work" subtype="implied" ref="#pmb142204 #pmb142210">
+                  </rs>
+                  <rs type="work" subtype="implied" ref="#pmb142204 #pmb142210">
                      <date when="1898-06-23">23. 6. 1898</date>
-                  </rs>, <rs type="work" subtype="implied" ref="#pmb142116">
+                  </rs>
+                  <rs type="work" subtype="implied" ref="#pmb142116">
                      <date when="1898-07-21">21. 7. 1898</date>
-                  </rs>, <rs type="work" subtype="implied" ref="#pmb142119">
+                  </rs>
+                  <rs type="work" subtype="implied" ref="#pmb142119">
                      <date when="1898-07-23">23. 7. 1898</date>
-                  </rs>, <rs type="work" subtype="implied" ref="#pmb142128">
+                  </rs>
+                  <rs type="work" subtype="implied" ref="#pmb142128">
                      <date when="1898-08-03">3. 8. 1898</date>
-                  </rs>, <rs type="work" subtype="implied" ref="#pmb142131">
+                  </rs>
+                  <rs type="work" subtype="implied" ref="#pmb142131">
                      <date when="1898-08-04">4. 8. 1898</date>
-                  </rs>, <rs type="work" subtype="implied" ref="#pmb142140">
+                  </rs>
+                  <rs type="work" subtype="implied" ref="#pmb142140">
                      <date when="1898-08-17">17. 8. 1898</date>
-                  </rs>, <rs type="work" subtype="implied" ref="#pmb142149">
+                  </rs>
+                  <rs type="work" subtype="implied" ref="#pmb142149">
                      <date when="1898-08-25">25. 8. 1898</date>
-                  </rs>, <rs type="work" subtype="implied" ref="#pmb142228">
+                  </rs>
+                  <rs type="work" subtype="implied" ref="#pmb142228">
                      <date when="1898-09-09">9. 9. 1898</date>
-                  </rs>, <rs type="work" subtype="implied" ref="#pmb142231">
+                  </rs>
+                  <rs type="work" subtype="implied" ref="#pmb142231">
                      <date when="1898-09-23">23. 9. 1898</date>
-                  </rs>, <rs type="work" subtype="implied" ref="#pmb142234">
+                  </rs>
+                  <rs type="work" subtype="implied" ref="#pmb142234">
                      <date when="1898-09-24">24. 9. 1898</date>
-                  </rs>, <rs type="work" subtype="implied" ref="#pmb142237">
+                  </rs>
+                  <rs type="work" subtype="implied" ref="#pmb142237">
                      <date when="1898-09-25">25. 9. 1898</date>
-                  </rs>, <rs type="work" subtype="implied" ref="#pmb142240">
+                  </rs>
+                  <rs type="work" subtype="implied" ref="#pmb142240">
                      <date when="1898-09-26">26. 9. 1898</date>
-                  </rs>, <rs type="work" subtype="implied" ref="#pmb142261">
+                  </rs>
+                  <rs type="work" subtype="implied" ref="#pmb142261">
                      <date when="1898-10-25">25. 10. 1898</date>
-                  </rs> und darüber hinaus.</note> verfolgſt. Du nennſt ſie »intereſſant« und ahnſt
+                  </rs>
+               </note> verfolgſt. Du nennſt ſie »intereſſant« und ahnſt
                gewiß nicht, daß das ihre Verurtheilung iſt. Intereſſant iſt die Rubrik »Vermiſchtes«
                in den Zeitungen, die von einem wunderbaren Walfiſch-Fang berichtet oder vom
                tätowirten Indianer. Die unbeſchreibliche künſtleriſche Anſtrengung, die ich auf
@@ -345,20 +404,28 @@
             <p>Mein Brief findet Dich hoffentlich in guter, froher Arbeit und in heller Stimmung.
                Denke Dir nur, welch’ ein <anchor type="commentary" xml:id="K_L02858-5"/>
                <hi rend="latintype">Schemen</hi>
-               <note type="commentary" xml:id="K_L02858-5h">Trugbild</note>
+               <note type="commentary" xml:id="K_L02858-5h" corresp="K_L02858-5"/>
                <space unit="chars" quantity="1"/>
-               <del rend="strikethrough">alle</del> alle Deine Leiden ſein müſſen, <pb facs="HS.NZ85.1.3168_0056-1"/>wenn eine einzige <anchor type="commentary" xml:id="K_L02858-6"/>Reiſe<note type="commentary" xml:id="K_L02858-6h">
-                  <ref type="schnitzler-briefe" target="L02845" subtype="See"/>.
+               <del rend="strikethrough">alle</del> alle Deine Leiden ſein müſſen, <pb facs="HS.NZ85.1.3168_0056-1"/>wenn eine einzige <anchor type="commentary" xml:id="K_L02858-6"/>Reiſe<note type="commentary" xml:id="K_L02858-6h" corresp="K_L02858-6">
+                  <ref type="schnitzler-briefe" target="L02845" subtype="See"/>
                </note> von <rs type="place" ref="#pmb50">Wien</rs> nach <rs type="place" ref="#pmb30">Salzburg</rs> ſie verblaſſen macht. Quäle Dich nicht und mache Dir
                einen frohen Winter!</p>
             <p>Grüß’ mir den <hi rend="latintype">
                   <rs type="person" ref="#pmb10863">Richard</rs>
                </hi>! Ich <del rend="strikethrough">h<gap reason="illegible" unit="chars" quantity="3"/>
                </del> freue mich, daß er das <anchor type="commentary" xml:id="K_L02858-7"/>dritte
-               Capitel des »<rs type="work" subtype="implied" ref="#pmb31535">Götterliebling</rs>«<note type="commentary" xml:id="K_L02858-7h">Als <rs type="person" ref="#pmb2121">Schnitzler</rs> am <ref type="schnitzler-tagebuch" target="1898-07-28" subtype="date-only"/> in <rs type="place" ref="#pmb30">Salzburg</rs> gewesen war, hatte ihm <rs type="person" ref="#pmb10863">Beer-Hofmann</rs>
-                  das dritte Kapitel des <rs type="work" subtype="implied" ref="#pmb31535">Götterlieblings</rs> vorgelesen. Die <rs type="work" subtype="implied" ref="#pmb31535">Erzählung</rs> erschien zuerst zwischen <date when="1899-11-04">4. 11. 1899</date> und <date when="1899-11-25">25. 11. 1899</date> als
-                  Fragment unter dem Titel <rs type="work" ref="#pmb43046">Der Tod Georgs</rs> in
-                  der <rs type="work" ref="#pmb36340">Zeit</rs>.</note> beendet hat. Nur fürchte
+               Capitel des »<rs type="work" subtype="implied" ref="#pmb31535">Götterliebling</rs>«<note type="commentary" xml:id="K_L02858-7h" corresp="K_L02858-7">
+                  <rs type="person" ref="#pmb2121">Schnitzler</rs>
+                  <ref type="schnitzler-tagebuch" target="1898-07-28" subtype="date-only"/>
+                  <rs type="place" ref="#pmb30">Salzburg</rs>
+                  <rs type="person" ref="#pmb10863">Beer-Hofmann</rs>
+                  <rs type="work" subtype="implied" ref="#pmb31535">Götterlieblings</rs>
+                  <rs type="work" subtype="implied" ref="#pmb31535">Erzählung</rs>
+                  <date when="1899-11-04">4. 11. 1899</date>
+                  <date when="1899-11-25">25. 11. 1899</date>
+                  <rs type="work" ref="#pmb43046">Der Tod Georgs</rs>
+                  <rs type="work" ref="#pmb36340">Zeit</rs>
+               </note> beendet hat. Nur fürchte
                ich, im vierten <rs type="work" subtype="implied" ref="#pmb31535">Capitel</rs> wird
                der Held wieder einſchlafen <pb facs="HS.NZ85.1.3168_0057-0"/>und einige Jahrhundert
                Weltgeſchichte <del rend="strikethrough">t<unclear>r</unclear>
@@ -370,10 +437,11 @@
                </subst> recht lang werden.</p>
             <p>Man ſandte mir hierher einen <anchor type="commentary" xml:id="K_L02858-8"/>
                <rs type="work" subtype="implied" ref="#pmb118848">Artikel</rs>
-               <note type="commentary" xml:id="K_L02858-8h">
+               <note type="commentary" xml:id="K_L02858-8h" corresp="K_L02858-8">
                   <bibl>
                      <rs type="person" ref="#pmb2570">Rudolf Lothar</rs>: <rs type="work" ref="#pmb118848">Briefe an eine Dame</rs>. In: <rs type="work" ref="#pmb43198">Die Wage. Eine Wiener Wochenschrift</rs>, Jg. 1, Nr. 26,
-                        <date when="1898-06-25">25. 6. 1898</date>, S. 439–440</bibl>.</note> von
+                        <date when="1898-06-25">25. 6. 1898</date>, S. 439–440</bibl>
+               </note> von
                   <hi rend="latintype">
                   <rs type="person" ref="#pmb2570">Rudolf Lothar</rs>
                </hi> über Dich in der »<rs type="work" ref="#pmb43198">Wage</rs>«. Wenn Du den <rs type="person" subtype="implied" ref="#pmb2570">Autor</rs> ſiehſt, ſo grüße ihn von
