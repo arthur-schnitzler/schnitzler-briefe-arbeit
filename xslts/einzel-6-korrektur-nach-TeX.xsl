@@ -3763,14 +3763,15 @@
    <!-- anchors in Fussnoten, sehr seltener Fall-->
    <xsl:template
       match="anchor[(@type = 'textConst' or @type = 'commentary') and ancestor::note[@type = 'footnote']]">
-      <xsl:variable name="xmlid" select="concat(@id, 'h')"/>
+      <xsl:variable name="xmlid" select="@id"/>
+      <xsl:variable name="type" select="@type"/>
       <xsl:text>\label{</xsl:text>
       <xsl:value-of select="@id"/>
       <xsl:text>v}</xsl:text>
       <xsl:apply-templates/>
       <xsl:text>\toendnotes[C]{\begin{minipage}[t]{4em}{\makebox[3.6em][r]{\tiny{Fußnote}}}\end{minipage}\begin{minipage}[t]{\dimexpr\linewidth-4em}\textit{</xsl:text>
       <xsl:for-each-group select="following-sibling::node()"
-         group-ending-with="note[@type = 'commentary']">
+         group-ending-with="note[@type = $type]">
          <xsl:if test="position() eq 1">
             <xsl:apply-templates select="current-group()[position() != last()]" mode="lemma"/>
             <xsl:text>}\,{]} </xsl:text>
@@ -3784,9 +3785,10 @@
    <xsl:template
       match="anchor[(@type = 'textConst' or @type = 'commentary') and not(ancestor::note[@type = 'footnote'])]">
       <xsl:variable name="typ-i-typ" select="@type"/>
+      <xsl:variable name="id" select="@id"/>
       <xsl:variable name="lemmatext" as="xs:string">
          <xsl:for-each-group select="following-sibling::node()"
-            group-ending-with="note[@type = $typ-i-typ]">
+            group-ending-with="note[@type = $typ-i-typ and @corresp=$id]">
             <xsl:if test="position() eq 1">
                <xsl:apply-templates select="current-group()[position() != last()]" mode="lemma"/>
             </xsl:if>
@@ -3808,13 +3810,13 @@
       match="note[(@type = 'textConst' or @type = 'commentary') and not(ancestor::note[@type = 'footnote'])]">
       <xsl:text>}{</xsl:text>
       <!-- Der Teil hier bildet das Lemma und kürzt es -->
-      <xsl:variable name="lemma-start" as="xs:string"
-         select="substring(@id, 1, string-length(@id) - 1)"/>
-      <xsl:variable name="lemma-end" as="xs:string" select="@id"/>
+      <xsl:variable name="corresp" as="xs:string"
+         select="@corresp"/>
+      
       <xsl:variable name="lemmaganz">
          <xsl:for-each-group
-            select="ancestor::*/anchor[@id = $lemma-start]/following-sibling::node()"
-            group-ending-with="note[@id = $lemma-end]">
+            select="ancestor::*/anchor[@id = $corresp]/following-sibling::node()"
+            group-ending-with="note[@corresp = $corresp]">
             <xsl:if test="position() eq 1">
                <xsl:apply-templates select="current-group()[position() != last()]" mode="lemma"/>
             </xsl:if>

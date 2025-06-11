@@ -267,21 +267,39 @@
     <!-- anchor -->
     <sch:pattern id="anchor-rules">
         <sch:rule context="tei:anchor">
+            <sch:let name="anchortype" value="@type"/> 
+            <sch:let name="anchorxmlid" value="@xml:id"/>
             <sch:assert
-                test="((@type = 'commentary' or @type = 'textConst') and matches(@xml:id, '^((T_|K_)(L\d{5}-\d+))$')) or not(@type = 'commentary' or @type = 'textConst')"
-                > anchor-Elemente vom Typ commentary oder textConst müssen eine xml:id mit Format
-                T_L00000-0 oder K_L00000-0 haben. </sch:assert>
+                test="(@type = 'commentary' and matches(@xml:id, '^((K_)(L\d{5}-\d+))$')) or not(@type = 'commentary')"
+                > anchor-Elemente vom Typ commentary müssen eine xml:id mit Format
+                K_L00000-0 haben. </sch:assert>
+            <sch:assert
+                test="(@type = 'textConst' and matches(@xml:id, '^((T_)(L\d{5}-\d+))$')) or not(@type = 'textConst')"
+                > anchor-Elemente vom Typ textConst müssen eine xml:id mit Format
+                T_L00000-0 haben. </sch:assert>
+            <sch:assert test="((@type = 'commentary' or @type = 'textConst') and (following-sibling::tei:note[@type=$anchortype]/@corresp=$anchorxmlid)) or not((@type = 'commentary' or @type = 'textConst'))">
+                Jeder "anchor" vom @typ "commentary" oder "textConst" muss ein folgendes Element "note" haben, das die @xml:id des "anchors" im @corresp hat
+            </sch:assert>
+            <sch:assert test="(following-sibling::node()[1][self::text() and normalize-space(.) = ''] and following-sibling::node()[2][self::*]
+                or
+                following-sibling::node()[1][self::text() and not(starts-with(., ' '))]) or normalize-space(.) != ''">
+                Auf das Element &lt;anchor/&gt; muss unmittelbar der Text kommen. Oder ein Element. 
+                Beispiele für Erlaubtes: &lt;anchor/&gt;hier, &lt;anchor/&gt; &lt;element/&gt;
+                Beispiel für Nicht-Erlaubtes: &lt;anchor/&gt; hier
+            </sch:assert>
         </sch:rule>
     </sch:pattern>
     <!-- normalNote -->
     <sch:pattern id="normalNote-rules">
         <sch:rule context="tei:note[@type = 'commentary' or @type = 'textConst']">
+            <sch:let name="notetype" value="@type"/> 
+            <sch:let name="notecorresp" value="@corresp"/>
             <sch:assert
                 test="not(descendant::tei:note[@type = 'textConst' or @type = 'commentary'])">
                 commentary- oder textConst-Noten dürfen keine geschachtelten Noten dieses Typs
                 enthalten. </sch:assert>
-            <sch:assert test="matches(@xml:id, '^((T_|K_)(L\d{5}-\d+h))$')"> commentary- oder
-                textConst-Noten müssen xml:id wie T_L00000-0h oder K_L00000-0h besitzen.
+            <sch:assert test="(@type = 'commentary' or @type = 'textConst') and preceding-sibling::tei:anchor[@type=$notetype]/@xml:id=$notecorresp">
+                Jedes "note" vom @typ "commentary" oder "textConst" muss ein vorangehendes Element "anchor" haben, das eine zum Attribut @corresp passende @xml:id hat
             </sch:assert>
         </sch:rule>
         <sch:rule context="tei:note[@type = 'footnote']">
@@ -297,8 +315,25 @@
                 > Referenzen in Notizen dürfen nur bestimmte subtype/type-Kombinationen haben.
             </sch:assert>
         </sch:rule>
+        
+        
+        
     </sch:pattern>
     
-    
+    <sch:pattern>
+        <sch:rule context="tei:pb">
+            <sch:assert test="following-sibling::node()[1][self::text() and normalize-space(.) = ''] and following-sibling::node()[2][self::*]
+                or
+                following-sibling::node()[1][self::text() and not(starts-with(., ' '))]">
+                Auf das Element &lt;pb/&gt; muss unmittelbar der Text kommen. Oder ein Element. 
+                Beispiele für Erlaubtes: &lt;pb/&gt;hier, &lt;pb/&gt; &lt;element/&gt;
+                Beispiel für Nicht-Erlaubtes: &lt;pb/&gt; hier
+            </sch:assert>
+            <sch:assert test="ancestor::tei:p or ancestor::tei:seg[not(descendant::tei:seg)] or ancestor::tei:l or ancestor::tei:quote or ancestor::tei:closer or ancestor::tei:dateline  or ancestor::tei:addrLine or ancestor::tei:salute or ancestor::tei:stamp  or ancestor::tei:cell or  parent::tei:desc or parent::tei:support">
+                &lt;pb/&gt; muss innerhalb eines zeilenbildenden Elements (&lt;p/&gt;, &lt;seg/&gt;, &lt;dateline/&gt;, &lt;closer, &lt;l/&gt;, &lt;addrLine/&gt;, &lt;salute/&gt;) stehen, oder, in den Metadaten, innerhalb von &lt;quote/&gt; oder &lt;stamp/&gt;
+                
+            </sch:assert>
+        </sch:rule>
+    </sch:pattern>
     
 </sch:schema>
