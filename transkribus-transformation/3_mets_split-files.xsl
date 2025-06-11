@@ -43,9 +43,10 @@
             group-starting-with="*[starts-with(@type, 'letter-begin')]">
             <xsl:variable name="nummer" select="$letzte-nummer + position()" as="xs:integer"/>
             <xsl:result-document href="../../temp/L0{$nummer}.xml">
+                <?xml-model href="../meta/schnitzler-briefe-schematron.sch" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                 <TEI xmlns="http://www.tei-c.org/ns/1.0"
                     xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-                    xsi:schemaLocation="http://www.tei-c.org/ns/1.0 ../meta/asbwschema.xsd"
+                    xsi:schemaLocation="http://www.tei-c.org/ns/1.0 ../meta/schnitzler-briefe-schema.xsd"
                     xml:id="{concat('L0',$nummer)}"
                     xml:base="https://id.acdh.oeaw.ac.at/schnitzler/schnitzler-briefe/editions">
                     <teiHeader>
