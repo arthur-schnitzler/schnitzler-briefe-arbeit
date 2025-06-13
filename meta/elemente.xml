@@ -17,13 +17,16 @@
                         <forename>Laura</forename>
                         <surname>Untner</surname>
                     </persName>
-                    <persName><forename>Selma</forename><surname>Jahnke</surname></persName>
+                    <persName>
+                        <forename>Selma</forename>
+                        <surname>Jahnke</surname>
+                    </persName>
                 </author>
             </titleStmt>
             <publicationStmt>
                 <publisher>Austrian Centre for Digital Humanities and Cultural Heritage</publisher>
                 <pubPlace>Vienna</pubPlace>
-                <date when="2024">2024</date>
+                <date when="2025">2025</date>
                 <availability>
                     <licence target="https://creativecommons.org/licenses/by/4.0/">
                         <p>The (CC BY 4.0)-License applies to this document.</p>
@@ -60,9 +63,10 @@
                     <ref target="https://github.com/arthur-schnitzler/schnitzler-briefe-data"
                         >https://github.com/arthur-schnitzler/schnitzler-briefe-data</ref>
                 </p>
-                <p>Im Ordner <code>data/meta</code> findet sich eine Schema-Datei
-                        <code>asbwschema.xsd</code>, die (mit geringfügigen Abweichungen) die hier
-                    beschriebenen Dateien validiert.</p>
+                <p>Im Ordner <code>data/meta</code> finden sich eine Schema-Datei
+                    <code>schnitzler-briefe-schema.xsd</code> und eine Schematron-Datei <code>schnitzler-briefe-schematron.sch</code>, die die hier
+                    beschriebenen Dateien validieren. (Eine geringfügige Abweichung ist der Umgang mit dem Schaft-s, das in den publizierten Fassungen als Element, nicht als UTF-8-Zeichen
+                gesetzt ist.)</p>
                 <p>Die Bildrechte sind nicht in unserem Besitz, weswegen die Faksimiles nicht
                     heruntergeladen werden können.</p>
                 <p>Die folgenden Beschreibungen der Verwendungsweisen von Elementen und Attributen
@@ -126,8 +130,8 @@
                             beiden letzteren Arten markieren den Beginn des Lemmabereichs, der mit
                             dem Element <code>note</code> endet. In diesem Fall sind die
                             zusammengehörigen Tags <code>anchor</code> und <code>note</code> durch
-                           die Entsprechung von <code>tei:anchor/@xml:id</code> mit <code>tei:note/@corresp</code> aufeinander
-                        bezogen.</p>
+                            die Entsprechung von <code>tei:anchor/@xml:id</code> mit
+                                <code>tei:note/@corresp</code> aufeinander bezogen.</p>
                         <p>Das Element <code>note</code> enthält einen Kommentar, eine Erläuterung
                             zur Textkonstitution oder eine Fußnote des Originaltexts
                                 (<code>note[@type='footnote']</code>, siehe unten). Die
@@ -194,9 +198,10 @@
                                 >Tagebuch</ref>s), ist in <code>@target</code> mit einem ISO-Datum
                             spezifiziert</p>
                         <p><code>@type="schnitzler-interviews"</code> (Verweis auf einen Brief/Text
-                            innerhalb der <ref target="https://schnitzler-interviews.acdh.oeaw.ac.at/"
-                                >Edition</ref>), enthält in <code>@target</code> die Interviewnummer/den
-                            Dateinamen (ohne ».xml«)</p>
+                            innerhalb der <ref
+                                target="https://schnitzler-interviews.acdh.oeaw.ac.at/"
+                                >Edition</ref>), enthält in <code>@target</code> die
+                            Interviewnummer/den Dateinamen (ohne ».xml«)</p>
                         <p><code>@type="schnitzler-lektueren"</code> (Verweis auf die digitale
                             Edition der <ref target="https://schnitzler-lektueren.acdh.oeaw.ac.at/"
                                 >Leseliste</ref>), enthält in <code>@target</code> eine Referenz auf
@@ -334,9 +339,9 @@
                     </div>
                     <div type="level3">
                         <head xml:id="foreign">foreign</head>
-                        <p>Markiert Sprachwechsel. <code>foreign</code>
-                            enthält als Attribut <code>xml:lang</code> mit den gängigen Sprachkürzeln als möglichen Attributwerten, beispielsweise »fr«, »en«, »la«, »it«.</p>
-                       
+                        <p>Markiert Sprachwechsel. <code>foreign</code> enthält als Attribut
+                                <code>xml:lang</code> mit den gängigen Sprachkürzeln als möglichen
+                            Attributwerten, beispielsweise »fr«, »en«, »la«, »it«.</p>
                     </div>
                     <div type="level3">
                         <head xml:id="hi_rend">hi[@rend]</head>
