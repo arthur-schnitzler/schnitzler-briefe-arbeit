@@ -280,12 +280,19 @@
             <sch:assert test="((@type = 'commentary' or @type = 'textConst') and (following-sibling::tei:note[@type=$anchortype]/@corresp=$anchorxmlid)) or not((@type = 'commentary' or @type = 'textConst'))">
                 Jeder "anchor" vom @typ "commentary" oder "textConst" muss ein folgendes Element "note" haben, das die @xml:id des "anchors" im @corresp hat
             </sch:assert>
-            <sch:assert test="(following-sibling::node()[1][self::text() and normalize-space(.) = ''] and following-sibling::node()[2][self::*]
-                or
-                following-sibling::node()[1][self::text() and not(starts-with(., ' '))]) or normalize-space(.) != ''">
-                Auf das Element &lt;anchor/&gt; muss unmittelbar der Text kommen. Oder ein Element. 
-                Beispiele für Erlaubtes: &lt;anchor/&gt;hier, &lt;anchor/&gt; &lt;element/&gt;
-                Beispiel für Nicht-Erlaubtes: &lt;anchor/&gt; hier
+            <sch:assert test="
+                (following-sibling::node()[1][self::text() and normalize-space(.) = '' ] and 
+                following-sibling::node()[2][self::*]) 
+                or 
+                (following-sibling::node()[1][self::text() and not(starts-with(., ' '))]) 
+                or 
+                (following-sibling::node()[1][self::*]) 
+                or 
+                normalize-space(.) != ''
+                ">
+                Auf das Element &lt;anchor/&gt; muss unmittelbar der Text oder ein Element kommen.
+                Erlaubt: &lt;anchor/&gt;hier, &lt;anchor/&gt;&lt;element/&gt;, &lt;anchor/&gt; &lt;element/&gt;
+                Nicht erlaubt: &lt;anchor/&gt; Text
             </sch:assert>
         </sch:rule>
     </sch:pattern>
