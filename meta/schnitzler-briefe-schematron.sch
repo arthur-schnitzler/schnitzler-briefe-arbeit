@@ -343,4 +343,13 @@
         </sch:rule>
     </sch:pattern>
     
+    <!-- Sonderzeichen -->
+    <sch:pattern id="Verbotene-Zeichen">
+        <sch:rule context="text()">
+            <sch:assert test="not(matches(., '[%~]'))">
+                Prozentzeichen (%)  und Tilde (~) sind durch  &lt;c rendition="#prozent"/&gt; respektive #tilde umzusetzen.
+            </sch:assert>
+        </sch:rule>
+    </sch:pattern>
+    
 </sch:schema>
