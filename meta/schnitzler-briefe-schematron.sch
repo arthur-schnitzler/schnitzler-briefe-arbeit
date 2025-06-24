@@ -345,7 +345,7 @@
     
     <!-- Sonderzeichen -->
     <sch:pattern id="Verbotene-Zeichen">
-        <sch:rule context="text()">
+        <sch:rule context="text()[ancestor::tei:body or ancestor::tei:teiHeader]">
             <sch:assert test="not(matches(., '[%~]'))">
                 Prozentzeichen (%)  und Tilde (~) sind durch  &lt;c rendition="#prozent"/&gt; respektive #tilde umzusetzen.
             </sch:assert>
