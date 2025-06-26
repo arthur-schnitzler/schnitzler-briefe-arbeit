@@ -6,13 +6,15 @@
     <!-- passt die notes an -->
     <!-- Identity template to copy nodes as-is -->
     <xsl:mode on-no-match="shallow-copy"/>
-    <xsl:template match="tei:note[@type = 'commentary' or @type = 'textConst']/@xml:id">
-        <xsl:variable name="alter-identifier" select="substring(., 1, string-length(.) - 1)"/>
+    
+    <xsl:template match="tei:note[@type = 'commentary' or @type = 'textConst']/@corresp">
+        <xsl:variable name="alter-identifier" select="." as="attribute()" />
         <xsl:variable name="neuer-identifier"
-            select="ancestor::*:text/descendant::*:anchor[@alt = $alter-identifier][1]/@xml:id"
+            select="ancestor::tei:text/descendant::tei:anchor[@alt= $alter-identifier][1]/@xml:id"
             as="attribute()"/>
-        <xsl:attribute name="xml:id">
-            <xsl:value-of select="concat($neuer-identifier, 'h')"/>
+        
+        <xsl:attribute name="corresp">
+            <xsl:value-of select="$neuer-identifier"/>
         </xsl:attribute>
     </xsl:template>
     <!-- Match tei:anchor[@type='commentary'] elements -->
