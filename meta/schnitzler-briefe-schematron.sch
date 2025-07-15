@@ -17,14 +17,19 @@
         <sch:rule context="tei:ref">
             <sch:assert
                 test="(@type = 'schnitzler-tagebuch' and matches(@target, '^(18|19)\d{2}-(0[1-9]|1[0-2])-(0[1-9]|[12]\d|3[01])$')) or not(@type = 'schnitzler-tagebuch')"
-                > Wenn @type="schnitzler-tagebuch", muss @target ein gültiges Datum im Format
-                YYYY-MM-DD sein. </sch:assert>
+                >Wenn @type="schnitzler-tagebuch", muss @target ein gültiges Datum im Format
+                YYYY-MM-DD sein.</sch:assert>
             <sch:assert
                 test="(@type = 'schnitzler-briefe' and matches(@target, '^L\d{5}$')) or not(@type = 'schnitzler-briefe')"
-                > Wenn @type="schnitzler-briefe", muss @target dem Muster 'L00000' entsprechen.
+                >Wenn @type="schnitzler-briefe", muss @target dem Muster 'L00000' entsprechen.
+            </sch:assert>
+            <sch:assert
+                test="normalize-space(.) = ''"
+                >tei:ref darf keinen Textinhalt haben (nur leere Elemente sind erlaubt).
             </sch:assert>
         </sch:rule>
     </sch:pattern>
+    
     <sch:pattern id="title-rules">
         <sch:rule context="tei:title[not(ancestor::tei:back)]">
             <sch:assert test="@level"> Das Attribut @level des tei:title muss vorhanden sein.
