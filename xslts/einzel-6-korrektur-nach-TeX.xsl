@@ -5728,9 +5728,22 @@
             <xsl:text>{XXXX ref}</xsl:text>
          </xsl:when>
          <xsl:when test="@subtype = 'date-only'">
-            <xsl:value-of
-               select="document(resolve-uri($target-path, document-uri(/)))//*:correspDesc/*:correspAction[@type = 'sent']/*:date/text()"
-            />
+            <xsl:try>
+               <xsl:variable name="doc" select="document(resolve-uri($target-path, document-uri(/)))"/>
+               <xsl:choose>
+                  <xsl:when test="$doc//*:correspDesc/*:correspAction[@type = 'sent']/*:date/text()">
+                     <xsl:value-of select="$doc//*:correspDesc/*:correspAction[@type = 'sent']/*:date/text()"/>
+                  </xsl:when>
+                  <xsl:otherwise>
+                     <xsl:text>XXXX Auszeichnungsfehler: Datum nicht gefunden</xsl:text>
+                  </xsl:otherwise>
+               </xsl:choose>
+               <xsl:catch>
+                  <xsl:text>XXXX Auszeichnungsfehler: Dokument </xsl:text>
+                  <xsl:value-of select="@target"/>
+                  <xsl:text> nicht gefunden</xsl:text>
+               </xsl:catch>
+            </xsl:try>
          </xsl:when>
          <xsl:otherwise>
             <xsl:choose>
