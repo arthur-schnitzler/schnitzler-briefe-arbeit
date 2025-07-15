@@ -5747,15 +5747,23 @@
                   <xsl:text>Vgl. </xsl:text>
                </xsl:when>
             </xsl:choose>
-            <xsl:choose>
-               <xsl:when test="document($target-path)//*:titleStmt/*:title[@level = 'a']">
-                  <xsl:value-of select="document($target-path)//*:titleStmt/*:title[@level = 'a']"
-                  > </xsl:value-of>
-               </xsl:when>
-               <xsl:otherwise>
-                  <xsl:text>XXXX Auszeichnungsfehler PROBLEM MIT DOKUMENT</xsl:text>
-               </xsl:otherwise>
-            </xsl:choose>
+            <xsl:try>
+               <xsl:variable name="doc" select="document($target-path)"/>
+               <xsl:choose>
+                  <xsl:when test="$doc//*:titleStmt/*:title[@level = 'a']">
+                     <xsl:value-of select="$doc//*:titleStmt/*:title[@level = 'a']"/>
+                  </xsl:when>
+                  <xsl:otherwise>
+                     <xsl:text>XXXX Auszeichnungsfehler: Titel nicht gefunden</xsl:text>
+                  </xsl:otherwise>
+               </xsl:choose>
+               <xsl:catch>
+                  <xsl:text>XXXX Auszeichnungsfehler: Dokument </xsl:text>
+                  <xsl:value-of select="@target"/>
+                  <xsl:text> nicht gefunden</xsl:text>
+               </xsl:catch>
+            </xsl:try>
+          
          </xsl:otherwise>
       </xsl:choose>
    </xsl:template>
