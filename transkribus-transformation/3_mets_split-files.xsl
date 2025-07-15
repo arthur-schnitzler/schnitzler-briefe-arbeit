@@ -19,12 +19,15 @@
     <xsl:param name="sender-in_pmb" as="xs:string" select="string($active-param-set/sender-in_pmb)"/>
     <xsl:param name="sender-in_name" as="xs:string"
         select="string($active-param-set/sender-in_name)"/>
-    <xsl:param name="empfaenger-in_pmb" as="xs:string" select="string($active-param-set/empfaenger-in_pmb)"/>
-    <xsl:param name="empfaenger-in_name" as="xs:string" select="string($active-param-set/empfaenger-in_name)"/>
+    <xsl:param name="empfaenger-in_pmb" as="xs:string"
+        select="string($active-param-set/empfaenger-in_pmb)"/>
+    <xsl:param name="empfaenger-in_name" as="xs:string"
+        select="string($active-param-set/empfaenger-in_name)"/>
     <xsl:param name="titel" as="xs:string" select="string($active-param-set/titel)"/>
     <xsl:param name="archiv-land" as="xs:string" select="string($active-param-set/archiv-land)"/>
     <xsl:param name="archiv-stadt" as="xs:string" select="string($active-param-set/archiv-stadt)"/>
-    <xsl:param name="archiv-institution" as="xs:string" select="string($active-param-set/archiv-institution)"/>
+    <xsl:param name="archiv-institution" as="xs:string"
+        select="string($active-param-set/archiv-institution)"/>
     <xsl:param name="signatur" as="xs:string" select="string($active-param-set/signatur)"/>
     <xsl:param name="exporter" as="xs:string" select="string($active-param-set/exporter)"/>
     <xsl:template match="tei:div">
@@ -43,7 +46,9 @@
             group-starting-with="*[starts-with(@type, 'letter-begin')]">
             <xsl:variable name="nummer" select="$letzte-nummer + position()" as="xs:integer"/>
             <xsl:result-document href="../../temp/L0{$nummer}.xml">
-                <?xml-model href="../meta/schnitzler-briefe-schematron.sch" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
+                <xsl:processing-instruction name="xml-model">
+                    <xsl:text>href="../meta/schnitzler-briefe-schematron.sch" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"</xsl:text>
+                </xsl:processing-instruction>
                 <TEI xmlns="http://www.tei-c.org/ns/1.0"
                     xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
                     xsi:schemaLocation="http://www.tei-c.org/ns/1.0 ../meta/schnitzler-briefe-schema.xsd"
