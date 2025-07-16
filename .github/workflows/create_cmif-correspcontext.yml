@@ -1,4 +1,4 @@
-name: Erzeuge CMIF und dann correspContext
+name: Erzeuge CMIF, correspContext, Inhaltsverzeichnisse
 
 on:
   workflow_dispatch:
@@ -75,4 +75,35 @@ jobs:
             git push https://x-access-token:${{ secrets.GITHUB_TOKEN }}@github.com/${{ github.repository }} HEAD:${{ github.ref_name }}
           else
             echo "📭 Keine neuen Änderungen durch Python-Skript."
+          fi
+
+  create-tocs:
+    needs: add-correspContext
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: 📥 Repo erneut auschecken (mit neuesten Änderungen)
+        uses: actions/checkout@v4
+
+      - name: 🐍 Python einrichten
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: 📦 Abhängigkeiten installieren
+        run: pip install lxml requests  # Falls benötigt
+
+      - name: ▶️ TOCs erstellen mit create-tocs.py
+        run: python ./python/create-tocs.py
+
+      - name: ✅ Änderungen committen & pushen (TOCs)
+        run: |
+          git config user.name "GitHub Action"
+          git config user.email "action@github.com"
+          if git status --porcelain | grep .; then
+            git add .
+            git commit -m "Automatisch: TOCs generiert"
+            git push https://x-access-token:${{ secrets.GITHUB_TOKEN }}@github.com/${{ github.repository }} HEAD:${{ github.ref_name }}
+          else
+            echo "📭 Keine Änderungen durch create-tocs.py."
           fi
