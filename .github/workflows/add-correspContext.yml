@@ -1,0 +1,39 @@
+name: correspContext hinzufügen
+
+on:
+  workflow_dispatch:  # Manuell starten
+  schedule:
+    - cron: '0 3 * * 1'  # Optional: jeden Montag um 03:00 UTC
+
+jobs:
+  run-script:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: 📥 Repository auschecken
+        uses: actions/checkout@v4
+        with:
+          persist-credentials: false  # wichtig für eigenen Commit-User
+
+      - name: 🐍 Python einrichten
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: 📦 Abhängigkeiten installieren
+        run: pip install lxml requests
+
+      - name: ▶️ Python-Skript ausführen
+        run: python ./python/add-correspContext.py
+
+      - name: 📤 Änderungen committen und pushen
+        run: |
+          git config user.name "GitHub Action"
+          git config user.email "action@github.com"
+          git add .
+          if git diff --cached --quiet; then
+            echo "Keine Änderungen gefunden."
+          else
+            git commit -m "Automatisch: correspContext aktualisiert"
+            git push https://x-access-token:${{ secrets.GITHUB_TOKEN }}@github.com/${{ github.repository }} HEAD:${{ github.ref_name }}
+          fi
