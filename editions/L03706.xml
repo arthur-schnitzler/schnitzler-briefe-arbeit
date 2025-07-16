@@ -1,10 +1,6 @@
-<?xml version="1.0" encoding="UTF-8"?>
+<?xml version='1.0' encoding='UTF-8'?>
 <?xml-model href="../meta/schnitzler-briefe-schematron.sch" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
-<TEI xmlns="http://www.tei-c.org/ns/1.0"
-     xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-     xsi:schemaLocation="http://www.tei-c.org/ns/1.0 ../meta/schnitzler-briefe-schema.xsd"
-     xml:id="L03706"
-     xml:base="https://id.acdh.oeaw.ac.at/schnitzler/schnitzler-briefe/editions">
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.tei-c.org/ns/1.0 ../meta/schnitzler-briefe-schema.xsd" xml:id="L03706" xml:base="https://id.acdh.oeaw.ac.at/schnitzler/schnitzler-briefe/editions">
    <teiHeader>
       <fileDesc>
          <titleStmt>
@@ -114,7 +110,12 @@
                <date evidence="conjecture" notBefore="1896-11-21" notAfter="1896-11-25">[21. 11. 1896 – 25. 11. 1896?]</date>
                <placeName ref="#pmb50" evidence="conjecture">Wien</placeName>
             </correspAction>
-         </correspDesc>
+         <correspContext><ref type="belongsToCorrespondence" target="correspondence_2128">Plessner, Else</ref>
+               <ref subtype="previous_letter" type="withinCollection" target="L00623">Blumenthal an Schnitzler, 19. 11. 1896</ref>
+               <ref subtype="next_letter" type="withinCollection" target="L02684">Schnitzler an Goldmann, 21. 11. 1896</ref>
+               <ref subtype="previous_letter" type="withinCorrespondence" source="correspondence_2128" target="L03707">Plessner an Schnitzler, 17. 11. 1896</ref>
+               <ref subtype="next_letter" type="withinCorrespondence" source="correspondence_2128" target="L03708">Plessner an Schnitzler, 1. 12. 1896</ref>
+            </correspContext></correspDesc>
       </profileDesc>
       <revisionDesc status="proposed">
          <change who="MAM" when="2025-07-03">Export aus Transkribus</change>
