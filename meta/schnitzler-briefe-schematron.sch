@@ -23,10 +23,16 @@
                 test="(@type = 'schnitzler-briefe' and matches(@target, '^L\d{5}$')) or not(@type = 'schnitzler-briefe')"
                 >Wenn @type="schnitzler-briefe", muss @target dem Muster 'L00000' entsprechen.
             </sch:assert>
-            <sch:assert
-                test="normalize-space(.) = ''"
-                >tei:ref darf keinen Textinhalt haben (nur leere Elemente sind erlaubt).
-            </sch:assert>
+            
+        </sch:rule>
+    </sch:pattern>
+    
+    <sch:pattern id="ref-rule-fuer-verweise">
+        <sch:rule context="tei:ref[not(ancestor::tei:correspContext)]">
+        <sch:assert
+            test="normalize-space(.) = ''"
+            >tei:ref darf keinen Textinhalt haben (nur leere Elemente sind erlaubt).
+        </sch:assert>
         </sch:rule>
     </sch:pattern>
     
