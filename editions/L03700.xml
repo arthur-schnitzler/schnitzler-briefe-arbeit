@@ -1,6 +1,10 @@
-<?xml version='1.0' encoding='UTF-8'?>
+<?xml version="1.0" encoding="UTF-8"?>
 <?xml-model href="../meta/schnitzler-briefe-schematron.sch" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
-<TEI xmlns="http://www.tei-c.org/ns/1.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.tei-c.org/ns/1.0 ../meta/schnitzler-briefe-schema.xsd" xml:id="L03700" xml:base="https://id.acdh.oeaw.ac.at/schnitzler/schnitzler-briefe/editions">
+<TEI xmlns="http://www.tei-c.org/ns/1.0"
+     xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+     xsi:schemaLocation="http://www.tei-c.org/ns/1.0 ../meta/schnitzler-briefe-schema.xsd"
+     xml:id="L03700"
+     xml:base="https://id.acdh.oeaw.ac.at/schnitzler/schnitzler-briefe/editions">
    <teiHeader>
       <fileDesc>
          <titleStmt>
@@ -83,7 +87,7 @@
                               <extent>
                                  <measure unit="seite" quantity="3"/>
                                  <measure unit="blatt" quantity="1"/>
-                                 <measure unit="zeichenanzahl" quantity="2064"/>
+                                 <measure unit="zeichenanzahl" quantity="2063"/>
                               </extent>
                            </supportDesc>
                         </objectDesc>
@@ -112,12 +116,20 @@
                   – 17. 4. 1896?]</date>
                <placeName ref="#pmb50" evidence="conjecture">Wien</placeName>
             </correspAction>
-         <correspContext><ref type="belongsToCorrespondence" target="correspondence_2128">Plessner, Else</ref>
+            <correspContext>
+               <ref type="belongsToCorrespondence" target="correspondence_2128">Plessner, Else</ref>
                <ref subtype="previous_letter" type="withinCollection" target="L02771">Goldmann an Schnitzler, 9. [4.] 1896</ref>
                <ref subtype="next_letter" type="withinCollection" target="L00541">Brandes an Schnitzler, 22. 4. 1896</ref>
-               <ref subtype="previous_letter" type="withinCorrespondence" source="correspondence_2128" target="L03699">Plessner an Schnitzler, 18. 3. 1896</ref>
-               <ref subtype="next_letter" type="withinCorrespondence" source="correspondence_2128" target="L03701">Plessner an Schnitzler, 15. 9. 1896</ref>
-            </correspContext></correspDesc>
+               <ref subtype="previous_letter"
+                    type="withinCorrespondence"
+                    source="correspondence_2128"
+                    target="L03699">Plessner an Schnitzler, 18. 3. 1896</ref>
+               <ref subtype="next_letter"
+                    type="withinCorrespondence"
+                    source="correspondence_2128"
+                    target="L03701">Plessner an Schnitzler, 15. 9. 1896</ref>
+            </correspContext>
+         </correspDesc>
       </profileDesc>
       <revisionDesc status="proposed">
          <change who="MAM" when="2025-07-03">Export aus Transkribus</change>
@@ -128,28 +140,26 @@
       <body>
          <div type="writingSession" n="1">
             <opener>
-               <dateline>
+               <dateline rend="left">
                   <pb facs=""/>
-                  <seg rend="left">
-                     <rs type="place" ref="#pmb50">Wien</rs> , den <date>14. April 1896</date>
-                  </seg>
-                  <seg rend="right">
-                     <rs type="place" ref="#pmb295211">Bäckerstraße N<hi rend="superscript">r</hi>
-                        1</rs>.</seg>
+                  <rs type="place" ref="#pmb50">Wien</rs> , den <date>14. April 1896</date>
                </dateline>
+               <seg rend="right">
+                  <rs type="place" ref="#pmb295211">Bäckerstraße N<hi rend="superscript">r</hi>
+                        1</rs>.</seg>
                <salute>Verehrter Herr Doctor!</salute>
             </opener>
             <p>Durch andauernde Unpässlichkeit war ich lange verhindert, Ihnen meinen aufrichtigen
                Dank für die große, große Liebenswürdigkeit auszusprechen, die Sie mir in so reichem
                Maße zu Theil werden lassen. Nun haben Sie mich aber ein wenig verwöhnt und ich wage
                es, Ihrem Wohlwollen eine abermalige Belastungsprobe zuzumuthen. Beiliegend übersende
-               Ihnen das Manuscript einer <rs type="work" ref="#pmb32316">Novelle</rs>, d. h. blos
+               Ihnen das Manuscript einer <rs type="work" ref="#pmb32316" subtype="implied">Novelle</rs>, d. h. blos
                das Gerüst und Gerippe zu einer solchen, indem ich Sie herzlichst bitte, diesen
                Blättern eine doppelt destillierte Aufmerksamkeit zu widmen. Ich glaube nämlich,
                damit einen etwas ungebahnten Weg betreten zu haben und möchte von Ihnen erfahren, ob
-               der eventuelle literarische Wert die Kühnheit der <rs type="work" ref="#pmb32316">Arbeit</rs> rechtfertigen kann. –</p>
-            <p>Kehren Sie sich bitte, nicht an das, stellenweise etwas tote Papierdeutsch, das <pb facs=""/>sich in diesem Entwurfe, wie ich ja selbst genau weiß, noch vorfindet,
-               sondern sehen Sie die Sache als Ganzes an. Es soll nämlich <anchor type="commentary" xml:id="K_L03700-1"/>eine gröstere Novelle<note type="commentary" corresp="K_L03700-1">Am <ref type="schnitzler-briefe" target="" subtype="date-only">L03702</ref> sendete <rs type="person" ref="#pmb2128">Plessner</rs>
+               der eventuelle literarische Wert die Kühnheit der <rs type="work" ref="#pmb32316" subtype="implied">Arbeit</rs> rechtfertigen kann. –</p>
+            <p>Kehren Sie sich bitte, nicht an das, stellenweise etwas tote Papierdeutsch, das <pb facs=""/>sich in diesem <rs type="work" subtype="implied" ref="#pmb32316">Entwurfe</rs>, wie ich ja selbst genau weiß, noch vorfindet,
+               sondern sehen Sie die Sache als Ganzes an. Es soll nämlich <anchor type="commentary" xml:id="K_L03700-1"/>eine gröstere Novelle<note type="commentary" corresp="K_L03700-1">Am <ref type="schnitzler-briefe" target="L03702" subtype="date-only"/> sendete <rs type="person" ref="#pmb2128">Plessner</rs>
                   <space unit="chars" quantity="1"/>
                   <rs type="person" ref="#pmb2121">Schnitzler</rs> eine überarbeitete Version von
                      <rs type="work" ref="#pmb32316">Warten</rs> in einem Paket mit anderen Texten
@@ -158,8 +168,8 @@
                   gedachte.</note> werden, zu deren Ausführung ich mir vorliegende Disposition
                gemacht habe, um den Gang und die Stimmung festzuhalten und theilweise auch den Stil.
                Die Ausführung ist so gedacht, dass, wenn ich z. B. an einer Stelle von dem »<anchor type="commentary" xml:id="K_L03700-2"/>behäbigen Dutzendbengel<note type="commentary" corresp="K_L03700-2">Die Passage lautet im Druck: »O ja – gewiß
-                  – mehr wie ein behäbiger Dutzendbengel, der überhaupt »solche Lämmer« gut leiden
-                  kann, findet mich »nett« und tanzt mit mir auf dem Subscribtionsball (<bibl>
+                  – mehr wie ein behäbiger Dutzendbengel, der überhaupt ›solche Lämmer‹ gut leiden
+                  kann, findet mich ›nett‹ und tanzt mit mir auf dem Subscribtionsball« (<bibl>
                      <rs type="person" ref="#pmb2128">Elsa Pessner</rs>: <rs type="work" ref="#pmb32316">Warten</rs>. In: <rs type="work" ref="#pmb32230">Der
                         Gläserne Käfig. Skizzen und Novellen</rs>. <rs type="place" ref="#pmb50">Wien</rs>: <rs type="org" ref="#pmb29220">Leopold Weiss</rs>
                      <space unit="chars" quantity="1"/>
@@ -173,7 +183,7 @@
                Aufzeichnunggen! – Nun, Sie werden ja selbst sehen!</p>
             <p>Und somit danke ich Ihnen, meinem verehrten literarischen Beichtvater, für die
                Geduld, mit der Sie diese Zeilen durchlesen (falls Sie bis hierher kommen) und
-               schließe mit nochmaligen Empfehlung dieser <rs type="work" ref="#pmb32316">Blätter</rs> an
+               schließe mit nochmaligen Empfehlung dieser <rs type="work" ref="#pmb32316" subtype="implied">Blätter</rs> an
                Ihre erwiesene Güte dankbar ergebenst</p>
             <closer>
                <signed>Elsa Plessner</signed>
