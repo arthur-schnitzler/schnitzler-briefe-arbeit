@@ -4,29 +4,27 @@
    xmlns:foo="whatever" xmlns:tei="http://www.tei-c.org/ns/1.0" version="3.0">
    <xsl:output method="text"/>
    <xsl:strip-space elements="*"/>
-   
    <xsl:template match="*:root">
       <xsl:text>\input{latex-korrekturansicht-vorspann}</xsl:text>
       <xsl:for-each select="*:TEI">
-         <xsl:sort select="descendant::*:correspDesc/*:correspAction[1]/*:date/@*[name()='when' or name()='from' or name()='notBefore']"></xsl:sort>
+         <xsl:sort
+            select="descendant::*:correspDesc/*:correspAction[1]/*:date/@*[name() = 'when' or name() = 'from' or name() = 'notBefore']"/>
          <xsl:text>\section{</xsl:text>
          <xsl:value-of select="@*:id"/>
          <xsl:text> </xsl:text>
-         <xsl:value-of select="descendant::*:titleStmt/*:title[@level='a']"/>
+         <xsl:value-of select="descendant::*:titleStmt/*:title[@level = 'a']"/>
          <xsl:text>}</xsl:text>
          <xsl:text>&#10;</xsl:text>
-         <xsl:if test="descendant::*:body//*:note[(@type='commentary' or @type='textConst')][1] and descendant::*:body//*:note[(@type='commentary' or @type='textConst') and not(child::*:ref[1] and not(child::*[2]) and normalize-space(.)='')]">
+         <xsl:if
+            test="descendant::*:body//*:note[(@type = 'commentary' or @type = 'textConst')][1] and descendant::*:body//*:note[(@type = 'commentary' or @type = 'textConst') and not(child::*:ref[1] and not(child::*[2]) and normalize-space(.) = '')]">
             <xsl:text>\begin{description}[nosep]</xsl:text>
-         <xsl:apply-templates select="descendant::*:body//*:note[@type='commentary' or @type='textConst']"/>
+            <xsl:apply-templates
+               select="descendant::*:body//*:note[@type = 'commentary' or @type = 'textConst']"/>
             <xsl:text>\end{description}</xsl:text>
          </xsl:if>
       </xsl:for-each>
       <xsl:text>\end{document}</xsl:text>
-      
    </xsl:template>
-   
-   
-   
    <!-- anchors in Fussnoten, sehr seltener Fall-->
    <xsl:template
       match="*:anchor[(@type = 'textConst' or @type = 'commentary') and ancestor::*:note[@type = 'footnote']]">
@@ -60,7 +58,8 @@
    <xsl:template
       match="*:note[(@type = 'textConst' or @type = 'commentary') and not(ancestor::*:note[@type = 'footnote'])]"
       mode="lemma"/>
-   <xsl:template match="*:subst/*:del" mode="lemma"/><!-- das verhindert die Wiedergabe des gelöschten Teils von subst in einem Lemma -->
+   <xsl:template match="*:subst/*:del" mode="lemma"/>
+   <!-- das verhindert die Wiedergabe des gelöschten Teils von subst in einem Lemma -->
    <xsl:template match="*:space[@unit = 'chars' and @quantity = '1']" mode="lemma">
       <xsl:text> </xsl:text>
    </xsl:template>
@@ -70,66 +69,68 @@
    <xsl:template
       match="*:note[(@type = 'textConst' or @type = 'commentary') and not(ancestor::*:note[@type = 'footnote'])]">
       <xsl:choose>
-         <xsl:when test="child::*:ref[1] and not(child::*[2]) and normalize-space(.)=''"/> <!-- das sollte reine Verweise rauskürzen -->
+         <xsl:when test="child::*:ref[1] and not(child::*[2]) and normalize-space(.) = ''"/>
+         <!-- das sollte reine Verweise rauskürzen -->
          <xsl:otherwise>
-      <!-- Der Teil hier bildet das Lemma und kürzt es -->
-      <xsl:variable name="lemma-start" as="xs:string"
-         select="substring(@id, 1, string-length(@id) - 1)"/>
-      <xsl:variable name="lemma-end" as="xs:string" select="@id"/>
-      <xsl:variable name="lemmaganz">
-         <xsl:for-each-group
-            select="ancestor::*/*:anchor[@id = $lemma-start]/following-sibling::node()"
-            group-ending-with="*:note[@id = $lemma-end]">
-            <xsl:if test="position() eq 1">
-               <xsl:apply-templates select="current-group()[position() != last()]" mode="lemma"/>
-            </xsl:if>
-         </xsl:for-each-group>
-      </xsl:variable>
-      <xsl:variable name="lemma" as="xs:string">
-         <xsl:choose>
-            <xsl:when test="not(contains($lemmaganz, ' '))">
-               <xsl:value-of select="$lemmaganz"/>
-            </xsl:when>
-            <xsl:when test="string-length(normalize-space($lemmaganz)) &gt; 24">
-               <xsl:variable name="lemma-kurz"
-                  select="concat(tokenize(normalize-space($lemmaganz), ' ')[1], ' … ', tokenize(normalize-space($lemmaganz), ' ')[last()])"/>
+            <!-- Der Teil hier bildet das Lemma und kürzt es -->
+            <xsl:variable name="lemma-start" as="xs:string"
+               select="substring(@id, 1, string-length(@id) - 1)"/>
+            <xsl:variable name="lemma-end" as="xs:string" select="@id"/>
+            <xsl:variable name="lemmaganz">
+               <xsl:for-each-group
+                  select="ancestor::*/*:anchor[@id = $lemma-start]/following-sibling::node()"
+                  group-ending-with="*:note[@id = $lemma-end]">
+                  <xsl:if test="position() eq 1">
+                     <xsl:apply-templates select="current-group()[position() != last()]"
+                        mode="lemma"/>
+                  </xsl:if>
+               </xsl:for-each-group>
+            </xsl:variable>
+            <xsl:variable name="lemma" as="xs:string">
                <xsl:choose>
-                  <xsl:when
-                     test="string-length(normalize-space($lemmaganz)) - string-length($lemma-kurz) &lt; 5">
-                     <xsl:value-of select="normalize-space($lemmaganz)"/>
+                  <xsl:when test="not(contains($lemmaganz, ' '))">
+                     <xsl:value-of select="$lemmaganz"/>
+                  </xsl:when>
+                  <xsl:when test="string-length(normalize-space($lemmaganz)) &gt; 24">
+                     <xsl:variable name="lemma-kurz"
+                        select="concat(tokenize(normalize-space($lemmaganz), ' ')[1], ' … ', tokenize(normalize-space($lemmaganz), ' ')[last()])"/>
+                     <xsl:choose>
+                        <xsl:when
+                           test="string-length(normalize-space($lemmaganz)) - string-length($lemma-kurz) &lt; 5">
+                           <xsl:value-of select="normalize-space($lemmaganz)"/>
+                        </xsl:when>
+                        <xsl:otherwise>
+                           <xsl:value-of select="$lemma-kurz"/>
+                        </xsl:otherwise>
+                     </xsl:choose>
                   </xsl:when>
                   <xsl:otherwise>
-                     <xsl:value-of select="$lemma-kurz"/>
+                     <xsl:value-of select="$lemmaganz"/>
                   </xsl:otherwise>
                </xsl:choose>
-            </xsl:when>
-            <xsl:otherwise>
-               <xsl:value-of select="$lemmaganz"/>
-            </xsl:otherwise>
-         </xsl:choose>
-      </xsl:variable>
-      <xsl:text>\item[</xsl:text>
-      <xsl:choose>
-         <xsl:when test="Lemma">
-            <xsl:value-of select="Lemma"/>
-         </xsl:when>
-         <xsl:otherwise>
+            </xsl:variable>
+            <xsl:text>\item[</xsl:text>
             <xsl:choose>
-               <xsl:when test="string-length($lemma) &gt; 0">
-                  <xsl:value-of select="$lemma"/>
+               <xsl:when test="Lemma">
+                  <xsl:value-of select="Lemma"/>
                </xsl:when>
                <xsl:otherwise>
-                  <xsl:text>XXXX Lemmafehler</xsl:text>
+                  <xsl:choose>
+                     <xsl:when test="string-length($lemma) &gt; 0">
+                        <xsl:value-of select="$lemma"/>
+                     </xsl:when>
+                     <xsl:otherwise>
+                        <xsl:text>XXXX Lemmafehler</xsl:text>
+                     </xsl:otherwise>
+                  </xsl:choose>
                </xsl:otherwise>
             </xsl:choose>
+            <xsl:text>]&#10;</xsl:text>
+            <xsl:apply-templates select="node() except Lemma"/>
+            <xsl:text>&#10;</xsl:text>
          </xsl:otherwise>
       </xsl:choose>
-      <xsl:text>]&#10;</xsl:text>
-      <xsl:apply-templates select="node() except Lemma"/>
-      <xsl:text>&#10;</xsl:text>
-         </xsl:otherwise></xsl:choose>
    </xsl:template>
-   
    <xsl:template match="ref[@type = 'pointer']">
       <!-- Pointer funktionieren so, dass sie, wenn sie auf v enden, auf einen Bereich zeigen, sonst
       wird einfach zweimal der selbe Punkt gesetzt-->
@@ -190,8 +191,36 @@
          <xsl:text>A.&#8239;S.: \emph{Tagebuch}, </xsl:text>
       </xsl:if>
       <xsl:value-of select="
-         format-date(@target,
-         '[D1].&#8239;[M1].&#8239;[Y0001]')"/>
+            format-date(@target,
+            '[D1].&#8239;[M1].&#8239;[Y0001]')"/>
+   </xsl:template>
+   <xsl:template match="ref[@type = 'schnitzler-kultur']">
+      <xsl:variable name="target" select="replace(@target, '#', '')"/>
+      <xsl:choose>
+         <xsl:when test="@subtype = 'date-only'">
+            <xsl:text>XXXX Das noch anschauen</xsl:text>
+         </xsl:when>
+         <xsl:otherwise>
+            <xsl:choose>
+               <xsl:when test="@subtype = 'see'">
+                  <xsl:text>siehe </xsl:text>
+               </xsl:when>
+               <xsl:when test="@subtype = 'cf'">
+                  <xsl:text>vgl. </xsl:text>
+               </xsl:when>
+               <xsl:when test="@subtype = 'See'">
+                  <xsl:text>Siehe </xsl:text>
+               </xsl:when>
+               <xsl:when test="@subtype = 'Cf'">
+                  <xsl:text>Vgl. </xsl:text>
+               </xsl:when>
+            </xsl:choose>
+            <xsl:text>A.&#8239;S.: \emph{Kulturveranstaltungen}, </xsl:text>
+            <xsl:value-of
+               select="normalize-space(document('https://raw.githubusercontent.com/arthur-schnitzler/schnitzler-kultur/main/data/editions/listevent.xml')/tei:TEI/tei:text[1]/tei:body[1]/tei:listEvent[1]/tei:event[@xml:id = $target]/@when-iso)"
+            />
+         </xsl:otherwise>
+      </xsl:choose>
    </xsl:template>
    <xsl:template match="ref[@type = 'schnitzler-lektueren']">
       <xsl:if test="not(@subtype = 'date-only')">
@@ -212,13 +241,13 @@
          <xsl:text>A.&#8239;S.: \emph{Lektüren}, </xsl:text>
       </xsl:if>
       <xsl:choose>
-         <xsl:when test="@target='Deutschsprachige-Literatur'">
+         <xsl:when test="@target = 'Deutschsprachige-Literatur'">
             <xsl:text>deutschsprachige Literatur</xsl:text>
          </xsl:when>
-         <xsl:when test="@target='Polen-Czechen'">
+         <xsl:when test="@target = 'Polen-Czechen'">
             <xsl:text>Polen, Czechen</xsl:text>
          </xsl:when>
-         <xsl:when test="@target='Ungarn-etc.'">
+         <xsl:when test="@target = 'Ungarn-etc.'">
             <xsl:text>Ungarn etc.</xsl:text>
          </xsl:when>
          <xsl:otherwise>
@@ -264,7 +293,9 @@
          </xsl:choose>
          <xsl:text>A.&#8239;S.: \emph{»Das Zeitlose ist von kürzester Dauer«}, </xsl:text>
       </xsl:if>
-      <xsl:value-of select="normalize-space(document(concat('https://raw.githubusercontent.com/arthur-schnitzler/schnitzler-interviews-data/main/data/editions/', replace(@target, '.html', ''), '.xml'))/descendant::tei:titleStmt/tei:title[@level='a'])"/>
+      <xsl:value-of
+         select="normalize-space(document(concat('https://raw.githubusercontent.com/arthur-schnitzler/schnitzler-interviews-data/main/data/editions/', replace(@target, '.html', ''), '.xml'))/descendant::tei:titleStmt/tei:title[@level = 'a'])"
+      />
    </xsl:template>
    <xsl:template match="ref[@type = 'url']">
       <xsl:text>\uline{\url{</xsl:text>
@@ -279,7 +310,7 @@
          </xsl:when>
          <xsl:when test="@subtype = 'date-only'">
             <xsl:value-of
-               select="ancestor::*:root/descendant::*:TEI[@id=$currenttarget or @xml:id=$currenttarget]/descendant::*:correspDesc/*:correspAction[@type = 'sent']/*:date/text()"
+               select="ancestor::*:root/descendant::*:TEI[@id = $currenttarget or @xml:id = $currenttarget]/descendant::*:correspDesc/*:correspAction[@type = 'sent']/*:date/text()"
             />
          </xsl:when>
          <xsl:otherwise>
@@ -298,10 +329,11 @@
                </xsl:when>
             </xsl:choose>
             <xsl:choose>
-               <xsl:when test="ancestor::*:root/descendant::*:TEI[@id=$currenttarget or @xml:id=$currenttarget]//*:titleStmt/*:title[@level = 'a']">
+               <xsl:when
+                  test="ancestor::*:root/descendant::*:TEI[@id = $currenttarget or @xml:id = $currenttarget]//*:titleStmt/*:title[@level = 'a']">
                   <xsl:value-of
-                     select="ancestor::*:root/descendant::*:TEI[@id=$currenttarget or @xml:id=$currenttarget]//*:titleStmt/*:title[@level = 'a']"
-                     > </xsl:value-of>
+                     select="ancestor::*:root/descendant::*:TEI[@id = $currenttarget or @xml:id = $currenttarget]//*:titleStmt/*:title[@level = 'a']"
+                  > </xsl:value-of>
                </xsl:when>
                <xsl:otherwise>
                   <xsl:text>XXXX Auszeichnungsfehler</xsl:text>
@@ -310,9 +342,6 @@
          </xsl:otherwise>
       </xsl:choose>
    </xsl:template>
-   
-   
-   
    <xsl:template match="c[@rendition = '#kaufmannsund']">
       <xsl:text>{\kaufmannsund}</xsl:text>
    </xsl:template>
@@ -531,22 +560,24 @@
          </xsl:otherwise>
       </xsl:choose>-->
    </xsl:template>
-   <xsl:template match="*:rs[(@type='work' or @type='org') and not(@subtype='implied')]|*:title[not(@subtype='implied')]">
+   <xsl:template
+      match="*:rs[(@type = 'work' or @type = 'org') and not(@subtype = 'implied')] | *:title[not(@subtype = 'implied')]">
       <xsl:text>\textit{</xsl:text>
       <xsl:apply-templates/>
       <xsl:text>}</xsl:text>
    </xsl:template>
    <xsl:template match="*:quote">
       <xsl:choose>
-      <xsl:when test="*:p">
-         <xsl:for-each select="*:p[not(position() = last())]">
+         <xsl:when test="*:p">
+            <xsl:for-each select="*:p[not(position() = last())]">
+               <xsl:apply-templates/>
+               <xsl:text>{ / }</xsl:text>
+            </xsl:for-each>
+            <xsl:apply-templates select="*:p[(position() = last())]"/>
+         </xsl:when>
+         <xsl:otherwise>
             <xsl:apply-templates/>
-            <xsl:text>{ / }</xsl:text>
-         </xsl:for-each>
-         <xsl:apply-templates select="*:p[(position() = last())]"/>
-      </xsl:when>
-      <xsl:otherwise>
-         <xsl:apply-templates/>
-      </xsl:otherwise>
-   </xsl:choose></xsl:template>
+         </xsl:otherwise>
+      </xsl:choose>
+   </xsl:template>
 </xsl:stylesheet>

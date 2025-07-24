@@ -5664,25 +5664,33 @@
       </xsl:choose>
       
    </xsl:template>
-   <xsl:template match="ref[@type = 'schnitzler-bahr']">
-      <xsl:if test="not(@subtype = 'date-only')">
-         <xsl:choose>
-            <xsl:when test="@subtype = 'see'">
-               <xsl:text>siehe </xsl:text>
-            </xsl:when>
-            <xsl:when test="@subtype = 'cf'">
-               <xsl:text>vgl. </xsl:text>
-            </xsl:when>
-            <xsl:when test="@subtype = 'See'">
-               <xsl:text>Siehe </xsl:text>
-            </xsl:when>
-            <xsl:when test="@subtype = 'Cf'">
-               <xsl:text>Vgl. </xsl:text>
-            </xsl:when>
-         </xsl:choose>
-         <xsl:text>Bahr/Schnitzler, </xsl:text>
-      </xsl:if>
-      <xsl:value-of select="replace(@target, '.html', '')"/>
+   <xsl:template match="ref[@type = 'schnitzler-kultur']">
+      <xsl:variable name="target" select="replace(@target, '#', '')"/>
+      <xsl:choose>
+         <xsl:when test="@subtype = 'date-only'"/>
+         <xsl:otherwise>
+            <xsl:choose>
+               <xsl:when test="@subtype = 'see'">
+                  <xsl:text>siehe </xsl:text>
+               </xsl:when>
+               <xsl:when test="@subtype = 'cf'">
+                  <xsl:text>vgl. </xsl:text>
+               </xsl:when>
+               <xsl:when test="@subtype = 'See'">
+                  <xsl:text>Siehe </xsl:text>
+               </xsl:when>
+               <xsl:when test="@subtype = 'Cf'">
+                  <xsl:text>Vgl. </xsl:text>
+               </xsl:when>
+            </xsl:choose>
+            <xsl:text>A.&#8239;S.: \emph{Kulturveranstaltungen}, </xsl:text>
+         </xsl:otherwise>
+      </xsl:choose>
+      <xsl:variable name="date-from-event" as="xs:date" select="document('https://raw.githubusercontent.com/arthur-schnitzler/schnitzler-kultur/main/data/editions/listevent.xml')/tei:TEI/tei:text[1]/tei:body[1]/tei:listEvent[1]/tei:event[@xml:id = $target]/@when-iso"
+      />
+      <xsl:value-of select="
+         format-date($date-from-event,
+         '[D1].&#8239;[M1].&#8239;[Y0001]')"/>
    </xsl:template>
    <xsl:template match="ref[@type = 'schnitzler-interviews']">
       <xsl:if test="not(@subtype = 'date-only')">

@@ -13,29 +13,12 @@
                 "error" enthalten. </sch:assert>
         </sch:rule>
     </sch:pattern>
-    <sch:pattern id="ref-rule">
-        <sch:rule context="tei:ref">
-            <sch:assert
-                test="(@type = 'schnitzler-tagebuch' and matches(@target, '^(18|19)\d{2}-(0[1-9]|1[0-2])-(0[1-9]|[12]\d|3[01])$')) or not(@type = 'schnitzler-tagebuch')"
-                >Wenn @type="schnitzler-tagebuch", muss @target ein gültiges Datum im Format
-                YYYY-MM-DD sein.</sch:assert>
-            <sch:assert
-                test="(@type = 'schnitzler-briefe' and matches(@target, '^L\d{5}$')) or not(@type = 'schnitzler-briefe')"
-                >Wenn @type="schnitzler-briefe", muss @target dem Muster 'L00000' entsprechen.
-            </sch:assert>
-            
-        </sch:rule>
-    </sch:pattern>
-    
     <sch:pattern id="ref-rule-fuer-verweise">
         <sch:rule context="tei:ref[not(ancestor::tei:correspContext)]">
-        <sch:assert
-            test="normalize-space(.) = ''"
-            >tei:ref darf keinen Textinhalt haben (nur leere Elemente sind erlaubt).
-        </sch:assert>
+            <sch:assert test="normalize-space(.) = ''">tei:ref darf keinen Textinhalt haben (nur
+                leere Elemente sind erlaubt). </sch:assert>
         </sch:rule>
     </sch:pattern>
-    
     <sch:pattern id="title-rules">
         <sch:rule context="tei:title[not(ancestor::tei:back)]">
             <sch:assert test="@level"> Das Attribut @level des tei:title muss vorhanden sein.
@@ -51,20 +34,15 @@
                 Nur das erste correspAction darf ein date/@n haben. </sch:assert>
         </sch:rule>
     </sch:pattern>
-    
     <sch:pattern id="correspAction1-rules">
         <sch:rule context="tei:correspAction[1]">
-            
-            <sch:assert test="descendant::tei:date/@n"> 
-                Das erste correspAction muss ein date/@n enthalten
-                </sch:assert>
+            <sch:assert test="descendant::tei:date/@n"> Das erste correspAction muss ein date/@n
+                enthalten </sch:assert>
             <sch:assert
                 test="tei:date/@when or (tei:date/@notAfter and tei:date/@notBefore) or (tei:date/@from and tei:date/@to)"
                 > Die erste correspAction muss ein valides tei:date Element enthalten </sch:assert>
-            
         </sch:rule>
     </sch:pattern>
-    
     <!-- correspContext -->
     <sch:pattern id="correspContext-rules">
         <sch:rule context="tei:correspContext">
@@ -83,8 +61,8 @@
                 tei:date darf keine mehrfachen Zeilenumbrüche enthalten. </sch:assert>
             <sch:assert
                 test="tei:placeName[(starts-with(@ref, '#pmb') and not(@ref = '#pmb') and (string(number(substring-after(@ref, '#pmb'))) != 'NaN') and not(contains(@ref, ' ')))] or not(child::tei:placeName)"
-                > Wenn placeName existiert, muss @ref gültig sein (#pmb..., keine Leerzeichen, keine mehrfachen Ortsnummern).
-            </sch:assert>
+                > Wenn placeName existiert, muss @ref gültig sein (#pmb..., keine Leerzeichen, keine
+                mehrfachen Ortsnummern). </sch:assert>
         </sch:rule>
     </sch:pattern>
     <!-- witness -->
@@ -167,8 +145,9 @@
         <sch:rule context="tei:sourceDesc[not(tei:listWit)]/tei:biblStruct[1]/tei:bibl[1]">
             <sch:assert
                 test="tei:note[tei:measure[@unit = 'zeichenanzahl' and @quantity]] or not(tei:note)"
-                > Wenn es keinen Archivzeugen gibt und es ein ein "note" in "biblStruct" gibt, muss es auch ein "measure" mit den
-                Attributen unit="zeichenanzahl" und @quantity haben </sch:assert>
+                > Wenn es keinen Archivzeugen gibt und es ein ein "note" in "biblStruct" gibt, muss
+                es auch ein "measure" mit den Attributen unit="zeichenanzahl" und @quantity haben
+            </sch:assert>
         </sch:rule>
     </sch:pattern>
     <!-- analytic -->
@@ -278,47 +257,45 @@
     <!-- anchor -->
     <sch:pattern id="anchor-rules">
         <sch:rule context="tei:anchor">
-            <sch:let name="anchortype" value="@type"/> 
+            <sch:let name="anchortype" value="@type"/>
             <sch:let name="anchorxmlid" value="@xml:id"/>
             <sch:assert
                 test="(@type = 'commentary' and matches(@xml:id, '^((K_)(L\d{5}-\d+))$')) or not(@type = 'commentary')"
-                > anchor-Elemente vom Typ commentary müssen eine xml:id mit Format
-                K_L00000-0 haben. </sch:assert>
+                > anchor-Elemente vom Typ commentary müssen eine xml:id mit Format K_L00000-0 haben. </sch:assert>
             <sch:assert
                 test="(@type = 'textConst' and matches(@xml:id, '^((T_)(L\d{5}-\d+))$')) or not(@type = 'textConst')"
-                > anchor-Elemente vom Typ textConst müssen eine xml:id mit Format
-                T_L00000-0 haben. </sch:assert>
-            <sch:assert test="((@type = 'commentary' or @type = 'textConst') and (following-sibling::tei:note[@type=$anchortype]/@corresp=$anchorxmlid)) or not((@type = 'commentary' or @type = 'textConst'))">
-                Jeder "anchor" vom @typ "commentary" oder "textConst" muss ein folgendes Element "note" haben, das die @xml:id des "anchors" im @corresp hat
-            </sch:assert>
+                > anchor-Elemente vom Typ textConst müssen eine xml:id mit Format T_L00000-0 haben. </sch:assert>
+            <sch:assert
+                test="((@type = 'commentary' or @type = 'textConst') and (following-sibling::tei:note[@type = $anchortype]/@corresp = $anchorxmlid)) or not((@type = 'commentary' or @type = 'textConst'))"
+                > Jeder "anchor" vom @typ "commentary" oder "textConst" muss ein folgendes Element
+                "note" haben, das die @xml:id des "anchors" im @corresp hat </sch:assert>
             <sch:assert test="
-                (following-sibling::node()[1][self::text() and normalize-space(.) = '' ] and 
-                following-sibling::node()[2][self::*]) 
-                or 
-                (following-sibling::node()[1][self::text() and not(starts-with(., ' '))]) 
-                or 
-                (following-sibling::node()[1][self::*]) 
-                or 
-                normalize-space(.) != ''
-                ">
-                Auf das Element &lt;anchor/&gt; muss unmittelbar der Text oder ein Element kommen.
-                Erlaubt: &lt;anchor/&gt;hier, &lt;anchor/&gt;&lt;element/&gt;, &lt;anchor/&gt; &lt;element/&gt;
-                Nicht erlaubt: &lt;anchor/&gt; Text
-            </sch:assert>
+                    (following-sibling::node()[1][self::text() and normalize-space(.) = ''] and
+                    following-sibling::node()[2][self::*])
+                    or
+                    (following-sibling::node()[1][self::text() and not(starts-with(., ' '))])
+                    or
+                    (following-sibling::node()[1][self::*])
+                    or
+                    normalize-space(.) != ''
+                    "> Auf das Element &lt;anchor/&gt; muss unmittelbar der Text oder
+                ein Element kommen. Erlaubt: &lt;anchor/&gt;hier, &lt;anchor/&gt;&lt;element/&gt;,
+                &lt;anchor/&gt; &lt;element/&gt; Nicht erlaubt: &lt;anchor/&gt; Text </sch:assert>
         </sch:rule>
     </sch:pattern>
     <!-- normalNote -->
     <sch:pattern id="normalNote-rules">
         <sch:rule context="tei:note[@type = 'commentary' or @type = 'textConst']">
-            <sch:let name="notetype" value="@type"/> 
+            <sch:let name="notetype" value="@type"/>
             <sch:let name="notecorresp" value="@corresp"/>
             <sch:assert
                 test="not(descendant::tei:note[@type = 'textConst' or @type = 'commentary'])">
                 commentary- oder textConst-Noten dürfen keine geschachtelten Noten dieses Typs
                 enthalten. </sch:assert>
-            <sch:assert test="(@type = 'commentary' or @type = 'textConst') and preceding-sibling::tei:anchor[@type=$notetype]/@xml:id=$notecorresp">
-                Jedes "note" vom @typ "commentary" oder "textConst" muss ein vorangehendes Element "anchor" haben, das eine zum Attribut @corresp passende @xml:id hat
-            </sch:assert>
+            <sch:assert
+                test="(@type = 'commentary' or @type = 'textConst') and preceding-sibling::tei:anchor[@type = $notetype]/@xml:id = $notecorresp"
+                > Jedes "note" vom @typ "commentary" oder "textConst" muss ein vorangehendes Element
+                "anchor" haben, das eine zum Attribut @corresp passende @xml:id hat </sch:assert>
         </sch:rule>
         <sch:rule context="tei:note[@type = 'footnote']">
             <sch:assert test="starts-with(@xml:id, 'F')"> Fußnoten müssen mit 'F' beginnen. </sch:assert>
@@ -328,41 +305,66 @@
         </sch:rule>
         <sch:rule context="tei:note/tei:ref">
             <sch:assert test="
-                    (@subtype = 'see' or @subtype = 'cf' or @subtype = 'See' or @subtype = 'Cf' or @subtype = 'date-only' or not(@subtype)) and
-                    (@type = 'schnitzler-tagebuch' or @type = 'schnitzler-briefe' or @type = 'schnitzler-lektueren' or @type = 'schnitzler-bahr' or @type = 'schnitzler-interviews')"
-                > Referenzen in Notizen dürfen nur bestimmte subtype/type-Kombinationen haben.
+                    (@subtype = 'see' or @subtype = 'cf' or @subtype = 'See' or @subtype = 'Cf' or @subtype = 'date-only' or not(@subtype))" 
+                > Erlaubt sind für subtype nur "see" (siehe), "See" (Siehe), "cf" (vgl.), "Cf." (Vgl) sowie "date-only", wenn nur
+            das Datum des verlinkten Objekts ausgegeben werden soll</sch:assert>
+            <sch:assert test="
+                (@type = 'schnitzler-tagebuch' or @type = 'schnitzler-briefe' or @type = 'schnitzler-lektueren' or @type = 'schnitzler-bahr' or @type = 'schnitzler-interviews' or @type = 'schnitzler-kultur')"></sch:assert>
+            <sch:assert test="not(@type = 'schnitzler-kultur') or matches(@target, '^pmb\d+$')">
+                Wenn @type = "schnitzler-kultur", muss @target mit "pmb" gefolgt von einer Ziffernfolge beginnen (z. B. "pmb1234").
+            </sch:assert>
+            <sch:assert test="
+                not(@type = 'schnitzler-tagebuch') or 
+                (matches(@target, '^\d{4}-\d{2}-\d{2}$') and 
+                xs:date(@target) ge xs:date('1862-05-15') and 
+                xs:date(@target) le xs:date('1931-10-21'))">
+                
+                Wenn @type = "schnitzler-tagebuch", muss @target ein ISO-Datum im Format YYYY-MM-DD sein,
+                das zwischen dem 15. Mai 1862 und dem 21. Oktober 1931 liegt.
+            </sch:assert>
+            <sch:assert test="
+                not(@type = 'schnitzler-interviews') or 
+                (matches(@target, '^(I|M|P)\d{3}') )">
+                Wenn @type = "schnitzler-interviews", muss @target vom Aufbau her »I123«, »M123« oder »P123« sein.
+            </sch:assert>
+            <sch:assert test="
+                not(@type = 'schnitzler-briefe') or 
+                (matches(@target, '^L\d{5}') )">
+                Wenn @type = "schnitzler-briefe", muss @target vom Aufbau her »L01234« sein.
+            </sch:assert>
+            <sch:assert test="
+                not(@type = 'schnitzler-bahr') or ( 
+                (matches(@target, '^(D|L)041\d{3}')) or
+                (matches(@target, '^T030\d{3}'))
+                ) ">
+                Wenn @type = "schnitzler-bahr", muss @target vom Aufbau her »D041345«, »L041345« oder »T030123« sein.
             </sch:assert>
         </sch:rule>
-        
-        
-        
     </sch:pattern>
-    
     <sch:pattern>
         <sch:rule context="tei:pb">
-            <sch:assert test="following-sibling::node()[1][self::text() and normalize-space(.) = ''] and following-sibling::node()[2][self::*]                 
-                or                 
-                following-sibling::node()[1][self::text() and not(starts-with(., ' '))]
-                or
-                following-sibling::node()[1][self::*]">
-                Auf das Element "&lt;pb/&gt;" muss unmittelbar der Text kommen. Oder ein Element. 
-                Beispiele für Erlaubtes: "&lt;pb/&gt;hier", "&lt;pb/&gt; &lt;element/&gt;"
-                Beispiel für Nicht-Erlaubtes: "&lt;pb/&gt; hier"
-            </sch:assert>
-            <sch:assert test="ancestor::tei:p or ancestor::tei:seg[not(descendant::tei:seg)] or ancestor::tei:l or ancestor::tei:quote or ancestor::tei:closer or ancestor::tei:dateline  or ancestor::tei:addrLine or ancestor::tei:salute or ancestor::tei:stamp  or ancestor::tei:cell or  parent::tei:desc or parent::tei:support">
-                &lt;pb/&gt; muss innerhalb eines zeilenbildenden Elements (&lt;p/&gt;, &lt;seg/&gt;, &lt;dateline/&gt;, &lt;closer, &lt;l/&gt;, &lt;addrLine/&gt;, &lt;salute/&gt;) stehen, oder, in den Metadaten, innerhalb von &lt;quote/&gt; oder &lt;stamp/&gt;
-                
-            </sch:assert>
+            <sch:assert test="
+                    following-sibling::node()[1][self::text() and normalize-space(.) = ''] and following-sibling::node()[2][self::*]
+                    or
+                    following-sibling::node()[1][self::text() and not(starts-with(., ' '))]
+                    or
+                    following-sibling::node()[1][self::*]"> Auf das Element
+                "&lt;pb/&gt;" muss unmittelbar der Text kommen. Oder ein Element. Beispiele für
+                Erlaubtes: "&lt;pb/&gt;hier", "&lt;pb/&gt; &lt;element/&gt;" Beispiel für
+                Nicht-Erlaubtes: "&lt;pb/&gt; hier" </sch:assert>
+            <sch:assert
+                test="ancestor::tei:p or ancestor::tei:seg[not(descendant::tei:seg)] or ancestor::tei:l or ancestor::tei:quote or ancestor::tei:closer or ancestor::tei:dateline or ancestor::tei:addrLine or ancestor::tei:salute or ancestor::tei:stamp or ancestor::tei:cell or parent::tei:desc or parent::tei:support"
+                > &lt;pb/&gt; muss innerhalb eines zeilenbildenden Elements (&lt;p/&gt;,
+                &lt;seg/&gt;, &lt;dateline/&gt;, &lt;closer, &lt;l/&gt;, &lt;addrLine/&gt;,
+                &lt;salute/&gt;) stehen, oder, in den Metadaten, innerhalb von &lt;quote/&gt; oder
+                &lt;stamp/&gt; </sch:assert>
         </sch:rule>
     </sch:pattern>
-    
     <!-- Sonderzeichen -->
     <sch:pattern id="Verbotene-Zeichen">
         <sch:rule context="text()[ancestor::tei:body or ancestor::tei:teiHeader]">
-            <sch:assert test="not(matches(., '[%~]'))">
-                Prozentzeichen (%)  und Tilde (~) sind durch  &lt;c rendition="#prozent"/&gt; respektive #tilde umzusetzen.
-            </sch:assert>
+            <sch:assert test="not(matches(., '[%~]'))"> Prozentzeichen (%) und Tilde (~) sind durch
+                &lt;c rendition="#prozent"/&gt; respektive #tilde umzusetzen. </sch:assert>
         </sch:rule>
     </sch:pattern>
-    
 </sch:schema>
