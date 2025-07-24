@@ -334,6 +334,23 @@
                 Wenn @type = "schnitzler-tagebuch", muss @target ein ISO-Datum im Format YYYY-MM-DD sein,
                 das zwischen dem 15. Mai 1862 und dem 21. Oktober 1931 liegt.
             </sch:assert>
+            <sch:assert test="
+                not(@type = 'schnitzler-interviews') or 
+                (matches(@target, '^(I|M|P)\d{3}') )">
+                Wenn @type = "schnitzler-interviews", muss @target vom Aufbau her »I123«, »M123« oder »P123« sein.
+            </sch:assert>
+            <sch:assert test="
+                not(@type = 'schnitzler-briefe') or 
+                (matches(@target, '^L\d{5}') )">
+                Wenn @type = "schnitzler-briefe", muss @target vom Aufbau her »L01234« sein.
+            </sch:assert>
+            <sch:assert test="
+                not(@type = 'schnitzler-bahr') or ( 
+                (matches(@target, '^(D|L)041\d{3}')) or
+                (matches(@target, '^T030\d{3}'))
+                ) ">
+                Wenn @type = "schnitzler-bahr", muss @target vom Aufbau her »D041345«, »L041345« oder »T030123« sein.
+            </sch:assert>
         </sch:rule>
     </sch:pattern>
     <sch:pattern id="check-schnitzler-kultur-target">
