@@ -13,18 +13,6 @@
                 "error" enthalten. </sch:assert>
         </sch:rule>
     </sch:pattern>
-    <sch:pattern id="ref-rule">
-        <sch:rule context="tei:ref">
-            <sch:assert
-                test="(@type = 'schnitzler-tagebuch' and matches(@target, '^(18|19)\d{2}-(0[1-9]|1[0-2])-(0[1-9]|[12]\d|3[01])$')) or not(@type = 'schnitzler-tagebuch')"
-                >Wenn @type="schnitzler-tagebuch", muss @target ein gültiges Datum im Format
-                YYYY-MM-DD sein.</sch:assert>
-            <sch:assert
-                test="(@type = 'schnitzler-briefe' and matches(@target, '^L\d{5}$')) or not(@type = 'schnitzler-briefe')"
-                >Wenn @type="schnitzler-briefe", muss @target dem Muster 'L00000' entsprechen.
-            </sch:assert>
-        </sch:rule>
-    </sch:pattern>
     <sch:pattern id="ref-rule-fuer-verweise">
         <sch:rule context="tei:ref[not(ancestor::tei:correspContext)]">
             <sch:assert test="normalize-space(.) = ''">tei:ref darf keinen Textinhalt haben (nur
@@ -351,12 +339,6 @@
                 ) ">
                 Wenn @type = "schnitzler-bahr", muss @target vom Aufbau her »D041345«, »L041345« oder »T030123« sein.
             </sch:assert>
-        </sch:rule>
-    </sch:pattern>
-    <sch:pattern id="check-schnitzler-kultur-target">
-        <sch:rule context="tei:note/tei:ref[@type = 'schnitzler-kultur']">
-            <sch:assert test="matches(@target, '^pmb\d+$')"> Das Attribut @target muss mit "pmb" gefolgt
-                von einer Ziffernfolge beginnen, z. B. "pmb1234". </sch:assert>
         </sch:rule>
     </sch:pattern>
     <sch:pattern>
