@@ -317,10 +317,23 @@
         </sch:rule>
         <sch:rule context="tei:note/tei:ref">
             <sch:assert test="
-                    (@subtype = 'see' or @subtype = 'cf' or @subtype = 'See' or @subtype = 'Cf' or @subtype = 'date-only' or not(@subtype)) and
-                    (@type = 'schnitzler-tagebuch' or @type = 'schnitzler-briefe' or @type = 'schnitzler-lektueren' or @type = 'schnitzler-bahr' or @type = 'schnitzler-interviews' or @type = 'schnitzler-kultur')"
-                > Referenzen in Kommentaren können nur auf das Tagebuch, auf Briefe, Lektüren, Bahr,
-                Interviews und Kulturveranstaltungen verweisen </sch:assert>
+                    (@subtype = 'see' or @subtype = 'cf' or @subtype = 'See' or @subtype = 'Cf' or @subtype = 'date-only' or not(@subtype))" 
+                > Erlaubt sind für subtype nur "see" (siehe), "See" (Siehe), "cf" (vgl.), "Cf." (Vgl) sowie "date-only", wenn nur
+            das Datum des verlinkten Objekts ausgegeben werden soll</sch:assert>
+            <sch:assert test="
+                (@type = 'schnitzler-tagebuch' or @type = 'schnitzler-briefe' or @type = 'schnitzler-lektueren' or @type = 'schnitzler-bahr' or @type = 'schnitzler-interviews' or @type = 'schnitzler-kultur')"></sch:assert>
+            <sch:assert test="not(@type = 'schnitzler-kultur') or matches(@target, '^pmb\d+$')">
+                Wenn @type = "schnitzler-kultur", muss @target mit "pmb" gefolgt von einer Ziffernfolge beginnen (z. B. "pmb1234").
+            </sch:assert>
+            <sch:assert test="
+                not(@type = 'schnitzler-tagebuch') or 
+                (matches(@target, '^\d{4}-\d{2}-\d{2}$') and 
+                xs:date(@target) ge xs:date('1862-05-15') and 
+                xs:date(@target) le xs:date('1931-10-21'))">
+                
+                Wenn @type = "schnitzler-tagebuch", muss @target ein ISO-Datum im Format YYYY-MM-DD sein,
+                das zwischen dem 15. Mai 1862 und dem 21. Oktober 1931 liegt.
+            </sch:assert>
         </sch:rule>
     </sch:pattern>
     <sch:pattern id="check-schnitzler-kultur-target">
