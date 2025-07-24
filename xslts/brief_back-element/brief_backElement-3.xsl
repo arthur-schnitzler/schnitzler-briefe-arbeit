@@ -195,6 +195,18 @@
             </xsl:choose>
         </xsl:attribute>
     </xsl:template>
+    <xsl:template match="tei:back//tei:listEvent/tei:event/@xml:id">
+        <xsl:attribute name="xml:id">
+            <xsl:choose>
+                <xsl:when test="contains(., 'event__')">
+                    <xsl:value-of select="concat('pmb', substring-after(., 'event__'))"/>
+                </xsl:when>
+                <xsl:otherwise>
+                    <xsl:value-of select="."/>
+                </xsl:otherwise>
+            </xsl:choose>
+        </xsl:attribute>
+    </xsl:template>
     <xsl:template match="tei:back//tei:note[@type = 'IDNO']">
         <xsl:element name="idno" namespace="http://www.tei-c.org/ns/1.0">
             <xsl:attribute name="type">
@@ -308,7 +320,6 @@
         </xsl:element>
     </xsl:template>
     <xsl:template match="tei:back//tei:placeName[. = preceding-sibling::tei:placeName/.]"/>
-    <xsl:template match="tei:back//tei:listEvent"/>
     <xsl:template
         match="tei:listOrg[not(child::*)] | tei:listBibl[not(child::*)] | tei:listPerson[not(child::*)] | tei:listPlace[not(child::*)]"
     />

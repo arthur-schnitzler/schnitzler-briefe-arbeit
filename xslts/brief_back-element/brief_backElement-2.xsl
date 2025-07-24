@@ -21,6 +21,7 @@
     <xsl:template match="tei:back/tei:listPlace[not(child::*)]"/>
     <xsl:template match="tei:back/tei:listOrg[not(child::*)]"/>
     <xsl:template match="tei:back/tei:listBibl[not(child::*)]"/>
+    <xsl:template match="tei:back/tei:listEvent[not(child::*)]"/>
     
     <xsl:template match="comment() | processing-instruction()" mode="copy-no-namespaces">
         <xsl:copy/>
@@ -124,6 +125,8 @@
         </xsl:element>
     </xsl:template>
     
+    
+    
     <xsl:template match="tei:back/tei:listPlace[child::*]">
         <xsl:element name="listPlace" namespace="http://www.tei-c.org/ns/1.0">
             <xsl:for-each select="distinct-values(tei:place/@xml:id)">
@@ -209,6 +212,29 @@
                     <xsl:otherwise>
                         <xsl:element name="error"> <xsl:attribute name="type">
                                 <xsl:text>org</xsl:text>
+                        </xsl:attribute>
+                            <xsl:value-of select="$nummer"/>
+                        </xsl:element>
+                    </xsl:otherwise>
+                </xsl:choose>
+            </xsl:for-each>
+        </xsl:element>
+    </xsl:template>
+    
+    <xsl:template match="tei:back/tei:listEvent[child::*]">
+        <xsl:element name="listEvent" namespace="http://www.tei-c.org/ns/1.0">
+            <xsl:for-each select="distinct-values(tei:event/@xml:id)">
+                <xsl:variable name="nummer" select="substring-after(., 'pmb')"/>
+                <xsl:variable name="eintrag"
+                    select="fn:escape-html-uri(concat('https://pmb.acdh.oeaw.ac.at/apis/tei/event/', $nummer))"
+                    as="xs:string"/>
+                <xsl:choose>
+                    <xsl:when test="doc-available($eintrag)">
+                        <xsl:apply-templates select="document($eintrag)" mode="copy-no-namespaces"/>
+                    </xsl:when>
+                    <xsl:otherwise>
+                        <xsl:element name="error"> <xsl:attribute name="type">
+                                <xsl:text>event</xsl:text>
                         </xsl:attribute>
                             <xsl:value-of select="$nummer"/>
                         </xsl:element>
