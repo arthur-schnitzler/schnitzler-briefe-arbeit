@@ -209,6 +209,36 @@
                         </xsl:otherwise>
                     </xsl:choose>
                 </xsl:element>
+                <xsl:element name="listEvent" namespace="http://www.tei-c.org/ns/1.0">
+                    <xsl:choose>
+                        <xsl:when
+                            test="ancestor::tei:TEI/descendant::tei:rs/@ref[contains(., '#')][1]">
+                            <!-- rs mit Raute -->
+                            <xsl:for-each
+                                select="distinct-values(ancestor::tei:TEI/descendant::tei:*[(@type = 'event' or name() = 'eventName') and not(ancestor::tei:back)]/@ref/tokenize(., '#'))">
+                                <xsl:if test="normalize-space(.) != ''">
+                                    <xsl:element name="event" namespace="http://www.tei-c.org/ns/1.0">
+                                        <xsl:attribute name="xml:id">
+                                            <xsl:value-of select="."/>
+                                        </xsl:attribute>
+                                    </xsl:element>
+                                </xsl:if>
+                            </xsl:for-each>
+                        </xsl:when>
+                        <xsl:otherwise>
+                            <xsl:for-each
+                                select="distinct-values(ancestor::tei:TEI/descendant::tei:*[(@type = 'event' or name() = 'eventName') and not(ancestor::tei:back)]/@ref/tokenize(., ' '))">
+                                <xsl:if test="normalize-space(.) != ''">
+                                    <xsl:element name="event" namespace="http://www.tei-c.org/ns/1.0">
+                                        <xsl:attribute name="xml:id">
+                                            <xsl:value-of select="."/>
+                                        </xsl:attribute>
+                                    </xsl:element>
+                                </xsl:if>
+                            </xsl:for-each>
+                        </xsl:otherwise>
+                    </xsl:choose>
+                </xsl:element>
             </xsl:element>
         </xsl:element>
     </xsl:template>

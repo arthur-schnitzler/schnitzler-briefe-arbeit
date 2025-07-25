@@ -367,4 +367,12 @@
                 &lt;c rendition="#prozent"/&gt; respektive #tilde umzusetzen. </sch:assert>
         </sch:rule>
     </sch:pattern>
+    <sch:pattern>
+    <sch:rule context="tei:rs">
+        <sch:assert test="matches(@ref, '^#pmb\d+( #pmb\d+)*$')">
+            Das Attribut @ref darf nur Werte enthalten, die mit "#pmb" gefolgt von einer Ziffernfolge beginnen.
+            Mehrere Werte müssen durch genau ein Leerzeichen getrennt sein, z. B. "#pmb1234 #pmb5678".
+        </sch:assert>
+    </sch:rule>
+    </sch:pattern>
 </sch:schema>
