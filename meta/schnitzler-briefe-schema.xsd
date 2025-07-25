@@ -1083,24 +1083,24 @@
    </xs:element>
    <xs:complexType mixed="true" name="normalNote">
       <xs:choice minOccurs="0" maxOccurs="unbounded">
-         <xs:element ref="tei:anchor" maxOccurs="unbounded" minOccurs="0"/>
-         <xs:element ref="tei:bibl" maxOccurs="unbounded" minOccurs="0"/>
-         <xs:element ref="tei:date" maxOccurs="unbounded" minOccurs="0"/>
-         <xs:element ref="tei:time" maxOccurs="unbounded" minOccurs="0"/>
-         <xs:element ref="tei:hi" maxOccurs="unbounded" minOccurs="0"/>
-         <xs:element ref="tei:orgName" maxOccurs="unbounded" minOccurs="0"/>
-         <xs:element ref="tei:persName" maxOccurs="unbounded" minOccurs="0"/>
-         <xs:element ref="tei:placeName" maxOccurs="unbounded" minOccurs="0"/>
-         <xs:element ref="tei:quote" maxOccurs="unbounded" minOccurs="0"/>
-         <xs:element ref="tei:rs" maxOccurs="unbounded" minOccurs="0"/>
-         <xs:element ref="tei:space" maxOccurs="unbounded" minOccurs="0"/>
-         <xs:element ref="tei:workName" maxOccurs="unbounded" minOccurs="0"/>
-         <xs:element ref="tei:Lemma" maxOccurs="unbounded" minOccurs="0"/>
-         <xs:element ref="tei:ref" maxOccurs="unbounded" minOccurs="0"/>
-         <xs:element ref="tei:foreign" maxOccurs="unbounded" minOccurs="0"/>
-         <xs:element ref="tei:c" maxOccurs="unbounded" minOccurs="0"/>
-         <xs:element ref="tei:supplied" maxOccurs="unbounded" minOccurs="0"/>
-         <xs:element ref="tei:p" maxOccurs="unbounded" minOccurs="0"/>
+         <xs:element ref="tei:anchor"/>
+         <xs:element ref="tei:bibl"/>
+         <xs:element ref="tei:date"/>
+         <xs:element ref="tei:time"/>
+         <xs:element ref="tei:hi"/>
+         <xs:element ref="tei:orgName"/>
+         <xs:element ref="tei:persName"/>
+         <xs:element ref="tei:placeName"/>
+         <xs:element ref="tei:quote"/>
+         <xs:element ref="tei:rs"/>
+         <xs:element ref="tei:space"/>
+         <xs:element ref="tei:workName"/>
+         <xs:element ref="tei:Lemma"/>
+         <xs:element ref="tei:ref"/>
+         <xs:element ref="tei:foreign"/>
+         <xs:element ref="tei:c"/>
+         <xs:element ref="tei:supplied"/>
+         <xs:element ref="tei:p"/>
       </xs:choice>
       <xs:attribute name="type" use="required">
          <xs:simpleType>
@@ -1110,6 +1110,7 @@
                <xs:enumeration value="footnote"/>
                <xs:enumeration value="zeichenanzahl"/>
                <xs:enumeration value="relation-type"/>
+               <xs:enumeration value="listorg"/>
             </xs:restriction>
          </xs:simpleType>
       </xs:attribute>
@@ -1125,6 +1126,12 @@
    <xs:complexType name="backNote_type_image">
       <xs:sequence minOccurs="0">
          <xs:element ref="tei:figure" minOccurs="0" maxOccurs="1"/>
+      </xs:sequence>
+      <xs:attribute name="type" type="xs:string" use="required"/>
+   </xs:complexType>
+   <xs:complexType name="backNote_type-listorg">
+      <xs:sequence minOccurs="0">
+         <xs:element ref="tei:listOrg" minOccurs="1" maxOccurs="1"/>
       </xs:sequence>
       <xs:attribute name="type" type="xs:string" use="required"/>
    </xs:complexType>
@@ -1144,8 +1151,9 @@
    </xs:complexType>
    <xs:element name="note">
       <xs:alternative type="backNote_type"
-         test="@type = 'work_kind' or @type = 'uri_worklink' or @type = 'bibliografische_angabe' or @type = 'references'"/>
+         test="@type = 'work_kind' or @type = 'uri_worklink' or @type = 'bibliografische_angabe' or @type = 'references' "/>
       <xs:alternative type="backNote_type-org" test="@type = 'apis_dates'"/>
+      <xs:alternative type="backNote_type-listorg" test="@type='listorg'"/>
       <xs:alternative type="backNote_type_image" test="@type = 'image'"/>
       <xs:alternative type="biblStruct_type-measure" test="@type = 'zeichenanzahl'"/>
       <xs:alternative type="normalNote"/>
@@ -1926,22 +1934,23 @@
    <!-- Ergänzungen für das Back-Element -->
    <xs:element name="listOrg">
       <xs:complexType>
-         <xs:sequence>
-            <xs:element maxOccurs="unbounded" ref="tei:org"/>
-         </xs:sequence>
+         <xs:choice maxOccurs="unbounded">
+            <xs:element ref="tei:org"/>
+         </xs:choice>
       </xs:complexType>
    </xs:element>
    <xs:element name="org">
       <xs:complexType>
-         <xs:all>
-            <xs:element maxOccurs="unbounded" ref="tei:orgName"/>
-            <xs:element minOccurs="0" maxOccurs="unbounded" ref="tei:location"/>
-            <xs:element minOccurs="0" maxOccurs="unbounded" ref="tei:idno"/>
-            <xs:element minOccurs="0" maxOccurs="unbounded" ref="tei:desc"/>
-            <xs:element ref="tei:listBibl" minOccurs="0" maxOccurs="1"/>
-            <xs:element minOccurs="0" maxOccurs="unbounded" ref="tei:note"/>
-         </xs:all>
-         <xs:attribute ref="xml:id" use="required"/>
+         <xs:choice maxOccurs="unbounded" minOccurs="1">
+            <xs:element ref="tei:orgName"/>
+            <xs:element ref="tei:location"/>
+            <xs:element ref="tei:idno"/>
+            <xs:element ref="tei:desc"/>
+            <xs:element ref="tei:listBibl"/>
+            <xs:element ref="tei:note"/>
+         </xs:choice>
+         <xs:attribute ref="xml:id" use="optional"/>
+         <xs:attribute name="role" use="optional"/>
       </xs:complexType>
    </xs:element>
    <xs:element name="listEvent">
@@ -1953,18 +1962,18 @@
    </xs:element>
    <xs:element name="event">
       <xs:complexType>
-         <xs:all>
-            <xs:element maxOccurs="unbounded" ref="tei:eventName"/>
-            <xs:element minOccurs="0" maxOccurs="unbounded" ref="tei:listBibl"/>
-            <xs:element minOccurs="0" maxOccurs="unbounded" ref="tei:idno"/>
-            <xs:element minOccurs="0" maxOccurs="unbounded" ref="tei:listPerson"/>
-            <xs:element minOccurs="0" maxOccurs="unbounded" ref="tei:listPlace"/>
-            <xs:element minOccurs="0" maxOccurs="unbounded" ref="tei:listEvent"/>
-            <xs:element ref="tei:listOrg" minOccurs="0" maxOccurs="1"/>
-            <xs:element minOccurs="0" maxOccurs="unbounded" ref="tei:note"/>
-            <xs:element ref="tei:desc" minOccurs="0" maxOccurs="unbounded"/>
-            <xs:element ref="tei:label" maxOccurs="unbounded" minOccurs="0"/>
-         </xs:all>
+         <xs:choice maxOccurs="unbounded" minOccurs="0">
+            <xs:element ref="tei:eventName"/>
+            <xs:element ref="tei:listBibl"/>
+            <xs:element ref="tei:idno"/>
+            <xs:element ref="tei:listPerson"/>
+            <xs:element ref="tei:listPlace"/>
+            <xs:element ref="tei:listEvent"/>
+            <xs:element ref="tei:listOrg"/>
+            <xs:element ref="tei:note"/>
+            <xs:element ref="tei:desc"/>
+            <xs:element ref="tei:label"/>
+         </xs:choice>
          <xs:attribute ref="xml:id" use="optional"/>
          <xs:attribute name="when" type="xs:date" use="optional"/>
          <xs:attribute name="ref" use="optional" type="xs:NCName"/>
