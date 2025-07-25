@@ -1,13 +1,9 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<?xml-model href="../meta/schnitzler-briefe-schematron.sch" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
-<TEI xmlns="http://www.tei-c.org/ns/1.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-   xsi:schemaLocation="http://www.tei-c.org/ns/1.0 ../meta/schnitzler-briefe-schema.xsd"
-   xml:id="L03729" xml:base="https://id.acdh.oeaw.ac.at/schnitzler/schnitzler-briefe/editions">
+<?xml version="1.0" encoding="UTF-8"?><?xml-model href="../meta/schnitzler-briefe-schematron.sch" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI xmlns="http://www.tei-c.org/ns/1.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.tei-c.org/ns/1.0 ../meta/schnitzler-briefe-schema.xsd" xml:id="L03729" xml:base="https://id.acdh.oeaw.ac.at/schnitzler/schnitzler-briefe/editions">
    <teiHeader>
       <fileDesc>
          <titleStmt>
             <title level="s">Arthur Schnitzler: Briefwechsel mit Autorinnen und Autoren</title>
-            <title level="a">Elsa Plessner an Arthur Schnitzler, 15.&#160;11.&#160;1915</title>
+            <title level="a">Elsa Plessner an Arthur Schnitzler, 15. 11. 1915</title>
             <author ref="#pmb2128">Plessner, Elsa</author>
             <editor>
                <name>Jahnke, Selma</name>
@@ -85,13 +81,21 @@
                               <extent>
                                  <measure unit="seite" quantity="4"/>
                                  <measure unit="blatt" quantity=""/>
+                                 <measure unit="zeichenanzahl" quantity="2719"/>
                               </extent>
                            </supportDesc>
                         </objectDesc>
                         <handDesc>
                            <handNote medium="" style="lateinische-kurrent"/>
                         </handDesc>
-                        
+                        <additions>
+                           <incident type="receiver" rend="">
+                              <desc>sechs Unterstreichungen</desc>
+                           </incident>
+                           <incident type="receiver" rend="">
+                              <desc>beschriftet: »<qoute>Plessner</qoute>«</desc>
+                           </incident>
+                        </additions>
                      </physDesc>
                   </msDesc>
                </witness>
@@ -105,12 +109,13 @@
          <correspDesc>
             <correspAction type="sent">
                <persName ref="#pmb2128">Plessner, Elsa</persName>
-               <date when="1915-11-15" n="01">15.&#160;11.&#160;1915</date>
+               <date when="1915-11-15" n="01">15. 11. 1915</date>
                <placeName ref="#pmb45258">München</placeName>
             </correspAction>
             <correspAction type="received">
                <persName ref="#pmb2121">Schnitzler, Arthur</persName>
-               <placeName ref="#50" evidence="conjecture">Wien</placeName>
+               <date evidence="conjecture" notBefore="1915-11-16" notAfter="1915-11-20">[16. 11. 1915 – 20. 11. 1915?]</date>
+               <placeName ref="#pmb50" evidence="conjecture">Wien</placeName>
             </correspAction>
          </correspDesc>
       </profileDesc>
@@ -122,76 +127,435 @@
       <body>
          <div type="writingSession" n="1">
             <opener>
-               <seg><pb facs=""/>
-                  <hi rend="capitals">
-                     <hi rend="pre-print">Pension</hi></hi></seg>
-               <seg>
+               <seg type="letterhead">
+                  <seg rend="left">
+                     <pb facs=""/>
+                     <hi rend="capitals">
+                        <hi rend="pre-print">Pension</hi>
+                     </hi>
+                  </seg>
+                  <seg rend="right">
+                     <hi rend="pre-print">Telephon 51151</hi>
+                  </seg>
+               </seg>
+               <seg type="letterhead">
                   <hi rend="capitals">
                      <hi rend="pre-print">
-                        <hi rend="underline" n=""><rs type="place" ref="#pmb295215">Serno</rs></hi>
+                        <hi rend="underline" n="2">
+                           <rs type="place" ref="#pmb295215">Serno</rs>
+                        </hi>
                      </hi>
-                  </hi></seg>
-               <seg><hi rend="pre-print">Telephon 51151</hi></seg>
+                  </hi>
+               </seg>
+               <seg type="letterhead">
+                  <seg rend="left">
+                     <hi rend="capitals">
+                        <rs type="place" ref="#pmb45258">
+                           <hi rend="pre-print">München</hi>
+                        </rs>
+                     </hi>
+                  </seg>
+                  <seg rend="right">
+                     <hi rend="pre-print">Den</hi>
+                     <space unit="chars" quantity="1"/>
+                     <date>15. XI. <hi rend="pre-print">191</hi>5</date>
+                  </seg>
+               </seg>
                <seg>
-                  <hi rend="capitals">
-                     <rs type="place" ref="#pmb45258">
-                        <hi rend="pre-print">München</hi></rs>
-                  </hi></seg>
-               <seg><rs type="place" ref="#pmb295215">
+                  <rs type="place" ref="#pmb295215">
                      <hi rend="pre-print">Theresienstraße</hi>
-                  </rs></seg>
-               <seg><rs type="place" ref="#pmb295215">
+                  </rs>
+               </seg>
+               <seg>
+                  <rs type="place" ref="#pmb295215">
                      <hi rend="pre-print">78 I. und II. Stock</hi>
-                  </rs></seg>
-               <dateline>
-                  <hi rend="pre-print">Den</hi><space unit="chars" quantity="1"/>
-                  <date>15. XI. <hi rend="pre-print">191</hi>5</date>
-               </dateline>
+                  </rs>
+               </seg>
                <salute>Verehrter Herr Doctor!</salute>
             </opener>
-            <p>Man sagt mir, dass Sie in den nächsten Wochen hierher nach <rs type="place"
-                  ref="#pmb45258">München</rs> kommen werden, zur Aufführung der »<rs type="work"
-                     ref="#pmb29985">einsamen Weg</rs>« in den <rs type="org" ref="#pmb47085">Kammerspielen</rs>
+            <p>Man sagt mir, dass Sie in den nächsten Wochen hierher nach <rs type="place" ref="#pmb45258">München</rs> kommen werden, zur Aufführung des »<rs type="work" ref="#pmb29985">einsamen Weg</rs>« in den <rs type="org" ref="#pmb47085">Kammerspielen</rs>.
                Dadurch sehe ich mich in die Nothwendigkeit versetzt, nach geraumer Zeit wieder
-               einmal ein Schreiben an Sie, verehrter Herr Doctor, zu richten,&#160;– warum, werden Sie
-               sofort einsehen. </p>
-            <p>Mit der vor Kurzem erfolgten, endlichen Auflösung meiner Ehe ist für mich jeder
+               einmal ein Schreiben an Sie, verehrter Herr Doctor, zu richten, – warum, werden Sie
+               sofort einsehen.</p>
+            <p>Mit der vor Kurzem erfolgten, endlichen <anchor type="commentary" xml:id="K_L03729-1"/>Auflösung meiner Ehe<note type="commentary" corresp="K_L03729-1"/> ist für mich jeder
                innere und äußere Grund fortgefallen, der mich verhindern <pb facs=""/>konnte, wieder
                als Bühnenschriftstellerin in der Öffentlichkeit zu erscheinen. Daher habe ich auf
                Anrathen eines kleinen, wie mir scheint, recht urtheilsfähigen Freundeskreises, ein
-               dreiactiges Schauspiel »<rs type="work" ref="#pmb295177">das erste Capitel</rs>« den <rs
-                  type="org" ref="#pmb47085">Münchner Kammerspielen</rs> eingereicht. Diese Arbeit, noch aus
+               dreiactiges Schauspiel »<rs type="work" ref="#pmb295177">das erste Capitel</rs>« den <rs type="org" ref="#pmb47085">Münchner Kammerspielen</rs> eingereicht. Diese <rs type="work" ref="#pmb295177" subtype="implied">Arbeit</rs>, noch aus
                meiner Mädchenzeit stammend, ist fast die einzige meiner literarischen Jugendsünden, die begangen zu haben ich nicht bereue, und
                die meinem, seit vierzehn Jahren einigermaßen gereiften Urtheil heute noch wertvoll
-               erscheint. Sie selbst, verehrter Herr Doctor, haben sie, wie alle meine Arbeiten unmittelbar nach der Entstehung gelesen, und in
-               einem, in meinem Besitz befindlichen Briefe an mich <pb facs=""/>zu meinem größten
-               Stolz als »unendlich fein« gelobt. – <rs type="work" ref="#pmb295177">Das erste Cap.</rs> ist nun
-               in einer leichten Überarbeitung – die nichts geschädigt hat, was an dem <rs
-                  type="work" ref="" subtype="implied">Stück</rs> lobenswert war – Herrn Dir. <rs
-                     type="person" ref="#pmb142471">Ziegel</rs> zugesandt worden und ich bitte Sie <hi
-                  rend="underline" n="1">nicht</hi> um Ihre Fürsprache sondern ich fühle mich
-               verpflichtet, Ihnen mitzutheilen, dass ich in dem Begleitbrief an Herrn <rs
-                  type="person" ref="#pmb142471">Ziegel</rs> folgenden Paßus schrieb: Arthur Schnitzler, der
-               die <rs type="work" ref="" subtype="implied">Arbeit</rs> in einer früheren Form kannte, bezeichnete sie
-               mir als, unendlich fein«. – Ich musste – verschollen, wie ich als Schriftstellerin
-               bin –, einen Eidesbelter von Gewicht zu Hilfe rufen, damit man über das literarische
-               Niveau des unbekannten Einsenders einigermaßen im Klaren sei. – Es ist daher sehr
-               leicht möglich, dass Herr Dir. <rs type="person" ref="#pmb142471">Ziegel</rs> sich an Sie,
+               erscheint. Sie selbst, verehrter Herr Doctor, haben sie, wie alle meine Arbeiten <anchor type="commentary" xml:id="K_L03729-2"/>unmittelbar nach der Entstehung<note type="commentary" corresp="K_L03729-2">
+                  <rs type="person" ref="#pmb2128">Plessner</rs> schickte <rs type="person" ref="#pmb2121">Schnitzler</rs> das Schauspiel mit ihrem Brief vom <ref type="schnitzler-briefe" target="L03723" subtype="date-only"/>.</note> gelesen, und in
+               einem, in meinem Besitz befindlichen <anchor type="commentary" xml:id="K_L03729-3"/>Briefe an mich<note type="commentary" corresp="K_L03729-3">nicht überliefert</note>
+               <space unit="chars" quantity="1"/>
+               <pb facs=""/>zu meinem größten
+               Stolz als »unendlich fein« gelobt. – <rs type="work" ref="#pmb295177">Das erste Cap.</rs> ist nun
+               in einer leichten Überarbeitung – die nichts geschädigt hat, was an dem <rs type="work" ref="#pmb295177" subtype="implied">Stück</rs> lobenswert war – Herrn Dir. <rs type="person" ref="#pmb142471">Ziegel</rs> zugesandt worden und ich bitte Sie <hi rend="underline" n="1">nicht</hi> um Ihre Fürsprache sondern ich fühle mich
+               verpflichtet, Ihnen mitzutheilen, dass ich in dem <anchor type="commentary" xml:id="K_L03729-4"/>Begleitbrief<note type="commentary" corresp="K_L03729-4">nicht überliefert</note> an Herrn <rs type="person" ref="#pmb142471">Ziegel</rs> folgenden Paßus schrieb: »<rs type="person" ref="#pmb2121">Arthur Schnitzler</rs>, der
+               die <rs type="work" ref="#pmb295177" subtype="implied">Arbeit</rs> in einer früheren Form kannte, bezeichnete sie
+               mir als, unendlich fein«. –</p>
+            <p>Ich musste – verschollen, wie ich als Schriftstellerin
+               bin –, einen Eideshelfer von Gewicht zu Hilfe rufen, damit man über das literarische
+               Niveau des unbekannten Einsenders einigermaßen im Klaren sei. –</p>
+            <p>Es ist daher sehr
+               leicht möglich, dass Herr Dir. <rs type="person" ref="#pmb142471">Ziegel</rs> sich an Sie,
                verehrter Herr Doctor, mit einer dies<pb facs=""/>bezüglichen Frage wendet, wenn Sie
                hier sind. Um Ihnen nun die Verlegenheit zu ersparen, wenn Sie sich, wie leicht
                denkbar, nicht mehr an das »<rs type="work" ref="#pmb295177">erste Cap.</rs>« und Ihr damaliges
                Urtheil erinnern, eine Verlegenheit, aus der für mich eine peinliche folgenschwere
-               Blamage entstehen könnte, erlaube ich mir, diesen Brief an Sie. Ihr damaliges Urtheil
-               war für mich von entscheidender Bedeutung, was nicht hindert, dass Autor u. <rs
-                  type="work" ref="#pmb295177" subtype="implied">Stück</rs> Ihrem Gedächtins gänzlich entschwunden sein könnten.
-               Ich hoffe, Sie sind nicht böse, dass ich mich ohne Ihr Vorwissen unter Ihren Schutz
+               Blamage entstehen könnte, erlaube ich mir, diesen Brief an Sie.</p>
+            <p>Ihr damaliges Urtheil
+               war für mich von entscheidender Bedeutung, was nicht hindert, dass Autor u. <rs type="work" ref="#pmb295177" subtype="implied">Stück</rs> Ihrem Gedächtins gänzlich entschwunden sein könnten.</p>
+            <p>Ich hoffe, Sie sind nicht böse, dass ich mich ohne Ihr Vorwissen unter Ihren Schutz
                stellte, und dass ich Sie hiermit vielmals bitte, mich gegebenenfalls nicht zu
                desavouiren.</p>
-            <closer>Indem ich Sie bitte, Ihrer Frau <rs type="person" subtype="implied"
-                  ref="#pmb2173">Gemahlin</rs> meinen verbindlichsten Gruß zu übermitteln mit
+            <closer>Indem ich Sie bitte, Ihrer Frau <rs type="person" subtype="implied" ref="#pmb2173">Gemahlin</rs> meinen verbindlichsten Gruß zu übermitteln mit
                vorzüglicher Hochachtung<lb/>
                <signed>Elsa Ginsberg-Plessne</signed>r</closer>
          </div>
       </body>
+      <back>
+         <listPerson>
+            <person xml:id="pmb2128">
+               <persName>
+                  <forename>Elsa</forename>
+                  <surname>Plessner</surname>
+               </persName>
+               <persName type="person_geburtsname_vorname">Elisabeth</persName>
+               <persName type="person_ehename_nachname">Ginsberg</persName>
+               <persName type="legacy-name-merge">Plessner, Elsa</persName>
+               <persName type="person_namensvariante_nachname">Pleßner</persName>
+               <birth>
+                  <date when="1875-08-22">22.08.1875</date>
+                  <settlement ref="pmb50">
+                     <placeName type="pref">Wien</placeName>
+                     <location>
+                        <geo>48,208333 16,373056</geo>
+                     </location>
+                  </settlement>
+               </birth>
+               <death>
+                  <date when="1932-05-01">01.05.1932</date>
+                  <settlement ref="pmb49185">
+                     <placeName type="pref">Alicante</placeName>
+                     <location>
+                        <geo>38,34517 -0,48149</geo>
+                     </location>
+                  </settlement>
+               </death>
+               <sex value="female"/>
+               <occupation ref="pmb90">Schriftsteller/Schriftstellerin</occupation>
+               <idno type="URL" subtype="d-nb">https://d-nb.info/gnd/1041571119</idno>
+               <idno type="URL" subtype="schnitzler-tagebuch">https://schnitzler-tagebuch.acdh.oeaw.ac.at/person_15435.html</idno>
+               <idno type="URL" subtype="schnitzler-bahr">https://schnitzler-bahr.acdh.oeaw.ac.at/pmb2128.html</idno>
+               <idno type="URL" subtype="pmb">https://pmb.acdh.oeaw.ac.at/entity/2128/</idno>
+               <idno type="URL" subtype="fackel">https://fackel.oeaw.ac.at/?p=fackelp51544</idno>
+               <idno type="URL" subtype="wikidata">http://www.wikidata.org/entity/Q19193427</idno>
+               <idno type="URL" subtype="wikipedia">https://de.wikipedia.org/wiki/Elsa_Plessner</idno>
+               <idno type="URL" subtype="schnitzler-briefe">https://schnitzler-briefe.acdh.oeaw.ac.at/pmb2128.html</idno>
+            </person>
+            <person xml:id="pmb2121">
+               <persName>
+                  <surname>Schnitzler</surname>
+                  <forename>Arthur</forename>
+               </persName>
+               <birth>
+                  <date when="1862-05-15">15. 5. 1862</date>
+                  <settlement ref="pmb50">
+                     <placeName type="pref">Wien</placeName>
+                     <location>
+                        <geo>48,208333 16,373056</geo>
+                     </location>
+                  </settlement>
+               </birth>
+               <death>
+                  <date when="1931-10-21">21. 10. 1931</date>
+                  <settlement ref="pmb50">
+                     <placeName type="pref">Wien</placeName>
+                     <location>
+                        <geo>48,208333 16,373056</geo>
+                     </location>
+                  </settlement>
+               </death>
+               <sex value="male"/>
+               <occupation ref="pmb90">Schriftsteller*in</occupation>
+               <occupation ref="pmb97">Mediziner*in</occupation>
+               <idno type="gnd">https://d-nb.info/gnd/118609807/</idno>
+            </person>
+            <person xml:id="pmb142471">
+               <persName>
+                  <forename>Erich</forename>
+                  <surname>Ziegel</surname>
+               </persName>
+               <birth>
+                  <date when="1876-08-26">1876-08-26</date>
+                  <settlement ref="pmb47935">
+                     <placeName type="pref">Schwerin</placeName>
+                     <location>
+                        <geo>53,62937 11,41316</geo>
+                     </location>
+                  </settlement>
+               </birth>
+               <death>
+                  <date when="1950-11-30">1950-11-30</date>
+                  <settlement ref="pmb45258">
+                     <placeName type="pref">München</placeName>
+                     <location>
+                        <geo>48,13743 11,57549</geo>
+                     </location>
+                  </settlement>
+               </death>
+               <sex value="male"/>
+               <occupation ref="pmb103">Theaterleiter/Theaterleiterin</occupation>
+               <occupation ref="pmb104">Regisseur/Regisseurin</occupation>
+               <occupation ref="pmb105">Schauspieler/Schauspielerin</occupation>
+               <occupation ref="pmb727">Dramatiker/Dramatikerin</occupation>
+               <idno type="URL" subtype="schnitzler-tagebuch">https://schnitzler-tagebuch.acdh.oeaw.ac.at/person_21545.html</idno>
+               <idno type="URL" subtype="pmb">https://pmb.acdh.oeaw.ac.at/entity/142471/</idno>
+               <idno type="URL" subtype="d-nb">https://d-nb.info/gnd/116986395</idno>
+               <idno type="URL" subtype="wikidata">http://www.wikidata.org/entity/Q1353576</idno>
+               <idno type="URL" subtype="wikipedia">https://de.wikipedia.org/wiki/Erich_Ziegel</idno>
+               <idno type="URL" subtype="schaubuehne">https://schaubuehne.oeaw.ac.at/register.html?author=25</idno>
+            </person>
+            <person xml:id="pmb2173">
+               <persName>
+                  <forename>Olga</forename>
+                  <surname>Schnitzler</surname>
+               </persName>
+               <persName type="person_geburtsname_nachname">Gussmann</persName>
+               <persName type="person_pseudonym">Dina Marius</persName>
+               <persName type="person_geburtsname_vorname">Olga Johanna Maria</persName>
+               <persName type="legacy-name-merge">Schnitzler, Olga</persName>
+               <persName type="legacy-name-merge">Schnitzler, Olga</persName>
+               <birth>
+                  <date when="1882-01-17">17.01.1882</date>
+                  <settlement ref="pmb50">
+                     <placeName type="pref">Wien</placeName>
+                     <location>
+                        <geo>48,208333 16,373056</geo>
+                     </location>
+                  </settlement>
+               </birth>
+               <death>
+                  <date when="1970-01-13">13.01.1970</date>
+                  <settlement ref="pmb885">
+                     <placeName type="pref">Lugano</placeName>
+                     <location>
+                        <geo>46,01008 8,96004</geo>
+                     </location>
+                  </settlement>
+               </death>
+               <sex value="female"/>
+               <occupation ref="pmb105">Schauspieler/Schauspielerin</occupation>
+               <occupation ref="pmb107">Sänger/Sängerin</occupation>
+               <idno type="URL" subtype="d-nb">https://d-nb.info/gnd/116848723</idno>
+               <idno type="URL" subtype="schnitzler-bahr">https://schnitzler-bahr.acdh.oeaw.ac.at/pmb2173.html</idno>
+               <idno type="URL" subtype="pmb">https://pmb.acdh.oeaw.ac.at/entity/2173/</idno>
+               <idno type="URL" subtype="schnitzler-tagebuch">https://schnitzler-tagebuch.acdh.oeaw.ac.at/person_19832.html</idno>
+               <idno type="URL" subtype="fackel">https://fackel.oeaw.ac.at/?p=fackelp50811</idno>
+               <idno type="URL" subtype="wikidata">http://www.wikidata.org/entity/Q55884531</idno>
+               <idno type="URL" subtype="schnitzler-kino">https://schnitzler-kino.acdh.oeaw.ac.at/pmb2173.html</idno>
+               <idno type="URL" subtype="schnitzler-briefe">https://schnitzler-briefe.acdh.oeaw.ac.at/pmb2173.html</idno>
+               <idno type="URL" subtype="pmb">https://pmb.acdh.oeaw.ac.at/entity/162151/</idno>
+               <idno type="URL" subtype="pmb">https://pmb.acdh.oeaw.ac.at/entity/162152/</idno>
+               <idno type="URL" subtype="bahr-textverzeichnis">https://bahr-textverzeichnis.acdh.oeaw.ac.at/pmb2173.html</idno>
+               <idno type="URL" subtype="schnitzler-interviews">https://schnitzler-interviews.acdh.oeaw.ac.at/pmb2173.html</idno>
+               <idno type="URL" subtype="bahr-textverzeichnis">https://bahr-textverzeichnis.acdh.oeaw.ac.at/TSN-listperson.html#pmb2173</idno>
+            </person>
+         </listPerson>
+         <listBibl>
+            <bibl xml:id="pmb29985">
+               <title>Der einsame Weg. Schauspiel in fünf Akten</title>
+               <title type="werk_link">https://archive.org/details/dereinsamewegsc00schngoog/</title>
+               <title type="werk_arbeitstitel">Junggeselle</title>
+               <title type="werk_arbeitstitel">Junggesellenstück</title>
+               <title type="werk_arbeitstitel">Die Egoisten</title>
+               <title type="werk_arbeitstitel">Einsame Wege</title>
+               <title type="werk_arbeitstitel">Wege ins Dunkle</title>
+               <title type="werk_arbeitstitel">Weg zum Licht</title>
+               <title type="legacy-name-merge">Der einsame Weg</title>
+               <title type="werk_arbeitstitel">Herbst</title>
+               <title type="werk_link">https://www.degruyter.com/document/doi/10.1515/9783111334066/html</title>
+               <author ref="pmb2121" role="hat-geschaffen">Schnitzler, Arthur</author>
+               <date notBefore="1904-01-01" when="1904-01-01">1904</date>
+               <idno type="URL" subtype="asaf">https://asaf.com/S.04.01.08</idno>
+               <idno type="URL" subtype="wikidata">http://www.wikidata.org/entity/Q1198519</idno>
+               <idno type="URL" subtype="dracor">https://dracor.org/ger/schnitzler-der-einsame-weg</idno>
+               <idno type="URL" subtype="theadok">https://theadok.at/work/31412</idno>
+               <idno type="URL" subtype="archive">https://archive.org/details/dereinsamewegsc00schngoog</idno>
+               <idno type="URL" subtype="schnitzler-bahr">https://schnitzler-bahr.acdh.oeaw.ac.at/pmb29985.html</idno>
+               <idno type="URL" subtype="pmb">https://pmb.acdh.oeaw.ac.at/entity/29985/</idno>
+               <idno type="URL" subtype="schnitzler-tagebuch">https://schnitzler-tagebuch.acdh.oeaw.ac.at/pmb29985.html</idno>
+               <idno type="URL" subtype="wikipedia">https://de.wikipedia.org/wiki/Der_einsame_Weg</idno>
+               <idno type="URL" subtype="schnitzler-interviews">https://schnitzler-interviews.acdh.oeaw.ac.at/pmb29985.html</idno>
+               <idno type="URL" subtype="schnitzler-zeitungen">https://schnitzler-zeitungen.acdh.oeaw.ac.at/223970.html?pmb29985</idno>
+               <idno type="URL" subtype="schnitzler-zeitungen">https://schnitzler-zeitungen.acdh.oeaw.ac.at/224107.html?pmb29985</idno>
+               <idno type="URL" subtype="schnitzler-mikrofilme">https://schnitzler-mikrofilme.acdh.oeaw.ac.at/1428169.html?pmb29985</idno>
+               <idno type="URL" subtype="schnitzler-mikrofilme">https://schnitzler-mikrofilme.acdh.oeaw.ac.at/1428171.html?pmb29985</idno>
+               <idno type="URL" subtype="schnitzler-mikrofilme">https://schnitzler-mikrofilme.acdh.oeaw.ac.at/1428170.html?pmb29985</idno>
+               <idno type="URL" subtype="schnitzler-briefe">https://schnitzler-briefe.acdh.oeaw.ac.at/pmb29985.html</idno>
+               <idno type="URL" subtype="pmb">https://pmb.acdh.oeaw.ac.at/entity/164815/</idno>
+               <idno type="URL" subtype="bahr-textverzeichnis">https://bahr-textverzeichnis.acdh.oeaw.ac.at/TSN-listperson.html#pmb164815</idno>
+               <note type="work_kind">Mehraktiges Drama</note>
+               <note type="references"/>
+            </bibl>
+            <bibl xml:id="pmb295177">
+               <title>Das erste Kapitel. Schauspiel in drei Akten</title>
+               <title type="werk_namensvariante">Das erste Capitel</title>
+               <title type="werk_link">https://archive.org/details/daserstekapitels00ples/page/n1</title>
+               <author ref="pmb2128" role="hat-geschaffen">Plessner, Elsa</author>
+               <date notBefore="1910-01-01" when="1910-01-01">1910</date>
+               <idno type="URL" subtype="pmb">https://pmb.acdh.oeaw.ac.at/entity/295177/</idno>
+               <note type="work_kind">Mehraktiges Drama</note>
+            </bibl>
+         </listBibl>
+         <listPlace>
+            <place xml:id="pmb45258">
+               <placeName>München</placeName>
+               <placeName type="legacy-name-merge">München?</placeName>
+               <placeName type="legacy-name-merge">Munich</placeName>
+               <placeName type="alternative-name">Monacho</placeName>
+               <desc type="entity_type">P.PPLA</desc>
+               <desc type="entity_type_id">1415</desc>
+               <location type="coords">
+                  <geo>48,13743 11,57549</geo>
+               </location>
+               <location type="located_in_place">
+                  <placeName ref="pmb314">Bayern</placeName>
+                  <geo>49,0 11,5</geo>
+               </location>
+               <location type="located_in_place">
+                  <placeName ref="pmb151">Deutschland</placeName>
+                  <geo>51,5 10,5</geo>
+               </location>
+               <idno type="URL" subtype="d-nb">https://d-nb.info/gnd/4127793-4</idno>
+               <idno type="URL" subtype="pmb">https://pmb.acdh.oeaw.ac.at/entity/38129/</idno>
+               <idno type="URL" subtype="pmb">https://pmb.acdh.oeaw.ac.at/entity/45258/</idno>
+               <idno type="URL" subtype="geonames">https://sws.geonames.org/2867714/</idno>
+               <idno type="URL" subtype="kraus">https://kraus.wienbibliothek.at/register/orte/pmb45258</idno>
+               <idno type="URL" subtype="wikidata">http://www.wikidata.org/entity/Q1726</idno>
+               <idno type="URL" subtype="wikipedia">https://de.wikipedia.org/wiki/M%C3%BCnchen</idno>
+               <idno type="URL" subtype="schnitzler-interviews">https://schnitzler-interviews.acdh.oeaw.ac.at/pmb45258.html</idno>
+               <idno type="URL" subtype="schnitzler-tagebuch">https://schnitzler-tagebuch.acdh.oeaw.ac.at/pmb45258.html</idno>
+               <idno type="URL" subtype="schnitzler-briefe">https://schnitzler-briefe.acdh.oeaw.ac.at/pmb45258.html</idno>
+               <idno type="URL" subtype="pmb">https://pmb.acdh.oeaw.ac.at/entity/263246/</idno>
+               <idno type="URL" subtype="wienerschnitzler">https://wienerschnitzler.org/pmb45258.html</idno>
+               <note type="image">
+                  <figure>
+                     <graphic url="https://iiif.onb.ac.at/images/AKON/AK112_094/094/full/,600/0/native.jpg"/>
+                  </figure>
+               </note>
+            </place>
+            <place xml:id="pmb50">
+               <placeName>Wien</placeName>
+               <placeName type="ort_fruherer-name">K.K. Reichshaupt- und Residenzstadt Wien</placeName>
+               <placeName type="alternative-name">Bécs</placeName>
+               <placeName type="alternative-name">Land Wien</placeName>
+               <placeName type="alternative-name">Vídeň</placeName>
+               <placeName type="alternative-name">Wenia</placeName>
+               <placeName type="alternative-name">Beč</placeName>
+               <placeName type="ort_fruherer-name">Vindobona</placeName>
+               <placeName type="alternative-name">Vienna</placeName>
+               <desc type="entity_type">A.ADM2</desc>
+               <desc type="entity_type_id">1135</desc>
+               <location type="coords">
+                  <geo>48,208333 16,373056</geo>
+               </location>
+               <location type="located_in_place">
+                  <placeName ref="pmb41240">Österreich</placeName>
+                  <geo>47,33333 13,33333</geo>
+               </location>
+               <location type="located_in_place">
+                  <placeName ref="pmb235218">Windmühlhöhe</placeName>
+                  <geo>48,24077 16,32092</geo>
+               </location>
+               <idno type="URL" subtype="geonames">https://sws.geonames.org/2761369/</idno>
+               <idno type="URL" subtype="d-nb">https://d-nb.info/gnd/4066009-6</idno>
+               <idno type="URL" subtype="schnitzler-bahr">https://schnitzler-bahr.acdh.oeaw.ac.at/pmb50.html</idno>
+               <idno type="URL" subtype="pmb">https://pmb.acdh.oeaw.ac.at/entity/50/</idno>
+               <idno type="URL" subtype="pmb">https://pmb.acdh.oeaw.ac.at/entity/2316/</idno>
+               <idno type="URL" subtype="pmb">https://pmb.acdh.oeaw.ac.at/entity/20954/</idno>
+               <idno type="URL" subtype="pmb">https://pmb.acdh.oeaw.ac.at/entity/65221/</idno>
+               <idno type="URL" subtype="pmb">https://pmb.acdh.oeaw.ac.at/entity/65223/</idno>
+               <idno type="URL" subtype="kraus">https://kraus.wienbibliothek.at/register/orte/pmb50</idno>
+               <idno type="URL" subtype="wikidata">http://www.wikidata.org/entity/Q1741</idno>
+               <idno type="URL" subtype="wikipedia">https://de.wikipedia.org/wiki/Wien</idno>
+               <idno type="URL" subtype="schnitzler-interviews">https://schnitzler-interviews.acdh.oeaw.ac.at/pmb50.html</idno>
+               <idno type="URL" subtype="geonames">https://sws.geonames.org/2761333/</idno>
+               <idno type="URL" subtype="pmb">https://pmb.acdh.oeaw.ac.at/entity/33999/</idno>
+               <idno type="URL" subtype="schnitzler-tagebuch">https://schnitzler-tagebuch.acdh.oeaw.ac.at/pmb50.html</idno>
+               <idno type="URL" subtype="schnitzler-briefe">https://schnitzler-briefe.acdh.oeaw.ac.at/pmb50.html</idno>
+               <note type="image">
+                  <figure>
+                     <graphic url="https://iiif.onb.ac.at/images/AKON/AK117_016/016/full/,600/0/native.jpg"/>
+                  </figure>
+               </note>
+            </place>
+            <place xml:id="pmb295215">
+               <placeName>Pension Serno</placeName>
+               <desc type="entity_type">Beherbergungsgebäude (K.BHB)</desc>
+               <desc type="entity_type_id">42</desc>
+               <location type="coords">
+                  <geo>48,150039 11,56863</geo>
+               </location>
+               <location type="located_in_place">
+                  <placeName ref="pmb45258">München</placeName>
+                  <geo>48,13743 11,57549</geo>
+               </location>
+               <location type="located_in_place">
+                  <placeName ref="pmb296084">Theresienstraße 78</placeName>
+                  <geo>48,151564 11,56207</geo>
+               </location>
+               <idno type="URL" subtype="pmb">https://pmb.acdh.oeaw.ac.at/entity/295215/</idno>
+               <idno type="URL" subtype="wikidata">http://www.wikidata.org/entity/Q135084742</idno>
+            </place>
+         </listPlace>
+         <listOrg>
+            <org xml:id="pmb47085">
+               <orgName>Münchner Kammerspiele</orgName>
+               <orgName type="alternative-name">Vereinigte Theater (München, Münchner Schauspielhaus)</orgName>
+               <orgName type="alternative-name">Schauspielhaus (München, Münchner Schauspielhaus)</orgName>
+               <orgName type="legacy-name-merge">Schauspielhaus München (Kammerspiele)</orgName>
+               <desc type="entity_type">Theater</desc>
+               <desc type="entity_type_id">1012</desc>
+               <location type="located_in_place">
+                  <placeName ref="pmb45258">München</placeName>
+                  <geo>48,13743 11,57549</geo>
+                  <idno type="URL" subtype="d-nb">https://d-nb.info/gnd/4127793-4</idno>
+                  <idno type="URL" subtype="pmb">https://pmb.acdh.oeaw.ac.at/entity/38129/</idno>
+                  <idno type="URL" subtype="pmb">https://pmb.acdh.oeaw.ac.at/entity/45258/</idno>
+                  <idno type="URL" subtype="geonames">https://sws.geonames.org/2867714/</idno>
+                  <idno type="URL" subtype="kraus">https://kraus.wienbibliothek.at/register/orte/pmb45258</idno>
+                  <idno type="URL" subtype="wikidata">http://www.wikidata.org/entity/Q1726</idno>
+                  <idno type="URL" subtype="wikipedia">https://de.wikipedia.org/wiki/M%C3%BCnchen</idno>
+                  <idno type="URL" subtype="schnitzler-interviews">https://schnitzler-interviews.acdh.oeaw.ac.at/pmb45258.html</idno>
+                  <idno type="URL" subtype="schnitzler-tagebuch">https://schnitzler-tagebuch.acdh.oeaw.ac.at/pmb45258.html</idno>
+                  <idno type="URL" subtype="schnitzler-briefe">https://schnitzler-briefe.acdh.oeaw.ac.at/pmb45258.html</idno>
+                  <idno type="URL" subtype="pmb">https://pmb.acdh.oeaw.ac.at/entity/263246/</idno>
+                  <idno type="URL" subtype="wienerschnitzler">https://wienerschnitzler.org/pmb45258.html</idno>
+               </location>
+               <location type="located_in_place">
+                  <placeName ref="pmb11">Münchner Schauspielhaus</placeName>
+                  <geo>48,138122 11,582478</geo>
+                  <idno type="URL" subtype="schnitzler-bahr">https://schnitzler-bahr.acdh.oeaw.ac.at/pmb11.html</idno>
+                  <idno type="URL" subtype="pmb">https://pmb.acdh.oeaw.ac.at/entity/11/</idno>
+                  <idno type="URL" subtype="kraus">https://kraus.wienbibliothek.at/register/orte/pmb11</idno>
+                  <idno type="URL" subtype="schnitzler-interviews">https://schnitzler-interviews.acdh.oeaw.ac.at/pmb11.html</idno>
+                  <idno type="URL" subtype="schnitzler-briefe">https://schnitzler-briefe.acdh.oeaw.ac.at/pmb11.html</idno>
+                  <idno type="URL" subtype="wienerschnitzler">https://wienerschnitzler.org/pmb11.html</idno>
+               </location>
+               <idno type="URL" subtype="wikidata">http://www.wikidata.org/entity/Q520185</idno>
+               <idno type="URL" subtype="pmb">https://pmb.acdh.oeaw.ac.at/entity/37068/</idno>
+               <idno type="URL" subtype="pmb">https://pmb.acdh.oeaw.ac.at/entity/47085/</idno>
+               <idno type="URL" subtype="d-nb">https://d-nb.info/gnd/44467-4</idno>
+               <idno type="URL" subtype="kraus">https://kraus.wienbibliothek.at/register/institutionen/pmb47085</idno>
+               <idno type="URL" subtype="wikipedia">https://de.wikipedia.org/wiki/M%C3%BCnchner_Kammerspiele</idno>
+               <idno type="URL" subtype="schnitzler-interviews">https://schnitzler-interviews.acdh.oeaw.ac.at/pmb47085.html</idno>
+               <note type="apis_dates">
+                  <date notBefore="1897-01-01" when="1897-01-01">1897</date>
+               </note>
+            </org>
+         </listOrg>
+      </back>
    </text>
 </TEI>
