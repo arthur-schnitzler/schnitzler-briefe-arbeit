@@ -1011,6 +1011,7 @@
          </xs:all>
          <xs:attribute name="ref" type="xs:string" use="optional"/>
          <xs:attribute name="type" type="xs:string" use="optional"/>
+         <xs:attribute name="role" type="xs:string" use="optional"/>
          <xs:attribute name="cert" use="optional">
             <xs:simpleType>
                <xs:restriction base="xs:NCName">
@@ -1759,6 +1760,7 @@
          <xs:element ref="tei:publisher" maxOccurs="unbounded" minOccurs="0"/>
          <xs:element ref="tei:pubPlace" maxOccurs="unbounded" minOccurs="0"/>
          <xs:element ref="tei:hi" maxOccurs="unbounded" minOccurs="0"/>
+         <xs:element ref="tei:note" minOccurs="0" maxOccurs="unbounded"/>
       </xs:all>
       <xs:attribute ref="xml:id" use="optional"/>
    </xs:complexType>
@@ -1957,11 +1959,19 @@
             <xs:element minOccurs="0" maxOccurs="unbounded" ref="tei:idno"/>
             <xs:element minOccurs="0" maxOccurs="unbounded" ref="tei:listPerson"/>
             <xs:element minOccurs="0" maxOccurs="unbounded" ref="tei:listPlace"/>
+            <xs:element minOccurs="0" maxOccurs="unbounded" ref="tei:listEvent"/>
             <xs:element ref="tei:listOrg" minOccurs="0" maxOccurs="1"/>
             <xs:element minOccurs="0" maxOccurs="unbounded" ref="tei:note"/>
+            <xs:element ref="tei:desc" minOccurs="0" maxOccurs="unbounded"/>
+            <xs:element ref="tei:label" maxOccurs="unbounded" minOccurs="0"/>
          </xs:all>
-         <xs:attribute ref="xml:id" use="required"/>
+         <xs:attribute ref="xml:id" use="optional"/>
          <xs:attribute name="when" type="xs:date" use="optional"/>
+         <xs:attribute name="ref" use="optional" type="xs:NCName"/>
+         <xs:attribute name="notAfter" type="xs:date"/>
+         <xs:attribute name="notBefore" type="xs:date"/>
+         <xs:attribute name="from" type="xs:date"/>
+         <xs:attribute name="to" type="xs:date"/>
       </xs:complexType>
    </xs:element>
    <xs:element name="eventName" type="eventNameType"/>
@@ -1981,19 +1991,19 @@
    </xs:element>
    <xs:element name="person">
       <xs:complexType>
-         <xs:all>
-            <xs:element maxOccurs="unbounded" ref="tei:persName" minOccurs="0"/>
-            <xs:element minOccurs="0" ref="tei:birth" maxOccurs="1"/>
-            <xs:element minOccurs="0" ref="tei:death" maxOccurs="1"/>
-            <xs:element ref="tei:sex" maxOccurs="1" minOccurs="0"/>
-            <xs:element minOccurs="0" maxOccurs="unbounded" ref="tei:occupation"/>
-            <xs:element maxOccurs="unbounded" ref="tei:idno"/>
-            <xs:element minOccurs="0" maxOccurs="unbounded" ref="tei:affiliation"/>
-            <xs:element minOccurs="0" ref="tei:listEvent" maxOccurs="1"/>
-            <xs:element minOccurs="0" ref="tei:listBibl"/>
-            <xs:element minOccurs="0" ref="tei:note"/>
-         </xs:all>
-         <xs:attribute ref="xml:id" use="required"/>
+         <xs:choice maxOccurs="unbounded" minOccurs="0">
+            <xs:element ref="tei:persName"/>
+            <xs:element ref="tei:birth"/>
+            <xs:element ref="tei:death"/>
+            <xs:element ref="tei:sex"/>
+            <xs:element ref="tei:occupation"/>
+            <xs:element ref="tei:idno"/>
+            <xs:element ref="tei:affiliation"/>
+            <xs:element ref="tei:listEvent"/>
+            <xs:element ref="tei:listBibl"/>
+            <xs:element ref="tei:note"/>
+         </xs:choice>
+         <xs:attribute ref="xml:id" use="optional"/>
          <xs:attribute name="role" use="optional"/>
       </xs:complexType>
    </xs:element>
@@ -2044,28 +2054,8 @@
          <xs:attribute name="ref" use="required" type="xs:NCName"/>
       </xs:complexType>
    </xs:element>
-   <xs:element name="listEvent">
-      <xs:complexType>
-         <xs:sequence>
-            <xs:element maxOccurs="unbounded" ref="tei:event"/>
-         </xs:sequence>
-      </xs:complexType>
-   </xs:element>
-   <xs:element name="event">
-      <xs:complexType>
-         <xs:sequence>
-            <xs:element ref="tei:desc"/>
-            <xs:element ref="tei:label"/>
-            <xs:element maxOccurs="unbounded" ref="tei:idno"/>
-         </xs:sequence>
-         <xs:attribute name="ref" use="required" type="xs:NCName"/>
-         <xs:attribute name="notAfter" type="xs:date"/>
-         <xs:attribute name="notBefore" type="xs:date"/>
-         <xs:attribute name="when" type="xs:date"/>
-         <xs:attribute name="from" type="xs:date"/>
-         <xs:attribute name="to" type="xs:date"/>
-      </xs:complexType>
-   </xs:element>
+   
+   
    <xs:element name="label" type="xs:string"/>
    <xs:element name="listPlace">
       <xs:complexType>
@@ -2086,7 +2076,7 @@
             <xs:element minOccurs="0" maxOccurs="unbounded" ref="tei:figure"/>
             <xs:element maxOccurs="unbounded" minOccurs="0" ref="tei:gap"/>
          </xs:all>
-         <xs:attribute ref="xml:id" use="required"/>
+         <xs:attribute ref="xml:id" use="optional"/>
       </xs:complexType>
    </xs:element>
    <xs:element name="location">
