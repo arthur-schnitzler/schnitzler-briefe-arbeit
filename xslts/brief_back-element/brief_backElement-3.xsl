@@ -90,7 +90,15 @@
     </xsl:template>
     <xsl:template match="@key">
         <xsl:attribute name="ref">
-            <xsl:value-of select="concat('pmb', .)"/>
+            <xsl:choose>
+                <xsl:when test="contains(., 'pmb')">
+                    <xsl:value-of select="."/>
+                </xsl:when>
+                <xsl:otherwise>
+                    <xsl:value-of select="concat('pmb', .)"/>
+                </xsl:otherwise>
+            </xsl:choose>
+            
         </xsl:attribute>
     </xsl:template>
     <xsl:template match="tei:placeName/@ref[contains(.,'place__')]|tei:placeName/@key[contains(.,'place__')]">
@@ -145,6 +153,7 @@
             <xsl:value-of select="."/>
         </xsl:element>
     </xsl:template>
+    
     <xsl:template match="tei:back//tei:listBibl[tei:bibl/@type = 'collections']"/>
     <xsl:template match="tei:back//tei:bibl/tei:note[@type = 'collections']"/>
     <xsl:template match="tei:back//tei:listBibl/tei:bibl/@xml:id">
