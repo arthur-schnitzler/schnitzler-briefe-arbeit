@@ -72,6 +72,7 @@ jobs:
           if git status --porcelain | grep .; then
             git add .
             git commit -m "Automatisch: correspContext ergänzt"
+            git pull --rebase
             git push https://x-access-token:${{ secrets.GITHUB_TOKEN }}@github.com/${{ github.repository }} HEAD:${{ github.ref_name }}
           else
             echo "📭 Keine neuen Änderungen durch Python-Skript."
