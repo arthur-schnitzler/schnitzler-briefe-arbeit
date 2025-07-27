@@ -103,8 +103,8 @@ jobs:
           git config user.email "action@github.com"
           if git status --porcelain | grep .; then
             git add .
-            git pull --rebase
             git commit -m "Automatisch: TOCs generiert"
+            git pull --rebase
             git push https://x-access-token:${{ secrets.GITHUB_TOKEN }}@github.com/${{ github.repository }} HEAD:${{ github.ref_name }}
           else
             echo "📭 Keine Änderungen durch create-tocs.py."
