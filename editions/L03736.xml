@@ -2,12 +2,12 @@
 <?xml-model href="../meta/schnitzler-briefe-schematron.sch" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
 <TEI xmlns="http://www.tei-c.org/ns/1.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
    xsi:schemaLocation="http://www.tei-c.org/ns/1.0 ../meta/schnitzler-briefe-schema.xsd"
-   xml:id="L03734" xml:base="https://id.acdh.oeaw.ac.at/schnitzler/schnitzler-briefe/editions">
+   xml:id="L03736" xml:base="https://id.acdh.oeaw.ac.at/schnitzler/schnitzler-briefe/editions">
    <teiHeader>
       <fileDesc>
          <titleStmt>
             <title level="s">Arthur Schnitzler: Briefwechsel mit Autorinnen und Autoren</title>
-            <title level="a">Arthur Schnitzler an Stefan Zweig, XXXX</title>
+            <title level="a">Arthur Schnitzler an Stefan Zweig, 23.&#160;12.&#160;1929</title>
             <author ref="#pmb2121">Schnitzler, Arthur</author>
             <editor>
                <name>Jahnke, Selma</name>
@@ -71,7 +71,7 @@
          <sourceDesc>
             <listWit>
                <witness n="1">
-                  <objectType corresp="xbrief"/>
+                  <objectType corresp="karte" ana="postkarte"/>
                   <msDesc>
                      <msIdentifier>
                         <country>ISR</country>
@@ -83,15 +83,26 @@
                         <objectDesc>
                            <supportDesc>
                               <extent>
-                                 <measure unit="seite" quantity=""/>
-                                 <measure unit="blatt" quantity=""/>
+                                 <measure unit="seite" quantity="2"/>
+                                 <measure unit="blatt" quantity="1"/>
                               </extent>
                            </supportDesc>
                         </objectDesc>
                         <handDesc>
-                           <handNote medium="" style="deutsche-kurrent"/>
+                           <handNote medium="schwarze-tinte" style="deutsche-kurrent"/>
                         </handDesc>
                      </physDesc>
+                     <additions>
+                        <incident type="postal">
+                           <desc>
+                              <stamp n="1">
+                                 <placeName ref="#pmb68">Wien 110</placeName>
+                                 <date when="1929-12-23"><supplied>23</supplied>. XII. 29</date>
+                                 <time>11</time>
+                              </stamp>
+                           </desc>
+                        </incident>
+                     </additions>
                   </msDesc>
                </witness>
             </listWit>
@@ -104,75 +115,68 @@
          <correspDesc>
             <correspAction type="sent">
                <persName ref="#pmb2121">Schnitzler, Arthur</persName>
-               <date when="" n="01">XXXX</date>
-               <placeName ref="#168" evidence="conjecture">Berlin</placeName>
+               <date when="1929-12-23" n="01">23.&#160;12.&#160;1929</date>
+               <placeName ref="#pmb50">Wien</placeName>
             </correspAction>
             <correspAction type="received">
                <persName ref="#pmb13212">Zweig, Stefan</persName>
-               <placeName ref="#50" evidence="conjecture">Wien</placeName>
+               <placeName ref="#pmb30">Salzburg</placeName>
             </correspAction>
          </correspDesc>
       </profileDesc>
       <revisionDesc status="proposed">
          <change who="MAM" when="2025-07-17">Export aus Transkribus</change>
+         <change who="MAM" when="2025-07-28">Durchsicht</change>
       </revisionDesc>
    </teiHeader>
    <text>
       <body>
+         <div type="address">
+            <address>
+               <addrLine>
+                  <pb facs="0160_FL81799558"/>
+                  <anchor type="textConst" xml:id="T_L03735-1"/>
+                  <hi rend="pre-print">A. S.</hi>
+                  <note type="textConst" corresp="T_L03735-1">ovaler Absenderkleber</note>
+               </addrLine>
+               <addrLine>
+                  <rs ref="#pmb68" type="place">
+                     <hi rend="pre-print">
+                        <hi rend="capitals">Wien, XVIII.</hi>
+                     </hi>
+                  </rs>
+               </addrLine>
+               <addrLine>
+                  <rs ref="#pmb168815" type="place">
+                     <hi rend="pre-print">
+                        <hi rend="capitals">Sternwartestr. 71</hi>
+                     </hi>
+                  </rs>
+               </addrLine>
+            </address>
+            <address>
+               <addrLine>Hrn. Dr. Stefan Zweig</addrLine>
+               <addrLine>
+                  <rs type="place" ref="#pmb30">Salzburg</rs>
+               </addrLine>
+               <addrLine>
+                  <rs type="place" ref="#pmb253003">Kapuzinerberg&#160;5</rs>.</addrLine>
+            </address>
+         </div>
          <div type="writingSession" n="1">
             <opener>
-               <seg>
-                  <pb facs="0157_FL81799773"/>
-                  <hi rend="pre-print"><hi rend="capitals">Dr Arthur Schnitzler</hi></hi>
-               </seg>
-               <dateline>
-                  <date>4.&#160;11.&#160;1929</date>.</dateline>
-               <seg><hi rend="pre-print"><rs type="place" ref="#pmb168815">Wien, XVIII.
-                        Sternwartestrasse&#160;71</rs>.</hi>
-               </seg>
-               <salute>Lieber und verehrter Stefan Zweig.</salute>
+               <dateline><pb facs="0161_FL81799563"/>
+                  <rs type="place" ref="#pmb50">Wien</rs><space unit="chars" quantity="1"/>
+                  <date>23.&#160;12.&#160;2<unclear>9</unclear></date>
+               </dateline>
             </opener>
-            <p>Besten Dank für Ihre Mitteilung Herrn <rs type="person" ref="#pmb295284">A. del Vayo</rs>
-               betreffend. Er möge sich direkt an mich wenden. Können Sie mir vielleicht sagen, was
-               für Honorare er zahlt? Bei <rs type="person" ref="#pmb11324">Fischer</rs> werde ich
-               reklamieren. In <rs type="place" ref="#pmb388">Spanien</rs> ist ja verhältnismässig
-               recht wenig von mir erschienen – so weit ich darüber informiert bin. </p>
-            <p>Ich freue mich auf das versprochene neue <rs type="work" ref="" subtype="implied">Buch</rs> und
-               beglückwünsche Sie noch einmal zu dem ausserordentlichen »<rs type="work" ref="#pmb76770"
-                  >Fouché</rs>«, dessen Erfolg sich, wie ich mit Vergnügen höre und lese, in Nähe
-               und Ferne immer glänzender bestätigt. </p>
-            <p>Neulich hat man mir aus <rs type="place" ref="#pmb182">Paris</rs> einen <rs
-                  type="work" ref="" subtype="implied">Ausschnitt</rs> geschickt, in dem eine Kinovorstellung
-               besprochen war »<rs type="work" ref="#pmb81352">Peur</rs>« d’apres la <rs type="work" subtype="implied"
-                  ref="#pmb294945">nouvelle</rs> de M. Arthur Schnitzler. Nach dem Inhalt muss es sich um die
-                  »<rs type="work" ref="#pmb81352">Angst</rs>« gehandelt haben, die ich selbst hier
-               in einem <anchor type="commentary" xml:id="K_L03734-1"/><rs type="place"
-                  ref="#pmb190636 #pmb253" subtype="implied" cert="low">Kino</rs><note
-                  type="commentary" corresp="K_L03734-1"><rs type="person" ref="#pmb2121"
-                     >Schnitzler</rs> und <rs type="person" ref="#pmb12435">Clara Katharina
-                        Pollaczek</rs> sahen den <rs type="work" subtype="implied" ref="#pmb81352">Film</rs> am
-                     <ref type="schnitzler-tagebuch" target="1929-06-14" subtype="date-only"/>
-                  entweder im <rs type="place" ref="#pmb253">Imperialkino</rs> oder im <rs
-                     type="place" ref="#pmb190636">Gartenbaukino</rs>.</note> gesehen habe. Die <rs
-                  type="work" ref="" subtype="implied">Notiz</rs> stand im »<rs type="work" ref="">Gringoir</rs>«;
-               meine weiteren Recherchen sind noch ohne Erfolg geblieben.</p>
-            <p>Es wäre schön, wenn ich Sie wieder einmal sprechen könnte. Dass Sie das letzte Mal in
-                  <rs type="place" ref="#pmb50">Wien</rs> keine Zeit hatten ist <del
-                  rend="strikethrough">ja</del> natürlich und Sie, lieber Stefan Zweig, haben mir
-               sicher verziehen, dass ich bei der Trauerfeier für <rs type="person" ref="#pmb11740"
-                  >Hofmannsthal</rs> nicht im <rs type="place" ref="" subtype="implied">Theater</rs>
-               war und so Ihre <rs type="work" ref="" subtype="implied">Rede</rs> nicht gehört habe. Man hat mir
-               erzählt, wie schön Sie gesprochen haben. </p>
-            <closer>Mit den herzlichsten Grüssen<lb/>Ihr freundschaftlich ergebener<lb/>
-               <signed>ArthSchnitzler</signed>
+            <p><salute>lieber Doctor Stefan Zweig,</salute> ich danke Ihnen sehr herzlich für Ihr
+               freundschaftliches <anchor type="commentary" xml:id="K_L03736-1"/>Telegramm<note
+                  type="commentary" corresp="K_L03736-1"><ref type="schnitzler-briefe" target="L03679"
+                  /></note></p>
+            <closer>Ihr<lb/>
+               <signed>ArthurSchnitzler</signed>
             </closer>
-            <postscript>
-               <p>Herrn Stefan Zweig</p>
-            </postscript>
-            <postscript>
-               <p>
-                  <rs type="place" ref="#pmb30">Salzburg</rs>.</p>
-            </postscript>
          </div>
       </body>
    </text>
