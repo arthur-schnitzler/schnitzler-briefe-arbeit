@@ -10,11 +10,13 @@
    <xsl:param name="works" as="node()" select="descendant::back/listBibl"/>
    <xsl:param name="orgs" select="//back/listOrg"/>
    <xsl:param name="places" select="//back/listPlace"/>
+   <xsl:param name="events" select="//back/listEvent"/>
    <!--<xsl:param name="sigle" select="document('../indices/siglen.xml')"/>-->
    <xsl:key name="person-lookup" match="person" use="concat('#', @id)"/>
    <xsl:key name="work-lookup" match="bibl" use="concat('#', @id)"/>
    <xsl:key name="org-lookup" match="org" use="concat('#', @id)"/>
    <xsl:key name="place-lookup" match="place" use="concat('#', @id)"/>
+   <xsl:key name="event-lookup" match="event" use="concat('#', @id)"/>
    <xsl:key name="sigle-lookup" match="row" use="siglekey"/>
    <!-- Funktionen -->
    <!-- Ersetzt im übergegeben String die Umlaute mit ae, oe, ue etc. -->
@@ -2122,12 +2124,11 @@
    <xsl:template match="front"/>
    <xsl:template match="back"/>
    <xsl:template match="back" mode="tex">
-      <xsl:if test="
-            descendant::person[not(@id = 'pmb2121')]">
+      <xsl:if test="child::listPerson/person[not(@id = 'pmb2121')]">
          <xsl:text>&#10;\renewcommand{\erwaehntePersonen}{</xsl:text>
          <xsl:text>Personen: </xsl:text>
          <xsl:for-each select="
-               descendant::person[not(@id = 'pmb2121')]">
+               child::listPerson/person[not(@id = 'pmb2121')]">
             <xsl:sort select="descendant::surname/text()"/>
             <xsl:value-of
                select="concat(descendant::forename/text(), ' ', descendant::surname/text())"/>
@@ -2137,10 +2138,10 @@
          </xsl:for-each>
          <xsl:text>}</xsl:text>
       </xsl:if>
-      <xsl:if test="descendant::org">
+      <xsl:if test="child::listOrg/org">
          <xsl:text>&#10;\renewcommand{\erwaehnteInstitutionen}{</xsl:text>
          <xsl:text>Institutionen: </xsl:text>
-         <xsl:for-each select="descendant::org">
+         <xsl:for-each select="child::listOrg/org">
             <xsl:sort select="descendant::orgName[1]/text()"/>
             <xsl:value-of
                select="foo:sonderzeichen-ersetzen(normalize-space(descendant::orgName[1]/text()))"/>
@@ -2150,10 +2151,10 @@
          </xsl:for-each>
          <xsl:text>}</xsl:text>
       </xsl:if>
-      <xsl:if test="descendant::place">
+      <xsl:if test="child::listPlace/place">
          <xsl:text>&#10;\renewcommand{\erwaehnteOrte}{</xsl:text>
          <xsl:text>Orte: </xsl:text>
-         <xsl:for-each select="descendant::place">
+         <xsl:for-each select="child::listPlace/place">
             <xsl:sort select="descendant::placeName[1]/text()"/>
             <xsl:value-of
                select="foo:sonderzeichen-ersetzen(normalize-space(descendant::placeName[1]/text()))"/>
@@ -2164,9 +2165,9 @@
          <xsl:text>}</xsl:text>
       </xsl:if>
       <xsl:text>&#10;\renewcommand{\erwaehnteWerke}{</xsl:text>
-      <xsl:if test="descendant::listBibl/bibl">
+      <xsl:if test="child::listBibl/bibl">
          <xsl:text>Werke: </xsl:text>
-         <xsl:for-each select="descendant::bibl">
+         <xsl:for-each select="child::listBibl/bibl">
             <xsl:sort select="descendant::title[1]/text()"/>
             <xsl:value-of
                select="foo:sonderzeichen-ersetzen(normalize-space(descendant::title[1]/text()))"/>
@@ -2175,6 +2176,19 @@
             <xsl:value-of select="descendant::date/text()"/>
             <xsl:text>)</xsl:text>
          </xsl:if>-->
+            <xsl:if test="position() != last()">
+               <xsl:text>, </xsl:text>
+            </xsl:if>
+         </xsl:for-each>
+      </xsl:if>
+      <xsl:text>}</xsl:text>
+      <xsl:text>&#10;\renewcommand{\erwaehnteEvents}{</xsl:text>
+      <xsl:if test="child::listEvent/event">
+         <xsl:text>Ereignisse: </xsl:text>
+         <xsl:for-each select="child::listEvent/event">
+            <xsl:sort select="descendant::eventName[1]/text()"/>
+            <xsl:value-of
+               select="foo:sonderzeichen-ersetzen(normalize-space(descendant::eventName[1]/text()))"/>
             <xsl:if test="position() != last()">
                <xsl:text>, </xsl:text>
             </xsl:if>
@@ -4732,6 +4746,9 @@
             <xsl:text>\textsuperscript{\textbf{\textcolor{red}{PERSON OFFEN}}}</xsl:text>
          </xsl:when>
          <xsl:otherwise>
+            <xsl:if test="$verweis">
+               <xsl:text>\emph{</xsl:text>
+            </xsl:if>
             <xsl:choose>
                <xsl:when
                   test="empty($entry/persName/forename) and not(empty($entry/persName/surname))">
@@ -4747,6 +4764,9 @@
                   />
                </xsl:otherwise>
             </xsl:choose>
+            <xsl:if test="$verweis">
+               <xsl:text>}</xsl:text>
+            </xsl:if>
          </xsl:otherwise>
       </xsl:choose>
       <xsl:text>.</xsl:text>
@@ -4793,7 +4813,7 @@
       <xsl:param name="first" as="xs:string"/>
       <xsl:param name="rest" as="xs:string"/>
       <xsl:if test="$verweis">
-         <xsl:text>{$\rightarrow$}</xsl:text>
+         <xsl:text>{$\rightarrow$}\emph{</xsl:text>
       </xsl:if>
       <xsl:choose>
          <xsl:when test="not(starts-with($first, '#pmb'))">
@@ -4867,6 +4887,27 @@
             </xsl:choose>
             <xsl:text>}</xsl:text>
          </xsl:when>
+         <xsl:when test="$typ = 'event'">
+            <xsl:text>\textcolor{violet}{</xsl:text>
+            <xsl:variable name="eintrag" select="key('event-lookup', $first, $events)/eventName[1]"
+               as="xs:string"/>
+            <xsl:choose>
+               <xsl:when test="$eintrag = ''">
+                  <xsl:text>XXXX</xsl:text>
+               </xsl:when>
+               <xsl:otherwise>
+                  <xsl:analyze-string select="$eintrag" regex="&amp;">
+                     <xsl:matching-substring>
+                        <xsl:text>{\kaufmannsund}</xsl:text>
+                     </xsl:matching-substring>
+                     <xsl:non-matching-substring>
+                        <xsl:value-of select="."/>
+                     </xsl:non-matching-substring>
+                  </xsl:analyze-string>
+               </xsl:otherwise>
+            </xsl:choose>
+            <xsl:text>}</xsl:text>
+         </xsl:when>
          <xsl:when test="$typ = 'place'">
             <xsl:text>\textcolor{pink}{</xsl:text>
             <xsl:variable name="eintrag" select="key('place-lookup', $first, $places)/placeName[1]"
@@ -4889,6 +4930,9 @@
             <xsl:text>}</xsl:text>
          </xsl:when>
       </xsl:choose>
+      <xsl:if test="$verweis">
+         <xsl:text>}</xsl:text>
+      </xsl:if>
       <xsl:if test="$rest != ''">
          <xsl:if test="$first != '#pmb2121'">
             <xsl:text>{\newline}</xsl:text>
@@ -5072,6 +5116,9 @@
                      <xsl:when test="@type = 'place'">
                         <xsl:text>\textcolor{pink}{</xsl:text>
                      </xsl:when>
+                     <xsl:when test="@type = 'event'">
+                        <xsl:text>\textcolor{violet}{</xsl:text>
+                     </xsl:when>
                   </xsl:choose>
                   <xsl:apply-templates/>
                   <xsl:text>}</xsl:text>
@@ -5167,9 +5214,6 @@
       <xsl:param name="verweis" as="xs:boolean"/>
       <xsl:variable name="entry" select="key('work-lookup', $first, $works)"/>
       <xsl:variable name="author-entry" select="$entry/author"/>
-      <xsl:if test="$verweis">
-         <xsl:text>$\rightarrow$</xsl:text>
-      </xsl:if>
       <xsl:if
          test="$entry/author[@role = 'author' or @role = 'abbreviated-name']/surname/text() != ''">
          <xsl:for-each select="$entry/author[@role = 'author' or @role = 'abbreviated-name']">
@@ -5233,7 +5277,7 @@
       <xsl:param name="verweis" as="xs:boolean"/>
       <xsl:variable name="entry" select="key('org-lookup', $first, $orgs)"/>
       <xsl:if test="$verweis">
-         <xsl:text>$\rightarrow$</xsl:text>
+         <xsl:text>{$\rightarrow$}\emph{</xsl:text>
       </xsl:if>
       <xsl:choose>
          <xsl:when test="$first = ''">
@@ -5255,6 +5299,9 @@
             </xsl:if>
          </xsl:otherwise>
       </xsl:choose>
+      <xsl:if test="$verweis">
+         <xsl:text>}</xsl:text>
+      </xsl:if>
       <xsl:text>.</xsl:text>
    </xsl:function>
    <xsl:function name="foo:orgNameEndnoteR">
@@ -5296,7 +5343,7 @@
       <xsl:variable name="place" select="key('place-lookup', $first, $places)"/>
       <xsl:variable name="ort" select="$place/placeName"/>
       <xsl:if test="$verweis">
-         <xsl:text>$\rightarrow$</xsl:text>
+         <xsl:text>{$\rightarrow$}\emph{</xsl:text>
       </xsl:if>
       <xsl:choose>
          <xsl:when test="$first = ''">
@@ -5307,6 +5354,9 @@
             />
          </xsl:otherwise>
       </xsl:choose>
+      <xsl:if test="$verweis">
+         <xsl:text>}</xsl:text>
+      </xsl:if>
       <xsl:text>.</xsl:text>
    </xsl:function>
    <xsl:function name="foo:placeNameEndnoteR">

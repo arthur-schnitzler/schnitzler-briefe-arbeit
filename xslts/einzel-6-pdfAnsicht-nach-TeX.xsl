@@ -2167,14 +2167,11 @@
    <xsl:template match="front"/>
    <xsl:template match="back"/>
    <xsl:template match="back" mode="tex">
-      <xsl:if test="
-            descendant::person[not(@id = 'pmb2121')]">
-         <xsl:text>
-         
-         \renewcommand{\erwaehntePersonen}{</xsl:text>
+      <xsl:if test="child::listPerson/person[not(@id = 'pmb2121')]">
+         <xsl:text>&#10;\renewcommand{\erwaehntePersonen}{</xsl:text>
          <xsl:text>Personen: </xsl:text>
          <xsl:for-each select="
-               descendant::person[not(@id = 'pmb2121')]">
+            child::listPerson/person[not(@id = 'pmb2121')]">
             <xsl:sort select="descendant::surname/text()"/>
             <xsl:value-of
                select="concat(descendant::forename/text(), ' ', descendant::surname/text())"/>
@@ -2184,11 +2181,10 @@
          </xsl:for-each>
          <xsl:text>}</xsl:text>
       </xsl:if>
-      <xsl:if test="descendant::listOrg/org">
-         <xsl:text>
-         \renewcommand{\erwaehnteInstitutionen}{</xsl:text>
+      <xsl:if test="child::listOrg/org">
+         <xsl:text>&#10;\renewcommand{\erwaehnteInstitutionen}{</xsl:text>
          <xsl:text>Institutionen: </xsl:text>
-         <xsl:for-each select="descendant::org">
+         <xsl:for-each select="child::listOrg/org">
             <xsl:sort select="descendant::orgName[1]/text()"/>
             <xsl:value-of
                select="foo:sonderzeichen-ersetzen(normalize-space(descendant::orgName[1]/text()))"/>
@@ -2198,25 +2194,23 @@
          </xsl:for-each>
          <xsl:text>}</xsl:text>
       </xsl:if>
-      <xsl:if test="descendant::listPlace/place">
-         <xsl:text>
-         \renewcommand{\erwaehnteOrte}{</xsl:text>
+      <xsl:if test="child::listPlace/place">
+         <xsl:text>&#10;\renewcommand{\erwaehnteOrte}{</xsl:text>
          <xsl:text>Orte: </xsl:text>
-         <xsl:for-each select="descendant::place">
+         <xsl:for-each select="child::listPlace/place">
             <xsl:sort select="descendant::placeName[1]/text()"/>
             <xsl:value-of
-               select="foo:sonderzeichen-ersetzen(normalize-space(descendant::placeName[1]))"/>
+               select="foo:sonderzeichen-ersetzen(normalize-space(descendant::placeName[1]/text()))"/>
             <xsl:if test="position() != last()">
                <xsl:text>, </xsl:text>
             </xsl:if>
          </xsl:for-each>
          <xsl:text>}</xsl:text>
       </xsl:if>
-      <xsl:text>
-         \renewcommand{\erwaehnteWerke}{</xsl:text>
-      <xsl:if test="descendant::listBibl/bibl">
+      <xsl:text>&#10;\renewcommand{\erwaehnteWerke}{</xsl:text>
+      <xsl:if test="child::listBibl/bibl">
          <xsl:text>Werke: </xsl:text>
-         <xsl:for-each select="descendant::bibl">
+         <xsl:for-each select="child::listBibl/bibl">
             <xsl:sort select="descendant::title[1]/text()"/>
             <xsl:value-of
                select="foo:sonderzeichen-ersetzen(normalize-space(descendant::title[1]/text()))"/>
