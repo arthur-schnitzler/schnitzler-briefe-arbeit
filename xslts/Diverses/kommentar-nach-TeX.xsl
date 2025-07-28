@@ -222,6 +222,34 @@
          </xsl:otherwise>
       </xsl:choose>
    </xsl:template>
+   <xsl:template match="ref[@type = 'wienerschnitzler']">
+      <xsl:variable name="target" select="replace(@target, '#', '')"/>
+      <xsl:choose>
+         <xsl:when test="@subtype = 'date-only'">
+            <xsl:text>XXXX Das noch anschauen</xsl:text>
+         </xsl:when>
+         <xsl:otherwise>
+            <xsl:choose>
+               <xsl:when test="@subtype = 'see'">
+                  <xsl:text>siehe </xsl:text>
+               </xsl:when>
+               <xsl:when test="@subtype = 'cf'">
+                  <xsl:text>vgl. </xsl:text>
+               </xsl:when>
+               <xsl:when test="@subtype = 'See'">
+                  <xsl:text>Siehe </xsl:text>
+               </xsl:when>
+               <xsl:when test="@subtype = 'Cf'">
+                  <xsl:text>Vgl. </xsl:text>
+               </xsl:when>
+            </xsl:choose>
+            <xsl:text>A.&#8239;S.: \emph{Wiener Schnitzler}, </xsl:text>
+            <xsl:value-of
+               select="normalize-space(document('https://raw.githubusercontent.com/wiener-moderne-verein/wienerschnitzler/main/data/editions/xml.xml')/tei:TEI/tei:text[1]/tei:body[1]/tei:listEvent[1]/tei:event[@xml:id = $target]/@when-iso)"
+            />
+         </xsl:otherwise>
+      </xsl:choose>
+   </xsl:template>
    <xsl:template match="ref[@type = 'schnitzler-lektueren']">
       <xsl:if test="not(@subtype = 'date-only')">
          <xsl:choose>
