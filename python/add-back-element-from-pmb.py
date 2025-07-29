@@ -967,35 +967,82 @@ class TEIBackGenerator:
         return processing_instructions
     
     def _write_xml_with_processing_instructions(self, tree: ET.ElementTree, output_file: str, processing_instructions: List[str]) -> None:
-        """Write XML file with processing instructions preserved"""
-        # First write the tree to a string
-        from xml.dom import minidom
+        """Write XML file with processing instructions preserved and original formatting maintained"""
+        # Read the original file to preserve formatting
+        with open(output_file, 'r', encoding='utf-8') as f:
+            original_content = f.read()
         
-        # Convert ElementTree to string
-        xml_str = ET.tostring(tree.getroot(), encoding='unicode')
+        # Find the back element in the modified tree
+        root = tree.getroot()
+        text_elem = root.find(f"tei:text", self.ns_map)
+        if text_elem is not None:
+            back_elem = text_elem.find(f"tei:back", self.ns_map)
+            if back_elem is not None:
+                # Convert only the back element to string
+                back_str = ET.tostring(back_elem, encoding='unicode')
+                
+                # Replace the back element in the original content
+                import re
+                
+                # Pattern to match the entire back element (including content)
+                back_pattern = r'<back[^>]*>.*?</back>'
+                
+                # Check if back element exists in original
+                if re.search(back_pattern, original_content, re.DOTALL):
+                    # Replace existing back element
+                    new_content = re.sub(back_pattern, back_str, original_content, flags=re.DOTALL)
+                else:
+                    # Insert back element before </text>
+                    new_content = re.sub(r'(\s*</text>)', f'\n      {back_str}\\1', original_content)
+                
+                # Processing instructions are already preserved in the original content
+                # so we don't need to update them again
+                
+                # Write to file
+                with open(output_file, 'w', encoding='utf-8') as f:
+                    f.write(new_content)
+                return
         
-        # Create properly formatted XML with declaration and processing instructions
+        # Fallback: if we can't find back element, write normally
+        self._write_xml_fallback(tree, output_file, processing_instructions)
+    
+    def _update_processing_instructions(self, content: str, processing_instructions: List[str]) -> str:
+        """Update processing instructions in XML content while preserving formatting"""
+        lines = content.split('\n')
+        new_lines = []
+        i = 0
+        
+        # Handle XML declaration
+        if i < len(lines) and lines[i].strip().startswith('<?xml'):
+            new_lines.append('<?xml version="1.0" encoding="UTF-8"?>')
+            i += 1
+        else:
+            new_lines.append('<?xml version="1.0" encoding="UTF-8"?>')
+        
+        # Add our processing instructions
+        new_lines.extend(processing_instructions)
+        
+        # Skip any existing processing instructions in the original
+        while i < len(lines):
+            line = lines[i].strip()
+            if line.startswith('<?') and line.endswith('?>') and not line.startswith('<?xml'):
+                i += 1  # Skip existing processing instruction
+            else:
+                break
+        
+        # Add all remaining lines
+        new_lines.extend(lines[i:])
+        
+        return '\n'.join(new_lines)
+    
+    def _write_xml_fallback(self, tree: ET.ElementTree, output_file: str, processing_instructions: List[str]) -> None:
+        """Fallback method for writing XML when original structure can't be preserved"""
         lines = ['<?xml version="1.0" encoding="UTF-8"?>']
-        
-        # Add processing instructions
         lines.extend(processing_instructions)
         
-        # Parse and format the XML content
-        try:
-            dom = minidom.parseString(xml_str)
-            # Get formatted XML without the XML declaration (we'll add our own)
-            formatted_xml = dom.toprettyxml(indent="   ", encoding=None)
-            # Remove the XML declaration line that minidom adds
-            formatted_lines = formatted_xml.split('\n')[1:]
-            # Remove empty lines at the beginning
-            while formatted_lines and not formatted_lines[0].strip():
-                formatted_lines.pop(0)
-            lines.extend(formatted_lines)
-        except:
-            # Fallback: just add the unformatted XML
-            lines.append(xml_str)
+        xml_str = ET.tostring(tree.getroot(), encoding='unicode')
+        lines.append(xml_str)
         
-        # Write to file
         with open(output_file, 'w', encoding='utf-8') as f:
             f.write('\n'.join(lines))
     
