@@ -33,23 +33,6 @@ jobs:
           curl -L -o saxon/saxon-he.jar https://repo1.maven.org/maven2/net/sf/saxon/Saxon-HE/10.8/Saxon-HE-10.8.jar
 
 
-      - name: Download original XML
-        run: curl -o temp-listevent.xml https://pmb.acdh.oeaw.ac.at/media/listevent.xml
-
-      - name: Transform XML with Saxon 10.8
-        run: |
-          java -jar saxon/saxon-he.jar \
-            -s:temp-listevent.xml \
-            -xsl:xslt/import-listevent.xsl \
-            -o:data/editions/listevent.xml
-
-      - name: Commit and push transformed XML
-        run: |
-          git config user.name "github-actions[bot]"
-          git config user.email "github-actions[bot]@users.noreply.github.com"
-          git add data/editions/listevent.xml
-          git commit -m "Automatisch transformierte listevent.xml mit Saxon HE 10.8 aktualisiert" || echo "Keine Änderungen zu committen"
-          git push
 
       - name: Run mentions-in-listevent.py
         run: python ./python/mentions-in-listevent.py
