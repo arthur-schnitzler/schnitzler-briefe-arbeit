@@ -1,6 +1,4 @@
-<?xml version='1.0' encoding='UTF-8'?>
-<?xml-model href="../meta/schnitzler-briefe-schematron.sch" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
-<TEI xmlns="http://www.tei-c.org/ns/1.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.tei-c.org/ns/1.0 ../meta/schnitzler-briefe-schema.xsd" xml:id="L03706" xml:base="https://id.acdh.oeaw.ac.at/schnitzler/schnitzler-briefe/editions">
+<?xml version="1.0" encoding="UTF-8"?><?xml-model href="../meta/schnitzler-briefe-schematron.sch" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI xmlns="http://www.tei-c.org/ns/1.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.tei-c.org/ns/1.0 ../meta/schnitzler-briefe-schema.xsd" xml:id="L03706" xml:base="https://id.acdh.oeaw.ac.at/schnitzler/schnitzler-briefe/editions">
    <teiHeader>
       <fileDesc>
          <titleStmt>
@@ -83,6 +81,7 @@
                               <extent>
                                  <measure unit="seite" quantity="1"/>
                                  <measure unit="blatt" quantity="1"/>
+                                 <measure unit="zeichenanzahl" quantity="297"/>
                               </extent>
                            </supportDesc>
                         </objectDesc>
@@ -110,12 +109,14 @@
                <date evidence="conjecture" notBefore="1896-11-21" notAfter="1896-11-25">[21. 11. 1896 – 25. 11. 1896?]</date>
                <placeName ref="#pmb50" evidence="conjecture">Wien</placeName>
             </correspAction>
-         <correspContext><ref type="belongsToCorrespondence" target="correspondence_2128">Plessner, Else</ref>
+            <correspContext>
+               <ref type="belongsToCorrespondence" target="correspondence_2128">Plessner, Else</ref>
                <ref subtype="previous_letter" type="withinCollection" target="L00623">Blumenthal an Schnitzler, 19. 11. 1896</ref>
                <ref subtype="next_letter" type="withinCollection" target="L02684">Schnitzler an Goldmann, 21. 11. 1896</ref>
                <ref subtype="previous_letter" type="withinCorrespondence" source="correspondence_2128" target="L03707">Plessner an Schnitzler, 17. 11. 1896</ref>
                <ref subtype="next_letter" type="withinCorrespondence" source="correspondence_2128" target="L03708">Plessner an Schnitzler, 1. 12. 1896</ref>
-            </correspContext></correspDesc>
+            </correspContext>
+         </correspDesc>
       </profileDesc>
       <revisionDesc status="proposed">
          <change who="MAM" when="2025-07-03">Export aus Transkribus</change>
@@ -132,8 +133,8 @@
                </dateline>
                <salute>Verehrter Herr Doctor!</salute>
             </opener>
-            <p>Besten Dank für liebenswürtige <anchor type="commentary" xml:id="K_L03706-1"/>Zeilen<note type="commentary" corresp="K_L03706-1">nicht überliefert</note>.
-                  Aus<rs type="place" ref="#pmb168">Berlin</rs> noch immer nichts. Werde Ihrem Rath
+            <p>Besten Dank für liebenswürdige <anchor type="commentary" xml:id="K_L03706-1"/>Zeilen<note type="commentary" corresp="K_L03706-1">nicht überliefert</note>.
+                  Aus <rs type="place" ref="#pmb168">Berlin</rs> noch immer nichts. Werde Ihrem Rath
                gemäß, dort anfragen.</p>
             <p>Dank für die Ihre bei Dir. <rs type="person" ref="#pmb10986" subtype="implied">B...</rs>. »<anchor type="commentary" xml:id="K_L03706-2"/>Gnade, dass Ihr Euch
                dessen erinnert<note type="commentary" corresp="K_L03706-2">Zitat aus <rs type="person" ref="#pmb11461">Goethes</rs>
@@ -193,7 +194,7 @@
                </persName>
                <birth>
                   <date when="1862-05-15">15. 5. 1862</date>
-                  <settlement ref="pmbpmb50">
+                  <settlement ref="pmb50">
                      <placeName type="pref">Wien</placeName>
                      <location>
                         <geo>48,208333 16,373056</geo>
@@ -202,7 +203,7 @@
                </birth>
                <death>
                   <date when="1931-10-21">21. 10. 1931</date>
-                  <settlement ref="pmbpmb50">
+                  <settlement ref="pmb50">
                      <placeName type="pref">Wien</placeName>
                      <location>
                         <geo>48,208333 16,373056</geo>
@@ -419,6 +420,23 @@
                      <graphic url="https://iiif.onb.ac.at/images/AKON/AK117_016/016/full/,600/0/native.jpg"/>
                   </figure>
                </note>
+            </place>
+            <place xml:id="pmb296017">
+               <placeName>Hotel Meranerhof</placeName>
+               <placeName type="ort_namensvariante">Pension Wolf</placeName>
+               <placeName type="ort_namensvariante">Villa Adelheid</placeName>
+               <placeName type="ort_namensvariante">Villa Giovanni</placeName>
+               <desc type="entity_type">Hotel (K.HTL)</desc>
+               <desc type="entity_type_id">12</desc>
+               <location type="coords">
+                  <geo>46,66964 11,15971</geo>
+               </location>
+               <location type="located_in_place">
+                  <placeName ref="pmb43520">Meran</placeName>
+                  <geo>46,66817 11,15953</geo>
+               </location>
+               <idno type="URL" subtype="pmb">https://pmb.acdh.oeaw.ac.at/entity/296017/</idno>
+               <idno type="URL" subtype="wikidata">http://www.wikidata.org/entity/Q135315649</idno>
             </place>
             <place xml:id="pmb168">
                <placeName>Berlin</placeName>
