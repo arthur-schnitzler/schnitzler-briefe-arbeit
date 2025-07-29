@@ -25,14 +25,6 @@ jobs:
 
 
 
-      - name: Run mentions-in-listevent.py
-        run: python ./python/mentions-in-listevent.py
-        
-      - name: Run add-eventypes-ana-to-listevent.py
-        run: python ./python/add-eventypes-ana-to-listevent.py
-        
-      - name: Run create-jsons-for-charts.py
-        run: python ./python/create-jsons-for-charts.py
 
       - name: Run mentions-in-back.py (extract PMB IDs from back elements)
         run: python ./python/mentions-in-back.py
@@ -48,14 +40,3 @@ jobs:
           git commit -m "Automatisch generierte Indexdateien aktualisiert" || echo "Keine Änderungen zu committen"
           git push
 
-      - name: Run make_calendar_data.py
-        run: python ./python/make_calendar_data.py
-
-      - name: Commit and push calendarData.js
-        run: |
-          git config user.name "github-actions[bot]"
-          git config user.email "github-actions[bot]@users.noreply.github.com"
-          git add html/js-data/calendarData.js
-          git add html/js-data/charts_by_year.json
-          git commit -m "Automatisch generierte Kalenderdaten und Chartdaten aktualisiert" || echo "Keine Änderungen zu committen"
-          git push
