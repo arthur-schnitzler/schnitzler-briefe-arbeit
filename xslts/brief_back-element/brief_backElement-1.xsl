@@ -39,7 +39,7 @@
                                     <xsl:element name="person"
                                         namespace="http://www.tei-c.org/ns/1.0">
                                         <xsl:attribute name="xml:id">
-                                            <xsl:value-of select="."/>
+                                            <xsl:value-of select="replace(., '#', '')"/>
                                         </xsl:attribute>
                                     </xsl:element>
                                 </xsl:if>
@@ -83,7 +83,7 @@
                                     <xsl:element name="person"
                                         namespace="http://www.tei-c.org/ns/1.0">
                                         <xsl:attribute name="xml:id">
-                                            <xsl:value-of select="."/>
+                                            <xsl:value-of select="replace(., '#', '')"/>
                                         </xsl:attribute>
                                     </xsl:element>
                                 </xsl:if>
@@ -158,7 +158,7 @@
                                     <xsl:element name="place"
                                         namespace="http://www.tei-c.org/ns/1.0">
                                         <xsl:attribute name="xml:id">
-                                            <xsl:value-of select="."/>
+                                            <xsl:value-of select="replace(., '#', '')"/>
                                         </xsl:attribute>
                                     </xsl:element>
                                 </xsl:if>
@@ -171,7 +171,7 @@
                                     <xsl:element name="place"
                                         namespace="http://www.tei-c.org/ns/1.0">
                                         <xsl:attribute name="xml:id">
-                                            <xsl:value-of select="."/>
+                                            <xsl:value-of select="replace(., '#', '')"/>
                                         </xsl:attribute>
                                     </xsl:element>
                                 </xsl:if>
@@ -189,7 +189,7 @@
                                 <xsl:if test="normalize-space(.) != ''">
                                     <xsl:element name="org" namespace="http://www.tei-c.org/ns/1.0">
                                         <xsl:attribute name="xml:id">
-                                            <xsl:value-of select="."/>
+                                            <xsl:value-of select="replace(., '#', '')"/>
                                         </xsl:attribute>
                                     </xsl:element>
                                 </xsl:if>
@@ -201,7 +201,7 @@
                                 <xsl:if test="normalize-space(.) != ''">
                                     <xsl:element name="org" namespace="http://www.tei-c.org/ns/1.0">
                                         <xsl:attribute name="xml:id">
-                                            <xsl:value-of select="."/>
+                                            <xsl:value-of select="replace(., '#', '')"/>
                                         </xsl:attribute>
                                     </xsl:element>
                                 </xsl:if>
@@ -219,7 +219,7 @@
                                 <xsl:if test="normalize-space(.) != ''">
                                     <xsl:element name="event" namespace="http://www.tei-c.org/ns/1.0">
                                         <xsl:attribute name="xml:id">
-                                            <xsl:value-of select="."/>
+                                            <xsl:value-of select="replace(., '#', '')"/>
                                         </xsl:attribute>
                                     </xsl:element>
                                 </xsl:if>
@@ -231,7 +231,7 @@
                                 <xsl:if test="normalize-space(.) != ''">
                                     <xsl:element name="event" namespace="http://www.tei-c.org/ns/1.0">
                                         <xsl:attribute name="xml:id">
-                                            <xsl:value-of select="."/>
+                                            <xsl:value-of select="replace(., '#', '')"/>
                                         </xsl:attribute>
                                     </xsl:element>
                                 </xsl:if>
