@@ -1,6 +1,4 @@
-<?xml version='1.0' encoding='UTF-8'?>
-<?xml-model href="../meta/schnitzler-briefe-schematron.sch" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
-<TEI xmlns="http://www.tei-c.org/ns/1.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.tei-c.org/ns/1.0 ../meta/schnitzler-briefe-schema.xsd" xml:id="L03711" xml:base="https://id.acdh.oeaw.ac.at/schnitzler/schnitzler-briefe/editions">
+<?xml version="1.0" encoding="UTF-8"?><?xml-model href="../meta/schnitzler-briefe-schematron.sch" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI xmlns="http://www.tei-c.org/ns/1.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.tei-c.org/ns/1.0 ../meta/schnitzler-briefe-schema.xsd" xml:id="L03711" xml:base="https://id.acdh.oeaw.ac.at/schnitzler/schnitzler-briefe/editions">
    <teiHeader>
       <fileDesc>
          <titleStmt>
@@ -83,7 +81,7 @@
                               <extent>
                                  <measure unit="seite" quantity="3"/>
                                  <measure unit="blatt" quantity=""/>
-                                 <measure unit="zeichenanzahl" quantity="1471"/>
+                                 <measure unit="zeichenanzahl" quantity="1472"/>
                               </extent>
                            </supportDesc>
                         </objectDesc>
@@ -112,12 +110,14 @@
                   – 14. 1. 1897?]</date>
                <placeName ref="#pmb50" evidence="conjecture">Wien</placeName>
             </correspAction>
-            <correspContext><ref type="belongsToCorrespondence" target="correspondence_2128">Plessner, Else</ref>
+            <correspContext>
+               <ref type="belongsToCorrespondence" target="correspondence_2128">Plessner, Else</ref>
                <ref subtype="previous_letter" type="withinCollection" target="L02800">Goldmann an Schnitzler, 8. 1. [1897]</ref>
                <ref subtype="next_letter" type="withinCollection" target="L03262">Salten an Schnitzler, [10. 1. 1897]</ref>
                <ref subtype="previous_letter" type="withinCorrespondence" source="correspondence_2128" target="L03710">Plessner an Schnitzler, 29. 12. 1896</ref>
                <ref subtype="next_letter" type="withinCorrespondence" source="correspondence_2128" target="L03712">Plessner an Schnitzler, 13. 1. 1897</ref>
-            </correspContext></correspDesc>
+            </correspContext>
+         </correspDesc>
       </profileDesc>
       <revisionDesc status="proposed">
          <change who="MAM" when="2025-07-03">Export aus Transkribus</change>
@@ -138,7 +138,11 @@
                sagen mir nichts Überraschendes. Eine halbe Stunde nachdem die <rs type="work" ref="#pmb296030" subtype="implied">Arbeit</rs> an Sie abgeschickt war, habe ich es
                auch schon selber gewusst: – Wenn ich aufrichtig sein soll – im Schreiben selbst hat
                mein Gewissen »<foreign xml:lang="la">veto</foreign>« geschrien. Aber ich schrie noch
-               lauter – <foreign xml:lang="la">vide</foreign> 2 Briefe an Sie! – Na – <foreign xml:lang="fr">passé</foreign>! – – Daß es rapid abwärts ging, habe ich <date>im
+               lauter – <foreign xml:lang="la">vide</foreign>
+               <space unit="chars" quantity="1"/>
+               <anchor type="commentary" xml:id="K_L03711-2"/>2 Briefe<note type="commentary" corresp="K_L03711-2">
+                  <ref type="schnitzler-briefe" target="L03709"/>, und <ref type="schnitzler-briefe" target="L03710"/>.
+               </note> an Sie! – Na – <foreign xml:lang="fr">passé</foreign>! – – Daß es rapid abwärts ging, habe ich <date>im
                   letzten Jahr</date> genug oft bemerkt, nachdem ich kaum ein bißchen hinaufgekommen
                war, daß ich fertig bin, total fertig, weiß ich <pb facs=""/>
                <hi rend="underline" n="1">seit einem halben Jahr</hi> – also Ihr Urtheil über »<rs type="work" ref="#pmb296030">Orchideen</rs>« nur das Siegel auf der Urkunde! Ich
@@ -150,7 +154,7 @@
                Wurzelkrankheit bei mir! Darum lauter, mißlungene Blüten! – Und da hilft nichts! Also
                nochmals herzlichen, herzlichen Dank für Ihre Geduld und Güte! – Besser machen können
                Sie freilich nichts, als es ist! – Darum werde ich Sie auch in Zukunft verschonen –
-               und sehen, wies ohne Feder geht. Herzlichen innigen Dank!</p>
+               und sehen, wie s ohne Feder geht. Herzlichen innigen Dank!</p>
             <closer>
                <signed>Elsa Plessner</signed>
             </closer>
@@ -203,7 +207,7 @@
                </persName>
                <birth>
                   <date when="1862-05-15">15. 5. 1862</date>
-                  <settlement ref="pmbpmb50">
+                  <settlement ref="pmb50">
                      <placeName type="pref">Wien</placeName>
                      <location>
                         <geo>48,208333 16,373056</geo>
@@ -212,7 +216,7 @@
                </birth>
                <death>
                   <date when="1931-10-21">21. 10. 1931</date>
-                  <settlement ref="pmbpmb50">
+                  <settlement ref="pmb50">
                      <placeName type="pref">Wien</placeName>
                      <location>
                         <geo>48,208333 16,373056</geo>
@@ -266,8 +270,7 @@
             </place>
             <place xml:id="pmb50">
                <placeName>Wien</placeName>
-               <placeName type="ort_fruherer-name">K.K. Reichshaupt- und Residenzstadt
-                  Wien</placeName>
+               <placeName type="ort_fruherer-name">K.K. Reichshaupt- und Residenzstadt Wien</placeName>
                <placeName type="alternative-name">Bécs</placeName>
                <placeName type="alternative-name">Land Wien</placeName>
                <placeName type="alternative-name">Vídeň</placeName>
