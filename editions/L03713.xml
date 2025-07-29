@@ -1,6 +1,4 @@
-<?xml version='1.0' encoding='UTF-8'?>
-<?xml-model href="../meta/schnitzler-briefe-schematron.sch" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
-<TEI xmlns="http://www.tei-c.org/ns/1.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.tei-c.org/ns/1.0 ../meta/schnitzler-briefe-schema.xsd" xml:id="L03713" xml:base="https://id.acdh.oeaw.ac.at/schnitzler/schnitzler-briefe/editions">
+<?xml version="1.0" encoding="UTF-8"?><?xml-model href="../meta/schnitzler-briefe-schematron.sch" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI xmlns="http://www.tei-c.org/ns/1.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.tei-c.org/ns/1.0 ../meta/schnitzler-briefe-schema.xsd" xml:id="L03713" xml:base="https://id.acdh.oeaw.ac.at/schnitzler/schnitzler-briefe/editions">
    <teiHeader>
       <fileDesc>
          <titleStmt>
@@ -111,13 +109,15 @@
                <date evidence="conjecture" notBefore="1897-03-29" notAfter="1897-04-01">[29. 3. 1897 – 1. 4. 1897?]</date>
                <placeName ref="#pmb50" evidence="conjecture">Wien</placeName>
             </correspAction>
-            <correspContext><ref type="belongsToCorrespondence" target="correspondence_2128">Plessner, Else</ref>
+            <correspContext>
+               <ref type="belongsToCorrespondence" target="correspondence_2128">Plessner, Else</ref>
                <ref subtype="previous_letter" type="withinCollection" target="L00660">Beer-Hofmann an Schnitzler, 23. 3. 1897</ref>
                <ref subtype="next_letter" type="withinCollection" target="L00661">Altenberg an Schnitzler, [24. 3. 1897]</ref>
                <ref subtype="previous_letter" type="withinCorrespondence" source="correspondence_2128" target="L03732">Plessner an Schnitzler, 18. 3. 1897</ref>
                <ref subtype="next_letter" type="withinCorrespondence" source="correspondence_2128" target="L03694">Plessner an Schnitzler, [Mitte April
                      1897]</ref>
-            </correspContext></correspDesc>
+            </correspContext>
+         </correspDesc>
       </profileDesc>
       <revisionDesc status="proposed">
          <change who="MAM" when="2025-07-03">Export aus Transkribus</change>
@@ -148,7 +148,7 @@
                auch die »<rs type="work" ref="#pmb296030">Orchideen</rs>» ganz von selbst. – – Jetzt
                wo ich glaube wieder ein bisschen beisammen zu sein, und alle Gefahr, das <anchor type="commentary" xml:id="K_L03713-2"/>Ende der <rs type="person" ref="#pmb13797">Baskirtseff</rs>
                <note type="commentary" corresp="K_L03713-2">Die Malerin <rs type="person" ref="#pmb13797">Marie Bashkirtseff</rs> starb im Alter von
-                  knapp 26 Jahren an Tuberkulose.</note> zu kopieren – geschwunden ist, wende ich
+                  knapp 26 Jahren an Tuberkulose. Ihr bis wenige Tage vor dem Tod geführtes <rs type="work" ref="#pmb79230">Tagebuch</rs> wurde posthum publiziert ein vielbeachtetes Buch.</note> zu kopieren – geschwunden ist, wende ich
                mich also an Sie und Ihre mir so oft bewiesene Güte – nehmen Sie mich in die Schule –
                stellen Sie mir Aufgaben!! – Außerordentlich hat es mich gefreut, dass <pb facs=""/>die letzte <rs type="work" ref="#pmb295194" subtype="implied">Arbeit</rs> im <rs type="work" ref="#pmb36376">W<hi rend="superscript">er</hi> Journal</rs> Ihnen nicht missfallen hat. Sehen Sie,
                verehrter Herr Doctor, die habe ich wirklich in 1½ Stunden hingeschmiert ohne viel an
@@ -229,7 +229,7 @@
                </persName>
                <birth>
                   <date when="1862-05-15">15. 5. 1862</date>
-                  <settlement ref="pmbpmb50">
+                  <settlement ref="pmb50">
                      <placeName type="pref">Wien</placeName>
                      <location>
                         <geo>48,208333 16,373056</geo>
@@ -238,7 +238,7 @@
                </birth>
                <death>
                   <date when="1931-10-21">21. 10. 1931</date>
-                  <settlement ref="pmbpmb50">
+                  <settlement ref="pmb50">
                      <placeName type="pref">Wien</placeName>
                      <location>
                         <geo>48,208333 16,373056</geo>
@@ -294,6 +294,16 @@
                <author ref="pmb2128" role="hat-geschaffen">Plessner, Elsa</author>
                <idno type="URL" subtype="pmb">https://pmb.acdh.oeaw.ac.at/entity/296030/</idno>
                <note type="work_kind">Unveröffentlichtes dramatisches Werk</note>
+            </bibl>
+            <bibl xml:id="pmb79230">
+               <title>Journal</title>
+               <title type="werk_bibliografische-angabe">Journal. Paris 1887.</title>
+               <author ref="pmb13797" role="hat-geschaffen">Bashkirtseff, Marie</author>
+               <date>1887</date>
+               <idno type="URL" subtype="pmb">https://pmb.acdh.oeaw.ac.at/entity/79230/</idno>
+               <idno type="URL" subtype="schnitzler-lektueren">https://schnitzler-lektueren.acdh.oeaw.ac.at/pmb79230.html</idno>
+               <idno type="URL" subtype="schnitzler-tagebuch">https://schnitzler-tagebuch.acdh.oeaw.ac.at/pmb79230.html</idno>
+               <note type="work_kind">Tagebuch</note>
             </bibl>
             <bibl xml:id="pmb295194">
                <title>Ein Brief</title>
