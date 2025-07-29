@@ -86,7 +86,6 @@ for filename in os.listdir(input_dir):
         tree.write(filepath, pretty_print=True, xml_declaration=True, encoding='UTF-8')
 
         print(" - correspContext eingefügt.")
-
     except Exception as e:
         print(f"Fehler in {filename}: {e}")
 

@@ -49,7 +49,7 @@
             </xsl:choose>
         </xsl:attribute>
     </xsl:template>
-    <xsl:template match="tei:date[contains(.,'&lt;')]">
+    <xsl:template match="tei:date[contains(., '&lt;')]">
         <xsl:element name="date" namespace="http://www.tei-c.org/ns/1.0">
             <xsl:apply-templates select="@*"/>
             <xsl:value-of select="substring-before(., '&lt;')"/>
@@ -82,7 +82,6 @@
             <xsl:value-of select="."/>
         </xsl:attribute>
     </xsl:template>
-    
     <xsl:template match="@to-iso">
         <xsl:attribute name="to">
             <xsl:value-of select="."/>
@@ -98,16 +97,16 @@
                     <xsl:value-of select="concat('pmb', .)"/>
                 </xsl:otherwise>
             </xsl:choose>
-            
         </xsl:attribute>
     </xsl:template>
-    <xsl:template match="tei:placeName/@ref[contains(.,'place__')]|tei:placeName/@key[contains(.,'place__')]">
+    <xsl:template
+        match="tei:placeName/@ref[contains(., 'place__')] | tei:placeName/@key[contains(., 'place__')]">
         <xsl:attribute name="ref">
-            <xsl:value-of select="concat('pmb', replace(.,'place__',''))"/>
+            <xsl:value-of select="concat('pmb', replace(., 'place__', ''))"/>
         </xsl:attribute>
     </xsl:template>
     <xsl:template match="tei:back//tei:title/@type[. = 'main']"/>
-    <xsl:template match="tei:back//tei:bibl/tei:author/@ref|tei:back//tei:bibl/tei:author/@key">
+    <xsl:template match="tei:back//tei:bibl/tei:author/@ref | tei:back//tei:bibl/tei:author/@key">
         <xsl:attribute name="ref">
             <xsl:choose>
                 <xsl:when test="starts-with(., 'pmbperson__') or starts-with(., 'person__')">
@@ -153,7 +152,6 @@
             <xsl:value-of select="."/>
         </xsl:element>
     </xsl:template>
-    
     <xsl:template match="tei:back//tei:listBibl[tei:bibl/@type = 'collections']"/>
     <xsl:template match="tei:back//tei:bibl/tei:note[@type = 'collections']"/>
     <xsl:template match="tei:back//tei:listBibl/tei:bibl/@xml:id">
