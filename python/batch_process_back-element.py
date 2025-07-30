@@ -12,7 +12,6 @@ from pathlib import Path
 import time
 import argparse
 from concurrent.futures import ThreadPoolExecutor, as_completed
-import pickle
 import os
 
 def process_file(xml_file, processor_script):
