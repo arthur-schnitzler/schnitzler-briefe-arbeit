@@ -17,8 +17,6 @@ from pathlib import Path
 import urllib.request
 import urllib.parse
 import time
-import pickle
-import os
 
 
 class TEIBackGenerator:
@@ -33,10 +31,18 @@ class TEIBackGenerator:
         self.pmb_lists = {}
         self.pmb_lookups = {}
         
-        # Cache-Datei für persistente Speicherung
+        # Cache-Dateien für persistente Speicherung
         self.cache_dir = Path.home() / '.cache' / 'pmb-lists'
-        self.cache_file = self.cache_dir / 'pmb_lookups.pkl'
         self.cache_max_age = 24 * 60 * 60  # 24 Stunden in Sekunden
+        
+        # Cache-Dateien für jede Entity-Type
+        self.cache_files = {
+            'person': self.cache_dir / 'listperson.xml',
+            'work': self.cache_dir / 'listbibl.xml', 
+            'place': self.cache_dir / 'listplace.xml',
+            'org': self.cache_dir / 'listorg.xml',
+            'event': self.cache_dir / 'listevent.xml'
+        }
         
         # Wien-Eintrag für spezielle Behandlung
         self.wien_entry = {
@@ -86,91 +92,129 @@ class TEIBackGenerator:
         return refs
     
     def _load_cache(self) -> bool:
-        """Lädt PMB-Listen aus dem Cache falls vorhanden und aktuell."""
+        """Lädt PMB-Listen aus dem XML-Cache falls vorhanden und aktuell."""
         try:
-            if not self.cache_file.exists():
+            # Prüfe ob alle Cache-Dateien existieren
+            if not all(cache_file.exists() for cache_file in self.cache_files.values()):
                 return False
             
-            # Prüfe Alter der Cache-Datei
-            cache_age = time.time() - self.cache_file.stat().st_mtime
+            # Prüfe Alter der Cache-Dateien (verwende älteste Datei)
+            oldest_time = min(cache_file.stat().st_mtime for cache_file in self.cache_files.values())
+            cache_age = time.time() - oldest_time
             if cache_age > self.cache_max_age:
                 print("PMB-Cache ist veraltet, wird neu geladen...")
                 return False
             
-            print("Lade PMB-Listen aus Cache...")
-            # Retry-Mechanismus für parallele Zugriffe
-            for attempt in range(3):
+            print("Lade PMB-Listen aus XML-Cache...")
+            total_entries = 0
+            
+            for entity_type, cache_file in self.cache_files.items():
                 try:
-                    with open(self.cache_file, 'rb') as f:
-                        cache_data = pickle.load(f)
-                        self.pmb_lookups = cache_data.get('lookups', {})
-                        self.pmb_lists = cache_data.get('lists', {})
-                    break
-                except (pickle.UnpicklingError, EOFError) as e:
-                    if attempt < 2:
-                        print(f"Cache-Lesefehler (Versuch {attempt + 1}/3), warte kurz...")
-                        time.sleep(1)
-                        continue
-                    else:
-                        print(f"Cache-Datei korrupt: {e}")
-                        return False
+                    # Parse cached XML file
+                    tree = ET.parse(cache_file)
+                    root = tree.getroot()
+                    self.pmb_lists[entity_type] = root
+                    
+                    # Create lookup dictionary
+                    self.pmb_lookups[entity_type] = {}
+                    
+                    # Bestimme Liste und Element Tags basierend auf Entity-Type
+                    if entity_type == 'person':
+                        list_tag = 'listPerson'
+                        item_tag = 'person'
+                    elif entity_type == 'work':
+                        list_tag = 'listBibl'
+                        item_tag = 'bibl'
+                    elif entity_type == 'place':
+                        list_tag = 'listPlace'
+                        item_tag = 'place'
+                    elif entity_type == 'org':
+                        list_tag = 'listOrg'
+                        item_tag = 'org'
+                    elif entity_type == 'event':
+                        list_tag = 'listEvent'
+                        item_tag = 'event'
+                    
+                    # Finde die Liste im Root-Element
+                    list_elem = root.find(f".//tei:{list_tag}", self.ns_map)
+                    if list_elem is not None:
+                        # Durchlaufe alle Items in der Liste
+                        for item in list_elem.findall(f"tei:{item_tag}", self.ns_map):
+                            xml_id = item.get(f"{{{ET._namespace_map.get('xml', 'http://www.w3.org/XML/1998/namespace')}}}id")
+                            if xml_id:
+                                # Extrahiere PMB-Nummer (entferne Präfixe wie person__, work__, etc.)
+                                pmb_id = xml_id
+                                if '__' in pmb_id:
+                                    pmb_id = pmb_id.split('__')[-1]
+                                if pmb_id.startswith('pmb'):
+                                    pmb_id = pmb_id[3:]  # Entferne 'pmb' Präfix
+                                
+                                # Speichere das Element unter der PMB-ID
+                                self.pmb_lookups[entity_type][pmb_id] = item
+                                total_entries += 1
+                    
+                except Exception as e:
+                    print(f"Fehler beim Laden der {entity_type} Cache-Datei: {e}")
+                    return False
             
-            # Prüfe ob alle Entity-Types vorhanden sind
-            expected_types = {'person', 'work', 'place', 'org', 'event'}
-            if not all(entity_type in self.pmb_lookups for entity_type in expected_types):
-                print("Cache unvollständig, wird neu geladen...")
-                return False
-            
-            total_entries = sum(len(lookup) for lookup in self.pmb_lookups.values())
-            print(f"PMB-Listen aus Cache geladen ({total_entries} Einträge)")
+            print(f"PMB-Listen aus XML-Cache geladen ({total_entries} Einträge)")
             return True
             
         except Exception as e:
-            print(f"Fehler beim Laden des Caches: {e}")
+            print(f"Fehler beim Laden des XML-Caches: {e}")
             return False
     
     def _save_cache(self) -> None:
-        """Speichert PMB-Listen im Cache."""
+        """Speichert PMB-Listen als XML-Dateien im Cache."""
         try:
             # Erstelle Cache-Verzeichnis falls nicht vorhanden
             self.cache_dir.mkdir(parents=True, exist_ok=True)
             
-            cache_data = {
-                'lookups': self.pmb_lookups,
-                'lists': self.pmb_lists,
-                'timestamp': time.time()
-            }
+            for entity_type, cache_file in self.cache_files.items():
+                if entity_type in self.pmb_lists and self.pmb_lists[entity_type] is not None:
+                    try:
+                        # Atomisches Schreiben über temporäre Datei
+                        temp_file = cache_file.with_suffix('.tmp')
+                        
+                        # Erstelle ElementTree für diese Liste
+                        tree = ET.ElementTree(self.pmb_lists[entity_type])
+                        
+                        # Schreibe XML mit korrekter Kodierung
+                        tree.write(temp_file, encoding='utf-8', xml_declaration=True)
+                        
+                        # Atomisch umbenennen
+                        temp_file.replace(cache_file)
+                        
+                    except Exception as e:
+                        print(f"Fehler beim Speichern der {entity_type} Cache-Datei: {e}")
+                        # Aufräumen falls temporäre Datei existiert
+                        temp_file = cache_file.with_suffix('.tmp')
+                        if temp_file.exists():
+                            try:
+                                temp_file.unlink()
+                            except:
+                                pass
             
-            # Atomisches Schreiben über temporäre Datei
-            temp_file = self.cache_file.with_suffix('.tmp')
-            with open(temp_file, 'wb') as f:
-                pickle.dump(cache_data, f)
-            
-            # Atomisch umbenennen
-            temp_file.replace(self.cache_file)
-            
-            print(f"PMB-Listen im Cache gespeichert: {self.cache_file}")
+            print(f"PMB-Listen als XML im Cache gespeichert: {self.cache_dir}")
             
         except Exception as e:
-            print(f"Fehler beim Speichern des Caches: {e}")
-            # Aufräumen falls temporäre Datei existiert
-            temp_file = self.cache_file.with_suffix('.tmp')
-            if temp_file.exists():
-                try:
-                    temp_file.unlink()
-                except:
-                    pass
+            print(f"Fehler beim Speichern des XML-Caches: {e}")
     
     def clear_cache(self) -> None:
-        """Löscht den PMB-Cache."""
+        """Löscht den PMB-XML-Cache."""
         try:
-            if self.cache_file.exists():
-                self.cache_file.unlink()
-                print(f"Cache gelöscht: {self.cache_file}")
+            deleted_files = 0
+            for cache_file in self.cache_files.values():
+                if cache_file.exists():
+                    cache_file.unlink()
+                    deleted_files += 1
+            
+            if deleted_files > 0:
+                print(f"XML-Cache gelöscht: {deleted_files} Dateien aus {self.cache_dir}")
             else:
-                print("Kein Cache vorhanden")
+                print("Kein XML-Cache vorhanden")
         except Exception as e:
-            print(f"Fehler beim Löschen des Caches: {e}")
+            print(f"Fehler beim Löschen des XML-Caches: {e}")
     
     def load_pmb_lists(self) -> None:
         """
