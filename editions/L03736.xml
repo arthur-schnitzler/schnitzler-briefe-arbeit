@@ -1,13 +1,11 @@
-<?xml version="1.0" encoding="UTF-8"?>
+<?xml version='1.0' encoding='UTF-8'?>
 <?xml-model href="../meta/schnitzler-briefe-schematron.sch" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
-<TEI xmlns="http://www.tei-c.org/ns/1.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-   xsi:schemaLocation="http://www.tei-c.org/ns/1.0 ../meta/schnitzler-briefe-schema.xsd"
-   xml:id="L03736" xml:base="https://id.acdh.oeaw.ac.at/schnitzler/schnitzler-briefe/editions">
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.tei-c.org/ns/1.0 ../meta/schnitzler-briefe-schema.xsd" xml:id="L03736" xml:base="https://id.acdh.oeaw.ac.at/schnitzler/schnitzler-briefe/editions">
    <teiHeader>
       <fileDesc>
          <titleStmt>
             <title level="s">Arthur Schnitzler: Briefwechsel mit Autorinnen und Autoren</title>
-            <title level="a">Arthur Schnitzler an Stefan Zweig, 23.&#160;12.&#160;1929</title>
+            <title level="a">Arthur Schnitzler an Stefan Zweig, 23. 12. 1929</title>
             <author ref="#pmb2121">Schnitzler, Arthur</author>
             <editor>
                <name>Jahnke, Selma</name>
@@ -115,14 +113,19 @@
          <correspDesc>
             <correspAction type="sent">
                <persName ref="#pmb2121">Schnitzler, Arthur</persName>
-               <date when="1929-12-23" n="01">23.&#160;12.&#160;1929</date>
+               <date when="1929-12-23" n="01">23. 12. 1929</date>
                <placeName ref="#pmb50">Wien</placeName>
             </correspAction>
             <correspAction type="received">
                <persName ref="#pmb13212">Zweig, Stefan</persName>
                <placeName ref="#pmb30">Salzburg</placeName>
             </correspAction>
-         </correspDesc>
+         <correspContext><ref type="belongsToCorrespondence" target="correspondence_13212">Zweig, Stefan</ref>
+               <ref subtype="previous_letter" type="withinCollection" target="L02528">Schnitzler an Adam, 23. 12. 1929</ref>
+               <ref subtype="next_letter" type="withinCollection" target="L03590">Salten an Schnitzler, 24. 12. [1929?]</ref>
+               <ref subtype="previous_letter" type="withinCorrespondence" source="correspondence_13212" target="L03679">Zweig an Schnitzler, 21. 12. [1929]</ref>
+               <ref subtype="next_letter" type="withinCorrespondence" source="correspondence_13212" target="L03693">Zweig an Schnitzler, 2. 4. 1930</ref>
+            </correspContext></correspDesc>
       </profileDesc>
       <revisionDesc status="proposed">
          <change who="MAM" when="2025-07-17">Export aus Transkribus</change>
@@ -160,20 +163,18 @@
                   <rs type="place" ref="#pmb30">Salzburg</rs>
                </addrLine>
                <addrLine>
-                  <rs type="place" ref="#pmb253003">Kapuzinerberg&#160;5</rs>.</addrLine>
+                  <rs type="place" ref="#pmb253003">Kapuzinerberg 5</rs>.</addrLine>
             </address>
          </div>
          <div type="writingSession" n="1">
             <opener>
                <dateline rend="right"><pb facs="0161_FL81799563"/>
                   <rs type="place" ref="#pmb50">Wien</rs><space unit="chars" quantity="1"/>
-                  <date>23.&#160;12.&#160;2<unclear>9</unclear></date>
+                  <date>23. 12. 2<unclear>9</unclear></date>
                </dateline>
             </opener>
             <p><salute>lieber Doctor Stefan Zweig,</salute> ich danke Ihnen sehr herzlich für Ihr
-               freundschaftliches <anchor type="commentary" xml:id="K_L03736-1"/>Telegramm<note
-                  type="commentary" corresp="K_L03736-1"><ref type="schnitzler-briefe" target="L03679"
-                  /></note></p>
+               freundschaftliches <anchor type="commentary" xml:id="K_L03736-1"/>Telegramm<note type="commentary" corresp="K_L03736-1"><ref type="schnitzler-briefe" target="L03679"/></note></p>
             <closer>Ihr<lb/>
                <signed>ArthurSchnitzler</signed>
             </closer>
@@ -215,7 +216,7 @@
   </death>
 
 
-  <sex value="male" />
+  <sex value="male"/>
 
 
   <occupation ref="pmb90">Schriftsteller/Schriftstellerin</occupation>
@@ -262,7 +263,7 @@
   <idno type="URL" subtype="schaubuehne">https://schaubuehne.oeaw.ac.at/register.html?author=2</idno>
 
 
-</person><person xml:id="pmb2121"><persName><surname>Schnitzler</surname><forename>Arthur</forename></persName><birth><date when="1862-05-15">15. 5. 1862</date><settlement ref="pmb50"><placeName type="pref">Wien</placeName><location><geo>48,208333 16,373056</geo></location></settlement></birth><death><date when="1931-10-21">21. 10. 1931</date><settlement ref="pmb50"><placeName type="pref">Wien</placeName><location><geo>48,208333 16,373056</geo></location></settlement></death><sex value="male" /><occupation ref="pmb90">Schriftsteller*in</occupation><occupation ref="pmb97">Mediziner*in</occupation><idno type="gnd">https://d-nb.info/gnd/118609807/</idno></person></listPerson><listPlace><place xml:id="pmb168815">
+</person><person xml:id="pmb2121"><persName><surname>Schnitzler</surname><forename>Arthur</forename></persName><birth><date when="1862-05-15">15. 5. 1862</date><settlement ref="pmb50"><placeName type="pref">Wien</placeName><location><geo>48,208333 16,373056</geo></location></settlement></birth><death><date when="1931-10-21">21. 10. 1931</date><settlement ref="pmb50"><placeName type="pref">Wien</placeName><location><geo>48,208333 16,373056</geo></location></settlement></death><sex value="male"/><occupation ref="pmb90">Schriftsteller*in</occupation><occupation ref="pmb97">Mediziner*in</occupation><idno type="gnd">https://d-nb.info/gnd/118609807/</idno></person></listPerson><listPlace><place xml:id="pmb168815">
   <placeName>Sternwartestraße 71</placeName>
 
 
@@ -438,7 +439,7 @@
 
 <note type="image">
   <figure>
-    <graphic url="https://iiif.onb.ac.at/images/AKON/AK072_600/600/full/,600/0/native.jpg" />
+    <graphic url="https://iiif.onb.ac.at/images/AKON/AK072_600/600/full/,600/0/native.jpg"/>
   </figure>
 </note>
 
