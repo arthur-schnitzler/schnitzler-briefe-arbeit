@@ -98,10 +98,22 @@ class TEIBackGenerator:
                 return False
             
             print("Lade PMB-Listen aus Cache...")
-            with open(self.cache_file, 'rb') as f:
-                cache_data = pickle.load(f)
-                self.pmb_lookups = cache_data.get('lookups', {})
-                self.pmb_lists = cache_data.get('lists', {})
+            # Retry-Mechanismus für parallele Zugriffe
+            for attempt in range(3):
+                try:
+                    with open(self.cache_file, 'rb') as f:
+                        cache_data = pickle.load(f)
+                        self.pmb_lookups = cache_data.get('lookups', {})
+                        self.pmb_lists = cache_data.get('lists', {})
+                    break
+                except (pickle.UnpicklingError, EOFError) as e:
+                    if attempt < 2:
+                        print(f"Cache-Lesefehler (Versuch {attempt + 1}/3), warte kurz...")
+                        time.sleep(1)
+                        continue
+                    else:
+                        print(f"Cache-Datei korrupt: {e}")
+                        return False
             
             # Prüfe ob alle Entity-Types vorhanden sind
             expected_types = {'person', 'work', 'place', 'org', 'event'}
@@ -129,13 +141,25 @@ class TEIBackGenerator:
                 'timestamp': time.time()
             }
             
-            with open(self.cache_file, 'wb') as f:
+            # Atomisches Schreiben über temporäre Datei
+            temp_file = self.cache_file.with_suffix('.tmp')
+            with open(temp_file, 'wb') as f:
                 pickle.dump(cache_data, f)
+            
+            # Atomisch umbenennen
+            temp_file.replace(self.cache_file)
             
             print(f"PMB-Listen im Cache gespeichert: {self.cache_file}")
             
         except Exception as e:
             print(f"Fehler beim Speichern des Caches: {e}")
+            # Aufräumen falls temporäre Datei existiert
+            temp_file = self.cache_file.with_suffix('.tmp')
+            if temp_file.exists():
+                try:
+                    temp_file.unlink()
+                except:
+                    pass
     
     def clear_cache(self) -> None:
         """Löscht den PMB-Cache."""
