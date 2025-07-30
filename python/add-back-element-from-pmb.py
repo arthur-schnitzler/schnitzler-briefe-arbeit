@@ -225,13 +225,10 @@ class TEIBackGenerator:
         except Exception as e:
             print(f"Fehler beim Löschen des XML-Caches: {e}")
     
-    def load_pmb_lists(self, minimal_mode: bool = False) -> None:
+    def load_pmb_lists(self) -> None:
         """
         Lädt alle PMB-Listen von den URLs und erstellt Lookup-Dictionaries.
         Nutzt Cache für bessere Performance.
-        
-        Args:
-            minimal_mode: Wenn True, werden nur die wichtigsten Felder extrahiert für bessere Performance
         """
         # Versuche zuerst aus Cache zu laden
         if self._load_cache():
