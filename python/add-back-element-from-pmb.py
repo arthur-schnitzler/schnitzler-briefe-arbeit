@@ -17,6 +17,8 @@ from pathlib import Path
 import urllib.request
 import urllib.parse
 import time
+import pickle
+import os
 
 
 class TEIBackGenerator:
@@ -30,6 +32,11 @@ class TEIBackGenerator:
         # Cache für PMB-Listen
         self.pmb_lists = {}
         self.pmb_lookups = {}
+        
+        # Cache-Datei für persistente Speicherung
+        self.cache_dir = Path.home() / '.cache' / 'pmb-lists'
+        self.cache_file = self.cache_dir / 'pmb_lookups.pkl'
+        self.cache_max_age = 24 * 60 * 60  # 24 Stunden in Sekunden
         
         # Wien-Eintrag für spezielle Behandlung
         self.wien_entry = {
@@ -78,10 +85,78 @@ class TEIBackGenerator:
         
         return refs
     
+    def _load_cache(self) -> bool:
+        """Lädt PMB-Listen aus dem Cache falls vorhanden und aktuell."""
+        try:
+            if not self.cache_file.exists():
+                return False
+            
+            # Prüfe Alter der Cache-Datei
+            cache_age = time.time() - self.cache_file.stat().st_mtime
+            if cache_age > self.cache_max_age:
+                print("PMB-Cache ist veraltet, wird neu geladen...")
+                return False
+            
+            print("Lade PMB-Listen aus Cache...")
+            with open(self.cache_file, 'rb') as f:
+                cache_data = pickle.load(f)
+                self.pmb_lookups = cache_data.get('lookups', {})
+                self.pmb_lists = cache_data.get('lists', {})
+            
+            # Prüfe ob alle Entity-Types vorhanden sind
+            expected_types = {'person', 'work', 'place', 'org', 'event'}
+            if not all(entity_type in self.pmb_lookups for entity_type in expected_types):
+                print("Cache unvollständig, wird neu geladen...")
+                return False
+            
+            total_entries = sum(len(lookup) for lookup in self.pmb_lookups.values())
+            print(f"PMB-Listen aus Cache geladen ({total_entries} Einträge)")
+            return True
+            
+        except Exception as e:
+            print(f"Fehler beim Laden des Caches: {e}")
+            return False
+    
+    def _save_cache(self) -> None:
+        """Speichert PMB-Listen im Cache."""
+        try:
+            # Erstelle Cache-Verzeichnis falls nicht vorhanden
+            self.cache_dir.mkdir(parents=True, exist_ok=True)
+            
+            cache_data = {
+                'lookups': self.pmb_lookups,
+                'lists': self.pmb_lists,
+                'timestamp': time.time()
+            }
+            
+            with open(self.cache_file, 'wb') as f:
+                pickle.dump(cache_data, f)
+            
+            print(f"PMB-Listen im Cache gespeichert: {self.cache_file}")
+            
+        except Exception as e:
+            print(f"Fehler beim Speichern des Caches: {e}")
+    
+    def clear_cache(self) -> None:
+        """Löscht den PMB-Cache."""
+        try:
+            if self.cache_file.exists():
+                self.cache_file.unlink()
+                print(f"Cache gelöscht: {self.cache_file}")
+            else:
+                print("Kein Cache vorhanden")
+        except Exception as e:
+            print(f"Fehler beim Löschen des Caches: {e}")
+    
     def load_pmb_lists(self) -> None:
         """
         Lädt alle PMB-Listen von den URLs und erstellt Lookup-Dictionaries.
+        Nutzt Cache für bessere Performance.
         """
+        # Versuche zuerst aus Cache zu laden
+        if self._load_cache():
+            return
+        
         pmb_urls = {
             'person': 'https://pmb.acdh.oeaw.ac.at/media/listperson.xml',
             'work': 'https://pmb.acdh.oeaw.ac.at/media/listbibl.xml',  # work entspricht bibl
@@ -90,7 +165,7 @@ class TEIBackGenerator:
             'event': 'https://pmb.acdh.oeaw.ac.at/media/listevent.xml'
         }
         
-        print("Loading PMB lists...")
+        print("Loading PMB lists from API...")
         
         for entity_type, url in pmb_urls.items():
             try:
@@ -147,6 +222,9 @@ class TEIBackGenerator:
                 self.pmb_lookups[entity_type] = {}
         
         print("PMB lists loaded successfully")
+        
+        # Speichere im Cache für zukünftige Verwendung
+        self._save_cache()
     
     def get_entity_from_pmb_lists(self, entity_type: str, pmb_id: str) -> Optional[ET.Element]:
         """
@@ -1348,6 +1426,7 @@ def main():
     parser.add_argument('-o', '--output', help='Ausgabedatei (optional, überschreibt Eingabedatei wenn nicht angegeben)')
     parser.add_argument('--no-pmb', action='store_true', help='Keine PMB-Anreicherung durchführen, nur Listen generieren')
     parser.add_argument('--no-local-lists', action='store_true', help='PMB-Listen nicht vorab laden, immer online nachschlagen')
+    parser.add_argument('--clear-cache', action='store_true', help='PMB-Cache löschen und neu aufbauen')
     
     args = parser.parse_args()
     
@@ -1358,6 +1437,11 @@ def main():
     
     # Verarbeite Datei
     generator = TEIBackGenerator()
+    
+    # Cache löschen falls gewünscht
+    if args.clear_cache:
+        generator.clear_cache()
+    
     success = generator.process_tei_file(
         args.input_file, 
         args.output, 

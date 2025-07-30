@@ -2944,6 +2944,13 @@
                   '[D1].&#8239;[M1].&#8239;[Y0001]')"/>
             <xsl:text>: </xsl:text>
          </xsl:when>
+         <xsl:when test="ref[@type = 'wienerschnitzler']">
+            <xsl:text>\emph{Wiener Schnitzler}, </xsl:text>
+            <xsl:value-of select="
+               format-date(ref[@type = 'wienerschnitzler']/@target,
+               '[D1].&#8239;[M1].&#8239;[Y0001]')"/>
+            <xsl:text>: </xsl:text>
+         </xsl:when>
          <xsl:when test="bibl">
             <xsl:text>\emph{</xsl:text>
             <xsl:apply-templates select="bibl"/>
@@ -5672,7 +5679,7 @@
          format-date($date-from-event,
          '[D1].&#8239;[M1].&#8239;[Y0001]')"/>
    </xsl:template>
-   <xsl:template match="ref[@type = 'schnitzler-tagebuch']">
+   <xsl:template match="ref[@type = 'schnitzler-tagebuch' or @type='wienerschnitzler']">
       <xsl:if test="not(@subtype = 'date-only')">
          <xsl:choose>
             <xsl:when test="@subtype = 'see'">
@@ -5688,11 +5695,19 @@
                <xsl:text>Vgl. </xsl:text>
             </xsl:when>
          </xsl:choose>
-         <xsl:text>A.&#8239;S.: \emph{Tagebuch}, </xsl:text>
+         <xsl:text>A.&#8239;S.: </xsl:text>
+         <xsl:choose>
+            <xsl:when test="@type = 'schnitzler-tagebuch'">
+               <xsl:text>\emph{Tagebuch},</xsl:text>
+            </xsl:when>
+            <xsl:when test="@type = 'wienerschnitzler'">
+               <xsl:text>\emph{Wiener Schnitzler},</xsl:text>
+            </xsl:when>
+         </xsl:choose>
       </xsl:if>
       <xsl:value-of select="
-            format-date(@target,
-            '[D1].&#8239;[M1].&#8239;[Y0001]')"/>
+         format-date(@target,
+         '[D1].&#8239;[M1].&#8239;[Y0001]')"/>
    </xsl:template>
    <xsl:template match="ref[@type = 'schnitzler-lektueren']">
       <xsl:if test="not(@subtype = 'date-only')">
