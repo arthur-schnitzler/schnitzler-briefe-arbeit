@@ -328,13 +328,14 @@ class TEIBackGenerator:
         # (caller kann dann online nachschlagen)
         return None
     
-    def fetch_pmb_data(self, entity_type: str, pmb_id: str) -> Optional[ET.Element]:
+    def fetch_pmb_data(self, entity_type: str, pmb_id: str, allow_online: bool = False) -> Optional[ET.Element]:
         """
         Lädt Daten - zuerst aus lokalen PMB-Listen, dann aus der PMB-API.
         
         Args:
             entity_type: 'person', 'work', 'place', 'org', oder 'event'
             pmb_id: Die PMB-ID (nur die Nummer)
+            allow_online: Ob Online-API-Aufrufe erlaubt sind (False für bessere Performance)
         
         Returns:
             XML-Element oder None bei Fehler
@@ -342,10 +343,12 @@ class TEIBackGenerator:
         # Zuerst in lokalen Listen suchen
         local_data = self.get_entity_from_pmb_lists(entity_type, pmb_id)
         if local_data is not None:
-            print(f"Found {entity_type}/{pmb_id} in local PMB lists")
             return local_data
         
-        # Wenn nicht lokal gefunden, online nachschlagen
+        # Wenn nicht lokal gefunden und Online-Aufrufe erlaubt
+        if not allow_online:
+            return None
+            
         print(f"Entity {entity_type}/{pmb_id} not found locally, fetching from API")
         url = f"https://pmb.acdh.oeaw.ac.at/apis/tei/{entity_type}/{pmb_id}"
         
@@ -457,7 +460,7 @@ class TEIBackGenerator:
                 pmb_number = person_id.replace('pmb', '').replace('#', '')
                 
                 # Lade Daten von PMB-API
-                pmb_data = self.fetch_pmb_data('person', pmb_number)
+                pmb_data = self.fetch_pmb_data('person', pmb_number, allow_online=False)
                 
                 if pmb_data is not None:
                     # Erstelle Person-Element
@@ -498,7 +501,7 @@ class TEIBackGenerator:
             pmb_number = bibl_id.replace('pmb', '').replace('#', '')
             
             # Lade Daten von PMB-API
-            pmb_data = self.fetch_pmb_data('work', pmb_number)
+            pmb_data = self.fetch_pmb_data('work', pmb_number, allow_online=False)
             
             if pmb_data is not None:
                 # Erstelle bibl-Element
@@ -547,7 +550,7 @@ class TEIBackGenerator:
                 enriched_list.append(self.create_wien_place())
             else:
                 # Lade Daten von PMB-API
-                pmb_data = self.fetch_pmb_data('place', pmb_number)
+                pmb_data = self.fetch_pmb_data('place', pmb_number, allow_online=False)
                 
                 if pmb_data is not None:
                     # Kopiere das gesamte Element
@@ -578,7 +581,7 @@ class TEIBackGenerator:
             pmb_number = org_id.replace('pmb', '').replace('#', '')
             
             # Lade Daten von PMB-API
-            pmb_data = self.fetch_pmb_data('org', pmb_number)
+            pmb_data = self.fetch_pmb_data('org', pmb_number, allow_online=False)
             
             if pmb_data is not None:
                 # Kopiere das gesamte Element
@@ -609,7 +612,7 @@ class TEIBackGenerator:
             pmb_number = event_id.replace('pmb', '').replace('#', '')
             
             # Lade Daten von PMB-API
-            pmb_data = self.fetch_pmb_data('event', pmb_number)
+            pmb_data = self.fetch_pmb_data('event', pmb_number, allow_online=False)
             
             if pmb_data is not None:
                 # Kopiere das gesamte Element
@@ -1504,6 +1507,7 @@ def main():
     parser.add_argument('--no-pmb', action='store_true', help='Keine PMB-Anreicherung durchführen, nur Listen generieren')
     parser.add_argument('--no-local-lists', action='store_true', help='PMB-Listen nicht vorab laden, immer online nachschlagen')
     parser.add_argument('--clear-cache', action='store_true', help='PMB-Cache löschen und neu aufbauen')
+    parser.add_argument('--offline-only', action='store_true', help='Nur Cache-Daten verwenden, keine Online-API-Aufrufe (schneller)')
     
     args = parser.parse_args()
     
