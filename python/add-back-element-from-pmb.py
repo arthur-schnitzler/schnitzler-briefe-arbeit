@@ -27,6 +27,10 @@ class TEIBackGenerator:
         # Registriere Namespace für ElementTree
         ET.register_namespace('', self.tei_ns)
         
+        # Cache für PMB-Listen
+        self.pmb_lists = {}
+        self.pmb_lookups = {}
+        
         # Wien-Eintrag für spezielle Behandlung
         self.wien_entry = {
             'pmb50': {
@@ -73,9 +77,105 @@ class TEIBackGenerator:
                 refs.add(cleaned)
         
         return refs
+    
+    def load_pmb_lists(self) -> None:
+        """
+        Lädt alle PMB-Listen von den URLs und erstellt Lookup-Dictionaries.
+        """
+        pmb_urls = {
+            'person': 'https://pmb.acdh.oeaw.ac.at/media/listperson.xml',
+            'work': 'https://pmb.acdh.oeaw.ac.at/media/listbibl.xml',  # work entspricht bibl
+            'place': 'https://pmb.acdh.oeaw.ac.at/media/listplace.xml',
+            'org': 'https://pmb.acdh.oeaw.ac.at/media/listorg.xml',
+            'event': 'https://pmb.acdh.oeaw.ac.at/media/listevent.xml'
+        }
+        
+        print("Loading PMB lists...")
+        
+        for entity_type, url in pmb_urls.items():
+            try:
+                print(f"  Loading {entity_type} list...")
+                with urllib.request.urlopen(url) as response:
+                    content = response.read()
+                
+                # Parse XML
+                root = ET.fromstring(content)
+                self.pmb_lists[entity_type] = root
+                
+                # Create lookup dictionary
+                self.pmb_lookups[entity_type] = {}
+                
+                # Bestimme Liste und Element Tags basierend auf Entity-Type
+                if entity_type == 'person':
+                    list_tag = 'listPerson'
+                    item_tag = 'person'
+                elif entity_type == 'work':
+                    list_tag = 'listBibl'
+                    item_tag = 'bibl'
+                elif entity_type == 'place':
+                    list_tag = 'listPlace'
+                    item_tag = 'place'
+                elif entity_type == 'org':
+                    list_tag = 'listOrg'
+                    item_tag = 'org'
+                elif entity_type == 'event':
+                    list_tag = 'listEvent'
+                    item_tag = 'event'
+                
+                # Finde die Liste im Root-Element
+                list_elem = root.find(f".//tei:{list_tag}", self.ns_map)
+                if list_elem is not None:
+                    # Durchlaufe alle Items in der Liste
+                    for item in list_elem.findall(f"tei:{item_tag}", self.ns_map):
+                        xml_id = item.get(f"{{{ET._namespace_map.get('xml', 'http://www.w3.org/XML/1998/namespace')}}}id")
+                        if xml_id:
+                            # Extrahiere PMB-Nummer (entferne Präfixe wie person__, work__, etc.)
+                            pmb_id = xml_id
+                            if '__' in pmb_id:
+                                pmb_id = pmb_id.split('__')[-1]
+                            if pmb_id.startswith('pmb'):
+                                pmb_id = pmb_id[3:]  # Entferne 'pmb' Präfix
+                            
+                            # Speichere das Element unter der PMB-ID
+                            self.pmb_lookups[entity_type][pmb_id] = item
+                
+                print(f"    Loaded {len(self.pmb_lookups[entity_type])} {entity_type} entries")
+                
+            except Exception as e:
+                print(f"  Error loading {entity_type} list: {e}")
+                self.pmb_lists[entity_type] = None
+                self.pmb_lookups[entity_type] = {}
+        
+        print("PMB lists loaded successfully")
+    
+    def get_entity_from_pmb_lists(self, entity_type: str, pmb_id: str) -> Optional[ET.Element]:
+        """
+        Sucht eine Entität zuerst in den lokalen PMB-Listen.
+        
+        Args:
+            entity_type: 'person', 'work', 'place', 'org', oder 'event'
+            pmb_id: Die PMB-ID (nur die Nummer)
+        
+        Returns:
+            XML-Element oder None wenn nicht gefunden
+        """
+        # Initialisiere Listen falls noch nicht geladen
+        if not self.pmb_lookups:
+            self.load_pmb_lists()
+        
+        # Suche in lokalem Lookup
+        if entity_type in self.pmb_lookups:
+            element = self.pmb_lookups[entity_type].get(pmb_id)
+            if element is not None:
+                return element
+        
+        # Wenn nicht in lokalen Listen gefunden, return None
+        # (caller kann dann online nachschlagen)
+        return None
+    
     def fetch_pmb_data(self, entity_type: str, pmb_id: str) -> Optional[ET.Element]:
         """
-        Lädt Daten aus der PMB-API.
+        Lädt Daten - zuerst aus lokalen PMB-Listen, dann aus der PMB-API.
         
         Args:
             entity_type: 'person', 'work', 'place', 'org', oder 'event'
@@ -84,6 +184,14 @@ class TEIBackGenerator:
         Returns:
             XML-Element oder None bei Fehler
         """
+        # Zuerst in lokalen Listen suchen
+        local_data = self.get_entity_from_pmb_lists(entity_type, pmb_id)
+        if local_data is not None:
+            print(f"Found {entity_type}/{pmb_id} in local PMB lists")
+            return local_data
+        
+        # Wenn nicht lokal gefunden, online nachschlagen
+        print(f"Entity {entity_type}/{pmb_id} not found locally, fetching from API")
         url = f"https://pmb.acdh.oeaw.ac.at/apis/tei/{entity_type}/{pmb_id}"
         
         try:
@@ -1102,7 +1210,7 @@ class TEIBackGenerator:
             if parent is not None:
                 parent.remove(empty_listbibl)
     
-    def process_tei_file(self, input_file: str, output_file: str = None, enrich_with_pmb: bool = True) -> bool:
+    def process_tei_file(self, input_file: str, output_file: str = None, enrich_with_pmb: bool = True, load_pmb_lists: bool = True) -> bool:
         """
         Verarbeitet eine TEI-XML-Datei und überschreibt das back-Element.
         
@@ -1110,11 +1218,16 @@ class TEIBackGenerator:
             input_file: Pfad zur Eingabedatei
             output_file: Pfad zur Ausgabedatei (optional, überschreibt input_file wenn None)
             enrich_with_pmb: Ob Listen mit PMB-Daten angereichert werden sollen
+            load_pmb_lists: Ob PMB-Listen vorab geladen werden sollen für bessere Performance
         
         Returns:
             True bei Erfolg, False bei Fehler
         """
         try:
+            # PMB-Listen laden falls gewünscht und noch nicht geladen
+            if enrich_with_pmb and load_pmb_lists and not self.pmb_lookups:
+                self.load_pmb_lists()
+                
             # XML-Datei laden
             tree = ET.parse(input_file)
             root = tree.getroot()
@@ -1234,6 +1347,7 @@ def main():
     parser.add_argument('input_file', help='Eingabe TEI-XML-Datei')
     parser.add_argument('-o', '--output', help='Ausgabedatei (optional, überschreibt Eingabedatei wenn nicht angegeben)')
     parser.add_argument('--no-pmb', action='store_true', help='Keine PMB-Anreicherung durchführen, nur Listen generieren')
+    parser.add_argument('--no-local-lists', action='store_true', help='PMB-Listen nicht vorab laden, immer online nachschlagen')
     
     args = parser.parse_args()
     
@@ -1247,7 +1361,8 @@ def main():
     success = generator.process_tei_file(
         args.input_file, 
         args.output, 
-        enrich_with_pmb=not args.no_pmb
+        enrich_with_pmb=not args.no_pmb,
+        load_pmb_lists=not args.no_local_lists
     )
     
     if not success:
