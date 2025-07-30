@@ -44,6 +44,15 @@ class TEIBackGenerator:
             'event': self.cache_dir / 'listevent.xml'
         }
         
+        # Kompakte JSON-Index-Dateien für schnellere Performance
+        self.index_files = {
+            'person': self.cache_dir / 'person_index.json',
+            'work': self.cache_dir / 'work_index.json',
+            'place': self.cache_dir / 'place_index.json', 
+            'org': self.cache_dir / 'org_index.json',
+            'event': self.cache_dir / 'event_index.json'
+        }
+        
         # Wien-Eintrag für spezielle Behandlung
         self.wien_entry = {
             'pmb50': {
@@ -216,10 +225,13 @@ class TEIBackGenerator:
         except Exception as e:
             print(f"Fehler beim Löschen des XML-Caches: {e}")
     
-    def load_pmb_lists(self) -> None:
+    def load_pmb_lists(self, minimal_mode: bool = False) -> None:
         """
         Lädt alle PMB-Listen von den URLs und erstellt Lookup-Dictionaries.
         Nutzt Cache für bessere Performance.
+        
+        Args:
+            minimal_mode: Wenn True, werden nur die wichtigsten Felder extrahiert für bessere Performance
         """
         # Versuche zuerst aus Cache zu laden
         if self._load_cache():
