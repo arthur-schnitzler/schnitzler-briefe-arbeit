@@ -203,7 +203,7 @@
                                     </persName>
                                     <date when="" n="01">XXXX</date>
                                     <!--<placeName ref="#50" evidence="conjecture">Wien</placeName>-->
-                                    <placeName ref="#168" evidence="conjecture">Berlin</placeName>
+                                    <placeName ref="#50" evidence="conjecture">Wien</placeName>
                                 </correspAction>
                                 <correspAction type="received">
                                     <persName ref="{concat('#', $empfaenger-in_pmb)}">
