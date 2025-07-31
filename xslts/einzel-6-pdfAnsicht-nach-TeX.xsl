@@ -2176,7 +2176,7 @@
             <xsl:value-of
                select="concat(descendant::forename/text(), ' ', descendant::surname/text())"/>
             <xsl:if test="position() != last()">
-               <xsl:text>, </xsl:text>
+               <xsl:text>, </xsl:text>
             </xsl:if>
          </xsl:for-each>
          <xsl:text>}</xsl:text>
@@ -2189,7 +2189,7 @@
             <xsl:value-of
                select="foo:sonderzeichen-ersetzen(normalize-space(descendant::orgName[1]/text()))"/>
             <xsl:if test="position() != last()">
-               <xsl:text>, </xsl:text>
+               <xsl:text>, </xsl:text>
             </xsl:if>
          </xsl:for-each>
          <xsl:text>}</xsl:text>
@@ -2202,7 +2202,7 @@
             <xsl:value-of
                select="foo:sonderzeichen-ersetzen(normalize-space(descendant::placeName[1]/text()))"/>
             <xsl:if test="position() != last()">
-               <xsl:text>, </xsl:text>
+               <xsl:text>, </xsl:text>
             </xsl:if>
          </xsl:for-each>
          <xsl:text>}</xsl:text>
@@ -2220,7 +2220,20 @@
             <xsl:text>)</xsl:text>
          </xsl:if>-->
             <xsl:if test="position() != last()">
-               <xsl:text>, </xsl:text>
+               <xsl:text>, </xsl:text>
+            </xsl:if>
+         </xsl:for-each>
+      </xsl:if>
+      <xsl:text>}</xsl:text>
+      <xsl:text>&#10;\renewcommand{\erwaehnteEvents}{</xsl:text>
+      <xsl:if test="child::listEvent/event">
+         <xsl:text>Ereignisse: </xsl:text>
+         <xsl:for-each select="child::listEvent/event">
+            <xsl:sort select="descendant::eventName[1]/text()"/>
+            <xsl:value-of
+               select="foo:sonderzeichen-ersetzen(normalize-space(descendant::eventName[1]/text()))"/>
+            <xsl:if test="position() != last()">
+               <xsl:text>, </xsl:text>
             </xsl:if>
          </xsl:for-each>
       </xsl:if>

@@ -2133,7 +2133,7 @@
             <xsl:value-of
                select="concat(descendant::forename/text(), ' ', descendant::surname/text())"/>
             <xsl:if test="position() != last()">
-               <xsl:text>, </xsl:text>
+               <xsl:text>, </xsl:text>
             </xsl:if>
          </xsl:for-each>
          <xsl:text>}</xsl:text>
@@ -2146,7 +2146,7 @@
             <xsl:value-of
                select="foo:sonderzeichen-ersetzen(normalize-space(descendant::orgName[1]/text()))"/>
             <xsl:if test="position() != last()">
-               <xsl:text>, </xsl:text>
+               <xsl:text>, </xsl:text>
             </xsl:if>
          </xsl:for-each>
          <xsl:text>}</xsl:text>
@@ -2159,7 +2159,7 @@
             <xsl:value-of
                select="foo:sonderzeichen-ersetzen(normalize-space(descendant::placeName[1]/text()))"/>
             <xsl:if test="position() != last()">
-               <xsl:text>, </xsl:text>
+               <xsl:text>, </xsl:text>
             </xsl:if>
          </xsl:for-each>
          <xsl:text>}</xsl:text>
@@ -2177,7 +2177,7 @@
             <xsl:text>)</xsl:text>
          </xsl:if>-->
             <xsl:if test="position() != last()">
-               <xsl:text>, </xsl:text>
+               <xsl:text>, </xsl:text>
             </xsl:if>
          </xsl:for-each>
       </xsl:if>
@@ -2190,7 +2190,7 @@
             <xsl:value-of
                select="foo:sonderzeichen-ersetzen(normalize-space(descendant::eventName[1]/text()))"/>
             <xsl:if test="position() != last()">
-               <xsl:text>, </xsl:text>
+               <xsl:text>, </xsl:text>
             </xsl:if>
          </xsl:for-each>
       </xsl:if>
