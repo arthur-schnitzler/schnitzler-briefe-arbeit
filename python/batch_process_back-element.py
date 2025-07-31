@@ -12,7 +12,6 @@ from pathlib import Path
 import time
 import argparse
 from concurrent.futures import ThreadPoolExecutor, as_completed
-import os
 
 def process_file(xml_file, processor_script):
     """Process a single XML file"""
@@ -36,49 +35,36 @@ def process_file(xml_file, processor_script):
     except Exception as e:
         return {"file": file_name, "status": "exception", "error": str(e)}
 
-def preload_pmb_cache():
-    """Preload the PMB cache by running the processor once"""
+def download_pmb_lists():
+    """Download and transform PMB lists"""
     script_dir = Path(__file__).parent
-    processor_script = script_dir / 'add-back-element-from-pmb.py'
+    download_script = script_dir / 'download-and-transform-pmb-lists.py'
     
-    print("Preloading PMB cache...")
+    if not download_script.exists():
+        print(f"Error: Download script {download_script} does not exist")
+        return False
     
-    # Create a dummy file to trigger cache loading
-    dummy_file = script_dir / 'dummy.xml'
-    dummy_content = '''<?xml version="1.0" encoding="UTF-8"?>
-<TEI xmlns="http://www.tei-c.org/ns/1.0">
-    <teiHeader></teiHeader>
-    <text>
-        <body>
-            <p>Dummy content</p>
-        </body>
-    </text>
-</TEI>'''
+    print("Downloading and transforming PMB lists...")
     
     try:
-        with open(dummy_file, 'w', encoding='utf-8') as f:
-            f.write(dummy_content)
-        
-        # Run processor to trigger cache loading
         result = subprocess.run([
             sys.executable, 
-            str(processor_script), 
-            str(dummy_file)
-        ], capture_output=True, text=True, timeout=600)  # 10 minute timeout for initial cache load
+            str(download_script)
+        ], capture_output=True, text=True, timeout=600)  # 10 minute timeout
         
         if result.returncode == 0:
-            print("PMB cache preloaded successfully")
+            print("PMB lists downloaded and transformed successfully")
+            return True
         else:
-            print(f"Warning: Cache preload had issues: {result.stderr}")
+            print(f"Error downloading PMB lists: {result.stderr}")
+            return False
         
     except subprocess.TimeoutExpired:
-        print("Warning: Cache preload timed out")
+        print("Error: PMB download timed out")
+        return False
     except Exception as e:
-        print(f"Warning: Cache preload failed: {e}")
-    finally:
-        # Clean up dummy file
-        if dummy_file.exists():
-            dummy_file.unlink()
+        print(f"Error downloading PMB lists: {e}")
+        return False
 
 def main():
     """Process all .xml files in editions folder"""
@@ -87,10 +73,10 @@ def main():
                        help='Number of parallel processes (default: 4)')
     parser.add_argument('--limit', '-l', type=int, 
                        help='Limit number of files to process (for testing)')
-    parser.add_argument('--pattern', default='*.xml',
-                       help='File pattern to match (default: *.xml)')
-    parser.add_argument('--skip-preload', action='store_true',
-                       help='Skip PMB cache preloading')
+    parser.add_argument('--pattern', default='L*.xml',
+                       help='File pattern to match (default: L*.xml)')
+    parser.add_argument('--skip-download', action='store_true',
+                       help='Skip PMB lists download')
     
     args = parser.parse_args()
     
@@ -108,9 +94,11 @@ def main():
         print(f"Error: Processor script {processor_script} does not exist")
         sys.exit(1)
     
-    # Preload PMB cache unless skipped
-    if not args.skip_preload:
-        preload_pmb_cache()
+    # Download PMB lists unless skipped
+    if not args.skip_download:
+        if not download_pmb_lists():
+            print("Failed to download PMB lists. Exiting.")
+            sys.exit(1)
     
     # Find all .xml files
     pattern = str(editions_dir / args.pattern)
