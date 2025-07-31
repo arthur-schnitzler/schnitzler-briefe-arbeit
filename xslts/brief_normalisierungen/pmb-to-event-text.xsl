@@ -6,13 +6,7 @@
     <!-- Hauptregel: Ersetze <pmb ref="pmb296012"/> -->
     <xsl:template match="*:pmb">
         <xsl:variable name="ref" select="replace(replace(@ref, '#', ''), 'pmb', '')"/>
-        <xsl:element name="rs" namespace="http://www.tei-c.org/ns/1.0">
-            <xsl:attribute name="type">
-                <xsl:text>event</xsl:text>
-            </xsl:attribute>
-            <xsl:attribute name="ref">
-                <xsl:value-of select="concat('#pmb', $ref)"/>
-            </xsl:attribute>
+       
             <xsl:variable name="event-url"
                 select="concat('https://pmb.acdh.oeaw.ac.at/apis/tei/event/', $ref)"/>
             <xsl:variable name="event-doc" select="parse-xml(unparsed-text($event-url))"/>
@@ -66,7 +60,18 @@
                     <xsl:text>Der </xsl:text>
                 </xsl:otherwise>
             </xsl:choose>
+        <xsl:element name="rs" namespace="http://www.tei-c.org/ns/1.0">
+            <xsl:attribute name="type">
+                <xsl:text>event</xsl:text>
+            </xsl:attribute>
+            <xsl:attribute name="ref">
+                <xsl:value-of select="concat('#pmb', $ref)"/>
+            </xsl:attribute>
+            <xsl:attribute name="subtype">
+                <xsl:text>implied</xsl:text>
+            </xsl:attribute>
             <xsl:value-of select="$event-type"/>
+       
             <xsl:text> von </xsl:text>
             <xsl:for-each select="$listBibl/*:bibl">
                 <xsl:element name="rs" namespace="http://www.tei-c.org/ns/1.0">
@@ -103,6 +108,7 @@
                     <xsl:text>, </xsl:text>
                 </xsl:if>
             </xsl:for-each>
+        </xsl:element>
             <xsl:text> fand am </xsl:text>
             <xsl:element name="date" namespace="http://www.tei-c.org/ns/1.0">
                 <xsl:attribute name="when">
@@ -141,6 +147,5 @@
                 </xsl:element>
             </xsl:if>
             <xsl:text> statt.</xsl:text>
-        </xsl:element>
     </xsl:template>
 </xsl:stylesheet>
