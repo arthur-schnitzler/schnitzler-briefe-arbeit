@@ -16,6 +16,22 @@
             <xsl:apply-templates select="node()" mode="copy-no-namespaces"/>
         </xsl:element>
     </xsl:template>
+    <xsl:template match="comment() | processing-instruction()" mode="copy-no-namespaces">
+        <xsl:copy/>
+    </xsl:template>
+    
+    <xsl:param name="listperson" select="document('../../python-temp/listperson.xml')"/>
+    <xsl:param name="listbibl" select="document('../../python-temp/listbibl.xml')"/>
+    <xsl:param name="listplace" select="document('../../python-temp/listplace.xml')"/>
+    <xsl:param name="listorg" select="document('../../python-temp/listorg.xml')"/>
+    <xsl:param name="listevent" select="document('../../python-temp/listevent.xml')"/>
+    
+    <xsl:key name="listperson-lookup" match="/tei:TEI[1]/tei:text[1]/tei:body[1]/tei:listPerson[1]/tei:person" use="@xml:id"/>
+    <xsl:key name="listbibl-lookup" match="/tei:TEI[1]/tei:text[1]/tei:body[1]/tei:listBibl[1]/tei:bibl" use="@xml:id"/>
+    <xsl:key name="listplace-lookup" match="/tei:TEI[1]/tei:text[1]/tei:body[1]/tei:listPlace[1]/tei:place" use="@xml:id"/>
+    <xsl:key name="listorg-lookup" match="/tei:TEI[1]/tei:text[1]/tei:body[1]/tei:listOrg[1]/tei:org" use="@xml:id"/>
+    <xsl:key name="listevent-lookup" match="/tei:TEI[1]/tei:text[1]/tei:body[1]/tei:listEvent[1]/tei:event" use="@xml:id"/>
+    
     
     <xsl:template match="tei:back/tei:listPerson[not(child::*)]"/>
     <xsl:template match="tei:back/tei:listPlace[not(child::*)]"/>
@@ -23,15 +39,13 @@
     <xsl:template match="tei:back/tei:listBibl[not(child::*)]"/>
     <xsl:template match="tei:back/tei:listEvent[not(child::*)]"/>
     
-    <xsl:template match="comment() | processing-instruction()" mode="copy-no-namespaces">
-        <xsl:copy/>
-    </xsl:template>
     
     <xsl:template match="tei:back/tei:listPerson[child::*]">
         <xsl:element name="listPerson" namespace="http://www.tei-c.org/ns/1.0">
             <xsl:for-each select="distinct-values(tei:person/@xml:id)">
+                <xsl:variable name="current-id" select="replace(replace(., '#', ''), 'pmb', '')"/>
                 <xsl:choose>
-                    <xsl:when test=". = '2121' or .='pmb2121' or . = '#pmb2121'">
+                    <xsl:when test="$current-id = '2121'">
                         <xsl:element name="person" namespace="http://www.tei-c.org/ns/1.0">
                             <xsl:attribute name="xml:id">
                                 <xsl:text>pmb2121</xsl:text>
@@ -63,6 +77,9 @@
                             <occupation ref="pmb97">Mediziner*in</occupation>
                             <idno type="gnd">https://d-nb.info/gnd/118609807/</idno>
                         </xsl:element>
+                    </xsl:when>
+                    <xsl:when test="key('listperson-lookup', concat('pmb', $current-id), $listperson)[1]">
+                        <xsl:copy-of select="key('listperson-lookup', concat('pmb', $current-id), $listperson)[1]"/>
                     </xsl:when>
                     <xsl:otherwise>
                         <xsl:variable name="nummer" select="substring-after(., 'pmb')"/>
@@ -98,15 +115,18 @@
     <xsl:template match="tei:back/tei:listBibl[child::*]">
         <xsl:element name="listBibl" namespace="http://www.tei-c.org/ns/1.0">
             <xsl:for-each select="distinct-values(tei:bibl/@xml:id)">
-                <xsl:variable name="nummer" select="substring-after(., 'pmb')"/>
+                <xsl:variable name="current-id" select="replace(replace(., '#', ''), 'pmb', '')"/>
                 <xsl:variable name="eintrag"
-                    select="fn:escape-html-uri(concat('https://pmb.acdh.oeaw.ac.at/apis/tei/work/', $nummer))"
+                    select="fn:escape-html-uri(concat('https://pmb.acdh.oeaw.ac.at/apis/tei/work/', $current-id))"
                     as="xs:string"/>
                 <xsl:choose>
+                    <xsl:when test="key('listbibl-lookup', concat('pmb', $current-id), $listbibl)[1]">
+                        <xsl:copy-of select="key('listbibl-lookup', concat('pmb', $current-id), $listbibl)[1]"/>
+                    </xsl:when>
                     <xsl:when test="doc-available($eintrag)">
                         <xsl:element name="bibl" namespace="http://www.tei-c.org/ns/1.0">
                             <xsl:attribute name="xml:id">
-                                <xsl:value-of select="concat('pmb', $nummer)"/>
+                                <xsl:value-of select="concat('pmb', $current-id)"/>
                             </xsl:attribute>
                             <xsl:variable name="eintrag_inhalt" select="document($eintrag)/bibl"/> <xsl:apply-templates
                                 select="$eintrag_inhalt/title[not(@type = 'loschen')] | $eintrag_inhalt/author | $eintrag_inhalt/date | $eintrag_inhalt/note[@type] | $eintrag_inhalt/idno"
@@ -117,7 +137,7 @@
                         <xsl:element name="error"> <xsl:attribute name="type">
                                 <xsl:text>bibl</xsl:text>
                         </xsl:attribute>
-                            <xsl:value-of select="$nummer"/>
+                            <xsl:value-of select="$current-id"/>
                         </xsl:element>
                     </xsl:otherwise>
                 </xsl:choose>
@@ -130,9 +150,9 @@
     <xsl:template match="tei:back/tei:listPlace[child::*]">
         <xsl:element name="listPlace" namespace="http://www.tei-c.org/ns/1.0">
             <xsl:for-each select="distinct-values(tei:place/@xml:id)">
-                <xsl:variable name="nummer" select="replace(replace(., 'pmb', ''), '#', '')"/>
+                <xsl:variable name="current-id" select="replace(replace(., '#', ''), 'pmb', '')"/>
                 <xsl:choose>
-                    <xsl:when test="$nummer='50'">
+                    <xsl:when test="$current-id='50'">
                         <place xml:id="pmb50">
                             <placeName>Wien</placeName>
                             <placeName type="ort_fruherer-name">K.K. Reichshaupt- und Residenzstadt Wien</placeName>
@@ -179,8 +199,11 @@
                             </note>
                         </place>
                     </xsl:when>
+                    <xsl:when test="key('listplace-lookup', concat('pmb', $current-id), $listplace)[1]">
+                        <xsl:copy-of select="key('listplace-lookup', concat('pmb', $current-id), $listplace)[1]"/>
+                    </xsl:when>
                     <xsl:otherwise><xsl:variable name="eintrag"
-                    select="fn:escape-html-uri(concat('https://pmb.acdh.oeaw.ac.at/apis/tei/place/', $nummer))"
+                    select="fn:escape-html-uri(concat('https://pmb.acdh.oeaw.ac.at/apis/tei/place/', $current-id))"
                     as="xs:string"/>
                 <xsl:choose>
                     <xsl:when test="doc-available($eintrag)">
@@ -190,7 +213,7 @@
                         <xsl:element name="error"> <xsl:attribute name="type">
                                 <xsl:text>place</xsl:text>
                         </xsl:attribute>
-                            <xsl:value-of select="$nummer"/>
+                            <xsl:value-of select="$current-id"/>
                         </xsl:element>
                     </xsl:otherwise>
                 </xsl:choose></xsl:otherwise></xsl:choose>
@@ -201,11 +224,14 @@
     <xsl:template match="tei:back/tei:listOrg[child::*]">
         <xsl:element name="listOrg" namespace="http://www.tei-c.org/ns/1.0">
             <xsl:for-each select="distinct-values(tei:org/@xml:id)">
-                <xsl:variable name="nummer" select="substring-after(., 'pmb')"/>
+                <xsl:variable name="current-id" select="replace(replace(., '#', ''), 'pmb', '')"/>
                 <xsl:variable name="eintrag"
-                    select="fn:escape-html-uri(concat('https://pmb.acdh.oeaw.ac.at/apis/tei/org/', $nummer))"
+                    select="fn:escape-html-uri(concat('https://pmb.acdh.oeaw.ac.at/apis/tei/org/', $current-id))"
                     as="xs:string"/>
                 <xsl:choose>
+                    <xsl:when test="key('listorg-lookup', concat('pmb', $current-id), $listorg)[1]">
+                        <xsl:copy-of select="key('listorg-lookup', concat('pmb', $current-id), $listorg)[1]"/>
+                    </xsl:when>
                     <xsl:when test="doc-available($eintrag)">
                         <xsl:apply-templates select="document($eintrag)" mode="copy-no-namespaces"/>
                     </xsl:when>
@@ -213,7 +239,7 @@
                         <xsl:element name="error"> <xsl:attribute name="type">
                                 <xsl:text>org</xsl:text>
                         </xsl:attribute>
-                            <xsl:value-of select="$nummer"/>
+                            <xsl:value-of select="$current-id"/>
                         </xsl:element>
                     </xsl:otherwise>
                 </xsl:choose>
@@ -224,11 +250,14 @@
     <xsl:template match="tei:back/tei:listEvent[child::*]">
         <xsl:element name="listEvent" namespace="http://www.tei-c.org/ns/1.0">
             <xsl:for-each select="distinct-values(tei:event/@xml:id)">
-                <xsl:variable name="nummer" select="substring-after(., 'pmb')"/>
+                <xsl:variable name="current-id" select="replace(replace(., '#', ''), 'pmb', '')"/>
                 <xsl:variable name="eintrag"
-                    select="fn:escape-html-uri(concat('https://pmb.acdh.oeaw.ac.at/apis/tei/event/', $nummer))"
+                    select="fn:escape-html-uri(concat('https://pmb.acdh.oeaw.ac.at/apis/tei/event/', $current-id))"
                     as="xs:string"/>
                 <xsl:choose>
+                    <xsl:when test="key('listevent-lookup', concat('pmb', $current-id), $listevent)[1]">
+                        <xsl:copy-of select="key('listevent-lookup', concat('pmb', $current-id), $listevent)[1]"/>
+                    </xsl:when>
                     <xsl:when test="doc-available($eintrag)">
                         <xsl:apply-templates select="document($eintrag)" mode="copy-no-namespaces"/>
                     </xsl:when>
@@ -236,11 +265,13 @@
                         <xsl:element name="error"> <xsl:attribute name="type">
                                 <xsl:text>event</xsl:text>
                         </xsl:attribute>
-                            <xsl:value-of select="$nummer"/>
+                            <xsl:value-of select="$current-id"/>
                         </xsl:element>
                     </xsl:otherwise>
                 </xsl:choose>
             </xsl:for-each>
         </xsl:element>
     </xsl:template>
+    
+    
 </xsl:stylesheet>

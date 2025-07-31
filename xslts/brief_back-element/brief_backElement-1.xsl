@@ -4,25 +4,7 @@
     version="3.0">
     <xsl:mode on-no-match="shallow-copy"/>
     <xsl:output method="xml" indent="yes"/>
-    <xsl:template match="tei:TEI[not(tei:facsimile)]">
-        <xsl:element name="TEI" namespace="http://www.tei-c.org/ns/1.0">
-            <xsl:copy-of select="@*"/>
-            <xsl:copy-of select="tei:teiHeader"/>
-            <xsl:if
-                test="descendant::tei:pb/@facs[. != '' and not(contains(., '.pdf')) and not(starts-with(., 'http'))]">
-                <xsl:element name="facsimile" namespace="http://www.tei-c.org/ns/1.0">
-                    <xsl:for-each select="descendant::tei:pb/distinct-values(@facs)">
-                        <xsl:element name="graphic" namespace="http://www.tei-c.org/ns/1.0">
-                            <xsl:attribute name="url">
-                                <xsl:value-of select="."/>
-                            </xsl:attribute>
-                        </xsl:element>
-                    </xsl:for-each>
-                </xsl:element>
-            </xsl:if>
-            <xsl:apply-templates select="tei:text"/>
-        </xsl:element>
-    </xsl:template>
+    
     <xsl:template match="tei:text">
         <xsl:element name="text" namespace="http://www.tei-c.org/ns/1.0">
             <xsl:copy-of select="@*" copy-namespaces="false"/>
