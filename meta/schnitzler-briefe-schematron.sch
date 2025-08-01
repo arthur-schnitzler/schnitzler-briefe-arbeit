@@ -231,9 +231,9 @@
     <sch:pattern id="seg-rules">
         <sch:rule context="tei:seg">
             <sch:assert
-                test="(child::tei:seg[@rend = 'left'] and child::tei:seg[@rend = 'right']) or not(child::tei:seg)"
-                > Wenn seg untergeordnete seg-Elemente hat, müssen diese sowohl rend='left' als auch
-                rend='right' enthalten. </sch:assert>
+                test="(child::tei:seg[1][@rend = 'left'] and child::tei:seg[2][@rend = 'right'] and count(child::tei:seg) = 2) or not(child::tei:seg)"
+                > Wenn seg untergeordnete seg-Elemente hat, muss das erste Kind rend='left' und das zweite Kind rend='right' haben, und es dürfen nur genau zwei seg-Kinder vorhanden sein.
+            </sch:assert>
         </sch:rule>
     </sch:pattern>
     <!-- dateline -->
@@ -296,6 +296,21 @@
                 test="(@type = 'commentary' or @type = 'textConst') and preceding-sibling::tei:anchor[@type = $notetype]/@xml:id = $notecorresp"
                 > Jedes "note" vom @typ "commentary" oder "textConst" muss ein vorangehendes Element
                 "anchor" haben, das eine zum Attribut @corresp passende @xml:id hat </sch:assert>
+            
+                
+            <!-- Regel 1: Punkt-Prüfung -->
+            <sch:assert
+                test="not(child::tei:ref and not(child::*[2]) and string-length(normalize-space(.)) lt 1) or normalize-space(.) = '.' "
+                > Ein Kommentar, der nur aus einem »ref« besteht, muss mit einem Punkt enden.
+            </sch:assert>
+            
+            <!-- Regel 2: subtype-Prüfung -->
+            <sch:assert
+                test="not(child::tei:ref and not(child::*[2])) or (child::tei:ref/@subtype='Cf' or child::tei:ref/@subtype='See' or not(child::tei:ref/@subtype))"
+                > Ein Kommentar, der nur aus einem »ref« besteht, darf als @subtype nur »See«, »Cf« oder kein @subtype haben.
+            </sch:assert>
+                
+            
         </sch:rule>
         <sch:rule context="tei:note[@type = 'footnote']">
             <sch:assert test="starts-with(@xml:id, 'F')"> Fußnoten müssen mit 'F' beginnen. </sch:assert>
