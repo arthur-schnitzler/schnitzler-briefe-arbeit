@@ -27,14 +27,6 @@ jobs:
         python -m pip install --upgrade pip
         pip install requests lxml
     
-    - name: Cache PMB lists
-      uses: actions/cache@v4
-      with:
-        path: ~/.cache/pmb-lists
-        key: pmb-lists-${{ runner.os }}-${{ hashFiles('python/add-back-element-from-pmb.py') }}
-        restore-keys: |
-          pmb-lists-${{ runner.os }}-
-    
     - name: Check for changes in editions folder in the last month
       id: check-changes
       run: |
