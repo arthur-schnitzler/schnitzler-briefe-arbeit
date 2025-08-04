@@ -67,9 +67,6 @@
             <xsl:attribute name="ref">
                 <xsl:value-of select="concat('#pmb', $ref)"/>
             </xsl:attribute>
-            <xsl:attribute name="subtype">
-                <xsl:text>implied</xsl:text>
-            </xsl:attribute>
             <xsl:value-of select="$event-type"/>
        
             <xsl:text> von </xsl:text>

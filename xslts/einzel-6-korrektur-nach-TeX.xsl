@@ -5684,7 +5684,7 @@
          <xsl:text>A.&#8239;S.: </xsl:text>
          <xsl:choose>
             <xsl:when test="@type = 'schnitzler-tagebuch'">
-               <xsl:text>\emph{Tagebuch},</xsl:text>
+               <xsl:text>\emph{Tagebuch}, </xsl:text>
             </xsl:when>
             <xsl:when test="@type = 'wienerschnitzler'">
                <xsl:text>\emph{Wiener Schnitzler}, </xsl:text>
