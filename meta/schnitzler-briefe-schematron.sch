@@ -232,8 +232,9 @@
         <sch:rule context="tei:seg">
             <sch:assert
                 test="(child::tei:seg[1][@rend = 'left'] and child::tei:seg[2][@rend = 'right'] and count(child::tei:seg) = 2) or not(child::tei:seg)"
-                > Wenn seg untergeordnete seg-Elemente hat, muss das erste Kind rend='left' und das zweite Kind rend='right' haben, und es dürfen nur genau zwei seg-Kinder vorhanden sein.
-            </sch:assert>
+                > Wenn seg untergeordnete seg-Elemente hat, muss das erste Kind rend='left' und das
+                zweite Kind rend='right' haben, und es dürfen nur genau zwei seg-Kinder vorhanden
+                sein. </sch:assert>
         </sch:rule>
     </sch:pattern>
     <!-- dateline -->
@@ -296,21 +297,15 @@
                 test="(@type = 'commentary' or @type = 'textConst') and preceding-sibling::tei:anchor[@type = $notetype]/@xml:id = $notecorresp"
                 > Jedes "note" vom @typ "commentary" oder "textConst" muss ein vorangehendes Element
                 "anchor" haben, das eine zum Attribut @corresp passende @xml:id hat </sch:assert>
-            
-                
             <!-- Regel 1: Punkt-Prüfung -->
             <sch:assert
-                test="not(child::tei:ref and not(child::*[2]) and string-length(normalize-space(.)) lt 1) or normalize-space(.) = '.' "
-                > Ein Kommentar, der nur aus einem »ref« besteht, muss mit einem Punkt enden.
-            </sch:assert>
-            
+                test="not(count(child::*) = 1 and child::tei:ref and normalize-space(text()) = '') or (child::tei:ref/@subtype = 'Cf' or child::tei:ref/@subtype = 'See' or not(child::tei:ref/@subtype))"
+                > Ein Kommentar, der nur aus einem »ref« besteht, muss mit einem Punkt enden. </sch:assert>
             <!-- Regel 2: subtype-Prüfung -->
             <sch:assert
-                test="not(child::tei:ref and not(child::*[2])) or (child::tei:ref/@subtype='Cf' or child::tei:ref/@subtype='See' or not(child::tei:ref/@subtype))"
-                > Ein Kommentar, der nur aus einem »ref« besteht, darf als @subtype nur »See«, »Cf« oder kein @subtype haben.
-            </sch:assert>
-                
-            
+                test="not(child::tei:ref and not(child::*[2])) or (child::tei:ref/@subtype = 'Cf' or child::tei:ref/@subtype = 'See' or not(child::tei:ref/@subtype))"
+                > Ein Kommentar, der nur aus einem »ref« besteht, darf als @subtype nur »See«, »Cf«
+                oder kein @subtype haben. </sch:assert>
         </sch:rule>
         <sch:rule context="tei:note[@type = 'footnote']">
             <sch:assert test="starts-with(@xml:id, 'F')"> Fußnoten müssen mit 'F' beginnen. </sch:assert>
@@ -320,40 +315,37 @@
         </sch:rule>
         <sch:rule context="tei:note/tei:ref">
             <sch:assert test="
-                    (@subtype = 'see' or @subtype = 'cf' or @subtype = 'See' or @subtype = 'Cf' or @subtype = 'date-only' or not(@subtype))" 
-                > Erlaubt sind für subtype nur "see" (siehe), "See" (Siehe), "cf" (vgl.), "Cf." (Vgl) sowie "date-only", wenn nur
-            das Datum des verlinkten Objekts ausgegeben werden soll</sch:assert>
+                    (@subtype = 'see' or @subtype = 'cf' or @subtype = 'See' or @subtype = 'Cf' or @subtype = 'date-only' or not(@subtype))"
+                > Erlaubt sind für subtype nur "see" (siehe), "See" (Siehe), "cf" (vgl.), "Cf."
+                (Vgl) sowie "date-only", wenn nur das Datum des verlinkten Objekts ausgegeben werden
+                soll</sch:assert>
             <sch:assert test="
-                (@type = 'schnitzler-tagebuch' or @type = 'schnitzler-briefe' or @type = 'schnitzler-lektueren' or @type = 'schnitzler-bahr' or @type = 'schnitzler-interviews' or @type = 'schnitzler-kultur' or @type = 'wienerschnitzler')"></sch:assert>
+                    (@type = 'schnitzler-tagebuch' or @type = 'schnitzler-briefe' or @type = 'schnitzler-lektueren' or @type = 'schnitzler-bahr' or @type = 'schnitzler-interviews' or @type = 'schnitzler-kultur' or @type = 'wienerschnitzler')"/>
             <sch:assert test="not(@type = 'schnitzler-kultur') or matches(@target, '^pmb\d+$')">
-                Wenn @type = "schnitzler-kultur", muss @target mit "pmb" gefolgt von einer Ziffernfolge beginnen (z. B. "pmb1234").
-            </sch:assert>
+                Wenn @type = "schnitzler-kultur", muss @target mit "pmb" gefolgt von einer
+                Ziffernfolge beginnen (z. B. "pmb1234"). </sch:assert>
             <sch:assert test="
-                not(@type = 'schnitzler-tagebuch' or @type='wienerschnitzler') or 
-                (matches(@target, '^\d{4}-\d{2}-\d{2}$') and 
-                xs:date(@target) ge xs:date('1862-05-15') and 
-                xs:date(@target) le xs:date('1931-10-21'))">
-                
-                Wenn @type = "schnitzler-tagebuch" oder 'wienerschnitzler', muss @target ein ISO-Datum im Format YYYY-MM-DD sein,
-                das zwischen dem 15. Mai 1862 und dem 21. Oktober 1931 liegt.
-            </sch:assert>
+                    not(@type = 'schnitzler-tagebuch' or @type = 'wienerschnitzler') or
+                    (matches(@target, '^\d{4}-\d{2}-\d{2}$') and
+                    xs:date(@target) ge xs:date('1862-05-15') and
+                    xs:date(@target) le xs:date('1931-10-21'))"> Wenn @type =
+                "schnitzler-tagebuch" oder 'wienerschnitzler', muss @target ein ISO-Datum im Format
+                YYYY-MM-DD sein, das zwischen dem 15. Mai 1862 und dem 21. Oktober 1931 liegt. </sch:assert>
             <sch:assert test="
-                not(@type = 'schnitzler-interviews') or 
-                (matches(@target, '^(I|M|P)\d{3}') )">
-                Wenn @type = "schnitzler-interviews", muss @target vom Aufbau her »I123«, »M123« oder »P123« sein.
-            </sch:assert>
+                    not(@type = 'schnitzler-interviews') or
+                    (matches(@target, '^(I|M|P)\d{3}'))"> Wenn @type =
+                "schnitzler-interviews", muss @target vom Aufbau her »I123«, »M123« oder »P123«
+                sein. </sch:assert>
             <sch:assert test="
-                not(@type = 'schnitzler-briefe') or 
-                (matches(@target, '^L\d{5}') )">
-                Wenn @type = "schnitzler-briefe", muss @target vom Aufbau her »L01234« sein.
-            </sch:assert>
+                    not(@type = 'schnitzler-briefe') or
+                    (matches(@target, '^L\d{5}'))"> Wenn @type = "schnitzler-briefe",
+                muss @target vom Aufbau her »L01234« sein. </sch:assert>
             <sch:assert test="
-                not(@type = 'schnitzler-bahr') or ( 
-                (matches(@target, '^(D|L)041\d{3}')) or
-                (matches(@target, '^T030\d{3}'))
-                ) ">
-                Wenn @type = "schnitzler-bahr", muss @target vom Aufbau her »D041345«, »L041345« oder »T030123« sein.
-            </sch:assert>
+                    not(@type = 'schnitzler-bahr') or (
+                    (matches(@target, '^(D|L)041\d{3}')) or
+                    (matches(@target, '^T030\d{3}'))
+                    )"> Wenn @type = "schnitzler-bahr", muss @target vom Aufbau her
+                »D041345«, »L041345« oder »T030123« sein. </sch:assert>
         </sch:rule>
     </sch:pattern>
     <sch:pattern>
@@ -383,11 +375,11 @@
         </sch:rule>
     </sch:pattern>
     <sch:pattern>
-    <sch:rule context="tei:rs">
-        <sch:assert test="matches(@ref, '^#pmb\d+( #pmb\d+)*$')">
-            Das Attribut @ref darf nur Werte enthalten, die mit "#pmb" gefolgt von einer Ziffernfolge beginnen.
-            Mehrere Werte müssen durch genau ein Leerzeichen getrennt sein, z. B. "#pmb1234 #pmb5678".
-        </sch:assert>
-    </sch:rule>
+        <sch:rule context="tei:rs">
+            <sch:assert test="matches(@ref, '^#pmb\d+( #pmb\d+)*$')"> Das Attribut @ref darf nur
+                Werte enthalten, die mit "#pmb" gefolgt von einer Ziffernfolge beginnen. Mehrere
+                Werte müssen durch genau ein Leerzeichen getrennt sein, z. B. "#pmb1234 #pmb5678".
+            </sch:assert>
+        </sch:rule>
     </sch:pattern>
 </sch:schema>
