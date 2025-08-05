@@ -299,13 +299,16 @@
                 "anchor" haben, das eine zum Attribut @corresp passende @xml:id hat </sch:assert>
             <!-- Regel 1: Punkt-Prüfung -->
             <sch:assert
-                test="not(count(child::*) = 1 and child::tei:ref and normalize-space(text()) = '') or (child::tei:ref/@subtype = 'Cf' or child::tei:ref/@subtype = 'See' or not(child::tei:ref/@subtype))"
-                > Ein Kommentar, der nur aus einem »ref« besteht, muss mit einem Punkt enden. </sch:assert>
+                test="not(count(*) = 1 and tei:ref and not(normalize-space(text()))) or ends-with(normalize-space(.), '.')"
+                >
+                Wenn eine note nur aus einem einzigen »ref« besteht, muss sie mit einem Punkt enden.
+            </sch:assert>
             <!-- Regel 2: subtype-Prüfung -->
             <sch:assert
-                test="not(child::tei:ref and not(child::*[2])) or (child::tei:ref/@subtype = 'Cf' or child::tei:ref/@subtype = 'See' or not(child::tei:ref/@subtype))"
-                > Ein Kommentar, der nur aus einem »ref« besteht, darf als @subtype nur »See«, »Cf«
-                oder kein @subtype haben. </sch:assert>
+                test="not(count(*) = 1 and tei:ref and not(normalize-space(text()))) or (tei:ref/@subtype = 'Cf' or tei:ref/@subtype = 'See' or not(tei:ref/@subtype))"
+                >
+                Wenn eine note nur aus einem einzigen »ref« besteht, darf dessen @subtype nur »Cf«, »See« oder leer sein.
+            </sch:assert>
         </sch:rule>
         <sch:rule context="tei:note[@type = 'footnote']">
             <sch:assert test="starts-with(@xml:id, 'F')"> Fußnoten müssen mit 'F' beginnen. </sch:assert>
