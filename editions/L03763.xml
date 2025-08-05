@@ -1,4 +1,6 @@
-<?xml version="1.0" encoding="UTF-8"?><?xml-model href="../meta/schnitzler-briefe-schematron.sch" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI xmlns="http://www.tei-c.org/ns/1.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.tei-c.org/ns/1.0 ../meta/schnitzler-briefe-schema.xsd" xml:id="L03763" xml:base="https://id.acdh.oeaw.ac.at/schnitzler/schnitzler-briefe/editions">
+<?xml version='1.0' encoding='UTF-8'?>
+<?xml-model href="../meta/schnitzler-briefe-schematron.sch" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.tei-c.org/ns/1.0 ../meta/schnitzler-briefe-schema.xsd" xml:id="L03763" xml:base="https://id.acdh.oeaw.ac.at/schnitzler/schnitzler-briefe/editions">
    <teiHeader>
       <fileDesc>
          <titleStmt>
@@ -114,7 +116,12 @@
                <date evidence="conjecture" notBefore="1920-08-21" notAfter="1920-08-25">[21. 8. 1920 – 25. 8. 1920?]</date>
                <placeName ref="#pmb30" evidence="internal">Salzburg</placeName>
             </correspAction>
-         </correspDesc>
+         <correspContext><ref type="belongsToCorrespondence" target="correspondence_13212">Zweig, Stefan</ref>
+               <ref subtype="previous_letter" type="withinCollection" target="L03685">Zweig an Schnitzler, 18. 8. 1920</ref>
+               <ref subtype="next_letter" type="withinCollection" target="L02355">Schnitzler an Brandes, 21. 8. 1920</ref>
+               <ref subtype="previous_letter" type="withinCorrespondence" source="correspondence_13212" target="L03685">Zweig an Schnitzler, 18. 8. 1920</ref>
+               <ref subtype="next_letter" type="withinCorrespondence" source="correspondence_13212" target="L03755">Schnitzler an Zweig, 3. 1. 1921</ref>
+            </correspContext></correspDesc>
       </profileDesc>
       <revisionDesc status="proposed">
          <change who="MAM" when="2025-07-17">Export aus Transkribus</change>
