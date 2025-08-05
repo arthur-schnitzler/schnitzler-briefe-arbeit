@@ -78,6 +78,19 @@
                                         <xsl:attribute name="corresp">
                                             <xsl:value-of select="@xml:id"/>
                                         </xsl:attribute>
+                                        <xsl:attribute name="ana">
+                                            <xsl:choose>
+                                                <xsl:when test="child::tei:teiHeader[1]/tei:profileDesc[1]/tei:correspDesc[1]/tei:correspAction[@type = 'sent'][1]/tei:persName[@ref='#pmb2121']">
+                                                    <xsl:text>as-sender</xsl:text>
+                                                </xsl:when>
+                                                <xsl:when test="not(child::tei:teiHeader[1]/tei:profileDesc[1]/tei:correspDesc[1]/tei:correspAction[@type = 'sent'][1]/tei:persName[@ref='#pmb2121']) and not(child::tei:teiHeader[1]/tei:profileDesc[1]/tei:correspDesc[1]/tei:correspAction[@type = 'received'][1]/tei:persName[@ref='#pmb2121'])">
+                                                    <xsl:text>umfeld</xsl:text>
+                                                </xsl:when>
+                                                <xsl:otherwise>
+                                                    <xsl:text>as-empf</xsl:text>
+                                                </xsl:otherwise>
+                                            </xsl:choose>
+                                        </xsl:attribute>
                                         <xsl:copy-of
                                             select="child::tei:teiHeader[1]/tei:fileDesc[1]/tei:titleStmt[1]/tei:title[@level = 'a'][1]"
                                             copy-namespaces="false"

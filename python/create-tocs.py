@@ -36,6 +36,18 @@ def get_matching_files(corresp_id):
             continue
     return result
 
+def get_ana_attribute(doc):
+    """Bestimmt das ana-Attribut basierend auf der Rolle von #pmb2121."""
+    sent_pmb2121 = doc.xpath("//tei:teiHeader[1]/tei:profileDesc[1]/tei:correspDesc[1]/tei:correspAction[@type='sent'][1]/tei:persName[@ref='#pmb2121']", namespaces=NAMESPACES)
+    received_pmb2121 = doc.xpath("//tei:teiHeader[1]/tei:profileDesc[1]/tei:correspDesc[1]/tei:correspAction[@type='received'][1]/tei:persName[@ref='#pmb2121']", namespaces=NAMESPACES)
+    
+    if sent_pmb2121:
+        return "as-sender"
+    elif not sent_pmb2121 and not received_pmb2121:
+        return "umfeld"
+    else:
+        return "as-empf"
+
 def generate_toc(corresp_id, person_name, matching_docs):
     toc_root = etree.Element('{http://www.tei-c.org/ns/1.0}TEI', nsmap={
         None: "http://www.tei-c.org/ns/1.0",
@@ -84,6 +96,8 @@ def generate_toc(corresp_id, person_name, matching_docs):
         else:
             # Falls kein xml:id vorhanden, ggf. Platzhalter oder überspringen
             item.set("corresp", "unknown")
+        
+        item.set("ana", get_ana_attribute(doc))
 
         title = doc.xpath("//tei:titleStmt/tei:title[@level='a'][1]", namespaces=NAMESPACES)
         date_el = doc.xpath("//tei:correspAction[@type='sent']/tei:date[1]", namespaces=NAMESPACES)
