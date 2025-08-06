@@ -305,7 +305,8 @@
             </sch:assert>
             <!-- Regel 2: subtype-Prüfung -->
             <sch:assert
-                test="not(count(*) = 1 and (tei:ref or not(normalize-space(.) ='.'))) or ((tei:ref/@subtype = 'Cf' or tei:ref/@subtype = 'See' or not(tei:ref/@subtype)) and normalize-space(.)='.')"
+                test="not(count(*) = 1 and tei:ref and not(normalize-space(text()))) 
+                or (tei:ref/@subtype = 'Cf' or tei:ref/@subtype = 'See' or not(tei:ref/@subtype))"
                 >
                 Wenn eine note nur aus einem einzigen »ref« besteht, darf dessen @subtype nur »Cf«, »See« oder leer sein.
             </sch:assert>
