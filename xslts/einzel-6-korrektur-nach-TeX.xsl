@@ -5779,6 +5779,28 @@
          select="normalize-space(document(concat('https://raw.githubusercontent.com/arthur-schnitzler/schnitzler-interviews-data/main/data/editions/', replace(@target, '.html', ''), '.xml'))/descendant::tei:titleStmt/tei:title[@level = 'a'][1])"
       />
    </xsl:template>
+   <xsl:template match="ref[@type = 'schnitzler-bahr']">
+      <xsl:if test="not(@subtype = 'date-only')">
+         <xsl:choose>
+            <xsl:when test="@subtype = 'see'">
+               <xsl:text>siehe </xsl:text>
+            </xsl:when>
+            <xsl:when test="@subtype = 'cf'">
+               <xsl:text>vgl. </xsl:text>
+            </xsl:when>
+            <xsl:when test="@subtype = 'See'">
+               <xsl:text>Siehe </xsl:text>
+            </xsl:when>
+            <xsl:when test="@subtype = 'Cf'">
+               <xsl:text>Vgl. </xsl:text>
+            </xsl:when>
+         </xsl:choose>
+         <xsl:text>Hermann Bahr, Arthur Schnitzler: \emph{Briefwechsel, Aufzeichnungen, Dokumente (1891–1931)}, </xsl:text>
+      </xsl:if>
+      <xsl:value-of
+         select="normalize-space(document(concat('https://raw.githubusercontent.com/arthur-schnitzler/schnitzler-bahr-data/main/data/editions/', replace(@target, '.html', ''), '.xml'))/descendant::tei:titleStmt/tei:title[@level = 'a'][1])"
+      />
+   </xsl:template>
    <xsl:template match="ref[@type = 'url']">
       <xsl:text>\uline{\url{</xsl:text>
       <xsl:value-of select="(@target)"/>
