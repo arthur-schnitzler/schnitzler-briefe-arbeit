@@ -90,8 +90,7 @@
                                 </respStmt>
                             </editionStmt>
                             <publicationStmt>
-                                <publisher>Austrian Centre for Digital Humanities and Cultural
-                                    Heritage</publisher>
+                                <publisher>Austrian Centre for Digital Humanities</publisher>
                                 <pubPlace>Vienna</pubPlace>
                                 <xsl:element name="date">
                                     <xsl:attribute name="when">
