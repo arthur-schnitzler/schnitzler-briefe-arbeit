@@ -1,9 +1,9 @@
-<?xml version="1.0" encoding="UTF-8"?><?xml-model href="../meta/schnitzler-briefe-schematron.sch" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI xmlns="http://www.tei-c.org/ns/1.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.tei-c.org/ns/1.0 ../meta/schnitzler-briefe-schema.xsd" xml:id="L03795" xml:base="https://id.acdh.oeaw.ac.at/schnitzler/schnitzler-briefe/editions">
+<?xml version="1.0" encoding="UTF-8"?><?xml-model href="../meta/schnitzler-briefe-schematron.sch" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI xmlns="http://www.tei-c.org/ns/1.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.tei-c.org/ns/1.0 ../meta/schnitzler-briefe-schema.xsd" xml:id="L03789" xml:base="https://id.acdh.oeaw.ac.at/schnitzler/schnitzler-briefe/editions">
    <teiHeader>
       <fileDesc>
          <titleStmt>
             <title level="s">Arthur Schnitzler: Briefwechsel mit Autorinnen und Autoren</title>
-            <title level="a">Arthur Schnitzler an Stefan Zweig, 7. 10. 1910</title>
+            <title level="a">Arthur Schnitzler an Stefan Zweig, 9. 11. 1911</title>
             <author ref="#pmb2121">Schnitzler, Arthur</author>
             <editor>
                <name>Jahnke, Selma</name>
@@ -67,7 +67,7 @@
          <sourceDesc>
             <listWit>
                <witness n="1">
-                  <objectType corresp="brief"/>
+                  <objectType corresp="karte" ana="bildpostkarte"/>
                   <msDesc>
                      <msIdentifier>
                         <country>ISR</country>
@@ -79,15 +79,26 @@
                         <objectDesc>
                            <supportDesc>
                               <extent>
-                                 <measure unit="seite" quantity="1"/>
+                                 <measure unit="seite" quantity="2"/>
                                  <measure unit="blatt" quantity="1"/>
-                                 <measure unit="zeichenanzahl" quantity="192"/>
+                                 <measure unit="zeichenanzahl" quantity="459"/>
                               </extent>
                            </supportDesc>
                         </objectDesc>
                         <handDesc>
-                           <handNote medium="schwarze-tinte" style="deutsche-kurrent"/>
+                           <handNote medium="schwarze-tinte" style="lateinische-kurrent"/>
                         </handDesc>
+                        <additions>
+                           <incident type="postal">
+                              <desc>
+                                 <stamp n="1">
+                                    <placeName ref="#pmb506">Hamburg</placeName>
+                                    <date when="1911-11-09">9. 11. 11</date>
+                                    <time>10–11M</time>
+                                 </stamp>
+                              </desc>
+                           </incident>
+                        </additions>
                      </physDesc>
                   </msDesc>
                </witness>
@@ -101,14 +112,13 @@
          <correspDesc>
             <correspAction type="sent">
                <persName ref="#pmb2121">Schnitzler, Arthur</persName>
-               <date when="1910-10-07" n="01">7. 10. 1910</date>
-               <placeName ref="#pmb50">Wien</placeName>
+               <date when="1911-11-09" n="01">9. 11. 1911</date>
+               <placeName ref="#pmb506">Hamburg</placeName>
             </correspAction>
             <correspAction type="received">
                <persName ref="#pmb13212">Zweig, Stefan</persName>
-               <date evidence="conjecture" notBefore="1910-10-08" notAfter="1910-10-12">[8. 10. 1910
-                  – 12. 10. 1910?]</date>
-               <placeName ref="#pmb50" evidence="conjecture">Wien</placeName>
+               <date evidence="conjecture" notBefore="1911-11-10" notAfter="1911-11-14">[10. 11. 1911 – 14. 11. 1911?]</date>
+               <placeName ref="#pmb50">Wien</placeName>
             </correspAction>
          </correspDesc>
       </profileDesc>
@@ -118,50 +128,53 @@
       </revisionDesc>
    </teiHeader>
    <facsimile>
-      <graphic url="0023_FL81799781"/>
+      <graphic url="0041_FL81799596"/>
+      <graphic url="0042_FL81799651"/>
+      <graphic url="0042_FL81799651"/>
    </facsimile>
    <text>
       <body>
+         <div type="address">
+            <address>
+               <addrLine>
+                  <pb facs="0041_FL81799596"/>Herrn Dr. Stephan Zweig</addrLine>
+               <addrLine>
+                  <rs type="place" ref="#pmb58">Wien VIII</rs>
+               </addrLine>
+               <addrLine>
+                  <rs type="place" ref="#pmb249577">Kochgasse 8</rs>
+               </addrLine>
+            </address>
+         </div>
+         <div type="image">
+            <seg>
+               <seg rend="left">
+                  <pb facs="0042_FL81799651"/>
+                  <hi rend="pre-print">
+                     <rs type="place" ref="#pmb774">Hamburg, Hotel Atlantic</rs>
+                  </hi>
+               </seg>
+               <seg rend="right">
+                  <rs type="place" ref="#pmb263991">
+                     <hi rend="pre-print">Restaurant Pfordte</hi>
+                  </rs>
+               </seg>
+            </seg>
+         </div>
          <div type="writingSession" n="1">
             <opener>
-               <seg>
-                  <seg rend="left">
-                     <pb facs="0023_FL81799781"/>
-                     <hi rend="pre-print">Dr Arthur Schnitzler</hi>
-                  </seg>
-                  <seg rend="right">
-                     <date>7. X. 910</date>
-                  </seg>
-               </seg>
-               <seg>
-                  <hi rend="pre-print">
-                     <rs type="place" ref="#pmb68">Wien XVIII.</rs>
-                  </hi>
-                  <space unit="chars" quantity="1"/>
-                  <subst>
-                     <del rend="strikethrough">
-                        <hi rend="pre-print">Spoettelgasse 7</hi>
-                     </del>
-                     <add place="below">
-                        <rs type="place" ref="#pmb168815">Sternwartestr 71</rs>
-                     </add>
-                  </subst>
-               </seg>
-               <salute>lieber Herr Doctor,</salute>
+               <dateline rend="center">
+                  <pb facs="0042_FL81799651"/>
+                  <rs type="place" ref="#pmb506">Hamburg</rs>, <date>9. 11. 911</date>
+               </dateline>
             </opener>
-            <p>am <anchor type="commentary" xml:id="K_L03795-1"/>
-               <rs type="event" ref="#pmb296492">
-                  <date>Dinſtag</date>
-               </rs>
-               <space unit="chars" quantity="1"/>
-               <time>Abend</time>
-               <note type="commentary" corresp="K_L03795-1">
-                  <ref type="schnitzler-kultur" target="pmb296492"/>. </note>, <add place="above">vor</add> 7 Uhr
-               will uns <rs type="person" ref="#pmb13055">Wasserma<c rendition="#gemination-n"/>
-               </rs> ſeine neuen <rs type="work" subtype="implied" ref="#pmb76946">Einakter</rs>
-               vorleſen; ich bitte Sie, in ſeinem, und unſerm Namen herzlichſt dabei zu ſein.</p>
-            <closer>Ihr<lb/>
-               <signed>A. S.</signed>
+            <p>
+               <salute>lieber Herr Doctor,</salute> außer Herrn <rs type="person" ref="#pmb156849">Morisse</rs> haben sich noch andre Übersetzer gemeldet, darunter <rs type="person" ref="#pmb23787">Rémon</rs>, der schon <rs type="work" ref="#pmb46129 #pmb296453 #pmb296467" subtype="implied">einiges</rs> von mir übersetzt
+               und auch zur Veröffentlichg gebracht hat. Entschieden hab ich mich noch nicht. Hat
+               <rs type="person" ref="#pmb156849">Morisse</rs> schon Stücke übersetzt? Vielen Dank für Ihr
+               freundliches Interesse. Gratuliere zu den schönen Annahmen. Lassen Sie sich’s in <rs type="place" ref="#pmb43520">Meran</rs> wohl ergehen. Herzliche Grüße. Ihr</p>
+            <closer>
+               <signed>Arthur Schnitzler</signed>
             </closer>
          </div>
       </body>
@@ -330,186 +343,145 @@
                   <graphic url="https://upload.wikimedia.org/wikipedia/commons/thumb/6/62/Zweig_Setzer_1927.jpg/250px-Zweig_Setzer_1927.jpg"/>
                </figure>
             </person>
-            <person xml:id="pmb13055">
+            <person xml:id="pmb156849">
                <persName>
-                  <forename>Jakob</forename>
-                  <surname>Wassermann</surname>
+                  <forename>Paul</forename>
+                  <surname>Morisse</surname>
                </persName>
-               <persName type="person_pseudonym">–rm–</persName>
-               <persName type="legacy-name-merge">Wassermann, Jakob</persName>
+               <persName type="legacy-name-merge">Morisse, Paul</persName>
+               <persName type="legacy-name-merge">Morisse, Paul</persName>
                <birth>
-                  <date when="1873-03-10">10.03.1873</date>
-                  <settlement ref="pmb40508">
-                     <placeName type="pref">Fürth</placeName>
+                  <date when="1866-03-11">1866-03-11</date>
+                  <settlement ref="pmb55374">
+                     <placeName type="pref">Rouen</placeName>
                      <location>
-                        <geo>49,47593 10,98856</geo>
+                        <geo>49,44313 1,09932</geo>
                      </location>
                   </settlement>
                </birth>
                <death>
-                  <date when="1934-01-01">01.01.1934</date>
-                  <settlement ref="pmb34401">
-                     <placeName type="pref">Altaussee</placeName>
+                  <date when="1946-09-28">1946-09-28</date>
+                  <settlement ref="pmb182">
+                     <placeName type="pref">Paris</placeName>
                      <location>
-                        <geo>47,639444 13,763333</geo>
+                        <geo>48,85341 2,3488</geo>
                      </location>
                   </settlement>
                </death>
                <sex value="male"/>
-               <occupation ref="pmb90">Schriftsteller/Schriftstellerin</occupation>
-               <idno type="URL" subtype="d-nb">https://d-nb.info/gnd/118629387</idno>
-               <idno type="URL" subtype="schnitzler-tagebuch">https://schnitzler-tagebuch.acdh.oeaw.ac.at/person_21107.html</idno>
-               <idno type="URL" subtype="schnitzler-bahr">https://schnitzler-bahr.acdh.oeaw.ac.at/pmb13055.html</idno>
-               <idno type="URL" subtype="pmb">https://pmb.acdh.oeaw.ac.at/entity/13055/</idno>
-               <idno type="URL" subtype="schnitzler-lektueren">https://schnitzler-lektueren.acdh.oeaw.ac.at/pmb13055.html</idno>
-               <idno type="URL" subtype="fackel">https://fackel.oeaw.ac.at/?p=fackelp46707</idno>
-               <idno type="URL" subtype="doi">https://doi.org/10.1553/0x003afbb2</idno>
-               <idno type="URL" subtype="wikidata">http://www.wikidata.org/entity/Q60369</idno>
-               <idno type="URL" subtype="wikipedia">https://de.wikipedia.org/wiki/Jakob_Wassermann</idno>
-               <idno type="URL" subtype="geschichtewiki">https://www.geschichtewiki.wien.gv.at/Special:URIResolver/?curid=5417</idno>
-               <idno type="URL" subtype="schnitzler-kino">https://schnitzler-kino.acdh.oeaw.ac.at/pmb13055.html</idno>
-               <idno type="URL" subtype="schnitzler-mikrofilme">https://schnitzler-mikrofilme.acdh.oeaw.ac.at/1416730.html?pmb13055</idno>
-               <idno type="URL" subtype="schnitzler-mikrofilme">https://schnitzler-mikrofilme.acdh.oeaw.ac.at/1416759.html?pmb13055</idno>
-               <idno type="URL" subtype="schnitzler-briefe">https://schnitzler-briefe.acdh.oeaw.ac.at/pmb13055.html</idno>
-               <idno type="URL" subtype="pmb">https://pmb.acdh.oeaw.ac.at/entity/162734/</idno>
-               <idno type="URL" subtype="schnitzler-interviews">https://schnitzler-interviews.acdh.oeaw.ac.at/pmb13055.html</idno>
-               <idno type="URL" subtype="bahr-textverzeichnis">https://bahr-textverzeichnis.acdh.oeaw.ac.at/pmb13055.html</idno>
-               <idno type="URL" subtype="bahr-textverzeichnis">https://bahr-textverzeichnis.acdh.oeaw.ac.at/TSN-listperson.html#pmb13055</idno>
-               <idno type="URL" subtype="stefanzweig">https://www.stefanzweig.digital/o:szd.personen/sdef:TEI/get#SZDPER.1496</idno>
-               <idno type="URL" subtype="brenner">https://brenner.oeaw.ac.at/?p=brennerp5725</idno>
-               <idno type="URL" subtype="schaubuehne">https://schaubuehne.oeaw.ac.at/register.html?author=173</idno>
-               <affiliation notBefore="1897-01-01" when="1897-01-01" notAfter="1897-12-31">
+               <occupation ref="pmb116">Übersetzer/Übersetzerin</occupation>
+               <idno type="URL" subtype="pmb">https://pmb.acdh.oeaw.ac.at/entity/156849/</idno>
+               <idno type="URL" subtype="pmb">https://pmb.acdh.oeaw.ac.at/entity/156941/</idno>
+               <idno type="URL" subtype="bahr-textverzeichnis">https://bahr-textverzeichnis.acdh.oeaw.ac.at/pmb156849.html</idno>
+               <idno type="URL" subtype="bahr-textverzeichnis">https://bahr-textverzeichnis.acdh.oeaw.ac.at/pmb156941.html</idno>
+               <idno type="URL" subtype="pmb">https://pmb.acdh.oeaw.ac.at/entity/161395/</idno>
+               <idno type="URL" subtype="bahr-textverzeichnis">https://bahr-textverzeichnis.acdh.oeaw.ac.at/TSN-listperson.html#pmb161395</idno>
+               <idno type="URL" subtype="wikidata">http://www.wikidata.org/entity/Q18533808</idno>
+               <affiliation when="1911-01-01">
                   <term ref="pmb1182">arbeitet für</term>
-                  <orgName ref="pmb29442">Frankfurter Zeitung</orgName>
-                  <idno type="URL" subtype="schnitzler-bahr">https://schnitzler-bahr.acdh.oeaw.ac.at/pmb29442.html</idno>
-                  <idno type="URL" subtype="pmb">https://pmb.acdh.oeaw.ac.at/entity/29442/</idno>
-                  <idno type="URL" subtype="kraus">https://kraus.wienbibliothek.at/register/institutionen/pmb29442</idno>
-                  <idno type="URL" subtype="schnitzler-interviews">https://schnitzler-interviews.acdh.oeaw.ac.at/pmb29442.html</idno>
-                  <idno type="URL" subtype="schnitzler-briefe">https://schnitzler-briefe.acdh.oeaw.ac.at/pmb29442.html</idno>
+                  <orgName ref="pmb34301">Mercure de France</orgName>
+                  <idno type="URL" subtype="d-nb">https://d-nb.info/gnd/5325531-8</idno>
+                  <idno type="URL" subtype="pmb">https://pmb.acdh.oeaw.ac.at/entity/34301/</idno>
+                  <idno type="URL" subtype="schnitzler-briefe">https://schnitzler-briefe.acdh.oeaw.ac.at/pmb34301.html</idno>
                </affiliation>
-               <affiliation when="1899-12-01">
-                  <term ref="pmb4232">ist Mitglied bei</term>
-                  <orgName ref="pmb43143">Wiener Schachclub</orgName>
-                  <idno type="URL" subtype="pmb">https://pmb.acdh.oeaw.ac.at/entity/43143/</idno>
-                  <idno type="URL" subtype="schnitzler-interviews">https://schnitzler-interviews.acdh.oeaw.ac.at/pmb43143.html</idno>
-                  <idno type="URL" subtype="schnitzler-briefe">https://schnitzler-briefe.acdh.oeaw.ac.at/pmb43143.html</idno>
-                  <idno type="URL" subtype="wikidata">http://www.wikidata.org/entity/Q1453009</idno>
-                  <idno type="URL" subtype="wikipedia">https://de.wikipedia.org/wiki/Wiener_Schachklub</idno>
-               </affiliation>
-               <listEvent>
-                  <event n="Private Lesung" ref="pmb62339" when="1898-10-26">
-                     <desc n="1370">teilgenommen an</desc>
-                     <label>Private Lesung von Der grüne Kakadu, Die Gefährtin, Paracelus, 26.10.1898</label>
-                     <idno type="URL" subtype="pmb">https://pmb.acdh.oeaw.ac.at/entity/62339/</idno>
-                  </event>
-                  <event n="Theaterpremiere" ref="pmb35406" when="1898-11-18">
-                     <desc n="1370">teilgenommen an</desc>
-                     <label>Premiere von Juana, Abschiedssouper, 18.11.1898</label>
-                     <idno type="URL" subtype="pmb">https://pmb.acdh.oeaw.ac.at/entity/35406/</idno>
-                  </event>
-                  <event n="Private Lesung" ref="pmb48949" when="1898-12-19">
-                     <desc n="1370">teilgenommen an</desc>
-                     <label>Private Lesung von Pauline, 19.12.1898</label>
-                     <idno type="URL" subtype="pmb">https://pmb.acdh.oeaw.ac.at/entity/48949/</idno>
-                  </event>
-                  <event n="Theateraufführung" ref="pmb45842" when="1899-01-11">
-                     <desc n="1370">teilgenommen an</desc>
-                     <label>Aufführung von Theodora, 11.1.1899</label>
-                     <idno type="URL" subtype="pmb">https://pmb.acdh.oeaw.ac.at/entity/45842/</idno>
-                  </event>
-                  <event n="Private Lesung" ref="pmb57577" when="1899-01-17">
-                     <desc n="1370">teilgenommen an</desc>
-                     <label>Private Lesung von Der Abenteurer und die Sängerin, 17.1.1899</label>
-                     <idno type="URL" subtype="pmb">https://pmb.acdh.oeaw.ac.at/entity/57577/</idno>
-                  </event>
-                  <event n="Konzert" ref="pmb142390" when="1899-11-21">
-                     <desc n="1370">teilgenommen an</desc>
-                     <label>Kompositions-Konzert mit Orchester von Clemens Franckenstein, 21.11.1899</label>
-                     <idno type="URL" subtype="pmb">https://pmb.acdh.oeaw.ac.at/entity/142390/</idno>
-                  </event>
-                  <event n="Private Lesung" ref="pmb183921" when="1899-11-26">
-                     <desc n="1370">teilgenommen an</desc>
-                     <label>Private Lesung von Der Schleier der Beatrice, 26.11.1899</label>
-                     <idno type="URL" subtype="pmb">https://pmb.acdh.oeaw.ac.at/entity/183921/</idno>
-                  </event>
-                  <event n="Private Lesung" ref="pmb183933" when="1901-01-03">
-                     <desc n="1256">ist Arbeitskraft bei</desc>
-                     <label>Private Lesung von Marionetten, Hilperich, 3.1.1901</label>
-                     <idno type="URL" subtype="pmb">https://pmb.acdh.oeaw.ac.at/entity/183933/</idno>
-                  </event>
-                  <event n="Private Lesung" ref="pmb169475" when="1903-11-12">
-                     <desc n="1370">teilgenommen an</desc>
-                     <label>Private Lesung von Der einsame Weg, 12.11.1903</label>
-                     <idno type="URL" subtype="pmb">https://pmb.acdh.oeaw.ac.at/entity/169475/</idno>
-                  </event>
-                  <event n="Lesung" ref="pmb50184" when="1904-03-06">
-                     <desc n="1370">teilgenommen an</desc>
-                     <label>Lesung von Richard Dehmel, 6.3.1904</label>
-                     <idno type="URL" subtype="pmb">https://pmb.acdh.oeaw.ac.at/entity/50184/</idno>
-                  </event>
-                  <event n="Private Lesung" ref="pmb145177" when="1905-12-27">
-                     <desc n="1256">ist Arbeitskraft bei</desc>
-                     <label>Private Lesung von Clarissa Mirabel, 27.12.1905</label>
-                     <idno type="URL" subtype="pmb">https://pmb.acdh.oeaw.ac.at/entity/145177/</idno>
-                  </event>
-                  <event n="Probe" ref="pmb46300" when="1907-01-02">
-                     <desc n="1370">teilgenommen an</desc>
-                     <label>Probeaufführung von Ruth Saint-Denis, 2.1.1907</label>
-                     <idno type="URL" subtype="pmb">https://pmb.acdh.oeaw.ac.at/entity/46300/</idno>
-                  </event>
-                  <event n="Vorlesung" ref="pmb46314" when="1907-02-10">
-                     <desc n="1256">ist Arbeitskraft bei</desc>
-                     <label>Lesung von Beer-Hofmann, Salten, Schnitzler, Wassermann, 10.2.1907</label>
-                     <idno type="URL" subtype="pmb">https://pmb.acdh.oeaw.ac.at/entity/46314/</idno>
-                  </event>
-                  <event n="Vorlesung" ref="pmb245881" when="1908-02-28">
-                     <desc n="1256">ist Arbeitskraft bei</desc>
-                     <label>Vorlesung von Jakob Wassermann, 28.2.1908</label>
-                     <idno type="URL" subtype="pmb">https://pmb.acdh.oeaw.ac.at/entity/245881/</idno>
-                  </event>
-                  <event n="Private Lesung" ref="pmb46528" when="1909-11-01">
-                     <desc n="1370">teilgenommen an</desc>
-                     <label>Private Lesung von Der junge Medardus, 1.11.1909</label>
-                     <idno type="URL" subtype="pmb">https://pmb.acdh.oeaw.ac.at/entity/46528/</idno>
-                     <idno type="URL" subtype="pmb">https://pmb.acdh.oeaw.ac.at/entity/184067/</idno>
-                  </event>
-                  <event n="Private Lesung" ref="pmb48222" when="1910-06-29">
-                     <desc n="1370">teilgenommen an</desc>
-                     <label>Private Lesung von Das weite Land, 29.6.1910</label>
-                     <idno type="URL" subtype="pmb">https://pmb.acdh.oeaw.ac.at/entity/48222/</idno>
-                  </event>
-                  <event n="Bankett" ref="pmb47517" when="1912-11-17">
-                     <desc n="1370">teilgenommen an</desc>
-                     <label>Hauptmann-Bankett der Concordia, 17.11.1912</label>
-                     <idno type="URL" subtype="pmb">https://pmb.acdh.oeaw.ac.at/entity/47517/</idno>
-                  </event>
-                  <event n="Private Lesung" ref="pmb47695" when="1913-02-24">
-                     <desc n="1370">teilgenommen an</desc>
-                     <label>Private Lesung Frau Beate und ihr Sohn, 24.2.1913</label>
-                     <idno type="URL" subtype="pmb">https://pmb.acdh.oeaw.ac.at/entity/47695/</idno>
-                  </event>
-                  <event n="Private Lesung" ref="pmb184201" when="1917-11-25">
-                     <desc n="1370">teilgenommen an</desc>
-                     <label>Private Lesung von Die Schwestern, 25.11.1917</label>
-                     <idno type="URL" subtype="pmb">https://pmb.acdh.oeaw.ac.at/entity/184201/</idno>
-                  </event>
-               </listEvent>
-               <note type="references"/>
-               <figure>
-                  <graphic url="https://upload.wikimedia.org/wikipedia/commons/thumb/0/03/Jakob_Wassermann_1934.jpg/250px-Jakob_Wassermann_1934.jpg"/>
-               </figure>
+               <note type="references">None</note>
+            </person>
+            <person xml:id="pmb23787">
+               <persName>
+                  <forename>Maurice</forename>
+                  <surname>Rémon</surname>
+               </persName>
+               <birth>
+                  <date when="1861-11-27">27.11.1861</date>
+                  <settlement ref="pmb182">
+                     <placeName type="pref">Paris</placeName>
+                     <location>
+                        <geo>48,85341 2,3488</geo>
+                     </location>
+                  </settlement>
+               </birth>
+               <death>
+                  <date when="1945-06-20">20.06.1945</date>
+                  <settlement ref="pmb49517">
+                     <placeName type="pref">Mérignac</placeName>
+                     <location>
+                        <geo>44,84247 -0,64512</geo>
+                     </location>
+                  </settlement>
+               </death>
+               <sex value="male"/>
+               <occupation ref="pmb116">Übersetzer/Übersetzerin</occupation>
+               <idno type="URL" subtype="schnitzler-tagebuch">https://schnitzler-tagebuch.acdh.oeaw.ac.at/person_19182.html</idno>
+               <idno type="URL" subtype="pmb">https://pmb.acdh.oeaw.ac.at/entity/23787/</idno>
+               <idno type="URL" subtype="wikidata">http://www.wikidata.org/entity/Q18197826</idno>
             </person>
          </listPerson>
          <listBibl>
-            <bibl xml:id="pmb76946">
-               <title>Die ungleichen Schalen</title>
-               <author ref="" role="hat-geschaffen">Wassermann, Jakob</author>
-               <idno type="URL" subtype="pmb">https://pmb.acdh.oeaw.ac.at/entity/76946/</idno>
-               <idno type="URL" subtype="schnitzler-tagebuch">https://schnitzler-tagebuch.acdh.oeaw.ac.at/pmb76946.html</idno>
-               <note type="work_kind">Einakterzyklus</note>
+            <bibl xml:id="pmb46129">
+               <title>La femme au poignard</title>
+               <title type="namensvariante">Die Frau mit dem Dolche</title>
+               <author ref="" role="hat-ubersetzt">Rémon, Maurice</author>
+               <author ref="" role="hat-ubersetzt">Valentin, Noémi</author>
+               <author ref="" role="hat-geschaffen">Schnitzler, Arthur</author>
+               <date notBefore="1912-01-01" when="1912-01-01">1912</date>
+               <idno type="URL" subtype="pmb">https://pmb.acdh.oeaw.ac.at/entity/46129/</idno>
+               <idno type="URL" subtype="schnitzler-tagebuch">https://schnitzler-tagebuch.acdh.oeaw.ac.at/pmb46129.html</idno>
+               <note type="work_kind">Einakter</note>
+            </bibl>
+            <bibl xml:id="pmb296453">
+               <title>Les Morts se taisent</title>
+               <title type="werk_link">https://gallica.bnf.fr/ark:/12148/bpt6k17465j/f607.item</title>
+               <title type="werk_bibliografische-angabe">In: La Revue de Paris, Jg. 9, H. 6, 1.6.1902, S. 601–619</title>
+               <author ref="pmb46140" role="hat-ubersetzt">Valentin, Noémi</author>
+               <author ref="pmb23787" role="hat-ubersetzt">Rémon, Maurice</author>
+               <author ref="pmb2121" role="hat-geschaffen">Schnitzler, Arthur</author>
+               <date when="1902-06-01">1902-06-01</date>
+               <idno type="URL" subtype="pmb">https://pmb.acdh.oeaw.ac.at/entity/296453/</idno>
+               <note type="work_kind">Novellette</note>
+            </bibl>
+            <bibl xml:id="pmb296467">
+               <title>Jour de gloire</title>
+               <title type="werk_link">https://gallica.bnf.fr/ark:/12148/bpt6k17472t/f575.item</title>
+               <title type="werk_link">In: La Revue de Paris, Jg. 10, Nr. 8, 1.8.1903, S. 569–589</title>
+               <author ref="pmb46140" role="hat-ubersetzt">Valentin, Noémi</author>
+               <author ref="pmb23787" role="hat-ubersetzt">Rémon, Maurice</author>
+               <author ref="pmb2121" role="hat-geschaffen">Schnitzler, Arthur</author>
+               <date when="1903-08-01">1903-08-01</date>
+               <idno type="URL" subtype="pmb">https://pmb.acdh.oeaw.ac.at/entity/296467/</idno>
+               <note type="work_kind">Novellette</note>
             </bibl>
          </listBibl>
          <listPlace>
+            <place xml:id="pmb506">
+               <placeName>Hamburg</placeName>
+               <desc type="entity_type">P.PPLA</desc>
+               <desc type="entity_type_id">1415</desc>
+               <location type="coords">
+                  <geo>53,55055 9,993333</geo>
+               </location>
+               <location type="located_in_place">
+                  <placeName ref="pmb151">Deutschland</placeName>
+                  <geo>51,5 10,5</geo>
+               </location>
+               <idno type="URL" subtype="wikidata">http://www.wikidata.org/entity/Q1055</idno>
+               <idno type="URL" subtype="schnitzler-bahr">https://schnitzler-bahr.acdh.oeaw.ac.at/pmb506.html</idno>
+               <idno type="URL" subtype="pmb">https://pmb.acdh.oeaw.ac.at/entity/506/</idno>
+               <idno type="URL" subtype="pmb">https://pmb.acdh.oeaw.ac.at/entity/44883/</idno>
+               <idno type="URL" subtype="d-nb">https://d-nb.info/gnd/4023118-5</idno>
+               <idno type="URL" subtype="pmb">https://pmb.acdh.oeaw.ac.at/entity/64301/</idno>
+               <idno type="URL" subtype="geonames">https://sws.geonames.org/2911298/</idno>
+               <idno type="URL" subtype="kraus">https://kraus.wienbibliothek.at/register/orte/pmb506</idno>
+               <idno type="URL" subtype="wikipedia">https://de.wikipedia.org/wiki/Hamburg</idno>
+               <idno type="URL" subtype="schnitzler-tagebuch">https://schnitzler-tagebuch.acdh.oeaw.ac.at/pmb506.html</idno>
+               <idno type="URL" subtype="schnitzler-briefe">https://schnitzler-briefe.acdh.oeaw.ac.at/pmb506.html</idno>
+               <idno type="URL" subtype="schnitzler-interviews">https://schnitzler-interviews.acdh.oeaw.ac.at/pmb506.html</idno>
+               <idno type="URL" subtype="wienerschnitzler">https://wienerschnitzler.org/pmb506.html</idno>
+               <note type="image">
+                  <figure>
+                     <graphic url="https://iiif.onb.ac.at/images/AKON/AK119_239/239/full/,600/0/native.jpg"/>
+                  </figure>
+               </note>
+            </place>
             <place xml:id="pmb50">
                <placeName>Wien</placeName>
                <placeName type="ort_fruherer-name">K.K. Reichshaupt- und Residenzstadt Wien</placeName>
@@ -555,101 +527,130 @@
                   </figure>
                </note>
             </place>
-            <place xml:id="pmb68">
-               <placeName>XVIII., Währing</placeName>
-               <placeName type="legacy-name-merge">Währing</placeName>
+            <place xml:id="pmb58">
+               <placeName>VIII., Josefstadt</placeName>
+               <placeName type="alternative-name">Josefstadt (Wien-Josefstadt)</placeName>
+               <placeName type="legacy-name-merge">Josefstadt</placeName>
                <desc type="entity_type">A.ADM3</desc>
                <desc type="entity_type_id">1124</desc>
                <location type="coords">
-                  <geo>48,23333 16,31667</geo>
-               </location>
-               <location type="located_in_place">
-                  <placeName ref="pmb41240">Österreich</placeName>
-                  <geo>47,33333 13,33333</geo>
+                  <geo>48,21126 16,34706</geo>
                </location>
                <location type="located_in_place">
                   <placeName ref="pmb50">Wien</placeName>
                   <geo>48,208333 16,373056</geo>
                </location>
-               <idno type="URL" subtype="geonames">https://sws.geonames.org/2762091/</idno>
-               <idno type="URL" subtype="schnitzler-bahr">https://schnitzler-bahr.acdh.oeaw.ac.at/pmb68.html</idno>
-               <idno type="URL" subtype="pmb">https://pmb.acdh.oeaw.ac.at/entity/68/</idno>
-               <idno type="URL" subtype="kraus">https://kraus.wienbibliothek.at/register/orte/pmb68</idno>
-               <idno type="URL" subtype="pmb">https://pmb.acdh.oeaw.ac.at/entity/90546/</idno>
-               <idno type="URL" subtype="geonames">https://sws.geonames.org/2780745/</idno>
-               <idno type="URL" subtype="schnitzler-interviews">https://schnitzler-interviews.acdh.oeaw.ac.at/pmb68.html</idno>
-               <idno type="URL" subtype="schnitzler-tagebuch">https://schnitzler-tagebuch.acdh.oeaw.ac.at/pmb68.html</idno>
-               <idno type="URL" subtype="wikidata">http://www.wikidata.org/entity/Q690417</idno>
-               <idno type="URL" subtype="wikipedia">https://de.wikipedia.org/wiki/W%C3%A4hring</idno>
-               <idno type="URL" subtype="schnitzler-briefe">https://schnitzler-briefe.acdh.oeaw.ac.at/pmb68.html</idno>
-               <idno type="URL" subtype="wienerschnitzler">https://wienerschnitzler.org/pmb68.html</idno>
+               <idno type="URL" subtype="geonames">https://sws.geonames.org/2775027/</idno>
+               <idno type="URL" subtype="d-nb">https://d-nb.info/gnd/4108158-4</idno>
+               <idno type="URL" subtype="schnitzler-bahr">https://schnitzler-bahr.acdh.oeaw.ac.at/pmb58.html</idno>
+               <idno type="URL" subtype="pmb">https://pmb.acdh.oeaw.ac.at/entity/58/</idno>
+               <idno type="URL" subtype="pmb">https://pmb.acdh.oeaw.ac.at/entity/15566/</idno>
+               <idno type="URL" subtype="kraus">https://kraus.wienbibliothek.at/register/orte/pmb58</idno>
+               <idno type="URL" subtype="wikidata">http://www.wikidata.org/entity/Q256778</idno>
+               <idno type="URL" subtype="wikipedia">https://de.wikipedia.org/wiki/Josefstadt_(Wien)</idno>
+               <idno type="URL" subtype="schnitzler-interviews">https://schnitzler-interviews.acdh.oeaw.ac.at/pmb58.html</idno>
+               <idno type="URL" subtype="schnitzler-tagebuch">https://schnitzler-tagebuch.acdh.oeaw.ac.at/pmb58.html</idno>
+               <idno type="URL" subtype="schnitzler-briefe">https://schnitzler-briefe.acdh.oeaw.ac.at/pmb58.html</idno>
+               <idno type="URL" subtype="wienerschnitzler">https://wienerschnitzler.org/pmb58.html</idno>
                <note type="image">
                   <figure>
-                     <graphic url="https://iiif.onb.ac.at/images/AKON/AK072_600/600/full/,600/0/native.jpg"/>
+                     <graphic url="https://iiif.onb.ac.at/images/AKON/AK002_025/025/full/,600/0/native.jpg"/>
                   </figure>
                </note>
             </place>
-            <place xml:id="pmb168815">
-               <placeName>Sternwartestraße 71</placeName>
+            <place xml:id="pmb249577">
+               <placeName>Kochgasse 8</placeName>
                <desc type="entity_type">Wohngebäude (K.WHS)</desc>
                <desc type="entity_type_id">36</desc>
                <location type="coords">
-                  <geo>48,23188 16,33716</geo>
+                  <geo>48,212327 16,349717</geo>
                </location>
                <location type="located_in_place">
-                  <placeName ref="pmb68">XVIII., Währing</placeName>
-                  <geo>48,23333 16,31667</geo>
+                  <placeName ref="pmb728">Kochgasse</placeName>
+                  <geo>48,213479790702 16,349493426813</geo>
                </location>
                <location type="located_in_place">
-                  <placeName ref="pmb533">Währinger Cottage</placeName>
-                  <geo>48,233056 16,341944</geo>
+                  <placeName ref="pmb58">VIII., Josefstadt</placeName>
+                  <geo>48,21126 16,34706</geo>
+               </location>
+               <idno type="URL" subtype="pmb">https://pmb.acdh.oeaw.ac.at/entity/249577/</idno>
+               <idno type="URL" subtype="wikidata">http://www.wikidata.org/entity/Q108886267</idno>
+               <idno type="URL" subtype="wikipedia">https://de.wikipedia.org/wiki/Kochgasse_8</idno>
+               <idno type="URL" subtype="wienerschnitzler">https://wienerschnitzler.org/pmb249577.html</idno>
+            </place>
+            <place xml:id="pmb774">
+               <placeName>Hotel Atlantic</placeName>
+               <desc type="entity_type">Hotel (K.HTL)</desc>
+               <desc type="entity_type_id">12</desc>
+               <location type="coords">
+                  <geo>53,557222 10,004722</geo>
                </location>
                <location type="located_in_place">
-                  <placeName ref="pmb150">Sternwartestraße</placeName>
-                  <geo>48,23099349198 16,340117830625</geo>
+                  <placeName ref="pmb506">Hamburg</placeName>
+                  <geo>53,55055 9,993333</geo>
                </location>
-               <idno type="URL" subtype="pmb">https://pmb.acdh.oeaw.ac.at/entity/168815/</idno>
-               <idno type="URL" subtype="schnitzler-briefe">https://schnitzler-briefe.acdh.oeaw.ac.at/pmb168815.html</idno>
-               <idno type="URL" subtype="wienerschnitzler">https://wienerschnitzler.org/pmb168815.html</idno>
+               <idno type="URL" subtype="schnitzler-bahr">https://schnitzler-bahr.acdh.oeaw.ac.at/pmb774.html</idno>
+               <idno type="URL" subtype="pmb">https://pmb.acdh.oeaw.ac.at/entity/774/</idno>
+               <idno type="URL" subtype="wikidata">http://www.wikidata.org/entity/Q873918</idno>
+               <idno type="URL" subtype="wikipedia">https://de.wikipedia.org/wiki/Hotel_Atlantic</idno>
+               <idno type="URL" subtype="schnitzler-briefe">https://schnitzler-briefe.acdh.oeaw.ac.at/pmb774.html</idno>
+               <idno type="URL" subtype="wienerschnitzler">https://wienerschnitzler.org/pmb774.html</idno>
+               <note type="apis_dates">
+                  <date notBefore="1909-01-01" when="1909-01-01">1909</date>
+               </note>
+            </place>
+            <place xml:id="pmb263991">
+               <placeName>Restaurant Pfordte im Hotel Atlantic</placeName>
+               <desc type="entity_type">S.REST</desc>
+               <desc type="entity_type_id">4015</desc>
+               <location type="coords">
+                  <geo>53,556989 10,004672</geo>
+               </location>
+               <location type="located_in_place">
+                  <placeName ref="pmb506">Hamburg</placeName>
+                  <geo>53,55055 9,993333</geo>
+               </location>
+               <location type="located_in_place">
+                  <placeName ref="pmb774">Hotel Atlantic</placeName>
+                  <geo>53,557222 10,004722</geo>
+               </location>
+               <idno type="URL" subtype="pmb">https://pmb.acdh.oeaw.ac.at/entity/263991/</idno>
+               <idno type="URL" subtype="wienerschnitzler">https://wienerschnitzler.org/pmb263991.html</idno>
+               <note type="apis_dates">
+                  <date notBefore="1909-01-01" when="1909-01-01">1909</date>
+               </note>
+            </place>
+            <place xml:id="pmb43520">
+               <placeName>Meran</placeName>
+               <placeName type="alternative-name">Merano</placeName>
+               <desc type="entity_type">P.PPLA3</desc>
+               <desc type="entity_type_id">1128</desc>
+               <location type="coords">
+                  <geo>46,66817 11,15953</geo>
+               </location>
+               <location type="located_in_place">
+                  <placeName ref="pmb40306">Italien</placeName>
+                  <geo>42,83333 12,83333</geo>
+               </location>
+               <idno type="URL" subtype="wikidata">http://www.wikidata.org/entity/Q131605</idno>
+               <idno type="URL" subtype="schnitzler-bahr">https://schnitzler-bahr.acdh.oeaw.ac.at/pmb887.html</idno>
+               <idno type="URL" subtype="geonames">https://sws.geonames.org/3173577/</idno>
+               <idno type="URL" subtype="pmb">https://pmb.acdh.oeaw.ac.at/entity/887/</idno>
+               <idno type="URL" subtype="pmb">https://pmb.acdh.oeaw.ac.at/entity/38694/</idno>
+               <idno type="URL" subtype="pmb">https://pmb.acdh.oeaw.ac.at/entity/43520/</idno>
+               <idno type="URL" subtype="pmb">https://pmb.acdh.oeaw.ac.at/entity/97977/</idno>
+               <idno type="URL" subtype="d-nb">https://d-nb.info/gnd/4038688-0</idno>
+               <idno type="URL" subtype="wikipedia">https://de.wikipedia.org/wiki/Meran</idno>
+               <idno type="URL" subtype="schnitzler-tagebuch">https://schnitzler-tagebuch.acdh.oeaw.ac.at/pmb43520.html</idno>
+               <idno type="URL" subtype="schnitzler-briefe">https://schnitzler-briefe.acdh.oeaw.ac.at/pmb43520.html</idno>
+               <idno type="URL" subtype="wienerschnitzler">https://wienerschnitzler.org/pmb43520.html</idno>
+               <note type="image">
+                  <figure>
+                     <graphic url="https://iiif.onb.ac.at/images/AKON/AK115_312/312/full/,600/0/native.jpg"/>
+                  </figure>
+               </note>
             </place>
          </listPlace>
-         <listEvent>
-            <event xml:id="pmb296492" when="1910-10-11">
-               <eventName n="Private Lesung">Private Lesung von Die ungleichen Schalen, 11.10.1910</eventName>
-               <idno type="URL" subtype="pmb">https://pmb.acdh.oeaw.ac.at/entity/296492/</idno>
-               <listBibl>
-                  <bibl>
-                     <title ref="pmb76946">Die ungleichen Schalen: Fünf einaktige Dramen</title>
-                     <note type="relation-type">ist Lesung von</note>
-                  </bibl>
-               </listBibl>
-               <listPerson>
-                  <person role="hat als Arbeitskraft">
-                     <persName ref="pmb13055">Wassermann, Jakob</persName>
-                  </person>
-                  <person role="hat als Teilnehmer:in">
-                     <persName ref="pmb2121">Schnitzler, Arthur</persName>
-                  </person>
-                  <person role="hat als Teilnehmer:in">
-                     <persName ref="pmb2167">Salten, Felix</persName>
-                  </person>
-                  <person role="hat als Teilnehmer:in">
-                     <persName ref="pmb26392">Van-Jung, Leo</persName>
-                  </person>
-                  <person role="hat als Teilnehmer:in">
-                     <persName ref="pmb13212">Zweig, Stefan</persName>
-                  </person>
-               </listPerson>
-               <listPlace>
-                  <place>
-                     <placeName role="veranstaltet in" ref="pmb168815">Sternwartestraße 71</placeName>
-                     <location>
-                        <geo>48,23188 16,33716</geo>
-                     </location>
-                  </place>
-               </listPlace>
-            </event>
-         </listEvent>
       </back>
    </text>
 </TEI>

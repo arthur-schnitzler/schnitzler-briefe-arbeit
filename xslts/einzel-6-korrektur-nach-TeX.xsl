@@ -4019,7 +4019,7 @@
       <xsl:text>}\noindent{}</xsl:text>
    </xsl:template>
    <xsl:template
-      match="div[(@type = 'writingSession' or @type='image') and not(ancestor::*[self::text[@type = 'dedication']])]">
+      match="div[(@type = 'writingSession') and not(ancestor::*[self::text[@type = 'dedication']])]">
       <xsl:variable name="language"
          select="substring(ancestor::TEI//profileDesc/langUsage/language/@ident, 1, 2)"/>
       <xsl:choose>
