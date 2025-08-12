@@ -30,6 +30,7 @@
         select="string($active-param-set/archiv-institution)"/>
     <xsl:param name="signatur" as="xs:string" select="string($active-param-set/signatur)"/>
     <xsl:param name="exporter" as="xs:string" select="string($active-param-set/exporter)"/>
+    <xsl:param name="handschrift" as="xs:string" select="string($active-param-set/handschrift)"/>
     <xsl:template match="tei:div">
         <xsl:element name="root"/>
         <xsl:variable name="letzte-nummer" as="xs:integer">
@@ -178,7 +179,7 @@
                                                   </supportDesc>
                                                 </objectDesc>
                                                 <handDesc>
-                                                  <handNote medium="" style="deutsche-kurrent"/>
+                                                  <handNote medium="" style="{$handschrift}"/>
                                                 </handDesc>
                                                 <!--<additions>
                                                     <incident type="archival">
