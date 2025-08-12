@@ -299,13 +299,13 @@
                 "anchor" haben, das eine zum Attribut @corresp passende @xml:id hat </sch:assert>
             <!-- Regel 1: Punkt-Prüfung -->
             <sch:assert
-                test="not(count(*) = 1 and tei:ref and not(normalize-space(text()))) or ends-with(normalize-space(.), '.')"
+                test="not(count(*) = 1 and tei:ref and not(normalize-space(string-join(text(), '')))) or ends-with(normalize-space(string-join(text(), '')), '.')"
                 >
                 Wenn eine note nur aus einem einzigen »ref« besteht, muss sie mit einem Punkt enden.
             </sch:assert>
             <!-- Regel 2: subtype-Prüfung -->
             <sch:assert
-                test="not(count(*) = 1 and tei:ref and not(normalize-space(text()))) 
+                test="not(count(*) = 1 and tei:ref and not(normalize-space(string-join(text(), '')))) 
                 or (tei:ref/@subtype = 'Cf' or tei:ref/@subtype = 'See' or not(tei:ref/@subtype))"
                 >
                 Wenn eine note nur aus einem einzigen »ref« besteht, darf dessen @subtype nur »Cf«, »See« oder leer sein.
