@@ -1,6 +1,4 @@
-<?xml version='1.0' encoding='UTF-8'?>
-<?xml-model href="../meta/schnitzler-briefe-schematron.sch" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
-<TEI xmlns="http://www.tei-c.org/ns/1.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.tei-c.org/ns/1.0 ../meta/schnitzler-briefe-schema.xsd" xml:id="L03621" xml:base="https://id.acdh.oeaw.ac.at/schnitzler/schnitzler-briefe/editions">
+<?xml version="1.0" encoding="UTF-8"?><?xml-model href="../meta/schnitzler-briefe-schematron.sch" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI xmlns="http://www.tei-c.org/ns/1.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.tei-c.org/ns/1.0 ../meta/schnitzler-briefe-schema.xsd" xml:id="L03621" xml:base="https://id.acdh.oeaw.ac.at/schnitzler/schnitzler-briefe/editions">
    <teiHeader>
       <fileDesc>
          <titleStmt>
@@ -92,7 +90,7 @@
                         </handDesc>
                         <additions>
                            <incident type="receiver" rend="roter-buntstift">
-                              <desc>eine Markierung</desc>
+                              <desc>eine Markierung, eventuell der falschen Datumsangabe</desc>
                            </incident>
                            <incident type="receiver" rend="bleistift">
                               <desc>»<quote>
@@ -140,16 +138,20 @@
                   – 18. 1. 1908?]</date>
                <placeName ref="#pmb50" evidence="conjecture">Wien</placeName>
             </correspAction>
-            <correspContext><ref type="belongsToCorrespondence" target="correspondence_13212">Zweig, Stefan</ref>
+            <correspContext>
+               <ref type="belongsToCorrespondence" target="correspondence_13212">Zweig, Stefan</ref>
                <ref subtype="previous_letter" type="withinCollection" target="L03490">Salten an Schnitzler, 15. 1. 1908</ref>
                <ref subtype="next_letter" type="withinCollection" target="L01751">Ehrenstein an Schnitzler, 16. 1. 1908</ref>
                <ref subtype="previous_letter" type="withinCorrespondence" source="correspondence_13212" target="L03804">Schnitzler an Zweig, 17. 10. 1904</ref>
                <ref subtype="next_letter" type="withinCorrespondence" source="correspondence_13212" target="L03808">Schnitzler an Zweig, 22. 1. 1908</ref>
-            </correspContext></correspDesc>
+            </correspContext>
+         </correspDesc>
       </profileDesc>
-      <revisionDesc status="proposed">
+      <revisionDesc status="candidate">
          <change who="MAM" when="2025-05-21">Export aus Transkribus</change>
          <change who="SJ" when="2025-05-22">erste Auszeichnung</change>
+         <change who="MAM" when="2025-08-12">Durchsicht</change>
+         <change who="MAM" when="2025-08-12">Index check</change>
       </revisionDesc>
    </teiHeader>
    <facsimile>
@@ -175,13 +177,15 @@
                <space dim="vertical" unit="line" quantity="1"/>
                <salute>Sehr verehrter Herr Doktor,</salute>
             </opener>
-            <p> gestatten Sie mir als persönlich Unbekanntem Ihnen heute meine aufrichtigen <anchor type="commentary" xml:id="K_L03621-2"/>Glückwünsche<note type="commentary" corresp="K_L03621-2">Am <ref type="schnitzler-tagebuch" target="1908-01-15" subtype="date-only"/> erhielt <rs type="person" ref="#pmb2121">Schnitzler</rs>
+            <p> gestatten Sie mir als persönlich Unbekanntem Ihnen heute meine aufrichtigen <anchor type="commentary" xml:id="K_L03621-2"/>
+               <rs type="org" ref="#pmb29677" subtype="implied">Glückwünsche</rs>
+               <note type="commentary" corresp="K_L03621-2">Am <ref type="schnitzler-tagebuch" target="1908-01-15" subtype="date-only"/> erhielt <rs type="person" ref="#pmb2121">Schnitzler</rs>
                   den <rs type="org" ref="#pmb29677">Grillparzer-Preis</rs> für seine Komödie <rs type="work" ref="#pmb29903">Zwischenspiel</rs>.</note> zu übermitteln. Ich
                glaube, für uns jüngere Leute, die wir in der Bewunderung Ihres Werkes gewissermassen
                aufgewachsen sind, kann es keine grössere Freude geben, als zu sehen, wie Ihnen nun
                auch aus den älteren kälteren Kreisen endlich die grosse Zustimmung wird, die wir so
                lange schon als ein Selbstverständliches ersehnen. Und so einen Tag wollte ich nicht
-               vorrübergehen zu lassen, ohne Ihnen zu sagen, dass <pb facs="MS-SCHNITZLER-B-00118-000-00002-1"/>es für uns ein Tag der freudigsten
+               vorübergehen zu lassen, ohne Ihnen zu sagen, dass <pb facs="MS-SCHNITZLER-B-00118-000-00002-1"/>es für uns ein Tag der freudigsten
                Genugtuung gewesen ist, unsere Liebe bestätigt zu wissen.</p>
             <closer>In Verehrung getreu<lb/> Ihr sehr ergebener<lb/>
                <signed>Stefan Zweig</signed>
