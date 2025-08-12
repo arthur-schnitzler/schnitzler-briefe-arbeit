@@ -805,7 +805,10 @@
       <xsl:when test="@type = 'comment'">
         <xsl:variable name="comment"
           select="@o/substring-before(substring-after(., 'comment:'), ';')"/>
-        <anchor type="commentary" xml:id="XXXX">
+        <anchor type="commentary">
+          <xsl:attribute name="xml:id">
+            <xsl:text>XXXX</xsl:text>
+          </xsl:attribute>
           <xsl:call-template name="elem">
             <xsl:with-param name="elem" select="$elem"/>
           </xsl:call-template>
@@ -813,7 +816,11 @@
           <xsl:value-of select="$comment"/>
           <xsl:text>]</xsl:text>
         </anchor>
-        <note type="commentary" xml:id="XXXX"/>
+        <note type="commentary" >
+          <xsl:attribute name="xml:id">
+            <xsl:text>XXXX</xsl:text>
+          </xsl:attribute>
+        </note>
       </xsl:when>
 
       <!--      <TextLine id="line_1648725614556_91" custom="readingOrder {index:0;} comment {offset:0; length:5;comment:test;}">-->

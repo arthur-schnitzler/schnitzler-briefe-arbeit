@@ -193,7 +193,10 @@
     <xsl:variable name="type" select="substring-after(@imageFilename, '.')"/>
 
     <!-- NOTE: up to now, lry and lry were mixed up. This is fiex here. -->
-    <surface ulx="0" uly="0" lrx="{@imageWidth}" lry="{@imageHeight}" xml:id="facs_{$numCurr}">
+    <surface ulx="0" uly="0" lrx="{@imageWidth}" lry="{@imageHeight}">
+      <xsl:attribute name="xml:id">
+        <xsl:value-of select="concat('facs_', $numCurr)"/>
+      </xsl:attribute>
       <graphic
         width="{@imageWidth}px" height="{@imageHeight}px" facs="{encode-for-uri(substring-before($imageName, '.'))||'.'||$type}"/>
       <xsl:apply-templates
@@ -786,7 +789,10 @@
       <xsl:when test="@type = 'comment'">
         <xsl:variable name="comment"
           select="@o/substring-before(substring-after(., 'comment:'), ';')"/>
-        <anchor type="commentary" xml:id="XXXX">
+        <anchor type="commentary">
+          <xsl:attribute name="xml:id">
+            <xsl:text>XXXX</xsl:text>
+          </xsl:attribute>
           <xsl:call-template name="elem">
             <xsl:with-param name="elem" select="$elem"/>
           </xsl:call-template>
@@ -794,7 +800,11 @@
           <xsl:value-of select="$comment"/>
           <xsl:text>]</xsl:text>
         </anchor>
-        <note type="commentary" xml:id="XXXX"/>
+        <note type="commentary">
+          <xsl:attribute name="xml:id">
+            <xsl:text>XXXX</xsl:text>
+          </xsl:attribute>
+        </note>
       </xsl:when>
 
       <!--      <TextLine id="line_1648725614556_91" custom="readingOrder {index:0;} comment {offset:0; length:5;comment:test;}">-->

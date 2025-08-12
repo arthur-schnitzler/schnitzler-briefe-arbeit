@@ -34,8 +34,10 @@
                 <TEI xmlns="http://www.tei-c.org/ns/1.0"
                     xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
                     xsi:schemaLocation="http://www.tei-c.org/ns/1.0 ../meta/asbwschema.xsd"
-                    xml:id="{concat('L0',$nummer)}"
                     xml:base="https://id.acdh.oeaw.ac.at/schnitzler/schnitzler-briefe/editions">
+                    <xsl:attribute name="xml:id">
+                        <xsl:value-of select="concat('L0',$nummer)"/>
+                    </xsl:attribute>
                     <teiHeader>
                         <fileDesc>
                             <titleStmt>

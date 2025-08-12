@@ -17,16 +17,20 @@
     <xsl:template
         match="TEI[descendant::text[@type = 'diaryDay']] | TEI[descendant::text[@type = 'image']] | TEI[descendant::image]">
         <TEI when="{(descendant::date[not(ancestor::kommentar) and ancestor::body]/@when)[1]}"
-            n="{(descendant::date[not(ancestor::kommentar) and ancestor::body]/@n)[1]}"
-            xml:id="xxxx">
+            n="{(descendant::date[not(ancestor::kommentar) and ancestor::body]/@n)[1]}">
+            <xsl:attribute name="xml:id">
+                <xsl:text>XXXX</xsl:text>
+            </xsl:attribute>
             <xsl:apply-templates select="@* | node()"/>
         </TEI>
     </xsl:template>
     <xsl:template
         match="TEI[descendant::text[@type = 'manuscript']] | TEI[descendant::text[@type = 'article']] | TEI[descendant::text[@type = 'text']] | TEI[descendant::text[@type = 'note']]">
         <TEI when="{descendant::listBibl[1]/biblStruct[1]/monogr[1]/imprint[1]/date[1]/@when}"
-            n="{descendant::listBibl[1]/biblStruct[1]/monogr[1]/imprint[1]/date[1]/@n}"
-            xml:id="xxxx">
+            n="{descendant::listBibl[1]/biblStruct[1]/monogr[1]/imprint[1]/date[1]/@n}">
+            <xsl:attribute name="xml:id">
+                <xsl:text>XXXX</xsl:text>
+            </xsl:attribute>
             <xsl:apply-templates select="@* | node()"/>
         </TEI>
     </xsl:template>
@@ -45,8 +49,10 @@
                         test="string-length(descendant::correspDesc/correspAction[@type = 'sent']/date/@when) = 4">
                         <TEI
                             when="{concat(descendant::correspDesc/correspAction[@type='sent']/date/@when,'-00-00')}"
-                            n="{descendant::correspDesc/correspAction[@type='sent']/date/@n}"
-                            xml:id="xxxx">
+                            n="{descendant::correspDesc/correspAction[@type='sent']/date/@n}">
+                            <xsl:attribute name="xml:id">
+                                <xsl:text>XXXX</xsl:text>
+                            </xsl:attribute>
                             <xsl:apply-templates select="@* | node()"/>
                         </TEI>
                     </xsl:when>
@@ -54,15 +60,19 @@
                         test="string-length(descendant::correspDesc/correspAction[@type = 'sent']/date/@when) = 7">
                         <TEI
                             when="{concat(descendant::correspDesc/correspAction[@type='sent']/date/@when,'-00')}"
-                            n="{descendant::correspDesc/correspAction[@type='sent']/date/@n}"
-                            xml:id="xxxx">
+                            n="{descendant::correspDesc/correspAction[@type='sent']/date/@n}">
+                            <xsl:attribute name="xml:id">
+                                <xsl:text>XXXX</xsl:text>
+                            </xsl:attribute>
                             <xsl:apply-templates select="@* | node()"/>
                         </TEI>
                     </xsl:when>
                     <xsl:otherwise>
                         <TEI when="{descendant::correspDesc/correspAction[@type='sent']/date/@when}"
-                            n="{descendant::correspDesc/correspAction[@type='sent']/date/@n}"
-                            xml:id="xxxx">
+                            n="{descendant::correspDesc/correspAction[@type='sent']/date/@n}">
+                            <xsl:attribute name="xml:id">
+                                <xsl:text>XXXX</xsl:text>
+                            </xsl:attribute>
                             <xsl:apply-templates select="@* | node()"/>
                         </TEI>
                     </xsl:otherwise>
