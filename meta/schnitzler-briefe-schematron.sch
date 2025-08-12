@@ -386,4 +386,36 @@
             </sch:assert>
         </sch:rule>
     </sch:pattern>
+    <!-- Einschränkung von placeName, persName, orgName, eventName auf teiHeader
+   oder text/back -->
+    <sch:pattern id="entity-name-location-restrictions">
+        <sch:rule context="tei:placeName[not(ancestor::tei:teiHeader) and 
+            not(ancestor::tei:back)]">
+            <sch:assert test="false()">
+                Das Element "placeName" darf nur in tei:teiHeader oder
+                tei:text/tei:back vorkommen.
+            </sch:assert>
+        </sch:rule>
+        <sch:rule context="tei:persName[not(ancestor::tei:teiHeader) and 
+            not(ancestor::tei:back)]">
+            <sch:assert test="false()">
+                Das Element "persName" darf nur in tei:teiHeader oder
+                tei:text/tei:back vorkommen.
+            </sch:assert>
+        </sch:rule>
+        <sch:rule context="tei:orgName[not(ancestor::tei:teiHeader) and 
+            not(ancestor::tei:back)]">
+            <sch:assert test="false()">
+                Das Element "orgName" darf nur in tei:teiHeader oder
+                tei:text/tei:back vorkommen.
+            </sch:assert>
+        </sch:rule>
+        <sch:rule context="tei:eventName[not(ancestor::tei:teiHeader) and 
+            not(ancestor::tei:back)]">
+            <sch:assert test="false()">
+                Das Element "eventName" darf nur in tei:teiHeader oder
+                tei:text/tei:back vorkommen.
+            </sch:assert>
+        </sch:rule>
+    </sch:pattern>
 </sch:schema>
