@@ -323,8 +323,7 @@
                 > Erlaubt sind für subtype nur "see" (siehe), "See" (Siehe), "cf" (vgl.), "Cf."
                 (Vgl) sowie "date-only", wenn nur das Datum des verlinkten Objekts ausgegeben werden
                 soll</sch:assert>
-            <sch:assert test="
-                    (@type = 'schnitzler-tagebuch' or @type = 'schnitzler-briefe' or @type = 'schnitzler-lektueren' or @type = 'schnitzler-bahr' or @type = 'schnitzler-interviews' or @type = 'schnitzler-kultur' or @type = 'wienerschnitzler')"/>
+            
             <sch:assert test="not(@type = 'schnitzler-kultur') or matches(@target, '^pmb\d+$')">
                 Wenn @type = "schnitzler-kultur", muss @target mit "pmb" gefolgt von einer
                 Ziffernfolge beginnen (z. B. "pmb1234"). </sch:assert>
@@ -345,11 +344,21 @@
                     (matches(@target, '^L\d{5}'))"> Wenn @type = "schnitzler-briefe",
                 muss @target vom Aufbau her »L01234« sein. </sch:assert>
             <sch:assert test="
+                not(@type = 'schnitzler-lektueren') or
+                (@target='Deutschsprachige-Literatur' or @target='Polen-Czechen' or @target='Ungarn-etc.' or @target='Frankreich'  or @target='Italien'  or @target='Spanien'
+                or @target='England'  or @target='Norden'  or @target='Russland'  or @target='Griechenland'
+                )"> Zulässige Werte für Target sind:
+                'Deutschsprachige-Literatur', 'Polen-Czechen', 'Ungarn-etc.', Frankreich, Italien, Spanien,
+                Russland, England, Norden, Griechenland
+            </sch:assert>
+            <sch:assert test="
                     not(@type = 'schnitzler-bahr') or (
                     (matches(@target, '^(D|L)041\d{3}')) or
                     (matches(@target, '^T030\d{3}'))
                     )"> Wenn @type = "schnitzler-bahr", muss @target vom Aufbau her
                 »D041345«, »L041345« oder »T030123« sein. </sch:assert>
+            <sch:assert test="
+                (@type = 'schnitzler-tagebuch' or @type = 'schnitzler-briefe' or @type = 'schnitzler-lektueren' or @type = 'schnitzler-bahr' or @type = 'schnitzler-interviews' or @type = 'schnitzler-kultur' or @type = 'wienerschnitzler')"/>
         </sch:rule>
     </sch:pattern>
     <sch:pattern>
