@@ -18,7 +18,6 @@
     Folgetags, ob er sich drei Tage lang am gleichen Ort aufhält-->
     <xsl:template
         match="tei:correspAction[tei:persName[@ref = 'https://d-nb.info/gnd/118609807' or @ref = '#pmb2121'] and not(tei:placeName) and tei:date]">
-        
         <xsl:variable name="sendedatum" as="xs:date?">
             <xsl:variable name="treffer" select="tei:date/@when"/>
             <xsl:choose>
@@ -96,13 +95,13 @@
                                 </xsl:when>
                                 <xsl:otherwise>
                                     <xsl:variable name="pmb-wert">
-                                        
-                                            <xsl:analyze-string select="$aufenthaltsort-am-sendedatum/tei:idno[@type = 'pmb' or @subtype='pmb'][1]" regex="/(\d+)/">
-                                                <xsl:matching-substring>
-                                                    <xsl:value-of select="regex-group(1)"/>
-                                                </xsl:matching-substring>
-                                            </xsl:analyze-string>
-                                        
+                                        <xsl:analyze-string
+                                            select="$aufenthaltsort-am-sendedatum/tei:idno[@type = 'pmb' or @subtype = 'pmb'][1]"
+                                            regex="/(\d+)/">
+                                            <xsl:matching-substring>
+                                                <xsl:value-of select="regex-group(1)"/>
+                                            </xsl:matching-substring>
+                                        </xsl:analyze-string>
                                     </xsl:variable>
                                     <xsl:value-of select="concat('#pmb', $pmb-wert)"/>
                                 </xsl:otherwise>
@@ -125,9 +124,10 @@
                                     />
                                 </xsl:when>
                                 <xsl:otherwise>
-                                    
                                     <xsl:variable name="pmb-wert">
-                                        <xsl:analyze-string select="$aufenthaltsort-am-sendedatum/tei:idno[@type = 'pmb' or @subtype='pmb'][1]" regex="/(\d+)/">
+                                        <xsl:analyze-string
+                                            select="$aufenthaltsort-am-sendedatum/tei:idno[@type = 'pmb' or @subtype = 'pmb'][1]"
+                                            regex="/(\d+)/">
                                             <xsl:matching-substring>
                                                 <xsl:value-of select="regex-group(1)"/>
                                             </xsl:matching-substring>
@@ -203,13 +203,13 @@
                                         </xsl:when>
                                         <xsl:otherwise>
                                             <xsl:variable name="pmb-wert">
-                                                
-                                                <xsl:analyze-string select="$eintrag/tei:place/tei:idno[@type = 'pmb' and . = $aktuell][1]" regex="/(\d+)/">
-                                                        <xsl:matching-substring>
-                                                            <xsl:value-of select="regex-group(1)"/>
-                                                        </xsl:matching-substring>
-                                                    </xsl:analyze-string>
-                                                
+                                                <xsl:analyze-string
+                                                  select="$eintrag/tei:place/tei:idno[@type = 'pmb' and . = $aktuell][1]"
+                                                  regex="/(\d+)/">
+                                                  <xsl:matching-substring>
+                                                  <xsl:value-of select="regex-group(1)"/>
+                                                  </xsl:matching-substring>
+                                                </xsl:analyze-string>
                                             </xsl:variable>
                                             <xsl:value-of select="concat('#pmb', $pmb-wert)"/>
                                         </xsl:otherwise>
@@ -233,27 +233,30 @@
         <xsl:element name="placeName" namespace="http://www.tei-c.org/ns/1.0"
             inherit-namespaces="true">
             <xsl:copy-of select="@ref | @evidence | @cert"/>
-            <xsl:variable name="nummer" select="substring-after(@ref, 'pmb')"/>
-            <xsl:variable name="eintrag"
-                select="fn:escape-html-uri(concat('https://pmb.acdh.oeaw.ac.at/apis/tei/place/', $nummer))"
-                as="xs:string"/>
+            <xsl:variable name="nummer" select="replace(replace(@ref, 'pmb', ''), '#', '')"/>
             <xsl:choose>
-                <xsl:when test="doc-available($eintrag)">
-                    <xsl:value-of select="document($eintrag)/place/placeName[1]"/>
+                <xsl:when test="$nummer = '50'">
+                    <xsl:text>Wien</xsl:text>
                 </xsl:when>
                 <xsl:otherwise>
-                    <xsl:element name="error" namespace="http://www.tei-c.org/ns/1.0">
-                        <xsl:attribute name="type">
-                            <xsl:text>placeName-nicht-bezogen</xsl:text>
-                        </xsl:attribute>
-                        <xsl:value-of select="$nummer"/>
-                    </xsl:element>
+                    <xsl:variable name="eintrag"
+                        select="fn:escape-html-uri(concat('https://pmb.acdh.oeaw.ac.at/apis/tei/place/', $nummer))"
+                        as="xs:string"/>
+                    <xsl:choose>
+                        <xsl:when test="doc-available($eintrag)">
+                            <xsl:value-of select="document($eintrag)/place/placeName[1]"/>
+                        </xsl:when>
+                        <xsl:otherwise>
+                            <xsl:element name="error" namespace="http://www.tei-c.org/ns/1.0">
+                                <xsl:attribute name="type">
+                                    <xsl:text>placeName-nicht-bezogen</xsl:text>
+                                </xsl:attribute>
+                                <xsl:value-of select="$nummer"/>
+                            </xsl:element>
+                        </xsl:otherwise>
+                    </xsl:choose>
                 </xsl:otherwise>
             </xsl:choose>
         </xsl:element>
     </xsl:template>
-    
-    
-    
-    
 </xsl:stylesheet>

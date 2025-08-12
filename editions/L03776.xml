@@ -1,6 +1,4 @@
-<?xml version='1.0' encoding='UTF-8'?>
-<?xml-model href="../meta/schnitzler-briefe-schematron.sch" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
-<TEI xmlns="http://www.tei-c.org/ns/1.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.tei-c.org/ns/1.0 ../meta/schnitzler-briefe-schema.xsd" xml:id="L03776" xml:base="https://id.acdh.oeaw.ac.at/schnitzler/schnitzler-briefe/editions">
+<?xml version="1.0" encoding="UTF-8"?><?xml-model href="../meta/schnitzler-briefe-schematron.sch" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI xmlns="http://www.tei-c.org/ns/1.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.tei-c.org/ns/1.0 ../meta/schnitzler-briefe-schema.xsd" xml:id="L03776" xml:base="https://id.acdh.oeaw.ac.at/schnitzler/schnitzler-briefe/editions">
    <teiHeader>
       <fileDesc>
          <titleStmt>
@@ -116,14 +114,16 @@
                <date evidence="conjecture" notBefore="1914-11-10" notAfter="1914-11-14">[10. 11. 1914 – 14. 11. 1914?]</date>
                <placeName ref="#pmb50" evidence="conjecture">Wien</placeName>
             </correspAction>
-            <correspContext><ref type="belongsToCorrespondence" target="correspondence_13212">Zweig, Stefan</ref>
+            <correspContext>
+               <ref type="belongsToCorrespondence" target="correspondence_13212">Zweig, Stefan</ref>
                <ref subtype="previous_letter" type="withinCollection" target="L02199">Schnitzler an Brandes, 20. 10. 1914</ref>
                <ref subtype="next_letter" type="withinCollection" target="L03647">Zweig an Schnitzler, [zwischen 14. und
                   27. 11. 1914?]</ref>
                <ref subtype="previous_letter" type="withinCorrespondence" source="correspondence_13212" target="L03777">Schnitzler an Zweig, 4. 9. 1914</ref>
                <ref subtype="next_letter" type="withinCorrespondence" source="correspondence_13212" target="L03647">Zweig an Schnitzler, [zwischen 14. und
                   27. 11. 1914?]</ref>
-            </correspContext></correspDesc>
+            </correspContext>
+         </correspDesc>
       </profileDesc>
       <revisionDesc status="proposed">
          <change who="MAM" when="2025-07-17">Export aus Transkribus</change>
@@ -160,9 +160,9 @@
                   Rolland</rs> anbahnen könne. Ich habe mir erlaubt ihn mit dieser Absicht an sie,
                lieber Herr Doktor, zu weisen und er möchte Sie bitten in obengedachtem Sinn, wenn es
                irgend angeht, <anchor type="commentary" xml:id="K_L03776-2"/>an <rs type="person" ref="#pmb12543">Rolland</rs> zu schreiben<note type="commentary" corresp="K_L03776-2">Am <date>11. 11. 1914</date> (Poststempel) schrieb <rs type="person" ref="#pmb13212">Zweig</rs> an <rs type="person" ref="#pmb12543">Rolland</rs>: »<quote>Ich verständige Sie gleichzeitig, dass ein Versuch einer
-                     neutralen Zeitschrift in der <rs type="work" ref="#pmb43435">Schweiz</rs>
+                     neutralen Zeitschrift in der <rs type="place" ref="#pmb43435">Schweiz</rs>
                      doppelsprachig unternommen werden soll. Professor <rs type="person" ref="#pmb113332">Brockhausen</rs>, ein bekannter Nationalöconom und
-                     Friedensfreund, wird in dieser Sache von <rs type="place" ref="#pmb50">Wien</rs> aus delegiert, er wird sicherlich in der <rs type="work" ref="#pmb43435">Schweiz</rs> auch Ihre Mitarbeit zu werben suchen, und ich
+                     Friedensfreund, wird in dieser Sache von <rs type="place" ref="#pmb50">Wien</rs> aus delegiert, er wird sicherlich in der <rs type="place" ref="#pmb43435">Schweiz</rs> auch Ihre Mitarbeit zu werben suchen, und ich
                      kann Ihnen nur sagen, dass er als rechtlich und tüchtig gilt, seine
                      vortreffliche Absicht nicht zu bezweifeln ist. Die Organisation kann ich nicht
                      beurteilen – hoffentlich setzt er sie Ihnen auseinander.</quote>« (<bibl>
@@ -471,9 +471,6 @@
                <note type="references">None </note>
             </person>
          </listPerson>
-         <listBibl>
-            <error type="bibl">43435</error>
-         </listBibl>
          <listPlace>
             <place xml:id="pmb50">
                <placeName>Wien</placeName>
@@ -542,6 +539,29 @@
                <idno type="URL" subtype="pmb">https://pmb.acdh.oeaw.ac.at/entity/168815/</idno>
                <idno type="URL" subtype="schnitzler-briefe">https://schnitzler-briefe.acdh.oeaw.ac.at/pmb168815.html</idno>
                <idno type="URL" subtype="wienerschnitzler">https://wienerschnitzler.org/pmb168815.html</idno>
+            </place>
+            <place xml:id="pmb43435">
+               <placeName>Schweiz</placeName>
+               <placeName type="ort_namensvariante">Schweizerische Eidgenossenschaft</placeName>
+               <desc type="entity_type">A.PCLI</desc>
+               <desc type="entity_type_id">1107</desc>
+               <location type="coords">
+                  <geo>47,00016 8,01427</geo>
+               </location>
+               <location type="located_in_place">
+                  <placeName ref="pmb468">Europa</placeName>
+                  <geo>48,69096 9,14062</geo>
+               </location>
+               <idno type="URL" subtype="schnitzler-bahr">https://schnitzler-bahr.acdh.oeaw.ac.at/pmb34006.html</idno>
+               <idno type="URL" subtype="geonames">https://sws.geonames.org/2658434/</idno>
+               <idno type="URL" subtype="pmb">https://pmb.acdh.oeaw.ac.at/entity/34006/</idno>
+               <idno type="URL" subtype="pmb">https://pmb.acdh.oeaw.ac.at/entity/43435/</idno>
+               <idno type="URL" subtype="kraus">https://kraus.wienbibliothek.at/register/orte/pmb43435</idno>
+               <idno type="URL" subtype="schnitzler-tagebuch">https://schnitzler-tagebuch.acdh.oeaw.ac.at/pmb43435.html</idno>
+               <idno type="URL" subtype="wikidata">http://www.wikidata.org/entity/Q39</idno>
+               <idno type="URL" subtype="schnitzler-briefe">https://schnitzler-briefe.acdh.oeaw.ac.at/pmb43435.html</idno>
+               <idno type="URL" subtype="wikipedia">https://de.wikipedia.org/wiki/Schweiz</idno>
+               <idno type="URL" subtype="schnitzler-interviews">https://schnitzler-interviews.acdh.oeaw.ac.at/pmb43435.html</idno>
             </place>
          </listPlace>
       </back>
