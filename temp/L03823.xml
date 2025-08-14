@@ -1,13 +1,9 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<?xml-model href="../meta/schnitzler-briefe-schematron.sch" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
-<TEI xmlns="http://www.tei-c.org/ns/1.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-   xsi:schemaLocation="http://www.tei-c.org/ns/1.0 ../meta/schnitzler-briefe-schema.xsd"
-   xml:id="L03823" xml:base="https://id.acdh.oeaw.ac.at/schnitzler/schnitzler-briefe/editions">
+<?xml version="1.0" encoding="UTF-8"?><?xml-model href="../meta/schnitzler-briefe-schematron.sch" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI xmlns="http://www.tei-c.org/ns/1.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.tei-c.org/ns/1.0 ../meta/schnitzler-briefe-schema.xsd" xml:id="L03823" xml:base="https://id.acdh.oeaw.ac.at/schnitzler/schnitzler-briefe/editions">
    <teiHeader>
       <fileDesc>
          <titleStmt>
             <title level="s">Arthur Schnitzler: Briefwechsel mit Autorinnen und Autoren</title>
-            <title level="a">Theodor Herzl an Arthur Schnitzler, 29.&#160;7.&#160;1892</title>
+            <title level="a">Theodor Herzl an Arthur Schnitzler, 29. 7. 1892</title>
             <author ref="#pmb11673">Herzl, Theodor</author>
             <editor>
                <name>Jahnke, Selma</name>
@@ -85,6 +81,7 @@
                               <extent>
                                  <measure unit="seite" quantity="11"/>
                                  <measure unit="blatt" quantity="3"/>
+                                 <measure unit="zeichenanzahl" quantity="8211"/>
                               </extent>
                            </supportDesc>
                         </objectDesc>
@@ -104,12 +101,14 @@
          <correspDesc>
             <correspAction type="sent">
                <persName ref="#pmb11673">Herzl, Theodor</persName>
-               <date when="1892-07-29" n="01">29.&#160;7.&#160;1892</date>
-               <placeName ref="#pmb6304">Houlgate</placeName>
+               <date when="1892-07-29" n="01">29. 7. 1892</date>
+               <placeName ref="#pmb63049">Houlgate</placeName>
             </correspAction>
             <correspAction type="received">
                <persName ref="#pmb2121">Schnitzler, Arthur</persName>
-               <placeName ref="#50" evidence="conjecture">Wien</placeName>
+               <date evidence="conjecture" notBefore="1892-07-30" notAfter="1892-08-03">[30. 7. 1892
+                  – 3. 8. 1892?]</date>
+               <placeName ref="#pmb50" evidence="conjecture">Wien</placeName>
             </correspAction>
          </correspDesc>
       </profileDesc>
@@ -118,23 +117,39 @@
          <change who="SJ" when="2025-08-14">Durchsicht</change>
       </revisionDesc>
    </teiHeader>
+   <facsimile>
+      <graphic url="MS-SCHNITZLER-B-00039-000-00011-2"/>
+      <graphic url="MS-SCHNITZLER-B-00039-000-00012-1"/>
+      <graphic url="MS-SCHNITZLER-B-00039-000-00012-2"/>
+      <graphic url="MS-SCHNITZLER-B-00039-000-00011-1"/>
+      <graphic url="MS-SCHNITZLER-B-00039-000-00013-2"/>
+      <graphic url="MS-SCHNITZLER-B-00039-000-00014-1"/>
+      <graphic url="MS-SCHNITZLER-B-00039-000-00014-2"/>
+      <graphic url="MS-SCHNITZLER-B-00039-000-00013-1"/>
+      <graphic url="MS-SCHNITZLER-B-00039-000-00015"/>
+      <graphic url="MS-SCHNITZLER-B-00039-000-00016-1"/>
+      <graphic url="MS-SCHNITZLER-B-00039-000-00016-2"/>
+   </facsimile>
    <text>
       <body>
          <div type="writingSession" n="1">
-
             <opener>
-               <seg rend="right"><pb facs="MS-SCHNITZLER-B-00039-000-00011-2"/>
-                  <rs type="place" ref="#pmb63049"> Beuzeval-Houlgate</rs><lb/>
-                  <rs type="place" ref="#pmb296559">(Calvados) France</rs><lb/>
-                  <rs type="place" ref="">Villa des oeillets</rs><lb/>
-                  <date> 29/7 92> </date></seg>
+               <seg rend="right">
+                  <pb facs="MS-SCHNITZLER-B-00039-000-00011-2"/>
+                  <rs type="place" ref="#pmb63049">Beuzeval-Houlgate</rs>
+                  <lb/>
+                  <rs type="place" ref="#pmb296559">(Calvados) France</rs>
+                  <lb/>
+                  <rs type="place" ref="">Villa des oeillets</rs>
+                  <lb/>
+                  <date>29/7 92&gt; </date>
+               </seg>
                <salute>Lieber D<hi rend="superscript">r</hi> Schnitzler!</salute>
             </opener>
             <p>D<hi rend="superscript">r</hi>
                <rs type="person" ref="#pmb11485">Goldmann</rs> hat mir eine grosse Freude bereitet,
                als er mir zur Bekanntschaft mit Ihrem »<rs type="work" ref="#pmb29823">Märchen</rs>«
-               verhalf. Wir sassen damals auf der Journalistentribüne des <rs type="work"
-                  ref="#pmb112436">Palais Bourbon,</rs> wohin mich ja der wunderliche Lauf meines
+               verhalf. Wir sassen damals auf der Journalistentribüne des <rs type="place" ref="#pmb112436">Palais Bourbon,</rs> wohin mich ja der wunderliche Lauf meines
                Lebens gebracht hat, u. sprachen von <rs type="place" ref="#pmb50">Wien</rs>, das mir
                mit den Leiden u. Beschwerlichkeiten an denen es für mich so voll war zu verblassen
                beginnt. <rs type="person" ref="#pmb11485">Goldmann</rs> war sehr entzückt von diesem
@@ -148,30 +163,24 @@
                Menschen sehen lassen, der auf allerlei Albernheiten der Gesellschaft herumritt. So
                thöricht und gewissenlos ist unser Urtheil. Vielleicht ist Ihnen auch schon Ähnliches
                passirt – vielleicht sogar mit mir. Ich bin jedenfalls voll von Reue über meine
-               Leichtfertigkeit, u. ich bat Ihnen Alles ab, als ich Ihr <rs type="work"
-                  ref="#pmb29823">Märchen</rs> gelesen hatte. Denn wir, die selber wissen, welche
-               Schmerzen sich uns zum Gedicht verklären, sehen ja auch den <pb
-                  facs="MS-SCHNITZLER-B-00039-000-00012-2"/>Menschen deutlich, der uns das
+               Leichtfertigkeit, u. ich bat Ihnen Alles ab, als ich Ihr <rs type="work" ref="#pmb29823">Märchen</rs> gelesen hatte. Denn wir, die selber wissen, welche
+               Schmerzen sich uns zum Gedicht verklären, sehen ja auch den <pb facs="MS-SCHNITZLER-B-00039-000-00012-2"/>Menschen deutlich, der uns das
                Menschliche erzählt. Der Rückschluss auf den Schreiber – wenigstens auf die Zeit
                seiner Entwicklung, in der es entstand – aus dem Geschriebenen ist ganz untrüglich.
                Und wie ich dieses feine <rs type="work" ref="#pmb29823" subtype="implied">Werk</rs>
                bewegt genoss, hatte ich ungefähr den Gedanken <del rend="strikethrough">, der</del>
-               jenes Sentimentalen, der eines versäumten Weibes gedenkt: <anchor type="commentary"
-                  xml:id="K_L03823-1"/>oh, <foreign xml:lang="fr">toi que j’ eusse aimé - oh toi qui
-                  le savais</foreign><note type="commentary" corresp="K_L03823-1">französisch,
-                  Gedichtzitat nach Baudelaire: »<quote>O Du, den ich geliebt hätte, o Du, der Du es
-                     wußtest!</quote>«, allerdings im Original mit weiblicher Adressatin. <bibl><rs
-                        type="person" ref="#pmb4950">Charles Baudelaire</rs>: À une passante. In:
-                        <rs type="work" ref="#pmb163235">Les fleurs du mal</rs>, <rs type="place"
-                        ref="#pmb182">Paris</rs>: Poulet-Malassis et de Broise <date>1861</date>, N°
-                     XCIII, S. 216–217</bibl>.</note>. Ja, wahrhaftig, Sie hätten sich längst denken
+               jenes Sentimentalen, der eines versäumten Weibes gedenkt: <anchor type="commentary" xml:id="K_L03823-1"/>oh, <foreign xml:lang="fr">toi que j’ eusse aimé - oh toi qui
+                  le savais</foreign>
+               <note type="commentary" corresp="K_L03823-1">französisch, Gedichtzitat nach
+                  Baudelaire: »<quote>O Du, den ich geliebt hätte, o Du, der Du es
+                  wußtest!</quote>«, allerdings im Original an weibliche Adressatin. <bibl>
+                     <rs type="person" ref="#pmb4950">Charles Baudelaire</rs>: À une passante. In:
+                        <rs type="work" ref="#pmb163235">Les fleurs du mal</rs>, <rs type="place" ref="#pmb182">Paris</rs>: Poulet-Malassis et de Broise <date>1861</date>, N°
+                     XCIII, S. 216–217</bibl>.</note>. Ja, wahrhaftig, Sie hätten sich längst denken
                können, dass ich Sie lieben würde, wenn ich das von Ihnen wüsste, was ich jetzt
-               weiss. Dass Sie mich, der ich doch in Ihrem <rs type="place" subtype="implied" ref=""
-                  >Bezirk</rs> wohnte, nicht aufsuchten, ist jetzt für mich eine Beschämung wie wenn
+               weiss. Dass Sie mich, der ich doch in Ihrem <rs type="place" subtype="implied" ref="">Bezirk</rs> wohnte, nicht aufsuchten, ist jetzt für mich eine Beschämung wie wenn
                man nicht zu einem Fest mit Anderen geladen wird, u. es würde mich zur Demuth mahnen
-               wenn ich solcher Winke bedürfte. Denn offenbar haben Sie <pb
-                  facs="MS-SCHNITZLER-B-00039-000-00011-1"/>in meinen <rs type="work" ref=""
-                  >Schmierereien</rs>, die an öffentlicheren Orten erschienen, nie einen solchen Ton
+               wenn ich solcher Winke bedürfte. Denn offenbar haben Sie <pb facs="MS-SCHNITZLER-B-00039-000-00011-1"/>in meinen <rs type="work" ref="">Schmierereien</rs>, die an öffentlicheren Orten erschienen, nie einen solchen Ton
                gefunden, der Ihnen zum Herzen ging. Sie sind zu fein, mein lieber Poet, um in dieser
                Bemerkung nicht genau das zu finden, was sie enthalten soll. Gerade zu solchen
                Leuten, wie Sie sind, hätte ich immer gern gesprochen. Scheint mir nicht gelungen zu
@@ -179,102 +188,856 @@
                Theater, mit dem ich abgeschlossen habe, ist es mir schlecht u. närrisch ergangen.
                   <rs type="work" ref="">Stücke</rs>, an die ich glaubte, in denen ich künstlerisch
                strebte, kamen gar nicht zum Vorschein. Wenn ich in einer gewissen gierigen
-               Verzweiflung zum Handwerk hinabstieg, wurde ich aufgeführt – und <del
-                  rend="strikethrough">von <gap reason="illegible" quantity="">xxxx</gap>
+               Verzweiflung zum Handwerk hinabstieg, wurde ich aufgeführt – und <del rend="strikethrough">von <gap reason="illegible" quantity="4" unit="chars"/>
                </del> verhöhnt. <del rend="strikethrough">
-                  <unclear>xxx xxxxxxx xxxxx xxxxx xxxx xxx xxxx</unclear>
+                  <gap reason="illegible" quantity="3" unit="chars"/>
+                  <space unit="chars" quantity="1"/>
+                  <gap reason="illegible" quantity="6" unit="chars"/> xxxxx xxxxx xxxx xxx xxxx
                </del> wenn ich – was äusserst selten geschieht – an meinen Platz in der deutschen
-               Literaturwelt denke, muss ich ergötzt lachen. Ich stehe weit <page>
-                  <pb facs="MS-SCHNITZLER-B-00039-000-00013-2"/>hinter <rs type="person"
-                     ref="#pmb12974">Triesch</rs>. Muss Ihnen aber sagen, dass ich dadurch nicht
-                  bitter geworden bin. Alle Schmerzen erziehen uns. Und mit einer heiteren
-                  Philosophie, die ich früher nicht kannte, sehe ich dem Treiben auf dem Markt zu.
-                  »Junge«, »Alte«, Realisten, u.s.w. je m’en fous. Wenn ich aber so ein Talent wie
-                  Ihres aufblühen sehe, freue ich mich, wie wenn ich nie ein Literat, das heisst ein
-                  engherziger unduldsamer neidischer boshafter Tropf gewesen wäre, freue mich wie
-                  über die Nelken da unten im Garten, die erwachen. <del rend="strikethrough">
-                     <unclear>Xxxxx xxxxx xxx</unclear>
-                  </del> Nehmen Sie es mir nicht übel, wenn ich so gesetzt spreche, es soll keine
-                  verletzendere Ueberlegenheit sein, als die eines etwas älteren Bruders. Denn Ihre
-                  Art u schreiben muthet mich ganz verwandtschaftlich an. So ungefähr mein Lieber,
-                  hätte ich wol auch <pb facs="MS-SCHNITZLER-B-00039-000-00014-1"/>schreiben mögen.
-                  Wenn ich nicht sehr irre, sind Sie auf dem rechten Weg. Ich hoffe bestimmt, dass
-                  Sie die reizendsten Lustspiele schreiben werden, die wir seit <rs type="person"
-                     ref="#pmb12624">Sardou</rs> hatten. Das ist kein Lapsus. Ich meine nicht den
-                     <rs type="person" ref="#pmb12624">Sardou</rs> der Atrappen, Bühnenmätzchen,
-                  Sarah-Bernhardtrollen u.s.w. sondern den, dessen Ton an einigen Stellen der pattes
-                  de mouche klingt. Werden Sie standhaft sein, sich vom Pöbel der Theater u. von den
-                  Bengeln der Kritik nicht beirren lassen, werden Sie – was ich leider nicht that –
-                  sich selber treu bleiben, so werden Sie der <rs type="person" ref="#pmb296564"
-                     >Alkandi</rs> werden, dessen Lied Alle singen müssen, ob sie wollen oder nicht.
-                  Sie haben ein sehr süsses Lied in der Kehle, mein lieber Schnitzler, vergröbern
-                     <pb facs="MS-SCHNITZLER-B-00039-000-00014-2"/>Sie es um Gotteswillen nicht.
-                  Bleiben Sie nur sich treu. Ich will damit nicht sagen, dass Sie sich in die <rs
-                     type="work" ref="#pmb29935">Anatol</rs>-Manier verbeissen sollen. Ich kenne
-                  einige dieser reizenden Sachen (ich rechnen darauf, dass Sie mir das <rs
-                     type="work" subtype="implied" ref="#pmb29935">Buch</rs> schicken) u. hatte
-                  schon eine kleine Selbstgefälligkeit in diesem charmanten Schwerenötherton
-                  wahrgenommen. Ich zweifle keinen Augenblick daran, dass Sie sich davon freimachen
-                  u. höher, hoch schwingen werden. Ich weiss nicht, wie es dem <rs type="work"
-                     ref="#pmb29823">Märchen</rs> bei der Aufführung gehen wird. Vielleicht
-                  schlecht. Lassen Sie sich dadurch nicht eine Sekunde verwirren. Es ist ein gutes
-                  Stück, dem die Lümmelhaftigkeit von Premièrebesuchern nichts anhaben kann. Man
-                  wird finden, dass es ein nicht neues Problem nicht <pb
-                     facs="MS-SCHNITZLER-B-00039-000-00013-1"/>bühnenmässig energisch genug
-                  behandelt. Speciell die <rs type="place" ref="#pmb166">Franzosen</rs> haben derlei
-                  Conflicte mit der erforderlichen Rücksichtslosigkeit erschöpft. Ich gestehe Ihnen
-                  sogar, dass ich auch von dem Schluss nicht ganz »befriedigt« war – so wahr ist es,
-                  dass wir uns der Rohheit u. Trivialität üblicher Ansichten nie ganz entziehen
-                  können. Ich glaube, ich erwartete etwas Sterben zum Schlusse. Dann aber erinnerte
-                  ich mich der vielen anmuthigen Sachen, die vom Anfang bis zu diesem matten Ende
-                  vorkamen, u. ich dachte <del rend="strikethrough">mir</del> dankbar: Bist doch
-                  mein lieber Poet! Ja, später gab ich Ihnen sogar Recht. So wahrheitsliebend die
-                  kleinen Äusserlichkeiten bis hinunter zum Salon<rs type="place" ref="#pmb50"
-                     >wienerisch</rs> (das ich <date>vor 7 Jahren</date> in einem schlechten <rs
-                     type="work" ref="">Stück</rs> auch versuchte) sind – das <rs type="work" ref=""
-                     >Lustspiel</rs> oder wenn Sie wollen <pb facs="MS-SCHNITZLER-B-00039-000-00015"/>
-                  <rs type="work" ref="">Schauspiel</rs> foutirt sich im Grunde der elenden
-                  Wirklichkeit. Es spielt zwischen Traum u. Erwachen. Und das ist für mich sein
-                  holder Reiz. Und da in diesem Gebiet der Stimmung, halber Farben und des Dämmerns
-                  wäre eine gewaltsam klärende Lösung thöricht u. störend. Ich glaube, Ihr Gefühl
-                  hat Ihnen das Rechte eingegeben. Das Raisonnement hat Unrecht. Man wird auch
-                  sagen: Wo existirt diese Gesellschaft, diese feuilletonredenden Künstler, die mit
-                  Gigerln, zwei ungleichen Schwestern und einem ernstnüchternen Mann im Hause dieser
-                  blinden Mutter verkehren? Ich habe den Eindruck, dass da halbwahre Beobachtungen
-                  vorliegen, getrübt durch literarische Erinnerungen, aber farbig verklärt durch das
-                  liebende Auge eines wirklichen Dichters. Ich vermuthe, dass Sie allmälig auf die
-                  halben Wahrheiten verzichten werden, die nur stören <pb
-                     facs="MS-SCHNITZLER-B-00039-000-00016-1"/>u. dass Sie sich wenn Sie
-                  Empfindungsdramen u. Stimmungslustspiele schreiben, <del rend="strikethrough"
-                     >werden</del> von den kleinen Allotriis des <rs type="place" ref="#pmb50"
-                     >Wiener</rs> Dialects u. dgl. zurückziehen werden. Das ist <anchor
-                     type="commentary" xml:id="K_L03823-2"/>charge d’atelier<note type="commentary"
-                     corresp="K_L03823-2">XXXX</note>, die wahrscheinlich diesmal bei der Aufführung
-                  gut wirken wird, Sie aber nicht verführen soll, hier Ihre Wirkungen zu suchen. Mit
-                  einem Wort, lieber Schnitzler: ich glaube an Sie. Und wenn Sie immer nur zu Ihrem
-                  eigenen Gaudium schreiben werden, so werden Sie uns Andere sehr erfreuen. Ein
-                  abschreckendes Beispiel, wohin die Concessionen führen, sehen Sie an mir. Ich
-                  könnte freilich manchen Umstand meines Lebens als mildernd für meine Irrthümer
-                  anführen, aber wer kümmert sich um Anderes als das vorliegende Werk. Noch möchte
-                  ich wünschen, dass Sie nicht in die Kloaken einer Loterie gerathen, sich von
-                  kleinlichem</page>
-               <page>
-                  <pb facs="MS-SCHNITZLER-B-00039-000-00016-2"/>Lob nicht verzärteln, von
-                  engherzigem Tadel nicht verdrossen machen lassen sollen. Als einem feinen Menschen
-                  wird Ihnen der Schlamm des Theaterlebens manchmal die Galle heben. Man spuckt ans
-                  u. geht weiter. Vorwärts. Ich werde Ihre Fortschritte mit Freude und Theilnahme
-                  verfolgen. Zu weit ins Geschmackvolle glaube ich nicht verirrt zu sein, und wenn
-                  ich, der ich ja auch wie der erstbeste dumme Junge und wie andere durchgefallene
-                  Dramatiker Kritiken schreibe, wenn ich Ihre Sachen mit Wohlgefallen lese, wage ich
-                  zu vermuthen, dass Sie auch einem Publicum gefallen werden. <closer>Ich grüsse Sie
-                     herzlich</closer>
-                  <closer>als Ihr aufrichtig ergebener</closer>
-                  <closer>
-                     <signed>Th. Herzl</signed>
-                  </closer>
-               </page>
-            </p>
+               Literaturwelt denke, muss ich ergötzt lachen. Ich stehe weit <pb facs="MS-SCHNITZLER-B-00039-000-00013-2"/>hinter <rs type="person" ref="#pmb12974">Triesch</rs>. Muss Ihnen aber sagen, dass ich dadurch nicht bitter geworden bin.
+               Alle Schmerzen erziehen uns. Und mit einer heiteren Philosophie, die ich früher nicht
+               kannte, sehe ich dem Treiben auf dem Markt zu. »Junge«, »Alte«, Realisten, u.s.w. je
+               m’en fous. Wenn ich aber so ein Talent wie Ihres aufblühen sehe, freue ich mich, wie
+               wenn ich nie ein Literat, das heisst ein engherziger unduldsamer neidischer boshafter
+               Tropf gewesen wäre, freue mich wie über die Nelken da unten im Garten, die erwachen.
+                  <del rend="strikethrough">
+                  <unclear>Xxxxx xxxxx xxx</unclear>
+               </del> Nehmen Sie es mir nicht übel, wenn ich so gesetzt spreche, es soll keine
+               verletzendere Ueberlegenheit sein, als die eines etwas älteren Bruders. Denn Ihre Art
+               u schreiben muthet mich ganz verwandtschaftlich an. So ungefähr mein Lieber, hätte
+               ich wol auch <pb facs="MS-SCHNITZLER-B-00039-000-00014-1"/>schreiben mögen. Wenn ich
+               nicht sehr irre, sind Sie auf dem rechten Weg. Ich hoffe bestimmt, dass Sie die
+               reizendsten Lustspiele schreiben werden, die wir seit <rs type="person" ref="#pmb12624">Sardou</rs> hatten. Das ist kein Lapsus. Ich meine nicht den <rs type="person" ref="#pmb12624">Sardou</rs> der Atrappen, Bühnenmätzchen,
+               Sarah-Bernhardtrollen u.s.w. sondern den, dessen Ton an einigen Stellen der pattes de
+               mouche klingt. Werden Sie standhaft sein, sich vom Pöbel der Theater u. von den
+               Bengeln der Kritik nicht beirren lassen, werden Sie – was ich leider nicht that –
+               sich selber treu bleiben, so werden Sie der <rs type="person" ref="#pmb296564">Alkandi</rs> werden, dessen Lied Alle singen müssen, ob sie wollen oder nicht.
+               Sie haben ein sehr süsses Lied in der Kehle, mein lieber Schnitzler, vergröbern <pb facs="MS-SCHNITZLER-B-00039-000-00014-2"/>Sie es um Gotteswillen nicht. Bleiben
+               Sie nur sich treu. Ich will damit nicht sagen, dass Sie sich in die <rs type="work" ref="#pmb29935">Anatol</rs>-Manier verbeissen sollen. Ich kenne einige dieser
+               reizenden Sachen (ich rechnen darauf, dass Sie mir das <rs type="work" subtype="implied" ref="#pmb29935">Buch</rs> schicken) u. hatte schon eine kleine
+               Selbstgefälligkeit in diesem charmanten Schwerenötherton wahrgenommen. Ich zweifle
+               keinen Augenblick daran, dass Sie sich davon freimachen u. höher, hoch schwingen
+               werden. Ich weiss nicht, wie es dem <rs type="work" ref="#pmb29823">Märchen</rs> bei
+               der Aufführung gehen wird. Vielleicht schlecht. Lassen Sie sich dadurch nicht eine
+               Sekunde verwirren. Es ist ein gutes Stück, dem die Lümmelhaftigkeit von
+               Premièrebesuchern nichts anhaben kann. Man wird finden, dass es ein nicht neues
+               Problem nicht <pb facs="MS-SCHNITZLER-B-00039-000-00013-1"/>bühnenmässig energisch
+               genug behandelt. Speciell die <rs type="place" ref="#pmb166">Franzosen</rs> haben
+               derlei Conflicte mit der erforderlichen Rücksichtslosigkeit erschöpft. Ich gestehe
+               Ihnen sogar, dass ich auch von dem Schluss nicht ganz »befriedigt« war – so wahr ist
+               es, dass wir uns der Rohheit u. Trivialität üblicher Ansichten nie ganz entziehen
+               können. Ich glaube, ich erwartete etwas Sterben zum Schlusse. Dann aber erinnerte ich
+               mich der vielen anmuthigen Sachen, die vom Anfang bis zu diesem matten Ende vorkamen,
+               u. ich dachte <del rend="strikethrough">mir</del> dankbar: Bist doch mein lieber
+               Poet! Ja, später gab ich Ihnen sogar Recht. So wahrheitsliebend die kleinen
+               Äusserlichkeiten bis hinunter zum Salon<rs type="place" ref="#pmb50">wienerisch</rs>
+               (das ich <date>vor 7 Jahren</date> in einem schlechten <rs type="work" ref="">Stück</rs> auch versuchte) sind – das <rs type="work" ref="">Lustspiel</rs> oder
+               wenn Sie wollen <pb facs="MS-SCHNITZLER-B-00039-000-00015"/>
+               <rs type="work" ref="">Schauspiel</rs> foutirt sich im Grunde der elenden
+               Wirklichkeit. Es spielt zwischen Traum u. Erwachen. Und das ist für mich sein holder
+               Reiz. Und da in diesem Gebiet der Stimmung, halber Farben und des Dämmerns wäre eine
+               gewaltsam klärende Lösung thöricht u. störend. Ich glaube, Ihr Gefühl hat Ihnen das
+               Rechte eingegeben. Das Raisonnement hat Unrecht. Man wird auch sagen: Wo existirt
+               diese Gesellschaft, diese feuilletonredenden Künstler, die mit Gigerln, zwei
+               ungleichen Schwestern und einem ernstnüchternen Mann im Hause dieser blinden Mutter
+               verkehren? Ich habe den Eindruck, dass da halbwahre Beobachtungen vorliegen, getrübt
+               durch literarische Erinnerungen, aber farbig verklärt durch das liebende Auge eines
+               wirklichen Dichters. Ich vermuthe, dass Sie allmälig auf die halben Wahrheiten
+               verzichten werden, die nur stören <pb facs="MS-SCHNITZLER-B-00039-000-00016-1"/>u.
+               dass Sie sich wenn Sie Empfindungsdramen u. Stimmungslustspiele schreiben, <del rend="strikethrough">werden</del> von den kleinen Allotriis des <rs type="place" ref="#pmb50">Wiener</rs> Dialects u. dgl. zurückziehen werden. Das ist <anchor type="commentary" xml:id="K_L03823-2"/>charge d’atelier<note type="commentary" corresp="K_L03823-2">XXXX</note>, die wahrscheinlich diesmal bei der Aufführung
+               gut wirken wird, Sie aber nicht verführen soll, hier Ihre Wirkungen zu suchen. Mit
+               einem Wort, lieber Schnitzler: ich glaube an Sie. Und wenn Sie immer nur zu Ihrem
+               eigenen Gaudium schreiben werden, so werden Sie uns Andere sehr erfreuen. Ein
+               abschreckendes Beispiel, wohin die Concessionen führen, sehen Sie an mir. Ich könnte
+               freilich manchen Umstand meines Lebens als mildernd für meine Irrthümer anführen,
+               aber wer kümmert sich um Anderes als das vorliegende Werk. Noch möchte ich wünschen,
+               dass Sie nicht in die Kloaken einer Loterie gerathen, sich von kleinlichem <pb facs="MS-SCHNITZLER-B-00039-000-00016-2"/>Lob nicht verzärteln, von engherzigem
+               Tadel nicht verdrossen machen lassen sollen. Als einem feinen Menschen wird Ihnen der
+               Schlamm des Theaterlebens manchmal die Galle heben. Man spuckt ans u. geht weiter.
+               Vorwärts. Ich werde Ihre Fortschritte mit Freude und Theilnahme verfolgen. Zu weit
+               ins Geschmackvolle glaube ich nicht verirrt zu sein, und wenn ich, der ich ja auch
+               wie der erstbeste dumme Junge und wie andere durchgefallene Dramatiker Kritiken
+               schreibe, wenn ich Ihre Sachen mit Wohlgefallen lese, wage ich zu vermuthen, dass Sie
+               auch einem Publicum gefallen werden.</p>
+            <closer>Ich grüsse Sie herzlich als Ihr aufrichtig ergebener<lb/>
+               <signed>Th. Herzl</signed>
+            </closer>
          </div>
       </body>
+      <back>
+         <listPerson>
+            <person xml:id="pmb11673">
+               <persName>
+                  <forename>Theodor</forename>
+                  <surname>Herzl</surname>
+               </persName>
+               <persName type="legacy-name-merge">Herzl, Theodor</persName>
+               <birth>
+                  <date when="1860-05-02">1860-05-02</date>
+                  <settlement ref="pmb43471">
+                     <placeName type="pref">Budapest</placeName>
+                     <location>
+                        <geo>47,49835 19,04045</geo>
+                     </location>
+                  </settlement>
+               </birth>
+               <death>
+                  <date when="1904-07-03">1904-07-03</date>
+                  <settlement ref="pmb470">
+                     <placeName type="pref">Edlach</placeName>
+                     <location>
+                        <geo>47,69255 15,80915</geo>
+                     </location>
+                  </settlement>
+               </death>
+               <sex value="male"/>
+               <occupation ref="pmb90">Schriftsteller/Schriftstellerin</occupation>
+               <occupation ref="pmb99">Journalist/Journalistin</occupation>
+               <idno type="URL" subtype="d-nb">https://d-nb.info/gnd/118550241</idno>
+               <idno type="URL" subtype="schnitzler-tagebuch">https://schnitzler-tagebuch.acdh.oeaw.ac.at/person_16165.html</idno>
+               <idno type="URL" subtype="schnitzler-bahr">https://schnitzler-bahr.acdh.oeaw.ac.at/pmb11673.html</idno>
+               <idno type="URL" subtype="pmb">https://pmb.acdh.oeaw.ac.at/entity/11673/</idno>
+               <idno type="URL" subtype="schnitzler-lektueren">https://schnitzler-lektueren.acdh.oeaw.ac.at/pmb11673.html</idno>
+               <idno type="URL" subtype="kraus">https://kraus.wienbibliothek.at/register/personen/pmb11673</idno>
+               <idno type="URL" subtype="fackel">https://fackel.oeaw.ac.at/?p=fackelp41891</idno>
+               <idno type="URL" subtype="doi">https://doi.org/10.1553/0x00281de3</idno>
+               <idno type="URL" subtype="wikidata">http://www.wikidata.org/entity/Q44003</idno>
+               <idno type="URL" subtype="wikipedia">https://de.wikipedia.org/wiki/Theodor_Herzl</idno>
+               <idno type="URL" subtype="geschichtewiki">https://www.geschichtewiki.wien.gv.at/Special:URIResolver/?curid=12784</idno>
+               <idno type="URL" subtype="schnitzler-interviews">https://schnitzler-interviews.acdh.oeaw.ac.at/pmb11673.html</idno>
+               <idno type="URL" subtype="schnitzler-mikrofilme">https://schnitzler-mikrofilme.acdh.oeaw.ac.at/1416430.html?pmb11673</idno>
+               <idno type="URL" subtype="schnitzler-mikrofilme">https://schnitzler-mikrofilme.acdh.oeaw.ac.at/1416431.html?pmb11673</idno>
+               <idno type="URL" subtype="schnitzler-mikrofilme">https://schnitzler-mikrofilme.acdh.oeaw.ac.at/1416432.html?pmb11673</idno>
+               <idno type="URL" subtype="schnitzler-briefe">https://schnitzler-briefe.acdh.oeaw.ac.at/pmb11673.html</idno>
+               <idno type="URL" subtype="pmb">https://pmb.acdh.oeaw.ac.at/entity/160507/</idno>
+               <idno type="URL" subtype="bahr-textverzeichnis">https://bahr-textverzeichnis.acdh.oeaw.ac.at/pmb11673.html</idno>
+               <idno type="URL" subtype="bahr-textverzeichnis">https://bahr-textverzeichnis.acdh.oeaw.ac.at/TSN-listperson.html#pmb11673</idno>
+               <idno type="URL" subtype="stefanzweig">https://www.stefanzweig.digital/o:szd.personen/sdef:TEI/get#SZDPER.606</idno>
+               <idno type="URL" subtype="brenner">https://brenner.oeaw.ac.at/?p=brennerp37542</idno>
+               <idno type="URL" subtype="schaubuehne">https://schaubuehne.oeaw.ac.at/register.html?author=1712</idno>
+               <affiliation notBefore="1881-01-01" when="1881-01-01" notAfter="1881-12-31">
+                  <term ref="pmb1182">arbeitet für</term>
+                  <orgName ref="pmb29294">Albia</orgName>
+                  <idno type="URL" subtype="schnitzler-bahr">https://schnitzler-bahr.acdh.oeaw.ac.at/pmb29294.html</idno>
+                  <idno type="URL" subtype="pmb">https://pmb.acdh.oeaw.ac.at/entity/29294/</idno>
+               </affiliation>
+               <affiliation notBefore="1891-10-01" when="1891-10-01" notAfter="1891-10-31">
+                  <term ref="pmb1182">arbeitet für</term>
+                  <orgName ref="pmb29351">Neue Freie Presse</orgName>
+                  <idno type="URL" subtype="schnitzler-bahr">https://schnitzler-bahr.acdh.oeaw.ac.at/pmb29351.html</idno>
+                  <idno type="URL" subtype="pmb">https://pmb.acdh.oeaw.ac.at/entity/29351/</idno>
+                  <idno type="URL" subtype="kraus">https://kraus.wienbibliothek.at/register/institutionen/pmb29351</idno>
+                  <idno type="URL" subtype="schnitzler-interviews">https://schnitzler-interviews.acdh.oeaw.ac.at/pmb29351.html</idno>
+                  <idno type="URL" subtype="schnitzler-briefe">https://schnitzler-briefe.acdh.oeaw.ac.at/pmb29351.html</idno>
+                  <idno type="URL" subtype="wikidata">http://www.wikidata.org/entity/Q2919142</idno>
+               </affiliation>
+               <affiliation notBefore="1897-01-01" when="1897-01-01" notAfter="1897-12-31">
+                  <term ref="pmb1182">arbeitet für</term>
+                  <orgName ref="pmb29351">Neue Freie Presse</orgName>
+                  <idno type="URL" subtype="schnitzler-bahr">https://schnitzler-bahr.acdh.oeaw.ac.at/pmb29351.html</idno>
+                  <idno type="URL" subtype="pmb">https://pmb.acdh.oeaw.ac.at/entity/29351/</idno>
+                  <idno type="URL" subtype="kraus">https://kraus.wienbibliothek.at/register/institutionen/pmb29351</idno>
+                  <idno type="URL" subtype="schnitzler-interviews">https://schnitzler-interviews.acdh.oeaw.ac.at/pmb29351.html</idno>
+                  <idno type="URL" subtype="schnitzler-briefe">https://schnitzler-briefe.acdh.oeaw.ac.at/pmb29351.html</idno>
+                  <idno type="URL" subtype="wikidata">http://www.wikidata.org/entity/Q2919142</idno>
+               </affiliation>
+               <listEvent>
+                  <event n="Probe" ref="pmb200677" when="1898-02-18">
+                     <desc n="1370">teilgenommen an</desc>
+                     <label>Probe mit Yvette Guilbert, 18.2.1898</label>
+                     <idno type="URL" subtype="pmb">https://pmb.acdh.oeaw.ac.at/entity/200677/</idno>
+                  </event>
+               </listEvent>
+               <note type="references"/>
+               <figure>
+                  <graphic url="https://upload.wikimedia.org/wikipedia/commons/thumb/9/95/Theodor_Herzl.jpg/250px-Theodor_Herzl.jpg"/>
+               </figure>
+            </person>
+            <person xml:id="pmb2121">
+               <persName>
+                  <surname>Schnitzler</surname>
+                  <forename>Arthur</forename>
+               </persName>
+               <birth>
+                  <date when="1862-05-15">15. 5. 1862</date>
+                  <settlement ref="pmb50">
+                     <placeName type="pref">Wien</placeName>
+                     <location>
+                        <geo>48,208333 16,373056</geo>
+                     </location>
+                  </settlement>
+               </birth>
+               <death>
+                  <date when="1931-10-21">21. 10. 1931</date>
+                  <settlement ref="pmb50">
+                     <placeName type="pref">Wien</placeName>
+                     <location>
+                        <geo>48,208333 16,373056</geo>
+                     </location>
+                  </settlement>
+               </death>
+               <sex value="male"/>
+               <occupation ref="pmb90">Schriftsteller*in</occupation>
+               <occupation ref="pmb97">Mediziner*in</occupation>
+               <idno type="gnd">https://d-nb.info/gnd/118609807/</idno>
+            </person>
+            <person xml:id="pmb11485">
+               <persName>
+                  <forename>Paul</forename>
+                  <surname>Goldmann</surname>
+               </persName>
+               <persName type="legacy-name-merge">Goldmann, Paul</persName>
+               <birth>
+                  <date when="1865-01-31">31.01.1865</date>
+                  <settlement ref="pmb677">
+                     <placeName type="pref">Breslau</placeName>
+                     <location>
+                        <geo>51,10773 17,03533</geo>
+                     </location>
+                  </settlement>
+               </birth>
+               <death>
+                  <date when="1935-09-25">25.09.1935</date>
+                  <settlement ref="pmb50">
+                     <placeName type="pref">Wien</placeName>
+                     <location>
+                        <geo>48,208333 16,373056</geo>
+                     </location>
+                  </settlement>
+               </death>
+               <sex value="male"/>
+               <occupation ref="pmb90">Schriftsteller/Schriftstellerin</occupation>
+               <occupation ref="pmb99">Journalist/Journalistin</occupation>
+               <idno type="URL" subtype="d-nb">https://d-nb.info/gnd/116755105</idno>
+               <idno type="URL" subtype="schnitzler-tagebuch">https://schnitzler-tagebuch.acdh.oeaw.ac.at/person_15529.html</idno>
+               <idno type="URL" subtype="schnitzler-bahr">https://schnitzler-bahr.acdh.oeaw.ac.at/pmb11485.html</idno>
+               <idno type="URL" subtype="pmb">https://pmb.acdh.oeaw.ac.at/entity/11485/</idno>
+               <idno type="URL" subtype="schnitzler-lektueren">https://schnitzler-lektueren.acdh.oeaw.ac.at/pmb11485.html</idno>
+               <idno type="URL" subtype="fackel">https://fackel.oeaw.ac.at/?p=fackelp51209</idno>
+               <idno type="URL" subtype="doi">https://doi.org/10.1553/0x0028183c</idno>
+               <idno type="URL" subtype="wikidata">http://www.wikidata.org/entity/Q2059817</idno>
+               <idno type="URL" subtype="wikipedia">https://de.wikipedia.org/wiki/Paul_Goldmann</idno>
+               <idno type="URL" subtype="geschichtewiki">https://www.geschichtewiki.wien.gv.at/Special:URIResolver/?curid=25489</idno>
+               <idno type="URL" subtype="schnitzler-kino">https://schnitzler-kino.acdh.oeaw.ac.at/pmb11485.html</idno>
+               <idno type="URL" subtype="schnitzler-interviews">https://schnitzler-interviews.acdh.oeaw.ac.at/pmb11485.html</idno>
+               <idno type="URL" subtype="schnitzler-mikrofilme">https://schnitzler-mikrofilme.acdh.oeaw.ac.at/1416756.html?pmb11485</idno>
+               <idno type="URL" subtype="schnitzler-briefe">https://schnitzler-briefe.acdh.oeaw.ac.at/pmb11485.html</idno>
+               <idno type="URL" subtype="pmb">https://pmb.acdh.oeaw.ac.at/entity/160242/</idno>
+               <idno type="URL" subtype="bahr-textverzeichnis">https://bahr-textverzeichnis.acdh.oeaw.ac.at/pmb11485.html</idno>
+               <idno type="URL" subtype="bahr-textverzeichnis">https://bahr-textverzeichnis.acdh.oeaw.ac.at/TSN-listperson.html#pmb11485</idno>
+               <affiliation when="1886-01-15">
+                  <term ref="pmb1182">arbeitet für</term>
+                  <orgName ref="pmb29698">An der schönen blauen Donau</orgName>
+                  <idno type="URL" subtype="schnitzler-bahr">https://schnitzler-bahr.acdh.oeaw.ac.at/pmb29698.html</idno>
+                  <idno type="URL" subtype="pmb">https://pmb.acdh.oeaw.ac.at/entity/29698/</idno>
+                  <idno type="URL" subtype="schnitzler-interviews">https://schnitzler-interviews.acdh.oeaw.ac.at/pmb29698.html</idno>
+                  <idno type="URL" subtype="schnitzler-briefe">https://schnitzler-briefe.acdh.oeaw.ac.at/pmb29698.html</idno>
+               </affiliation>
+               <affiliation when="1890-03-17">
+                  <term ref="pmb4232">ist Mitglied bei</term>
+                  <orgName ref="pmb186959">Jung Wien [Ansätze zu einem literarischen Verein]</orgName>
+                  <idno type="URL" subtype="pmb">https://pmb.acdh.oeaw.ac.at/entity/186959/</idno>
+               </affiliation>
+               <affiliation notBefore="1891-01-01" when="1891-01-01" notAfter="1891-01-31">
+                  <term ref="pmb1182">arbeitet für</term>
+                  <orgName ref="pmb29525">Wiener Sonn- und Montagszeitung</orgName>
+                  <idno type="URL" subtype="schnitzler-bahr">https://schnitzler-bahr.acdh.oeaw.ac.at/pmb29525.html</idno>
+                  <idno type="URL" subtype="pmb">https://pmb.acdh.oeaw.ac.at/entity/29525/</idno>
+                  <idno type="URL" subtype="schnitzler-interviews">https://schnitzler-interviews.acdh.oeaw.ac.at/pmb29525.html</idno>
+                  <idno type="URL" subtype="schnitzler-briefe">https://schnitzler-briefe.acdh.oeaw.ac.at/pmb29525.html</idno>
+               </affiliation>
+               <affiliation when="1891-04-01">
+                  <term ref="pmb1182">arbeitet für</term>
+                  <orgName ref="pmb29442">Frankfurter Zeitung</orgName>
+                  <idno type="URL" subtype="schnitzler-bahr">https://schnitzler-bahr.acdh.oeaw.ac.at/pmb29442.html</idno>
+                  <idno type="URL" subtype="pmb">https://pmb.acdh.oeaw.ac.at/entity/29442/</idno>
+                  <idno type="URL" subtype="kraus">https://kraus.wienbibliothek.at/register/institutionen/pmb29442</idno>
+                  <idno type="URL" subtype="schnitzler-interviews">https://schnitzler-interviews.acdh.oeaw.ac.at/pmb29442.html</idno>
+                  <idno type="URL" subtype="schnitzler-briefe">https://schnitzler-briefe.acdh.oeaw.ac.at/pmb29442.html</idno>
+               </affiliation>
+               <affiliation when="1891-12-18">
+                  <term ref="pmb1153">in Bezug zu</term>
+                  <orgName ref="pmb88870">Café de la Paix</orgName>
+                  <idno type="URL" subtype="pmb">https://pmb.acdh.oeaw.ac.at/entity/88870/</idno>
+               </affiliation>
+               <affiliation when="1893-09-12">
+                  <term ref="pmb1153">in Bezug zu</term>
+                  <orgName ref="pmb89851">Hôtel zum goldenen Horn</orgName>
+                  <idno type="URL" subtype="pmb">https://pmb.acdh.oeaw.ac.at/entity/89851/</idno>
+               </affiliation>
+               <affiliation when="1898-10-18">
+                  <term ref="pmb1153">in Bezug zu</term>
+                  <orgName ref="pmb118866">Anping Maru</orgName>
+                  <idno type="URL" subtype="pmb">https://pmb.acdh.oeaw.ac.at/entity/118866/</idno>
+                  <idno type="URL" subtype="schnitzler-briefe">https://schnitzler-briefe.acdh.oeaw.ac.at/pmb118866.html</idno>
+               </affiliation>
+               <affiliation when="1900-01-01">
+                  <term ref="pmb1182">arbeitet für</term>
+                  <orgName ref="pmb29351">Neue Freie Presse</orgName>
+                  <idno type="URL" subtype="schnitzler-bahr">https://schnitzler-bahr.acdh.oeaw.ac.at/pmb29351.html</idno>
+                  <idno type="URL" subtype="pmb">https://pmb.acdh.oeaw.ac.at/entity/29351/</idno>
+                  <idno type="URL" subtype="kraus">https://kraus.wienbibliothek.at/register/institutionen/pmb29351</idno>
+                  <idno type="URL" subtype="schnitzler-interviews">https://schnitzler-interviews.acdh.oeaw.ac.at/pmb29351.html</idno>
+                  <idno type="URL" subtype="schnitzler-briefe">https://schnitzler-briefe.acdh.oeaw.ac.at/pmb29351.html</idno>
+                  <idno type="URL" subtype="wikidata">http://www.wikidata.org/entity/Q2919142</idno>
+               </affiliation>
+               <affiliation notBefore="1918-11-01" when="1918-11-01" notAfter="1918-11-30">
+                  <term ref="pmb1534">unterstützt</term>
+                  <orgName ref="pmb159040">Demokratischer Volksbund</orgName>
+                  <idno type="URL" subtype="pmb">https://pmb.acdh.oeaw.ac.at/entity/159040/</idno>
+               </affiliation>
+               <affiliation>
+                  <term ref="pmb3415">Lernender/Lernende an</term>
+                  <orgName ref="pmb156367">Maria-Magdalenen-Gymnasium</orgName>
+                  <idno type="URL" subtype="pmb">https://pmb.acdh.oeaw.ac.at/entity/156367/</idno>
+                  <idno type="URL" subtype="wikidata">http://www.wikidata.org/entity/Q1297729</idno>
+                  <idno type="URL" subtype="d-nb">https://d-nb.info/gnd/19423-2</idno>
+                  <idno type="URL" subtype="wikipedia">https://de.wikipedia.org/wiki/Maria-Magdalenen-Gymnasium</idno>
+               </affiliation>
+               <affiliation>
+                  <term ref="pmb3415">Lernender/Lernende an</term>
+                  <orgName ref="pmb157549">Universität Breslau</orgName>
+                  <idno type="URL" subtype="pmb">https://pmb.acdh.oeaw.ac.at/entity/157549/</idno>
+                  <idno type="URL" subtype="wikidata">http://www.wikidata.org/entity/Q315658</idno>
+                  <idno type="URL" subtype="d-nb">https://d-nb.info/gnd/1220756-1</idno>
+                  <idno type="URL" subtype="wikipedia">https://de.wikipedia.org/wiki/Universit%C3%A4t_Breslau</idno>
+               </affiliation>
+               <listEvent>
+                  <event n="Private Lesung" ref="pmb186731" when="1889-11-15">
+                     <desc n="1370">teilgenommen an</desc>
+                     <label>Private Lesung von Alkandi’s Lied, 15.11.1889</label>
+                     <idno type="URL" subtype="pmb">https://pmb.acdh.oeaw.ac.at/entity/186731/</idno>
+                  </event>
+                  <event n="Private Lesung" ref="pmb186784" when="1890-02-10">
+                     <desc n="1370">teilgenommen an</desc>
+                     <label>Private Lesung von Anatols Hochzeitsmorgen, Erinnerungen, 10.2.1890</label>
+                     <idno type="URL" subtype="pmb">https://pmb.acdh.oeaw.ac.at/entity/186784/</idno>
+                  </event>
+                  <event n="Vereinstreffen" ref="pmb118221" when="1890-04-02">
+                     <desc n="1256">ist Arbeitskraft bei</desc>
+                     <label>Planung eines Vereins Jung Wien, 2.4.1890</label>
+                     <idno type="URL" subtype="pmb">https://pmb.acdh.oeaw.ac.at/entity/118221/</idno>
+                  </event>
+                  <event n="Theateraufführung" ref="pmb88376" when="1891-01-08">
+                     <desc n="1370">teilgenommen an</desc>
+                     <label>Aufführung von Boccaccio, 8.1.1891</label>
+                     <idno type="URL" subtype="pmb">https://pmb.acdh.oeaw.ac.at/entity/88376/</idno>
+                  </event>
+                  <event n="Vereinstreffen" ref="pmb89146" when="1891-03-17">
+                     <desc n="1370">teilgenommen an</desc>
+                     <label>Gründungstreffen Jung Wien, 17.3.1891</label>
+                     <idno type="URL" subtype="pmb">https://pmb.acdh.oeaw.ac.at/entity/89146/</idno>
+                  </event>
+                  <event n="Vereinstreffen" ref="pmb190527" when="1891-03-23">
+                     <desc n="1370">teilgenommen an</desc>
+                     <label>Zusammenkunft Jung Wien, 23.3.1891</label>
+                     <idno type="URL" subtype="pmb">https://pmb.acdh.oeaw.ac.at/entity/190527/</idno>
+                  </event>
+                  <event n="Theateruraufführung" ref="pmb87976" when="1894-10-31">
+                     <desc n="1370">teilgenommen an</desc>
+                     <label>Uraufführung von Gismonda, 31.10.1894</label>
+                     <idno type="URL" subtype="pmb">https://pmb.acdh.oeaw.ac.at/entity/87976/</idno>
+                  </event>
+                  <event n="Private Lesung" ref="pmb183899" when="1896-08-15">
+                     <desc n="1370">teilgenommen an</desc>
+                     <label>Private Lesung von Freiwild, 15.8.1896</label>
+                     <idno type="URL" subtype="pmb">https://pmb.acdh.oeaw.ac.at/entity/183899/</idno>
+                  </event>
+                  <event n="Theateruraufführung" ref="pmb118148" when="1896-12-03">
+                     <desc n="1370">teilgenommen an</desc>
+                     <label>Uraufführung von Lorenzaccio, 3.12.1896</label>
+                     <idno type="URL" subtype="pmb">https://pmb.acdh.oeaw.ac.at/entity/118148/</idno>
+                  </event>
+                  <event n="Private Lesung" ref="pmb57577" when="1899-01-17">
+                     <desc n="1370">teilgenommen an</desc>
+                     <label>Private Lesung von Der Abenteurer und die Sängerin, 17.1.1899</label>
+                     <idno type="URL" subtype="pmb">https://pmb.acdh.oeaw.ac.at/entity/57577/</idno>
+                  </event>
+                  <event n="Theateruraufführung" ref="pmb143814" when="1900-02-25">
+                     <desc n="1370">teilgenommen an</desc>
+                     <label>Uraufführung von Das tausendjährige Reich, 25.2.1900</label>
+                     <idno type="URL" subtype="pmb">https://pmb.acdh.oeaw.ac.at/entity/143814/</idno>
+                  </event>
+                  <event n="Vortrag" ref="pmb141507" when="1900-03-28">
+                     <desc n="1370">teilgenommen an</desc>
+                     <label>Vortrag von Adele Schreiber über Arthur Schnitzler, 28.3.1900</label>
+                     <idno type="URL" subtype="pmb">https://pmb.acdh.oeaw.ac.at/entity/141507/</idno>
+                  </event>
+                  <event n="Theateruraufführung" ref="pmb141542" when="1900-04-06">
+                     <desc n="1370">teilgenommen an</desc>
+                     <label>Uraufführung von Gevatter Tod, 6.4.1900</label>
+                     <idno type="URL" subtype="pmb">https://pmb.acdh.oeaw.ac.at/entity/141542/</idno>
+                  </event>
+                  <event n="Theateraufführung" ref="pmb141737" when="1900-05-11">
+                     <desc n="1370">teilgenommen an</desc>
+                     <label>Aufführung von Onkel Toni, 11.5.1900</label>
+                     <idno type="URL" subtype="pmb">https://pmb.acdh.oeaw.ac.at/entity/141737/</idno>
+                  </event>
+                  <event n="Theateraufführung" ref="pmb141832" when="1900-10-03">
+                     <desc n="1370">teilgenommen an</desc>
+                     <label>Aufführung von Rosenmontag, 3.10.1900</label>
+                     <idno type="URL" subtype="pmb">https://pmb.acdh.oeaw.ac.at/entity/141832/</idno>
+                  </event>
+                  <event n="Private Lesung" ref="pmb183950" when="1901-08-24">
+                     <desc n="1370">teilgenommen an</desc>
+                     <label>Private Lesung von Lebendige Stunden, Die Frau mit dem Dolche, Literatur, 24.8.1901</label>
+                     <idno type="URL" subtype="pmb">https://pmb.acdh.oeaw.ac.at/entity/183950/</idno>
+                  </event>
+                  <event n="Theateruraufführung" ref="pmb144188" when="1901-11-22">
+                     <desc n="1370">teilgenommen an</desc>
+                     <label>Uraufführung von Alt-Heidelberg, 22.11.1901</label>
+                     <idno type="URL" subtype="pmb">https://pmb.acdh.oeaw.ac.at/entity/144188/</idno>
+                  </event>
+                  <event n="Theateruraufführung" ref="pmb144171" when="1901-11-27">
+                     <desc n="1370">teilgenommen an</desc>
+                     <label>Uraufführung Der rothe Hahn, 27.11.1901</label>
+                     <idno type="URL" subtype="pmb">https://pmb.acdh.oeaw.ac.at/entity/144171/</idno>
+                  </event>
+                  <event n="Theateruraufführung" ref="pmb35104" when="1902-01-04">
+                     <desc n="1370">teilgenommen an</desc>
+                     <label>Uraufführung von Lebendige Stunden, 4.1.1902</label>
+                     <idno type="URL" subtype="pmb">https://pmb.acdh.oeaw.ac.at/entity/35104/</idno>
+                  </event>
+                  <event n="Theaterpremiere" ref="pmb145675" when="1902-10-13">
+                     <desc n="1370">teilgenommen an</desc>
+                     <label>Premiere von Rausch, 13.10.1902</label>
+                     <idno type="URL" subtype="pmb">https://pmb.acdh.oeaw.ac.at/entity/145675/</idno>
+                  </event>
+                  <event n="Theateruraufführung" ref="pmb55527" when="1928-01-05">
+                     <desc n="1370">teilgenommen an</desc>
+                     <label>Uraufführung von Es ist mein Wille, Aufführung von Amphytrion, 5.1.1928</label>
+                     <idno type="URL" subtype="pmb">https://pmb.acdh.oeaw.ac.at/entity/55527/</idno>
+                  </event>
+                  <event n="Theateraufführung" ref="pmb55542" when="1928-01-08">
+                     <desc n="1370">teilgenommen an</desc>
+                     <label>Aufführung von Amphitryon und Es ist mein Wille, 8.1.1928</label>
+                     <idno type="URL" subtype="pmb">https://pmb.acdh.oeaw.ac.at/entity/55542/</idno>
+                  </event>
+               </listEvent>
+            </person>
+            <person xml:id="pmb4950">
+               <persName>
+                  <forename>Charles</forename>
+                  <surname>Baudelaire</surname>
+               </persName>
+               <persName type="legacy-name-merge">Baudelaire, Charles</persName>
+               <birth>
+                  <date when="1821-04-09">1821-04-09</date>
+                  <settlement ref="pmb182">
+                     <placeName type="pref">Paris</placeName>
+                     <location>
+                        <geo>48,85341 2,3488</geo>
+                     </location>
+                  </settlement>
+               </birth>
+               <death>
+                  <date when="1867-08-31">1867-08-31</date>
+                  <settlement ref="pmb182">
+                     <placeName type="pref">Paris</placeName>
+                     <location>
+                        <geo>48,85341 2,3488</geo>
+                     </location>
+                  </settlement>
+               </death>
+               <sex value="male"/>
+               <occupation ref="pmb90">Schriftsteller/Schriftstellerin</occupation>
+               <idno type="URL" subtype="d-nb">https://d-nb.info/gnd/118507184</idno>
+               <idno type="URL" subtype="schnitzler-bahr">https://schnitzler-bahr.acdh.oeaw.ac.at/pmb4950.html</idno>
+               <idno type="URL" subtype="pmb">https://pmb.acdh.oeaw.ac.at/entity/4950/</idno>
+               <idno type="URL" subtype="kraus">https://kraus.wienbibliothek.at/register/personen/pmb4950</idno>
+               <idno type="URL" subtype="fackel">https://fackel.oeaw.ac.at/?p=fackelp39885</idno>
+               <idno type="URL" subtype="wikidata">http://www.wikidata.org/entity/Q501</idno>
+               <idno type="URL" subtype="wikipedia">https://de.wikipedia.org/wiki/Charles_Baudelaire</idno>
+               <idno type="URL" subtype="schnitzler-interviews">https://schnitzler-interviews.acdh.oeaw.ac.at/pmb4950.html</idno>
+               <idno type="URL" subtype="pmb">https://pmb.acdh.oeaw.ac.at/entity/159257/</idno>
+               <idno type="URL" subtype="stefanzweig">https://www.stefanzweig.digital/o:szd.personen/sdef:TEI/get#SZDPER.74</idno>
+               <idno type="URL" subtype="bahr-textverzeichnis">https://bahr-textverzeichnis.acdh.oeaw.ac.at/pmb4950.html</idno>
+               <idno type="URL" subtype="bahr-textverzeichnis">https://bahr-textverzeichnis.acdh.oeaw.ac.at/TSN-listperson.html#pmb4950</idno>
+               <idno type="URL" subtype="brenner">https://brenner.oeaw.ac.at/?p=brennerp1674</idno>
+               <idno type="URL" subtype="schaubuehne">https://schaubuehne.oeaw.ac.at/register.html?author=2516</idno>
+               <note type="references"/>
+               <figure>
+                  <graphic url="https://upload.wikimedia.org/wikipedia/commons/thumb/5/52/Baudelaire_crop.jpg/250px-Baudelaire_crop.jpg"/>
+               </figure>
+            </person>
+            <person xml:id="pmb12974">
+               <persName>
+                  <forename>Friedrich Gustav</forename>
+                  <surname>Triesch</surname>
+               </persName>
+               <persName type="legacy-name-merge">Triesch, Friedrich Gustav</persName>
+               <birth>
+                  <date when="1845-06-16">16.06.1845</date>
+                  <settlement ref="pmb50">
+                     <placeName type="pref">Wien</placeName>
+                     <location>
+                        <geo>48,208333 16,373056</geo>
+                     </location>
+                  </settlement>
+               </birth>
+               <death>
+                  <date when="1907-05-24">24.05.1907</date>
+                  <settlement ref="pmb50">
+                     <placeName type="pref">Wien</placeName>
+                     <location>
+                        <geo>48,208333 16,373056</geo>
+                     </location>
+                  </settlement>
+               </death>
+               <sex value="male"/>
+               <occupation ref="pmb90">Schriftsteller/Schriftstellerin</occupation>
+               <idno type="URL" subtype="d-nb">https://d-nb.info/gnd/117418323</idno>
+               <idno type="URL" subtype="schnitzler-tagebuch">https://schnitzler-tagebuch.acdh.oeaw.ac.at/person_20810.html</idno>
+               <idno type="URL" subtype="schnitzler-bahr">https://schnitzler-bahr.acdh.oeaw.ac.at/pmb12974.html</idno>
+               <idno type="URL" subtype="pmb">https://pmb.acdh.oeaw.ac.at/entity/12974/</idno>
+               <idno type="URL" subtype="fackel">https://fackel.oeaw.ac.at/?p=fackelp43832</idno>
+               <idno type="URL" subtype="wikidata">http://www.wikidata.org/entity/Q55675343</idno>
+               <idno type="URL" subtype="schnitzler-interviews">https://schnitzler-interviews.acdh.oeaw.ac.at/pmb12974.html</idno>
+               <idno type="URL" subtype="schnitzler-briefe">https://schnitzler-briefe.acdh.oeaw.ac.at/pmb12974.html</idno>
+               <idno type="URL" subtype="pmb">https://pmb.acdh.oeaw.ac.at/entity/162565/</idno>
+               <idno type="URL" subtype="bahr-textverzeichnis">https://bahr-textverzeichnis.acdh.oeaw.ac.at/pmb12974.html</idno>
+               <idno type="URL" subtype="bahr-textverzeichnis">https://bahr-textverzeichnis.acdh.oeaw.ac.at/TSN-listperson.html#pmb12974</idno>
+               <affiliation when="1893-04-19">
+                  <term ref="pmb4232">ist Mitglied bei</term>
+                  <orgName ref="pmb29794">Die Saubermänner. Tischgesellschaft</orgName>
+                  <idno type="URL" subtype="schnitzler-bahr">https://schnitzler-bahr.acdh.oeaw.ac.at/pmb29794.html</idno>
+                  <idno type="URL" subtype="pmb">https://pmb.acdh.oeaw.ac.at/entity/29794/</idno>
+                  <idno type="URL" subtype="schnitzler-briefe">https://schnitzler-briefe.acdh.oeaw.ac.at/pmb29794.html</idno>
+               </affiliation>
+               <affiliation>
+                  <term ref="pmb1182">arbeitet für</term>
+                  <orgName ref="pmb29634">Verein der Literaturfreunde</orgName>
+                  <idno type="URL" subtype="schnitzler-bahr">https://schnitzler-bahr.acdh.oeaw.ac.at/pmb29634.html</idno>
+                  <idno type="URL" subtype="pmb">https://pmb.acdh.oeaw.ac.at/entity/29634/</idno>
+                  <idno type="URL" subtype="schnitzler-briefe">https://schnitzler-briefe.acdh.oeaw.ac.at/pmb29634.html</idno>
+               </affiliation>
+               <listEvent>
+                  <event n="Vereinstreffen" ref="pmb94343" when="1893-04-19">
+                     <desc n="1370">teilgenommen an</desc>
+                     <label>Vereinstreffen Saubermänner, 19.4.1893</label>
+                     <idno type="URL" subtype="pmb">https://pmb.acdh.oeaw.ac.at/entity/94343/</idno>
+                  </event>
+                  <event n="Vereinstreffen" ref="pmb184497" when="1894-02-20">
+                     <desc n="1370">teilgenommen an</desc>
+                     <label>Stiftungsfest Saubermänner, 20.2.1894</label>
+                     <idno type="URL" subtype="pmb">https://pmb.acdh.oeaw.ac.at/entity/184497/</idno>
+                  </event>
+                  <event n="Vereinstreffen" ref="pmb184524" when="1894-04-24">
+                     <desc n="1370">teilgenommen an</desc>
+                     <label>Vereinstreffen Saubermänner, 24.4.1894</label>
+                     <idno type="URL" subtype="pmb">https://pmb.acdh.oeaw.ac.at/entity/184524/</idno>
+                  </event>
+               </listEvent>
+               <note type="references"/>
+               <figure>
+                  <graphic url="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a3/Otto_Friedrich_Portrait_of_Friedrich_Gustav_Triesch_1897.jpg/250px-Otto_Friedrich_Portrait_of_Friedrich_Gustav_Triesch_1897.jpg"/>
+               </figure>
+            </person>
+            <person xml:id="pmb12624">
+               <persName>
+                  <forename>Victorien</forename>
+                  <surname>Sardou</surname>
+               </persName>
+               <persName type="legacy-name-merge">Sardou, Victorien</persName>
+               <birth>
+                  <date when="1831-09-07">07.09.1831</date>
+                  <settlement ref="pmb182">
+                     <placeName type="pref">Paris</placeName>
+                     <location>
+                        <geo>48,85341 2,3488</geo>
+                     </location>
+                  </settlement>
+               </birth>
+               <death>
+                  <date when="1908-11-08">08.11.1908</date>
+                  <settlement ref="pmb182">
+                     <placeName type="pref">Paris</placeName>
+                     <location>
+                        <geo>48,85341 2,3488</geo>
+                     </location>
+                  </settlement>
+               </death>
+               <sex value="male"/>
+               <occupation ref="pmb90">Schriftsteller/Schriftstellerin</occupation>
+               <idno type="URL" subtype="d-nb">https://d-nb.info/gnd/118794566</idno>
+               <idno type="URL" subtype="schnitzler-tagebuch">https://schnitzler-tagebuch.acdh.oeaw.ac.at/person_19577.html</idno>
+               <idno type="URL" subtype="schnitzler-bahr">https://schnitzler-bahr.acdh.oeaw.ac.at/pmb12624.html</idno>
+               <idno type="URL" subtype="pmb">https://pmb.acdh.oeaw.ac.at/entity/12624/</idno>
+               <idno type="URL" subtype="schnitzler-lektueren">https://schnitzler-lektueren.acdh.oeaw.ac.at/pmb12624.html</idno>
+               <idno type="URL" subtype="fackel">https://fackel.oeaw.ac.at/?p=fackelp52775</idno>
+               <idno type="URL" subtype="wikidata">http://www.wikidata.org/entity/Q354828</idno>
+               <idno type="URL" subtype="wikipedia">https://de.wikipedia.org/wiki/Victorien_Sardou</idno>
+               <idno type="URL" subtype="schnitzler-kino">https://schnitzler-kino.acdh.oeaw.ac.at/pmb12624.html</idno>
+               <idno type="URL" subtype="schnitzler-interviews">https://schnitzler-interviews.acdh.oeaw.ac.at/pmb12624.html</idno>
+               <idno type="URL" subtype="schnitzler-briefe">https://schnitzler-briefe.acdh.oeaw.ac.at/pmb12624.html</idno>
+               <idno type="URL" subtype="pmb">https://pmb.acdh.oeaw.ac.at/entity/162039/</idno>
+               <idno type="URL" subtype="hanslick">https://hanslick.acdh.oeaw.ac.at/hsl_person_id_3375.html</idno>
+               <idno type="URL" subtype="bahr-textverzeichnis">https://bahr-textverzeichnis.acdh.oeaw.ac.at/pmb12624.html</idno>
+               <idno type="URL" subtype="bahr-textverzeichnis">https://bahr-textverzeichnis.acdh.oeaw.ac.at/TSN-listperson.html#pmb12624</idno>
+               <idno type="URL" subtype="stefanzweig">https://www.stefanzweig.digital/o:szd.personen/sdef:TEI/get#SZDPER.1247</idno>
+               <note type="references"/>
+               <figure>
+                  <graphic url="https://upload.wikimedia.org/wikipedia/commons/thumb/c/c8/VictorienSardou_%28cropped%29.jpg/250px-VictorienSardou_%28cropped%29.jpg"/>
+               </figure>
+            </person>
+            <person xml:id="pmb296564">
+               <persName>
+                  <forename>Yakub</forename>
+                  <surname>Al-Kindi</surname>
+               </persName>
+               <persName type="namensvariante">Abū Yūsuf Yaʿqūb bin Isḥāq al-Kindī</persName>
+               <persName type="person_namensvariante_nachname">Alkendi</persName>
+               <persName type="person_namensvariante_nachname">Alkindus</persName>
+               <persName type="person_namensvariante_nachname">al-Kindī</persName>
+               <persName type="person_namensvariante_vorname">Abū (Yūsuf) Yaʿqūb ibn Ishāq</persName>
+               <birth>
+                  <date notBefore="0800-01-01" when="0800-01-01" notAfter="0800-12-31">800</date>
+                  <settlement ref="pmb296565">
+                     <placeName type="pref">Kufa</placeName>
+                     <location>
+                        <geo>32,03 44,4</geo>
+                     </location>
+                  </settlement>
+               </birth>
+               <death>
+                  <date when="0873-01-01" notAfter="0873-12-31">873</date>
+                  <settlement ref="pmb90298">
+                     <placeName type="pref">Baghdad</placeName>
+                     <location>
+                        <geo>33,34058 44,40088</geo>
+                     </location>
+                  </settlement>
+               </death>
+               <sex value="male"/>
+               <occupation ref="pmb154">Philosoph/Philosophin</occupation>
+               <occupation ref="pmb292">Gelehrter/Gelehrte</occupation>
+               <occupation ref="pmb293">Mathematiker/Mathematikerin</occupation>
+               <occupation ref="pmb344">Musiker/Musikerin</occupation>
+               <occupation ref="pmb1692">Arzt/Ärztin</occupation>
+               <idno type="URL" subtype="pmb">https://pmb.acdh.oeaw.ac.at/entity/296564/</idno>
+               <idno type="URL" subtype="wikidata">http://www.wikidata.org/entity/Q179759</idno>
+               <idno type="URL" subtype="d-nb">https://d-nb.info/gnd/118887947</idno>
+            </person>
+         </listPerson>
+         <listBibl>
+            <bibl xml:id="pmb29823">
+               <title>Das Märchen. Schauspiel in drei Aufzügen</title>
+               <title type="werk_bibliografische-angabe">Arthur Schnitzler: Das Märchen. Schauspiel in drei Aufzügen. Dresden, Leipzig: E. Pierson’s Verlag 1894.</title>
+               <title type="werk_link">https://babel.hathitrust.org/cgi/pt?id=coo.31924026341598&amp;view=1up&amp;seq=5</title>
+               <author ref="" role="hat-geschaffen">Schnitzler, Arthur</author>
+               <date>1893-12-01</date>
+               <idno type="URL" subtype="asaf">https://asaf.com/S.04.01.04</idno>
+               <idno type="URL" subtype="wikidata">http://www.wikidata.org/entity/Q1169917</idno>
+               <idno type="URL" subtype="theadok">https://theadok.at/work/38151</idno>
+               <idno type="URL" subtype="books">https://books.google.at/books?id=eUc8AQAAMAAJ</idno>
+               <idno type="URL" subtype="schnitzler-bahr">https://schnitzler-bahr.acdh.oeaw.ac.at/pmb29823.html</idno>
+               <idno type="URL" subtype="pmb">https://pmb.acdh.oeaw.ac.at/entity/29823/</idno>
+               <idno type="URL" subtype="schnitzler-tagebuch">https://schnitzler-tagebuch.acdh.oeaw.ac.at/pmb29823.html</idno>
+               <idno type="URL" subtype="wikipedia">https://de.wikipedia.org/wiki/Das_M%C3%A4rchen_(Schnitzler)</idno>
+               <idno type="URL" subtype="schnitzler-interviews">https://schnitzler-interviews.acdh.oeaw.ac.at/pmb29823.html</idno>
+               <idno type="URL" subtype="schnitzler-zeitungen">https://schnitzler-zeitungen.acdh.oeaw.ac.at/224002.html?pmb29823</idno>
+               <idno type="URL" subtype="schnitzler-mikrofilme">https://schnitzler-mikrofilme.acdh.oeaw.ac.at/1428157.html?pmb29823</idno>
+               <idno type="URL" subtype="schnitzler-briefe">https://schnitzler-briefe.acdh.oeaw.ac.at/pmb29823.html</idno>
+               <note type="work_kind">Mehraktiges Drama</note>
+            </bibl>
+            <bibl xml:id="pmb163235">
+               <title>Les fleurs du mal</title>
+               <author ref="" role="hat-geschaffen">Baudelaire, Charles</author>
+               <idno type="URL" subtype="pmb">https://pmb.acdh.oeaw.ac.at/entity/163235/</idno>
+               <idno type="URL" subtype="bahr-textverzeichnis">https://bahr-textverzeichnis.acdh.oeaw.ac.at/TSN-listperson.html#pmb163235</idno>
+            </bibl>
+            <bibl xml:id="pmb29935">
+               <title>Anatol</title>
+               <title type="werk_bibliografische-angabe">Arthur Schnitzler: Anatol. Berlin: Bibliographisches Bureau 1892, vordatiert auf 1893</title>
+               <title type="legacy-name-merge">Anatol</title>
+               <author ref="" role="hat-geschaffen">Schnitzler, Arthur</author>
+               <author ref="" role="hat-ein-vorwortnachwort-verfasst-zu">Hofmannsthal, Hugo von</author>
+               <date>1892-10-29</date>
+               <idno type="URL" subtype="asaf">https://asaf.com/S.04.01.03</idno>
+               <idno type="URL" subtype="wikidata">http://www.wikidata.org/entity/Q487409</idno>
+               <idno type="URL" subtype="dracor">https://dracor.org/ger/schnitzler-anatol</idno>
+               <idno type="URL" subtype="theadok">https://theadok.at/work/32630</idno>
+               <idno type="URL" subtype="deutschestextarchiv">http://www.deutschestextarchiv.de/book/view/schnitzler_anatol_1893</idno>
+               <idno type="URL" subtype="schnitzler-bahr">https://schnitzler-bahr.acdh.oeaw.ac.at/pmb29935.html</idno>
+               <idno type="URL" subtype="pmb">https://pmb.acdh.oeaw.ac.at/entity/29935/</idno>
+               <idno type="URL" subtype="schnitzler-tagebuch">https://schnitzler-tagebuch.acdh.oeaw.ac.at/pmb29935.html</idno>
+               <idno type="URL" subtype="wikipedia">https://de.wikipedia.org/wiki/Anatol_(Schauspiel)</idno>
+               <idno type="URL" subtype="schnitzler-interviews">https://schnitzler-interviews.acdh.oeaw.ac.at/pmb29935.html</idno>
+               <idno type="URL" subtype="schnitzler-zeitungen">https://schnitzler-zeitungen.acdh.oeaw.ac.at/223994.html?pmb29935</idno>
+               <idno type="URL" subtype="schnitzler-zeitungen">https://schnitzler-zeitungen.acdh.oeaw.ac.at/223993.html?pmb29935</idno>
+               <idno type="URL" subtype="schnitzler-mikrofilme">https://schnitzler-mikrofilme.acdh.oeaw.ac.at/1428158.html?pmb29935</idno>
+               <idno type="URL" subtype="schnitzler-mikrofilme">https://schnitzler-mikrofilme.acdh.oeaw.ac.at/1428802.html?pmb29935</idno>
+               <idno type="URL" subtype="schnitzler-briefe">https://schnitzler-briefe.acdh.oeaw.ac.at/pmb29935.html</idno>
+               <idno type="URL" subtype="pmb">https://pmb.acdh.oeaw.ac.at/entity/164802/</idno>
+               <idno type="URL" subtype="bahr-textverzeichnis">https://bahr-textverzeichnis.acdh.oeaw.ac.at/TSN-listperson.html#pmb164802</idno>
+               <note type="work_kind">Einakterzyklus</note>
+               <note type="references"/>
+            </bibl>
+         </listBibl>
+         <listPlace>
+            <place xml:id="pmb63049">
+               <placeName>Houlgate</placeName>
+               <desc type="entity_type">P.PPL</desc>
+               <desc type="entity_type_id">1412</desc>
+               <location type="coords">
+                  <geo>49,299 -0,08153</geo>
+               </location>
+               <location type="located_in_place">
+                  <placeName ref="pmb166">Frankreich</placeName>
+                  <geo>46,0 2,0</geo>
+               </location>
+               <idno type="URL" subtype="pmb">https://pmb.acdh.oeaw.ac.at/entity/63049/</idno>
+               <idno type="URL" subtype="geonames">https://sws.geonames.org/3013091/</idno>
+               <idno type="URL" subtype="schnitzler-interviews">https://schnitzler-interviews.acdh.oeaw.ac.at/pmb63049.html</idno>
+               <note type="image">
+                  <figure>
+                     <graphic url="https://iiif.onb.ac.at/images/AKON/AK083_412/412/full/,600/0/native.jpg"/>
+                  </figure>
+               </note>
+            </place>
+            <place xml:id="pmb50">
+               <placeName>Wien</placeName>
+               <placeName type="ort_fruherer-name">K.K. Reichshaupt- und Residenzstadt Wien</placeName>
+               <placeName type="alternative-name">Bécs</placeName>
+               <placeName type="alternative-name">Land Wien</placeName>
+               <placeName type="alternative-name">Vídeň</placeName>
+               <placeName type="alternative-name">Wenia</placeName>
+               <placeName type="alternative-name">Beč</placeName>
+               <placeName type="ort_fruherer-name">Vindobona</placeName>
+               <placeName type="alternative-name">Vienna</placeName>
+               <desc type="entity_type">A.ADM2</desc>
+               <desc type="entity_type_id">1135</desc>
+               <location type="coords">
+                  <geo>48,208333 16,373056</geo>
+               </location>
+               <location type="located_in_place">
+                  <placeName ref="pmb41240">Österreich</placeName>
+                  <geo>47,33333 13,33333</geo>
+               </location>
+               <location type="located_in_place">
+                  <placeName ref="pmb235218">Windmühlhöhe</placeName>
+                  <geo>48,24077 16,32092</geo>
+               </location>
+               <idno type="URL" subtype="geonames">https://sws.geonames.org/2761369/</idno>
+               <idno type="URL" subtype="d-nb">https://d-nb.info/gnd/4066009-6</idno>
+               <idno type="URL" subtype="schnitzler-bahr">https://schnitzler-bahr.acdh.oeaw.ac.at/pmb50.html</idno>
+               <idno type="URL" subtype="pmb">https://pmb.acdh.oeaw.ac.at/entity/50/</idno>
+               <idno type="URL" subtype="pmb">https://pmb.acdh.oeaw.ac.at/entity/2316/</idno>
+               <idno type="URL" subtype="pmb">https://pmb.acdh.oeaw.ac.at/entity/20954/</idno>
+               <idno type="URL" subtype="pmb">https://pmb.acdh.oeaw.ac.at/entity/65221/</idno>
+               <idno type="URL" subtype="pmb">https://pmb.acdh.oeaw.ac.at/entity/65223/</idno>
+               <idno type="URL" subtype="kraus">https://kraus.wienbibliothek.at/register/orte/pmb50</idno>
+               <idno type="URL" subtype="wikidata">http://www.wikidata.org/entity/Q1741</idno>
+               <idno type="URL" subtype="wikipedia">https://de.wikipedia.org/wiki/Wien</idno>
+               <idno type="URL" subtype="schnitzler-interviews">https://schnitzler-interviews.acdh.oeaw.ac.at/pmb50.html</idno>
+               <idno type="URL" subtype="geonames">https://sws.geonames.org/2761333/</idno>
+               <idno type="URL" subtype="pmb">https://pmb.acdh.oeaw.ac.at/entity/33999/</idno>
+               <idno type="URL" subtype="schnitzler-tagebuch">https://schnitzler-tagebuch.acdh.oeaw.ac.at/pmb50.html</idno>
+               <idno type="URL" subtype="schnitzler-briefe">https://schnitzler-briefe.acdh.oeaw.ac.at/pmb50.html</idno>
+               <note type="image">
+                  <figure>
+                     <graphic url="https://iiif.onb.ac.at/images/AKON/AK117_016/016/full/,600/0/native.jpg"/>
+                  </figure>
+               </note>
+            </place>
+            <place xml:id="pmb296559">
+               <placeName>Calvados</placeName>
+               <desc type="entity_type">Bezirk (A.BZK)</desc>
+               <desc type="entity_type_id">25</desc>
+               <location type="coords">
+                  <geo>49,033333333333 0,25</geo>
+               </location>
+               <location type="located_in_place">
+                  <placeName ref="pmb166">Frankreich</placeName>
+                  <geo>46,0 2,0</geo>
+               </location>
+               <idno type="URL" subtype="pmb">https://pmb.acdh.oeaw.ac.at/entity/296559/</idno>
+               <idno type="URL" subtype="wikidata">http://www.wikidata.org/entity/Q3249</idno>
+               <idno type="URL" subtype="d-nb">https://d-nb.info/gnd/4197801-8</idno>
+               <idno type="URL" subtype="geonames">https://sws.geonames.org/3029094/</idno>
+            </place>
+            <place xml:id="pmb112436">
+               <placeName>Palais Bourbon</placeName>
+               <desc type="entity_type">Regierungsgebäude (K.RGB)</desc>
+               <desc type="entity_type_id">54</desc>
+               <location type="coords">
+                  <geo>48,861903 2,318648</geo>
+               </location>
+               <location type="located_in_place">
+                  <placeName ref="pmb141464">7. Arrondissement (Palais-Bourbon)</placeName>
+                  <geo>48,8565 2,321</geo>
+               </location>
+               <location type="located_in_place">
+                  <placeName ref="pmb182">Paris</placeName>
+                  <geo>48,85341 2,3488</geo>
+               </location>
+               <idno type="URL" subtype="pmb">https://pmb.acdh.oeaw.ac.at/entity/112436/</idno>
+               <idno type="URL" subtype="geonames">https://sws.geonames.org/8299342/</idno>
+               <idno type="URL" subtype="d-nb">https://d-nb.info/gnd/4342820-4</idno>
+               <idno type="URL" subtype="wikidata">http://www.wikidata.org/entity/Q936633</idno>
+               <idno type="URL" subtype="wikipedia">https://de.wikipedia.org/wiki/Palais_Bourbon</idno>
+               <idno type="URL" subtype="schnitzler-briefe">https://schnitzler-briefe.acdh.oeaw.ac.at/pmb112436.html</idno>
+               <note type="image">
+                  <figure>
+                     <graphic url="https://iiif.onb.ac.at/images/AKON/AK074_540/540/full/,600/0/native.jpg"/>
+                  </figure>
+               </note>
+            </place>
+            <place xml:id="pmb182">
+               <placeName>Paris</placeName>
+               <placeName type="alternative-name">P'ariz</placeName>
+               <placeName type="alternative-name">Pariž</placeName>
+               <placeName type="alternative-name">Parisius</placeName>
+               <placeName type="alternative-name">Île-de-France</placeName>
+               <desc type="entity_type">P.PPLC</desc>
+               <desc type="entity_type_id">1418</desc>
+               <location type="coords">
+                  <geo>48,85341 2,3488</geo>
+               </location>
+               <location type="located_in_place">
+                  <placeName ref="pmb166">Frankreich</placeName>
+                  <geo>46,0 2,0</geo>
+               </location>
+               <idno type="URL" subtype="schnitzler-bahr">https://schnitzler-bahr.acdh.oeaw.ac.at/pmb182.html</idno>
+               <idno type="URL" subtype="d-nb">https://d-nb.info/gnd/4044660-8</idno>
+               <idno type="URL" subtype="pmb">https://pmb.acdh.oeaw.ac.at/entity/182/</idno>
+               <idno type="URL" subtype="pmb">https://pmb.acdh.oeaw.ac.at/entity/64183/</idno>
+               <idno type="URL" subtype="geonames">https://sws.geonames.org/2988507/</idno>
+               <idno type="URL" subtype="kraus">https://kraus.wienbibliothek.at/register/orte/pmb182</idno>
+               <idno type="URL" subtype="wikidata">http://www.wikidata.org/entity/Q90</idno>
+               <idno type="URL" subtype="wikipedia">https://de.wikipedia.org/wiki/Paris</idno>
+               <idno type="URL" subtype="schnitzler-interviews">https://schnitzler-interviews.acdh.oeaw.ac.at/pmb182.html</idno>
+               <idno type="URL" subtype="schnitzler-tagebuch">https://schnitzler-tagebuch.acdh.oeaw.ac.at/pmb182.html</idno>
+               <idno type="URL" subtype="schnitzler-briefe">https://schnitzler-briefe.acdh.oeaw.ac.at/pmb182.html</idno>
+               <idno type="URL" subtype="wienerschnitzler">https://wienerschnitzler.org/pmb182.html</idno>
+               <note type="image">
+                  <figure>
+                     <graphic url="https://iiif.onb.ac.at/images/AKON/AK073_094/094/full/,600/0/native.jpg"/>
+                  </figure>
+               </note>
+            </place>
+            <place xml:id="pmb166">
+               <placeName>Frankreich</placeName>
+               <placeName type="alternative-name">France</placeName>
+               <desc type="entity_type">A.PCLI</desc>
+               <desc type="entity_type_id">1107</desc>
+               <location type="coords">
+                  <geo>46,0 2,0</geo>
+               </location>
+               <location type="located_in_place">
+                  <placeName ref="pmb468">Europa</placeName>
+                  <geo>48,69096 9,14062</geo>
+               </location>
+               <idno type="URL" subtype="wikidata">http://www.wikidata.org/entity/Q142</idno>
+               <idno type="URL" subtype="schnitzler-bahr">https://schnitzler-bahr.acdh.oeaw.ac.at/pmb166.html</idno>
+               <idno type="URL" subtype="geonames">https://sws.geonames.org/3017382/</idno>
+               <idno type="URL" subtype="pmb">https://pmb.acdh.oeaw.ac.at/entity/166/</idno>
+               <idno type="URL" subtype="wikipedia">https://de.wikipedia.org/wiki/Frankreich</idno>
+               <idno type="URL" subtype="schnitzler-interviews">https://schnitzler-interviews.acdh.oeaw.ac.at/pmb166.html</idno>
+               <idno type="URL" subtype="schnitzler-tagebuch">https://schnitzler-tagebuch.acdh.oeaw.ac.at/pmb166.html</idno>
+               <idno type="URL" subtype="schnitzler-briefe">https://schnitzler-briefe.acdh.oeaw.ac.at/pmb166.html</idno>
+            </place>
+         </listPlace>
+      </back>
    </text>
 </TEI>
