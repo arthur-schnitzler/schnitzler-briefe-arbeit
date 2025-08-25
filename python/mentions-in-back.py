@@ -12,16 +12,11 @@ os.makedirs("./temp-indices", exist_ok=True)
 
 # Zu verarbeitende Elemente und Zieldateien
 targets = [
-    ("persName", "./temp-indices/mentioned-persons.xml", 
-     "./tei:listPerson/tei:person[not(ancestor::tei:back[position()>1])]"),
-    ("placeName", "./temp-indices/mentioned-places.xml", 
-     "./tei:listPlace/tei:place[not(ancestor::tei:back[position()>1])]"),
-    ("orgName", "./temp-indices/mentioned-orgs.xml", 
-     "./tei:listOrg/tei:org[not(ancestor::tei:back[position()>1])]"),
-    ("work", "./temp-indices/mentioned-bibl.xml", 
-     "./tei:listBibl/tei:bibl[not(ancestor::tei:back[position()>1])]"),
-    ("event", "./temp-indices/mentioned-event.xml", 
-     "./tei:listEvent/tei:event[not(ancestor::tei:back[position()>1])]")
+    ("persName", "./temp-indices/mentioned-persons.xml"),
+    ("placeName", "./temp-indices/mentioned-places.xml"),
+    ("orgName", "./temp-indices/mentioned-orgs.xml"),
+    ("work", "./temp-indices/mentioned-bibl.xml"),
+    ("event", "./temp-indices/mentioned-event.xml")
 ]
 
 # Hilfsfunktion: XML schön formatieren
@@ -37,7 +32,7 @@ work_ids = set()
 # Verarbeitung aller L*.xml Dateien in ./editions/
 xml_files = glob.glob("./editions/L*.xml")
 
-for tag_name, output_filename, xpath in targets:
+for tag_name, output_filename in targets:
     keys = set()
 
     for xml_file in xml_files:
@@ -49,17 +44,54 @@ for tag_name, output_filename, xpath in targets:
             back_elements = root.findall(".//tei:back", namespaces=NS)
             
             for back in back_elements:
-                # Standardverhalten für alle Elemente (inkl. bibl)
-                for elem in back.findall(xpath, namespaces=NS):
-                    # Versuche zuerst 'key', dann 'ref', dann 'xml:id' Attribut
-                    key = elem.get("key") or elem.get("ref") or elem.get("{http://www.w3.org/XML/1998/namespace}id")
-                    if key and key.startswith("pmb"):
-                        clean_key = key.replace("pmb", "", 1)
-                        keys.add(clean_key)
-                        
-                        # Für Werke auch zur work_ids Liste hinzufügen
-                        if tag_name == "work":
-                            work_ids.add(clean_key)
+                # Spezielle Behandlung für alle Entitätstypen - nur direkte Kinder berücksichtigen
+                # Alle verschachtelten Entitäten in person/bibl/place/org-Elementen ignorieren
+                
+                if tag_name == "persName":
+                    # Nur direkte tei:listPerson/tei:person (nicht verschachtelt)
+                    for list_person in back.findall("./tei:listPerson", namespaces=NS):
+                        for elem in list_person.findall("./tei:person", namespaces=NS):
+                            key = elem.get("key") or elem.get("ref") or elem.get("{http://www.w3.org/XML/1998/namespace}id")
+                            if key and key.startswith("pmb"):
+                                clean_key = key.replace("pmb", "", 1)
+                                keys.add(clean_key)
+                
+                elif tag_name == "work":
+                    # Nur direkte tei:listBibl/tei:bibl (nicht verschachtelt)
+                    for list_bibl in back.findall("./tei:listBibl", namespaces=NS):
+                        for elem in list_bibl.findall("./tei:bibl", namespaces=NS):
+                            key = elem.get("key") or elem.get("ref") or elem.get("{http://www.w3.org/XML/1998/namespace}id")
+                            if key and key.startswith("pmb"):
+                                clean_key = key.replace("pmb", "", 1)
+                                keys.add(clean_key)
+                                work_ids.add(clean_key)
+                
+                elif tag_name == "placeName":
+                    # Nur direkte tei:listPlace/tei:place (nicht verschachtelt)
+                    for list_place in back.findall("./tei:listPlace", namespaces=NS):
+                        for elem in list_place.findall("./tei:place", namespaces=NS):
+                            key = elem.get("key") or elem.get("ref") or elem.get("{http://www.w3.org/XML/1998/namespace}id")
+                            if key and key.startswith("pmb"):
+                                clean_key = key.replace("pmb", "", 1)
+                                keys.add(clean_key)
+                
+                elif tag_name == "orgName":
+                    # Nur direkte tei:listOrg/tei:org (nicht verschachtelt)
+                    for list_org in back.findall("./tei:listOrg", namespaces=NS):
+                        for elem in list_org.findall("./tei:org", namespaces=NS):
+                            key = elem.get("key") or elem.get("ref") or elem.get("{http://www.w3.org/XML/1998/namespace}id")
+                            if key and key.startswith("pmb"):
+                                clean_key = key.replace("pmb", "", 1)
+                                keys.add(clean_key)
+                
+                elif tag_name == "event":
+                    # Nur direkte tei:listEvent/tei:event (nicht in person/bibl/place/org verschachtelt)
+                    for list_event in back.findall("./tei:listEvent", namespaces=NS):
+                        for elem in list_event.findall("./tei:event", namespaces=NS):
+                            key = elem.get("key") or elem.get("ref") or elem.get("{http://www.w3.org/XML/1998/namespace}id")
+                            if key and key.startswith("pmb"):
+                                clean_key = key.replace("pmb", "", 1)
+                                keys.add(clean_key)
 
         except ET.ParseError as e:
             print(f"Fehler beim Parsen von {xml_file}: {e}")
