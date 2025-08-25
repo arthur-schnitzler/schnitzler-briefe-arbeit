@@ -13,15 +13,15 @@ os.makedirs("./temp-indices", exist_ok=True)
 # Zu verarbeitende Elemente und Zieldateien
 targets = [
     ("persName", "./temp-indices/mentioned-persons.xml", 
-     "./tei:listPerson/tei:person"),
+     "./tei:listPerson/tei:person[not(ancestor::tei:back[position()>1])]"),
     ("placeName", "./temp-indices/mentioned-places.xml", 
-     "./tei:listPlace/tei:place"),
+     "./tei:listPlace/tei:place[not(ancestor::tei:back[position()>1])]"),
     ("orgName", "./temp-indices/mentioned-orgs.xml", 
-     "./tei:listOrg/tei:org"),
+     "./tei:listOrg/tei:org[not(ancestor::tei:back[position()>1])]"),
     ("work", "./temp-indices/mentioned-bibl.xml", 
-     "./tei:listBibl/tei:bibl"),
+     "./tei:listBibl/tei:bibl[not(ancestor::tei:back[position()>1])]"),
     ("event", "./temp-indices/mentioned-event.xml", 
-     "./tei:listEvent/tei:event")
+     "./tei:listEvent/tei:event[not(ancestor::tei:back[position()>1])]")
 ]
 
 # Hilfsfunktion: XML schön formatieren

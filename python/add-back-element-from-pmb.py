@@ -41,15 +41,15 @@ class PMBProcessor:
                     
                     # Find all entities in the file
                     if pmb_type == "person":
-                        entities = root.findall(".//tei:person", self.ns)
+                        entities = root.findall(".//tei:person[not(ancestor::tei:back)]", self.ns)
                     elif pmb_type == "bibl":
-                        entities = root.findall(".//tei:bibl", self.ns)
+                        entities = root.findall(".//tei:bibl[not(ancestor::tei:back)]", self.ns)
                     elif pmb_type == "place":
-                        entities = root.findall(".//tei:place", self.ns)
+                        entities = root.findall(".//tei:place[not(ancestor::tei:back)]", self.ns)
                     elif pmb_type == "org":
-                        entities = root.findall(".//tei:org", self.ns)
+                        entities = root.findall(".//tei:org[not(ancestor::tei:back)]", self.ns)
                     elif pmb_type == "event":
-                        entities = root.findall(".//tei:event", self.ns)
+                        entities = root.findall(".//tei:event[not(ancestor::tei:back)]", self.ns)
                     
                     for entity in entities:
                         xml_id = entity.get(f"{{{self.xml_ns}}}id")
