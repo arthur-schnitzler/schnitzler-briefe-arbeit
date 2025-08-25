@@ -1,6 +1,4 @@
-<?xml version='1.0' encoding='UTF-8'?>
-<?xml-model href="../meta/schnitzler-briefe-schematron.sch" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
-<TEI xmlns="http://www.tei-c.org/ns/1.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.tei-c.org/ns/1.0 ../meta/schnitzler-briefe-schema.xsd" xml:id="L03800" xml:base="https://id.acdh.oeaw.ac.at/schnitzler/schnitzler-briefe/editions">
+<?xml version="1.0" encoding="UTF-8"?><?xml-model href="../meta/schnitzler-briefe-schematron.sch" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI xmlns="http://www.tei-c.org/ns/1.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.tei-c.org/ns/1.0 ../meta/schnitzler-briefe-schema.xsd" xml:id="L03800" xml:base="https://id.acdh.oeaw.ac.at/schnitzler/schnitzler-briefe/editions">
    <teiHeader>
       <fileDesc>
          <titleStmt>
@@ -121,16 +119,20 @@
                <date evidence="conjecture" notBefore="1908-07-06" notAfter="1908-07-10">[6. 7. 1908 – 10. 7. 1908?]</date>
                <placeName ref="#pmb50">Wien</placeName>
             </correspAction>
-         <correspContext><ref type="belongsToCorrespondence" target="correspondence_13212">Zweig, Stefan</ref>
+            <correspContext>
+               <ref type="belongsToCorrespondence" target="correspondence_13212">Zweig, Stefan</ref>
                <ref subtype="previous_letter" type="withinCollection" target="L01779">Schnitzler an Brandes, 4. 7. 1908</ref>
                <ref subtype="next_letter" type="withinCollection" target="L03497">Salten an Schnitzler, 5. 7. 1908</ref>
                <ref subtype="previous_letter" type="withinCorrespondence" source="correspondence_13212" target="L03810">Schnitzler an Zweig, 5. 6. 1908</ref>
                <ref subtype="next_letter" type="withinCorrespondence" source="correspondence_13212" target="L03801">Schnitzler an Zweig, 22. 10. 1908</ref>
-            </correspContext></correspDesc>
+            </correspContext>
+         </correspDesc>
       </profileDesc>
-      <revisionDesc status="proposed">
+      <revisionDesc status="candidate">
          <change who="MAM" when="2025-07-17">Export aus Transkribus</change>
          <change who="MAM" when="2025-08-11">Durchsicht</change>
+         <change who="MAM" when="2025-08-25">Index check</change>
+         <change who="MAM" when="2025-08-25">Durchsicht</change>
       </revisionDesc>
    </teiHeader>
    <facsimile>
@@ -143,12 +145,16 @@
          <div type="address">
             <address>
                <addrLine>
-                  <pb facs="0011_FL81799686"/><hi rend="latintype">Dr. Stefan Zweig</hi></addrLine>
+                  <pb facs="0011_FL81799686"/>
+                  <hi rend="latintype">Dr. Stefan Zweig</hi>
+               </addrLine>
                <addrLine>
                   <rs type="place" ref="#pmb58">Wien VIII</rs>
                </addrLine>
                <addrLine>
-                  <rs type="place" ref="#pmb249577"><hi rend="latintype">Kochgasse 8</hi></rs>
+                  <rs type="place" ref="#pmb249577">
+                     <hi rend="latintype">Kochgasse 8</hi>
+                  </rs>
                </addrLine>
             </address>
          </div>
@@ -159,7 +165,7 @@
                   <hi rend="pre-print">
                      <rs type="place" ref="#pmb296521">Santnerspitze</rs>
                   </hi>
-                  <space unit="chars" quantity="10"/>
+                  <space unit="chars" quantity="5"/>
                   <hi rend="pre-print">
                      <rs type="place" ref="#pmb296523">Burgstall</rs>
                   </hi>
@@ -172,7 +178,7 @@
             </seg>
             <p rend="center">
                <hi rend="pre-print">
-                  <rs type="place" ref="#pmb969">Tirol</rs>: <rs type="place" ref="#pmb467">Seis am Schlern</rs>, 1000m. Nach dem <rs type="work" ref="#pmb51884" subtype="implied">Aquarell</rs> von <rs type="person" ref="#pmb27687">F. A. C. M. Reisch</rs>,
+                  <rs type="place" ref="#pmb969">Tirol</rs>: <rs type="place" ref="#pmb988">Seis am Schlern</rs>, 1000m. Nach dem <rs type="work" ref="#pmb51884" subtype="implied">Aquarell</rs> von <rs type="person" ref="#pmb27687">F. A. C. M. Reisch</rs>,
                      <rs type="place" ref="#pmb43520">Meran</rs>.</hi>
             </p>
          </div>
@@ -185,7 +191,9 @@
             </opener>
             <p>herzlichen Dank, <salute>lieber Herr Doktor,</salute> für das <anchor type="commentary" xml:id="K_L03800-1"/>
                <rs type="work" ref="#pmb296135" subtype="implied">
-                  <rs type="person" ref="#pmb10825">Balzac</rs>-Büchlein</rs>
+                  <hi rend="latintype">
+                     <rs type="person" ref="#pmb10825">Balzac</rs>
+                  </hi>-Büchlein</rs>
                <note type="commentary" corresp="K_L03800-1">
                   <bibl>
                      <rs type="person" ref="#pmb13212">Stefan Zweig</rs>:
@@ -634,8 +642,8 @@
             <place xml:id="pmb296521">
                <placeName>Punta Santner</placeName>
                <placeName type="ort_namensvariante">Santnerspitze</placeName>
-               <desc type="entity_type">Berg (N.BRG)</desc>
-               <desc type="entity_type_id">28</desc>
+               <desc type="entity_type">T.PK</desc>
+               <desc type="entity_type_id">1621</desc>
                <location type="coords">
                   <geo>46,525332 11,570442</geo>
                </location>
@@ -646,6 +654,7 @@
                <idno type="URL" subtype="pmb">https://pmb.acdh.oeaw.ac.at/entity/296521/</idno>
                <idno type="URL" subtype="wikidata">http://www.wikidata.org/entity/Q28668217</idno>
                <idno type="URL" subtype="geonames">https://sws.geonames.org/6697113/</idno>
+               <idno type="URL" subtype="wikipedia">https://de.wikipedia.org/wiki/Santnerspitze</idno>
             </place>
             <place xml:id="pmb296523">
                <placeName>Burgstall</placeName>
@@ -700,22 +709,6 @@
                <idno type="URL" subtype="wikipedia">https://de.wikipedia.org/wiki/S%C3%BCdtirol</idno>
                <idno type="URL" subtype="schnitzler-tagebuch">https://schnitzler-tagebuch.acdh.oeaw.ac.at/pmb969.html</idno>
                <idno type="URL" subtype="schnitzler-briefe">https://schnitzler-briefe.acdh.oeaw.ac.at/pmb969.html</idno>
-            </place>
-            <place xml:id="pmb467">
-               <placeName>Villa Heufler</placeName>
-               <desc type="entity_type">Beherbergungsgebäude (K.BHB)</desc>
-               <desc type="entity_type_id">42</desc>
-               <location type="coords">
-                  <geo>46,54555 11,560026</geo>
-               </location>
-               <location type="located_in_place">
-                  <placeName ref="pmb988">Seis am Schlern</placeName>
-                  <geo>46,54133 11,55868</geo>
-               </location>
-               <idno type="URL" subtype="schnitzler-bahr">https://schnitzler-bahr.acdh.oeaw.ac.at/pmb467.html</idno>
-               <idno type="URL" subtype="pmb">https://pmb.acdh.oeaw.ac.at/entity/467/</idno>
-               <idno type="URL" subtype="schnitzler-briefe">https://schnitzler-briefe.acdh.oeaw.ac.at/pmb467.html</idno>
-               <idno type="URL" subtype="wienerschnitzler">https://wienerschnitzler.org/pmb467.html</idno>
             </place>
             <place xml:id="pmb43520">
                <placeName>Meran</placeName>
