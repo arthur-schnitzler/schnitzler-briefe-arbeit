@@ -16,7 +16,7 @@ targets = [
     ("placeName", "./temp-indices/mentioned-places.xml", ".//tei:place"),
     ("orgName", "./temp-indices/mentioned-orgs.xml", ".//tei:org"),
     ("work", "./temp-indices/mentioned-bibl.xml", ".//tei:bibl"),
-    ("event", "./temp-indices/mentioned-event.xml", ".//tei:event")
+    ("event", "./temp-indices/mentioned-event.xml", "tei:listEvent/tei:event")
 ]
 
 # Hilfsfunktion: XML schön formatieren
