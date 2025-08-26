@@ -3,8 +3,10 @@
     xmlns:tei="http://www.tei-c.org/ns/1.0" version="3.0">
     <xsl:mode on-no-match="shallow-copy"/>
     <xsl:output method="xml" indent="yes"/>
+    <!--<xsl:param name="schnitzler-briefe_cmif"
+        select="document('https://raw.githubusercontent.com/arthur-schnitzler/schnitzler-briefe-arbeit/refs/heads/main/indices/schnitzler-briefe_cmif.xml')"/>-->
     <xsl:param name="schnitzler-briefe_cmif"
-        select="document('https://raw.githubusercontent.com/arthur-schnitzler/schnitzler-briefe-arbeit/refs/heads/main/indices/schnitzler-briefe_cmif.xml')"/>
+        select="document('../../indices/schnitzler-briefe_cmif.xml')"/>
     <xsl:key name="kontext-lookup" match="tei:correspDesc" use="@key"/>
     <!-- Dieses XSLT nimmt aus /indices/asbw-cmif noch correspContext 
     -->
