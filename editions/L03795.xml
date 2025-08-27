@@ -1,6 +1,10 @@
-<?xml version='1.0' encoding='UTF-8'?>
+<?xml version="1.0" encoding="UTF-8"?>
 <?xml-model href="../meta/schnitzler-briefe-schematron.sch" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
-<TEI xmlns="http://www.tei-c.org/ns/1.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.tei-c.org/ns/1.0 ../meta/schnitzler-briefe-schema.xsd" xml:id="L03795" xml:base="https://id.acdh.oeaw.ac.at/schnitzler/schnitzler-briefe/editions">
+<TEI xmlns="http://www.tei-c.org/ns/1.0"
+     xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+     xsi:schemaLocation="http://www.tei-c.org/ns/1.0 ../meta/schnitzler-briefe-schema.xsd"
+     xml:id="L03795"
+     xml:base="https://id.acdh.oeaw.ac.at/schnitzler/schnitzler-briefe/editions">
    <teiHeader>
       <fileDesc>
          <titleStmt>
@@ -112,17 +116,27 @@
                   – 12. 10. 1910?]</date>
                <placeName ref="#pmb50" evidence="conjecture">Wien</placeName>
             </correspAction>
-            <correspContext><ref type="belongsToCorrespondence" target="correspondence_13212">Zweig, Stefan</ref>
+            <correspContext>
+               <ref type="belongsToCorrespondence" target="correspondence_13212">Zweig, Stefan</ref>
                <ref subtype="previous_letter" type="withinCollection" target="L03796">Schnitzler an Zweig, 6. 10. 1910</ref>
                <ref subtype="next_letter" type="withinCollection" target="L01963">Schnitzler an Bahr, 8. 10. 1910</ref>
-               <ref subtype="previous_letter" type="withinCorrespondence" source="correspondence_13212" target="L03796">Schnitzler an Zweig, 6. 10. 1910</ref>
-               <ref subtype="next_letter" type="withinCorrespondence" source="correspondence_13212" target="L03625">Zweig an Schnitzler, [zwischen 18. und
+               <ref subtype="previous_letter"
+                    type="withinCorrespondence"
+                    source="correspondence_13212"
+                    target="L03796">Schnitzler an Zweig, 6. 10. 1910</ref>
+               <ref subtype="next_letter"
+                    type="withinCorrespondence"
+                    source="correspondence_13212"
+                    target="L03625">Zweig an Schnitzler, [zwischen 18. und
                   24. 10.? 1910]</ref>
-            </correspContext></correspDesc>
+            </correspContext>
+         </correspDesc>
       </profileDesc>
-      <revisionDesc status="proposed">
+      <revisionDesc status="candidate">
          <change who="MAM" when="2025-07-17">Export aus Transkribus</change>
          <change who="MAM" when="2025-08-08">Durchsicht</change>
+         <change who="MAM" when="2025-08-27">Durchsicht</change>
+         <change who="MAM" when="2025-08-27">Index check</change>
       </revisionDesc>
    </teiHeader>
    <facsimile>
@@ -135,7 +149,7 @@
                <seg>
                   <seg rend="left">
                      <pb facs="0023_FL81799781"/>
-                     <hi rend="pre-print">Dr Arthur Schnitzler</hi>
+                     <hi rend="pre-print">Dr. Arthur Schnitzler</hi>
                   </seg>
                   <seg rend="right">
                      <date>7. X. 910</date>
@@ -160,11 +174,14 @@
             <p>am <anchor type="commentary" xml:id="K_L03795-1"/>
                <rs type="event" ref="#pmb296492" subtype="implied">
                   <date>Dinſtag</date>
-               <space unit="chars" quantity="1"/>
-                  <time>Abend</time></rs>
+                  <space unit="chars" quantity="1"/>
+                  <time>Abend</time>
+               </rs>
                <note type="commentary" corresp="K_L03795-1">
-                  <ref type="schnitzler-kultur" target="pmb296492"/>. </note>, <add place="above">vor</add> 7 Uhr
-               will uns <rs type="person" ref="#pmb13055">Wasserma<c rendition="#gemination-n"/>
+                  <ref type="schnitzler-kultur" target="pmb296492" subtype="See"/>. </note>, <add place="above">vor</add> 7 Uhr
+               will uns <rs type="person" ref="#pmb13055">
+                  <hi rend="latintype">Wasserma<c rendition="#gemination-n"/>
+                  </hi>
                </rs> ſeine neuen <rs type="work" subtype="implied" ref="#pmb76946">Einakter</rs>
                vorleſen; ich bitte Sie, in ſeinem, und unſerm Namen herzlichſt dabei zu ſein.</p>
             <closer>Ihr<lb/>
@@ -501,7 +518,7 @@
                      <idno type="URL" subtype="pmb">https://pmb.acdh.oeaw.ac.at/entity/184201/</idno>
                   </event>
                </listEvent>
-               <note type="references"/>
+               <note type="references"> </note>
                <figure>
                   <graphic url="https://upload.wikimedia.org/wikipedia/commons/thumb/0/03/Jakob_Wassermann_1934.jpg/250px-Jakob_Wassermann_1934.jpg"/>
                </figure>
