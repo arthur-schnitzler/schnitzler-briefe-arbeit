@@ -1,6 +1,4 @@
-<?xml version='1.0' encoding='UTF-8'?>
-<?xml-model href="../meta/schnitzler-briefe-schematron.sch" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
-<TEI xmlns="http://www.tei-c.org/ns/1.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.tei-c.org/ns/1.0 ../meta/schnitzler-briefe-schema.xsd" xml:id="L03805" xml:base="https://id.acdh.oeaw.ac.at/schnitzler/schnitzler-briefe/editions">
+<?xml version="1.0" encoding="UTF-8"?><?xml-model href="../meta/schnitzler-briefe-schematron.sch" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI xmlns="http://www.tei-c.org/ns/1.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.tei-c.org/ns/1.0 ../meta/schnitzler-briefe-schema.xsd" xml:id="L03805" xml:base="https://id.acdh.oeaw.ac.at/schnitzler/schnitzler-briefe/editions">
    <teiHeader>
       <fileDesc>
          <titleStmt>
@@ -81,7 +79,7 @@
                         <objectDesc>
                            <supportDesc>
                               <extent>
-                                 <measure unit="seite" quantity="2"/>
+                                 <measure unit="seite" quantity="1"/>
                                  <measure unit="blatt" quantity="1"/>
                                  <measure unit="zeichenanzahl" quantity="75"/>
                               </extent>
@@ -112,16 +110,20 @@
                   – 5. 12. 1909?]</date>
                <placeName ref="#pmb50" evidence="conjecture">Wien</placeName>
             </correspAction>
-         <correspContext><ref type="belongsToCorrespondence" target="correspondence_13212">Zweig, Stefan</ref>
+            <correspContext>
+               <ref type="belongsToCorrespondence" target="correspondence_13212">Zweig, Stefan</ref>
                <ref subtype="previous_letter" type="withinCollection" target="L01889">Ehrenstein an Schnitzler, 25. 11. 1909</ref>
                <ref subtype="next_letter" type="withinCollection" target="L01890">Beer-Hofmann an Schnitzler, 30. 11. 1909</ref>
                <ref subtype="previous_letter" type="withinCorrespondence" source="correspondence_13212" target="L03803">Schnitzler an Zweig, 2. 6. 1909</ref>
                <ref subtype="next_letter" type="withinCorrespondence" source="correspondence_13212" target="L03624">Zweig an Schnitzler, 13. 12. 1909</ref>
-            </correspContext></correspDesc>
+            </correspContext>
+         </correspDesc>
       </profileDesc>
       <revisionDesc status="proposed">
          <change who="MAM" when="2025-07-17">Export aus Transkribus</change>
          <change who="MAM" when="2025-08-11">Durchsicht</change>
+         <change who="MAM" when="2025-08-26">Index check</change>
+         <change who="MAM" when="2025-08-26">Durchsicht</change>
       </revisionDesc>
    </teiHeader>
    <facsimile>
@@ -133,14 +135,16 @@
             <opener>
                <dateline rend="right">
                   <pb facs="0020_FL81799734"/>
-                  <anchor type="commentary" xml:id="K_L03805-2"/><date>30. 11. 09</date><note type="commentary" corresp="K_L03805-2">Die Datierung der Visitenkarte bereitet
+                  <anchor type="commentary" xml:id="K_L03805-1"/>
+                  <date>30. 11. 09</date>
+                  <note type="commentary" corresp="K_L03805-1">Die Datierung der Visitenkarte bereitet
                      einige Schwierigkeiten und kann trotz der Datumsangabe nur unzuverlässig
-                     vorgenommen werden. Weder lässt sich für Donnerstag, den <ref type="schnitzler-tagebuch" subtype="date-only" target="1909-12-02"/> ein
+                     vorgenommen werden. Weder lässt sich für den angesprochenen Donnerstag – dem <ref type="schnitzler-tagebuch" subtype="date-only" target="1909-12-02"/> – ein
                      Besuch <rs type="person" ref="#pmb13212">Zweigs</rs> nachweisen, noch ist eine
-                     diesbezügliche weitere Kommunikation überliefert. Zu erwarten wäre, dass eine
+                     diesbezügliche weitere Kommunikation ober eine persönliche Begegnung überliefert. Zu erwarten wäre, dass eine
                      Einladung nicht gänzlich abgelehnt, sondern dass von <rs type="person" ref="#pmb13212">Zweig</rs> – aus welchen Gründen immer – verzögernd
-                     geantwortet wurde. Seltsamerweise ging der folgende Brief <rs type="person" ref="#pmb13212">Zweigs</rs>, vom <ref type="schnitzler-briefe" subtype="date-only" target="L03624"/> nicht auf eine ausstehende Einladung
-                     ein und als es in Folge dieses Briefes am <ref type="schnitzler-tagebuch" subtype="date-only" target="1909-12-17"/> zum nächsten persönlichen Treffen
+                     geantwortet wurde. Seltsamerweise ging der folgende Brief <rs type="person" ref="#pmb13212">Zweigs</rs> – vom <ref type="schnitzler-briefe" subtype="date-only" target="L03624"/> – nicht auf eine ausstehende Einladung
+                     ein und als es in Folge dieses Briefes am <ref type="schnitzler-tagebuch" subtype="date-only" target="1909-12-17"/> zum nächsten nachgewiesenen persönlichen Treffen
                      kam, fand dies bei <rs type="person" ref="#pmb13212">Zweig</rs> zuhause
                      statt.</note>.</dateline>
             </opener>
@@ -320,33 +324,10 @@
                </figure>
             </person>
          </listPerson>
-         <listBibl>
-            <bibl xml:id="pmb33243">
-               <title>Tagebuch</title>
-               <title type="werk_link">https://schnitzler-tagebuch.acdh.oeaw.ac.at</title>
-               <author ref="" role="hat-herausgegeben">Braunwarth, Peter Michael</author>
-               <author ref="" role="hat-herausgegeben">Urbach, Reinhard</author>
-               <author ref="" role="hat-herausgegeben">Welzig, Werner</author>
-               <author ref="" role="hat-herausgegeben">Miklin, Richard</author>
-               <author ref="" role="hat-herausgegeben">Fliedl, Konstanze</author>
-               <author ref="" role="hat-herausgegeben">Ruprechter, Walter</author>
-               <author ref="" role="hat-herausgegeben">Pertlik, Susanne</author>
-               <author ref="" role="hat-geschaffen">Schnitzler, Arthur</author>
-               <date from="1981-01-01" to="2000-01-01">1981 – 2000</date>
-               <idno type="URL" subtype="pmb">https://pmb.acdh.oeaw.ac.at/entity/33243/</idno>
-               <idno type="URL" subtype="schnitzler-tagebuch">https://schnitzler-tagebuch.acdh.oeaw.ac.at/pmb33243.html</idno>
-               <idno type="URL" subtype="wikidata">http://www.wikidata.org/entity/Q108122826</idno>
-               <idno type="URL" subtype="wikipedia">https://de.wikipedia.org/wiki/Tagebuch_(Schnitzler)</idno>
-               <idno type="URL" subtype="schnitzler-interviews">https://schnitzler-interviews.acdh.oeaw.ac.at/pmb33243.html</idno>
-               <idno type="URL" subtype="schnitzler-briefe">https://schnitzler-briefe.acdh.oeaw.ac.at/pmb33243.html</idno>
-               <note type="work_kind">Tagebuch</note>
-            </bibl>
-         </listBibl>
          <listPlace>
             <place xml:id="pmb50">
                <placeName>Wien</placeName>
-               <placeName type="ort_fruherer-name">K.K. Reichshaupt- und Residenzstadt
-                  Wien</placeName>
+               <placeName type="ort_fruherer-name">K.K. Reichshaupt- und Residenzstadt Wien</placeName>
                <placeName type="alternative-name">Bécs</placeName>
                <placeName type="alternative-name">Land Wien</placeName>
                <placeName type="alternative-name">Vídeň</placeName>
@@ -389,7 +370,6 @@
                   </figure>
                </note>
             </place>
-            
          </listPlace>
       </back>
    </text>
