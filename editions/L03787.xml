@@ -1,6 +1,10 @@
-<?xml version='1.0' encoding='UTF-8'?>
+<?xml version="1.0" encoding="UTF-8"?>
 <?xml-model href="../meta/schnitzler-briefe-schematron.sch" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
-<TEI xmlns="http://www.tei-c.org/ns/1.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.tei-c.org/ns/1.0 ../meta/schnitzler-briefe-schema.xsd" xml:id="L03787" xml:base="https://id.acdh.oeaw.ac.at/schnitzler/schnitzler-briefe/editions">
+<TEI xmlns="http://www.tei-c.org/ns/1.0"
+     xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+     xsi:schemaLocation="http://www.tei-c.org/ns/1.0 ../meta/schnitzler-briefe-schema.xsd"
+     xml:id="L03787"
+     xml:base="https://id.acdh.oeaw.ac.at/schnitzler/schnitzler-briefe/editions">
    <teiHeader>
       <fileDesc>
          <titleStmt>
@@ -112,16 +116,26 @@
                   27. 10. 1911]</date>
                <placeName ref="#pmb50" evidence="external">Wien</placeName>
             </correspAction>
-            <correspContext><ref type="belongsToCorrespondence" target="correspondence_13212">Zweig, Stefan</ref>
+            <correspContext>
+               <ref type="belongsToCorrespondence" target="correspondence_13212">Zweig, Stefan</ref>
                <ref subtype="previous_letter" type="withinCollection" target="L03554">Salten an Schnitzler, 22. 10. 1911</ref>
                <ref subtype="next_letter" type="withinCollection" target="L03637">Zweig an Schnitzler, 27. 10. 1911</ref>
-               <ref subtype="previous_letter" type="withinCorrespondence" source="correspondence_13212" target="L03788">Schnitzler an Zweig, 16. 10. 1911</ref>
-               <ref subtype="next_letter" type="withinCorrespondence" source="correspondence_13212" target="L03637">Zweig an Schnitzler, 27. 10. 1911</ref>
-            </correspContext></correspDesc>
+               <ref subtype="previous_letter"
+                    type="withinCorrespondence"
+                    source="correspondence_13212"
+                    target="L03788">Schnitzler an Zweig, 16. 10. 1911</ref>
+               <ref subtype="next_letter"
+                    type="withinCorrespondence"
+                    source="correspondence_13212"
+                    target="L03637">Zweig an Schnitzler, 27. 10. 1911</ref>
+            </correspContext>
+         </correspDesc>
       </profileDesc>
-      <revisionDesc status="proposed">
+      <revisionDesc status="candidate">
          <change who="MAM" when="2025-07-17">Export aus Transkribus</change>
          <change who="MAM" when="2025-08-07">Durchsicht</change>
+         <change who="MAM" when="2025-09-01">Durchsicht</change>
+         <change who="MAM" when="2025-09-01">Index check</change>
       </revisionDesc>
    </teiHeader>
    <facsimile>
@@ -139,14 +153,15 @@
                   </seg>
                   <seg rend="right">
                      <anchor type="commentary" xml:id="K_L03787-1"/>
-                     <date>26. X. 911</date>
-                     <note type="commentary" corresp="K_L03787-1">Bei dem Strich vor dem »<quote>X</quote>«
-                        dürfte es sich um einen Schreibirrtum 
-                        <rs type="person" ref="#pmb2121">Schnitzlers</rs> handeln und nicht um ein »<quote>I</quote>«. Das
-                        wird sich aus dem Antwortschreiben
+                     <date>26. <subst>
+                           <del rend="overwritten">1<unclear>1</unclear>
+                           </del>
+                           <add place="inline">X</add>
+                        </subst>. 911</date>
+                     <note type="commentary" corresp="K_L03787-1">Mögliche Zweifel an der Datierung auf Oktober werden durch das Antwortschreiben
                            <rs type="person" ref="#pmb13212">Zweigs</rs> vom <ref type="schnitzler-briefe" target="L03637" subtype="date-only"/>
-                        ersichtlich. Auch würde eine Verortung des Korrespondenzstücks im
-                        September inhaltlich wenig Sinn ergeben, da die angekündigte Reise noch
+                        ausgeräumt. Auch würde eine Verortung des Korrespondenzstücks in den
+                        September (›IX‹) inhaltlich wenig Sinn ergeben, da die von <rs type="person" ref="#pmb2121">Schnitzler</rs> angekündigte Reise noch
                         einen Monat entfernt wäre.</note>.</seg>
                </seg>
                <salute>lieber Doctor Zweig,</salute>
@@ -154,21 +169,20 @@
             <p>Sie ſind auch in dieſem <anchor type="commentary" xml:id="K_L03787-2"/>
                <rs type="person" ref="#pmb52643">
                   <hi rend="latintype">Gautier</hi>
-               </rs> Comité<note type="commentary" corresp="K_L03787-2">Anlässlich des
-                  100. Geburtstages von <rs type="person" ref="#pmb52643">Théophile Gautier</rs>
+               </rs> Comité<note type="commentary" corresp="K_L03787-2">Anlässlich des kürzlich vergangenen
+                  100. Geburtstages von <rs type="person" ref="#pmb52643">Théophile Gautier</rs> am <date>30.&#160;8.&#160;1911</date>
                   bemühte sich seine Tochter, die Schriftstellerin <rs type="person" ref="#pmb296445">Judith Gautier</rs> und sein Schwiegersohn <rs type="person" ref="#pmb148642">Émile Bergerat</rs> um die Errichtung eines Denkmals. Das
                   Vorhaben gelang nicht.</note>. Darf ich Sie fragen, <hi rend="underline" n="1">ob</hi> Sie, <hi rend="latintype">resp.</hi>
                <space unit="chars" quantity="1"/>
                <hi rend="underline" n="1">welchen</hi> Beitrag Sie gezeichnet haben oder zeichnen
-               wollen?</p>
-            <p>Ich möchte mich nach Ihnen richten. </p>
+               wollen? Ich möchte mich nach Ihnen richten. </p>
             <p>– Nach meiner <anchor type="commentary" xml:id="K_L03787-3"/>Rückkehr aus <rs type="place" ref="#pmb151">Deutsch<pb facs="0039_FL81799716"/>land</rs>
                <note type="commentary" corresp="K_L03787-3">
                   <rs type="person" ref="#pmb2121">Schnitzler</rs> reiste am <ref type="wienerschnitzler" target="1911-10-29" subtype="date-only"/> über <rs type="place" ref="#pmb652">Prag</rs> nach <rs type="place" ref="#pmb168">Berlin</rs>, <rs type="place" ref="#pmb506">Hamburg</rs>, <rs type="place" ref="#pmb45258">München</rs> und <rs type="place" ref="#pmb667">Garmisch-Partenkirchen</rs>. Am <ref type="wienerschnitzler" subtype="date-only" target="1911-11-17"/> war er wieder in <rs type="place" ref="#pmb50">Wien</rs>. Erst am <ref type="schnitzler-tagebuch" target="1911-12-12" subtype="date-only"/> sah man sich wieder.</note> hoff ich
                Sie ſehr bald zu längerem Zusa<c rendition="#gemination-m"/>enſein bei uns zu
                ſehn.</p>
             <closer>Herzlichſt Ihr<lb/>
-               <signed>ArthSchnitzler</signed>
+               <signed>ArthSchnitzl</signed>
             </closer>
          </div>
       </body>
@@ -384,7 +398,7 @@
                <idno type="URL" subtype="bahr-textverzeichnis">https://bahr-textverzeichnis.acdh.oeaw.ac.at/TSN-listperson.html#pmb52643</idno>
                <idno type="URL" subtype="stefanzweig">https://www.stefanzweig.digital/o:szd.personen/sdef:TEI/get#SZDPER.455</idno>
                <idno type="URL" subtype="brenner">https://brenner.oeaw.ac.at/?p=brennerp11456</idno>
-               <note type="references"/>
+               <note type="references"> </note>
                <figure>
                   <graphic url="https://upload.wikimedia.org/wikipedia/commons/thumb/9/9c/Th%C3%A9ophile_Gautier_by_Nadar.png/250px-Th%C3%A9ophile_Gautier_by_Nadar.png"/>
                </figure>
@@ -420,6 +434,7 @@
                <idno type="URL" subtype="pmb">https://pmb.acdh.oeaw.ac.at/entity/296445/</idno>
                <idno type="URL" subtype="wikidata">http://www.wikidata.org/entity/Q2523100</idno>
                <idno type="URL" subtype="d-nb">https://d-nb.info/gnd/118955039</idno>
+               <idno type="URL" subtype="wikipedia">https://de.wikipedia.org/wiki/Judith_Gautier</idno>
             </person>
             <person xml:id="pmb148642">
                <persName>
@@ -452,8 +467,7 @@
          <listPlace>
             <place xml:id="pmb50">
                <placeName>Wien</placeName>
-               <placeName type="ort_fruherer-name">K.K. Reichshaupt- und Residenzstadt
-                  Wien</placeName>
+               <placeName type="ort_fruherer-name">K.K. Reichshaupt- und Residenzstadt Wien</placeName>
                <placeName type="alternative-name">Bécs</placeName>
                <placeName type="alternative-name">Land Wien</placeName>
                <placeName type="alternative-name">Vídeň</placeName>
