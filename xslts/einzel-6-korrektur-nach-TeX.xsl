@@ -4110,12 +4110,12 @@
          </xsl:otherwise>
       </xsl:choose>
    </xsl:template>
-   <xsl:template match="lg[@type = 'stanza']">
+   <xsl:template match="*:lg[@type = 'stanza']">
       <xsl:text>\stanza{}</xsl:text>
       <xsl:apply-templates/>
       <xsl:text>\stanzaend{}</xsl:text>
    </xsl:template>
-   <xsl:template match="l[ancestor::lg[@type = 'poem']]">
+   <xsl:template match="*:l[ancestor::*:lg[@type = 'stanza' or @type='poem']]">
       <xsl:if test="@rend = 'inline'">
          <xsl:text>\stanzaindent{2}</xsl:text>
       </xsl:if>
