@@ -324,7 +324,7 @@
             </xsl:choose>
          </xsl:variable>
          <xsl:text>, \emph{</xsl:text>
-         <xsl:for-each select="$indexkey/occupation">
+         <xsl:for-each select="$indexkey/tei:occupation">
             <xsl:if test="fn:position() &lt; 4">
                <!-- Nur drei Berufe aufnehmen -->
                <xsl:variable name="berufstring"
@@ -671,17 +671,17 @@
       <xsl:param name="endung" as="xs:string"/>
       <xsl:variable name="org-entry" select="key('org-lookup', ($first), $orgs)"/>
       <xsl:variable name="ort" select="$org-entry/tei:place[1]/tei:placeName[1]"/>
-      <xsl:variable name="bezirk" select="$org-entry/Bezirk"/>
-      <xsl:variable name="typ" select="$org-entry/desc[1]/gloss[1]"/>
+      <xsl:variable name="bezirk" select="$org-entry/*:Bezirk"/>
+      <xsl:variable name="typ" select="$org-entry/tei:desc[1]/tei:gloss[1]"/>
       <xsl:choose>
-         <xsl:when test="string-length($org-entry/orgName[1]) = 0">
+         <xsl:when test="string-length($org-entry/tei:orgName[1]) = 0">
             <xsl:text>XXXX ORGangabe fehlt</xsl:text>
          </xsl:when>
          <xsl:otherwise>
             <xsl:choose>
                <xsl:when test="$first != ''">
                   <xsl:choose>
-                     <xsl:when test="$org-entry/orgName = ''">\textcolor{red}{ORGNR INHALT FEHLT}{ </xsl:when>
+                     <xsl:when test="$org-entry/tei:orgName = ''">\textcolor{red}{ORGNR INHALT FEHLT}{ </xsl:when>
                      <xsl:otherwise>
                         <xsl:text>\orgindex{</xsl:text>
                         <xsl:if test="$ort != ''">
@@ -778,7 +778,7 @@
                            </xsl:when>
                         </xsl:choose>
                         <xsl:value-of
-                           select="foo:index-sortiert(normalize-space($org-entry/orgName[1]), 'up')"/>
+                           select="foo:index-sortiert(normalize-space($org-entry/tei:orgName[1]), 'up')"/>
                         <xsl:if test="$typ != '' and not($ort = 'Wien' and $typ = 'Tageszeitung')">
                            <!--<xsl:text>, \emph{</xsl:text>
                            <xsl:value-of select="normalize-space($org-entry/Typ)"/>
@@ -2172,10 +2172,10 @@
          </xsl:for-each>
          <xsl:text>}</xsl:text>
       </xsl:if>
-      <xsl:if test="child::tei:listOrg/org">
+      <xsl:if test="child::tei:listOrg/tei:org">
          <xsl:text>&#10;\renewcommand{\erwaehnteInstitutionen}{</xsl:text>
          <xsl:text>Institutionen: </xsl:text>
-         <xsl:for-each select="child::tei:listOrg/org">
+         <xsl:for-each select="child::tei:listOrg/tei:org">
             <xsl:sort select="descendant::tei:orgName[1]/text()"/>
             <xsl:value-of
                select="foo:sonderzeichen-ersetzen(normalize-space(descendant::tei:orgName[1]/text()))"/>
@@ -5070,17 +5070,17 @@
             <xsl:text>\textcolor{red}{ORGANISATION OFFEN}</xsl:text>
          </xsl:when>
          <xsl:otherwise>
-            <xsl:if test="$entry[1]/orgName[1] != ''">
+            <xsl:if test="$entry[1]/tei:orgName[1] != ''">
                <xsl:value-of
-                  select="foo:sonderzeichen-ersetzen(normalize-space($entry[1]//orgName))"/>
+                  select="foo:sonderzeichen-ersetzen(normalize-space($entry[1]//tei:orgName))"/>
             </xsl:if>
             <xsl:if test="$entry[1]/Ort[1] != ''">
                <xsl:text>, </xsl:text>
-               <xsl:value-of select="foo:sonderzeichen-ersetzen(normalize-space($entry[1]/Ort))"/>
+               <xsl:value-of select="foo:sonderzeichen-ersetzen(normalize-space($entry[1]/*:Ort))"/>
             </xsl:if>
             <xsl:if test="$entry[1]/Ort[1] != ''">
                <xsl:text>, \emph{</xsl:text>
-               <xsl:value-of select="foo:sonderzeichen-ersetzen(normalize-space($entry[1]/Typ))"/>
+               <xsl:value-of select="foo:sonderzeichen-ersetzen(normalize-space($entry[1]/*:Typ))"/>
                <xsl:text>}</xsl:text>
             </xsl:if>
          </xsl:otherwise>
