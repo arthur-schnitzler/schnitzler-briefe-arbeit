@@ -427,4 +427,12 @@
             </sch:assert>
         </sch:rule>
     </sch:pattern>
+    <!-- div image restrictions -->
+    <sch:pattern id="div-image-restrictions">
+        <sch:rule context="tei:div[@type = 'image']">
+            <sch:assert test="not(descendant::tei:p[tei:seg])">
+                tei:div mit @type='image' darf keine tei:p mit tei:seg Kindelementen enthalten. Wenn tei:seg benötigt wird, muss tei:p in tei:seg umgewandelt werden.
+            </sch:assert>
+        </sch:rule>
+    </sch:pattern>
 </sch:schema>
