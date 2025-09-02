@@ -508,13 +508,13 @@
          </xsl:when>
          <xsl:when test="$work-entry/tei:author[@role = 'author']">
             <xsl:variable name="author-ref"
-               select="substring-after($work-entry/tei:author[@role = 'author'][$author-zaehler]/idno[@type = 'pmb'], '#')"/>
+               select="substring-after($work-entry/tei:author[@role = 'author'][$author-zaehler]/tei:idno[@type = 'pmb'], '#')"/>
             <xsl:value-of select="foo:person-in-index($author-ref, $endung, false())"/>
             <xsl:text>!</xsl:text>
          </xsl:when>
          <xsl:when test="$work-entry/tei:author[@role = 'abbreviated-name']">
             <xsl:variable name="author-ref"
-               select="substring-after($work-entry/tei:author[@role = 'abbreviated-name'][$author-zaehler]/idno[@type = 'pmb'], '#')"/>
+               select="substring-after($work-entry/tei:author[@role = 'abbreviated-name'][$author-zaehler]/tei:idno[@type = 'pmb'], '#')"/>
             <xsl:value-of select="foo:person-in-index($author-ref, $endung, false())"/>
             <xsl:text>!</xsl:text>
          </xsl:when>
@@ -1361,7 +1361,7 @@
       <xsl:value-of select="foo:vorne-hinten($vorne)"/>
       <xsl:text>be}</xsl:text>
    </xsl:function>
-   <xsl:template match="tei:msIdentifier/country"/>
+   <xsl:template match="tei:msIdentifier/tei:country"/>
    <xsl:template match="tei:incident">
       <xsl:apply-templates select="tei:desc"/>
    </xsl:template>
@@ -1566,7 +1566,7 @@
       </xsl:choose>
       <xsl:apply-templates/>
    </xsl:template>
-   <xsl:template match="tei:typeDesc/p">
+   <xsl:template match="tei:typeDesc/tei:p">
       <xsl:apply-templates/>
    </xsl:template>
    <xsl:template match="tei:handDesc">
@@ -2007,12 +2007,12 @@
       <xsl:text> </xsl:text>
       <xsl:apply-templates/>
    </xsl:template>
-   <xsl:template match="tei:imprint/pubPlace">
+   <xsl:template match="tei:imprint/tei:pubPlace">
       <xsl:text> </xsl:text>
       <xsl:apply-templates/>
       <xsl:text>: </xsl:text>
    </xsl:template>
-   <xsl:template match="tei:imprint/publisher">
+   <xsl:template match="tei:imprint/tei:publisher">
       <xsl:apply-templates/>
    </xsl:template>
    <xsl:template match="tei:stamp">
@@ -2111,7 +2111,7 @@
       <xsl:apply-templates/>
       <xsl:text>, </xsl:text>
    </xsl:template>
-   <xsl:template match="tei:msIdentifier/idno">
+   <xsl:template match="tei:msIdentifier/tei:idno">
       <xsl:choose>
          <xsl:when test="starts-with(normalize-space(.), 'Yale Collection of German Literature, ')">
             <xsl:value-of
@@ -2965,12 +2965,12 @@
       </xsl:choose>
       <xsl:text>»</xsl:text>
       <xsl:choose>
-         <xsl:when test="tei:quote/p">
-            <xsl:for-each select="quote/p[not(position() = last())]">
+         <xsl:when test="tei:quote/tei:p">
+            <xsl:for-each select="tei:quote/tei:p[not(position() = last())]">
                <xsl:apply-templates/>
                <xsl:text>{ / }</xsl:text>
             </xsl:for-each>
-            <xsl:apply-templates select="tei:quote/p[(position() = last())]"/>
+            <xsl:apply-templates select="tei:quote/tei:p[(position() = last())]"/>
          </xsl:when>
          <xsl:otherwise>
             <xsl:apply-templates select="tei:quote"/>
@@ -3204,7 +3204,7 @@
             select="foo:abgedruckte-workNameRoutine(substring(ancestor::tei:TEI/tei:teiHeader/tei:fileDesc/tei:titleStmt/tei:title[@level = 'a']/@ref, 1, 7), false())"
          />
       </xsl:if>
-      <xsl:if test="ancestor::tei:TEI/tei:teiHeader/profileDesc/correspDesc">
+      <xsl:if test="ancestor::tei:TEI/tei:teiHeader/tei:profileDesc/tei:correspDesc">
          <xsl:choose>
             <xsl:when
                test="not(ancestor::tei:TEI/tei:teiHeader/tei:profileDesc/tei:correspDesc/tei:correspAction[@type = 'sent']/tei:date/@when)">
@@ -3463,7 +3463,7 @@
       </xsl:choose>
       <xsl:if test="self::tei:closer | self::tei:p[@rend = 'inline']">\leftskip=0em{}</xsl:if>
    </xsl:template>
-   <!-- <xsl:template match="tei:opener/p|dateline">
+   <!-- <xsl:template match="tei:opener/tei:p|tei:dateline">
       <xsl:text>&#10;\pstart</xsl:text>
       <xsl:choose>
          <xsl:when test="@rend='right'">
@@ -5234,7 +5234,7 @@
             </xsl:matching-substring>
          </xsl:analyze-string>
       </xsl:variable>
-      <xsl:variable name="caption" as="node()?" select="parent::tei:div/caption"/>
+      <xsl:variable name="caption" as="node()?" select="parent::tei:div/tei:caption"/>
       <!-- Drei Varianten:
          - Bild ohne Bildtext zentriert
          - Bild mit Bildtext, hatei:lbe Textbreite, Bildtext daneben
