@@ -17,7 +17,7 @@
     <xsl:key name="org-lookup" match="tei:org" use="concat('#', @xml:id)"/>
     <xsl:key name="place-lookup" match="tei:place" use="concat('#', @xml:id)"/>
     <xsl:key name="event-lookup" match="tei:event" use="concat('#', @xml:id)"/>
-    <xsl:key name="sigle-lookup" match="tei:row" use="siglekey"/>
+    <xsl:key name="sigle-lookup" match="tei:row" use="tei:siglekey"/>
     
     <!-- Funktionen -->
    <!-- Ersetzt im übergegeben String die Umlaute mit ae, oe, ue etc. -->
@@ -140,7 +140,7 @@
       <xsl:variable name="kBeruf" as="xs:boolean">
          <xsl:choose>
             <xsl:when
-               test="$indexkey/occupation[1] and not(starts-with($indexkey/tei:persName/tei:surname, '??'))">
+               test="$indexkey/tei:occupation[1] and not(starts-with($indexkey/tei:persName/tei:surname, '??'))">
                <xsl:value-of select="true()"/>
             </xsl:when>
             <xsl:otherwise>
@@ -150,31 +150,31 @@
       </xsl:variable>
       <xsl:variable name="kTodesort" as="xs:string?">
          <xsl:choose>
-            <xsl:when test="$indexkey/death/tei:placeName[not(@type)]/settlement">
+            <xsl:when test="$indexkey/tei:death/tei:placeName[not(@type)]/tei:settlement">
                <xsl:value-of
-                  select="fn:normalize-space($indexkey/death/tei:placeName[not(@type)]/settlement)"/>
+                  select="fn:normalize-space($indexkey/tei:death/tei:placeName[not(@type)]/tei:settlement)"/>
             </xsl:when>
-            <xsl:when test="$indexkey/death/tei:placeName[@type = 'deportation']">
+            <xsl:when test="$indexkey/tei:death/tei:placeName[@type = 'deportation']">
                <xsl:value-of
-                  select="concat('deportiert ', fn:normalize-space($indexkey/death/tei:placeName/settlement))"
+                  select="concat('deportiert ', fn:normalize-space($indexkey/tei:death/tei:placeName/tei:settlement))"
                />
             </xsl:when>
-            <xsl:when test="$indexkey/death/tei:placeName[@type = 'burial']">
+            <xsl:when test="$indexkey/tei:death/tei:placeName[@type = 'burial']">
                <xsl:value-of
-                  select="concat('beerdigt ', fn:normalize-space($indexkey/death/tei:placeName/settlement))"
+                  select="concat('beerdigt ', fn:normalize-space($indexkey/tei:death/tei:placeName/tei:settlement))"
                />
             </xsl:when>
          </xsl:choose>
       </xsl:variable>
-      <xsl:variable name="kGeburtsort" as="xs:string?" select="$indexkey/birth/tei:placeName/settlement"/>
+      <xsl:variable name="kGeburtsort" as="xs:string?" select="$indexkey/tei:birth/tei:placeName/tei:settlement"/>
       <xsl:variable name="birth_day" as="xs:string?">
          <xsl:choose>
             <xsl:when test="string-length($kGeburtsort) &gt; 0">
                <xsl:value-of
-                  select="concat($indexkey[1]/birth[1]/tei:date[1]/text(), ' ', $kGeburtsort)"/>
+                  select="concat($indexkey[1]/tei:birth[1]/tei:date[1]/text(), ' ', $kGeburtsort)"/>
             </xsl:when>
             <xsl:otherwise>
-               <xsl:value-of select="$indexkey[1]/birth[1]/tei:date[1]/text()"/>
+               <xsl:value-of select="$indexkey[1]/tei:birth[1]/tei:date[1]/text()"/>
             </xsl:otherwise>
          </xsl:choose>
       </xsl:variable>
@@ -183,14 +183,14 @@
       <xsl:variable name="death_day" as="xs:string?">
          <xsl:choose>
             <xsl:when test="$ebenda">
-               <xsl:value-of select="concat($indexkey[1]/death[1]/tei:date[1]/text(), ' ebd.')"/>
+               <xsl:value-of select="concat($indexkey[1]/tei:death[1]/tei:date[1]/text(), ' ebd.')"/>
             </xsl:when>
             <xsl:when test="string-length($kTodesort) &gt; 0">
-               <xsl:value-of select="concat($indexkey[1]/death[1]/tei:date[1]/text(), ' ', $kTodesort)"
+               <xsl:value-of select="concat($indexkey[1]/tei:death[1]/tei:date[1]/text(), ' ', $kTodesort)"
                />
             </xsl:when>
             <xsl:otherwise>
-               <xsl:value-of select="$indexkey[1]/death[1]/tei:date[1]/text()"/>
+               <xsl:value-of select="$indexkey[1]/tei:death[1]/tei:date[1]/text()"/>
             </xsl:otherwise>
          </xsl:choose>
       </xsl:variable>
@@ -324,7 +324,7 @@
             </xsl:choose>
          </xsl:variable>
          <xsl:text>, \emph{</xsl:text>
-         <xsl:for-each select="$indexkey/occupation">
+         <xsl:for-each select="$indexkey/tei:occupation">
             <xsl:if test="fn:position() &lt; 4">
                <!-- Nur drei Berufe aufnehmen -->
                <xsl:variable name="berufstring"
@@ -671,17 +671,17 @@
       <xsl:param name="endung" as="xs:string"/>
       <xsl:variable name="org-entry" select="key('org-lookup', ($first), $orgs)"/>
       <xsl:variable name="ort" select="$org-entry/tei:place[1]/tei:placeName[1]"/>
-      <xsl:variable name="bezirk" select="$org-entry/Bezirk"/>
-      <xsl:variable name="typ" select="$org-entry/desc[1]/gloss[1]"/>
+      <xsl:variable name="bezirk" select="$org-entry/*:Bezirk"/>
+      <xsl:variable name="typ" select="$org-entry/tei:desc[1]/tei:gloss[1]"/>
       <xsl:choose>
-         <xsl:when test="string-length($org-entry/orgName[1]) = 0">
+         <xsl:when test="string-length($org-entry/tei:orgName[1]) = 0">
             <xsl:text>XXXX ORGangabe fehlt</xsl:text>
          </xsl:when>
          <xsl:otherwise>
             <xsl:choose>
                <xsl:when test="$first != ''">
                   <xsl:choose>
-                     <xsl:when test="$org-entry/orgName = ''">\textcolor{red}{ORGNR INHALT FEHLT}{ </xsl:when>
+                     <xsl:when test="$org-entry/tei:orgName = ''">\textcolor{red}{ORGNR INHALT FEHLT}{ </xsl:when>
                      <xsl:otherwise>
                         <xsl:text>\orgindex{</xsl:text>
                         <xsl:if test="$ort != ''">
@@ -778,7 +778,7 @@
                            </xsl:when>
                         </xsl:choose>
                         <xsl:value-of
-                           select="foo:index-sortiert(normalize-space($org-entry/orgName[1]), 'up')"/>
+                           select="foo:index-sortiert(normalize-space($org-entry/tei:orgName[1]), 'up')"/>
                         <xsl:if test="$typ != '' and not($ort = 'Wien' and $typ = 'Tageszeitung')">
                            <!--<xsl:text>, \emph{</xsl:text>
                            <xsl:value-of select="normalize-space($org-entry/Typ)"/>
@@ -1720,12 +1720,12 @@
       <xsl:text>&#10;\physDesc{</xsl:text>
       <xsl:choose>
          <xsl:when
-            test="(ancestor::tei:witness/objectType or child::tei:objectDesc) and (child::tei:typeDesc or child::tei:handDesc or child::tei:additions)">
+            test="(ancestor::tei:witness/tei:objectType or child::tei:objectDesc) and (child::tei:typeDesc or child::tei:handDesc or child::tei:additions)">
             <xsl:choose>
-               <xsl:when test="ancestor::tei:witness/objectType and child::tei:objectDesc">
-                  <xsl:apply-templates select="ancestor::tei:witness/objectType" mode="physdesc"/>
+               <xsl:when test="ancestor::tei:witness/tei:objectType and child::tei:objectDesc">
+                  <xsl:apply-templates select="ancestor::tei:witness/tei:objectType" mode="physdesc"/>
                   <xsl:if
-                     test="child::tei:objectDesc/supportDesc/extent/measure[2] or child::tei:objectDesc/supportDesc/child::tei:*[not(name() = 'extent')]">
+                     test="child::tei:objectDesc/tei:supportDesc/tei:extent/tei:measure[2] or child::tei:objectDesc/tei:supportDesc/child::tei:*[not(name() = 'extent')]">
                      <xsl:text>, </xsl:text>
                   </xsl:if>
                   <xsl:apply-templates select="child::tei:objectDesc"/>
@@ -1735,7 +1735,7 @@
                </xsl:when>
             </xsl:choose>
             <xsl:if
-               test="(ancestor::tei:witness/objectType or child::tei:objectDesc) and child::tei:*[not(name() = 'objectDesc')]">
+               test="(ancestor::tei:witness/tei:objectType or child::tei:objectDesc) and child::tei:*[not(name() = 'objectDesc')]">
                <xsl:text>&#10;\newline{}</xsl:text>
             </xsl:if>
             <xsl:if test="tei:typeDesc">
@@ -2098,16 +2098,16 @@
       </xsl:choose>
       <xsl:text>}</xsl:text>
    </xsl:template>
-   <xsl:template match="tei:msIdentifier/settlement">
+   <xsl:template match="tei:msIdentifier/tei:settlement">
       <xsl:choose>
-         <xsl:when test="contains(parent::tei:msIdentifier/repository, .)"/>
+         <xsl:when test="contains(parent::tei:msIdentifier/tei:repository, .)"/>
          <xsl:otherwise>
             <xsl:apply-templates/>
             <xsl:text>, </xsl:text>
          </xsl:otherwise>
       </xsl:choose>
    </xsl:template>
-   <xsl:template match="tei:msIdentifier/repository">
+   <xsl:template match="tei:msIdentifier/tei:repository">
       <xsl:apply-templates/>
       <xsl:text>, </xsl:text>
    </xsl:template>
@@ -2172,10 +2172,10 @@
          </xsl:for-each>
          <xsl:text>}</xsl:text>
       </xsl:if>
-      <xsl:if test="child::tei:listOrg/org">
+      <xsl:if test="child::tei:listOrg/tei:org">
          <xsl:text>&#10;\renewcommand{\erwaehnteInstitutionen}{</xsl:text>
          <xsl:text>Institutionen: </xsl:text>
-         <xsl:for-each select="child::tei:listOrg/org">
+         <xsl:for-each select="child::tei:listOrg/tei:org">
             <xsl:sort select="descendant::tei:orgName[1]/text()"/>
             <xsl:value-of
                select="foo:sonderzeichen-ersetzen(normalize-space(descendant::tei:orgName[1]/text()))"/>
@@ -3358,7 +3358,7 @@
       </xsl:if>
       <xsl:choose>
          <xsl:when test="tei:table"/>
-         <xsl:when test="tei:textkonstitution/zu-anmerken/table"/>
+         <xsl:when test="tei:textkonstitution/zu-anmerken/tei:table"/>
          <xsl:when test="ancestor::tei:quote[ancestor::tei:note] | ancestor::tei:quote[ancestor::tei:physDesc]">
             <xsl:if test="not(position() = 1)">
                <xsl:text>{ / }</xsl:text>
@@ -3454,7 +3454,7 @@
       </xsl:choose>
       <xsl:choose>
          <xsl:when test="tei:table"/>
-         <xsl:when test="tei:textkonstitution/zu-anmerken/table"/>
+         <xsl:when test="tei:textkonstitution/zu-anmerken/tei:table"/>
          <xsl:when test="ancestor::tei:quote[ancestor::tei:note] | ancestor::tei:quote[ancestor::tei:physDesc]"/>
          <xsl:otherwise>
             <xsl:text>\pend
@@ -3634,7 +3634,7 @@
             <xsl:with-param name="spalte" select="$spalte5"/>
          </xsl:call-template>
       </xsl:variable>
-      <xsl:variable name="tabellen-anzahl" as="xs:integer" select="count(ancestor::tei:body//table)"/>
+      <xsl:variable name="tabellen-anzahl" as="xs:integer" select="count(ancestor::tei:body//tei:table)"/>
       <xsl:variable name="xml-id-part" as="xs:string" select="ancestor::tei:TEI/@xml:id"/>
       <xsl:text>\settowidth{\longeste}{</xsl:text>
       <xsl:value-of select="$longest1"/>
@@ -3759,13 +3759,13 @@
    <xsl:template match="tei:row[parent::tei:table[@rend = 'group']]">
       <xsl:choose>
          <!-- Eine Klammer kriegen nur die, die auch mehr als zwei Zeilen haben -->
-         <xsl:when test="child::tei:cell/@role = 'label' and child::tei:cell/table/row[2]">
+         <xsl:when test="child::tei:cell/@role = 'label' and child::tei:cell/tei:table/tei:row[2]">
             <xsl:text>$\left.</xsl:text>
             <xsl:apply-templates select="tei:cell[not(@role = 'label')]"/>
             <xsl:text>\right\}$ </xsl:text>
             <xsl:apply-templates select="tei:cell[@role = 'label']"/>
          </xsl:when>
-         <xsl:when test="child::tei:cell/@role = 'label' and not(child::tei:cell/table/row[2])">
+         <xsl:when test="child::tei:cell/@role = 'label' and not(child::tei:cell/tei:table/tei:row[2])">
             <xsl:text>$\left.</xsl:text>
             <xsl:apply-templates select="tei:cell[not(@role = 'label')]"/>
             <xsl:text>\right.$\hspace{0.9em}</xsl:text>
@@ -5070,17 +5070,17 @@
             <xsl:text>\textcolor{red}{ORGANISATION OFFEN}</xsl:text>
          </xsl:when>
          <xsl:otherwise>
-            <xsl:if test="$entry[1]/orgName[1] != ''">
+            <xsl:if test="$entry[1]/tei:orgName[1] != ''">
                <xsl:value-of
-                  select="foo:sonderzeichen-ersetzen(normalize-space($entry[1]//orgName))"/>
+                  select="foo:sonderzeichen-ersetzen(normalize-space($entry[1]//tei:orgName))"/>
             </xsl:if>
             <xsl:if test="$entry[1]/Ort[1] != ''">
                <xsl:text>, </xsl:text>
-               <xsl:value-of select="foo:sonderzeichen-ersetzen(normalize-space($entry[1]/Ort))"/>
+               <xsl:value-of select="foo:sonderzeichen-ersetzen(normalize-space($entry[1]/*:Ort))"/>
             </xsl:if>
             <xsl:if test="$entry[1]/Ort[1] != ''">
                <xsl:text>, \emph{</xsl:text>
-               <xsl:value-of select="foo:sonderzeichen-ersetzen(normalize-space($entry[1]/Typ))"/>
+               <xsl:value-of select="foo:sonderzeichen-ersetzen(normalize-space($entry[1]/*:Typ))"/>
                <xsl:text>}</xsl:text>
             </xsl:if>
          </xsl:otherwise>
