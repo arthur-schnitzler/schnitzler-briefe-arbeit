@@ -3823,7 +3823,7 @@
       <xsl:apply-templates/>
       <xsl:text>\toendnotes[C]{\begin{minipage}[t]{4em}{\makebox[3.6em][r]{\tiny{Fußnote}}}\end{minipage}\begin{minipage}[t]{\dimexpr\linewidth-4em}\textit{</xsl:text>
       <xsl:for-each-group select="following-sibling::node()"
-         group-ending-with="note[@type = $type]">
+         group-ending-with="tei:note[@type = $type]">
          <xsl:if test="position() eq 1">
             <xsl:apply-templates select="current-group()[position() != last()]" mode="lemma"/>
             <xsl:text>}\,{]} </xsl:text>
@@ -3840,7 +3840,7 @@
       <xsl:variable name="id" select="@xml:id"/>
       <xsl:variable name="lemmatext" as="xs:string">
          <xsl:for-each-group select="following-sibling::node()"
-            group-ending-with="note[@type = $typ-i-typ and @corresp=$id]">
+            group-ending-with="tei:note[@type = $typ-i-typ and @corresp=$id][1]">
             <xsl:if test="position() eq 1">
                <xsl:apply-templates select="current-group()[position() != last()]" mode="lemma"/>
             </xsl:if>
@@ -4178,6 +4178,9 @@
    <!-- Geminationsstriche -->
    <xsl:template match="tei:c[@rendition = '#gemination-m']">
       <xsl:text>{\geminationm}</xsl:text>
+   </xsl:template>
+   <xsl:template match="tei:c[@rendition = '#langesS']">
+      <xsl:text>ſ</xsl:text>
    </xsl:template>
    <xsl:template match="tei:c[@rendition = '#gemination-n']">
       <xsl:text>{\geminationn}</xsl:text>
