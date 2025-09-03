@@ -39,17 +39,20 @@ class PMBProcessor:
                     tree = ET.parse(file_path)
                     root = tree.getroot()
                     
-                    # Find all entities in the file
+                    # Find all entities in the file (filter out back section manually)
                     if pmb_type == "person":
-                        entities = root.findall(".//tei:person[not(ancestor::tei:back)]", self.ns)
+                        entities = root.findall(f".//tei:person", self.ns)
                     elif pmb_type == "bibl":
-                        entities = root.findall(".//tei:bibl[not(ancestor::tei:back)]", self.ns)
+                        entities = root.findall(f".//tei:bibl", self.ns)
                     elif pmb_type == "place":
-                        entities = root.findall(".//tei:place[not(ancestor::tei:back)]", self.ns)
+                        entities = root.findall(f".//tei:place", self.ns)
                     elif pmb_type == "org":
-                        entities = root.findall(".//tei:org[not(ancestor::tei:back)]", self.ns)
+                        entities = root.findall(f".//tei:org", self.ns)
                     elif pmb_type == "event":
-                        entities = root.findall(".//tei:event[not(ancestor::tei:back)]", self.ns)
+                        entities = root.findall(f".//tei:event", self.ns)
+                    
+                    # Filter out entities in back section
+                    entities = [entity for entity in entities if not self._is_in_back_section(entity, root)]
                     
                     for entity in entities:
                         xml_id = entity.get(f"{{{self.xml_ns}}}id")
