@@ -3609,7 +3609,7 @@
             </xsl:for-each>
          </row>
       </xsl:variable>
-      <xsl:variable name="longest1" as="xs:string">
+      <xsl:variable name="longest1" as="xs:string?">
          <xsl:call-template name="foo:laengsterTextInSpalte">
             <xsl:with-param name="spalte" select="$spalte1"/>
          </xsl:call-template>
