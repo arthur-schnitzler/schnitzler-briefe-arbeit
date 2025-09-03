@@ -1373,7 +1373,7 @@
       <xsl:apply-templates select="tei:incident[@type = 'additional-information']"/>
       <xsl:apply-templates select="tei:incident[@type = 'editorial']"/>
    </xsl:template>
-   <xsl:template match="tei:incident[@type = 'supplement']/desc">
+   <xsl:template match="tei:incident[@type = 'supplement']/tei:desc">
       <xsl:variable name="poschitzion"
          select="count(parent::tei:incident/preceding-sibling::tei:incident[@type = 'supplement'])"/>
       <xsl:choose>
@@ -1428,7 +1428,7 @@
          </xsl:when>
       </xsl:choose>
    </xsl:template>
-   <xsl:template match="tei:incident[@type = 'receiver']/desc">
+   <xsl:template match="tei:incident[@type = 'receiver']/tei:desc">
       <xsl:variable name="receiver"
          select="substring-before(ancestor::tei:teiHeader//tei:correspDesc/tei:correspAction[@type = 'received']/tei:persName[1], ',')"/>
       <xsl:variable name="poschitzion"
@@ -3609,7 +3609,7 @@
             </xsl:for-each>
          </row>
       </xsl:variable>
-      <xsl:variable name="longest1" as="xs:string">
+      <xsl:variable name="longest1" as="xs:string?">
          <xsl:call-template name="foo:laengsterTextInSpalte">
             <xsl:with-param name="spalte" select="$spalte1"/>
          </xsl:call-template>
@@ -3823,7 +3823,7 @@
       <xsl:apply-templates/>
       <xsl:text>\toendnotes[C]{\begin{minipage}[t]{4em}{\makebox[3.6em][r]{\tiny{Fußnote}}}\end{minipage}\begin{minipage}[t]{\dimexpr\linewidth-4em}\textit{</xsl:text>
       <xsl:for-each-group select="following-sibling::node()"
-         group-ending-with="note[@type = $type]">
+         group-ending-with="tei:note[@type = $type]">
          <xsl:if test="position() eq 1">
             <xsl:apply-templates select="current-group()[position() != last()]" mode="lemma"/>
             <xsl:text>}\,{]} </xsl:text>
@@ -3840,7 +3840,7 @@
       <xsl:variable name="id" select="@xml:id"/>
       <xsl:variable name="lemmatext" as="xs:string">
          <xsl:for-each-group select="following-sibling::node()"
-            group-ending-with="note[@type = $typ-i-typ and @corresp=$id]">
+            group-ending-with="tei:note[@type = $typ-i-typ and @corresp=$id][1]">
             <xsl:if test="position() eq 1">
                <xsl:apply-templates select="current-group()[position() != last()]" mode="lemma"/>
             </xsl:if>
@@ -4178,6 +4178,9 @@
    <!-- Geminationsstriche -->
    <xsl:template match="tei:c[@rendition = '#gemination-m']">
       <xsl:text>{\geminationm}</xsl:text>
+   </xsl:template>
+   <xsl:template match="tei:c[@rendition = '#langesS']">
+      <xsl:text>ſ</xsl:text>
    </xsl:template>
    <xsl:template match="tei:c[@rendition = '#gemination-n']">
       <xsl:text>{\geminationn}</xsl:text>
@@ -5170,10 +5173,10 @@
             <xsl:text>\textbf{</xsl:text>
             <xsl:value-of select="normalize-space(foo:sonderzeichen-ersetzen($ort))"/>
             <xsl:text>}</xsl:text>
-            <xsl:if test="key('place-lookup', $first, $places)/desc">
+            <xsl:if test="key('place-lookup', $first, $places)/tei:desc">
                <xsl:text>, \emph{</xsl:text>
                <xsl:value-of
-                  select="replace(key('place-lookup', $first, $places)/desc[1]/text(), '#', '')"/>
+                  select="replace(key('place-lookup', $first, $places)/tei:desc[1]/text(), '#', '')"/>
                <xsl:text>}</xsl:text>
             </xsl:if>
          </xsl:otherwise>
@@ -5189,9 +5192,9 @@
       <xsl:param name="endung-setzen" as="xs:boolean"/>
       <xsl:variable name="place" select="key('place-lookup', $first, $places)"/>
       <xsl:variable name="ort" select="$place/tei:placeName[1]"/>
-      <xsl:variable name="active" select="$place/belongsTo/@active"/>
-      <xsl:variable name="passive" select="$place/belongsTo/@passive"/>
-      <xsl:variable name="typ" select="$place/desc/gloss"/>
+      <xsl:variable name="active" select="$place/tei:belongsTo/@active"/>
+      <xsl:variable name="passive" select="$place/tei:belongsTo/@passive"/>
+      <xsl:variable name="typ" select="$place/tei:desc/tei:gloss"/>
       <xsl:choose>
          <xsl:when test="not(starts-with($first, '#pmb'))">
             <xsl:text>\textcolor{red}{FEHLER4}</xsl:text>
