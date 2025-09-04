@@ -1,6 +1,10 @@
-<?xml version='1.0' encoding='UTF-8'?>
+<?xml version="1.0" encoding="UTF-8"?>
 <?xml-model href="../meta/schnitzler-briefe-schematron.sch" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
-<TEI xmlns="http://www.tei-c.org/ns/1.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.tei-c.org/ns/1.0 ../meta/schnitzler-briefe-schema.xsd" xml:id="L03785" xml:base="https://id.acdh.oeaw.ac.at/schnitzler/schnitzler-briefe/editions">
+<TEI xmlns="http://www.tei-c.org/ns/1.0"
+     xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+     xsi:schemaLocation="http://www.tei-c.org/ns/1.0 ../meta/schnitzler-briefe-schema.xsd"
+     xml:id="L03785"
+     xml:base="https://id.acdh.oeaw.ac.at/schnitzler/schnitzler-briefe/editions">
    <teiHeader>
       <fileDesc>
          <titleStmt>
@@ -83,7 +87,7 @@
                               <extent>
                                  <measure unit="seite" quantity="2"/>
                                  <measure unit="blatt" quantity="1"/>
-                                 <measure unit="zeichenanzahl" quantity="1237"/>
+                                 <measure unit="zeichenanzahl" quantity="1238"/>
                               </extent>
                            </supportDesc>
                         </objectDesc>
@@ -116,16 +120,26 @@
                <date evidence="external" notBefore="1913-03-19" notAfter="1913-03-20">[19. 3. 1913 – 20. 3. 1913?]</date>
                <placeName ref="#pmb182" evidence="external">Paris</placeName>
             </correspAction>
-            <correspContext><ref type="belongsToCorrespondence" target="correspondence_13212">Zweig, Stefan</ref>
+            <correspContext>
+               <ref type="belongsToCorrespondence" target="correspondence_13212">Zweig, Stefan</ref>
                <ref subtype="previous_letter" type="withinCollection" target="L03642">Zweig an Schnitzler, 15. 3. 1913</ref>
                <ref subtype="next_letter" type="withinCollection" target="L03644">Zweig an Schnitzler, 20. 3. 1913</ref>
-               <ref subtype="previous_letter" type="withinCorrespondence" source="correspondence_13212" target="L03642">Zweig an Schnitzler, 15. 3. 1913</ref>
-               <ref subtype="next_letter" type="withinCorrespondence" source="correspondence_13212" target="L03644">Zweig an Schnitzler, 20. 3. 1913</ref>
-            </correspContext></correspDesc>
+               <ref subtype="previous_letter"
+                    type="withinCorrespondence"
+                    source="correspondence_13212"
+                    target="L03642">Zweig an Schnitzler, 15. 3. 1913</ref>
+               <ref subtype="next_letter"
+                    type="withinCorrespondence"
+                    source="correspondence_13212"
+                    target="L03644">Zweig an Schnitzler, 20. 3. 1913</ref>
+            </correspContext>
+         </correspDesc>
       </profileDesc>
-      <revisionDesc status="proposed">
+      <revisionDesc status="candidate">
          <change who="MAM" when="2025-07-17">Export aus Transkribus</change>
          <change who="MAM" when="2025-08-07">Durchsicht</change>
+         <change who="MAM" when="2025-09-04">Durchsicht</change>
+         <change who="MAM" when="2025-09-04">Index check</change>
       </revisionDesc>
    </teiHeader>
    <facsimile>
@@ -157,8 +171,7 @@
                Erfolg des<rs type="work" ref="#pmb30207" subtype="implied">Stücks</rs> in <rs type="place" ref="#pmb182">Paris</rs> ist meines Erachtens nur möglich, wenn
                insbesondere der <rs type="work" subtype="implied" ref="#pmb30207">Hofreiter</rs>
                durch einen Schauspieler ersten Ranges dem Verständnis der Leute nahegebracht werden
-               würde.</p>
-            <p>Ich weiss nicht, ob das <rs type="org" ref="#pmb296443">Theater Des Arts</rs> über
+               würde. Ich weiss nicht, ob das <rs type="org" ref="#pmb296443">Theater Des Arts</rs> über
                eine festengagierte Truppe verfügt oder sich mit Schauspielern von Fall zu Fall
                behilft; dass man etwa <pb facs="0058_FL81799562"/>
                <rs type="person" ref="#pmb17536">Guitry</rs> (der das <rs type="work" ref="#pmb30207" subtype="implied">Stück</rs>
@@ -185,9 +198,12 @@
                   <add place="inline">te.</add>
                </subst>
             </p>
-            <p>Wir haben hier eine etwas unruhige Zeit hinter uns, da<rs type="person" ref="#pmb12692">Heini</rs> an Blinddarm operiert worden und erst gestern <add place="inline">(</add>bei vortrefflichem Befinden<add place="inline">)</add> aus
+            <p>Wir haben hier eine etwas unruhige Zeit hinter uns, da <rs type="person" ref="#pmb12692">Heini</rs> an <anchor type="commentary" xml:id="K_L03785-77"/>Blinddarm<note type='commentary' corresp="K_L03785-77">Bei <rs type="person" ref="#pmb12692">Heinrich Schnitzler</rs> wurde am 
+                  <ref type="schnitzler-tagebuch" subtype="date-only" target="1913-03-04"/> eine 
+                  Blinddarmentzündung diagnostiziert. Am <ref type="schnitzler-tagebuch" subtype="date-only" target="1913-03-09"/>
+                  wurde er von seinem Onkel <rs type="person" ref="#pmb12698">Julius Schnitzler</rs> operiert.</note> operiert worden und erst gestern <add place="inline">(</add>bei vortrefflichem Befinden<add place="inline">)</add> aus
                dem <rs type="place" ref="#pmb236861" subtype="implied">Sanatorium</rs>
-               wiederheimgekehrt ist.</p>
+               <anchor type="textConst" xml:id="T_L03785-1"/>wieder heimgekehrt<note type='textConst' corresp="T_L03785-1">Im Typoskript steht: »<quote>wiederheimgekehrt</quote>«.</note> ist.</p>
             <closer>Mit vielen Grüssen, auch von meiner <rs type="person" ref="#pmb2173" subtype="implied">Frau</rs>
                <lb/>Ihr aufrichtig ergebener<lb/>
                <signed>
