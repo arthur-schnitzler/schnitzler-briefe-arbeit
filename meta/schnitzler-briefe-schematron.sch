@@ -435,4 +435,12 @@
             </sch:assert>
         </sch:rule>
     </sch:pattern>
+    <!-- hi element with type underline must have @n -->
+    <sch:pattern id="hi-underline-n">
+        <sch:rule context="tei:hi[@rend = 'underline']">
+            <sch:assert test="@n">
+                tei:hi mit @type='underline' muss ein Attribut @n haben.
+            </sch:assert>
+        </sch:rule>
+    </sch:pattern>
 </sch:schema>
