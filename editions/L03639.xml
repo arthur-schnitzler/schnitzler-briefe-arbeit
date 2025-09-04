@@ -1,6 +1,10 @@
-<?xml version='1.0' encoding='UTF-8'?>
+<?xml version="1.0" encoding="UTF-8"?>
 <?xml-model href="../meta/schnitzler-briefe-schematron.sch" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
-<TEI xmlns="http://www.tei-c.org/ns/1.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.tei-c.org/ns/1.0 ../meta/schnitzler-briefe-schema.xsd" xml:id="L03639" xml:base="https://id.acdh.oeaw.ac.at/schnitzler/schnitzler-briefe/editions">
+<TEI xmlns="http://www.tei-c.org/ns/1.0"
+     xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+     xsi:schemaLocation="http://www.tei-c.org/ns/1.0 ../meta/schnitzler-briefe-schema.xsd"
+     xml:id="L03639"
+     xml:base="https://id.acdh.oeaw.ac.at/schnitzler/schnitzler-briefe/editions">
    <teiHeader>
       <fileDesc>
          <titleStmt>
@@ -84,12 +88,12 @@
                               <extent>
                                  <measure unit="seite" quantity="4"/>
                                  <measure unit="blatt" quantity="1"/>
-                                 <measure unit="zeichenanzahl" quantity="2462"/>
+                                 <measure unit="zeichenanzahl" quantity="2461"/>
                               </extent>
                            </supportDesc>
                         </objectDesc>
                         <handDesc>
-                           <handNote medium="blaue-tinte" style="lateinische-kurrent"/>
+                           <handNote medium="lila-tinte" style="lateinische-kurrent"/>
                         </handDesc>
                         <additions>
                            <incident type="receiver" rend="bleistift">
@@ -151,7 +155,6 @@
                <placeName ref="#pmb50">Wien</placeName>
             </correspAction>
             <correspAction type="delivered">
-               <persName ref="#pmb2121">Schnitzler, Arthur</persName>
                <date evidence="conjecture" notBefore="1912-11-12" notAfter="1912-11-14">[12. 11. 1912 – 14. 11. 1912?]</date>
                <placeName ref="#pmb50">Wien</placeName>
             </correspAction>
@@ -160,16 +163,26 @@
                <date evidence="external" when="1912-11-14">[14. 11. 1912]</date>
                <placeName ref="#pmb50">Wien</placeName>
             </correspAction>
-            <correspContext><ref type="belongsToCorrespondence" target="correspondence_13212">Zweig, Stefan</ref>
+            <correspContext>
+               <ref type="belongsToCorrespondence" target="correspondence_13212">Zweig, Stefan</ref>
                <ref subtype="previous_letter" type="withinCollection" target="L02097">Andreas-Salomé an Schnitzler, [vor dem 15. 11. 1912?]</ref>
                <ref subtype="next_letter" type="withinCollection" target="L02096">Hofmannsthal an Schnitzler, 13. 11. 1912</ref>
-               <ref subtype="previous_letter" type="withinCorrespondence" source="correspondence_13212" target="L03784">Schnitzler an Zweig, 10. 11. 1912</ref>
-               <ref subtype="next_letter" type="withinCorrespondence" source="correspondence_13212" target="L03782">Schnitzler an Zweig, 14. 11. 1912</ref>
-            </correspContext></correspDesc>
+               <ref subtype="previous_letter"
+                    type="withinCorrespondence"
+                    source="correspondence_13212"
+                    target="L03784">Schnitzler an Zweig, 10. 11. 1912</ref>
+               <ref subtype="next_letter"
+                    type="withinCorrespondence"
+                    source="correspondence_13212"
+                    target="L03782">Schnitzler an Zweig, 14. 11. 1912</ref>
+            </correspContext>
+         </correspDesc>
       </profileDesc>
-      <revisionDesc status="proposed">
+      <revisionDesc status="candidate">
          <change who="MAM" when="2025-05-21">Export aus Transkribus</change>
          <change who="SJ" when="2025-06-05">Auszeichnung</change>
+         <change who="MAM" when="2025-09-04">Durchsicht</change>
+         <change who="MAM" when="2025-09-04">Index check</change>
       </revisionDesc>
    </teiHeader>
    <facsimile>
@@ -227,7 +240,7 @@
                     davon, zu sehr mit Sympathie und Zorn gegen und für seine so herrlich
                     lebendigen, so atemnahen Menschen. <anchor type="commentary" xml:id="K_L03639-2"/>
                <foreign xml:lang="la">Nostra ipsissima res agitur</foreign>
-               <note type="commentary" corresp="K_L03639-2">latein: Es geht um unsere ureigene
+               <note type="commentary" corresp="K_L03639-2">lateinisch: Es geht um unsere ureigene
                         Angelegenheit.</note> – ich spür es zu sehr und <pb facs="MS-SCHNITZLER-B-00118-000-00038-1"/>kann gar nicht recht heraus, mir's
                     zu betrachten, so sehr bin ich darin. Jedesfalls: Sie haben nie eine grössere
                     Scene geschrieben als die im vierten Akt zwischen dem Geistlichen und Bernhardi,
@@ -240,9 +253,16 @@
                     vermag ich noch nicht, ich sagte es ja, er ist noch zu heiß in mir. Aber ich
                     weiß, solchen letzten menschlichen Entäußerungen kann nie <pb facs="MS-SCHNITZLER-B-00118-000-00037-0"/>die Bewunderung fehlen. Ich weiß
                     Ihr <rs type="work" ref="#pmb30203" subtype="implied">Werk</rs> wird wirken (im
-                    banalen bühnentechnischen Sinn und um wie viel mehr in höheren!), ich werde
-                    jedesfalls in <rs type="place" ref="#pmb168">Berlin</rs> bei der <anchor type="commentary" xml:id="K_L03639-3"/>Première<note type="commentary" corresp="K_L03639-3">Die Uraufführung von <rs type="work" ref="#pmb30203">Professor Bernhardi</rs> fand am <date>28. 11. 1912</date> am <rs type="place" ref="#pmb208">Kleinen Theater</rs> in <rs type="place" ref="#pmb168">Berlin</rs> statt.</note> sein, sobald ich das Datums
-                    erfahre und eine Einteilung zu treffen vermag. Denn ich möchte nicht fehlen,
+                    banalen bühnentechnischen Sinn und um wie viel mehr im höheren!), ich werde
+                    jedesfalls in <rs type="place" ref="#pmb168">Berlin</rs> bei der <anchor type="commentary" xml:id="K_L03639-3"/>
+               <rs type="event" ref="#pmb35355" subtype="implied">Première</rs>
+               <note type="commentary" corresp="K_L03639-3">Die <rs type="event" ref="#pmb35355" subtype="implied">Uraufführung</rs> von <rs type="work" ref="#pmb30203">Professor Bernhardi</rs> fand am <ref type="schnitzler-kultur" subtype="date-only" target="pmb35355"/> am <rs type="place" ref="#pmb208">Kleinen Theater</rs> in <rs type="place" ref="#pmb168">Berlin</rs> statt.</note> sein, sobald ich das Datum
+                    erfahre und eine Einteilung zu treffen vermag. Denn ich <anchor type="commentary" xml:id="K_L03639-55"/>möchte nicht fehlen<note type='commentary' corresp="K_L03639-55">Er dürfte 
+                       den Plan, zur <rs type="event" ref="#pmb35355" subtype="implied">Uraufführung</rs> nach <rs type="place" ref="#pmb168">Berlin</rs> zu reisen,
+                    nicht umgesetzt haben. Zumindest erwähnt <rs type="person" ref="#pmb2121">Schnitzler</rs> im <rs type="work" ref="#pmb33243">Tagebuch</rs>-Eintrag zum 
+                       <ref type="schnitzler-tagebuch" subtype="date-only" target="1912-11-28"/>
+                       seine
+                    Anwesenheit nicht.</note>,
                     wenn ein solches Werk aus Buch zum Wort und vom Wort zur lebendigen Wirkung
                     wird.</p>
             <closer>Viele Grüsse Ihrer verehrten Frau <rs type="person" ref="#pmb2173" subtype="implied">Gemahlin</rs>! Innigst getreu und mit frohem
@@ -1859,6 +1879,69 @@
                <idno type="URL" subtype="wienerschnitzler">https://wienerschnitzler.org/pmb208.html</idno>
             </place>
          </listPlace>
+         <listEvent>
+            <event xml:id="pmb35355" when="1912-11-28">
+               <eventName n="Theateruraufführung">Uraufführung von Professor Bernhardi, 28.11.1912</eventName>
+               <note type="listorg">
+                  <listOrg>
+                     <org role="veranstaltet von">
+                        <orgName ref="pmb45430">Kleines Theater</orgName>
+                     </org>
+                  </listOrg>
+               </note>
+               <idno type="URL" subtype="pmb">https://pmb.acdh.oeaw.ac.at/entity/35355/</idno>
+               <listBibl>
+                  <bibl>
+                     <title ref="pmb30203">Professor Bernhardi. Komödie in fünf Akten</title>
+                     <note type="relation-type">ist Uraufführung von</note>
+                  </bibl>
+                  <bibl>
+                     <title ref="pmb162680">»Professor Bernhardi« von Arthur Schnitzler</title>
+                     <note type="relation-type">wird rezensiert in</note>
+                  </bibl>
+               </listBibl>
+               <listPerson>
+                  <person role="hat als Teilnehmer:in">
+                     <persName ref="pmb2121">Schnitzler, Arthur</persName>
+                  </person>
+                  <person role="hat als Teilnehmer:in">
+                     <persName ref="pmb12698">Schnitzler, Julius</persName>
+                  </person>
+                  <person role="hat als Teilnehmer:in">
+                     <persName ref="pmb24423">Schnitzler, Helene</persName>
+                  </person>
+                  <person role="hat als Teilnehmer:in">
+                     <persName ref="pmb11617">Hauptmann, Gerhart</persName>
+                  </person>
+                  <person role="hat als Teilnehmer:in">
+                     <persName ref="pmb11324">Fischer, Samuel</persName>
+                  </person>
+                  <person role="hat als Teilnehmer:in">
+                     <persName ref="pmb2657">Fischer, Hedwig</persName>
+                  </person>
+                  <person role="hat als Teilnehmer:in">
+                     <persName ref="pmb10788">Auernheimer, Raoul</persName>
+                  </person>
+                  <person role="hat als Teilnehmer:in">
+                     <persName ref="pmb11910">Kerr, Alfred</persName>
+                  </person>
+                  <person role="hat als Teilnehmer:in">
+                     <persName ref="pmb10833">Barnowsky, Victor</persName>
+                  </person>
+                  <person role="hat als Teilnehmer:in">
+                     <persName ref="pmb2173">Schnitzler, Olga</persName>
+                  </person>
+               </listPerson>
+               <listPlace>
+                  <place>
+                     <placeName role="veranstaltet in" ref="pmb208">Kleines Theater</placeName>
+                     <location>
+                        <geo>52,517222 13,389167</geo>
+                     </location>
+                  </place>
+               </listPlace>
+            </event>
+         </listEvent>
       </back>
    </text>
 </TEI>
