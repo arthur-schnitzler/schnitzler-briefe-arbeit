@@ -109,9 +109,15 @@
     <xsl:template match="tei:back//tei:bibl/tei:author/@ref | tei:back//tei:bibl/tei:author/@key">
         <xsl:attribute name="ref">
             <xsl:choose>
-                <xsl:when test="starts-with(., 'pmbperson__') or starts-with(., 'person__')">
+                <xsl:when test="starts-with(., 'pmbperson__')">
+                    <xsl:value-of select="concat('pmb', substring-after(., 'pmbperson__'))"/>
+                </xsl:when>
+                <xsl:when test="starts-with(., 'person__')">
                     <xsl:value-of select="concat('pmb', substring-after(., 'person__'))"/>
                 </xsl:when>
+                <xsl:otherwise>
+                    <xsl:value-of select="."/>
+                </xsl:otherwise>
             </xsl:choose>
         </xsl:attribute>
     </xsl:template>

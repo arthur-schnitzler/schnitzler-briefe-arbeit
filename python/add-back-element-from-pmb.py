@@ -417,7 +417,12 @@ class PMBProcessor:
         for elem in root.findall(".//*[@key]"):
             key = elem.get("key")
             if not key.startswith('pmb'):
-                key = f'pmb{key}'
+                if key.startswith('pmbperson__'):
+                    key = f'pmb{key[11:]}'  # Remove 'pmbperson__' prefix
+                elif key.startswith('person__'):
+                    key = f'pmb{key[8:]}'   # Remove 'person__' prefix
+                else:
+                    key = f'pmb{key}'
             elem.set("ref", key)
             del elem.attrib["key"]
         
