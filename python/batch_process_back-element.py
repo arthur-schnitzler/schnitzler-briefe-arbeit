@@ -23,7 +23,7 @@ def process_file(xml_file, processor_script):
             sys.executable, 
             str(processor_script), 
             xml_file
-        ], capture_output=True, text=True, timeout=300)  # 5 minute timeout per file
+        ], capture_output=True, text=True, timeout=120)  # 2 minute timeout per file
         
         if result.returncode == 0:
             return {"file": file_name, "status": "success", "error": None}
@@ -31,7 +31,7 @@ def process_file(xml_file, processor_script):
             return {"file": file_name, "status": "failed", "error": result.stderr}
             
     except subprocess.TimeoutExpired:
-        return {"file": file_name, "status": "timeout", "error": "Timeout after 5 minutes"}
+        return {"file": file_name, "status": "timeout", "error": "Timeout after 2 minutes"}
     except Exception as e:
         return {"file": file_name, "status": "exception", "error": str(e)}
 

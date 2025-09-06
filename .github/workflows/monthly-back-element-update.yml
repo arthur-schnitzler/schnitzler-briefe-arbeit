@@ -53,13 +53,15 @@ jobs:
     
     - name: Run back element batch processing
       if: steps.check-changes.outputs.has_changes == 'true'
+      timeout-minutes: 300  # Gesamt-Timeout für diesen Step (5 Stunden)
+      continue-on-error: true  # Workflow soll auch bei Timeouts oder Fehlern weiterlaufen
       run: |
         echo "Starting batch processing of back elements..."
-        python python/batch_process_back-element.py --parallel 2
-        echo "Batch processing completed"
+        python python/batch_process_back-element.py --parallel 6 || echo "Batch processing finished with some errors/timeouts, but continuing..."
+        echo "Batch processing step completed"
     
     - name: Check for actual file changes after processing
-      if: steps.check-changes.outputs.has_changes == 'true'
+      if: always() && steps.check-changes.outputs.has_changes == 'true'  # Läuft auch bei Fehlern im vorherigen Step
       id: check-git-changes
       run: |
         # Prüfen ob das Script tatsächlich Dateien geändert hat
@@ -73,13 +75,13 @@ jobs:
         fi
     
     - name: Configure Git
-      if: steps.check-git-changes.outputs.files_changed == 'true'
+      if: always() && steps.check-git-changes.outputs.files_changed == 'true'
       run: |
         git config --local user.email "action@github.com"
         git config --local user.name "GitHub Action"
     
     - name: Commit and push changes
-      if: steps.check-git-changes.outputs.files_changed == 'true'
+      if: always() && steps.check-git-changes.outputs.files_changed == 'true'
       run: |
         # Erstelle Commit-Message mit Zusammenfassung
         CURRENT_DATE=$(date +%Y-%m-%d)
