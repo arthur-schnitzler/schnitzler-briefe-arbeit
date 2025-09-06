@@ -44,7 +44,7 @@ def download_pmb_lists():
         print(f"Error: Download script {download_script} does not exist")
         return False
     
-    print("Downloading and transforming PMB lists...")
+    print("📥 Downloading and transforming PMB lists...")
     
     try:
         result = subprocess.run([
@@ -53,7 +53,7 @@ def download_pmb_lists():
         ], capture_output=True, text=True, timeout=600)  # 10 minute timeout
         
         if result.returncode == 0:
-            print("PMB lists downloaded and transformed successfully")
+            print("✅ PMB lists downloaded and transformed successfully")
             return True
         else:
             print(f"Error downloading PMB lists: {result.stderr}")
@@ -113,9 +113,9 @@ def main():
         xml_files = xml_files[:args.limit]
         print(f"Limited to first {args.limit} files")
     
-    print(f"Found {len(xml_files)} files to process")
-    print(f"Using {args.parallel} parallel processes")
-    print("\nStarting batch processing...")
+    print(f"📊 Found {len(xml_files)} files to process")
+    print(f"⚙️ Using {args.parallel} parallel processes")
+    print("\n🔄 Starting batch processing of XML files...")
     
     # Process files
     processed = 0
