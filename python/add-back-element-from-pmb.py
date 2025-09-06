@@ -21,6 +21,16 @@ class PMBProcessor:
         self.xml_ns = "http://www.w3.org/XML/1998/namespace"
         self.ns = {"tei": self.tei_ns, "xml": self.xml_ns}
         
+        # Statistics for debugging
+        self.stats = {
+            "pmb_lookups": 0,
+            "pmb_found": 0,
+            "pmb_not_found": 0,
+            "api_calls": 0,
+            "api_success": 0,
+            "api_failures": 0
+        }
+        
         # Load PMB lookup data
         self.pmb_data = self._load_pmb_data()
         
@@ -61,6 +71,13 @@ class PMBProcessor:
                             
                 except ET.ParseError as e:
                     print(f"Error parsing {file_path}: {e}")
+        
+        print(f"PMB data loaded: {len(pmb_data)} entities")
+        
+        # Show sample of loaded IDs for debugging
+        if len(pmb_data) > 0:
+            sample_ids = list(pmb_data.keys())[:10]
+            print(f"Sample PMB IDs loaded: {sample_ids}")
         
         return pmb_data
 
@@ -264,9 +281,12 @@ class PMBProcessor:
                 continue
             
             # Clean the ID to match PMB format
+            original_id = xml_id
             clean_id = re.sub(r'^.*__', 'pmb', xml_id)
             if not clean_id.startswith('pmb'):
                 clean_id = f'pmb{clean_id}'
+            
+            print(f"🔍 Looking up: {original_id} -> {clean_id} (entity_type: {entity_type})")
             
             # Special case for Arthur Schnitzler
             if clean_id == 'pmb2121' and entity_type == 'person':
@@ -274,14 +294,22 @@ class PMBProcessor:
                 continue
             
             # Try to find in loaded PMB data
+            self.stats["pmb_lookups"] += 1
             pmb_entity = self.pmb_data.get(clean_id)
+            
             if pmb_entity is not None:
                 # Copy data from PMB
+                self.stats["pmb_found"] += 1
+                print(f"✅ Found {clean_id} in local PMB data")
                 entity.clear()
                 entity.set("{http://www.w3.org/XML/1998/namespace}id", clean_id)
                 for child in pmb_entity:
                     entity.append(child)
             else:
+                # Entity not found in local PMB data
+                self.stats["pmb_not_found"] += 1
+                print(f"❌ {clean_id} NOT FOUND in local PMB data - would need API call")
+                
                 # Try to fetch from PMB API
                 self._fetch_from_api(entity, clean_id, entity_type)
 
@@ -347,8 +375,18 @@ class PMBProcessor:
         number = pmb_id.replace('pmb', '')
         url = f"https://pmb.acdh.oeaw.ac.at/apis/tei/{entity_type}/{number}"
         
+        self.stats["api_calls"] += 1
+        print(f"🌐 Making API call for {pmb_id}: {url}")
+        
         try:
-            response = requests.get(url, timeout=10)
+            response = requests.get(url, timeout=5)  # Reduced timeout
+            if response.status_code == 200:
+                self.stats["api_success"] += 1
+                print(f"✅ API success for {pmb_id}")
+            else:
+                self.stats["api_failures"] += 1
+                print(f"❌ API failed for {pmb_id}: HTTP {response.status_code}")
+                
             if response.status_code == 200:
                 # Parse the response and add to entity
                 api_root = ET.fromstring(response.content)
@@ -567,6 +605,17 @@ class PMBProcessor:
             
             # Write with preserved processing instructions
             tree.write(output_file, encoding="utf-8", xml_declaration=True)
+            
+            # Print statistics
+            print(f"\n📊 PMB Processing Statistics:")
+            print(f"   Total lookups: {self.stats['pmb_lookups']}")
+            print(f"   Found locally: {self.stats['pmb_found']}")
+            print(f"   Not found locally: {self.stats['pmb_not_found']}")
+            print(f"   API calls made: {self.stats['api_calls']}")
+            print(f"   API successes: {self.stats['api_success']}")
+            print(f"   API failures: {self.stats['api_failures']}")
+            if self.stats['pmb_lookups'] > 0:
+                print(f"   Hit rate: {100 * self.stats['pmb_found'] / self.stats['pmb_lookups']:.1f}%")
             
             # Re-read the written file and insert processing instructions
             with open(output_file, 'r', encoding='utf-8') as f:
