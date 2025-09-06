@@ -2,7 +2,6 @@
 <xsl:stylesheet xmlns:xsl="http://www.w3.org/1999/XSL/Transform"
     xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:fn="http://www.w3.org/2005/xpath-functions"
     xmlns:foo="whatever" xmlns:tei="http://www.tei-c.org/ns/1.0" version="3.0">
-    <xsl:include href="tex_date-format.xsl"/>
     <xsl:output method="text"/>
     <xsl:strip-space elements="*"/>
     <!-- subst root tei:persName address body div sourceDesc physDesc witList msIdentifier fileDesc teiHeader correspDesc correspAction date witnessdate -->
@@ -132,8 +131,7 @@
    <!-- Diese Funktion setzt den Inhalt eines Index-Eintrags einer Person. Übergeben wird nur der key -->
    <xsl:function name="foo:person-fuer-index">
       <xsl:param name="xkey" as="xs:string"/>
-      <xsl:variable name="xkey-bereinigt" select="concat('#pmb', replace(replace($xkey, '#', ''), 'pmb', ''))"/>
-      <xsl:variable name="indexkey" select="key('person-lookup', $xkey-bereinigt, $persons)" as="node()?"/>
+      <xsl:variable name="indexkey" select="key('person-lookup', $xkey, $persons)" as="node()?"/>
       <xsl:variable name="kName" as="xs:string?"
          select="normalize-space($indexkey/tei:persName/tei:surname)"/>
       <xsl:variable name="kforename" as="xs:string?"
@@ -152,32 +150,31 @@
       </xsl:variable>
       <xsl:variable name="kTodesort" as="xs:string?">
          <xsl:choose>
-            <xsl:when test="$indexkey/tei:death[1]/tei:settlement[1]/tei:placeName[not(@type) or @type='pref']">
+            <xsl:when test="$indexkey/tei:death/tei:placeName[not(@type)]/tei:settlement">
                <xsl:value-of
-                  select="fn:normalize-space($indexkey/tei:death[1]/tei:settlement[1]/tei:placeName[not(@type) or @type='pref'][1])"/>
+                  select="fn:normalize-space($indexkey/tei:death/tei:placeName[not(@type)]/tei:settlement)"/>
             </xsl:when>
             <xsl:when test="$indexkey/tei:death/tei:placeName[@type = 'deportation']">
                <xsl:value-of
-                  select="concat('deportiert ', fn:normalize-space($indexkey/tei:death[1]/tei:settlement[1]/tei:placeName[1]))"
+                  select="concat('deportiert ', fn:normalize-space($indexkey/tei:death/tei:placeName/tei:settlement))"
                />
             </xsl:when>
             <xsl:when test="$indexkey/tei:death/tei:placeName[@type = 'burial']">
                <xsl:value-of
-                  select="concat('beerdigt ', fn:normalize-space($indexkey/tei:death[1]/tei:settlement[1]/tei:placeName[1]))"
+                  select="concat('beerdigt ', fn:normalize-space($indexkey/tei:death/tei:placeName/tei:settlement))"
                />
             </xsl:when>
          </xsl:choose>
       </xsl:variable>
-      <xsl:variable name="kGeburtsort" as="xs:string?" select="$indexkey/tei:birth/tei:settlement/tei:placeName"/>
+      <xsl:variable name="kGeburtsort" as="xs:string?" select="$indexkey/tei:birth/tei:placeName/tei:settlement"/>
       <xsl:variable name="birth_day" as="xs:string?">
          <xsl:choose>
             <xsl:when test="string-length($kGeburtsort) &gt; 0">
-              
                <xsl:value-of
-                  select="concat(foo:date-translate($indexkey[1]/tei:birth[1]/tei:date[1]/text()), ' ', $kGeburtsort)"/>
+                  select="concat($indexkey[1]/tei:birth[1]/tei:date[1]/text(), ' ', $kGeburtsort)"/>
             </xsl:when>
             <xsl:otherwise>
-               <xsl:value-of select="foo:date-translate($indexkey[1]/tei:birth[1]/tei:date[1]/text())"/>
+               <xsl:value-of select="$indexkey[1]/tei:birth[1]/tei:date[1]/text()"/>
             </xsl:otherwise>
          </xsl:choose>
       </xsl:variable>
@@ -186,14 +183,14 @@
       <xsl:variable name="death_day" as="xs:string?">
          <xsl:choose>
             <xsl:when test="$ebenda">
-               <xsl:value-of select="concat(foo:date-translate($indexkey[1]/tei:death[1]/tei:date[1]/text()), ' ebd.')"/>
+               <xsl:value-of select="concat($indexkey[1]/tei:death[1]/tei:date[1]/text(), ' ebd.')"/>
             </xsl:when>
             <xsl:when test="string-length($kTodesort) &gt; 0">
-               <xsl:value-of select="concat(foo:date-translate($indexkey[1]/tei:death[1]/tei:date[1]/text()), ' ', $kTodesort)"
+               <xsl:value-of select="concat($indexkey[1]/tei:death[1]/tei:date[1]/text(), ' ', $kTodesort)"
                />
             </xsl:when>
             <xsl:otherwise>
-               <xsl:value-of select="foo:date-translate($indexkey[1]/tei:death[1]/tei:date[1]/text())"/>
+               <xsl:value-of select="$indexkey[1]/tei:death[1]/tei:date[1]/text()"/>
             </xsl:otherwise>
          </xsl:choose>
       </xsl:variable>
@@ -363,24 +360,24 @@
       </xsl:choose>
    </xsl:function>
    <xsl:function name="foo:person-in-index">
-      <xsl:param name="indexkey" as="xs:string"/>
+      <xsl:param name="indexkey" as="xs:string?"/>
       <xsl:param name="endung" as="xs:string"/>
       <xsl:param name="endung-setzen" as="xs:boolean"/>
-      <xsl:variable name="indexkey-bereinigt" select="replace(replace($indexkey, '#', ''), 'pmb', '')"/>
+      <xsl:if test="not($indexkey = '')">
          <xsl:text>\pwindex{</xsl:text>
          <xsl:choose>
             <!-- Sonderregel für anonym -->
-            <xsl:when test="$indexkey-bereinigt = '' or empty($indexkey-bereinigt)">
+            <xsl:when test="$indexkey = '' or empty($indexkey)">
                <xsl:text>--@Nicht ermittelte Verfasser</xsl:text>
             </xsl:when>
             <xsl:otherwise>
-               <xsl:value-of select="foo:person-fuer-index($indexkey-bereinigt)"/>
+               <xsl:value-of select="foo:person-fuer-index($indexkey)"/>
             </xsl:otherwise>
          </xsl:choose>
          <xsl:if test="$endung-setzen">
             <xsl:value-of select="$endung"/>
          </xsl:if>
-      
+      </xsl:if>
    </xsl:function>
    <xsl:function name="foo:werk-um-artikel-kuerzen">
       <xsl:param name="string" as="xs:string?"/>
@@ -509,26 +506,18 @@
          <xsl:when test="empty($work-entry)">
             <xsl:text>\textcolor{red}{XXXX}</xsl:text>
          </xsl:when>
-         <xsl:when test="$work-entry/tei:author[$author-zaehler]/@ref">
-            <xsl:value-of select="concat('SEX', $work-entry/tei:author[$author-zaehler]/@*/name()[not(.='role')])"/>
-            <xsl:value-of select="foo:person-in-index($work-entry/tei:author[$author-zaehler]/@ref, $endung, false())"/>
-            <xsl:text>!</xsl:text>
-         </xsl:when>
-         
-       <!--  <xsl:when test="$work-entry/tei:author[@role = 'author' or @role='hat-geschaffen'  or @role='hat-unter-einem-kurzel-veroffentlicht' or @role='hat-unter-pseudonym-geschrieben']">
-            <!-\-<xsl:variable name="author-ref"
-               select="substring-after($work-entry/tei:author[@role = 'author' or @role='hat-geschaffen'][$author-zaehler]/tei:idno[@type = 'pmb'], '#')"/>-\->
+         <xsl:when test="$work-entry/tei:author[@role = 'author']">
             <xsl:variable name="author-ref"
-               select="replace($work-entry/tei:author[@role = 'author' or @role='hat-geschaffen'][$author-zaehler]/@key, '#', '')"/>
+               select="substring-after($work-entry/tei:author[@role = 'author'][$author-zaehler]/tei:idno[@type = 'pmb'], '#')"/>
             <xsl:value-of select="foo:person-in-index($author-ref, $endung, false())"/>
             <xsl:text>!</xsl:text>
          </xsl:when>
-         <xsl:when test="$work-entry/tei:author[@role = 'abbreviated-name' or @role='hat-unter-einem-kurzel-veroffentlicht' or @role='hat-unter-einem-kurzel-veroffentlicht' or @role='hat-unter-pseudonym-geschrieben']">
+         <xsl:when test="$work-entry/tei:author[@role = 'abbreviated-name']">
             <xsl:variable name="author-ref"
-               select="replace($work-entry/tei:author[@role = 'abbreviated-name' or @role='hat-unter-einem-kurzel-veroffentlicht'or @role='hat-unter-einem-kurzel-veroffentlicht' or @role='hat-unter-pseudonym-geschrieben'][$author-zaehler]/@key, '#', '')"/>
+               select="substring-after($work-entry/tei:author[@role = 'abbreviated-name'][$author-zaehler]/tei:idno[@type = 'pmb'], '#')"/>
             <xsl:value-of select="foo:person-in-index($author-ref, $endung, false())"/>
             <xsl:text>!</xsl:text>
-         </xsl:when>-->
+         </xsl:when>
          <xsl:otherwise>
             <xsl:text>\pwindex{</xsl:text>
          </xsl:otherwise>
@@ -1006,6 +995,22 @@
             </xsl:if>
          </xsl:otherwise>
       </xsl:choose>
+   </xsl:function>
+   <xsl:function name="foo:date-translate">
+      <xsl:param name="date-string" as="xs:string"/>
+      <xsl:variable name="date-doppelung" as="xs:string">
+         <xsl:choose>
+            <xsl:when
+               test="normalize-space(tokenize($date-string, '–')[1]) = normalize-space(tokenize($date-string, '–')[2])">
+               <!-- solche Fälle ändern: <date>1892-10-29  – 1892-10-29</tei:date> zu <date>1892-10-29</tei:date> -->
+               <xsl:value-of select="normalize-space(tokenize($date-string, '–')[1])"/>
+            </xsl:when>
+            <xsl:otherwise>
+               <xsl:value-of select="$date-string"/>
+            </xsl:otherwise>
+         </xsl:choose>
+      </xsl:variable>
+      <xsl:value-of select="foo:date-repeat($date-doppelung, string-length($date-doppelung), 1)"/>
    </xsl:function>
    <xsl:function name="foo:section-titel-token">
       <!-- Das gibt den Titel für das Inhaltsverzeichnis aus. Immer nach 55 Zeichen wird umgebrochen -->
@@ -4876,7 +4881,7 @@
       <xsl:param name="first" as="xs:string"/>
       <xsl:param name="endung" as="xs:string"/>
       <xsl:variable name="work-entry-authors"
-         select="key('work-lookup', $first, $works)/tei:author[@role = 'author' or @role = 'abbreviated-name'  or @role='hat-geschaffen' or @role='hat-unter-pseudonym-geschrieben'  or @role='hat-unter-einem-kurzel-veroffentlicht']"/>
+         select="key('work-lookup', $first, $works)/tei:author[@role = 'author' or @role = 'abbreviated-name']"/>
       <xsl:variable name="work-entry-authors-count" select="count($work-entry-authors)"/>
       <xsl:choose>
          <xsl:when test="not(key('work-lookup', $first, $works))">
@@ -4947,7 +4952,7 @@
             <xsl:variable name="entry" select="key('work-lookup', replace($first, '#', ''), $works)"
                as="node()?"/>
             <xsl:variable name="author"
-               select="$entry/tei:author[@role = 'author' or @role = 'abbreviated-name' or @role='hat-geschaffen' or @role='hat-unter-pseudonym-geschrieben' or @role='hat-unter-einem-kurzel-veroffentlicht']"/>
+               select="$entry/tei:author[@role = 'author' or @role = 'abbreviated-name']"/>
             <xsl:choose>
                <xsl:when test="not($entry) or $entry = ''">
                   <xsl:text>\pwindex{XXXX Abgedrucktes Werk, Nummer nicht vorhanden|pwt}</xsl:text>
@@ -4969,7 +4974,7 @@
                      </xsl:when>
                      <xsl:otherwise>
                         <xsl:for-each
-                           select="$entry/tei:author[@role = 'author' or @role = 'abbreviated-name' or @role='hat-geschaffen' or @role='hat-unter-pseudonym-geschrieben' or @role='hat-unter-einem-kurzel-veroffentlicht']">
+                           select="$entry/tei:author[@role = 'author' or @role = 'abbreviated-name']">
                            <xsl:value-of select="foo:werk-in-index($first, '|pwt', position())"/>
                            <xsl:choose>
                               <xsl:when test="$vorne">
@@ -4999,8 +5004,8 @@
       <xsl:variable name="entry" select="key('work-lookup', $first, $works)"/>
       <xsl:variable name="author-entry" select="$entry/tei:author"/>
       <xsl:if
-         test="$entry/tei:author[@role = 'author' or @role = 'abbreviated-name' or @role='hat-geschaffen' or @role='hat-unter-pseudonym-geschrieben' or @role='hat-unter-einem-kurzel-veroffentlicht']/tei:surname/text() != ''">
-         <xsl:for-each select="$entry/tei:author[@role = 'author' or @role = 'abbreviated-name' or @role='hat-geschaffen' or @role='hat-unter-pseudonym-geschrieben' or @role='hat-unter-einem-kurzel-veroffentlicht']">
+         test="$entry/tei:author[@role = 'author' or @role = 'abbreviated-name']/tei:surname/text() != ''">
+         <xsl:for-each select="$entry/tei:author[@role = 'author' or @role = 'abbreviated-name']">
             <xsl:choose>
                <xsl:when test="tei:persName/tei:forename = '' and tei:persName/tei:surname = ''">
                   <xsl:text>\textcolor{red}{KEIN NAME}</xsl:text>
@@ -5168,13 +5173,12 @@
             <xsl:text>\textbf{</xsl:text>
             <xsl:value-of select="normalize-space(foo:sonderzeichen-ersetzen($ort))"/>
             <xsl:text>}</xsl:text>
-            <!-- Das hier würde den Ortstyp setzen: -->
-            <!--<xsl:if test="key('place-lookup', $first, $places)/tei:desc">
+            <xsl:if test="key('place-lookup', $first, $places)/tei:desc">
                <xsl:text>, \emph{</xsl:text>
                <xsl:value-of
                   select="replace(key('place-lookup', $first, $places)/tei:desc[1]/text(), '#', '')"/>
                <xsl:text>}</xsl:text>
-            </xsl:if>-->
+            </xsl:if>
          </xsl:otherwise>
       </xsl:choose>
    </xsl:function>

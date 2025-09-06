@@ -1,6 +1,8 @@
 import requests
 import re
 from pathlib import Path
+import time
+import os
 
 def normalize_xml_content(content):
     # Replace patterns with "__" in xml:id and key attributes with "pmb"
@@ -9,6 +11,15 @@ def normalize_xml_content(content):
     content = re.sub(r'(key=")[^"]*__([^"]*")', r'\1pmb\2', content)
     
     return content
+
+def is_file_fresh(filepath, max_age_hours=24):
+    """Check if file exists and is younger than max_age_hours"""
+    if not filepath.exists():
+        return False
+    
+    file_age = time.time() - filepath.stat().st_mtime
+    max_age_seconds = max_age_hours * 3600
+    return file_age < max_age_seconds
 
 def download_pmb_files():
     urls = [
@@ -23,14 +34,34 @@ def download_pmb_files():
     output_dir = Path("python-temp")
     output_dir.mkdir(exist_ok=True)
     
+    # Check if all files are fresh (less than 24 hours old)
+    all_files_fresh = True
+    for url in urls:
+        filename = url.split("/")[-1]
+        filepath = output_dir / filename
+        if not is_file_fresh(filepath):
+            all_files_fresh = False
+            break
+    
+    if all_files_fresh:
+        print("All PMB files are fresh (less than 24 hours old), skipping download")
+        return
+    
+    print("PMB files are stale or missing, downloading...")
+    
     for url in urls:
         filename = url.split("/")[-1]
         filepath = output_dir / filename
         
+        # Skip download if this specific file is fresh
+        if is_file_fresh(filepath):
+            print(f"Skipping {filename} (file is fresh)")
+            continue
+            
         print(f"Downloading {filename}...")
         
         try:
-            response = requests.get(url)
+            response = requests.get(url, timeout=60)  # Add timeout
             response.raise_for_status()
             
             # Normalize the XML content
@@ -43,6 +74,11 @@ def download_pmb_files():
             
         except requests.exceptions.RequestException as e:
             print(f"Error downloading {filename}: {e}")
+            # If download fails but we have an old version, continue
+            if filepath.exists():
+                print(f"Using existing (potentially outdated) version of {filename}")
+            else:
+                print(f"No fallback available for {filename}")
 
 if __name__ == "__main__":
     download_pmb_files()

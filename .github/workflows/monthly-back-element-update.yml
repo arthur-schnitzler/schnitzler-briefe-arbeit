@@ -27,6 +27,14 @@ jobs:
         python -m pip install --upgrade pip
         pip install requests lxml
     
+    - name: Cache PMB files
+      uses: actions/cache@v3
+      with:
+        path: python-temp/
+        key: pmb-files-${{ github.run_id }}-${{ github.run_attempt }}
+        restore-keys: |
+          pmb-files-
+    
     - name: Check for changes in editions folder in the last month
       id: check-changes
       run: |
