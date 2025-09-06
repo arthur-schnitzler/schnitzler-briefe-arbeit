@@ -69,7 +69,7 @@ jobs:
         echo "⚙️  Step 2: Processing XML files with back element enrichment..."
         echo "🔄 Step 3: Running parallel processing on editions/ folder..."
         echo ""
-        python python/batch_process_back-element.py --parallel 6 || echo "Batch processing finished with some errors/timeouts, but continuing..."
+        python -u python/batch_process_back-element.py --parallel 6 || echo "Batch processing finished with some errors/timeouts, but continuing..."
         echo "Batch processing step completed"
     
     - name: Check for actual file changes after processing

@@ -13,6 +13,10 @@ import time
 import argparse
 from concurrent.futures import ThreadPoolExecutor, as_completed
 
+# Ensure unbuffered output for GitHub Actions
+sys.stdout.reconfigure(line_buffering=True)
+sys.stderr.reconfigure(line_buffering=True)
+
 def process_file(xml_file, processor_script):
     """Process a single XML file"""
     file_name = Path(xml_file).name
@@ -115,12 +119,17 @@ def main():
     
     print(f"📊 Found {len(xml_files)} files to process")
     print(f"⚙️ Using {args.parallel} parallel processes")
+    print(f"📋 Processing files matching: {args.pattern}")
     print("\n🔄 Starting batch processing of XML files...")
+    sys.stdout.flush()
     
     # Process files
     processed = 0
     failed = 0
     start_time = time.time()
+    
+    print(f"🚀 Submitting {len(xml_files)} jobs to thread pool...")
+    sys.stdout.flush()
     
     with ThreadPoolExecutor(max_workers=args.parallel) as executor:
         # Submit all jobs
@@ -129,21 +138,31 @@ def main():
             for xml_file in xml_files
         }
         
+        print(f"✅ All jobs submitted! Waiting for results...")
+        sys.stdout.flush()
+        
         # Process results as they complete
         for future in as_completed(future_to_file):
             result = future.result()
             
             if result["status"] == "success":
-                print(f"✅ Successfully processed {result['file']}")
                 processed += 1
             else:
                 print(f"❌ Failed to process {result['file']}: {result['error']}")
                 failed += 1
             
-            # Progress indicator
+            # Progress indicator - more frequent updates
             total_done = processed + failed
-            if total_done % 50 == 0 or total_done == len(xml_files):
-                print(f"Progress: {total_done}/{len(xml_files)} ({100*total_done/len(xml_files):.1f}%)")
+            if total_done % 10 == 0 or total_done == len(xml_files):
+                elapsed = time.time() - start_time
+                avg_time = elapsed / total_done if total_done > 0 else 0
+                remaining_files = len(xml_files) - total_done
+                eta = remaining_files * avg_time if avg_time > 0 else 0
+                
+                print(f"📊 Progress: {total_done}/{len(xml_files)} ({100*total_done/len(xml_files):.1f}%) | "
+                      f"✅ {processed} success | ❌ {failed} failed | "
+                      f"⏱️  {avg_time:.1f}s/file | ETA: {eta/60:.1f}min")
+                sys.stdout.flush()
     
     # Summary
     end_time = time.time()
