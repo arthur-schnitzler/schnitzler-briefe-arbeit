@@ -1828,8 +1828,8 @@
          <xsl:when test="@corresp = 'telegramm'">
             <xsl:text>Telegramm</xsl:text>
          </xsl:when>
-         <xsl:when test="@corresp = 'umschlag'">
-            <xsl:text>Umschlag</xsl:text>
+         <xsl:when test="@corresp = 'kuvert'">
+            <xsl:text>Kuvert</xsl:text>
          </xsl:when>
          <xsl:when test="@corresp = 'widmung'">
             <xsl:text>Widmung</xsl:text>
@@ -1873,7 +1873,7 @@
    </xsl:template>
    <xsl:template match="tei:extent">
       <xsl:variable name="unitOrder"
-         select="'blatt seite karte kartenbrief widmung umschlag zeichenanzahl'"/>
+         select="'blatt seite karte kartenbrief widmung kuvert zeichenanzahl'"/>
       <xsl:variable name="measures" select="." as="node()"/>
       <xsl:for-each select="tokenize($unitOrder, ' ')">
          <xsl:variable name="current" select="."/>
@@ -1910,14 +1910,14 @@
          </xsl:otherwise>
       </xsl:choose>
    </xsl:template>
-   <xsl:template match="tei:measure[@unit = 'umschlag']">
+   <xsl:template match="tei:measure[@unit = 'kuvert']">
       <xsl:choose>
          <xsl:when test="@quantity = '1'">
-            <xsl:text>Umschlag</xsl:text>
+            <xsl:text>Kuvert</xsl:text>
          </xsl:when>
          <xsl:otherwise>
             <xsl:value-of select="@quantity"/>
-            <xsl:text>&#160;Umschläge</xsl:text>
+            <xsl:text>&#160;Kuverts</xsl:text>
          </xsl:otherwise>
       </xsl:choose>
    </xsl:template>

@@ -73,6 +73,24 @@
             <sch:assert
                 test="(@n = 1 and descendant::tei:measure[@unit = 'zeichenanzahl']) or @n != 1">
                 Wenn @n = 1, muss measure mit @unit='zeichenanzahl' enthalten sein. </sch:assert>
+            <sch:assert
+                test="not(tei:objectType/@corresp='karte' and not(descendant::tei:physDesc/tei:objectDesc/@form) and not(descendant::tei:measure/@unit='karte'))">
+                Wenn es sich um eine Karte handelt (und keine Angabe objectDesc/@form vorhanden ist), muss measure/@unit='karte' vorkommen. </sch:assert>
+            <sch:assert
+                test="not(tei:objectType/@corresp='brief' and not(descendant::tei:physDesc/tei:objectDesc/@form) and not(descendant::tei:measure/@unit='blatt'))">
+                Wenn es sich um einen Brief handelt (und keine Angabe objectDesc/@form vorhanden ist), muss measure/@unit='blatt' vorkommen. </sch:assert>
+            <sch:assert
+                test="not(tei:objectType/@corresp='brief' and not(descendant::tei:physDesc/tei:objectDesc/@form) and not(descendant::tei:measure/@unit='seite'))">
+                Wenn es sich um einen Brief handelt (und keine Angabe objectDesc/@form vorhanden ist), muss measure/@unit='seite' vorkommen. </sch:assert>
+            <sch:assert
+                test="not(tei:objectType/@corresp='kartenbrief' and not(descendant::tei:physDesc/tei:objectDesc/@form) and not(descendant::tei:measure/@unit='kartenbrief'))">
+                Wenn es sich um einen Kartenbrief handelt (und keine Angabe objectDesc/@form vorhanden ist), muss measure/@unit='kartenbrief' vorkommen. </sch:assert>
+            <sch:assert
+                test="not(tei:objectType/@corresp='telegramm' and not(descendant::tei:physDesc/tei:objectDesc/@form) and not(descendant::tei:measure/@unit='telegramm'))">
+                Wenn es sich um ein Telegramm handelt (und keine Angabe objectDesc/@form vorhanden ist), muss measure/@unit='Telegramm' vorkommen. </sch:assert>
+            <sch:assert
+                test="not(tei:objectType/@corresp='widmung' and not(descendant::tei:physDesc/tei:objectDesc/@form) and not(descendant::tei:measure/@unit='widmung'))">
+                Wenn es sich um ein Telegramm handelt (und keine Angabe objectDesc/@form vorhanden ist), muss measure/@unit='Telegramm' vorkommen. </sch:assert>
         </sch:rule>
     </sch:pattern>
     <!-- physDesc -->

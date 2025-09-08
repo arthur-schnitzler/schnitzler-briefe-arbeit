@@ -1,6 +1,10 @@
-<?xml version='1.0' encoding='UTF-8'?>
+<?xml version="1.0" encoding="UTF-8"?>
 <?xml-model href="../meta/schnitzler-briefe-schematron.sch" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
-<TEI xmlns="http://www.tei-c.org/ns/1.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.tei-c.org/ns/1.0 ../meta/schnitzler-briefe-schema.xsd" xml:id="L03777" xml:base="https://id.acdh.oeaw.ac.at/schnitzler/schnitzler-briefe/editions">
+<TEI xmlns="http://www.tei-c.org/ns/1.0"
+     xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+     xsi:schemaLocation="http://www.tei-c.org/ns/1.0 ../meta/schnitzler-briefe-schema.xsd"
+     xml:id="L03777"
+     xml:base="https://id.acdh.oeaw.ac.at/schnitzler/schnitzler-briefe/editions">
    <teiHeader>
       <fileDesc>
          <titleStmt>
@@ -81,8 +85,7 @@
                         <objectDesc>
                            <supportDesc>
                               <extent>
-                                 <measure unit="seite" quantity="2"/>
-                                 <measure unit="blatt" quantity="1"/>
+                                 <measure unit="karte" quantity="1"/>
                                  <measure unit="zeichenanzahl" quantity="544"/>
                               </extent>
                            </supportDesc>
@@ -100,6 +103,12 @@
                                     <time>9</time>
                                  </stamp>
                               </desc>
+                           </incident>
+                           <incident type="additional-information">
+                              <desc>Postkartenmotiv mit <rs ref="#pmb2173" type="person">Olga</rs>
+                                 und <rs ref="#pmb12692" type="person">Heinrich</rs> links vor dem
+                                 Haus und Schnitzler und <rs ref="#pmb2238" type="person">Lili</rs>
+                                 auf dem Söller</desc>
                            </incident>
                         </additions>
                      </physDesc>
@@ -119,7 +128,7 @@
                <placeName ref="#pmb50">Wien</placeName>
             </correspAction>
             <correspAction type="transmitted">
-               <date when="1914-09-05" n="01">5. 9. 1914</date>
+               <date when="1914-09-05">5. 9. 1914</date>
                <placeName ref="#pmb50">Wien</placeName>
             </correspAction>
             <correspAction type="received">
@@ -128,16 +137,26 @@
                   – 8. 9. 1914?]</date>
                <placeName ref="#pmb50">Wien</placeName>
             </correspAction>
-            <correspContext><ref type="belongsToCorrespondence" target="correspondence_13212">Zweig, Stefan</ref>
+            <correspContext>
+               <ref type="belongsToCorrespondence" target="correspondence_13212">Zweig, Stefan</ref>
                <ref subtype="previous_letter" type="withinCollection" target="L02195">Brandes an Schnitzler, 23. 8. 1914</ref>
                <ref subtype="next_letter" type="withinCollection" target="L02196">Hofmannsthal an Schnitzler, 11. 9. [1914]</ref>
-               <ref subtype="previous_letter" type="withinCorrespondence" source="correspondence_13212" target="L03656">Zweig an Schnitzler, [17. 7. 1915?]</ref>
-               <ref subtype="next_letter" type="withinCorrespondence" source="correspondence_13212" target="L03776">Schnitzler an Zweig, 9. 11. 1914</ref>
-            </correspContext></correspDesc>
+               <ref subtype="previous_letter"
+                    type="withinCorrespondence"
+                    source="correspondence_13212"
+                    target="L03656">Zweig an Schnitzler, [17. 7. 1915?]</ref>
+               <ref subtype="next_letter"
+                    type="withinCorrespondence"
+                    source="correspondence_13212"
+                    target="L03776">Schnitzler an Zweig, 9. 11. 1914</ref>
+            </correspContext>
+         </correspDesc>
       </profileDesc>
-      <revisionDesc status="proposed">
+      <revisionDesc status="candidate">
          <change who="MAM" when="2025-07-17">Export aus Transkribus</change>
          <change who="MAM" when="2025-08-06">Durchsicht</change>
+         <change who="MAM" when="2025-09-08">Durchsicht</change>
+         <change who="MAM" when="2025-09-08">Index check</change>
       </revisionDesc>
    </teiHeader>
    <facsimile>
@@ -151,19 +170,19 @@
          <div type="address">
             <address>
                <addrLine>
-                  <pb facs="0067_FL81799588"/>Hrn Dr. Stefan Zweig</addrLine>
+                  <pb facs="0067_FL81799588"/>Hrn <hi rend="latintype">Dr. Stefan Zweig</hi></addrLine>
                <addrLine>
                   <rs type="place" ref="#pmb58">Wien VIII</rs>
                </addrLine>
                <addrLine>
-                  <rs type="place" ref="#pmb249577">Kochgasse 8</rs>.</addrLine>
+                  <rs type="place" ref="#pmb249577"><hi rend="latintype">Kochgasse 8</hi></rs>.</addrLine>
             </address>
          </div>
          <div type="image">
             <p rend="center">
                <pb facs="0068_FL81799692"/>
                <rs type="place" ref="#pmb168815">
-                  <hi rend="pre-print">Wien, XVIII, Sternwartestr. 71</hi>
+                  <hi rend="pre-print">Wien, XVIII, Sternwartestr. 71</hi>.
                </rs>
             </p>
          </div>
@@ -312,6 +331,26 @@
                      <desc n="1370">teilgenommen an</desc>
                      <label>Lesung von Richard Dehmel, 6.3.1904</label>
                      <idno type="URL" subtype="pmb">https://pmb.acdh.oeaw.ac.at/entity/50184/</idno>
+                  </event>
+                  <event n="Theateraufführung" ref="pmb249556" when="1909-12-12">
+                     <desc n="1370">teilgenommen an</desc>
+                     <label>Aufführung von Der Ruf des Lebens, 12.12.1909</label>
+                     <idno type="URL" subtype="pmb">https://pmb.acdh.oeaw.ac.at/entity/249556/</idno>
+                  </event>
+                  <event n="Private Lesung" ref="pmb296492" when="1910-10-11">
+                     <desc n="1370">teilgenommen an</desc>
+                     <label>Private Lesung von Die ungleichen Schalen, 11.10.1910</label>
+                     <idno type="URL" subtype="pmb">https://pmb.acdh.oeaw.ac.at/entity/296492/</idno>
+                  </event>
+                  <event n="Theateraufführung" ref="pmb251446" when="1910-11-27">
+                     <desc n="1370">teilgenommen an</desc>
+                     <label>Aufführung von Der junge Medardus, 27.11.1910</label>
+                     <idno type="URL" subtype="pmb">https://pmb.acdh.oeaw.ac.at/entity/251446/</idno>
+                  </event>
+                  <event n="Liederkonzert" ref="pmb183571" when="1911-02-05">
+                     <desc n="1370">teilgenommen an</desc>
+                     <label>Gesangskonzert Olga Schnitzler, 5.2.1911</label>
+                     <idno type="URL" subtype="pmb">https://pmb.acdh.oeaw.ac.at/entity/183571/</idno>
                   </event>
                   <event n="Generalprobe" ref="pmb239133" when="1912-10-25">
                      <desc n="1370">teilgenommen an</desc>
