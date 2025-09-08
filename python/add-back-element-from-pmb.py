@@ -34,130 +34,152 @@ class PMBProcessor:
             "api_failures": 0
         }
         
-        print(f"📥 Loading PMB data from {pmb_lists_dir}...")
+        print(f"📥 Initializing optimized PMB system...")
         sys.stdout.flush()
         
-        # Initialize PMB data with lazy loading
-        self.pmb_data = {}  # Will be populated on demand
-        self.pmb_cache = {}  # Cache for loaded entities
-        self.pmb_files_loaded = set()  # Track which files we've loaded
+        # Optimized minimal loading approach
+        self.pmb_cache = {}  # Small cache for recently accessed entities (max 1000)
+        self.pmb_index = {}  # Minimal index: {pmb_id: entity_type}
+        self.api_session = requests.Session()  # Reuse connection
+        self.max_cache_size = 1000
         
-        print(f"✅ PMBProcessor initialized")
+        # Create minimal index only (should be very fast)
+        self._create_minimal_pmb_index()
+        
+        print(f"✅ PMBProcessor initialized with minimal loading strategy")
         sys.stdout.flush()
         
         # Register namespaces
         ET.register_namespace("", self.tei_ns)
         ET.register_namespace("xml", self.xml_ns)
 
-    def _load_pmb_entity_lazy(self, pmb_id: str, entity_type: str) -> Optional[ET.Element]:
-        """Load a specific PMB entity on demand"""
+    def _create_minimal_pmb_index(self) -> None:
+        """Create a minimal index of PMB IDs without loading full entity data"""
+        file_types = {
+            "listperson.xml": "person",
+            "listplace.xml": "place", 
+            "listorg.xml": "org",
+            "listbibl.xml": "work",
+            "listevent.xml": "event"
+        }
+        
+        total_indexed = 0
+        
+        for filename, entity_type in file_types.items():
+            filepath = self.pmb_lists_dir / filename
+            if not filepath.exists():
+                print(f"⚠️ {filename} not found, skipping index creation for {entity_type}")
+                continue
+                
+            try:
+                # Use iterparse for memory efficiency - only read ID attributes
+                print(f"📋 Indexing {entity_type} IDs from {filename}...")
+                sys.stdout.flush()
+                
+                count = 0
+                for event, elem in ET.iterparse(filepath, events=('start',)):
+                    # Only process the main entity elements
+                    if elem.tag.endswith(entity_type) or (entity_type == "work" and elem.tag.endswith("bibl")):
+                        xml_id = elem.get(f"{{{self.xml_ns}}}id")
+                        if xml_id:
+                            self.pmb_index[xml_id] = entity_type
+                            count += 1
+                        elem.clear()  # Free memory immediately
+                        
+                print(f"✅ Indexed {count} {entity_type} IDs")
+                total_indexed += count
+                sys.stdout.flush()
+                
+            except Exception as e:
+                print(f"❌ Error indexing {filename}: {e}")
+                sys.stdout.flush()
+        
+        print(f"📊 Total PMB entities indexed: {total_indexed}")
+        sys.stdout.flush()
+
+    def _load_pmb_entity_optimized(self, pmb_id: str) -> Optional[ET.Element]:
+        """Load a specific PMB entity with optimized caching strategy"""
         # Check cache first
         if pmb_id in self.pmb_cache:
-            print(f"📋 Found {pmb_id} in cache")
+            print(f"📋 Cache hit for {pmb_id}")
             sys.stdout.flush()
             return self.pmb_cache[pmb_id]
         
-        # Determine which file to load
-        file_path = self.pmb_lists_dir / f"list{entity_type}.xml"
-        file_key = f"list{entity_type}.xml"
+        # Check if we know this entity type from our index
+        entity_type = self.pmb_index.get(pmb_id)
+        if not entity_type:
+            print(f"❓ {pmb_id} not found in PMB index - will try API")
+            sys.stdout.flush()
+            return None
+            
+        # Load specific entity from file using targeted parsing
+        return self._load_single_entity_from_file(pmb_id, entity_type)
+    
+    def _load_single_entity_from_file(self, pmb_id: str, entity_type: str) -> Optional[ET.Element]:
+        """Load a single entity from PMB file using targeted parsing"""
+        filename_map = {
+            "person": "listperson.xml",
+            "place": "listplace.xml", 
+            "org": "listorg.xml",
+            "work": "listbibl.xml",
+            "event": "listevent.xml"
+        }
         
-        # Load entire file if not loaded yet (but only once per type)
-        if file_key not in self.pmb_files_loaded and file_path.exists():
-            print(f"📖 Loading {entity_type} PMB data from {file_path.name}...")
+        filename = filename_map.get(entity_type)
+        if not filename:
+            return None
+            
+        filepath = self.pmb_lists_dir / filename
+        if not filepath.exists():
+            return None
+            
+        try:
+            print(f"🔍 Searching for {pmb_id} in {filename}...")
             sys.stdout.flush()
             
-            try:
-                tree = ET.parse(file_path)
-                root = tree.getroot()
-                
-                # Find all entities in the file
-                if entity_type == "person":
-                    entities = root.findall(f".//tei:person", self.ns)
-                elif entity_type == "bibl":
-                    entities = root.findall(f".//tei:bibl", self.ns)
-                elif entity_type == "place":
-                    entities = root.findall(f".//tei:place", self.ns)
-                elif entity_type == "org":
-                    entities = root.findall(f".//tei:org", self.ns)
-                elif entity_type == "event":
-                    entities = root.findall(f".//tei:event", self.ns)
-                
-                # Filter out entities in back section and cache them
-                entities = [entity for entity in entities if not self._is_in_back_section(entity, root)]
-                
-                entity_count = 0
-                for entity in entities:
-                    xml_id = entity.get(f"{{{self.xml_ns}}}id")
-                    if xml_id:
-                        self.pmb_cache[xml_id] = entity
-                        entity_count += 1
-                
-                self.pmb_files_loaded.add(file_key)
-                print(f"✅ Cached {entity_count} {entity_type} entities from {file_path.name}")
-                sys.stdout.flush()
-                
-            except ET.ParseError as e:
-                print(f"❌ Error parsing {file_path}: {e}")
-                sys.stdout.flush()
-        
-        # Return the specific entity if found
-        return self.pmb_cache.get(pmb_id)
-
-    def _load_pmb_data(self) -> Dict[str, ET.Element]:
-        """Load all PMB XML files into memory for lookups"""
-        pmb_data = {}
-        
-        for pmb_type in ["person", "bibl", "place", "org", "event"]:
-            file_path = self.pmb_lists_dir / f"list{pmb_type}.xml"
-            if file_path.exists():
-                print(f"📖 Loading {pmb_type} data from {file_path.name}...")
-                sys.stdout.flush()
-                try:
-                    tree = ET.parse(file_path)
-                    root = tree.getroot()
+            # Use iterparse to find specific entity without loading entire file
+            for event, elem in ET.iterparse(filepath, events=('start', 'end')):
+                if event == 'start':
+                    # Check if this is the entity we're looking for
+                    if elem.tag.endswith(entity_type) or (entity_type == "work" and elem.tag.endswith("bibl")):
+                        xml_id = elem.get(f"{{{self.xml_ns}}}id")
+                        if xml_id == pmb_id:
+                            # Found it! Wait for the end event to get complete element
+                            continue
+                elif event == 'end':
+                    # Check if this is our target entity
+                    if elem.tag.endswith(entity_type) or (entity_type == "work" and elem.tag.endswith("bibl")):
+                        xml_id = elem.get(f"{{{self.xml_ns}}}id")
+                        if xml_id == pmb_id:
+                            # Make a copy before clearing
+                            entity_copy = ET.fromstring(ET.tostring(elem))
+                            self._add_to_cache(pmb_id, entity_copy)
+                            print(f"✅ Found and cached {pmb_id}")
+                            sys.stdout.flush()
+                            return entity_copy
                     
-                    # Find all entities in the file (filter out back section manually)
-                    if pmb_type == "person":
-                        entities = root.findall(f".//tei:person", self.ns)
-                    elif pmb_type == "bibl":
-                        entities = root.findall(f".//tei:bibl", self.ns)
-                    elif pmb_type == "place":
-                        entities = root.findall(f".//tei:place", self.ns)
-                    elif pmb_type == "org":
-                        entities = root.findall(f".//tei:org", self.ns)
-                    elif pmb_type == "event":
-                        entities = root.findall(f".//tei:event", self.ns)
-                    
-                    # Filter out entities in back section
-                    entities = [entity for entity in entities if not self._is_in_back_section(entity, root)]
-                    
-                    entity_count = 0
-                    for entity in entities:
-                        xml_id = entity.get(f"{{{self.xml_ns}}}id")
-                        if xml_id:
-                            pmb_data[xml_id] = entity
-                            entity_count += 1
-                    
-                    print(f"✅ Loaded {entity_count} {pmb_type} entities")
-                    sys.stdout.flush()
-                            
-                except ET.ParseError as e:
-                    print(f"❌ Error parsing {file_path}: {e}")
-                    sys.stdout.flush()
-            else:
-                print(f"⚠️ PMB file not found: {file_path}")
-                sys.stdout.flush()
-        
-        print(f"📊 PMB data loaded: {len(pmb_data)} entities")
-        sys.stdout.flush()
-        
-        # Show sample of loaded IDs for debugging
-        if len(pmb_data) > 0:
-            sample_ids = list(pmb_data.keys())[:10]
-            print(f"🔍 Sample PMB IDs loaded: {sample_ids}")
+                    # Clear processed elements to save memory
+                    elem.clear()
+            
+            print(f"❌ {pmb_id} not found in {filename}")
             sys.stdout.flush()
+            return None
+            
+        except Exception as e:
+            print(f"❌ Error loading {pmb_id} from {filename}: {e}")
+            sys.stdout.flush()
+            return None
+    
+    def _add_to_cache(self, pmb_id: str, entity: ET.Element) -> None:
+        """Add entity to cache with size management"""
+        # Simple LRU: remove oldest entries if cache is full
+        if len(self.pmb_cache) >= self.max_cache_size:
+            # Remove first (oldest) entry
+            oldest_key = next(iter(self.pmb_cache))
+            del self.pmb_cache[oldest_key]
         
-        return pmb_data
+        self.pmb_cache[pmb_id] = entity
+
 
     def _is_in_back_section(self, elem: ET.Element, root: ET.Element) -> bool:
         """Check if element is in the back section by checking path"""
@@ -376,7 +398,7 @@ class PMBProcessor:
             print(f"🔍 Looking up: {original_id} -> {clean_id} (entity_type: {entity_type})")
             sys.stdout.flush()
             
-            pmb_entity = self._load_pmb_entity_lazy(clean_id, entity_type)
+            pmb_entity = self._load_pmb_entity_optimized(clean_id)
             
             if pmb_entity is not None:
                 # Copy data from PMB

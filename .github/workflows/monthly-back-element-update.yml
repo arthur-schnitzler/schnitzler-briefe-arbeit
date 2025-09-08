@@ -67,16 +67,16 @@ jobs:
 
     - name: Run back element batch processing
       if: steps.check-changes.outputs.has_changes == 'true'
-      timeout-minutes: 300  # Gesamt-Timeout für diesen Step (5 Stunden)
+      timeout-minutes: 120  # Gesamt-Timeout für diesen Step (2 Stunden)
       continue-on-error: true  # Workflow soll auch bei Timeouts oder Fehlern weiterlaufen
       run: |
-        echo "Starting batch processing of back elements..."
+        echo "Starting optimized batch processing of back elements..."
         echo "📥 Step 1: Downloading/checking PMB lists (listperson.xml, listbibl.xml, etc.)..."
-        echo "⚙️  Step 2: Processing XML files with back element enrichment..."
-        echo "🔄 Step 3: Running parallel processing on editions/ folder..."
+        echo "⚙️  Step 2: Using optimized PMB loading system (minimal memory usage, fast startup)..."
+        echo "🔄 Step 3: Running parallel processing on editions/ folder (3 processes)..."
         echo "💾 Intermediate commits will be created every 100 successful files"
         echo ""
-        python -u python/batch_process_back-element.py --parallel 4 --commit-interval 100 || echo "Batch processing finished with some errors/timeouts, but continuing..."
+        python -u python/batch_process_back-element.py --parallel 3 --commit-interval 100 || echo "Batch processing finished with some errors/timeouts, but continuing..."
         echo "Batch processing step completed"
     
     - name: Check for actual file changes after processing
