@@ -37,8 +37,10 @@ class PMBProcessor:
         print(f"📥 Loading PMB data from {pmb_lists_dir}...")
         sys.stdout.flush()
         
-        # Load PMB lookup data
-        self.pmb_data = self._load_pmb_data()
+        # Load PMB lookup data - TEMPORARILY DISABLED FOR DEBUGGING
+        print("⚠️ PMB loading temporarily disabled for debugging")
+        sys.stdout.flush()
+        self.pmb_data = {}  # Empty dict instead of loading
         
         print(f"✅ PMBProcessor initialized")
         sys.stdout.flush()
