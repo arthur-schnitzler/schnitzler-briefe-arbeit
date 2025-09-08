@@ -1,6 +1,10 @@
-<?xml version='1.0' encoding='UTF-8'?>
+<?xml version="1.0" encoding="UTF-8"?>
 <?xml-model href="../meta/schnitzler-briefe-schematron.sch" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
-<TEI xmlns="http://www.tei-c.org/ns/1.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.tei-c.org/ns/1.0 ../meta/schnitzler-briefe-schema.xsd" xml:id="L03646" xml:base="https://id.acdh.oeaw.ac.at/schnitzler/schnitzler-briefe/editions">
+<TEI xmlns="http://www.tei-c.org/ns/1.0"
+     xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+     xsi:schemaLocation="http://www.tei-c.org/ns/1.0 ../meta/schnitzler-briefe-schema.xsd"
+     xml:id="L03646"
+     xml:base="https://id.acdh.oeaw.ac.at/schnitzler/schnitzler-briefe/editions">
    <teiHeader>
       <fileDesc>
          <titleStmt>
@@ -140,16 +144,26 @@
                   – 23. 2. 1914?]</date>
                <placeName ref="#pmb50" evidence="conjecture">Wien</placeName>
             </correspAction>
-            <correspContext><ref type="belongsToCorrespondence" target="correspondence_13212">Zweig, Stefan</ref>
+            <correspContext>
+               <ref type="belongsToCorrespondence" target="correspondence_13212">Zweig, Stefan</ref>
                <ref subtype="previous_letter" type="withinCollection" target="L02165">Schnitzler, Schnitzler an Beer-Hofmann, 2. 2. 1914</ref>
                <ref subtype="next_letter" type="withinCollection" target="L02166">Bahr an Schnitzler, 7. 3. 1914</ref>
-               <ref subtype="previous_letter" type="withinCorrespondence" source="correspondence_13212" target="L03638">Zweig an Schnitzler, 1[2/3?]. 6. [1913?]</ref>
-               <ref subtype="next_letter" type="withinCorrespondence" source="correspondence_13212" target="L03656">Zweig an Schnitzler, [17. 7. 1915?]</ref>
-            </correspContext></correspDesc>
+               <ref subtype="previous_letter"
+                    type="withinCorrespondence"
+                    source="correspondence_13212"
+                    target="L03638">Zweig an Schnitzler, 1[2/3?]. 6. [1913?]</ref>
+               <ref subtype="next_letter"
+                    type="withinCorrespondence"
+                    source="correspondence_13212"
+                    target="L03656">Zweig an Schnitzler, [17. 7. 1915?]</ref>
+            </correspContext>
+         </correspDesc>
       </profileDesc>
-      <revisionDesc status="proposed">
+      <revisionDesc status="candidate">
          <change who="MAM" when="2025-05-21">Export aus Transkribus</change>
          <change who="SJ" when="2025-06-11">Auszeichnungen</change>
+         <change who="MAM" when="2025-09-08">Durchsicht</change>
+         <change who="MAM" when="2025-09-08">Index check</change>
       </revisionDesc>
    </teiHeader>
    <facsimile>
@@ -186,19 +200,30 @@
             </opener>
             <p>
                <salute>Sehr verehrter Herr Doktor,</salute> empfangen Sie meinen herzlichen
-               Glückwunsch zur erfolgreichen <anchor type="commentary" xml:id="K_L03646-1"/>Auferstehung<note type="commentary" corresp="K_L03646-1">Der einsame Weg wurde
-                  am <date>13. 2. 1904</date> am <rs type="place" ref="#pmb3">Deutschen Theater</rs>
+               Glückwunsch zur erfolgreichen <anchor type="commentary" xml:id="K_L03646-1"/>
+               <anchor type="textConst" xml:id="T_L03646-1"/>
+               <rs type="event" subtype="implied" ref="#pmb59607">Auferstehung</rs>
+               <note type="textConst" corresp="T_L03646-1">Zweig verwendet an dieser Stelle ein ›h‹, das aus der
+                  deutschen Kurrentschrift entlehnt ist.</note>
+               <note type="commentary" corresp="K_L03646-1">
+                  <rs type="work" ref="#pmb29985">Der einsame Weg</rs> wurde
+                  am <ref type="schnitzler-kultur" subtype="date-only" target="pmb35272"/> vom <rs type="org" ref="#pmb35597">Deutschen Theater</rs>
                   in <rs type="place" ref="#pmb168">Berlin</rs> mit mäßigem Erfolg uraufgeführt.
-                  Erst zehn Jahre später, am <date>19. 2.1914</date>, fand die <rs type="place" ref="#pmb50">Wiener</rs> Erstaufführung am <rs type="place" ref="#pmb14">Burgtheater</rs> statt.</note> des »<rs type="work" ref="#pmb29985">Einsamen
+                  Erst zehn Jahre später, am <ref type="schnitzler-kultur" subtype="date-only" target="pmb59607"/>, fand die <rs type="event" subtype="implied" ref="#pmb59607">
+                     <rs type="place" ref="#pmb50">Wiener</rs> Erstaufführung</rs> am <rs type="place" ref="#pmb14">Burgtheater</rs> statt.</note> des »<rs type="work" ref="#pmb29985">Einsamen
                   Weges</rs>«. Durch alle Unzulänglichkeit mancher Darsteller habe ich
-                  <date>gestern</date> abends wieder diese Menschen gespürt, die seit Jahren wie
+               <rs type="event" subtype="implied" ref="#pmb59607">
+                  <date>gestern</date>
+               </rs> abends wieder diese Menschen gespürt, die seit Jahren wie
                wirklich begegnete in meinem Leben sind und bin froh wieder Ihrer Meisterschaft
                bewusst geworden. Ich habe ja keine Berufung darüber zu sprechen, aber immer bei
                Ihren Werken, wenn ich <del rend="strikethrough">ihnen</del> auf der Bühne oder im
                Buch <pb facs="MS-SCHNITZLER-B-00118-000-00054-0"/>ihnen neuerlich nahe trete, ist es
                mir Bedürfnis ein Wort an Sie zu richten, Ihnen irgendwie zu danken für Alles was Sie
-               uns gegeben haben. Ich meine nie das Einzelne damit und gerade <date>gestern</date>,
-               im »<rs type="work" ref="#pmb29985">Einsamen Weg</rs>« der mir vor Jahren, als er das
+               uns gegeben haben. Ich meine nie das Einzelne damit und gerade <rs type="event" subtype="implied" ref="#pmb59607">
+                  <date>gestern</date>
+               </rs>,
+               im »<rs type="work" ref="#pmb29985">Einsamen Weg</rs>«<supplied>,</supplied> der mir vor Jahren, als er das
                letzte war, auch das liebste Ihrer Stücke schien, ist mir bewusst geworden, wie stark
                in Ihrer Kunst seitdem der Zusammenschluss aller innerlichen Kräfte geworden ist, wie
                Manches, was hier noch Andeutung ist, im »<rs type="work" ref="#pmb30207">Weiten
@@ -216,7 +241,7 @@
                   <del rend="overwritten">f </del>
                   <add place="inline">w</add>
                </subst>ie für die meisten (die Ihre Werke in erster Linie als Theaterstücke werten)
-               ein Mehr oder Minder des Gefallens, ich wehre mich gegen den Vergleich und freue
+               ein Mehr – oder Minder des Gefallens, ich wehre mich gegen den Vergleich und freue
                mich, Ihnen immer und immer wieder für das Ganze danken zu können. Es sei
                   <date>heute</date> und nicht zum letzten Mal aus aufrichtiger Empfindung
                getan.</p>
@@ -316,6 +341,26 @@
                      <label>Lesung von Richard Dehmel, 6.3.1904</label>
                      <idno type="URL" subtype="pmb">https://pmb.acdh.oeaw.ac.at/entity/50184/</idno>
                   </event>
+                  <event n="Theateraufführung" ref="pmb249556" when="1909-12-12">
+                     <desc n="1370">teilgenommen an</desc>
+                     <label>Aufführung von Der Ruf des Lebens, 12.12.1909</label>
+                     <idno type="URL" subtype="pmb">https://pmb.acdh.oeaw.ac.at/entity/249556/</idno>
+                  </event>
+                  <event n="Private Lesung" ref="pmb296492" when="1910-10-11">
+                     <desc n="1370">teilgenommen an</desc>
+                     <label>Private Lesung von Die ungleichen Schalen, 11.10.1910</label>
+                     <idno type="URL" subtype="pmb">https://pmb.acdh.oeaw.ac.at/entity/296492/</idno>
+                  </event>
+                  <event n="Theateraufführung" ref="pmb251446" when="1910-11-27">
+                     <desc n="1370">teilgenommen an</desc>
+                     <label>Aufführung von Der junge Medardus, 27.11.1910</label>
+                     <idno type="URL" subtype="pmb">https://pmb.acdh.oeaw.ac.at/entity/251446/</idno>
+                  </event>
+                  <event n="Liederkonzert" ref="pmb183571" when="1911-02-05">
+                     <desc n="1370">teilgenommen an</desc>
+                     <label>Gesangskonzert Olga Schnitzler, 5.2.1911</label>
+                     <idno type="URL" subtype="pmb">https://pmb.acdh.oeaw.ac.at/entity/183571/</idno>
+                  </event>
                   <event n="Generalprobe" ref="pmb239133" when="1912-10-25">
                      <desc n="1370">teilgenommen an</desc>
                      <label>Generalprobe von Das Haus am Meer, 25.10.1912</label>
@@ -408,7 +453,7 @@
                <title type="legacy-name-merge">Der einsame Weg</title>
                <title type="werk_arbeitstitel">Herbst</title>
                <title type="werk_link">https://www.degruyter.com/document/doi/10.1515/9783111334066/html</title>
-               <author ref="" role="hat-geschaffen">Schnitzler, Arthur</author>
+               <author ref="pmb2121" role="hat-geschaffen">Schnitzler, Arthur</author>
                <date notBefore="1904-01-01" when="1904-01-01">1904</date>
                <idno type="URL" subtype="asaf">https://asaf.com/S.04.01.08</idno>
                <idno type="URL" subtype="wikidata">http://www.wikidata.org/entity/Q1198519</idno>
@@ -436,7 +481,7 @@
                <title type="werk_link">http://www.literature.at/alo?objid=12113</title>
                <title type="werk_bibliografische-angabe">Arthur Schnitzler: Das weite Land. Tragikomödie in fünf Akten. Erste Auflage. Berlin: S. Fischer 1911,</title>
                <title type="werk_arbeitstitel">Frieberg</title>
-               <author ref="" role="hat-geschaffen">Schnitzler, Arthur</author>
+               <author ref="pmb2121" role="hat-geschaffen">Schnitzler, Arthur</author>
                <date>1910-10-20</date>
                <idno type="URL" subtype="asaf">https://asaf.com/S.04.01.06</idno>
                <idno type="URL" subtype="wikidata">http://www.wikidata.org/entity/Q1171735</idno>
@@ -462,7 +507,7 @@
                <title type="werk_link">https://babel.hathitrust.org/cgi/pt?id=inu.30000093470296&amp;view=1up&amp;seq=314&amp;skin=2021&amp;q1=beate</title>
                <title type="werk_arbeitstitel">Mutter u. Sohn</title>
                <title type="werk_arbeitstitel">Beate Woiwod</title>
-               <author ref="" role="hat-geschaffen">Schnitzler, Arthur</author>
+               <author ref="pmb2121" role="hat-geschaffen">Schnitzler, Arthur</author>
                <date to="1913-04-01">1.2.1913 – 1.4.1913</date>
                <idno type="URL" subtype="asaf">https://asaf.com/S.04.02.35</idno>
                <idno type="URL" subtype="wikidata">http://www.wikidata.org/entity/Q1451452</idno>
@@ -543,27 +588,6 @@
                <idno type="URL" subtype="wikipedia">https://de.wikipedia.org/wiki/Kochgasse_8</idno>
                <idno type="URL" subtype="wienerschnitzler">https://wienerschnitzler.org/pmb249577.html</idno>
             </place>
-            <place xml:id="pmb3">
-               <placeName>Deutsches Theater Berlin</placeName>
-               <desc type="entity_type">Theater (K.THE)</desc>
-               <desc type="entity_type_id">4</desc>
-               <location type="coords">
-                  <geo>52,524444 13,382222</geo>
-               </location>
-               <location type="located_in_place">
-                  <placeName ref="pmb168">Berlin</placeName>
-                  <geo>52,52437 13,41053</geo>
-               </location>
-               <location type="located_in_place">
-                  <placeName ref="pmb307">Schumannstraße</placeName>
-                  <geo>52,52402 13,38186</geo>
-               </location>
-               <idno type="URL" subtype="schnitzler-bahr">https://schnitzler-bahr.acdh.oeaw.ac.at/pmb3.html</idno>
-               <idno type="URL" subtype="pmb">https://pmb.acdh.oeaw.ac.at/entity/3/</idno>
-               <idno type="URL" subtype="schnitzler-interviews">https://schnitzler-interviews.acdh.oeaw.ac.at/pmb3.html</idno>
-               <idno type="URL" subtype="schnitzler-briefe">https://schnitzler-briefe.acdh.oeaw.ac.at/pmb3.html</idno>
-               <idno type="URL" subtype="wienerschnitzler">https://wienerschnitzler.org/pmb3.html</idno>
-            </place>
             <place xml:id="pmb168">
                <placeName>Berlin</placeName>
                <placeName type="alternative-name">Hauptstadt Berlin</placeName>
@@ -626,6 +650,120 @@
                </note>
             </place>
          </listPlace>
+         <listOrg>
+            <org xml:id="pmb35597">
+               <orgName>Deutsches Theater Berlin</orgName>
+               <orgName type="institution_namensvariante">Deutsches Theater</orgName>
+               <desc type="entity_type">Theater</desc>
+               <desc type="entity_type_id">1012</desc>
+               <location type="located_in_place">
+                  <placeName ref="pmb168">Berlin</placeName>
+                  <geo>52,52437 13,41053</geo>
+                  <idno type="URL" subtype="geonames">https://sws.geonames.org/2950159/</idno>
+                  <idno type="URL" subtype="schnitzler-bahr">https://schnitzler-bahr.acdh.oeaw.ac.at/pmb168.html</idno>
+                  <idno type="URL" subtype="d-nb">https://d-nb.info/gnd/4005728-8</idno>
+                  <idno type="URL" subtype="pmb">https://pmb.acdh.oeaw.ac.at/entity/168/</idno>
+                  <idno type="URL" subtype="kraus">https://kraus.wienbibliothek.at/register/orte/pmb168</idno>
+                  <idno type="URL" subtype="pmb">https://pmb.acdh.oeaw.ac.at/entity/92171/</idno>
+                  <idno type="URL" subtype="wikidata">http://www.wikidata.org/entity/Q64</idno>
+                  <idno type="URL" subtype="wikipedia">https://de.wikipedia.org/wiki/Berlin</idno>
+                  <idno type="URL" subtype="schnitzler-interviews">https://schnitzler-interviews.acdh.oeaw.ac.at/pmb168.html</idno>
+                  <idno type="URL" subtype="schnitzler-tagebuch">https://schnitzler-tagebuch.acdh.oeaw.ac.at/pmb168.html</idno>
+                  <idno type="URL" subtype="schnitzler-briefe">https://schnitzler-briefe.acdh.oeaw.ac.at/pmb168.html</idno>
+                  <idno type="URL" subtype="wienerschnitzler">https://wienerschnitzler.org/pmb168.html</idno>
+               </location>
+               <location type="located_in_place">
+                  <placeName ref="pmb3">Deutsches Theater Berlin</placeName>
+                  <geo>52,524444 13,382222</geo>
+                  <idno type="URL" subtype="schnitzler-bahr">https://schnitzler-bahr.acdh.oeaw.ac.at/pmb3.html</idno>
+                  <idno type="URL" subtype="pmb">https://pmb.acdh.oeaw.ac.at/entity/3/</idno>
+                  <idno type="URL" subtype="schnitzler-interviews">https://schnitzler-interviews.acdh.oeaw.ac.at/pmb3.html</idno>
+                  <idno type="URL" subtype="schnitzler-briefe">https://schnitzler-briefe.acdh.oeaw.ac.at/pmb3.html</idno>
+                  <idno type="URL" subtype="wienerschnitzler">https://wienerschnitzler.org/pmb3.html</idno>
+               </location>
+               <idno type="URL" subtype="wikidata">http://www.wikidata.org/entity/Q703955</idno>
+               <idno type="URL" subtype="d-nb">https://d-nb.info/gnd/4058252-8</idno>
+               <idno type="URL" subtype="pmb">https://pmb.acdh.oeaw.ac.at/entity/35597/</idno>
+               <idno type="URL" subtype="kraus">https://kraus.wienbibliothek.at/register/institutionen/pmb35597</idno>
+               <idno type="URL" subtype="wikipedia">https://de.wikipedia.org/wiki/Deutsches_Theater_Berlin</idno>
+               <idno type="URL" subtype="schnitzler-interviews">https://schnitzler-interviews.acdh.oeaw.ac.at/pmb35597.html</idno>
+               <idno type="URL" subtype="schnitzler-mikrofilme">https://schnitzler-mikrofilme.acdh.oeaw.ac.at/1416472.html?pmb35597</idno>
+               <idno type="URL" subtype="schnitzler-mikrofilme">https://schnitzler-mikrofilme.acdh.oeaw.ac.at/1416473.html?pmb35597</idno>
+               <idno type="URL" subtype="schnitzler-briefe">https://schnitzler-briefe.acdh.oeaw.ac.at/pmb35597.html</idno>
+               <note type="apis_dates">
+                  <date notBefore="1849-01-01" when="1849-01-01">1849</date>
+               </note>
+            </org>
+         </listOrg>
+         <listEvent>
+            <event xml:id="pmb59607" when="1914-02-19">
+               <eventName n="Theaterpremiere">Premiere von Der einsame Weg, 19.2.1914</eventName>
+               <note type="listorg">
+                  <listOrg>
+                     <org role="veranstaltet von">
+                        <orgName ref="pmb36247">Burgtheater</orgName>
+                     </org>
+                  </listOrg>
+               </note>
+               <idno type="URL" subtype="pmb">https://pmb.acdh.oeaw.ac.at/entity/59607/</idno>
+               <note type="references">https://anno.onb.ac.at/cgi-content/anno?aid=bth&amp;datum=19140219&amp;seite=1&amp;zoom=33</note>
+               <listBibl>
+                  <bibl>
+                     <title ref="pmb29985">Der einsame Weg. Schauspiel in fünf Akten</title>
+                     <note type="relation-type">ist Premiere von</note>
+                  </bibl>
+               </listBibl>
+               <listPerson>
+                  <person role="hat als Arbeitskraft">
+                     <persName ref="pmb12399">Paulsen, Max</persName>
+                  </person>
+                  <person role="hat als Arbeitskraft">
+                     <persName ref="pmb2642">Speidel-Haeberle, Else</persName>
+                  </person>
+                  <person role="hat als Arbeitskraft">
+                     <persName ref="pmb11423">Gerasch, Alfred</persName>
+                  </person>
+                  <person role="hat als Arbeitskraft">
+                     <persName ref="pmb12951">Wohlgemuth, Else</persName>
+                  </person>
+                  <person role="hat als Arbeitskraft">
+                     <persName ref="pmb2446">Devrient, Max</persName>
+                  </person>
+                  <person role="hat als Arbeitskraft">
+                     <persName ref="pmb3201">Walden, Harry</persName>
+                  </person>
+                  <person role="hat als Arbeitskraft">
+                     <persName ref="pmb10959">Bleibtreu, Hedwig</persName>
+                  </person>
+                  <person role="hat als Arbeitskraft">
+                     <persName ref="pmb11659">Herterich, Franz</persName>
+                  </person>
+                  <person role="hat als Teilnehmer:in">
+                     <persName ref="pmb2121">Schnitzler, Arthur</persName>
+                  </person>
+                  <person role="hat als Teilnehmer:in">
+                     <persName ref="pmb2173">Schnitzler, Olga</persName>
+                  </person>
+                  <person role="hat als Teilnehmer:in">
+                     <persName ref="pmb3159">Schmidl, Hugo</persName>
+                  </person>
+                  <person role="hat als Teilnehmer:in">
+                     <persName ref="pmb12698">Schnitzler, Julius</persName>
+                  </person>
+                  <person role="hat als Teilnehmer:in">
+                     <persName ref="pmb24423">Schnitzler, Helene</persName>
+                  </person>
+               </listPerson>
+               <listPlace>
+                  <place>
+                     <placeName role="veranstaltet in" ref="pmb14">Burgtheater</placeName>
+                     <location>
+                        <geo>48,210333 16,361139</geo>
+                     </location>
+                  </place>
+               </listPlace>
+            </event>
+         </listEvent>
       </back>
    </text>
 </TEI>

@@ -1,12 +1,15 @@
-<?xml version='1.0' encoding='UTF-8'?>
+<?xml version="1.0" encoding="UTF-8"?>
 <?xml-model href="../meta/schnitzler-briefe-schematron.sch" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
-<TEI xmlns="http://www.tei-c.org/ns/1.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.tei-c.org/ns/1.0 ../meta/schnitzler-briefe-schema.xsd" xml:id="L03638" xml:base="https://id.acdh.oeaw.ac.at/schnitzler/schnitzler-briefe/editions">
+<TEI xmlns="http://www.tei-c.org/ns/1.0"
+     xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+     xsi:schemaLocation="http://www.tei-c.org/ns/1.0 ../meta/schnitzler-briefe-schema.xsd"
+     xml:id="L03638"
+     xml:base="https://id.acdh.oeaw.ac.at/schnitzler/schnitzler-briefe/editions">
    <teiHeader>
       <fileDesc>
          <titleStmt>
             <title level="s">Arthur Schnitzler: Briefwechsel mit Autorinnen und Autoren</title>
-            <title level="a">Stefan Zweig an Arthur Schnitzler,
-               1[2/3?]. 6. [1913?]</title>
+            <title level="a">Stefan Zweig an Arthur Schnitzler, [12. oder 13.?] 6. [1913?]</title>
             <author ref="#pmb13212">Zweig, Stefan</author>
             <editor>
                <name>Jahnke, Selma</name>
@@ -94,7 +97,8 @@
                               <desc>
                                  <stamp n="1">
                                     <placeName ref="#pmb58">8/ Wien</placeName>
-                                    <date notBefore="1913-06-12" notAfter="1913-06-13">1[2/3?]. VI. [13?]</date>
+                                    <date notBefore="1913-06-12" notAfter="1913-06-13">1<gap reason="illegible" unit="chars" quantity="1"/>. VI. <supplied>1913</supplied>
+                                    </date>
                                     <time>7</time>
                                  </stamp>
                               </desc>
@@ -131,23 +135,37 @@
          <correspDesc>
             <correspAction type="sent">
                <persName ref="#pmb13212">Zweig, Stefan</persName>
-               <date notBefore="1913-06-12" notAfter="1913-06-13" n="01">1[2/3?]. 6. [1913?]</date>
-               <placeName ref="#pmb50" evidence="conjecture">Wien</placeName>
+               <date notBefore="1913-06-12" notAfter="1913-06-13" n="01">[12. oder
+                  13.?] 6. [1913?]</date>
+               <placeName ref="#pmb50">Wien</placeName>
             </correspAction>
             <correspAction type="received">
                <persName ref="#pmb2121">Schnitzler, Arthur</persName>
-               <placeName ref="#pmb50" evidence="conjecture">Wien</placeName>
+               <date notBefore="1913-06-12" notAfter="1913-06-16">[12.&#160;6.&#160;1913 –
+                  16. 6. 1913?]</date>
+               <placeName ref="#pmb50">Wien</placeName>
+               
             </correspAction>
-            <correspContext><ref type="belongsToCorrespondence" target="correspondence_13212">Zweig, Stefan</ref>
+            <correspContext>
+               <ref type="belongsToCorrespondence" target="correspondence_13212">Zweig, Stefan</ref>
                <ref subtype="previous_letter" type="withinCollection" target="L03643">Zweig an Schnitzler, [28. 5. 1913?]</ref>
                <ref subtype="next_letter" type="withinCollection" target="L03561">Salten an Schnitzler, 24. 6. 1913</ref>
-               <ref subtype="previous_letter" type="withinCorrespondence" source="correspondence_13212" target="L03643">Zweig an Schnitzler, [28. 5. 1913?]</ref>
-               <ref subtype="next_letter" type="withinCorrespondence" source="correspondence_13212" target="L03646">Zweig an Schnitzler, 20. 2. 1914</ref>
-            </correspContext></correspDesc>
+               <ref subtype="previous_letter"
+                    type="withinCorrespondence"
+                    source="correspondence_13212"
+                    target="L03643">Zweig an Schnitzler, [28. 5. 1913?]</ref>
+               <ref subtype="next_letter"
+                    type="withinCorrespondence"
+                    source="correspondence_13212"
+                    target="L03646">Zweig an Schnitzler, 20. 2. 1914</ref>
+            </correspContext>
+         </correspDesc>
       </profileDesc>
-      <revisionDesc status="proposed">
+      <revisionDesc status="candidate">
          <change who="MAM" when="2025-05-21">Export aus Transkribus</change>
          <change who="SJ" when="2025-06-03">Auszeichnung</change>
+         <change who="MAM" when="2025-09-08">Durchsicht</change>
+         <change who="MAM" when="2025-09-08">Index check</change>
       </revisionDesc>
    </teiHeader>
    <facsimile>
@@ -160,24 +178,24 @@
          <div type="address">
             <address>
                <addrLine>
-                  <pb facs="MS-SCHNITZLER-B-00118-000-00035"/>D<hi rend="superscript">r</hi>
-                  Artur Schnitzler</addrLine>
+                  <pb facs="MS-SCHNITZLER-B-00118-000-00035"/>D<hi rend="superscript">r</hi> Artur
+                  Schnitzler</addrLine>
                <addrLine>
                   <rs type="place" ref="#pmb533">Wien – Cottage</rs>
                </addrLine>
                <addrLine>
                   <rs type="place" ref="#pmb168815">
                      <anchor type="commentary" xml:id="K_L03638-1"/>Sternwartestrasse 72<note type="commentary" corresp="K_L03638-1">
-                        <rs type="person" ref="#pmb13212">Zweig</rs> wechselt
-                        bei der Adressierung seiner Schreiben an <rs type="person" ref="#pmb2121">Schnitzler</rs> immer wieder zwischen der falschen Hausnummer
-                           »<quote>72</quote>« und der richtigen
-                  »<quote>71</quote>«.</note>
+                        <rs type="person" ref="#pmb13212">Zweig</rs> wechselt bei der Adressierung
+                        seiner Schreiben an <rs type="person" ref="#pmb2121">Schnitzler</rs> immer
+                        wieder zwischen der falschen Hausnummer »<quote>72</quote>« und der
+                        richtigen »<quote>71</quote>«.</note>
                   </rs>
                </addrLine>
             </address>
          </div>
          <div type="image">
-            <p>
+            <p rend="center">
                <pb facs="MS-SCHNITZLER-B-00118-000-00036"/>
                <hi rend="pre-print">
                   <rs type="place" ref="#pmb721">Wien – Maximilianplatz</rs> u. <rs type="place" ref="#pmb526">Votivkirche</rs>
@@ -187,18 +205,24 @@
          <div type="writingSession" n="1">
             <p>
                <pb facs="MS-SCHNITZLER-B-00118-000-00035"/>
-               <salute>Verehrter Herr Doktor,</salute>
-               ich höre eben von <anchor type="commentary" xml:id="K_L03638-2"/>
-               <rs type="person" ref="#pmb12692">Heinis</rs> Erkrankung<note type="commentary" corresp="K_L03638-2">Am <ref type="schnitzler-tagebuch" subtype="date-only" target="1913-06-10"/>
-                     erhielten <rs type="person" ref="#pmb2173">Olga</rs> und <rs type="person" ref="#pmb2121">Arthur Schnitzler</rs>, die erst am <date>Vortag</date> zu einer
-                     Reise in die <rs type="place" ref="#pmb43435">Schweiz</rs> aufgebrochen waren, ein
-                     Telegramm, dass ihr Sohn <rs type="person" ref="#pmb12692">Heinrich
-                        Schnitzler</rs> an Scharlach erkrankt sei. Die <rs type="person" ref="#pmb2173 #pmb2121">Eltern</rs> verließen das eben
-                     erreichte <rs type="place" ref="#pmb2448">Chur</rs> sofort wieder und kehrten
-                     bereits am <date>11. 6. 1913</date> nach <rs type="place" ref="#pmb50">Wien</rs>
-                  zurück.</note> und Ihrer jähen <anchor type="commentary" xml:id="K_L03638-3"/>Rückkehr<note type="commentary" corresp="K_L03638-3">Die Karte ist nicht datiert. Auf dem Poststempel läßt sich entziffern, dass sie im Juni gesendet wurde, die Angabe des Tages mit der Ziffer 1 beginnt und zweistellig ist. Dabei ist von der zweiten Ziffer nur eine obere Rundung zu sehen, wie sie bei den Zahlen 2, 3, 8 und 9 vorkommt. Der Verweis auf die »<quote>jähe Rückkehr</quote>« deutet darauf hin, dass <rs type="person" ref="#pmb13212">Zweig</rs> die Karte bereits am <date>12.</date> oder <date>13. 6.</date> verfasst hat, als die Aufregung über die durchkreuzten Reisepläne von <rs type="person" ref="#pmb2173">Olga</rs> und <rs type="person" ref="#pmb2121">Arthur Schnitzler</rs> noch frisch war.</note>. Hoffentlich geht alles gut und rasch
-               vorbei, meine innigsten Wünsche sind mit Ihnen in all diesen erregten und hoffentlich
-               bald beruhigten Stunden.</p>
+               <salute>Verehrter Herr Doktor,</salute> ich höre eben von <anchor type="commentary" xml:id="K_L03638-2"/>
+               <rs type="person" ref="#pmb12692">Heinis</rs> Erkrankung<note type="commentary" corresp="K_L03638-2">
+                  Am <ref type="wienerschnitzler" subtype="date-only" target="1913-06-09"/> waren <rs type="person" ref="#pmb2173">Olga</rs> und
+                  <rs type="person" ref="#pmb2121">Arthur Schnitzler</rs> zu einer mehrwöchigen Reise in die <rs type="place" ref="#pmb43435">Schweiz</rs> aufgebrochen.
+                  Bereits am Folgetag erhielten sie ein Telegramm, demnach ihr Sohn <rs type="person" ref="#pmb12692">Heinrich</rs> an Scharlach erkrankt
+                  war. Die <rs type="person" ref="#pmb2173 #pmb2121" subtype="implied">Eltern</rs> verließen das eben
+                  erreichte <rs type="place" ref="#pmb2448">Chur</rs> sofort wieder und kehrten
+                  bereits am <ref type="wienerschnitzler" subtype="date-only" target="1913-06-11"/> nach <rs type="place" ref="#pmb50">Wien</rs>
+                  zurück.</note> und Ihrer <anchor type="commentary" xml:id="K_L03638-3"/>jähen Rückkehr<note type="commentary" corresp="K_L03638-3">Die Karte ist nicht
+                  datiert. Auf dem Poststempel läßt sich entziffern, dass sie im Juni gesendet
+                  wurde und die Tagesziffer mit der Ziffer 1 beginnt und zweistellig ist. 
+                  Von der zweiten Ziffer ist nur eine obere Rundung zu sehen, wie sie bei den Zahlen
+                  ›2‹, ›3‹, ›8‹ und ›9‹ vorkommt. Die Karte muss also am
+                     <date>12.</date> oder <date>13. 6. 1913</date> versandt sein, als die Aufregung über
+                  die durchkreuzten Reisepläne von <rs type="person" ref="#pmb2173">Olga</rs> und
+                     <rs type="person" ref="#pmb2121">Arthur Schnitzler</rs> noch frisch
+               war.</note>. Hoffentlich geht alles gut und rasch vorbei, meine innigsten Wünsche
+               sind mit Ihnen in all diesen erregten und hoffentlich bald beruhigten Stunden.</p>
             <closer>Ihr aufrichtig getreuer<lb/>
                <signed>Stefan Zweig</signed>
             </closer>
@@ -290,6 +314,26 @@
                      <desc n="1370">teilgenommen an</desc>
                      <label>Lesung von Richard Dehmel, 6.3.1904</label>
                      <idno type="URL" subtype="pmb">https://pmb.acdh.oeaw.ac.at/entity/50184/</idno>
+                  </event>
+                  <event n="Theateraufführung" ref="pmb249556" when="1909-12-12">
+                     <desc n="1370">teilgenommen an</desc>
+                     <label>Aufführung von Der Ruf des Lebens, 12.12.1909</label>
+                     <idno type="URL" subtype="pmb">https://pmb.acdh.oeaw.ac.at/entity/249556/</idno>
+                  </event>
+                  <event n="Private Lesung" ref="pmb296492" when="1910-10-11">
+                     <desc n="1370">teilgenommen an</desc>
+                     <label>Private Lesung von Die ungleichen Schalen, 11.10.1910</label>
+                     <idno type="URL" subtype="pmb">https://pmb.acdh.oeaw.ac.at/entity/296492/</idno>
+                  </event>
+                  <event n="Theateraufführung" ref="pmb251446" when="1910-11-27">
+                     <desc n="1370">teilgenommen an</desc>
+                     <label>Aufführung von Der junge Medardus, 27.11.1910</label>
+                     <idno type="URL" subtype="pmb">https://pmb.acdh.oeaw.ac.at/entity/251446/</idno>
+                  </event>
+                  <event n="Liederkonzert" ref="pmb183571" when="1911-02-05">
+                     <desc n="1370">teilgenommen an</desc>
+                     <label>Gesangskonzert Olga Schnitzler, 5.2.1911</label>
+                     <idno type="URL" subtype="pmb">https://pmb.acdh.oeaw.ac.at/entity/183571/</idno>
                   </event>
                   <event n="Generalprobe" ref="pmb239133" when="1912-10-25">
                      <desc n="1370">teilgenommen an</desc>
