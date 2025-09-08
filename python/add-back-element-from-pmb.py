@@ -12,6 +12,7 @@ import xml.etree.ElementTree as ET
 from pathlib import Path
 from typing import Set, Dict, Optional
 import requests
+import copy
 
 
 class PMBProcessor:
@@ -116,7 +117,7 @@ class PMBProcessor:
         return self._load_single_entity_from_file(pmb_id, entity_type)
     
     def _load_single_entity_from_file(self, pmb_id: str, entity_type: str) -> Optional[ET.Element]:
-        """Load a single entity from PMB file using targeted parsing"""
+        """Load a single entity from PMB file using full tree parsing"""
         filename_map = {
             "person": "listperson.xml",
             "place": "listplace.xml", 
@@ -137,29 +138,23 @@ class PMBProcessor:
             print(f"🔍 Searching for {pmb_id} in {filename}...")
             sys.stdout.flush()
             
-            # Use iterparse to find specific entity without loading entire file
-            for event, elem in ET.iterparse(filepath, events=('start', 'end')):
-                if event == 'start':
-                    # Check if this is the entity we're looking for
-                    if elem.tag.endswith(entity_type) or (entity_type == "work" and elem.tag.endswith("bibl")):
-                        xml_id = elem.get(f"{{{self.xml_ns}}}id")
-                        if xml_id == pmb_id:
-                            # Found it! Wait for the end event to get complete element
-                            continue
-                elif event == 'end':
-                    # Check if this is our target entity
-                    if elem.tag.endswith(entity_type) or (entity_type == "work" and elem.tag.endswith("bibl")):
-                        xml_id = elem.get(f"{{{self.xml_ns}}}id")
-                        if xml_id == pmb_id:
-                            # Make a copy before clearing
-                            entity_copy = ET.fromstring(ET.tostring(elem))
-                            self._add_to_cache(pmb_id, entity_copy)
-                            print(f"✅ Found and cached {pmb_id}")
-                            sys.stdout.flush()
-                            return entity_copy
-                    
-                    # Clear processed elements to save memory
-                    elem.clear()
+            # Load the entire tree to preserve element structure
+            tree = ET.parse(filepath)
+            root = tree.getroot()
+            
+            # Find the specific entity using xpath
+            if entity_type == "work":
+                entity = root.find(f".//tei:bibl[@xml:id='{pmb_id}']", self.ns)
+            else:
+                entity = root.find(f".//tei:{entity_type}[@xml:id='{pmb_id}']", self.ns)
+            
+            if entity is not None:
+                # Create a deep copy to avoid reference issues
+                entity_copy = copy.deepcopy(entity)
+                self._add_to_cache(pmb_id, entity_copy)
+                print(f"✅ Found and cached {pmb_id}")
+                sys.stdout.flush()
+                return entity_copy
             
             print(f"❌ {pmb_id} not found in {filename}")
             sys.stdout.flush()
@@ -179,6 +174,19 @@ class PMBProcessor:
             del self.pmb_cache[oldest_key]
         
         self.pmb_cache[pmb_id] = entity
+
+    def _clone_element(self, elem: ET.Element) -> ET.Element:
+        """Create a deep clone of an element with all attributes, text, and children"""
+        # Create new element with same tag
+        new_elem = ET.Element(elem.tag, elem.attrib)
+        new_elem.text = elem.text
+        new_elem.tail = elem.tail
+        
+        # Recursively clone children
+        for child in elem:
+            new_elem.append(self._clone_element(child))
+        
+        return new_elem
 
 
     def _is_in_back_section(self, elem: ET.Element, root: ET.Element) -> bool:
@@ -407,8 +415,15 @@ class PMBProcessor:
                 sys.stdout.flush()
                 entity.clear()
                 entity.set("{http://www.w3.org/XML/1998/namespace}id", clean_id)
+                copied_children = 0
+                # Copy children directly from PMB entity
                 for child in pmb_entity:
-                    entity.append(child)
+                    # Create a deep copy to avoid reference issues
+                    child_copy = copy.deepcopy(child)
+                    entity.append(child_copy)
+                    copied_children += 1
+                print(f"✅ Copied {copied_children} children to entity")
+                sys.stdout.flush()
             else:
                 # Entity not found in local PMB data
                 self.stats["pmb_not_found"] += 1
@@ -735,8 +750,8 @@ class PMBProcessor:
             if output_file is None:
                 output_file = input_file
             
-            # Write with preserved processing instructions
-            tree.write(output_file, encoding="utf-8", xml_declaration=True)
+            # Write with preserved processing instructions, preserving element structure
+            tree.write(output_file, encoding="utf-8", xml_declaration=True, short_empty_elements=False)
             
             # Print statistics
             print(f"\n📊 PMB Processing Statistics:")
