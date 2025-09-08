@@ -572,11 +572,20 @@ class PMBProcessor:
     def process_file(self, input_file: str, output_file: Optional[str] = None) -> str:
         """Process a TEI XML file through all three steps"""
         try:
+            print(f"🔄 Starting processing of {Path(input_file).name}")
+            sys.stdout.flush()
+            
             # Read original file to preserve processing instructions
+            print(f"📖 Reading file: {Path(input_file).name}")
+            sys.stdout.flush()
             with open(input_file, 'r', encoding='utf-8') as f:
                 original_content = f.read()
             
+            print(f"📝 File size: {len(original_content):,} characters")
+            sys.stdout.flush()
+            
             # Extract processing instructions from original file
+            print(f"🔍 Extracting processing instructions...")
             processing_instructions = []
             lines = original_content.split('\n')
             for line in lines:
@@ -586,18 +595,36 @@ class PMBProcessor:
                 elif line.startswith('<') and not line.startswith('<?'):
                     break  # Stop at first actual XML element
             
+            print(f"⚙️ Parsing XML...")
+            sys.stdout.flush()
             tree = ET.parse(input_file)
             root = tree.getroot()
+            print(f"✅ XML parsed successfully")
+            sys.stdout.flush()
             
             # Step 1: Extract references and create back element
+            print(f"🔍 Step 1: Extracting references...")
+            sys.stdout.flush()
             refs = self._extract_refs(root)
+            print(f"📊 Found references: {sum(len(v) for v in refs.values())} total")
+            sys.stdout.flush()
             root = self._create_back_element(root, refs)
+            print(f"✅ Step 1 completed")
+            sys.stdout.flush()
             
             # Step 2: Populate with PMB data
+            print(f"🌐 Step 2: Populating from PMB data...")
+            sys.stdout.flush()
             root = self._populate_from_pmb(root)
+            print(f"✅ Step 2 completed")
+            sys.stdout.flush()
             
             # Step 3: Normalize data
+            print(f"⚙️ Step 3: Normalizing data...")
+            sys.stdout.flush()
             root = self._normalize_data(root)
+            print(f"✅ Step 3 completed")
+            sys.stdout.flush()
             
             # Write output
             if output_file is None:
