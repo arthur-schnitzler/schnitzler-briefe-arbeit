@@ -76,7 +76,7 @@ jobs:
         echo "🔄 Step 3: Running parallel processing on editions/ folder..."
         echo "💾 Intermediate commits will be created every 100 successful files"
         echo ""
-        python -u python/batch_process_back-element.py --parallel 2 --commit-interval 100 || echo "Batch processing finished with some errors/timeouts, but continuing..."
+        python -u python/batch_process_back-element.py --parallel 1 --commit-interval 100 || echo "Batch processing finished with some errors/timeouts, but continuing..."
         echo "Batch processing step completed"
     
     - name: Check for actual file changes after processing
