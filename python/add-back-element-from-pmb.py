@@ -37,10 +37,10 @@ class PMBProcessor:
         print(f"📥 Loading PMB data from {pmb_lists_dir}...")
         sys.stdout.flush()
         
-        # Load PMB lookup data - TEMPORARILY DISABLED FOR DEBUGGING
-        print("⚠️ PMB loading temporarily disabled for debugging")
-        sys.stdout.flush()
-        self.pmb_data = {}  # Empty dict instead of loading
+        # Initialize PMB data with lazy loading
+        self.pmb_data = {}  # Will be populated on demand
+        self.pmb_cache = {}  # Cache for loaded entities
+        self.pmb_files_loaded = set()  # Track which files we've loaded
         
         print(f"✅ PMBProcessor initialized")
         sys.stdout.flush()
@@ -48,6 +48,60 @@ class PMBProcessor:
         # Register namespaces
         ET.register_namespace("", self.tei_ns)
         ET.register_namespace("xml", self.xml_ns)
+
+    def _load_pmb_entity_lazy(self, pmb_id: str, entity_type: str) -> Optional[ET.Element]:
+        """Load a specific PMB entity on demand"""
+        # Check cache first
+        if pmb_id in self.pmb_cache:
+            print(f"📋 Found {pmb_id} in cache")
+            sys.stdout.flush()
+            return self.pmb_cache[pmb_id]
+        
+        # Determine which file to load
+        file_path = self.pmb_lists_dir / f"list{entity_type}.xml"
+        file_key = f"list{entity_type}.xml"
+        
+        # Load entire file if not loaded yet (but only once per type)
+        if file_key not in self.pmb_files_loaded and file_path.exists():
+            print(f"📖 Loading {entity_type} PMB data from {file_path.name}...")
+            sys.stdout.flush()
+            
+            try:
+                tree = ET.parse(file_path)
+                root = tree.getroot()
+                
+                # Find all entities in the file
+                if entity_type == "person":
+                    entities = root.findall(f".//tei:person", self.ns)
+                elif entity_type == "bibl":
+                    entities = root.findall(f".//tei:bibl", self.ns)
+                elif entity_type == "place":
+                    entities = root.findall(f".//tei:place", self.ns)
+                elif entity_type == "org":
+                    entities = root.findall(f".//tei:org", self.ns)
+                elif entity_type == "event":
+                    entities = root.findall(f".//tei:event", self.ns)
+                
+                # Filter out entities in back section and cache them
+                entities = [entity for entity in entities if not self._is_in_back_section(entity, root)]
+                
+                entity_count = 0
+                for entity in entities:
+                    xml_id = entity.get(f"{{{self.xml_ns}}}id")
+                    if xml_id:
+                        self.pmb_cache[xml_id] = entity
+                        entity_count += 1
+                
+                self.pmb_files_loaded.add(file_key)
+                print(f"✅ Cached {entity_count} {entity_type} entities from {file_path.name}")
+                sys.stdout.flush()
+                
+            except ET.ParseError as e:
+                print(f"❌ Error parsing {file_path}: {e}")
+                sys.stdout.flush()
+        
+        # Return the specific entity if found
+        return self.pmb_cache.get(pmb_id)
 
     def _load_pmb_data(self) -> Dict[str, ET.Element]:
         """Load all PMB XML files into memory for lookups"""
@@ -317,14 +371,18 @@ class PMBProcessor:
                 self._add_schnitzler_data(entity)
                 continue
             
-            # Try to find in loaded PMB data
+            # Try to find with lazy loading
             self.stats["pmb_lookups"] += 1
-            pmb_entity = self.pmb_data.get(clean_id)
+            print(f"🔍 Looking up: {original_id} -> {clean_id} (entity_type: {entity_type})")
+            sys.stdout.flush()
+            
+            pmb_entity = self._load_pmb_entity_lazy(clean_id, entity_type)
             
             if pmb_entity is not None:
                 # Copy data from PMB
                 self.stats["pmb_found"] += 1
                 print(f"✅ Found {clean_id} in local PMB data")
+                sys.stdout.flush()
                 entity.clear()
                 entity.set("{http://www.w3.org/XML/1998/namespace}id", clean_id)
                 for child in pmb_entity:
@@ -332,7 +390,8 @@ class PMBProcessor:
             else:
                 # Entity not found in local PMB data
                 self.stats["pmb_not_found"] += 1
-                print(f"❌ {clean_id} NOT FOUND in local PMB data - would need API call")
+                print(f"❌ {clean_id} NOT FOUND in local PMB data - making API call")
+                sys.stdout.flush()
                 
                 # Try to fetch from PMB API
                 self._fetch_from_api(entity, clean_id, entity_type)
