@@ -691,6 +691,9 @@ class PMBProcessor:
 
 
 def main():
+    print(f"🚀 Starting add-back-element-from-pmb.py")
+    sys.stdout.flush()
+    
     if len(sys.argv) < 2:
         print("Usage: python add-back-element-from-pmb.py <input_file> [output_file]")
         sys.exit(1)
@@ -698,8 +701,21 @@ def main():
     input_file = sys.argv[1]
     output_file = sys.argv[2] if len(sys.argv) > 2 else None
     
+    print(f"📝 Processing file: {input_file}")
+    sys.stdout.flush()
+    
+    print(f"🔧 Creating PMBProcessor instance...")
+    sys.stdout.flush()
+    
     processor = PMBProcessor()
+    
+    print(f"▶️ Starting file processing...")
+    sys.stdout.flush()
+    
     result = processor.process_file(input_file, output_file)
+    
+    print(f"✅ Script completed: {result}")
+    sys.stdout.flush()
     
     if result:
         print(f"Successfully processed: {result}")
