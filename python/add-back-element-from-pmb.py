@@ -16,6 +16,9 @@ import requests
 
 class PMBProcessor:
     def __init__(self, pmb_lists_dir: str = "python-temp"):
+        print(f"🔧 Initializing PMBProcessor...")
+        sys.stdout.flush()
+        
         self.pmb_lists_dir = Path(pmb_lists_dir)
         self.tei_ns = "http://www.tei-c.org/ns/1.0"
         self.xml_ns = "http://www.w3.org/XML/1998/namespace"
@@ -31,8 +34,14 @@ class PMBProcessor:
             "api_failures": 0
         }
         
+        print(f"📥 Loading PMB data from {pmb_lists_dir}...")
+        sys.stdout.flush()
+        
         # Load PMB lookup data
         self.pmb_data = self._load_pmb_data()
+        
+        print(f"✅ PMBProcessor initialized")
+        sys.stdout.flush()
         
         # Register namespaces
         ET.register_namespace("", self.tei_ns)
@@ -45,6 +54,8 @@ class PMBProcessor:
         for pmb_type in ["person", "bibl", "place", "org", "event"]:
             file_path = self.pmb_lists_dir / f"list{pmb_type}.xml"
             if file_path.exists():
+                print(f"📖 Loading {pmb_type} data from {file_path.name}...")
+                sys.stdout.flush()
                 try:
                     tree = ET.parse(file_path)
                     root = tree.getroot()
@@ -64,20 +75,31 @@ class PMBProcessor:
                     # Filter out entities in back section
                     entities = [entity for entity in entities if not self._is_in_back_section(entity, root)]
                     
+                    entity_count = 0
                     for entity in entities:
                         xml_id = entity.get(f"{{{self.xml_ns}}}id")
                         if xml_id:
                             pmb_data[xml_id] = entity
+                            entity_count += 1
+                    
+                    print(f"✅ Loaded {entity_count} {pmb_type} entities")
+                    sys.stdout.flush()
                             
                 except ET.ParseError as e:
-                    print(f"Error parsing {file_path}: {e}")
+                    print(f"❌ Error parsing {file_path}: {e}")
+                    sys.stdout.flush()
+            else:
+                print(f"⚠️ PMB file not found: {file_path}")
+                sys.stdout.flush()
         
-        print(f"PMB data loaded: {len(pmb_data)} entities")
+        print(f"📊 PMB data loaded: {len(pmb_data)} entities")
+        sys.stdout.flush()
         
         # Show sample of loaded IDs for debugging
         if len(pmb_data) > 0:
             sample_ids = list(pmb_data.keys())[:10]
-            print(f"Sample PMB IDs loaded: {sample_ids}")
+            print(f"🔍 Sample PMB IDs loaded: {sample_ids}")
+            sys.stdout.flush()
         
         return pmb_data
 
