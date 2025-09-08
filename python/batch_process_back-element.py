@@ -67,6 +67,25 @@ def process_file(xml_file, processor_script):
     """Process a single XML file"""
     file_name = Path(xml_file).name
     
+    print(f"🔄 About to process {file_name}")
+    sys.stdout.flush()
+    
+    # Check if files exist
+    if not Path(xml_file).exists():
+        print(f"❌ Input file does not exist: {xml_file}")
+        sys.stdout.flush()
+        return {"file": file_name, "status": "failed", "error": "Input file not found"}
+    
+    if not Path(processor_script).exists():
+        print(f"❌ Processor script does not exist: {processor_script}")
+        sys.stdout.flush()
+        return {"file": file_name, "status": "failed", "error": "Processor script not found"}
+    
+    print(f"📂 Input file: {xml_file} ({Path(xml_file).stat().st_size:,} bytes)")
+    print(f"🐍 Processor: {processor_script}")
+    print(f"🚀 Launching subprocess...")
+    sys.stdout.flush()
+    
     try:
         # Run the processor script
         result = subprocess.run([
@@ -75,12 +94,23 @@ def process_file(xml_file, processor_script):
             xml_file
         ], capture_output=True, text=True, timeout=600)  # 10 minute timeout per file
         
+        print(f"📤 Subprocess completed for {file_name}")
+        sys.stdout.flush()
+        
         if result.returncode == 0:
+            print(f"✅ {file_name} processed successfully")
+            sys.stdout.flush()
             return {"file": file_name, "status": "success", "error": None}
         else:
+            print(f"❌ {file_name} failed with return code {result.returncode}")
+            print(f"   STDOUT: {result.stdout[:500]}...")
+            print(f"   STDERR: {result.stderr[:500]}...")
+            sys.stdout.flush()
             return {"file": file_name, "status": "failed", "error": result.stderr}
             
     except subprocess.TimeoutExpired:
+        print(f"⏰ {file_name} timed out after 10 minutes")
+        sys.stdout.flush()
         return {"file": file_name, "status": "timeout", "error": "Timeout after 10 minutes"}
     except Exception as e:
         return {"file": file_name, "status": "exception", "error": str(e)}
