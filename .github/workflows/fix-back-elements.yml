@@ -122,6 +122,7 @@ jobs:
     
     - name: Run validation to identify problematic files
       id: validation
+      continue-on-error: true
       run: |
         echo "🔍 Running validation to identify problematic files..."
         python validate_back_elements.py
