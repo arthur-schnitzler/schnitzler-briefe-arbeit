@@ -1,0 +1,242 @@
+name: Fix problematic back elements
+
+on:
+  workflow_dispatch: # Manual execution only
+
+jobs:
+  fix-back-elements:
+    runs-on: ubuntu-latest
+    
+    steps:
+    - name: Checkout repository
+      uses: actions/checkout@v4
+      with:
+        fetch-depth: 0  # Vollständige Git-Historie für Änderungserkennung
+        token: ${{ secrets.GITHUB_TOKEN }}
+    
+    - name: Set up Python
+      uses: actions/setup-python@v4
+      with:
+        python-version: '3.11'
+    
+    - name: Install Python dependencies
+      run: |
+        python -m pip install --upgrade pip
+        pip install requests lxml
+    
+    - name: Cache PMB files
+      uses: actions/cache@v3
+      with:
+        path: python-temp/
+        key: pmb-files-${{ github.run_id }}-${{ github.run_attempt }}
+        restore-keys: |
+          pmb-files-
+    
+    - name: Create XPath validation script
+      run: |
+        cat > validate_back_elements.py << 'EOF'
+        #!/usr/bin/env python3
+        import os
+        import sys
+        from lxml import etree
+        import glob
+        
+        def validate_file(file_path):
+            """Validate a single XML file for problematic back elements."""
+            try:
+                with open(file_path, 'r', encoding='utf-8') as f:
+                    content = f.read()
+                
+                # Parse XML with namespaces
+                parser = etree.XMLParser(recover=True)
+                tree = etree.fromstring(content.encode('utf-8'), parser)
+                
+                # Define TEI namespace
+                namespaces = {'tei': 'http://www.tei-c.org/ns/1.0'}
+                
+                issues = []
+                
+                # Check for empty birth elements: //tei:TEI/tei:text/tei:back/tei:listPerson//tei:birth[not(child::*)]
+                empty_births = tree.xpath('//tei:TEI/tei:text/tei:back/tei:listPerson//tei:birth[not(child::*)]', namespaces=namespaces)
+                if empty_births:
+                    issues.append(f"Found {len(empty_births)} empty birth element(s)")
+                
+                # Check for empty idno elements: //tei:TEI/tei:text/tei:back/descendant::tei:idno[not(@*) and .='']
+                empty_idnos = tree.xpath("//tei:TEI/tei:text/tei:back/descendant::tei:idno[not(@*) and .='']", namespaces=namespaces)
+                if empty_idnos:
+                    issues.append(f"Found {len(empty_idnos)} empty idno element(s) without attributes")
+                
+                return issues
+                
+            except Exception as e:
+                return [f"XML parsing error: {str(e)}"]
+        
+        def main():
+            """Main validation function."""
+            editions_path = "./editions"
+            if not os.path.exists(editions_path):
+                print(f"ERROR: {editions_path} directory not found")
+                sys.exit(1)
+            
+            print(f"🔍 Validating back elements in {editions_path}...")
+            
+            # Find all XML files
+            xml_files = glob.glob(os.path.join(editions_path, "**/*.xml"), recursive=True)
+            print(f"Found {len(xml_files)} XML files to validate")
+            
+            problematic_files = []
+            total_issues = 0
+            
+            for i, xml_file in enumerate(xml_files, 1):
+                if i % 100 == 0:
+                    print(f"Progress: {i}/{len(xml_files)} files checked")
+                
+                issues = validate_file(xml_file)
+                if issues:
+                    problematic_files.append((xml_file, issues))
+                    total_issues += len(issues)
+            
+            # Results
+            if problematic_files:
+                print(f"\n❌ Validation failed: {len(problematic_files)} files with {total_issues} issues")
+                print("\nProblematic files:")
+                
+                # Write problematic files to output for workflow
+                with open('problematic_files.txt', 'w') as f:
+                    for file_path, issues in problematic_files:
+                        rel_path = os.path.relpath(file_path, '.')
+                        print(f"  {rel_path}: {', '.join(issues)}")
+                        f.write(f"{rel_path}\n")
+                
+                print(f"\n📝 List of problematic files saved to problematic_files.txt")
+                return len(problematic_files)
+            else:
+                print(f"\n✅ Validation passed: All {len(xml_files)} files are valid")
+                return 0
+        
+        if __name__ == "__main__":
+            sys.exit(main())
+        EOF
+        
+        chmod +x validate_back_elements.py
+    
+    - name: Run validation to identify problematic files
+      id: validation
+      run: |
+        echo "🔍 Running validation to identify problematic files..."
+        python validate_back_elements.py
+        echo "validation_exit_code=$?" >> $GITHUB_OUTPUT
+
+    - name: Process validation results
+      id: process-results
+      run: |
+        if [ -f "problematic_files.txt" ]; then
+          PROBLEM_COUNT=$(wc -l < problematic_files.txt)
+          echo "found_problems=true" >> $GITHUB_OUTPUT
+          echo "problem_count=$PROBLEM_COUNT" >> $GITHUB_OUTPUT
+          
+          echo "🔧 Found $PROBLEM_COUNT files needing processing:"
+          cat problematic_files.txt
+        else
+          echo "found_problems=false" >> $GITHUB_OUTPUT
+          echo "problem_count=0" >> $GITHUB_OUTPUT
+          echo "✅ No problematic files found - all back elements are valid"
+        fi
+    
+    - name: Configure Git for processing
+      if: steps.process-results.outputs.found_problems == 'true'
+      run: |
+        git config --local user.email "action@github.com"
+        git config --local user.name "GitHub Action (Back Element Fix)"
+    
+    - name: Process problematic files
+      if: steps.process-results.outputs.found_problems == 'true'
+      timeout-minutes: 120
+      run: |
+        echo "🔧 Processing ${{ steps.process-results.outputs.problem_count }} problematic files..."
+        
+        # Read the list of files and process each one individually
+        while IFS= read -r file_path; do
+          if [ -n "$file_path" ]; then
+            echo "Processing: $file_path"
+            python python/add-back-element-from-pmb.py "$file_path"
+          fi
+        done < problematic_files.txt
+        
+        echo "✅ Finished processing problematic files"
+    
+    - name: Check for changes and commit
+      if: steps.process-results.outputs.found_problems == 'true'
+      run: |
+        git add -A
+        if git diff --staged --quiet; then
+          echo "No changes to commit after processing"
+        else
+          CHANGED_COUNT=$(git diff --staged --name-only | wc -l)
+          CURRENT_DATE=$(date +%Y-%m-%d)
+          
+          cat > commit_message.txt << EOF
+        Fix back elements: Process $CHANGED_COUNT files with validation issues - $CURRENT_DATE
+        
+        Fixed files that had problematic back elements:
+        - Empty birth elements without children
+        - Empty idno elements without attributes
+        
+        🤖 Generated by fix-back-elements workflow
+        🔧 Processed using python/add-back-element-from-pmb.py
+        📊 PMB data enrichment applied to problematic files
+        
+        Files processed: ${{ steps.process-results.outputs.problem_count }}
+        EOF
+          
+          git commit -F commit_message.txt
+          git push
+          
+          echo "✅ Committed and pushed fixes for $CHANGED_COUNT files"
+        fi
+    
+    - name: Run final validation
+      if: steps.process-results.outputs.found_problems == 'true'
+      run: |
+        echo "🔍 Running final validation to verify all fixes..."
+        python validate_back_elements.py
+        FINAL_EXIT_CODE=$?
+        
+        if [ $FINAL_EXIT_CODE -eq 0 ]; then
+          echo "✅ Final validation passed: All issues have been resolved!"
+        else
+          echo "⚠️ Final validation: Some issues may still remain"
+        fi
+    
+    - name: Create workflow summary
+      if: always()
+      run: |
+        echo "# Back Element Fix Summary" >> $GITHUB_STEP_SUMMARY
+        echo "" >> $GITHUB_STEP_SUMMARY
+        echo "**Date:** $(date +%Y-%m-%d)" >> $GITHUB_STEP_SUMMARY
+        echo "**Time:** $(date +%H:%M:%S) UTC" >> $GITHUB_STEP_SUMMARY
+        echo "" >> $GITHUB_STEP_SUMMARY
+        
+        if [ "${{ steps.process-results.outputs.found_problems }}" == "true" ]; then
+          echo "🔍 **Validation Result:** Found ${{ steps.process-results.outputs.problem_count }} problematic files" >> $GITHUB_STEP_SUMMARY
+          echo "🔧 **Action Taken:** Processed all problematic files with XPath validation" >> $GITHUB_STEP_SUMMARY
+          echo "" >> $GITHUB_STEP_SUMMARY
+          echo "**Issues Fixed:**" >> $GITHUB_STEP_SUMMARY
+          echo "- Empty birth elements without children" >> $GITHUB_STEP_SUMMARY
+          echo "- Empty idno elements without attributes" >> $GITHUB_STEP_SUMMARY
+        else
+          echo "✅ **Validation Result:** All back elements are valid" >> $GITHUB_STEP_SUMMARY
+          echo "✅ **Status:** No problematic files found, no action needed" >> $GITHUB_STEP_SUMMARY
+        fi
+        
+        echo "" >> $GITHUB_STEP_SUMMARY
+        echo "---" >> $GITHUB_STEP_SUMMARY
+        echo "*This workflow validates and fixes back elements using XPath rules*" >> $GITHUB_STEP_SUMMARY
+    
+    - name: Notify on failure
+      if: failure()
+      run: |
+        echo "❌ Back element fix workflow failed!" >> $GITHUB_STEP_SUMMARY
+        echo "" >> $GITHUB_STEP_SUMMARY
+        echo "Please check the workflow logs for details." >> $GITHUB_STEP_SUMMARY
+        echo "The workflow can be manually re-run from the Actions tab." >> $GITHUB_STEP_SUMMARY
