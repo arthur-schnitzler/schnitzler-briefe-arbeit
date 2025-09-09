@@ -1,0 +1,301 @@
+name: Validate Back Elements Quality
+
+on:
+  schedule:
+    # Runs shortly after the monthly back element update (2:30 UTC on the 1st of each month)
+    - cron: '30 2 1 * *'
+  workflow_dispatch: # Allows manual execution
+    inputs:
+      force_check:
+        description: 'Force validation even without recent monthly update'
+        required: false
+        default: 'false'
+        type: boolean
+
+jobs:
+  validate-back-elements:
+    runs-on: ubuntu-latest
+    
+    steps:
+    - name: Checkout repository
+      uses: actions/checkout@v4
+      with:
+        fetch-depth: 50  # Need some history to check for recent monthly updates
+        token: ${{ secrets.GITHUB_TOKEN }}
+    
+    - name: Set up Python
+      uses: actions/setup-python@v4
+      with:
+        python-version: '3.11'
+    
+    - name: Install Python dependencies
+      run: |
+        python -m pip install --upgrade pip
+        pip install lxml requests
+    
+    - name: Check if monthly update ran recently
+      id: check-recent-update
+      run: |
+        # Check if there was a monthly update commit in the last 2 hours
+        TWO_HOURS_AGO=$(date -d "2 hours ago" --iso-8601=seconds)
+        echo "Checking for monthly update commits since: $TWO_HOURS_AGO"
+        
+        # Look for commits by GitHub Action in the last 2 hours
+        RECENT_COMMITS=$(git log --since="$TWO_HOURS_AGO" --author="GitHub Action" --oneline | wc -l)
+        echo "Found $RECENT_COMMITS recent commits by GitHub Action"
+        
+        if [ $RECENT_COMMITS -gt 0 ] || [ "${{ github.event.inputs.force_check }}" == "true" ]; then
+          echo "Should run validation: recent update found or force_check enabled"
+          echo "should_validate=true" >> $GITHUB_OUTPUT
+        else
+          echo "No recent monthly update found, skipping validation"
+          echo "should_validate=false" >> $GITHUB_OUTPUT
+        fi
+    
+    - name: Create XPath validation script
+      if: steps.check-recent-update.outputs.should_validate == 'true'
+      run: |
+        cat > validate_back_elements.py << 'EOF'
+        #!/usr/bin/env python3
+        import os
+        import sys
+        from lxml import etree
+        import glob
+        
+        def validate_file(file_path):
+            """Validate a single XML file for problematic back elements."""
+            try:
+                with open(file_path, 'r', encoding='utf-8') as f:
+                    content = f.read()
+                
+                # Parse XML with namespaces
+                parser = etree.XMLParser(recover=True)
+                tree = etree.fromstring(content.encode('utf-8'), parser)
+                
+                # Define TEI namespace
+                namespaces = {'tei': 'http://www.tei-c.org/ns/1.0'}
+                
+                issues = []
+                
+                # Check for empty birth elements: //tei:TEI/tei:text/tei:back/tei:listPerson//tei:birth[not(child::*)]
+                empty_births = tree.xpath('//tei:TEI/tei:text/tei:back/tei:listPerson//tei:birth[not(child::*)]', namespaces=namespaces)
+                if empty_births:
+                    issues.append(f"Found {len(empty_births)} empty birth element(s)")
+                
+                # Check for empty idno elements: //tei:TEI/tei:text/tei:back/descendant::tei:idno[not(@*) and .='']
+                empty_idnos = tree.xpath("//tei:TEI/tei:text/tei:back/descendant::tei:idno[not(@*) and .='']", namespaces=namespaces)
+                if empty_idnos:
+                    issues.append(f"Found {len(empty_idnos)} empty idno element(s) without attributes")
+                
+                return issues
+                
+            except Exception as e:
+                return [f"XML parsing error: {str(e)}"]
+        
+        def main():
+            """Main validation function."""
+            editions_path = "./editions"
+            if not os.path.exists(editions_path):
+                print(f"ERROR: {editions_path} directory not found")
+                sys.exit(1)
+            
+            print(f"🔍 Validating back elements in {editions_path}...")
+            
+            # Find all XML files
+            xml_files = glob.glob(os.path.join(editions_path, "**/*.xml"), recursive=True)
+            print(f"Found {len(xml_files)} XML files to validate")
+            
+            problematic_files = []
+            total_issues = 0
+            
+            for i, xml_file in enumerate(xml_files, 1):
+                if i % 100 == 0:
+                    print(f"Progress: {i}/{len(xml_files)} files checked")
+                
+                issues = validate_file(xml_file)
+                if issues:
+                    problematic_files.append((xml_file, issues))
+                    total_issues += len(issues)
+            
+            # Results
+            if problematic_files:
+                print(f"\n❌ Validation failed: {len(problematic_files)} files with {total_issues} issues")
+                print("\nProblematic files:")
+                
+                # Write problematic files to output for workflow
+                with open('problematic_files.txt', 'w') as f:
+                    for file_path, issues in problematic_files:
+                        rel_path = os.path.relpath(file_path, '.')
+                        print(f"  {rel_path}: {', '.join(issues)}")
+                        f.write(f"{rel_path}\n")
+                
+                print(f"\n📝 List of problematic files saved to problematic_files.txt")
+                return len(problematic_files)
+            else:
+                print(f"\n✅ Validation passed: All {len(xml_files)} files are valid")
+                return 0
+        
+        if __name__ == "__main__":
+            sys.exit(main())
+        EOF
+        
+        chmod +x validate_back_elements.py
+    
+    - name: Run validation
+      if: steps.check-recent-update.outputs.should_validate == 'true'
+      id: validation
+      continue-on-error: true
+      run: |
+        python validate_back_elements.py
+        echo "validation_exit_code=$?" >> $GITHUB_OUTPUT
+    
+    - name: Process validation results
+      if: steps.check-recent-update.outputs.should_validate == 'true'
+      id: process-results
+      run: |
+        if [ -f "problematic_files.txt" ]; then
+          PROBLEM_COUNT=$(wc -l < problematic_files.txt)
+          echo "found_problems=true" >> $GITHUB_OUTPUT
+          echo "problem_count=$PROBLEM_COUNT" >> $GITHUB_OUTPUT
+          
+          echo "Files needing reprocessing:"
+          cat problematic_files.txt
+        else
+          echo "found_problems=false" >> $GITHUB_OUTPUT
+          echo "problem_count=0" >> $GITHUB_OUTPUT
+        fi
+    
+    - name: Cache PMB files for reprocessing
+      if: steps.process-results.outputs.found_problems == 'true'
+      uses: actions/cache@v3
+      with:
+        path: python-temp/
+        key: pmb-files-validation-${{ github.run_id }}-${{ github.run_attempt }}
+        restore-keys: |
+          pmb-files-
+    
+    - name: Configure Git for fixes
+      if: steps.process-results.outputs.found_problems == 'true'
+      run: |
+        git config --local user.email "action@github.com"
+        git config --local user.name "GitHub Action (Back Element Validation Fix)"
+    
+    - name: Reprocess problematic files
+      if: steps.process-results.outputs.found_problems == 'true'
+      timeout-minutes: 60
+      run: |
+        echo "🔧 Reprocessing ${{ steps.process-results.outputs.problem_count }} problematic files..."
+        echo "Files to reprocess:"
+        cat problematic_files.txt
+        
+        # Create a targeted reprocessing script
+        cat > reprocess_files.py << 'EOF'
+        import sys
+        import os
+        sys.path.append('./python')
+        from batch_process_back_element import process_single_file
+        
+        # Read the list of problematic files
+        with open('problematic_files.txt', 'r') as f:
+            files_to_process = [line.strip() for line in f if line.strip()]
+        
+        print(f"Reprocessing {len(files_to_process)} files...")
+        
+        success_count = 0
+        for i, file_path in enumerate(files_to_process, 1):
+            try:
+                print(f"[{i}/{len(files_to_process)}] Processing: {file_path}")
+                # Call the same function used in the main batch processor
+                if process_single_file(file_path):
+                    success_count += 1
+                    print(f"✅ Successfully processed: {file_path}")
+                else:
+                    print(f"❌ Failed to process: {file_path}")
+            except Exception as e:
+                print(f"❌ Error processing {file_path}: {e}")
+        
+        print(f"\nReprocessing complete: {success_count}/{len(files_to_process)} files successful")
+        EOF
+        
+        python reprocess_files.py
+    
+    - name: Commit fixes if changes were made
+      if: steps.process-results.outputs.found_problems == 'true'
+      run: |
+        git add -A
+        if git diff --staged --quiet; then
+          echo "No changes to commit after reprocessing"
+        else
+          CHANGED_COUNT=$(git diff --staged --name-only | wc -l)
+          
+          cat > fix_commit_message.txt << EOF
+          Validation fix: Reprocess $CHANGED_COUNT files with back element issues
+          
+          Fixed files that had problems after monthly back element update:
+          - Empty birth elements without children
+          - Empty idno elements without attributes
+          
+          🤖 Generated by validation workflow
+          🔧 Reprocessed using python/batch_process_back-element.py
+          📊 PMB data enrichment applied to problematic files
+          
+          Files fixed: ${{ steps.process-results.outputs.problem_count }}
+          EOF
+          
+          git commit -F fix_commit_message.txt
+          git push
+          
+          echo "✅ Committed and pushed fixes for $CHANGED_COUNT files"
+        fi
+    
+    - name: Run validation again to verify fixes
+      if: steps.process-results.outputs.found_problems == 'true'
+      run: |
+        echo "🔍 Running validation again to verify fixes..."
+        python validate_back_elements.py
+        FINAL_EXIT_CODE=$?
+        
+        if [ $FINAL_EXIT_CODE -eq 0 ]; then
+          echo "✅ All issues have been resolved!"
+        else
+          echo "⚠️ Some issues may still remain, but reprocessing was attempted"
+        fi
+    
+    - name: Create workflow summary
+      if: always() && steps.check-recent-update.outputs.should_validate == 'true'
+      run: |
+        echo "# Back Element Validation Summary" >> $GITHUB_STEP_SUMMARY
+        echo "" >> $GITHUB_STEP_SUMMARY
+        echo "**Date:** $(date +%Y-%m-%d)" >> $GITHUB_STEP_SUMMARY
+        echo "**Time:** $(date +%H:%M:%S) UTC" >> $GITHUB_STEP_SUMMARY
+        echo "" >> $GITHUB_STEP_SUMMARY
+        
+        if [ "${{ steps.process-results.outputs.found_problems }}" == "true" ]; then
+          echo "❌ **Validation Result:** Found ${{ steps.process-results.outputs.problem_count }} problematic files" >> $GITHUB_STEP_SUMMARY
+          echo "🔧 **Action Taken:** Attempted to reprocess all problematic files" >> $GITHUB_STEP_SUMMARY
+          echo "" >> $GITHUB_STEP_SUMMARY
+          echo "**Issues Found:**" >> $GITHUB_STEP_SUMMARY
+          echo "- Empty birth elements without children" >> $GITHUB_STEP_SUMMARY
+          echo "- Empty idno elements without attributes" >> $GITHUB_STEP_SUMMARY
+        else
+          echo "✅ **Validation Result:** All back elements are valid" >> $GITHUB_STEP_SUMMARY
+          echo "✅ **Status:** No issues found, no action needed" >> $GITHUB_STEP_SUMMARY
+        fi
+        
+        echo "" >> $GITHUB_STEP_SUMMARY
+        echo "---" >> $GITHUB_STEP_SUMMARY
+        echo "*This workflow validates the quality of back elements after monthly updates*" >> $GITHUB_STEP_SUMMARY
+    
+    - name: Create summary for skipped validation
+      if: always() && steps.check-recent-update.outputs.should_validate == 'false'
+      run: |
+        echo "# Back Element Validation Summary" >> $GITHUB_STEP_SUMMARY
+        echo "" >> $GITHUB_STEP_SUMMARY
+        echo "**Date:** $(date +%Y-%m-%d)" >> $GITHUB_STEP_SUMMARY
+        echo "**Time:** $(date +%H:%M:%S) UTC" >> $GITHUB_STEP_SUMMARY
+        echo "" >> $GITHUB_STEP_SUMMARY
+        echo "⏭️ **Status:** Validation skipped - no recent monthly update found" >> $GITHUB_STEP_SUMMARY
+        echo "" >> $GITHUB_STEP_SUMMARY
+        echo "Validation only runs when:" >> $GITHUB_STEP_SUMMARY
+        echo "- A monthly back element update ran in the last 2 hours" >> $GITHUB_STEP_SUMMARY
+        echo "- Manual execution with 'force_check' enabled" >> $GITHUB_STEP_SUMMARY

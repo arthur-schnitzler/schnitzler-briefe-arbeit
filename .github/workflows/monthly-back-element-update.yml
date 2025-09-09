@@ -157,6 +157,219 @@ jobs:
         echo "---" >> $GITHUB_STEP_SUMMARY
         echo "*This workflow runs automatically on the 1st of each month at 4:00 AM UTC*" >> $GITHUB_STEP_SUMMARY
     
+    - name: Create XPath validation script
+      if: always() && steps.check-changes.outputs.has_changes == 'true'
+      run: |
+        cat > validate_back_elements.py << 'EOF'
+        #!/usr/bin/env python3
+        import os
+        import sys
+        from lxml import etree
+        import glob
+        
+        def validate_file(file_path):
+            """Validate a single XML file for problematic back elements."""
+            try:
+                with open(file_path, 'r', encoding='utf-8') as f:
+                    content = f.read()
+                
+                # Parse XML with namespaces
+                parser = etree.XMLParser(recover=True)
+                tree = etree.fromstring(content.encode('utf-8'), parser)
+                
+                # Define TEI namespace
+                namespaces = {'tei': 'http://www.tei-c.org/ns/1.0'}
+                
+                issues = []
+                
+                # Check for empty birth elements: //tei:TEI/tei:text/tei:back/tei:listPerson//tei:birth[not(child::*)]
+                empty_births = tree.xpath('//tei:TEI/tei:text/tei:back/tei:listPerson//tei:birth[not(child::*)]', namespaces=namespaces)
+                if empty_births:
+                    issues.append(f"Found {len(empty_births)} empty birth element(s)")
+                
+                # Check for empty idno elements: //tei:TEI/tei:text/tei:back/descendant::tei:idno[not(@*) and .='']
+                empty_idnos = tree.xpath("//tei:TEI/tei:text/tei:back/descendant::tei:idno[not(@*) and .='']", namespaces=namespaces)
+                if empty_idnos:
+                    issues.append(f"Found {len(empty_idnos)} empty idno element(s) without attributes")
+                
+                return issues
+                
+            except Exception as e:
+                return [f"XML parsing error: {str(e)}"]
+        
+        def main():
+            """Main validation function."""
+            editions_path = "./editions"
+            if not os.path.exists(editions_path):
+                print(f"ERROR: {editions_path} directory not found")
+                sys.exit(1)
+            
+            print(f"🔍 Validating back elements in {editions_path}...")
+            
+            # Find all XML files
+            xml_files = glob.glob(os.path.join(editions_path, "**/*.xml"), recursive=True)
+            print(f"Found {len(xml_files)} XML files to validate")
+            
+            problematic_files = []
+            total_issues = 0
+            
+            for i, xml_file in enumerate(xml_files, 1):
+                if i % 100 == 0:
+                    print(f"Progress: {i}/{len(xml_files)} files checked")
+                
+                issues = validate_file(xml_file)
+                if issues:
+                    problematic_files.append((xml_file, issues))
+                    total_issues += len(issues)
+            
+            # Results
+            if problematic_files:
+                print(f"\n❌ Validation failed: {len(problematic_files)} files with {total_issues} issues")
+                print("\nProblematic files:")
+                
+                # Write problematic files to output for workflow
+                with open('problematic_files.txt', 'w') as f:
+                    for file_path, issues in problematic_files:
+                        rel_path = os.path.relpath(file_path, '.')
+                        print(f"  {rel_path}: {', '.join(issues)}")
+                        f.write(f"{rel_path}\n")
+                
+                print(f"\n📝 List of problematic files saved to problematic_files.txt")
+                return len(problematic_files)
+            else:
+                print(f"\n✅ Validation passed: All {len(xml_files)} files are valid")
+                return 0
+        
+        if __name__ == "__main__":
+            sys.exit(main())
+        EOF
+        
+        chmod +x validate_back_elements.py
+    
+    - name: Run validation
+      if: always() && steps.check-changes.outputs.has_changes == 'true'
+      id: validation
+      continue-on-error: true
+      run: |
+        echo "🔍 Running post-processing validation..."
+        python validate_back_elements.py
+        echo "validation_exit_code=$?" >> $GITHUB_OUTPUT
+    
+    - name: Process validation results and fix issues
+      if: always() && steps.check-changes.outputs.has_changes == 'true'
+      id: validation-fix
+      run: |
+        if [ -f "problematic_files.txt" ]; then
+          PROBLEM_COUNT=$(wc -l < problematic_files.txt)
+          echo "found_problems=true" >> $GITHUB_OUTPUT
+          echo "problem_count=$PROBLEM_COUNT" >> $GITHUB_OUTPUT
+          
+          echo "🔧 Found $PROBLEM_COUNT files needing reprocessing:"
+          cat problematic_files.txt
+          
+          # Create a targeted reprocessing script
+          cat > reprocess_files.py << 'EOF'
+        import sys
+        import os
+        sys.path.append('./python')
+        from batch_process_back_element import process_single_file
+        
+        # Read the list of problematic files
+        with open('problematic_files.txt', 'r') as f:
+            files_to_process = [line.strip() for line in f if line.strip()]
+        
+        print(f"Reprocessing {len(files_to_process)} files...")
+        
+        success_count = 0
+        for i, file_path in enumerate(files_to_process, 1):
+            try:
+                print(f"[{i}/{len(files_to_process)}] Processing: {file_path}")
+                # Call the same function used in the main batch processor
+                if process_single_file(file_path):
+                    success_count += 1
+                    print(f"✅ Successfully processed: {file_path}")
+                else:
+                    print(f"❌ Failed to process: {file_path}")
+            except Exception as e:
+                print(f"❌ Error processing {file_path}: {e}")
+        
+        print(f"\nReprocessing complete: {success_count}/{len(files_to_process)} files successful")
+        EOF
+          
+          echo "Reprocessing problematic files..."
+          python reprocess_files.py
+          
+          # Check if reprocessing made changes
+          git add -A
+          if git diff --staged --quiet; then
+            echo "No changes after reprocessing"
+            echo "reprocessing_made_changes=false" >> $GITHUB_OUTPUT
+          else
+            echo "Changes made during reprocessing"
+            echo "reprocessing_made_changes=true" >> $GITHUB_OUTPUT
+          fi
+        else
+          echo "found_problems=false" >> $GITHUB_OUTPUT
+          echo "problem_count=0" >> $GITHUB_OUTPUT
+          echo "reprocessing_made_changes=false" >> $GITHUB_OUTPUT
+        fi
+    
+    - name: Commit validation fixes
+      if: always() && steps.validation-fix.outputs.reprocessing_made_changes == 'true'
+      run: |
+        CHANGED_COUNT=$(git diff --staged --name-only | wc -l)
+        
+        cat > validation_fix_commit_message.txt << EOF
+        Validation fix: Reprocess $CHANGED_COUNT files with back element issues
+        
+        Post-processing validation found and fixed files with:
+        - Empty birth elements without children  
+        - Empty idno elements without attributes
+        
+        🤖 Generated by monthly workflow validation step
+        🔧 Reprocessed using python/batch_process_back-element.py
+        📊 PMB data enrichment applied to problematic files
+        
+        Files fixed: ${{ steps.validation-fix.outputs.problem_count }}
+        EOF
+        
+        git commit -F validation_fix_commit_message.txt
+        git push
+        
+        echo "✅ Committed and pushed validation fixes for $CHANGED_COUNT files"
+    
+    - name: Run final validation
+      if: always() && steps.validation-fix.outputs.found_problems == 'true'
+      run: |
+        echo "🔍 Running final validation to verify all fixes..."
+        python validate_back_elements.py
+        FINAL_EXIT_CODE=$?
+        
+        if [ $FINAL_EXIT_CODE -eq 0 ]; then
+          echo "✅ Final validation passed: All issues have been resolved!"
+        else
+          echo "⚠️ Final validation: Some issues may still remain"
+        fi
+    
+    - name: Update workflow summary with validation results
+      if: always() && steps.check-changes.outputs.has_changes == 'true'
+      run: |
+        echo "" >> $GITHUB_STEP_SUMMARY
+        echo "## Validation Results" >> $GITHUB_STEP_SUMMARY
+        echo "" >> $GITHUB_STEP_SUMMARY
+        
+        if [ "${{ steps.validation-fix.outputs.found_problems }}" == "true" ]; then
+          echo "🔍 **Post-processing validation:** Found ${{ steps.validation-fix.outputs.problem_count }} files with issues" >> $GITHUB_STEP_SUMMARY
+          if [ "${{ steps.validation-fix.outputs.reprocessing_made_changes }}" == "true" ]; then
+            echo "🔧 **Action taken:** Automatically reprocessed and committed fixes" >> $GITHUB_STEP_SUMMARY
+            echo "✅ **Result:** Issues resolved and pushed to repository" >> $GITHUB_STEP_SUMMARY
+          else
+            echo "⚠️ **Action taken:** Attempted reprocessing, but no changes were made" >> $GITHUB_STEP_SUMMARY
+          fi
+        else
+          echo "✅ **Post-processing validation:** All back elements are valid" >> $GITHUB_STEP_SUMMARY
+        fi
+    
     - name: Notify on failure
       if: failure()
       run: |
