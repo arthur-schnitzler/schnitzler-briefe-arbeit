@@ -33,23 +33,28 @@ jobs:
         python -m pip install --upgrade pip
         pip install lxml requests
     
-    - name: Check if monthly update ran recently
+    - name: Check if validation should run
       id: check-recent-update
       run: |
-        # Check if there was a monthly update commit in the last 2 hours
-        TWO_HOURS_AGO=$(date -d "2 hours ago" --iso-8601=seconds)
-        echo "Checking for monthly update commits since: $TWO_HOURS_AGO"
-        
-        # Look for commits by GitHub Action in the last 2 hours
-        RECENT_COMMITS=$(git log --since="$TWO_HOURS_AGO" --author="GitHub Action" --oneline | wc -l)
-        echo "Found $RECENT_COMMITS recent commits by GitHub Action"
-        
-        if [ $RECENT_COMMITS -gt 0 ] || [ "${{ github.event.inputs.force_check }}" == "true" ]; then
-          echo "Should run validation: recent update found or force_check enabled"
+        if [ "${{ github.event_name }}" == "workflow_dispatch" ]; then
+          echo "Manual execution - always run validation"
           echo "should_validate=true" >> $GITHUB_OUTPUT
         else
-          echo "No recent monthly update found, skipping validation"
-          echo "should_validate=false" >> $GITHUB_OUTPUT
+          # For scheduled runs, check if there was a monthly update commit in the last 2 hours
+          TWO_HOURS_AGO=$(date -d "2 hours ago" --iso-8601=seconds)
+          echo "Checking for monthly update commits since: $TWO_HOURS_AGO"
+          
+          # Look for commits by GitHub Action in the last 2 hours
+          RECENT_COMMITS=$(git log --since="$TWO_HOURS_AGO" --author="GitHub Action" --oneline | wc -l)
+          echo "Found $RECENT_COMMITS recent commits by GitHub Action"
+          
+          if [ $RECENT_COMMITS -gt 0 ]; then
+            echo "Should run validation: recent update found"
+            echo "should_validate=true" >> $GITHUB_OUTPUT
+          else
+            echo "No recent monthly update found, skipping validation"
+            echo "should_validate=false" >> $GITHUB_OUTPUT
+          fi
         fi
     
     - name: Create XPath validation script
@@ -297,5 +302,5 @@ jobs:
         echo "⏭️ **Status:** Validation skipped - no recent monthly update found" >> $GITHUB_STEP_SUMMARY
         echo "" >> $GITHUB_STEP_SUMMARY
         echo "Validation only runs when:" >> $GITHUB_STEP_SUMMARY
-        echo "- A monthly back element update ran in the last 2 hours" >> $GITHUB_STEP_SUMMARY
-        echo "- Manual execution with 'force_check' enabled" >> $GITHUB_STEP_SUMMARY
+        echo "- A monthly back element update ran in the last 2 hours (scheduled runs)" >> $GITHUB_STEP_SUMMARY
+        echo "- Manual execution (workflow_dispatch always runs validation)" >> $GITHUB_STEP_SUMMARY
