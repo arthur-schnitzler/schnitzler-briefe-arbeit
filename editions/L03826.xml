@@ -1,6 +1,10 @@
-<?xml version='1.0' encoding='UTF-8'?>
+<?xml version="1.0" encoding="UTF-8"?>
 <?xml-model href="../meta/schnitzler-briefe-schematron.sch" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
-<TEI xmlns="http://www.tei-c.org/ns/1.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.tei-c.org/ns/1.0 ../meta/schnitzler-briefe-schema.xsd" xml:id="L03826" xml:base="https://id.acdh.oeaw.ac.at/schnitzler/schnitzler-briefe/editions">
+<TEI xmlns="http://www.tei-c.org/ns/1.0"
+     xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+     xsi:schemaLocation="http://www.tei-c.org/ns/1.0 ../meta/schnitzler-briefe-schema.xsd"
+     xml:id="L03826"
+     xml:base="https://id.acdh.oeaw.ac.at/schnitzler/schnitzler-briefe/editions">
    <teiHeader>
       <fileDesc>
          <titleStmt>
@@ -120,12 +124,20 @@
                   – 7. 1. 1893?]</date>
                <placeName ref="#pmb50" evidence="conjecture">Wien</placeName>
             </correspAction>
-         <correspContext><ref type="belongsToCorrespondence" target="correspondence_11673">Herzl, Theodor</ref>
+            <correspContext>
+               <ref type="belongsToCorrespondence" target="correspondence_11673">Herzl, Theodor</ref>
                <ref subtype="previous_letter" type="withinCollection" target="L00154">Fels an Schnitzler, [1. 1. 1893?]</ref>
                <ref subtype="next_letter" type="withinCollection" target="L00155">Schnitzler an Hofmannsthal, 7. 1. 1893</ref>
-               <ref subtype="previous_letter" type="withinCorrespondence" source="correspondence_11673" target="L03824">Herzl an Schnitzler, 16. 11. 1892</ref>
-               <ref subtype="next_letter" type="withinCorrespondence" source="correspondence_11673" target="L03827">Herzl an Schnitzler, 4. 5. 1892</ref>
-            </correspContext></correspDesc>
+               <ref subtype="previous_letter"
+                    type="withinCorrespondence"
+                    source="correspondence_11673"
+                    target="L03824">Herzl an Schnitzler, 16. 11. 1892</ref>
+               <ref subtype="next_letter"
+                    type="withinCorrespondence"
+                    source="correspondence_11673"
+                    target="L03827">Herzl an Schnitzler, 4. 5. 1892</ref>
+            </correspContext>
+         </correspDesc>
       </profileDesc>
       <revisionDesc status="proposed">
          <change who="MAM" when="2025-08-12">Export aus Transkribus</change>
@@ -158,8 +170,9 @@
                </seg>
                <seg type="letterhead">
                   <seg rend="left">
-                     
-                        <hi rend="pre-print">D<hi rend="superscript">r</hi><space unit="chars" quantity="1"/><hi rend="capitals">Th. Herzl</hi>
+                     <hi rend="pre-print">D<hi rend="superscript">r</hi>
+                        <space unit="chars" quantity="1"/>
+                        <hi rend="capitals">Th. Herzl</hi>
                      </hi>
                   </seg>
                   <seg rend="right">
@@ -178,7 +191,7 @@
                Journalist. Ich bemühe mich, dieses Métier, das der reizende kleine <anchor type="commentary" xml:id="K_L03826-1"/>
                <rs type="person" ref="#pmb11740">Hoffmannsthal</rs> verachtet<note type="commentary" corresp="K_L03826-1">
                   <rs type="person" ref="#pmb11740">Hofmannsthals</rs> Brief, mit dem er <rs type="person" ref="#pmb11673">Herzl</rs> sein Stück <rs type="work" ref="#pmb30141">Gestern</rs> übersandte, ist nicht überliefert, aber aus <rs type="person" ref="#pmb11673">Herzls</rs> Antwort vom <date>2. 11. 1892</date>
-                  geht hervor, dass <rs type="person" ref="#pmb191546">Hofmannsthal</rs> eine Kritik
+                  geht hervor, dass <rs type="person" ref="#pmb11740">Hofmannsthal</rs> eine Kritik
                   am Journalismus geäußert hat: »Ihre Antipathie gegen mein Métier theile ich
                   vollkommen und bin Ihnen sehr dankbar, dass Sie sie soweit überwunden haben, um an
                   mich zu schreiben.« (<bibl>
@@ -225,7 +238,7 @@
                   <forename>Theodor</forename>
                   <surname>Herzl</surname>
                </persName>
-               <persName type="legacy-name-merge">Herzl, Theodor</persName>
+               <persName type="person_pseudonym">Albert Schnabel</persName>
                <birth>
                   <date when="1860-05-02">1860-05-02</date>
                   <settlement ref="pmb43471">
@@ -953,7 +966,6 @@
                   <graphic url="https://upload.wikimedia.org/wikipedia/commons/thumb/6/67/Hofmannsthal_1893.jpg/250px-Hofmannsthal_1893.jpg"/>
                </figure>
             </person>
-            <error type="person">191546</error>
             <person xml:id="pmb11153">
                <persName>
                   <forename>Charles</forename>
@@ -1061,7 +1073,7 @@
                <title type="werk_bibliografische-angabe">Moderne Rundschau, Bd. 4, H. 2, 15. 10. 1891; H. 3, 1. 11. 1891</title>
                <title type="legacy-name-merge">Gestern</title>
                <title type="werk_unter-diesem-namen-oder-kurzel-veroffentlicht">Loris</title>
-               <author ref="" role="hat-unter-pseudonym-geschrieben">Hofmannsthal, Hugo von</author>
+               <author ref="pmb11740" role="hat-unter-pseudonym-geschrieben">Hofmannsthal, Hugo von</author>
                <date when="1891-10-15">15.10.1891</date>
                <idno type="URL" subtype="schnitzler-bahr">https://schnitzler-bahr.acdh.oeaw.ac.at/pmb30141.html</idno>
                <idno type="URL" subtype="pmb">https://pmb.acdh.oeaw.ac.at/entity/30141/</idno>
@@ -1072,12 +1084,15 @@
             </bibl>
             <bibl xml:id="pmb33610">
                <title>David Copperfield</title>
-               <author ref="" role="hat-geschaffen">Dickens, Charles</author>
+               <title type="legacy-name-merge">The personal history, adventures, experience, and observation of David Copperfield, the younger</title>
+               <author ref="pmb11153" role="hat-geschaffen">Dickens, Charles</author>
                <date notBefore="1849-01-01" when="1849-01-01">1849</date>
                <idno type="URL" subtype="pmb">https://pmb.acdh.oeaw.ac.at/entity/33610/</idno>
                <idno type="URL" subtype="schnitzler-lektueren">https://schnitzler-lektueren.acdh.oeaw.ac.at/pmb33610.html</idno>
                <idno type="URL" subtype="schnitzler-tagebuch">https://schnitzler-tagebuch.acdh.oeaw.ac.at/pmb33610.html</idno>
                <idno type="URL" subtype="schnitzler-briefe">https://schnitzler-briefe.acdh.oeaw.ac.at/pmb33610.html</idno>
+               <idno type="URL" subtype="pmb">https://pmb.acdh.oeaw.ac.at/entity/77372/</idno>
+               <idno type="URL" subtype="schnitzler-lektueren">https://schnitzler-lektueren.acdh.oeaw.ac.at/pmb77372.html</idno>
                <note type="work_kind">Roman</note>
             </bibl>
          </listBibl>
@@ -1243,6 +1258,11 @@
                <orgName type="werk_link">http://anno.onb.ac.at/info/nfp_info.htm</orgName>
                <desc type="entity_type">Tageszeitungsredaktion</desc>
                <desc type="entity_type_id">972</desc>
+               <location type="located_in_place">
+                  <placeName ref="pmb296731">8, Rue de Monceau</placeName>
+                  <geo>48,875505 2,306854</geo>
+                  <idno type="URL" subtype="pmb">https://pmb.acdh.oeaw.ac.at/entity/296731/</idno>
+               </location>
                <location type="located_in_place">
                   <placeName ref="pmb50">Wien</placeName>
                   <geo>48,208333 16,373056</geo>

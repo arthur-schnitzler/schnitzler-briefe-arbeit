@@ -1,6 +1,10 @@
-<?xml version='1.0' encoding='UTF-8'?>
+<?xml version="1.0" encoding="UTF-8"?>
 <?xml-model href="../meta/schnitzler-briefe-schematron.sch" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
-<TEI xmlns="http://www.tei-c.org/ns/1.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.tei-c.org/ns/1.0 ../meta/schnitzler-briefe-schema.xsd" xml:id="L03693" xml:base="https://id.acdh.oeaw.ac.at/schnitzler/schnitzler-briefe/editions">
+<TEI xmlns="http://www.tei-c.org/ns/1.0"
+     xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+     xsi:schemaLocation="http://www.tei-c.org/ns/1.0 ../meta/schnitzler-briefe-schema.xsd"
+     xml:id="L03693"
+     xml:base="https://id.acdh.oeaw.ac.at/schnitzler/schnitzler-briefe/editions">
    <teiHeader>
       <fileDesc>
          <titleStmt>
@@ -145,12 +149,20 @@
                   – 7. 4. 1930?]</date>
                <placeName ref="#pmb50" evidence="conjecture">Wien</placeName>
             </correspAction>
-            <correspContext><ref type="belongsToCorrespondence" target="correspondence_13212">Zweig, Stefan</ref>
+            <correspContext>
+               <ref type="belongsToCorrespondence" target="correspondence_13212">Zweig, Stefan</ref>
                <ref subtype="previous_letter" type="withinCollection" target="L02534">Bahr an Schnitzler, 20. 3. 1930</ref>
                <ref subtype="next_letter" type="withinCollection" target="L03737">Schnitzler an Zweig, 5. 4. 1930</ref>
-               <ref subtype="previous_letter" type="withinCorrespondence" source="correspondence_13212" target="L03736">Schnitzler an Zweig, 23. 12. 1929</ref>
-               <ref subtype="next_letter" type="withinCorrespondence" source="correspondence_13212" target="L03737">Schnitzler an Zweig, 5. 4. 1930</ref>
-            </correspContext></correspDesc>
+               <ref subtype="previous_letter"
+                    type="withinCorrespondence"
+                    source="correspondence_13212"
+                    target="L03736">Schnitzler an Zweig, 23. 12. 1929</ref>
+               <ref subtype="next_letter"
+                    type="withinCorrespondence"
+                    source="correspondence_13212"
+                    target="L03737">Schnitzler an Zweig, 5. 4. 1930</ref>
+            </correspContext>
+         </correspDesc>
       </profileDesc>
       <revisionDesc status="proposed">
          <change who="MAM" when="2025-06-11">Export aus Transkribus</change>
@@ -187,7 +199,7 @@
                <salute>Sehr verehrter Herr Doktor!</salute>
             </opener>
             <p>Ich bin nicht Besitzer Ihrer geheimen Telefonnummer, vielleicht sind Sie so lieb, sie
-               meiner <rs type="place" ref="#pmb50">Wiener</rs> Adresse (<rs type="place" ref="#pmb292961 ">IX., Garnisongasse 10</rs>, Tel.Nr. A 26-0-57) anzuvertrauen und
+               meiner <rs type="place" ref="#pmb50">Wiener</rs> Adresse (<rs type="place" ref="#pmb292961">IX., Garnisongasse 10</rs>, Tel.Nr. A 26-0-57) anzuvertrauen und
                mir zu sagen, wann ich <subst>
                   <del rend="overwritten">s</del>
                   <add place="inline">S</add>
@@ -304,6 +316,26 @@
                      <label>Lesung von Richard Dehmel, 6.3.1904</label>
                      <idno type="URL" subtype="pmb">https://pmb.acdh.oeaw.ac.at/entity/50184/</idno>
                   </event>
+                  <event n="Theateraufführung" ref="pmb249556" when="1909-12-12">
+                     <desc n="1370">teilgenommen an</desc>
+                     <label>Aufführung von Der Ruf des Lebens, 12.12.1909</label>
+                     <idno type="URL" subtype="pmb">https://pmb.acdh.oeaw.ac.at/entity/249556/</idno>
+                  </event>
+                  <event n="Private Lesung" ref="pmb296492" when="1910-10-11">
+                     <desc n="1370">teilgenommen an</desc>
+                     <label>Private Lesung von Die ungleichen Schalen, 11.10.1910</label>
+                     <idno type="URL" subtype="pmb">https://pmb.acdh.oeaw.ac.at/entity/296492/</idno>
+                  </event>
+                  <event n="Theateraufführung" ref="pmb251446" when="1910-11-27">
+                     <desc n="1370">teilgenommen an</desc>
+                     <label>Aufführung von Der junge Medardus, 27.11.1910</label>
+                     <idno type="URL" subtype="pmb">https://pmb.acdh.oeaw.ac.at/entity/251446/</idno>
+                  </event>
+                  <event n="Liederkonzert" ref="pmb183571" when="1911-02-05">
+                     <desc n="1370">teilgenommen an</desc>
+                     <label>Gesangskonzert Olga Schnitzler, 5.2.1911</label>
+                     <idno type="URL" subtype="pmb">https://pmb.acdh.oeaw.ac.at/entity/183571/</idno>
+                  </event>
                   <event n="Generalprobe" ref="pmb239133" when="1912-10-25">
                      <desc n="1370">teilgenommen an</desc>
                      <label>Generalprobe von Das Haus am Meer, 25.10.1912</label>
@@ -387,14 +419,14 @@
             <bibl xml:id="pmb33243">
                <title>Tagebuch</title>
                <title type="werk_link">https://schnitzler-tagebuch.acdh.oeaw.ac.at</title>
-               <author ref="" role="hat-herausgegeben">Braunwarth, Peter Michael</author>
-               <author ref="" role="hat-herausgegeben">Urbach, Reinhard</author>
-               <author ref="" role="hat-herausgegeben">Welzig, Werner</author>
-               <author ref="" role="hat-herausgegeben">Miklin, Richard</author>
-               <author ref="" role="hat-herausgegeben">Fliedl, Konstanze</author>
-               <author ref="" role="hat-herausgegeben">Ruprechter, Walter</author>
-               <author ref="" role="hat-herausgegeben">Pertlik, Susanne</author>
-               <author ref="" role="hat-geschaffen">Schnitzler, Arthur</author>
+               <author ref="pmb119261" role="hat-herausgegeben">Braunwarth, Peter Michael</author>
+               <author ref="pmb65504" role="hat-herausgegeben">Urbach, Reinhard</author>
+               <author ref="pmb143327" role="hat-herausgegeben">Welzig, Werner</author>
+               <author ref="pmb143331" role="hat-herausgegeben">Miklin, Richard</author>
+               <author ref="pmb119271" role="hat-herausgegeben">Fliedl, Konstanze</author>
+               <author ref="pmb143334" role="hat-herausgegeben">Ruprechter, Walter</author>
+               <author ref="pmb143337" role="hat-herausgegeben">Pertlik, Susanne</author>
+               <author ref="pmb2121" role="hat-geschaffen">Schnitzler, Arthur</author>
                <date from="1981-01-01" to="2000-01-01">1981 – 2000</date>
                <idno type="URL" subtype="pmb">https://pmb.acdh.oeaw.ac.at/entity/33243/</idno>
                <idno type="URL" subtype="schnitzler-tagebuch">https://schnitzler-tagebuch.acdh.oeaw.ac.at/pmb33243.html</idno>
@@ -406,7 +438,7 @@
             </bibl>
             <bibl xml:id="pmb76766">
                <title>Das Lamm des Armen. Tragikomödie in drei Akten</title>
-               <author ref="" role="hat-geschaffen">Zweig, Stefan</author>
+               <author ref="pmb13212" role="hat-geschaffen">Zweig, Stefan</author>
                <date notBefore="1929-01-01" when="1929-01-01">1929</date>
                <idno type="URL" subtype="wikidata">http://www.wikidata.org/entity/Q89202589</idno>
                <idno type="URL" subtype="pmb">https://pmb.acdh.oeaw.ac.at/entity/76766/</idno>
