@@ -36,19 +36,29 @@ def get_matching_files(corresp_id):
             continue
     return result
 
-def get_ana_attribute(doc):
-    """Bestimmt das ana-Attribut basierend auf der Rolle von #pmb2121."""
+def get_ana_attribute(doc, person_grp_id):
+    """Bestimmt das ana-Attribut basierend auf der Rolle von #pmb2121 und dem aktuellen Korrespondenzpartner."""
+    
+    # Prüfe ob #pmb2121 der Sender ist
     sent_pmb2121 = doc.xpath("//tei:teiHeader[1]/tei:profileDesc[1]/tei:correspDesc[1]/tei:correspAction[@type='sent'][1]/tei:persName[@ref='#pmb2121']", namespaces=NAMESPACES)
-    received_pmb2121 = doc.xpath("//tei:teiHeader[1]/tei:profileDesc[1]/tei:correspDesc[1]/tei:correspAction[@type='received'][1]/tei:persName[@ref='#pmb2121']", namespaces=NAMESPACES)
     
     if sent_pmb2121:
-        return "as-sender"
-    elif not sent_pmb2121 and not received_pmb2121:
-        return "umfeld"
-    else:
-        return "as-empf"
+        # #pmb2121 ist Sender - prüfe ob der Empfänger der aktuelle Korrespondenzpartner ist
+        received_current = doc.xpath(f"//tei:teiHeader[1]/tei:profileDesc[1]/tei:correspDesc[1]/tei:correspAction[@type='received'][1]/tei:persName[@ref='#{person_grp_id}']", namespaces=NAMESPACES)
+        return "as-sender" if received_current else "umfeld"
+    
+    # Prüfe ob #pmb2121 der Empfänger ist
+    received_pmb2121 = doc.xpath("//tei:teiHeader[1]/tei:profileDesc[1]/tei:correspDesc[1]/tei:correspAction[@type='received'][1]/tei:persName[@ref='#pmb2121']", namespaces=NAMESPACES)
+    
+    if received_pmb2121:
+        # #pmb2121 ist Empfänger - prüfe ob der Sender der aktuelle Korrespondenzpartner ist
+        sent_current = doc.xpath(f"//tei:teiHeader[1]/tei:profileDesc[1]/tei:correspDesc[1]/tei:correspAction[@type='sent'][1]/tei:persName[@ref='#{person_grp_id}']", namespaces=NAMESPACES)
+        return "as-empf" if sent_current else "umfeld"
+    
+    # Fallback - #pmb2121 weder als Sender noch als Empfänger gefunden
+    return "umfeld"
 
-def generate_toc(corresp_id, person_name, matching_docs):
+def generate_toc(corresp_id, person_name, matching_docs, person_grp_id):
     toc_root = etree.Element('{http://www.tei-c.org/ns/1.0}TEI', nsmap={
         None: "http://www.tei-c.org/ns/1.0",
         "xsi": "http://www.w3.org/2001/XMLSchema-instance"
@@ -97,7 +107,7 @@ def generate_toc(corresp_id, person_name, matching_docs):
             # Falls kein xml:id vorhanden, ggf. Platzhalter oder überspringen
             item.set("corresp", "unknown")
         
-        item.set("ana", get_ana_attribute(doc))
+        item.set("ana", get_ana_attribute(doc, person_grp_id))
 
         title = doc.xpath("//tei:titleStmt/tei:title[@level='a'][1]", namespaces=NAMESPACES)
         date_el = doc.xpath("//tei:correspAction[@type='sent']/tei:date[1]", namespaces=NAMESPACES)
@@ -114,12 +124,13 @@ def main():
     listcorresp_doc = get_listcorrespondence()
 
     for personGrp in listcorresp_doc.xpath('//tei:listPerson/tei:personGrp[not(@xml:id="correspondence_null")]', namespaces=NAMESPACES):
-        corresp_id = personGrp.attrib['{http://www.w3.org/XML/1998/namespace}id'].replace('correspondence_', '')
+        person_grp_id = personGrp.attrib['{http://www.w3.org/XML/1998/namespace}id']
+        corresp_id = person_grp_id.replace('correspondence_', '')
         person_name_el = personGrp.xpath("tei:persName[@role='main'][1]/text()", namespaces=NAMESPACES)
         person_name = name_ohne_komma(person_name_el[0]) if person_name_el else 'Unbekannt'
-        matching_docs = get_matching_files(f"correspondence_{corresp_id}")
+        matching_docs = get_matching_files(person_grp_id)
 
-        toc_tree = generate_toc(corresp_id, person_name, matching_docs)
+        toc_tree = generate_toc(corresp_id, person_name, matching_docs, person_grp_id)
         toc_tree.write(os.path.join(OUTDIR, f"toc_{corresp_id}.xml"), pretty_print=True, encoding='utf-8', xml_declaration=True)
 
 if __name__ == "__main__":

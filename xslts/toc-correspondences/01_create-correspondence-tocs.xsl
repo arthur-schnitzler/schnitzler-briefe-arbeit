@@ -81,14 +81,25 @@
                                         <xsl:attribute name="ana">
                                             <xsl:choose>
                                                 <xsl:when test="child::tei:teiHeader[1]/tei:profileDesc[1]/tei:correspDesc[1]/tei:correspAction[@type = 'sent'][1]/tei:persName[@ref='#pmb2121']">
-                                                    <xsl:text>as-sender</xsl:text>
+                                                    <xsl:choose>
+                                                        <xsl:when test="child::tei:teiHeader[1]/tei:profileDesc[1]/tei:correspDesc[1]/tei:correspAction[@type = 'received'][1]/tei:persName[@ref= concat('#', @xml:id)]">
+                                                            <xsl:text>as-sender</xsl:text>
+                                                        </xsl:when>
+                                                        <xsl:otherwise>
+                                                            <xsl:text>umfeld</xsl:text>
+                                                        </xsl:otherwise>
+                                                    </xsl:choose>
                                                 </xsl:when>
-                                                <xsl:when test="not(child::tei:teiHeader[1]/tei:profileDesc[1]/tei:correspDesc[1]/tei:correspAction[@type = 'sent'][1]/tei:persName[@ref='#pmb2121']) and not(child::tei:teiHeader[1]/tei:profileDesc[1]/tei:correspDesc[1]/tei:correspAction[@type = 'received'][1]/tei:persName[@ref='#pmb2121'])">
-                                                    <xsl:text>umfeld</xsl:text>
+                                                <xsl:when test="child::tei:teiHeader[1]/tei:profileDesc[1]/tei:correspDesc[1]/tei:correspAction[@type = 'received'][1]/tei:persName[@ref='#pmb2121']">
+                                                    <xsl:choose>
+                                                        <xsl:when test="child::tei:teiHeader[1]/tei:profileDesc[1]/tei:correspDesc[1]/tei:correspAction[@type = 'sent'][1]/tei:persName[@ref= concat('#', @xml:id)]">
+                                                            <xsl:text>as-empf</xsl:text>
+                                                        </xsl:when>
+                                                        <xsl:otherwise>
+                                                            <xsl:text>umfeld</xsl:text>
+                                                        </xsl:otherwise>
+                                                    </xsl:choose>
                                                 </xsl:when>
-                                                <xsl:otherwise>
-                                                    <xsl:text>as-empf</xsl:text>
-                                                </xsl:otherwise>
                                             </xsl:choose>
                                         </xsl:attribute>
                                         <xsl:copy-of
