@@ -1,6 +1,10 @@
-<?xml version='1.0' encoding='UTF-8'?>
+<?xml version="1.0" encoding="UTF-8"?>
 <?xml-model href="../meta/schnitzler-briefe-schematron.sch" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
-<TEI xmlns="http://www.tei-c.org/ns/1.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.tei-c.org/ns/1.0 ../meta/schnitzler-briefe-schema.xsd" xml:id="L03774" xml:base="https://id.acdh.oeaw.ac.at/schnitzler/schnitzler-briefe/editions">
+<TEI xmlns="http://www.tei-c.org/ns/1.0"
+     xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+     xsi:schemaLocation="http://www.tei-c.org/ns/1.0 ../meta/schnitzler-briefe-schema.xsd"
+     xml:id="L03774"
+     xml:base="https://id.acdh.oeaw.ac.at/schnitzler/schnitzler-briefe/editions">
    <teiHeader>
       <fileDesc>
          <titleStmt>
@@ -83,7 +87,7 @@
                               <extent>
                                  <measure unit="seite" quantity="2"/>
                                  <measure unit="blatt" quantity="1"/>
-                                 <measure unit="zeichenanzahl" quantity="4598"/>
+                                 <measure unit="zeichenanzahl" quantity="4590"/>
                               </extent>
                            </supportDesc>
                         </objectDesc>
@@ -125,18 +129,28 @@
                <date evidence="conjecture" notBefore="1914-11-27" notAfter="1914-11-29">[27. 11. 1914 – 29. 11. 1914?]</date>
                <placeName ref="#pmb50" evidence="conjecture">Wien</placeName>
             </correspAction>
-            <correspContext><ref type="belongsToCorrespondence" target="correspondence_13212">Zweig, Stefan</ref>
+            <correspContext>
+               <ref type="belongsToCorrespondence" target="correspondence_13212">Zweig, Stefan</ref>
                <ref subtype="previous_letter" type="withinCollection" target="L03647">Zweig an Schnitzler, [zwischen 14. und
                   27. 11. 1914?]</ref>
                <ref subtype="next_letter" type="withinCollection" target="L03649">Zweig an Schnitzler, [29. 11. 1914]</ref>
-               <ref subtype="previous_letter" type="withinCorrespondence" source="correspondence_13212" target="L03647">Zweig an Schnitzler, [zwischen 14. und
+               <ref subtype="previous_letter"
+                    type="withinCorrespondence"
+                    source="correspondence_13212"
+                    target="L03647">Zweig an Schnitzler, [zwischen 14. und
                   27. 11. 1914?]</ref>
-               <ref subtype="next_letter" type="withinCorrespondence" source="correspondence_13212" target="L03649">Zweig an Schnitzler, [29. 11. 1914]</ref>
-            </correspContext></correspDesc>
+               <ref subtype="next_letter"
+                    type="withinCorrespondence"
+                    source="correspondence_13212"
+                    target="L03649">Zweig an Schnitzler, [29. 11. 1914]</ref>
+            </correspContext>
+         </correspDesc>
       </profileDesc>
-      <revisionDesc status="proposed">
+      <revisionDesc status="candidate">
          <change who="MAM" when="2025-07-17">Export aus Transkribus</change>
          <change who="MAM" when="2025-08-06">Durchsicht</change>
+         <change who="MAM" when="2025-09-15">Durchsicht</change>
+         <change who="MAM" when="2025-09-15">Index check</change>
       </revisionDesc>
    </teiHeader>
    <facsimile>
@@ -168,39 +182,49 @@
                <salute rend="center">Lieber Herr Doktor.</salute>
             </opener>
             <p>Beifolgend die <rs type="work" ref="#pmb296393" subtype="implied">Berichtigung</rs>
-               oder <rs type="work" ref="#pmb296393" subtype="implied">Erklärung</rs> oder wie sie
+               oder <rs type="work" ref="#pmb296393" subtype="implied">Erklärung</rs> oder wie Sie
                es nennen wollen. Ich wünschte gern zu wissen, 1., ob Sie im Ganzen damit
-               einverstanden sind, 2. ob Sie eine <anchor type="commentary" xml:id="K_L03774-1"/>Veröffentlichung von Seite 4 an<note type="commentary" corresp="K_L03774-1">Wie
-                  hier schon antizipiert, wurde dieser Teil nicht in die <rs type="work" subtype="implied" ref="#pmb296393">Veröffentlichung</rs> im <rs type="work" ref="#pmb58493">Journal de Genève</rs> (<bibl>
-                     <rs type="person" ref="#pmb2121">Arthur Schnitzler</rs>, <rs type="person" ref="#pmb12543">Romain Rolland</rs> [Einleitung und Übersetzung]: <rs type="work" ref="#pmb58490">Une protestation d’Arthur Schnitzler</rs>. In:
-                        <rs type="work" ref="#pmb58493">Journal de Genève</rs>, Jg. 85, <date when="1914-12-21" n="1">21. 12. 1914</date>, 3. Ausgabe, S. [1]</bibl>.)
-                  bzw. in der <rs type="work" ref="#pmb42406">Neuen Zürcher Zeitung</rs> aufgenommen (<bibl>
+               einverstanden sind, 2. ob Sie eine <anchor type="commentary" xml:id="K_L03774-1"/>Veröffentlichung von Seite 4 an<note type="commentary" corresp="K_L03774-1">Es
+                  handelt sich um die Nachschrift, die mit »<quote>Nach Niederschrift dieser
+                     Zeilen</quote>…« beginnt, siehe unten. Wie hier antizipiert, wurde dieser Teil
+                  nicht in die <rs type="work" subtype="implied" ref="#pmb296393">Veröffentlichung</rs> im <rs type="work" ref="#pmb58493">Journal de
+                     Genève</rs> bzw. in der <rs type="work" ref="#pmb42406">Neuen Zürcher
+                     Zeitung</rs> aufgenommen: <bibl>
+                     <rs type="work" ref="#pmb58490">Une protestation d’Arthur Schnitzler</rs>. In:
+                        <rs type="work" ref="#pmb58493">Journal de Genève</rs>, Jg. 85, <date when="1914-12-21" n="1">21. 12. 1914</date>, 3. Ausgabe, S. [1]</bibl>. <bibl>
                      <rs type="work" ref="#pmb296393">Ein Brief Artur Schnitzlers</rs>. In: <rs type="work" ref="#pmb42406">Neue Zürcher Zeitung</rs>, Jg. 135, Nr. 1700,
                         <date>22. 12. 1914</date>, 2. Mittagsblatt, S. 2</bibl>).</note> für
-               notwendig und opportun hielten. Haben Sie nichts einzuwenden,so senden Sie
+               notwendig und opportun hielten. Haben Sie nichts einzuwenden, so senden Sie
                freundlichst unserer Verabredung gemäss das Ganze mit meinen verehrungsvollen Grüssen
-                  an<rs type="person" ref="#pmb12543">Rolland</rs>. Was in dieser Angelegenheit
-               anderswo und eventuell hier geschehen könnte oder sollte, möchte ich doch gerne
-               persönlich oder wenigstens telefonisch mit Ihnen besprechen. Vielleicht schreiben Sie
-               mir ein Wort, wann man Sie in den nächsten Tagen anrufen darf. Wie telefoniert man
-               denn an den Regierungsrat <rs type="person" ref="#pmb13132">Winternitz</rs>; ich habe
-               mich bisher noch nicht an ihn gewandt.</p>
+                  <anchor type="commentary" xml:id="K_L03774-2"/>an <rs type="person" ref="#pmb12543">Rolland</rs>
+               <note type="commentary" corresp="K_L03774-2">Die Sendung verzögerte sich noch um
+                  einen Korrekturlauf auf den <date>5. 12. 1914</date>, <ref type="schnitzler-briefe" target="L03779" subtype="see"/>.</note>. Was in dieser
+               Angelegenheit anderswo und eventuell hier geschehen könnte oder sollte, möchte ich
+               doch gerne persönlich oder wenigstens telefonisch mit Ihnen besprechen. Vielleicht
+               schreiben Sie mir ein Wort, wann man Sie in den nächsten Tagen anrufen darf. Wie
+               telefoniert man denn an den <anchor type="commentary" xml:id="K_L03774-3"/>Regierungsrat <rs type="person" ref="#pmb13132">Winternitz</rs>
+               <note type="commentary" corresp="K_L03774-3">Dieser war Regierungsrat im
+                  literarischen Bureau des <rs type="org" ref="#pmb293721">Ministeriums des
+                     Äußeren</rs> – und der Schwiegervater von <rs type="person" ref="#pmb4829">Friderike von Winternitz</rs>. Diese ließ just in diesem Jahr ihre Ehe mit <rs type="person" ref="#pmb298330" subtype="implied">Felix Adolf von Wintenitz</rs>
+                  annulieren, um ihre Beziehung mit <rs type="person" ref="#pmb13212">Zweig</rs> zu
+                  legalisieren. Die Kontaktaufnahme auf diesem Weg hat dementsprechend eine pinkante
+                  Note.</note>; ich habe mich bisher noch nicht an ihn gewandt.</p>
             <p>
                <pb facs="0074_FL81799724"/>Zu Ihrer militärischen <rs type="org" ref="#pmb293828" subtype="implied">Verwendung</rs> kann man Ihnen gratulieren, glaube ich. Sie
-               werden Interessanteres und wahrscheinlich sogar authentischeres erfahren als die
+               werden Interessanteres und wahrscheinlich sogar Authentischeres erfahren als die
                Leute an der Front. Der Baron <rs type="person" ref="#pmb13136">Winterstein</rs> hat
-               uns <anchor type="commentary" xml:id="K_L03774-2"/>neulich<note type="commentary" corresp="K_L03774-2">
+               uns <anchor type="commentary" xml:id="K_L03774-4"/>neulich<note type="commentary" corresp="K_L03774-4">
                   <ref type="schnitzler-tagebuch" target="1914-11-25" subtype="Cf"/>.</note>
-               allerlei Anregendes erzählt; wir hätten sie gern dabei gehabt.</p>
+               allerlei Anregendes erzählt; wir hätten Sie gern dabei gehabt.</p>
             <closer>Herzlichst grüssend<lb/>Ihr<lb/>
                <signed>
                   <handShift/>Arthur Schnitzler</signed>
             </closer>
             <postscript>
                <p>
-                  <handShift medium="typewriter"/>Beiliegend <anchor type="commentary" xml:id="K_L03774-3"/>zwei <rs type="work" subtype="implied" ref="#pmb296393">Exemplare</rs>
-                  <note type="commentary" corresp="K_L03774-3">Nur ein Exemplar
-                     ist überliefert und wird im Folgenden wiedergegeben.</note>.</p>
+                  <handShift medium="typewriter"/>Beiliegend <anchor type="commentary" xml:id="K_L03774-5"/>zwei <rs type="work" subtype="implied" ref="#pmb296393">Exemplare</rs>
+                  <note type="commentary" corresp="K_L03774-5">Nur ein Exemplar ist überliefert und
+                     wird im Folgenden wiedergegeben.</note>.</p>
             </postscript>
          </div>
          <div type="writingSession" n="2">
@@ -230,43 +254,43 @@
                meiner Seite selbstverständlich niemals gefallen sind; – und – im Vertrauen auf eine
                auch während des Weltkrieges weiterdauernde Giltigkeit internationaler
                journalistischer Anstandsgesetze – erwarte ich von <pb facs="0082_FL81799661"/>der
-               Loyalität der jenigen Zeitungen, die jenem erdichteten Bericht Raum gegönnt haben –
-               auch von solchen, die (um in der Sprache der Politik zu reden) im Feindesland
-               erscheinen – dass sie sich auch zur Aufnahme meiner Richtigstellung verpflichtet
-               finden werden.</p>
+               Loyalität derjenigen Zeitungen, die jenem erdichteten <rs type="work" ref="#pmb32959" subtype="implied">Bericht</rs> Raum gegönnt haben – auch von solchen, die (um in
+               der Sprache der Politik zu reden) im Feindesland erscheinen – dass sie sich auch zur
+               Aufnahme meiner Richtigstellung verpflichtet finden werden.</p>
+            <space dim="vertical" unit="line" quantity="1"/>
             <p>
-               <pb facs="0078_FL81799629"/>Nach Niederschrift dieser Zeilen finde ich in der <anchor type="commentary" xml:id="K_L03774-4"/>
+               <pb facs="0078_FL81799629"/>Nach Niederschrift dieser Zeilen finde ich in der <anchor type="commentary" xml:id="K_L03774-6"/>
                <rs type="work" ref="#pmb58400">New-Yorkerstaats-Zeitung</rs> einen <rs type="work" ref="#pmb58394" subtype="implied">Privatbrief</rs>
-               <note type="commentary" corresp="K_L03774-4">
+               <note type="commentary" corresp="K_L03774-6">
                   <ref type="schnitzler-interviews" target="M106"/>. Dieser Abschnitt wurde nicht
-                  veröffentlicht. <rs type="person" ref="#pmb2121">Schnitzler</rs> hatte bereits 
-                   eine Richtigstellung dazu publiziert, <ref type="schnitzler-interviews" target="P080"/>.</note> abgedruckt, die den ich vor mehreren Wochen an einen in
-                  <rs type="place" ref="#pmb44053">New-York</rs> lebenden <rs type="person" ref="#pmb15271" subtype="implied">Freund</rs> gerichtet habe oder vielmehr
-               gerichtet haben soll. Denn in dem von der <rs type="work" ref="#pmb58400">New-Yorker-Staats-Zeitung</rs> veröffentlichten <rs type="work" ref="#pmb58394" subtype="implied">Brief</rs> ist (offenbar in bester redaktioneller Absicht Zur
-               Erhöhung einer populären Wirkung auf das <rs type="place" ref="#pmb43406">deutsch-amerikanische</rs> Publikum kaum mehr ein Satz gleichlautend mit dem
+                  veröffentlicht. <rs type="person" ref="#pmb2121">Schnitzler</rs> hatte bereits
+                  eine Richtigstellung dazu publiziert, <ref type="schnitzler-interviews" target="P080"/>.</note> abgedruckt, den ich vor mehreren Wochen an einen in <rs type="place" ref="#pmb44053">New-York</rs> lebenden <rs type="person" ref="#pmb15271" subtype="implied">Freund</rs> gerichtet habe oder vielmehr
+               gerichtet haben soll. Denn in dem von der <rs type="work" ref="#pmb58400">New-Yorker-Staats-Zeitung</rs> veröffentlichten <rs type="work" ref="#pmb58394" subtype="implied">Brief</rs> ist (offenbar in bester redaktioneller Absicht zur
+               Erhöhung einer populären Wirkung auf das <rs type="place" ref="#pmb43406">deutsch-amerikanische</rs> Publikum) kaum mehr ein Satz gleichlautend mit dem
                entsprechenden Satz des Originals; manche Sätze sind völlig ausgefallen, andere
-               hinzuerfunden, so dass zwischen den beiden Briefen, meinem eigenen und dem in der <rs type="work" ref="#pmb58400">New-Yorker-Staatszeitung</rs> abgedruckten, an manchen
-               Stellen, auch dem Sinne nach, nur mehr eine ganz enfernte Aehnlichkeit besteht.
-               Diesen, an sich gewiss ziemlich gleichgültigen Fall, möchte ich immerhin zum Anlasse
+               hinzuerfunden, so dass zwischen den beiden <rs type="work" subtype="implied" ref="#pmb58394">Briefen</rs>, meinem eigenen und <rs type="work" subtype="implied" ref="#pmb58394">dem in der <rs type="work" ref="#pmb58400">New-Yorker-Staatszeitung</rs>
+               </rs> abgedruckten, an manchen
+               Stellen, auch dem Sinne nach, nur mehr eine ganz enfernte Aehnlichkeit besteht.</p>
+            <p>Diesen, an sich gewiss ziemlich gleichgültigen Fall, möchte ich immerhin zum Anlasse
                nehmen, um ganz im Allgemeinen und <pb facs="0079_FL81799755"/>nach allen Seiten hin
                vor raschgläubiger Hinnahme auch solcher Veröffentlichungen zu warnen, die
-               durch irgend ein bestechendes äusseres Zeichen der Echtheit als welche wohl die mit
+               durch irgend ein bestechendes äusseres Zeichen der Echtheit (als welche wohl die mit
                Anrede, Gruss und Unterschrift versehene Form eines Privatbriefes gelten kann) den
                Charakter absoluter Worttreue vorzutäuschen suchen. Es ist in solcher Zeit nicht
                leicht zu entscheiden, wo man vertrauen und wo man misstrauen soll; nicht nur
                Urteilsfähigkeit, sondern auch Verantwortungsgefühl scheinen manchmal auch dort
                geschwunden, wo wir sie noch vor kurzem als etwas Unverlierbares betrachtet hätten; –
-               also seien wir in Glauben und Zweifel, Ihr Freunde und Ihr Feinde gleich vorsichtig
+               also seien wir in Glauben und Zweifel, Ihr Freunde und Ihr Feinde, gleich vorsichtig
                gegenüber Feind und Freund<subst>
                   <del rend="strikethrough">.</del>
                   <add place="inline">!</add>
                </subst>
             </p>
-            <closer>
+            <closer><handShift/>
                <signed>Arthur Schnitzler</signed>
             </closer>
             <postscript>
-               <dateline>Im <date>November 1914</date>.</dateline>
+               <dateline><handShift medium="typewriter"/>Im <date>November 1914</date>.</dateline>
             </postscript>
          </div>
       </body>
@@ -384,6 +408,26 @@
                      <desc n="1370">teilgenommen an</desc>
                      <label>Lesung von Richard Dehmel, 6.3.1904</label>
                      <idno type="URL" subtype="pmb">https://pmb.acdh.oeaw.ac.at/entity/50184/</idno>
+                  </event>
+                  <event n="Theateraufführung" ref="pmb249556" when="1909-12-12">
+                     <desc n="1370">teilgenommen an</desc>
+                     <label>Aufführung von Der Ruf des Lebens, 12.12.1909</label>
+                     <idno type="URL" subtype="pmb">https://pmb.acdh.oeaw.ac.at/entity/249556/</idno>
+                  </event>
+                  <event n="Private Lesung" ref="pmb296492" when="1910-10-11">
+                     <desc n="1370">teilgenommen an</desc>
+                     <label>Private Lesung von Die ungleichen Schalen, 11.10.1910</label>
+                     <idno type="URL" subtype="pmb">https://pmb.acdh.oeaw.ac.at/entity/296492/</idno>
+                  </event>
+                  <event n="Theateraufführung" ref="pmb251446" when="1910-11-27">
+                     <desc n="1370">teilgenommen an</desc>
+                     <label>Aufführung von Der junge Medardus, 27.11.1910</label>
+                     <idno type="URL" subtype="pmb">https://pmb.acdh.oeaw.ac.at/entity/251446/</idno>
+                  </event>
+                  <event n="Liederkonzert" ref="pmb183571" when="1911-02-05">
+                     <desc n="1370">teilgenommen an</desc>
+                     <label>Gesangskonzert Olga Schnitzler, 5.2.1911</label>
+                     <idno type="URL" subtype="pmb">https://pmb.acdh.oeaw.ac.at/entity/183571/</idno>
                   </event>
                   <event n="Generalprobe" ref="pmb239133" when="1912-10-25">
                      <desc n="1370">teilgenommen an</desc>
@@ -530,6 +574,69 @@
                   </event>
                </listEvent>
                <note type="references"> </note>
+            </person>
+            <person xml:id="pmb4829">
+               <persName>
+                  <forename>Friderike Maria</forename>
+                  <surname>Zweig</surname>
+               </persName>
+               <persName type="person_geburtsname_nachname">Burger</persName>
+               <persName type="person_adoptierter-nachname">Weiss</persName>
+               <persName type="person_geschieden_nachname">von Winternitz</persName>
+               <birth>
+                  <date when="1882-12-04">1882-12-04</date>
+                  <settlement ref="pmb50">
+                     <placeName type="pref">Wien</placeName>
+                     <location>
+                        <geo>48,208333 16,373056</geo>
+                     </location>
+                  </settlement>
+               </birth>
+               <death>
+                  <date when="1971-01-18">1971-01-18</date>
+                  <settlement ref="pmb44353">
+                     <placeName type="pref">Stamford</placeName>
+                     <location>
+                        <geo>41,05343 -73,53873</geo>
+                     </location>
+                  </settlement>
+               </death>
+               <sex value="female"/>
+               <occupation ref="pmb90">Schriftsteller/Schriftstellerin</occupation>
+               <idno type="URL" subtype="d-nb">https://d-nb.info/gnd/118637460</idno>
+               <idno type="URL" subtype="schnitzler-tagebuch">https://schnitzler-tagebuch.acdh.oeaw.ac.at/person_21383.html</idno>
+               <idno type="URL" subtype="schnitzler-bahr">https://schnitzler-bahr.acdh.oeaw.ac.at/pmb4829.html</idno>
+               <idno type="URL" subtype="pmb">https://pmb.acdh.oeaw.ac.at/entity/4829/</idno>
+               <idno type="URL" subtype="pmb">https://pmb.acdh.oeaw.ac.at/entity/27217/</idno>
+               <idno type="URL" subtype="wikidata">http://www.wikidata.org/entity/Q115184</idno>
+               <idno type="URL" subtype="wikipedia">https://de.wikipedia.org/wiki/Friderike_Maria_Zweig</idno>
+               <idno type="URL" subtype="geschichtewiki">https://www.geschichtewiki.wien.gv.at/Special:URIResolver/?curid=37503</idno>
+               <idno type="URL" subtype="stefanzweig">https://www.stefanzweig.digital/o:szd.personen/sdef:TEI/get#SZDPER.1556</idno>
+               <figure>
+                  <graphic url="https://upload.wikimedia.org/wikipedia/commons/thumb/d/d9/FriederikeWinternitzSetzer.jpg/250px-FriederikeWinternitzSetzer.jpg"/>
+               </figure>
+            </person>
+            <person xml:id="pmb298330">
+               <persName>
+                  <forename>Felix Adolf von</forename>
+                  <surname>Winternitz</surname>
+               </persName>
+               <birth>
+                  <date when="1877-10-09">1877-10-09</date>
+                  <settlement ref="pmb50">
+                     <placeName type="pref">Wien</placeName>
+                     <location>
+                        <geo>48,208333 16,373056</geo>
+                     </location>
+                  </settlement>
+               </birth>
+               <death>
+                  <date when="1950-01-01" notAfter="1950-12-31">1950</date>
+               </death>
+               <sex value="male"/>
+               <occupation ref="pmb659">Finanzbeamter/Finanzbeamte</occupation>
+               <idno type="URL" subtype="pmb">https://pmb.acdh.oeaw.ac.at/entity/298330/</idno>
+               <idno type="URL" subtype="wikidata">http://www.wikidata.org/entity/Q136294527</idno>
             </person>
             <person xml:id="pmb13136">
                <persName>
@@ -885,22 +992,11 @@
             </bibl>
             <bibl xml:id="pmb58493">
                <title>Journal de Genève</title>
-               <author ref="" role="hat-herausgegeben">Seippel, Paul</author>
+               <author ref="pmb259326" role="hat-herausgegeben">Seippel, Paul</author>
                <date to="1998-02-28">1826-01-05 – 1998-02-28</date>
                <idno type="URL" subtype="pmb">https://pmb.acdh.oeaw.ac.at/entity/58493/</idno>
                <idno type="URL" subtype="schnitzler-interviews">https://schnitzler-interviews.acdh.oeaw.ac.at/pmb58493.html</idno>
                <note type="work_kind">Tageszeitung</note>
-            </bibl>
-            <bibl xml:id="pmb58490">
-               <title>Une protestation d’Arthur Schnitzler</title>
-               <title type="werk_link">https://schnitzler-interviews.acdh.oeaw.ac.at/P111.html</title>
-               <title type="werk_bibliografische-angabe">Romain Rolland, Arthur Schnitzler: Une protestation d’Arthur Schnitzler. In: Journal de Genève, Jg. 85, 21. 12. 1914, 3. Ausgabe, S. [1].</title>
-               <author ref="" role="hat-geschaffen">Schnitzler, Arthur</author>
-               <author ref="" role="hat-geschaffen">Rolland, Romain</author>
-               <date>1914-12-21</date>
-               <idno type="URL" subtype="pmb">https://pmb.acdh.oeaw.ac.at/entity/58490/</idno>
-               <idno type="URL" subtype="schnitzler-interviews">https://schnitzler-interviews.acdh.oeaw.ac.at/pmb58490.html</idno>
-               <note type="work_kind">Leserbrief</note>
             </bibl>
             <bibl xml:id="pmb42406">
                <title>Neue Zürcher Zeitung</title>
@@ -914,9 +1010,21 @@
                <idno type="URL" subtype="hanslick">https://hanslick.acdh.oeaw.ac.at/hsl_work_id_2205.html</idno>
                <note type="work_kind">Tageszeitung</note>
             </bibl>
+            <bibl xml:id="pmb58490">
+               <title>Une protestation d’Arthur Schnitzler</title>
+               <title type="werk_link">https://schnitzler-interviews.acdh.oeaw.ac.at/P111.html</title>
+               <title type="werk_bibliografische-angabe">Schnitzler, Arthur, Rolland, Romain [Einleitung und Übersetzung]: Une protestation d’Arthur Schnitzler. In: Journal de Genève, Jg. 85, 21. 12. 1914, 3. Ausgabe, S. [1]</title>
+               <author ref="pmb2121" role="hat-geschaffen">Schnitzler, Arthur</author>
+               <author ref="pmb12543" role="hat-geschaffen">Rolland, Romain</author>
+               <author ref="pmb12543" role="hat-ubersetzt">Rolland, Romain</author>
+               <date>1914-12-21</date>
+               <idno type="URL" subtype="pmb">https://pmb.acdh.oeaw.ac.at/entity/58490/</idno>
+               <idno type="URL" subtype="schnitzler-interviews">https://schnitzler-interviews.acdh.oeaw.ac.at/pmb58490.html</idno>
+               <note type="work_kind">Leserbrief</note>
+            </bibl>
             <bibl xml:id="pmb32959">
                <title>?? [Fiktives Interview aus der Kriegszeit]</title>
-               <author ref="" role="hat-geschaffen">?? [Journalist, der fiktives russisches Interview verantwortet]</author>
+               <author ref="pmb27739" role="hat-geschaffen">?? [Journalist, der fiktives russisches Interview verantwortet]</author>
                <date when="1914-11-01">November 1914</date>
                <idno type="URL" subtype="pmb">https://pmb.acdh.oeaw.ac.at/entity/32959/</idno>
                <idno type="URL" subtype="schnitzler-interviews">https://schnitzler-interviews.acdh.oeaw.ac.at/pmb32959.html</idno>
@@ -934,7 +1042,7 @@
             </bibl>
             <bibl xml:id="pmb58394">
                <title>Artur Schnitzler über den Krieg. Brief an einen Schulfreund in New York</title>
-               <author ref="" role="bekommt-zugeschrieben">Schnitzler, Arthur</author>
+               <author ref="pmb2121" role="bekommt-zugeschrieben">Schnitzler, Arthur</author>
                <date when="1914-11-17">1914-11-17</date>
                <idno type="URL" subtype="pmb">https://pmb.acdh.oeaw.ac.at/entity/58394/</idno>
                <idno type="URL" subtype="schnitzler-interviews">https://schnitzler-interviews.acdh.oeaw.ac.at/pmb58394.html</idno>
@@ -1150,6 +1258,25 @@
             </place>
          </listPlace>
          <listOrg>
+            <org xml:id="pmb293721">
+               <orgName>Außenministerium</orgName>
+               <orgName type="institution_namensvariante">Auswärtiges Amt</orgName>
+               <desc type="entity_type">Ministerium</desc>
+               <desc type="entity_type_id">1482</desc>
+               <location type="located_in_place">
+                  <placeName ref="pmb281567">Minoritenplatz</placeName>
+                  <geo>48,2094 16,3642</geo>
+                  <idno type="URL" subtype="pmb">https://pmb.acdh.oeaw.ac.at/entity/281567/</idno>
+                  <idno type="URL" subtype="wikidata">http://www.wikidata.org/entity/Q6869229</idno>
+                  <idno type="URL" subtype="d-nb">https://d-nb.info/gnd/4525680-9</idno>
+                  <idno type="URL" subtype="geonames">https://sws.geonames.org/10375655/</idno>
+                  <idno type="URL" subtype="wikipedia">https://de.wikipedia.org/wiki/Minoritenplatz</idno>
+               </location>
+               <idno type="URL" subtype="pmb">https://pmb.acdh.oeaw.ac.at/entity/293721/</idno>
+               <idno type="URL" subtype="wikidata">http://www.wikidata.org/entity/Q642938</idno>
+               <idno type="URL" subtype="d-nb">https://d-nb.info/gnd/16037727-4</idno>
+               <idno type="URL" subtype="wikipedia">https://de.wikipedia.org/wiki/Bundesministerium_f%C3%BCr_europ%C3%A4ische_und_internationale_Angelegenheiten</idno>
+            </org>
             <org xml:id="pmb293828">
                <orgName>Kriegsarchiv</orgName>
                <desc type="entity_type">Archiv</desc>
