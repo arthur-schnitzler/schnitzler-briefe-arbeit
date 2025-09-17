@@ -480,10 +480,10 @@ class PMBProcessor:
         # Add occupations
         occ1 = ET.SubElement(person_elem, f"{{{self.tei_ns}}}occupation")
         occ1.set("ref", "pmb90")
-        occ1.text = "Schriftsteller*in"
+        occ1.text = "Schriftsteller/Schriftstellerin"
         occ2 = ET.SubElement(person_elem, f"{{{self.tei_ns}}}occupation")
         occ2.set("ref", "pmb97")
-        occ2.text = "Mediziner*in"
+        occ2.text = "Mediziner/Medizinerin"
         
         # Add GND
         idno = ET.SubElement(person_elem, f"{{{self.tei_ns}}}idno")

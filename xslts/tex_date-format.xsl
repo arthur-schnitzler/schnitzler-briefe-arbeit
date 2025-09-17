@@ -8,205 +8,47 @@
     <!-- Das Zeichen, das als Abstand nach dem Punkt gesetzt werden soll -->
     <xsl:function name="foo:date-translate" as="xs:string?">
         <xsl:param name="date-string" as="xs:string?"/>
-        <!-- Falls von der PMB noch ISO-Daten in spitzen Klammern mitgereicht werden, diese weg -->
-        <xsl:variable name="werk-datum-ohne-pmb-iso-zusatz" as="xs:string">
-            <xsl:choose>
-                <xsl:when test="contains($date-string, '&lt;')">
-                    <xsl:value-of select="normalize-space(substring-before($date-string, '&lt;'))"/>
-                </xsl:when>
-                <xsl:otherwise>
-                    <xsl:value-of select="normalize-space($date-string)"/>
-                </xsl:otherwise>
-            </xsl:choose>
-        </xsl:variable>
-        <!-- Manchmal gelangen Zeiträume hierher, die als zwei Daten behandeln -->
+        <xsl:variable name="clean-date" select="normalize-space(if (contains($date-string, '&lt;')) then substring-before($date-string, '&lt;') else $date-string)"/>
+
         <xsl:choose>
-            <xsl:when
-                test="fn:normalize-space($werk-datum-ohne-pmb-iso-zusatz) = '' or empty($werk-datum-ohne-pmb-iso-zusatz)"/>
-            <xsl:when test="contains($werk-datum-ohne-pmb-iso-zusatz, ' – ')">
-                <xsl:variable name="datum1">
-                    <xsl:analyze-string
-                        select="substring-before($werk-datum-ohne-pmb-iso-zusatz, ' – ')"
-                        regex="(\d{{4}})-0?(\d+)-0?(\d+)">
-                        <xsl:matching-substring>
-                            <xsl:variable name="datum" select="xs:date(.)" as="xs:date"/>
-                            <xsl:value-of
-                                select="concat(number(fn:day-from-date($datum)), '.', $spacy, number(fn:month-from-date($datum)), '.', $spacy, number(year-from-date($datum)))"
-                            />
-                        </xsl:matching-substring>
-                        <xsl:non-matching-substring>
-                            <xsl:analyze-string select="."
-                                regex="(\d{{1,2}})(\.)(\s{{0,1}})(\d{{1,2}})(\.)(\s{{0,1}})(\d{{2,4}})">
-                                <xsl:matching-substring>
-                                    <xsl:value-of
-                                        select="concat(regex-group(1), $spacy, regex-group(4), $spacy, regex-group(7))"
-                                    />
-                                </xsl:matching-substring>
-                                <xsl:non-matching-substring>
-                                    <!--<xsl:value-of select="foo:date-repeat(., string-length(.), 1)"/>-->
-                                    <xsl:value-of select="."/>
-                                </xsl:non-matching-substring>
-                            </xsl:analyze-string>
-                        </xsl:non-matching-substring>
-                    </xsl:analyze-string>
-                </xsl:variable>
-                <xsl:variable name="datum2">
-                    <xsl:analyze-string
-                        select="substring-after($werk-datum-ohne-pmb-iso-zusatz, ' – ')"
-                        regex="(\d{{4}})-0?(\d+)-0?(\d+)">
-                        <xsl:matching-substring>
-                            <xsl:variable name="datum" select="xs:date(.)" as="xs:date"/>
-                            <xsl:value-of
-                                select="concat(number(fn:day-from-date($datum)), '.', $spacy, number(fn:month-from-date($datum)), '.', $spacy, number(year-from-date($datum)))"
-                            />
-                        </xsl:matching-substring>
-                        <xsl:non-matching-substring>
-                            <xsl:analyze-string select="."
-                                regex="(\d{{1,2}})(\.)(\s{{0,1}})(\d{{1,2}})(\.)(\s{{0,1}})(\d{{2,4}})">
-                                <xsl:matching-substring>
-                                    <xsl:value-of
-                                        select="concat(regex-group(1), $spacy, regex-group(4), $spacy, regex-group(7))"
-                                    />
-                                </xsl:matching-substring>
-                                <xsl:non-matching-substring>
-                                    <xsl:value-of select="."/>
-                                    <!--<xsl:value-of select="foo:date-repeat(., string-length(.), 1)"/>-->
-                                </xsl:non-matching-substring>
-                            </xsl:analyze-string>
-                        </xsl:non-matching-substring>
-                    </xsl:analyze-string>
-                </xsl:variable>
-                <xsl:choose>
-                    <xsl:when
-                        test="$datum1 != $datum2 and (contains(concat($datum1, $datum2), ' ') or contains(concat($datum1, $datum2), $spacy))">
-                        <xsl:value-of select="concat($datum1, ' – ', $datum2)"/>
-                    </xsl:when>
-                    <xsl:otherwise>
-                        <xsl:value-of select="concat($datum1, '–', $datum2)"/>
-                    </xsl:otherwise>
-                </xsl:choose>
+            <xsl:when test="$clean-date = '' or empty($clean-date)"/>
+            <xsl:when test="contains($clean-date, ' – ')">
+                <xsl:variable name="datum1" select="foo:datum-analyze(substring-before($clean-date, ' – '))"/>
+                <xsl:variable name="datum2" select="foo:datum-analyze(substring-after($clean-date, ' – '))"/>
+                <xsl:value-of select="concat($datum1, if ($datum1 != $datum2 and (contains(concat($datum1, $datum2), ' ') or contains(concat($datum1, $datum2), $spacy))) then ' – ' else '–', $datum2)"/>
+            </xsl:when>
+            <xsl:when test="matches($clean-date, '^\[um\s(.*?)\sv\.\s{0,1}u\.\s{0,1}Z\.(\?)?\]$')">
+                <xsl:analyze-string select="$clean-date" regex="^\[um\s(.*?)\s(v\.\s{{0,1}}u\.\s{{0,1}}Z\.)(\?)?\]$">
+                    <xsl:matching-substring>
+                        <xsl:value-of select="concat('{[}um ', foo:datum-analyze(regex-group(1)), ' ', regex-group(2), if (regex-group(3)) then regex-group(3) else '', '{]}')"/>
+                    </xsl:matching-substring>
+                </xsl:analyze-string>
+            </xsl:when>
+            <xsl:when test="matches($clean-date, '^\[um\s(.*?)(\?)?\]$') and not(matches($clean-date, 'v\.\s{0,1}u\.\s{0,1}Z\.'))">
+                <xsl:analyze-string select="$clean-date" regex="^\[um\s(.*?)(\?)?\]$">
+                    <xsl:matching-substring>
+                        <xsl:value-of select="concat('{[}um ', foo:datum-analyze(regex-group(1)), if (regex-group(2)) then regex-group(2) else '', '{]}')"/>
+                    </xsl:matching-substring>
+                </xsl:analyze-string>
+            </xsl:when>
+            <xsl:when test="matches($clean-date, '^\[(.*?)(\?)?\]$') and not(starts-with($clean-date, '[um'))">
+                <xsl:analyze-string select="$clean-date" regex="^\[(.*?)(\?)?\]$">
+                    <xsl:matching-substring>
+                        <xsl:value-of select="concat('{[}', foo:datum-analyze(regex-group(1)), if (regex-group(2)) then regex-group(2) else '', '{]}')"/>
+                    </xsl:matching-substring>
+                </xsl:analyze-string>
+            </xsl:when>
+            <xsl:when test="matches($clean-date, '^um\s(.*?)$')">
+                <xsl:value-of select="concat('um ', foo:datum-analyze(substring-after($clean-date, 'um ')))"/>
+            </xsl:when>
+            <xsl:when test="matches($clean-date, '^(.*?)\sv\.\s{0,1}u\.\s{0,1}Z\.(\?)?$')">
+                <xsl:value-of select="concat(foo:datum-analyze(normalize-space(substring-before($clean-date, ' v.'))), ' v.', $spacy, 'u.', $spacy, 'Z.', if (ends-with($clean-date, '?')) then '?' else '')"/>
+            </xsl:when>
+            <xsl:when test="matches($clean-date, '^(.*?)\?$')">
+                <xsl:value-of select="concat(foo:datum-analyze(substring-before($clean-date, '?')), '?')"/>
             </xsl:when>
             <xsl:otherwise>
-                <xsl:choose>
-                    <!-- [um ...v.u.Z.?] -->
-                    <xsl:when
-                        test="fn:matches($werk-datum-ohne-pmb-iso-zusatz, '^\[um\s(.*?)\sv.\s{0,1}u.\s{0,1}Z.\?\]$')">
-                        <xsl:analyze-string select="$werk-datum-ohne-pmb-iso-zusatz"
-                            regex="^\[um\s(.*?)\sv.\s{{0,1}}u.\s{{0,1}}Z.\?\]$">
-                            <xsl:matching-substring>
-                                <xsl:value-of
-                                    select="concat('{[}um ', foo:datum-analyze(substring-before(substring-after(., '[um '), '?]')), ' v.', $spacy, 'u.', $spacy, 'Z.?{]}')"
-                                />
-                            </xsl:matching-substring>
-                        </xsl:analyze-string>
-                    </xsl:when>
-                    <!-- [um ...v.u.Z.] -->
-                    <xsl:when
-                        test="fn:matches($werk-datum-ohne-pmb-iso-zusatz, '^\[um\s(.*?)\sv.\s{0,1}u.\s{0,1}Z.\]$')">
-                        <xsl:analyze-string select="$werk-datum-ohne-pmb-iso-zusatz"
-                            regex="^\[um\s(.*?)\sv.\s{{0,1}}u.\s{{0,1}}Z.\]$">
-                            <xsl:matching-substring>
-                                <xsl:value-of
-                                    select="concat('{[}um ', foo:datum-analyze(substring-before(substring-after(., '[um '), '?]')), ' v.', $spacy, 'u.', $spacy, 'Z.{]}')"
-                                />
-                            </xsl:matching-substring>
-                        </xsl:analyze-string>
-                    </xsl:when>
-                    <!-- [um ...?] -->
-                    <xsl:when
-                        test="fn:matches($werk-datum-ohne-pmb-iso-zusatz, '^\[um\s(.*?)\?\]$')">
-                        <xsl:analyze-string select="$werk-datum-ohne-pmb-iso-zusatz"
-                            regex="^\[um\s(.*?)\?\]$">
-                            <xsl:matching-substring>
-                                <xsl:value-of
-                                    select="concat('{[}um ', foo:datum-analyze(substring-before(substring-after(., '[um '), '?]')), '?{]}')"
-                                />
-                            </xsl:matching-substring>
-                        </xsl:analyze-string>
-                    </xsl:when>
-                    <!-- [um ...] -->
-                    <xsl:when test="fn:matches($werk-datum-ohne-pmb-iso-zusatz, '^\[um\s(.*?)\]$')">
-                        <xsl:analyze-string select="$werk-datum-ohne-pmb-iso-zusatz"
-                            regex="^\[um\s(.*?)\]$">
-                            <xsl:matching-substring>
-                                <xsl:value-of
-                                    select="concat('{[}um ', foo:datum-analyze(substring-before(substring-after(., '[um '), ']')), '{]}')"
-                                />
-                            </xsl:matching-substring>
-                        </xsl:analyze-string>
-                    </xsl:when>
-                    <!-- […?] -->
-                    <xsl:when test="fn:matches($werk-datum-ohne-pmb-iso-zusatz, '^\[(.*?)\?\]$')">
-                        <xsl:analyze-string select="$werk-datum-ohne-pmb-iso-zusatz"
-                            regex="^\[(.*?)\?\]$">
-                            <xsl:matching-substring>
-                                <xsl:value-of
-                                    select="concat('{[}', foo:datum-analyze(substring-before(substring-after(., '['), '?]')), '?{]}')"
-                                />
-                            </xsl:matching-substring>
-                        </xsl:analyze-string>
-                    </xsl:when>
-                    <!-- […] -->
-                    <xsl:when test="fn:matches($werk-datum-ohne-pmb-iso-zusatz, '^\[(.*?)\]$')">
-                        <xsl:analyze-string select="$werk-datum-ohne-pmb-iso-zusatz"
-                            regex="^\[(.*?)\]$">
-                            <xsl:matching-substring>
-                                <xsl:value-of
-                                    select="concat('{[}', foo:datum-analyze(substring-before(substring-after(., '['), ']')), '{]}')"
-                                />
-                            </xsl:matching-substring>
-                        </xsl:analyze-string>
-                    </xsl:when>
-                    <!-- um … -->
-                    <xsl:when test="fn:matches($werk-datum-ohne-pmb-iso-zusatz, '^um\s(.*?)$')">
-                        <xsl:analyze-string select="$werk-datum-ohne-pmb-iso-zusatz"
-                            regex="^um\s(.*?)$">
-                            <xsl:matching-substring>
-                                <xsl:value-of
-                                    select="concat('um ', foo:datum-analyze((substring-after(., 'um '))))"
-                                />
-                            </xsl:matching-substring>
-                        </xsl:analyze-string>
-                    </xsl:when>
-                    <!-- … v.u.Z.? -->
-                    <xsl:when
-                        test="fn:matches($werk-datum-ohne-pmb-iso-zusatz, '^(.*?)\sv.\s{0,1}u.\s{0,1}Z.\?$')">
-                        <xsl:analyze-string select="$werk-datum-ohne-pmb-iso-zusatz"
-                            regex="^(.*?)\sv.\s{{0,1}}u.\s{{0,1}}Z.\?$">
-                            <xsl:matching-substring>
-                                <xsl:value-of
-                                    select="concat(foo:datum-analyze(normalize-space(substring-before(., ' v.'))), ' v.', $spacy, 'u.', $spacy, 'Z.?')"
-                                />
-                            </xsl:matching-substring>
-                        </xsl:analyze-string>
-                    </xsl:when>
-                    <!-- … v.u.Z. -->
-                    <xsl:when
-                        test="fn:matches($werk-datum-ohne-pmb-iso-zusatz, '^(.*?)\sv.\s{0,1}u.\s{0,1}Z.$')">
-                        <xsl:analyze-string select="$werk-datum-ohne-pmb-iso-zusatz"
-                            regex="^(.*?)\sv.\s{{0,1}}u.\s{{0,1}}Z.$">
-                            <xsl:matching-substring>
-                                <xsl:value-of
-                                    select="concat(foo:datum-analyze(normalize-space(substring-before(., ' v.'))), ' v.', $spacy, 'u.', $spacy, 'Z.')"
-                                />
-                            </xsl:matching-substring>
-                        </xsl:analyze-string>
-                    </xsl:when>
-                    <!-- … ? -->
-                    <xsl:when test="fn:matches($werk-datum-ohne-pmb-iso-zusatz, '^(.*?)\?$')">
-                        <xsl:analyze-string select="$werk-datum-ohne-pmb-iso-zusatz"
-                            regex="^(.*?)\?$">
-                            <xsl:matching-substring>
-                                <xsl:value-of
-                                    select="concat(foo:datum-analyze(substring-before(., '?')), '?')"
-                                />
-                            </xsl:matching-substring>
-                        </xsl:analyze-string>
-                    </xsl:when>
-                    <xsl:otherwise>
-                        <xsl:value-of select="foo:datum-analyze($werk-datum-ohne-pmb-iso-zusatz)"/>
-                    </xsl:otherwise>
-                </xsl:choose>
+                <xsl:value-of select="foo:datum-analyze($clean-date)"/>
             </xsl:otherwise>
         </xsl:choose>
     </xsl:function>
@@ -240,25 +82,44 @@
                 />
             </xsl:matching-substring>
             <xsl:non-matching-substring>
+                <!-- Spezifisches Pattern für DD.MM.YYYY ohne Leerzeichen -->
                 <xsl:analyze-string select="."
-                    regex="^(\d{{1,2}})(\.)(&#8239;)(\d{{1,2}})(\.)(&#8239;)(\d{{2,4}})$">
+                    regex="^(\d+)\.(\d+)\.(\d+)$">
                     <xsl:matching-substring>
-                        <xsl:value-of
-                            select="concat(regex-group(1), '.', $spacy, regex-group(4), '.', $spacy, regex-group(7))"
-                        />
+                        <xsl:variable name="day">
+                            <xsl:value-of select="if (starts-with(regex-group(1), '0') and string-length(regex-group(1)) > 1) then substring(regex-group(1), 2) else regex-group(1)"/>
+                        </xsl:variable>
+                        <xsl:variable name="month">
+                            <xsl:value-of select="if (starts-with(regex-group(2), '0') and string-length(regex-group(2)) > 1) then substring(regex-group(2), 2) else regex-group(2)"/>
+                        </xsl:variable>
+                        <xsl:value-of select="concat($day, '.', $spacy, $month, '.', $spacy, regex-group(3))"/>
                     </xsl:matching-substring>
                     <xsl:non-matching-substring>
+                        <xsl:analyze-string select="."
+                            regex="^(\d{{1,2}})\.(\d{{1,2}})\.(\d{{4}})">
+                            <xsl:matching-substring>
+                                <xsl:variable name="day">
+                                    <xsl:value-of select="if (starts-with(regex-group(1), '0') and string-length(regex-group(1)) > 1) then substring(regex-group(1), 2) else regex-group(1)"/>
+                                </xsl:variable>
+                                <xsl:variable name="month">
+                                    <xsl:value-of select="if (starts-with(regex-group(2), '0') and string-length(regex-group(2)) > 1) then substring(regex-group(2), 2) else regex-group(2)"/>
+                                </xsl:variable>
+                                <xsl:value-of
+                                    select="concat($day, '.', $spacy, $month, '.', $spacy, regex-group(3))"
+                                />
+                            </xsl:matching-substring>
+                            <xsl:non-matching-substring>
                         <xsl:choose>
                             <xsl:when test="contains(., '&#8239;')">
                                 <xsl:value-of select="."/>
                             </xsl:when>
                             <xsl:otherwise>
                                 <xsl:analyze-string select="."
-                                    regex="^(\d{{1,2}})(\.)(\s{{0,1}})(\d{{1,2}})(\.)(\s{{0,1}})(\d{{2,4}})$">
+                                    regex="^(\d{{1,2}})(\.)(\s*)(\d{{1,2}})(\.)(\s*)(\d{{2,4}})$">
                                     <xsl:matching-substring>
                                         <xsl:variable name="day">
                                             <xsl:choose>
-                                                <xsl:when test="starts-with(regex-group(1), '0')">
+                                                <xsl:when test="starts-with(regex-group(1), '0') and string-length(regex-group(1)) > 1">
                                                   <xsl:value-of
                                                   select="substring(regex-group(1), 2)"/>
                                                 </xsl:when>
@@ -269,7 +130,7 @@
                                         </xsl:variable>
                                         <xsl:variable name="month">
                                             <xsl:choose>
-                                                <xsl:when test="starts-with(regex-group(4), '0')">
+                                                <xsl:when test="starts-with(regex-group(4), '0') and string-length(regex-group(4)) > 1">
                                                   <xsl:value-of
                                                   select="substring(regex-group(4), 2)"/>
                                                 </xsl:when>
@@ -283,11 +144,13 @@
                                         />
                                     </xsl:matching-substring>
                                     <xsl:non-matching-substring>
-                                        <xsl:value-of select="."/>
+                                        <xsl:value-of select="concat('', .)"/>
                                     </xsl:non-matching-substring>
                                 </xsl:analyze-string>
                             </xsl:otherwise>
                         </xsl:choose>
+                            </xsl:non-matching-substring>
+                        </xsl:analyze-string>
                     </xsl:non-matching-substring>
                 </xsl:analyze-string>
             </xsl:non-matching-substring>

@@ -1,6 +1,10 @@
-<?xml version='1.0' encoding='UTF-8'?>
+<?xml version="1.0" encoding="UTF-8"?>
 <?xml-model href="../meta/schnitzler-briefe-schematron.sch" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
-<TEI xmlns="http://www.tei-c.org/ns/1.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.tei-c.org/ns/1.0 ../meta/schnitzler-briefe-schema.xsd" xml:id="L03636" xml:base="https://id.acdh.oeaw.ac.at/schnitzler/schnitzler-briefe/editions">
+<TEI xmlns="http://www.tei-c.org/ns/1.0"
+     xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+     xsi:schemaLocation="http://www.tei-c.org/ns/1.0 ../meta/schnitzler-briefe-schema.xsd"
+     xml:id="L03636"
+     xml:base="https://id.acdh.oeaw.ac.at/schnitzler/schnitzler-briefe/editions">
    <teiHeader>
       <fileDesc>
          <titleStmt>
@@ -141,12 +145,20 @@
                   – 26. 2. 1911?]</date>
                <placeName ref="#pmb50" evidence="conjecture">Wien</placeName>
             </correspAction>
-            <correspContext><ref type="belongsToCorrespondence" target="correspondence_13212">Zweig, Stefan</ref>
+            <correspContext>
+               <ref type="belongsToCorrespondence" target="correspondence_13212">Zweig, Stefan</ref>
                <ref subtype="previous_letter" type="withinCollection" target="L03799">Schnitzler an Zweig, 11. 2. 1911</ref>
                <ref subtype="next_letter" type="withinCollection" target="L02011">Hofmannsthal an Schnitzler, [2. 3. 1911]</ref>
-               <ref subtype="previous_letter" type="withinCorrespondence" source="correspondence_13212" target="L03799">Schnitzler an Zweig, 11. 2. 1911</ref>
-               <ref subtype="next_letter" type="withinCorrespondence" source="correspondence_13212" target="L03631">Zweig an Schnitzler, [4.] 4. 1911</ref>
-            </correspContext></correspDesc>
+               <ref subtype="previous_letter"
+                    type="withinCorrespondence"
+                    source="correspondence_13212"
+                    target="L03799">Schnitzler an Zweig, 11. 2. 1911</ref>
+               <ref subtype="next_letter"
+                    type="withinCorrespondence"
+                    source="correspondence_13212"
+                    target="L03631">Zweig an Schnitzler, [4.] 4. 1911</ref>
+            </correspContext>
+         </correspDesc>
       </profileDesc>
       <revisionDesc status="candidate">
          <change who="MAM" when="2025-05-21">Export aus Transkribus</change>
@@ -318,6 +330,26 @@
                      <label>Lesung von Richard Dehmel, 6.3.1904</label>
                      <idno type="URL" subtype="pmb">https://pmb.acdh.oeaw.ac.at/entity/50184/</idno>
                   </event>
+                  <event n="Theateraufführung" ref="pmb249556" when="1909-12-12">
+                     <desc n="1370">teilgenommen an</desc>
+                     <label>Aufführung von Der Ruf des Lebens, 12.12.1909</label>
+                     <idno type="URL" subtype="pmb">https://pmb.acdh.oeaw.ac.at/entity/249556/</idno>
+                  </event>
+                  <event n="Private Lesung" ref="pmb296492" when="1910-10-11">
+                     <desc n="1370">teilgenommen an</desc>
+                     <label>Private Lesung von Die ungleichen Schalen, 11.10.1910</label>
+                     <idno type="URL" subtype="pmb">https://pmb.acdh.oeaw.ac.at/entity/296492/</idno>
+                  </event>
+                  <event n="Theateraufführung" ref="pmb251446" when="1910-11-27">
+                     <desc n="1370">teilgenommen an</desc>
+                     <label>Aufführung von Der junge Medardus, 27.11.1910</label>
+                     <idno type="URL" subtype="pmb">https://pmb.acdh.oeaw.ac.at/entity/251446/</idno>
+                  </event>
+                  <event n="Liederkonzert" ref="pmb183571" when="1911-02-05">
+                     <desc n="1370">teilgenommen an</desc>
+                     <label>Gesangskonzert Olga Schnitzler, 5.2.1911</label>
+                     <idno type="URL" subtype="pmb">https://pmb.acdh.oeaw.ac.at/entity/183571/</idno>
+                  </event>
                   <event n="Generalprobe" ref="pmb239133" when="1912-10-25">
                      <desc n="1370">teilgenommen an</desc>
                      <label>Generalprobe von Das Haus am Meer, 25.10.1912</label>
@@ -392,8 +424,8 @@
                   </settlement>
                </death>
                <sex value="male"/>
-               <occupation ref="pmb90">Schriftsteller*in</occupation>
-               <occupation ref="pmb97">Mediziner*in</occupation>
+               <occupation ref="pmb90">Schriftsteller/Schriftstellerin</occupation>
+               <occupation ref="pmb97">Mediziner/Medizinerin</occupation>
                <idno type="gnd">https://d-nb.info/gnd/118609807/</idno>
             </person>
             <person xml:id="pmb2173">
@@ -1790,7 +1822,7 @@
                <title type="werk_link">http://www.literature.at/alo?objid=12113</title>
                <title type="werk_bibliografische-angabe">Arthur Schnitzler: Das weite Land. Tragikomödie in fünf Akten. Erste Auflage. Berlin: S. Fischer 1911,</title>
                <title type="werk_arbeitstitel">Frieberg</title>
-               <author ref="" role="hat-geschaffen">Schnitzler, Arthur</author>
+               <author ref="pmb2121" role="hat-geschaffen">Schnitzler, Arthur</author>
                <date>1910-10-20</date>
                <idno type="URL" subtype="asaf">https://asaf.com/S.04.01.06</idno>
                <idno type="URL" subtype="wikidata">http://www.wikidata.org/entity/Q1171735</idno>
@@ -1812,17 +1844,17 @@
             </bibl>
             <bibl xml:id="pmb76768">
                <title>Émile Verhaeren</title>
-               <author ref="" role="hat-geschaffen">Zweig, Stefan</author>
+               <author ref="pmb13212" role="hat-geschaffen">Zweig, Stefan</author>
                <idno type="URL" subtype="pmb">https://pmb.acdh.oeaw.ac.at/entity/76768/</idno>
                <idno type="URL" subtype="schnitzler-tagebuch">https://schnitzler-tagebuch.acdh.oeaw.ac.at/pmb76768.html</idno>
                <idno type="URL" subtype="wikidata">http://www.wikidata.org/entity/Q105977829</idno>
                <note type="work_kind">Monografie</note>
             </bibl>
             <bibl xml:id="pmb295136">
-               <title>Émile Verhaeren. Sa vie , son oeuvre</title>
-               <author ref="" role="hat-geschaffen">Zweig, Stefan</author>
-               <author ref="" role="hat-ubersetzt">Morisse, Paul</author>
-               <author ref="" role="hat-ubersetzt">Chervet, Henri</author>
+               <title>Émile Verhaeren. Sa vie, son oeuvre</title>
+               <author ref="pmb13212" role="hat-geschaffen">Zweig, Stefan</author>
+               <author ref="pmb156849" role="hat-ubersetzt">Morisse, Paul</author>
+               <author ref="pmb295140" role="hat-ubersetzt">Chervet, Henri</author>
                <date notBefore="1910-01-01" when="1910-01-01">1910</date>
                <idno type="URL" subtype="pmb">https://pmb.acdh.oeaw.ac.at/entity/295136/</idno>
                <note type="work_kind">Essay</note>
