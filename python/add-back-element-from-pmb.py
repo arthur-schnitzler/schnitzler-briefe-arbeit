@@ -1,9 +1,10 @@
 #!/usr/bin/env python3
 """
-Python implementation of the three XSLT files in xslts/brief_back-element/:
+Python implementation of the four XSLT files in xslts/brief_back-element/:
 - brief_backElement-1.xsl: Creates back element with empty placeholders
 - brief_backElement-2.xsl: Populates placeholders with PMB data
-- brief_backElement-3.xsl: Normalizes and cleans up the data
+- brief_backElement-3.xsl: Adds persons from bibliography authors
+- brief_backElement-4.xsl: Normalizes and cleans up the data
 """
 
 import sys
@@ -539,8 +540,77 @@ class PMBProcessor:
             error.set("type", entity_type)
             error.text = f"{number} - {str(e)}"
 
+    def _add_persons_from_bibliography(self, root: ET.Element) -> ET.Element:
+        """Add persons from bibliography authors to listPerson (Step 3 - brief_backElement-3.xsl)"""
+        back_elem = root.find(".//tei:back", self.ns)
+        if back_elem is None:
+            return root
+
+        listbibl = back_elem.find("tei:listBibl", self.ns)
+        if listbibl is None:
+            return root
+
+        # Check if listBibl has bibl elements with author elements
+        bibl_authors = listbibl.findall(".//tei:bibl/tei:author[@ref]", self.ns)
+        if not bibl_authors:
+            print("No author elements with @ref found in listBibl")
+            return root
+
+        # Get or create listPerson
+        listperson = back_elem.find("tei:listPerson", self.ns)
+        if listperson is None:
+            listperson = ET.SubElement(back_elem, f"{{{self.tei_ns}}}listPerson")
+
+        # Get existing person IDs (excluding pmb2121)
+        existing_person_ids = set()
+        for person in listperson.findall("tei:person", self.ns):
+            xml_id = person.get("{http://www.w3.org/XML/1998/namespace}id")
+            if xml_id and xml_id != "pmb2121":
+                existing_person_ids.add(xml_id)
+
+        # Get unique author refs from bibliography
+        author_refs = set()
+        for author in bibl_authors:
+            ref = author.get("ref")
+            if ref and ref != "pmb2121":
+                # Clean the reference
+                clean_ref = ref.replace("#", "")
+                if not clean_ref.startswith("pmb"):
+                    clean_ref = f"pmb{clean_ref}"
+                author_refs.add(clean_ref)
+
+        print(f"Found {len(author_refs)} unique author references")
+        print(f"Existing persons: {len(existing_person_ids)}")
+
+        # Add missing persons
+        added_count = 0
+        for ref in author_refs:
+            if ref not in existing_person_ids:
+                print(f"Adding person: {ref}")
+
+                # Try to load from local PMB data first
+                pmb_person = self._load_pmb_entity_optimized(ref)
+
+                if pmb_person is not None:
+                    # Clone the PMB person and add to listPerson
+                    person_copy = copy.deepcopy(pmb_person)
+                    person_copy.set("{http://www.w3.org/XML/1998/namespace}id", ref)
+                    listperson.append(person_copy)
+                    added_count += 1
+                    print(f"✅ Added {ref} from local PMB data")
+                else:
+                    # Try to fetch from API
+                    print(f"🌐 Fetching {ref} from PMB API...")
+                    person_elem = ET.SubElement(listperson, f"{{{self.tei_ns}}}person")
+                    person_elem.set("{http://www.w3.org/XML/1998/namespace}id", ref)
+                    self._fetch_from_api(person_elem, ref, "person")
+                    added_count += 1
+
+        print(f"Added {added_count} persons to listPerson")
+        return root
+
     def _normalize_data(self, root: ET.Element) -> ET.Element:
-        """Apply normalizations (Step 3)"""
+        """Apply normalizations (Step 4)"""
         # Convert when-iso to when attributes
         for elem in root.findall(".//*[@when-iso]"):
             when_iso = elem.get("when-iso")
@@ -738,12 +808,19 @@ class PMBProcessor:
             root = self._populate_from_pmb(root)
             print(f"✅ Step 2 completed")
             sys.stdout.flush()
-            
-            # Step 3: Normalize data
-            print(f"⚙️ Step 3: Normalizing data...")
+
+            # Step 3: Add persons from bibliography authors
+            print(f"👤 Step 3: Adding persons from bibliography authors...")
+            sys.stdout.flush()
+            root = self._add_persons_from_bibliography(root)
+            print(f"✅ Step 3 completed")
+            sys.stdout.flush()
+
+            # Step 4: Normalize data
+            print(f"⚙️ Step 4: Normalizing data...")
             sys.stdout.flush()
             root = self._normalize_data(root)
-            print(f"✅ Step 3 completed")
+            print(f"✅ Step 4 completed")
             sys.stdout.flush()
             
             # Write output
