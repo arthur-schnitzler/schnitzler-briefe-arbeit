@@ -34,6 +34,14 @@
                                     </xsl:attribute>
                                     <xsl:text>Korrespondenz Arthur Schnitzler – </xsl:text>
                                     <xsl:value-of select="$Korrespondenzname"/>
+                                    <xsl:choose>
+                                        <xsl:when test="@ana = 'edition-in-progress'">
+                                            <xsl:text> (Objekte noch nicht vollständig ediert)</xsl:text>
+                                        </xsl:when>
+                                        <xsl:when test="@ana = 'corrections-in-progress'">
+                                            <xsl:text> (noch nicht abschließend korrigiert)</xsl:text>
+                                        </xsl:when>
+                                    </xsl:choose>
                                 </xsl:element>
                                 <respStmt>
                                     <resp>providing the content</resp>
@@ -65,6 +73,14 @@
                     </teiHeader>
                     <text>
                         <body>
+                            <xsl:choose>
+                                <xsl:when test="@ana = 'edition-in-progress'">
+                                    <p><xsl:text>Vorsicht! Die Korrespondenzstücke dieses Briefwechsels sind noch nicht alle verzeichnet. Wir arbeiten daran.</xsl:text></p>
+                                </xsl:when>
+                                <xsl:when test="@ana = 'corrections-in-progress'">
+                                    <p><xsl:text>Wir haben alle Korrespondenzstücke dieses Briefwechsels aufgenommen, sitzen aber noch an den Korrekturen.</xsl:text></p>
+                                </xsl:when>
+                            </xsl:choose>
                             <xsl:element name="list" namespace="http://www.tei-c.org/ns/1.0">
                                 <xsl:for-each
                                     select="collection(concat($folderURI, '../../editions/?select=L0*.xml;recurse=yes'))[descendant::tei:correspContext/tei:ref[@type='belongsToCorrespondence' and @target= concat('correspondence_', $correspondence-nummer)]]/node()">

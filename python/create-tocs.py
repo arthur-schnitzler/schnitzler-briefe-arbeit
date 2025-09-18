@@ -117,6 +117,17 @@ def generate_toc(corresp_id, person_name, matching_docs, person_pmb_id):
         if date_el:
             item.append(date_el[0])
 
+        # Zusätzliche Texte basierend auf @ana-Attribut
+        ana_value = item.get("ana")
+        if ana_value == "edition-in-progress":
+            additional_text = etree.Element("note")
+            additional_text.text = " (Objekte noch nicht vollständig ediert)"
+            item.append(additional_text)
+        elif ana_value == "corrections-in-progress":
+            additional_text = etree.Element("note")
+            additional_text.text = " (noch nicht abschließend korrigiert)"
+            item.append(additional_text)
+
     return etree.ElementTree(toc_root)
 
 def main():
