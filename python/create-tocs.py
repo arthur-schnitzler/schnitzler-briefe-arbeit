@@ -58,7 +58,7 @@ def get_ana_attribute(doc, person_pmb_id):
     # Fallback - #pmb2121 weder als Sender noch als Empfänger gefunden
     return "umfeld"
 
-def generate_toc(corresp_id, person_name, matching_docs, person_pmb_id):
+def generate_toc(corresp_id, person_name, matching_docs, person_pmb_id, person_grp_ana=None):
     toc_root = etree.Element('{http://www.tei-c.org/ns/1.0}TEI', nsmap={
         None: "http://www.tei-c.org/ns/1.0",
         "xsi": "http://www.w3.org/2001/XMLSchema-instance"
@@ -74,6 +74,12 @@ def generate_toc(corresp_id, person_name, matching_docs, person_pmb_id):
     etree.SubElement(titleStmt, "title", level="s").text = "Arthur Schnitzler: Briefwechsel mit Autorinnen und Autoren"
     title2 = etree.SubElement(titleStmt, "title", level="a")
     title2.text = f"Korrespondenz Arthur Schnitzler – {person_name}"
+
+    # Zusätzliche Texte basierend auf personGrp @ana-Attribut
+    if person_grp_ana == "edition-in-progress":
+        title2.text += " (Objekte noch nicht vollständig ediert)"
+    elif person_grp_ana == "corrections-in-progress":
+        title2.text += " (noch nicht abschließend korrigiert)"
 
     respStmt1 = etree.SubElement(titleStmt, "respStmt")
     etree.SubElement(respStmt1, "resp").text = "providing the content"
@@ -95,6 +101,15 @@ def generate_toc(corresp_id, person_name, matching_docs, person_pmb_id):
 
     text = etree.SubElement(toc_root, "text")
     body = etree.SubElement(text, "body")
+
+    # Zusätzliche Paragraphen basierend auf personGrp @ana-Attribut
+    if person_grp_ana == "edition-in-progress":
+        p_elem = etree.SubElement(body, "p")
+        p_elem.text = "Vorsicht! Die Korrespondenzstücke dieses Briefwechsels sind noch nicht alle verzeichnet. Wir arbeiten daran."
+    elif person_grp_ana == "corrections-in-progress":
+        p_elem = etree.SubElement(body, "p")
+        p_elem.text = "Wir haben alle Korrespondenzstücke dieses Briefwechsels aufgenommen, sitzen aber noch an den Korrekturen."
+
     list_elem = etree.SubElement(body, "list")
 
     for doc in sorted(matching_docs, key=lambda d: (
@@ -117,16 +132,6 @@ def generate_toc(corresp_id, person_name, matching_docs, person_pmb_id):
         if date_el:
             item.append(date_el[0])
 
-        # Zusätzliche Texte basierend auf @ana-Attribut
-        ana_value = item.get("ana")
-        if ana_value == "edition-in-progress":
-            additional_text = etree.Element("note")
-            additional_text.text = " (Objekte noch nicht vollständig ediert)"
-            item.append(additional_text)
-        elif ana_value == "corrections-in-progress":
-            additional_text = etree.Element("note")
-            additional_text.text = " (noch nicht abschließend korrigiert)"
-            item.append(additional_text)
 
     return etree.ElementTree(toc_root)
 
@@ -143,10 +148,13 @@ def main():
         # Die PMB-ID der Person aus der personGrp extrahieren
         person_pmb_id = personGrp.xpath("tei:persName[@role='main'][1]/@ref", namespaces=NAMESPACES)
         person_pmb_id = person_pmb_id[0] if person_pmb_id else None
-        
+
+        # Das @ana-Attribut der personGrp extrahieren
+        person_grp_ana = personGrp.get('ana')
+
         matching_docs = get_matching_files(person_grp_id)
 
-        toc_tree = generate_toc(corresp_id, person_name, matching_docs, person_pmb_id)
+        toc_tree = generate_toc(corresp_id, person_name, matching_docs, person_pmb_id, person_grp_ana)
         toc_tree.write(os.path.join(OUTDIR, f"toc_{corresp_id}.xml"), pretty_print=True, encoding='utf-8', xml_declaration=True)
 
 if __name__ == "__main__":
