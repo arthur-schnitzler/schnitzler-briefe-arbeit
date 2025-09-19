@@ -30,7 +30,7 @@ import subprocess
 # Default URLs and paths
 DEFAULT_CSV_URL = 'https://pmb.acdh.oeaw.ac.at/media/relations.csv'
 DEFAULT_SAXON_JAR = './saxon/saxon-he-9.9.1-7.jar'
-DEFAULT_OUTPUT_DIR = './python-temp'
+DEFAULT_OUTPUT_DIR = './indices/utils'
 
 def remove_angle_brackets(content):
     """Remove content in angle brackets from text."""

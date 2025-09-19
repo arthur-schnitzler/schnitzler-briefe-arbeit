@@ -24,7 +24,7 @@
                </xsl:when>
                <xsl:otherwise>
                   <xsl:variable name="namens-eintrag"
-                     select="key('person-lookup', $first, $persons)/tei:persName[1]" as="node()"/>
+                     select="key('person-lookup', replace($first, '#', ''), $persons)/tei:persName[1]" as="node()"/>
                   <xsl:text>\textcolor{blue}{</xsl:text>
                   <xsl:choose>
                      <xsl:when test="$namens-eintrag/tei:surname and $namens-eintrag/tei:forename">
@@ -45,7 +45,7 @@
          </xsl:when>
          <xsl:when test="$typ = 'work'">
             <xsl:text>\textcolor{green}{</xsl:text>
-            <xsl:variable name="eintrag" select="key('work-lookup', $first, $works)/tei:title[1]"
+            <xsl:variable name="eintrag" select="key('work-lookup', replace($first, '#', ''), $works)/tei:title[1]"
                as="xs:string"/>
             <xsl:choose>
                <xsl:when test="$eintrag = ''">
@@ -66,7 +66,7 @@
          </xsl:when>
          <xsl:when test="$typ = 'org'">
             <xsl:text>\textcolor{brown}{</xsl:text>
-            <xsl:variable name="eintrag" select="key('org-lookup', $first, $orgs)/tei:orgName[1]"
+            <xsl:variable name="eintrag" select="key('org-lookup', replace($first, '#', ''), $orgs)/tei:orgName[1]"
                as="xs:string"/>
             <xsl:choose>
                <xsl:when test="$eintrag = ''">
@@ -108,7 +108,7 @@
          </xsl:when>
          <xsl:when test="$typ = 'place'">
             <xsl:text>\textcolor{pink}{</xsl:text>
-            <xsl:variable name="eintrag" select="key('place-lookup', $first, $places)/tei:placeName[1]"
+            <xsl:variable name="eintrag" select="key('place-lookup', replace($first, '#', ''), $places)/tei:placeName[1]"
                as="xs:string"/>
             <xsl:choose>
                <xsl:when test="$eintrag = ''">
