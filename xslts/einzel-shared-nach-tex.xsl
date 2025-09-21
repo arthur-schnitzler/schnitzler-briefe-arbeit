@@ -56,8 +56,8 @@
    <!-- Gibt zwei Werte zurück: Den Indexeintrag zum sortieren und den, wie er erscheinen soll -->
    <xsl:function name="foo:index-sortiert">
       <xsl:param name="index-sortieren" as="xs:string"/>
-      <xsl:param name="shape" as="xs:string"/><!-- werte sc, it, bf -->
-      
+      <xsl:param name="shape" as="xs:string"/>
+      <!-- werte sc, it, bf -->
       <xsl:value-of select="foo:umlaute-entfernen(foo:werk-um-artikel-kuerzen($index-sortieren))"/>
       <xsl:text>@</xsl:text>
       <xsl:choose>
@@ -3537,7 +3537,7 @@
       <xsl:param name="spalte" as="node()?"/>
       <xsl:variable name="zelleOhneNote" as="node()?">
          <column>
-            <xsl:for-each select="$spalte//tei:cell[1]">
+            <xsl:for-each select="$spalte//tei:cell">
                <cell>
                   <xsl:for-each select="descendant::text()[not(ancestor-or-self::tei:note)]">
                      <xsl:value-of select="normalize-space(.)"/>
@@ -3555,15 +3555,14 @@
             </xsl:for-each>
          </column>
       </xsl:variable>
-      <xsl:variable name="sorted-cells" as="element(tei:cell)*">
-         <xsl:perform-sort select="$zelleOhneNote//tei:cell">
+      <xsl:variable name="sorted-cells" as="element(cell)*">
+         <xsl:perform-sort select="$zelleOhneNote//cell">
             <xsl:sort select="string-length(.)"/>
          </xsl:perform-sort>
       </xsl:variable>
-      <xsl:copy-of select="$sorted-cells[last()]"/>
+      <xsl:value-of select="$sorted-cells[last()]"/>
    </xsl:template>
    <xsl:template match="tei:table">
-      <xsl:text>\pstart SEX \pend</xsl:text>
       <xsl:variable name="spalte1" as="node()">
          <row>
             <xsl:for-each select="descendant::tei:row/tei:cell[1]">
@@ -3670,11 +3669,11 @@
          </xsl:otherwise>
       </xsl:choose>
       <xsl:choose>
-         <xsl:when test="@cols &gt; 5">
+         <xsl:when test="descendant::tei:row/tei:cell[5]">
             <xsl:text>\textcolor{red}{Tabellen mit mehr als fünf Spalten bislang nicht vorgesehen XXXXX}</xsl:text>
          </xsl:when>
          <xsl:otherwise>
-            <xsl:for-each select="row">
+            <xsl:for-each select="tei:row">
                <xsl:text>\pstart\noindent</xsl:text>
                <xsl:text>\makebox[</xsl:text>
                <xsl:text>\the\longeste</xsl:text>
@@ -4802,7 +4801,6 @@
       </xsl:choose>
       <xsl:text>.</xsl:text>
    </xsl:function>
-  
    <xsl:function name="foo:indexeintrag-hinten">
       <xsl:param name="first" as="xs:string"/>
       <xsl:param name="verweis" as="xs:boolean"/>
@@ -4866,12 +4864,14 @@
                   <!-- Einträge  Schnitzler raus -->
                </xsl:when>
                <xsl:otherwise>
-                  <xsl:value-of select="foo:person-in-index(replace($first, '#', ''), $endung, true())"/>
+                  <xsl:value-of
+                     select="foo:person-in-index(replace($first, '#', ''), $endung, true())"/>
                </xsl:otherwise>
             </xsl:choose>
          </xsl:when>
          <xsl:when test="$typ = 'work'">
-            <xsl:value-of select="foo:werk-indexName-Routine-autoren(replace($first, '#', ''), $endung)"/>
+            <xsl:value-of
+               select="foo:werk-indexName-Routine-autoren(replace($first, '#', ''), $endung)"/>
          </xsl:when>
          <xsl:when test="$typ = 'org'">
             <xsl:value-of select="foo:org-in-index(replace($first, '#', ''), $endung)"/>
@@ -5059,7 +5059,8 @@
             <xsl:text>\textcolor{red}{ORT FEHLER}</xsl:text>
          </xsl:when>
          <xsl:otherwise>
-            <xsl:value-of select="foo:place-in-index(replace($first, '#', ''), $endung, $endung-setzen)"/>
+            <xsl:value-of
+               select="foo:place-in-index(replace($first, '#', ''), $endung, $endung-setzen)"/>
          </xsl:otherwise>
       </xsl:choose>
       <xsl:if test="$rest != ''">
@@ -5072,7 +5073,6 @@
       <xsl:param name="wert" as="xs:string"/>
       <xsl:value-of select="normalize-space(foo:umlaute-entfernen($wert))"/>
    </xsl:function>
-   
    <xsl:function name="foo:place-for-index">
       <!-- Diese Funktion formatiert die Indexangabe vor und nach dem Klammeraffen @ tuebingen@Tübingen -->
       <xsl:param name="first" as="xs:string"/>
@@ -5111,10 +5111,13 @@
          <xsl:when test="not(starts-with($first, 'pmb'))">
             <xsl:text>\textcolor{red}{FEHLER4}</xsl:text>
          </xsl:when>
-         <xsl:when test="count($place/tei:location[@type='located_in_place' and
-            matches(tei:placeName/@ref, '^pmb(5[1-9]|6[0-9]|7[0-3])$')]) &gt; 0">
-            <xsl:for-each select="$place/tei:location[@type='located_in_place' and
-               matches(tei:placeName/@ref, '^pmb(5[1-9]|6[0-9]|7[0-3])$')]">
+         <xsl:when test="
+               count($place/tei:location[@type = 'located_in_place' and
+               matches(tei:placeName/@ref, '^pmb(5[1-9]|6[0-9]|7[0-3])$')]) &gt; 0">
+            <xsl:for-each select="
+                  $place/tei:location[@type = 'located_in_place' and
+                  matches(tei:placeName/@ref, '^pmb(5[1-9]|6[0-9]|7[0-3])$')]">
+               <!-- ein Ort in einem Wiener Bezirk -->
                <xsl:text>\oindex{</xsl:text>
                <xsl:value-of select="foo:index-sortiert('Wien', 'bf')"/>
                <xsl:text>!</xsl:text>
@@ -5128,6 +5131,29 @@
          </xsl:when>
          <xsl:otherwise>
             <xsl:text>\oindex{</xsl:text>
+            
+               <xsl:variable name="zu-beruecksichtigen" as="node()">
+                  <list>
+                     <xsl:for-each select="$place/tei:location[@type='located_in_place']">
+                     <xsl:choose>
+                        <xsl:when test="key('placeType-lookup', tei:placeName/@ref, $placeTypes)"></xsl:when>
+                        <xsl:otherwise>
+                           <item>
+                              <xsl:copy-of select="*"/>
+                              
+                           </item>
+                        </xsl:otherwise>
+                     </xsl:choose>
+                        
+                     
+                     </xsl:for-each>
+                  </list>
+               </xsl:variable>
+               
+               
+               <xsl:value-of select="foo:place-in-index(tei:placeName/@ref, '', false())"/>
+               
+            
             <xsl:value-of select="foo:place-for-index(replace($first, '#', ''))"/>
             <xsl:if test="$endung-setzen">
                <xsl:value-of select="$endung"/>
