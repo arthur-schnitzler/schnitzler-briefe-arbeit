@@ -23,7 +23,7 @@
         <xsl:param name="existing-persons" as="node()"/>
         <xsl:param name="context-node" as="node()"/>
         <xsl:for-each
-            select="distinct-values($context-node/tei:bibl/tei:author/@*[name()='key' or name()='ref' and not(@key='pmb2121') and not(@ref='pmb2121')])">
+            select="distinct-values($context-node/tei:bibl/tei:author/@*[name()='key' or name()='ref'])">
             <xsl:variable name="current-id"
                 select="concat('pmb', replace(replace(., '#', ''), 'pmb', ''))"/>
             <xsl:choose>
@@ -31,6 +31,7 @@
                     <!-- Person already exists in local listPerson, skip -->
                 </xsl:when>
                 <xsl:otherwise>
+                    
                     <xsl:choose>
                         <xsl:when
                             test="key('listperson-lookup', $current-id, $listperson)[1]">
@@ -78,7 +79,7 @@
         <xsl:element name="back" namespace="http://www.tei-c.org/ns/1.0">
             <xsl:variable name="persons" as="node()?">
                 <list>
-                    <xsl:for-each select="child::tei:listPerson/tei:person/@xml:id[not(. ='pmb2121')]">
+                    <xsl:for-each select="child::tei:listPerson/tei:person/@xml:id">
                         <item>
                             <xsl:value-of select="."/>
                         </item>
