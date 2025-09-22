@@ -5151,7 +5151,7 @@
                </xsl:variable>
                
                
-               <xsl:value-of select="foo:place-in-index(tei:placeName/@ref, '', false())"/>
+            <!--<xsl:value-of select="foo:place-in-index($place/tei:placeName/@ref, '', false())"/>-->
                
             
             <xsl:value-of select="foo:place-for-index(replace($first, '#', ''))"/>
