@@ -8,10 +8,10 @@
    <xsl:strip-space elements="*"/>
    <!-- subst root tei:persName address body div sourceDesc physDesc witList msIdentifier fileDesc teiHeader correspDesc correspAction date witnessdate -->
    <!-- Globale Parameter -->
-   <xsl:param name="persons" select="//tei:back/tei:listPerson"/>
+   <xsl:param name="persons" select="descendant::tei:back/tei:listPerson"/>
    <xsl:param name="works" as="node()" select="descendant::tei:back/tei:listBibl"/>
-   <xsl:param name="orgs" select="//tei:back/tei:listOrg"/>
-   <xsl:param name="places" select="//tei:back/tei:listPlace" as="node()"/>
+   <xsl:param name="orgs" select="descendant::tei:back/tei:listOrg"/>
+   <xsl:param name="places" select="descendant::tei:back/tei:listPlace" as="node()"/>
    <xsl:param name="placeTypes" select="document('../indices/utils/placeTypes.xml')" as="node()"/>
    <xsl:param name="partOf" select="document('./indices/utils/partOf.xml')" as="node()"/>
    <xsl:param name="events" select="//tei:back/tei:listEvent"/>
@@ -1569,7 +1569,7 @@
             test="count(distinct-values(tei:handNote/@corresp)) = 1 and tei:handNote[1]/@corresp = ancestor::tei:TEI/tei:teiHeader[1]/tei:fileDesc[1]/tei:titleStmt[1][not(child::tei:author[2])]/tei:author[1]/@ref">
             <xsl:variable name="handDesc-v" select="current()"/>
             <xsl:for-each select="distinct-values(tei:handNote/@corresp)">
-               <xsl:variable name="corespi" select="."/>
+               <xsl:variable name="corespi" select="replace(., '#', '')"/>
                <xsl:text>Handschrift: </xsl:text>
                <xsl:choose>
                   <xsl:when test="count($handDesc-v/tei:handNote[@corresp = $corespi]) = 1">
@@ -1613,7 +1613,7 @@
          <xsl:otherwise>
             <xsl:variable name="handDesc-v" select="current()"/>
             <xsl:for-each select="distinct-values(tei:handNote/@corresp)">
-               <xsl:variable name="corespi" select="."/>
+               <xsl:variable name="corespi" select="replace(., '#', '')"/>
                <xsl:variable name="corespi-name"
                   select="key('person-lookup', ($corespi[1]), $persons)[1]/tei:persName[1]"
                   as="node()?"/>
@@ -3051,22 +3051,22 @@
       <!-- Zuerst mal Abstand, ob klein oder groß, je nachdem, ob Archivsignatur und Kommentar war -->
       <xsl:choose>
          <xsl:when
-            test="ancestor::tei:TEI/preceding-sibling::TEI[1]/tei:teiHeader/tei:fileDesc/tei:sourceDesc/tei:listBibl/tei:biblStruct[1]/tei:monogr/tei:imprint/tei:date/xs:integer(substring(@when, 1, 4)) &lt; 1935">
+            test="ancestor::tei:TEI/preceding-sibling::tei:TEI[1]/tei:teiHeader/tei:fileDesc/tei:sourceDesc/tei:listBibl/tei:biblStruct[1]/tei:monogr/tei:imprint/tei:date/xs:integer(substring(@when, 1, 4)) &lt; 1935">
             <xsl:text>&#10;\toendnotes[C]{\medbreak\pagebreak[2]}</xsl:text>
          </xsl:when>
          <xsl:when
-            test="ancestor::tei:TEI/preceding-sibling::TEI[1]/tei:teiHeader/tei:fileDesc/tei:sourceDesc/tei:listWit">
+            test="ancestor::tei:TEI/preceding-sibling::tei:TEI[1]/tei:teiHeader/tei:fileDesc/tei:sourceDesc/tei:listWit">
             <xsl:text>&#10;\toendnotes[C]{\medbreak\pagebreak[2]}</xsl:text>
          </xsl:when>
-         <xsl:when test="ancestor::tei:TEI/preceding-sibling::TEI[1]/body//*[@subtype]">
-            <xsl:text>&#10;\toendnotes[C]{\medbreak\pagebreak[2]}</xsl:text>
-         </xsl:when>
-         <xsl:when
-            test="ancestor::tei:TEI/preceding-sibling::TEI[1]/body//descendant::tei:note[@type = 'commentary' or @type = 'textConst']">
+         <xsl:when test="ancestor::tei:TEI/preceding-sibling::tei:TEI[1]/tei:body//*[@subtype]">
             <xsl:text>&#10;\toendnotes[C]{\medbreak\pagebreak[2]}</xsl:text>
          </xsl:when>
          <xsl:when
-            test="ancestor::tei:TEI/preceding-sibling::TEI[1]/body//descendant::tei:div[@type = 'biographical']">
+            test="ancestor::tei:TEI/preceding-sibling::tei:TEI[1]/tei:body//descendant::tei:note[@type = 'commentary' or @type = 'textConst']">
+            <xsl:text>&#10;\toendnotes[C]{\medbreak\pagebreak[2]}</xsl:text>
+         </xsl:when>
+         <xsl:when
+            test="ancestor::tei:TEI/preceding-sibling::tei:TEI[1]/tei:body//descendant::tei:div[@type = 'biographical']">
             <xsl:text>&#10;\toendnotes[C]{\medbreak\pagebreak[2]}</xsl:text>
          </xsl:when>
          <xsl:otherwise>
@@ -3251,9 +3251,9 @@
    <xsl:template match="tei:lb[parent::tei:item]">
       <xsl:text>{\newline}</xsl:text>
    </xsl:template>
-   <xsl:template match="tei:note[@type = 'footnote' and ancestor::tei:text/body]">
+   <xsl:template match="tei:note[@type = 'footnote' and ancestor::tei:text/tei:body]">
       <xsl:text>\footnote{</xsl:text>
-      <xsl:for-each select="p">
+      <xsl:for-each select="tei:p">
          <xsl:apply-templates select="."/>
          <xsl:if test="not(position() = last())">\par\noindent </xsl:if>
       </xsl:for-each>
@@ -4451,9 +4451,9 @@
    <xsl:template match="tei:handShift[@scribe]">
       <xsl:variable name="scribe" select="replace(@scribe, '#', '')"/>
       <xsl:variable name="scribe-vorname"
-         select="ancestor::tei:TEI/tei:text/tei:backlistPerson/tei:person[@xml:id = $scribe]/tei:persName[1]/tei:forename[1]"/>
+         select="ancestor::tei:TEI/tei:text/tei:back/tei:listPerson/tei:person[@xml:id = $scribe]/tei:persName[1]/tei:forename[1]"/>
       <xsl:variable name="scribe-nachname"
-         select="ancestor::tei:TEI/tei:text/tei:backlistPerson/tei:person[@xml:id = $scribe]/tei:persName[1]/tei:surname[1]"/>
+         select="ancestor::tei:TEI/tei:text/tei:back/tei:listPerson/tei:person[@xml:id = $scribe]/tei:persName[1]/tei:surname[1]"/>
       <xsl:variable name="scribes" as="node()">
          <xsl:element name="scribes">
             <xsl:for-each
@@ -4479,7 +4479,7 @@
          <!-- alle Namen, außer dem aktuellen -->
          <xsl:element name="listPerson">
             <xsl:for-each
-               select="ancestor::tei:TEI/tei:text/tei:backlistPerson/tei:person[@xml:id = $scribes/scribe/@xml:id and not(@xml:id = $scribe)]">
+               select="ancestor::tei:TEI/tei:text/tei:back/tei:listPerson/tei:person[@xml:id = $scribes/tei:scribe/@xml:id and not(@xml:id = $scribe)]">
                <xsl:element name="person">
                   <xsl:attribute name="id">
                      <xsl:value-of select="@xml:id"/>
