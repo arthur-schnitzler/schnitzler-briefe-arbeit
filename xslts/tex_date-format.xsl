@@ -144,7 +144,7 @@
                                         />
                                     </xsl:matching-substring>
                                     <xsl:non-matching-substring>
-                                        <xsl:value-of select="concat('', .)"/>
+                                        <xsl:value-of select="replace(replace(concat('', .), '\[', '{[}'), '\]', '{]}')"/>
                                     </xsl:non-matching-substring>
                                 </xsl:analyze-string>
                             </xsl:otherwise>
