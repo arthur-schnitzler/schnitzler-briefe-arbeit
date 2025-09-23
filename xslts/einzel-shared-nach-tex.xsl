@@ -3051,22 +3051,22 @@
       <!-- Zuerst mal Abstand, ob klein oder groß, je nachdem, ob Archivsignatur und Kommentar war -->
       <xsl:choose>
          <xsl:when
-            test="ancestor::tei:TEI/preceding-sibling::TEI[1]/tei:teiHeader/tei:fileDesc/tei:sourceDesc/tei:listBibl/tei:biblStruct[1]/tei:monogr/tei:imprint/tei:date/xs:integer(substring(@when, 1, 4)) &lt; 1935">
+            test="ancestor::tei:TEI/preceding-sibling::tei:TEI[1]/tei:teiHeader/tei:fileDesc/tei:sourceDesc/tei:listBibl/tei:biblStruct[1]/tei:monogr/tei:imprint/tei:date/xs:integer(substring(@when, 1, 4)) &lt; 1935">
             <xsl:text>&#10;\toendnotes[C]{\medbreak\pagebreak[2]}</xsl:text>
          </xsl:when>
          <xsl:when
-            test="ancestor::tei:TEI/preceding-sibling::TEI[1]/tei:teiHeader/tei:fileDesc/tei:sourceDesc/tei:listWit">
+            test="ancestor::tei:TEI/preceding-sibling::tei:TEI[1]/tei:teiHeader/tei:fileDesc/tei:sourceDesc/tei:listWit">
             <xsl:text>&#10;\toendnotes[C]{\medbreak\pagebreak[2]}</xsl:text>
          </xsl:when>
-         <xsl:when test="ancestor::tei:TEI/preceding-sibling::TEI[1]/body//*[@subtype]">
-            <xsl:text>&#10;\toendnotes[C]{\medbreak\pagebreak[2]}</xsl:text>
-         </xsl:when>
-         <xsl:when
-            test="ancestor::tei:TEI/preceding-sibling::TEI[1]/body//descendant::tei:note[@type = 'commentary' or @type = 'textConst']">
+         <xsl:when test="ancestor::tei:TEI/preceding-sibling::tei:TEI[1]/tei:body//*[@subtype]">
             <xsl:text>&#10;\toendnotes[C]{\medbreak\pagebreak[2]}</xsl:text>
          </xsl:when>
          <xsl:when
-            test="ancestor::tei:TEI/preceding-sibling::TEI[1]/body//descendant::tei:div[@type = 'biographical']">
+            test="ancestor::tei:TEI/preceding-sibling::tei:TEI[1]/tei:body//descendant::tei:note[@type = 'commentary' or @type = 'textConst']">
+            <xsl:text>&#10;\toendnotes[C]{\medbreak\pagebreak[2]}</xsl:text>
+         </xsl:when>
+         <xsl:when
+            test="ancestor::tei:TEI/preceding-sibling::tei:TEI[1]/tei:body//descendant::tei:div[@type = 'biographical']">
             <xsl:text>&#10;\toendnotes[C]{\medbreak\pagebreak[2]}</xsl:text>
          </xsl:when>
          <xsl:otherwise>
@@ -3251,9 +3251,9 @@
    <xsl:template match="tei:lb[parent::tei:item]">
       <xsl:text>{\newline}</xsl:text>
    </xsl:template>
-   <xsl:template match="tei:note[@type = 'footnote' and ancestor::tei:text/body]">
+   <xsl:template match="tei:note[@type = 'footnote' and ancestor::tei:text/tei:body]">
       <xsl:text>\footnote{</xsl:text>
-      <xsl:for-each select="p">
+      <xsl:for-each select="tei:p">
          <xsl:apply-templates select="."/>
          <xsl:if test="not(position() = last())">\par\noindent </xsl:if>
       </xsl:for-each>
