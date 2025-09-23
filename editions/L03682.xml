@@ -1,6 +1,10 @@
-<?xml version='1.0' encoding='UTF-8'?>
+<?xml version="1.0" encoding="UTF-8"?>
 <?xml-model href="../meta/schnitzler-briefe-schematron.sch" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
-<TEI xmlns="http://www.tei-c.org/ns/1.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.tei-c.org/ns/1.0 ../meta/schnitzler-briefe-schema.xsd" xml:id="L03682" xml:base="https://id.acdh.oeaw.ac.at/schnitzler/schnitzler-briefe/editions">
+<TEI xmlns="http://www.tei-c.org/ns/1.0"
+     xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+     xsi:schemaLocation="http://www.tei-c.org/ns/1.0 ../meta/schnitzler-briefe-schema.xsd"
+     xml:id="L03682"
+     xml:base="https://id.acdh.oeaw.ac.at/schnitzler/schnitzler-briefe/editions">
    <teiHeader>
       <fileDesc>
          <titleStmt>
@@ -69,7 +73,7 @@
          <sourceDesc>
             <listWit>
                <witness n="1">
-                  <objectType corresp="karte" ana="briefkarte"/>
+                  <objectType corresp="brief"/>
                   <msDesc>
                      <msIdentifier>
                         <country>D</country>
@@ -81,12 +85,28 @@
                         <objectDesc>
                            <supportDesc>
                               <extent>
-                                 <measure unit="karte" quantity="1"/>
-                                 <measure unit="zeichenanzahl" quantity="2655"/>
+                                 <measure unit="blatt" quantity="1"/>
+                                 <measure unit="seite" quantity="2"/>
+                                 <measure unit="zeichenanzahl" quantity="2631"/>
                               </extent>
                            </supportDesc>
-                           
                         </objectDesc>
+                        <handDesc>
+                           <handNote medium="lila-tinte" style="lateinische-kurrent"/>
+                        </handDesc>
+                        <additions>
+                           <incident type="receiver" rend="roter-buntstift">
+                              <desc>13 Unterstreichungen und Vermerk: »<quote>
+                                    <p>
+                                       <hi rend="latintype">Zweig</hi>
+                                    </p>
+                                    <p>
+                                       <hi rend="latintype">Aph</hi>
+                                       <supplied>orismen</supplied>
+                                    </p>
+                                 </quote>«</desc>
+                           </incident>
+                        </additions>
                      </physDesc>
                   </msDesc>
                </witness>
@@ -137,34 +157,61 @@
             <correspAction type="received">
                <persName ref="#pmb2121">Schnitzler, Arthur</persName>
                <date evidence="conjecture" notBefore="1928-01-08" notAfter="1928-01-12">[8. 1. 1928 – 12. 1. 1928?]</date>
+               <placeName ref="#pmb50" evidence="conjecture">Wien</placeName>
             </correspAction>
-            <correspContext><ref type="belongsToCorrespondence" target="correspondence_13212">Zweig, Stefan</ref>
+            <correspContext>
+               <ref type="belongsToCorrespondence" target="correspondence_13212">Zweig, Stefan</ref>
                <ref subtype="previous_letter" type="withinCollection" target="L02577">Rie an Schnitzler, 6. 1. 1928</ref>
                <ref subtype="next_letter" type="withinCollection" target="L03741">Schnitzler an Zweig, 16. 1. 1928</ref>
-               <ref subtype="previous_letter" type="withinCorrespondence" source="correspondence_13212" target="L03740">Schnitzler an Zweig, 15. 10. 1927</ref>
-               <ref subtype="next_letter" type="withinCorrespondence" source="correspondence_13212" target="L03741">Schnitzler an Zweig, 16. 1. 1928</ref>
-            </correspContext></correspDesc>
+               <ref subtype="previous_letter"
+                    type="withinCorrespondence"
+                    source="correspondence_13212"
+                    target="L03740">Schnitzler an Zweig, 15. 10. 1927</ref>
+               <ref subtype="next_letter"
+                    type="withinCorrespondence"
+                    source="correspondence_13212"
+                    target="L03741">Schnitzler an Zweig, 16. 1. 1928</ref>
+            </correspContext>
+         </correspDesc>
       </profileDesc>
       <revisionDesc status="proposed">
          <change who="MAM" when="2025-06-04">Angelegt aus Buchausgabe, mit Scan aus DLA
             durchsehen</change>
+         <change who="MAM" when="2025-09-23">Scan aus DLA berücksichtigt</change>
       </revisionDesc>
    </teiHeader>
+   <facsimile>
+      <graphic url="HS005481175_0001"/>
+      <graphic url="HS005481175_0002"/>
+   </facsimile>
    <text>
       <body>
          <div type="writingSession" n="1">
             <opener>
-               <dateline rend="right">
-                  <pb facs=""/>
-                  <date>7. 1. <anchor type="commentary" xml:id="K_L03682-1"/>1927<note type="commentary" corresp="K_L03682-1">Schreibirrtum <rs type="person" ref="#pmb13212">Zweigs</rs>, wie sich aus
-                      dem Inhalt und dem Antwortschreiben <rs type="person" ref="#pmb2121">Schnitzlers</rs> vom <ref type="schnitzler-briefe" target="L03741" subtype="date-only"/> ergibt.</note>
-                  </date>
-               </dateline>
-               <seg rend="right">
-                  <rs type="place" ref="#pmb253003">Kapuzinerberg 5</rs>
+               <seg>
+                  <seg rend="left">
+                     <pb facs="HS005481175_0001"/>
+                     <hi rend="pre-print">SZ</hi>
+                  </seg>
+                  <seg rend="right">
+                     <date>7. 1. <anchor type="commentary" xml:id="K_L03682-1"/>1927<note type="commentary" corresp="K_L03682-1">Schreibirrtum <rs type="person" ref="#pmb13212">Zweigs</rs>, wie sich aus
+                           dem Inhalt und dem Antwortschreiben <rs type="person" ref="#pmb2121">Schnitzlers</rs> vom <ref type="schnitzler-briefe" target="L03741" subtype="date-only"/> ergibt.</note>
+                     </date>
+                  </seg>
                </seg>
                <seg rend="right">
-                  <rs type="place" ref="#pmb30">Salzburg</rs>
+                  <hi rend="pre-print">
+                     <hi rend="capitals">
+                        <rs type="place" ref="#pmb253003">Kapuzinerberg<space unit="chars" quantity="1"/>5</rs>
+                     </hi>
+                  </hi>
+               </seg>
+               <seg rend="right">
+                  <hi rend="pre-print">
+                     <hi rend="capitals">
+                        <rs type="place" ref="#pmb30">Salzburg</rs>
+                     </hi>
+                  </hi>
                </seg>
             </opener>
             <p>
@@ -185,7 +232,7 @@
                zu dringen, er klammert sich an einen Begriff und der ist Ihnen durch das Deminutiv
                der »<rs type="work" subtype="implied" ref="#pmb29917">Liebelei</rs>« von anfangs an taxfrei
                verliehen worden. Lassen Sie der Zeit ihre Zeit und Sie werden selbst noch die
-               Wandlung erfahren, dieselbe die allen <rs type="place" ref="#pmb41240">Österreichern</rs>
+               Wandlung erfahren, die<pb facs="HS005481175_0002"/>selbe die allen <rs type="place" ref="#pmb41240">Österreichern</rs>
                allmählich bewilligt wurde, sehr unwillig zwar aber dann umso dauerhafter. Aber Ihr
                <rs type="work" ref="#pmb30051" subtype="implied">Buch</rs> war fördernd für ein ernsteres
                Anschaun, ein Sich besinnen dieser Gleichgiltigkeit, die ich für Sie empörter
@@ -201,7 +248,8 @@
                nähern kann. Inzwischen fiel mir eine kleine <rs type="work" subtype="implied" ref="#pmb293997">Komödie</rs> ein, die zu schreiben ich allein zu träge bin; aber schon in
                Gedanken mit Heiterkeiten zu spielen, entlastet. Ich glaube man kann sich nur von
                einer Arbeit in der andern erholen oder wenigstens im Spiel mit neuen Plänen und
-               Möglichkeiten. Möge jeder Tag Ihnen freudig und erfüllt sein. Wer verdient dies
+               Möglichkeiten.</p>
+            <p>Möge jeder Tag Ihnen freudig und erfüllt sein. Wer verdient dies
                Bedeutsamste wenn nicht Sie? </p>
             <closer>Innigst Ihnen getreu<lb/>Ihr <signed>Stefan Zweig</signed>
             </closer>
@@ -293,6 +341,26 @@
                      <desc n="1370">teilgenommen an</desc>
                      <label>Lesung von Richard Dehmel, 6.3.1904</label>
                      <idno type="URL" subtype="pmb">https://pmb.acdh.oeaw.ac.at/entity/50184/</idno>
+                  </event>
+                  <event n="Theateraufführung" ref="pmb249556" when="1909-12-12">
+                     <desc n="1370">teilgenommen an</desc>
+                     <label>Aufführung von Der Ruf des Lebens, 12.12.1909</label>
+                     <idno type="URL" subtype="pmb">https://pmb.acdh.oeaw.ac.at/entity/249556/</idno>
+                  </event>
+                  <event n="Private Lesung" ref="pmb296492" when="1910-10-11">
+                     <desc n="1370">teilgenommen an</desc>
+                     <label>Private Lesung von Die ungleichen Schalen, 11.10.1910</label>
+                     <idno type="URL" subtype="pmb">https://pmb.acdh.oeaw.ac.at/entity/296492/</idno>
+                  </event>
+                  <event n="Theateraufführung" ref="pmb251446" when="1910-11-27">
+                     <desc n="1370">teilgenommen an</desc>
+                     <label>Aufführung von Der junge Medardus, 27.11.1910</label>
+                     <idno type="URL" subtype="pmb">https://pmb.acdh.oeaw.ac.at/entity/251446/</idno>
+                  </event>
+                  <event n="Liederkonzert" ref="pmb183571" when="1911-02-05">
+                     <desc n="1370">teilgenommen an</desc>
+                     <label>Gesangskonzert Olga Schnitzler, 5.2.1911</label>
+                     <idno type="URL" subtype="pmb">https://pmb.acdh.oeaw.ac.at/entity/183571/</idno>
                   </event>
                   <event n="Generalprobe" ref="pmb239133" when="1912-10-25">
                      <desc n="1370">teilgenommen an</desc>
@@ -427,11 +495,50 @@
                   <graphic url="https://upload.wikimedia.org/wikipedia/commons/thumb/0/0e/Goethe_%28Stieler_1828%29.jpg/250px-Goethe_%28Stieler_1828%29.jpg"/>
                </figure>
             </person>
+            <person xml:id="pmb8596">
+               <persName>
+                  <forename>Alexander</forename>
+                  <surname>Lernet-Holenia</surname>
+               </persName>
+               <birth>
+                  <date when="1897-10-21">21.10.1897</date>
+                  <settlement ref="pmb50">
+                     <placeName type="pref">Wien</placeName>
+                     <location>
+                        <geo>48,208333 16,373056</geo>
+                     </location>
+                  </settlement>
+               </birth>
+               <death>
+                  <date when="1976-07-03">03.07.1976</date>
+                  <settlement ref="pmb50">
+                     <placeName type="pref">Wien</placeName>
+                     <location>
+                        <geo>48,208333 16,373056</geo>
+                     </location>
+                  </settlement>
+               </death>
+               <sex value="male"/>
+               <occupation ref="pmb90">Schriftsteller/Schriftstellerin</occupation>
+               <idno type="URL" subtype="d-nb">https://d-nb.info/gnd/118571990</idno>
+               <idno type="URL" subtype="schnitzler-tagebuch">https://schnitzler-tagebuch.acdh.oeaw.ac.at/person_17466.html</idno>
+               <idno type="URL" subtype="pmb">https://pmb.acdh.oeaw.ac.at/entity/8596/</idno>
+               <idno type="URL" subtype="fackel">https://fackel.oeaw.ac.at/?p=fackelp37992</idno>
+               <idno type="URL" subtype="kraus1933">https://kraus1933.ace.oeaw.ac.at/Gesamt.xml?template=register_personen.html&amp;letter=L#DWpers0148</idno>
+               <idno type="URL" subtype="wikidata">http://www.wikidata.org/entity/Q112214</idno>
+               <idno type="URL" subtype="wikipedia">https://de.wikipedia.org/wiki/Alexander_Lernet-Holenia</idno>
+               <idno type="URL" subtype="geschichtewiki">https://www.geschichtewiki.wien.gv.at/Special:URIResolver/?curid=14368</idno>
+               <idno type="URL" subtype="bahr-textverzeichnis">https://bahr-textverzeichnis.acdh.oeaw.ac.at/pmb8596.html</idno>
+               <idno type="URL" subtype="stefanzweig">https://www.stefanzweig.digital/o:szd.personen/sdef:TEI/get#SZDPER.818</idno>
+               <figure>
+                  <graphic url="https://upload.wikimedia.org/wikipedia/commons/thumb/2/26/USIS_-_Alexander_Lernet-Holenia_II.jpg/250px-USIS_-_Alexander_Lernet-Holenia_II.jpg"/>
+               </figure>
+            </person>
          </listPerson>
          <listBibl>
             <bibl xml:id="pmb30051">
                <title>Der Geist im Wort und der Geist in der Tat</title>
-               <author ref="" role="hat-geschaffen">Schnitzler, Arthur</author>
+               <author ref="pmb2121" role="hat-geschaffen">Schnitzler, Arthur</author>
                <date notBefore="1927-01-01" when="1927-01-01">1927</date>
                <idno type="URL" subtype="asaf">https://asaf.com/S.04.03.03</idno>
                <idno type="URL" subtype="literature">http://www.literature.at/viewer.alo?objid=12115</idno>
@@ -450,7 +557,7 @@
                <title>Liebelei. Schauspiel in drei Akten</title>
                <title type="werk_link">https://www.deutschestextarchiv.de/book/show/schnitzler_liebelei_1896</title>
                <title type="legacy-name-merge">Liebelei</title>
-               <author ref="" role="hat-geschaffen">Schnitzler, Arthur</author>
+               <author ref="pmb2121" role="hat-geschaffen">Schnitzler, Arthur</author>
                <date>1895-10-09</date>
                <idno type="URL" subtype="asaf">https://asaf.com/S.04.01.27</idno>
                <idno type="URL" subtype="wikidata">http://www.wikidata.org/entity/Q1823758</idno>
@@ -472,7 +579,8 @@
             </bibl>
             <bibl xml:id="pmb293680">
                <title>Drei Dichter ihres Lebens. Casanova – Stendhal – Tolstoi</title>
-               <author ref="" role="hat-geschaffen">Zweig, Stefan</author>
+               <title type="werk_link">https://www.projekt-gutenberg.org/zweig/3dichter/3dichter.html</title>
+               <author ref="pmb13212" role="hat-geschaffen">Zweig, Stefan</author>
                <date>1928</date>
                <idno type="URL" subtype="pmb">https://pmb.acdh.oeaw.ac.at/entity/293680/</idno>
                <note type="work_kind">Essaysammlung</note>
@@ -481,8 +589,8 @@
                <title>Quiproquo. Komödie in drei Akten</title>
                <title type="werk_namensvariante">Gelegenheit macht Liebe</title>
                <title type="person_pseudonym">Clemens Neydisser</title>
-               <author ref="" role="hat-unter-pseudonym-geschrieben">Zweig, Stefan</author>
-               <author ref="" role="hat-unter-pseudonym-geschrieben">Lernet-Holenia, Alexander</author>
+               <author ref="pmb13212" role="hat-unter-pseudonym-geschrieben">Zweig, Stefan</author>
+               <author ref="pmb8596" role="hat-unter-pseudonym-geschrieben">Lernet-Holenia, Alexander</author>
                <date notBefore="1928-01-01" when="1928-01-01">1928</date>
                <idno type="URL" subtype="pmb">https://pmb.acdh.oeaw.ac.at/entity/293997/</idno>
                <note type="work_kind">Mehraktiges Drama</note>
@@ -518,6 +626,51 @@
                <idno type="URL" subtype="schnitzler-briefe">https://schnitzler-briefe.acdh.oeaw.ac.at/pmb30.html</idno>
                <idno type="URL" subtype="pmb">https://pmb.acdh.oeaw.ac.at/entity/262547/</idno>
                <idno type="URL" subtype="wienerschnitzler">https://wienerschnitzler.org/pmb30.html</idno>
+            </place>
+            <place xml:id="pmb50">
+               <placeName>Wien</placeName>
+               <placeName type="ort_fruherer-name">K.K. Reichshaupt- und Residenzstadt Wien</placeName>
+               <placeName type="alternative-name">Bécs</placeName>
+               <placeName type="alternative-name">Land Wien</placeName>
+               <placeName type="alternative-name">Vídeň</placeName>
+               <placeName type="alternative-name">Wenia</placeName>
+               <placeName type="alternative-name">Beč</placeName>
+               <placeName type="ort_fruherer-name">Vindobona</placeName>
+               <placeName type="alternative-name">Vienna</placeName>
+               <desc type="entity_type">A.ADM2</desc>
+               <desc type="entity_type_id">1135</desc>
+               <location type="coords">
+                  <geo>48,208333 16,373056</geo>
+               </location>
+               <location type="located_in_place">
+                  <placeName ref="pmb41240">Österreich</placeName>
+                  <geo>47,33333 13,33333</geo>
+               </location>
+               <location type="located_in_place">
+                  <placeName ref="pmb235218">Windmühlhöhe</placeName>
+                  <geo>48,24077 16,32092</geo>
+               </location>
+               <idno type="URL" subtype="geonames">https://sws.geonames.org/2761369/</idno>
+               <idno type="URL" subtype="d-nb">https://d-nb.info/gnd/4066009-6</idno>
+               <idno type="URL" subtype="schnitzler-bahr">https://schnitzler-bahr.acdh.oeaw.ac.at/pmb50.html</idno>
+               <idno type="URL" subtype="pmb">https://pmb.acdh.oeaw.ac.at/entity/50/</idno>
+               <idno type="URL" subtype="pmb">https://pmb.acdh.oeaw.ac.at/entity/2316/</idno>
+               <idno type="URL" subtype="pmb">https://pmb.acdh.oeaw.ac.at/entity/20954/</idno>
+               <idno type="URL" subtype="pmb">https://pmb.acdh.oeaw.ac.at/entity/65221/</idno>
+               <idno type="URL" subtype="pmb">https://pmb.acdh.oeaw.ac.at/entity/65223/</idno>
+               <idno type="URL" subtype="kraus">https://kraus.wienbibliothek.at/register/orte/pmb50</idno>
+               <idno type="URL" subtype="wikidata">http://www.wikidata.org/entity/Q1741</idno>
+               <idno type="URL" subtype="wikipedia">https://de.wikipedia.org/wiki/Wien</idno>
+               <idno type="URL" subtype="schnitzler-interviews">https://schnitzler-interviews.acdh.oeaw.ac.at/pmb50.html</idno>
+               <idno type="URL" subtype="geonames">https://sws.geonames.org/2761333/</idno>
+               <idno type="URL" subtype="pmb">https://pmb.acdh.oeaw.ac.at/entity/33999/</idno>
+               <idno type="URL" subtype="schnitzler-tagebuch">https://schnitzler-tagebuch.acdh.oeaw.ac.at/pmb50.html</idno>
+               <idno type="URL" subtype="schnitzler-briefe">https://schnitzler-briefe.acdh.oeaw.ac.at/pmb50.html</idno>
+               <note type="image">
+                  <figure>
+                     <graphic url="https://iiif.onb.ac.at/images/AKON/AK117_016/016/full/,600/0/native.jpg"/>
+                  </figure>
+               </note>
             </place>
             <place xml:id="pmb253003">
                <placeName>Paschinger Schlössl</placeName>
