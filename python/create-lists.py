@@ -2,6 +2,7 @@ import xml.etree.ElementTree as ET
 from xml.dom import minidom
 from urllib.request import urlopen
 import os
+import time
 
 # TEI Namespace
 NS = {'tei': 'http://www.tei-c.org/ns/1.0'}
@@ -20,6 +21,47 @@ def pretty_xml(elem):
     rough_string = ET.tostring(elem, encoding='utf-8')
     reparsed = minidom.parseString(rough_string)
     return reparsed.toprettyxml(indent="  ")
+
+# Hilfsfunktion: Entität von PMB API holen
+def fetch_entity_from_api(entity_id, entity_type):
+    """
+    Holt eine Entität von der PMB API
+    entity_type: 'person', 'place', 'org', 'work', 'event'
+    """
+    api_urls = {
+        'person': f'https://pmb.acdh.oeaw.ac.at/apis/tei/person/{entity_id}',
+        'place': f'https://pmb.acdh.oeaw.ac.at/apis/tei/place/{entity_id}',
+        'org': f'https://pmb.acdh.oeaw.ac.at/apis/tei/institution/{entity_id}',
+        'work': f'https://pmb.acdh.oeaw.ac.at/apis/tei/work/{entity_id}',
+        'event': f'https://pmb.acdh.oeaw.ac.at/apis/tei/event/{entity_id}'
+    }
+
+    if entity_type not in api_urls:
+        print(f"⚠️ Unbekannter Entitätstyp: {entity_type}")
+        return None
+
+    try:
+        print(f"🌐 Lade {entity_type} {entity_id} von PMB API...")
+        with urlopen(api_urls[entity_type]) as response:
+            content = response.read()
+
+        # XML parsen und Element extrahieren
+        api_root = ET.fromstring(content)
+
+        # ID anpassen: place__298436 -> pmb298436
+        old_id = api_root.get("{http://www.w3.org/XML/1998/namespace}id", "")
+        if old_id.startswith(f"{entity_type}__"):
+            new_id = f"pmb{entity_id}"
+            api_root.set("{http://www.w3.org/XML/1998/namespace}id", new_id)
+
+        # Kurz warten um API nicht zu überlasten
+        time.sleep(0.1)
+
+        return api_root
+
+    except Exception as e:
+        print(f"❌ Fehler beim Laden von {entity_type} {entity_id}: {e}")
+        return None
 
 # Hilfsfunktion: TEI-Template mit Liste erstellen
 def create_tei_with_template(list_element, list_type):
@@ -185,15 +227,47 @@ for ent in entities:
     for item in mentioned_tree.getroot().findall("item"):
         mentioned_ids.add("pmb" + item.text.strip())
 
-    # 3. Entitäten filtern
+    # 3. Entitäten filtern und fehlende von API laden
     container = source_root.find(f".//tei:{ent['list_tag']}", namespaces=NS)
+
+    # Zuerst existierende Entitäten filtern
+    existing_ids = set()
     for item in list(container.findall(f"tei:{ent['item_tag']}", namespaces=NS)):
         old_id = item.attrib.get("{http://www.w3.org/XML/1998/namespace}id", "")
         new_id = old_id.replace(ent["id_prefix"], "pmb")
         item.set("{http://www.w3.org/XML/1998/namespace}id", new_id)
 
-        if new_id not in mentioned_ids:
+        if new_id in mentioned_ids:
+            existing_ids.add(new_id)
+        else:
             container.remove(item)
+
+    # Fehlende Entitäten von API laden
+    missing_ids = mentioned_ids - existing_ids
+    entity_type_map = {
+        'listperson.xml': 'person',
+        'listplace.xml': 'place',
+        'listorg.xml': 'org',
+        'listbibl.xml': 'work',
+        'listevent.xml': 'event'
+    }
+
+    entity_type = entity_type_map.get(ent['output'])
+    if entity_type and missing_ids:
+        print(f"📥 {len(missing_ids)} fehlende {entity_type} Entitäten von API laden...")
+
+        for missing_id in missing_ids:
+            # pmb298436 -> 298436
+            entity_id = missing_id.replace("pmb", "")
+
+            # Von API laden
+            api_entity = fetch_entity_from_api(entity_id, entity_type)
+            if api_entity is not None:
+                # Zur Liste hinzufügen
+                container.append(api_entity)
+                print(f"✅ {missing_id} hinzugefügt")
+            else:
+                print(f"❌ {missing_id} konnte nicht geladen werden")
 
     # 3b. Alle @key- und @ref-Attribute rekursiv durchgehen und ersetzen
     def update_references(element):
