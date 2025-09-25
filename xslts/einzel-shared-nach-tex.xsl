@@ -1353,16 +1353,16 @@
       <xsl:apply-templates select="tei:desc"/>
    </xsl:template>
    <xsl:template match="tei:additions">
-      <xsl:apply-templates select="tei:incident[@type = 'supplement']"/>
+      <xsl:apply-templates select="tei:incident[@type = 'attachment']"/>
       <xsl:apply-templates select="tei:incident[@type = 'postal']"/>
       <xsl:apply-templates select="tei:incident[@type = 'receiver']"/>
       <xsl:apply-templates select="tei:incident[@type = 'archival']"/>
       <xsl:apply-templates select="tei:incident[@type = 'additional-information']"/>
       <xsl:apply-templates select="tei:incident[@type = 'editorial']"/>
    </xsl:template>
-   <xsl:template match="tei:incident[@type = 'supplement']/tei:desc">
+   <xsl:template match="tei:incident[@type = 'attachment']/tei:desc">
       <xsl:variable name="poschitzion"
-         select="count(parent::tei:incident/preceding-sibling::tei:incident[@type = 'supplement'])"/>
+         select="count(parent::tei:incident/preceding-sibling::tei:incident[@type = 'attachment'])"/>
       <xsl:choose>
          <xsl:when test="$poschitzion &gt; 0">
             <xsl:text> </xsl:text>
@@ -1371,13 +1371,13 @@
             <xsl:apply-templates/>
          </xsl:when>
          <xsl:when
-            test="$poschitzion = 0 and not(parent::tei:incident/following-sibling::tei:incident[@type = 'supplement'])">
+            test="$poschitzion = 0 and not(parent::tei:incident/following-sibling::tei:incident[@type = 'attachment'])">
             <xsl:text>&#10;\newline{}Beilage: </xsl:text>
             <xsl:apply-templates/>
             <xsl:text> </xsl:text>
          </xsl:when>
          <xsl:when
-            test="$poschitzion = 0 and parent::tei:incident/following-sibling::tei:incident[@type = 'supplement']">
+            test="$poschitzion = 0 and parent::tei:incident/following-sibling::tei:incident[@type = 'attachment']">
             <xsl:text>&#10;\newline{}Beilagen: </xsl:text>
             <xsl:value-of select="$poschitzion + 1"/>
             <xsl:text>)&#160;</xsl:text>

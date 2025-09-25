@@ -1290,16 +1290,16 @@
       <xsl:apply-templates select="desc"/>
    </xsl:template>
    <xsl:template match="additions">
-      <xsl:apply-templates select="incident[@type = 'supplement']"/>
+      <xsl:apply-templates select="incident[@type = 'attachment']"/>
       <xsl:apply-templates select="incident[@type = 'postal']"/>
       <xsl:apply-templates select="incident[@type = 'receiver']"/>
       <xsl:apply-templates select="incident[@type = 'archival']"/>
       <xsl:apply-templates select="incident[@type = 'additional-information']"/>
       <xsl:apply-templates select="incident[@type = 'editorial']"/>
    </xsl:template>
-   <xsl:template match="incident[@type = 'supplement']/desc">
+   <xsl:template match="incident[@type = 'attachment']/desc">
       <xsl:variable name="poschitzion"
-         select="count(parent::incident/preceding-sibling::incident[@type = 'supplement'])"/>
+         select="count(parent::incident/preceding-sibling::incident[@type = 'attachment'])"/>
       <xsl:choose>
          <xsl:when test="$poschitzion &gt; 0">
             <xsl:text> </xsl:text>
@@ -1308,13 +1308,13 @@
             <xsl:apply-templates/>
          </xsl:when>
          <xsl:when
-            test="$poschitzion = 0 and not(parent::incident/following-sibling::incident[@type = 'supplement'])">
+            test="$poschitzion = 0 and not(parent::incident/following-sibling::incident[@type = 'attachment'])">
             <xsl:text>&#10;\newline{}Beilage: </xsl:text>
             <xsl:apply-templates/>
             <xsl:text> </xsl:text>
          </xsl:when>
          <xsl:when
-            test="$poschitzion = 0 and parent::incident/following-sibling::incident[@type = 'supplement']">
+            test="$poschitzion = 0 and parent::incident/following-sibling::incident[@type = 'attachment']">
             <xsl:text>&#10;\newline{}Beilagen: </xsl:text>
             <xsl:value-of select="$poschitzion + 1"/>
             <xsl:text>)&#160;</xsl:text>

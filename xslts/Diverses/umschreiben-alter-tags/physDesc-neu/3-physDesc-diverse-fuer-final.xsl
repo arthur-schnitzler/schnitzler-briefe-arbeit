@@ -63,10 +63,10 @@
     
   <!--  <xsl:template match="tei:additions">
         <xsl:element name="additions" namespace="http://www.tei-c.org/ns/1.0">
-            <xsl:for-each select="tei:incident[@type='supplement']">
+            <xsl:for-each select="tei:incident[@type='attachment']">
                 <xsl:element namespace="http://www.tei-c.org/ns/1.0" name="incident">
                     <xsl:attribute name="type">
-                        <xsl:text>supplement</xsl:text>
+                        <xsl:text>attachment</xsl:text>
                     </xsl:attribute>
                     <xsl:copy-of select="node()"/>
                 </xsl:element>
