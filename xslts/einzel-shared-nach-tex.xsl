@@ -171,46 +171,46 @@
       <xsl:variable name="kTodesort" as="xs:string?">
          <xsl:choose>
             <xsl:when
-               test="$indexkey/tei:death/tei:placeName[not(@type) or @type = 'pref']/tei:settlement">
+               test="$indexkey/tei:death[1]/tei:placeName[not(@type) or @type = 'pref']/tei:settlement">
                <xsl:value-of
-                  select="fn:normalize-space($indexkey/tei:death/tei:placeName[not(@type) or @type = 'pref']/tei:settlement)"
+                  select="fn:normalize-space($indexkey/tei:death[1]/tei:placeName[not(@type) or @type = 'pref']/tei:settlement)"
                />
             </xsl:when>
-            <xsl:when test="$indexkey/tei:death/tei:placeName[@type = 'deportation']">
+            <xsl:when test="$indexkey/tei:death[1]/tei:placeName[@type = 'deportation']">
                <xsl:value-of
-                  select="concat('deportiert ', fn:normalize-space($indexkey/tei:death/tei:placeName/tei:settlement))"
+                  select="concat('deportiert ', fn:normalize-space($indexkey/tei:death[1]/tei:placeName[1]/tei:settlement))"
                />
             </xsl:when>
-            <xsl:when test="$indexkey/tei:death/tei:placeName[@type = 'burial']">
+            <xsl:when test="$indexkey/tei:death[1]/tei:placeName[@type = 'burial']">
                <xsl:value-of
-                  select="concat('beerdigt ', fn:normalize-space($indexkey/tei:death/tei:placeName/tei:settlement))"
+                  select="concat('beerdigt ', fn:normalize-space($indexkey/tei:death[1]/tei:placeName[1]/tei:settlement))"
                />
             </xsl:when>
             <xsl:when
-               test="$indexkey/tei:death/tei:settlement/tei:placeName[not(@type) or @type = 'pref']">
+               test="$indexkey/tei:death[1]/tei:settlement[1]/tei:placeName[not(@type) or @type = 'pref']">
                <xsl:value-of
-                  select="fn:normalize-space($indexkey/tei:death/tei:settlement/tei:placeName[not(@type) or @type = 'pref'])"
+                  select="fn:normalize-space($indexkey/tei:death[1]/tei:settlement[1]/tei:placeName[not(@type) or @type = 'pref'])"
                />
             </xsl:when>
-            <xsl:when test="$indexkey/tei:death/tei:settlement/tei:placeName[@type = 'deportation']">
+            <xsl:when test="$indexkey/tei:death[1]/tei:settlement[1]/tei:placeName[@type = 'deportation']">
                <xsl:value-of
-                  select="concat('deportiert ', fn:normalize-space($indexkey/tei:death/tei:settlement/tei:placeName))"
+                  select="concat('deportiert ', fn:normalize-space($indexkey/tei:death[1]/tei:settlement[1]/tei:placeName))"
                />
             </xsl:when>
-            <xsl:when test="$indexkey/tei:death/tei:settlement/tei:placeName[@type = 'burial']">
+            <xsl:when test="$indexkey/tei:death[1]/tei:settlement[1]/tei:placeName[@type = 'burial']">
                <xsl:value-of
-                  select="concat('beerdigt ', fn:normalize-space($indexkey/tei:death/tei:settlement/tei:placeName))"
+                  select="concat('beerdigt ', fn:normalize-space($indexkey/tei:death[1]/tei:settlement[1]/tei:placeName))"
                />
             </xsl:when>
          </xsl:choose>
       </xsl:variable>
       <xsl:variable name="kGeburtsort" as="xs:string?">
          <xsl:choose>
-            <xsl:when test="$indexkey/tei:birth/tei:placeName/tei:settlement">
-               <xsl:value-of select="$indexkey/tei:birth/tei:placeName/tei:settlement"/>
+            <xsl:when test="$indexkey/tei:birth[1]/tei:placeName[1]/tei:settlement">
+               <xsl:value-of select="$indexkey/tei:birth[1]/tei:placeName[1]/tei:settlement"/>
             </xsl:when>
-            <xsl:when test="$indexkey/tei:birth/tei:settlement/tei:placeName">
-               <xsl:value-of select="$indexkey/tei:birth/tei:settlement/tei:placeName"/>
+            <xsl:when test="$indexkey/tei:birth[1]/tei:settlement[1]/tei:placeName">
+               <xsl:value-of select="$indexkey/tei:birth[1]/tei:settlement[1]/tei:placeName"/>
             </xsl:when>
          </xsl:choose>
       </xsl:variable>
@@ -5136,7 +5136,7 @@
                   <list>
                      <xsl:for-each select="$place/tei:location[@type='located_in_place']">
                      <xsl:choose>
-                        <xsl:when test="key('placeType-lookup', tei:placeName/@ref, $placeTypes)"></xsl:when>
+                        <xsl:when test="key('placeType-lookup', tei:placeName[1]/@ref, $placeTypes)"></xsl:when>
                         <xsl:otherwise>
                            <item>
                               <xsl:copy-of select="*"/>
