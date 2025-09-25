@@ -1,6 +1,10 @@
-<?xml version='1.0' encoding='UTF-8'?>
+<?xml version="1.0" encoding="UTF-8"?>
 <?xml-model href="../meta/schnitzler-briefe-schematron.sch" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
-<TEI xmlns="http://www.tei-c.org/ns/1.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.tei-c.org/ns/1.0 ../meta/schnitzler-briefe-schema.xsd" xml:id="L03779" xml:base="https://id.acdh.oeaw.ac.at/schnitzler/schnitzler-briefe/editions">
+<TEI xmlns="http://www.tei-c.org/ns/1.0"
+     xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+     xsi:schemaLocation="http://www.tei-c.org/ns/1.0 ../meta/schnitzler-briefe-schema.xsd"
+     xml:id="L03779"
+     xml:base="https://id.acdh.oeaw.ac.at/schnitzler/schnitzler-briefe/editions">
    <teiHeader>
       <fileDesc>
          <titleStmt>
@@ -83,10 +87,13 @@
                               <extent>
                                  <measure unit="seite" quantity="2"/>
                                  <measure unit="blatt" quantity="1"/>
-                                 <measure unit="zeichenanzahl" quantity="1647"/>
+                                 <measure unit="zeichenanzahl" quantity="1646"/>
                               </extent>
                            </supportDesc>
                         </objectDesc>
+                        <typeDesc>
+                           <typeNote medium="schreibmaschine"/>
+                        </typeDesc>
                         <handDesc>
                            <handNote medium="schwarze-tinte" style="lateinische-kurrent">
                               <p>Korrekturen, Ergänzungen, Unterschrift</p>
@@ -132,15 +139,25 @@
                   – 5. 12. 1914?]</date>
                <placeName ref="#pmb50" evidence="conjecture">Wien</placeName>
             </correspAction>
-            <correspContext><ref type="belongsToCorrespondence" target="correspondence_13212">Zweig, Stefan</ref>
+            <correspContext>
+               <ref type="belongsToCorrespondence" target="correspondence_13212">Zweig, Stefan</ref>
                <ref subtype="previous_letter" type="withinCollection" target="L03649">Zweig an Schnitzler, [29. 11. 1914]</ref>
                <ref subtype="next_letter" type="withinCollection" target="L03683">Zweig an Schnitzler, 3. 12. 1914</ref>
-               <ref subtype="previous_letter" type="withinCorrespondence" source="correspondence_13212" target="L03649">Zweig an Schnitzler, [29. 11. 1914]</ref>
-               <ref subtype="next_letter" type="withinCorrespondence" source="correspondence_13212" target="L03683">Zweig an Schnitzler, 3. 12. 1914</ref>
-            </correspContext></correspDesc>
+               <ref subtype="previous_letter"
+                    type="withinCorrespondence"
+                    source="correspondence_13212"
+                    target="L03649">Zweig an Schnitzler, [29. 11. 1914]</ref>
+               <ref subtype="next_letter"
+                    type="withinCorrespondence"
+                    source="correspondence_13212"
+                    target="L03683">Zweig an Schnitzler, 3. 12. 1914</ref>
+            </correspContext>
+         </correspDesc>
       </profileDesc>
-      <revisionDesc status="proposed">
+      <revisionDesc status="candidate">
          <change who="MAM" when="2025-07-17">Export aus Transkribus</change>
+         <change who="MAM" when="2025-09-25">Durchsicht</change>
+         <change who="MAM" when="2025-09-25">Index check</change>
       </revisionDesc>
    </teiHeader>
    <facsimile>
@@ -168,7 +185,7 @@
             </opener>
             <p>Hier beigeschlossen ein Exemplar der <rs type="work" ref="#pmb296393" subtype="implied">Erklärung</rs> mit den besprochenen Aenderungen. Einen andern,
                einen wahrhaft bekennerischen Ton, vermöchte ich kaum zu finden. Je mehr man über die
-               Sache nachdenkt, umso dümmer kommt sie einem vor. Ich wollte Sie noch fragen: Was<add place="inline">,</add> denken sie, soll nun <anchor type="commentary" xml:id="K_L03779-1"/>
+               Sache nachdenkt, umso dümmer kommt sie einem vor. Ich wollte Sie noch fragen: Was<add place="inline">,</add> denken Sie, soll nun <anchor type="commentary" xml:id="K_L03779-1"/>
                <rs type="person" ref="#pmb12543">Rolland</rs>
                <note type="commentary" corresp="K_L03779-1">
                   <rs type="person" ref="#pmb13212">Zweig</rs> schrieb am <date>5. 12. 1914</date> an <rs type="person" ref="#pmb12543">Rolland</rs>: »<quote>
@@ -196,7 +213,7 @@
                         Verlag</publisher>
                      <space unit="chars" quantity="1"/>
                      <date>2014</date>
-                  </bibl>. </note> mit unseren <rs type="work" ref="#pmb296393" subtype="implied">Erklärungen</rs> tun? Sie ins <rs type="place" ref="#pmb166">Französische</rs>
+                  </bibl>. </note> mit unseren <rs type="work" ref="#pmb296393" subtype="implied">Erklärungen</rs> tun? Sie ins <rs type="place" ref="#pmb166">Französi<add place="inline">s</add>che</rs>
                übersetzen und eventuell nicht nur an das <rs type="org" ref="#pmb296405">Journal de Gen<subst>
                      <del rend="overwritten">é</del>
                      <add place="inline">è</add>
@@ -210,9 +227,10 @@
                eine Zeile, wann ich Sie anrufen dürfte. Den <anchor type="commentary" xml:id="K_L03779-3"/>Appell an die Blätter<note type="commentary" corresp="K_L03779-3">
                   <ref type="schnitzler-briefe" target="L03774"/>.</note>, mit dem meine vorige <rs type="work" ref="#pmb296393" subtype="implied">Erklärung</rs> schloss, <pb facs="0072_FL81799731"/>(<anchor type="commentary" xml:id="K_L03779-4"/>bitte <add place="above">die</add> beide<add place="inline">n</add> Exemplare zu
                   vernichten<note type="commentary" corresp="K_L03779-4">
-                  <rs type="person" ref="#pmb13212">Zweig</rs> kam der Bitte nicht nach, er behielt
-                  sich ein Exemplar.</note>) habe ich diesmal weggelassen. Ich glaube, man bedarf
-               ihrer nicht. Ich hatte heute den sonderbaren <anchor type="commentary" xml:id="K_L03779-5"/>Traum<note type="commentary" corresp="K_L03779-5">
+                  <rs type="person" ref="#pmb13212">Zweig</rs> kam der Bitte nicht nach, die erste Fassung 
+                     ist als Beilage von <ref type="schnitzler-briefe" target="L03774"/> überliefert.</note>) habe ich diesmal weggelassen. Ich glaube, man bedarf
+               ihrer nicht.</p>
+            <p>Ich hatte heute den sonderbaren <anchor type="commentary" xml:id="K_L03779-5"/>Traum<note type="commentary" corresp="K_L03779-5">
                   <ref type="schnitzler-tagebuch" subtype="Cf" target="1914-12-02"/>.</note>, dass
                ich mit Ihnen in einem offenen Fiaker auf erhöhter Strasse durch eine irgendwie
                orientalische Stadt fuhr; <subst>
@@ -349,6 +367,26 @@
                      <desc n="1370">teilgenommen an</desc>
                      <label>Lesung von Richard Dehmel, 6.3.1904</label>
                      <idno type="URL" subtype="pmb">https://pmb.acdh.oeaw.ac.at/entity/50184/</idno>
+                  </event>
+                  <event n="Theateraufführung" ref="pmb249556" when="1909-12-12">
+                     <desc n="1370">teilgenommen an</desc>
+                     <label>Aufführung von Der Ruf des Lebens, 12.12.1909</label>
+                     <idno type="URL" subtype="pmb">https://pmb.acdh.oeaw.ac.at/entity/249556/</idno>
+                  </event>
+                  <event n="Private Lesung" ref="pmb296492" when="1910-10-11">
+                     <desc n="1370">teilgenommen an</desc>
+                     <label>Private Lesung von Die ungleichen Schalen, 11.10.1910</label>
+                     <idno type="URL" subtype="pmb">https://pmb.acdh.oeaw.ac.at/entity/296492/</idno>
+                  </event>
+                  <event n="Theateraufführung" ref="pmb251446" when="1910-11-27">
+                     <desc n="1370">teilgenommen an</desc>
+                     <label>Aufführung von Der junge Medardus, 27.11.1910</label>
+                     <idno type="URL" subtype="pmb">https://pmb.acdh.oeaw.ac.at/entity/251446/</idno>
+                  </event>
+                  <event n="Liederkonzert" ref="pmb183571" when="1911-02-05">
+                     <desc n="1370">teilgenommen an</desc>
+                     <label>Gesangskonzert Olga Schnitzler, 5.2.1911</label>
+                     <idno type="URL" subtype="pmb">https://pmb.acdh.oeaw.ac.at/entity/183571/</idno>
                   </event>
                   <event n="Generalprobe" ref="pmb239133" when="1912-10-25">
                      <desc n="1370">teilgenommen an</desc>
@@ -494,7 +532,7 @@
                      <idno type="URL" subtype="pmb">https://pmb.acdh.oeaw.ac.at/entity/143820/</idno>
                   </event>
                </listEvent>
-               <note type="references"/>
+               <note type="references"> </note>
             </person>
          </listPerson>
          <listBibl>
@@ -502,8 +540,7 @@
                <title>Ein Brief Artur Schnitzlers</title>
                <title type="werk_link">https://www.e-newspaperarchives.ch/?a=d&amp;d=NZZ19141222-04.2.4</title>
                <title type="werk_link">https://schnitzler-interviews.acdh.oeaw.ac.at/P111.html</title>
-               <title type="werk_bibliografische-angabe">Ein Brief Artur Schnitzlers. In: Neue
-                  Zürcher Zeitung, Jg. 135, Nr. 1700, 22. 12. 1914, 2. Mittagsblatt, S. 2</title>
+               <title type="werk_bibliografische-angabe">Ein Brief Artur Schnitzlers. In: Neue Zürcher Zeitung, Jg. 135, Nr. 1700, 22. 12. 1914, 2. Mittagsblatt, S. 2</title>
                <author ref="pmb2121" role="hat-geschaffen">Schnitzler, Arthur</author>
                <date>1914-12-22</date>
                <idno type="URL" subtype="pmb">https://pmb.acdh.oeaw.ac.at/entity/296393/</idno>
@@ -525,8 +562,7 @@
          <listPlace>
             <place xml:id="pmb50">
                <placeName>Wien</placeName>
-               <placeName type="ort_fruherer-name">K.K. Reichshaupt- und Residenzstadt
-                  Wien</placeName>
+               <placeName type="ort_fruherer-name">K.K. Reichshaupt- und Residenzstadt Wien</placeName>
                <placeName type="alternative-name">Bécs</placeName>
                <placeName type="alternative-name">Land Wien</placeName>
                <placeName type="alternative-name">Vídeň</placeName>
