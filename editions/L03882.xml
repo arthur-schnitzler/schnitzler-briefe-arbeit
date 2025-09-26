@@ -1,6 +1,10 @@
-<?xml version='1.0' encoding='UTF-8'?>
+<?xml version="1.0" encoding="UTF-8"?>
 <?xml-model href="../meta/schnitzler-briefe-schematron.sch" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
-<TEI xmlns="http://www.tei-c.org/ns/1.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.tei-c.org/ns/1.0 ../meta/schnitzler-briefe-schema.xsd" xml:id="L03882" xml:base="https://id.acdh.oeaw.ac.at/schnitzler/schnitzler-briefe/editions">
+<TEI xmlns="http://www.tei-c.org/ns/1.0"
+     xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+     xsi:schemaLocation="http://www.tei-c.org/ns/1.0 ../meta/schnitzler-briefe-schema.xsd"
+     xml:id="L03882"
+     xml:base="https://id.acdh.oeaw.ac.at/schnitzler/schnitzler-briefe/editions">
    <teiHeader>
       <fileDesc>
          <titleStmt>
@@ -83,7 +87,7 @@
                               <extent>
                                  <measure unit="seite" quantity="2"/>
                                  <measure unit="blatt" quantity="1"/>
-                                 <measure unit="zeichenanzahl" quantity="736"/>
+                                 <measure unit="zeichenanzahl" quantity="738"/>
                               </extent>
                            </supportDesc>
                         </objectDesc>
@@ -118,11 +122,20 @@
                <date evidence="conjecture" notBefore="1914-12-20" notAfter="1914-12-24">[20. 12. 1914 – 24. 12. 1914?]</date>
                <placeName ref="#pmb50" evidence="conjecture">Wien</placeName>
             </correspAction>
-         <correspContext><ref type="belongsToCorrespondence" target="correspondence_12543">Rolland, Romain</ref>
+            <correspContext>
+               <ref type="belongsToCorrespondence" target="correspondence_12543">Rolland, Romain</ref>
                <ref subtype="previous_letter" type="withinCollection" target="L02200">Schnitzler an Brandes, 18. 12. 1914</ref>
                <ref subtype="next_letter" type="withinCollection" target="L02201">Brandes an Schnitzler, 23. 12. 1914</ref>
-               <ref subtype="next_letter" type="withinCorrespondence" source="correspondence_12543" target="L03883">Rolland an Schnitzler, 6. 2. 1916</ref>
-            </correspContext></correspDesc>
+               <ref subtype="previous_letter"
+                    type="withinCorrespondence"
+                    source="correspondence_12543"
+                    target="L03883">Schnitzler an Rolland, 14. 12. 1914</ref>
+               <ref subtype="next_letter"
+                    type="withinCorrespondence"
+                    source="correspondence_12543"
+                    target="L03885">Schnitzler an Rolland, 7. 1. 1915</ref>
+            </correspContext>
+         </correspDesc>
       </profileDesc>
       <revisionDesc status="proposed">
          <change who="MAM" when="2025-09-26">Angelegt</change>
@@ -227,21 +240,33 @@
                </seg>
                <salute>Cher Monsieur Arthur Schnitzler</salute>
             </opener>
-            <p><foreign xml:lang="fr">La traduction de votre <rs type="work" ref="#pmb58490">lettre
+            <p>
+               <foreign xml:lang="fr">La traduction de votre <rs type="work" ref="#pmb58490">lettre
                      de protestation</rs> paraîtra dans le <hi rend="underline" n="1">
                      <rs type="work" ref="#pmb58493">Journal de Genève</rs>
                   </hi> de demain ou d’après-demain. Je vous ferai envoyer aussitôt le numéro. Je
                   l’ai adressé le second <rs type="work" ref="#pmb296393" subtype="implied">exemplaire</rs> à la <rs type="org" ref="#pmb29672">
                      <hi rend="underline" n="1">Neue Zürcher Zeitung</hi>
-                  </rs>.</foreign></p>
-            <p><foreign xml:lang="fr">Je suis heureux de pouvoir</foreign><space unit="chars" quantity="1"/><add place="above"><foreign xml:lang="fr">vous</foreign></add><space unit="chars" quantity="1"/><foreign xml:lang="fr">aider à faire entendre une voix
+                  </rs>.</foreign>
+            </p>
+            <p>
+               <foreign xml:lang="fr">Je suis heureux de pouvoir</foreign>
+               <space unit="chars" quantity="1"/>
+               <add place="above">
+                  <foreign xml:lang="fr">vous</foreign>
+               </add>
+               <space unit="chars" quantity="1"/>
+               <foreign xml:lang="fr">aider à faire entendre une voix
                   de justice et de raison, au milieu de ce délire de l’esprit <rs type="place" ref="#pmb468">européen</rs>. On dit que la pire chose a son utilité: je veux le
                   croire, en voyant que cette guerre abominable m’a procuré l’occasion d’entrer en
                   rapports amicaux avec <pb facs="MS-SCHNITZLER-B-00086-000-00005-2"/>vous, et de
                   vous témoigner ma vive sympathie artistique pour votre œuvre si humaine, – théâtre
-                  et romans</foreign></p>
-            <closer><foreign xml:lang="fr">Veuillez croire, cher Monsieur Dr. Schnitzler, à mes
-                  sentiments tout dévoués</foreign><lb/>
+                  et romans</foreign>
+            </p>
+            <closer>
+               <foreign xml:lang="fr">Veuillez croire, cher Monsieur Dr. Schnitzler, à mes
+                  sentiments tout dévoués</foreign>
+               <lb/>
                <signed>Romain Rolland</signed>
             </closer>
          </div>
@@ -366,9 +391,7 @@
             <bibl xml:id="pmb58490">
                <title>Une protestation d’Arthur Schnitzler</title>
                <title type="werk_link">https://schnitzler-interviews.acdh.oeaw.ac.at/P111.html</title>
-               <title type="werk_bibliografische-angabe">Schnitzler, Arthur, Rolland, Romain
-                  [Einleitung und Übersetzung]: Une protestation d’Arthur Schnitzler. In: Journal de
-                  Genève, Jg. 85, 21. 12. 1914, 3. Ausgabe, S. [1]</title>
+               <title type="werk_bibliografische-angabe">Schnitzler, Arthur, Rolland, Romain [Einleitung und Übersetzung]: Une protestation d’Arthur Schnitzler. In: Journal de Genève, Jg. 85, 21. 12. 1914, 3. Ausgabe, S. [1]</title>
                <author ref="pmb2121" role="hat-geschaffen">Schnitzler, Arthur</author>
                <author ref="pmb12543" role="hat-geschaffen">Rolland, Romain</author>
                <author ref="pmb12543" role="hat-ubersetzt">Rolland, Romain</author>
@@ -389,8 +412,7 @@
                <title>Ein Brief Artur Schnitzlers</title>
                <title type="werk_link">https://www.e-newspaperarchives.ch/?a=d&amp;d=NZZ19141222-04.2.4</title>
                <title type="werk_link">https://schnitzler-interviews.acdh.oeaw.ac.at/P111.html</title>
-               <title type="werk_bibliografische-angabe">Ein Brief Artur Schnitzlers. In: Neue
-                  Zürcher Zeitung, Jg. 135, Nr. 1700, 22. 12. 1914, 2. Mittagsblatt, S. 2</title>
+               <title type="werk_bibliografische-angabe">Ein Brief Artur Schnitzlers. In: Neue Zürcher Zeitung, Jg. 135, Nr. 1700, 22. 12. 1914, 2. Mittagsblatt, S. 2</title>
                <author ref="pmb2121" role="hat-geschaffen">Schnitzler, Arthur</author>
                <date>1914-12-22</date>
                <idno type="URL" subtype="pmb">https://pmb.acdh.oeaw.ac.at/entity/296393/</idno>
@@ -432,6 +454,51 @@
                <note type="image">
                   <figure>
                      <graphic url="https://iiif.onb.ac.at/images/AKON/AK116_160/160/full/,600/0/native.jpg"/>
+                  </figure>
+               </note>
+            </place>
+            <place xml:id="pmb50">
+               <placeName>Wien</placeName>
+               <placeName type="ort_fruherer-name">K.K. Reichshaupt- und Residenzstadt Wien</placeName>
+               <placeName type="alternative-name">Bécs</placeName>
+               <placeName type="alternative-name">Land Wien</placeName>
+               <placeName type="alternative-name">Vídeň</placeName>
+               <placeName type="alternative-name">Wenia</placeName>
+               <placeName type="alternative-name">Beč</placeName>
+               <placeName type="ort_fruherer-name">Vindobona</placeName>
+               <placeName type="alternative-name">Vienna</placeName>
+               <desc type="entity_type">A.ADM2</desc>
+               <desc type="entity_type_id">1135</desc>
+               <location type="coords">
+                  <geo>48,208333 16,373056</geo>
+               </location>
+               <location type="located_in_place">
+                  <placeName ref="pmb41240">Österreich</placeName>
+                  <geo>47,33333 13,33333</geo>
+               </location>
+               <location type="located_in_place">
+                  <placeName ref="pmb235218">Windmühlhöhe</placeName>
+                  <geo>48,24077 16,32092</geo>
+               </location>
+               <idno type="URL" subtype="geonames">https://sws.geonames.org/2761369/</idno>
+               <idno type="URL" subtype="d-nb">https://d-nb.info/gnd/4066009-6</idno>
+               <idno type="URL" subtype="schnitzler-bahr">https://schnitzler-bahr.acdh.oeaw.ac.at/pmb50.html</idno>
+               <idno type="URL" subtype="pmb">https://pmb.acdh.oeaw.ac.at/entity/50/</idno>
+               <idno type="URL" subtype="pmb">https://pmb.acdh.oeaw.ac.at/entity/2316/</idno>
+               <idno type="URL" subtype="pmb">https://pmb.acdh.oeaw.ac.at/entity/20954/</idno>
+               <idno type="URL" subtype="pmb">https://pmb.acdh.oeaw.ac.at/entity/65221/</idno>
+               <idno type="URL" subtype="pmb">https://pmb.acdh.oeaw.ac.at/entity/65223/</idno>
+               <idno type="URL" subtype="kraus">https://kraus.wienbibliothek.at/register/orte/pmb50</idno>
+               <idno type="URL" subtype="wikidata">http://www.wikidata.org/entity/Q1741</idno>
+               <idno type="URL" subtype="wikipedia">https://de.wikipedia.org/wiki/Wien</idno>
+               <idno type="URL" subtype="schnitzler-interviews">https://schnitzler-interviews.acdh.oeaw.ac.at/pmb50.html</idno>
+               <idno type="URL" subtype="geonames">https://sws.geonames.org/2761333/</idno>
+               <idno type="URL" subtype="pmb">https://pmb.acdh.oeaw.ac.at/entity/33999/</idno>
+               <idno type="URL" subtype="schnitzler-tagebuch">https://schnitzler-tagebuch.acdh.oeaw.ac.at/pmb50.html</idno>
+               <idno type="URL" subtype="schnitzler-briefe">https://schnitzler-briefe.acdh.oeaw.ac.at/pmb50.html</idno>
+               <note type="image">
+                  <figure>
+                     <graphic url="https://iiif.onb.ac.at/images/AKON/AK117_016/016/full/,600/0/native.jpg"/>
                   </figure>
                </note>
             </place>
