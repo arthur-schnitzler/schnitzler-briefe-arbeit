@@ -1,6 +1,10 @@
-<?xml version='1.0' encoding='UTF-8'?>
+<?xml version="1.0" encoding="UTF-8"?>
 <?xml-model href="../meta/schnitzler-briefe-schematron.sch" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
-<TEI xmlns="http://www.tei-c.org/ns/1.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.tei-c.org/ns/1.0 ../meta/schnitzler-briefe-schema.xsd" xml:id="L03648" xml:base="https://id.acdh.oeaw.ac.at/schnitzler/schnitzler-briefe/editions">
+<TEI xmlns="http://www.tei-c.org/ns/1.0"
+     xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+     xsi:schemaLocation="http://www.tei-c.org/ns/1.0 ../meta/schnitzler-briefe-schema.xsd"
+     xml:id="L03648"
+     xml:base="https://id.acdh.oeaw.ac.at/schnitzler/schnitzler-briefe/editions">
    <teiHeader>
       <fileDesc>
          <titleStmt>
@@ -83,7 +87,7 @@
                               <extent>
                                  <measure unit="blatt" quantity="1"/>
                                  <measure unit="seite" quantity="2"/>
-                                 <measure unit="zeichenanzahl" quantity="1050"/>
+                                 <measure unit="zeichenanzahl" quantity="1056"/>
                               </extent>
                            </supportDesc>
                         </objectDesc>
@@ -93,6 +97,11 @@
                         <additions>
                            <incident type="receiver" rend="roter-buntstift">
                               <desc>eine Unterstreichung</desc>
+                           </incident>
+                           <incident type="receiver" rend="bleistift">
+                              <desc>Vermerk: »<quote>
+                                    <hi rend="latintype">Zweig</hi>
+                                 </quote>«</desc>
                            </incident>
                         </additions>
                      </physDesc>
@@ -131,19 +140,29 @@
             </correspAction>
             <correspAction type="received">
                <persName ref="#pmb2121">Schnitzler, Arthur</persName>
-               <date evidence="conjecture" notBefore="1914-12-13" notAfter="1914-12-17">[13. 12. 1914 – 17. 12. 1914?]</date>
-               <placeName ref="#pmb50">Wien</placeName>
+               <date evidence="conjecture" notBefore="1914-12-12" notAfter="1914-12-16">[12. 12. 1914 – 16. 12. 1914?]</date>
+               <placeName ref="#pmb50" evidence="conjecture">Wien</placeName>
             </correspAction>
-            <correspContext><ref type="belongsToCorrespondence" target="correspondence_13212">Zweig, Stefan</ref>
+            <correspContext>
+               <ref type="belongsToCorrespondence" target="correspondence_13212">Zweig, Stefan</ref>
                <ref subtype="previous_letter" type="withinCollection" target="L03645">Zweig an Schnitzler, [7.?] 12. 1914</ref>
                <ref subtype="next_letter" type="withinCollection" target="L02200">Schnitzler an Brandes, 18. 12. 1914</ref>
-               <ref subtype="previous_letter" type="withinCorrespondence" source="correspondence_13212" target="L03645">Zweig an Schnitzler, [7.?] 12. 1914</ref>
-               <ref subtype="next_letter" type="withinCorrespondence" source="correspondence_13212" target="L03771">Schnitzler an Zweig, 15. 1. 1915</ref>
-            </correspContext></correspDesc>
+               <ref subtype="previous_letter"
+                    type="withinCorrespondence"
+                    source="correspondence_13212"
+                    target="L03645">Zweig an Schnitzler, [7.?] 12. 1914</ref>
+               <ref subtype="next_letter"
+                    type="withinCorrespondence"
+                    source="correspondence_13212"
+                    target="L03771">Schnitzler an Zweig, 15. 1. 1915</ref>
+            </correspContext>
+         </correspDesc>
       </profileDesc>
-      <revisionDesc status="proposed">
+      <revisionDesc status="candidate">
          <change who="MAM" when="2025-05-21">Export aus Transkribus</change>
          <change who="MAM" when="2025-06-05">Durchsicht</change>
+         <change who="MAM" when="2025-09-26">Durchsicht</change>
+         <change who="MAM" when="2025-09-26">Index check</change>
       </revisionDesc>
    </teiHeader>
    <facsimile>
@@ -171,26 +190,28 @@
                   <hi rend="pre-print">
                      <hi rend="capitals">
                         <rs type="place" ref="#pmb50">Wien</rs>,</hi>
-                     <space unit="chars" quantity="1"/>
-                     <date>12, XII</date>
                   </hi>
+                  <space unit="chars" quantity="1"/>
+                  <date>12. XII</date>
                </seg>
             </opener>
             <p>
                <salute>Verehrter Herr Doktor,</salute>
                <space unit="chars" quantity="1"/>
-               <rs type="person" ref="#pmb12543">Romain Rolland</rs> schreibt mir soeben »<anchor type="commentary" xml:id="K_L03648-1"/>Je recois le noble ècrit de Arthur
-               Schnitzler. Je le traduirai avec plaisir et je prierai <rs type="person" ref="#pmb259326">Seippel</rs> de le faire paraître dans le <rs type="work" ref="#pmb58493">Journal de Genèvre</rs>. (Envoyez moi un second exemplaire pour un
+               <rs type="person" ref="#pmb12543">Romain Rolland</rs> schreibt mir soeben »<anchor type="commentary" xml:id="K_L03648-1"/>
+               <foreign xml:lang="fr">Je recois le noble <rs type="work" subtype="implied" ref="#pmb58490">écrit</rs> de Arthur
+               Schnitzler. Je le traduirai avec plaisir et je prierai <rs type="person" ref="#pmb259326">Seippel</rs> de le faire paraître dans le <rs type="work" ref="#pmb58493">Journal de Genève</rs>. (Envoyez moi un second exemplaire pour un
                   <rs type="work" ref="#pmb42406" subtype="implied">journal</rs> de la <rs type="place" ref="#pmb43435">Suisse Allemande</rs>.) Je crains seulement qu’on
                n’objecte que personne, ici ni en <rs type="place" ref="#pmb166">France</rs>, n’a
-               entendu parler de ces mensonges; personne chez nons, n’a élevé, ni pensé a elever des
-               accusations semblables contre A. S., ni contre aucun des principans écrivains
-                  allemands.<note type="commentary" corresp="K_L03648-1">
+               entendu parler de ces mensonges; personne chez nous, n’a élevé, ni pensé a elever des
+               accusations semblables contre A. S., ni contre aucun des principaux écrivains
+                  allemands.</foreign>
+               <note type="commentary" corresp="K_L03648-1">
                   <rs type="person" ref="#pmb12543">Romain Rolland</rs> an <rs type="person" ref="#pmb13212">Stefan
-                     Zweig</rs>, <date>9. 12. 1914</date>: »<quote>Ich erhalte den hochherzigen Text
+                     Zweig</rs>, <date>9. 12. 1914</date>: »<quote>Ich erhalte den hochherzigen <rs type="work" subtype="implied" ref="#pmb58490">Text</rs>
                      von <rs type="person" ref="#pmb2121">Arthur Schnitzler</rs>. Ich werde ihn gern
                      übersetzen und <rs type="person" ref="#pmb259326">Seippel</rs> bitten, dass er
-                     ihn im ›<rs type="work" ref="#pmb58493">Journal de Genèvre</rs>‹
+                     ihn im ›<rs type="work" ref="#pmb58493">Journal de Genève</rs>‹
                      veröffentlicht. (Schicken Sie mir noch ein zweites Exemplar für eine <rs type="work" ref="#pmb42406" subtype="implied">Zeitung</rs> in der <rs type="place" ref="#pmb43435">deutschsprachigen Schweiz</rs>.) Nur glaube
                      ich, dass niemand von diesen Lügen etwas gehört hat, weder hier noch in <rs type="place" ref="#pmb166">Frankreich</rs>; es ist bei uns niemandem in den
                      Sinn gekommen, derartige Anschuldigungen gegen <rs type="person" ref="#pmb2121">Arthur Schnitzler</rs> oder irgendeinen anderen großen deutschen
@@ -213,7 +234,10 @@
                <rs type="place" ref="#pmb294001">Genf, Hôtel Beau Sejour</rs>.</p>
             <p>Das kleine <anchor type="commentary" xml:id="K_L03648-2"/>
                <rs type="work" ref="#pmb294020" subtype="implied">Gedicht</rs>
-               <note type="commentary" corresp="K_L03648-2">nicht ermittelt. Die Details dürften beim letzten Treffen am
+               <note type="commentary" corresp="K_L03648-2">nicht ermittelt. Es dürfte sich um ein Lied 
+                  handeln, das <rs type="person" ref="#pmb2173">Olga Schnitzler</rs> anlässlich des <rs type="event" ref="#pmb183655">
+                     <rs type="person" ref="#pmb12071">Liliencron</rs>-Abends</rs>
+                  am <ref type="schnitzler-kultur" target="pmb183655" subtype="date-only"/> vortragen sollte. Die Details könnten beim letzten Treffen am
                      <ref type="schnitzler-tagebuch" subtype="date-only" target="1914-12-10"/>
                   mündlich besprochen worden sein.</note> für das Lied Ihrer Frau <rs type="person" ref="#pmb2173" subtype="implied">Gemahlin</rs> leistet der <hi rend="underline" n="1">guten</hi> Verdeutschung hartnäckigen Widerstand. Hier wie überall offenbart
                sich’s neuerlich, dass das Einfachste immer auch das Schwerste ist.</p>
@@ -308,6 +332,26 @@
                      <desc n="1370">teilgenommen an</desc>
                      <label>Lesung von Richard Dehmel, 6.3.1904</label>
                      <idno type="URL" subtype="pmb">https://pmb.acdh.oeaw.ac.at/entity/50184/</idno>
+                  </event>
+                  <event n="Theateraufführung" ref="pmb249556" when="1909-12-12">
+                     <desc n="1370">teilgenommen an</desc>
+                     <label>Aufführung von Der Ruf des Lebens, 12.12.1909</label>
+                     <idno type="URL" subtype="pmb">https://pmb.acdh.oeaw.ac.at/entity/249556/</idno>
+                  </event>
+                  <event n="Private Lesung" ref="pmb296492" when="1910-10-11">
+                     <desc n="1370">teilgenommen an</desc>
+                     <label>Private Lesung von Die ungleichen Schalen, 11.10.1910</label>
+                     <idno type="URL" subtype="pmb">https://pmb.acdh.oeaw.ac.at/entity/296492/</idno>
+                  </event>
+                  <event n="Theateraufführung" ref="pmb251446" when="1910-11-27">
+                     <desc n="1370">teilgenommen an</desc>
+                     <label>Aufführung von Der junge Medardus, 27.11.1910</label>
+                     <idno type="URL" subtype="pmb">https://pmb.acdh.oeaw.ac.at/entity/251446/</idno>
+                  </event>
+                  <event n="Liederkonzert" ref="pmb183571" when="1911-02-05">
+                     <desc n="1370">teilgenommen an</desc>
+                     <label>Gesangskonzert Olga Schnitzler, 5.2.1911</label>
+                     <idno type="URL" subtype="pmb">https://pmb.acdh.oeaw.ac.at/entity/183571/</idno>
                   </event>
                   <event n="Generalprobe" ref="pmb239133" when="1912-10-25">
                      <desc n="1370">teilgenommen an</desc>
@@ -1761,11 +1805,80 @@
                </listEvent>
                <note type="references">None  </note>
             </person>
+            <person xml:id="pmb12071">
+               <persName>
+                  <forename>Detlev von</forename>
+                  <surname>Liliencron</surname>
+               </persName>
+               <persName type="legacy-name-merge">Liliencron, Detlev von</persName>
+               <birth>
+                  <date when="1844-06-03">03.06.1844</date>
+                  <settlement ref="pmb907">
+                     <placeName type="pref">Kiel</placeName>
+                     <location>
+                        <geo>54,32133 10,13489</geo>
+                     </location>
+                  </settlement>
+               </birth>
+               <death>
+                  <date when="1909-07-22">22.07.1909</date>
+                  <settlement ref="pmb61082">
+                     <placeName type="pref">Rahlstedt</placeName>
+                     <location>
+                        <geo>53,60194 10,15667</geo>
+                     </location>
+                  </settlement>
+               </death>
+               <sex value="male"/>
+               <occupation ref="pmb90">Schriftsteller/Schriftstellerin</occupation>
+               <occupation ref="pmb370">Dichter/Dichterin</occupation>
+               <occupation ref="pmb727">Dramatiker/Dramatikerin</occupation>
+               <idno type="URL" subtype="d-nb">https://d-nb.info/gnd/118572954</idno>
+               <idno type="URL" subtype="schnitzler-tagebuch">https://schnitzler-tagebuch.acdh.oeaw.ac.at/person_17547.html</idno>
+               <idno type="URL" subtype="schnitzler-bahr">https://schnitzler-bahr.acdh.oeaw.ac.at/pmb12071.html</idno>
+               <idno type="URL" subtype="pmb">https://pmb.acdh.oeaw.ac.at/entity/12071/</idno>
+               <idno type="URL" subtype="schnitzler-lektueren">https://schnitzler-lektueren.acdh.oeaw.ac.at/pmb12071.html</idno>
+               <idno type="URL" subtype="kraus">https://kraus.wienbibliothek.at/register/personen/pmb12071</idno>
+               <idno type="URL" subtype="fackel">https://fackel.oeaw.ac.at/?p=fackelp40404</idno>
+               <idno type="URL" subtype="wikidata">http://www.wikidata.org/entity/Q21119</idno>
+               <idno type="URL" subtype="wikipedia">https://de.wikipedia.org/wiki/Detlev_von_Liliencron</idno>
+               <idno type="URL" subtype="schnitzler-interviews">https://schnitzler-interviews.acdh.oeaw.ac.at/pmb12071.html</idno>
+               <idno type="URL" subtype="schnitzler-mikrofilme">https://schnitzler-mikrofilme.acdh.oeaw.ac.at/1416454.html?pmb12071</idno>
+               <idno type="URL" subtype="schnitzler-briefe">https://schnitzler-briefe.acdh.oeaw.ac.at/pmb12071.html</idno>
+               <idno type="URL" subtype="pmb">https://pmb.acdh.oeaw.ac.at/entity/161077/</idno>
+               <idno type="URL" subtype="bahr-textverzeichnis">https://bahr-textverzeichnis.acdh.oeaw.ac.at/pmb12071.html</idno>
+               <idno type="URL" subtype="bahr-textverzeichnis">https://bahr-textverzeichnis.acdh.oeaw.ac.at/TSN-listperson.html#pmb12071</idno>
+               <idno type="URL" subtype="stefanzweig">https://www.stefanzweig.digital/o:szd.personen/sdef:TEI/get#SZDPER.830</idno>
+               <idno type="URL" subtype="brenner">https://brenner.oeaw.ac.at/?p=brennerp2119</idno>
+               <idno type="URL" subtype="schaubuehne">https://schaubuehne.oeaw.ac.at/register.html?author=1253</idno>
+               <listEvent>
+                  <event n="Lesung" ref="pmb48855" when="1907-11-27">
+                     <desc n="1256">ist Arbeitskraft bei</desc>
+                     <label>Lesung von Liliencron, 27.11.1907</label>
+                     <idno type="URL" subtype="pmb">https://pmb.acdh.oeaw.ac.at/entity/48855/</idno>
+                  </event>
+               </listEvent>
+               <figure>
+                  <graphic url="https://upload.wikimedia.org/wikipedia/commons/thumb/4/4c/D_v_Lilienkron_1905.jpg/250px-D_v_Lilienkron_1905.jpg"/>
+               </figure>
+            </person>
          </listPerson>
          <listBibl>
+            <bibl xml:id="pmb58490">
+               <title>Une protestation d’Arthur Schnitzler</title>
+               <title type="werk_link">https://schnitzler-interviews.acdh.oeaw.ac.at/P111.html</title>
+               <title type="werk_bibliografische-angabe">Schnitzler, Arthur, Rolland, Romain [Einleitung und Übersetzung]: Une protestation d’Arthur Schnitzler. In: Journal de Genève, Jg. 85, 21. 12. 1914, 3. Ausgabe, S. [1]</title>
+               <author ref="pmb2121" role="hat-geschaffen">Schnitzler, Arthur</author>
+               <author ref="pmb12543" role="hat-geschaffen">Rolland, Romain</author>
+               <author ref="pmb12543" role="hat-ubersetzt">Rolland, Romain</author>
+               <date>1914-12-21</date>
+               <idno type="URL" subtype="pmb">https://pmb.acdh.oeaw.ac.at/entity/58490/</idno>
+               <idno type="URL" subtype="schnitzler-interviews">https://schnitzler-interviews.acdh.oeaw.ac.at/pmb58490.html</idno>
+               <note type="work_kind">Leserbrief</note>
+            </bibl>
             <bibl xml:id="pmb58493">
                <title>Journal de Genève</title>
-               <author ref="" role="hat-herausgegeben">Seippel, Paul</author>
+               <author ref="pmb259326" role="hat-herausgegeben">Seippel, Paul</author>
                <date to="1998-02-28">1826-01-05 – 1998-02-28</date>
                <idno type="URL" subtype="pmb">https://pmb.acdh.oeaw.ac.at/entity/58493/</idno>
                <idno type="URL" subtype="schnitzler-interviews">https://schnitzler-interviews.acdh.oeaw.ac.at/pmb58493.html</idno>
@@ -1783,20 +1896,9 @@
                <idno type="URL" subtype="hanslick">https://hanslick.acdh.oeaw.ac.at/hsl_work_id_2205.html</idno>
                <note type="work_kind">Tageszeitung</note>
             </bibl>
-            <bibl xml:id="pmb58490">
-               <title>Une protestation d’Arthur Schnitzler</title>
-               <title type="werk_link">https://schnitzler-interviews.acdh.oeaw.ac.at/P111.html</title>
-               <title type="werk_bibliografische-angabe">Romain Rolland, Arthur Schnitzler: Une protestation d’Arthur Schnitzler. In: Journal de Genève, Jg. 85, 21. 12. 1914, 3. Ausgabe, S. [1].</title>
-               <author ref="" role="hat-geschaffen">Schnitzler, Arthur</author>
-               <author ref="" role="hat-geschaffen">Rolland, Romain</author>
-               <date>1914-12-21</date>
-               <idno type="URL" subtype="pmb">https://pmb.acdh.oeaw.ac.at/entity/58490/</idno>
-               <idno type="URL" subtype="schnitzler-interviews">https://schnitzler-interviews.acdh.oeaw.ac.at/pmb58490.html</idno>
-               <note type="work_kind">Leserbrief</note>
-            </bibl>
             <bibl xml:id="pmb294020">
                <title>?? [Gedicht, das Stefan Zweig für Olga Schnitzler übersetzen soll]</title>
-               <author ref="" role="hat-ubersetzt">Zweig, Stefan</author>
+               <author ref="pmb13212" role="hat-ubersetzt">Zweig, Stefan</author>
                <idno type="URL" subtype="pmb">https://pmb.acdh.oeaw.ac.at/entity/294020/</idno>
                <note type="work_kind">Gedicht</note>
             </bibl>
@@ -1959,6 +2061,41 @@
                </note>
             </place>
          </listPlace>
+         <listEvent>
+            <event xml:id="pmb183655" when="1915-01-03">
+               <eventName n="Liederkonzert">Konzert Olga Schnitzler, 3.1.1915</eventName>
+               <note type="listorg">
+                  <listOrg>
+                     <org role="veranstaltet von">
+                        <orgName ref="pmb51283">Verein Volksheim</orgName>
+                     </org>
+                  </listOrg>
+               </note>
+               <idno type="URL" subtype="pmb">https://pmb.acdh.oeaw.ac.at/entity/183655/</idno>
+               <listPerson>
+                  <person role="hat als Arbeitskraft">
+                     <persName ref="pmb2173">Schnitzler, Olga</persName>
+                  </person>
+                  <person role="hat als Teilnehmer:in">
+                     <persName ref="pmb17540">Gund, Robert</persName>
+                  </person>
+                  <person role="hat als Teilnehmer:in">
+                     <persName ref="pmb2121">Schnitzler, Arthur</persName>
+                  </person>
+                  <person role="hat als Teilnehmer:in">
+                     <persName ref="pmb2642">Speidel-Haeberle, Else</persName>
+                  </person>
+               </listPerson>
+               <listPlace>
+                  <place>
+                     <placeName role="veranstaltet in" ref="pmb599">Volkshochschule Ottakring</placeName>
+                     <location>
+                        <geo>48,206694 16,333972</geo>
+                     </location>
+                  </place>
+               </listPlace>
+            </event>
+         </listEvent>
       </back>
    </text>
 </TEI>

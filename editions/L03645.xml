@@ -1,6 +1,10 @@
-<?xml version='1.0' encoding='UTF-8'?>
+<?xml version="1.0" encoding="UTF-8"?>
 <?xml-model href="../meta/schnitzler-briefe-schematron.sch" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
-<TEI xmlns="http://www.tei-c.org/ns/1.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.tei-c.org/ns/1.0 ../meta/schnitzler-briefe-schema.xsd" xml:id="L03645" xml:base="https://id.acdh.oeaw.ac.at/schnitzler/schnitzler-briefe/editions">
+<TEI xmlns="http://www.tei-c.org/ns/1.0"
+     xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+     xsi:schemaLocation="http://www.tei-c.org/ns/1.0 ../meta/schnitzler-briefe-schema.xsd"
+     xml:id="L03645"
+     xml:base="https://id.acdh.oeaw.ac.at/schnitzler/schnitzler-briefe/editions">
    <teiHeader>
       <fileDesc>
          <titleStmt>
@@ -82,7 +86,7 @@
                            <supportDesc>
                               <extent>
                                  <measure unit="karte" quantity="1"/>
-                                 <measure unit="zeichenanzahl" quantity="439"/>
+                                 <measure unit="zeichenanzahl" quantity="438"/>
                               </extent>
                            </supportDesc>
                         </objectDesc>
@@ -137,18 +141,29 @@
             </correspAction>
             <correspAction type="received">
                <persName ref="#pmb2121">Schnitzler, Arthur</persName>
+               <date evidence="conjecture" notBefore="1914-12-07" notAfter="1914-12-10">[7. 12. 1914 – 10. 12. 1914?]</date>
                <placeName ref="#pmb50" evidence="conjecture">Wien</placeName>
             </correspAction>
-            <correspContext><ref type="belongsToCorrespondence" target="correspondence_13212">Zweig, Stefan</ref>
+            <correspContext>
+               <ref type="belongsToCorrespondence" target="correspondence_13212">Zweig, Stefan</ref>
                <ref subtype="previous_letter" type="withinCollection" target="L03778">Schnitzler an Zweig, 5. 12. 1914</ref>
                <ref subtype="next_letter" type="withinCollection" target="L03648">Zweig an Schnitzler, 12. 12. [1914]</ref>
-               <ref subtype="previous_letter" type="withinCorrespondence" source="correspondence_13212" target="L03778">Schnitzler an Zweig, 5. 12. 1914</ref>
-               <ref subtype="next_letter" type="withinCorrespondence" source="correspondence_13212" target="L03648">Zweig an Schnitzler, 12. 12. [1914]</ref>
-            </correspContext></correspDesc>
+               <ref subtype="previous_letter"
+                    type="withinCorrespondence"
+                    source="correspondence_13212"
+                    target="L03778">Schnitzler an Zweig, 5. 12. 1914</ref>
+               <ref subtype="next_letter"
+                    type="withinCorrespondence"
+                    source="correspondence_13212"
+                    target="L03648">Zweig an Schnitzler, 12. 12. [1914]</ref>
+            </correspContext>
+         </correspDesc>
       </profileDesc>
-      <revisionDesc status="proposed">
+      <revisionDesc status="candidate">
          <change who="MAM" when="2025-05-21">Export aus Transkribus</change>
          <change who="SJ" when="2025-06-11">Auszeichnungen</change>
+         <change who="MAM" when="2025-09-26">Durchsicht</change>
+         <change who="MAM" when="2025-09-26">Index check</change>
       </revisionDesc>
    </teiHeader>
    <facsimile>
@@ -161,7 +176,7 @@
          <div type="address">
             <address>
                <addrLine>
-                  <pb facs="MS-SCHNITZLER-B-00118-000-00051"/>D<hi rend="superscript">r</hi> Artur
+                  <pb facs="MS-SCHNITZLER-B-00118-000-00051"/>D<hi rend="superscript">r</hi> Arthur
                   Schnitzler</addrLine>
                <addrLine>
                   <rs type="place" ref="#pmb533">Wien – Cottage</rs>
@@ -198,7 +213,11 @@
                <note type="commentary" corresp="K_L03645-1">
                   <ref type="schnitzler-tagebuch" subtype="Cf" target="1914-12-10"/>.</note> freudigst und pünktlichst. Diese
                Karte stellt ein <rs type="work" ref="#pmb294323" subtype="implied">Werk</rs> des
-               wirklich genialen taubstummen Bildhauers <rs type="person" ref="#pmb13374">Ambrosi</rs> dar, der in diesem Jahre bei <rs type="person" ref="#pmb11617">Gerhardt Hauptmann</rs> ein wundervolles <rs type="work" ref="#pmb294342" subtype="implied">Portrait</rs> machte und keinen sehnlichern Wunsch als den: Sie
+               wirklich genialen taubstummen Bildhauers <rs type="person" ref="#pmb13374">Ambrosi</rs> dar, der in diesem Jahre bei <rs type="person" ref="#pmb11617">Gerhardt Hauptmann</rs> ein wundervolles <rs type="work" ref="#pmb294342" subtype="implied">Portrait</rs> machte und keinen sehnlichern <anchor type="commentary" xml:id="K_L03645-2"/>Wunsch<note type="commentary" corresp="K_L03645-2">
+                  <rs type="person" ref="#pmb2121">Schnitzler</rs>
+               dürfte auf den Wunsch nicht reagiert haben. In seinem Nachlass ist nur der Durchschlag eines 
+               Schreibens an <rs type="person" ref="#pmb13374">Ambrosi</rs> ein Jahrzehnt später überliefert (<bibl>
+                     <date>20. 11. 1924</date>, <publisher>Deutsches Literaturarchiv Marbach</publisher>, HS.1985.1.242</bibl>).</note> als den: Sie
                möchten ihm einmal 2 x 2 Stunden widmen, dass er auch die Ihre schaffen könnte.</p>
             <closer>Mit vielen Grüssen Ihr getreuer <signed>Stefan Zweig</signed>
             </closer>
@@ -290,6 +309,26 @@
                      <desc n="1370">teilgenommen an</desc>
                      <label>Lesung von Richard Dehmel, 6.3.1904</label>
                      <idno type="URL" subtype="pmb">https://pmb.acdh.oeaw.ac.at/entity/50184/</idno>
+                  </event>
+                  <event n="Theateraufführung" ref="pmb249556" when="1909-12-12">
+                     <desc n="1370">teilgenommen an</desc>
+                     <label>Aufführung von Der Ruf des Lebens, 12.12.1909</label>
+                     <idno type="URL" subtype="pmb">https://pmb.acdh.oeaw.ac.at/entity/249556/</idno>
+                  </event>
+                  <event n="Private Lesung" ref="pmb296492" when="1910-10-11">
+                     <desc n="1370">teilgenommen an</desc>
+                     <label>Private Lesung von Die ungleichen Schalen, 11.10.1910</label>
+                     <idno type="URL" subtype="pmb">https://pmb.acdh.oeaw.ac.at/entity/296492/</idno>
+                  </event>
+                  <event n="Theateraufführung" ref="pmb251446" when="1910-11-27">
+                     <desc n="1370">teilgenommen an</desc>
+                     <label>Aufführung von Der junge Medardus, 27.11.1910</label>
+                     <idno type="URL" subtype="pmb">https://pmb.acdh.oeaw.ac.at/entity/251446/</idno>
+                  </event>
+                  <event n="Liederkonzert" ref="pmb183571" when="1911-02-05">
+                     <desc n="1370">teilgenommen an</desc>
+                     <label>Gesangskonzert Olga Schnitzler, 5.2.1911</label>
+                     <idno type="URL" subtype="pmb">https://pmb.acdh.oeaw.ac.at/entity/183571/</idno>
                   </event>
                   <event n="Generalprobe" ref="pmb239133" when="1912-10-25">
                      <desc n="1370">teilgenommen an</desc>
@@ -538,7 +577,7 @@
             <bibl xml:id="pmb294323">
                <title>Stefan Zweig</title>
                <title type="werk_link">https://sammlung.belvedere.at/objects/11150/stefan-zweig</title>
-               <author ref="" role="hat-geschaffen">Ambrosi, Gustinus</author>
+               <author ref="pmb13374" role="hat-geschaffen">Ambrosi, Gustinus</author>
                <date to="1913-12-31">1913-01-01 – 1913-12-31</date>
                <idno type="URL" subtype="pmb">https://pmb.acdh.oeaw.ac.at/entity/294323/</idno>
                <note type="work_kind">Büste</note>
@@ -546,7 +585,7 @@
             <bibl xml:id="pmb294342">
                <title>Gerhart Hauptmann</title>
                <title type="werk_link">https://sammlung.belvedere.at/objects/11152/gerhart-hauptmann</title>
-               <author ref="" role="hat-geschaffen">Ambrosi, Gustinus</author>
+               <author ref="pmb13374" role="hat-geschaffen">Ambrosi, Gustinus</author>
                <date to="1914-12-31">1914-01-01 – 1914-12-31</date>
                <idno type="URL" subtype="pmb">https://pmb.acdh.oeaw.ac.at/entity/294342/</idno>
                <note type="work_kind">Büste</note>
