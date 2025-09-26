@@ -1,6 +1,10 @@
-<?xml version='1.0' encoding='UTF-8'?>
+<?xml version="1.0" encoding="UTF-8"?>
 <?xml-model href="../meta/schnitzler-briefe-schematron.sch" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
-<TEI xmlns="http://www.tei-c.org/ns/1.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.tei-c.org/ns/1.0 ../meta/schnitzler-briefe-schema.xsd" xml:id="L03771" xml:base="https://id.acdh.oeaw.ac.at/schnitzler/schnitzler-briefe/editions">
+<TEI xmlns="http://www.tei-c.org/ns/1.0"
+     xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+     xsi:schemaLocation="http://www.tei-c.org/ns/1.0 ../meta/schnitzler-briefe-schema.xsd"
+     xml:id="L03771"
+     xml:base="https://id.acdh.oeaw.ac.at/schnitzler/schnitzler-briefe/editions">
    <teiHeader>
       <fileDesc>
          <titleStmt>
@@ -82,7 +86,7 @@
                            <supportDesc>
                               <extent>
                                  <measure unit="karte" quantity="1"/>
-                                 <measure unit="zeichenanzahl" quantity="533"/>
+                                 <measure unit="zeichenanzahl" quantity="534"/>
                               </extent>
                            </supportDesc>
                         </objectDesc>
@@ -116,12 +120,20 @@
                   – 18. 1. 1915?]</date>
                <placeName ref="#pmb50" evidence="conjecture">Wien</placeName>
             </correspAction>
-            <correspContext><ref type="belongsToCorrespondence" target="correspondence_13212">Zweig, Stefan</ref>
+            <correspContext>
+               <ref type="belongsToCorrespondence" target="correspondence_13212">Zweig, Stefan</ref>
                <ref subtype="previous_letter" type="withinCollection" target="L02202">Schnitzler an Brandes, 8. 1. 1915</ref>
                <ref subtype="next_letter" type="withinCollection" target="L03650">Zweig an Schnitzler, 16. 1. 1915</ref>
-               <ref subtype="previous_letter" type="withinCorrespondence" source="correspondence_13212" target="L03648">Zweig an Schnitzler, 12. 12. [1914]</ref>
-               <ref subtype="next_letter" type="withinCorrespondence" source="correspondence_13212" target="L03650">Zweig an Schnitzler, 16. 1. 1915</ref>
-            </correspContext></correspDesc>
+               <ref subtype="previous_letter"
+                    type="withinCorrespondence"
+                    source="correspondence_13212"
+                    target="L03648">Zweig an Schnitzler, 12. 12. [1914]</ref>
+               <ref subtype="next_letter"
+                    type="withinCorrespondence"
+                    source="correspondence_13212"
+                    target="L03650">Zweig an Schnitzler, 16. 1. 1915</ref>
+            </correspContext>
+         </correspDesc>
       </profileDesc>
       <revisionDesc status="proposed">
          <change who="MAM" when="2025-07-17">Export aus Transkribus</change>
@@ -296,6 +308,26 @@
                      <label>Lesung von Richard Dehmel, 6.3.1904</label>
                      <idno type="URL" subtype="pmb">https://pmb.acdh.oeaw.ac.at/entity/50184/</idno>
                   </event>
+                  <event n="Theateraufführung" ref="pmb249556" when="1909-12-12">
+                     <desc n="1370">teilgenommen an</desc>
+                     <label>Aufführung von Der Ruf des Lebens, 12.12.1909</label>
+                     <idno type="URL" subtype="pmb">https://pmb.acdh.oeaw.ac.at/entity/249556/</idno>
+                  </event>
+                  <event n="Private Lesung" ref="pmb296492" when="1910-10-11">
+                     <desc n="1370">teilgenommen an</desc>
+                     <label>Private Lesung von Die ungleichen Schalen, 11.10.1910</label>
+                     <idno type="URL" subtype="pmb">https://pmb.acdh.oeaw.ac.at/entity/296492/</idno>
+                  </event>
+                  <event n="Theateraufführung" ref="pmb251446" when="1910-11-27">
+                     <desc n="1370">teilgenommen an</desc>
+                     <label>Aufführung von Der junge Medardus, 27.11.1910</label>
+                     <idno type="URL" subtype="pmb">https://pmb.acdh.oeaw.ac.at/entity/251446/</idno>
+                  </event>
+                  <event n="Liederkonzert" ref="pmb183571" when="1911-02-05">
+                     <desc n="1370">teilgenommen an</desc>
+                     <label>Gesangskonzert Olga Schnitzler, 5.2.1911</label>
+                     <idno type="URL" subtype="pmb">https://pmb.acdh.oeaw.ac.at/entity/183571/</idno>
+                  </event>
                   <event n="Generalprobe" ref="pmb239133" when="1912-10-25">
                      <desc n="1370">teilgenommen an</desc>
                      <label>Generalprobe von Das Haus am Meer, 25.10.1912</label>
@@ -462,11 +494,43 @@
                <idno type="URL" subtype="geschichtewiki">https://www.geschichtewiki.wien.gv.at/Special:URIResolver/?curid=21895</idno>
                <idno type="URL" subtype="fackel">https://fackel.oeaw.ac.at/?p=fackelp51174</idno>
             </person>
+            <person xml:id="pmb259326">
+               <persName>
+                  <forename>Paul</forename>
+                  <surname>Seippel</surname>
+               </persName>
+               <birth>
+                  <date when="1858-04-24">1858-04-24</date>
+                  <settlement ref="pmb294016">
+                     <placeName type="pref">Gingins</placeName>
+                     <location>
+                        <geo>46,416666666667 6,1833333333333</geo>
+                     </location>
+                  </settlement>
+               </birth>
+               <death>
+                  <date when="1926-03-13">1926-03-13</date>
+                  <settlement ref="pmb294018">
+                     <placeName type="pref">Chêne-Bourg</placeName>
+                     <location>
+                        <geo>46,19737 6,19704</geo>
+                     </location>
+                  </settlement>
+               </death>
+               <sex value="male"/>
+               <occupation ref="pmb119">Herausgeber/Herausgeberin</occupation>
+               <occupation ref="pmb416">Romanist/Romanistin</occupation>
+               <idno type="URL" subtype="pmb">https://pmb.acdh.oeaw.ac.at/entity/259326/</idno>
+               <idno type="URL" subtype="wikidata">http://www.wikidata.org/entity/Q55846629</idno>
+               <idno type="URL" subtype="d-nb">https://d-nb.info/gnd/117471852</idno>
+               <idno type="URL" subtype="stefanzweig">https://www.stefanzweig.digital/o:szd.personen/sdef:TEI/get#SZDPER.1712</idno>
+               <idno type="URL" subtype="wikipedia">https://de.wikipedia.org/wiki/Paul_Seippel</idno>
+            </person>
          </listPerson>
          <listBibl>
             <bibl xml:id="pmb58493">
                <title>Journal de Genève</title>
-               <author ref="" role="hat-herausgegeben">Seippel, Paul</author>
+               <author ref="pmb259326" role="hat-herausgegeben">Seippel, Paul</author>
                <date to="1998-02-28">1826-01-05 – 1998-02-28</date>
                <idno type="URL" subtype="pmb">https://pmb.acdh.oeaw.ac.at/entity/58493/</idno>
                <idno type="URL" subtype="schnitzler-interviews">https://schnitzler-interviews.acdh.oeaw.ac.at/pmb58493.html</idno>
@@ -475,9 +539,10 @@
             <bibl xml:id="pmb58490">
                <title>Une protestation d’Arthur Schnitzler</title>
                <title type="werk_link">https://schnitzler-interviews.acdh.oeaw.ac.at/P111.html</title>
-               <title type="werk_bibliografische-angabe">Romain Rolland, Arthur Schnitzler: Une protestation d’Arthur Schnitzler. In: Journal de Genève, Jg. 85, 21. 12. 1914, 3. Ausgabe, S. [1].</title>
-               <author ref="" role="hat-geschaffen">Schnitzler, Arthur</author>
-               <author ref="" role="hat-geschaffen">Rolland, Romain</author>
+               <title type="werk_bibliografische-angabe">Schnitzler, Arthur, Rolland, Romain [Einleitung und Übersetzung]: Une protestation d’Arthur Schnitzler. In: Journal de Genève, Jg. 85, 21. 12. 1914, 3. Ausgabe, S. [1]</title>
+               <author ref="pmb2121" role="hat-geschaffen">Schnitzler, Arthur</author>
+               <author ref="pmb12543" role="hat-geschaffen">Rolland, Romain</author>
+               <author ref="pmb12543" role="hat-ubersetzt">Rolland, Romain</author>
                <date>1914-12-21</date>
                <idno type="URL" subtype="pmb">https://pmb.acdh.oeaw.ac.at/entity/58490/</idno>
                <idno type="URL" subtype="schnitzler-interviews">https://schnitzler-interviews.acdh.oeaw.ac.at/pmb58490.html</idno>
