@@ -73,6 +73,8 @@
                   <xs:enumeration value="withinCorrespondence"/>
                   <xs:enumeration value="withinCollection"/>
                   <xs:enumeration value="belongsToCorrespondence"/>
+                  <xs:enumeration value="URL"/>
+                  <xs:enumeration value="DOI"/>
                </xs:restriction>
             </xs:simpleType>
          </xs:attribute>
@@ -556,13 +558,14 @@
    </xs:element>
    <xs:element name="monogr">
       <xs:complexType mixed="true">
-         <xs:all minOccurs="0">
-            <xs:element ref="tei:author" minOccurs="0" maxOccurs="unbounded"/>
-            <xs:element ref="tei:biblScope" minOccurs="0" maxOccurs="unbounded"/>
-            <xs:element ref="tei:editor" minOccurs="0" maxOccurs="unbounded"/>
-            <xs:element ref="tei:imprint" minOccurs="0" maxOccurs="1"/>
-            <xs:element ref="tei:title" minOccurs="0" maxOccurs="1"/>
-         </xs:all>
+         <xs:choice minOccurs="0" maxOccurs="unbounded">
+            <xs:element ref="tei:author"/>
+            <xs:element ref="tei:biblScope"/>
+            <xs:element ref="tei:editor"/>
+            <xs:element ref="tei:imprint"/>
+            <xs:element ref="tei:title"/>
+            <xs:element ref="tei:ref"/>
+         </xs:choice>
       </xs:complexType>
    </xs:element>
    <xs:element name="series">

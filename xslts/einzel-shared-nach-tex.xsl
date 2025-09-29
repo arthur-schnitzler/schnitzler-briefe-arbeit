@@ -1830,19 +1830,19 @@
       <xsl:if test="@form">
          <xsl:choose>
             <xsl:when test="@form = 'durchschlag'">
-               <xsl:text>Durchschlag</xsl:text>
+               <xsl:text>Durchschlag, </xsl:text>
             </xsl:when>
             <xsl:when test="@form = 'fotografische_vervielfaeltigung'">
-               <xsl:text>fotografische Vervielfältigung</xsl:text>
+               <xsl:text>fotografische Vervielfältigung, </xsl:text>
             </xsl:when>
             <xsl:when test="@form = 'fotokopie'">
-               <xsl:text>Fotokopie</xsl:text>
+               <xsl:text>Fotokopie, </xsl:text>
             </xsl:when>
             <xsl:when test="@form = 'hs_abschrift'">
-               <xsl:text>handschriftliche Abschrift</xsl:text>
+               <xsl:text>handschriftliche Abschrift. </xsl:text>
             </xsl:when>
             <xsl:when test="@form = 'ms_abschrift'">
-               <xsl:text>maschinenschriftliche Abschrift</xsl:text>
+               <xsl:text>maschinenschriftliche Abschrift, </xsl:text>
             </xsl:when>
          </xsl:choose>
       </xsl:if>
@@ -2447,44 +2447,49 @@
                    <xsl:value-of select="$monogr/tei:title"/>
                 </xsl:otherwise>
              </xsl:choose>-->
-      <xsl:if test="$monogr/editor[1]">
+      <xsl:if test="$monogr/tei:editor[1]">
          <xsl:text>. </xsl:text>
          <xsl:choose>
-            <xsl:when test="$monogr/editor[2]">
-               <xsl:text>Hg. </xsl:text>
-               <xsl:for-each select="$monogr/editor">
+            <xsl:when test="$monogr/tei:editor[2]">
+               <xsl:text>Herausgegeben von</xsl:text>
+               <xsl:for-each select="$monogr/tei:editor">
+                  <xsl:text> </xsl:text>
+                  <xsl:value-of select="foo:vorname-vor-nachname(.)"/>
                   <xsl:choose>
-                     <xsl:when test="contains(., ', ')">
-                        <xsl:value-of select="normalize-space(substring-after(., ', '))"/>
-                        <xsl:text> </xsl:text>
-                        <xsl:value-of select="normalize-space(substring-before(., ', '))"/>
-                     </xsl:when>
-                  </xsl:choose>
-                  <xsl:choose>
-                     <xsl:when test="position() = last()"/>
-                     <xsl:when test="not(position() = last() - 1)">
+                     <xsl:when test="position() &lt; last() -1">
                         <xsl:text>, </xsl:text>
                      </xsl:when>
-                     <xsl:otherwise>
+                     <xsl:when test="position() = last() -1">
                         <xsl:text> und </xsl:text>
-                     </xsl:otherwise>
+                     </xsl:when>
+                     <xsl:otherwise/>
+                     
                   </xsl:choose>
                </xsl:for-each>
             </xsl:when>
-            <xsl:otherwise>
-               <xsl:value-of select="$monogr/editor"/>
-            </xsl:otherwise>
+            <xsl:when test="$monogr/tei:editor[1]">
+               <xsl:choose>
+                  <xsl:when test="contains($monogr/tei:editor[1], 'Hrsg') or contains($monogr/tei:editor[1], 'Herausge') or contains($monogr/tei:editor[1], 'herausgeg') or contains($monogr/tei:editor[1], 'Hg.')">
+                     <xsl:text> </xsl:text>
+                     <xsl:value-of select="$monogr/tei:editor[1]"/>
+                  </xsl:when>
+                  <xsl:otherwise>
+                     <xsl:text> Herausgegeben von </xsl:text>
+                     <xsl:value-of select="foo:vorname-vor-nachname($monogr/tei:editor[1])"/>
+                  </xsl:otherwise>
+               </xsl:choose>
+            </xsl:when>
          </xsl:choose>
-         <xsl:if test="count($monogr/editor/tei:persName/@ref) &gt; 0">
-            <xsl:for-each select="$monogr/editor/tei:persName/@ref">
+         <xsl:if test="count($monogr/tei:editor/tei:persName/@ref) &gt; 0">
+            <xsl:for-each select="$monogr/tei:editor/tei:persName/@ref">
                <xsl:value-of
-                  select="foo:person-in-index($monogr/editor/tei:persName/@ref, '|pwk}', true())"/>
+                  select="foo:person-in-index($monogr/tei:editor/tei:persName/@ref, '|pwk}', true())"/>
             </xsl:for-each>
          </xsl:if>
       </xsl:if>
-      <xsl:if test="$monogr/edition">
+      <xsl:if test="$monogr/tei:edition">
          <xsl:text>. </xsl:text>
-         <xsl:value-of select="$monogr/edition"/>
+         <xsl:value-of select="$monogr/tei:edition"/>
       </xsl:if>
       <xsl:choose>
          <!-- Hier Abfrage, ob es ein Journal ist -->
@@ -2503,17 +2508,29 @@
             </xsl:if>
          </xsl:otherwise>
       </xsl:choose>
-   </xsl:function>
-   <xsl:function name="foo:vorname-vor-nachname">
-      <xsl:param name="autorname" as="xs:string"/>
       <xsl:choose>
-         <xsl:when test="contains($autorname, ', ')">
-            <xsl:value-of select="substring-after($autorname, ', ')"/>
-            <xsl:text> </xsl:text>
-            <xsl:value-of select="substring-before($autorname, ', ')"/>
+         <xsl:when test="$monogr/tei:ref[@type='URL' or @type='DOI']">
+            <xsl:for-each select="$monogr/tei:ref[@type='URL' or @type='DOI']">
+            <xsl:text> \url{</xsl:text>
+               <xsl:value-of select="@target"/>
+            <xsl:text>}</xsl:text>
+               <xsl:if test="fn:position() != last()">
+                  <xsl:text>, </xsl:text>
+               </xsl:if>
+            </xsl:for-each>
+         </xsl:when>
+      </xsl:choose>
+   </xsl:function>
+   <xsl:function name="foo:vorname-vor-nachname" as="xs:string">
+      <xsl:param name="name" as="xs:string"/>
+      <xsl:variable name="teile" select="tokenize($name, ',')"/>
+      <xsl:choose>
+         <!-- Nur wenn genau zwei Teile durch genau ein Komma -->
+         <xsl:when test="count($teile) = 2">
+            <xsl:value-of select="normalize-space(concat($teile[2], ' ', $teile[1]))"/>
          </xsl:when>
          <xsl:otherwise>
-            <xsl:value-of select="$autorname"/>
+            <xsl:value-of select="$name"/>
          </xsl:otherwise>
       </xsl:choose>
    </xsl:function>
@@ -2565,8 +2582,8 @@
    </xsl:function>
    <xsl:function name="foo:herausgeber-nach-dem-titel">
       <xsl:param name="monogr" as="node()"/>
-      <xsl:if test="$monogr/editor != '' and $monogr/tei:author != ''">
-         <xsl:value-of select="$monogr/editor"/>
+      <xsl:if test="$monogr/tei:editor != '' and $monogr/tei:author != ''">
+         <xsl:value-of select="$monogr/tei:editor"/>
       </xsl:if>
    </xsl:function>
    <xsl:function name="foo:analytic-angabe">
@@ -2608,12 +2625,43 @@
             </xsl:choose>
          </xsl:otherwise>
       </xsl:choose>
-      <xsl:if test="$analytic/editor[1]">
-         <xsl:text> </xsl:text>
-         <xsl:value-of select="$analytic/editor"/>
-         <xsl:text>.</xsl:text>
-      </xsl:if>
+      <xsl:choose>
+         <xsl:when test="$analytic/tei:editor[2]">
+            <xsl:text>Herausgegeben von</xsl:text>
+            <xsl:for-each select="$analytic/tei:editor">
+               <xsl:text> </xsl:text>
+               <xsl:value-of select="foo:vorname-vor-nachname(.)"/>
+               <xsl:choose>
+                  <xsl:when test="position() &lt; last() -1">
+                     <xsl:text>, </xsl:text>
+                  </xsl:when>
+                  <xsl:when test="position() = last() -1">
+                     <xsl:text> und </xsl:text>
+                  </xsl:when>
+                  <xsl:otherwise/>
+                     
+                  
+               </xsl:choose>
+            </xsl:for-each>
+         </xsl:when>
+         <xsl:when test="$analytic/tei:editor[1]">
+            <xsl:choose>
+               <xsl:when test="contains($analytic/tei:editor[1], 'Hrsg') or contains($analytic/tei:editor[1], 'Herausge') or contains($analytic/tei:editor[1], 'herausgeg') or contains($analytic/tei:editor[1], 'Hg.')">
+                  <xsl:text> </xsl:text>
+                  <xsl:value-of select="$analytic/tei:editor[1]"/>
+               </xsl:when>
+               <xsl:otherwise>
+                  <xsl:text> Herausgegeben von </xsl:text>
+                  <xsl:value-of select="foo:vorname-vor-nachname($analytic/tei:editor[1])"/>
+               </xsl:otherwise>
+            </xsl:choose>
+            <xsl:text>.</xsl:text>
+         </xsl:when>
+      </xsl:choose>
+      
    </xsl:function>
+   
+  
    <xsl:function name="foo:nach-dem-rufezeichen">
       <xsl:param name="titel" as="xs:string"/>
       <xsl:param name="gedruckte-quellen" as="node()"/>

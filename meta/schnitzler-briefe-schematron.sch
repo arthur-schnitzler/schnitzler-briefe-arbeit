@@ -375,8 +375,14 @@
                     (matches(@target, '^T030\d{3}'))
                     )"> Wenn @type = "schnitzler-bahr", muss @target vom Aufbau her
                 »D041345«, »L041345« oder »T030123« sein. </sch:assert>
+            <sch:assert test="not(@type = 'URL') or matches(@target, '^https?://.*')">
+                Wenn @type = "URL", muss @target eine gültige HTTP- oder HTTPS-URL sein.
+            </sch:assert>
+            <sch:assert test="not(@type = 'DOI') or matches(@target, '^(https://dx\.doi\.org/|https://doi\.org/|doi:)?10\.\d+/.+')">
+                Wenn @type = "DOI", muss @target eine gültige DOI sein (z.B. "10.1234/example" oder "https://doi.org/10.1234/example").
+            </sch:assert>
             <sch:assert test="
-                (@type = 'schnitzler-tagebuch' or @type = 'schnitzler-briefe' or @type = 'schnitzler-lektueren' or @type = 'schnitzler-bahr' or @type = 'schnitzler-interviews' or @type = 'schnitzler-kultur' or @type = 'wienerschnitzler')"/>
+                (@type = 'schnitzler-tagebuch' or @type = 'schnitzler-briefe' or @type = 'schnitzler-lektueren' or @type = 'schnitzler-bahr' or @type = 'schnitzler-interviews' or @type = 'schnitzler-kultur' or @type = 'wienerschnitzler' or @type = 'URL' or @type = 'DOI')"/>
         </sch:rule>
     </sch:pattern>
     <sch:pattern>
