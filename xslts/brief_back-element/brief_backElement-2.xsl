@@ -128,7 +128,8 @@
                             <xsl:attribute name="xml:id">
                                 <xsl:value-of select="concat('pmb', $current-id)"/>
                             </xsl:attribute>
-                            <xsl:variable name="eintrag_inhalt" select="document($eintrag)/bibl"/> <xsl:apply-templates
+                            <xsl:variable name="eintrag_inhalt" select="document($eintrag)/bibl"/> 
+                            <xsl:apply-templates
                                 select="$eintrag_inhalt/title[not(@type = 'loschen')] | $eintrag_inhalt/author | $eintrag_inhalt/date | $eintrag_inhalt/note[@type] | $eintrag_inhalt/idno"
                                 mode="copy-no-namespaces"/>
                         </xsl:element>
@@ -144,8 +145,15 @@
             </xsl:for-each>
         </xsl:element>
     </xsl:template>
-    
-    
+    <!--<xsl:template match="tei:back[1]/tei:listBibl[1]/tei:bibl[1]/*:author[@key]">
+        <xsl:element name="uuthor" namespace="http://www.tei-c.org/ns/1.0">
+            <xsl:copy-of select="@*[not(name()='key')]"/>
+            <xsl:attribute name="ref">
+                <xsl:value-of select="replace(@key, 'person__', 'pmb')"/>
+            </xsl:attribute>
+        <xsl:value-of select="."/>
+        </xsl:element>
+    </xsl:template>-->
     
     <xsl:template match="tei:back/tei:listPlace[child::*]">
         <xsl:element name="listPlace" namespace="http://www.tei-c.org/ns/1.0">
