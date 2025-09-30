@@ -20,7 +20,10 @@ os.makedirs(temp_dir, exist_ok=True)
 def pretty_xml(elem):
     rough_string = ET.tostring(elem, encoding='utf-8')
     reparsed = minidom.parseString(rough_string)
-    return reparsed.toprettyxml(indent="  ")
+    pretty_string = reparsed.toprettyxml(indent="  ")
+    # Entferne überflüssige Leerzeilen
+    lines = [line for line in pretty_string.split('\n') if line.strip()]
+    return '\n'.join(lines) + '\n'
 
 # Hilfsfunktion: Entität von PMB API holen
 def fetch_entity_from_api(entity_id, entity_type):
