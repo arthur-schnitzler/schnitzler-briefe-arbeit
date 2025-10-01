@@ -3936,7 +3936,7 @@
       <xsl:text>\lemma{\textnormal{\emph{</xsl:text>
       <xsl:choose>
          <xsl:when test="*:Lemma">
-            <xsl:value-of select="*:Lemma"/>
+            <xsl:apply-templates select="*:Lemma" mode="lemma"/>
          </xsl:when>
          <xsl:otherwise>
             <xsl:choose>
@@ -4762,6 +4762,28 @@
       <xsl:text>\end{otherlanguage}</xsl:text>
    </xsl:template>
    <xsl:template match="tei:foreign[starts-with(@lang, 'ja') or starts-with(@xml:lang, 'ja')]">
+      <xsl:text>\japanese{</xsl:text>
+      <xsl:apply-templates/>
+      <xsl:text>}</xsl:text>
+   </xsl:template>
+   <!-- Templates für Lemma-Modus -->
+   <xsl:template match="*" mode="lemma">
+      <xsl:apply-templates mode="lemma"/>
+   </xsl:template>
+   <xsl:template match="text()" mode="lemma">
+      <xsl:value-of select="."/>
+   </xsl:template>
+   <xsl:template match="tei:foreign[starts-with(@lang, 'el') or starts-with(@xml:lang, 'el')]" mode="lemma">
+      <xsl:text>\griechisch{</xsl:text>
+      <xsl:apply-templates mode="lemma"/>
+      <xsl:text>}</xsl:text>
+   </xsl:template>
+   <xsl:template match="tei:foreign[starts-with(@lang, 'he') or starts-with(@xml:lang, 'he')]" mode="lemma">
+      <xsl:text>\hebraeisch{</xsl:text>
+      <xsl:apply-templates mode="lemma"/>
+      <xsl:text>}</xsl:text>
+   </xsl:template>
+   <xsl:template match="tei:foreign[starts-with(@lang, 'ja') or starts-with(@xml:lang, 'ja')]" mode="lemma">
       <xsl:text>\japanese{</xsl:text>
       <xsl:apply-templates/>
       <xsl:text>}</xsl:text>
