@@ -4716,6 +4716,11 @@
       <xsl:apply-templates/>
       <xsl:text>}</xsl:text>
    </xsl:template>
+   <xsl:template match="tei:foreign[starts-with(@lang, 'he') or starts-with(@xml:lang, 'he')]">
+      <xsl:text>\hebraeisch{</xsl:text>
+      <xsl:apply-templates/>
+      <xsl:text>}</xsl:text>
+   </xsl:template>
    <xsl:template match="tei:foreign[starts-with(@lang, 'en') or starts-with(@xml:lang, 'en')]">
       <xsl:text>\begin{otherlanguage}{english}</xsl:text>
       <xsl:apply-templates/>
