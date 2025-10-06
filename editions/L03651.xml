@@ -1,11 +1,16 @@
-<?xml version='1.0' encoding='UTF-8'?>
+<?xml version="1.0" encoding="UTF-8"?>
 <?xml-model href="../meta/schnitzler-briefe-schematron.sch" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
-<TEI xmlns="http://www.tei-c.org/ns/1.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.tei-c.org/ns/1.0 ../meta/schnitzler-briefe-schema.xsd" xml:id="L03651" xml:base="https://id.acdh.oeaw.ac.at/schnitzler/schnitzler-briefe/editions">
+<TEI xmlns="http://www.tei-c.org/ns/1.0"
+     xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+     xsi:schemaLocation="http://www.tei-c.org/ns/1.0 ../meta/schnitzler-briefe-schema.xsd"
+     xml:id="L03651"
+     xml:base="https://id.acdh.oeaw.ac.at/schnitzler/schnitzler-briefe/editions">
    <teiHeader>
       <fileDesc>
          <titleStmt>
             <title level="s">Arthur Schnitzler: Briefwechsel mit Autorinnen und Autoren</title>
-            <title level="a">Stefan Zweig an Arthur Schnitzler, [zwischen 5. und 10. 2. 1915]</title>
+            <title level="a">Stefan Zweig an Arthur Schnitzler, [zwischen 8. und
+               15. 2. 1915?]</title>
             <author ref="#pmb13212">Zweig, Stefan</author>
             <editor>
                <name>Jahnke, Selma</name>
@@ -89,6 +94,11 @@
                         <handDesc>
                            <handNote medium="lila-tinte" style="lateinische-kurrent"/>
                         </handDesc>
+                        <additions>
+                           <incident type="receiver" rend="roter-buntstift">
+                              <desc>zwei Unterstreichungen</desc>
+                           </incident>
+                        </additions>
                      </physDesc>
                   </msDesc>
                </witness>
@@ -120,24 +130,36 @@
          <correspDesc>
             <correspAction type="sent">
                <persName ref="#pmb13212">Zweig, Stefan</persName>
-               <date notBefore="1915-02-05" notAfter="1915-02-10" n="01">[zwischen 5. und 10. 2. 1915]</date>
+               <date notBefore="1915-02-08" notAfter="1915-02-15" n="01">[zwischen 8. und
+                  15. 2. 1915?]</date>
                <placeName ref="#pmb50">Wien</placeName>
             </correspAction>
             <correspAction type="received">
                <persName ref="#pmb2121">Schnitzler, Arthur</persName>
-               <date notBefore="1915-02-05" notAfter="1915-02-10">[zwischen 5. und 10. 2. 1915]</date>
+               <date notBefore="1915-02-08" notAfter="1915-02-15">[zwischen 8. und
+                  15. 2. 1915?]</date>
                <placeName ref="#pmb50" evidence="conjecture">Wien</placeName>
             </correspAction>
-            <correspContext><ref type="belongsToCorrespondence" target="correspondence_13212">Zweig, Stefan</ref>
+            <correspContext>
+               <ref type="belongsToCorrespondence" target="correspondence_13212">Zweig, Stefan</ref>
                <ref subtype="previous_letter" type="withinCollection" target="L03650">Zweig an Schnitzler, 16. 1. 1915</ref>
                <ref subtype="next_letter" type="withinCollection" target="L02203">Schnitzler an Bahr, 9. 2. 1915</ref>
-               <ref subtype="previous_letter" type="withinCorrespondence" source="correspondence_13212" target="L03650">Zweig an Schnitzler, 16. 1. 1915</ref>
-               <ref subtype="next_letter" type="withinCorrespondence" source="correspondence_13212" target="L03772">Schnitzler an Zweig, 11. 2. 1915</ref>
-            </correspContext></correspDesc>
+               <ref subtype="previous_letter"
+                    type="withinCorrespondence"
+                    source="correspondence_13212"
+                    target="L03650">Zweig an Schnitzler, 16. 1. 1915</ref>
+               <ref subtype="next_letter"
+                    type="withinCorrespondence"
+                    source="correspondence_13212"
+                    target="L03772">Schnitzler an Zweig, 11. 2. 1915</ref>
+            </correspContext>
+         </correspDesc>
       </profileDesc>
-      <revisionDesc status="proposed">
+      <revisionDesc status="candidate">
          <change who="MAM" when="2025-05-21">Export aus Transkribus</change>
          <change who="MAM" when="2025-06-04">Durchsicht</change>
+         <change who="MAM" when="2025-10-06">Durchsicht</change>
+         <change who="MAM" when="2025-10-06">Index check</change>
       </revisionDesc>
    </teiHeader>
    <facsimile>
@@ -165,41 +187,52 @@
             <p>
                <salute>Verehrter lieber Herr Doktor,</salute>
                <space unit="chars" quantity="1"/>
-               <rs type="person" ref="#pmb12543">Romain Rolland</rs> hat nur endlich wieder einen
-                  <anchor type="commentary" xml:id="K_L03651-1"/>Brief<note type="commentary" corresp="K_L03651-1">
-                  <rs type="person" ref="#pmb12543">Romain Rolland</rs> an <rs type="person" ref="#pmb13212">Stefan Zweig</rs>,
-                     <date>5. 2. 1915</date>, abgedruckt in: <bibl>
-                     <rs type="person" ref="#pmb12543">Romain Rolland</rs>, <rs type="person" ref="#pmb13212">Stefan Zweig</rs>: <title level="m">Von Welt zu
-                           Welt. Briefe einer Freundschaft 1914–1918</title>. Mit einem Begleitwort von Peter Handke. Aus dem Französischen von Eva
-                     und Gerhard Schwewe (Briefe Rollands) und Christel Gersch (Briefe Zweigs). <pubPlace>Berlin</pubPlace>:
-                     <publisher>Aufbau Verlag</publisher>
-                     <space unit="chars" quantity="1"/>
-                     <date>2014</date>
-                  </bibl>.</note> ungehindert
-               schreiben können. Er spricht auch von Ihnen darin – er hat offenbar in <rs type="work" ref="#pmb41531">Berl. Tag.</rs> jenen <anchor type="commentary" xml:id="K_L03651-2"/>
+               <rs type="person" ref="#pmb12543">Romain Rolland</rs> hat mir endlich wieder einen
+                  <anchor type="commentary" xml:id="K_L03651-1"/>Brief<note type="commentary" corresp="K_L03651-1">Das vorliegende Korrespondenzstück ist undatiert, wird aber
+                  durch das erwähnte Schreiben <rs type="person" ref="#pmb12543">Rollands</rs>, das
+                  mit <date>5. 2. 1915</date> datiert ist, zeitlich verortet. Nimmt man an, dass der
+                  Postweg in Kriegszeiten etwas länger dauert als gewöhnlich, so ist ein Erhalt des
+                  Schreibens durch <rs type="person" ref="#pmb13212">Zweig</rs> und in Folge die
+                  vorliegende Benachrichtigung von <rs type="person" ref="#pmb2121">Schnitzler</rs>
+                  für den Zeitraum zwischen <date>8. 2. 1915</date> und
+                     <date>15. 2. 1915</date> wahrscheinlich.</note> ungehindert schreiben
+               können. Er spricht auch von Ihnen darin – er hat offenbar in <rs type="work" ref="#pmb41531">Berl. Tag.</rs> jenen <anchor type="commentary" xml:id="K_L03651-2"/>
                <rs type="work" ref="#pmb294010" subtype="implied">Artikel</rs>
                <note type="commentary" corresp="K_L03651-2">
                   <bibl>
-                     <rs type="person" ref="#pmb3256">P. B.</rs> [=<rs type="person" ref="#pmb3256">Paul Block</rs>]: <rs type="work" ref="#pmb294010">Kultur–?</rs> In: <rs type="work" ref="#pmb41531">Berliner Tageblatt</rs>,
-                     Jg. 44, Nr. 33, <date>21. 1. 1915</date>, Abendausgabe, S. [3]</bibl>.</note> gegen und für Sie gelesen – und schreibt »<anchor type="commentary" xml:id="K_L03651-3"/>Le voici logé a la même enseigne en <rs type="place" ref="#pmb151">Allemagne</rs> que je le suis en <rs type="place" ref="#pmb166">France</rs>! Exprimez lui de ma part toute ma sympathie
-               confraternelle – si toutefois elle <pb facs="MS-SCHNITZLER-B-00118-000-00066"/>ne le
-                  comp<supplied>r</supplied>omet pas encore plus. Ah que les gens sont fous! C’est
-               presque comique.<note type="commentary" corresp="K_L03651-3">französisch: Und wie
-                  finden Sie, was unserem armen <rs type="person" ref="#pmb2121">Arthur
-                     Schnitzler</rs> widerfahren ist? Da gerät er in <rs type="place" ref="#pmb151">Deutschland</rs> in die gleiche Lage wie ich in <rs type="place" ref="#pmb166">Frankreich</rs>! Drücken Sie ihm meine brüderliche Verbundenheit aus, falls
-                  ihn das nicht noch mehr kompromittiert. Ach, wie töricht die Menschen doch sind!
-                  Es ist schon fast komisch. (<bibl>Zitiert nach <title level="m">Von Welt zu
-                        Welt</title>
-                  </bibl>.) </note>« Wirklich – dieser Versuch auch Sie jetzt
-               einzubeziehen in den grossen deutschen Bann war schon zu ärgerlich! Wird man all dies
-               in zehn Jahren noch verstehen können? Ich denke Ihrer oft und in Herzlichkeit:
-               hoffentlich hat die tragische Monotonie der andauernden bewegungslosen Kämpfe auch in
-               Ihnen wieder die Arbeit als Gegengewalt hochgebracht<subst>
+                     <rs type="person" ref="#pmb3256">P. B.</rs> [=&#160;<rs type="person" ref="#pmb3256">Paul Block</rs>]: <rs type="work" ref="#pmb294010">Kultur–?</rs> In: <rs type="work" ref="#pmb41531">Berliner Tageblatt</rs>, Jg. 44, Nr. 33,
+                     <date>21. 1. 1915</date>, Abendausgabe, S. [3]</bibl>. Ausgangspunkt für <rs type="person" ref="#pmb3256">Paul Block</rs> war die ungezeichnete, kritische Meldung <rs type="work" ref="#pmb298631">Schnitzler erhebt Einspruch</rs>
+                  in der <rs type="work" ref="#pmb41572">Deutschen Tageszeitung</rs> (<bibl>Jg.&#160;22, Nr.&#160;24, <date>19.&#160;1.&#160;1915</date>, Abend-Ausgabe, S.&#160;5</bibl>). In ihr wird
+                  <rs type="person" ref="#pmb2121">Schnitzler</rs> vorgeworfen, er habe sich von <rs type="person" ref="#pmb12543">Rolland</rs> instrumentalisieren
+                  lassen, »<quote>als Beweise für für die innere Uneinigkeit der deutschen Geister</quote>«. <rs type="person" ref="#pmb3256">Block</rs> wendet das Argument
+                  gegen den anonymen Verfasser der <rs type="work" ref="#pmb298631" subtype="implied">Meldung</rs>, indem er ihm vorhält, gerade die
+                  Uneinigkeit unter die deutschsprachigen Schriftsteller tragen zu wollen.</note> gegen und für
+               Sie gelesen – und schreibt »<anchor type="commentary" xml:id="K_L03651-3"/>Le voici
+               logé a la même enseigne en <rs type="place" ref="#pmb151">Allemagne</rs> que je le
+               suis en <rs type="place" ref="#pmb166">France</rs>! Exprimez lui de ma part toute ma
+               sympathie confraternelle – si toutefois elle <pb facs="MS-SCHNITZLER-B-00118-000-00066"/>ne le comp<supplied>r</supplied>omet pas
+               encore plus. Ah que les gens sont fous! C’est presque comique.<note type="commentary" corresp="K_L03651-3">französisch: Und wie finden Sie, was unserem armen <rs type="person" ref="#pmb2121">Arthur Schnitzler</rs> widerfahren ist? Da gerät
+                  er in <rs type="place" ref="#pmb151">Deutschland</rs> in die gleiche Lage wie ich
+                  in <rs type="place" ref="#pmb166">Frankreich</rs>! Drücken Sie ihm meine
+                  brüderliche Verbundenheit aus, falls ihn das nicht noch mehr kompromittiert. Ach,
+                  wie töricht die Menschen doch sind! Es ist schon fast komisch. (<bibl>Zitiert nach
+                        <rs type="person" ref="#pmb12543">Romain Rolland</rs>, <rs type="person" ref="#pmb13212">Stefan Zweig</rs>: <title level="m">Von Welt zu Welt. Briefe
+                        einer Freundschaft 1914–1918</title>. Mit einem Begleitwort von Peter
+                     Handke. Aus dem Französischen von Eva und Gerhard Schwewe (Briefe Rollands) und
+                     Christel Gersch (Briefe Zweigs). <pubPlace>Berlin</pubPlace>: <publisher>Aufbau
+                        Verlag</publisher>
+                     <space unit="chars" quantity="1"/>
+                     <date>2014</date>
+                  </bibl>.) </note>« Wirklich – dieser Versuch auch Sie jetzt einzubeziehen in den
+               grossen deutschen Bann war schon zu ärgerlich! Wird man all dies in zehn Jahren noch
+               verstehen können? Ich denke Ihrer oft und in Herzlichkeit; hoffentlich hat die
+               tragische Monotonie der andauernden bewegungslosen Kämpfe auch in Ihnen wieder die
+               Arbeit als Gegengewalt hochgebracht<subst>
                   <del rend="strikethrough">
                      <space unit="chars" quantity="1"/>und</del>
                   <add place="inline">.</add>
-               </subst> Ich habe keinen bessern Wunsch als Sie wieder schaffend und gesammelt
-               zu wissen, dass wenigstens hier im Geistigen etwas Fruchtbares bleibe aus diesen
+               </subst> Ich habe keinen bessern Wunsch als Sie wieder schaffend und gesammelt zu
+               wissen, dass wenigstens hier im Geistigen etwas Fruchtbares bleibe aus diesen
                sinnlosen Tagen der Vernichtung.</p>
             <closer>Ihnen und Ihrer lieben <rs type="person" ref="#pmb2173" subtype="implied">Frau</rs> herzlich getreu<lb/>
                <signed>Stefan Zweig</signed>
@@ -292,6 +325,26 @@
                      <desc n="1370">teilgenommen an</desc>
                      <label>Lesung von Richard Dehmel, 6.3.1904</label>
                      <idno type="URL" subtype="pmb">https://pmb.acdh.oeaw.ac.at/entity/50184/</idno>
+                  </event>
+                  <event n="Theateraufführung" ref="pmb249556" when="1909-12-12">
+                     <desc n="1370">teilgenommen an</desc>
+                     <label>Aufführung von Der Ruf des Lebens, 12.12.1909</label>
+                     <idno type="URL" subtype="pmb">https://pmb.acdh.oeaw.ac.at/entity/249556/</idno>
+                  </event>
+                  <event n="Private Lesung" ref="pmb296492" when="1910-10-11">
+                     <desc n="1370">teilgenommen an</desc>
+                     <label>Private Lesung von Die ungleichen Schalen, 11.10.1910</label>
+                     <idno type="URL" subtype="pmb">https://pmb.acdh.oeaw.ac.at/entity/296492/</idno>
+                  </event>
+                  <event n="Theateraufführung" ref="pmb251446" when="1910-11-27">
+                     <desc n="1370">teilgenommen an</desc>
+                     <label>Aufführung von Der junge Medardus, 27.11.1910</label>
+                     <idno type="URL" subtype="pmb">https://pmb.acdh.oeaw.ac.at/entity/251446/</idno>
+                  </event>
+                  <event n="Liederkonzert" ref="pmb183571" when="1911-02-05">
+                     <desc n="1370">teilgenommen an</desc>
+                     <label>Gesangskonzert Olga Schnitzler, 5.2.1911</label>
+                     <idno type="URL" subtype="pmb">https://pmb.acdh.oeaw.ac.at/entity/183571/</idno>
                   </event>
                   <event n="Generalprobe" ref="pmb239133" when="1912-10-25">
                      <desc n="1370">teilgenommen an</desc>
@@ -1782,7 +1835,7 @@
                <title type="werk_link">https://dfg-viewer.de/show?tx_dlf%5Bdouble%5D=0&amp;tx_dlf%5Bid%5D=https%3A%2F%2Fcontent.staatsbibliothek-berlin.de%2Fzefys%2FSNP27646518-19150121-2-0-0-0.xml&amp;tx_dlf%5Bpage%5D=3&amp;cHash=dd119c1b0b2116bf60d04211b3bade67</title>
                <title type="werk_unter-diesem-namen-oder-kurzel-veroffentlicht">P.B.</title>
                <title type="werk_bibliografische-angabe">P. B. [=Paul Block]: Kultur–? In: Berliner Tageblatt, Jg. 44, Nr. 33, 21. 1. 1915, Abendausgabe, S. [3]</title>
-               <author ref="" role="hat-unter-einem-kurzel-veroffentlicht">Block, Paul</author>
+               <author ref="pmb3256" role="hat-unter-einem-kurzel-veroffentlicht">Block, Paul</author>
                <date when="1915-01-21">1915-01-21</date>
                <idno type="URL" subtype="pmb">https://pmb.acdh.oeaw.ac.at/entity/294010/</idno>
                <note type="work_kind">Aufsatz</note>
