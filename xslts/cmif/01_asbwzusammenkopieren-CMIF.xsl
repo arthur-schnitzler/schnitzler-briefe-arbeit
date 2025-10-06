@@ -167,9 +167,7 @@
                                         </xsl:if>
                                     </xsl:element>-->
                                 </xsl:element>
-                                
-                            </xsl:element>
-                            <xsl:element name="note" namespace="http://www.tei-c.org/ns/1.0">
+                                <xsl:element name="note" namespace="http://www.tei-c.org/ns/1.0">
                                 <xsl:if test="tei:text/tei:back/tei:listPerson">
                                     <xsl:variable name="briefpartner" as="node()">
                                         <list>
@@ -273,6 +271,7 @@
                                         />
                                     </xsl:attribute>
                                 </xsl:element>
+                            </xsl:element>
                             </xsl:element>
                         </xsl:if>
                     </xsl:for-each>
