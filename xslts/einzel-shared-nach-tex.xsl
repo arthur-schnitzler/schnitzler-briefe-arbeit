@@ -4352,6 +4352,19 @@
       </xsl:choose>
       <xsl:text>{]} }</xsl:text>
    </xsl:template>
+   <xsl:template match="tei:gap[@unit = 'lines' and @reason = 'textualLoss']">
+      <xsl:text>\textcolor{gray}{[</xsl:text>
+      <xsl:choose>
+         <xsl:when test="@quantity = 1">
+            <xsl:text>eine Zeile Textverlust</xsl:text>
+         </xsl:when>
+         <xsl:otherwise>
+            <xsl:value-of select="@quantity"/>
+            <xsl:text> Zeilen Textverlust</xsl:text>
+         </xsl:otherwise>
+      </xsl:choose>
+      <xsl:text>{]} }</xsl:text>
+   </xsl:template>
    <xsl:template match="tei:gap[@reason = 'outOfScope']">
       <xsl:text>{[}\ldots{]}</xsl:text>
    </xsl:template>
