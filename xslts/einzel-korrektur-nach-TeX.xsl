@@ -87,7 +87,7 @@
          </xsl:when>
          <xsl:when test="$typ = 'event'">
             <xsl:text>\textcolor{violet}{</xsl:text>
-            <xsl:variable name="eintrag" select="key('event-lookup', $first, $events)/tei:eventName[1]"
+            <xsl:variable name="eintrag" select="key('event-lookup', replace($first, '#',''), $events)/tei:eventName[1]"
                as="xs:string"/>
             <xsl:choose>
                <xsl:when test="$eintrag = ''">
