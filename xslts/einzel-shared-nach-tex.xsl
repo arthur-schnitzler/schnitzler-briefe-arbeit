@@ -4336,7 +4336,7 @@
          <xsl:value-of select="foo:gapigap($gapchars - 1)"/>
       </xsl:if>
    </xsl:function>
-   <xsl:template match="tei:gap[@unit = 'chars' and @reason = 'illegible']">
+   <xsl:template match="tei:gap[@unit = 'chars' and (@reason = 'illegible' or @reason = 'textualLoss')]">
       <xsl:value-of select="foo:gapigap(@quantity)"/>
    </xsl:template>
    <xsl:template match="tei:gap[@unit = 'lines' and @reason = 'illegible']">
