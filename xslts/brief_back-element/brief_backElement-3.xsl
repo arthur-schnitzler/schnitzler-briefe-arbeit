@@ -22,6 +22,7 @@
     <xsl:template name="add-persons">
         <xsl:param name="existing-persons" as="node()"/>
         <xsl:param name="context-node" as="node()"/>
+        <xsl:param name="bibl-list" as="node()"/>
         <xsl:for-each
             select="distinct-values($context-node/tei:bibl/tei:author/@*[name()='key' or name()='ref'])">
             <xsl:variable name="current-id"
@@ -31,13 +32,22 @@
                     <!-- Person already exists in local listPerson, skip -->
                 </xsl:when>
                 <xsl:otherwise>
-                    
+                    <!-- Check if this author is only in bibl elements with ana="commentary" -->
+                    <xsl:variable name="author-in-commentary-bibl" select="$bibl-list//*:bibl[@ana='comment'][tei:author/@*[name()='key' or name()='ref']/concat('pmb', replace(replace(., '#', ''), 'pmb', '')) = $current-id]"/>
+                    <xsl:variable name="author-in-non-commentary-bibl" select="$bibl-list//*:bibl[not(@ana='comment')][tei:author/@*[name()='key' or name()='ref']/concat('pmb', replace(replace(., '#', ''), 'pmb', '')) = $current-id]"/>
+
                     <xsl:choose>
                         <xsl:when
                             test="key('listperson-lookup', $current-id, $listperson)[1]">
-                            <xsl:copy-of
-                                select="key('listperson-lookup', $current-id, $listperson)[1]"
-                            />
+                            <xsl:element name="person" namespace="http://www.tei-c.org/ns/1.0">
+                                <xsl:copy-of select="key('listperson-lookup', $current-id, $listperson)[1]/@xml:id"/>
+                                <xsl:if test="exists($author-in-commentary-bibl) and not(exists($author-in-non-commentary-bibl))">
+                                    <xsl:attribute name="ana">
+                                        <xsl:text>comment</xsl:text>
+                                    </xsl:attribute>
+                                </xsl:if>
+                                <xsl:copy-of select="key('listperson-lookup', $current-id, $listperson)[1]/node()"/>
+                            </xsl:element>
                         </xsl:when>
                         <xsl:otherwise>
                             <xsl:variable name="nummer"
@@ -52,6 +62,11 @@
                                   <xsl:attribute name="xml:id">
                                   <xsl:value-of select="concat('pmb', $nummer)"/>
                                   </xsl:attribute>
+                                  <xsl:if test="exists($author-in-commentary-bibl) and not(exists($author-in-non-commentary-bibl))">
+                                      <xsl:attribute name="ana">
+                                          <xsl:text>comment</xsl:text>
+                                      </xsl:attribute>
+                                  </xsl:if>
                                   <xsl:variable name="eintrag_inhalt"
                                   select="document($eintrag)/person"/>
                                   <xsl:apply-templates
@@ -86,6 +101,11 @@
                     </xsl:for-each>
                 </list>
             </xsl:variable>
+            <xsl:variable name="bibl-list" as="node()">
+                <list>
+                    <xsl:copy-of select="tei:listBibl/tei:bibl"/>
+                </list>
+            </xsl:variable>
             <xsl:element name="listPerson" namespace="http://www.tei-c.org/ns/1.0">
                 <xsl:if test="tei:listPerson">
                     <xsl:copy-of select="tei:listPerson/*"/>
@@ -93,6 +113,7 @@
                 <xsl:call-template name="add-persons">
                     <xsl:with-param name="existing-persons" select="$persons"/>
                     <xsl:with-param name="context-node" select="tei:listBibl"/>
+                    <xsl:with-param name="bibl-list" select="$bibl-list"/>
                 </xsl:call-template>
             </xsl:element>
             <xsl:copy-of select="*[not(name() = 'listPerson')]"/>
