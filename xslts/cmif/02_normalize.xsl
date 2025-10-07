@@ -106,6 +106,7 @@ entstehen Duplikate! -->
                         </xsl:for-each>
                         <xsl:copy-of select="tei:correspContext/child::*"/>
                     </xsl:element>
+                    <xsl:copy-of select="tei:note[child::tei:ref]"/>
                 </xsl:element>
             </xsl:for-each>
         </xsl:element>
