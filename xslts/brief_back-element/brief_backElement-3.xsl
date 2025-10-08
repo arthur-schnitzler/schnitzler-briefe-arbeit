@@ -32,7 +32,7 @@
                     <!-- Person already exists in local listPerson, skip -->
                 </xsl:when>
                 <xsl:otherwise>
-                    <!-- Check if this author is only in bibl elements with ana="commentary" -->
+                    <!-- Check if this author is only in bibl elements with ana="comment" -->
                     <xsl:variable name="author-in-commentary-bibl" select="$bibl-list//*:bibl[@ana='comment'][tei:author/@*[name()='key' or name()='ref']/concat('pmb', replace(replace(., '#', ''), 'pmb', '')) = $current-id]"/>
                     <xsl:variable name="author-in-non-commentary-bibl" select="$bibl-list//*:bibl[not(@ana='comment')][tei:author/@*[name()='key' or name()='ref']/concat('pmb', replace(replace(., '#', ''), 'pmb', '')) = $current-id]"/>
 

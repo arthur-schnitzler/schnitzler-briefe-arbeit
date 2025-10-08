@@ -378,7 +378,7 @@ class PMBProcessor:
                         if ref_id.strip():
                             bibl_elem = ET.SubElement(list_elem, f"{{{self.tei_ns}}}bibl")
                             bibl_elem.set("{http://www.w3.org/XML/1998/namespace}id", ref_id.replace("#", ""))
-                    # Then add refs only in commentary (with ana="commentary")
+                    # Then add refs only in commentary (with ana="comment")
                     for ref_id in sorted(in_commentary_refs - in_text_refs):
                         if ref_id.strip():
                             bibl_elem = ET.SubElement(list_elem, f"{{{self.tei_ns}}}bibl")
