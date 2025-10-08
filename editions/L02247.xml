@@ -1,6 +1,10 @@
-<?xml version='1.0' encoding='UTF-8'?>
+<?xml version="1.0" encoding="UTF-8"?>
 <?xml-model href="../meta/schnitzler-briefe-schematron.sch" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
-<TEI xmlns="http://www.tei-c.org/ns/1.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.tei-c.org/ns/1.0 ../meta/schnitzler-briefe-schema.xsd" xml:id="L02247" xml:base="https://id.acdh.oeaw.ac.at/schnitzler/schnitzler-briefe/editions">
+<TEI xmlns="http://www.tei-c.org/ns/1.0"
+     xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+     xsi:schemaLocation="http://www.tei-c.org/ns/1.0 ../meta/schnitzler-briefe-schema.xsd"
+     xml:id="L02247"
+     xml:base="https://id.acdh.oeaw.ac.at/schnitzler/schnitzler-briefe/editions">
    <teiHeader>
       <fileDesc>
          <titleStmt>
@@ -116,12 +120,20 @@
                <date evidence="conjecture" notBefore="1916-11-23" notAfter="1916-11-25">[23. 11. 1916 – 27. 11. 1916?]</date>
                <placeName ref="#pmb50">Wien</placeName>
             </correspAction>
-            <correspContext><ref type="belongsToCorrespondence" target="correspondence_12438">Adam, Robert</ref>
+            <correspContext>
+               <ref type="belongsToCorrespondence" target="correspondence_12438">Adam, Robert</ref>
                <ref subtype="previous_letter" type="withinCollection" target="L03767">Schnitzler an Zweig, 22. 11. 1916</ref>
                <ref subtype="next_letter" type="withinCollection" target="L02248">Adam an Schnitzler, 30. 11. 1916</ref>
-               <ref subtype="previous_letter" type="withinCorrespondence" source="correspondence_12438" target="L02246">Adam an Schnitzler, 20. 11. 1916</ref>
-               <ref subtype="next_letter" type="withinCorrespondence" source="correspondence_12438" target="L02248">Adam an Schnitzler, 30. 11. 1916</ref>
-            </correspContext></correspDesc>
+               <ref subtype="previous_letter"
+                    type="withinCorrespondence"
+                    source="correspondence_12438"
+                    target="L02246">Adam an Schnitzler, 20. 11. 1916</ref>
+               <ref subtype="next_letter"
+                    type="withinCorrespondence"
+                    source="correspondence_12438"
+                    target="L02248">Adam an Schnitzler, 30. 11. 1916</ref>
+            </correspContext>
+         </correspDesc>
       </profileDesc>
       <revisionDesc status="approved">
          <change who="MAM" when="2019-05-07">Angelegt</change>
@@ -259,8 +271,8 @@
                <idno type="URL" subtype="wikipedia">https://de.wikipedia.org/wiki/Robert_Adam_(Schriftsteller)</idno>
                <idno type="URL" subtype="schnitzler-interviews">https://schnitzler-interviews.acdh.oeaw.ac.at/pmb12438.html</idno>
                <idno type="URL" subtype="schnitzler-mikrofilme">https://schnitzler-mikrofilme.acdh.oeaw.ac.at/1411534.html?pmb12438</idno>
-               <idno type="URL" subtype="schnitzler-briefe">https://schnitzler-briefe.acdh.oeaw.ac.at/pmb12438.html</idno>
                <idno type="URL" subtype="bahr-textverzeichnis">https://bahr-textverzeichnis.acdh.oeaw.ac.at/pmb12438.html</idno>
+               <idno type="URL" subtype="schnitzler-briefe">https://schnitzler-briefe.acdh.oeaw.ac.at/pmb12438.html</idno>
                <affiliation>
                   <term ref="pmb1182">arbeitet für</term>
                   <orgName ref="pmb29591">Handelsgericht Wien</orgName>
@@ -315,37 +327,88 @@
                <idno type="URL" subtype="schnitzler-lektueren">https://schnitzler-lektueren.acdh.oeaw.ac.at/pmb11190.html</idno>
                <idno type="URL" subtype="wikidata">http://www.wikidata.org/entity/Q38337</idno>
                <idno type="URL" subtype="wikipedia">https://de.wikipedia.org/wiki/Alexandre_Dumas_der_%C3%84ltere</idno>
-               <idno type="URL" subtype="schnitzler-briefe">https://schnitzler-briefe.acdh.oeaw.ac.at/pmb11190.html</idno>
                <idno type="URL" subtype="pmb">https://pmb.acdh.oeaw.ac.at/entity/159835/</idno>
                <idno type="URL" subtype="hanslick">https://hanslick.acdh.oeaw.ac.at/hsl_person_id_2940.html</idno>
                <idno type="URL" subtype="bahr-textverzeichnis">https://bahr-textverzeichnis.acdh.oeaw.ac.at/pmb11190.html</idno>
                <idno type="URL" subtype="bahr-textverzeichnis">https://bahr-textverzeichnis.acdh.oeaw.ac.at/TSN-listperson.html#pmb159835</idno>
                <idno type="URL" subtype="stefanzweig">https://www.stefanzweig.digital/o:szd.personen/sdef:TEI/get#SZDPER.324</idno>
+               <idno type="URL" subtype="schnitzler-briefe">https://schnitzler-briefe.acdh.oeaw.ac.at/pmb11190.html</idno>
+               <idno type="URL" subtype="schnitzler-kultur">https://schnitzler-kultur.acdh.oeaw.ac.at/pmb11190.html</idno>
                <note type="references"> </note>
                <figure>
                   <graphic url="https://upload.wikimedia.org/wikipedia/commons/thumb/0/06/Alexander_Dumas_p%C3%A8re_par_Nadar_-_Google_Art_Project.jpg/250px-Alexander_Dumas_p%C3%A8re_par_Nadar_-_Google_Art_Project.jpg"/>
+               </figure>
+            </person>
+            <person xml:id="pmb12543">
+               <persName>
+                  <forename>Romain</forename>
+                  <surname>Rolland</surname>
+               </persName>
+               <birth>
+                  <date when="1866-01-29">29.01.1866</date>
+                  <settlement ref="pmb48686">
+                     <placeName type="pref">Clamecy</placeName>
+                     <location>
+                        <geo>47,46017 3,5194</geo>
+                     </location>
+                  </settlement>
+               </birth>
+               <death>
+                  <date when="1944-12-30">30.12.1944</date>
+                  <settlement ref="pmb58488">
+                     <placeName type="pref">Vézelay</placeName>
+                     <location>
+                        <geo>47,46572 3,74559</geo>
+                     </location>
+                  </settlement>
+               </death>
+               <sex value="male"/>
+               <occupation ref="pmb90">Schriftsteller/Schriftstellerin</occupation>
+               <idno type="URL" subtype="d-nb">https://d-nb.info/gnd/118602330</idno>
+               <idno type="URL" subtype="schnitzler-tagebuch">https://schnitzler-tagebuch.acdh.oeaw.ac.at/person_19333.html</idno>
+               <idno type="URL" subtype="schnitzler-bahr">https://schnitzler-bahr.acdh.oeaw.ac.at/pmb12543.html</idno>
+               <idno type="URL" subtype="pmb">https://pmb.acdh.oeaw.ac.at/entity/12543/</idno>
+               <idno type="URL" subtype="schnitzler-lektueren">https://schnitzler-lektueren.acdh.oeaw.ac.at/pmb12543.html</idno>
+               <idno type="URL" subtype="fackel">https://fackel.oeaw.ac.at/?p=fackelp52430</idno>
+               <idno type="URL" subtype="kraus1933">https://kraus1933.ace.oeaw.ac.at/Gesamt.xml?template=register_personen.html&amp;letter=R#DWpers0200</idno>
+               <idno type="URL" subtype="wikidata">http://www.wikidata.org/entity/Q47162</idno>
+               <idno type="URL" subtype="wikipedia">https://de.wikipedia.org/wiki/Romain_Rolland</idno>
+               <idno type="URL" subtype="schnitzler-interviews">https://schnitzler-interviews.acdh.oeaw.ac.at/pmb12543.html</idno>
+               <idno type="URL" subtype="schnitzler-mikrofilme">https://schnitzler-mikrofilme.acdh.oeaw.ac.at/1416477.html?pmb12543</idno>
+               <idno type="URL" subtype="bahr-textverzeichnis">https://bahr-textverzeichnis.acdh.oeaw.ac.at/pmb12543.html</idno>
+               <idno type="URL" subtype="stefanzweig">https://www.stefanzweig.digital/o:szd.personen/sdef:TEI/get#SZDPER.1192</idno>
+               <idno type="URL" subtype="brenner">https://brenner.oeaw.ac.at/?p=brennerp10255</idno>
+               <idno type="URL" subtype="schnitzler-briefe">https://schnitzler-briefe.acdh.oeaw.ac.at/pmb12543.html</idno>
+               <idno type="URL" subtype="schnitzler-kultur">https://schnitzler-kultur.acdh.oeaw.ac.at/pmb12543.html</idno>
+               <figure>
+                  <graphic url="https://upload.wikimedia.org/wikipedia/commons/thumb/a/ad/Romain_Rolland_1915.jpg/250px-Romain_Rolland_1915.jpg"/>
                </figure>
             </person>
          </listPerson>
          <listBibl>
             <bibl xml:id="pmb33654">
                <title>Wundervogel</title>
-               <author ref="" role="hat-geschaffen">Adam, Robert</author>
+               <author ref="pmb12438" role="hat-geschaffen">Adam, Robert</author>
                <idno type="URL" subtype="pmb">https://pmb.acdh.oeaw.ac.at/entity/33654/</idno>
                <idno type="URL" subtype="schnitzler-briefe">https://schnitzler-briefe.acdh.oeaw.ac.at/pmb33654.html</idno>
                <note type="work_kind">Unveröffentlichtes dramatisches Werk</note>
             </bibl>
             <bibl xml:id="pmb33640">
-               <title>Jean Christophe</title>
-               <author ref="" role="hat-geschaffen">Rolland, Romain</author>
+               <title>Jean-Christophe</title>
+               <title type="legacy-name-merge">Jean-Christophe</title>
+               <author ref="pmb12543" role="hat-geschaffen">Rolland, Romain</author>
                <date from="1904-01-01" to="1912-01-01">1904 – 1912</date>
                <idno type="URL" subtype="pmb">https://pmb.acdh.oeaw.ac.at/entity/33640/</idno>
+               <idno type="URL" subtype="pmb">https://pmb.acdh.oeaw.ac.at/entity/78079/</idno>
                <idno type="URL" subtype="schnitzler-briefe">https://schnitzler-briefe.acdh.oeaw.ac.at/pmb33640.html</idno>
+               <idno type="URL" subtype="schnitzler-lektueren">https://schnitzler-lektueren.acdh.oeaw.ac.at/pmb78079.html</idno>
+               <idno type="URL" subtype="schnitzler-tagebuch">https://schnitzler-tagebuch.acdh.oeaw.ac.at/pmb78079.html</idno>
+               <idno type="URL" subtype="wikidata">http://www.wikidata.org/entity/Q2476841</idno>
                <note type="work_kind">Roman</note>
             </bibl>
             <bibl xml:id="pmb33652">
                <title>Meine Memoiren</title>
-               <author ref="" role="hat-geschaffen">Dumas, Alexandre père</author>
+               <author ref="pmb11190" role="hat-geschaffen">Dumas, Alexandre père</author>
                <date from="1852-01-01" to="1856-01-01">1852 – 1856</date>
                <idno type="URL" subtype="pmb">https://pmb.acdh.oeaw.ac.at/entity/33652/</idno>
                <idno type="URL" subtype="schnitzler-briefe">https://schnitzler-briefe.acdh.oeaw.ac.at/pmb33652.html</idno>
@@ -418,8 +481,9 @@
                   <geo>48,23099349198 16,340117830625</geo>
                </location>
                <idno type="URL" subtype="pmb">https://pmb.acdh.oeaw.ac.at/entity/168815/</idno>
-               <idno type="URL" subtype="schnitzler-briefe">https://schnitzler-briefe.acdh.oeaw.ac.at/pmb168815.html</idno>
                <idno type="URL" subtype="wienerschnitzler">https://wienerschnitzler.org/pmb168815.html</idno>
+               <idno type="URL" subtype="schnitzler-briefe">https://schnitzler-briefe.acdh.oeaw.ac.at/pmb168815.html</idno>
+               <idno type="URL" subtype="schnitzler-kultur">https://schnitzler-kultur.acdh.oeaw.ac.at/pmb168815.html</idno>
             </place>
             <place xml:id="pmb62">
                <placeName>XII., Meidling</placeName>
@@ -447,8 +511,8 @@
                <idno type="URL" subtype="wikipedia">https://de.wikipedia.org/wiki/Meidling_(Wiener_Bezirksteil)</idno>
                <idno type="URL" subtype="wikipedia">https://de.wikipedia.org/wiki/Meidling</idno>
                <idno type="URL" subtype="schnitzler-tagebuch">https://schnitzler-tagebuch.acdh.oeaw.ac.at/pmb62.html</idno>
-               <idno type="URL" subtype="schnitzler-briefe">https://schnitzler-briefe.acdh.oeaw.ac.at/pmb62.html</idno>
                <idno type="URL" subtype="wienerschnitzler">https://wienerschnitzler.org/pmb62.html</idno>
+               <idno type="URL" subtype="schnitzler-briefe">https://schnitzler-briefe.acdh.oeaw.ac.at/pmb62.html</idno>
                <note type="image">
                   <figure>
                      <graphic url="https://iiif.onb.ac.at/images/AKON/AK002_021/021/full/,600/0/native.jpg"/>

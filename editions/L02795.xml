@@ -1,6 +1,10 @@
-<?xml version='1.0' encoding='UTF-8'?>
+<?xml version="1.0" encoding="UTF-8"?>
 <?xml-model href="../meta/schnitzler-briefe-schematron.sch" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
-<TEI xmlns="http://www.tei-c.org/ns/1.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.tei-c.org/ns/1.0 ../meta/schnitzler-briefe-schema.xsd" xml:id="L02795" xml:base="https://id.acdh.oeaw.ac.at/schnitzler/schnitzler-briefe/editions">
+<TEI xmlns="http://www.tei-c.org/ns/1.0"
+     xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+     xsi:schemaLocation="http://www.tei-c.org/ns/1.0 ../meta/schnitzler-briefe-schema.xsd"
+     xml:id="L02795"
+     xml:base="https://id.acdh.oeaw.ac.at/schnitzler/schnitzler-briefe/editions">
    <teiHeader>
       <fileDesc>
          <titleStmt>
@@ -125,12 +129,20 @@
                   – 12. 1. 1896?]</date>
                <placeName ref="#pmb146">Frankfurt am Main</placeName>
             </correspAction>
-            <correspContext><ref type="belongsToCorrespondence" target="correspondence_11485">Goldmann, Paul</ref>
+            <correspContext>
+               <ref type="belongsToCorrespondence" target="correspondence_11485">Goldmann, Paul</ref>
                <ref subtype="previous_letter" type="withinCollection" target="L02762">Goldmann an Schnitzler, 11. 1. [1896]</ref>
                <ref subtype="next_letter" type="withinCollection" target="L02763">Goldmann an Schnitzler, 13. 1. [1896]</ref>
-               <ref subtype="previous_letter" type="withinCorrespondence" source="correspondence_11485" target="L02762">Goldmann an Schnitzler, 11. 1. [1896]</ref>
-               <ref subtype="next_letter" type="withinCorrespondence" source="correspondence_11485" target="L02763">Goldmann an Schnitzler, 13. 1. [1896]</ref>
-            </correspContext></correspDesc>
+               <ref subtype="previous_letter"
+                    type="withinCorrespondence"
+                    source="correspondence_11485"
+                    target="L02762">Goldmann an Schnitzler, 11. 1. [1896]</ref>
+               <ref subtype="next_letter"
+                    type="withinCorrespondence"
+                    source="correspondence_11485"
+                    target="L02763">Goldmann an Schnitzler, 13. 1. [1896]</ref>
+            </correspContext>
+         </correspDesc>
       </profileDesc>
       <revisionDesc status="approved">
          <change who="MAM" when="2022-09-16">Angelegt</change>
@@ -210,11 +222,13 @@
                <idno type="URL" subtype="schnitzler-tagebuch">https://schnitzler-tagebuch.acdh.oeaw.ac.at/person_15525.html</idno>
                <idno type="URL" subtype="pmb">https://pmb.acdh.oeaw.ac.at/entity/17163/</idno>
                <idno type="URL" subtype="schnitzler-briefe">https://schnitzler-briefe.acdh.oeaw.ac.at/pmb17163.html</idno>
+               <idno type="URL" subtype="schnitzler-kultur">https://schnitzler-kultur.acdh.oeaw.ac.at/pmb17163.html</idno>
                <listEvent>
                   <event n="Theaterpremiere" ref="pmb89661" when="1896-01-11">
                      <desc n="1370">teilgenommen an</desc>
                      <label>Premiere von Liebelei, Die Versucherin, 11.1.1896</label>
                      <idno type="URL" subtype="pmb">https://pmb.acdh.oeaw.ac.at/entity/89661/</idno>
+                     <idno type="URL" subtype="schnitzler-kultur">https://schnitzler-kultur.acdh.oeaw.ac.at/pmb89661.html</idno>
                   </event>
                </listEvent>
             </person>
@@ -301,11 +315,13 @@
                <idno type="URL" subtype="d-nb">https://d-nb.info/gnd/116623667</idno>
                <idno type="URL" subtype="wikidata">http://www.wikidata.org/entity/Q124647317</idno>
                <idno type="URL" subtype="schnitzler-briefe">https://schnitzler-briefe.acdh.oeaw.ac.at/pmb23593.html</idno>
+               <idno type="URL" subtype="schnitzler-kultur">https://schnitzler-kultur.acdh.oeaw.ac.at/pmb23593.html</idno>
                <listEvent>
                   <event n="Theaterpremiere" ref="pmb89661" when="1896-01-11">
                      <desc n="1370">teilgenommen an</desc>
                      <label>Premiere von Liebelei, Die Versucherin, 11.1.1896</label>
                      <idno type="URL" subtype="pmb">https://pmb.acdh.oeaw.ac.at/entity/89661/</idno>
+                     <idno type="URL" subtype="schnitzler-kultur">https://schnitzler-kultur.acdh.oeaw.ac.at/pmb89661.html</idno>
                   </event>
                </listEvent>
             </person>
@@ -315,7 +331,7 @@
                <title>Liebelei. Schauspiel in drei Akten</title>
                <title type="werk_link">https://www.deutschestextarchiv.de/book/show/schnitzler_liebelei_1896</title>
                <title type="legacy-name-merge">Liebelei</title>
-               <author ref="" role="hat-geschaffen">Schnitzler, Arthur</author>
+               <author ref="pmb2121" role="hat-geschaffen">Schnitzler, Arthur</author>
                <date>1895-10-09</date>
                <idno type="URL" subtype="asaf">https://asaf.com/S.04.01.27</idno>
                <idno type="URL" subtype="wikidata">http://www.wikidata.org/entity/Q1823758</idno>
@@ -329,9 +345,10 @@
                <idno type="URL" subtype="schnitzler-zeitungen">https://schnitzler-zeitungen.acdh.oeaw.ac.at/223992.html?pmb29917</idno>
                <idno type="URL" subtype="schnitzler-mikrofilme">https://schnitzler-mikrofilme.acdh.oeaw.ac.at/1428144.html?pmb29917</idno>
                <idno type="URL" subtype="schnitzler-mikrofilme">https://schnitzler-mikrofilme.acdh.oeaw.ac.at/1589039.html?pmb29917</idno>
-               <idno type="URL" subtype="schnitzler-briefe">https://schnitzler-briefe.acdh.oeaw.ac.at/pmb29917.html</idno>
                <idno type="URL" subtype="pmb">https://pmb.acdh.oeaw.ac.at/entity/164806/</idno>
                <idno type="URL" subtype="bahr-textverzeichnis">https://bahr-textverzeichnis.acdh.oeaw.ac.at/TSN-listperson.html#pmb164806</idno>
+               <idno type="URL" subtype="schnitzler-briefe">https://schnitzler-briefe.acdh.oeaw.ac.at/pmb29917.html</idno>
+               <idno type="URL" subtype="schnitzler-kultur">https://schnitzler-kultur.acdh.oeaw.ac.at/pmb29917.html</idno>
                <note type="work_kind">Mehraktiges Drama</note>
                <note type="references"> </note>
             </bibl>
@@ -350,9 +367,9 @@
                </location>
                <idno type="URL" subtype="pmb">https://pmb.acdh.oeaw.ac.at/entity/118831/</idno>
                <idno type="URL" subtype="wikipedia">https://de.wikipedia.org/wiki/Gro%C3%9Fe_Eschenheimer_Stra%C3%9Fe</idno>
-               <idno type="URL" subtype="schnitzler-briefe">https://schnitzler-briefe.acdh.oeaw.ac.at/pmb118831.html</idno>
                <idno type="URL" subtype="pmb">https://pmb.acdh.oeaw.ac.at/entity/182216/</idno>
                <idno type="URL" subtype="wikidata">http://www.wikidata.org/entity/Q1494459</idno>
+               <idno type="URL" subtype="schnitzler-briefe">https://schnitzler-briefe.acdh.oeaw.ac.at/pmb118831.html</idno>
             </place>
             <place xml:id="pmb146">
                <placeName>Frankfurt am Main</placeName>
@@ -361,6 +378,7 @@
                <placeName type="legacy-name-merge">Frankfurt a. Main</placeName>
                <placeName type="alternative-name">Frankfurt, Main</placeName>
                <placeName type="alternative-name">Frankfurt/Main</placeName>
+               <placeName type="legacy-name-merge">Frankfurt a. M\:</placeName>
                <desc type="entity_type">P.PPLA3</desc>
                <desc type="entity_type_id">1128</desc>
                <location type="coords">
@@ -384,8 +402,10 @@
                <idno type="URL" subtype="wikipedia">https://de.wikipedia.org/wiki/Frankfurt_am_Main</idno>
                <idno type="URL" subtype="schnitzler-interviews">https://schnitzler-interviews.acdh.oeaw.ac.at/pmb146.html</idno>
                <idno type="URL" subtype="schnitzler-tagebuch">https://schnitzler-tagebuch.acdh.oeaw.ac.at/pmb146.html</idno>
-               <idno type="URL" subtype="schnitzler-briefe">https://schnitzler-briefe.acdh.oeaw.ac.at/pmb146.html</idno>
                <idno type="URL" subtype="wienerschnitzler">https://wienerschnitzler.org/pmb146.html</idno>
+               <idno type="URL" subtype="pmb">https://pmb.acdh.oeaw.ac.at/entity/261820/</idno>
+               <idno type="URL" subtype="schnitzler-briefe">https://schnitzler-briefe.acdh.oeaw.ac.at/pmb146.html</idno>
+               <idno type="URL" subtype="schnitzler-kultur">https://schnitzler-kultur.acdh.oeaw.ac.at/pmb146.html</idno>
                <note type="image">
                   <figure>
                      <graphic url="https://iiif.onb.ac.at/images/AKON/AK111_495/495/full/,600/0/native.jpg"/>
@@ -394,7 +414,7 @@
             </place>
          </listPlace>
          <listOrg>
-            <org xml:id="pmb88756">
+            <org xml:id="pmb34987" ana="comment">
                <orgName>Frankfurter Stadttheater</orgName>
                <orgName type="institution_namensvariante">Schauspielhaus (Frankfurt, Main)</orgName>
                <orgName type="institution_namensvariante">Comoedienhaus</orgName>
@@ -421,9 +441,10 @@
                   <idno type="URL" subtype="wikipedia">https://de.wikipedia.org/wiki/Frankfurt_am_Main</idno>
                   <idno type="URL" subtype="schnitzler-interviews">https://schnitzler-interviews.acdh.oeaw.ac.at/pmb146.html</idno>
                   <idno type="URL" subtype="schnitzler-tagebuch">https://schnitzler-tagebuch.acdh.oeaw.ac.at/pmb146.html</idno>
-                  <idno type="URL" subtype="schnitzler-briefe">https://schnitzler-briefe.acdh.oeaw.ac.at/pmb146.html</idno>
                   <idno type="URL" subtype="wienerschnitzler">https://wienerschnitzler.org/pmb146.html</idno>
                   <idno type="URL" subtype="pmb">https://pmb.acdh.oeaw.ac.at/entity/261820/</idno>
+                  <idno type="URL" subtype="schnitzler-briefe">https://schnitzler-briefe.acdh.oeaw.ac.at/pmb146.html</idno>
+                  <idno type="URL" subtype="schnitzler-kultur">https://schnitzler-kultur.acdh.oeaw.ac.at/pmb146.html</idno>
                </location>
                <location type="located_in_place">
                   <placeName ref="pmb56867">Hochstraße [Frankfurt am Main]</placeName>
@@ -437,6 +458,7 @@
                   <geo>50,1081 8,67417</geo>
                   <idno type="URL" subtype="pmb">https://pmb.acdh.oeaw.ac.at/entity/199463/</idno>
                   <idno type="URL" subtype="wienerschnitzler">https://wienerschnitzler.org/pmb199463.html</idno>
+                  <idno type="URL" subtype="schnitzler-kultur">https://schnitzler-kultur.acdh.oeaw.ac.at/pmb199463.html</idno>
                </location>
                <idno type="URL" subtype="d-nb">https://d-nb.info/gnd/509073-8</idno>
                <idno type="URL" subtype="pmb">https://pmb.acdh.oeaw.ac.at/entity/88756/</idno>
@@ -445,12 +467,12 @@
                <idno type="URL" subtype="d-nb">https://d-nb.info/gnd/1041343701</idno>
                <idno type="URL" subtype="wikidata">http://www.wikidata.org/entity/Q5155182</idno>
                <idno type="URL" subtype="wikipedia">https://de.wikipedia.org/wiki/Comoedienhaus_(Frankfurt_am_Main)</idno>
-               <idno type="URL" subtype="schnitzler-briefe">https://schnitzler-briefe.acdh.oeaw.ac.at/pmb88756.html</idno>
                <idno type="URL" subtype="pmb">https://pmb.acdh.oeaw.ac.at/entity/34987/</idno>
                <idno type="URL" subtype="kraus">https://kraus.wienbibliothek.at/register/institutionen/pmb34987</idno>
                <idno type="URL" subtype="schnitzler-interviews">https://schnitzler-interviews.acdh.oeaw.ac.at/pmb34987.html</idno>
-               <idno type="URL" subtype="schnitzler-briefe">https://schnitzler-briefe.acdh.oeaw.ac.at/pmb34987.html</idno>
                <idno type="URL" subtype="wikidata">http://www.wikidata.org/entity/Q568931</idno>
+               <idno type="URL" subtype="schnitzler-briefe">https://schnitzler-briefe.acdh.oeaw.ac.at/pmb88756.html</idno>
+               <idno type="URL" subtype="schnitzler-kultur">https://schnitzler-kultur.acdh.oeaw.ac.at/pmb88756.html</idno>
                <note type="references"> </note>
                <note type="apis_dates">
                   <date to="1902-10-30">1782-09-02 – 1902-10-30</date>

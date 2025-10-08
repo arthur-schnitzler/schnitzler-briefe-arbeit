@@ -1,6 +1,10 @@
-<?xml version='1.0' encoding='UTF-8'?>
+<?xml version="1.0" encoding="UTF-8"?>
 <?xml-model href="../meta/schnitzler-briefe-schematron.sch" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
-<TEI xmlns="http://www.tei-c.org/ns/1.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.tei-c.org/ns/1.0 ../meta/schnitzler-briefe-schema.xsd" xml:id="L02570" xml:base="https://id.acdh.oeaw.ac.at/schnitzler/schnitzler-briefe/editions">
+<TEI xmlns="http://www.tei-c.org/ns/1.0"
+     xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+     xsi:schemaLocation="http://www.tei-c.org/ns/1.0 ../meta/schnitzler-briefe-schema.xsd"
+     xml:id="L02570"
+     xml:base="https://id.acdh.oeaw.ac.at/schnitzler/schnitzler-briefe/editions">
    <teiHeader>
       <fileDesc>
          <titleStmt>
@@ -121,12 +125,20 @@
                <date evidence="conjecture" notBefore="1912-11-29" notAfter="1912-12-01">[29. 11. 1912 – 3. 12. 1912?]</date>
                <placeName ref="#pmb50">Wien</placeName>
             </correspAction>
-            <correspContext><ref type="belongsToCorrespondence" target="correspondence_4836">Rie-Andro, Therese</ref>
+            <correspContext>
+               <ref type="belongsToCorrespondence" target="correspondence_4836">Rie-Andro, Therese</ref>
                <ref subtype="previous_letter" type="withinCollection" target="L02105">Hofmannsthal an Schnitzler, [29. 11. 1912]</ref>
                <ref subtype="next_letter" type="withinCollection" target="L02106">Altenberg an Schnitzler, 1. 12. 191[2]</ref>
-               <ref subtype="previous_letter" type="withinCorrespondence" source="correspondence_4836" target="L02574">Schnitzler an Rie, 12. 2. 1912</ref>
-               <ref subtype="next_letter" type="withinCorrespondence" source="correspondence_4836" target="L02571">Rie an Schnitzler, 27. 1. 1913</ref>
-            </correspContext></correspDesc>
+               <ref subtype="previous_letter"
+                    type="withinCorrespondence"
+                    source="correspondence_4836"
+                    target="L02574">Schnitzler an Rie, 12. 2. 1912</ref>
+               <ref subtype="next_letter"
+                    type="withinCorrespondence"
+                    source="correspondence_4836"
+                    target="L02571">Rie an Schnitzler, 27. 1. 1913</ref>
+            </correspContext>
+         </correspDesc>
       </profileDesc>
       <revisionDesc status="approved">
          <change who="MAM" when="2021-06-17">Angelegt</change>
@@ -233,19 +245,23 @@
                <idno type="URL" subtype="wikipedia">https://de.wikipedia.org/wiki/Therese_Rie</idno>
                <idno type="URL" subtype="dx">https://dx.doi.org/10.1553/0x0001df4f</idno>
                <idno type="URL" subtype="schnitzler-mikrofilme">https://schnitzler-mikrofilme.acdh.oeaw.ac.at/1416474.html?pmb4836</idno>
-               <idno type="URL" subtype="schnitzler-briefe">https://schnitzler-briefe.acdh.oeaw.ac.at/pmb4836.html</idno>
                <idno type="URL" subtype="schnitzler-tagebuch">https://schnitzler-tagebuch.acdh.oeaw.ac.at/person_19255.html</idno>
                <idno type="URL" subtype="schaubuehne">https://schaubuehne.oeaw.ac.at/register.html?author=2614</idno>
+               <idno type="URL" subtype="schnitzler-briefe">https://schnitzler-briefe.acdh.oeaw.ac.at/pmb4836.html</idno>
+               <idno type="URL" subtype="schnitzler-kultur">https://schnitzler-kultur.acdh.oeaw.ac.at/pmb4836.html</idno>
                <listEvent>
                   <event n="Lesung" ref="pmb56061" when="1912-11-28">
                      <desc n="1370">teilgenommen an</desc>
                      <label>Lesung von Professor Bernhardi, 28.11.1912</label>
                      <idno type="URL" subtype="pmb">https://pmb.acdh.oeaw.ac.at/entity/56061/</idno>
+                     <idno type="URL" subtype="schnitzler-briefe">https://schnitzler-briefe.acdh.oeaw.ac.at/pmb56061.html</idno>
                   </event>
                   <event n="Theateruraufführung" ref="pmb35439" when="1929-12-21">
                      <desc n="1370">teilgenommen an</desc>
                      <label>Uraufführung von Im Spiel der Sommerlüfte, 21.12.1929</label>
                      <idno type="URL" subtype="pmb">https://pmb.acdh.oeaw.ac.at/entity/35439/</idno>
+                     <idno type="URL" subtype="schnitzler-briefe">https://schnitzler-briefe.acdh.oeaw.ac.at/pmb35439.html</idno>
+                     <idno type="URL" subtype="schnitzler-kultur">https://schnitzler-kultur.acdh.oeaw.ac.at/pmb35439.html</idno>
                   </event>
                </listEvent>
             </person>
@@ -276,85 +292,6 @@
                <occupation ref="pmb90">Schriftsteller/Schriftstellerin</occupation>
                <occupation ref="pmb97">Mediziner/Medizinerin</occupation>
                <idno type="gnd">https://d-nb.info/gnd/118609807/</idno>
-            </person>
-            <person xml:id="pmb12378">
-               <persName>
-                  <forename>Ferdinand</forename>
-                  <surname>Onno</surname>
-               </persName>
-               <persName type="person_geburtsname_nachname">Onowotschek</persName>
-               <persName type="person_geburtsname_vorname">Ferdinand</persName>
-               <birth>
-                  <date when="1881-10-19">19.10.1881</date>
-                  <settlement ref="pmb976">
-                     <placeName type="pref">Czernowitz</placeName>
-                     <location>
-                        <geo>48,29149 25,94034</geo>
-                     </location>
-                  </settlement>
-               </birth>
-               <death>
-                  <date when="1969-08-18">18.08.1969</date>
-                  <settlement ref="pmb50">
-                     <placeName type="pref">Wien</placeName>
-                     <location>
-                        <geo>48,208333 16,373056</geo>
-                     </location>
-                  </settlement>
-               </death>
-               <sex value="male"/>
-               <occupation ref="pmb105">Schauspieler/Schauspielerin</occupation>
-               <idno type="URL" subtype="d-nb">https://d-nb.info/gnd/117134570</idno>
-               <idno type="URL" subtype="schnitzler-tagebuch">https://schnitzler-tagebuch.acdh.oeaw.ac.at/person_18556.html</idno>
-               <idno type="URL" subtype="schnitzler-bahr">https://schnitzler-bahr.acdh.oeaw.ac.at/pmb12378.html</idno>
-               <idno type="URL" subtype="pmb">https://pmb.acdh.oeaw.ac.at/entity/12378/</idno>
-               <idno type="URL" subtype="fackel">https://fackel.oeaw.ac.at/?p=fackelp43225</idno>
-               <idno type="URL" subtype="wikidata">http://www.wikidata.org/entity/Q1405663</idno>
-               <idno type="URL" subtype="wikipedia">https://de.wikipedia.org/wiki/Ferdinand_Onno</idno>
-               <idno type="URL" subtype="geschichtewiki">https://www.geschichtewiki.wien.gv.at/Special:URIResolver/?curid=37138</idno>
-               <idno type="URL" subtype="schnitzler-kino">https://schnitzler-kino.acdh.oeaw.ac.at/pmb12378.html</idno>
-               <idno type="URL" subtype="schnitzler-briefe">https://schnitzler-briefe.acdh.oeaw.ac.at/pmb12378.html</idno>
-               <idno type="URL" subtype="pmb">https://pmb.acdh.oeaw.ac.at/entity/161539/</idno>
-               <idno type="URL" subtype="bahr-textverzeichnis">https://bahr-textverzeichnis.acdh.oeaw.ac.at/TSN-listperson.html#pmb12378</idno>
-               <listEvent>
-                  <event n="Theaterpremiere" ref="pmb186278" when="1911-05-27">
-                     <desc n="1256">ist Arbeitskraft bei</desc>
-                     <label>Premiere von Der junge Medardus, 27.5.1911</label>
-                     <idno type="URL" subtype="pmb">https://pmb.acdh.oeaw.ac.at/entity/186278/</idno>
-                     <idno type="URL" subtype="pmb">https://pmb.acdh.oeaw.ac.at/entity/88576/</idno>
-                  </event>
-                  <event n="Theaterpremiere" ref="pmb47397" when="1912-02-10">
-                     <desc n="1256">ist Arbeitskraft bei</desc>
-                     <label>Premiere von Marionetten, 10.2.1912</label>
-                     <idno type="URL" subtype="pmb">https://pmb.acdh.oeaw.ac.at/entity/47397/</idno>
-                  </event>
-                  <event n="Theaterpremiere" ref="pmb209635" when="1912-03-10">
-                     <desc n="1256">ist Arbeitskraft bei</desc>
-                     <label>Premiere von Der Schleier der Pierrette, 16.3.1912</label>
-                     <idno type="URL" subtype="pmb">https://pmb.acdh.oeaw.ac.at/entity/209635/</idno>
-                  </event>
-                  <event n="Lesung" ref="pmb56061" when="1912-11-28">
-                     <desc n="1256">ist Arbeitskraft bei</desc>
-                     <label>Lesung von Professor Bernhardi, 28.11.1912</label>
-                     <idno type="URL" subtype="pmb">https://pmb.acdh.oeaw.ac.at/entity/56061/</idno>
-                  </event>
-                  <event n="Vorlesung" ref="pmb254030" when="1912-12-11">
-                     <desc n="1256">ist Arbeitskraft bei</desc>
-                     <label>Vorlesung von Professor Bernhardi, 11.12.1912</label>
-                     <idno type="URL" subtype="pmb">https://pmb.acdh.oeaw.ac.at/entity/254030/</idno>
-                  </event>
-                  <event n="Theaterpremiere" ref="pmb63449" when="1920-03-12">
-                     <desc n="1256">ist Arbeitskraft bei</desc>
-                     <label>Premiere von Der Puppenspieler, Der grüne Kakadu, Komtesse Mizzi, 12.3.1920</label>
-                     <idno type="URL" subtype="pmb">https://pmb.acdh.oeaw.ac.at/entity/63449/</idno>
-                  </event>
-                  <event n="Theateruraufführung" ref="pmb35418" when="1931-02-14">
-                     <desc n="1256">ist Arbeitskraft bei</desc>
-                     <label>Uraufführung von Der Gang zum Weiher, 14.2.1931</label>
-                     <idno type="URL" subtype="pmb">https://pmb.acdh.oeaw.ac.at/entity/35418/</idno>
-                  </event>
-               </listEvent>
-               <note type="references"> </note>
             </person>
             <person xml:id="pmb11461">
                <persName>
@@ -397,7 +334,6 @@
                <idno type="URL" subtype="freud">https://freud.acdh-dev.oeaw.ac.at/frd_person_24.html</idno>
                <idno type="URL" subtype="schnitzler-kino">https://schnitzler-kino.acdh.oeaw.ac.at/pmb11461.html</idno>
                <idno type="URL" subtype="schnitzler-interviews">https://schnitzler-interviews.acdh.oeaw.ac.at/pmb11461.html</idno>
-               <idno type="URL" subtype="schnitzler-briefe">https://schnitzler-briefe.acdh.oeaw.ac.at/pmb11461.html</idno>
                <idno type="URL" subtype="pmb">https://pmb.acdh.oeaw.ac.at/entity/160235/</idno>
                <idno type="URL" subtype="schubert-digital">https://schubert-digital.at/P-00110.html</idno>
                <idno type="URL" subtype="hanslick">https://hanslick.acdh.oeaw.ac.at/hsl_person_id_100.html</idno>
@@ -407,6 +343,8 @@
                <idno type="URL" subtype="stefanzweig">https://www.stefanzweig.digital/o:szd.personen/sdef:TEI/get#SZDPER.489</idno>
                <idno type="URL" subtype="brenner">https://brenner.oeaw.ac.at/?p=brennerp4072</idno>
                <idno type="URL" subtype="schaubuehne">https://schaubuehne.oeaw.ac.at/register.html?author=1898</idno>
+               <idno type="URL" subtype="schnitzler-briefe">https://schnitzler-briefe.acdh.oeaw.ac.at/pmb11461.html</idno>
+               <idno type="URL" subtype="schnitzler-kultur">https://schnitzler-kultur.acdh.oeaw.ac.at/pmb11461.html</idno>
                <figure>
                   <graphic url="https://upload.wikimedia.org/wikipedia/commons/thumb/0/0e/Goethe_%28Stieler_1828%29.jpg/250px-Goethe_%28Stieler_1828%29.jpg"/>
                </figure>
@@ -444,9 +382,10 @@
                   <orgName ref="pmb41367">Allgemeine Poliklinik</orgName>
                   <idno type="URL" subtype="pmb">https://pmb.acdh.oeaw.ac.at/entity/41367/</idno>
                   <idno type="URL" subtype="schnitzler-interviews">https://schnitzler-interviews.acdh.oeaw.ac.at/pmb41367.html</idno>
-                  <idno type="URL" subtype="schnitzler-briefe">https://schnitzler-briefe.acdh.oeaw.ac.at/pmb41367.html</idno>
                   <idno type="URL" subtype="wikidata">http://www.wikidata.org/entity/Q2648842</idno>
                   <idno type="URL" subtype="wikipedia">https://de.wikipedia.org/wiki/Allgemeine_Poliklinik_Wien</idno>
+                  <idno type="URL" subtype="schnitzler-briefe">https://schnitzler-briefe.acdh.oeaw.ac.at/pmb41367.html</idno>
+                  <idno type="URL" subtype="schnitzler-kultur">https://schnitzler-kultur.acdh.oeaw.ac.at/pmb41367.html</idno>
                </affiliation>
                <affiliation>
                   <term ref="pmb1153">in Bezug zu</term>
@@ -494,6 +433,7 @@
                <idno type="URL" subtype="doi">https://doi.org/10.1553/0x00284418</idno>
                <idno type="URL" subtype="schnitzler-interviews">https://schnitzler-interviews.acdh.oeaw.ac.at/pmb12695.html</idno>
                <idno type="URL" subtype="schnitzler-briefe">https://schnitzler-briefe.acdh.oeaw.ac.at/pmb12695.html</idno>
+               <idno type="URL" subtype="schnitzler-kultur">https://schnitzler-kultur.acdh.oeaw.ac.at/pmb12695.html</idno>
                <affiliation notBefore="1860-01-01" when="1860-01-01" notAfter="1860-12-31">
                   <term ref="pmb1409">besitzt</term>
                   <orgName ref="pmb29401">Wiener Medizinische Presse</orgName>
@@ -505,9 +445,10 @@
                   <orgName ref="pmb41367">Allgemeine Poliklinik</orgName>
                   <idno type="URL" subtype="pmb">https://pmb.acdh.oeaw.ac.at/entity/41367/</idno>
                   <idno type="URL" subtype="schnitzler-interviews">https://schnitzler-interviews.acdh.oeaw.ac.at/pmb41367.html</idno>
-                  <idno type="URL" subtype="schnitzler-briefe">https://schnitzler-briefe.acdh.oeaw.ac.at/pmb41367.html</idno>
                   <idno type="URL" subtype="wikidata">http://www.wikidata.org/entity/Q2648842</idno>
                   <idno type="URL" subtype="wikipedia">https://de.wikipedia.org/wiki/Allgemeine_Poliklinik_Wien</idno>
+                  <idno type="URL" subtype="schnitzler-briefe">https://schnitzler-briefe.acdh.oeaw.ac.at/pmb41367.html</idno>
+                  <idno type="URL" subtype="schnitzler-kultur">https://schnitzler-kultur.acdh.oeaw.ac.at/pmb41367.html</idno>
                </affiliation>
                <affiliation notBefore="1887-01-01" when="1887-01-01" notAfter="1887-12-31">
                   <term ref="pmb1153">in Bezug zu</term>
@@ -518,39 +459,46 @@
                </affiliation>
                <listEvent>
                   <event n="Vortrag" ref="pmb207380" when="1877-02-21">
-                     <desc n="1256">ist Arbeitskraft bei</desc>
+                     <desc n="1256">ist mitwirkend an</desc>
                      <label>Vortrag von Johann Schnitzler über den Hals, 21.2.1877</label>
                      <idno type="URL" subtype="pmb">https://pmb.acdh.oeaw.ac.at/entity/207380/</idno>
+                     <idno type="URL" subtype="schnitzler-kultur">https://schnitzler-kultur.acdh.oeaw.ac.at/pmb207380.html</idno>
                   </event>
                   <event n="Theateraufführung" ref="pmb207497" when="1879-05-23">
                      <desc n="1370">teilgenommen an</desc>
                      <label>Aufführung von Götz von Berlichingen, 23.5.1879</label>
                      <idno type="URL" subtype="pmb">https://pmb.acdh.oeaw.ac.at/entity/207497/</idno>
+                     <idno type="URL" subtype="schnitzler-kultur">https://schnitzler-kultur.acdh.oeaw.ac.at/pmb207497.html</idno>
                   </event>
                   <event n="Hausball" ref="pmb207789" when="1883-02-04">
-                     <desc n="1256">ist Arbeitskraft bei</desc>
+                     <desc n="1256">ist mitwirkend an</desc>
                      <label>Hausball bei Johann und Louise Schnitzler, 4.2.1883</label>
                      <idno type="URL" subtype="pmb">https://pmb.acdh.oeaw.ac.at/entity/207789/</idno>
+                     <idno type="URL" subtype="schnitzler-kultur">https://schnitzler-kultur.acdh.oeaw.ac.at/pmb207789.html</idno>
                   </event>
                   <event n="Hausball" ref="pmb208095" when="1887-01-30">
-                     <desc n="1256">ist Arbeitskraft bei</desc>
+                     <desc n="1256">ist mitwirkend an</desc>
                      <label>Hausball bei Johann und Louise Schnitzler, 30.1.1887</label>
                      <idno type="URL" subtype="pmb">https://pmb.acdh.oeaw.ac.at/entity/208095/</idno>
+                     <idno type="URL" subtype="schnitzler-kultur">https://schnitzler-kultur.acdh.oeaw.ac.at/pmb208095.html</idno>
                   </event>
                   <event n="Soirée" ref="pmb208188" when="1888-01-01">
-                     <desc n="1256">ist Arbeitskraft bei</desc>
+                     <desc n="1256">ist mitwirkend an</desc>
                      <label>Soirée bei Johann und Louise Schnitzler, 1.1.1888</label>
                      <idno type="URL" subtype="pmb">https://pmb.acdh.oeaw.ac.at/entity/208188/</idno>
+                     <idno type="URL" subtype="schnitzler-kultur">https://schnitzler-kultur.acdh.oeaw.ac.at/pmb208188.html</idno>
                   </event>
                   <event n="Hausball" ref="pmb208293" when="1889-01-01">
-                     <desc n="1256">ist Arbeitskraft bei</desc>
+                     <desc n="1256">ist mitwirkend an</desc>
                      <label>Hausball bei Johann und Louise Schnitzler, 1.1.1889</label>
                      <idno type="URL" subtype="pmb">https://pmb.acdh.oeaw.ac.at/entity/208293/</idno>
+                     <idno type="URL" subtype="schnitzler-kultur">https://schnitzler-kultur.acdh.oeaw.ac.at/pmb208293.html</idno>
                   </event>
                   <event n="Schulaufführung" ref="pmb89901" when="1891-05-13">
                      <desc n="1370">teilgenommen an</desc>
                      <label>Aufführung von Das Abenteuer seines Lebens u.a.,  13.5.1891</label>
                      <idno type="URL" subtype="pmb">https://pmb.acdh.oeaw.ac.at/entity/89901/</idno>
+                     <idno type="URL" subtype="schnitzler-kultur">https://schnitzler-kultur.acdh.oeaw.ac.at/pmb89901.html</idno>
                   </event>
                </listEvent>
                <figure>
@@ -595,6 +543,93 @@
                   <graphic url="https://upload.wikimedia.org/wikipedia/commons/thumb/f/fa/Hochenegg.JPG/250px-Hochenegg.JPG"/>
                </figure>
             </person>
+            <person xml:id="pmb12378" ana="comment">
+               <persName>
+                  <forename>Ferdinand</forename>
+                  <surname>Onno</surname>
+               </persName>
+               <persName type="person_geburtsname_nachname">Onowotschek</persName>
+               <persName type="person_geburtsname_vorname">Ferdinand</persName>
+               <birth>
+                  <date when="1881-10-19">19.10.1881</date>
+                  <settlement ref="pmb976">
+                     <placeName type="pref">Czernowitz</placeName>
+                     <location>
+                        <geo>48,29149 25,94034</geo>
+                     </location>
+                  </settlement>
+               </birth>
+               <death>
+                  <date when="1969-08-18">18.08.1969</date>
+                  <settlement ref="pmb50">
+                     <placeName type="pref">Wien</placeName>
+                     <location>
+                        <geo>48,208333 16,373056</geo>
+                     </location>
+                  </settlement>
+               </death>
+               <sex value="male"/>
+               <occupation ref="pmb105">Schauspieler/Schauspielerin</occupation>
+               <idno type="URL" subtype="d-nb">https://d-nb.info/gnd/117134570</idno>
+               <idno type="URL" subtype="schnitzler-tagebuch">https://schnitzler-tagebuch.acdh.oeaw.ac.at/person_18556.html</idno>
+               <idno type="URL" subtype="schnitzler-bahr">https://schnitzler-bahr.acdh.oeaw.ac.at/pmb12378.html</idno>
+               <idno type="URL" subtype="pmb">https://pmb.acdh.oeaw.ac.at/entity/12378/</idno>
+               <idno type="URL" subtype="fackel">https://fackel.oeaw.ac.at/?p=fackelp43225</idno>
+               <idno type="URL" subtype="wikidata">http://www.wikidata.org/entity/Q1405663</idno>
+               <idno type="URL" subtype="wikipedia">https://de.wikipedia.org/wiki/Ferdinand_Onno</idno>
+               <idno type="URL" subtype="geschichtewiki">https://www.geschichtewiki.wien.gv.at/Special:URIResolver/?curid=37138</idno>
+               <idno type="URL" subtype="schnitzler-kino">https://schnitzler-kino.acdh.oeaw.ac.at/pmb12378.html</idno>
+               <idno type="URL" subtype="pmb">https://pmb.acdh.oeaw.ac.at/entity/161539/</idno>
+               <idno type="URL" subtype="bahr-textverzeichnis">https://bahr-textverzeichnis.acdh.oeaw.ac.at/TSN-listperson.html#pmb12378</idno>
+               <idno type="URL" subtype="schnitzler-briefe">https://schnitzler-briefe.acdh.oeaw.ac.at/pmb12378.html</idno>
+               <idno type="URL" subtype="schnitzler-kultur">https://schnitzler-kultur.acdh.oeaw.ac.at/pmb12378.html</idno>
+               <listEvent>
+                  <event n="Theaterpremiere" ref="pmb186278" when="1911-05-27">
+                     <desc n="1256">ist mitwirkend an</desc>
+                     <label>Premiere von Der junge Medardus, 27.5.1911</label>
+                     <idno type="URL" subtype="pmb">https://pmb.acdh.oeaw.ac.at/entity/186278/</idno>
+                     <idno type="URL" subtype="pmb">https://pmb.acdh.oeaw.ac.at/entity/88576/</idno>
+                     <idno type="URL" subtype="schnitzler-kultur">https://schnitzler-kultur.acdh.oeaw.ac.at/pmb186278.html</idno>
+                  </event>
+                  <event n="Theaterpremiere" ref="pmb47397" when="1912-02-10">
+                     <desc n="1256">ist mitwirkend an</desc>
+                     <label>Premiere von Marionetten, 10.2.1912</label>
+                     <idno type="URL" subtype="pmb">https://pmb.acdh.oeaw.ac.at/entity/47397/</idno>
+                     <idno type="URL" subtype="schnitzler-kultur">https://schnitzler-kultur.acdh.oeaw.ac.at/pmb47397.html</idno>
+                  </event>
+                  <event n="Theaterpremiere" ref="pmb209635" when="1912-03-10">
+                     <desc n="1256">ist mitwirkend an</desc>
+                     <label>Premiere von Der Schleier der Pierrette, 16.3.1912</label>
+                     <idno type="URL" subtype="pmb">https://pmb.acdh.oeaw.ac.at/entity/209635/</idno>
+                     <idno type="URL" subtype="schnitzler-kultur">https://schnitzler-kultur.acdh.oeaw.ac.at/pmb209635.html</idno>
+                  </event>
+                  <event n="Lesung" ref="pmb56061" when="1912-11-28">
+                     <desc n="1256">ist mitwirkend an</desc>
+                     <label>Lesung von Professor Bernhardi, 28.11.1912</label>
+                     <idno type="URL" subtype="pmb">https://pmb.acdh.oeaw.ac.at/entity/56061/</idno>
+                     <idno type="URL" subtype="schnitzler-briefe">https://schnitzler-briefe.acdh.oeaw.ac.at/pmb56061.html</idno>
+                  </event>
+                  <event n="Vorlesung" ref="pmb254030" when="1912-12-11">
+                     <desc n="1256">ist mitwirkend an</desc>
+                     <label>Vorlesung von Professor Bernhardi, 11.12.1912</label>
+                     <idno type="URL" subtype="pmb">https://pmb.acdh.oeaw.ac.at/entity/254030/</idno>
+                  </event>
+                  <event n="Theaterpremiere" ref="pmb63449" when="1920-03-12">
+                     <desc n="1256">ist mitwirkend an</desc>
+                     <label>Premiere von Der Puppenspieler, Der grüne Kakadu, Komtesse Mizzi, 12.3.1920</label>
+                     <idno type="URL" subtype="pmb">https://pmb.acdh.oeaw.ac.at/entity/63449/</idno>
+                     <idno type="URL" subtype="schnitzler-kultur">https://schnitzler-kultur.acdh.oeaw.ac.at/pmb63449.html</idno>
+                  </event>
+                  <event n="Theateruraufführung" ref="pmb35418" when="1931-02-14">
+                     <desc n="1256">ist mitwirkend an</desc>
+                     <label>Uraufführung von Der Gang zum Weiher, 14.2.1931</label>
+                     <idno type="URL" subtype="pmb">https://pmb.acdh.oeaw.ac.at/entity/35418/</idno>
+                     <idno type="URL" subtype="schnitzler-briefe">https://schnitzler-briefe.acdh.oeaw.ac.at/pmb35418.html</idno>
+                     <idno type="URL" subtype="schnitzler-kultur">https://schnitzler-kultur.acdh.oeaw.ac.at/pmb35418.html</idno>
+                  </event>
+               </listEvent>
+               <note type="references"> </note>
+            </person>
          </listPerson>
          <listBibl>
             <bibl xml:id="pmb30203">
@@ -602,7 +637,7 @@
                <title type="werk_arbeitstitel">Ärztestück</title>
                <title type="werk_arbeitstitel">Junggesellenstück</title>
                <title type="werk_link">https://www.schnitzler-edition.net/emendtext/10083</title>
-               <author ref="" role="hat-geschaffen">Schnitzler, Arthur</author>
+               <author ref="pmb2121" role="hat-geschaffen">Schnitzler, Arthur</author>
                <date notBefore="1912-01-01" when="1912-01-01">1912</date>
                <idno type="URL" subtype="asaf">https://asaf.com/S.04.01.31</idno>
                <idno type="URL" subtype="wikidata">http://www.wikidata.org/entity/Q872683</idno>
@@ -617,13 +652,14 @@
                <idno type="URL" subtype="schnitzler-mikrofilme">https://schnitzler-mikrofilme.acdh.oeaw.ac.at/1428584.html?pmb30203</idno>
                <idno type="URL" subtype="schnitzler-mikrofilme">https://schnitzler-mikrofilme.acdh.oeaw.ac.at/1428583.html?pmb30203</idno>
                <idno type="URL" subtype="schnitzler-mikrofilme">https://schnitzler-mikrofilme.acdh.oeaw.ac.at/1428586.html?pmb30203</idno>
-               <idno type="URL" subtype="schnitzler-briefe">https://schnitzler-briefe.acdh.oeaw.ac.at/pmb30203.html</idno>
                <idno type="URL" subtype="schnitzler-interviews">https://schnitzler-interviews.acdh.oeaw.ac.at/pmb30203.html</idno>
+               <idno type="URL" subtype="schnitzler-briefe">https://schnitzler-briefe.acdh.oeaw.ac.at/pmb30203.html</idno>
+               <idno type="URL" subtype="schnitzler-kultur">https://schnitzler-kultur.acdh.oeaw.ac.at/pmb30203.html</idno>
                <note type="work_kind">Mehraktiges Drama</note>
             </bibl>
             <bibl xml:id="pmb56049">
                <title>An den Mond</title>
-               <author ref="" role="hat-geschaffen">Goethe, Johann Wolfgang von</author>
+               <author ref="pmb11461" role="hat-geschaffen">Goethe, Johann Wolfgang von</author>
                <date notBefore="1778-01-01" when="1778-01-01">1778</date>
                <idno type="URL" subtype="pmb">https://pmb.acdh.oeaw.ac.at/entity/56049/</idno>
                <idno type="URL" subtype="schnitzler-briefe">https://schnitzler-briefe.acdh.oeaw.ac.at/pmb56049.html</idno>
@@ -631,7 +667,7 @@
             </bibl>
          </listBibl>
          <listPlace>
-            <place xml:id="pmb50">
+            <place xml:id="pmb50" ana="comment">
                <placeName>Wien</placeName>
                <placeName type="ort_fruherer-name">K.K. Reichshaupt- und Residenzstadt Wien</placeName>
                <placeName type="alternative-name">Bécs</placeName>
@@ -676,7 +712,7 @@
                   </figure>
                </note>
             </place>
-            <place xml:id="pmb168">
+            <place xml:id="pmb168" ana="comment">
                <placeName>Berlin</placeName>
                <placeName type="alternative-name">Hauptstadt Berlin</placeName>
                <placeName type="alternative-name">Barlīn</placeName>
@@ -702,8 +738,9 @@
                <idno type="URL" subtype="wikipedia">https://de.wikipedia.org/wiki/Berlin</idno>
                <idno type="URL" subtype="schnitzler-interviews">https://schnitzler-interviews.acdh.oeaw.ac.at/pmb168.html</idno>
                <idno type="URL" subtype="schnitzler-tagebuch">https://schnitzler-tagebuch.acdh.oeaw.ac.at/pmb168.html</idno>
-               <idno type="URL" subtype="schnitzler-briefe">https://schnitzler-briefe.acdh.oeaw.ac.at/pmb168.html</idno>
                <idno type="URL" subtype="wienerschnitzler">https://wienerschnitzler.org/pmb168.html</idno>
+               <idno type="URL" subtype="schnitzler-briefe">https://schnitzler-briefe.acdh.oeaw.ac.at/pmb168.html</idno>
+               <idno type="URL" subtype="schnitzler-kultur">https://schnitzler-kultur.acdh.oeaw.ac.at/pmb168.html</idno>
                <note type="image">
                   <figure>
                      <graphic url="https://iiif.onb.ac.at/images/AKON/AK113_515/515/full/,600/0/native.jpg"/>
@@ -722,15 +759,18 @@
                   <idno type="URL" subtype="schnitzler-bahr">https://schnitzler-bahr.acdh.oeaw.ac.at/pmb41.html</idno>
                   <idno type="URL" subtype="pmb">https://pmb.acdh.oeaw.ac.at/entity/41/</idno>
                   <idno type="URL" subtype="www">https://www.geschichtewiki.wien.gv.at/Special:URIResolver/?curid=15996</idno>
-                  <idno type="URL" subtype="schnitzler-briefe">https://schnitzler-briefe.acdh.oeaw.ac.at/pmb41.html</idno>
                   <idno type="URL" subtype="schnitzler-interviews">https://schnitzler-interviews.acdh.oeaw.ac.at/pmb41.html</idno>
                   <idno type="URL" subtype="wienerschnitzler">https://wienerschnitzler.org/pmb41.html</idno>
+                  <idno type="URL" subtype="schnitzler-briefe">https://schnitzler-briefe.acdh.oeaw.ac.at/pmb41.html</idno>
+                  <idno type="URL" subtype="schnitzler-kultur">https://schnitzler-kultur.acdh.oeaw.ac.at/pmb41.html</idno>
                </location>
                <location type="located_in_place">
                   <placeName ref="pmb182710">Allgemeine Poliklinik [neues Gebäude]</placeName>
                   <geo>48,216139 16,349167</geo>
                   <idno type="URL" subtype="pmb">https://pmb.acdh.oeaw.ac.at/entity/182710/</idno>
                   <idno type="URL" subtype="wienerschnitzler">https://wienerschnitzler.org/pmb182710.html</idno>
+                  <idno type="URL" subtype="schnitzler-briefe">https://schnitzler-briefe.acdh.oeaw.ac.at/pmb182710.html</idno>
+                  <idno type="URL" subtype="schnitzler-kultur">https://schnitzler-kultur.acdh.oeaw.ac.at/pmb182710.html</idno>
                </location>
                <location type="located_in_place">
                   <placeName ref="pmb59">IX., Alsergrund</placeName>
@@ -744,23 +784,26 @@
                   <idno type="URL" subtype="d-nb">https://d-nb.info/gnd/4066013-8</idno>
                   <idno type="URL" subtype="wikidata">http://www.wikidata.org/entity/Q257780</idno>
                   <idno type="URL" subtype="wikipedia">https://de.wikipedia.org/wiki/Alsergrund</idno>
-                  <idno type="URL" subtype="schnitzler-briefe">https://schnitzler-briefe.acdh.oeaw.ac.at/pmb59.html</idno>
                   <idno type="URL" subtype="wienerschnitzler">https://wienerschnitzler.org/pmb59.html</idno>
+                  <idno type="URL" subtype="schnitzler-briefe">https://schnitzler-briefe.acdh.oeaw.ac.at/pmb59.html</idno>
+                  <idno type="URL" subtype="schnitzler-kultur">https://schnitzler-kultur.acdh.oeaw.ac.at/pmb59.html</idno>
                </location>
                <idno type="URL" subtype="pmb">https://pmb.acdh.oeaw.ac.at/entity/41367/</idno>
                <idno type="URL" subtype="schnitzler-interviews">https://schnitzler-interviews.acdh.oeaw.ac.at/pmb41367.html</idno>
-               <idno type="URL" subtype="schnitzler-briefe">https://schnitzler-briefe.acdh.oeaw.ac.at/pmb41367.html</idno>
                <idno type="URL" subtype="wikidata">http://www.wikidata.org/entity/Q2648842</idno>
                <idno type="URL" subtype="wikipedia">https://de.wikipedia.org/wiki/Allgemeine_Poliklinik_Wien</idno>
+               <idno type="URL" subtype="schnitzler-briefe">https://schnitzler-briefe.acdh.oeaw.ac.at/pmb41367.html</idno>
+               <idno type="URL" subtype="schnitzler-kultur">https://schnitzler-kultur.acdh.oeaw.ac.at/pmb41367.html</idno>
                <note type="apis_dates">
                   <date from="1872-01-01" to="1998-01-01">1872 – 1998</date>
                </note>
             </org>
          </listOrg>
          <listEvent>
-            <event xml:id="pmb56061" when="1912-11-28">
+            <event xml:id="pmb56061" ana="comment">
                <eventName n="Lesung">Lesung von Professor Bernhardi, 28.11.1912</eventName>
                <idno type="URL" subtype="pmb">https://pmb.acdh.oeaw.ac.at/entity/56061/</idno>
+               <idno type="URL" subtype="schnitzler-briefe">https://schnitzler-briefe.acdh.oeaw.ac.at/pmb56061.html</idno>
                <listBibl>
                   <bibl>
                      <title ref="pmb30203">Professor Bernhardi. Komödie in fünf Akten</title>
@@ -768,10 +811,10 @@
                   </bibl>
                </listBibl>
                <listPerson>
-                  <person role="hat als Arbeitskraft">
+                  <person role="hat mitwirkend">
                      <persName ref="pmb12378">Onno, Ferdinand</persName>
                   </person>
-                  <person role="hat als Teilnehmer:in">
+                  <person role="hat teilnehmend">
                      <persName ref="pmb4836">Rie, Therese</persName>
                   </person>
                </listPerson>
@@ -784,7 +827,7 @@
                   </place>
                </listPlace>
             </event>
-            <event xml:id="pmb35355" when="1912-11-28">
+            <event xml:id="pmb35355" ana="comment">
                <eventName n="Theateruraufführung">Uraufführung von Professor Bernhardi, 28.11.1912</eventName>
                <note type="listorg">
                   <listOrg>
@@ -794,6 +837,8 @@
                   </listOrg>
                </note>
                <idno type="URL" subtype="pmb">https://pmb.acdh.oeaw.ac.at/entity/35355/</idno>
+               <idno type="URL" subtype="schnitzler-briefe">https://schnitzler-briefe.acdh.oeaw.ac.at/pmb35355.html</idno>
+               <idno type="URL" subtype="schnitzler-kultur">https://schnitzler-kultur.acdh.oeaw.ac.at/pmb35355.html</idno>
                <listBibl>
                   <bibl>
                      <title ref="pmb30203">Professor Bernhardi. Komödie in fünf Akten</title>
@@ -805,34 +850,34 @@
                   </bibl>
                </listBibl>
                <listPerson>
-                  <person role="hat als Teilnehmer:in">
+                  <person role="hat teilnehmend">
                      <persName ref="pmb2121">Schnitzler, Arthur</persName>
                   </person>
-                  <person role="hat als Teilnehmer:in">
+                  <person role="hat teilnehmend">
                      <persName ref="pmb12698">Schnitzler, Julius</persName>
                   </person>
-                  <person role="hat als Teilnehmer:in">
+                  <person role="hat teilnehmend">
                      <persName ref="pmb24423">Schnitzler, Helene</persName>
                   </person>
-                  <person role="hat als Teilnehmer:in">
+                  <person role="hat teilnehmend">
                      <persName ref="pmb11617">Hauptmann, Gerhart</persName>
                   </person>
-                  <person role="hat als Teilnehmer:in">
+                  <person role="hat teilnehmend">
                      <persName ref="pmb11324">Fischer, Samuel</persName>
                   </person>
-                  <person role="hat als Teilnehmer:in">
+                  <person role="hat teilnehmend">
                      <persName ref="pmb2657">Fischer, Hedwig</persName>
                   </person>
-                  <person role="hat als Teilnehmer:in">
+                  <person role="hat teilnehmend">
                      <persName ref="pmb10788">Auernheimer, Raoul</persName>
                   </person>
-                  <person role="hat als Teilnehmer:in">
+                  <person role="hat teilnehmend">
                      <persName ref="pmb11910">Kerr, Alfred</persName>
                   </person>
-                  <person role="hat als Teilnehmer:in">
+                  <person role="hat teilnehmend">
                      <persName ref="pmb10833">Barnowsky, Victor</persName>
                   </person>
-                  <person role="hat als Teilnehmer:in">
+                  <person role="hat teilnehmend">
                      <persName ref="pmb2173">Schnitzler, Olga</persName>
                   </person>
                </listPerson>
