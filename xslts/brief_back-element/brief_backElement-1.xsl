@@ -154,7 +154,7 @@
                                         <xsl:value-of select="$current"/>
                                     </xsl:attribute>
                                     <xsl:attribute name="ana">
-                                        <xsl:text>commentary</xsl:text>
+                                        <xsl:text>comment</xsl:text>
                                     </xsl:attribute>
                                 </xsl:element>
                             </xsl:if>

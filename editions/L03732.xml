@@ -1,6 +1,10 @@
-<?xml version='1.0' encoding='UTF-8'?>
+<?xml version="1.0" encoding="UTF-8"?>
 <?xml-model href="../meta/schnitzler-briefe-schematron.sch" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
-<TEI xmlns="http://www.tei-c.org/ns/1.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.tei-c.org/ns/1.0 ../meta/schnitzler-briefe-schema.xsd" xml:id="L03732" xml:base="https://id.acdh.oeaw.ac.at/schnitzler/schnitzler-briefe/editions">
+<TEI xmlns="http://www.tei-c.org/ns/1.0"
+     xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+     xsi:schemaLocation="http://www.tei-c.org/ns/1.0 ../meta/schnitzler-briefe-schema.xsd"
+     xml:id="L03732"
+     xml:base="https://id.acdh.oeaw.ac.at/schnitzler/schnitzler-briefe/editions">
    <teiHeader>
       <fileDesc>
          <titleStmt>
@@ -112,13 +116,21 @@
                   – 23. 3. 1897?]</date>
                <placeName ref="#pmb50" evidence="conjecture">Wien</placeName>
             </correspAction>
-            <correspContext><ref type="belongsToCorrespondence" target="correspondence_2128">Plessner, Else</ref>
+            <correspContext>
+               <ref type="belongsToCorrespondence" target="correspondence_2128">Plessner, Else</ref>
                <ref subtype="previous_letter" type="withinCollection" target="L00654">Schnitzler an Beer-Hofmann, 18. 3. 1897</ref>
                <ref subtype="next_letter" type="withinCollection" target="L00655">Bahr an Schnitzler, [nach dem
                   20. 3. 1897]</ref>
-               <ref subtype="previous_letter" type="withinCorrespondence" source="correspondence_2128" target="L03712">Plessner an Schnitzler, 13. 1. 1897</ref>
-               <ref subtype="next_letter" type="withinCorrespondence" source="correspondence_2128" target="L03713">Plessner an Schnitzler, 23. 3. 1897</ref>
-            </correspContext></correspDesc>
+               <ref subtype="previous_letter"
+                    type="withinCorrespondence"
+                    source="correspondence_2128"
+                    target="L03712">Plessner an Schnitzler, 13. 1. 1897</ref>
+               <ref subtype="next_letter"
+                    type="withinCorrespondence"
+                    source="correspondence_2128"
+                    target="L03713">Plessner an Schnitzler, 23. 3. 1897</ref>
+            </correspContext>
+         </correspDesc>
       </profileDesc>
       <revisionDesc status="proposed">
          <change who="MAM" when="2025-07-03">Export aus Transkribus</change>
@@ -198,11 +210,17 @@
                   </settlement>
                </birth>
                <death>
-                  <date when="1932-05-01">01.05.1932</date>
+                  <date when="1932-05-07">07.05.1932</date>
                   <settlement ref="pmb49185">
                      <placeName type="pref">Alicante</placeName>
                      <location>
                         <geo>38,34517 -0,48149</geo>
+                     </location>
+                  </settlement>
+                  <settlement ref="pmb296401">
+                     <placeName type="pref">calle Gravina 15</placeName>
+                     <location>
+                        <geo>38,3456446 -0,47927879</geo>
                      </location>
                   </settlement>
                </death>
@@ -216,17 +234,21 @@
                <idno type="URL" subtype="wikidata">http://www.wikidata.org/entity/Q19193427</idno>
                <idno type="URL" subtype="wikipedia">https://de.wikipedia.org/wiki/Elsa_Plessner</idno>
                <idno type="URL" subtype="schnitzler-briefe">https://schnitzler-briefe.acdh.oeaw.ac.at/pmb2128.html</idno>
+               <idno type="URL" subtype="schnitzler-kultur">https://schnitzler-kultur.acdh.oeaw.ac.at/pmb2128.html</idno>
                <listEvent>
                   <event n="Theateruraufführung" ref="pmb42011" when="1896-10-16">
                      <desc n="1370">teilgenommen an</desc>
                      <label>Uraufführung von Sein Sohn, 16.10.1896</label>
                      <idno type="URL" subtype="pmb">https://pmb.acdh.oeaw.ac.at/entity/42011/</idno>
                      <idno type="URL" subtype="pmb">https://pmb.acdh.oeaw.ac.at/entity/208861/</idno>
+                     <idno type="URL" subtype="schnitzler-briefe">https://schnitzler-briefe.acdh.oeaw.ac.at/pmb42011.html</idno>
+                     <idno type="URL" subtype="schnitzler-kultur">https://schnitzler-kultur.acdh.oeaw.ac.at/pmb42011.html</idno>
                   </event>
                   <event n="Theateruraufführung" ref="pmb296012" when="1901-03-16">
                      <desc n="1370">teilgenommen an</desc>
                      <label>Uraufführung von Die Ehrlosen, 16.3.1901</label>
                      <idno type="URL" subtype="pmb">https://pmb.acdh.oeaw.ac.at/entity/296012/</idno>
+                     <idno type="URL" subtype="schnitzler-briefe">https://schnitzler-briefe.acdh.oeaw.ac.at/pmb296012.html</idno>
                   </event>
                </listEvent>
                <figure>
@@ -276,16 +298,18 @@
                <occupation ref="pmb157">Hotelier/Hotelière</occupation>
                <occupation ref="pmb208">Hotelbesitzer/Hotelbesitzerin</occupation>
                <idno type="URL" subtype="pmb">https://pmb.acdh.oeaw.ac.at/entity/296094/</idno>
+               <idno type="URL" subtype="schnitzler-briefe">https://schnitzler-briefe.acdh.oeaw.ac.at/pmb296094.html</idno>
             </person>
          </listPerson>
          <listBibl>
             <bibl xml:id="pmb30265">
                <title>Der gläserne Käfig. Eine Parabel</title>
                <title type="werk_bibliografische-angabe">Die Zeit, Bd. 12, Nr. 149, 7. 8. 1897</title>
-               <author ref="" role="hat-geschaffen">Plessner, Elsa</author>
+               <author ref="pmb2128" role="hat-geschaffen">Plessner, Elsa</author>
                <date when="1897-08-07">07.08.1897</date>
                <idno type="URL" subtype="schnitzler-bahr">https://schnitzler-bahr.acdh.oeaw.ac.at/pmb30265.html</idno>
                <idno type="URL" subtype="pmb">https://pmb.acdh.oeaw.ac.at/entity/30265/</idno>
+               <idno type="URL" subtype="schnitzler-briefe">https://schnitzler-briefe.acdh.oeaw.ac.at/pmb30265.html</idno>
                <note type="work_kind">Erzählung</note>
             </bibl>
          </listBibl>
@@ -312,8 +336,9 @@
                <idno type="URL" subtype="d-nb">https://d-nb.info/gnd/4038688-0</idno>
                <idno type="URL" subtype="wikipedia">https://de.wikipedia.org/wiki/Meran</idno>
                <idno type="URL" subtype="schnitzler-tagebuch">https://schnitzler-tagebuch.acdh.oeaw.ac.at/pmb43520.html</idno>
-               <idno type="URL" subtype="schnitzler-briefe">https://schnitzler-briefe.acdh.oeaw.ac.at/pmb43520.html</idno>
                <idno type="URL" subtype="wienerschnitzler">https://wienerschnitzler.org/pmb43520.html</idno>
+               <idno type="URL" subtype="schnitzler-briefe">https://schnitzler-briefe.acdh.oeaw.ac.at/pmb43520.html</idno>
+               <idno type="URL" subtype="schnitzler-kultur">https://schnitzler-kultur.acdh.oeaw.ac.at/pmb43520.html</idno>
                <note type="image">
                   <figure>
                      <graphic url="https://iiif.onb.ac.at/images/AKON/AK115_312/312/full/,600/0/native.jpg"/>
@@ -381,6 +406,7 @@
                </location>
                <idno type="URL" subtype="pmb">https://pmb.acdh.oeaw.ac.at/entity/296017/</idno>
                <idno type="URL" subtype="wikidata">http://www.wikidata.org/entity/Q135315649</idno>
+               <idno type="URL" subtype="schnitzler-briefe">https://schnitzler-briefe.acdh.oeaw.ac.at/pmb296017.html</idno>
             </place>
          </listPlace>
       </back>
