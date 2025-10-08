@@ -41,15 +41,21 @@
     
     
     <xsl:template match="tei:back/tei:listPerson[child::*]">
+        <xsl:variable name="source-list" select="."/>
         <xsl:element name="listPerson" namespace="http://www.tei-c.org/ns/1.0">
             <xsl:for-each select="distinct-values(tei:person/@xml:id)">
                 <xsl:variable name="current-id" select="replace(replace(replace(., '#', ''), 'person__', ''), 'pmb', '')"/>
+                <xsl:variable name="current-xml-id" select="."/>
+                <xsl:variable name="ana-attribute" select="$source-list/tei:person[@xml:id = $current-xml-id]/@ana"/>
                 <xsl:choose>
                     <xsl:when test="$current-id = '2121'">
                         <xsl:element name="person" namespace="http://www.tei-c.org/ns/1.0">
                             <xsl:attribute name="xml:id">
                                 <xsl:text>pmb2121</xsl:text>
                             </xsl:attribute>
+                            <xsl:if test="$ana-attribute">
+                                <xsl:copy-of select="$ana-attribute"/>
+                            </xsl:if>
                             <persName>
                                 <surname>Schnitzler</surname>
                                 <forename>Arthur</forename>
@@ -78,8 +84,14 @@
                             <idno type="gnd">https://d-nb.info/gnd/118609807/</idno>
                         </xsl:element>
                     </xsl:when>
-                    <xsl:when test="key('listperson-lookup', concat('pmb', $current-id), $listperson)[1]">
-                        <xsl:copy-of select="key('listperson-lookup', concat('pmb', $current-id), $listperson)[1]"/>
+                    <xsl:when test="key('listperson-lookup', concat('pmb', $current-id), $listperson)[1][child::*]">
+                        <xsl:element name="person" namespace="http://www.tei-c.org/ns/1.0">
+                            <xsl:copy-of select="key('listperson-lookup', concat('pmb', $current-id), $listperson)[1]/@xml:id"/>
+                            <xsl:if test="$ana-attribute">
+                                <xsl:copy-of select="$ana-attribute"/>
+                            </xsl:if>
+                            <xsl:copy-of select="key('listperson-lookup', concat('pmb', $current-id), $listperson)[1]/node()"/>
+                        </xsl:element>
                     </xsl:when>
                     <xsl:otherwise>
                         <xsl:variable name="nummer" select="substring-after(., 'pmb')"/>
@@ -92,6 +104,9 @@
                                     <xsl:attribute name="xml:id">
                                         <xsl:value-of select="concat('pmb', $nummer)"/>
                                     </xsl:attribute>
+                                    <xsl:if test="$ana-attribute">
+                                        <xsl:copy-of select="$ana-attribute"/>
+                                    </xsl:if>
                                     <xsl:variable name="eintrag_inhalt"
                                         select="document($eintrag)/person"/> <xsl:apply-templates
                                             select="$eintrag_inhalt/persName[not(@type = 'loschen')] | $eintrag_inhalt/birth | $eintrag_inhalt/death | $eintrag_inhalt/sex | $eintrag_inhalt/occupation | $eintrag_inhalt/idno"
@@ -113,22 +128,34 @@
     </xsl:template>
     
     <xsl:template match="tei:back/tei:listBibl[child::*]">
+        <xsl:variable name="source-list" select="."/>
         <xsl:element name="listBibl" namespace="http://www.tei-c.org/ns/1.0">
             <xsl:for-each select="distinct-values(tei:bibl/@xml:id)">
                 <xsl:variable name="current-id" select="replace(replace(., '#', ''), 'pmb', '')"/>
+                <xsl:variable name="current-xml-id" select="."/>
+                <xsl:variable name="ana-attribute" select="$source-list/tei:bibl[@xml:id = $current-xml-id]/@ana"/>
                 <xsl:variable name="eintrag"
                     select="fn:escape-html-uri(concat('https://pmb.acdh.oeaw.ac.at/apis/tei/work/', $current-id))"
                     as="xs:string"/>
                 <xsl:choose>
-                    <xsl:when test="key('listbibl-lookup', concat('pmb', $current-id), $listbibl)[1]">
-                        <xsl:copy-of select="key('listbibl-lookup', concat('pmb', $current-id), $listbibl)[1]"/>
+                    <xsl:when test="key('listbibl-lookup', concat('pmb', $current-id), $listbibl)[1][child::*]">
+                        <xsl:element name="bibl" namespace="http://www.tei-c.org/ns/1.0">
+                            <xsl:copy-of select="key('listbibl-lookup', concat('pmb', $current-id), $listbibl)[1]/@xml:id"/>
+                            <xsl:if test="$ana-attribute">
+                                <xsl:copy-of select="$ana-attribute"/>
+                            </xsl:if>
+                            <xsl:copy-of select="key('listbibl-lookup', concat('pmb', $current-id), $listbibl)[1]/node()"/>
+                        </xsl:element>
                     </xsl:when>
                     <xsl:when test="doc-available($eintrag)">
                         <xsl:element name="bibl" namespace="http://www.tei-c.org/ns/1.0">
                             <xsl:attribute name="xml:id">
                                 <xsl:value-of select="concat('pmb', $current-id)"/>
                             </xsl:attribute>
-                            <xsl:variable name="eintrag_inhalt" select="document($eintrag)/bibl"/> 
+                            <xsl:if test="$ana-attribute">
+                                <xsl:copy-of select="$ana-attribute"/>
+                            </xsl:if>
+                            <xsl:variable name="eintrag_inhalt" select="document($eintrag)/bibl"/>
                             <xsl:apply-templates
                                 select="$eintrag_inhalt/title[not(@type = 'loschen')] | $eintrag_inhalt/author | $eintrag_inhalt/date | $eintrag_inhalt/note[@type] | $eintrag_inhalt/idno"
                                 mode="copy-no-namespaces"/>
@@ -156,12 +183,18 @@
     </xsl:template>
     
     <xsl:template match="tei:back/tei:listPlace[child::*]">
+        <xsl:variable name="source-list" select="."/>
         <xsl:element name="listPlace" namespace="http://www.tei-c.org/ns/1.0">
             <xsl:for-each select="distinct-values(tei:place/@xml:id)">
                 <xsl:variable name="current-id" select="replace(replace(., '#', ''), 'pmb', '')"/>
+                <xsl:variable name="current-xml-id" select="."/>
+                <xsl:variable name="ana-attribute" select="$source-list/tei:place[@xml:id = $current-xml-id]/@ana"/>
                 <xsl:choose>
                     <xsl:when test="$current-id='50'">
                         <place xml:id="pmb50">
+                            <xsl:if test="$ana-attribute">
+                                <xsl:copy-of select="$ana-attribute"/>
+                            </xsl:if>
                             <placeName>Wien</placeName>
                             <placeName type="ort_fruherer-name">K.K. Reichshaupt- und Residenzstadt Wien</placeName>
                             <placeName type="alternative-name">Bécs</placeName>
@@ -207,15 +240,42 @@
                             </note>
                         </place>
                     </xsl:when>
-                    <xsl:when test="key('listplace-lookup', concat('pmb', $current-id), $listplace)[1]">
-                        <xsl:copy-of select="key('listplace-lookup', concat('pmb', $current-id), $listplace)[1]"/>
+                    <xsl:when test="key('listplace-lookup', concat('pmb', $current-id), $listplace)[1][child::*]">
+                        <xsl:element name="place" namespace="http://www.tei-c.org/ns/1.0">
+                            <xsl:copy-of select="key('listplace-lookup', concat('pmb', $current-id), $listplace)[1]/@xml:id"/>
+                            <xsl:if test="$ana-attribute">
+                                <xsl:copy-of select="$ana-attribute"/>
+                            </xsl:if>
+                            <xsl:copy-of select="key('listplace-lookup', concat('pmb', $current-id), $listplace)[1]/node()"/>
+                        </xsl:element>
                     </xsl:when>
                     <xsl:otherwise><xsl:variable name="eintrag"
                     select="fn:escape-html-uri(concat('https://pmb.acdh.oeaw.ac.at/apis/tei/place/', $current-id))"
                     as="xs:string"/>
                 <xsl:choose>
                     <xsl:when test="doc-available($eintrag)">
-                        <xsl:apply-templates select="document($eintrag)" mode="copy-no-namespaces"/>
+                        <xsl:variable name="api-content" select="document($eintrag)/*[local-name()='place']"/>
+                        <xsl:choose>
+                            <xsl:when test="$api-content/node()">
+                                <xsl:element name="place" namespace="http://www.tei-c.org/ns/1.0">
+                                    <xsl:attribute name="xml:id">
+                                        <xsl:value-of select="concat('pmb', $current-id)"/>
+                                    </xsl:attribute>
+                                    <xsl:if test="$ana-attribute">
+                                        <xsl:copy-of select="$ana-attribute"/>
+                                    </xsl:if>
+                                    <xsl:apply-templates select="$api-content/node()" mode="copy-no-namespaces"/>
+                                </xsl:element>
+                            </xsl:when>
+                            <xsl:otherwise>
+                                <xsl:element name="error">
+                                    <xsl:attribute name="type">
+                                        <xsl:text>place-empty</xsl:text>
+                                    </xsl:attribute>
+                                    <xsl:value-of select="$current-id"/>
+                                </xsl:element>
+                            </xsl:otherwise>
+                        </xsl:choose>
                     </xsl:when>
                     <xsl:otherwise>
                         <xsl:element name="error"> <xsl:attribute name="type">
@@ -230,18 +290,48 @@
     </xsl:template>
     
     <xsl:template match="tei:back/tei:listOrg[child::*]">
+        <xsl:variable name="source-list" select="."/>
         <xsl:element name="listOrg" namespace="http://www.tei-c.org/ns/1.0">
             <xsl:for-each select="distinct-values(tei:org/@xml:id)">
                 <xsl:variable name="current-id" select="replace(replace(., '#', ''), 'pmb', '')"/>
+                <xsl:variable name="current-xml-id" select="."/>
+                <xsl:variable name="ana-attribute" select="$source-list/tei:org[@xml:id = $current-xml-id]/@ana"/>
                 <xsl:variable name="eintrag"
                     select="fn:escape-html-uri(concat('https://pmb.acdh.oeaw.ac.at/apis/tei/org/', $current-id))"
                     as="xs:string"/>
                 <xsl:choose>
-                    <xsl:when test="key('listorg-lookup', concat('pmb', $current-id), $listorg)[1]">
-                        <xsl:copy-of select="key('listorg-lookup', concat('pmb', $current-id), $listorg)[1]"/>
+                    <xsl:when test="key('listorg-lookup', concat('pmb', $current-id), $listorg)[1][child::*]">
+                        <xsl:element name="org" namespace="http://www.tei-c.org/ns/1.0">
+                            <xsl:copy-of select="key('listorg-lookup', concat('pmb', $current-id), $listorg)[1]/@xml:id"/>
+                            <xsl:if test="$ana-attribute">
+                                <xsl:copy-of select="$ana-attribute"/>
+                            </xsl:if>
+                            <xsl:copy-of select="key('listorg-lookup', concat('pmb', $current-id), $listorg)[1]/node()"/>
+                        </xsl:element>
                     </xsl:when>
                     <xsl:when test="doc-available($eintrag)">
-                        <xsl:apply-templates select="document($eintrag)" mode="copy-no-namespaces"/>
+                        <xsl:variable name="api-content" select="document($eintrag)/*[local-name()='org']"/>
+                        <xsl:choose>
+                            <xsl:when test="$api-content/node()">
+                                <xsl:element name="org" namespace="http://www.tei-c.org/ns/1.0">
+                                    <xsl:attribute name="xml:id">
+                                        <xsl:value-of select="concat('pmb', $current-id)"/>
+                                    </xsl:attribute>
+                                    <xsl:if test="$ana-attribute">
+                                        <xsl:copy-of select="$ana-attribute"/>
+                                    </xsl:if>
+                                    <xsl:apply-templates select="$api-content/node()" mode="copy-no-namespaces"/>
+                                </xsl:element>
+                            </xsl:when>
+                            <xsl:otherwise>
+                                <xsl:element name="error">
+                                    <xsl:attribute name="type">
+                                        <xsl:text>org-empty</xsl:text>
+                                    </xsl:attribute>
+                                    <xsl:value-of select="$current-id"/>
+                                </xsl:element>
+                            </xsl:otherwise>
+                        </xsl:choose>
                     </xsl:when>
                     <xsl:otherwise>
                         <xsl:element name="error"> <xsl:attribute name="type">
@@ -256,18 +346,35 @@
     </xsl:template>
     
     <xsl:template match="tei:back/tei:listEvent[child::*]">
+        <xsl:variable name="source-list" select="."/>
         <xsl:element name="listEvent" namespace="http://www.tei-c.org/ns/1.0">
             <xsl:for-each select="distinct-values(tei:event/@xml:id)">
                 <xsl:variable name="current-id" select="replace(replace(., '#', ''), 'pmb', '')"/>
+                <xsl:variable name="current-xml-id" select="."/>
+                <xsl:variable name="ana-attribute" select="$source-list/tei:event[@xml:id = $current-xml-id]/@ana"/>
                 <xsl:variable name="eintrag"
                     select="fn:escape-html-uri(concat('https://pmb.acdh.oeaw.ac.at/apis/tei/event/', $current-id))"
                     as="xs:string"/>
                 <xsl:choose>
-                    <xsl:when test="key('listevent-lookup', concat('pmb', $current-id), $listevent)[1]">
-                        <xsl:copy-of select="key('listevent-lookup', concat('pmb', $current-id), $listevent)[1]"/>
+                    <xsl:when test="key('listevent-lookup', concat('pmb', $current-id), $listevent)[1][child::*]">
+                        <xsl:element name="event" namespace="http://www.tei-c.org/ns/1.0">
+                            <xsl:copy-of select="key('listevent-lookup', concat('pmb', $current-id), $listevent)[1]/@xml:id"/>
+                            <xsl:if test="$ana-attribute">
+                                <xsl:copy-of select="$ana-attribute"/>
+                            </xsl:if>
+                            <xsl:copy-of select="key('listevent-lookup', concat('pmb', $current-id), $listevent)[1]/node()"/>
+                        </xsl:element>
                     </xsl:when>
                     <xsl:when test="doc-available($eintrag)">
-                        <xsl:apply-templates select="document($eintrag)" mode="copy-no-namespaces"/>
+                        <xsl:element name="event" namespace="http://www.tei-c.org/ns/1.0">
+                            <xsl:attribute name="xml:id">
+                                <xsl:value-of select="concat('pmb', $current-id)"/>
+                            </xsl:attribute>
+                            <xsl:if test="$ana-attribute">
+                                <xsl:copy-of select="$ana-attribute"/>
+                            </xsl:if>
+                            <xsl:apply-templates select="document($eintrag)/*[local-name()='event']/node()" mode="copy-no-namespaces"/>
+                        </xsl:element>
                     </xsl:when>
                     <xsl:otherwise>
                         <xsl:element name="error"> <xsl:attribute name="type">

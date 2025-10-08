@@ -200,107 +200,129 @@ class PMBProcessor:
                     return True
         return False
 
-    def _extract_refs(self, root: ET.Element) -> Dict[str, Set[str]]:
-        """Extract all references from the TEI document (Step 1 of XSLT 1)"""
+    def _extract_refs(self, root: ET.Element) -> Dict[str, Dict[str, Set[str]]]:
+        """Extract all references from the TEI document (Step 1 of XSLT 1)
+        Returns: Dict with entity types, each containing 'in_text' and 'in_commentary' sets
+        """
         refs = {
-            "person": set(),
-            "bibl": set(),
-            "place": set(),
-            "org": set(),
-            "event": set()
+            "person": {"in_text": set(), "in_commentary": set()},
+            "bibl": {"in_text": set(), "in_commentary": set()},
+            "place": {"in_text": set(), "in_commentary": set()},
+            "org": {"in_text": set(), "in_commentary": set()},
+            "event": {"in_text": set(), "in_commentary": set()}
         }
-        
+
         # Check if document uses '#' format
         has_hash = any("#" in ref for ref in self._get_all_refs(root))
-        
+
+        # Helper function to check if element is in commentary
+        def is_in_commentary(elem):
+            """Check if element is inside a note[@type='commentary']"""
+            current = elem
+            while current is not None:
+                if current.tag == f"{{{self.tei_ns}}}note" and current.get("type") == "commentary":
+                    return True
+                current = current.getparent() if hasattr(current, 'getparent') else None
+            return False
+
         # Extract person references
         person_elements = root.findall(".//tei:*[@type='person']", self.ns) + \
                          root.findall(".//tei:persName", self.ns) + \
                          root.findall(".//tei:author", self.ns)
-        
+
         for elem in person_elements:
             if not self._is_in_back_section(elem, root):
                 ref = elem.get("ref") or elem.get("key")
                 if ref:
+                    in_commentary = is_in_commentary(elem)
+                    ref_set = refs["person"]["in_commentary"] if in_commentary else refs["person"]["in_text"]
                     if has_hash:
-                        refs["person"].update(token.replace("#", "").strip() for token in ref.split("#") if token.strip())
+                        ref_set.update(token.replace("#", "").strip() for token in ref.split("#") if token.strip())
                     else:
-                        refs["person"].update(token.strip() for token in ref.split() if token.strip())
+                        ref_set.update(token.strip() for token in ref.split() if token.strip())
         
-        # Extract handShift references
+        # Extract handShift references (always in text, not commentary)
         handshift_elements = root.findall(".//tei:handShift", self.ns)
         for elem in handshift_elements:
             scribe = elem.get("scribe")
             if scribe:
-                refs["person"].add(scribe.replace("#", "").strip())
-        
-        # Extract handNote references
+                refs["person"]["in_text"].add(scribe.replace("#", "").strip())
+
+        # Extract handNote references (always in text, not commentary)
         handnote_elements = root.findall(".//tei:handNote", self.ns)
         for elem in handnote_elements:
             corresp = elem.get("corresp")
             if corresp and corresp != "schreibkraft":
-                refs["person"].add(corresp.replace("#", "").strip())
-        
+                refs["person"]["in_text"].add(corresp.replace("#", "").strip())
+
         # Extract work/bibl references
         work_elements = root.findall(".//tei:rs[@type='work']", self.ns)
         for elem in work_elements:
             if not self._is_in_back_section(elem, root):
                 ref = elem.get("ref") or elem.get("key")
                 if ref and "#" in ref:
-                    refs["bibl"].update(token.replace("#", "").strip() for token in ref.split("#") if token.strip())
-        
-        # Extract title references from biblStruct
+                    in_commentary = is_in_commentary(elem)
+                    ref_set = refs["bibl"]["in_commentary"] if in_commentary else refs["bibl"]["in_text"]
+                    ref_set.update(token.replace("#", "").strip() for token in ref.split("#") if token.strip())
+
+        # Extract title references from biblStruct (not in commentary)
         title_elements = root.findall(".//tei:biblStruct//tei:title[@ref]", self.ns)
         for elem in title_elements:
             ref = elem.get("ref")
             if ref:
-                refs["bibl"].update(token.replace("#", "").strip() for token in ref.split("#") if token.strip())
-        
-        # Extract title references from teiHeader
+                refs["bibl"]["in_text"].update(token.replace("#", "").strip() for token in ref.split("#") if token.strip())
+
+        # Extract title references from teiHeader (not in commentary)
         header_titles = root.findall(".//tei:teiHeader//tei:title[@ref]", self.ns)
         for elem in header_titles:
             ref = elem.get("ref")
             if ref:
-                refs["bibl"].add(ref.replace("#", "").strip())
-        
+                refs["bibl"]["in_text"].add(ref.replace("#", "").strip())
+
         # Extract place references
         place_elements = root.findall(".//tei:*[@type='place']", self.ns) + \
                         root.findall(".//tei:placeName", self.ns)
-        
+
         for elem in place_elements:
             if not self._is_in_back_section(elem, root):
                 ref = elem.get("ref") or elem.get("key")
                 if ref:
+                    in_commentary = is_in_commentary(elem)
+                    ref_set = refs["place"]["in_commentary"] if in_commentary else refs["place"]["in_text"]
                     if has_hash:
-                        refs["place"].update(token.replace("#", "").strip() for token in ref.split("#") if token.strip())
+                        ref_set.update(token.replace("#", "").strip() for token in ref.split("#") if token.strip())
                     else:
-                        refs["place"].update(token.strip() for token in ref.split() if token.strip())
-        
+                        ref_set.update(token.strip() for token in ref.split() if token.strip())
+
         # Extract org references
         org_elements = root.findall(".//tei:*[@type='org']", self.ns) + \
                       root.findall(".//tei:orgName", self.ns)
-        
+
         for elem in org_elements:
             if not self._is_in_back_section(elem, root):
                 ref = elem.get("ref") or elem.get("key")
                 if ref:
+                    in_commentary = is_in_commentary(elem)
+                    ref_set = refs["org"]["in_commentary"] if in_commentary else refs["org"]["in_text"]
                     if has_hash:
-                        refs["org"].update(token.replace("#", "").strip() for token in ref.split("#") if token.strip())
+                        ref_set.update(token.replace("#", "").strip() for token in ref.split("#") if token.strip())
                     else:
-                        refs["org"].update(token.strip() for token in ref.split() if token.strip())
-        
+                        ref_set.update(token.strip() for token in ref.split() if token.strip())
+
         # Extract event references
         event_elements = root.findall(".//tei:*[@type='event']", self.ns) + \
                         root.findall(".//tei:eventName", self.ns)
-        
+
         for elem in event_elements:
             if not self._is_in_back_section(elem, root):
                 ref = elem.get("ref") or elem.get("key")
                 if ref:
+                    in_commentary = is_in_commentary(elem)
+                    ref_set = refs["event"]["in_commentary"] if in_commentary else refs["event"]["in_text"]
                     if has_hash:
-                        refs["event"].update(token.replace("#", "").strip() for token in ref.split("#") if token.strip())
+                        ref_set.update(token.replace("#", "").strip() for token in ref.split("#") if token.strip())
                     else:
-                        refs["event"].update(token.strip() for token in ref.split() if token.strip())
+                        ref_set.update(token.strip() for token in ref.split() if token.strip())
         
         return refs
 
@@ -313,59 +335,98 @@ class PMBProcessor:
             refs.append(elem.get("key"))
         return refs
 
-    def _create_back_element(self, root: ET.Element, refs: Dict[str, Set[str]]) -> ET.Element:
+    def _create_back_element(self, root: ET.Element, refs: Dict[str, Dict[str, Set[str]]]) -> ET.Element:
         """Create back element with placeholder lists (Step 1)"""
         # Find or create text element
         text_elem = root.find(".//tei:text", self.ns)
         if text_elem is None:
             return root
-        
+
         # Remove existing back element
         existing_back = text_elem.find("tei:back", self.ns)
         if existing_back is not None:
             text_elem.remove(existing_back)
-        
+
         # Create new back element
         back_elem = ET.SubElement(text_elem, f"{{{self.tei_ns}}}back")
-        
+
         # Create list elements with empty placeholders
-        for list_type, ref_set in refs.items():
-            if ref_set:  # Only create if there are references
+        for list_type, ref_dict in refs.items():
+            in_text_refs = ref_dict.get("in_text", set())
+            in_commentary_refs = ref_dict.get("in_commentary", set())
+            all_refs = in_text_refs | in_commentary_refs
+
+            if all_refs:  # Only create if there are references
                 if list_type == "person":
                     list_elem = ET.SubElement(back_elem, f"{{{self.tei_ns}}}listPerson")
-                    for ref_id in sorted(ref_set):
+                    # First add refs from text (no ana attribute)
+                    for ref_id in sorted(in_text_refs):
                         if ref_id.strip():
                             person_elem = ET.SubElement(list_elem, f"{{{self.tei_ns}}}person")
                             person_elem.set("{http://www.w3.org/XML/1998/namespace}id", ref_id.replace("#", ""))
-                
+                    # Then add refs only in commentary (with ana="comment")
+                    for ref_id in sorted(in_commentary_refs - in_text_refs):
+                        if ref_id.strip():
+                            person_elem = ET.SubElement(list_elem, f"{{{self.tei_ns}}}person")
+                            person_elem.set("{http://www.w3.org/XML/1998/namespace}id", ref_id.replace("#", ""))
+                            person_elem.set("ana", "comment")
+
                 elif list_type == "bibl":
                     list_elem = ET.SubElement(back_elem, f"{{{self.tei_ns}}}listBibl")
-                    for ref_id in sorted(ref_set):
+                    # First add refs from text (no ana attribute)
+                    for ref_id in sorted(in_text_refs):
                         if ref_id.strip():
                             bibl_elem = ET.SubElement(list_elem, f"{{{self.tei_ns}}}bibl")
                             bibl_elem.set("{http://www.w3.org/XML/1998/namespace}id", ref_id.replace("#", ""))
-                
+                    # Then add refs only in commentary (with ana="commentary")
+                    for ref_id in sorted(in_commentary_refs - in_text_refs):
+                        if ref_id.strip():
+                            bibl_elem = ET.SubElement(list_elem, f"{{{self.tei_ns}}}bibl")
+                            bibl_elem.set("{http://www.w3.org/XML/1998/namespace}id", ref_id.replace("#", ""))
+                            bibl_elem.set("ana", "commentary")
+
                 elif list_type == "place":
                     list_elem = ET.SubElement(back_elem, f"{{{self.tei_ns}}}listPlace")
-                    for ref_id in sorted(ref_set):
+                    # First add refs from text (no ana attribute)
+                    for ref_id in sorted(in_text_refs):
                         if ref_id.strip():
                             place_elem = ET.SubElement(list_elem, f"{{{self.tei_ns}}}place")
                             place_elem.set("{http://www.w3.org/XML/1998/namespace}id", ref_id.replace("#", ""))
-                
+                    # Then add refs only in commentary (with ana="comment")
+                    for ref_id in sorted(in_commentary_refs - in_text_refs):
+                        if ref_id.strip():
+                            place_elem = ET.SubElement(list_elem, f"{{{self.tei_ns}}}place")
+                            place_elem.set("{http://www.w3.org/XML/1998/namespace}id", ref_id.replace("#", ""))
+                            place_elem.set("ana", "comment")
+
                 elif list_type == "org":
                     list_elem = ET.SubElement(back_elem, f"{{{self.tei_ns}}}listOrg")
-                    for ref_id in sorted(ref_set):
+                    # First add refs from text (no ana attribute)
+                    for ref_id in sorted(in_text_refs):
                         if ref_id.strip():
                             org_elem = ET.SubElement(list_elem, f"{{{self.tei_ns}}}org")
                             org_elem.set("{http://www.w3.org/XML/1998/namespace}id", ref_id.replace("#", ""))
-                
+                    # Then add refs only in commentary (with ana="comment")
+                    for ref_id in sorted(in_commentary_refs - in_text_refs):
+                        if ref_id.strip():
+                            org_elem = ET.SubElement(list_elem, f"{{{self.tei_ns}}}org")
+                            org_elem.set("{http://www.w3.org/XML/1998/namespace}id", ref_id.replace("#", ""))
+                            org_elem.set("ana", "comment")
+
                 elif list_type == "event":
                     list_elem = ET.SubElement(back_elem, f"{{{self.tei_ns}}}listEvent")
-                    for ref_id in sorted(ref_set):
+                    # First add refs from text (no ana attribute)
+                    for ref_id in sorted(in_text_refs):
                         if ref_id.strip():
                             event_elem = ET.SubElement(list_elem, f"{{{self.tei_ns}}}event")
                             event_elem.set("{http://www.w3.org/XML/1998/namespace}id", ref_id.replace("#", ""))
-        
+                    # Then add refs only in commentary (with ana="comment")
+                    for ref_id in sorted(in_commentary_refs - in_text_refs):
+                        if ref_id.strip():
+                            event_elem = ET.SubElement(list_elem, f"{{{self.tei_ns}}}event")
+                            event_elem.set("{http://www.w3.org/XML/1998/namespace}id", ref_id.replace("#", ""))
+                            event_elem.set("ana", "comment")
+
         return root
 
     def _populate_from_pmb(self, root: ET.Element) -> ET.Element:
@@ -388,27 +449,30 @@ class PMBProcessor:
             xml_id = entity.get("{http://www.w3.org/XML/1998/namespace}id")
             if not xml_id:
                 continue
-            
+
+            # Save ana attribute if it exists
+            ana_attribute = entity.get("ana")
+
             # Clean the ID to match PMB format
             original_id = xml_id
             clean_id = re.sub(r'^.*__', 'pmb', xml_id)
             if not clean_id.startswith('pmb'):
                 clean_id = f'pmb{clean_id}'
-            
+
             print(f"🔍 Looking up: {original_id} -> {clean_id} (entity_type: {entity_type})")
-            
+
             # Special case for Arthur Schnitzler
             if clean_id == 'pmb2121' and entity_type == 'person':
-                self._add_schnitzler_data(entity)
+                self._add_schnitzler_data(entity, ana_attribute)
                 continue
-            
+
             # Try to find with lazy loading
             self.stats["pmb_lookups"] += 1
             print(f"🔍 Looking up: {original_id} -> {clean_id} (entity_type: {entity_type})")
             sys.stdout.flush()
-            
+
             pmb_entity = self._load_pmb_entity_optimized(clean_id)
-            
+
             if pmb_entity is not None:
                 # Copy data from PMB
                 self.stats["pmb_found"] += 1
@@ -416,6 +480,9 @@ class PMBProcessor:
                 sys.stdout.flush()
                 entity.clear()
                 entity.set("{http://www.w3.org/XML/1998/namespace}id", clean_id)
+                # Restore ana attribute if it existed
+                if ana_attribute:
+                    entity.set("ana", ana_attribute)
                 copied_children = 0
                 # Copy children directly from PMB entity
                 for child in pmb_entity:
@@ -430,14 +497,17 @@ class PMBProcessor:
                 self.stats["pmb_not_found"] += 1
                 print(f"❌ {clean_id} NOT FOUND in local PMB data - making API call")
                 sys.stdout.flush()
-                
-                # Try to fetch from PMB API
-                self._fetch_from_api(entity, clean_id, entity_type)
 
-    def _add_schnitzler_data(self, person_elem: ET.Element):
+                # Try to fetch from PMB API
+                self._fetch_from_api(entity, clean_id, entity_type, ana_attribute)
+
+    def _add_schnitzler_data(self, person_elem: ET.Element, ana_attribute: Optional[str] = None):
         """Add hardcoded Arthur Schnitzler data"""
         person_elem.clear()
         person_elem.set("{http://www.w3.org/XML/1998/namespace}id", "pmb2121")
+        # Restore ana attribute if it existed
+        if ana_attribute:
+            person_elem.set("ana", ana_attribute)
         
         # Add persName
         persname = ET.SubElement(person_elem, f"{{{self.tei_ns}}}persName")
@@ -491,14 +561,14 @@ class PMBProcessor:
         idno.set("type", "gnd")
         idno.text = "https://d-nb.info/gnd/118609807/"
 
-    def _fetch_from_api(self, entity: ET.Element, pmb_id: str, entity_type: str):
+    def _fetch_from_api(self, entity: ET.Element, pmb_id: str, entity_type: str, ana_attribute: Optional[str] = None):
         """Fetch entity data from PMB API"""
         number = pmb_id.replace('pmb', '')
         url = f"https://pmb.acdh.oeaw.ac.at/apis/tei/{entity_type}/{number}"
-        
+
         self.stats["api_calls"] += 1
         print(f"🌐 Making API call for {pmb_id}: {url}")
-        
+
         try:
             response = requests.get(url, timeout=5)  # Reduced timeout
             if response.status_code == 200:
@@ -507,12 +577,15 @@ class PMBProcessor:
             else:
                 self.stats["api_failures"] += 1
                 print(f"❌ API failed for {pmb_id}: HTTP {response.status_code}")
-                
+
             if response.status_code == 200:
                 # Parse the response and add to entity
                 api_root = ET.fromstring(response.content)
                 entity.clear()
                 entity.set("{http://www.w3.org/XML/1998/namespace}id", pmb_id)
+                # Restore ana attribute if it existed
+                if ana_attribute:
+                    entity.set("ana", ana_attribute)
                 
                 # Copy relevant children based on entity type
                 if entity_type == "person":

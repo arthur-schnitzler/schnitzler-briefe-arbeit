@@ -1801,6 +1801,7 @@
          <xs:element ref="tei:note" maxOccurs="unbounded" minOccurs="0"/>
       </xs:all>
       <xs:attribute ref="xml:id" use="required"/>
+      <xs:attribute name="ana" use="optional"/>
    </xs:complexType>
    <xs:element name="bibl">
       <xs:alternative test="@xml:id" type="bibl_in_back_listBibl"/>
@@ -1972,6 +1973,7 @@
          </xs:choice>
          <xs:attribute ref="xml:id" use="optional"/>
          <xs:attribute name="role" use="optional"/>
+         <xs:attribute name="ana" use="optional"/>
       </xs:complexType>
    </xs:element>
    <xs:element name="listEvent">
@@ -2003,6 +2005,7 @@
          <xs:attribute name="from" type="xs:date"/>
          <xs:attribute name="to" type="xs:date"/>
          <xs:attribute name="n" type="xs:string"/>
+         <xs:attribute name="ana" use="optional"/>
       </xs:complexType>
    </xs:element>
    <xs:element name="eventName" type="eventNameType"/>
@@ -2037,6 +2040,7 @@
          </xs:choice>
          <xs:attribute ref="xml:id" use="optional"/>
          <xs:attribute name="role" use="optional"/>
+         <xs:attribute name="ana" use="optional"/>
       </xs:complexType>
    </xs:element>
    <xs:element name="forename" type="xs:string"/>
@@ -2109,6 +2113,7 @@
             <xs:element maxOccurs="unbounded" minOccurs="0" ref="tei:gap"/>
          </xs:all>
          <xs:attribute ref="xml:id" use="optional"/>
+         <xs:attribute name="ana" use="optional"/>
       </xs:complexType>
    </xs:element>
    <xs:element name="location">
