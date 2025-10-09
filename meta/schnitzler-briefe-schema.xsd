@@ -553,6 +553,7 @@
             <xs:element ref="tei:author" minOccurs="0" maxOccurs="unbounded"/>
             <xs:element ref="tei:title" maxOccurs="1"/>
             <xs:element ref="tei:editor" minOccurs="0" maxOccurs="unbounded"/>
+            <xs:element ref="tei:respStmt" minOccurs="0" maxOccurs="unbounded"/>
          </xs:all>
       </xs:complexType>
    </xs:element>
@@ -562,6 +563,7 @@
             <xs:element ref="tei:author"/>
             <xs:element ref="tei:biblScope"/>
             <xs:element ref="tei:editor"/>
+            <xs:element ref="tei:respStmt"/>
             <xs:element ref="tei:imprint"/>
             <xs:element ref="tei:title"/>
             <xs:element ref="tei:ref"/>
@@ -571,8 +573,11 @@
    <xs:element name="series">
       <xs:complexType>
          <xs:sequence>
-            <xs:element ref="tei:title"/>
-            <xs:element ref="tei:biblScope"/>
+            <xs:element ref="tei:title" maxOccurs="1" minOccurs="1"/>
+            <xs:element ref="tei:biblScope" minOccurs="0" maxOccurs="unbounded"/>
+            <xs:element ref="tei:editor" minOccurs="0" maxOccurs="unbounded"/>
+            <xs:element ref="tei:respStmt" minOccurs="0" maxOccurs="unbounded"/>
+            <xs:element ref="tei:imprint" minOccurs="0" maxOccurs="unbounded"/>
          </xs:sequence>
       </xs:complexType>
    </xs:element>
@@ -1663,11 +1668,14 @@
       </xs:complexType>
    </xs:element>
    <xs:element name="respStmt">
-      <xs:complexType mixed="true">
-         <xs:choice minOccurs="0" maxOccurs="unbounded">
-            <xs:element ref="tei:name" maxOccurs="unbounded" minOccurs="0"/>
-            <xs:element ref="tei:resp" maxOccurs="unbounded" minOccurs="0"/>
-         </xs:choice>
+      <xs:complexType>
+         <xs:sequence>
+            <xs:element ref="tei:resp" minOccurs="1"/>
+            <xs:choice minOccurs="1" maxOccurs="unbounded">
+               <xs:element ref="tei:persName"/>
+               <xs:element ref="tei:orgName"/>
+            </xs:choice>
+         </xs:sequence>
       </xs:complexType>
    </xs:element>
    <xs:element name="resp" type="xs:string"/>
