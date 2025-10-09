@@ -467,4 +467,12 @@
             </sch:assert>
         </sch:rule>
     </sch:pattern>
+    <!-- biblStruct author and editor format -->
+    <sch:pattern id="biblStruct-author-editor-format">
+        <sch:rule context="tei:biblStruct//tei:author | tei:biblStruct//tei:editor">
+            <sch:assert test="matches(normalize-space(.), '^[^,]+,\s*.+$')">
+                tei:author und tei:editor in biblStruct müssen im Format "Nachname, Vorname" eingegeben werden.
+            </sch:assert>
+        </sch:rule>
+    </sch:pattern>
 </sch:schema>
