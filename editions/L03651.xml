@@ -1,6 +1,10 @@
-<?xml version='1.0' encoding='UTF-8'?>
+<?xml version="1.0" encoding="UTF-8"?>
 <?xml-model href="../meta/schnitzler-briefe-schematron.sch" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
-<TEI xmlns="http://www.tei-c.org/ns/1.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.tei-c.org/ns/1.0 ../meta/schnitzler-briefe-schema.xsd" xml:id="L03651" xml:base="https://id.acdh.oeaw.ac.at/schnitzler/schnitzler-briefe/editions">
+<TEI xmlns="http://www.tei-c.org/ns/1.0"
+     xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+     xsi:schemaLocation="http://www.tei-c.org/ns/1.0 ../meta/schnitzler-briefe-schema.xsd"
+     xml:id="L03651"
+     xml:base="https://id.acdh.oeaw.ac.at/schnitzler/schnitzler-briefe/editions">
    <teiHeader>
       <fileDesc>
          <titleStmt>
@@ -28,8 +32,8 @@
             <edition>schnitzler-briefe</edition>
             <respStmt>
                <resp>Transkription und Kommentierung</resp>
-               <name>Jahnke, Selma</name>
-               <name>Müller, Martin Anton</name>
+               <persName>Jahnke, Selma</persName>
+               <persName>Müller, Martin Anton</persName>
             </respStmt>
          </editionStmt>
          <publicationStmt>
@@ -136,12 +140,20 @@
                   10. 2. 1915?]</date>
                <placeName ref="#pmb50" evidence="conjecture">Wien</placeName>
             </correspAction>
-            <correspContext><ref type="belongsToCorrespondence" target="correspondence_13212">Zweig, Stefan</ref>
+            <correspContext>
+               <ref type="belongsToCorrespondence" target="correspondence_13212">Zweig, Stefan</ref>
                <ref subtype="previous_letter" type="withinCollection" target="L03650">Zweig an Schnitzler, 16. 1. 1915</ref>
                <ref subtype="next_letter" type="withinCollection" target="L02203">Schnitzler an Bahr, 9. 2. 1915</ref>
-               <ref subtype="previous_letter" type="withinCorrespondence" source="correspondence_13212" target="L03650">Zweig an Schnitzler, 16. 1. 1915</ref>
-               <ref subtype="next_letter" type="withinCorrespondence" source="correspondence_13212" target="L03772">Schnitzler an Zweig, 11. 2. 1915</ref>
-            </correspContext></correspDesc>
+               <ref subtype="previous_letter"
+                    type="withinCorrespondence"
+                    source="correspondence_13212"
+                    target="L03650">Zweig an Schnitzler, 16. 1. 1915</ref>
+               <ref subtype="next_letter"
+                    type="withinCorrespondence"
+                    source="correspondence_13212"
+                    target="L03772">Schnitzler an Zweig, 11. 2. 1915</ref>
+            </correspContext>
+         </correspDesc>
       </profileDesc>
       <revisionDesc status="candidate">
          <change who="MAM" when="2025-05-21">Export aus Transkribus</change>
@@ -222,7 +234,7 @@
                         »<quote>
                      <p>Sehr geehrter Herr Block.</p>
                      <p>Darf ich Ihnen die Hand drücken für die liebenswürdige und vornehme Art, in
-                        der Sie sich meiner gegen einen (mir bisher nicht vor Augen gekommenen) <rs type="person" ref="#pmb298631" subtype="implied">Angriff</rs> in der <rs type="work" ref="#pmb41572">D. T. Z.</rs>
+                        der Sie sich meiner gegen einen (mir bisher nicht vor Augen gekommenen) <rs type="work" ref="#pmb298631" subtype="implied">Angriff</rs> in der <rs type="work" ref="#pmb41572">D. T. Z.</rs>
                         <space unit="chars" quantity="1"/>
                         <rs type="work" ref="#pmb294010" subtype="implied">angenommen</rs> haben?
                         Wenn ich auch glaube, daß Sie dem Herrn Anonymus mit Ihrer schönen
@@ -2315,8 +2327,7 @@
                   <graphic url="https://upload.wikimedia.org/wikipedia/commons/thumb/4/49/Samuel_Fischer_1915_-_Oelgemaelde_von_Max_Liebermann.JPG/250px-Samuel_Fischer_1915_-_Oelgemaelde_von_Max_Liebermann.JPG"/>
                </figure>
             </person>
-            <error type="person">298631</error>
-            <person xml:id="pmb259326">
+            <person xml:id="pmb259326" ana="comment">
                <persName>
                   <forename>Paul</forename>
                   <surname>Seippel</surname>
@@ -2349,7 +2360,7 @@
                <idno type="URL" subtype="wikipedia">https://de.wikipedia.org/wiki/Paul_Seippel</idno>
                <idno type="URL" subtype="schnitzler-briefe">https://schnitzler-briefe.acdh.oeaw.ac.at/pmb259326.html</idno>
             </person>
-            <person xml:id="pmb27739">
+            <person xml:id="pmb27739" ana="comment">
                <persName>
                   <surname>?? [Journalist, der fiktives russisches Interview verantwortet]</surname>
                </persName>

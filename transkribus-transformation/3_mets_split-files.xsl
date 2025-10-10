@@ -69,8 +69,8 @@
                                     <xsl:value-of select="$sender-in_name"/>
                                 </author>
                                 <editor>
-                                    <name>Jahnke, Selma</name>
-                                    <name>Müller, Martin Anton</name>
+                                    <persName>Jahnke, Selma</persName>
+                                    <persName>Müller, Martin Anton</persName>
                                 </editor>
                                 <funder>
                                     <name>Österreichischer Wissenschaftsfonds FWF</name>
@@ -88,8 +88,8 @@
                                 <edition>schnitzler-briefe</edition>
                                 <respStmt>
                                     <resp>Transkription und Kommentierung</resp>
-                                    <name>Jahnke, Selma</name>
-                                    <name>Müller, Martin Anton</name>
+                                    <persName>Jahnke, Selma</persName>
+                                    <persName>Müller, Martin Anton</persName>
                                 </respStmt>
                             </editionStmt>
                             <publicationStmt>
