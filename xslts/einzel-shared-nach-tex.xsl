@@ -4203,7 +4203,7 @@
          <xsl:text>\centering{}</xsl:text>
       </xsl:if>
       <xsl:apply-templates/>
-      <xsl:if test="following-sibling::l">
+      <xsl:if test="following-sibling::tei:l">
          <xsl:text>\newverse{}</xsl:text>
       </xsl:if>
    </xsl:template>
