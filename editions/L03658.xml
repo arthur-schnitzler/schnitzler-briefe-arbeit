@@ -1,6 +1,10 @@
-<?xml version='1.0' encoding='UTF-8'?>
+<?xml version="1.0" encoding="UTF-8"?>
 <?xml-model href="../meta/schnitzler-briefe-schematron.sch" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
-<TEI xmlns="http://www.tei-c.org/ns/1.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.tei-c.org/ns/1.0 ../meta/schnitzler-briefe-schema.xsd" xml:id="L03658" xml:base="https://id.acdh.oeaw.ac.at/schnitzler/schnitzler-briefe/editions">
+<TEI xmlns="http://www.tei-c.org/ns/1.0"
+     xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+     xsi:schemaLocation="http://www.tei-c.org/ns/1.0 ../meta/schnitzler-briefe-schema.xsd"
+     xml:id="L03658"
+     xml:base="https://id.acdh.oeaw.ac.at/schnitzler/schnitzler-briefe/editions">
    <teiHeader>
       <fileDesc>
          <titleStmt>
@@ -134,12 +138,20 @@
                   – 1. 5. 1916?]</date>
                <placeName ref="#pmb50" evidence="conjecture">Wien</placeName>
             </correspAction>
-            <correspContext><ref type="belongsToCorrespondence" target="correspondence_13212">Zweig, Stefan</ref>
+            <correspContext>
+               <ref type="belongsToCorrespondence" target="correspondence_13212">Zweig, Stefan</ref>
                <ref subtype="previous_letter" type="withinCollection" target="L03770">Schnitzler an Zweig, 16. 2. 1916</ref>
                <ref subtype="next_letter" type="withinCollection" target="L03812">Schnitzler an Zweig, 3. 5. 1916</ref>
-               <ref subtype="previous_letter" type="withinCorrespondence" source="correspondence_13212" target="L03770">Schnitzler an Zweig, 16. 2. 1916</ref>
-               <ref subtype="next_letter" type="withinCorrespondence" source="correspondence_13212" target="L03812">Schnitzler an Zweig, 3. 5. 1916</ref>
-            </correspContext></correspDesc>
+               <ref subtype="previous_letter"
+                    type="withinCorrespondence"
+                    source="correspondence_13212"
+                    target="L03770">Schnitzler an Zweig, 16. 2. 1916</ref>
+               <ref subtype="next_letter"
+                    type="withinCorrespondence"
+                    source="correspondence_13212"
+                    target="L03812">Schnitzler an Zweig, 3. 5. 1916</ref>
+            </correspContext>
+         </correspDesc>
       </profileDesc>
       <revisionDesc status="candidate">
          <change who="MAM" when="2025-05-21">Export aus Transkribus</change>
@@ -163,6 +175,12 @@
                   <seg rend="left">
                      <hi rend="pre-print">SZ</hi>
                   </seg>
+                  <seg rend="right">
+                     <hi rend="pre-print">
+                        <hi rend="capitals">
+                           <rs type="place" ref="#pmb249577">VIII. Kochgasse 8</rs>.</hi>
+                     </hi>
+                  </seg>
                </seg>
             </opener>
             <p>
@@ -177,7 +195,9 @@
                <note type="commentary" corresp="K_L03658-2">Am <ref type="schnitzler-kultur" subtype="date-only" target="pmb183752"/> sang <rs type="person" ref="#pmb4829">Olga</rs> ein <rs type="event" subtype="implied" ref="#pmb183752">Wohltätigkeitskonzert</rs> in einem Hörsaal der <rs type="place" ref="#pmb182710">Allgemeinen Poliklinik.</rs>
                </note>
                <space unit="chars" quantity="1"/>
-               <rs type="event" subtype="implied" ref="#pmb183752"><date>Samstag</date></rs> zu hören und hoffentlich <pb facs="MS-SCHNITZLER-B-00118-000-00080"/>Sie auch sehen zu dürfen. In Verehrung
+               <rs type="event" subtype="implied" ref="#pmb183752">
+                  <date>Samstag</date>
+               </rs> zu hören und hoffentlich <pb facs="MS-SCHNITZLER-B-00118-000-00080"/>Sie auch sehen zu dürfen. In Verehrung
                getreu Ihr</p>
             <closer>
                <signed>Stefan Zweig</signed>
@@ -2005,8 +2025,7 @@
          <listPlace>
             <place xml:id="pmb50">
                <placeName>Wien</placeName>
-               <placeName type="ort_fruherer-name">K.K. Reichshaupt- und Residenzstadt
-                  Wien</placeName>
+               <placeName type="ort_fruherer-name">K.K. Reichshaupt- und Residenzstadt Wien</placeName>
                <placeName type="alternative-name">Bécs</placeName>
                <placeName type="alternative-name">Land Wien</placeName>
                <placeName type="alternative-name">Vídeň</placeName>
@@ -2143,6 +2162,43 @@
                </note>
             </place>
          </listPlace>
+         <listEvent>
+            <event xml:id="pmb183752" ana="comment">
+               <eventName n="Liederkonzert">Gesangskonzert von Olga Schnitzler, 29.4.1916</eventName>
+               <note type="listorg">
+                  <listOrg>
+                     <org role="veranstaltet von">
+                        <orgName ref="pmb41367">Allgemeine Poliklinik</orgName>
+                     </org>
+                  </listOrg>
+               </note>
+               <idno type="URL" subtype="pmb">https://pmb.acdh.oeaw.ac.at/entity/183752/</idno>
+               <idno type="URL" subtype="schnitzler-briefe">https://schnitzler-briefe.acdh.oeaw.ac.at/pmb183752.html</idno>
+               <idno type="URL" subtype="schnitzler-kultur">https://schnitzler-kultur.acdh.oeaw.ac.at/pmb183752.html</idno>
+               <listPerson>
+                  <person role="hat mitwirkend">
+                     <persName ref="pmb2173">Schnitzler, Olga</persName>
+                  </person>
+                  <person role="hat mitwirkend">
+                     <persName ref="pmb16284">Fischer, Jacob</persName>
+                  </person>
+                  <person role="hat teilnehmend">
+                     <persName ref="pmb2121">Schnitzler, Arthur</persName>
+                  </person>
+                  <person role="hat teilnehmend">
+                     <persName ref="pmb13212">Zweig, Stefan</persName>
+                  </person>
+               </listPerson>
+               <listPlace>
+                  <place>
+                     <placeName role="veranstaltet in" ref="pmb182710">Allgemeine Poliklinik [neues Gebäude]</placeName>
+                     <location>
+                        <geo>48,216139 16,349167</geo>
+                     </location>
+                  </place>
+               </listPlace>
+            </event>
+         </listEvent>
       </back>
    </text>
 </TEI>
