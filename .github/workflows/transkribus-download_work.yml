@@ -30,7 +30,6 @@ jobs:
       run: |
         mkdir -p mets
         mkdir -p tei
-        apt-get update && apt-get install openjdk-11-jre-headless ant -y --no-install-recommend
         pip install acdh-transkribus-utils
         wget https://sourceforge.net/projects/saxon/files/Saxon-HE/9.9/SaxonHE9-9-1-7J.zip/download && unzip download -d saxon && rm -rf download
     - name: Download METS Files
