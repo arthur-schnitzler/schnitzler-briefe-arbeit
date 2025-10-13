@@ -1,6 +1,10 @@
-<?xml version='1.0' encoding='UTF-8'?>
+<?xml version="1.0" encoding="UTF-8"?>
 <?xml-model href="../meta/schnitzler-briefe-schematron.sch" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
-<TEI xmlns="http://www.tei-c.org/ns/1.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.tei-c.org/ns/1.0 ../meta/schnitzler-briefe-schema.xsd" xml:id="L03786" xml:base="https://id.acdh.oeaw.ac.at/schnitzler/schnitzler-briefe/editions">
+<TEI xmlns="http://www.tei-c.org/ns/1.0"
+     xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+     xsi:schemaLocation="http://www.tei-c.org/ns/1.0 ../meta/schnitzler-briefe-schema.xsd"
+     xml:id="L03786"
+     xml:base="https://id.acdh.oeaw.ac.at/schnitzler/schnitzler-briefe/editions">
    <teiHeader>
       <fileDesc>
          <titleStmt>
@@ -82,7 +86,7 @@
                            <supportDesc>
                               <extent>
                                  <measure unit="karte" quantity="1"/>
-                                 <measure unit="zeichenanzahl" quantity="1397"/>
+                                 <measure unit="zeichenanzahl" quantity="1394"/>
                               </extent>
                            </supportDesc>
                         </objectDesc>
@@ -110,16 +114,26 @@
                <date evidence="conjecture" notBefore="1917-08-19" notAfter="1917-08-23">[19. 8. 1917 – 23. 8. 1917?]</date>
                <placeName ref="#pmb50" evidence="conjecture">Wien</placeName>
             </correspAction>
-            <correspContext><ref type="belongsToCorrespondence" target="correspondence_13212">Zweig, Stefan</ref>
+            <correspContext>
+               <ref type="belongsToCorrespondence" target="correspondence_13212">Zweig, Stefan</ref>
                <ref subtype="previous_letter" type="withinCollection" target="L03661">Zweig an Schnitzler, 15. 8. 1917</ref>
                <ref subtype="next_letter" type="withinCollection" target="L02268">Adam an Schnitzler, 23. 8. 1917</ref>
-               <ref subtype="previous_letter" type="withinCorrespondence" source="correspondence_13212" target="L03661">Zweig an Schnitzler, 15. 8. 1917</ref>
-               <ref subtype="next_letter" type="withinCorrespondence" source="correspondence_13212" target="L03662">Zweig an Schnitzler, 25. 8. 1917</ref>
-            </correspContext></correspDesc>
+               <ref subtype="previous_letter"
+                    type="withinCorrespondence"
+                    source="correspondence_13212"
+                    target="L03661">Zweig an Schnitzler, 15. 8. 1917</ref>
+               <ref subtype="next_letter"
+                    type="withinCorrespondence"
+                    source="correspondence_13212"
+                    target="L03662">Zweig an Schnitzler, 25. 8. 1917</ref>
+            </correspContext>
+         </correspDesc>
       </profileDesc>
-      <revisionDesc status="proposed">
+      <revisionDesc status="candidate">
          <change who="MAM" when="2025-07-17">Export aus Transkribus</change>
          <change who="MAM" when="2025-08-07">Durchsicht</change>
+         <change who="MAM" when="2025-10-13">Durchsicht</change>
+         <change who="MAM" when="2025-10-13">Index check</change>
       </revisionDesc>
    </teiHeader>
    <facsimile>
@@ -157,17 +171,18 @@
                   <add place="inline">,</add>
                </subst> der ihn als alternden Ehemann und Arzt in <rs type="place" ref="#pmb296113">Lanzarote</rs> zeichnete) <pb facs="0037_FL81799625"/>so halte
                ich es <add place="above">doch</add> für sehr denkbar, daß irgend ein Mangel, der sich
-                  <supplied>an</supplied> andren Stelle finden mag, wie das oft der Fall ist, erst
+                   andrer Stelle finden mag, wie das oft der Fall ist, erst
                am Ende herauskommt. Da jedes künstlerische Product eine Einheit vorstellt, handelt
                es sich hier nicht um einen Irrtum des Beurtheilers, sondern um etwas ähnliches wie
                bei der sog. »falschen Localisation« die dem Nervenarzt bekannt ist: Schmerzen werden
                an einer von der kranken <del rend="strikethrough">Stelle</del> weit entfernten
                Stelle empfunden. Hier rühre ich vielleicht an ein aesthetisch kritisches Problem,
-               das man näher betrachten könnte. Wie Sie unter den »tausend Tagen« leiden, vermag ich
-               Ihnen wohl nachzufühlen! möge Ihr <rs type="work" ref="#pmb76769" subtype="implied">Buch</rs>,
+               das man näher betrachten könnte.</p>
+            <p>Wie Sie unter den »tausend Tagen« leiden, vermag ich
+               Ihnen wohl nachzufühlen<unclear>:</unclear> möge Ihr <rs type="work" ref="#pmb76769" subtype="implied">Buch</rs>,
                dem ich mich entgegenfreue, Sie we<c rendition="#gemination-n"/> nicht befreit, doch wenigstens entschädigt
-               haben.</p>
-            <closer>Seien Sie vielmals, auch von meiner <rs type="person" ref="#pmb2173" subtype="implied">Frau</rs>, u herzlichst gegrüßt, Ihr <signed>A. S.</signed>
+               haben. Seien Sie vielmals, auch von meiner <rs type="person" ref="#pmb2173" subtype="implied">Frau</rs>, u herzlichst gegrüßt,</p>
+            <closer>Ihr <signed>A. S.</signed>
             </closer>
          </div>
       </body>
