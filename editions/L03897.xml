@@ -1,11 +1,12 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <?xml-model href="../meta/schnitzler-briefe-schematron.sch" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
-<TEI xmlns="http://www.tei-c.org/ns/1.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.tei-c.org/ns/1.0 ../meta/schnitzler-briefe-schema.xsd" xml:id="L03818" xml:base="https://id.acdh.oeaw.ac.at/schnitzler/schnitzler-briefe/editions">
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.tei-c.org/ns/1.0 ../meta/schnitzler-briefe-schema.xsd" xml:id="L03897" xml:base="https://id.acdh.oeaw.ac.at/schnitzler/schnitzler-briefe/editions">
    <teiHeader>
       <fileDesc>
          <titleStmt>
             <title level="s">Arthur Schnitzler: Briefwechsel mit Autorinnen und Autoren</title>
-            <title level="a">Sigmund Freud an Arthur Schnitzler, 8. 3. 1926</title>
+            <title level="a">Sigmund Freud: Widmungsexemplar von Psychoanalytische Studien an Werken
+               der Dichtung und Kunst, [erste Hälfte] November 1924</title>
             <author ref="#pmb11370">Freud, Sigmund</author>
             <editor>
                <name>Jahnke, Selma</name>
@@ -69,63 +70,42 @@
          <sourceDesc>
             <listWit>
                <witness n="1">
-                  <objectType corresp="brief"/>
+                  <objectType corresp="widmung" ana="widmung_vorsatzblatt"/>
                   <msDesc>
                      <msIdentifier>
-                        <country>GB</country>
-                        <settlement>Cambridge</settlement>
-                        <repository>University Library</repository>
-                        <idno>Schnitzler, B 31</idno>
+                        <country>A</country>
+                        <settlement>Wien</settlement>
+                        <repository>Österreichische Nationalbibliothek</repository>
+                        <idno>231446-B Rara 774</idno>
                      </msIdentifier>
                      <physDesc>
                         <objectDesc>
                            <supportDesc>
                               <extent>
-                                 <measure unit="seite" quantity="2"/>
-                                 <measure unit="blatt" quantity="1"/>
-                                 <measure unit="zeichenanzahl" quantity="568"/>
+                                 <measure unit="widmung" quantity="1"/>
+                                 <measure unit="zeichenanzahl" quantity="69"/>
                               </extent>
                            </supportDesc>
                         </objectDesc>
                         <handDesc>
-                           <handNote medium="blaue-tinte" style="deutsche-kurrent"/>
+                           <handNote medium="schwarze-tinte" style="deutsche-kurrent"/>
                         </handDesc>
+                        <additions>
+                           <incident type="additional-information">
+                              <desc>Auf die Existenz des Exemplars hat erstmals Luigi Reitani
+                                 aufmerksam gemacht (<bibl>
+                                    <rs type="person" ref="#pmb2121">Arthur
+                                       Schnitzler</rs>: <title level="m">Sulla
+                                    Psicoanalisia</title>. <pubPlace>Milano</pubPlace>:
+                                       <publisher>Studio Editoriale</publisher>
+                                    <space unit="chars" quantity="1"/>
+                                    <date>1987</date>, S. 106</bibl>.)</desc>
+                           </incident>
+                        </additions>
                      </physDesc>
                   </msDesc>
                </witness>
             </listWit>
-            <listBibl>
-               <biblStruct>
-                  <analytic>
-                     <author ref="#pmb11370">Freud, Sigmund</author>
-                     <title level="a">Briefe an Arthur Schnitzler</title>
-                     <editor>Schnitzler, Henry</editor>
-                  </analytic>
-                  <monogr>
-                     <title level="j">Neue deutsche Rundschau</title>
-                     <imprint>
-                        <date when="1955">Januar 1955</date>
-                     </imprint>
-                     <biblScope unit="jg">66</biblScope>
-                     <biblScope unit="nr">1</biblScope>
-                     <biblScope unit="pp">99</biblScope>
-                  </monogr>
-               </biblStruct>
-               <biblStruct>
-                  <monogr>
-                     <author ref="#pmb11370">Freud, Sigmund</author>
-                     <title level="m">Sigmund Freud Edition. Digitale historisch-kritische
-                        Gesamtausgabe</title>
-                     <editor>Diercks, Christine</editor>
-                     <editor>Blatow, Arkadi</editor>
-                     <editor>Skale, Elisabeth</editor>
-                     <imprint>
-                        <date when="2014">2014–2025</date>
-                     </imprint>
-                     <ref type="URL" target="https://www.freudedition.net/briefe/freud-sigmund/schnitzler-arthur/1926/03/08"/>
-                  </monogr>
-               </biblStruct>
-            </listBibl>
          </sourceDesc>
       </fileDesc>
       <profileDesc>
@@ -135,86 +115,96 @@
          <correspDesc>
             <correspAction type="sent">
                <persName ref="#pmb11370">Freud, Sigmund</persName>
-               <date when="1926-03-08" n="01">8. 3. 1926</date>
+               <date notBefore="1924-11-01" notAfter="1924-11-15" n="01">[erste Hälfte] November
+                  1924</date>
                <placeName ref="#pmb50">Wien</placeName>
             </correspAction>
             <correspAction type="received">
                <persName ref="#pmb2121">Schnitzler, Arthur</persName>
-               <date evidence="conjecture" notBefore="1926-03-08" notAfter="1926-03-11">[8. 3. 1926
-                  – 11. 3. 1926?]</date>
-               <placeName ref="#pmb50" evidence="conjecture">Wien</placeName>
+               <date notBefore="1924-11-01" notAfter="1924-11-15">[erste Hälfte] November
+                  1924</date>
+               <placeName ref="#pmb50">Wien</placeName>
             </correspAction>
             <correspContext><ref type="belongsToCorrespondence" target="correspondence_11370">Freud, Sigmund</ref>
-               <ref subtype="previous_letter" type="withinCollection" target="L03585">Salten an Schnitzler, 23. 2. 1926</ref>
-               <ref subtype="next_letter" type="withinCollection" target="L02466">Hofmannsthal an Schnitzler, 9. 3. [1926]</ref>
-               <ref subtype="previous_letter" type="withinCorrespondence" source="correspondence_11370" target="L03897">Freud an Schnitzler, [erste Hälfte] November
+               <ref subtype="previous_letter" type="withinCollection" target="L02418">Hofmannsthal an Schnitzler, 31. 10. 1924</ref>
+               <ref subtype="next_letter" type="withinCollection" target="L03669">Zweig an Schnitzler, 4. 11. 1924</ref>
+               <ref subtype="previous_letter" type="withinCorrespondence" source="correspondence_11370" target="L03816">Freud an Schnitzler, Oktober
                   1924</ref>
-               <ref subtype="next_letter" type="withinCorrespondence" source="correspondence_11370" target="L03889">Freud an Schnitzler, 24. 3. 1926</ref>
+               <ref subtype="next_letter" type="withinCorrespondence" source="correspondence_11370" target="L03818">Freud an Schnitzler, 8. 3. 1926</ref>
             </correspContext></correspDesc>
       </profileDesc>
       <revisionDesc status="proposed">
-         <change who="MAM" when="2025-07-30">Export aus Transkribus</change>
-         <change who="SJ" when="2025-07-31">Durchsicht</change>
+         <change who="MAM" when="2025-10-13">Angelegt</change>
       </revisionDesc>
    </teiHeader>
    <facsimile>
-      <graphic url="MS-SCHNITZLER-B-00031-000-00007"/>
-      <graphic url="MS-SCHNITZLER-B-00031-000-00008"/>
+      <graphic url="1074A09E_jpg_5"/>
+      <graphic url="1074A09E_jpg_7"/>
    </facsimile>
    <text>
       <body>
          <div type="writingSession" n="1">
-            <opener>
-               <dateline rend="right">
-                  <pb facs="MS-SCHNITZLER-B-00031-000-00007"/>
-                  <date>8. 3. 26</date>
-               </dateline>
-               <seg type="letterhead">
-                  <seg rend="left">
-                     <hi rend="pre-print">
-                        <hi rend="capitals">Prof. D<hi rend="superscript">r.</hi> Freud </hi>
-                     </hi>
-                  </seg>
-                  <seg rend="right">
-                     <hi rend="pre-print">
-                        <hi rend="capitals">
-                           <rs type="place" ref="#pmb253790">Wien IX., Berggasse 19</rs>
-                        </hi>
-                     </hi>
-                  </seg>
-               </seg>
-               <salute>Verehrteſter!</salute>
-            </opener>
-            <p>Ich war Ihnen noch nie ſo nah. Ich hauſe <anchor type="commentary" xml:id="K_L03818-1"/>im <rs type="place" ref="#pmb61755" subtype="implied">Sanatorium</rs>
-               <note type="commentary" corresp="K_L03818-1">Vom <date>5. 3. 1926</date> bis zum
-                     <date>2. 4. 1926</date> hielt sich <rs type="person" ref="#pmb11370">Sigmund
-                     Freud</rs> im <rs type="place" ref="#pmb61755">Cottage-Sanatorium</rs> in der
-                     <rs type="place" ref="#pmb238059">Sternwartestraße 74</rs> auf. <rs type="person" ref="#pmb2121">Schnitzler</rs> besuchte ihn dort zwei Mal, <ref type="schnitzler-tagebuch" target="1926-03-12" subtype="cf"/>, und <ref type="schnitzler-tagebuch" target="1926-03-26" subtype="date-only"/>.</note> in Ihrer <rs type="place" ref="#pmb150">Straße</rs> u mache auf Wunſch der Interniſten
-               Herztherapie, befinde mich aber ſubjektiv recht wol. </p>
-            <p>Infolge eines früheren Verſäumnißes kann ich mich <date>heute</date> in Einem für
-               zwei Ihrer <anchor type="commentary" xml:id="K_L03818-2"/>
-               <rs type="work" ref="#pmb30775 #pmb30751" subtype="implied">Geſchenke</rs>
-               <note type="commentary" corresp="K_L03818-2">
-                  <date>Anfang März</date> erschien <rs type="work" ref="#pmb30775">Der Gang zum
-                     Weiher</rs>. Beim zweiten Werk dürfte es sich um <rs type="work" ref="#pmb30751">Die Frau des Richters</rs> handeln.</note> bedanken. Die
-                  <anchor type="commentary" xml:id="K_L03818-3"/>begleitende <rs type="work" ref="#pmb78443" subtype="implied">Brochüre</rs>
-               <note type="commentary" corresp="K_L03818-3">
-                  <rs type="person" ref="#pmb2121">Schnitzlers</rs>
-                  <space unit="chars" quantity="1"/>
-                  <rs type="work" ref="#pmb33243">Tagebuch</rs>-Eintrag vom <ref type="schnitzler-tagebuch" subtype="date-only" target="1926-03-09"/> bestätigt den Erhalt von und
-                  die Beschäftigung mit <rs type="person" ref="#pmb11370">Freuds</rs> Text <rs type="work" ref="#pmb78443">Hemmung, Symptom und Angst</rs>. (<bibl>
-                     <rs type="place" ref="#pmb864">Leipzig</rs>, <rs type="place" ref="#pmb50">Wien</rs>, <rs type="place" ref="#pmb484">Zürich</rs>: <rs type="org" ref="#pmb118000">Internationaler Psychoanalytischer Verlag</rs>
-                     <space unit="chars" quantity="1"/>
-                     <date>1926</date>
-                  </bibl>).</note> ſoll in keiner Weiſe eine Revanche ſein, ſie iſt eben nur meine letzte
-                  <rs type="work" ref="#pmb78443" subtype="implied">Publikation</rs> – vielleicht in
-               jedem Sinne – ſonst aber recht <del rend="strikethrough">untereſ</del> unintereſſant
-               und beſonders für Sie unwichtig. </p>
-            <p>Troſt, daß Sie sie ja weder zu leſen noch ſich darüber <pb facs="MS-SCHNITZLER-B-00031-000-00008"/>zu äußern brauchen.</p>
-            <closer>Mit herzl Gruß<lb/>
-               <signed>Ihr <hi rend="latintype">Freud</hi>
-               </signed>
+            <p rend="center">
+               <pb facs="1074A09E_jpg_5"/>Arthur Schnitzler</p>
+            <p rend="center">in geziemender Schüchternheit</p>
+            <closer>
+               <signed>der Verfasser</signed>
             </closer>
+            <postscript>
+               <dateline rend="right">
+                  <anchor type="commentary" xml:id="K_L03892-1"/>
+                  <date>Nov.
+                     1924</date>
+                  <note type="commentary" corresp="K_L03892-1">Die Datierung lässt
+                     sich mit Hilfe des <rs type="work" ref="#pmb33243">Tagebuch</rs>-Eintrags zum
+                        <ref type="schnitzler-tagebuch" target="1924-11-19" subtype="date-only"/>
+                     zeitlich in der ersten Hälfte des Novembers verorten: »<quote>– Die besondre
+                        Lebhaftigkeit des Traums könnte auch durch meine Absicht <rs type="person" ref="#pmb11370">Freud</rs> zu besuchen bedingt sein (sowie ich
+                        ungewöhnlich viel träumte, als ich <date>1900</date> seine <rs type="work" ref="#pmb78440">Traumdeutung</rs> las). – Er sandte mir neulich ein paar
+                        Aufsätze ›mit geziemender Schüchternheit‹. –</quote>« </note>
+               </dateline>
+            </postscript>
+         </div>
+         <div type="writingSession" n="2">
+            <p rend="center">
+               <pb facs="1074A09E_jpg_7"/>
+               <hi rend="pre-print">
+                  <rs type="work" ref="#pmb298727">Psychoanalytische Studien</rs>
+               </hi>
+               <lb/>
+               <hi rend="pre-print">
+                  <rs type="work" ref="#pmb298727">an Werken der</rs>
+               </hi>
+               <lb/>
+               <hi rend="pre-print">
+                  <rs type="work" ref="#pmb298727">Dichtung und Kunst</rs>
+               </hi>
+            </p>
+            <p rend="center">
+               <hi rend="pre-print">Von</hi>
+            </p>
+            <p rend="center">
+               <hi rend="pre-print">Sigm. Freud</hi>
+            </p>
+            <space dim="vertical" unit="line" quantity="1"/>
+            <p rend="center">
+               <hi rend="pre-print">
+                  <date>1924</date>
+               </hi>
+            </p>
+            <p rend="center">
+               <hi rend="pre-print">
+                  <rs type="org" ref="#pmb118000">
+                     <hi rend="spaced-out">Internationaler Psychoanalytischer
+               Verlag</hi>
+                  </rs>
+               </hi>
+            </p>
+            <p rend="center">
+               <hi rend="pre-print">
+                  <rs type="place" ref="#pmb864">Leipzig</rs> / <rs type="place" ref="#pmb50">Wien</rs> / <rs type="place" ref="#pmb484">Zürich</rs>
+               </hi>
+            </p>
          </div>
       </body>
       <back>
@@ -314,7 +304,7 @@
                <occupation ref="pmb97">Mediziner/Medizinerin</occupation>
                <idno type="gnd">https://d-nb.info/gnd/118609807/</idno>
             </person>
-            <person xml:id="pmb119261">
+            <person xml:id="pmb119261" ana="comment">
                <persName>
                   <forename>Peter Michael</forename>
                   <surname>Braunwarth</surname>
@@ -339,7 +329,7 @@
                <idno type="URL" subtype="schnitzler-briefe">https://schnitzler-briefe.acdh.oeaw.ac.at/pmb119261.html</idno>
                <idno type="URL" subtype="schnitzler-kultur">https://schnitzler-kultur.acdh.oeaw.ac.at/pmb119261.html</idno>
             </person>
-            <person xml:id="pmb65504">
+            <person xml:id="pmb65504" ana="comment">
                <persName>
                   <forename>Reinhard</forename>
                   <surname>Urbach</surname>
@@ -366,7 +356,7 @@
                <idno type="URL" subtype="schnitzler-briefe">https://schnitzler-briefe.acdh.oeaw.ac.at/pmb65504.html</idno>
                <idno type="URL" subtype="schnitzler-kultur">https://schnitzler-kultur.acdh.oeaw.ac.at/pmb65504.html</idno>
             </person>
-            <person xml:id="pmb143327">
+            <person xml:id="pmb143327" ana="comment">
                <persName>
                   <forename>Werner</forename>
                   <surname>Welzig</surname>
@@ -399,7 +389,7 @@
                <idno type="URL" subtype="schnitzler-briefe">https://schnitzler-briefe.acdh.oeaw.ac.at/pmb143327.html</idno>
                <idno type="URL" subtype="schnitzler-kultur">https://schnitzler-kultur.acdh.oeaw.ac.at/pmb143327.html</idno>
             </person>
-            <person xml:id="pmb143331">
+            <person xml:id="pmb143331" ana="comment">
                <persName>
                   <forename>Richard</forename>
                   <surname>Miklin</surname>
@@ -415,7 +405,7 @@
                <idno type="URL" subtype="schnitzler-briefe">https://schnitzler-briefe.acdh.oeaw.ac.at/pmb143331.html</idno>
                <idno type="URL" subtype="schnitzler-kultur">https://schnitzler-kultur.acdh.oeaw.ac.at/pmb143331.html</idno>
             </person>
-            <person xml:id="pmb119271">
+            <person xml:id="pmb119271" ana="comment">
                <persName>
                   <forename>Konstanze</forename>
                   <surname>Fliedl</surname>
@@ -439,7 +429,7 @@
                <idno type="URL" subtype="schnitzler-briefe">https://schnitzler-briefe.acdh.oeaw.ac.at/pmb119271.html</idno>
                <idno type="URL" subtype="schnitzler-kultur">https://schnitzler-kultur.acdh.oeaw.ac.at/pmb119271.html</idno>
             </person>
-            <person xml:id="pmb143334">
+            <person xml:id="pmb143334" ana="comment">
                <persName>
                   <forename>Walter</forename>
                   <surname>Ruprechter</surname>
@@ -456,7 +446,7 @@
                <idno type="URL" subtype="schnitzler-briefe">https://schnitzler-briefe.acdh.oeaw.ac.at/pmb143334.html</idno>
                <idno type="URL" subtype="schnitzler-kultur">https://schnitzler-kultur.acdh.oeaw.ac.at/pmb143334.html</idno>
             </person>
-            <person xml:id="pmb143337">
+            <person xml:id="pmb143337" ana="comment">
                <persName>
                   <forename>Susanne</forename>
                   <surname>Pertlik</surname>
@@ -480,55 +470,14 @@
             </person>
          </listPerson>
          <listBibl>
-            <bibl xml:id="pmb30775">
-               <title>Der Gang zum Weiher. Dramatische Dichtung</title>
-               <title type="werk_arbeitstitel">Der weise Vater</title>
-               <title type="werk_arbeitstitel">Der Weiher</title>
-               <author ref="pmb2121" role="hat-geschaffen">Schnitzler, Arthur</author>
-               <date when="1926-03-01">1926-03-01</date>
-               <idno type="URL" subtype="asaf">https://asaf.com/S.04.01.09</idno>
-               <idno type="URL" subtype="wikidata">http://www.wikidata.org/entity/Q1193696</idno>
-               <idno type="URL" subtype="schnitzler-bahr">https://schnitzler-bahr.acdh.oeaw.ac.at/pmb30775.html</idno>
-               <idno type="URL" subtype="pmb">https://pmb.acdh.oeaw.ac.at/entity/30775/</idno>
-               <idno type="URL" subtype="schnitzler-tagebuch">https://schnitzler-tagebuch.acdh.oeaw.ac.at/pmb30775.html</idno>
-               <idno type="URL" subtype="wikipedia">https://de.wikipedia.org/wiki/Der_Gang_zum_Weiher</idno>
-               <idno type="URL" subtype="schnitzler-zeitungen">https://schnitzler-zeitungen.acdh.oeaw.ac.at/223956.html?pmb30775</idno>
-               <idno type="URL" subtype="schnitzler-zeitungen">https://schnitzler-zeitungen.acdh.oeaw.ac.at/223955.html?pmb30775</idno>
-               <idno type="URL" subtype="schnitzler-mikrofilme">https://schnitzler-mikrofilme.acdh.oeaw.ac.at/1428572.html?pmb30775</idno>
-               <idno type="URL" subtype="schnitzler-mikrofilme">https://schnitzler-mikrofilme.acdh.oeaw.ac.at/1428826.html?pmb30775</idno>
-               <idno type="URL" subtype="schnitzler-mikrofilme">https://schnitzler-mikrofilme.acdh.oeaw.ac.at/1428574.html?pmb30775</idno>
-               <idno type="URL" subtype="schnitzler-mikrofilme">https://schnitzler-mikrofilme.acdh.oeaw.ac.at/1428575.html?pmb30775</idno>
-               <idno type="URL" subtype="schnitzler-interviews">https://schnitzler-interviews.acdh.oeaw.ac.at/pmb30775.html</idno>
-               <idno type="URL" subtype="schnitzler-briefe">https://schnitzler-briefe.acdh.oeaw.ac.at/pmb30775.html</idno>
-               <idno type="URL" subtype="schnitzler-kultur">https://schnitzler-kultur.acdh.oeaw.ac.at/pmb30775.html</idno>
-               <note type="work_kind">Mehraktiges Drama</note>
-            </bibl>
-            <bibl xml:id="pmb30751">
-               <title>Die Frau des Richters. Novelle</title>
-               <title type="werk_bibliografische-angabe">Vossische Zeitung, 7.–15. 8. 1925</title>
-               <author ref="pmb2121" role="hat-geschaffen">Schnitzler, Arthur</author>
-               <date to="1925-08-15">7.8.1925 – 15.8.1925</date>
-               <idno type="URL" subtype="asaf">https://asaf.com/S.04.02.22</idno>
-               <idno type="URL" subtype="wikidata">http://www.wikidata.org/entity/Q1212589</idno>
-               <idno type="URL" subtype="literature">http://www.literature.at/viewer.alo?objid=12119&amp;page=1&amp;viewmode=fullscreen</idno>
-               <idno type="URL" subtype="schnitzler-bahr">https://schnitzler-bahr.acdh.oeaw.ac.at/pmb30751.html</idno>
-               <idno type="URL" subtype="pmb">https://pmb.acdh.oeaw.ac.at/entity/30751/</idno>
-               <idno type="URL" subtype="schnitzler-tagebuch">https://schnitzler-tagebuch.acdh.oeaw.ac.at/pmb30751.html</idno>
-               <idno type="URL" subtype="wikipedia">https://de.wikipedia.org/wiki/Die_Frau_des_Richters</idno>
-               <idno type="URL" subtype="schnitzler-zeitungen">https://schnitzler-zeitungen.acdh.oeaw.ac.at/223889.html?pmb30751</idno>
-               <idno type="URL" subtype="schnitzler-mikrofilme">https://schnitzler-mikrofilme.acdh.oeaw.ac.at/1428609.html?pmb30751</idno>
-               <idno type="URL" subtype="schnitzler-mikrofilme">https://schnitzler-mikrofilme.acdh.oeaw.ac.at/1428610.html?pmb30751</idno>
-               <idno type="URL" subtype="schnitzler-briefe">https://schnitzler-briefe.acdh.oeaw.ac.at/pmb30751.html</idno>
-               <idno type="URL" subtype="schnitzler-kultur">https://schnitzler-kultur.acdh.oeaw.ac.at/pmb30751.html</idno>
-               <note type="work_kind">Erzählung</note>
-            </bibl>
-            <bibl xml:id="pmb78443">
-               <title>Hemmung, Symptom und Angst</title>
-               <author ref="pmb11370" role="hat-geschaffen">Freud, Sigmund</author>
-               <date>1926</date>
-               <idno type="URL" subtype="pmb">https://pmb.acdh.oeaw.ac.at/entity/78443/</idno>
-               <idno type="URL" subtype="schnitzler-tagebuch">https://schnitzler-tagebuch.acdh.oeaw.ac.at/pmb78443.html</idno>
-               <idno type="URL" subtype="schnitzler-briefe">https://schnitzler-briefe.acdh.oeaw.ac.at/pmb78443.html</idno>
+            <bibl xml:id="pmb298727">
+               <title>Psychoanalytische Studien an Werken der Dichtung und Kunst</title>
+               <title type="werk_link">https://data.onb.ac.at/rep/1074A09E</title>
+               <author role="hat-geschaffen" ref="pmb11370">Freud, Sigmund</author>
+               <date notBefore="1924-01-01" when="1924-01-01">1924</date>
+               <idno type="URL" subtype="pmb">https://pmb.acdh.oeaw.ac.at/entity/298727/</idno>
+               <idno type="URL" subtype="wikidata">http://www.wikidata.org/entity/Q136486714</idno>
+               <note type="work_kind">Wissenschaftliches Werk</note>
             </bibl>
             <bibl xml:id="pmb33243" ana="comment">
                <title>Tagebuch</title>
@@ -551,9 +500,18 @@
                <idno type="URL" subtype="schnitzler-kultur">https://schnitzler-kultur.acdh.oeaw.ac.at/pmb33243.html</idno>
                <note type="work_kind">Tagebuch</note>
             </bibl>
+            <bibl xml:id="pmb78440" ana="comment">
+               <title>Die Traumdeutung</title>
+               <author ref="pmb11370" role="hat-geschaffen">Freud, Sigmund</author>
+               <date when="1899-11-04">1899-11-04</date>
+               <idno type="URL" subtype="pmb">https://pmb.acdh.oeaw.ac.at/entity/78440/</idno>
+               <idno type="URL" subtype="schnitzler-tagebuch">https://schnitzler-tagebuch.acdh.oeaw.ac.at/pmb78440.html</idno>
+               <idno type="URL" subtype="wikidata">http://www.wikidata.org/entity/Q93288279</idno>
+               <note type="work_kind">Wissenschaftliches Werk</note>
+            </bibl>
          </listBibl>
          <listPlace>
-            <place xml:id="pmb50" ana="comment">
+            <place xml:id="pmb50">
                <placeName>Wien</placeName>
                <placeName type="ort_fruherer-name">K.K. Reichshaupt- und Residenzstadt Wien</placeName>
                <placeName type="alternative-name">Bécs</placeName>
@@ -598,92 +556,7 @@
                   </figure>
                </note>
             </place>
-            <place xml:id="pmb253790">
-               <placeName>Berggasse 19</placeName>
-               <desc type="entity_type">Wohngebäude (K.WHS)</desc>
-               <desc type="entity_type_id">36</desc>
-               <location type="coords">
-                  <geo>48,218652 16,363025</geo>
-               </location>
-               <location type="located_in_place">
-                  <placeName ref="pmb59">IX., Alsergrund</placeName>
-                  <geo>48,22387 16,35641</geo>
-               </location>
-               <location type="located_in_place">
-                  <placeName ref="pmb52510">Berggasse</placeName>
-                  <geo>48,218776849348906 16,36345511169916</geo>
-               </location>
-               <idno type="URL" subtype="pmb">https://pmb.acdh.oeaw.ac.at/entity/253790/</idno>
-               <idno type="URL" subtype="wikidata">http://www.wikidata.org/entity/Q125296475</idno>
-               <idno type="URL" subtype="wienerschnitzler">https://wienerschnitzler.org/pmb253790.html</idno>
-               <idno type="URL" subtype="schnitzler-briefe">https://schnitzler-briefe.acdh.oeaw.ac.at/pmb253790.html</idno>
-            </place>
-            <place xml:id="pmb61755" ana="comment">
-               <placeName>Cottage-Sanatorium für Nerven- und Stoffwechselkranke</placeName>
-               <desc type="entity_type">Sanatorium (K.SAN)</desc>
-               <desc type="entity_type_id">27</desc>
-               <location type="coords">
-                  <geo>48,233056 16,333056</geo>
-               </location>
-               <location type="located_in_place">
-                  <placeName ref="pmb68">XVIII., Währing</placeName>
-                  <geo>48,23333 16,31667</geo>
-               </location>
-               <location type="located_in_place">
-                  <placeName ref="pmb150">Sternwartestraße</placeName>
-                  <geo>48,23099349198 16,340117830625</geo>
-               </location>
-               <idno type="URL" subtype="pmb">https://pmb.acdh.oeaw.ac.at/entity/61755/</idno>
-               <idno type="URL" subtype="schnitzler-interviews">https://schnitzler-interviews.acdh.oeaw.ac.at/pmb61755.html</idno>
-               <idno type="URL" subtype="wienerschnitzler">https://wienerschnitzler.org/pmb61755.html</idno>
-               <idno type="URL" subtype="schnitzler-briefe">https://schnitzler-briefe.acdh.oeaw.ac.at/pmb61755.html</idno>
-               <note type="apis_dates">
-                  <date from="1908-01-01" to="1944-01-01">1908 – 1944</date>
-               </note>
-            </place>
-            <place xml:id="pmb150">
-               <placeName>Sternwartestraße</placeName>
-               <desc type="entity_type">R.ST</desc>
-               <desc type="entity_type_id">2030</desc>
-               <location type="coords">
-                  <geo>48,23099349198 16,340117830625</geo>
-               </location>
-               <location type="located_in_place">
-                  <placeName ref="pmb68">XVIII., Währing</placeName>
-                  <geo>48,23333 16,31667</geo>
-               </location>
-               <location type="located_in_place">
-                  <placeName ref="pmb533">Währinger Cottage</placeName>
-                  <geo>48,233056 16,341944</geo>
-               </location>
-               <idno type="URL" subtype="schnitzler-bahr">https://schnitzler-bahr.acdh.oeaw.ac.at/pmb150.html</idno>
-               <idno type="URL" subtype="pmb">https://pmb.acdh.oeaw.ac.at/entity/150/</idno>
-               <idno type="URL" subtype="geonames">https://www.geonames.org/12495677</idno>
-               <idno type="URL" subtype="schnitzler-interviews">https://schnitzler-interviews.acdh.oeaw.ac.at/pmb150.html</idno>
-               <idno type="URL" subtype="schnitzler-tagebuch">https://schnitzler-tagebuch.acdh.oeaw.ac.at/pmb150.html</idno>
-               <idno type="URL" subtype="wienerschnitzler">https://wienerschnitzler.org/pmb150.html</idno>
-               <idno type="URL" subtype="schnitzler-briefe">https://schnitzler-briefe.acdh.oeaw.ac.at/pmb150.html</idno>
-            </place>
-            <place xml:id="pmb238059" ana="comment">
-               <placeName>Sternwartestraße 74</placeName>
-               <desc type="entity_type">Gebäude (K.GBD)</desc>
-               <desc type="entity_type_id">24</desc>
-               <location type="coords">
-                  <geo>48,232945 16,332974</geo>
-               </location>
-               <location type="located_in_place">
-                  <placeName ref="pmb68">XVIII., Währing</placeName>
-                  <geo>48,23333 16,31667</geo>
-               </location>
-               <location type="located_in_place">
-                  <placeName ref="pmb150">Sternwartestraße</placeName>
-                  <geo>48,23099349198 16,340117830625</geo>
-               </location>
-               <idno type="URL" subtype="pmb">https://pmb.acdh.oeaw.ac.at/entity/238059/</idno>
-               <idno type="URL" subtype="wienerschnitzler">https://wienerschnitzler.org/pmb238059.html</idno>
-               <idno type="URL" subtype="schnitzler-briefe">https://schnitzler-briefe.acdh.oeaw.ac.at/pmb238059.html</idno>
-            </place>
-            <place xml:id="pmb864" ana="comment">
+            <place xml:id="pmb864">
                <placeName>Leipzig</placeName>
                <placeName type="alternative-name">Gross-Leipzig</placeName>
                <desc type="entity_type">P.PPLA3</desc>
@@ -714,7 +587,7 @@
                   </figure>
                </note>
             </place>
-            <place xml:id="pmb484" ana="comment">
+            <place xml:id="pmb484">
                <placeName>Zürich</placeName>
                <placeName type="alternative-name">Turicum</placeName>
                <placeName type="alternative-name">Duregum</placeName>
@@ -748,7 +621,7 @@
             </place>
          </listPlace>
          <listOrg>
-            <org xml:id="pmb118000" ana="comment">
+            <org xml:id="pmb118000">
                <orgName>Internationaler Psychoanalytischer Verlag</orgName>
                <orgName type="alternative-name">Internationaler Psychoanalytischer Verlag</orgName>
                <desc type="entity_type">Verlag</desc>
