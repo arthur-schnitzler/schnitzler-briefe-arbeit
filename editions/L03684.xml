@@ -1,6 +1,10 @@
-<?xml version='1.0' encoding='UTF-8'?>
+<?xml version="1.0" encoding="UTF-8"?>
 <?xml-model href="../meta/schnitzler-briefe-schematron.sch" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
-<TEI xmlns="http://www.tei-c.org/ns/1.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.tei-c.org/ns/1.0 ../meta/schnitzler-briefe-schema.xsd" xml:id="L03684" xml:base="https://id.acdh.oeaw.ac.at/schnitzler/schnitzler-briefe/editions">
+<TEI xmlns="http://www.tei-c.org/ns/1.0"
+     xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+     xsi:schemaLocation="http://www.tei-c.org/ns/1.0 ../meta/schnitzler-briefe-schema.xsd"
+     xml:id="L03684"
+     xml:base="https://id.acdh.oeaw.ac.at/schnitzler/schnitzler-briefe/editions">
    <teiHeader>
       <fileDesc>
          <titleStmt>
@@ -83,7 +87,7 @@
                               <extent>
                                  <measure unit="seite" quantity="1"/>
                                  <measure unit="blatt" quantity="1"/>
-                                 <measure unit="zeichenanzahl" quantity="649"/>
+                                 <measure unit="zeichenanzahl" quantity="644"/>
                               </extent>
                            </supportDesc>
                         </objectDesc>
@@ -140,18 +144,28 @@
                <persName ref="#pmb2121">Schnitzler, Arthur</persName>
                <date evidence="conjecture" notBefore="1920-08-15" notAfter="1920-08-19">[15. 8. 1920
                   – 19. 8. 1920?]</date>
-               <placeName ref="#pmb50">Wien</placeName>
+               <placeName ref="#pmb50" evidence="conjecture">Wien</placeName>
             </correspAction>
-            <correspContext><ref type="belongsToCorrespondence" target="correspondence_13212">Zweig, Stefan</ref>
+            <correspContext>
+               <ref type="belongsToCorrespondence" target="correspondence_13212">Zweig, Stefan</ref>
                <ref subtype="previous_letter" type="withinCollection" target="L02352">Hofmannsthal an Schnitzler, 30. 7. 1920</ref>
                <ref subtype="next_letter" type="withinCollection" target="L02353">Schnitzler an Brandes, 16. 8. 1920</ref>
-               <ref subtype="previous_letter" type="withinCorrespondence" source="correspondence_13212" target="L03664">Zweig an Schnitzler, 14. 4. 1919</ref>
-               <ref subtype="next_letter" type="withinCorrespondence" source="correspondence_13212" target="L03739">Schnitzler an Zweig, 18. 8. [1920]</ref>
-            </correspContext></correspDesc>
+               <ref subtype="previous_letter"
+                    type="withinCorrespondence"
+                    source="correspondence_13212"
+                    target="L03664">Zweig an Schnitzler, 14. 4. 1919</ref>
+               <ref subtype="next_letter"
+                    type="withinCorrespondence"
+                    source="correspondence_13212"
+                    target="L03739">Schnitzler an Zweig, 18. 8. [1920]</ref>
+            </correspContext>
+         </correspDesc>
       </profileDesc>
-      <revisionDesc status="proposed">
+      <revisionDesc status="candidate">
          <change who="MAM" when="2025-06-11">Export aus Transkribus</change>
          <change who="SJ" when="2025-06-18">Auszeichnung</change>
+         <change who="MAM" when="2025-10-14">Durchsicht</change>
+         <change who="MAM" when="2025-10-14">Index check</change>
       </revisionDesc>
    </teiHeader>
    <facsimile>
@@ -165,15 +179,12 @@
                   <pb facs="MS-SCHNITZLER-B-00118-000-00099"/>
                   <rs type="place" ref="#pmb30">Salzburg</rs> , am <date>14. August 1920</date>
                </dateline>
-               <salute>Lieber verehrter Herr Doktor!</salute>
+               <salute rend="center">Lieber verehrter Herr Doktor!</salute>
             </opener>
-            <p>Ich erhielt heute beifolgendes Telegramm von dem <rs type="place" ref="#pmb44053">New-Yorker</rs> Verleger <rs type="person" ref="#pmb24825">Thomas Seltzer</rs>,
-                  <rs type="place" ref="#pmb294764">5, West Fif<subst>
-                     <del rend="strikethrough">tie</del>
-                     <add place="inline">th</add>
-                  </subst> Street</rs>, <rs type="place" ref="#pmb44053">New-York</rs>, der auch von
-               mir <anchor type="commentary" xml:id="K_L03684-1"/>einige <rs type="work" subtype="implied" ref="#pmb76771 #pmb76769">Bücher</rs>
-               <note type="commentary" corresp="K_L03684-1">
+            <p>Ich erhielt heute <anchor type="commentary" xml:id="K_L03684-1"/>beifolgendes Telegramm<note type="commentary" corresp="K_L03684-1">Beilage nicht erhalten</note> von dem <rs type="place" ref="#pmb44053">New-Yorker</rs> Verleger <rs type="person" ref="#pmb24825">Thomas Seltzer</rs>,
+                  <rs type="place" ref="#pmb294764">5, West Fifth<!-- Korrektur der Sekretärin, wird nicht wiedergegeben --> Street</rs>, <rs type="place" ref="#pmb44053">New-York</rs>, der auch von
+               mir <anchor type="commentary" xml:id="K_L03684-2"/>einige <rs type="work" subtype="implied" ref="#pmb76771 #pmb76769">Bücher</rs>
+               <note type="commentary" corresp="K_L03684-2">
                   <date>1921</date> erschien <rs type="person" ref="#pmb13212">Zweigs</rs>
                   <space unit="chars" quantity="1"/>
                   <rs type="work" ref="#pmb76771" subtype="implied">Rolland-Biografie</rs> in
@@ -186,8 +197,8 @@
                      <pubPlace>New York</pubPlace>: <rs type="org" ref="#pmb29336">T. Seltzer</rs>
                      <space unit="chars" quantity="1"/>
                      <date>1922</date>.</bibl>)</note> bringt. Er hatte ursprünglich ein <rs type="work" ref="#pmb294768" subtype="implied">Buch</rs> widerrechtlich von mir
-               gebracht, sogar <anchor type="commentary" xml:id="K_L03684-2"/>unter falschem
-                  Namen<note type="commentary" corresp="K_L03684-2">
+               <rs type="work" subtype="implied" ref="#pmb76771">gebracht</rs>, sogar <anchor type="commentary" xml:id="K_L03684-3"/>unter falschem
+                  Namen<note type="commentary" corresp="K_L03684-3">
                   <date>1919</date> erschien die Novelle <rs type="work" ref="#pmb294768">Brennendes
                      Geheimnis</rs> von <rs type="person" ref="#pmb13212">Stefan Zweig</rs> nicht
                      autorisiert unter ebenfalls nicht autorisiertem, ins <rs type="place" ref="#pmb254">Englische</rs> übersetzten
@@ -198,7 +209,7 @@
                </note>, hat aber dann die Sache anständig beigelegt und gilt als einer der
                tatkräftigsten Unternehmer. Ich würde Ihnen immerhin raten ihm ein Angebot zu machen,
                das jedenfalls durch den Unterschied der Valuta schon erfreulich wird.</p>
-            <closer> Ich nutze den guten Anlass um mich lhnen in Erinnerung zu bringen und bleibe
+            <closer> Ich nutze den guten Anlass um mich Ihnen in Erinnerung zu bringen und bleibe
                mit vielen Grüssen Ihr<lb/>aufrichtig ergebener<lb/>
                <signed>
                   <handShift/>Stefan Zweig</signed>
