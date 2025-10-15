@@ -1,6 +1,10 @@
-<?xml version='1.0' encoding='UTF-8'?>
+<?xml version="1.0" encoding="UTF-8"?>
 <?xml-model href="../meta/schnitzler-briefe-schematron.sch" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
-<TEI xmlns="http://www.tei-c.org/ns/1.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.tei-c.org/ns/1.0 ../meta/schnitzler-briefe-schema.xsd" xml:id="L03665" xml:base="https://id.acdh.oeaw.ac.at/schnitzler/schnitzler-briefe/editions">
+<TEI xmlns="http://www.tei-c.org/ns/1.0"
+     xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+     xsi:schemaLocation="http://www.tei-c.org/ns/1.0 ../meta/schnitzler-briefe-schema.xsd"
+     xml:id="L03665"
+     xml:base="https://id.acdh.oeaw.ac.at/schnitzler/schnitzler-briefe/editions">
    <teiHeader>
       <fileDesc>
          <titleStmt>
@@ -83,7 +87,7 @@
                               <extent>
                                  <measure unit="seite" quantity="1"/>
                                  <measure unit="blatt" quantity="1"/>
-                                 <measure unit="zeichenanzahl" quantity="611"/>
+                                 <measure unit="zeichenanzahl" quantity="613"/>
                               </extent>
                            </supportDesc>
                         </objectDesc>
@@ -95,9 +99,10 @@
                               <desc>
                                  <bibl>
                                     <publisher>Deutschen Literaturarchiv Marbach</publisher>,
-                                    HS.NZ85.1.4978</bibl>: Ausschnitt mit den Seiten 60 und 61 aus dem
-                                 Antiquariatskatalog, 1 Blatt, 2 Seiten. Die Angabe der Lot-Nummer
-                                 und die Adresse des Antiquariats mit Bleistift unterstrichen. Der
+                                    HS.NZ85.1.4978</bibl>: Ausschnitt mit den Seiten 60 und 61 aus
+                                 dem Antiquariatskatalog von <rs type="org" ref="#pmb293717">Emil
+                                    Hirsch</rs>, 1 Blatt, 2 Seiten. Die Angabe der Lot-Nummer und
+                                 die Adresse des Antiquariats mit Bleistift unterstrichen. Der
                                  Hinweis auf Schnitzler in der Beschreibung mit blauem Buntstift
                                  (von Zweig?) unterstrichen. Auf der ersten Seite mit rotem
                                  Buntstift Vermerk von Schnitzler: »<quote>
@@ -105,6 +110,9 @@
                                        <hi rend="latintype">Krell</hi>
                                     </rs>
                                  </quote>«.</desc>
+                           </incident>
+                           <incident type="receiver" rend="roter-buntstift">
+                              <desc>eine Unterstreichung</desc>
                            </incident>
                         </additions>
                      </physDesc>
@@ -151,12 +159,20 @@
                <date when="1923-05-27" evidence="external">27. 3. 1929</date>
                <placeName ref="#pmb50">Wien</placeName>
             </correspAction>
-            <correspContext><ref type="belongsToCorrespondence" target="correspondence_13212">Zweig, Stefan</ref>
+            <correspContext>
+               <ref type="belongsToCorrespondence" target="correspondence_13212">Zweig, Stefan</ref>
                <ref subtype="previous_letter" type="withinCollection" target="L02398">Brandes an Schnitzler, [11. 5. 1923]</ref>
                <ref subtype="next_letter" type="withinCollection" target="L02399">Hofmannsthal an Schnitzler, 15. 5. 1923</ref>
-               <ref subtype="previous_letter" type="withinCorrespondence" source="correspondence_13212" target="L03753">Schnitzler an Zweig, 22. 1. 1923</ref>
-               <ref subtype="next_letter" type="withinCorrespondence" source="correspondence_13212" target="L03758">Schnitzler an Zweig, 29. 5. 1923</ref>
-            </correspContext></correspDesc>
+               <ref subtype="previous_letter"
+                    type="withinCorrespondence"
+                    source="correspondence_13212"
+                    target="L03753">Schnitzler an Zweig, 22. 1. 1923</ref>
+               <ref subtype="next_letter"
+                    type="withinCorrespondence"
+                    source="correspondence_13212"
+                    target="L03758">Schnitzler an Zweig, 29. 5. 1923</ref>
+            </correspContext>
+         </correspDesc>
       </profileDesc>
       <revisionDesc status="proposed">
          <change who="MAM" when="2025-05-21">Export aus Transkribus</change>
@@ -199,13 +215,13 @@
                         freundlichst rücksenden zu wollen.</p>
                      <p>Mit vorzüglicher Hochachtung</p>
                      <p>
-                        <space unit="chars" quantity="5"/>
+                        <supplied>Raum für Unterschrift</supplied>
                      </p>
                      <p>Herrn <rs type="person" ref="#pmb295084">Emil Hirsch</rs>, Verleger,</p>
                      <p>
                         <rs type="place" ref="#pmb45258">München</rs>.</p>
                   </quote>« (<bibl>
-                     <publisher>DLA</publisher>, HS.1985.1.1016</bibl>). Aus den zwei weiteren
+                     <publisher>Deutsches Literaturarchiv Marbach</publisher>, HS.1985.1.1016</bibl>). Aus den zwei weiteren
                   Schreiben <rs type="person" ref="#pmb2121">Schnitzlers</rs> an <rs type="person" ref="#pmb295084">Hirsch</rs> geht hervor, dass das Exemplar von <rs type="person" ref="#pmb11995">Max Krell</rs> zum Verkauf freigegeben wurde –
                   der es wiederum von <rs type="person" ref="#pmb2121">Schnitzlers</rs> Schwägerin
                      <rs type="person" ref="#pmb2315">Elisabeth Steinrück</rs> bezogen hatte. Ob nun
@@ -244,8 +260,17 @@
                      Roman</rs>. <rs type="place" ref="#pmb168">Berlin</rs>, <rs type="org" ref="#pmb29639">S. Fischer</rs>, <date>1915</date>. 8. Origlwd. </hi>
             </p>
             <p>
-               <hi rend="pre-print">Erste Ausgabe. <hi rend="spaced-out">Mit handschriftl.
-                     Widmung</hi> des Verf. an Arthur u. Olga Schnitzler.</hi>
+               <hi rend="pre-print">Erste Ausgabe.<space unit="chars" quantity="1"/>
+               </hi>
+               <space unit="chars" quantity="1"/>
+               <hi rend="pre-print">
+                  <hi rend="spaced-out">Mit
+                  handschriftl.
+                 Widmung</hi>
+               </hi>
+               <space unit="chars" quantity="1"/>
+               <hi rend="pre-print">
+                  <space unit="chars" quantity="1"/>des Verf. an Arthur u. Olga Schnitzler.</hi>
             </p>
             <p>
                <gap reason="outOfScope" unit="lines" quantity="36"/>
@@ -2714,6 +2739,36 @@
             </place>
          </listPlace>
          <listOrg>
+            <org xml:id="pmb293717">
+               <orgName>Antiquariat Emil Hirsch</orgName>
+               <desc type="entity_type">Antiquariat</desc>
+               <desc type="entity_type_id">992</desc>
+               <location type="located_in_place">
+                  <placeName ref="pmb45258">München</placeName>
+                  <geo>48,13743 11,57549</geo>
+                  <idno type="URL" subtype="d-nb">https://d-nb.info/gnd/4127793-4</idno>
+                  <idno type="URL" subtype="pmb">https://pmb.acdh.oeaw.ac.at/entity/38129/</idno>
+                  <idno type="URL" subtype="pmb">https://pmb.acdh.oeaw.ac.at/entity/45258/</idno>
+                  <idno type="URL" subtype="geonames">https://sws.geonames.org/2867714/</idno>
+                  <idno type="URL" subtype="kraus">https://kraus.wienbibliothek.at/register/orte/pmb45258</idno>
+                  <idno type="URL" subtype="wikidata">http://www.wikidata.org/entity/Q1726</idno>
+                  <idno type="URL" subtype="wikipedia">https://de.wikipedia.org/wiki/M%C3%BCnchen</idno>
+                  <idno type="URL" subtype="schnitzler-interviews">https://schnitzler-interviews.acdh.oeaw.ac.at/pmb45258.html</idno>
+                  <idno type="URL" subtype="schnitzler-tagebuch">https://schnitzler-tagebuch.acdh.oeaw.ac.at/pmb45258.html</idno>
+                  <idno type="URL" subtype="pmb">https://pmb.acdh.oeaw.ac.at/entity/263246/</idno>
+                  <idno type="URL" subtype="wienerschnitzler">https://wienerschnitzler.org/pmb45258.html</idno>
+                  <idno type="URL" subtype="schnitzler-briefe">https://schnitzler-briefe.acdh.oeaw.ac.at/pmb45258.html</idno>
+                  <idno type="URL" subtype="schnitzler-kultur">https://schnitzler-kultur.acdh.oeaw.ac.at/pmb45258.html</idno>
+               </location>
+               <location type="located_in_place">
+                  <placeName ref="pmb298429">Karlstraße 10</placeName>
+                  <geo>48,142913 11,567552</geo>
+                  <idno type="URL" subtype="pmb">https://pmb.acdh.oeaw.ac.at/entity/298429/</idno>
+               </location>
+               <idno type="URL" subtype="pmb">https://pmb.acdh.oeaw.ac.at/entity/293717/</idno>
+               <idno type="URL" subtype="wikidata">http://www.wikidata.org/entity/Q116809892</idno>
+               <idno type="URL" subtype="schnitzler-briefe">https://schnitzler-briefe.acdh.oeaw.ac.at/pmb293717.html</idno>
+            </org>
             <org xml:id="pmb29639">
                <orgName>S. Fischer Verlag</orgName>
                <desc type="entity_type">Verlag</desc>
@@ -2807,36 +2862,6 @@
                <note type="apis_dates">
                   <date notBefore="1886-01-01" when="1886-01-01">1886</date>
                </note>
-            </org>
-            <org xml:id="pmb293717">
-               <orgName>Antiquariat Emil Hirsch</orgName>
-               <desc type="entity_type">Antiquariat</desc>
-               <desc type="entity_type_id">992</desc>
-               <location type="located_in_place">
-                  <placeName ref="pmb45258">München</placeName>
-                  <geo>48,13743 11,57549</geo>
-                  <idno type="URL" subtype="d-nb">https://d-nb.info/gnd/4127793-4</idno>
-                  <idno type="URL" subtype="pmb">https://pmb.acdh.oeaw.ac.at/entity/38129/</idno>
-                  <idno type="URL" subtype="pmb">https://pmb.acdh.oeaw.ac.at/entity/45258/</idno>
-                  <idno type="URL" subtype="geonames">https://sws.geonames.org/2867714/</idno>
-                  <idno type="URL" subtype="kraus">https://kraus.wienbibliothek.at/register/orte/pmb45258</idno>
-                  <idno type="URL" subtype="wikidata">http://www.wikidata.org/entity/Q1726</idno>
-                  <idno type="URL" subtype="wikipedia">https://de.wikipedia.org/wiki/M%C3%BCnchen</idno>
-                  <idno type="URL" subtype="schnitzler-interviews">https://schnitzler-interviews.acdh.oeaw.ac.at/pmb45258.html</idno>
-                  <idno type="URL" subtype="schnitzler-tagebuch">https://schnitzler-tagebuch.acdh.oeaw.ac.at/pmb45258.html</idno>
-                  <idno type="URL" subtype="pmb">https://pmb.acdh.oeaw.ac.at/entity/263246/</idno>
-                  <idno type="URL" subtype="wienerschnitzler">https://wienerschnitzler.org/pmb45258.html</idno>
-                  <idno type="URL" subtype="schnitzler-briefe">https://schnitzler-briefe.acdh.oeaw.ac.at/pmb45258.html</idno>
-                  <idno type="URL" subtype="schnitzler-kultur">https://schnitzler-kultur.acdh.oeaw.ac.at/pmb45258.html</idno>
-               </location>
-               <location type="located_in_place">
-                  <placeName ref="pmb298429">Karlstraße 10</placeName>
-                  <geo>48,142913 11,567552</geo>
-                  <idno type="URL" subtype="pmb">https://pmb.acdh.oeaw.ac.at/entity/298429/</idno>
-               </location>
-               <idno type="URL" subtype="pmb">https://pmb.acdh.oeaw.ac.at/entity/293717/</idno>
-               <idno type="URL" subtype="wikidata">http://www.wikidata.org/entity/Q116809892</idno>
-               <idno type="URL" subtype="schnitzler-briefe">https://schnitzler-briefe.acdh.oeaw.ac.at/pmb293717.html</idno>
             </org>
          </listOrg>
       </back>
