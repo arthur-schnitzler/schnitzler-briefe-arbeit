@@ -1,6 +1,10 @@
-<?xml version='1.0' encoding='UTF-8'?>
+<?xml version="1.0" encoding="UTF-8"?>
 <?xml-model href="../meta/schnitzler-briefe-schematron.sch" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
-<TEI xmlns="http://www.tei-c.org/ns/1.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.tei-c.org/ns/1.0 ../meta/schnitzler-briefe-schema.xsd" xml:id="L00342" xml:base="https://id.acdh.oeaw.ac.at/schnitzler/schnitzler-briefe/editions">
+<TEI xmlns="http://www.tei-c.org/ns/1.0"
+     xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+     xsi:schemaLocation="http://www.tei-c.org/ns/1.0 ../meta/schnitzler-briefe-schema.xsd"
+     xml:id="L00342"
+     xml:base="https://id.acdh.oeaw.ac.at/schnitzler/schnitzler-briefe/editions">
    <teiHeader>
       <fileDesc>
          <titleStmt>
@@ -134,13 +138,21 @@
                   – 5. 7. 1894?]</date>
                <placeName ref="#pmb50">Wien</placeName>
             </correspAction>
-            <correspContext><ref type="belongsToCorrespondence" target="correspondence_10863">Beer-Hofmann, Richard</ref>
+            <correspContext>
+               <ref type="belongsToCorrespondence" target="correspondence_10863">Beer-Hofmann, Richard</ref>
                <ref subtype="previous_letter" type="withinCollection" target="L03139">Salten an Schnitzler, [29. 6.? 1894]</ref>
                <ref subtype="next_letter" type="withinCollection" target="L00343">Schnitzler an Beer-Hofmann, 2. 7. 1894</ref>
-               <ref subtype="previous_letter" type="withinCorrespondence" source="correspondence_10863" target="L00341">Schnitzler an Beer-Hofmann, [zwischen
+               <ref subtype="previous_letter"
+                    type="withinCorrespondence"
+                    source="correspondence_10863"
+                    target="L00341">Schnitzler an Beer-Hofmann, [zwischen
                   26. – 29. 6. 1894?]</ref>
-               <ref subtype="next_letter" type="withinCorrespondence" source="correspondence_10863" target="L00343">Schnitzler an Beer-Hofmann, 2. 7. 1894</ref>
-            </correspContext></correspDesc>
+               <ref subtype="next_letter"
+                    type="withinCorrespondence"
+                    source="correspondence_10863"
+                    target="L00343">Schnitzler an Beer-Hofmann, 2. 7. 1894</ref>
+            </correspContext>
+         </correspDesc>
       </profileDesc>
       <revisionDesc status="approved">
          <change who="MAM" when="2016-04-05">Angelegt aus Buchausgabe</change>
@@ -164,7 +176,9 @@
             </opener>
             <p>An <rs ref="#pmb2450" type="person">F.</rs> hatte ich natürlich vergessen, ordnete
                aber die Sache sofort nach Erhalt Ihres Briefes. –</p>
-            <p>Unter welcher Adresse <anchor type="commentary" xml:id="K_L00342-1"/>gratulirt<note type="commentary" corresp="K_L00342-1">
+            <p>Unter welcher Adresse <anchor type="commentary" xml:id="K_L00342-1"/>
+               <rs type="event" ref="#pmb298917" subtype="implied">gratulirt</rs>
+               <note type="commentary" corresp="K_L00342-1">
                   <rs type="person" ref="#pmb2121">Schnitzlers</rs> Bruder
                <rs ref="#pmb12698" type="person">Julius</rs> und <rs ref="#pmb24423" type="person">Helene
                   Altmann</rs> heirateten am <ref type="schnitzler-tagebuch" target="1894-07-08" subtype="date-only"/>.</note> man Ihrem <rs type="person" ref="#pmb12698" subtype="implied">Bruder</rs>?</p>
@@ -3884,6 +3898,23 @@
                <idno type="URL" subtype="schnitzler-briefe">https://schnitzler-briefe.acdh.oeaw.ac.at/pmb39535.html</idno>
             </org>
          </listOrg>
+         <listEvent>
+            <event xml:id="pmb298917">
+               <eventName n="Hochzeit">Hochzeit von Helene Altmann und Julius Schnitzler, 8.7.1894</eventName>
+               <idno type="URL" subtype="pmb">https://pmb.acdh.oeaw.ac.at/entity/298917/</idno>
+               <listPerson>
+                  <person role="hat mitwirkend">
+                     <persName ref="pmb12698">Schnitzler, Julius</persName>
+                  </person>
+                  <person role="hat mitwirkend">
+                     <persName ref="pmb24423">Schnitzler, Helene</persName>
+                  </person>
+                  <person role="hat teilnehmend">
+                     <persName ref="pmb2121">Schnitzler, Arthur</persName>
+                  </person>
+               </listPerson>
+            </event>
+         </listEvent>
       </back>
    </text>
 </TEI>

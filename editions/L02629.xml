@@ -1,6 +1,10 @@
-<?xml version='1.0' encoding='UTF-8'?>
+<?xml version="1.0" encoding="UTF-8"?>
 <?xml-model href="../meta/schnitzler-briefe-schematron.sch" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
-<TEI xmlns="http://www.tei-c.org/ns/1.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.tei-c.org/ns/1.0 ../meta/schnitzler-briefe-schema.xsd" xml:id="L02629" xml:base="https://id.acdh.oeaw.ac.at/schnitzler/schnitzler-briefe/editions">
+<TEI xmlns="http://www.tei-c.org/ns/1.0"
+     xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+     xsi:schemaLocation="http://www.tei-c.org/ns/1.0 ../meta/schnitzler-briefe-schema.xsd"
+     xml:id="L02629"
+     xml:base="https://id.acdh.oeaw.ac.at/schnitzler/schnitzler-briefe/editions">
    <teiHeader>
       <fileDesc>
          <titleStmt>
@@ -87,8 +91,12 @@
                            </supportDesc>
                         </objectDesc>
                         <handDesc>
-                           <handNote medium="schwarze-tinte" style="deutsche-kurrent" corresp="#pmb11485"/>
-                           <handNote medium="schwarze-tinte" style="lateinische-kurrent" corresp="#pmb11485">
+                           <handNote medium="schwarze-tinte"
+                                     style="deutsche-kurrent"
+                                     corresp="#pmb11485"/>
+                           <handNote medium="schwarze-tinte"
+                                     style="lateinische-kurrent"
+                                     corresp="#pmb11485">
                               <p>Adresse</p>
                            </handNote>
                         </handDesc>
@@ -139,12 +147,20 @@
                <date when="1894-07-05">5. 7. 1894</date>
                <placeName ref="#pmb50">Wien</placeName>
             </correspAction>
-            <correspContext><ref type="belongsToCorrespondence" target="correspondence_11485">Goldmann, Paul</ref>
+            <correspContext>
+               <ref type="belongsToCorrespondence" target="correspondence_11485">Goldmann, Paul</ref>
                <ref subtype="previous_letter" type="withinCollection" target="L00345">Kraus an Schnitzler, 2. 7. 1894</ref>
                <ref subtype="next_letter" type="withinCollection" target="L03140">Salten an Schnitzler, [3. 7. 1894]</ref>
-               <ref subtype="previous_letter" type="withinCorrespondence" source="correspondence_11485" target="L02627">Goldmann an Schnitzler, 19. 6. [1894]</ref>
-               <ref subtype="next_letter" type="withinCorrespondence" source="correspondence_11485" target="L02608">Goldmann an Schnitzler, 29. 7. [1894]</ref>
-            </correspContext></correspDesc>
+               <ref subtype="previous_letter"
+                    type="withinCorrespondence"
+                    source="correspondence_11485"
+                    target="L02627">Goldmann an Schnitzler, 19. 6. [1894]</ref>
+               <ref subtype="next_letter"
+                    type="withinCorrespondence"
+                    source="correspondence_11485"
+                    target="L02608">Goldmann an Schnitzler, 29. 7. [1894]</ref>
+            </correspContext>
+         </correspDesc>
       </profileDesc>
       <revisionDesc status="approved">
          <change who="LU" when="2022-04-05">Angelegt</change>
@@ -186,8 +202,10 @@
             </opener>
             <p>Bitte ſchicke mir die <rs type="place" subtype="implied" ref="#pmb168934">Adreſſe</rs>
                Deines <rs type="person" subtype="implied" ref="#pmb12698">Bruders</rs> oder <del rend="strikethrough">ſei</del> des <anchor type="commentary" xml:id="K_L02629-1"/>Locales<note type="commentary" corresp="K_L02629-1">nicht identifizert</note>,
-               in dem er die <anchor type="commentary" xml:id="K_L02629-2"/>Hochzeit<note type="commentary" corresp="K_L02629-2">
-                  <rs type="person" ref="#pmb12698">Julius Schnitzler</rs> und <rs type="person" ref="#pmb24423">Helene Altmann</rs> hatten am <ref target="1894-07-08" type="schnitzler-tagebuch" subtype="date-only"/> geheiratet.</note> feiert.</p>
+               in dem er die <anchor type="commentary" xml:id="K_L02629-2"/>
+               <rs type="event" ref="#pmb298917" subtype="implied">Hochzeit</rs>
+               <note type="commentary" corresp="K_L02629-2">
+                  <rs type="person" ref="#pmb12698">Julius Schnitzler</rs> und <rs type="person" ref="#pmb24423">Helene Altmann</rs> heirateten am <ref target="1894-07-08" type="schnitzler-tagebuch" subtype="date-only"/>.</note> feiert.</p>
             <p>Und warum ſchreibſt Du mir nicht? Herzlichſt <lb/>Dein <lb/>
                <signed>P. G.</signed>
             </p>
@@ -1058,6 +1076,31 @@
                <idno type="URL" subtype="schnitzler-kultur">https://schnitzler-kultur.acdh.oeaw.ac.at/pmb168934.html</idno>
             </place>
          </listPlace>
+         <listEvent>
+            <event xml:id="pmb298917">
+               <eventName n="Hochzeit">Hochzeit von Helene Altmann und Julius Schnitzler, 8.7.1894</eventName>
+               <idno type="URL" subtype="pmb">https://pmb.acdh.oeaw.ac.at/entity/298917/</idno>
+               <listPerson>
+                  <person role="hat mitwirkend">
+                     <persName ref="pmb12698">Schnitzler, Julius</persName>
+                  </person>
+                  <person role="hat mitwirkend">
+                     <persName ref="pmb24423">Schnitzler, Helene</persName>
+                  </person>
+                  <person role="hat teilnehmend">
+                     <persName ref="pmb2121">Schnitzler, Arthur</persName>
+                  </person>
+               </listPerson>
+               <listPlace>
+                  <place>
+                     <placeName role="veranstaltet in" ref="pmb50">Wien</placeName>
+                     <location>
+                        <geo>48,208333 16,373056</geo>
+                     </location>
+                  </place>
+               </listPlace>
+            </event>
+         </listEvent>
       </back>
    </text>
 </TEI>
