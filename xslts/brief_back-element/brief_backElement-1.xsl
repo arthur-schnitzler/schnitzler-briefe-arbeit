@@ -18,7 +18,7 @@
                                 <xsl:element name="listPerson"
                                     namespace="http://www.tei-c.org/ns/1.0">
                                     <xsl:for-each
-                                        select="distinct-values($tei-root/descendant::*[(@type = 'person' or name() = 'persName' or name() = 'author') and not(ancestor::tei:back) and not(ancestor::tei:note[@type = 'commentary'])]/@ref/tokenize(., '#'))">
+                                        select="distinct-values($tei-root/descendant::*[(@type = 'person' or name() = 'persName' or name() = 'author') and not(@subtype = 'implied') and not(ancestor::tei:back) and not(ancestor::tei:note[@type = 'commentary'])]/@ref/tokenize(., '#'))">
                                         <xsl:if test="normalize-space(.) != ''">
                                             <xsl:element name="person"
                                                 namespace="http://www.tei-c.org/ns/1.0">
@@ -65,7 +65,7 @@
                             </xsl:for-each>
                             <xsl:for-each select="$person-implied//tei:person">
                                 <xsl:variable name="current" select="@xml:id"/>
-                                <xsl:if test="not($person-im-text//tei:person[@xml:id = $current and not(ancestor::tei:rs[@subtype = 'implied'])])">
+                                <xsl:if test="not($person-im-text//tei:person/@xml:id = $current)">
                                     <xsl:element name="person"
                                         namespace="http://www.tei-c.org/ns/1.0">
                                         <xsl:attribute name="xml:id">
@@ -149,7 +149,7 @@
                             </xsl:for-each>
                             <xsl:for-each select="$person-implied//tei:person">
                                 <xsl:variable name="current" select="@xml:id"/>
-                                <xsl:if test="not($person-im-text//tei:person[@xml:id = $current and not(ancestor::tei:rs[@subtype = 'implied'])])">
+                                <xsl:if test="not($person-im-text//tei:person/@xml:id = $current)">
                                     <xsl:element name="person"
                                         namespace="http://www.tei-c.org/ns/1.0">
                                         <xsl:attribute name="xml:id">
@@ -186,10 +186,10 @@
                 <xsl:element name="listBibl" namespace="http://www.tei-c.org/ns/1.0">
                     <xsl:variable name="bibl-im-text">
                         <xsl:if
-                            test="$tei-root/descendant::tei:rs[@type = 'work' and not(ancestor::tei:back) and not(ancestor::tei:note[@type = 'commentary'])]/@ref[contains(., '#')][1]">
+                            test="$tei-root/descendant::tei:rs[@type = 'work' and not(@subtype = 'implied') and not(ancestor::tei:back) and not(ancestor::tei:note[@type = 'commentary'])]/@ref[contains(., '#')][1]">
                             <!-- rs mit Raute -->
                             <xsl:for-each
-                                select="distinct-values($tei-root/descendant::tei:rs[@type = 'work' and not(ancestor::tei:back) and not(ancestor::tei:note[@type = 'commentary'])]/@ref/tokenize(., '#'))">
+                                select="distinct-values($tei-root/descendant::tei:rs[@type = 'work' and not(@subtype = 'implied') and not(ancestor::tei:back) and not(ancestor::tei:note[@type = 'commentary'])]/@ref/tokenize(., '#'))">
                                 <xsl:if test="normalize-space(.) != ''">
                                     <xsl:element name="bibl" namespace="http://www.tei-c.org/ns/1.0">
                                         <xsl:attribute name="xml:id">
@@ -234,7 +234,7 @@
                     </xsl:if>
                     <xsl:for-each select="$bibl-implied//tei:bibl">
                         <xsl:variable name="current" select="@xml:id"/>
-                        <xsl:if test="not($bibl-im-text//tei:bibl[@xml:id = $current and not(ancestor::tei:rs[@subtype = 'implied'])])">
+                        <xsl:if test="not($bibl-im-text//tei:bibl/@xml:id = $current)">
                             <xsl:element name="bibl" namespace="http://www.tei-c.org/ns/1.0">
                                 <xsl:attribute name="xml:id">
                                     <xsl:value-of select="$current"/>
@@ -271,7 +271,7 @@
                         <xsl:when test="$tei-root/descendant::tei:rs/@ref[contains(., '#')][1]">
                             <!-- rs mit Raute -->
                             <xsl:variable name="place-in-text"><xsl:for-each
-                                select="distinct-values($tei-root/descendant::tei:*[(@type = 'place' or name() = 'placeName') and not(ancestor::tei:back) and not(ancestor::tei:note[@type = 'commentary'])]/@ref/tokenize(., '#'))">
+                                select="distinct-values($tei-root/descendant::tei:*[(@type = 'place' or name() = 'placeName') and not(@subtype = 'implied') and not(ancestor::tei:back) and not(ancestor::tei:note[@type = 'commentary'])]/@ref/tokenize(., '#'))">
                                 <xsl:if test="normalize-space(.) != ''">
                                     <xsl:element name="place"
                                         namespace="http://www.tei-c.org/ns/1.0">
@@ -312,7 +312,7 @@
                             </xsl:for-each>
                             <xsl:for-each select="$place-implied//tei:place">
                                 <xsl:variable name="current" select="@xml:id"/>
-                                <xsl:if test="not($place-in-text//tei:place[@xml:id = $current and not(ancestor::tei:rs[@subtype = 'implied'])])">
+                                <xsl:if test="not($place-in-text//tei:place/@xml:id = $current)">
                                     <xsl:element name="place"
                                         namespace="http://www.tei-c.org/ns/1.0">
                                         <xsl:attribute name="xml:id">
@@ -369,7 +369,7 @@
                             </xsl:for-each>
                             <xsl:for-each select="$place-implied//tei:place">
                                 <xsl:variable name="current" select="@xml:id"/>
-                                <xsl:if test="not($place-in-text//tei:place[@xml:id = $current and not(ancestor::tei:rs[@subtype = 'implied'])])">
+                                <xsl:if test="not($place-in-text//tei:place/@xml:id = $current)">
                                     <xsl:element name="place"
                                         namespace="http://www.tei-c.org/ns/1.0">
                                         <xsl:attribute name="xml:id">
@@ -389,7 +389,7 @@
                         <xsl:when test="$tei-root/descendant::tei:rs/@ref[contains(., '#')][1]">
                             <!-- rs mit Raute -->
                             <xsl:variable name="org-in-text"><xsl:for-each
-                                select="distinct-values($tei-root/descendant::tei:*[(@type = 'org' or name() = 'orgName') and not(ancestor::tei:back) and not(ancestor::tei:note[@type = 'commentary'])]/@ref/tokenize(., '#'))">
+                                select="distinct-values($tei-root/descendant::tei:*[(@type = 'org' or name() = 'orgName') and not(@subtype = 'implied') and not(ancestor::tei:back) and not(ancestor::tei:note[@type = 'commentary'])]/@ref/tokenize(., '#'))">
                                 <xsl:if test="normalize-space(.) != ''">
                                     <xsl:element name="org" namespace="http://www.tei-c.org/ns/1.0">
                                         <xsl:attribute name="xml:id">
@@ -428,7 +428,7 @@
                             </xsl:for-each>
                             <xsl:for-each select="$org-implied//tei:org">
                                 <xsl:variable name="current" select="@xml:id"/>
-                                <xsl:if test="not($org-in-text//tei:org[@xml:id = $current and not(ancestor::tei:rs[@subtype = 'implied'])])">
+                                <xsl:if test="not($org-in-text//tei:org/@xml:id = $current)">
                                     <xsl:element name="org"
                                         namespace="http://www.tei-c.org/ns/1.0">
                                         <xsl:attribute name="xml:id">
@@ -483,7 +483,7 @@
                             </xsl:for-each>
                             <xsl:for-each select="$org-implied//tei:org">
                                 <xsl:variable name="current" select="@xml:id"/>
-                                <xsl:if test="not($org-in-text//tei:org[@xml:id = $current and not(ancestor::tei:rs[@subtype = 'implied'])])">
+                                <xsl:if test="not($org-in-text//tei:org/@xml:id = $current)">
                                     <xsl:element name="org"
                                         namespace="http://www.tei-c.org/ns/1.0">
                                         <xsl:attribute name="xml:id">
@@ -503,7 +503,7 @@
                         <xsl:when test="$tei-root/descendant::tei:rs/@ref[contains(., '#')][1]">
                             <!-- rs mit Raute -->
                             <xsl:variable name="event-in-text"><xsl:for-each
-                                select="distinct-values($tei-root/descendant::tei:*[(@type = 'event' or name() = 'eventName') and not(ancestor::tei:back) and not(ancestor::tei:note[@type = 'commentary'])]/@ref/tokenize(., '#'))">
+                                select="distinct-values($tei-root/descendant::tei:*[(@type = 'event' or name() = 'eventName') and not(@subtype = 'implied') and not(ancestor::tei:back) and not(ancestor::tei:note[@type = 'commentary'])]/@ref/tokenize(., '#'))">
                                 <xsl:if test="normalize-space(.) != ''">
                                     <xsl:element name="event"
                                         namespace="http://www.tei-c.org/ns/1.0">
@@ -544,7 +544,7 @@
                             </xsl:for-each>
                             <xsl:for-each select="$event-implied//tei:event">
                                 <xsl:variable name="current" select="@xml:id"/>
-                                <xsl:if test="not($event-in-text//tei:event[@xml:id = $current and not(ancestor::tei:rs[@subtype = 'implied'])])">
+                                <xsl:if test="not($event-in-text//tei:event/@xml:id = $current)">
                                     <xsl:element name="event"
                                         namespace="http://www.tei-c.org/ns/1.0">
                                         <xsl:attribute name="xml:id">
@@ -601,7 +601,7 @@
                             </xsl:for-each>
                             <xsl:for-each select="$event-implied//tei:event">
                                 <xsl:variable name="current" select="@xml:id"/>
-                                <xsl:if test="not($event-in-text//tei:event[@xml:id = $current and not(ancestor::tei:rs[@subtype = 'implied'])])">
+                                <xsl:if test="not($event-in-text//tei:event/@xml:id = $current)">
                                     <xsl:element name="event"
                                         namespace="http://www.tei-c.org/ns/1.0">
                                         <xsl:attribute name="xml:id">

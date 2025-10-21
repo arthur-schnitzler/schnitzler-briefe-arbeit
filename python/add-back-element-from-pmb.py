@@ -237,12 +237,15 @@ class PMBProcessor:
                     in_commentary = is_in_commentary(elem)
                     is_implied = elem.get("subtype") == "implied"
 
-                    if is_implied and not in_commentary:
+                    # Collect references into appropriate sets
+                    if in_commentary:
+                        # References in commentary
+                        ref_set = refs["person"]["in_commentary"]
+                    elif is_implied:
                         # Implied references (only if not in commentary)
                         ref_set = refs["person"]["implied"]
-                    elif in_commentary:
-                        ref_set = refs["person"]["in_commentary"]
                     else:
+                        # Direct references in text (not implied, not in commentary)
                         ref_set = refs["person"]["in_text"]
 
                     if has_hash:
@@ -273,10 +276,11 @@ class PMBProcessor:
                     in_commentary = is_in_commentary(elem)
                     is_implied = elem.get("subtype") == "implied"
 
-                    if is_implied and not in_commentary:
-                        ref_set = refs["bibl"]["implied"]
-                    elif in_commentary:
+                    # Collect references into appropriate sets
+                    if in_commentary:
                         ref_set = refs["bibl"]["in_commentary"]
+                    elif is_implied:
+                        ref_set = refs["bibl"]["implied"]
                     else:
                         ref_set = refs["bibl"]["in_text"]
 
@@ -307,10 +311,11 @@ class PMBProcessor:
                     in_commentary = is_in_commentary(elem)
                     is_implied = elem.get("subtype") == "implied"
 
-                    if is_implied and not in_commentary:
-                        ref_set = refs["place"]["implied"]
-                    elif in_commentary:
+                    # Collect references into appropriate sets
+                    if in_commentary:
                         ref_set = refs["place"]["in_commentary"]
+                    elif is_implied:
+                        ref_set = refs["place"]["implied"]
                     else:
                         ref_set = refs["place"]["in_text"]
 
