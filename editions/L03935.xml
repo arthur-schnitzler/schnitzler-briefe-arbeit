@@ -1,10 +1,6 @@
-<?xml version="1.0" encoding="UTF-8"?>
+<?xml version='1.0' encoding='UTF-8'?>
 <?xml-model href="../meta/schnitzler-briefe-schematron.sch" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
-<TEI xmlns="http://www.tei-c.org/ns/1.0"
-     xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-     xsi:schemaLocation="http://www.tei-c.org/ns/1.0 ../meta/schnitzler-briefe-schema.xsd"
-     xml:base="https://id.acdh.oeaw.ac.at/schnitzler/schnitzler-briefe/editions"
-     xml:id="L03935">
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.tei-c.org/ns/1.0 ../meta/schnitzler-briefe-schema.xsd" xml:base="https://id.acdh.oeaw.ac.at/schnitzler/schnitzler-briefe/editions" xml:id="L03935">
    <teiHeader>
       <fileDesc>
          <titleStmt>
@@ -113,7 +109,12 @@
                <persName ref="#pmb11673">Herzl, Theodor</persName>
                <placeName ref="#pmb50" evidence="conjecture">Wien</placeName>
             </correspAction>
-         </correspDesc>
+         <correspContext><ref type="belongsToCorrespondence" target="correspondence_11673">Herzl, Theodor</ref>
+               <ref subtype="previous_letter" type="withinCollection" target="L02942">Goldmann an Schnitzler, 2. 12. [1900]</ref>
+               <ref subtype="next_letter" type="withinCollection" target="L02943">Goldmann an Schnitzler, 3. 12. [1900]</ref>
+               <ref subtype="previous_letter" type="withinCorrespondence" source="correspondence_11673" target="L03936">Schnitzler an Herzl, 17. 11. 1900</ref>
+               <ref subtype="next_letter" type="withinCorrespondence" source="correspondence_11673" target="L03874">Herzl an Schnitzler, 5. 12. 1900</ref>
+            </correspContext></correspDesc>
       </profileDesc>
       <revisionDesc status="proposed">
          <change who="MAM" when="2025-10-20">Export aus Transkribus</change>
