@@ -202,14 +202,14 @@ class PMBProcessor:
 
     def _extract_refs(self, root: ET.Element) -> Dict[str, Dict[str, Set[str]]]:
         """Extract all references from the TEI document (Step 1 of XSLT 1)
-        Returns: Dict with entity types, each containing 'in_text' and 'in_commentary' sets
+        Returns: Dict with entity types, each containing 'in_text', 'in_commentary', and 'implied' sets
         """
         refs = {
-            "person": {"in_text": set(), "in_commentary": set()},
-            "bibl": {"in_text": set(), "in_commentary": set()},
-            "place": {"in_text": set(), "in_commentary": set()},
-            "org": {"in_text": set(), "in_commentary": set()},
-            "event": {"in_text": set(), "in_commentary": set()}
+            "person": {"in_text": set(), "in_commentary": set(), "implied": set()},
+            "bibl": {"in_text": set(), "in_commentary": set(), "implied": set()},
+            "place": {"in_text": set(), "in_commentary": set(), "implied": set()},
+            "org": {"in_text": set(), "in_commentary": set(), "implied": set()},
+            "event": {"in_text": set(), "in_commentary": set(), "implied": set()}
         }
 
         # Check if document uses '#' format
@@ -235,7 +235,16 @@ class PMBProcessor:
                 ref = elem.get("ref") or elem.get("key")
                 if ref:
                     in_commentary = is_in_commentary(elem)
-                    ref_set = refs["person"]["in_commentary"] if in_commentary else refs["person"]["in_text"]
+                    is_implied = elem.get("subtype") == "implied"
+
+                    if is_implied and not in_commentary:
+                        # Implied references (only if not in commentary)
+                        ref_set = refs["person"]["implied"]
+                    elif in_commentary:
+                        ref_set = refs["person"]["in_commentary"]
+                    else:
+                        ref_set = refs["person"]["in_text"]
+
                     if has_hash:
                         ref_set.update(token.replace("#", "").strip() for token in ref.split("#") if token.strip())
                     else:
@@ -262,7 +271,15 @@ class PMBProcessor:
                 ref = elem.get("ref") or elem.get("key")
                 if ref and "#" in ref:
                     in_commentary = is_in_commentary(elem)
-                    ref_set = refs["bibl"]["in_commentary"] if in_commentary else refs["bibl"]["in_text"]
+                    is_implied = elem.get("subtype") == "implied"
+
+                    if is_implied and not in_commentary:
+                        ref_set = refs["bibl"]["implied"]
+                    elif in_commentary:
+                        ref_set = refs["bibl"]["in_commentary"]
+                    else:
+                        ref_set = refs["bibl"]["in_text"]
+
                     ref_set.update(token.replace("#", "").strip() for token in ref.split("#") if token.strip())
 
         # Extract title references from biblStruct (not in commentary)
@@ -288,7 +305,15 @@ class PMBProcessor:
                 ref = elem.get("ref") or elem.get("key")
                 if ref:
                     in_commentary = is_in_commentary(elem)
-                    ref_set = refs["place"]["in_commentary"] if in_commentary else refs["place"]["in_text"]
+                    is_implied = elem.get("subtype") == "implied"
+
+                    if is_implied and not in_commentary:
+                        ref_set = refs["place"]["implied"]
+                    elif in_commentary:
+                        ref_set = refs["place"]["in_commentary"]
+                    else:
+                        ref_set = refs["place"]["in_text"]
+
                     if has_hash:
                         ref_set.update(token.replace("#", "").strip() for token in ref.split("#") if token.strip())
                     else:
@@ -303,7 +328,15 @@ class PMBProcessor:
                 ref = elem.get("ref") or elem.get("key")
                 if ref:
                     in_commentary = is_in_commentary(elem)
-                    ref_set = refs["org"]["in_commentary"] if in_commentary else refs["org"]["in_text"]
+                    is_implied = elem.get("subtype") == "implied"
+
+                    if is_implied and not in_commentary:
+                        ref_set = refs["org"]["implied"]
+                    elif in_commentary:
+                        ref_set = refs["org"]["in_commentary"]
+                    else:
+                        ref_set = refs["org"]["in_text"]
+
                     if has_hash:
                         ref_set.update(token.replace("#", "").strip() for token in ref.split("#") if token.strip())
                     else:
@@ -318,12 +351,20 @@ class PMBProcessor:
                 ref = elem.get("ref") or elem.get("key")
                 if ref:
                     in_commentary = is_in_commentary(elem)
-                    ref_set = refs["event"]["in_commentary"] if in_commentary else refs["event"]["in_text"]
+                    is_implied = elem.get("subtype") == "implied"
+
+                    if is_implied and not in_commentary:
+                        ref_set = refs["event"]["implied"]
+                    elif in_commentary:
+                        ref_set = refs["event"]["in_commentary"]
+                    else:
+                        ref_set = refs["event"]["in_text"]
+
                     if has_hash:
                         ref_set.update(token.replace("#", "").strip() for token in ref.split("#") if token.strip())
                     else:
                         ref_set.update(token.strip() for token in ref.split() if token.strip())
-        
+
         return refs
 
     def _get_all_refs(self, root: ET.Element) -> list:
@@ -354,7 +395,8 @@ class PMBProcessor:
         for list_type, ref_dict in refs.items():
             in_text_refs = ref_dict.get("in_text", set())
             in_commentary_refs = ref_dict.get("in_commentary", set())
-            all_refs = in_text_refs | in_commentary_refs
+            implied_refs = ref_dict.get("implied", set())
+            all_refs = in_text_refs | in_commentary_refs | implied_refs
 
             if all_refs:  # Only create if there are references
                 if list_type == "person":
@@ -370,6 +412,12 @@ class PMBProcessor:
                             person_elem = ET.SubElement(list_elem, f"{{{self.tei_ns}}}person")
                             person_elem.set("{http://www.w3.org/XML/1998/namespace}id", ref_id.replace("#", ""))
                             person_elem.set("ana", "comment")
+                    # Then add refs only implied (with ana="implied", but not if also in in_text)
+                    for ref_id in sorted(implied_refs - in_text_refs - in_commentary_refs):
+                        if ref_id.strip():
+                            person_elem = ET.SubElement(list_elem, f"{{{self.tei_ns}}}person")
+                            person_elem.set("{http://www.w3.org/XML/1998/namespace}id", ref_id.replace("#", ""))
+                            person_elem.set("ana", "implied")
 
                 elif list_type == "bibl":
                     list_elem = ET.SubElement(back_elem, f"{{{self.tei_ns}}}listBibl")
@@ -383,7 +431,13 @@ class PMBProcessor:
                         if ref_id.strip():
                             bibl_elem = ET.SubElement(list_elem, f"{{{self.tei_ns}}}bibl")
                             bibl_elem.set("{http://www.w3.org/XML/1998/namespace}id", ref_id.replace("#", ""))
-                            bibl_elem.set("ana", "commentary")
+                            bibl_elem.set("ana", "comment")
+                    # Then add refs only implied (with ana="implied", but not if also in in_text)
+                    for ref_id in sorted(implied_refs - in_text_refs - in_commentary_refs):
+                        if ref_id.strip():
+                            bibl_elem = ET.SubElement(list_elem, f"{{{self.tei_ns}}}bibl")
+                            bibl_elem.set("{http://www.w3.org/XML/1998/namespace}id", ref_id.replace("#", ""))
+                            bibl_elem.set("ana", "implied")
 
                 elif list_type == "place":
                     list_elem = ET.SubElement(back_elem, f"{{{self.tei_ns}}}listPlace")
@@ -398,6 +452,12 @@ class PMBProcessor:
                             place_elem = ET.SubElement(list_elem, f"{{{self.tei_ns}}}place")
                             place_elem.set("{http://www.w3.org/XML/1998/namespace}id", ref_id.replace("#", ""))
                             place_elem.set("ana", "comment")
+                    # Then add refs only implied (with ana="implied", but not if also in in_text)
+                    for ref_id in sorted(implied_refs - in_text_refs - in_commentary_refs):
+                        if ref_id.strip():
+                            place_elem = ET.SubElement(list_elem, f"{{{self.tei_ns}}}place")
+                            place_elem.set("{http://www.w3.org/XML/1998/namespace}id", ref_id.replace("#", ""))
+                            place_elem.set("ana", "implied")
 
                 elif list_type == "org":
                     list_elem = ET.SubElement(back_elem, f"{{{self.tei_ns}}}listOrg")
@@ -412,6 +472,12 @@ class PMBProcessor:
                             org_elem = ET.SubElement(list_elem, f"{{{self.tei_ns}}}org")
                             org_elem.set("{http://www.w3.org/XML/1998/namespace}id", ref_id.replace("#", ""))
                             org_elem.set("ana", "comment")
+                    # Then add refs only implied (with ana="implied", but not if also in in_text)
+                    for ref_id in sorted(implied_refs - in_text_refs - in_commentary_refs):
+                        if ref_id.strip():
+                            org_elem = ET.SubElement(list_elem, f"{{{self.tei_ns}}}org")
+                            org_elem.set("{http://www.w3.org/XML/1998/namespace}id", ref_id.replace("#", ""))
+                            org_elem.set("ana", "implied")
 
                 elif list_type == "event":
                     list_elem = ET.SubElement(back_elem, f"{{{self.tei_ns}}}listEvent")
@@ -426,6 +492,12 @@ class PMBProcessor:
                             event_elem = ET.SubElement(list_elem, f"{{{self.tei_ns}}}event")
                             event_elem.set("{http://www.w3.org/XML/1998/namespace}id", ref_id.replace("#", ""))
                             event_elem.set("ana", "comment")
+                    # Then add refs only implied (with ana="implied", but not if also in in_text)
+                    for ref_id in sorted(implied_refs - in_text_refs - in_commentary_refs):
+                        if ref_id.strip():
+                            event_elem = ET.SubElement(list_elem, f"{{{self.tei_ns}}}event")
+                            event_elem.set("{http://www.w3.org/XML/1998/namespace}id", ref_id.replace("#", ""))
+                            event_elem.set("ana", "implied")
 
         return root
 
