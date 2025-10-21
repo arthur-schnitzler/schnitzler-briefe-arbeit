@@ -727,7 +727,7 @@
         </xsl:choose>
         <xsl:choose>
           <xsl:when test="@o[contains(., 'underlined')]">
-            <hi rend="underline" n="">
+            <hi rend="underline" n="1">
               <xsl:call-template name="elem">
                 <xsl:with-param name="elem" select="$elem"/>
               </xsl:call-template>
