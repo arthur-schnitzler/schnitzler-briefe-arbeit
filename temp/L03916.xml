@@ -1,6 +1,10 @@
-<?xml version='1.0' encoding='UTF-8'?>
+<?xml version="1.0" encoding="UTF-8"?>
 <?xml-model href="../meta/schnitzler-briefe-schematron.sch" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
-<TEI xmlns="http://www.tei-c.org/ns/1.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.tei-c.org/ns/1.0 ../meta/schnitzler-briefe-schema.xsd" xml:base="https://id.acdh.oeaw.ac.at/schnitzler/schnitzler-briefe/editions" xml:id="L03941">
+<TEI xmlns="http://www.tei-c.org/ns/1.0"
+     xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+     xsi:schemaLocation="http://www.tei-c.org/ns/1.0 ../meta/schnitzler-briefe-schema.xsd"
+     xml:base="https://id.acdh.oeaw.ac.at/schnitzler/schnitzler-briefe/editions"
+     xml:id="L03916">
    <teiHeader>
       <fileDesc>
          <titleStmt>
@@ -83,6 +87,7 @@
                               <extent>
                                  <measure unit="seite" quantity=""/>
                                  <measure unit="blatt" quantity=""/>
+                                 <measure unit="zeichenanzahl" quantity="390"/>
                               </extent>
                            </supportDesc>
                         </objectDesc>
@@ -102,46 +107,38 @@
          <correspDesc>
             <correspAction type="sent">
                <persName ref="#pmb2121">Schnitzler, Arthur</persName>
-               <date when="" n="01">XXXX</date>
-               <placeName ref="#50" evidence="conjecture">Wien</placeName>
+               <date when="1901-01" n="01">XXXX</date>
+               <placeName ref="#pmb50" evidence="conjecture">Wien</placeName>
             </correspAction>
             <correspAction type="received">
                <persName ref="#pmb11673">Herzl, Theodor</persName>
-               <placeName ref="#50" evidence="conjecture">Wien</placeName>
+               <placeName ref="#pmb50" evidence="conjecture">Wien</placeName>
             </correspAction>
-         <correspContext><ref type="belongsToCorrespondence" target="correspondence_11673">Herzl, Theodor</ref>
-               <ref subtype="previous_letter" type="withinCollection" target="L02548">Beer-Hofmann an Schnitzler, 14. 9. 1931</ref>
-               <ref subtype="previous_letter" type="withinCorrespondence" source="correspondence_11673" target="L03899">Herzl an Schnitzler, [28. 2. 1902]</ref>
-            </correspContext></correspDesc>
+         </correspDesc>
       </profileDesc>
       <revisionDesc status="proposed">
          <change who="MAM" when="2025-10-20">Export aus Transkribus</change>
       </revisionDesc>
    </teiHeader>
+   <facsimile>
+      <graphic url="H1_1926_8_001"/>
+      <graphic url="H1_1926_8_002"/>
+   </facsimile>
    <text>
       <body>
          <div type="writingSession" n="1">
             <p>
-               <pb facs="H1_1926_7_001"/>
-               <salute>Verehrteſter Herr Doktor!</salute> Ich erlaube mir heute eine Bitte an Sie!
-               Sind Sie in der Lage, Karten zur <rs type="person" ref="#pmb18926">Judic</rs> zu
-               verſchenken? Ich habe den Muth zu dieſer Frage, indem ich leſe, daſs es
-               leer ſein ſoll. Im Falle Sie alſo eine gewiſſe Verfügungsmöglichkeit haben, verbinden
-                  <pb facs="H1_1926_7_002"/>Sie mich außerordentlich, wen̄ Sie mir für einen oder
-               den anderen Abend ein oder zwei <add>
-                  <hi rend="latintype">Parquet-</hi>
-               </add>Sitze verſchaffen können. Beſonders ſympathiſch wäre mir <date>
-                  <hi rend="underline" n="1">Don̄erstag</hi>
-               </date>
-               <date>
-                  <hi rend="underline" n="1">Samstag</hi>
-               </date> oder <date>
-                  <hi rend="underline" n="1">Son̄tag</hi>
-               </date>. Nicht wahr Sie ſagen mir gefälligſt telephoniſch zwiſchen 2 und 3 Uhr <add>–
-                  (event bis 5 od 6)</add> oder durch eine Karte Antwort? Und ſind nicht ungehalten
-               über mein Erſuchen?</p>
-            <closer>Mit herzlichem Gruße und Dank Ihr ergebner
-               <signed>Dr. Arthur Schnitzler</signed>
+               <salute>
+                  <pb facs="H1_1926_8_001"/>lieber Doctor Herzl,</salute> ſeien Sie nicht
+               ungehalten, dſs ich <hi rend="underline" n="1">Sie</hi> Frage, aber ich wüßte nicht
+               wen ſonſt, da ich nur mit Ihnen in dieſer Sache verhandelt habe: an wen hab ich mich <subst>
+                  <del rend="strikethrough">wegen</del>
+                  <add>mit</add>
+               </subst> meinen <rs type="work" ref="#pmb29853" subtype="implied">Honoraranſprüchen</rs> zu wenden? Man hat nemlich voll<pb facs="H1_1926_8_002"/>ko<c rendition="#gemination-m"/>en vergeſſen, die Länge meiner <rs type="work" ref="#pmb29853" subtype="implied">Novelle</rs> in Betracht zu ziehen, was ich bei Einſendg
+               ausdrücklich betonte.</p>
+            <closer>Verbindlichſt grüßend<lb/>Ihr ergebn<unclear>er</unclear>
+               <lb/>
+               <signed>Arthur Schnitzler</signed>
             </closer>
          </div>
       </body>
@@ -266,61 +263,30 @@
                   <graphic url="https://upload.wikimedia.org/wikipedia/commons/thumb/9/95/Theodor_Herzl.jpg/250px-Theodor_Herzl.jpg"/>
                </figure>
             </person>
-            <person xml:id="pmb18926">
-               <persName>
-                  <forename>Anna</forename>
-                  <surname>Judic</surname>
-               </persName>
-               <persName type="person_geburtsname_nachname">Damiens</persName>
-               <persName type="person_geburtsname_vorname">Anne</persName>
-               <persName type="legacy-name-merge">Judic, Anne</persName>
-               <birth>
-                  <date when="1849-07-19">19.07.1849</date>
-                  <settlement ref="pmb45858">
-                     <placeName type="pref">Semur-en-Auxois</placeName>
-                     <location>
-                        <geo>47,48333 4,33333</geo>
-                     </location>
-                  </settlement>
-               </birth>
-               <death>
-                  <date when="1911-04-15">15.04.1911</date>
-                  <settlement ref="pmb45860">
-                     <placeName type="pref">Golfe-Juan</placeName>
-                     <location>
-                        <geo>43,56812 7,07744</geo>
-                     </location>
-                  </settlement>
-               </death>
-               <sex value="female"/>
-               <occupation ref="pmb105">Schauspieler/Schauspielerin</occupation>
-               <occupation ref="pmb107">Sänger/Sängerin</occupation>
-               <idno type="URL" subtype="schnitzler-tagebuch">https://schnitzler-tagebuch.acdh.oeaw.ac.at/person_16592.html</idno>
-               <idno type="URL" subtype="pmb">https://pmb.acdh.oeaw.ac.at/entity/18926/</idno>
-               <idno type="URL" subtype="fackel">https://fackel.oeaw.ac.at/?p=fackelp47197</idno>
-               <idno type="URL" subtype="wikidata">http://www.wikidata.org/entity/Q449228</idno>
-               <idno type="URL" subtype="wikipedia">https://de.wikipedia.org/wiki/Anna_Judic</idno>
-               <idno type="URL" subtype="pmb">https://pmb.acdh.oeaw.ac.at/entity/160702/</idno>
-               <idno type="URL" subtype="bahr-textverzeichnis">https://bahr-textverzeichnis.acdh.oeaw.ac.at/pmb18926.html</idno>
-               <idno type="URL" subtype="bahr-textverzeichnis">https://bahr-textverzeichnis.acdh.oeaw.ac.at/TSN-listperson.html#pmb160702</idno>
-               <idno type="URL" subtype="schnitzler-kultur">https://schnitzler-kultur.acdh.oeaw.ac.at/pmb18926.html</idno>
-               <listEvent>
-                  <event n="Theateraufführung" ref="pmb208331" when="1889-05-01">
-                     <desc n="1256">ist mitwirkend an</desc>
-                     <label>Aufführung von Fiaker 117, 1.5.1889</label>
-                     <idno type="URL" subtype="pmb">https://pmb.acdh.oeaw.ac.at/entity/208331/</idno>
-                     <idno type="URL" subtype="schnitzler-kultur">https://schnitzler-kultur.acdh.oeaw.ac.at/pmb208331.html</idno>
-                  </event>
-                  <event n="Theateraufführung" ref="pmb208519" when="1892-01-03">
-                     <desc n="1256">ist mitwirkend an</desc>
-                     <label>Aufführung von Lilly, 3.1.1892</label>
-                     <idno type="URL" subtype="pmb">https://pmb.acdh.oeaw.ac.at/entity/208519/</idno>
-                     <idno type="URL" subtype="schnitzler-kultur">https://schnitzler-kultur.acdh.oeaw.ac.at/pmb208519.html</idno>
-                  </event>
-               </listEvent>
-               <note type="references"> </note>
-            </person>
          </listPerson>
+         <listBibl>
+            <bibl xml:id="pmb29853" ana="implied">
+               <title>Lieutenant Gustl. Novelle</title>
+               <title type="werk_bibliografische-angabe">Arthur Schnitzler: Lieutenant Gustl. In: Neue Freie Presse, Nr. 13053, 25. 12. 1900, Morgenblatt, S. 34–41</title>
+               <title type="werk_link">http://anno.onb.ac.at/cgi-content/anno?aid=nfp&amp;datum=19001225&amp;seite=34</title>
+               <title type="werk_namensvariante">Leutnant Gustl</title>
+               <author ref="pmb2121" role="hat-geschaffen">Schnitzler, Arthur</author>
+               <date>1900-11-23</date>
+               <idno type="URL" subtype="asaf">https://asaf.com/S.04.02.39</idno>
+               <idno type="URL" subtype="wikidata">http://www.wikidata.org/entity/Q1821658</idno>
+               <idno type="URL" subtype="theadok">https://theadok.at/work/31187</idno>
+               <idno type="URL" subtype="schnitzler-bahr">https://schnitzler-bahr.acdh.oeaw.ac.at/pmb29853.html</idno>
+               <idno type="URL" subtype="pmb">https://pmb.acdh.oeaw.ac.at/entity/29853/</idno>
+               <idno type="URL" subtype="schnitzler-tagebuch">https://schnitzler-tagebuch.acdh.oeaw.ac.at/pmb29853.html</idno>
+               <idno type="URL" subtype="wikipedia">https://de.wikipedia.org/wiki/Leutnant_Gustl</idno>
+               <idno type="URL" subtype="schnitzler-interviews">https://schnitzler-interviews.acdh.oeaw.ac.at/pmb29853.html</idno>
+               <idno type="URL" subtype="schnitzler-zeitungen">https://schnitzler-zeitungen.acdh.oeaw.ac.at/223911.html?pmb29853</idno>
+               <idno type="URL" subtype="schnitzler-mikrofilme">https://schnitzler-mikrofilme.acdh.oeaw.ac.at/1428622.html?pmb29853</idno>
+               <idno type="URL" subtype="schnitzler-briefe">https://schnitzler-briefe.acdh.oeaw.ac.at/pmb29853.html</idno>
+               <idno type="URL" subtype="schnitzler-kultur">https://schnitzler-kultur.acdh.oeaw.ac.at/pmb29853.html</idno>
+               <note type="work_kind">Novelle</note>
+            </bibl>
+         </listBibl>
          <listPlace>
             <place xml:id="pmb50">
                <placeName>Wien</placeName>
