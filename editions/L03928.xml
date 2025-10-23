@@ -1,6 +1,10 @@
-<?xml version='1.0' encoding='UTF-8'?>
+<?xml version="1.0" encoding="UTF-8"?>
 <?xml-model href="../meta/schnitzler-briefe-schematron.sch" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
-<TEI xmlns="http://www.tei-c.org/ns/1.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.tei-c.org/ns/1.0 ../meta/schnitzler-briefe-schema.xsd" xml:base="https://id.acdh.oeaw.ac.at/schnitzler/schnitzler-briefe/editions" xml:id="L03928">
+<TEI xmlns="http://www.tei-c.org/ns/1.0"
+     xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+     xsi:schemaLocation="http://www.tei-c.org/ns/1.0 ../meta/schnitzler-briefe-schema.xsd"
+     xml:base="https://id.acdh.oeaw.ac.at/schnitzler/schnitzler-briefe/editions"
+     xml:id="L03928">
    <teiHeader>
       <fileDesc>
          <titleStmt>
@@ -118,12 +122,20 @@
                <persName ref="#pmb11673">Herzl, Theodor</persName>
                <placeName ref="#pmb50" evidence="conjecture">Wien</placeName>
             </correspAction>
-         <correspContext><ref type="belongsToCorrespondence" target="correspondence_11673">Herzl, Theodor</ref>
+            <correspContext>
+               <ref type="belongsToCorrespondence" target="correspondence_11673">Herzl, Theodor</ref>
                <ref subtype="previous_letter" type="withinCollection" target="L00432">Kraus an Schnitzler, 25. 4. 1895</ref>
                <ref subtype="next_letter" type="withinCollection" target="L03859">Herzl an Schnitzler, 26. 4. 1895</ref>
-               <ref subtype="previous_letter" type="withinCorrespondence" source="correspondence_11673" target="L03858">Herzl an Schnitzler, 16. 4. 1895</ref>
-               <ref subtype="next_letter" type="withinCorrespondence" source="correspondence_11673" target="L03859">Herzl an Schnitzler, 26. 4. 1895</ref>
-            </correspContext></correspDesc>
+               <ref subtype="previous_letter"
+                    type="withinCorrespondence"
+                    source="correspondence_11673"
+                    target="L03858">Herzl an Schnitzler, 16. 4. 1895</ref>
+               <ref subtype="next_letter"
+                    type="withinCorrespondence"
+                    source="correspondence_11673"
+                    target="L03859">Herzl an Schnitzler, 26. 4. 1895</ref>
+            </correspContext>
+         </correspDesc>
       </profileDesc>
       <revisionDesc status="proposed">
          <change who="MAM" when="2025-10-20">Export aus
@@ -145,7 +157,7 @@
       dass Herr <rs type="person" ref="#pmb14328">Bl.</rs> auf den reco<c rendition="#gemination-m"/>andirten Brief mit keiner Silbe
       geantwortet hat, und ſich das
       <hi rend="latintype">
-         <rs type="work" ref="#pmb76499" subtype="implied">Manuscript</rs>
+                  <rs type="work" ref="#pmb76499" subtype="implied">Manuscript</rs>
                </hi> bei <rs type="person" ref="#pmb11324">F.</rs> befindet,
       der gleichfalls noch nichts von
       ſich hören läßt. Es ſind ſo liebe
@@ -494,6 +506,21 @@
                </figure>
             </person>
          </listPerson>
+         <listBibl>
+            <bibl xml:id="pmb76499" ana="implied">
+               <title>Das neue Ghetto. Schauspiel in vier Acten</title>
+               <title type="werk_bibliografische-angabe">Das neue Ghetto. Schauspiel in 4 Acten, Wien: Buchdruckerei »Industrie« – Selbstverlag 1903.</title>
+               <author ref="pmb11673" role="hat-geschaffen">Herzl, Theodor</author>
+               <date when="1898-01-05">1898-01-05</date>
+               <idno type="URL" subtype="wikidata">http://www.wikidata.org/entity/Q125352855</idno>
+               <idno type="URL" subtype="wikipedia">https://de.wikipedia.org/wiki/Das_neue_Ghetto</idno>
+               <idno type="URL" subtype="pmb">https://pmb.acdh.oeaw.ac.at/entity/76499/</idno>
+               <idno type="URL" subtype="schnitzler-tagebuch">https://schnitzler-tagebuch.acdh.oeaw.ac.at/pmb76499.html</idno>
+               <idno type="URL" subtype="schnitzler-briefe">https://schnitzler-briefe.acdh.oeaw.ac.at/pmb76499.html</idno>
+               <idno type="URL" subtype="schnitzler-kultur">https://schnitzler-kultur.acdh.oeaw.ac.at/pmb76499.html</idno>
+               <note type="work_kind">Mehraktiges Drama</note>
+            </bibl>
+         </listBibl>
          <listPlace>
             <place xml:id="pmb50">
                <placeName>Wien</placeName>
