@@ -3,8 +3,7 @@
    xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:fn="http://www.w3.org/2005/xpath-functions"
    xmlns:foo="whatever" xmlns:tei="http://www.tei-c.org/ns/1.0" version="3.0">
    <xsl:include href="einzel-shared-nach-tex.xsl"/>
-   
-   
+
    <xsl:template match="tei:persName | tei:workName | tei:orgName | tei:placeName | tei:rs">
       <xsl:variable name="first" select="tokenize(@ref, ' ')[1]" as="xs:string?"/>
       <xsl:variable name="rest" select="substring-after(@ref, concat($first, ' '))" as="xs:string"/>
@@ -70,7 +69,7 @@
                      <xsl:text>}</xsl:text>
                   </xsl:if>
                   <xsl:value-of
-                     select="foo:indexName-Routine(@type, tokenize(@ref, ' ')[1], substring-after(@ref, ' '), $endung-index)"
+                     select="foo:indexName-Routine(string(@type), string(tokenize(@ref, ' ')[1]), substring-after(@ref, ' '), $endung-index)"
                   />
                </xsl:when>
                <xsl:otherwise>

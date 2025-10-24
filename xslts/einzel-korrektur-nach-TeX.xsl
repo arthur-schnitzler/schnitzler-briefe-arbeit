@@ -3,6 +3,9 @@
    xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:fn="http://www.w3.org/2005/xpath-functions"
    xmlns:foo="whatever" xmlns:tei="http://www.tei-c.org/ns/1.0" version="3.0">
    <xsl:include href="einzel-shared-nach-tex.xsl"/>
+
+   
+
    
    
    <xsl:function name="foo:marginpar-EndnoteRoutine">

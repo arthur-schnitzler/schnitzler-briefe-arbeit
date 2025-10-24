@@ -1313,6 +1313,7 @@
    </xsl:function>
    <xsl:function name="foo:briefempfaengerindex">
       <xsl:param name="empfaenger-key" as="xs:string"/>
+      
       <xsl:param name="sender-key" as="xs:string"/>
       <xsl:param name="date-sort" as="xs:date?"/>
       <xsl:param name="date-n" as="xs:integer"/>
@@ -1320,22 +1321,22 @@
       <xsl:param name="vorne" as="xs:boolean"/>
       <xsl:text>\briefempfaengerindex{</xsl:text>
       <xsl:value-of
-         select="foo:index-sortiert(concat(normalize-space(key('person-lookup', ($empfaenger-key), $persons)/tei:persName/tei:surname), ', ', normalize-space(key('person-lookup', ($empfaenger-key), $persons)/tei:persName/tei:forename)), 'sc')"/>
+         select="foo:index-sortiert(concat(normalize-space(key('person-lookup', replace($empfaenger-key, '#', ''), $persons)/tei:persName/tei:surname), ', ', normalize-space(key('person-lookup', replace($empfaenger-key, '#', ''), $persons)/tei:persName/tei:forename)), 'sc')"/>
       <xsl:text>!zzz</xsl:text>
       <xsl:value-of
-         select="foo:umlaute-entfernen(concat(normalize-space(key('person-lookup', ($sender-key), $persons)/tei:persName/tei:surname), ', ', normalize-space(key('person-lookup', ($sender-key), $persons)/tei:persName/tei:forename)))"/>
+         select="foo:umlaute-entfernen(concat(normalize-space(key('person-lookup', replace($sender-key, '#', ''), $persons)/tei:persName/tei:surname), ', ', normalize-space(key('person-lookup', replace($sender-key, '#', ''), $persons)/tei:persName/tei:forename)))"/>
       <xsl:text>@\emph{von </xsl:text>
       <xsl:choose>
          <!-- Sonderregel für Hofmannsthal sen. -->
          <xsl:when
-            test="ends-with(key('person-lookup', $sender-key, $persons)/tei:persName/tei:forename, ' (sen.)')">
+            test="ends-with(key('person-lookup', replace($sender-key, '#', ''), $persons)/tei:persName/tei:forename, ' (sen.)')">
             <xsl:value-of
-               select="concat(substring-before(normalize-space(key('person-lookup', ($sender-key), $persons)/tei:persName/tei:forename), ' (sen.)'), ' ', normalize-space(key('person-lookup', ($sender-key), $persons)/tei:persName/tei:surname))"/>
+               select="concat(substring-before(normalize-space(key('person-lookup', replace($sender-key, '#', ''), $persons)/tei:persName/tei:forename), ' (sen.)'), ' ', normalize-space(key('person-lookup', replace($sender-key, '#', ''), $persons)/tei:persName/tei:surname))"/>
             <xsl:text> (sen.)</xsl:text>
          </xsl:when>
          <xsl:otherwise>
             <xsl:value-of
-               select="concat(normalize-space(key('person-lookup', ($sender-key), $persons)/tei:persName/tei:forename), ' ', normalize-space(key('person-lookup', ($sender-key), $persons)/tei:persName/tei:surname))"
+               select="concat(normalize-space(key('person-lookup', replace($sender-key, '#', ''), $persons)/tei:persName/tei:forename), ' ', normalize-space(key('person-lookup', replace($sender-key, '#', ''), $persons)/tei:persName/tei:surname))"
             />
          </xsl:otherwise>
       </xsl:choose>
@@ -1707,6 +1708,7 @@
          <xsl:text>)</xsl:text>
       </xsl:if>
    </xsl:function>
+   
    <xsl:template match="tei:physDesc">
       <xsl:text>&#10;\physDesc{</xsl:text>
       <xsl:choose>
@@ -2061,8 +2063,74 @@
    <xsl:template match="tei:dateSender/tei:date"/>
    <!-- Autoren in den Index -->
    <xsl:template match="tei:author[not(ancestor::tei:biblStruct)]"/>
-   <xsl:template match="tei:correspDesc">
-      <xsl:apply-templates/>
+   <xsl:template match="tei:correspDesc" priority="1">
+      <xsl:text>&#10;\correspDesc{</xsl:text>
+      <xsl:for-each select="tei:correspAction">
+         <xsl:choose>
+            <xsl:when test="@type='sent'">
+               <xsl:text>Versand </xsl:text>
+            </xsl:when>
+            <xsl:when test="@type='transmitted'">
+               <xsl:text>Übermittlung </xsl:text>
+            </xsl:when>
+            <xsl:when test="@type='forwarded'">
+               <xsl:text>Weiterleitung </xsl:text>
+            </xsl:when>
+            <xsl:when test="@type='redirected'">
+               <xsl:text>Umleitung </xsl:text>
+            </xsl:when>
+            <xsl:when test="@type='delivered'">
+               <xsl:text>Zustellung </xsl:text>
+            </xsl:when>
+            <xsl:when test="@type='received'">
+               <xsl:text>Erhalt </xsl:text>
+            </xsl:when>
+         </xsl:choose>         
+         <xsl:if test="tei:persName">
+            <xsl:text> durch </xsl:text>
+            <xsl:for-each select="tei:persName">
+               <xsl:value-of select="foo:vorname-vor-nachname(.)"/>
+               <xsl:if test="fn:position() != last()">
+                  <xsl:text>, </xsl:text>
+               </xsl:if>
+            </xsl:for-each>
+         </xsl:if>
+         <xsl:if test="tei:date">
+            <xsl:choose>
+               <xsl:when test="tei:date/@when">
+                  <xsl:text> am </xsl:text>
+               </xsl:when>
+               <xsl:otherwise>
+                  <xsl:text> im Zeitraum </xsl:text>
+               </xsl:otherwise>
+            </xsl:choose>            
+            <xsl:for-each select="tei:date">
+               <xsl:value-of select="(.)"/>
+            </xsl:for-each>
+         </xsl:if>
+         <xsl:choose>
+            <xsl:when test="tei:placeName">
+               <xsl:text> in </xsl:text>
+               <xsl:for-each select="tei:placeName">
+                  <xsl:value-of select="."/>
+                  <xsl:if test="fn:position() != last()">
+                     <xsl:text>, </xsl:text>
+                  </xsl:if>
+               </xsl:for-each>
+            </xsl:when>
+            <xsl:otherwise>
+               <xsl:text> \textbf{Ort fehlend} </xsl:text>
+            </xsl:otherwise>
+         </xsl:choose>
+         
+         
+         
+         <xsl:if test="fn:position() != last()">
+            <xsl:text>&#10;\newline{}</xsl:text>
+         </xsl:if>
+      </xsl:for-each>
+      
+      <xsl:text>}</xsl:text>
    </xsl:template>
    <xsl:template match="tei:listWit">
       <xsl:apply-templates/>
@@ -3197,12 +3265,21 @@
       <xsl:text>\nopagebreak}</xsl:text>-->
       <xsl:variable name="quellen" as="node()"
          select="ancestor::tei:TEI/tei:teiHeader/tei:fileDesc/tei:sourceDesc"/>
+      <xsl:variable name="correspDesc" as="node()"
+         select="ancestor::tei:TEI/tei:teiHeader/tei:profileDesc/tei:correspDesc"/>
       <!-- Wenn es Adressen gibt, diese in die Endnote -->
       <!--<xsl:text>\datumImAnhang{</xsl:text>
       <xsl:value-of select="foo:monatUndJahrInKopfzeile(ancestor::tei:TEI/@when)"/>
       <xsl:text>}</xsl:text>-->
+      
+      <xsl:apply-templates select="$correspDesc"></xsl:apply-templates>
+      <xsl:text>\toendnotes[C]{\smallbreak}</xsl:text>
+      <xsl:text>&#10;</xsl:text>
+      
       <!--       Zuerst mal die Archivsignaturen  
 -->
+      
+      
       <xsl:if test="ancestor::tei:TEI/tei:teiHeader/tei:fileDesc/tei:sourceDesc/tei:listWit">
          <xsl:choose>
             <xsl:when test="count($quellen/tei:listWit/tei:witness) = 1">
@@ -3247,6 +3324,7 @@
             <xsl:text>\toendnotes[C]{\smallbreak}</xsl:text>
          </xsl:when>
       </xsl:choose>
+      
       <xsl:apply-templates select="child::tei:div | child::tei:image"/>
       <xsl:text>\endnumbering</xsl:text>
       <xsl:if
