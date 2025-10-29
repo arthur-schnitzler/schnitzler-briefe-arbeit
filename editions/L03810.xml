@@ -1,6 +1,4 @@
-<?xml version='1.0' encoding='UTF-8'?>
-<?xml-model href="../meta/schnitzler-briefe-schematron.sch" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
-<TEI xmlns="http://www.tei-c.org/ns/1.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.tei-c.org/ns/1.0 ../meta/schnitzler-briefe-schema.xsd" xml:id="L03810" xml:base="https://id.acdh.oeaw.ac.at/schnitzler/schnitzler-briefe/editions">
+<?xml version="1.0" encoding="UTF-8"?><?xml-model href="../meta/schnitzler-briefe-schematron.sch" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI xmlns="http://www.tei-c.org/ns/1.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.tei-c.org/ns/1.0 ../meta/schnitzler-briefe-schema.xsd" xml:id="L03810" xml:base="https://id.acdh.oeaw.ac.at/schnitzler/schnitzler-briefe/editions">
    <teiHeader>
       <fileDesc>
          <titleStmt>
@@ -82,7 +80,7 @@
                            <supportDesc>
                               <extent>
                                  <measure unit="karte" quantity="1"/>
-                                 <measure unit="zeichenanzahl" quantity="297"/>
+                                 <measure unit="zeichenanzahl" quantity="296"/>
                               </extent>
                            </supportDesc>
                         </objectDesc>
@@ -126,18 +124,21 @@
                <date evidence="conjecture" notBefore="1908-06-06" notAfter="1908-06-10">[6. 6. 1908 – 10. 6. 1908?]</date>
                <placeName ref="#pmb50">Wien</placeName>
             </correspAction>
-            <correspContext><ref type="belongsToCorrespondence" target="correspondence_13212">Zweig, Stefan</ref>
+            <correspContext>
+               <ref type="belongsToCorrespondence" target="correspondence_13212">Zweig, Stefan</ref>
                <ref subtype="previous_letter" type="withinCollection" target="L03622">Zweig an Schnitzler, 3. 6. 1908</ref>
                <ref subtype="next_letter" type="withinCollection" target="L03484">Goldmann an Schnitzler, 5. 6. [1908]</ref>
                <ref subtype="previous_letter" type="withinCorrespondence" source="correspondence_13212" target="L03622">Zweig an Schnitzler, 3. 6. 1908</ref>
                <ref subtype="next_letter" type="withinCorrespondence" source="correspondence_13212" target="L03800">Schnitzler an Zweig, 5. 7. 1908</ref>
-            </correspContext></correspDesc>
+            </correspContext>
+         </correspDesc>
       </profileDesc>
-      <revisionDesc status="candidate">
+      <revisionDesc status="approved">
          <change who="MAM" when="2025-07-17">Export aus Transkribus</change>
          <change who="MAM" when="2025-08-11">Durchsicht</change>
          <change who="MAM" when="2025-08-25">Durchsicht</change>
          <change who="MAM" when="2025-08-25">Index check</change>
+         <change who="SJ" when="2025-10-29">Durchsicht</change>
       </revisionDesc>
    </teiHeader>
    <facsimile>
@@ -150,13 +151,19 @@
          <div type="address">
             <address>
                <addrLine>
-                  <pb facs="0009_FL81799744"/>Dr. Stefan Zweig</addrLine>
+                  <pb facs="0009_FL81799744"/>
+                  <hi rend="latintype">Dr. Stefan Zweig</hi>
+               </addrLine>
                <!-- Punkt ist im "S" zu sehen -->
                <addrLine>
-                  <rs type="place" ref="#pmb58">Wien VIII</rs>
+                  <rs type="place" ref="#pmb58">
+                     <hi rend="latintype">Wien VIII</hi>
+                  </rs>
                </addrLine>
                <addrLine>
-                  <rs type="place" ref="#pmb249577">Kochgasse 8</rs>
+                  <rs type="place" ref="#pmb249577">
+                     <hi rend="latintype">Kochgasse 8</hi>
+                  </rs>
                </addrLine>
             </address>
          </div>
@@ -182,7 +189,7 @@
                   <ref type="schnitzler-briefe" target="L03622"/>.</note>,
                   <salute>lieber Herr Doctor,</salute> hieher mir nachgeſandt, hat mich ſo ſehr
                gefreut, daſs ich Ihnen gleich dafür danken muſs. Ihnen mehr zu ſagen verlege ich mir
-               auf ein, hoffentlich nicht allzufernes <anchor type="commentary" xml:id="K_L03810-11"/>Wiederſehen<note type="commentary" corresp="K_L03810-11">Das nächste 
+               auf ein, hoffentlich nicht allzufernes <anchor type="commentary" xml:id="K_L03810-2"/>Wiederſehen<note type="commentary" corresp="K_L03810-2">Das nächste 
                   Treffen fand am <ref type="schnitzler-tagebuch" target="1908-06-10" subtype="date-only"/> statt.</note>.</p>
             <closer>Herzlichſt grüßend<lb/>Ihr<lb/>
                <signed>ArthSchnitzler</signed>
