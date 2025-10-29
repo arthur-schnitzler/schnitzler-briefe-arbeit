@@ -1,6 +1,10 @@
-<?xml version='1.0' encoding='UTF-8'?>
+<?xml version="1.0" encoding="UTF-8"?>
 <?xml-model href="../meta/schnitzler-briefe-schematron.sch" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
-<TEI xmlns="http://www.tei-c.org/ns/1.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.tei-c.org/ns/1.0 ../meta/schnitzler-briefe-schema.xsd" xml:id="L03624" xml:base="https://id.acdh.oeaw.ac.at/schnitzler/schnitzler-briefe/editions">
+<TEI xmlns="http://www.tei-c.org/ns/1.0"
+     xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+     xsi:schemaLocation="http://www.tei-c.org/ns/1.0 ../meta/schnitzler-briefe-schema.xsd"
+     xml:id="L03624"
+     xml:base="https://id.acdh.oeaw.ac.at/schnitzler/schnitzler-briefe/editions">
    <teiHeader>
       <fileDesc>
          <titleStmt>
@@ -83,7 +87,7 @@
                               <extent>
                                  <measure unit="seite" quantity="3"/>
                                  <measure unit="blatt" quantity="1"/>
-                                 <measure unit="zeichenanzahl" quantity="1909"/>
+                                 <measure unit="zeichenanzahl" quantity="1907"/>
                               </extent>
                            </supportDesc>
                         </objectDesc>
@@ -151,12 +155,20 @@
                <date evidence="conjecture" notBefore="1909-12-13" notAfter="1909-12-16">[13. 12. 1909 – 16. 12. 1909?]</date>
                <placeName ref="#pmb50">Wien</placeName>
             </correspAction>
-            <correspContext><ref type="belongsToCorrespondence" target="correspondence_13212">Zweig, Stefan</ref>
+            <correspContext>
+               <ref type="belongsToCorrespondence" target="correspondence_13212">Zweig, Stefan</ref>
                <ref subtype="previous_letter" type="withinCollection" target="L01899">Hofmannsthal an Schnitzler, 13. 12. 1909</ref>
                <ref subtype="next_letter" type="withinCollection" target="L01901">Schnitzler an Bahr, 14. 12. 1909</ref>
-               <ref subtype="previous_letter" type="withinCorrespondence" source="correspondence_13212" target="L03805">Schnitzler an Zweig, 30. 11. 1909</ref>
-               <ref subtype="next_letter" type="withinCorrespondence" source="correspondence_13212" target="L03807">Schnitzler an Zweig, [zwischen 14. und 16. 12. 1909?]</ref>
-            </correspContext></correspDesc>
+               <ref subtype="previous_letter"
+                    type="withinCorrespondence"
+                    source="correspondence_13212"
+                    target="L03805">Schnitzler an Zweig, 30. 11. 1909</ref>
+               <ref subtype="next_letter"
+                    type="withinCorrespondence"
+                    source="correspondence_13212"
+                    target="L03807">Schnitzler an Zweig, [zwischen 14. und 16. 12. 1909?]</ref>
+            </correspContext>
+         </correspDesc>
       </profileDesc>
       <revisionDesc status="candidate">
          <change who="MAM" when="2025-05-21">Export aus Transkribus</change>
@@ -202,10 +214,14 @@
                <date>gestern</date>
                <note type="commentary" corresp="K_L03624-1">
                   <rs type="work" ref="#pmb29905">Der Ruf des Lebens</rs> von <rs type="person" ref="#pmb2121">Schnitzler</rs> erlebte am <ref type="schnitzler-kultur" target="pmb35185" subtype="date-only"/> am <rs type="place" ref="#pmb20">Deutschen Volkstheater</rs> seine <rs type="place" ref="#pmb50">Wiener</rs>
-                  Erstaufführung. Am <ref type="schnitzler-kultur" target="pmb249556" subtype="date-only"/> fand die zweite Vorstellung statt. <rs type="person" ref="#pmb2121">Schnitzler</rs> wohnte beiden Aufführungen bei, <ref type="schnitzler-tagebuch" target="1909-12-11" subtype="cf"/> und <ref type="schnitzler-tagebuch" target="1909-12-12" subtype="date-only"/>.</note>
-               die Freude, der erfolgreichen Aufführung Ihres »<rs type="work" ref="#pmb29905">Ruf
-                  des Lebens</rs>« beizuwohnen. Es wäre ungeziemend wollte ich mir eine Bemerkung
-               über das Wesen und den Wert des <rs type="work" ref="#pmb29905" subtype="implied">Stückes</rs>
+                  <space unit="chars" quantity="1"/>
+                  <rs type="event" ref="#pmb35185" subtype="implied">Erstaufführung</rs>. Am <ref type="schnitzler-kultur" target="pmb249556" subtype="date-only"/> fand die
+                  zweite <rs type="event" ref="#pmb249556" subtype="implied">Vorstellung</rs> statt.
+                     <rs type="person" ref="#pmb2121">Schnitzler</rs> wohnte beiden Aufführungen
+                  bei, <ref type="schnitzler-tagebuch" target="1909-12-11" subtype="cf"/> und <ref type="schnitzler-tagebuch" target="1909-12-12" subtype="date-only"/>.</note>
+               die Freude, der erfolgreichen <rs type="event" subtype="implied" ref="#pmb249556">Aufführung</rs> Ihres »<rs type="work" ref="#pmb29905">Ruf des Lebens</rs>«
+               beizuwohnen. Es wäre ungeziemend wollte ich mir eine Bemerkung über das Wesen und den
+               Wert des <rs type="work" ref="#pmb29905" subtype="implied">Stückes</rs>
                <space unit="chars" quantity="1"/>
                <add place="above">zu</add> Ihnen ungefragt gestatten, aber das darf ich Ihnen wohl
                sagen, dass ich vielleicht niemals von einem Ihrer Werke im Theater einen so
@@ -216,37 +232,40 @@
                <anchor type="commentary" xml:id="K_L03624-2"/>soviel Missverständnis<note type="commentary" corresp="K_L03624-2">
                   <rs type="person" ref="#pmb2121">Schnitzler</rs> vermerkt im <rs type="work" ref="#pmb33243">Tagebuch</rs> am <ref type="schnitzler-tagebuch" target="1909-12-17" subtype="date-only"/> nach einem Gespräch mit <rs type="person" ref="#pmb13212">Stefan Zweig</rs>, dass dieser »<quote>mit einem
                      Vorurtheil nach den <rs type="place" ref="#pmb168">Berliner</rs> Kritiken
-                     gekommen und ganz gewonnen</quote>« worden sei. Die <rs type="place" ref="#pmb168">Berliner</rs> Premiere am <ref type="schnitzler-kultur" target="pmb35179" subtype="date-only"/> war ambivalent
-                  besprochen worden, <bibl>vgl. etwa: 
-                     <rs type="person" ref="#pmb7827">Rudolf Herzog</rs>: <rs type="work" ref="#pmb293663">Lessing Theater. Zum ersten Male: »Der Ruf des Lebens«,
-                        Schauspiel in drei Akten von Arthur Schnitzler</rs>. In: <rs type="work" ref="#pmb41512">Berliner Neueste Nachrichten</rs>, Jg. 26, Nr. 94,
-                        <date>25. 2. 1906</date>, S. 3</bibl>. <bibl>
+                     gekommen und ganz gewonnen</quote>« worden sei. Die <rs type="place" ref="#pmb168">Berliner</rs>
+                  <space unit="chars" quantity="1"/>
+                  <rs type="event" ref="#pmb35179" subtype="implied">Premiere</rs> am <ref type="schnitzler-kultur" target="pmb35179" subtype="date-only"/> war ambivalent
+                  besprochen worden, <bibl>vgl. etwa: <rs type="person" ref="#pmb7827">Rudolf
+                        Herzog</rs>: <rs type="work" ref="#pmb293663">Lessing Theater. Zum ersten
+                        Male: »Der Ruf des Lebens«, Schauspiel in drei Akten von Arthur
+                        Schnitzler</rs>. In: <rs type="work" ref="#pmb41512">Berliner Neueste
+                        Nachrichten</rs>, Jg. 26, Nr. 94, <date>25. 2. 1906</date>, S. 3</bibl>. <bibl>
                      <rs type="person" ref="#pmb293655">M. J. [=Max Jordan]</rs>: <rs type="work" ref="#pmb293658">Lessing Theater. Zum ersten Mal: »Der Ruf des Lebens«,
                         Schauspiel in drei Akten von Arthur Schnitzler</rs>. In: <rs type="work" ref="#pmb41531">Berliner Tageblatt</rs>, Jg. 35, Nr. 102,
                         <date>25. 2. 1906</date>, S. 2–3</bibl>. <bibl>
                      <rs type="person" ref="#pmb11910">Alfred Kerr</rs>: <rs type="work" ref="#pmb169072">Ödipus und der Ruf des Lebens</rs>, in: <rs type="work" ref="#pmb36156">Neue Rundschau</rs>, Jg. 17, H. 5, <date>Mai 1906</date>,
-                     S. 492-498</bibl>. <bibl>
+                     S. 492–498</bibl>. <bibl>
                      <rs type="person" ref="#pmb11813">[Siegfried Jacobsohn]</rs>: <rs type="work" ref="#pmb276072">Der Ruf des Lebens</rs>. In: <rs type="work" ref="#pmb41564">Die Schaubühne</rs>, Jg. 2, Nr. 9, <date>März 1906</date>,
-                     S. 246–250</bibl>. Auch <rs type="person" ref="#pmb2121">Schnitzler</rs> selbst war, besonders 
-               vom zweiten Akt, nicht überzeugt und versuchte zeitlebens immer wieder, die Schwächen des Stückes zu beheben,
-               jedoch ohne eine neue Fassung fertigzustellen.</note> – feind<pb facs="MS-SCHNITZLER-B-00118-000-00008-0"/>lich oder auch freundlich – gegenüber stand, möchte ich Ihnen sagen, dass ich das
-               Gefühl gänzlichen Einverständnis hatte. Ich habe wie selten hier die Gefühle in einer
+                     S. 246–250</bibl>. Auch <rs type="person" ref="#pmb2121">Schnitzler</rs> selbst
+                  war, besonders vom zweiten Akt, nicht überzeugt und versuchte zeitlebens immer
+                  wieder, die Schwächen des Stückes zu beheben, jedoch ohne eine neue Fassung
+                  fertigzustellen.</note> – feind<pb facs="MS-SCHNITZLER-B-00118-000-00008-0"/>lich
+               oder auch freundlich – gegenüber stand, möchte ich Ihnen sagen, dass ich das Gefühl
+               gänzlichen Einverständnis hatte. Ich habe wie selten hier die Gefühle in einer
                   nah<del rend="strikethrough">t</del>en und doch nicht schamlosen menschlichen
                Körperlichkeit gefühlt und den ungeheuren Raum wirklich mit einem süssen und
                bezwingenden Schrecken aufgerissen gesehen, der zwischen dem intensivesten Leben und
                dem Nichts plötzlich aufspringen kann. Nie, soweit ich Ihr Werk überschaue, haben Sie
-               eine ähnliche Gewalt über das Schicksal gezeigt und ich wäre froh, wenn Sie <anchor type="textConst" xml:id="T_L03624-1"/>sich<note type="textConst" corresp="T_L03624-1">Er schreibt: »<quote>Sich</quote>«.</note>
-               dieses <rs type="work" ref="#pmb29905" subtype="implied">Stück</rs> nicht um ein paar
+               eine ähnliche Gewalt über das Schicksal gezeigt und ich wäre froh, wenn Sie <anchor type="textConst" xml:id="T_L03624-1"/>sich<note type="textConst" corresp="T_L03624-1">Er schreibt: »<quote>Sich</quote>«.</note> dieses <rs type="work" ref="#pmb29905" subtype="implied">Stück</rs> nicht um ein paar
                theatralischer Dinge willen jemals verärgern oder minder lieb haben liessen. Ich
                werde Ihnen immer dafür dankbar sein und ich glaube, immer mehr werden sich finden,
                die es so fühlen werden: nicht um des Gesagten willen, der Worte und der Menschen
                sosehr, sondern um der ungeheuren Vitalität willen, die aus jedem <subst>
                   <del rend="overwritten">A</del>
                   <add place="inline">W</add>
-               </subst>esen darin atmet.
-               Diese feindliche Um<pb facs="MS-SCHNITZLER-B-00118-000-00008-1"/>schlingung von Leben
-               und Tod, die feurige Secunde ihres Einswerdens in der Leidenschaft wird mir
-               unvergesslich eine der schönsten Erinnerungen an d<subst>
+               </subst>esen darin atmet. Diese feindliche Um<pb facs="MS-SCHNITZLER-B-00118-000-00008-1"/>schlingung von Leben und Tod, die
+               feurige Secunde ihres Einswerdens in der Leidenschaft wird mir unvergesslich eine der
+               schönsten Erinnerungen an d<subst>
                   <del rend="overwritten">ie</del>
                   <add place="inline">en</add>
                </subst> Abend sein.</p>
@@ -730,7 +749,7 @@
                   <graphic url="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a1/Siegfried_Jacobsohn.jpg/250px-Siegfried_Jacobsohn.jpg"/>
                </figure>
             </person>
-            <person xml:id="pmb119261">
+            <person xml:id="pmb119261" ana="comment">
                <persName>
                   <forename>Peter Michael</forename>
                   <surname>Braunwarth</surname>
@@ -755,7 +774,7 @@
                <idno type="URL" subtype="schnitzler-briefe">https://schnitzler-briefe.acdh.oeaw.ac.at/pmb119261.html</idno>
                <idno type="URL" subtype="schnitzler-kultur">https://schnitzler-kultur.acdh.oeaw.ac.at/pmb119261.html</idno>
             </person>
-            <person xml:id="pmb65504">
+            <person xml:id="pmb65504" ana="comment">
                <persName>
                   <forename>Reinhard</forename>
                   <surname>Urbach</surname>
@@ -782,7 +801,7 @@
                <idno type="URL" subtype="schnitzler-briefe">https://schnitzler-briefe.acdh.oeaw.ac.at/pmb65504.html</idno>
                <idno type="URL" subtype="schnitzler-kultur">https://schnitzler-kultur.acdh.oeaw.ac.at/pmb65504.html</idno>
             </person>
-            <person xml:id="pmb143327">
+            <person xml:id="pmb143327" ana="comment">
                <persName>
                   <forename>Werner</forename>
                   <surname>Welzig</surname>
@@ -815,7 +834,7 @@
                <idno type="URL" subtype="schnitzler-briefe">https://schnitzler-briefe.acdh.oeaw.ac.at/pmb143327.html</idno>
                <idno type="URL" subtype="schnitzler-kultur">https://schnitzler-kultur.acdh.oeaw.ac.at/pmb143327.html</idno>
             </person>
-            <person xml:id="pmb143331">
+            <person xml:id="pmb143331" ana="comment">
                <persName>
                   <forename>Richard</forename>
                   <surname>Miklin</surname>
@@ -831,7 +850,7 @@
                <idno type="URL" subtype="schnitzler-briefe">https://schnitzler-briefe.acdh.oeaw.ac.at/pmb143331.html</idno>
                <idno type="URL" subtype="schnitzler-kultur">https://schnitzler-kultur.acdh.oeaw.ac.at/pmb143331.html</idno>
             </person>
-            <person xml:id="pmb119271">
+            <person xml:id="pmb119271" ana="comment">
                <persName>
                   <forename>Konstanze</forename>
                   <surname>Fliedl</surname>
@@ -855,7 +874,7 @@
                <idno type="URL" subtype="schnitzler-briefe">https://schnitzler-briefe.acdh.oeaw.ac.at/pmb119271.html</idno>
                <idno type="URL" subtype="schnitzler-kultur">https://schnitzler-kultur.acdh.oeaw.ac.at/pmb119271.html</idno>
             </person>
-            <person xml:id="pmb143334">
+            <person xml:id="pmb143334" ana="comment">
                <persName>
                   <forename>Walter</forename>
                   <surname>Ruprechter</surname>
@@ -872,7 +891,7 @@
                <idno type="URL" subtype="schnitzler-briefe">https://schnitzler-briefe.acdh.oeaw.ac.at/pmb143334.html</idno>
                <idno type="URL" subtype="schnitzler-kultur">https://schnitzler-kultur.acdh.oeaw.ac.at/pmb143334.html</idno>
             </person>
-            <person xml:id="pmb143337">
+            <person xml:id="pmb143337" ana="comment">
                <persName>
                   <forename>Susanne</forename>
                   <surname>Pertlik</surname>
@@ -894,7 +913,7 @@
                <idno type="URL" subtype="schnitzler-briefe">https://schnitzler-briefe.acdh.oeaw.ac.at/pmb143337.html</idno>
                <idno type="URL" subtype="schnitzler-kultur">https://schnitzler-kultur.acdh.oeaw.ac.at/pmb143337.html</idno>
             </person>
-            <person xml:id="pmb43666">
+            <person xml:id="pmb43666" ana="comment">
                <persName>
                   <forename>William Siegmund</forename>
                   <surname>Schlamm</surname>
@@ -1184,6 +1203,233 @@
                </note>
             </place>
          </listPlace>
+         <listEvent>
+            <event xml:id="pmb35185" ana="comment">
+               <eventName n="Theaterpremiere">Premiere von Der Ruf des Lebens, 11.12.1909</eventName>
+               <note type="listorg">
+                  <listOrg>
+                     <org role="veranstaltet von">
+                        <orgName ref="pmb36430">Volkstheater</orgName>
+                     </org>
+                  </listOrg>
+               </note>
+               <idno type="URL" subtype="pmb">https://pmb.acdh.oeaw.ac.at/entity/35185/</idno>
+               <idno type="URL" subtype="schnitzler-kultur">https://schnitzler-kultur.acdh.oeaw.ac.at/pmb35185.html</idno>
+               <listBibl>
+                  <bibl>
+                     <title ref="pmb29905">Der Ruf des Lebens. Schauspiel in drei Akten</title>
+                     <note type="relation-type">ist Premiere von</note>
+                  </bibl>
+                  <bibl>
+                     <title ref="pmb46153">Arthur Schnitzler: Der Ruf des Lebens. Zur ersten Aufführung im Deutschen Volkstheater</title>
+                     <note type="relation-type">wird rezensiert in</note>
+                  </bibl>
+               </listBibl>
+               <listPerson>
+                  <person role="hat teilnehmend">
+                     <persName ref="pmb2121">Schnitzler, Arthur</persName>
+                  </person>
+                  <person role="hat teilnehmend">
+                     <persName ref="pmb2173">Schnitzler, Olga</persName>
+                  </person>
+                  <person role="hat teilnehmend">
+                     <persName ref="pmb12701">Schnitzler, Louise</persName>
+                  </person>
+                  <person role="hat teilnehmend">
+                     <persName ref="pmb12698">Schnitzler, Julius</persName>
+                  </person>
+                  <person role="hat teilnehmend">
+                     <persName ref="pmb24423">Schnitzler, Helene</persName>
+                  </person>
+                  <person role="hat mitwirkend">
+                     <persName ref="pmb18489">Homma, Hans</persName>
+                  </person>
+                  <person role="hat mitwirkend">
+                     <persName ref="pmb17831">Hannemann, Käthe</persName>
+                  </person>
+                  <person role="hat mitwirkend">
+                     <persName ref="pmb3341">Thaller, Kathi</persName>
+                  </person>
+                  <person role="hat mitwirkend">
+                     <persName ref="pmb21727">Müller, Leopoldine</persName>
+                  </person>
+                  <person role="hat mitwirkend">
+                     <persName ref="pmb2868">Kutschera, Victor</persName>
+                  </person>
+                  <person role="hat mitwirkend">
+                     <persName ref="pmb11224">Edthofer, Anton</persName>
+                  </person>
+                  <person role="hat mitwirkend">
+                     <persName ref="pmb26880">Weisse, Adolf</persName>
+                  </person>
+                  <person role="hat mitwirkend">
+                     <persName ref="pmb3694">Marberg, Lili</persName>
+                  </person>
+                  <person role="hat mitwirkend">
+                     <persName ref="pmb11981">Kramer, Leopold</persName>
+                  </person>
+                  <person role="hat mitwirkend">
+                     <persName ref="pmb8246">Klitsch, Wilhelm</persName>
+                  </person>
+                  <person role="hat mitwirkend">
+                     <persName ref="pmb16860">Fürth, Jaroslav</persName>
+                  </person>
+               </listPerson>
+               <listPlace>
+                  <place>
+                     <placeName role="veranstaltet in" ref="pmb20">Volkstheater</placeName>
+                     <location>
+                        <geo>48,205142 16,3566</geo>
+                     </location>
+                  </place>
+               </listPlace>
+            </event>
+            <event xml:id="pmb249556" ana="implied">
+               <eventName n="Theateraufführung">Aufführung von Der Ruf des Lebens, 12.12.1909</eventName>
+               <note type="listorg">
+                  <listOrg>
+                     <org role="veranstaltet von">
+                        <orgName ref="pmb36430">Volkstheater</orgName>
+                     </org>
+                  </listOrg>
+               </note>
+               <idno type="URL" subtype="pmb">https://pmb.acdh.oeaw.ac.at/entity/249556/</idno>
+               <idno type="URL" subtype="schnitzler-kultur">https://schnitzler-kultur.acdh.oeaw.ac.at/pmb249556.html</idno>
+               <listBibl>
+                  <bibl>
+                     <title ref="pmb29905">Der Ruf des Lebens. Schauspiel in drei Akten</title>
+                     <note type="relation-type">ist Aufführung von</note>
+                  </bibl>
+               </listBibl>
+               <listPerson>
+                  <person role="hat teilnehmend">
+                     <persName ref="pmb2121">Schnitzler, Arthur</persName>
+                  </person>
+                  <person role="hat teilnehmend">
+                     <persName ref="pmb3287">Franz Ferdinand von Österreich-Este</persName>
+                  </person>
+                  <person role="hat teilnehmend">
+                     <persName ref="pmb13212">Zweig, Stefan</persName>
+                  </person>
+               </listPerson>
+               <listPlace>
+                  <place>
+                     <placeName role="veranstaltet in" ref="pmb20">Volkstheater</placeName>
+                     <location>
+                        <geo>48,205142 16,3566</geo>
+                     </location>
+                  </place>
+               </listPlace>
+            </event>
+            <event xml:id="pmb35179" ana="comment">
+               <eventName n="Theaterpremiere">Premiere von Der Ruf des Lebens, 24.2.1906</eventName>
+               <note type="listorg">
+                  <listOrg>
+                     <org role="veranstaltet von">
+                        <orgName ref="pmb35053">Lessing-Theater</orgName>
+                     </org>
+                  </listOrg>
+               </note>
+               <idno type="URL" subtype="pmb">https://pmb.acdh.oeaw.ac.at/entity/35179/</idno>
+               <idno type="URL" subtype="schnitzler-briefe">https://schnitzler-briefe.acdh.oeaw.ac.at/pmb35179.html</idno>
+               <idno type="URL" subtype="schnitzler-kultur">https://schnitzler-kultur.acdh.oeaw.ac.at/pmb35179.html</idno>
+               <listBibl>
+                  <bibl>
+                     <title ref="pmb33352">»Der Ruf des Lebens.« Schauspiel von Artur Schnitzler. Erste Aufführung im Lessingtheater</title>
+                     <note type="relation-type">wird rezensiert in</note>
+                  </bibl>
+                  <bibl>
+                     <title ref="pmb29905">Der Ruf des Lebens. Schauspiel in drei Akten</title>
+                     <note type="relation-type">ist Premiere von</note>
+                  </bibl>
+                  <bibl>
+                     <title ref="pmb293658">Lessing Theater. Zum ersten Mal: »Der Ruf des Lebens«, Schauspiel in drei Akten von Arthur Schnitzler</title>
+                     <note type="relation-type">wird rezensiert in</note>
+                  </bibl>
+                  <bibl>
+                     <title ref="pmb293663">Lessing Theater. Zum ersten Male: »Der Ruf des Lebens«, Schauspiel in drei Akten von Arthur Schnitzler</title>
+                     <note type="relation-type">wird rezensiert in</note>
+                  </bibl>
+                  <bibl>
+                     <title ref="pmb32518">Theater</title>
+                     <note type="relation-type">wird rezensiert in</note>
+                  </bibl>
+               </listBibl>
+               <listPerson>
+                  <person role="hat teilnehmend">
+                     <persName ref="pmb11581">Harden, Maximilian</persName>
+                  </person>
+                  <person role="hat teilnehmend">
+                     <persName ref="pmb2121">Schnitzler, Arthur</persName>
+                  </person>
+                  <person role="hat teilnehmend">
+                     <persName ref="pmb10762">Andreas-Salomé, Lou</persName>
+                  </person>
+                  <person role="hat teilnehmend">
+                     <persName ref="pmb9931">Sombart, Werner</persName>
+                  </person>
+                  <person role="hat mitwirkend">
+                     <persName ref="pmb10986">Brahm, Otto</persName>
+                  </person>
+                  <person role="hat teilnehmend">
+                     <persName ref="pmb2657">Fischer, Hedwig</persName>
+                  </person>
+                  <person role="hat teilnehmend">
+                     <persName ref="pmb11324">Fischer, Samuel</persName>
+                  </person>
+                  <person role="hat teilnehmend">
+                     <persName ref="pmb4532">Jonas, Paul</persName>
+                  </person>
+                  <person role="hat teilnehmend">
+                     <persName ref="pmb18900">Jonas, Clara</persName>
+                  </person>
+                  <person role="hat teilnehmend">
+                     <persName ref="pmb12968">Trebitsch, Siegfried</persName>
+                  </person>
+                  <person role="hat teilnehmend">
+                     <persName ref="pmb11910">Kerr, Alfred</persName>
+                  </person>
+                  <person role="hat teilnehmend">
+                     <persName ref="pmb2713">Heilbut, Emil</persName>
+                  </person>
+                  <person role="hat mitwirkend">
+                     <persName ref="pmb12530">Rittner, Rudolf</persName>
+                  </person>
+                  <person role="hat mitwirkend">
+                     <persName ref="pmb6145">Bassermann, Else</persName>
+                  </person>
+                  <person role="hat mitwirkend">
+                     <persName ref="pmb10844">Bassermann, Albert</persName>
+                  </person>
+                  <person role="hat mitwirkend">
+                     <persName ref="pmb12977">Triesch, Irene</persName>
+                  </person>
+                  <person role="hat mitwirkend">
+                     <persName ref="pmb12491">Reicher, Emanuel</persName>
+                  </person>
+                  <person role="hat mitwirkend">
+                     <persName ref="pmb21647">Marx, Paul</persName>
+                  </person>
+                  <person role="hat mitwirkend">
+                     <persName ref="pmb2865">Lehmann, Else</persName>
+                  </person>
+                  <person role="hat mitwirkend">
+                     <persName ref="pmb10733">Stieler, Kurt</persName>
+                  </person>
+                  <person role="hat mitwirkend">
+                     <persName ref="pmb143371">Hofmann, Grete</persName>
+                  </person>
+               </listPerson>
+               <listPlace>
+                  <place>
+                     <placeName role="veranstaltet in" ref="pmb18">Lessing-Theater</placeName>
+                     <location>
+                        <geo>52,5225 13,376389</geo>
+                     </location>
+                  </place>
+               </listPlace>
+            </event>
+         </listEvent>
       </back>
    </text>
 </TEI>
