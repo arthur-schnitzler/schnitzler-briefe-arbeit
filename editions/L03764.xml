@@ -1,6 +1,10 @@
-<?xml version='1.0' encoding='UTF-8'?>
+<?xml version="1.0" encoding="UTF-8"?>
 <?xml-model href="../meta/schnitzler-briefe-schematron.sch" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
-<TEI xmlns="http://www.tei-c.org/ns/1.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.tei-c.org/ns/1.0 ../meta/schnitzler-briefe-schema.xsd" xml:id="L03764" xml:base="https://id.acdh.oeaw.ac.at/schnitzler/schnitzler-briefe/editions">
+<TEI xmlns="http://www.tei-c.org/ns/1.0"
+     xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+     xsi:schemaLocation="http://www.tei-c.org/ns/1.0 ../meta/schnitzler-briefe-schema.xsd"
+     xml:id="L03764"
+     xml:base="https://id.acdh.oeaw.ac.at/schnitzler/schnitzler-briefe/editions">
    <teiHeader>
       <fileDesc>
          <titleStmt>
@@ -112,18 +116,27 @@
                   – 27. 7. 1910?]</date>
                <placeName ref="#pmb50" evidence="conjecture">Wien</placeName>
             </correspAction>
-            <correspContext><ref type="belongsToCorrespondence" target="correspondence_13212">Zweig, Stefan</ref>
+            <correspContext>
+               <ref type="belongsToCorrespondence" target="correspondence_13212">Zweig, Stefan</ref>
                <ref subtype="previous_letter" type="withinCollection" target="L01951">Hofmannsthal, Friedmann, Hofmannsthal, Friedmann an Schnitzler, 23. 7. 1910</ref>
                <ref subtype="next_letter" type="withinCollection" target="L03550">Salten, Salten an Schnitzler, Schnitzler, [24. 7. 1910]</ref>
-               <ref subtype="previous_letter" type="withinCorrespondence" source="correspondence_13212" target="L03806">Schnitzler an Zweig, 22. 12. 1909</ref>
-               <ref subtype="next_letter" type="withinCorrespondence" source="correspondence_13212" target="L03813">Schnitzler an Zweig, 10. 9. 1910</ref>
-            </correspContext></correspDesc>
+               <ref subtype="previous_letter"
+                    type="withinCorrespondence"
+                    source="correspondence_13212"
+                    target="L03806">Schnitzler an Zweig, 22. 12. 1909</ref>
+               <ref subtype="next_letter"
+                    type="withinCorrespondence"
+                    source="correspondence_13212"
+                    target="L03813">Schnitzler an Zweig, 10. 9. 1910</ref>
+            </correspContext>
+         </correspDesc>
       </profileDesc>
-      <revisionDesc status="candidate">
+      <revisionDesc status="approved">
          <change who="MAM" when="2025-07-17">Export aus Transkribus</change>
          <change who="MAM" when="2025-08-05">Durchsicht</change>
          <change who="MAM" when="2025-08-27">Durchsicht</change>
          <change who="MAM" when="2025-08-27">Index check</change>
+         <change who="SJ" when="2025-10-30">Durchsicht</change>
       </revisionDesc>
    </teiHeader>
    <facsimile>
@@ -181,7 +194,7 @@
                      Hg. und kommentiert von Oliver Matuschek unter Mitwirkung von Klemens
                      Renoldner. <pubPlace>Berlin</pubPlace>: <publisher>Insel Verlag</publisher>
                      <space unit="chars" quantity="1"/>
-                     <date when="2022">2022</date>, S. 107</bibl>.) Entsprechend dürfte <rs type="person" ref="#pmb2121">Schnitzler</rs> das Buch in der <date>zweiten
+                     <date when="2022">2022</date>, S. 107</bibl>.) Entsprechend dürfte <rs type="person" ref="#pmb2121">Schnitzler</rs> das <rs type="work" ref="#pmb296158" subtype="implied">Buch</rs> in der <date>zweiten
                      Hälfte des Juni</date> erhalten haben.</note> zu danken – ich thu es nun, mit
                verſpäteter Herzlichkeit, und freu mich ſehr darauf das <rs type="work" ref="#pmb296158" subtype="implied">Buch</rs> (es ſieht wunderſchön aus) in einigen
                der nächſten ruhigen Stunden, <pb facs="0102_FL81799733"/>wahrſcheinlich auf einer
@@ -3202,7 +3215,7 @@
             </person>
          </listPerson>
          <listBibl>
-            <bibl xml:id="pmb296158">
+            <bibl xml:id="pmb296158" ana="implied">
                <title>Ausgewählte Gedichte. In Nachdichtung</title>
                <author ref="pmb13212" role="hat-ubersetzt">Zweig, Stefan</author>
                <author ref="pmb26435" role="hat-geschaffen">Verhaeren, Émile</author>
