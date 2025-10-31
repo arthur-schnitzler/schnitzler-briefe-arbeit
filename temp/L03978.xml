@@ -1,16 +1,10 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<?xml-model href="../meta/schnitzler-briefe-schematron.sch" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
-<TEI xmlns="http://www.tei-c.org/ns/1.0"
-     xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-     xsi:schemaLocation="http://www.tei-c.org/ns/1.0 ../meta/schnitzler-briefe-schema.xsd"
-     xml:base="https://id.acdh.oeaw.ac.at/schnitzler/schnitzler-briefe/editions"
-     xml:id="L03978">
+<?xml version="1.0" encoding="UTF-8"?><?xml-model href="../meta/schnitzler-briefe-schematron.sch" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI xmlns="http://www.tei-c.org/ns/1.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.tei-c.org/ns/1.0 ../meta/schnitzler-briefe-schema.xsd" xml:base="https://id.acdh.oeaw.ac.at/schnitzler/schnitzler-briefe/editions" xml:id="L03978">
    <teiHeader>
       <fileDesc>
          <titleStmt>
             <title level="s">Arthur Schnitzler: Briefwechsel mit Autorinnen und
                                     Autoren</title>
-            <title level="a">Arthur Schnitzler an Berta Zuckerkandl, XXXX</title>
+            <title level="a">Arthur Schnitzler an Berta Zuckerkandl, 7. 11. 1929</title>
             <author ref="#pmb2121">Schnitzler, Arthur</author>
             <editor>
                <persName>Jahnke, Selma</persName>
@@ -82,20 +76,21 @@
          <sourceDesc>
             <listWit>
                <witness n="1">
-                  <objectType corresp="xbrief"/>
+                  <objectType corresp="brief"/>
                   <msDesc>
                      <msIdentifier>
-                        <country>GB</country>
-                        <settlement>Cambridge</settlement>
-                        <repository>University Library</repository>
-                        <idno>Schnitzler, B 31</idno>
+                        <country>D</country>
+                        <settlement>Marbach am Neckar</settlement>
+                        <repository>Deutsches Literaturarchiv</repository>
+                        <idno>HS.1985.1.2282</idno>
                      </msIdentifier>
                      <physDesc>
-                        <objectDesc>
+                        <objectDesc form="durchschlag">
                            <supportDesc>
                               <extent>
                                  <measure unit="seite" quantity=""/>
                                  <measure unit="blatt" quantity=""/>
+                                 <measure unit="zeichenanzahl" quantity="607"/>
                               </extent>
                            </supportDesc>
                         </objectDesc>
@@ -115,12 +110,12 @@
          <correspDesc>
             <correspAction type="sent">
                <persName ref="#pmb2121">Schnitzler, Arthur</persName>
-               <date when="" n="01">XXXX</date>
-               <placeName ref="#50" evidence="conjecture">Wien</placeName>
+               <date when="1929-11-07" n="01">7. 11. 1929</date>
+               <placeName ref="#pmb50">Wien</placeName>
             </correspAction>
             <correspAction type="received">
                <persName ref="#pmb2312">Zuckerkandl, Berta</persName>
-               <placeName ref="#50" evidence="conjecture">Wien</placeName>
+               <placeName ref="#pmb50">Wien</placeName>
             </correspAction>
          </correspDesc>
       </profileDesc>
@@ -129,30 +124,36 @@
                                 Transkribus</change>
       </revisionDesc>
    </teiHeader>
+   <facsimile>
+      <graphic url="HS00050068X_0067"/>
+   </facsimile>
    <text>
       <body>
          <div type="writingSession" n="1">
-            
-           <opener> <dateline><pb facs="HS00050068X_0067"/>
-               <date>7.11.1929</date>.</dateline>
-            <salute>Liebe und verehrte Freundin.</salute></opener>
+            <opener>
+               <dateline>
+                  <pb facs="HS00050068X_0067"/>
+                  <date>7. 11. 1929</date>.</dateline>
+               <salute>Liebe und verehrte Freundin.</salute>
+            </opener>
             <p>Beigeschlossen das gewünschte deutsche »<rs type="work" ref="">Reigen</rs>«-Exemplar.
       </p>
             <p>Zugleich hier die Adresse von Mme. <rs type="person" ref="#pmb14794">E. Cabire</rs>, <rs type="place" ref="#pmb299318">27, Rue Lemercier, Paris XVII</rs>. In ihrem
       letzten Brief aus <rs type="place" ref="#pmb182">Paris</rs> heisst es: »<foreign xml:lang="fr">J’ai eu le
       plaisir de signer dernièrement un bulletin
-      de reception relatif à »<rs type="work" ref="#pmb299314 #pmb30207">Das weite Land</rs></foreign>«, que
-      Mme. <rs type="person" ref="">Zuckerkandl</rs> a réussie de placer chez M.
-      <rs type="person" ref="">Gemier</rs>.«
+      de reception relatif à ›<rs type="work" ref="#pmb299314 #pmb30207">Das weite Land</rs>‹, que
+      Mme. Zuckerkandl a réussie de placer chez M.
+      <rs type="person" ref="#pmb17611">Gemier</rs>.</foreign>«
       </p>
             <p>An einer anderen Stelle desselben
       Briefes heisst es: »<foreign xml:lang="fr">Je ne considère pas mon
       travail comme tout à fait fini</foreign>«.
       </p>
             <closer>Alles Gute für Ihre Reise und viele<lb/> herzliche Grüsse von Ihrem aufrichtig ergebenen<lb/> und dankbaren</closer>
-            <postscript><p>Frau Hofrätin Bertha Zuckerkandl,</p></postscript>
             <postscript>
-               <rs type="place" ref="#pmb50">Wien</rs>.</postscript>
+               <p>Frau Hofrätin Bertha Zuckerkandl,<lb/>
+                  <rs type="place" ref="#pmb50">Wien</rs>.</p>
+            </postscript>
          </div>
       </body>
    </text>

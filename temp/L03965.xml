@@ -1,10 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<?xml-model href="../meta/schnitzler-briefe-schematron.sch" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
-<TEI xmlns="http://www.tei-c.org/ns/1.0"
-     xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-     xsi:schemaLocation="http://www.tei-c.org/ns/1.0 ../meta/schnitzler-briefe-schema.xsd"
-     xml:base="https://id.acdh.oeaw.ac.at/schnitzler/schnitzler-briefe/editions"
-     xml:id="L03965">
+<?xml version="1.0" encoding="UTF-8"?><?xml-model href="../meta/schnitzler-briefe-schematron.sch" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI xmlns="http://www.tei-c.org/ns/1.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.tei-c.org/ns/1.0 ../meta/schnitzler-briefe-schema.xsd" xml:base="https://id.acdh.oeaw.ac.at/schnitzler/schnitzler-briefe/editions" xml:id="L03965">
    <teiHeader>
       <fileDesc>
          <titleStmt>
@@ -82,20 +76,21 @@
          <sourceDesc>
             <listWit>
                <witness n="1">
-                  <objectType corresp="xbrief"/>
+                  <objectType corresp="brief"/>
                   <msDesc>
                      <msIdentifier>
-                        <country>GB</country>
-                        <settlement>Cambridge</settlement>
-                        <repository>University Library</repository>
-                        <idno>Schnitzler, B 31</idno>
+                        <country>D</country>
+                        <settlement>Marbach am Neckar</settlement>
+                        <repository>Deutsches Literaturarchiv</repository>
+                        <idno>HS.1985.1.2282</idno>
                      </msIdentifier>
                      <physDesc>
-                        <objectDesc>
+                        <objectDesc form="durchschlag">
                            <supportDesc>
                               <extent>
                                  <measure unit="seite" quantity=""/>
                                  <measure unit="blatt" quantity=""/>
+                                 <measure unit="zeichenanzahl" quantity="4669"/>
                               </extent>
                            </supportDesc>
                         </objectDesc>
@@ -115,12 +110,12 @@
          <correspDesc>
             <correspAction type="sent">
                <persName ref="#pmb2121">Schnitzler, Arthur</persName>
-               <date when="" n="01">XXXX</date>
-               <placeName ref="#50" evidence="conjecture">Wien</placeName>
+               <date when="1926-01-25" n="01">25. 1. 1926</date>
+               <placeName ref="#pmb50">Wien</placeName>
             </correspAction>
             <correspAction type="received">
                <persName ref="#pmb2312">Zuckerkandl, Berta</persName>
-               <placeName ref="#50" evidence="conjecture">Wien</placeName>
+               <placeName ref="#pmb182">Paris</placeName>
             </correspAction>
          </correspDesc>
       </profileDesc>
@@ -129,15 +124,23 @@
                                 Transkribus</change>
       </revisionDesc>
    </teiHeader>
+   <facsimile>
+      <graphic url="HS00050068X_0037"/>
+      <graphic url="HS00050068X_0038"/>
+      <graphic url="HS00050068X_0039"/>
+      <graphic url="HS00050068X_0040"/>
+   </facsimile>
    <text>
       <body>
          <div type="writingSession" n="1">
             <opener>
-            <dateline><pb facs="HS00050068X_0037"/>
-               <date>25.1.1926</date>.</dateline>
-            <salute>Liebe und verehrte Frau Hofrätin.</salute></opener>
+               <dateline>
+                  <pb facs="HS00050068X_0037"/>
+                  <date>25. 1. 1926</date>.</dateline>
+               <salute>Liebe und verehrte Frau Hofrätin.</salute>
+            </opener>
             <p>Vielen Dank für Ihre freundliche
-      Nachricht. Bei meinen Gesprächen mit <rs type="person" ref="">Gemier</rs>
+      Nachricht. Bei meinen Gesprächen mit <rs type="person" ref="#pmb17611">Gemier</rs>
       hatte ich gleich den Eindruck, dass er das
       »<rs type="work" ref="">Weite Land</rs>« eigentlich noch nicht kennt.
       <del rend="strikethrough">
@@ -177,8 +180,8 @@
       ausmachen würde. Uebrigens wird ja Herr
       <rs type="person" ref="">Delamain</rs> sich erst ein Urteil bilden können,
       wenn er die <rs type="work" ref="">Novelle</rs> gelesen hat. Ich sende <del rend="strikethrough">ih¬</del>
-                  <del rend="strikethrough">nen</del> ihm <date>heute</date> das <rs type="work" ref="">Buch</rs> zu. Die <rs type="work" ref="">Uebersetzung</rs>
-      der Frau <rs type="person" ref="">Clara Pollaczek</rs> sende ich aber erst
+               <del rend="strikethrough">nen</del> ihm <date>heute</date> das <rs type="work" ref="">Buch</rs> zu. Die <rs type="work" ref="">Uebersetzung</rs>
+               der Frau <rs type="person" ref="#pmb12435">Clara Pollaczek</rs> sende ich aber erst
       an Sie, verehrte Freundin. Ich glaube, sie ist
       vorzüglich und viel höher zu werten als eine
       sogenannte Rohübersetzung. Ich halte es sogar für möglich, dass die<rs type="work" ref="">Uebersetzung</rs> so
@@ -187,12 +190,12 @@
       könnte. Nun aber wird selbstverständlich bei
       jedem Menschen, der erfährt, dass die <rs type="work" ref="">Uebersetzung</rs> von jemandem stammt, dessen Muttersprache nicht das<rs type="place" ref="#pmb166">Französische</rs> ist, ein Vorurteil zu überwinden sein und ich frage daher
       an, ob es nicht möglich wäre Herrn <rs type="person" ref="">Delamain</rs>
-      die <rs type="work" ref="">Uebersetzung</rs> der Frau <rs type="person" ref="">P.</rs> vorläufig ohne
+               die <rs type="work" ref="">Uebersetzung</rs> der Frau <rs type="person" ref="#pmb12435">P.</rs> vorläufig ohne
       Namensnennung, als eine ganz ernst und definitiv gemeinte zu übergeben. Wie wäre es, wenn
-      Sie die <rs type="work" ref="">Uebersetzung</rs> zuerst einmal einem vollkommen objektiven Beurteiler, z.E.<rs type="person" ref="">Geraldy</rs> oder
+      Sie die <rs type="work" ref="" subtype="implied">Uebersetzung</rs> zuerst einmal einem vollkommen objektiven Beurteiler, z.&#160;E. <rs type="person" ref="">Geraldy</rs> oder
                
                   <pb facs="HS00050068X_0039"/>
-                  <rs type="person" ref="">Lenormand</rs> lesen liessen, ohne ihnen zu sagen
+               <rs type="person" ref="">Lenormand</rs> lesen liessen, ohne ihnen zu sagen
                dass eine <rs type="place" ref="#pmb41240">Oesterreicherin</rs> und keine gebürtige<rs type="place" ref="#pmb166">Französin</rs> diese Uebersetzung verfasst hat. Natürlich dürfte man ihnen auch
       nicht unter dem Siegel der Verschwiegenheit
       verraten, wie sich die Sache wirklich verhält. Bitte sagen sie mir, wie sie darüber
@@ -204,7 +207,7 @@
       Wollen Sie nicht auch gelegentlich
       <rs type="person" ref="">Delamain</rs> fragen, ob noch Exemplare von »<rs type="work" ref="">Anatol</rs>« und von »<rs type="work" ref="">La Ronde</rs>« vorhanden sind?
       Es müsste nun wohl auch offiziell zu konstatieren sein, dass für neue Auflagen urheberrechtlich auch das Recht für <rs type="place" ref="#pmb166">Frankreich</rs>
-                  <date>heute</date> wieder in meiner Hand ist und dass
+               <date>heute</date> wieder in meiner Hand ist und dass
       unbedingt diese alten Uebersetzungen nicht
       mehr neu aufgelegt werden dürfen. Von <rs type="person" ref="">Stock</rs>
       hatte ich für jedes der beiden Bücher –
@@ -212,14 +215,14 @@
       ein Verlag sich einbilden könnte dadurch
       auf ewige Zeiten ein Recht erworben zu haben. Natürlich würde nichts dagegen sprechen mit <rs type="person" ref="">Delamain</rs> auch über <add>»
                   </add>
-                  <rs type="work" ref="">Reigen
+               <rs type="work" ref="">Reigen
                   </rs>
-                  <add>«</add> und
+               <add>«</add> und
       »<rs type="work" ref="">Anatole</rs>« von neuem abzuschliessen.
       Ich schreibe an <rs type="person" ref="">Delamain</rs>
-                  <date>heute</date>
+               <date>heute</date>
       nur ganz kurz, dass ich prinzipiell gegen
-      die Vereinigung von »<rs type="person" ref="">Fräulein Else</rs>« mit anderen Novellen in einem Band bin und dass
+      die Vereinigung von »<rs type="work" ref="">Fräulein Else</rs>« mit anderen Novellen in einem Band bin und dass
       Sie, verehrte Frau Hofrätin, binnen kurzem
       die <rs type="place" ref="#pmb166">französische</rs> Uebersetzung ihm übermitteln
                
@@ -227,11 +230,11 @@
       werden. Ich bin noch bis ca. <date>4. Februar</date> in
       <rs type="place" ref="#pmb50">Wien</rs> und hoffe am <date>15.</date> wieder von <rs type="place" ref="#pmb168">Berlin</rs>
       aus zurück zu sein.</p>
-      <closer>Mit den herzlichsten Grüssen, Ihre<lb/> lieben Nachrichten mit Spannung erwartend,<lb/> Ihr freundschaftlich ergebener</closer>
-                  <postscript><p>Frau Hofrätin Bertha Zuckerkandl,<lb/>
-                     <rs type="place" ref="#pmb182">Paris</rs>.</p>
-                  </postscript>
-               
+            <closer>Mit den herzlichsten Grüssen, Ihre<lb/> lieben Nachrichten mit Spannung erwartend,<lb/> Ihr freundschaftlich ergebener</closer>
+            <postscript>
+               <p>Frau Hofrätin Bertha Zuckerkandl,<lb/>
+                  <rs type="place" ref="#pmb182">Paris</rs>.</p>
+            </postscript>
          </div>
       </body>
    </text>

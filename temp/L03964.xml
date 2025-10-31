@@ -1,16 +1,10 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<?xml-model href="../meta/schnitzler-briefe-schematron.sch" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
-<TEI xmlns="http://www.tei-c.org/ns/1.0"
-     xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-     xsi:schemaLocation="http://www.tei-c.org/ns/1.0 ../meta/schnitzler-briefe-schema.xsd"
-     xml:base="https://id.acdh.oeaw.ac.at/schnitzler/schnitzler-briefe/editions"
-     xml:id="L03964">
+<?xml version="1.0" encoding="UTF-8"?><?xml-model href="../meta/schnitzler-briefe-schematron.sch" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI xmlns="http://www.tei-c.org/ns/1.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.tei-c.org/ns/1.0 ../meta/schnitzler-briefe-schema.xsd" xml:base="https://id.acdh.oeaw.ac.at/schnitzler/schnitzler-briefe/editions" xml:id="L03964">
    <teiHeader>
       <fileDesc>
          <titleStmt>
             <title level="s">Arthur Schnitzler: Briefwechsel mit Autorinnen und
                                     Autoren</title>
-            <title level="a">Arthur Schnitzler an Berta Zuckerkandl, XXXX</title>
+            <title level="a">Arthur Schnitzler an Berta Zuckerkandl, 11. 1. 1926</title>
             <author ref="#pmb2121">Schnitzler, Arthur</author>
             <editor>
                <persName>Jahnke, Selma</persName>
@@ -82,20 +76,21 @@
          <sourceDesc>
             <listWit>
                <witness n="1">
-                  <objectType corresp="xbrief"/>
+                  <objectType corresp="brief"/>
                   <msDesc>
                      <msIdentifier>
-                        <country>GB</country>
-                        <settlement>Cambridge</settlement>
-                        <repository>University Library</repository>
-                        <idno>Schnitzler, B 31</idno>
+                        <country>D</country>
+                        <settlement>Marbach am Neckar</settlement>
+                        <repository>Deutsches Literaturarchiv</repository>
+                        <idno>HS.1985.1.2282</idno>
                      </msIdentifier>
                      <physDesc>
-                        <objectDesc>
+                        <objectDesc form="durchschlag">
                            <supportDesc>
                               <extent>
                                  <measure unit="seite" quantity=""/>
                                  <measure unit="blatt" quantity=""/>
+                                 <measure unit="zeichenanzahl" quantity="1347"/>
                               </extent>
                            </supportDesc>
                         </objectDesc>
@@ -115,12 +110,12 @@
          <correspDesc>
             <correspAction type="sent">
                <persName ref="#pmb2121">Schnitzler, Arthur</persName>
-               <date when="" n="01">XXXX</date>
-               <placeName ref="#50" evidence="conjecture">Wien</placeName>
+               <date when="1926-01-11" n="01">11. 1. 1926</date>
+               <placeName ref="#pmb50">Wien</placeName>
             </correspAction>
             <correspAction type="received">
                <persName ref="#pmb2312">Zuckerkandl, Berta</persName>
-               <placeName ref="#50" evidence="conjecture">Wien</placeName>
+               <placeName ref="#pmb182">Paris</placeName>
             </correspAction>
          </correspDesc>
       </profileDesc>
@@ -129,13 +124,19 @@
                                 Transkribus</change>
       </revisionDesc>
    </teiHeader>
+   <facsimile>
+      <graphic url="HS00050068X_0035"/>
+      <graphic url="HS00050068X_0036"/>
+   </facsimile>
    <text>
       <body>
          <div type="writingSession" n="1">
-            
-            <opener><dateline><pb facs="HS00050068X_0035"/>
-               <date>11.1.1926</date>.</dateline>
-            <salute>Liebe und verehrte Frau Hofrätin.</salute></opener>
+            <opener>
+               <dateline rend="right">
+                  <pb facs="HS00050068X_0035"/>
+                  <date>11. 1. 1926</date>.</dateline>
+               <salute>Liebe und verehrte Frau Hofrätin.</salute>
+            </opener>
             <p>
                <rs type="person" ref="">Resnard</rs>
              hat mir mit einem sehr liebenswürdigen Brief das Bulletin geschickt, Ihrem
@@ -144,7 +145,7 @@
       meiner Werke herauskommt. Wissen sie vielleicht, was man dazu geben wird?
       </p>
             <p>Frau
-            <rs type="person" ref="">Clara Pollaczek</rs> ist mit ihrer Uebersetzung des »<rs type="work" ref="">Fräulein Else</rs>« bald fertig, natürlich wird die Vervielfältigung noch
+               <rs type="person" ref="#pmb12435">Clara Pollaczek</rs> ist mit ihrer Uebersetzung des »<rs type="work" ref="">Fräulein Else</rs>« bald fertig, natürlich wird die Vervielfältigung noch
       einige Zeit in Anspruch nehmen; wie lange bleiben Sie noch in<rs type="place" ref="#pmb182">Paris</rs>? Wird man Ihnen das
       <rs type="work" ref="">Manuscript</rs> noch dorthin senden können?
       </p>
@@ -160,14 +161,14 @@
       allen Richtungen hin Erfolg, für sich selbst
       hoffentlich noch <del rend="strikethrough">noch</del> mehr als für die Anderen,
       befinden sich wohl und frisch und denken meiner mit gleicher freundschaftlicher Sympathie
-      wie ich Ihrer.
-                  <pb facs="HS00050068X_0036"/>
-                  <closer>Mit den herzlichsten Grüssen<lb/> Ihr getreuer</closer>
-                  <postscript>Frau Hofrätin Berta Zuckerkandl,</postscript>
-                  <postscript>
-                     <rs type="place" ref="#pmb182">Paris</rs>.</postscript>
-               
-            </p>
+      wie ich Ihrer.</p>
+            <closer>
+               <pb facs="HS00050068X_0036"/>Mit den herzlichsten Grüssen<lb/> Ihr getreuer</closer>
+            <space dim="vertical" unit="line" quantity="1"/>
+            <postscript>
+               <p>Frau Hofrätin Berta Zuckerkandl,<lb/>
+                  <rs type="place" ref="#pmb182">Paris</rs>.</p>
+            </postscript>
          </div>
       </body>
    </text>

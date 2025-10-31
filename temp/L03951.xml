@@ -1,16 +1,10 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<?xml-model href="../meta/schnitzler-briefe-schematron.sch" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
-<TEI xmlns="http://www.tei-c.org/ns/1.0"
-     xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-     xsi:schemaLocation="http://www.tei-c.org/ns/1.0 ../meta/schnitzler-briefe-schema.xsd"
-     xml:base="https://id.acdh.oeaw.ac.at/schnitzler/schnitzler-briefe/editions"
-     xml:id="L03951">
+<?xml version="1.0" encoding="UTF-8"?><?xml-model href="../meta/schnitzler-briefe-schematron.sch" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI xmlns="http://www.tei-c.org/ns/1.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.tei-c.org/ns/1.0 ../meta/schnitzler-briefe-schema.xsd" xml:base="https://id.acdh.oeaw.ac.at/schnitzler/schnitzler-briefe/editions" xml:id="L03951">
    <teiHeader>
       <fileDesc>
          <titleStmt>
             <title level="s">Arthur Schnitzler: Briefwechsel mit Autorinnen und
                                     Autoren</title>
-            <title level="a">Arthur Schnitzler an Berta Zuckerkandl, XXXX</title>
+            <title level="a">Arthur Schnitzler an Berta Zuckerkandl, 9. 12. 1911</title>
             <author ref="#pmb2121">Schnitzler, Arthur</author>
             <editor>
                <persName>Jahnke, Selma</persName>
@@ -82,20 +76,21 @@
          <sourceDesc>
             <listWit>
                <witness n="1">
-                  <objectType corresp="xbrief"/>
+                  <objectType corresp="brief"/>
                   <msDesc>
                      <msIdentifier>
-                        <country>GB</country>
-                        <settlement>Cambridge</settlement>
-                        <repository>University Library</repository>
-                        <idno>Schnitzler, B 31</idno>
+                        <country>D</country>
+                        <settlement>Marbach am Neckar</settlement>
+                        <repository>Deutsches Literaturarchiv</repository>
+                        <idno>HS.1985.1.2282</idno>
                      </msIdentifier>
                      <physDesc>
-                        <objectDesc>
+                        <objectDesc form="durchschlag">
                            <supportDesc>
                               <extent>
                                  <measure unit="seite" quantity=""/>
                                  <measure unit="blatt" quantity=""/>
+                                 <measure unit="zeichenanzahl" quantity="1080"/>
                               </extent>
                            </supportDesc>
                         </objectDesc>
@@ -115,12 +110,12 @@
          <correspDesc>
             <correspAction type="sent">
                <persName ref="#pmb2121">Schnitzler, Arthur</persName>
-               <date when="" n="01">XXXX</date>
-               <placeName ref="#50" evidence="conjecture">Wien</placeName>
+               <date when="1911-12-09" n="01">9. 12. 1911</date>
+               <placeName ref="#pmb50">Wien</placeName>
             </correspAction>
             <correspAction type="received">
                <persName ref="#pmb2312">Zuckerkandl, Berta</persName>
-               <placeName ref="#50" evidence="conjecture">Wien</placeName>
+               <placeName ref="#pmb50">Wien</placeName>
             </correspAction>
          </correspDesc>
       </profileDesc>
@@ -129,34 +124,40 @@
                                 Transkribus</change>
       </revisionDesc>
    </teiHeader>
+   <facsimile>
+      <graphic url="HS00050068X_0012"/>
+      <graphic url="HS00050068X_0013"/>
+   </facsimile>
    <text>
       <body>
          <div type="writingSession" n="1">
-            
-            <opener><dateline><pb facs="HS00050068X_0012"/>
-               <date>9.12.1911</date>.</dateline>
-            <salute>Verehrte gnädige Frau.</salute></opener>
+            <opener>
+               <dateline rend="right">
+                  <pb facs="HS00050068X_0012"/>
+                  <date>9. 12. 1911</date>.</dateline>
+               <salute>Verehrte gnädige Frau.</salute>
+            </opener>
             <p>Herzlichen Dank für die freundliche
       Uebersendung des Briefes von Madame <rs type="person" ref="">Lefèvre</rs>. Ich
       habe also gleich an sie geschrieben und sie vor
-      allem um Beantwortung der Frage ersucht, ob <del rend="strikethrough">Ghui</del>
-               <rs type="person" ref="">Guitry</rs> im nächsten Jahre bei <rs type="person" ref="">Antoine</rs> sein wird,
-      ferner ob sie überzeugt ist, dass <rs type="person" ref="">Antoine</rs> ihr eine<rs type="work" ref="">Uebersetzung</rs> besonders gerne anvertrauen würde. Denn schliesslich Herr<rs type="person" ref="">Remon</rs> hat mir über
-      seine Verbindung mit <rs type="person" ref="">Antoine</rs> ungefähr dasselbe
+      allem um Beantwortung der Frage ersucht, ob <del rend="strikethrough">Ghui</del><space unit="chars" quantity="1"/>
+               <rs type="person" ref="">Guitry</rs> im nächsten Jahre bei <rs type="person" ref="#pmb2211">Antoine</rs> sein wird,
+      ferner ob sie überzeugt ist, dass <rs type="person" ref="#pmb2211">Antoine</rs> ihr eine<rs type="work" ref="">Uebersetzung</rs> besonders gerne anvertrauen würde. Denn schliesslich Herr<rs type="person" ref="#pmb23787">Remon</rs> hat mir über
+      seine Verbindung mit <rs type="person" ref="#pmb2211">Antoine</rs> ungefähr dasselbe
       geschrieben und behauptet noch überdies, dass seine Uebersetzung der »<rs type="work" ref="">Frau mit dem Dolch</rs>« heuer
-      bei <rs type="person" ref="">Antoine</rs> zur Aufführung kommen soll. Nebstbei
-      scheint er doch in dirkter Verbindung mit <rs type="person" ref="">Gui¬</rs>
-               <rs type="person" ref="">try</rs> zu stehen und es kommt in der Angelegenheit
+      bei <rs type="person" ref="#pmb2211">Antoine</rs> zur Aufführung kommen soll. Nebstbei
+      scheint er doch in dirkter Verbindung mit <rs type="person" ref="">Guitry</rs> zu stehen und es kommt in der Angelegenheit
       des »<rs type="work" ref="">Weiten Landes</rs>« doch mehr auf <rs type="person" ref="">Guitry</rs> an als
-      auf <rs type="person" ref="">Antoine</rs>, umso mehr als <rs type="person" ref="">Antoine</rs> es nicht einmal
+      auf <rs type="person" ref="#pmb2211">Antoine</rs>, umso mehr als <rs type="person" ref="#pmb2211">Antoine</rs> es nicht einmal
       der Mühe wert hält mir auf meinen direkten und
       klare Fragen formulierenden Brief zu antworten.
                   <pb facs="HS00050068X_0013"/>
       Wir wollen nun die Antwort der Frau <rs type="person" ref="">Lefèvre</rs> abwarten und dann weiter sehen.</p>
-      <closer>Mit wiederholtem Dank für Ihre Bemühungen und Ihr liebenswürdiges Interesse mit vielen<lb/> Grüssen<lb/> Ihr aufrichtig ergebener</closer>
+            <closer>Mit wiederholtem Dank für Ihre Bemühungen und Ihr liebenswürdiges Interesse mit vielen<lb/> Grüssen<lb/> Ihr aufrichtig ergebener</closer>
             <space dim="vertical" unit="line" quantity="1"/>
-                  <postscript><p>Frau Berta Zuckerkandl, <rs type="place" ref="#pmb50">Wien</rs>.</p></postscript>
-               
+            <postscript>
+               <p>Frau Berta Zuckerkandl, <rs type="place" ref="#pmb50">Wien</rs>.</p>
+            </postscript>
          </div>
       </body>
    </text>

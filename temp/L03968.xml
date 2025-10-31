@@ -1,16 +1,10 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<?xml-model href="../meta/schnitzler-briefe-schematron.sch" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
-<TEI xmlns="http://www.tei-c.org/ns/1.0"
-     xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-     xsi:schemaLocation="http://www.tei-c.org/ns/1.0 ../meta/schnitzler-briefe-schema.xsd"
-     xml:base="https://id.acdh.oeaw.ac.at/schnitzler/schnitzler-briefe/editions"
-     xml:id="L03968">
+<?xml version="1.0" encoding="UTF-8"?><?xml-model href="../meta/schnitzler-briefe-schematron.sch" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI xmlns="http://www.tei-c.org/ns/1.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.tei-c.org/ns/1.0 ../meta/schnitzler-briefe-schema.xsd" xml:base="https://id.acdh.oeaw.ac.at/schnitzler/schnitzler-briefe/editions" xml:id="L03968">
    <teiHeader>
       <fileDesc>
          <titleStmt>
             <title level="s">Arthur Schnitzler: Briefwechsel mit Autorinnen und
                                     Autoren</title>
-            <title level="a">Arthur Schnitzler an Berta Zuckerkandl, XXXX</title>
+            <title level="a">Arthur Schnitzler an Berta Zuckerkandl, 4. 2. 1926</title>
             <author ref="#pmb2121">Schnitzler, Arthur</author>
             <editor>
                <persName>Jahnke, Selma</persName>
@@ -82,20 +76,21 @@
          <sourceDesc>
             <listWit>
                <witness n="1">
-                  <objectType corresp="xbrief"/>
+                  <objectType corresp="brief"/>
                   <msDesc>
                      <msIdentifier>
-                        <country>GB</country>
-                        <settlement>Cambridge</settlement>
-                        <repository>University Library</repository>
-                        <idno>Schnitzler, B 31</idno>
+                        <country>D</country>
+                        <settlement>Marbach am Neckar</settlement>
+                        <repository>Deutsches Literaturarchiv</repository>
+                        <idno>HS.1985.1.2282</idno>
                      </msIdentifier>
                      <physDesc>
-                        <objectDesc>
+                        <objectDesc form="durchschlag">
                            <supportDesc>
                               <extent>
                                  <measure unit="seite" quantity=""/>
                                  <measure unit="blatt" quantity=""/>
+                                 <measure unit="zeichenanzahl" quantity="1070"/>
                               </extent>
                            </supportDesc>
                         </objectDesc>
@@ -115,12 +110,12 @@
          <correspDesc>
             <correspAction type="sent">
                <persName ref="#pmb2121">Schnitzler, Arthur</persName>
-               <date when="" n="01">XXXX</date>
-               <placeName ref="#50" evidence="conjecture">Wien</placeName>
+               <date when="1926-02-04" n="01">4. 2. 1926</date>
+               <placeName ref="#pmb50">Wien</placeName>
             </correspAction>
             <correspAction type="received">
                <persName ref="#pmb2312">Zuckerkandl, Berta</persName>
-               <placeName ref="#50" evidence="conjecture">Wien</placeName>
+               <placeName ref="#pmb50">Wien</placeName>
             </correspAction>
          </correspDesc>
       </profileDesc>
@@ -129,23 +124,28 @@
                                 Transkribus</change>
       </revisionDesc>
    </teiHeader>
+   <facsimile>
+      <graphic url="HS00050068X_0047"/>
+   </facsimile>
    <text>
       <body>
          <div type="writingSession" n="1">
-            
-           <opener> <dateline><pb facs="HS00050068X_0047"/>
-               <date>4.2.1926</date>.</dateline>
-            <salute>Verehrte und liebe Frau Hofrätin.</salute></opener>
+            <opener>
+               <dateline rend="right">
+                  <pb facs="HS00050068X_0047"/>
+                  <date>4. 2. 1926</date>.</dateline>
+               <salute>Verehrte und liebe Frau Hofrätin.</salute>
+            </opener>
             <p>Leider kann ich Ihre Ankunft in
       <rs type="place" ref="#pmb50">Wien</rs> nicht mehr abwarten, so mögen Sie denn
       diesen Gruss und Dank in Ihrer <rs type="place" ref="">Wohnung</rs> vorfinden. Eben habe ich an<rs type="person" ref="">Delamain</rs> geschrieben, dass ich seine Vorschläge annehme und
       habe noch, Ihrem guten Ratschlag folgend,
       einiges »Liebenswürdige« beigefügt. Dass
-      die Uebersetzung von Frau <rs type="person" ref="">Pollaczek</rs> solche
+      die Uebersetzung von Frau <rs type="person" ref="#pmb12435">Pollaczek</rs> solche
       Zustimmung findet ist in jeder Hinsicht erfreulich und lässt weitere Versuche in dieser Richtung in Erwägung ziehen. Es ist die
-      Frage, ob die <rs type="person" ref="">Uebersetzerin</rs> bei Erscheinen
-      des <rs type="work" ref="">Buches</rs> gleich mit ihrem ganzen Namen
-      genannt werden soll oder ob es aus mancherlei Gründen sich empfiehlt nur mit den Initialen oder mit einem Pseudonym hervorzutreten. Ueber diese Fragen und allerlei anderes wird sich Frau <rs type="person" ref="">P.</rs>, wenn Sie erlauben,
+      Frage, ob die <rs type="person" ref="#pmb12435" subtype="implied">Uebersetzerin</rs> bei Erscheinen
+      des <rs type="work" ref="" subtype="implied">Buches</rs> gleich mit ihrem ganzen Namen
+               genannt werden soll oder ob es aus mancherlei Gründen sich empfiehlt nur mit den Initialen oder mit einem Pseudonym hervorzutreten. Ueber diese Fragen und allerlei anderes wird sich Frau <rs type="person" ref="#pmb12435">P.</rs>, wenn Sie erlauben,
       persönlich mit Ihnen in Verbindung setzen.
       </p>
             <p>Meine Adresse in <rs type="place" ref="#pmb168">Berlin</rs> ist <rs type="place" ref="">Hotel</rs>
@@ -154,56 +154,11 @@
       <rs type="event">Vorlesung</rs> im <rs type="place" ref="">Reichstag</rs> statt.
       </p>
             <closer>Auf ein baldiges Wiedersehen und<lb/> herzlichste Grüsse<lb/> Ihres sehr ergebenen</closer>
-            <postscript>Frau Hofrätin Berta Zuckerkandl,</postscript>
+            <space dim="vertical" unit="line" quantity="1"/>
             <postscript>
-               <rs type="place" ref="#pmb50">Wien</rs>.</postscript>
-            
-               <pb facs="HS00050068X_0048"/>
-               <dateline>
-                  <date>27.5.1926</date>.</dateline>
-               <salute>Verehrte liebe Frau Hofrätin.</salute>
-               
-                  
-                  <p>Seit einigen Tagen
-                bin ich von meiner
-      Reise wieder zurück, die sehr schön und interessant war und höre, dass Sie in<rs type="place" ref="#pmb182">Paris</rs> sind
-      und <date>Anfang Juni</date> wieder zurückkommen. So will ich
-      Sie heute nur bitten mir, wenn Sie Zeit haben,
-      ein Wort über den Stand meiner Angelegenheiten
-      in <rs type="place" ref="#pmb166">Frankreich</rs> mitzuteilen, insbesondere möchte ich
-      wissen, ob die »<rs type="work" ref="">Else</rs>« nicht bald erscheinen wird.
-      Das Honorar resp. die Garantie, die Herr <rs type="person" ref="">Delamain</rs>
-      bisher nicht geschickt hat, die 500 Francs, sind
-      ja indess auf etwas ganz Lächerliches zusammengeschrumpft. Man erzahlte mir im übrigen, dass in
-      <rs type="place" ref="#pmb166">Frankreich</rs>
-               <date>jetzt</date> die Verträge auf der Basis von
-      Zahlungen in <rs type="place" ref="">schweizer</rs> Francs durchaus abgeschlossen werden.
-      Haben Sie vielleicht auch etwas von
-      <rs type="person" ref="">Nathan</rs> gehört? Und von »<rs type="work" ref="">Casanovas Heimfahrt</rs>«?
-      Herrn
-               <rs type="person" ref="">Besnard</rs> bitte empfehlen Sie mich
-      bestens; er hat mich sehr dringend zum Besuch
-      des <rs type="event">Kongresses</rs> aufgefordert, ich habe ihm schon
-      von meiner Reise aus geschrieben, dass es mir leider nicht möglich sein wird nach<rs type="place" ref="#pmb182">Paris</rs> zu kommen. Auch über den Aufschub der »<rs type="event" ref=""><rs type="work" ref="">Kassian</rs>«-Aufführung</rs> hat er mir berichtet.
-      Die Uebersetzerin des »<rs type="work" ref="">Einsamen Weg</rs>«,
-      Frau <rs type="person" ref="">Bianquis</rs>, hat mir ein Buch geschickt, »<rs type="work" ref="">La Poésie autrichienne, de Hofmannsthal à Rilke</rs>«,
-      in dem sie (nach oberflächlicher Durchsicht)
-      vielfache, aber etwas fragwürdig geordnete Kenntnisse über die <rs type="place" ref="#pmb41240">österreichische</rs> Literatur verrät; insbesondere die Bibliographie ist überraschend zusammengestell<supplied>t</supplied>.
-            
-               <pb facs="HS00050068X_0049"/>Ich erhielt ferner einen Brief von einer
-                     Frau <rs type="person" ref="#pmb299310">Lahy-Hollebecque</rs>, <rs type="place" ref="#pmb299307">22, Avenue de l’Observatoire</rs>, die sich auf eine ihr im Jahre <date>1905</date> von
-      mir oder einem Vertreter erteilte Autorisation
-      zur Uebersetzung des »<rs type="work" ref="">Einsamen Wegs</rs>« beruft und
-      angibt, sie hätte nun die Möglichkeit das <rs type="work" ref="">Buch</rs>
-      drucken zu lassen. Wenn Sie erlauben, verehrte
-      Frau Hofrätin, schreibe ich der Dame, dass sie sich
-      mit Ihnen in Verbindung setzen möge. Erinnere ich
-      mich recht, so ist ja die <rs type="work" ref="">Uebersetzung</rs> von Frau
-      <rs type="person" ref="">Bianquis</rs> noch keinem Theater vorgelegen.</p>
-      <closer>Herzlichste Grüsse und hoffentlich<lb/> auf ein sehr baldiges Wiedersehen.<lb/> Ihr getreuer</closer>
-               <postscript><p>Frau Hofrätin Bertha Zuckerkandl,<lb/>
-                  <rs type="place" ref="#pmb182">Paris</rs>.</p></postscript>
-            
+               <p>Frau Hofrätin Berta Zuckerkandl,<lb/>
+                  <rs type="place" ref="#pmb50">Wien</rs>.</p>
+            </postscript>
          </div>
       </body>
    </text>

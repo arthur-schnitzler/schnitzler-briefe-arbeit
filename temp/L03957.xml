@@ -1,16 +1,10 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<?xml-model href="../meta/schnitzler-briefe-schematron.sch" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
-<TEI xmlns="http://www.tei-c.org/ns/1.0"
-     xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-     xsi:schemaLocation="http://www.tei-c.org/ns/1.0 ../meta/schnitzler-briefe-schema.xsd"
-     xml:base="https://id.acdh.oeaw.ac.at/schnitzler/schnitzler-briefe/editions"
-     xml:id="L03957">
+<?xml version="1.0" encoding="UTF-8"?><?xml-model href="../meta/schnitzler-briefe-schematron.sch" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI xmlns="http://www.tei-c.org/ns/1.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.tei-c.org/ns/1.0 ../meta/schnitzler-briefe-schema.xsd" xml:base="https://id.acdh.oeaw.ac.at/schnitzler/schnitzler-briefe/editions" xml:id="L03957">
    <teiHeader>
       <fileDesc>
          <titleStmt>
             <title level="s">Arthur Schnitzler: Briefwechsel mit Autorinnen und
                                     Autoren</title>
-            <title level="a">Arthur Schnitzler an Berta Zuckerkandl, XXXX</title>
+            <title level="a">Arthur Schnitzler an Berta Zuckerkandl, 2. 4. 1925</title>
             <author ref="#pmb2121">Schnitzler, Arthur</author>
             <editor>
                <persName>Jahnke, Selma</persName>
@@ -82,20 +76,21 @@
          <sourceDesc>
             <listWit>
                <witness n="1">
-                  <objectType corresp="xbrief"/>
+                  <objectType corresp="brief"/>
                   <msDesc>
                      <msIdentifier>
-                        <country>GB</country>
-                        <settlement>Cambridge</settlement>
-                        <repository>University Library</repository>
-                        <idno>Schnitzler, B 31</idno>
+                        <country>D</country>
+                        <settlement>Marbach am Neckar</settlement>
+                        <repository>Deutsches Literaturarchiv</repository>
+                        <idno>HS.1985.1.2282</idno>
                      </msIdentifier>
                      <physDesc>
-                        <objectDesc>
+                        <objectDesc form="durchschlag">
                            <supportDesc>
                               <extent>
                                  <measure unit="seite" quantity=""/>
                                  <measure unit="blatt" quantity=""/>
+                                 <measure unit="zeichenanzahl" quantity="3320"/>
                               </extent>
                            </supportDesc>
                         </objectDesc>
@@ -115,12 +110,12 @@
          <correspDesc>
             <correspAction type="sent">
                <persName ref="#pmb2121">Schnitzler, Arthur</persName>
-               <date when="" n="01">XXXX</date>
-               <placeName ref="#50" evidence="conjecture">Wien</placeName>
+               <date when="1925-04-02" n="01">2. 4. 1925</date>
+               <placeName ref="#pmb50">Wien</placeName>
             </correspAction>
             <correspAction type="received">
                <persName ref="#pmb2312">Zuckerkandl, Berta</persName>
-               <placeName ref="#50" evidence="conjecture">Wien</placeName>
+               <placeName ref="#pmb182" evidence="conjecture">Paris</placeName>
             </correspAction>
          </correspDesc>
       </profileDesc>
@@ -129,18 +124,24 @@
                                 Transkribus</change>
       </revisionDesc>
    </teiHeader>
+   <facsimile>
+      <graphic url="HS00050068X_0021"/>
+      <graphic url="HS00050068X_0022"/>
+      <graphic url="HS00050068X_0023"/>
+   </facsimile>
    <text>
       <body>
          <div type="writingSession" n="1">
-            
-            <opener><dateline><pb facs="HS00050068X_0021"/>
-               <date>2.4.1925</date>.</dateline>
-            <salute>Liebe und verehrte Fraü Hofrätin.</salute></opener>
+            <opener>
+               <dateline rend="right">
+                  <pb facs="HS00050068X_0021"/>
+                  <date>2. 4. 1925</date>.</dateline>
+               <salute>Liebe und verehrte Frau Hofrätin.</salute>
+            </opener>
             <p>Meine Karte haben Sie wohl erhalten und sind wohl mit mir einverstanden, dass
       wir vorläufig einmal die Abschrift von ein
-      oder zwei Akten der <rs type="person" ref="">Bianquis'schen</rs>
-               <rs type="work" ref="">Ueber¬</rs>
-               <rs type="work" ref="">setzung</rs> abschreiben lassen. Sollten sie es
+      oder zwei Akten der <rs type="person" ref="#pmb14187">Bianquis’schen</rs>
+               <rs type="work" ref="">Uebersetzung</rs> abschreiben lassen. Sollten sie es
       aber für richtig oder auch nur im geringsten
       aussichtsvoll halten gleich die Abschrift
       des <rs type="work" ref="">Ganzen</rs> anfertigen zu lassen, so gebe ich
@@ -148,7 +149,7 @@
       die Kosten auf.
       </p>
             <p>»<rs type="work" ref="">Das</rs>
-               <rs type="work" ref=""> weite Land</rs>« dürfte ja an
+               <rs type="work" ref="">weite Land</rs>« dürfte ja an
       sich mehr Chancen haben, wenigstens auf der
       <rs type="place" ref="#pmb166">französischen</rs> Bühne und es ist geradezu rührend, dass<rs type="person" ref="">Lenormand</rs> sich die Mühe nimmt die
       Uebersetzung in Stand zu bringen. Bitte danken Sie ihm vielmals in meinem Namen; eben
@@ -168,35 +169,32 @@
       dass eine Aufführung der »<rs type="work" ref="">Liebelei</rs>« an ei-
       nem guten <rs type="place" ref="#pmb182">Pariser</rs> Theater das Wünschenswerteste wäre. Dazu müsste man die »<rs type="work" ref="">Literatur</rs>«
                   <pb facs="HS00050068X_0022"/>geben. (Wie es übrigens <date>vor dem Krieg</date>
-                  <rs type="person" ref="">Lugné Poes</rs> Absicht war).
+               <rs type="person" ref="">Lugné Poes</rs> Absicht war).
       Zur Einakterfrage kann ich begreiflicherweise nichts Neues bemerken. Nach wie
       vor halte ich trotz Géraldy »Die grosse Szene<supplied>«</supplied> für den wirkamsten, vorausgesetzt, dass
       sich der grosse Schauspieler für die Hauptrolle findet. Der »Kak<supplied>a</supplied>du« kommt gleichfalls
-      in Betracht, obwohl er schon bei <rs type="person" ref="">Antoine</rs> gespielt wurde. Immerhin könnte man auch an die
+      in Betracht, obwohl er schon bei <rs type="person" ref="#pmb2211">Antoine</rs> gespielt wurde. Immerhin könnte man auch an die
       »<rs type="work" ref="">Frau mit dem Dolche</rs>« denken; – die Schwierigkeit wird eben immer bleiben den guten
       Uebersetzer zu entdecken. Wie schade, dass
       die meisten <rs type="place" ref="#pmb166">französischen</rs> Poeten nicht
       deutsch können. Ich erinnere übrigens daran,
       dass auch »<rs type="work" ref="">Die Stunde der Erkenntnis</rs>« von
-      Mad. <rs type="person" ref="">Bianquis</rs> übersetzt (?) ist und dass
+               Mad. <rs type="person" ref="#pmb14187">Bianquis</rs> übersetzt (?) ist und dass
       <rs type="person" ref="">Lugné <del rend="strikethrough">Poeé</del> Poé</rs> eine Aufführung in Betracht
       zog.
       Im Ganzen halte ich die Aufführung eines abendfüllenden Stückes oder eines Einakterzyklus an irgend einem andern
       guten Theater für erstrebenswerter als die
-      Aufführung eines Einakter an der <rs type="org" ref="">Comédie</rs>
-                  <rs type="org" ref="">française</rs>.
+      Aufführung eines Einakter an der <rs type="org" ref="">Comédie française</rs>.
       Von
                <rs type="person" ref="">Balzagette</rs> habe ich einen Brief:
-      Er liest eben die Korrekturbogen von »<rs type="work" ref="">Ster-</rs>
-                  <rs type="work" ref="">ben</rs>«. Von <rs type="person" ref="">Grasset</rs> keinerlei Nachricht; auch
+      Er liest eben die Korrekturbogen von »<rs type="work" ref="">Sterben</rs>«. Von <rs type="person" ref="">Grasset</rs> keinerlei Nachricht; auch
       von <rs type="person" ref="">Nathan</rs> habe ich nichts weiter gehört<del rend="strikethrough">.</del>
       seit »<rs type="work" ref="">Casanovas Heimfahrt</rs>«.</p>
-      <closer>Wann kommen Sie zurück, verehrte<lb/> Freundin? Seien Sie sehr herzlich gegrüsst<lb/> und immer wieder vielmals für Ihre Bemühungen bedankt.<lb/> Wie immer<lb/> der Ihrige</closer>
-               
-               
-                  
-                  <postscript>
-                     <p><pb facs="HS00050068X_0023"/>Eben
+            <closer>Wann kommen Sie zurück, verehrte<lb/> Freundin? Seien Sie sehr herzlich gegrüsst<lb/> und immer wieder vielmals für Ihre Bemühungen bedankt.<lb/> Wie immer<lb/> der Ihrige</closer>
+            <space dim="vertical" unit="line" quantity="1"/>
+            <postscript>
+               <p>
+                  <pb facs="HS00050068X_0023"/>Eben
                          kommt der beigeschlossene Brief aus
                      <rs type="place" ref="#pmb182">Paris</rs>. Ich muss bemerken, dass ich Mme <rs type="person" ref="">Maury</rs>
                   keinerlei keine bestimmte Autorisation erteilt
@@ -207,13 +205,13 @@
                   es für richtig halten, verehrte Freundin, so
                   setzen sie sich vielleicht mit Mme <rs type="person" ref="">Maury</rs> schon
                      <supplied>in</supplied> Rücksicht auf die in ihrem Brief erwähnte
-                  Mademoiselle <rs type="person" ref="">Bianquis</rs> in Verbindung. Andernfalls senden sie mir gütigst den Brief zu¬
+                  Mademoiselle <rs type="person" ref="#pmb14187">Bianquis</rs> in Verbindung. Andernfalls senden sie mir gütigst den Brief zu¬
                   rück und ich antworte ihr persönlich, glaube
                   aber den Honorarvorschlag nicht annehmen zu
                   sollen.</p>
-                     <p>Ihr</p>
-                     <p>1 Beilage.</p></postscript>
-               
+               <p>Ihr</p>
+               <p>1 Beilage.</p>
+            </postscript>
          </div>
       </body>
    </text>
