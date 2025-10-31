@@ -1,6 +1,10 @@
-<?xml version='1.0' encoding='UTF-8'?>
+<?xml version="1.0" encoding="UTF-8"?>
 <?xml-model href="../meta/schnitzler-briefe-schematron.sch" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
-<TEI xmlns="http://www.tei-c.org/ns/1.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.tei-c.org/ns/1.0 ../meta/schnitzler-briefe-schema.xsd" xml:id="L03746" xml:base="https://id.acdh.oeaw.ac.at/schnitzler/schnitzler-briefe/editions">
+<TEI xmlns="http://www.tei-c.org/ns/1.0"
+     xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+     xsi:schemaLocation="http://www.tei-c.org/ns/1.0 ../meta/schnitzler-briefe-schema.xsd"
+     xml:id="L03746"
+     xml:base="https://id.acdh.oeaw.ac.at/schnitzler/schnitzler-briefe/editions">
    <teiHeader>
       <fileDesc>
          <titleStmt>
@@ -82,7 +86,7 @@
                            <supportDesc>
                               <extent>
                                  <measure unit="karte" quantity="1"/>
-                                 <measure unit="zeichenanzahl" quantity="282"/>
+                                 <measure unit="zeichenanzahl" quantity="280"/>
                               </extent>
                            </supportDesc>
                         </objectDesc>
@@ -125,12 +129,20 @@
                <date evidence="conjecture" notBefore="1925-05-05" notAfter="1925-05-09">[5. 5. 1925 – 9. 5. 1925?]</date>
                <placeName ref="#pmb30">Salzburg</placeName>
             </correspAction>
-            <correspContext><ref type="belongsToCorrespondence" target="correspondence_13212">Zweig, Stefan</ref>
+            <correspContext>
+               <ref type="belongsToCorrespondence" target="correspondence_13212">Zweig, Stefan</ref>
                <ref subtype="previous_letter" type="withinCollection" target="L03045">Salten an Schnitzler, 30. 4. 1925</ref>
                <ref subtype="next_letter" type="withinCollection" target="L03021">Schnitzler an Salten, 6. 5. 1925</ref>
-               <ref subtype="previous_letter" type="withinCorrespondence" source="correspondence_13212" target="L03670">Zweig an Schnitzler, 2. 1. 1925</ref>
-               <ref subtype="next_letter" type="withinCorrespondence" source="correspondence_13212" target="L03671">Zweig an Schnitzler, 21. 8. 1926</ref>
-            </correspContext></correspDesc>
+               <ref subtype="previous_letter"
+                    type="withinCorrespondence"
+                    source="correspondence_13212"
+                    target="L03670">Zweig an Schnitzler, 2. 1. 1925</ref>
+               <ref subtype="next_letter"
+                    type="withinCorrespondence"
+                    source="correspondence_13212"
+                    target="L03671">Zweig an Schnitzler, 21. 8. 1926</ref>
+            </correspContext>
+         </correspDesc>
       </profileDesc>
       <revisionDesc status="proposed">
          <change who="MAM" when="2025-07-17">Export aus Transkribus</change>
@@ -633,16 +645,7 @@
             </person>
          </listPerson>
          <listBibl>
-            <bibl xml:id="pmb293671">
-               <title>Der Kampf mit dem Dämon. Hölderlin – Kleist – Nietzsche</title>
-               <title type="werk_link">https://www.projekt-gutenberg.org/zweig/kampfdae</title>
-               <author ref="pmb13212" role="hat-geschaffen">Zweig, Stefan</author>
-               <date notBefore="1925-01-01" when="1925-01-01">1925</date>
-               <idno type="URL" subtype="pmb">https://pmb.acdh.oeaw.ac.at/entity/293671/</idno>
-               <idno type="URL" subtype="schnitzler-briefe">https://schnitzler-briefe.acdh.oeaw.ac.at/pmb293671.html</idno>
-               <note type="work_kind">Essaysammlung</note>
-            </bibl>
-            <bibl xml:id="pmb36374">
+            <bibl xml:id="pmb36374" ana="implied">
                <title>Neue Freie Presse</title>
                <title type="werk_link">http://anno.onb.ac.at/cgi-content/anno?aid=nfp</title>
                <title type="legacy-name-merge">Neue freie Presse (Zeitung, Wien)</title>
@@ -678,6 +681,15 @@
                <idno type="URL" subtype="pmb">https://pmb.acdh.oeaw.ac.at/entity/296331/</idno>
                <idno type="URL" subtype="schnitzler-briefe">https://schnitzler-briefe.acdh.oeaw.ac.at/pmb296331.html</idno>
                <note type="work_kind">Essay</note>
+            </bibl>
+            <bibl xml:id="pmb293671" ana="implied">
+               <title>Der Kampf mit dem Dämon. Hölderlin – Kleist – Nietzsche</title>
+               <title type="werk_link">https://www.projekt-gutenberg.org/zweig/kampfdae</title>
+               <author ref="pmb13212" role="hat-geschaffen">Zweig, Stefan</author>
+               <date notBefore="1925-01-01" when="1925-01-01">1925</date>
+               <idno type="URL" subtype="pmb">https://pmb.acdh.oeaw.ac.at/entity/293671/</idno>
+               <idno type="URL" subtype="schnitzler-briefe">https://schnitzler-briefe.acdh.oeaw.ac.at/pmb293671.html</idno>
+               <note type="work_kind">Essaysammlung</note>
             </bibl>
          </listBibl>
          <listPlace>
