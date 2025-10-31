@@ -1,6 +1,10 @@
-<?xml version='1.0' encoding='UTF-8'?>
+<?xml version="1.0" encoding="UTF-8"?>
 <?xml-model href="../meta/schnitzler-briefe-schematron.sch" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
-<TEI xmlns="http://www.tei-c.org/ns/1.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.tei-c.org/ns/1.0 ../meta/schnitzler-briefe-schema.xsd" xml:id="L03671" xml:base="https://id.acdh.oeaw.ac.at/schnitzler/schnitzler-briefe/editions">
+<TEI xmlns="http://www.tei-c.org/ns/1.0"
+     xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+     xsi:schemaLocation="http://www.tei-c.org/ns/1.0 ../meta/schnitzler-briefe-schema.xsd"
+     xml:id="L03671"
+     xml:base="https://id.acdh.oeaw.ac.at/schnitzler/schnitzler-briefe/editions">
    <teiHeader>
       <fileDesc>
          <titleStmt>
@@ -93,11 +97,14 @@
                            <incident type="postal">
                               <desc>
                                  <stamp n="1">
-                                    <placeName ref="#pmb40482">Montreux – Bon Port</placeName>
+                                    <placeName ref="#pmb299347">Montreux – Bon Port</placeName>
                                     <date when="1926-08-21">21. VIII. 26</date>
                                     <time>17</time>
                                  </stamp>
                               </desc>
+                           </incident>
+                           <incident type="receiver" rend="roter-buntstift">
+                              <desc>eine Unterstreichung</desc>
                            </incident>
                         </additions>
                      </physDesc>
@@ -132,22 +139,33 @@
             <correspAction type="sent">
                <persName ref="#pmb13212">Zweig, Stefan</persName>
                <date when="1926-08-21" n="01">21. 8. 1926</date>
+               <placeName ref="#pmb40482">Montreux</placeName>
             </correspAction>
             <correspAction type="received">
                <persName ref="#pmb2121">Schnitzler, Arthur</persName>
                <date evidence="conjecture" notBefore="1926-08-22" notAfter="1926-08-26">[22. 8. 1926 – 26. 8. 1926?]</date>
                <placeName ref="#pmb34005">Zermatt</placeName>
             </correspAction>
-            <correspContext><ref type="belongsToCorrespondence" target="correspondence_13212">Zweig, Stefan</ref>
+            <correspContext>
+               <ref type="belongsToCorrespondence" target="correspondence_13212">Zweig, Stefan</ref>
                <ref subtype="previous_letter" type="withinCollection" target="L02477">Großmann an Schnitzler, 2. 6. 1926</ref>
                <ref subtype="next_letter" type="withinCollection" target="L02478">Brandes an Schnitzler, 28. 8. 1926</ref>
-               <ref subtype="previous_letter" type="withinCorrespondence" source="correspondence_13212" target="L03746">Schnitzler an Zweig, 4. 5. 1925</ref>
-               <ref subtype="next_letter" type="withinCorrespondence" source="correspondence_13212" target="L03747">Schnitzler an Zweig, 2. 10. 1926</ref>
-            </correspContext></correspDesc>
+               <ref subtype="previous_letter"
+                    type="withinCorrespondence"
+                    source="correspondence_13212"
+                    target="L03746">Schnitzler an Zweig, 4. 5. 1925</ref>
+               <ref subtype="next_letter"
+                    type="withinCorrespondence"
+                    source="correspondence_13212"
+                    target="L03747">Schnitzler an Zweig, 2. 10. 1926</ref>
+            </correspContext>
+         </correspDesc>
       </profileDesc>
-      <revisionDesc status="proposed">
+      <revisionDesc status="candidate">
          <change who="MAM" when="2025-05-21">Export aus Transkribus</change>
          <change who="MAM" when="2025-05-27">Durchsicht</change>
+         <change who="MAM" when="2025-10-31">Durchsicht</change>
+         <change who="MAM" when="2025-10-31">Index check</change>
       </revisionDesc>
    </teiHeader>
    <facsimile>
@@ -186,8 +204,8 @@
                   Doktor,</salute> ich habe nachgefragt: in <rs type="place" ref="#pmb40482">Montreux</rs> kann man nicht Seebaden, nur in <rs type="place" ref="#pmb293684">Clarens</rs> und <rs type="place" ref="#pmb36464">Ouchy</rs>. Ich denke hier,
                herrlich still in glühendster Sonne im <rs type="place" ref="#pmb293686">Hotel
                   Byron</rs> in <rs type="place" ref="#pmb92015">Villeneuve</rs> rastend, mit viel
-               Dankbarkeit unserer <anchor type="commentary" xml:id="K_L03671-1"/>Begegnung<note type="commentary" corresp="K_L03671-1">
-                  <ref type="schnitzler-tagebuch" subtype="see" target="1926-08-20"/>.</note> im Bergland!</p>
+               Dankbarkeit unserer <anchor type="commentary" xml:id="K_L03671-1"/>Begegnung im Bergland<note type="commentary" corresp="K_L03671-1">
+                  <ref type="schnitzler-tagebuch" subtype="See" target="1926-08-20"/>.</note>!</p>
             <closer>Grüssen Sie, bitte, Frau <rs type="person" ref="#pmb12435">Pollaczek</rs>
                ergebenst von mir und denken Sie freundlichst Ihres immer getreuen<lb/>
                <signed>Stefan Zweig</signed>

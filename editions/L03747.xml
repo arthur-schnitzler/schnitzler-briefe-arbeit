@@ -1,6 +1,10 @@
-<?xml version='1.0' encoding='UTF-8'?>
+<?xml version="1.0" encoding="UTF-8"?>
 <?xml-model href="../meta/schnitzler-briefe-schematron.sch" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
-<TEI xmlns="http://www.tei-c.org/ns/1.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.tei-c.org/ns/1.0 ../meta/schnitzler-briefe-schema.xsd" xml:id="L03747" xml:base="https://id.acdh.oeaw.ac.at/schnitzler/schnitzler-briefe/editions">
+<TEI xmlns="http://www.tei-c.org/ns/1.0"
+     xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+     xsi:schemaLocation="http://www.tei-c.org/ns/1.0 ../meta/schnitzler-briefe-schema.xsd"
+     xml:id="L03747"
+     xml:base="https://id.acdh.oeaw.ac.at/schnitzler/schnitzler-briefe/editions">
    <teiHeader>
       <fileDesc>
          <titleStmt>
@@ -83,7 +87,7 @@
                               <extent>
                                  <measure unit="seite" quantity="2"/>
                                  <measure unit="blatt" quantity="1"/>
-                                 <measure unit="zeichenanzahl" quantity="2520"/>
+                                 <measure unit="zeichenanzahl" quantity="2522"/>
                               </extent>
                            </supportDesc>
                         </objectDesc>
@@ -113,18 +117,28 @@
             </correspAction>
             <correspAction type="received">
                <persName ref="#pmb13212">Zweig, Stefan</persName>
-               <date evidence="conjecture" notBefore="1926-10-03" notAfter="1926-10-07">[3. 10. 1926 – 7. 10. 1926?]</date>
+               <date evidence="conjecture" notBefore="1926-10-03" notAfter="1926-10-04">[3. 10. 1926 – 4. 10. 1926?]</date>
                <placeName ref="#pmb30">Salzburg</placeName>
             </correspAction>
-            <correspContext><ref type="belongsToCorrespondence" target="correspondence_13212">Zweig, Stefan</ref>
+            <correspContext>
+               <ref type="belongsToCorrespondence" target="correspondence_13212">Zweig, Stefan</ref>
                <ref subtype="previous_letter" type="withinCollection" target="L02478">Brandes an Schnitzler, 28. 8. 1926</ref>
                <ref subtype="next_letter" type="withinCollection" target="L03663">Zweig an Schnitzler, [4.] 10. [1926?]</ref>
-               <ref subtype="previous_letter" type="withinCorrespondence" source="correspondence_13212" target="L03671">Zweig an Schnitzler, 21. 8. 1926</ref>
-               <ref subtype="next_letter" type="withinCorrespondence" source="correspondence_13212" target="L03663">Zweig an Schnitzler, [4.] 10. [1926?]</ref>
-            </correspContext></correspDesc>
+               <ref subtype="previous_letter"
+                    type="withinCorrespondence"
+                    source="correspondence_13212"
+                    target="L03671">Zweig an Schnitzler, 21. 8. 1926</ref>
+               <ref subtype="next_letter"
+                    type="withinCorrespondence"
+                    source="correspondence_13212"
+                    target="L03663">Zweig an Schnitzler, [4.] 10. [1926?]</ref>
+            </correspContext>
+         </correspDesc>
       </profileDesc>
-      <revisionDesc status="proposed">
+      <revisionDesc status="candidate">
          <change who="MAM" when="2025-07-17">Export aus Transkribus</change>
+         <change who="MAM" when="2025-10-31">Durchsicht</change>
+         <change who="MAM" when="2025-10-31">Index check</change>
       </revisionDesc>
    </teiHeader>
    <facsimile>
@@ -168,7 +182,8 @@
                wahrscheinlich einzige künstlerische Möglichkeit das kühne Problem zu meistern.
                Beinahe noch fesselnder, unmittelbarer ans Herz greifend hebt die zweite <rs type="work" ref="#pmb296169" subtype="implied">Novelle</rs> an, aber mir ist, so
                glänzend auch diese Erzählung geführt ist, als hätte der Stoff – von einem gewissen
-               Moment an, vielleicht schon von der Stelle, wo der Vater seine Tochter in dem fremden
+               Moment an<add place="inline">,</add> vielleicht schon von der Stelle<del rend="strikethrough">
+                  <space unit="chars" quantity="1"/>an</del>, wo der Vater seine Tochter in dem fremden
                Hotelzimmer verschwinden sieht, noch ergiebigere Entwicklungsmöglichkeiten geboten
                als Sie ihm abgewonnen oder als Sie mit Absicht gewählt haben. Für mein Gefühl
                erklingt der Abgesang dieses väterlichen Schicksals zu früh. Aber das kommt
@@ -192,7 +207,7 @@
                   Sterne</rs>
                <note type="commentary" corresp="K_L03747-2">In <rs type="work" ref="#pmb195350">Wallensteins Tod</rs> von <rs type="person" ref="#pmb12654">Friedrich Schiller</rs>
                      heißt es: »<quote>In deiner Brust sind deines Schicksals Sterne.</quote>«</note>«. Zweifellos. Aber es sind nicht diese Sterne allein, die unser Schicksal
-               regieren. <del rend="strikethrough">(</del>Das hat, wie Sie hoffentlich merken,nur eine Spitze gegen den lieben Gott
+               regieren. <del rend="strikethrough">(</del>Das hat, wie Sie hoffentlich merken, nur eine Spitze gegen den lieben Gott
                und nicht gegen den ausgezeichneten Dichter der »<rs type="work" ref="#pmb76772">Verwirrung der Gefühle</rs>«, den ich herzlich grüsse als sein aufrichtig
                ergebener</p>
             <closer>
@@ -485,7 +500,7 @@
                   <graphic url="https://upload.wikimedia.org/wikipedia/commons/thumb/7/74/Friedrich_Schiller_by_Ludovike_Simanowiz.jpg/250px-Friedrich_Schiller_by_Ludovike_Simanowiz.jpg"/>
                </figure>
             </person>
-            <person xml:id="pmb10809">
+            <person xml:id="pmb10809" ana="comment">
                <persName>
                   <forename>Eduard</forename>
                   <surname>Bacher</surname>
@@ -551,7 +566,7 @@
                   <graphic url="https://upload.wikimedia.org/wikipedia/commons/thumb/8/8c/Dr._Eduard_Bacher_1904_%C3%96IZ.png/250px-Dr._Eduard_Bacher_1904_%C3%96IZ.png"/>
                </figure>
             </person>
-            <person xml:id="pmb10875">
+            <person xml:id="pmb10875" ana="comment">
                <persName>
                   <forename>Moriz</forename>
                   <surname>Benedikt</surname>
@@ -619,7 +634,7 @@
                   <graphic url="https://upload.wikimedia.org/wikipedia/commons/thumb/b/b7/Moriz_Benedikt_1904_%C3%96IZ.png/250px-Moriz_Benedikt_1904_%C3%96IZ.png"/>
                </figure>
             </person>
-            <person xml:id="pmb10872">
+            <person xml:id="pmb10872" ana="comment">
                <persName>
                   <forename>Ernst</forename>
                   <surname>Benedikt</surname>
@@ -704,7 +719,7 @@
                <idno type="URL" subtype="schnitzler-briefe">https://schnitzler-briefe.acdh.oeaw.ac.at/pmb76772.html</idno>
                <note type="work_kind">Novellensammlung</note>
             </bibl>
-            <bibl xml:id="pmb296166">
+            <bibl xml:id="pmb296166" ana="implied">
                <title>Vierundzwanzig Stunden aus dem Leben einer Frau. Novelle</title>
                <title type="werk_link">https://anno.onb.ac.at/cgi-content/anno?aid=nfp&amp;datum=19251225&amp;seite=31&amp;zoom=33</title>
                <title type="werk_bibliografische-angabe">Stefan Zweig: Vierundzwanzig Stunden aus dem Leben einer Frau. Novelle. In: Neue Freie Presse, Nr. 22.013, 25. 12. 1925, Morgenblatt, Weihnachtsbeilage, S. 31–44</title>
@@ -716,39 +731,6 @@
                <idno type="URL" subtype="wikipedia">https://de.wikipedia.org/wiki/Vierundzwanzig_Stunden_aus_dem_Leben_einer_Frau</idno>
                <idno type="URL" subtype="schnitzler-briefe">https://schnitzler-briefe.acdh.oeaw.ac.at/pmb296166.html</idno>
                <note type="work_kind">Novelle</note>
-            </bibl>
-            <bibl xml:id="pmb296173">
-               <title>Verwirrung der Gefühle</title>
-               <author ref="pmb13212" role="hat-geschaffen">Zweig, Stefan</author>
-               <date notBefore="1926-01-01" when="1926-01-01">1926</date>
-               <idno type="URL" subtype="pmb">https://pmb.acdh.oeaw.ac.at/entity/296173/</idno>
-               <idno type="URL" subtype="d-nb">https://d-nb.info/gnd/109816556X</idno>
-               <idno type="URL" subtype="wikidata">http://www.wikidata.org/entity/Q2550138</idno>
-               <idno type="URL" subtype="wikipedia">https://de.wikipedia.org/wiki/Verwirrung_der_Gef%C3%BChle</idno>
-               <idno type="URL" subtype="schnitzler-briefe">https://schnitzler-briefe.acdh.oeaw.ac.at/pmb296173.html</idno>
-               <note type="work_kind">Novelle</note>
-            </bibl>
-            <bibl xml:id="pmb296169">
-               <title>Untergang eines Herzens</title>
-               <author ref="pmb13212" role="hat-geschaffen">Zweig, Stefan</author>
-               <date notBefore="1927-01-01" when="1927-01-01">1927</date>
-               <idno type="URL" subtype="pmb">https://pmb.acdh.oeaw.ac.at/entity/296169/</idno>
-               <idno type="URL" subtype="wikidata">http://www.wikidata.org/entity/Q2497577</idno>
-               <idno type="URL" subtype="wikipedia">https://de.wikipedia.org/wiki/Untergang_eines_Herzens</idno>
-               <idno type="URL" subtype="schnitzler-briefe">https://schnitzler-briefe.acdh.oeaw.ac.at/pmb296169.html</idno>
-               <note type="work_kind">Novelle</note>
-            </bibl>
-            <bibl xml:id="pmb195350">
-               <title>Wallensteins Tod</title>
-               <author ref="pmb12654" role="hat-geschaffen">Schiller, Friedrich von</author>
-               <date notBefore="1799-01-01" when="1799-01-01">1799</date>
-               <idno type="URL" subtype="pmb">https://pmb.acdh.oeaw.ac.at/entity/195350/</idno>
-               <idno type="URL" subtype="wikidata">http://www.wikidata.org/entity/Q1742540</idno>
-               <idno type="URL" subtype="wikipedia">https://de.wikipedia.org/wiki/Wallensteins_Tod</idno>
-               <idno type="URL" subtype="hanslick">https://hanslick.acdh.oeaw.ac.at/hsl_work_id_2573.html</idno>
-               <idno type="URL" subtype="schnitzler-briefe">https://schnitzler-briefe.acdh.oeaw.ac.at/pmb195350.html</idno>
-               <idno type="URL" subtype="schnitzler-kultur">https://schnitzler-kultur.acdh.oeaw.ac.at/pmb195350.html</idno>
-               <note type="work_kind">Mehraktiges Drama</note>
             </bibl>
             <bibl xml:id="pmb36374" ana="comment">
                <title>Neue Freie Presse</title>
@@ -767,6 +749,39 @@
                <idno type="URL" subtype="pmb">https://pmb.acdh.oeaw.ac.at/entity/201326/</idno>
                <idno type="URL" subtype="schnitzler-briefe">https://schnitzler-briefe.acdh.oeaw.ac.at/pmb36374.html</idno>
                <note type="work_kind">Tageszeitung</note>
+            </bibl>
+            <bibl xml:id="pmb195350" ana="implied">
+               <title>Wallensteins Tod</title>
+               <author ref="pmb12654" role="hat-geschaffen">Schiller, Friedrich von</author>
+               <date notBefore="1799-01-01" when="1799-01-01">1799</date>
+               <idno type="URL" subtype="pmb">https://pmb.acdh.oeaw.ac.at/entity/195350/</idno>
+               <idno type="URL" subtype="wikidata">http://www.wikidata.org/entity/Q1742540</idno>
+               <idno type="URL" subtype="wikipedia">https://de.wikipedia.org/wiki/Wallensteins_Tod</idno>
+               <idno type="URL" subtype="hanslick">https://hanslick.acdh.oeaw.ac.at/hsl_work_id_2573.html</idno>
+               <idno type="URL" subtype="schnitzler-briefe">https://schnitzler-briefe.acdh.oeaw.ac.at/pmb195350.html</idno>
+               <idno type="URL" subtype="schnitzler-kultur">https://schnitzler-kultur.acdh.oeaw.ac.at/pmb195350.html</idno>
+               <note type="work_kind">Mehraktiges Drama</note>
+            </bibl>
+            <bibl xml:id="pmb296173" ana="implied">
+               <title>Verwirrung der Gefühle</title>
+               <author ref="pmb13212" role="hat-geschaffen">Zweig, Stefan</author>
+               <date notBefore="1926-01-01" when="1926-01-01">1926</date>
+               <idno type="URL" subtype="pmb">https://pmb.acdh.oeaw.ac.at/entity/296173/</idno>
+               <idno type="URL" subtype="d-nb">https://d-nb.info/gnd/109816556X</idno>
+               <idno type="URL" subtype="wikidata">http://www.wikidata.org/entity/Q2550138</idno>
+               <idno type="URL" subtype="wikipedia">https://de.wikipedia.org/wiki/Verwirrung_der_Gef%C3%BChle</idno>
+               <idno type="URL" subtype="schnitzler-briefe">https://schnitzler-briefe.acdh.oeaw.ac.at/pmb296173.html</idno>
+               <note type="work_kind">Novelle</note>
+            </bibl>
+            <bibl xml:id="pmb296169" ana="implied">
+               <title>Untergang eines Herzens</title>
+               <author ref="pmb13212" role="hat-geschaffen">Zweig, Stefan</author>
+               <date notBefore="1927-01-01" when="1927-01-01">1927</date>
+               <idno type="URL" subtype="pmb">https://pmb.acdh.oeaw.ac.at/entity/296169/</idno>
+               <idno type="URL" subtype="wikidata">http://www.wikidata.org/entity/Q2497577</idno>
+               <idno type="URL" subtype="wikipedia">https://de.wikipedia.org/wiki/Untergang_eines_Herzens</idno>
+               <idno type="URL" subtype="schnitzler-briefe">https://schnitzler-briefe.acdh.oeaw.ac.at/pmb296169.html</idno>
+               <note type="work_kind">Novelle</note>
             </bibl>
          </listBibl>
          <listPlace>
