@@ -142,6 +142,20 @@
                 > Wenn placeName vorhanden ist, muss @ref ein gültiger #pmb-Wert sein </sch:assert>
         </sch:rule>
     </sch:pattern>
+    <!-- stamp @n must be unique and ascending -->
+    <sch:pattern id="stamp-n-unique-ascending">
+        <sch:rule context="tei:additions">
+            <sch:let name="stamp-ns" value="descendant::tei:stamp/@n"/>
+            <sch:assert test="count($stamp-ns) = count(distinct-values($stamp-ns))">
+                Die @n-Werte von tei:stamp müssen eindeutig sein.
+            </sch:assert>
+            <sch:assert test="
+                every $i in (1 to count(descendant::tei:stamp) - 1)
+                satisfies xs:integer(descendant::tei:stamp[$i]/@n) lt xs:integer(descendant::tei:stamp[$i + 1]/@n)">
+                Die @n-Werte von tei:stamp müssen aufsteigend sein.
+            </sch:assert>
+        </sch:rule>
+    </sch:pattern>
     <!-- addSpan -->
     <sch:pattern id="addSpan-content">
         <sch:rule context="tei:addSpan">
