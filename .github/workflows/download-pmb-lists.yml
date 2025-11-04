@@ -1,0 +1,59 @@
+name: Download PMB Listen
+
+on:
+  schedule:
+    # Läuft jeden zweiten Mittwoch um 3 Uhr morgens UTC
+    - cron: '0 3 */14 * 3'
+  workflow_dispatch: # Ermöglicht manuelles Auslösen
+
+jobs:
+  download-lists:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v4
+
+      - name: Erstelle python-temp Verzeichnis
+        run: mkdir -p python-temp
+
+      - name: Download PMB Listen
+        run: |
+          echo "Lade listbibl.xml herunter..."
+          curl -f -o python-temp/listbibl.xml https://pmb.acdh.oeaw.ac.at/media/listbibl.xml
+
+          echo "Lade listperson.xml herunter..."
+          curl -f -o python-temp/listperson.xml https://pmb.acdh.oeaw.ac.at/media/listperson.xml
+
+          echo "Lade listplace.xml herunter..."
+          curl -f -o python-temp/listplace.xml https://pmb.acdh.oeaw.ac.at/media/listplace.xml
+
+          echo "Lade listorg.xml herunter..."
+          curl -f -o python-temp/listorg.xml https://pmb.acdh.oeaw.ac.at/media/listorg.xml
+
+          echo "Lade listevent.xml herunter..."
+          curl -f -o python-temp/listevent.xml https://pmb.acdh.oeaw.ac.at/media/listevent.xml
+
+          echo "Alle Listen erfolgreich heruntergeladen."
+
+      - name: Prüfe auf Änderungen
+        id: check_changes
+        run: |
+          git_status=$(git status --porcelain python-temp/)
+
+          if [ -n "$git_status" ]; then
+            echo "Änderungen in PMB-Listen gefunden."
+            echo "changes_found=true" >> $GITHUB_OUTPUT
+          else
+            echo "Keine Änderungen in den PMB-Listen."
+            echo "changes_found=false" >> $GITHUB_OUTPUT
+          fi
+
+      - name: Commit und Push
+        if: steps.check_changes.outputs.changes_found == 'true'
+        run: |
+          git config --global user.name 'github-actions[bot]'
+          git config --global user.email 'github-actions[bot]@users.noreply.github.com'
+          git add python-temp/
+          git commit -m "Automatisches Update der PMB-Listen von pmb.acdh.oeaw.ac.at"
+          git push

@@ -836,6 +836,13 @@
           </xsl:call-template>
         </rs>
       </xsl:when>
+      <xsl:when test="@type = 'event'">
+        <rs type="event" ref="">
+          <xsl:call-template name="elem">
+            <xsl:with-param name="elem" select="$elem"/>
+          </xsl:call-template>
+        </rs>
+      </xsl:when>
 
       <xsl:when test="@type = 'signed'">
         <signed>

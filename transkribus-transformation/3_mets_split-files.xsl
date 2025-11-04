@@ -30,7 +30,8 @@
         select="string($active-param-set/archiv-institution)"/>
     <xsl:param name="signatur" as="xs:string" select="string($active-param-set/signatur)"/>
     <xsl:param name="exporter" as="xs:string" select="string($active-param-set/exporter)"/>
-    <xsl:param name="handschrift" as="xs:string" select="string($active-param-set/handschrift)"/>
+    <xsl:param name="handschrift" as="xs:string?" select="string($active-param-set/handschrift)"/>
+    <xsl:param name="maschinschriftlich" as="xs:string?" select="string($active-param-set/maschinschriftlich)"/>
     <xsl:template match="tei:div">
         <xsl:element name="root"/>
         <xsl:variable name="letzte-nummer" as="xs:integer">
@@ -180,9 +181,16 @@
                                                   </extent>
                                                   </supportDesc>
                                                 </objectDesc>
+                                                <xsl:if test="normalize-space($handschrift) != ''">
                                                 <handDesc>
                                                   <handNote medium="" style="{$handschrift}"/>
                                                 </handDesc>
+                                                </xsl:if>
+                                                <xsl:if test="$maschinschriftlich = 'true'">
+                                                    <typeDesc>
+                                                        <typeNote medium="schreibmaschine"/>
+                                                    </typeDesc>
+                                                </xsl:if>
                                                 <!--<additions>
                                                     <incident type="archival">
                                                         <desc>Xmit Bleistift von unbekannter Hand nummeriert: »<quote>x</quote>«</desc>
