@@ -1789,8 +1789,8 @@
                      <xsl:when test="@ana = 'widmung_vorsatzblatt'">
                         <xsl:text>Widmung am Vorsatzblatt</xsl:text>
                      </xsl:when>
-                     <xsl:when test="@ana = 'widmung_titetei:lblatt'">
-                        <xsl:text>Widmung am Titetei:lblatt</xsl:text>
+                     <xsl:when test="@ana = 'widmung_titelblatt'">
+                        <xsl:text>Widmung am Titelblatt</xsl:text>
                      </xsl:when>
                      <xsl:when test="@ana = 'widmung_schmutztitel'">
                         <xsl:text>Widmung am Schmutztitel</xsl:text>
