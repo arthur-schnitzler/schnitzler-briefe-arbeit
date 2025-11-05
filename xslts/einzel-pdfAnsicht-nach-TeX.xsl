@@ -22,7 +22,7 @@
       <xsl:variable name="verweis" as="xs:boolean" select="@subtype = 'implied'"/>
       <!-- Kursiv ja / nein -->
       <xsl:variable name="emph"
-         select="not(@subtype = 'implied') and $kommentar-herausgeber and (@type = 'work' or @type = 'org' or @type='event')"/>
+         select="not(@subtype = 'implied') and $kommentar-herausgeber and (@type = 'work' or @type = 'org')"/>
       <xsl:variable name="cert" as="xs:boolean" select="(@cert = 'low') or (@cert = 'medium')"/>
       <xsl:variable name="endung-index" as="xs:string">
          <xsl:choose>
