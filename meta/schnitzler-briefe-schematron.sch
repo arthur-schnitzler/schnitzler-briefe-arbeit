@@ -481,6 +481,14 @@
             </sch:assert>
         </sch:rule>
     </sch:pattern>
+    <!-- hi element with rend spaced-out must not have child elements -->
+    <sch:pattern id="hi-spaced-out-no-children">
+        <sch:rule context="tei:hi[@rend = 'spaced-out']">
+            <sch:assert test="not(child::*)">
+                tei:hi mit @rend='spaced-out' darf keine Kindelemente enthalten.
+            </sch:assert>
+        </sch:rule>
+    </sch:pattern>
     <!-- biblStruct author and editor format -->
     <sch:pattern id="biblStruct-author-editor-format">
         <sch:rule context="tei:biblStruct//tei:author | tei:biblStruct//tei:editor">
