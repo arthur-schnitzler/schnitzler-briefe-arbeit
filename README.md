@@ -17,3 +17,6 @@ The original page2tei-transformation is from @dariok with contributions from @tb
 
 * set handle credentials as environment variables called `username` and `pw`
 * run `python add_handles.py` (needs `acdh-tei-pyutils`)
+
+### SAXON-HE
+The projects also includes Saxon-HE, which is licensed separately under the Mozilla Public License, Version 2.0 (MPL 2.0). See the dedicated [LICENSE.txt](saxon/notices/LICENSE.txt)
