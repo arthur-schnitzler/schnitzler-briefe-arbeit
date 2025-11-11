@@ -1554,7 +1554,12 @@
             <xsl:apply-templates/>
          </xsl:when>
       </xsl:choose>
-      <xsl:apply-templates/>
+      <xsl:if test="tei:typeNote/tei:p">
+         <xsl:text> (</xsl:text>
+         <xsl:apply-templates select="tei:typeNote/tei:p"/>
+         <xsl:text>)</xsl:text>
+      </xsl:if>
+      
    </xsl:template>
    <xsl:template match="tei:typeDesc/tei:p">
       <xsl:apply-templates/>
