@@ -1580,12 +1580,12 @@
                <xsl:variable name="corespi" select="replace(., '#', '')"/>
                <xsl:text>Handschrift: </xsl:text>
                <xsl:choose>
-                  <xsl:when test="count($handDesc-v/tei:handNote[@corresp = $corespi]) = 1">
+                  <xsl:when test="count($handDesc-v/tei:handNote[@corresp = concat('#', $corespi)]) = 1">
                      <xsl:value-of
-                        select="foo:handNote($handDesc-v/tei:handNote[@corresp = $corespi])"/>
+                        select="foo:handNote($handDesc-v/tei:handNote[@corresp = concat('#', $corespi)])"/>
                   </xsl:when>
                   <xsl:otherwise>
-                     <xsl:for-each select="$handDesc-v/tei:handNote[@corresp = $corespi]">
+                     <xsl:for-each select="$handDesc-v/tei:handNote[@corresp = concat('#', $corespi)]">
                         <xsl:variable name="poschitzon" select="position()"/>
                         <xsl:value-of select="$poschitzon"/>
                         <xsl:text>)&#160;</xsl:text>
@@ -1601,7 +1601,7 @@
          </xsl:when>
          <!-- Nur eine Handschrift, diese nicht vom Autor/der Autorin: -->
          <xsl:when test="not(child::tei:handNote[2]) and (tei:handNote/@corresp)">
-            <xsl:text>Handschrift </xsl:text>
+            <xsl:text>HandschriftX2 </xsl:text>
             <xsl:choose>
                <xsl:when test="tei:handNote/@corresp = 'schreibkraft'">
                   <xsl:text>einer Schreibkraft: </xsl:text>
@@ -1638,12 +1638,12 @@
                </xsl:choose>
                <xsl:text>: </xsl:text>
                <xsl:choose>
-                  <xsl:when test="count($handDesc-v/tei:handNote[@corresp = $corespi]) = 1">
+                  <xsl:when test="count($handDesc-v/tei:handNote[replace(@corresp, '#', '') = $corespi]) = 1">
                      <xsl:value-of
-                        select="foo:handNote($handDesc-v/tei:handNote[@corresp = $corespi])"/>
+                        select="foo:handNote($handDesc-v/tei:handNote[replace(@corresp, '#', '') = $corespi])"/>
                   </xsl:when>
                   <xsl:otherwise>
-                     <xsl:for-each select="$handDesc-v/tei:handNote[@corresp = $corespi]">
+                     <xsl:for-each select="$handDesc-v/tei:handNote[replace(@corresp, '#', '') = $corespi]">
                         <xsl:variable name="poschitzon" select="position()"/>
                         <xsl:value-of select="$poschitzon"/>
                         <xsl:text>)&#160;</xsl:text>
