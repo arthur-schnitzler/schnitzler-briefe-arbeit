@@ -497,4 +497,15 @@
             </sch:assert>
         </sch:rule>
     </sch:pattern>
+    <!-- rs element whitespace restrictions -->
+    <sch:pattern id="rs-whitespace-restrictions">
+        <sch:rule context="tei:rs">
+            <sch:assert test="not(node()[1][self::text()] and matches(node()[1], '^\s') and not(node()[1][matches(., '^\s+$')] and node()[2][self::*]))">
+                tei:rs darf nur mit Whitespace beginnen, wenn danach ein Element folgt.
+            </sch:assert>
+            <sch:assert test="not(node()[last()][self::text()] and matches(node()[last()], '\s$') and not(node()[last()][matches(., '^\s+$')] and node()[last()-1][self::*]))">
+                tei:rs darf nur mit Whitespace enden, wenn davor ein Element steht.
+            </sch:assert>
+        </sch:rule>
+    </sch:pattern>
 </sch:schema>
