@@ -78,7 +78,7 @@
                                 </xsl:if>
                             </xsl:for-each>
                             <xsl:for-each
-                                select="distinct-values($tei-root/descendant::tei:handShift/@scribe)">
+                                select="distinct-values($tei-root/descendant::tei:handShift/@scribe[not(.='schreibkraft')])">
                                 <xsl:element name="person" namespace="http://www.tei-c.org/ns/1.0">
                                     <xsl:attribute name="xml:id">
                                         <xsl:value-of select="replace(., '#', '')"/>
@@ -162,7 +162,7 @@
                                 </xsl:if>
                             </xsl:for-each>
                             <xsl:for-each
-                                select="distinct-values($tei-root/descendant::tei:handShift/@scribe)">
+                                select="distinct-values($tei-root/descendant::tei:handShift/@scribe[not(.='schreibkraft')])">
                                 <xsl:element name="person" namespace="http://www.tei-c.org/ns/1.0">
                                     <xsl:attribute name="xml:id">
                                         <xsl:value-of select="replace(., '#', '')"/>
