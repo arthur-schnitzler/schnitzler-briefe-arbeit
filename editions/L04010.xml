@@ -1,13 +1,11 @@
-<?xml version="1.0" encoding="UTF-8"?>
+<?xml version='1.0' encoding='UTF-8'?>
 <?xml-model href="../meta/schnitzler-briefe-schematron.sch" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
-<TEI xmlns="http://www.tei-c.org/ns/1.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-   xsi:schemaLocation="http://www.tei-c.org/ns/1.0 ../meta/schnitzler-briefe-schema.xsd"
-   xml:base="https://id.acdh.oeaw.ac.at/schnitzler/schnitzler-briefe/editions" xml:id="L04010">
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.tei-c.org/ns/1.0 ../meta/schnitzler-briefe-schema.xsd" xml:base="https://id.acdh.oeaw.ac.at/schnitzler/schnitzler-briefe/editions" xml:id="L04010">
    <teiHeader>
       <fileDesc>
          <titleStmt>
             <title level="s">Arthur Schnitzler: Briefwechsel mit Autorinnen und Autoren</title>
-            <title level="a">Berta Zuckerkandl an Olga Schnitzler, [21.&#160;1.&#160;1914?]</title>
+            <title level="a">Berta Zuckerkandl an Olga Schnitzler, [21. 1. 1914?]</title>
             <author ref="#pmb2312">Zuckerkandl, Berta</author>
             <editor>
                <persName>Jahnke, Selma</persName>
@@ -104,14 +102,19 @@
          <correspDesc>
             <correspAction type="sent">
                <persName ref="#pmb2312">Zuckerkandl, Berta</persName>
-               <date when="1914-01-21" n="01">[21.&#160;1.&#160;1914?]</date>
+               <date when="1914-01-21" n="01">[21. 1. 1914?]</date>
                <placeName ref="#pmb50" evidence="conjecture">Wien</placeName>
             </correspAction>
             <correspAction type="received">
                <persName ref="#pmb2173">Schnitzler, Olga</persName>
                <placeName ref="#pmb50" evidence="conjecture">Wien</placeName>
             </correspAction>
-         </correspDesc>
+         <correspContext><ref type="belongsToCorrespondence" target="correspondence_2312">Zuckerkandl, Berta</ref>
+               <ref subtype="previous_letter" type="withinCollection" target="L02164">Suttner an Schnitzler, [20. 12. 1913?]</ref>
+               <ref subtype="next_letter" type="withinCollection" target="L02165">Schnitzler, Schnitzler an Beer-Hofmann, 2. 2. 1914</ref>
+               <ref subtype="previous_letter" type="withinCorrespondence" source="correspondence_2312" target="L03945">Schnitzler an Zuckerkandl, 8. 1. 1912</ref>
+               <ref subtype="next_letter" type="withinCorrespondence" source="correspondence_2312" target="L03987">Schnitzler an Zuckerkandl, 25. 3. 1915</ref>
+            </correspContext></correspDesc>
       </profileDesc>
       <revisionDesc status="proposed">
          <change who="MAM" when="2025-11-12">Export aus Transkribus</change>
@@ -121,20 +124,15 @@
       <body>
          <div type="writingSession" n="1">
             <p><pb facs="HS000512214_0001"/><salute>Liebe Olga!</salute> Nur ein Wort bevor Du abreist. Ich lasse
-               Dich mit einem <hi rend="underline" n="1">so guten Gefühl</hi> weg. Es war <anchor type="commentary" xml:id="K_L04010-1"/>gestern<note type='commentary' corresp="K_L04010-1">Das Korrespondenzstück
-                  ist nicht datiert. Aus dem Inhalt geht hervor, dass <rs type="person" ref="#pmb2173">Olga Schnitzler</rs> am Vorabend bei <rs type="person" ref="#pmb2167 #pmb23918" 
-                     >Felix</rs> und <rs type="person" ref="#pmb23918" 
-                        >Ottilie Salten</rs> aufgetreten war und ein öffentlicher Auftritt in einer anderen
+               Dich mit einem <hi rend="underline" n="1">so guten Gefühl</hi> weg. Es war <anchor type="commentary" xml:id="K_L04010-1"/>gestern<note type="commentary" corresp="K_L04010-1">Das Korrespondenzstück
+                  ist nicht datiert. Aus dem Inhalt geht hervor, dass <rs type="person" ref="#pmb2173">Olga Schnitzler</rs> am Vorabend bei <rs type="person" ref="#pmb2167 #pmb23918">Felix</rs> und <rs type="person" ref="#pmb23918">Ottilie Salten</rs> aufgetreten war und ein öffentlicher Auftritt in einer anderen
                   Stadt bevorstand. Das dürfte sich auf den Auftritt am <ref type="schnitzler-kultur" subtype="date-only" target="pmb183645"/> in
                   <rs type="place" ref="#pmb58684">Regensburg</rs> beziehen, den sie am <ref type="schnitzler-tagebuch" subtype="date-only" target="1914-01-20"/>
-                  bei <rs type="person" ref="#pmb2167 #pmb23918"
-                     >Saltens</rs> probte.</note>
-               wirklich Alles so ausgezeichnet. Sowol Material, wie seelische Disposition. <pb
-                  facs="HS000512214_0002-0"/>Glaube mir Du kannst ruhig sein, und gieb Dich dort nur so rückhaltlos
+                  bei <rs type="person" ref="#pmb2167 #pmb23918">Saltens</rs> probte.</note>
+               wirklich Alles so ausgezeichnet. Sowol Material, wie seelische Disposition. <pb facs="HS000512214_0002-0"/>Glaube mir Du kannst ruhig sein, und gieb Dich dort nur so rückhaltlos
                aus wie gestern Abend – so wirst Du u musst Du Dir Dein Publikum erwerben. <rs type="person" ref="#pmb54787" cert="low">Fufi</rs> dem
                ich’s er<pb facs="HS000512214_0002-1"/>zählte freut sich mit mir, u trägt mir sehr auf – Dir’s zu
-               sagen. Er war sehr böse auf mich weil ich <rs type="person" ref="#pmb2167 #pmb23918"
-                  >Salten’s</rs> nicht bat ob er Dich hören ko<c rendition="#gemination-m"/>en
+               sagen. Er war sehr böse auf mich weil ich <rs type="person" ref="#pmb2167 #pmb23918">Salten’s</rs> nicht bat ob er Dich hören ko<c rendition="#gemination-m"/>en
                dürfe.</p>
             <p>Also – i<c rendition="#gemination-m"/>er Vorwärts!! Du hast es in Dir.</p>
             <closer>Deine <signed>Berte.</signed></closer>
