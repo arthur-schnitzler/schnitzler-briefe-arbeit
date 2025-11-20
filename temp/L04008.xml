@@ -1,13 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <?xml-model href="../meta/schnitzler-briefe-schematron.sch" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
-<TEI xmlns="http://www.tei-c.org/ns/1.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-   xsi:schemaLocation="http://www.tei-c.org/ns/1.0 ../meta/schnitzler-briefe-schema.xsd"
-   xml:base="https://id.acdh.oeaw.ac.at/schnitzler/schnitzler-briefe/editions" xml:id="L04008">
+<TEI xmlns="http://www.tei-c.org/ns/1.0"
+     xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+     xsi:schemaLocation="http://www.tei-c.org/ns/1.0 ../meta/schnitzler-briefe-schema.xsd"
+     xml:base="https://id.acdh.oeaw.ac.at/schnitzler/schnitzler-briefe/editions"
+     xml:id="L04008">
    <teiHeader>
       <fileDesc>
          <titleStmt>
             <title level="s">Arthur Schnitzler: Briefwechsel mit Autorinnen und Autoren</title>
-            <title level="a">Berta Zuckerkandl an Arthur Schnitzler, 24.&#160;10.&#160;1924</title>
+            <title level="a">Berta Zuckerkandl an Arthur Schnitzler, 11. 10. 1924</title>
             <author ref="#pmb2312">Zuckerkandl, Berta</author>
             <editor>
                <persName>Jahnke, Selma</persName>
@@ -85,6 +87,7 @@
                               <extent>
                                  <measure unit="seite" quantity="2"/>
                                  <measure unit="blatt" quantity="1"/>
+                                 <measure unit="zeichenanzahl" quantity="797"/>
                               </extent>
                            </supportDesc>
                         </objectDesc>
@@ -104,12 +107,13 @@
          <correspDesc>
             <correspAction type="sent">
                <persName ref="#pmb2312">Zuckerkandl, Berta</persName>
-               <date when="1924-10-24" n="01">24.&#160;10.&#160;1924</date>
-               <placeName ref="#50" evidence="conjecture">Wien</placeName>
+               <date when="1924-10-11" n="01">11. 10. 1924</date>
+               <placeName ref="#pmb50" evidence="conjecture">Wien</placeName>
             </correspAction>
             <correspAction type="received">
                <persName ref="#pmb2121">Schnitzler, Arthur</persName>
-               <placeName ref="#50" evidence="conjecture">Wien</placeName>
+               <date evidence="conjecture" notBefore="1924-10-11" notAfter="1924-10-14">[11. 10. 1924 – 14. 10. 1924?]</date>
+               <placeName ref="#pmb50" evidence="conjecture">Wien</placeName>
             </correspAction>
          </correspDesc>
       </profileDesc>
@@ -118,32 +122,377 @@
          <change who="SJ" when="2025-11-20">Durchsicht</change>
       </revisionDesc>
    </teiHeader>
+   <facsimile>
+      <graphic url="MS-SCHNITZLER-B-00200-000-00052"/>
+      <graphic url="MS-SCHNITZLER-B-00200-000-00053"/>
+   </facsimile>
    <text>
       <body>
          <div type="writingSession" n="1">
-
             <opener>
-               <dateline rend="right"><pb facs="MS-SCHNITZLER-B-00200-000-00052"/>
-                  <date>Samstag 11.&#160;O.&#160;1924</date>.</dateline>
+               <dateline rend="right">
+                  <pb facs="MS-SCHNITZLER-B-00200-000-00052"/>
+                  <date>Samstag 11. O. 1924</date>.</dateline>
             </opener>
-            <p><salute>Innig verehrter Freund!</salute> Seit zwei Tagen, seit Ihrer <rs type="event"
-                  ref="">Generalprobe</rs>, kämpfe ich vergebens mit meinem Telephon. Da ich nicht
-               zu Ihnen kann (meine <rs type="person" ref="">Schwester</rs> u mein <rs type="person"
-                  ref="">Bruder</rs> nehmen mir jede Minute) so will ich Ihnen wenigstens nur das
-               Eine sagen.</p>
+            <p>
+               <salute>Innig verehrter Freund!</salute> Seit zwei Tagen, seit Ihrer <rs type="event" ref="#pmb210305">Generalprobe</rs>, kämpfe ich vergebens mit meinem Telephon. Da
+               ich nicht zu Ihnen kann (meine <rs type="person" ref="#pmb15024" subtype="implied">Schwester</rs> u mein <rs type="person" ref="#pmb25793" subtype="implied">Bruder</rs> nehmen mir jede Minute) so will ich Ihnen wenigstens nur das Eine
+               sagen.</p>
             <p>Ich habe mich längst damit abgefunden, und bin sogar froh, nicht mehr Kritiker zu
                sein. Aber diesmal war mir weh um’s Herz. Diesmal hätte ich so sehnsüchtig Vieles,
-               Vieles sagen wollen, über dieses Ihr verschleiert wehmütig wissendes <rs type="work"
-                  ref="">Werk</rs>. So kann ich Ihnen nur danken <pb
-                  facs="MS-SCHNITZLER-B-00200-000-00053"/>für so viel Reichtum den Sie schenken.....
-               wenn man versteht. .........</p>
-            <p>Ich hoffe Sie noch diese Woche sprechen zu können.</p>
-            <closer>In Treue Ihre <lb/><signed>Berta Zuckerkandl</signed></closer>
+               Vieles sagen wollen, über dieses Ihr verschleiert wehmütig wissendes <rs type="work" ref="#pmb30205" subtype="implied">Werk</rs>. So kann ich Ihnen nur danken <pb facs="MS-SCHNITZLER-B-00200-000-00053"/>für so viel Reichtum den Sie schencken<c rendition="#dots" n="5"/> wenn man versteht.<c rendition="#dots" n="9"/>.........</p>
+            <p>Ich hoffe Sie <anchor type="commentary" xml:id="K_L04008-1"/>noch <date>diese
+                  Woche</date>
+               <note type="commentary" corresp="K_L04008-1">Am <ref type="schnitzler-tagebuch" target="1924-10-17" subtype="date-only"/> traf <rs type="person" ref="#pmb2121">Schnitzler</rs>
+                  <space unit="chars" quantity="1"/>
+                  <rs type="person" ref="#pmb2312">Zuckerkandl</rs> und ihre Schwester <rs type="person" ref="#pmb15024">Sophie Clemenceau</rs> bei einem <rs type="event" ref="#pmb210307">Konzert von Jean Untermeyer</rs>, am <ref type="schnitzler-tagebuch" target="1924-10-28" subtype="date-only"/> besuchte er <rs type="person" ref="#pmb2312">Zuckerkandl</rs> zuhause, um ihr zu kondilieren, da ihr Bruder <rs type="person" ref="#pmb25793">Julius Szeps</rs> am Tag zuvor verstorben war.
+               </note> sprechen zu können.</p>
+            <closer>In Treue Ihre <lb/>
+               <signed>Berta Zuckerkandl</signed>
+            </closer>
             <postscript>
-               <p>Bitte grüssen Sie <rs type="person" ref="">Olga</rs> von mir. Wenn ich bisher
-                  nicht kommen konnte so sind eben meine Familienangelegenheiten daran Schuld.</p>
+               <p>Bitte grüssen Sie <rs type="person" ref="#pmb2173">Olga</rs> von mir. Wenn ich
+                  bisher nicht kommen konnte so sind eben meine Familienangelegenheiten daran
+                  Schuld.</p>
             </postscript>
          </div>
       </body>
+      <back>
+         <listPerson>
+            <person xml:id="pmb2312">
+               <persName>
+                  <forename>Berta</forename>
+                  <surname>Zuckerkandl</surname>
+               </persName>
+               <persName type="person_geburtsname_nachname">Szeps</persName>
+               <persName type="legacy-name-merge">Zuckerkandl, Bertha (Berta)</persName>
+               <birth>
+                  <date when="1864-04-13">13.04.1864</date>
+                  <settlement ref="pmb50">
+                     <placeName type="pref">Wien</placeName>
+                     <location>
+                        <geo>48,208333 16,373056</geo>
+                     </location>
+                  </settlement>
+               </birth>
+               <death>
+                  <date when="1945-10-16">16.10.1945</date>
+                  <settlement ref="pmb182">
+                     <placeName type="pref">Paris</placeName>
+                     <location>
+                        <geo>48,85341 2,3488</geo>
+                     </location>
+                  </settlement>
+               </death>
+               <sex value="female"/>
+               <occupation ref="pmb90">Schriftsteller/Schriftstellerin</occupation>
+               <occupation ref="pmb99">Journalist/Journalistin</occupation>
+               <occupation ref="pmb116">Übersetzer/Übersetzerin</occupation>
+               <occupation ref="pmb1263">Literaturkritiker/Literaturkritikerin</occupation>
+               <idno type="URL" subtype="d-nb">https://d-nb.info/gnd/118758160</idno>
+               <idno type="URL" subtype="schnitzler-bahr">https://schnitzler-bahr.acdh.oeaw.ac.at/pmb2312.html</idno>
+               <idno type="URL" subtype="pmb">https://pmb.acdh.oeaw.ac.at/entity/2312/</idno>
+               <idno type="URL" subtype="kraus">https://kraus.wienbibliothek.at/register/personen/pmb2312</idno>
+               <idno type="URL" subtype="fackel">https://fackel.oeaw.ac.at/?p=fackelp39160</idno>
+               <idno type="URL" subtype="wikidata">http://www.wikidata.org/entity/Q86553</idno>
+               <idno type="URL" subtype="wikipedia">https://de.wikipedia.org/wiki/Berta_Zuckerkandl-Szeps</idno>
+               <idno type="URL" subtype="geschichtewiki">https://www.geschichtewiki.wien.gv.at/Special:URIResolver/?curid=8813</idno>
+               <idno type="URL" subtype="schnitzler-kino">https://schnitzler-kino.acdh.oeaw.ac.at/pmb2312.html</idno>
+               <idno type="URL" subtype="schnitzler-interviews">https://schnitzler-interviews.acdh.oeaw.ac.at/pmb2312.html</idno>
+               <idno type="URL" subtype="pmb">https://pmb.acdh.oeaw.ac.at/entity/162941/</idno>
+               <idno type="URL" subtype="schnitzler-tagebuch">https://schnitzler-tagebuch.acdh.oeaw.ac.at/person_21594.html</idno>
+               <idno type="URL" subtype="bahr-textverzeichnis">https://bahr-textverzeichnis.acdh.oeaw.ac.at/pmb2312.html</idno>
+               <idno type="URL" subtype="bahr-textverzeichnis">https://bahr-textverzeichnis.acdh.oeaw.ac.at/TSN-listperson.html#pmb2312</idno>
+               <idno type="URL" subtype="bahr-textverzeichnis">https://bahr-textverzeichnis.acdh.oeaw.ac.at/TSN-listperson.html#pmb162941</idno>
+               <idno type="URL" subtype="schaubuehne">https://schaubuehne.oeaw.ac.at/register.html?author=8</idno>
+               <idno type="URL" subtype="schnitzler-briefe">https://schnitzler-briefe.acdh.oeaw.ac.at/pmb2312.html</idno>
+               <idno type="URL" subtype="schnitzler-kultur">https://schnitzler-kultur.acdh.oeaw.ac.at/pmb2312.html</idno>
+               <idno type="URL" subtype="sk">https://sk.acdh.oeaw.ac.at/pmb2312</idno>
+               <idno type="URL" subtype="sk">https://sk.acdh.oeaw.ac.at/p_39160</idno>
+               <idno type="URL" subtype="acdh-oeaw">https://acdh-oeaw.github.io/wiener-rundschau-static/wr-person-0195</idno>
+            </person>
+            <person xml:id="pmb2121">
+               <persName>
+                  <surname>Schnitzler</surname>
+                  <forename>Arthur</forename>
+               </persName>
+               <birth>
+                  <date when="1862-05-15">15. 5. 1862</date>
+                  <settlement ref="pmb50">
+                     <placeName type="pref">Wien</placeName>
+                     <location>
+                        <geo>48,208333 16,373056</geo>
+                     </location>
+                  </settlement>
+               </birth>
+               <death>
+                  <date when="1931-10-21">21. 10. 1931</date>
+                  <settlement ref="pmb50">
+                     <placeName type="pref">Wien</placeName>
+                     <location>
+                        <geo>48,208333 16,373056</geo>
+                     </location>
+                  </settlement>
+               </death>
+               <sex value="male"/>
+               <occupation ref="pmb90">Schriftsteller/Schriftstellerin</occupation>
+               <occupation ref="pmb97">Mediziner/Medizinerin</occupation>
+               <idno type="gnd">https://d-nb.info/gnd/118609807/</idno>
+            </person>
+            <person xml:id="pmb2173">
+               <persName>
+                  <forename>Olga</forename>
+                  <surname>Schnitzler</surname>
+               </persName>
+               <persName type="person_geburtsname_nachname">Gussmann</persName>
+               <persName type="person_pseudonym">Dina Marius</persName>
+               <persName type="person_geburtsname_vorname">Olga Johanna Maria</persName>
+               <persName type="legacy-name-merge">Schnitzler, Olga</persName>
+               <persName type="legacy-name-merge">Schnitzler, Olga</persName>
+               <birth>
+                  <date when="1882-01-17">17.01.1882</date>
+                  <settlement ref="pmb50">
+                     <placeName type="pref">Wien</placeName>
+                     <location>
+                        <geo>48,208333 16,373056</geo>
+                     </location>
+                  </settlement>
+               </birth>
+               <death>
+                  <date when="1970-01-13">13.01.1970</date>
+                  <settlement ref="pmb885">
+                     <placeName type="pref">Lugano</placeName>
+                     <location>
+                        <geo>46,01008 8,96004</geo>
+                     </location>
+                  </settlement>
+               </death>
+               <sex value="female"/>
+               <occupation ref="pmb105">Schauspieler/Schauspielerin</occupation>
+               <occupation ref="pmb107">Sänger/Sängerin</occupation>
+               <idno type="URL" subtype="d-nb">https://d-nb.info/gnd/116848723</idno>
+               <idno type="URL" subtype="schnitzler-bahr">https://schnitzler-bahr.acdh.oeaw.ac.at/pmb2173.html</idno>
+               <idno type="URL" subtype="pmb">https://pmb.acdh.oeaw.ac.at/entity/2173/</idno>
+               <idno type="URL" subtype="schnitzler-tagebuch">https://schnitzler-tagebuch.acdh.oeaw.ac.at/person_19832.html</idno>
+               <idno type="URL" subtype="fackel">https://fackel.oeaw.ac.at/?p=fackelp50811</idno>
+               <idno type="URL" subtype="wikidata">http://www.wikidata.org/entity/Q55884531</idno>
+               <idno type="URL" subtype="schnitzler-kino">https://schnitzler-kino.acdh.oeaw.ac.at/pmb2173.html</idno>
+               <idno type="URL" subtype="pmb">https://pmb.acdh.oeaw.ac.at/entity/162151/</idno>
+               <idno type="URL" subtype="pmb">https://pmb.acdh.oeaw.ac.at/entity/162152/</idno>
+               <idno type="URL" subtype="bahr-textverzeichnis">https://bahr-textverzeichnis.acdh.oeaw.ac.at/pmb2173.html</idno>
+               <idno type="URL" subtype="schnitzler-interviews">https://schnitzler-interviews.acdh.oeaw.ac.at/pmb2173.html</idno>
+               <idno type="URL" subtype="bahr-textverzeichnis">https://bahr-textverzeichnis.acdh.oeaw.ac.at/TSN-listperson.html#pmb2173</idno>
+               <idno type="URL" subtype="schnitzler-briefe">https://schnitzler-briefe.acdh.oeaw.ac.at/pmb2173.html</idno>
+               <idno type="URL" subtype="schnitzler-kultur">https://schnitzler-kultur.acdh.oeaw.ac.at/pmb2173.html</idno>
+            </person>
+            <person xml:id="pmb15024" ana="implied">
+               <persName>
+                  <forename>Sophie</forename>
+                  <surname>Clemenceau</surname>
+               </persName>
+               <persName type="person_geburtsname_nachname">Szeps</persName>
+               <birth>
+                  <date when="1862-05-25">1862-05-25</date>
+               </birth>
+               <death>
+                  <date when="1937-09-24">1937-09-24</date>
+               </death>
+               <sex value="female"/>
+               <idno type="URL" subtype="schnitzler-tagebuch">https://schnitzler-tagebuch.acdh.oeaw.ac.at/person_14240.html</idno>
+               <idno type="URL" subtype="pmb">https://pmb.acdh.oeaw.ac.at/entity/15024/</idno>
+               <idno type="URL" subtype="wikidata">http://www.wikidata.org/entity/Q125275567</idno>
+            </person>
+            <person xml:id="pmb25793" ana="implied">
+               <persName>
+                  <forename>Julius</forename>
+                  <surname>Szeps</surname>
+               </persName>
+               <persName type="legacy-name-merge">Szeps, Julius</persName>
+               <birth>
+                  <date when="1867-10-27">1867-10-27</date>
+                  <settlement ref="pmb50">
+                     <placeName type="pref">Wien</placeName>
+                     <location>
+                        <geo>48,208333 16,373056</geo>
+                     </location>
+                  </settlement>
+               </birth>
+               <death>
+                  <date when="1924-10-27">27.10.1924</date>
+                  <settlement ref="pmb50">
+                     <placeName type="pref">Wien</placeName>
+                     <location>
+                        <geo>48,208333 16,373056</geo>
+                     </location>
+                  </settlement>
+               </death>
+               <sex value="male"/>
+               <occupation ref="pmb99">Journalist/Journalistin</occupation>
+               <idno type="URL" subtype="schnitzler-tagebuch">https://schnitzler-tagebuch.acdh.oeaw.ac.at/person_20604.html</idno>
+               <idno type="URL" subtype="schnitzler-bahr">https://schnitzler-bahr.acdh.oeaw.ac.at/pmb25793.html</idno>
+               <idno type="URL" subtype="pmb">https://pmb.acdh.oeaw.ac.at/entity/25793/</idno>
+               <idno type="URL" subtype="fackel">https://fackel.oeaw.ac.at/?p=fackelp53860</idno>
+               <idno type="URL" subtype="pmb">https://pmb.acdh.oeaw.ac.at/entity/106062/</idno>
+               <idno type="URL" subtype="d-nb">https://d-nb.info/gnd/1051216036</idno>
+               <idno type="URL" subtype="doi">https://doi.org/10.1553/0x002f7a8c</idno>
+               <idno type="URL" subtype="wikidata">http://www.wikidata.org/entity/Q55682544</idno>
+               <idno type="URL" subtype="wikipedia">https://de.wikipedia.org/wiki/Julius_Szeps</idno>
+               <idno type="URL" subtype="schnitzler-briefe">https://schnitzler-briefe.acdh.oeaw.ac.at/pmb25793.html</idno>
+            </person>
+         </listPerson>
+         <listBibl>
+            <bibl xml:id="pmb30205" ana="implied">
+               <title>Komödie der Verführung. In drei Akten</title>
+               <title type="werk_link">https://www.schnitzler-edition.net/genetisch?openWorkInfo=10049#werkinfo-10049</title>
+               <title type="werk_arbeitstitel">Der Verführer</title>
+               <title type="legacy-name-merge">Komödie der Verführung</title>
+               <author role="hat-geschaffen" ref="pmb2121">Schnitzler, Arthur</author>
+               <date notBefore="1924-01-01" when="1924-01-01">1924</date>
+               <idno type="URL" subtype="asaf">https://asaf.com/S.04.01.23</idno>
+               <idno type="URL" subtype="theadok">https://theadok.at/work/38146</idno>
+               <idno type="URL" subtype="schnitzler-bahr">https://schnitzler-bahr.acdh.oeaw.ac.at/pmb30205.html</idno>
+               <idno type="URL" subtype="pmb">https://pmb.acdh.oeaw.ac.at/entity/30205/</idno>
+               <idno type="URL" subtype="schnitzler-tagebuch">https://schnitzler-tagebuch.acdh.oeaw.ac.at/pmb30205.html</idno>
+               <idno type="URL" subtype="wikidata">http://www.wikidata.org/entity/Q1781088</idno>
+               <idno type="URL" subtype="schnitzler-zeitungen">https://schnitzler-zeitungen.acdh.oeaw.ac.at/223957.html?pmb30205</idno>
+               <idno type="URL" subtype="schnitzler-mikrofilme">https://schnitzler-mikrofilme.acdh.oeaw.ac.at/1428570.html?pmb30205</idno>
+               <idno type="URL" subtype="schnitzler-mikrofilme">https://schnitzler-mikrofilme.acdh.oeaw.ac.at/1428571.html?pmb30205</idno>
+               <idno type="URL" subtype="pmb">https://pmb.acdh.oeaw.ac.at/entity/195884/</idno>
+               <idno type="URL" subtype="wikipedia">https://de.wikipedia.org/wiki/Kom%C3%B6die_der_Verf%C3%BChrung</idno>
+               <idno type="URL" subtype="schnitzler-interviews">https://schnitzler-interviews.acdh.oeaw.ac.at/pmb30205.html</idno>
+               <idno type="URL" subtype="schnitzler-briefe">https://schnitzler-briefe.acdh.oeaw.ac.at/pmb30205.html</idno>
+               <idno type="URL" subtype="schnitzler-kultur">https://schnitzler-kultur.acdh.oeaw.ac.at/pmb30205.html</idno>
+               <note type="work_kind">Mehraktiges Drama</note>
+            </bibl>
+         </listBibl>
+         <listPlace>
+            <place xml:id="pmb50">
+               <placeName>Wien</placeName>
+               <placeName type="ort_fruherer-name">K.K. Reichshaupt- und Residenzstadt Wien</placeName>
+               <placeName type="alternative-name">Bécs</placeName>
+               <placeName type="alternative-name">Land Wien</placeName>
+               <placeName type="alternative-name">Vídeň</placeName>
+               <placeName type="alternative-name">Wenia</placeName>
+               <placeName type="alternative-name">Beč</placeName>
+               <placeName type="ort_fruherer-name">Vindobona</placeName>
+               <placeName type="alternative-name">Vienna</placeName>
+               <desc type="entity_type">A.ADM2</desc>
+               <desc type="entity_type_id">1135</desc>
+               <location type="coords">
+                  <geo>48,208333 16,373056</geo>
+               </location>
+               <location type="located_in_place">
+                  <placeName ref="pmb41240">Österreich</placeName>
+                  <geo>47,33333 13,33333</geo>
+               </location>
+               <location type="located_in_place">
+                  <placeName ref="pmb235218">Windmühlhöhe</placeName>
+                  <geo>48,24077 16,32092</geo>
+               </location>
+               <idno type="URL" subtype="geonames">https://sws.geonames.org/2761369/</idno>
+               <idno type="URL" subtype="d-nb">https://d-nb.info/gnd/4066009-6</idno>
+               <idno type="URL" subtype="schnitzler-bahr">https://schnitzler-bahr.acdh.oeaw.ac.at/pmb50.html</idno>
+               <idno type="URL" subtype="pmb">https://pmb.acdh.oeaw.ac.at/entity/50/</idno>
+               <idno type="URL" subtype="pmb">https://pmb.acdh.oeaw.ac.at/entity/2316/</idno>
+               <idno type="URL" subtype="pmb">https://pmb.acdh.oeaw.ac.at/entity/20954/</idno>
+               <idno type="URL" subtype="pmb">https://pmb.acdh.oeaw.ac.at/entity/65221/</idno>
+               <idno type="URL" subtype="pmb">https://pmb.acdh.oeaw.ac.at/entity/65223/</idno>
+               <idno type="URL" subtype="kraus">https://kraus.wienbibliothek.at/register/orte/pmb50</idno>
+               <idno type="URL" subtype="wikidata">http://www.wikidata.org/entity/Q1741</idno>
+               <idno type="URL" subtype="wikipedia">https://de.wikipedia.org/wiki/Wien</idno>
+               <idno type="URL" subtype="schnitzler-interviews">https://schnitzler-interviews.acdh.oeaw.ac.at/pmb50.html</idno>
+               <idno type="URL" subtype="geonames">https://sws.geonames.org/2761333/</idno>
+               <idno type="URL" subtype="pmb">https://pmb.acdh.oeaw.ac.at/entity/33999/</idno>
+               <idno type="URL" subtype="schnitzler-tagebuch">https://schnitzler-tagebuch.acdh.oeaw.ac.at/pmb50.html</idno>
+               <idno type="URL" subtype="schnitzler-briefe">https://schnitzler-briefe.acdh.oeaw.ac.at/pmb50.html</idno>
+               <note type="image">
+                  <figure>
+                     <graphic url="https://iiif.onb.ac.at/images/AKON/AK117_016/016/full/,600/0/native.jpg"/>
+                  </figure>
+               </note>
+            </place>
+         </listPlace>
+         <listEvent>
+            <event xml:id="pmb210305">
+               <eventName n="Generalprobe">Generalprobe von Komödie der Verführung, 10.10.1924</eventName>
+               <note type="listorg">
+                  <listOrg>
+                     <org role="veranstaltet von">
+                        <orgName ref="pmb36247">Burgtheater</orgName>
+                     </org>
+                  </listOrg>
+               </note>
+               <idno type="URL" subtype="pmb">https://pmb.acdh.oeaw.ac.at/entity/210305/</idno>
+               <idno type="URL" subtype="schnitzler-kultur">https://schnitzler-kultur.acdh.oeaw.ac.at/pmb210305.html</idno>
+               <listBibl>
+                  <bibl>
+                     <title ref="pmb30205">Komödie der Verführung. In drei Akten</title>
+                     <note type="relation-type">ist Generalprobe von</note>
+                  </bibl>
+               </listBibl>
+               <listPerson>
+                  <person role="hat teilnehmend">
+                     <persName ref="pmb2121">Schnitzler, Arthur</persName>
+                  </person>
+                  <person role="hat teilnehmend">
+                     <persName ref="pmb2312">Zuckerkandl, Berta</persName>
+                  </person>
+                  <person role="hat teilnehmend">
+                     <persName ref="pmb12435">Pollaczek, Clara Katharina</persName>
+                  </person>
+                  <person role="hat teilnehmend">
+                     <persName ref="pmb9449">Reich, Emil</persName>
+                  </person>
+                  <person role="hat teilnehmend">
+                     <persName ref="pmb2456">Specht, Richard</persName>
+                  </person>
+                  <person role="hat teilnehmend">
+                     <persName ref="pmb25172">Specht, Wanda</persName>
+                  </person>
+                  <person role="hat mitwirkend">
+                     <persName ref="pmb12211">Mayen, Maria</persName>
+                  </person>
+                  <person role="hat teilnehmend">
+                     <persName ref="pmb26340">Urbantschitsch, Rudolf</persName>
+                  </person>
+               </listPerson>
+               <listPlace>
+                  <place>
+                     <placeName role="veranstaltet in" ref="pmb14">Burgtheater</placeName>
+                     <location>
+                        <geo>48,210333 16,361139</geo>
+                     </location>
+                  </place>
+               </listPlace>
+            </event>
+            <event xml:id="pmb210307" ana="comment">
+               <eventName n="Liederkonzert">Konzert von Jean Untermeyer, 17.10.1924</eventName>
+               <idno type="URL" subtype="pmb">https://pmb.acdh.oeaw.ac.at/entity/210307/</idno>
+               <idno type="URL" subtype="schnitzler-kultur">https://schnitzler-kultur.acdh.oeaw.ac.at/pmb210307.html</idno>
+               <listPerson>
+                  <person role="hat mitwirkend">
+                     <persName ref="pmb4451">Untermeyer, Jean</persName>
+                  </person>
+                  <person role="hat teilnehmend">
+                     <persName ref="pmb2121">Schnitzler, Arthur</persName>
+                  </person>
+                  <person role="hat teilnehmend">
+                     <persName ref="pmb2312">Zuckerkandl, Berta</persName>
+                  </person>
+                  <person role="hat teilnehmend">
+                     <persName ref="pmb15024">Clemenceau, Sophie</persName>
+                  </person>
+               </listPerson>
+               <listPlace>
+                  <place>
+                     <placeName role="veranstaltet in" ref="pmb516">Musikverein</placeName>
+                     <location>
+                        <geo>48,201265597319 16,372564182283</geo>
+                     </location>
+                  </place>
+               </listPlace>
+            </event>
+         </listEvent>
+      </back>
    </text>
 </TEI>
