@@ -6,8 +6,8 @@ from lxml import etree
 NS = {'tei': 'http://www.tei-c.org/ns/1.0'}
 
 def get_cmif_context_map():
-    print("Lade schnitzler-briefe_cmif.xml ...")
-    url = 'https://raw.githubusercontent.com/arthur-schnitzler/schnitzler-briefe-arbeit/refs/heads/main/indices/schnitzler-briefe_cmif.xml'
+    print("Lade schnitzler-briefe-cmif.xml ...")
+    url = 'https://raw.githubusercontent.com/arthur-schnitzler/schnitzler-briefe-arbeit/refs/heads/main/indices/schnitzler-briefe-cmif.xml'
     response = requests.get(url)
     response.raise_for_status()
     cmif_root = etree.fromstring(response.content)

@@ -31,15 +31,15 @@ jobs:
           java -jar saxon.jar -s:temp2.xml -xsl:xslts/cmif/02_normalize.xsl -o:temp3.xml
           java -jar saxon.jar -s:temp3.xml -xsl:xslts/cmif/03_sort.xsl -o:temp4.xml
           java -jar saxon.jar -s:temp4.xml -xsl:xslts/cmif/04_doppelte-daten.xsl -o:temp5.xml
-          java -jar saxon.jar -s:temp5.xml -xsl:xslts/cmif/05_correspContext_prev-next.xsl -o:indices/schnitzler-briefe_cmif.xml
+          java -jar saxon.jar -s:temp5.xml -xsl:xslts/cmif/05_correspContext_prev-next.xsl -o:indices/schnitzler-briefe-cmif.xml
           rm -f temp2.xml temp3.xml temp4.xml temp5.xml saxon.jar
 
       - name: ✅ Änderungen committen & pushen (CMIF)
         run: |
           git config user.name "GitHub Action"
           git config user.email "action@github.com"
-          if git status --porcelain | grep indices/schnitzler-briefe_cmif.xml; then
-            git add indices/schnitzler-briefe_cmif.xml
+          if git status --porcelain | grep indices/schnitzler-briefe-cmif.xml; then
+            git add indices/schnitzler-briefe-cmif.xml
             git commit -m "Automatisch: CMIF aktualisiert"
             git push https://x-access-token:${{ secrets.GITHUB_TOKEN }}@github.com/${{ github.repository }} HEAD:${{ github.ref_name }}
           else
