@@ -1,6 +1,10 @@
-<?xml version='1.0' encoding='UTF-8'?>
+<?xml version="1.0" encoding="UTF-8"?>
 <?xml-model href="../meta/schnitzler-briefe-schematron.sch" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
-<TEI xmlns="http://www.tei-c.org/ns/1.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.tei-c.org/ns/1.0 ../meta/schnitzler-briefe-schema.xsd" xml:id="L03700" xml:base="https://id.acdh.oeaw.ac.at/schnitzler/schnitzler-briefe/editions">
+<TEI xmlns="http://www.tei-c.org/ns/1.0"
+     xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+     xsi:schemaLocation="http://www.tei-c.org/ns/1.0 ../meta/schnitzler-briefe-schema.xsd"
+     xml:id="L03700"
+     xml:base="https://id.acdh.oeaw.ac.at/schnitzler/schnitzler-briefe/editions">
    <teiHeader>
       <fileDesc>
          <titleStmt>
@@ -83,7 +87,7 @@
                               <extent>
                                  <measure unit="seite" quantity="3"/>
                                  <measure unit="blatt" quantity="1"/>
-                                 <measure unit="zeichenanzahl" quantity="2061"/>
+                                 <measure unit="zeichenanzahl" quantity="2060"/>
                               </extent>
                            </supportDesc>
                         </objectDesc>
@@ -112,18 +116,33 @@
                   – 17. 4. 1896?]</date>
                <placeName ref="#pmb50" evidence="conjecture">Wien</placeName>
             </correspAction>
-            <correspContext><ref type="belongsToCorrespondence" target="correspondence_2128">Plessner, Elsa</ref>
+            <correspContext>
+               <ref type="belongsToCorrespondence" target="correspondence_2128">Plessner, Elsa</ref>
                <ref subtype="previous_letter" type="withinCollection" target="L02771">Goldmann an Schnitzler, 9. [4.] 1896</ref>
                <ref subtype="next_letter" type="withinCollection" target="L00541">Brandes an Schnitzler, 22. 4. 1896</ref>
-               <ref subtype="previous_letter" type="withinCorrespondence" source="correspondence_2128" target="L03699">Plessner an Schnitzler, 18. 3. 1896</ref>
-               <ref subtype="next_letter" type="withinCorrespondence" source="correspondence_2128" target="L03701">Plessner an Schnitzler, 15. 9. 1896</ref>
-            </correspContext></correspDesc>
+               <ref subtype="previous_letter"
+                    type="withinCorrespondence"
+                    source="correspondence_2128"
+                    target="L03699">Plessner an Schnitzler, 18. 3. 1896</ref>
+               <ref subtype="next_letter"
+                    type="withinCorrespondence"
+                    source="correspondence_2128"
+                    target="L03701">Plessner an Schnitzler, 15. 9. 1896</ref>
+            </correspContext>
+         </correspDesc>
       </profileDesc>
-      <revisionDesc status="proposed">
+      <revisionDesc status="candidate">
          <change who="MAM" when="2025-07-03">Export aus Transkribus</change>
          <change who="SJ" when="2025-07-08">Durchsicht</change>
+         <change who="MAM" when="2025-11-21">Durchsicht</change>
+         <change who="MAM" when="2025-11-21">Index check</change>
       </revisionDesc>
    </teiHeader>
+   <facsimile>
+      <graphic url="HS000409661_0004"/>
+      <graphic url="HS000409661_0005-1"/>
+      <graphic url="HS000409661_0005-2"/>
+   </facsimile>
    <text>
       <body>
          <div type="writingSession" n="1">
@@ -137,46 +156,49 @@
                      <rs type="place" ref="#pmb295211">Bäckerstraße N<hi rend="superscript">o</hi>
                         1</rs>.</seg>
                </seg>
-               <salute>Verehrter Herr Doctor!</salute>
+               <salute rend="center">Verehrter Herr Doctor!</salute>
             </opener>
             <p>Durch andauernde Unpässlichkeit war ich lange verhindert, Ihnen meinen aufrichtigen
                Dank für die große, große Liebenswürdigkeit auszusprechen, die Sie mir in so reichem
                Maße zu Theil werden lassen. Nun haben Sie mich aber ein wenig verwöhnt und ich wage
-               es, Ihrem Wohlwollen eine abermalige Belastungsprobe zuzumuthen. <anchor type="commentary" xml:id="K_L03700-1"/>Beiliegend<note type="commentary" corresp="K_L03700-1">Die Beilage ist nicht überliefert. Es handelte sich um einen
+               es, Ihrem Wohlwollen eine abermalige Belastungsprobe zuzumuthen.&#160;– <anchor type="commentary" xml:id="K_L03700-1"/>Beiliegend<note type="commentary" corresp="K_L03700-1">Die Beilage ist nicht überliefert. Es handelte sich um einen
                   Entwurf der Novelle <rs type="work" ref="#pmb32316">Warten</rs>, wie aus den
-                  wörtlichen Zitaten hervorgeht.</note> übersende Ihnen das Manuscript einer <rs type="work" ref="#pmb32316" subtype="implied">Novelle</rs>, d. h. blos das Gerüst
+                  wörtlichen Zitaten hervorgeht.</note> übersende <supplied>ich</supplied> Ihnen das Manuscript einer <rs type="work" ref="#pmb32316" subtype="implied">Novelle</rs>, d. h. blos das Gerüst
                und Gerippe zu einer solchen, indem ich Sie herzlichst bitte, diesen Blättern eine
                doppelt destillierte Aufmerksamkeit zu widmen. Ich glaube nämlich, damit einen etwas
                ungebahnten Weg betreten zu haben und möchte von Ihnen erfahren, ob der eventuelle
                literarische Wert die Kühnheit der <rs type="work" ref="#pmb32316" subtype="implied">Arbeit</rs> rechtfertigen kann. –</p>
-            <p>Kehren Sie sich bitte, nicht an das, stellenweise etwas tote Papierdeutsch, das <pb facs="HS000409661_0005-1"/>sich in diesem <rs type="work" subtype="implied" ref="#pmb32316">Entwurfe</rs>, wie ich ja selbst genau weiß, noch vorfindet, sondern sehen Sie
-               die Sache als Ganzes an. Es soll nämlich <anchor type="commentary" xml:id="K_L03700-2"/>eine größere Novelle<note type="commentary" corresp="K_L03700-2">Am <ref type="schnitzler-briefe" target="L03702" subtype="date-only"/> sendete <rs type="person" ref="#pmb2128">Plessner</rs>
+            <p>Kehren Sie sich, bitte, nicht an das, stellenweise etwas tote Papierdeutsch, das <pb facs="HS000409661_0005-1"/>sich in diesem <rs type="work" subtype="implied" ref="#pmb32316">Entwurfe</rs>, wie ich ja selbst genau weiß, noch vorfindet,
+               sondern sehen Sie die Sache als Ganzes an. Es soll nämlich <anchor type="commentary" xml:id="K_L03700-2"/>eine größere Novelle<note type="commentary" corresp="K_L03700-2">Am <ref type="schnitzler-briefe" target="L03702" subtype="date-only"/> sandte <rs type="person" ref="#pmb2128">Plessner</rs>
                   <space unit="chars" quantity="1"/>
-                  <rs type="person" ref="#pmb2121">Schnitzler</rs> erneut eine überarbeitete Version von
-                     <rs type="work" ref="#pmb32316">Warten</rs> in einem Paket mit anderen Texten
-                   und teilte mit, dass sie nicht mehr beabsichtigte, den Text weiter
-                  auszuführen, sondern ihn vielmehr als Fragment und »quasi-croquois« zu publizieren
-                  gedachte.</note> werden, zu deren Ausführung ich mir vorliegende Disposition
+                  <rs type="person" ref="#pmb2121">Schnitzler</rs> erneut eine überarbeitete Version
+                  von <rs type="work" ref="#pmb32316">Warten</rs> in einem Paket mit anderen Texten
+                  und teilte mit, dass sie nicht mehr beabsichtigte, den Text weiter auszuführen,
+                  sondern ihn vielmehr als Fragment zu publizieren
+                  dachte.</note> werden, zu deren Ausführung ich mir vorliegende Disposition
                gemacht habe, um den Gang und die Stimmung festzuhalten und theilweise auch den Stil.
-               Die Ausführung ist so gedacht, dass, wenn ich z. B. an einer Stelle von dem »<anchor type="commentary" xml:id="K_L03700-3"/>behäbigen Dutzendbengel<note type="commentary" corresp="K_L03700-3">Die Passage lautet im Druck: »O ja – gewiß
+               Die Ausführung ist so gedacht, dass, wenn ich z. B. an einer Stelle von dem »<anchor type="commentary" xml:id="K_L03700-3"/>behäbigen Dutzendbengel<note type="commentary" corresp="K_L03700-3">Die Passage lautet im Erstdruck: »<quote>O ja – gewiß
                   – mehr wie ein behäbiger Dutzendbengel, der überhaupt ›solche Lämmer‹ gut leiden
-                  kann, findet mich ›nett‹ und tanzt mit mir auf dem Subscribtionsball« (<bibl>
+                  kann, findet mich ›nett‹ und tanzt mit mir auf allen möglichen Bällen</quote>«.
+                     (<bibl>
+                     <rs type="person" ref="#pmb2128">E. Pleßner</rs>: <rs type="work" ref="#pmb32316">Warten. Novelle</rs>. In: <rs type="work" ref="#pmb40968">Magazin für Litteratur</rs>, Jg. 66, Nr. 29, <date>24. 7. 1897</date>, Sp. 867–875, hier: 869</bibl>.)
+                     In der Erstausgabe wird »<quote>auf dem Subscribtionsball</quote>« getanzt.  (<bibl>
                      <rs type="person" ref="#pmb2128">Elsa Pessner</rs>: <rs type="work" ref="#pmb32316">Warten</rs>. In: <rs type="work" ref="#pmb32230">Der
                         Gläserne Käfig. Skizzen und Novellen</rs>. <rs type="place" ref="#pmb50">Wien</rs>: <rs type="org" ref="#pmb29220">Leopold Weiss</rs>
                      <space unit="chars" quantity="1"/>
-                     <date>1901</date>, S. 39–56, hier S. 43</bibl>).</note>« spreche »der kleine
+                     <date>1901</date>, S. 39–56, hier S. 43</bibl>.)</note>« spreche »der kleine
                Backfische ganz gut leiden mag«, ich dies nicht blos erzählen, sondern scenisch
                ausmalen will.</p>
             <p>Der »Ich«ton ist, wie ich glaube, der hier einzig mögliche, um die seelischen
                Feinheiten herauszubringen. Die Characterisirung der andern, der Männerfigur lässt
                sich durch die Heldin selbst ganz gut bewerkstelligen, denn sie notirt ja sein Reden
-               und Verhalten und hauptsächlich ist es mir doch darum zu thun, die Wirkung <pb facs="HS000409661_0005-2"/>seiner Person auf sie zu zeigen – und das thut sie ja selbst in diesen
-               Aufzeichnunggen! – Nun, Sie werden ja selbst sehen!</p>
+               und Verhalten und hauptsächlich ist es mir doch darum zu thun, die Wirkung <pb facs="HS000409661_0005-2"/>seiner Person auf sie zu zeigen – und das thut sie ja
+               selbst in diesen Aufzeichnungen! – Nun, Sie werden ja selbst sehen!</p>
             <p>Und somit danke ich Ihnen, meinem verehrten literarischen Beichtvater, für die
                Geduld, mit der Sie diese Zeilen durchlesen (falls Sie bis hierher kommen) und
-               schließe mit nochmaligen Empfehlung dieser <rs type="work" ref="#pmb32316" subtype="implied">Blätter</rs> an Ihre erwiesene Güte dankbar ergebenst</p>
+               schließe mit nochmaliger Empfehlung dieser <rs type="work" ref="#pmb32316" subtype="implied">Blätter</rs> an Ihre erwiesene Güte dankbar ergebenst</p>
             <closer>
-               <signed>Elsa Plessner</signed>
+               <signed>Elsa Plessner.</signed>
             </closer>
          </div>
       </body>
@@ -226,25 +248,6 @@
                <idno type="URL" subtype="wikipedia">https://de.wikipedia.org/wiki/Elsa_Plessner</idno>
                <idno type="URL" subtype="schnitzler-briefe">https://schnitzler-briefe.acdh.oeaw.ac.at/pmb2128.html</idno>
                <idno type="URL" subtype="schnitzler-kultur">https://schnitzler-kultur.acdh.oeaw.ac.at/pmb2128.html</idno>
-               <listEvent>
-                  <event n="Theateruraufführung" ref="pmb42011" when="1896-10-16">
-                     <desc n="1370">teilgenommen an</desc>
-                     <label>Uraufführung von Sein Sohn, 16.10.1896</label>
-                     <idno type="URL" subtype="pmb">https://pmb.acdh.oeaw.ac.at/entity/42011/</idno>
-                     <idno type="URL" subtype="pmb">https://pmb.acdh.oeaw.ac.at/entity/208861/</idno>
-                     <idno type="URL" subtype="schnitzler-briefe">https://schnitzler-briefe.acdh.oeaw.ac.at/pmb42011.html</idno>
-                     <idno type="URL" subtype="schnitzler-kultur">https://schnitzler-kultur.acdh.oeaw.ac.at/pmb42011.html</idno>
-                  </event>
-                  <event n="Theateruraufführung" ref="pmb296012" when="1901-03-16">
-                     <desc n="1370">teilgenommen an</desc>
-                     <label>Uraufführung von Die Ehrlosen, 16.3.1901</label>
-                     <idno type="URL" subtype="pmb">https://pmb.acdh.oeaw.ac.at/entity/296012/</idno>
-                     <idno type="URL" subtype="schnitzler-briefe">https://schnitzler-briefe.acdh.oeaw.ac.at/pmb296012.html</idno>
-                  </event>
-               </listEvent>
-               <figure>
-                  <graphic url="https://upload.wikimedia.org/wikipedia/commons/thumb/5/5e/Elsa_Plessner%2C_Autorin_von_%E2%80%9EDie_Ehrlosen%E2%80%9C.png/250px-Elsa_Plessner%2C_Autorin_von_%E2%80%9EDie_Ehrlosen%E2%80%9C.png"/>
-               </figure>
             </person>
             <person xml:id="pmb2121">
                <persName>
@@ -276,22 +279,32 @@
             </person>
          </listPerson>
          <listBibl>
-            <bibl xml:id="pmb32316">
-               <title>Warten</title>
+            <bibl xml:id="pmb32316" ana="implied">
+               <title>Warten. Novelle</title>
                <title type="werk_bibliografische-angabe">In: Der Gläserne Käfig. Skizzen und Novellen. Wien: Leopold Weiss 1901, S. 39–56</title>
                <title type="werk_arbeitstitel">Blätter</title>
                <title type="werk_bibliografische-angabe">E. Pleßner: Warten. In: Magazin für Litteratur, Jg. 66, Nr. 29, 24. 7. 1897, Sp. 867–875</title>
                <title type="werk_link">https://tudigit.ulb.tu-darmstadt.de/show/Zb-1110-1897-66</title>
-               <author ref="pmb2128" role="hat-geschaffen">Plessner, Elsa</author>
+               <author role="hat-geschaffen" ref="pmb2128">Plessner, Elsa</author>
                <date when="1897-07-24">24.07.1897</date>
                <idno type="URL" subtype="schnitzler-bahr">https://schnitzler-bahr.acdh.oeaw.ac.at/pmb32316.html</idno>
                <idno type="URL" subtype="pmb">https://pmb.acdh.oeaw.ac.at/entity/32316/</idno>
                <idno type="URL" subtype="schnitzler-briefe">https://schnitzler-briefe.acdh.oeaw.ac.at/pmb32316.html</idno>
                <note type="work_kind">Novelle</note>
             </bibl>
+            <bibl xml:id="pmb40968" ana="comment">
+               <title>Magazin für die Literatur des Auslandes</title>
+               <title type="werk_link">https://de.wikisource.org/wiki/Magazin_für_die_Literatur_des_Auslandes</title>
+               <title type="namensvariante">Das Magazin für Litteratur</title>
+               <date from="1832-01-01" to="1915-01-01">1832 – 1915</date>
+               <idno type="URL" subtype="pmb">https://pmb.acdh.oeaw.ac.at/entity/40968/</idno>
+               <idno type="URL" subtype="bahr-textverzeichnis">https://bahr-textverzeichnis.acdh.oeaw.ac.at/pmb40968.html</idno>
+               <idno type="URL" subtype="schnitzler-briefe">https://schnitzler-briefe.acdh.oeaw.ac.at/pmb40968.html</idno>
+               <note type="work_kind">Zeitschrift</note>
+            </bibl>
             <bibl xml:id="pmb32230" ana="comment">
                <title>Der gläserne Käfig. Skizzen und Novellen</title>
-               <author ref="pmb2128" role="hat-geschaffen">Plessner, Elsa</author>
+               <author role="hat-geschaffen" ref="pmb2128">Plessner, Elsa</author>
                <date notBefore="1901-01-01" when="1901-01-01">1901</date>
                <idno type="URL" subtype="schnitzler-bahr">https://schnitzler-bahr.acdh.oeaw.ac.at/pmb32230.html</idno>
                <idno type="URL" subtype="pmb">https://pmb.acdh.oeaw.ac.at/entity/32230/</idno>
@@ -390,6 +403,9 @@
                   <idno type="URL" subtype="wienerschnitzler">https://wienerschnitzler.org/pmb50.html</idno>
                   <idno type="URL" subtype="schnitzler-briefe">https://schnitzler-briefe.acdh.oeaw.ac.at/pmb50.html</idno>
                   <idno type="URL" subtype="schnitzler-kultur">https://schnitzler-kultur.acdh.oeaw.ac.at/pmb50.html</idno>
+                  <idno type="URL" subtype="sk">https://sk.acdh.oeaw.ac.at/DWplace00347</idno>
+                  <idno type="URL" subtype="sk">https://sk.acdh.oeaw.ac.at/DWplace00066</idno>
+                  <idno type="URL" subtype="sk">https://sk.acdh.oeaw.ac.at/DWplace00085</idno>
                </location>
                <idno type="URL" subtype="schnitzler-bahr">https://schnitzler-bahr.acdh.oeaw.ac.at/pmb29220.html</idno>
                <idno type="URL" subtype="pmb">https://pmb.acdh.oeaw.ac.at/entity/29220/</idno>
