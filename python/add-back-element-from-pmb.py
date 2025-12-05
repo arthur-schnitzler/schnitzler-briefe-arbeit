@@ -9,7 +9,7 @@ Python implementation of the four XSLT files in xslts/brief_back-element/:
 
 import sys
 import re
-import xml.etree.ElementTree as ET
+from lxml import etree as ET
 from pathlib import Path
 from typing import Set, Dict, Optional
 import requests
@@ -647,7 +647,11 @@ class PMBProcessor:
         print(f"🌐 Making API call for {pmb_id}: {url}")
 
         try:
-            response = requests.get(url, timeout=5)  # Reduced timeout
+            headers = {
+                "Content-type": "application/xml; charset=utf-8",
+                "Accept-Charset": "utf-8",
+            }
+            response = requests.get(url, headers=headers, timeout=5)  # Reduced timeout
             if response.status_code == 200:
                 self.stats["api_success"] += 1
                 print(f"✅ API success for {pmb_id}")
@@ -657,7 +661,7 @@ class PMBProcessor:
 
             if response.status_code == 200:
                 # Parse the response and add to entity
-                api_root = ET.fromstring(response.content)
+                api_root = ET.fromstring(response.content.decode("utf-8"))
                 entity.clear()
                 entity.set("{http://www.w3.org/XML/1998/namespace}id", pmb_id)
                 # Restore ana attribute if it existed

@@ -1,6 +1,5 @@
-import xml.etree.ElementTree as ET
-from xml.dom import minidom
-import urllib.request
+from lxml import etree as ET
+import requests
 import glob
 import os
 
@@ -21,9 +20,12 @@ targets = [
 
 # Hilfsfunktion: XML schön formatieren
 def pretty_xml(element):
-    rough_string = ET.tostring(element, encoding='utf-8')
-    reparsed = minidom.parseString(rough_string)
-    return reparsed.toprettyxml(indent="  ")
+    return ET.tostring(
+        element,
+        encoding='utf-8',
+        pretty_print=True,
+        xml_declaration=True
+    ).decode('utf-8')
 
 # Sets für spätere Verwendung
 mentioned_person_keys = set()
@@ -113,9 +115,13 @@ for tag_name, output_filename in targets:
 
 # ===== Autoren der Werke aus listbibl.xml nachschlagen =====
 try:
-    response = urllib.request.urlopen("https://pmb.acdh.oeaw.ac.at/media/listbibl.xml")
-    listbibl_tree = ET.parse(response)
-    listbibl_root = listbibl_tree.getroot()
+    url = "https://pmb.acdh.oeaw.ac.at/media/listbibl.xml"
+    headers = {
+        "Content-type": "application/xml; charset=utf-8",
+        "Accept-Charset": "utf-8",
+    }
+    r = requests.get(url, headers=headers)
+    listbibl_root = ET.fromstring(r.content.decode("utf-8"))
 
     work_keys_in_listbibl = {f"work__{wid}" for wid in work_ids}
 

@@ -4,6 +4,7 @@ from pathlib import Path
 import time
 import os
 import sys
+from lxml import etree as ET
 
 # Ensure unbuffered output
 sys.stdout.reconfigure(line_buffering=True)
@@ -68,21 +69,30 @@ def download_pmb_files():
         sys.stdout.flush()  # Immediate output
         
         try:
-            response = requests.get(url, timeout=60)  # Add timeout
+            headers = {
+                "Content-type": "application/xml; charset=utf-8",
+                "Accept-Charset": "utf-8",
+            }
+            response = requests.get(url, headers=headers, timeout=60)  # Add timeout and headers
             response.raise_for_status()
-            
-            print(f"📄 Processing {filename} ({len(response.text):,} chars)...")
+
+            print(f"📄 Processing {filename} ({len(response.content):,} bytes)...")
             sys.stdout.flush()
-            
-            # Normalize the XML content
-            normalized_content = normalize_xml_content(response.text)
-            
+
+            # Parse and normalize the XML content
+            source_tree = ET.ElementTree(ET.fromstring(response.content.decode("utf-8")))
+
+            # Convert tree back to string and normalize
+            xml_string = ET.tostring(source_tree.getroot(), encoding='utf-8').decode('utf-8')
+            normalized_content = normalize_xml_content(xml_string)
+
             with open(filepath, 'w', encoding='utf-8') as f:
+                f.write('<?xml version="1.0" encoding="UTF-8"?>\n')
                 f.write(normalized_content)
-            
+
             print(f"✅ Successfully saved and normalized {filename}")
             sys.stdout.flush()
-            
+
         except requests.exceptions.RequestException as e:
             print(f"❌ Error downloading {filename}: {e}")
             # If download fails but we have an old version, continue

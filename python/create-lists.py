@@ -1,12 +1,10 @@
-import xml.etree.ElementTree as ET
-from xml.dom import minidom
-from urllib.request import urlopen
+from lxml import etree as ET
+import requests
 import os
 import time
 
 # TEI Namespace
 NS = {'tei': 'http://www.tei-c.org/ns/1.0'}
-ET.register_namespace('', NS['tei'])  # saubere Ausgabe
 
 # Zielverzeichnis
 output_dir = "./indices"
@@ -18,12 +16,12 @@ os.makedirs(temp_dir, exist_ok=True)
 
 # Hilfsfunktion: schön formatieren
 def pretty_xml(elem):
-    rough_string = ET.tostring(elem, encoding='utf-8')
-    reparsed = minidom.parseString(rough_string)
-    pretty_string = reparsed.toprettyxml(indent="  ")
-    # Entferne überflüssige Leerzeilen
-    lines = [line for line in pretty_string.split('\n') if line.strip()]
-    return '\n'.join(lines) + '\n'
+    return ET.tostring(
+        elem,
+        encoding='utf-8',
+        pretty_print=True,
+        xml_declaration=True
+    ).decode('utf-8')
 
 # Hilfsfunktion: Entität von PMB API holen
 def fetch_entity_from_api(entity_id, entity_type):
@@ -45,11 +43,14 @@ def fetch_entity_from_api(entity_id, entity_type):
 
     try:
         print(f"🌐 Lade {entity_type} {entity_id} von PMB API...")
-        with urlopen(api_urls[entity_type]) as response:
-            content = response.read()
+        headers = {
+            "Content-type": "application/xml; charset=utf-8",
+            "Accept-Charset": "utf-8",
+        }
+        r = requests.get(api_urls[entity_type], headers=headers)
 
         # XML parsen und Element extrahieren
-        api_root = ET.fromstring(content)
+        api_root = ET.fromstring(r.content.decode("utf-8"))
 
         # ID anpassen: place__298436 -> pmb298436
         old_id = api_root.get("{http://www.w3.org/XML/1998/namespace}id", "")
@@ -217,11 +218,14 @@ entities = [
 # Hauptschleife
 for ent in entities:
     print(f"\n🔄 Verarbeite: {ent['output']}")
-    
-    # 1. XML-Datei aus dem Netz laden
-    with urlopen(ent["url"]) as response:
-        content = response.read()
-    source_tree = ET.ElementTree(ET.fromstring(content))
+
+    # 1. XML-Datei aus dem Netz laden mit optimierten Headern
+    headers = {
+        "Content-type": "application/xml; charset=utf-8",
+        "Accept-Charset": "utf-8",
+    }
+    r = requests.get(ent["url"], headers=headers)
+    source_tree = ET.ElementTree(ET.fromstring(r.content.decode("utf-8")))
     source_root = source_tree.getroot()
 
     # 2. Erwähnte IDs laden
