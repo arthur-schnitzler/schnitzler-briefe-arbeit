@@ -1,11 +1,15 @@
-<?xml version='1.0' encoding='UTF-8'?>
+<?xml version="1.0" encoding="UTF-8"?>
 <?xml-model href="../meta/schnitzler-briefe-schematron.sch" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
-<?xml-model href="../meta/schnitzler-briefe-schematron.sch" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI xmlns="http://www.tei-c.org/ns/1.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.tei-c.org/ns/1.0 ../meta/schnitzler-briefe-schema.xsd" xml:id="L00094" xml:base="https://id.acdh.oeaw.ac.at/schnitzler/schnitzler-briefe/editions">
+<TEI xmlns="http://www.tei-c.org/ns/1.0"
+     xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+     xsi:schemaLocation="http://www.tei-c.org/ns/1.0 ../meta/schnitzler-briefe-schema.xsd"
+     xml:id="L00018"
+     xml:base="https://id.acdh.oeaw.ac.at/schnitzler/schnitzler-briefe/editions">
    <teiHeader>
       <fileDesc>
          <titleStmt>
             <title level="s">Arthur Schnitzler: Briefwechsel mit Autorinnen und Autoren</title>
-            <title level="a">Arthur Schnitzler an Hugo von Hofmannsthal, [13.? 4. 1892]</title>
+            <title level="a">Arthur Schnitzler an Richard Beer-Hofmann, 6. 6. 1891</title>
             <author ref="#pmb2121">Schnitzler, Arthur</author>
             <editor>
                <name>Müller, Martin Anton</name>
@@ -61,7 +65,7 @@
                      beschränken.</p>
                </licence>
             </availability>
-            <idno type="handle">https://hdl.handle.net/21.11115/0000-000E-6B7F-D</idno>
+            <idno type="handle">https://hdl.handle.net/21.11115/0000-000E-6B33-1</idno>
          </publicationStmt>
          <seriesStmt>
             <p>Machine-Readable Transcriptions of the Correspondences of Arthur Schnitzler</p>
@@ -72,29 +76,34 @@
                   <objectType corresp="brief"/>
                   <msDesc>
                      <msIdentifier>
-                        <country>D</country>
-                        <settlement>Frankfurt am Main</settlement>
-                        <repository>Freies Deutsches Hochstift</repository>
-                        <idno>Hs-30885,30</idno>
+                        <country>U.S.A.</country>
+                        <settlement>Yale</settlement>
+                        <repository>Beinecke Rare Book and Manuscript Library</repository>
+                        <idno>Yale Collection of German Literature, MSS 31</idno>
                      </msIdentifier>
                      <physDesc>
                         <objectDesc>
                            <supportDesc>
                               <extent>
+                                 <measure unit="kuvert" quantity="1"/>
                                  <measure unit="blatt" quantity="1"/>
-                                 <measure unit="seite" quantity="2"/>
-                                 <measure unit="zeichenanzahl" quantity="332"/>
+                                 <measure unit="seite" quantity="4"/>
+                                 <measure unit="zeichenanzahl" quantity="1395"/>
                               </extent>
                            </supportDesc>
                         </objectDesc>
                         <handDesc>
-                           <handNote medium="bleistift" style="deutsche-kurrent"/>
+                           <handNote medium="schwarze-tinte" style="deutsche-kurrent"/>
                         </handDesc>
                         <additions>
-                           <incident type="archival" rend="bleistift">
-                              <desc>von Schnitzler mutmaßlich bei der Durchsicht der Korrespondenz
-                                    <date>1929</date> datiert: »<quote>
-                                    <date>91</date>?</quote>«</desc>
+                           <incident type="postal">
+                              <desc>
+                                 <stamp n="1">
+                                    <placeName ref="#pmb50">Wien</placeName>
+                                    <date>6 6 91</date>
+                                    <time>4–5 N</time>
+                                 </stamp>
+                              </desc>
                            </incident>
                         </additions>
                      </physDesc>
@@ -102,19 +111,32 @@
                </witness>
             </listWit>
             <listBibl>
-               <biblStruct corresp="HvHAS">
+               <biblStruct corresp="ASB1">
                   <monogr>
-                     <author ref="#pmb11740">Hofmannsthal, Hugo von</author>
                      <author ref="#pmb2121">Schnitzler, Arthur</author>
-                     <title level="m">Briefwechsel</title>
+                     <title level="m">Briefe 1875–1912</title>
                      <editor>Nickl, Therese</editor>
                      <editor>Schnitzler, Heinrich</editor>
                      <imprint>
                         <pubPlace>Frankfurt am Main</pubPlace>
                         <publisher>S. Fischer</publisher>
-                        <date when="1964">1964</date>
+                        <date when="1981">1981</date>
                      </imprint>
-                     <biblScope unit="pp">20</biblScope>
+                     <biblScope unit="pp">117</biblScope>
+                  </monogr>
+               </biblStruct>
+               <biblStruct corresp="ASBH">
+                  <monogr>
+                     <author ref="#pmb2121">Schnitzler, Arthur</author>
+                     <author ref="#pmb10863">Beer-Hofmann, Richard</author>
+                     <title level="m">Briefwechsel 1891–1931</title>
+                     <editor>Fliedl, Konstanze</editor>
+                     <imprint>
+                        <pubPlace>Wien, Zürich</pubPlace>
+                        <publisher>Europaverlag</publisher>
+                        <date when="1992">1992</date>
+                     </imprint>
+                     <biblScope unit="pp">30–31</biblScope>
                   </monogr>
                </biblStruct>
             </listBibl>
@@ -127,49 +149,10 @@
          <correspDesc>
             <correspAction type="sent">
                <persName ref="#pmb2121">Schnitzler, Arthur</persName>
-               <date when="1892-04-13" n="01">[13.? 4. 1892]</date>
+               <date when="1891-06-06" n="01">6. 6. 1891</date>
                <placeName ref="#pmb50">Wien</placeName>
             </correspAction>
             <correspAction type="received">
-               <persName ref="#pmb11740">Hofmannsthal, Hugo von</persName>
-               <date evidence="conjecture" notBefore="1892-04-13" notAfter="1892-04-15">[13. 4. 1892
-                  – 17. 4. 1892?]</date>
-               <placeName ref="#pmb50">Wien</placeName>
-            </correspAction>
-            <correspContext><ref type="belongsToCorrespondence" target="correspondence_11740">Hofmannsthal, Hugo von</ref>
-               <ref subtype="previous_letter" type="withinCollection" target="L00093">Hofmannsthal an Schnitzler, 10. 4. 1892</ref>
-               <ref subtype="next_letter" type="withinCollection" target="L03184">Salten an Schnitzler, [13.? 4. 1892]</ref>
-               <ref subtype="previous_letter" type="withinCorrespondence" source="correspondence_11740" target="L00093">Hofmannsthal an Schnitzler, 10. 4. 1892</ref>
-               <ref subtype="next_letter" type="withinCorrespondence" source="correspondence_11740" target="L00096">Schnitzler an Hofmannsthal, 24. 4. 1892</ref>
-            </correspContext></correspDesc>
-      </profileDesc>
-      <revisionDesc status="approved">
-         <change who="GHS" when="2018-12-05">Angelegt</change>
-         <change who="MAM" when="2019-01-17">Durchsicht</change>
-         <change when="2019-01-18" who="MAM">Index check</change>
-         <change who="GHS" when="2019-09-13">finalisiert</change>
-      </revisionDesc>
-   </teiHeader>
-   <facsimile>
-      <graphic url="Hs-30885,30_001"/>
-      <graphic url="Hs-30885,30_002"/>
-   </facsimile>
-   <text>
-      <body>
-         <div type="writingSession" n="1">
-            <opener>
-               <salute>
-                  <pb facs="Hs-30885,30_001"/>Lieber Freund,</salute>
-            </opener>
-            <p>
-               <time>½ 3</time> iſt eine ſchreckliche Stunde! Entweder iſt man gleich nach dem Eſſen
-               – oder noch vor, alſo faul oder hungrig. Ich bin dafür, daß wir um <time>12</time>
-               oder <time>½ 1</time> wegfahren, am beſten auf den <rs ref="#pmb574" type="place">Kahlenberg</rs>, <pb facs="Hs-30885,30_002"/>dort eſſen und um <time>7</time>
-               herunter fahren. We<c rendition="#gemination-n"/> dies nicht möglich, ſo fahren wir
-               beſſer erſt nach <time>3</time> weg, glaub’ ich. Nicht?</p>
-            <closer>Herzlichſt<lb/>Ihr<signed>ArthSch</signed>
-            </closer>
-         </div>
-      </body>
-      <back><listPerson><person xml:id="pmb11740"><error type="person">11740 - ('Connection aborted.', ConnectionResetError(54, 'Connection reset by peer'))</error></person><person xml:id="pmb2121"><persName><surname>Schnitzler</surname><forename>Arthur</forename></persName><birth><date when="1862-05-15">15. 5. 1862</date><settlement ref="pmb50"><placeName type="pref">Wien</placeName><location><geo>48,208333 16,373056</geo></location></settlement></birth><death><date when="1931-10-21">21. 10. 1931</date><settlement ref="pmb50"><placeName type="pref">Wien</placeName><location><geo>48,208333 16,373056</geo></location></settlement></death><sex value="male"/><occupation ref="pmb90">Schriftsteller/Schriftstellerin</occupation><occupation ref="pmb97">Mediziner/Medizinerin</occupation><idno type="gnd">https://d-nb.info/gnd/118609807/</idno></person></listPerson><listPlace><place xml:id="pmb50"><error type="place">50 - ('Connection aborted.', ConnectionResetError(54, 'Connection reset by peer'))</error></place><place xml:id="pmb574"><error type="place">574 - ('Connection aborted.', ConnectionResetError(54, 'Connection reset by peer'))</error></place></listPlace></back></text>
-</TEI>
+               <persName ref="#pmb10863">Beer-Hofmann, Richard</persName>
+               <date evidence="conjecture" notBefore="1891-06-07" notAfter="1891-06-11">[7. 6. 1891
+                  – 11. 6. 1891?]<

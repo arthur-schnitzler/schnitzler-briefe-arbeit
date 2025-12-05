@@ -1,6 +1,6 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <?xml-model href="../meta/schnitzler-briefe-schematron.sch" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
-<TEI xmlns="http://www.tei-c.org/ns/1.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.tei-c.org/ns/1.0 ../meta/schnitzler-briefe-schema.xsd" xml:id="L00016" xml:base="https://id.acdh.oeaw.ac.at/schnitzler/schnitzler-briefe/editions">
+<?xml-model href="../meta/schnitzler-briefe-schematron.sch" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI xmlns="http://www.tei-c.org/ns/1.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.tei-c.org/ns/1.0 ../meta/schnitzler-briefe-schema.xsd" xml:id="L00016" xml:base="https://id.acdh.oeaw.ac.at/schnitzler/schnitzler-briefe/editions">
    <teiHeader>
       <fileDesc>
          <titleStmt>
@@ -134,12 +134,14 @@
                   – 4. 6. 1891?]</date>
                <placeName ref="#pmb50">Wien</placeName>
             </correspAction>
-            <correspContext><ref type="belongsToCorrespondence" target="correspondence_10863">Beer-Hofmann, Richard</ref>
+            <correspContext>
+               <ref type="belongsToCorrespondence" target="correspondence_10863">Beer-Hofmann, Richard</ref>
                <ref subtype="previous_letter" type="withinCollection" target="L00015">Schnitzler an Beer-Hofmann, 23. 5. 1891</ref>
                <ref subtype="next_letter" type="withinCollection" target="L00017">Schnitzler an Beer-Hofmann, [Juni 1891 – 1900?]</ref>
                <ref subtype="previous_letter" type="withinCorrespondence" source="correspondence_10863" target="L00015">Schnitzler an Beer-Hofmann, 23. 5. 1891</ref>
                <ref subtype="next_letter" type="withinCorrespondence" source="correspondence_10863" target="L00017">Schnitzler an Beer-Hofmann, [Juni 1891 – 1900?]</ref>
-            </correspContext></correspDesc>
+            </correspContext>
+         </correspDesc>
       </profileDesc>
       <revisionDesc status="approved">
          <change who="GHS" when="2019-09-09">nachträglich angelegt aus Buchausgabe und CUL-Mikrofilm
@@ -539,6 +541,10 @@
     <idno type="URL" subtype="pmb">https://pmb.acdh.oeaw.ac.at/entity/200646/</idno>
         
         <idno type="URL" subtype="schnitzler-kultur">https://schnitzler-kultur.acdh.oeaw.ac.at/pmb200646.html</idno>
+            
+    <idno type="URL" subtype="pmb">https://pmb.acdh.oeaw.ac.at/entity/143121/</idno>
+        
+        <idno type="URL" subtype="schnitzler-kultur">https://schnitzler-kultur.acdh.oeaw.ac.at/pmb143121.html</idno>
             
     <idno type="URL" subtype="pmb">https://pmb.acdh.oeaw.ac.at/entity/200770/</idno>
         
@@ -1657,7 +1663,50 @@
 
 
 
-</person><person xml:id="pmb40187" ana="implied"><error type="person">40187 - HTTPSConnectionPool(host='pmb.acdh.oeaw.ac.at', port=443): Read timed out. (read timeout=5)</error></person></listPerson><listBibl><bibl xml:id="pmb31357"><error type="bibl">31357</error></bibl><bibl xml:id="pmb31637"><error type="bibl">31637</error></bibl><bibl xml:id="pmb35837"><error type="bibl">35837</error></bibl><bibl xml:id="pmb35860"><error type="bibl">35860</error></bibl><bibl xml:id="pmb40168"><error type="bibl">40168</error></bibl></listBibl><listPlace><place xml:id="pmb167789"><placeName>Ordination Arthur Schnitzler [Bösendorferstraße 11]</placeName>
+</person><person xml:id="pmb40187" ana="implied"><persName>
+      <forename>Victor Carl</forename>
+      <surname>Wolf</surname>
+  </persName>
+
+
+  <birth>
+    <date when="1866-01-01" notAfter="1866-12-31" notBefore="1866-01-01">1866</date>
+   
+  </birth>  
+
+
+  <death>
+    <date when="1903-03-10">10.3.1903</date>
+      
+      
+      <settlement ref="pmb50">
+        <placeName type="pref">Wien</placeName>
+        
+        <location><geo>48,208333 16,373056</geo></location>
+      
+      </settlement>
+      
+      
+  </death>
+
+
+  <sex value="male"/>
+
+
+  <occupation ref="pmb913">Unternehmer/Unternehmerin</occupation>
+
+
+  <idno type="URL" subtype="pmb">https://pmb.acdh.oeaw.ac.at/entity/40187/</idno>
+
+  <idno type="URL" subtype="schnitzler-briefe">https://schnitzler-briefe.acdh.oeaw.ac.at/pmb40187.html</idno>
+
+
+
+
+
+
+
+</person></listPerson><listBibl><bibl xml:id="pmb31357"><error type="bibl">31357</error></bibl><bibl xml:id="pmb31637"><error type="bibl">31637</error></bibl><bibl xml:id="pmb35837"><error type="bibl">35837</error></bibl><bibl xml:id="pmb35860"><error type="bibl">35860</error></bibl><bibl xml:id="pmb40168"><error type="bibl">40168</error></bibl></listBibl><listPlace><place xml:id="pmb167789"><placeName>Ordination Arthur Schnitzler [Bösendorferstraße 11]</placeName>
 
 
   <desc type="entity_type">Ordination</desc>
@@ -1863,60 +1912,6 @@
 
 
 
-</place><place xml:id="pmb542"><placeName>Bösendorferstraße</placeName>
-
-  <placeName type="legacy-name-merge">Giselastraße</placeName>
-
-  <placeName type="ort_fruherer-name">Giselastraße</placeName>
-
-
-  <desc type="entity_type">R.ST</desc>
-  <desc type="entity_type_id">2030</desc>
-
-<location type="coords">
-  <geo>48,201213 16,371141</geo>
-</location>
-
-
-<location type="located_in_place">
-  <placeName ref="pmbplace__51">I., Innere Stadt</placeName>
-  <geo>48,20769 16,37049</geo>
-</location>
-
-
-  <idno type="URL" subtype="schnitzler-bahr">https://schnitzler-bahr.acdh.oeaw.ac.at/pmb542.html</idno>
-
-  <idno type="URL" subtype="pmb">https://pmb.acdh.oeaw.ac.at/entity/542/</idno>
-
-  <idno type="URL" subtype="legalkraus">https://kraus.wienbibliothek.at/register/orte/pmb542</idno>
-
-  <idno type="URL" subtype="pmb">https://pmb.acdh.oeaw.ac.at/entity/92256/</idno>
-
-  <idno type="URL" subtype="geonames">https://www.geonames.org/12495675</idno>
-
-  <idno type="URL" subtype="schnitzler-tagebuch">https://schnitzler-tagebuch.acdh.oeaw.ac.at/pmb542.html</idno>
-
-  <idno type="URL" subtype="wienerschnitzler">https://wienerschnitzler.org/pmb542.html</idno>
-
-  <idno type="URL" subtype="schnitzler-briefe">https://schnitzler-briefe.acdh.oeaw.ac.at/pmb542.html</idno>
-
-  <idno type="URL" subtype="schnitzler-kultur">https://schnitzler-kultur.acdh.oeaw.ac.at/pmb542.html</idno>
-
-
-<listBibl>
-    
-    <bibl type="collections" n="13">No WikiData-ID found</bibl>
-    
-    <bibl type="collections" n="5">Karl Kraus: Rechtsakten</bibl>
-    
-    <bibl type="collections" n="43">Wiener Schnitzler – Schnitzlers Wien</bibl>
-    
-</listBibl>
-
-
-
-
-
 </place><place xml:id="pmb833"><placeName>Brünn</placeName>
 
   <placeName type="alternative-name">Brunna</placeName>
@@ -2018,7 +2013,7 @@
   </figure>
 </note>
 
-</place><place xml:id="pmb167805" ana="implied"><placeName>Kärntnerring 12/Bösendorferstraße 11</placeName>
+</place><place xml:id="pmb167805" ana="comment"><placeName>Kärntnerring 12/Bösendorferstraße 11</placeName>
 
 
   <desc type="entity_type">Wohngebäude (K.WHS)</desc>
@@ -2064,5 +2059,5 @@
 
 
 
-</place></listPlace></back></text>
+</place><place xml:id="pmb542" ana="comment"><error type="place">542 - ('Connection aborted.', ConnectionResetError(54, 'Connection reset by peer'))</error></place></listPlace></back></text>
 </TEI>

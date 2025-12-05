@@ -50,10 +50,6 @@ class PMBProcessor:
         
         print(f"✅ PMBProcessor initialized with minimal loading strategy")
         sys.stdout.flush()
-        
-        # Register namespaces
-        ET.register_namespace("", self.tei_ns)
-        ET.register_namespace("xml", self.xml_ns)
 
     def _create_minimal_pmb_index(self) -> None:
         """Create a minimal index of PMB IDs without loading full entity data"""
@@ -980,9 +976,9 @@ class PMBProcessor:
             # Write output
             if output_file is None:
                 output_file = input_file
-            
-            # Write with preserved processing instructions, preserving element structure
-            tree.write(output_file, encoding="utf-8", xml_declaration=True, short_empty_elements=False)
+
+            # Write with lxml (lxml doesn't support short_empty_elements parameter)
+            tree.write(output_file, encoding="utf-8", xml_declaration=True, pretty_print=False)
             
             # Print statistics
             print(f"\n📊 PMB Processing Statistics:")
