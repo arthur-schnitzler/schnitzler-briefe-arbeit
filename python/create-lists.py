@@ -70,7 +70,9 @@ def fetch_entity_from_api(entity_id, entity_type):
 # Hilfsfunktion: TEI-Template mit Liste erstellen
 def create_tei_with_template(list_element, list_type):
     # TEI-Grundstruktur mit Header erstellen
-    tei = ET.Element("{http://www.tei-c.org/ns/1.0}TEI")
+    # Use nsmap to define default namespace (no prefix)
+    nsmap = {None: 'http://www.tei-c.org/ns/1.0'}
+    tei = ET.Element("{http://www.tei-c.org/ns/1.0}TEI", nsmap=nsmap)
     
     # teiHeader erstellen
     header = ET.SubElement(tei, "{http://www.tei-c.org/ns/1.0}teiHeader")
@@ -232,7 +234,8 @@ for ent in entities:
     mentioned_ids = set()
     mentioned_tree = ET.parse(ent["local_list"])
     for item in mentioned_tree.getroot().findall("item"):
-        mentioned_ids.add("pmb" + item.text.strip())
+        if item.text:  # Check if text is not None
+            mentioned_ids.add("pmb" + item.text.strip())
 
     # 3. Entitäten filtern und fehlende von API laden
     container = source_root.find(f".//tei:{ent['list_tag']}", namespaces=NS)
