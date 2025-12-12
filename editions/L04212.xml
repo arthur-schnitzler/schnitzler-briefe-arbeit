@@ -2,12 +2,12 @@
 <?xml-model href="../meta/schnitzler-briefe-schematron.sch" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
 <TEI xmlns="http://www.tei-c.org/ns/1.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
    xsi:schemaLocation="http://www.tei-c.org/ns/1.0 ../meta/schnitzler-briefe-schema.xsd"
-   xml:base="https://id.acdh.oeaw.ac.at/schnitzler/schnitzler-briefe/editions" xml:id="L04082">
+   xml:base="https://id.acdh.oeaw.ac.at/schnitzler/schnitzler-briefe/editions" xml:id="L04212">
    <teiHeader>
       <fileDesc>
          <titleStmt>
             <title level="s">Arthur Schnitzler: Briefwechsel mit Autorinnen und Autoren</title>
-            <title level="a">Arthur Schnitzler an Gustav Schwarzkopf, XXXX</title>
+            <title level="a">Arthur Schnitzler an Gustav Schwarzkopf, 20.&#160;7.&#160;1904</title>
             <author ref="#pmb2121">Schnitzler, Arthur</author>
             <editor>
                <persName>Jahnke, Selma</persName>
@@ -71,7 +71,7 @@
          <sourceDesc>
             <listWit>
                <witness n="1">
-                  <objectType corresp="xbrief"/>
+                  <objectType corresp="telegramm"/>
                   <msDesc>
                      <msIdentifier>
                         <country>GB</country>
@@ -83,14 +83,40 @@
                         <objectDesc>
                            <supportDesc>
                               <extent>
-                                 <measure unit="seite" quantity=""/>
-                                 <measure unit="blatt" quantity=""/>
+                                 <measure unit="telegramm" quantity="1"/>
                               </extent>
                            </supportDesc>
                         </objectDesc>
                         <handDesc>
-                           <handNote medium="" style="deutsche-kurrent"/>
+                           <handNote medium="lila-tinte" style="deutsche-kurrent"/>
                         </handDesc>
+                        <additions>
+                           <incident type="postal">
+                              <desc>»<quote>
+                                    <p><hi rend="pre-print">Eingelangt am</hi><space unit="chars"
+                                          quantity="1"/><date>20/7 <hi rend="pre-print"
+                                          >190…</hi></date><space unit="chars" quantity="1"
+                                          /><unclear>N</unclear></p>
+                                    <p><hi rend="pre-print">Von</hi><space unit="chars" quantity="1"/>
+                                       <rs type="place" ref="#pmb483">Reichenau NÖ.</rs></p>
+                                    <p><hi rend="pre-print">Aufgabe-Nr</hi><space unit="chars"
+                                          quantity="1"/>46325 <hi rend="pre-print">mit … Taxworten
+                                          (</hi>16<hi rend="pre-print">Worten … Chiffern)</hi></p>
+                                    <p><hi rend="pre-print">Aufgegeben am … um</hi><space
+                                          unit="chars" quantity="1"/><time>9<hi rend="superscript"
+                                                ><unclear>1</unclear>00</hi></time></p></quote>«</desc>
+                           </incident>
+                           <incident type="postal">
+                              <desc>
+                                 <stamp n="1">
+                                    <placeName ref="#pmb51">Wien 1/1</placeName>
+                                    <date when="1904-07-20"
+                                       >20&#160;VII&#160;0<supplied>4</supplied></date>
+                                    <time>11–V</time>
+                                 </stamp>
+                              </desc>
+                           </incident>
+                        </additions>
                      </physDesc>
                   </msDesc>
                </witness>
@@ -104,12 +130,18 @@
          <correspDesc>
             <correspAction type="sent">
                <persName ref="#pmb2121">Schnitzler, Arthur</persName>
-               <date when="" n="01">XXXX</date>
-               <placeName ref="#50" evidence="conjecture">Wien</placeName>
+               <date when="1904-07-20" n="01">20.&#160;7.&#160;1904</date>
+               <placeName ref="#pmb483">Reichenau</placeName>
+            </correspAction>
+            <correspAction type="delivered">
+               <date when="1904-07-20">20.&#160;7.&#160;1904</date>
+               <placeName ref="#pmb50">Wien</placeName>
             </correspAction>
             <correspAction type="received">
                <persName ref="#pmb12740">Schwarzkopf, Gustav</persName>
-               <placeName ref="#50" evidence="conjecture">Wien</placeName>
+               <date notBefore="1904-07-20" notAfter="1904-08-31">[20.&#160;7.&#160;1904 –
+                  31.&#160;8.&#160;1904?]</date>
+               <placeName ref="#pmb50">Wien</placeName>
             </correspAction>
          </correspDesc>
       </profileDesc>
@@ -119,36 +151,27 @@
    </teiHeader>
    <text>
       <body>
+         <div type="address">
+            <address>
+               <addrLine><pb facs="MS-SCHNITZLER-B-00096-B-000-00415"/><hi rend="latintype">Gustav
+                     Schwarzkopf</hi></addrLine>
+               <addrLine><rs type="place" ref="#pmb207296"><hi rend="latintype">Tiefer
+                        Graben&#160;23</hi> Wien</rs></addrLine>
+            </address>
+         </div>
          <div type="writingSession" n="1">
-            <opener>
-               <dateline><pb facs="MS-SCHNITZLER-B-00096-B-000-00131"/>
-                  <hi rend="latintype">
-                     <rs type="place" ref="#pmb168">Berlin</rs>
-                  </hi>
-                  <space unit="chars" quantity="1"/>
-                  <date>8.&#160;10.&#160;99</date>.</dateline>
-            </opener>
             <p>
-               <salute>lieber Guſtav,</salute> meine Abſicht iſts, <date>Donnerſtg</date> oder
-                  <date>Freitag</date> in <rs type="place" ref="#pmb50">Wien</rs> zu ſein. <rs
-                     type="person" ref="#pmb11485">Paul Goldma<c rendition="#gemination-n"/></rs> ko<c
-                  rendition="#gemination-m"/>t ungefähr am gleichen Tag aus <rs type="place" ref=""
-                  >Florenz</rs> an, und wird acht Tage in <rs type="place" ref="#pmb50">Wien</rs>,
-               bei mir, wohnen. So ſpar ich mir die <rs type="place" ref="#pmb168">Berlin</rs>er
-               Berichte auf unſre nächſte mündliche Unterhaltg auf. Die Damen <rs type="person"
-                  ref="">G.</rs> grüßen beſtens zurück. – Heut vor einem Jahr war <pb
-                  facs="MS-SCHNITZLER-B-00096-B-000-00132"/>hier die <rs type="event" ref="">
-                  <rs type="work" ref="">Vermächtnis</rs>
-                  <hi rend="latintype">Première</hi>
-               </rs>
-               ! Lang lang iſts her!– Dafür hab ich geſtern dem <rs
-                  type="person" ref="">Brahm</rs> die <hi rend="latintype">
-                  <rs type="work" ref="">Beatrice</rs>
-               </hi> vorgeleſen; mir ko<c rendition="#gemination-m"/>t vor, ſie hat einen gewiſſen
-               Eindruck auf ihn gemacht. Aber ich gebe ſie noch nicht her; habe noch manches daran
-               zu thun. Überdies iſt ſie hier nahezu unſpielbar. Ich las (mit einer Unterbrechung,
-               Souper,) Von 7 –Mitternacht.&#160;– leben Sie wohl und auf baldg Wiederſehn!</p>
-            <closer>Herzlichſt Ihr <signed>Arthur</signed>
+               <pb facs="MS-SCHNITZLER-B-00096-B-000-00415"/>Wann <anchor type="commentary"
+                  xml:id="K_L04212-1"/>ko<c rendition="#gemination-m"/>en<note type="commentary"
+                  corresp="K_L04212-1"><rs type="person" ref="#pmb12740">Schwarzkopf</rs> hielt sich
+                  in <rs type="place" ref="#pmb91729">Sekirn</rs> auf und kam nicht nach <rs
+                     type="place" ref="#pmb483">Reichenau</rs>.</note> Sie endlich <del
+                  rend="strikethrough">Wien</del> wir bleiben bis <anchor type="commentary"
+                  xml:id="K_L04212-2"/><date>Freitag</date><note type="commentary"
+                  corresp="K_L04212-2">Die Abreise verzögerte sich auf Samstag, <ref
+                     type="wienerschnitzler" target="1904-07-23" subtype="date-only"/>.</note>
+            </p>
+            <closer>Herzlichst <signed>Arthur–</signed>
             </closer>
          </div>
       </body>
