@@ -331,16 +331,17 @@
                 "anchor" haben, das eine zum Attribut @corresp passende @xml:id hat </sch:assert>
             <!-- Regel 1: Punkt-Prüfung -->
             <sch:assert
-                test="not(count(*) = 1 and tei:ref and not(normalize-space(string-join(text(), '')))) or ends-with(normalize-space(string-join(text(), '')), '.')"
+                test="not(count(*) = 1 and tei:ref and string-length(normalize-space(replace(string-join(text(), ''), '\.', ''))) = 0)
+                or ends-with(normalize-space(.), '.')"
                 >
-                Wenn eine note nur aus einem einzigen »ref« besteht, muss sie mit einem Punkt enden.
+                Wenn eine note[@type='commentary'] nur aus einem einzigen »ref« und evtl. Whitespace besteht, muss sie mit einem Punkt enden.
             </sch:assert>
             <!-- Regel 2: subtype-Prüfung -->
             <sch:assert
-                test="not(count(*) = 1 and tei:ref and not(normalize-space(string-join(text(), '')))) 
-                or (tei:ref/@subtype = 'Cf' or tei:ref/@subtype = 'See' or not(tei:ref/@subtype))"
+                test="not(count(*) = 1 and tei:ref and string-length(normalize-space(replace(string-join(text(), ''), '\.', ''))) = 0)
+                or (tei:ref/@subtype = 'Cf' or tei:ref/@subtype = 'See' or tei:ref/@subtype = 'date-only' or not(tei:ref/@subtype))"
                 >
-                Wenn eine note nur aus einem einzigen »ref« besteht, darf dessen @subtype nur »Cf«, »See« oder leer sein.
+                Wenn eine note[@type='commentary'] nur aus einem einzigen »ref« und evtl. Whitespace besteht, darf dessen @subtype nur »Cf«, »See«, »date-only« oder leer sein (nicht »see« oder »cf«).
             </sch:assert>
         </sch:rule>
         <sch:rule context="tei:note[@type = 'footnote']">
