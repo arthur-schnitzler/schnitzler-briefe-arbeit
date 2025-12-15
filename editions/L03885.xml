@@ -1,7 +1,9 @@
-<?xml version='1.0' encoding='UTF-8'?>
+<?xml version="1.0" encoding="UTF-8"?>
 <?xml-model href="../meta/schnitzler-briefe-schematron.sch" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
 <?xml-model href="../meta/schnitzler-briefe-schematron.sch" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
-<TEI xmlns="http://www.tei-c.org/ns/1.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.tei-c.org/ns/1.0 ../meta/schnitzler-briefe-schema.xsd" xml:id="L03885" xml:base="https://id.acdh.oeaw.ac.at/schnitzler/schnitzler-briefe/editions">
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+   xsi:schemaLocation="http://www.tei-c.org/ns/1.0 ../meta/schnitzler-briefe-schema.xsd"
+   xml:id="L03885" xml:base="https://id.acdh.oeaw.ac.at/schnitzler/schnitzler-briefe/editions">
    <teiHeader>
       <fileDesc>
          <titleStmt>
@@ -73,6 +75,69 @@
                   <objectType corresp="brief"/>
                   <msDesc>
                      <msIdentifier>
+                        <country>F</country>
+                        <settlement>Paris</settlement>
+                        <repository>Bibliothèque Nationale de France</repository>
+                        <idno>Fonds Romain Rolland, Cote NAF 28400</idno>
+                     </msIdentifier>
+                     <physDesc>
+                        <objectDesc>
+                           <supportDesc>
+                              <extent>
+                                 <measure unit="kuvert" quantity="1"/>
+                                 <measure unit="seite" quantity="2"/>
+                                 <measure unit="blatt" quantity="2"/>
+                                 <measure unit="zeichenanzahl" quantity="1312"/>
+                              </extent>
+                           </supportDesc>
+                        </objectDesc>
+                        <typeDesc>
+                           <typeNote medium="schreibmaschine"/>
+                        </typeDesc>
+                        <handDesc>
+                           <handNote medium="schwarze-tinte" style="nicht-anzuwenden">
+                              <p>Unterschrift, Unterstreichung und Ergänzung zweier Satzzeichen</p>
+                           </handNote>
+                        </handDesc>
+                        <additions>
+                           <incident type="postal">
+                              <desc>
+                                 <stamp n="1">
+                                    <placeName ref="#pmb51">1/1 Wien</placeName>
+                                    <date when="1915-01-07">7. I. 15</date>
+                                    <time>6</time>
+                                 </stamp>
+                              </desc>
+                           </incident>
+                           <incident type="postal">
+                              <desc>
+                                 <stamp n="2">
+                                    <placeName ref="#pmb51">Wien 1</placeName>
+                                    <addSpan>Überprüft</addSpan>
+                                 </stamp>
+                              </desc>
+                           </incident>
+                           <incident type="receiver" rend="schwarze-tinte">
+                              <desc>Datierung: »<quote>
+                                    <date>7/1/1915</date>
+                              </quote>« und Vermerk: »<quote>
+                                 <hi rend="underline" n="1">ARL</hi>
+                              </quote>«</desc>
+                           </incident>
+                           <incident type="archival" rend="bleistift">
+                              <desc>Kuvert nummeriert: »<quote>2</quote>«</desc>
+                           </incident>
+                           <incident type="archival" rend="bleistift">
+                              <desc>Blätter (einschliesslich des Kuverts) paginiert: »<quote>4</quote>« – »<quote>5</quote>«</desc>
+                           </incident>
+                        </additions>
+                     </physDesc>
+                  </msDesc>
+               </witness>
+               <witness n="2">
+                  <objectType corresp="brief"/>
+                  <msDesc>
+                     <msIdentifier>
                         <country>D</country>
                         <settlement>Marbach am Neckar</settlement>
                         <repository>Deutsches Literaturarchiv</repository>
@@ -82,7 +147,7 @@
                         <objectDesc form="durchschlag">
                            <supportDesc>
                               <extent>
-                                 <measure unit="zeichenanzahl" quantity="1261"/>
+                                 <measure unit="zeichenanzahl" quantity="1312"/>
                               </extent>
                            </supportDesc>
                         </objectDesc>
@@ -125,228 +190,552 @@
             </correspAction>
             <correspAction type="received">
                <persName ref="#pmb12543">Rolland, Romain</persName>
-               <date evidence="external" notBefore="1915-01-08" notAfter="1915-01-11">[8. 1. 1915 – 11. 1. 1915?]</date>
-               <placeName ref="#pmb562" evidence="conjecture">Genf</placeName>
+               <date evidence="external" notBefore="1915-01-08" notAfter="1915-01-11">[8. 1. 1915 –
+                  11. 1. 1915?]</date>
+               <placeName ref="#pmb562">Genf</placeName>
             </correspAction>
-            <correspContext><ref type="belongsToCorrespondence" target="correspondence_12543">Rolland, Romain</ref>
-               <ref subtype="previous_letter" type="withinCollection" target="L02201">Brandes an Schnitzler, 23. 12. 1914</ref>
-               <ref subtype="next_letter" type="withinCollection" target="L02202">Schnitzler an Brandes, 8. 1. 1915</ref>
-               <ref subtype="previous_letter" type="withinCorrespondence" source="correspondence_12543" target="L03882">Rolland an Schnitzler, 19. 12. 1914</ref>
-               <ref subtype="next_letter" type="withinCorrespondence" source="correspondence_12543" target="L03883">Rolland an Schnitzler, 6. 2. 1916</ref>
-            </correspContext></correspDesc>
+            <correspContext>
+               <ref type="belongsToCorrespondence" target="correspondence_12543">Rolland,
+                  Romain</ref>
+               <ref subtype="previous_letter" type="withinCollection" target="L02201">Brandes an
+                  Schnitzler, 23. 12. 1914</ref>
+               <ref subtype="next_letter" type="withinCollection" target="L02202">Schnitzler an
+                  Brandes, 8. 1. 1915</ref>
+               <ref subtype="previous_letter" type="withinCorrespondence"
+                  source="correspondence_12543" target="L03882">Rolland an Schnitzler,
+                  19. 12. 1914</ref>
+               <ref subtype="next_letter" type="withinCorrespondence" source="correspondence_12543"
+                  target="L03883">Rolland an Schnitzler, 6. 2. 1916</ref>
+            </correspContext>
+         </correspDesc>
       </profileDesc>
       <revisionDesc status="proposed">
          <change who="MAM" when="2025-09-26">Angelegt aus Briefe II</change>
+         <change who="MAM" when="2025-12-15">Durchsicht mit BNF</change>
       </revisionDesc>
    </teiHeader>
    <text>
       <body>
+         <div type="address">
+            <address>
+               <addrLine>
+                  <pb facs=""/>
+                  <hi rend="pre-print">Dr. Arthur Schnitzler</hi>
+               </addrLine>
+               <addrLine>
+                  <hi rend="pre-print">
+                     <rs type="place" ref="#pmb168815">Wien XVIII. Sternwartestrasse 71</rs>
+                  </hi>
+               </addrLine>
+            </address>
+            <address>
+               <addrLine>Herrn Romain Rolland</addrLine>
+               <addrLine>
+                  <rs type="place" ref="#pmb562">Genève</rs>
+               </addrLine>
+               <addrLine>
+                  <rs type="place" ref="#pmb294001">Hotel Beau-Séjour</rs>.</addrLine>
+               <addrLine>
+                  <rs type="place" ref="#pmb43435">Schweiz</rs>.</addrLine>
+            </address>
+         </div>
          <div type="writingSession" n="1">
             <opener>
-               <dateline rend="right">
-                  <pb facs=""/>
-                  <date>7. 1. 1915</date>.</dateline>
-               <salute>Verehrter Herr Rolland.</salute>
+               <seg>
+                  <seg rend="left" type="letterhead">
+                     <pb facs=""/>
+                     <hi rend="pre-print">Dr. Arthur Schnitzler</hi>
+                  </seg>
+                  <seg rend="right">
+                     <date>7. 1. 1915</date>.</seg>
+               </seg>
+               <seg type="letterhead">
+                  <hi rend="pre-print">
+                     <rs type="place" ref="#pmb168815">Wien XVIII. Sternwartestrasse 71</rs>
+                  </hi>
+               </seg>
+               <salute rend="center">Verehrter Herr Rolland.</salute>
             </opener>
             <p>Das <rs type="work" ref="#pmb58493">
-                  <rs type="work" ref="#pmb58490" subtype="implied">Journal de Genève</rs>
-               </rs> ist <anchor type="commentary" xml:id="K_L03885-44"/>nicht an mich gelangt<note type="commentary" corresp="K_L03885-44">Er
-                  erhielt seinen <rs type="work" ref="#pmb58490" subtype="implied">Protest</rs> erst am <ref type="schnitzler-tagebuch" subtype="date-only" target="1915-01-17"/>.</note>, während die <rs type="work" ref="#pmb42406">
-                  <rs type="work" ref="#pmb296393" subtype="implied">Zürcher Zeitung</rs>
-               </rs> gestern von der <rs type="org" ref="#pmb29672" subtype="implied">Redaktion</rs> aus mit erheblicher Verspätung bei mir angekommen
-               ist. Die Zensur entschliesst sich wahrscheinlich besonders schwer Zeitungen in
-               französischer Sprache durchzulassen und so werde ich vorläufig darauf verzichten
-               müssen, Ihre <rs type="work" ref="#pmb58490" subtype="implied">Übersetzung</rs>
-               meiner <rs type="work" ref="#pmb296393">Erklärung</rs> zu lesen, wenn Sie vielleicht
-               nicht doch noch einen Versuch machen wollen, mindestens den betreffenden Ausschnitt
-               unter Couvert mir zuzuschicken. Die Zensur wird es hoffentlich als politisch
-               gefahrlos erkennen, mir einen von mir selbst verfassten und von Romain Rolland
-               übersetzten <rs type="work" ref="#pmb58490" subtype="implied">Protest</rs> zur
-               Lektüre frei zu geben.</p>
+                  <rs type="work" ref="#pmb58490" subtype="implied">Journal de Genêve</rs>
+               </rs> ist <anchor type="commentary" xml:id="K_L03885-1"/>nicht an mich gelangt<note
+                  type="commentary" corresp="K_L03885-1">Er erhielt seinen <rs type="work"
+                     ref="#pmb58490" subtype="implied">Protest</rs> erst am <ref
+                     type="schnitzler-tagebuch" subtype="date-only" target="1915-01-17"/>.</note>,
+               während die <rs type="work" ref="#pmb42406">
+                  <rs type="work" ref="#pmb296393" subtype="implied">Züricher Zeitung</rs>
+               </rs> gestern von der <rs type="org" ref="#pmb29672" subtype="implied">Redaktion</rs>
+               aus mit erheblicher Verspätung bei mir angekommen ist. Die Zensur entschliesst sich
+               wahrscheinlich besonders schwer Zeitungen in französischer Sprache durchzulassen<add
+                  place="inline">,</add> und so werde ich vorläufig darauf verzichten müssen, Ihre
+                  <rs type="work" ref="#pmb58490" subtype="implied">Uebersetzung</rs> meiner <rs
+                  type="work" ref="#pmb296393">Erklärung</rs> zu lesen, wenn Sie vielleicht nicht
+               doch noch einen Versuch machen wollen, mindestens den betreffenden <hi
+                  rend="underline" n="1">Ausschnitt</hi> unter Couvert mir zuzuschicken. Die Zensur
+               wird es hoffentlich als politisch gefahrlos erkennen, mir einen von mir selbst
+               verfassten und von Romain Rolland übersetzten <rs type="work" ref="#pmb58490"
+                  subtype="implied">Protest</rs> zur Lektüre frei zu geben.</p>
             <p>Lassen Sie mich Ihnen heute nochmals für Ihre freundliche Bemühung, sowie für Ihren
-               letzten, so liebenswürdigen <anchor type="commentary" xml:id="K_L03885-1"/>Brief<note type="commentary" corresp="K_L03885-1">
-                  <ref type="schnitzler-briefe" target="L03882"/>?</note> herzlich danken. Immer wieder lesen wir in der
-               letzten Zeit in Feldpostbriefen, dass die feindlichen Soldaten, die einander in den
-               Schützengräben gegenüberliegen, in den Kampfpausen einander Höflichkeiten,
-               Rücksichten, Gefälligkeiten, ja achtungsvoll-freundschaftliche Gesinnung erweisen;
-               wie denken Sie, mein verehrter Herr Rolland, über die Einführung von Schützengräben
-               für Journalisten und Diplomaten?</p>
-            <closer>Seien Sie herzlichst gegrüsst<lb/>Ihr sehr ergebener</closer>
+               letzten, so liebenswürdigen <anchor type="commentary" xml:id="K_L03885-2"/>Brief<note
+                  type="commentary" corresp="K_L03885-2">
+                  <ref type="schnitzler-briefe" target="L03882"/>?</note> herzlich danken. Immer
+               wieder lesen wir in der letzten Zeit in Feldpostbriefen, dass die feindlichen
+               Soldaten, die einander in den Schützengräben gegenüberliegen, in den Kampfpausen
+               einander Höflichkeiten, Rücksichten, Gefälligkeiten, ja
+               achtungsvoll-freundschaftliche Gesinnung erweisen<add place="inline">;</add> wie
+               denken Sie, mein verehrter Herr Rolland, über die Einführung von Schützengräben für
+               Journalisten und Diplomaten?</p>
+            <closer>Seien Sie herzlichst gegrüsst<lb/>Ihr sehr
+                  ergebener<lb/><signed><handShift/>Arthur Schnitzler</signed></closer>
          </div>
       </body>
-      <back><listPerson><person xml:id="pmb12543"><persName>
-      <forename>Romain</forename>
-      <surname>Rolland</surname>
-  </persName>
-  <birth>
-    <date when="1866-01-29">29.01.1866</date>
-      <settlement ref="pmb48686">
-        <placeName type="pref">Clamecy</placeName>
-        <location><geo>47,46017 3,5194</geo></location>
-      </settlement>
-  </birth>  
-  <death>
-    <date when="1944-12-30">30.12.1944</date>
-      <settlement ref="pmb58488">
-        <placeName type="pref">Vézelay</placeName>
-        <location><geo>47,46572 3,74559</geo></location>
-      </settlement>
-  </death>
-  <sex value="male"/>
-  <occupation ref="pmb90">Schriftsteller/Schriftstellerin</occupation>
-  <idno type="URL" subtype="gnd">https://d-nb.info/gnd/118602330</idno>
-  <idno type="URL" subtype="schnitzler-tagebuch">https://schnitzler-tagebuch.acdh.oeaw.ac.at/person_19333.html</idno>
-  <idno type="URL" subtype="schnitzler-bahr">https://schnitzler-bahr.acdh.oeaw.ac.at/pmb12543.html</idno>
-  <idno type="URL" subtype="pmb">https://pmb.acdh.oeaw.ac.at/entity/12543/</idno>
-  <idno type="URL" subtype="schnitzler-lektueren">https://schnitzler-lektueren.acdh.oeaw.ac.at/pmb12543.html</idno>
-  <idno type="URL" subtype="fackel">https://fackel.oeaw.ac.at/?p=fackelp52430</idno>
-  <idno type="URL" subtype="dritte-walpurgisnacht">https://kraus1933.ace.oeaw.ac.at/Gesamt.xml?template=register_personen.html&amp;letter=R#DWpers0200</idno>
-  <idno type="URL" subtype="wikidata">http://www.wikidata.org/entity/Q47162</idno>
-  <idno type="URL" subtype="wikipedia">https://de.wikipedia.org/wiki/Romain_Rolland</idno>
-  <idno type="URL" subtype="schnitzler-interviews">https://schnitzler-interviews.acdh.oeaw.ac.at/pmb12543.html</idno>
-  <idno type="URL" subtype="schnitzler-mikrofilme">https://schnitzler-mikrofilme.acdh.oeaw.ac.at/1416477.html?pmb12543</idno>
-  <idno type="URL" subtype="bahr-textverzeichnis">https://bahr-textverzeichnis.acdh.oeaw.ac.at/pmb12543.html</idno>
-  <idno type="URL" subtype="zweig-digital">https://www.stefanzweig.digital/o:szd.personen/sdef:TEI/get#SZDPER.1192</idno>
-  <idno type="URL" subtype="brenner">https://brenner.oeaw.ac.at/?p=brennerp10255</idno>
-  <idno type="URL" subtype="schnitzler-briefe">https://schnitzler-briefe.acdh.oeaw.ac.at/pmb12543.html</idno>
-  <idno type="URL" subtype="schnitzler-kultur">https://schnitzler-kultur.acdh.oeaw.ac.at/pmb12543.html</idno>
-<figure>
-    <graphic url="https://upload.wikimedia.org/wikipedia/commons/thumb/a/ad/Romain_Rolland_1915.jpg/250px-Romain_Rolland_1915.jpg"/>
-</figure>
-</person><person xml:id="pmb2121"><persName><surname>Schnitzler</surname><forename>Arthur</forename></persName><birth><date when="1862-05-15">15. 5. 1862</date><settlement ref="pmb50"><placeName type="pref">Wien</placeName><location><geo>48,208333 16,373056</geo></location></settlement></birth><death><date when="1931-10-21">21. 10. 1931</date><settlement ref="pmb50"><placeName type="pref">Wien</placeName><location><geo>48,208333 16,373056</geo></location></settlement></death><sex value="male"/><occupation ref="pmb90">Schriftsteller/Schriftstellerin</occupation><occupation ref="pmb97">Mediziner/Medizinerin</occupation><idno type="gnd">https://d-nb.info/gnd/118609807/</idno></person></listPerson><listBibl><bibl xml:id="pmb296393"><title type="main">Ein Brief Artur Schnitzlers</title>
-  <title type="werk_link">https://www.e-newspaperarchives.ch/?a=d&amp;d=NZZ19141222-04.2.4</title>
-  <title type="werk_link">https://schnitzler-interviews.acdh.oeaw.ac.at/P111.html</title>
-  <title type="werk_bibliografische-angabe">Ein Brief Artur Schnitzlers. In: Neue Zürcher Zeitung, Jg. 135, Nr. 1700, 22. 12. 1914, 2. Mittagsblatt, S. 2</title>
-  <author role="hat-geschaffen" ref="pmb2121">Schnitzler, Arthur</author>
-<date>1914-12-22</date>
-  <idno type="URL" subtype="pmb">https://pmb.acdh.oeaw.ac.at/entity/296393/</idno>
-  <idno type="URL" subtype="schnitzler-briefe">https://schnitzler-briefe.acdh.oeaw.ac.at/pmb296393.html</idno>
-<note type="work_kind">Leserbrief</note>
-</bibl><bibl xml:id="pmb42406"><title type="main">Neue Zürcher Zeitung</title>
-<date when="1780-01-12">12.1.1780</date>
-  <idno type="URL" subtype="pmb">https://pmb.acdh.oeaw.ac.at/entity/42406/</idno>
-  <idno type="URL" subtype="legalkraus">https://kraus.wienbibliothek.at/register/werke/pmb42406</idno>
-  <idno type="URL" subtype="wikidata">http://www.wikidata.org/entity/Q658945</idno>
-  <idno type="URL" subtype="wikipedia">https://de.wikipedia.org/wiki/Neue_Z%C3%BCrcher_Zeitung</idno>
-  <idno type="URL" subtype="schnitzler-interviews">https://schnitzler-interviews.acdh.oeaw.ac.at/pmb42406.html</idno>
-  <idno type="URL" subtype="hanslick-online">https://hanslick.acdh.oeaw.ac.at/hsl_work_id_2205.html</idno>
-  <idno type="URL" subtype="schnitzler-briefe">https://schnitzler-briefe.acdh.oeaw.ac.at/pmb42406.html</idno>
-  <idno type="URL" subtype="semantickraus">https://sk.acdh.oeaw.ac.at/pmb42406/published-expression</idno>
-<note type="work_kind">Tageszeitung</note>
-</bibl><bibl xml:id="pmb58493"><title type="main">Journal de Genève</title>
-  <author role="hat-herausgegeben" ref="pmb259326">Seippel, Paul</author>
-<date to="1998-02-28">1826-01-05 – 1998-02-28</date>
-  <idno type="URL" subtype="pmb">https://pmb.acdh.oeaw.ac.at/entity/58493/</idno>
-  <idno type="URL" subtype="schnitzler-interviews">https://schnitzler-interviews.acdh.oeaw.ac.at/pmb58493.html</idno>
-  <idno type="URL" subtype="schnitzler-briefe">https://schnitzler-briefe.acdh.oeaw.ac.at/pmb58493.html</idno>
-  <note type="work_kind">Tageszeitung</note>
-</bibl><bibl xml:id="pmb58490" ana="comment"><title type="main">Une protestation d’Arthur Schnitzler</title>
-  <title type="werk_link">https://schnitzler-interviews.acdh.oeaw.ac.at/P111.html</title>
-  <title type="werk_bibliografische-angabe">Schnitzler, Arthur, Rolland, Romain [Einleitung und Übersetzung]: Une protestation d’Arthur Schnitzler. In: Journal de Genève, Jg. 85, 21. 12. 1914, 3. Ausgabe, S. [1]</title>
-  <author role="hat-geschaffen" ref="pmb2121">Schnitzler, Arthur</author>
-  <author role="hat-ubersetzt" ref="pmb12543">Rolland, Romain</author>
-<date>1914-12-21</date>
-  <idno type="URL" subtype="pmb">https://pmb.acdh.oeaw.ac.at/entity/58490/</idno>
-  <idno type="URL" subtype="schnitzler-interviews">https://schnitzler-interviews.acdh.oeaw.ac.at/pmb58490.html</idno>
-  <idno type="URL" subtype="schnitzler-briefe">https://schnitzler-briefe.acdh.oeaw.ac.at/pmb58490.html</idno>
-  <note type="work_kind">Leserbrief</note>
-</bibl></listBibl><listPlace><place xml:id="pmb50"><placeName>Wien</placeName>
-  <placeName type="ort_fruherer-name">K.K. Reichshaupt- und Residenzstadt Wien</placeName>
-  <placeName type="legacy-name-merge">Wien</placeName>
-  <placeName type="alternative-name">Bécs</placeName>
-  <placeName type="alternative-name">Land Wien</placeName>
-  <placeName type="alternative-name">Vídeň</placeName>
-  <placeName type="alternative-name">Wenia</placeName>
-  <placeName type="alternative-name">Beč</placeName>
-  <placeName type="ort_fruherer-name">Vindobona</placeName>
-  <placeName type="legacy-name-merge">Vindobona</placeName>
-  <placeName type="alternative-name">Vienna</placeName>
-  <placeName type="legacy-name-merge">Vienna</placeName>
-  <placeName type="alternative-name">Vienna</placeName>
-  <desc type="entity_type">A.ADM2</desc>
-  <desc type="entity_type_id">1135</desc>
-<location type="coords">
-  <geo>48,208333 16,373056</geo>
-</location>
-<location type="located_in_place">
-  <placeName ref="pmb41240">Österreich</placeName>
-  <geo>47,33333 13,33333</geo>
-</location>
-  <idno type="URL" subtype="geonames">https://sws.geonames.org/2761369/</idno>
-  <idno type="URL" subtype="gnd">https://d-nb.info/gnd/4066009-6</idno>
-  <idno type="URL" subtype="schnitzler-bahr">https://schnitzler-bahr.acdh.oeaw.ac.at/pmb50.html</idno>
-  <idno type="URL" subtype="pmb">https://pmb.acdh.oeaw.ac.at/entity/50/</idno>
-  <idno type="URL" subtype="pmb">https://pmb.acdh.oeaw.ac.at/entity/2316/</idno>
-  <idno type="URL" subtype="pmb">https://pmb.acdh.oeaw.ac.at/entity/20954/</idno>
-  <idno type="URL" subtype="pmb">https://pmb.acdh.oeaw.ac.at/entity/65221/</idno>
-  <idno type="URL" subtype="pmb">https://pmb.acdh.oeaw.ac.at/entity/65223/</idno>
-  <idno type="URL" subtype="legalkraus">https://kraus.wienbibliothek.at/register/orte/pmb50</idno>
-  <idno type="URL" subtype="wikidata">http://www.wikidata.org/entity/Q1741</idno>
-  <idno type="URL" subtype="wikipedia">https://de.wikipedia.org/wiki/Wien</idno>
-  <idno type="URL" subtype="schnitzler-interviews">https://schnitzler-interviews.acdh.oeaw.ac.at/pmb50.html</idno>
-  <idno type="URL" subtype="geonames">https://sws.geonames.org/2761333/</idno>
-  <idno type="URL" subtype="pmb">https://pmb.acdh.oeaw.ac.at/entity/33999/</idno>
-  <idno type="URL" subtype="schnitzler-tagebuch">https://schnitzler-tagebuch.acdh.oeaw.ac.at/pmb50.html</idno>
-  <idno type="URL" subtype="wienerschnitzler">https://wienerschnitzler.org/pmb50.html</idno>
-  <idno type="URL" subtype="schnitzler-briefe">https://schnitzler-briefe.acdh.oeaw.ac.at/pmb50.html</idno>
-  <idno type="URL" subtype="schnitzler-kultur">https://schnitzler-kultur.acdh.oeaw.ac.at/pmb50.html</idno>
-  <idno type="URL" subtype="semantickraus">https://sk.acdh.oeaw.ac.at/DWplace00347</idno>
-  <idno type="URL" subtype="semantickraus">https://sk.acdh.oeaw.ac.at/DWplace00066</idno>
-  <idno type="URL" subtype="semantickraus">https://sk.acdh.oeaw.ac.at/DWplace00085</idno>
-<note type="image">
-  <figure>
-    <graphic url="https://iiif.onb.ac.at/images/AKON/AK117_016/016/full/,600/0/native.jpg"/>
-  </figure>
-</note>
-</place><place xml:id="pmb562"><placeName>Genf</placeName>
-  <placeName type="legacy-name-merge">Genf</placeName>
-  <placeName type="legacy-name-merge">Drize, Kreis Genf</placeName>
-  <placeName type="alternative-name">Genf</placeName>
-  <placeName type="legacy-name-merge">Geneva</placeName>
-  <placeName type="legacy-name-merge">Genf</placeName>
-  <desc type="entity_type">P.PPLA</desc>
-  <desc type="entity_type_id">1415</desc>
-<location type="coords">
-  <geo>46,20222 6,14569</geo>
-</location>
-<location type="located_in_place">
-  <placeName ref="pmb43435">Schweiz</placeName>
-  <geo>47,00016 8,01427</geo>
-</location>
-<location type="located_in_place">
-  <placeName ref="pmb294758">Romandie</placeName>
-  <geo>46,2 6,15</geo>
-</location>
-  <idno type="URL" subtype="wikidata">http://www.wikidata.org/entity/Q71</idno>
-  <idno type="URL" subtype="schnitzler-bahr">https://schnitzler-bahr.acdh.oeaw.ac.at/pmb562.html</idno>
-  <idno type="URL" subtype="pmb">https://pmb.acdh.oeaw.ac.at/entity/562/</idno>
-  <idno type="URL" subtype="pmb">https://pmb.acdh.oeaw.ac.at/entity/22973/</idno>
-  <idno type="URL" subtype="pmb">https://pmb.acdh.oeaw.ac.at/entity/64309/</idno>
-  <idno type="URL" subtype="geonames">https://sws.geonames.org/2660646/</idno>
-  <idno type="URL" subtype="legalkraus">https://kraus.wienbibliothek.at/register/orte/pmb562</idno>
-  <idno type="URL" subtype="pmb">https://pmb.acdh.oeaw.ac.at/entity/99397/</idno>
-  <idno type="URL" subtype="gnd">https://d-nb.info/gnd/4020137-5</idno>
-  <idno type="URL" subtype="wikipedia">https://de.wikipedia.org/wiki/Genf</idno>
-  <idno type="URL" subtype="schnitzler-interviews">https://schnitzler-interviews.acdh.oeaw.ac.at/pmb562.html</idno>
-  <idno type="URL" subtype="schnitzler-tagebuch">https://schnitzler-tagebuch.acdh.oeaw.ac.at/pmb562.html</idno>
-  <idno type="URL" subtype="wienerschnitzler">https://wienerschnitzler.org/pmb562.html</idno>
-  <idno type="URL" subtype="semantickraus">https://sk.acdh.oeaw.ac.at/DWplace00220</idno>
-  <idno type="URL" subtype="schnitzler-briefe">https://schnitzler-briefe.acdh.oeaw.ac.at/pmb562.html</idno>
-<note type="image">
-  <figure>
-    <graphic url="https://iiif.onb.ac.at/images/AKON/AK116_160/160/full/,600/0/native.jpg"/>
-  </figure>
-</note>
-</place></listPlace><listOrg><org xml:id="pmb29672" ana="implied"><orgName>Neue Zürcher Zeitung</orgName>
-  <desc type="entity_type">Tageszeitungsredaktion</desc>
-  <desc type="entity_type_id">972</desc>
-<location type="located_in_place">
-  <placeName ref="pmb484">Zürich</placeName>
-  <geo>47,37174 8,54226</geo>
-  <idno type="URL" subtype="wikidata">http://www.wikidata.org/entity/Q72</idno><idno type="URL" subtype="geonames">https://sws.geonames.org/2657896/</idno><idno type="URL" subtype="schnitzler-bahr">https://schnitzler-bahr.acdh.oeaw.ac.at/pmb484.html</idno><idno type="URL" subtype="pmb">https://pmb.acdh.oeaw.ac.at/entity/484/</idno><idno type="URL" subtype="pmb">https://pmb.acdh.oeaw.ac.at/entity/62728/</idno><idno type="URL" subtype="d-nb">https://d-nb.info/gnd/4068038-1</idno><idno type="URL" subtype="kraus">https://kraus.wienbibliothek.at/register/orte/pmb484</idno><idno type="URL" subtype="wikipedia">https://de.wikipedia.org/wiki/Z%C3%BCrich</idno><idno type="URL" subtype="schnitzler-tagebuch">https://schnitzler-tagebuch.acdh.oeaw.ac.at/pmb484.html</idno><idno type="URL" subtype="schnitzler-interviews">https://schnitzler-interviews.acdh.oeaw.ac.at/pmb484.html</idno><idno type="URL" subtype="wienerschnitzler">https://wienerschnitzler.org/pmb484.html</idno><idno type="URL" subtype="schnitzler-briefe">https://schnitzler-briefe.acdh.oeaw.ac.at/pmb484.html</idno><idno type="URL" subtype="schnitzler-kultur">https://schnitzler-kultur.acdh.oeaw.ac.at/pmb484.html</idno><idno type="URL" subtype="sk">https://sk.acdh.oeaw.ac.at/DWplace00061</idno><idno type="URL" subtype="sk">https://sk.acdh.oeaw.ac.at/pmb484</idno><idno type="URL" subtype="sk">https://sk.acdh.oeaw.ac.at/fa_place00003366</idno></location>
-  <idno type="URL" subtype="schnitzler-bahr">https://schnitzler-bahr.acdh.oeaw.ac.at/pmb29672.html</idno>
-  <idno type="URL" subtype="pmb">https://pmb.acdh.oeaw.ac.at/entity/29672/</idno>
-  <idno type="URL" subtype="schnitzler-interviews">https://schnitzler-interviews.acdh.oeaw.ac.at/pmb29672.html</idno>
-  <idno type="URL" subtype="schnitzler-briefe">https://schnitzler-briefe.acdh.oeaw.ac.at/pmb29672.html</idno>
-</org></listOrg></back></text>
+      <back>
+         <listPerson>
+            <person xml:id="pmb2121">
+               <persName>
+                  <surname>Schnitzler</surname>
+                  <forename>Arthur</forename>
+               </persName>
+               <birth>
+                  <date when="1862-05-15">15. 5. 1862</date>
+                  <settlement ref="pmb50">
+                     <placeName type="pref">Wien</placeName>
+                     <location>
+                        <geo>48,208333 16,373056</geo>
+                     </location>
+                  </settlement>
+               </birth>
+               <death>
+                  <date when="1931-10-21">21. 10. 1931</date>
+                  <settlement ref="pmb50">
+                     <placeName type="pref">Wien</placeName>
+                     <location>
+                        <geo>48,208333 16,373056</geo>
+                     </location>
+                  </settlement>
+               </death>
+               <sex value="male"/>
+               <occupation ref="pmb90">Schriftsteller/Schriftstellerin</occupation>
+               <occupation ref="pmb97">Mediziner/Medizinerin</occupation>
+               <idno type="gnd">https://d-nb.info/gnd/118609807/</idno>
+            </person>
+            <person xml:id="pmb12543">
+               <persName>
+                  <forename>Romain</forename>
+                  <surname>Rolland</surname>
+               </persName>
+               <birth>
+                  <date when="1866-01-29">29.01.1866</date>
+                  <settlement ref="pmb48686">
+                     <placeName type="pref">Clamecy</placeName>
+                     <location>
+                        <geo>47,46017 3,5194</geo>
+                     </location>
+                  </settlement>
+               </birth>
+               <death>
+                  <date when="1944-12-30">30.12.1944</date>
+                  <settlement ref="pmb58488">
+                     <placeName type="pref">Vézelay</placeName>
+                     <location>
+                        <geo>47,46572 3,74559</geo>
+                     </location>
+                  </settlement>
+               </death>
+               <sex value="male"/>
+               <occupation ref="pmb90">Schriftsteller/Schriftstellerin</occupation>
+               <idno type="URL" subtype="d-nb">https://d-nb.info/gnd/118602330</idno>
+               <idno type="URL" subtype="schnitzler-tagebuch"
+                  >https://schnitzler-tagebuch.acdh.oeaw.ac.at/person_19333.html</idno>
+               <idno type="URL" subtype="schnitzler-bahr"
+                  >https://schnitzler-bahr.acdh.oeaw.ac.at/pmb12543.html</idno>
+               <idno type="URL" subtype="pmb">https://pmb.acdh.oeaw.ac.at/entity/12543/</idno>
+               <idno type="URL" subtype="schnitzler-lektueren"
+                  >https://schnitzler-lektueren.acdh.oeaw.ac.at/pmb12543.html</idno>
+               <idno type="URL" subtype="fackel">https://fackel.oeaw.ac.at/?p=fackelp52430</idno>
+               <idno type="URL" subtype="kraus1933"
+                  >https://kraus1933.ace.oeaw.ac.at/Gesamt.xml?template=register_personen.html&amp;letter=R#DWpers0200</idno>
+               <idno type="URL" subtype="wikidata">http://www.wikidata.org/entity/Q47162</idno>
+               <idno type="URL" subtype="wikipedia"
+                  >https://de.wikipedia.org/wiki/Romain_Rolland</idno>
+               <idno type="URL" subtype="schnitzler-interviews"
+                  >https://schnitzler-interviews.acdh.oeaw.ac.at/pmb12543.html</idno>
+               <idno type="URL" subtype="schnitzler-mikrofilme"
+                  >https://schnitzler-mikrofilme.acdh.oeaw.ac.at/1416477.html?pmb12543</idno>
+               <idno type="URL" subtype="bahr-textverzeichnis"
+                  >https://bahr-textverzeichnis.acdh.oeaw.ac.at/pmb12543.html</idno>
+               <idno type="URL" subtype="stefanzweig"
+                  >https://www.stefanzweig.digital/o:szd.personen/sdef:TEI/get#SZDPER.1192</idno>
+               <idno type="URL" subtype="brenner">https://brenner.oeaw.ac.at/?p=brennerp10255</idno>
+               <idno type="URL" subtype="schnitzler-briefe"
+                  >https://schnitzler-briefe.acdh.oeaw.ac.at/pmb12543.html</idno>
+               <idno type="URL" subtype="schnitzler-kultur"
+                  >https://schnitzler-kultur.acdh.oeaw.ac.at/pmb12543.html</idno>
+               <idno type="URL" subtype="briefedition"
+                  >https://briefedition.wedekind.h-da.de/view/person/list.xhtml?id=10642652</idno>
+               <figure>
+                  <graphic
+                     url="https://upload.wikimedia.org/wikipedia/commons/thumb/a/ad/Romain_Rolland_1915.jpg/250px-Romain_Rolland_1915.jpg"
+                  />
+               </figure>
+            </person>
+            <person xml:id="pmb259326">
+               <persName>
+                  <forename>Paul</forename>
+                  <surname>Seippel</surname>
+               </persName>
+               <birth>
+                  <date when="1858-04-24">1858-04-24</date>
+                  <settlement ref="pmb294016">
+                     <placeName type="pref">Gingins</placeName>
+                     <location>
+                        <geo>46,416666666667 6,1833333333333</geo>
+                     </location>
+                  </settlement>
+               </birth>
+               <death>
+                  <date when="1926-03-13">1926-03-13</date>
+                  <settlement ref="pmb294018">
+                     <placeName type="pref">Chêne-Bourg</placeName>
+                     <location>
+                        <geo>46,19737 6,19704</geo>
+                     </location>
+                  </settlement>
+               </death>
+               <sex value="male"/>
+               <occupation ref="pmb119">Herausgeber/Herausgeberin</occupation>
+               <occupation ref="pmb416">Romanist/Romanistin</occupation>
+               <idno type="URL" subtype="pmb">https://pmb.acdh.oeaw.ac.at/entity/259326/</idno>
+               <idno type="URL" subtype="wikidata">http://www.wikidata.org/entity/Q55846629</idno>
+               <idno type="URL" subtype="d-nb">https://d-nb.info/gnd/117471852</idno>
+               <idno type="URL" subtype="stefanzweig"
+                  >https://www.stefanzweig.digital/o:szd.personen/sdef:TEI/get#SZDPER.1712</idno>
+               <idno type="URL" subtype="wikipedia"
+                  >https://de.wikipedia.org/wiki/Paul_Seippel</idno>
+               <idno type="URL" subtype="schnitzler-briefe"
+                  >https://schnitzler-briefe.acdh.oeaw.ac.at/pmb259326.html</idno>
+            </person>
+         </listPerson>
+         <listBibl>
+            <bibl xml:id="pmb58493">
+               <title>Journal de Genève</title>
+               <author ref="pmb259326" role="hat-herausgegeben">Seippel, Paul</author>
+               <date to="1998-02-28">1826-01-05 – 1998-02-28</date>
+               <idno type="URL" subtype="pmb">https://pmb.acdh.oeaw.ac.at/entity/58493/</idno>
+               <idno type="URL" subtype="schnitzler-interviews"
+                  >https://schnitzler-interviews.acdh.oeaw.ac.at/pmb58493.html</idno>
+               <idno type="URL" subtype="schnitzler-briefe"
+                  >https://schnitzler-briefe.acdh.oeaw.ac.at/pmb58493.html</idno>
+               <note type="work_kind">Tageszeitung</note>
+            </bibl>
+            <bibl xml:id="pmb42406">
+               <title>Neue Zürcher Zeitung</title>
+               <date when="1780-01-12">12.1.1780</date>
+               <idno type="URL" subtype="pmb">https://pmb.acdh.oeaw.ac.at/entity/42406/</idno>
+               <idno type="URL" subtype="wikidata">http://www.wikidata.org/entity/Q658945</idno>
+               <idno type="URL" subtype="wikipedia"
+                  >https://de.wikipedia.org/wiki/Neue_Z%C3%BCrcher_Zeitung</idno>
+               <idno type="URL" subtype="schnitzler-interviews"
+                  >https://schnitzler-interviews.acdh.oeaw.ac.at/pmb42406.html</idno>
+               <idno type="URL" subtype="hanslick"
+                  >https://hanslick.acdh.oeaw.ac.at/hsl_work_id_2205.html</idno>
+               <idno type="URL" subtype="schnitzler-briefe"
+                  >https://schnitzler-briefe.acdh.oeaw.ac.at/pmb42406.html</idno>
+               <idno type="URL" subtype="sk"
+                  >https://sk.acdh.oeaw.ac.at/pmb42406/published-expression</idno>
+               <idno type="URL" subtype="kraus"
+                  >https://www.kraus.wienbibliothek.at/legalkraus/pmb42406.html</idno>
+               <note type="work_kind">Tageszeitung</note>
+            </bibl>
+            <bibl xml:id="pmb296393">
+               <title>Ein Brief Artur Schnitzlers</title>
+               <title type="werk_link"
+                  >https://www.e-newspaperarchives.ch/?a=d&amp;d=NZZ19141222-04.2.4</title>
+               <title type="werk_link"
+                  >https://schnitzler-interviews.acdh.oeaw.ac.at/P111.html</title>
+               <title type="werk_bibliografische-angabe">Ein Brief Artur Schnitzlers. In: Neue
+                  Zürcher Zeitung, Jg. 135, Nr. 1700, 22. 12. 1914, 2. Mittagsblatt, S. 2</title>
+               <author ref="pmb2121" role="hat-geschaffen">Schnitzler, Arthur</author>
+               <date>1914-12-22</date>
+               <idno type="URL" subtype="pmb">https://pmb.acdh.oeaw.ac.at/entity/296393/</idno>
+               <idno type="URL" subtype="schnitzler-briefe"
+                  >https://schnitzler-briefe.acdh.oeaw.ac.at/pmb296393.html</idno>
+               <note type="work_kind">Leserbrief</note>
+            </bibl>
+            <bibl xml:id="pmb58490" ana="implied">
+               <title>Une protestation d’Arthur Schnitzler</title>
+               <title type="werk_link"
+                  >https://schnitzler-interviews.acdh.oeaw.ac.at/P111.html</title>
+               <title type="werk_bibliografische-angabe">Schnitzler, Arthur, Rolland, Romain
+                  [Einleitung und Übersetzung]: Une protestation d’Arthur Schnitzler. In: Journal de
+                  Genève, Jg. 85, 21. 12. 1914, 3. Ausgabe, S. [1]</title>
+               <author ref="pmb2121" role="hat-geschaffen">Schnitzler, Arthur</author>
+               <author ref="pmb12543" role="hat-ubersetzt">Rolland, Romain</author>
+               <date>1914-12-21</date>
+               <idno type="URL" subtype="pmb">https://pmb.acdh.oeaw.ac.at/entity/58490/</idno>
+               <idno type="URL" subtype="schnitzler-interviews"
+                  >https://schnitzler-interviews.acdh.oeaw.ac.at/pmb58490.html</idno>
+               <idno type="URL" subtype="schnitzler-briefe"
+                  >https://schnitzler-briefe.acdh.oeaw.ac.at/pmb58490.html</idno>
+               <note type="work_kind">Leserbrief</note>
+            </bibl>
+         </listBibl>
+         <listPlace>
+            <place xml:id="pmb51">
+               <placeName>I., Innere Stadt</placeName>
+               <placeName type="alternative-name">Inner city</placeName>
+               <placeName type="alternative-name">Wien,Innere Stadt</placeName>
+               <placeName type="alternative-name">1. Wiener Gemeindebezirk</placeName>
+               <placeName type="legacy-name-merge">Wien-Innere Stadt</placeName>
+               <desc type="entity_type">A.ADM3</desc>
+               <desc type="entity_type_id">1124</desc>
+               <location type="coords">
+                  <geo>48,20769 16,37049</geo>
+               </location>
+               <location type="located_in_place">
+                  <placeName ref="pmb41240">Österreich</placeName>
+                  <geo>47,33333 13,33333</geo>
+               </location>
+               <location type="located_in_place">
+                  <placeName ref="pmb50">Wien</placeName>
+                  <geo>48,208333 16,373056</geo>
+               </location>
+               <idno type="URL" subtype="schnitzler-bahr"
+                  >https://schnitzler-bahr.acdh.oeaw.ac.at/pmb51.html</idno>
+               <idno type="URL" subtype="pmb">https://pmb.acdh.oeaw.ac.at/entity/51/</idno>
+               <idno type="URL" subtype="pmb">https://pmb.acdh.oeaw.ac.at/entity/36789/</idno>
+               <idno type="URL" subtype="pmb">https://pmb.acdh.oeaw.ac.at/entity/51010/</idno>
+               <idno type="URL" subtype="geonames">https://sws.geonames.org/2775259/</idno>
+               <idno type="URL" subtype="kraus"
+                  >https://www.kraus.wienbibliothek.at/legalkraus/pmb51.html</idno>
+               <idno type="URL" subtype="schnitzler-interviews"
+                  >https://schnitzler-interviews.acdh.oeaw.ac.at/pmb51.html</idno>
+               <idno type="URL" subtype="wikidata">http://www.wikidata.org/entity/Q267329</idno>
+               <idno type="URL" subtype="wikipedia"
+                  >https://de.wikipedia.org/wiki/Innere_Stadt_(Wien)</idno>
+               <idno type="URL" subtype="wienerschnitzler"
+                  >https://wienerschnitzler.org/pmb51.html</idno>
+               <idno type="URL" subtype="schnitzler-briefe"
+                  >https://schnitzler-briefe.acdh.oeaw.ac.at/pmb51.html</idno>
+               <idno type="URL" subtype="schnitzler-kultur"
+                  >https://schnitzler-kultur.acdh.oeaw.ac.at/pmb51.html</idno>
+            </place>
+            <place xml:id="pmb50">
+               <placeName>Wien</placeName>
+               <placeName type="ort_fruherer-name">K.K. Reichshaupt- und Residenzstadt
+                  Wien</placeName>
+               <placeName type="alternative-name">Bécs</placeName>
+               <placeName type="alternative-name">Land Wien</placeName>
+               <placeName type="alternative-name">Vídeň</placeName>
+               <placeName type="alternative-name">Wenia</placeName>
+               <placeName type="alternative-name">Beč</placeName>
+               <placeName type="ort_fruherer-name">Vindobona</placeName>
+               <placeName type="alternative-name">Vienna</placeName>
+               <desc type="entity_type">A.ADM2</desc>
+               <desc type="entity_type_id">1135</desc>
+               <location type="coords">
+                  <geo>48,208333 16,373056</geo>
+               </location>
+               <location type="located_in_place">
+                  <placeName ref="pmb41240">Österreich</placeName>
+                  <geo>47,33333 13,33333</geo>
+               </location>
+               <location type="located_in_place">
+                  <placeName ref="pmb235218">Windmühlhöhe</placeName>
+                  <geo>48,24077 16,32092</geo>
+               </location>
+               <idno type="URL" subtype="geonames">https://sws.geonames.org/2761369/</idno>
+               <idno type="URL" subtype="d-nb">https://d-nb.info/gnd/4066009-6</idno>
+               <idno type="URL" subtype="schnitzler-bahr"
+                  >https://schnitzler-bahr.acdh.oeaw.ac.at/pmb50.html</idno>
+               <idno type="URL" subtype="pmb">https://pmb.acdh.oeaw.ac.at/entity/50/</idno>
+               <idno type="URL" subtype="pmb">https://pmb.acdh.oeaw.ac.at/entity/2316/</idno>
+               <idno type="URL" subtype="pmb">https://pmb.acdh.oeaw.ac.at/entity/20954/</idno>
+               <idno type="URL" subtype="pmb">https://pmb.acdh.oeaw.ac.at/entity/65221/</idno>
+               <idno type="URL" subtype="pmb">https://pmb.acdh.oeaw.ac.at/entity/65223/</idno>
+               <idno type="URL" subtype="kraus"
+                  >https://kraus.wienbibliothek.at/register/orte/pmb50</idno>
+               <idno type="URL" subtype="wikidata">http://www.wikidata.org/entity/Q1741</idno>
+               <idno type="URL" subtype="wikipedia">https://de.wikipedia.org/wiki/Wien</idno>
+               <idno type="URL" subtype="schnitzler-interviews"
+                  >https://schnitzler-interviews.acdh.oeaw.ac.at/pmb50.html</idno>
+               <idno type="URL" subtype="geonames">https://sws.geonames.org/2761333/</idno>
+               <idno type="URL" subtype="pmb">https://pmb.acdh.oeaw.ac.at/entity/33999/</idno>
+               <idno type="URL" subtype="schnitzler-tagebuch"
+                  >https://schnitzler-tagebuch.acdh.oeaw.ac.at/pmb50.html</idno>
+               <idno type="URL" subtype="schnitzler-briefe"
+                  >https://schnitzler-briefe.acdh.oeaw.ac.at/pmb50.html</idno>
+               <note type="image">
+                  <figure>
+                     <graphic
+                        url="https://iiif.onb.ac.at/images/AKON/AK117_016/016/full/,600/0/native.jpg"
+                     />
+                  </figure>
+               </note>
+            </place>
+            <place xml:id="pmb562">
+               <placeName>Genf</placeName>
+               <placeName type="legacy-name-merge">Drize, Kreis Genf</placeName>
+               <placeName type="legacy-name-merge">Geneva</placeName>
+               <desc type="entity_type">P.PPLA</desc>
+               <desc type="entity_type_id">1415</desc>
+               <location type="coords">
+                  <geo>46,20222 6,14569</geo>
+               </location>
+               <location type="located_in_place">
+                  <placeName ref="pmb43435">Schweiz</placeName>
+                  <geo>47,00016 8,01427</geo>
+               </location>
+               <location type="located_in_place">
+                  <placeName ref="pmb294758">Romandie</placeName>
+                  <geo>46,2 6,15</geo>
+               </location>
+               <idno type="URL" subtype="wikidata">http://www.wikidata.org/entity/Q71</idno>
+               <idno type="URL" subtype="schnitzler-bahr"
+                  >https://schnitzler-bahr.acdh.oeaw.ac.at/pmb562.html</idno>
+               <idno type="URL" subtype="pmb">https://pmb.acdh.oeaw.ac.at/entity/562/</idno>
+               <idno type="URL" subtype="pmb">https://pmb.acdh.oeaw.ac.at/entity/22973/</idno>
+               <idno type="URL" subtype="pmb">https://pmb.acdh.oeaw.ac.at/entity/64309/</idno>
+               <idno type="URL" subtype="geonames">https://sws.geonames.org/2660646/</idno>
+               <idno type="URL" subtype="kraus"
+                  >https://www.kraus.wienbibliothek.at/legalkraus/pmb562.html</idno>
+               <idno type="URL" subtype="pmb">https://pmb.acdh.oeaw.ac.at/entity/99397/</idno>
+               <idno type="URL" subtype="d-nb">https://d-nb.info/gnd/4020137-5</idno>
+               <idno type="URL" subtype="wikipedia">https://de.wikipedia.org/wiki/Genf</idno>
+               <idno type="URL" subtype="schnitzler-interviews"
+                  >https://schnitzler-interviews.acdh.oeaw.ac.at/pmb562.html</idno>
+               <idno type="URL" subtype="schnitzler-tagebuch"
+                  >https://schnitzler-tagebuch.acdh.oeaw.ac.at/pmb562.html</idno>
+               <idno type="URL" subtype="wienerschnitzler"
+                  >https://wienerschnitzler.org/pmb562.html</idno>
+               <idno type="URL" subtype="sk">https://sk.acdh.oeaw.ac.at/DWplace00220</idno>
+               <idno type="URL" subtype="schnitzler-briefe"
+                  >https://schnitzler-briefe.acdh.oeaw.ac.at/pmb562.html</idno>
+               <note type="image">
+                  <figure>
+                     <graphic
+                        url="https://iiif.onb.ac.at/images/AKON/AK116_160/160/full/,600/0/native.jpg"
+                     />
+                  </figure>
+               </note>
+            </place>
+            <place xml:id="pmb168815">
+               <placeName>Sternwartestraße 71</placeName>
+               <desc type="entity_type">Wohngebäude (K.WHS)</desc>
+               <desc type="entity_type_id">36</desc>
+               <location type="coords">
+                  <geo>48,23188 16,33716</geo>
+               </location>
+               <location type="located_in_place">
+                  <placeName ref="pmb68">XVIII., Währing</placeName>
+                  <geo>48,23333 16,31667</geo>
+               </location>
+               <location type="located_in_place">
+                  <placeName ref="pmb533">Währinger Cottage</placeName>
+                  <geo>48,233056 16,341944</geo>
+               </location>
+               <location type="located_in_place">
+                  <placeName ref="pmb150">Sternwartestraße</placeName>
+                  <geo>48,23099349198 16,340117830625</geo>
+               </location>
+               <idno type="URL" subtype="pmb">https://pmb.acdh.oeaw.ac.at/entity/168815/</idno>
+               <idno type="URL" subtype="wienerschnitzler"
+                  >https://wienerschnitzler.org/pmb168815.html</idno>
+               <idno type="URL" subtype="schnitzler-briefe"
+                  >https://schnitzler-briefe.acdh.oeaw.ac.at/pmb168815.html</idno>
+               <idno type="URL" subtype="schnitzler-kultur"
+                  >https://schnitzler-kultur.acdh.oeaw.ac.at/pmb168815.html</idno>
+            </place>
+            <place xml:id="pmb294001">
+               <placeName>Hôtel Beau-Séjour</placeName>
+               <desc type="entity_type">Hotel (K.HTL)</desc>
+               <desc type="entity_type_id">12</desc>
+               <location type="coords">
+                  <geo>46,1881943314491 6,15002700866006</geo>
+               </location>
+               <location type="located_in_place">
+                  <placeName ref="pmb562">Genf</placeName>
+                  <geo>46,20222 6,14569</geo>
+               </location>
+               <idno type="URL" subtype="pmb">https://pmb.acdh.oeaw.ac.at/entity/294001/</idno>
+               <idno type="URL" subtype="schnitzler-briefe"
+                  >https://schnitzler-briefe.acdh.oeaw.ac.at/pmb294001.html</idno>
+               <note type="apis_dates">
+                  <date when="1943-01-01" notAfter="1943-12-31">1943</date>
+               </note>
+            </place>
+            <place xml:id="pmb43435">
+               <placeName>Schweiz</placeName>
+               <placeName type="ort_namensvariante">Schweizerische Eidgenossenschaft</placeName>
+               <desc type="entity_type">A.PCLI</desc>
+               <desc type="entity_type_id">1107</desc>
+               <location type="coords">
+                  <geo>47,00016 8,01427</geo>
+               </location>
+               <location type="located_in_place">
+                  <placeName ref="pmb468">Europa</placeName>
+                  <geo>48,69096 9,14062</geo>
+               </location>
+               <idno type="URL" subtype="schnitzler-bahr"
+                  >https://schnitzler-bahr.acdh.oeaw.ac.at/pmb34006.html</idno>
+               <idno type="URL" subtype="geonames">https://sws.geonames.org/2658434/</idno>
+               <idno type="URL" subtype="pmb">https://pmb.acdh.oeaw.ac.at/entity/34006/</idno>
+               <idno type="URL" subtype="pmb">https://pmb.acdh.oeaw.ac.at/entity/43435/</idno>
+               <idno type="URL" subtype="kraus"
+                  >https://www.kraus.wienbibliothek.at/legalkraus/pmb43435.html</idno>
+               <idno type="URL" subtype="schnitzler-tagebuch"
+                  >https://schnitzler-tagebuch.acdh.oeaw.ac.at/pmb43435.html</idno>
+               <idno type="URL" subtype="wikidata">http://www.wikidata.org/entity/Q39</idno>
+               <idno type="URL" subtype="wikipedia">https://de.wikipedia.org/wiki/Schweiz</idno>
+               <idno type="URL" subtype="schnitzler-interviews"
+                  >https://schnitzler-interviews.acdh.oeaw.ac.at/pmb43435.html</idno>
+               <idno type="URL" subtype="schnitzler-briefe"
+                  >https://schnitzler-briefe.acdh.oeaw.ac.at/pmb43435.html</idno>
+               <idno type="URL" subtype="sk">https://sk.acdh.oeaw.ac.at/fa_place00004619</idno>
+            </place>
+         </listPlace>
+         <listOrg>
+            <org xml:id="pmb29672" ana="implied">
+               <orgName>Neue Zürcher Zeitung</orgName>
+               <desc type="entity_type">Tageszeitungsredaktion</desc>
+               <desc type="entity_type_id">972</desc>
+               <location type="located_in_place">
+                  <placeName ref="pmb484">Zürich</placeName>
+                  <geo>47,37174 8,54226</geo>
+                  <idno type="URL" subtype="wikidata">http://www.wikidata.org/entity/Q72</idno>
+                  <idno type="URL" subtype="geonames">https://sws.geonames.org/2657896/</idno>
+                  <idno type="URL" subtype="schnitzler-bahr"
+                     >https://schnitzler-bahr.acdh.oeaw.ac.at/pmb484.html</idno>
+                  <idno type="URL" subtype="pmb">https://pmb.acdh.oeaw.ac.at/entity/484/</idno>
+                  <idno type="URL" subtype="pmb">https://pmb.acdh.oeaw.ac.at/entity/62728/</idno>
+                  <idno type="URL" subtype="d-nb">https://d-nb.info/gnd/4068038-1</idno>
+                  <idno type="URL" subtype="www"
+                     >https://www.kraus.wienbibliothek.at/legalkraus/pmb484.html</idno>
+                  <idno type="URL" subtype="wikipedia"
+                     >https://de.wikipedia.org/wiki/Z%C3%BCrich</idno>
+                  <idno type="URL" subtype="schnitzler-tagebuch"
+                     >https://schnitzler-tagebuch.acdh.oeaw.ac.at/pmb484.html</idno>
+                  <idno type="URL" subtype="schnitzler-interviews"
+                     >https://schnitzler-interviews.acdh.oeaw.ac.at/pmb484.html</idno>
+                  <idno type="URL" subtype="wienerschnitzler"
+                     >https://wienerschnitzler.org/pmb484.html</idno>
+                  <idno type="URL" subtype="schnitzler-briefe"
+                     >https://schnitzler-briefe.acdh.oeaw.ac.at/pmb484.html</idno>
+                  <idno type="URL" subtype="schnitzler-kultur"
+                     >https://schnitzler-kultur.acdh.oeaw.ac.at/pmb484.html</idno>
+                  <idno type="URL" subtype="sk">https://sk.acdh.oeaw.ac.at/DWplace00061</idno>
+                  <idno type="URL" subtype="sk">https://sk.acdh.oeaw.ac.at/pmb484</idno>
+                  <idno type="URL" subtype="sk">https://sk.acdh.oeaw.ac.at/fa_place00003366</idno>
+               </location>
+               <idno type="URL" subtype="schnitzler-bahr"
+                  >https://schnitzler-bahr.acdh.oeaw.ac.at/pmb29672.html</idno>
+               <idno type="URL" subtype="pmb">https://pmb.acdh.oeaw.ac.at/entity/29672/</idno>
+               <idno type="URL" subtype="schnitzler-interviews"
+                  >https://schnitzler-interviews.acdh.oeaw.ac.at/pmb29672.html</idno>
+               <idno type="URL" subtype="schnitzler-briefe"
+                  >https://schnitzler-briefe.acdh.oeaw.ac.at/pmb29672.html</idno>
+            </org>
+         </listOrg>
+      </back>
+   </text>
 </TEI>
