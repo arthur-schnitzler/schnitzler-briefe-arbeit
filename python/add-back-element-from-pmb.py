@@ -994,17 +994,33 @@ class PMBProcessor:
             # Re-read the written file and insert processing instructions
             with open(output_file, 'r', encoding='utf-8') as f:
                 content = f.read()
-            
+
             # Insert processing instructions after XML declaration
             lines = content.split('\n')
+
+            # Find where to insert: after <?xml ... ?> but before any other PIs or root element
+            insert_index = 0
             if lines[0].startswith('<?xml '):
-                # Insert processing instructions after XML declaration
-                new_lines = [lines[0]] + processing_instructions + lines[1:]
-                content = '\n'.join(new_lines)
-            else:
-                # Insert at beginning if no XML declaration found
-                content = '\n'.join(processing_instructions + lines)
-            
+                insert_index = 1
+
+            # Remove any existing processing instructions that we're about to re-add
+            # to prevent duplicates when running multiple times
+            cleaned_lines = lines[:insert_index]
+            existing_pis = set()
+
+            for i in range(insert_index, len(lines)):
+                line = lines[i].strip()
+                # Skip existing PIs that match our extracted ones
+                if line.startswith('<?') and line.endswith('?>') and not line.startswith('<?xml '):
+                    if line in processing_instructions:
+                        existing_pis.add(line)
+                        continue  # Skip this line to avoid duplication
+                cleaned_lines.append(lines[i])
+
+            # Now insert our processing instructions after the XML declaration
+            final_lines = cleaned_lines[:insert_index] + processing_instructions + cleaned_lines[insert_index:]
+            content = '\n'.join(final_lines)
+
             with open(output_file, 'w', encoding='utf-8') as f:
                 f.write(content)
             
