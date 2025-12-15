@@ -1,12 +1,16 @@
-<?xml version='1.0' encoding='UTF-8'?>
+<?xml version="1.0" encoding="UTF-8"?>
 <?xml-model href="../meta/schnitzler-briefe-schematron.sch" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
 <?xml-model href="../meta/schnitzler-briefe-schematron.sch" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
-<TEI xmlns="http://www.tei-c.org/ns/1.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.tei-c.org/ns/1.0 ../meta/schnitzler-briefe-schema.xsd" xml:id="L04214" xml:base="https://id.acdh.oeaw.ac.at/schnitzler/schnitzler-briefe/editions">
+<TEI xmlns="http://www.tei-c.org/ns/1.0"
+     xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+     xsi:schemaLocation="http://www.tei-c.org/ns/1.0 ../meta/schnitzler-briefe-schema.xsd"
+     xml:id="L04213"
+     xml:base="https://id.acdh.oeaw.ac.at/schnitzler/schnitzler-briefe/editions">
    <teiHeader>
       <fileDesc>
          <titleStmt>
             <title level="s">Arthur Schnitzler: Briefwechsel mit Autorinnen und Autoren</title>
-            <title level="a">Arthur Schnitzler an Romain Rolland, [29. 1.?] 1916</title>
+            <title level="a">Arthur Schnitzler an Romain Rolland, 11. 2. 1915</title>
             <author ref="#pmb2121">Schnitzler, Arthur</author>
             <editor>
                <name>Jahnke, Selma</name>
@@ -70,7 +74,7 @@
          <sourceDesc>
             <listWit>
                <witness n="1">
-                  <objectType corresp="telegramm"/>
+                  <objectType corresp="karte" ana="briefkarte"/>
                   <msDesc>
                      <msIdentifier>
                         <country>F</country>
@@ -82,49 +86,47 @@
                         <objectDesc>
                            <supportDesc>
                               <extent>
-                                 <measure unit="telegramm" quantity="1"/>
-                                 <measure unit="zeichenanzahl" quantity="255"/>
+                                 <measure unit="karte" quantity="1"/>
+                                 <measure unit="kuvert" quantity="1"/>
+                                 <measure unit="zeichenanzahl" quantity="813"/>
                               </extent>
                            </supportDesc>
                         </objectDesc>
-                        <typeDesc>
-                           <typeNote medium="maschinell"/>
-                        </typeDesc>
+                        <handDesc>
+                           <handNote medium="schwarze-tinte" style="lateinische-kurrent"/>
+                        </handDesc>
                         <additions>
-                           <incident type="postal">
-                              <desc>»<quote>
-                                    <hi rend="pre-print">Erhalten von</hi>
-                                    <space unit="chars" quantity="1"/>K<space unit="chars" quantity="1"/>
-                                    <hi rend="pre-print">den</hi>
-                                    <space unit="chars" quantity="1"/>
-                                    <date>6/2 <hi rend="pre-print">191</hi>6</date>
-                                    <space unit="chars" quantity="1"/>
-                                    <hi rend="pre-print">um</hi>
-                                    <space unit="chars" quantity="1"/>
-                                    <time>3<hi rend="pre-print">Uhr</hi>10<hi rend="pre-print">s</hi>
-                                    </time>
-                                    <space unit="chars" quantity="1"/>
-                                    <unclear>Sundy</unclear>
-                                 </quote>« </desc>
-                           </incident>
                            <incident type="postal">
                               <desc>
                                  <stamp n="1">
-                                    <placeName ref="#pmb562">Genève Bureau des Télé<unclear>grammes</unclear>
-                                    </placeName>
-                                    <date when="1916-02-06">6 II 16</date>
+                                    <placeName ref="#pmb59">9/1 Wien 65</placeName>
+                                    <date when="1915-02-12">12 II 15</date>
+                                    <time>9</time>
                                  </stamp>
                               </desc>
                            </incident>
                            <incident type="postal">
                               <desc>
                                  <stamp n="2">
-                                    <addSpan>Transmissible</addSpan>
+                                    <placeName ref="#pmb562">Genève</placeName>
+                                    <date when="1915-02-15">15 II 15</date>
+                                    <time>VII</time>
                                  </stamp>
                               </desc>
                            </incident>
+                           <incident type="receiver" rend="schwarze-tinte">
+                              <desc>Datierung: »<quote>
+                                    <date>11/2/1915</date>
+                                 </quote>« und Vermerk: »<quote>
+                                    <hi rend="underline" n="1">ARL</hi>
+                                 </quote>«</desc>
+                           </incident>
                            <incident type="archival" rend="bleistift">
-                              <desc>Blatt paginiert: »<quote>6</quote>«</desc>
+                              <desc>Kuvert nummeriert: »<quote>3</quote>«</desc>
+                           </incident>
+                           <incident type="archival" rend="bleistift">
+                              <desc>Blätter (einschliesslich des Kuverts) paginiert:
+                                    »<quote>7</quote>« – »<quote>8</quote>«</desc>
                            </incident>
                         </additions>
                      </physDesc>
@@ -140,12 +142,16 @@
          <correspDesc>
             <correspAction type="sent">
                <persName ref="#pmb2121">Schnitzler, Arthur</persName>
-               <date when="1916-01-29" n="01">[29. 1.?] 1916</date>
+               <date when="1915-02-11" n="01">11. 2. 1915</date>
+               <placeName ref="#pmb50">Wien</placeName>
+            </correspAction>
+            <correspAction type="transmitted">
+               <date when="1915-02-12">12. 2. 1915</date>
                <placeName ref="#pmb50">Wien</placeName>
             </correspAction>
             <correspAction type="received">
                <persName ref="#pmb12543">Rolland, Romain</persName>
-               <date when="1916-02-06">6. 2. 1916</date>
+               <date when="1915-02-15">15. 2. 1915</date>
                <placeName ref="#pmb562">Genf</placeName>
             </correspAction>
          </correspDesc>
@@ -159,27 +165,55 @@
          <div type="address">
             <address>
                <addrLine>
-                  <pb facs=""/>romain rolland <rs type="place" ref="#pmb294004">genf champel</rs>
+                  <pb facs=""/>
+                  <hi rend="pre-print">Dr. Arthur Schnitzler</hi>
                </addrLine>
                <addrLine>
-                  <rs type="place" ref="#pmb294001">hotel beau-sejour</rs>. =</addrLine>
+                  <hi rend="pre-print">
+                     <rs type="place" ref="#pmb168815">Wien XVIII. Sternwartestrasse 71</rs>
+                  </hi>
+               </addrLine>
+            </address>
+            <address>
+               <addrLine>M Romain Rolland,</addrLine>
+               <addrLine>
+                  <rs type="place" ref="#pmb562">Genf</rs>
+               </addrLine>
+               <addrLine>
+                  <rs type="place" ref="#pmb294001">Hotel Beau-Séjour</rs>
+               </addrLine>
             </address>
          </div>
          <div type="writingSession" n="1">
             <opener>
-               <dateline rend="center">
-                  <pb facs=""/>
-                  <rs type="place" ref="#pmb562">geneve</rs>
-                  <space unit="chars" quantity="1"/>
-                  <rs type="place" ref="#pmb50">wien</rs> 13.4 5077-25-31/1–8– <anchor type="commentary" xml:id="K_L03884-1"/>retard guerre<note type="commentary" corresp="K_L03884-1">französisch: Verspätung Krieg</note>, ctr =
-              </dateline>
+               <seg>
+                  <seg rend="left" type="letterhead">
+                     <pb facs=""/>
+                     <hi rend="pre-print">Dr. Arthur Schnitzler</hi>
+                  </seg>
+                  <seg rend="right">
+                     <date>11. Feber 1915</date>.</seg>
+               </seg>
+               <seg type="letterhead">
+                  <hi rend="pre-print">
+                     <rs type="place" ref="#pmb168815">Wien XVIII. Sternwartestrasse 71</rs>
+                  </hi>
+               </seg>
             </opener>
-            <p>zum <anchor type="commentary" xml:id="K_L03884-2"/>fuenfzigsten geburtstag<note type="commentary" corresp="K_L03884-2">Am
-                  <date>29. 1. 1916</date> war <rs type="person" ref="#pmb12543">Rolland</rs> 50 Jahre alt geworden.</note> begluekwuensche ich sie in herzlicher
-               verehrung persoenliche begegnung in schoenern zeiten erhoffend
-               
-            </p>
-            <closer>= ihr <signed>doktor schnitz<del rend="strikethrough">e</del>ler<del rend="strikethrough">er</del>+. –.|+</signed>
+            <p>
+               <salute>verehrter Herr Rolland,</salute> durch <anchor type="commentary" xml:id="K_L04215-1"/>
+               <rs type="person" ref="#pmb13212">Stefan Zweig</rs> empfang ich Ihre lieben
+                  Grüße<note type="commentary" corresp="K_L04215-1">
+                  <ref type="schnitzler-briefe" target="L03651"/>.</note>, die ich herzlichst
+               erwidre. Sie haben also die Angriffe oder wenigstens von den Angriffen gelesen, die
+               anläßlich meines von Ihnen so schön übersetzten Protestes gegen mich gerichtet worden
+               sind. Übrigens standen sie nur in antisemiti¬ schen Blättern – und von dieser Seite
+               bin ich dergleichen seit Jahren, ja seit Jahrzehnten, bei jeder möglichen und <pb facs=""/>unmöglichen Gelegenheit so reichlich gewohnt, daß sie mich vollko<c rendition="#gemination-m"/>en kalt lassen. Warum sollte der Krieg gerade auf diese
+               traurige Menschensorte eine »läuternde« Wirkung ausüben, da doch auch anderswo nicht
+               eben viel davon zu merken ist.</p>
+            <closer>Auf bessere Zeiten denn, und einen freundschaftlichen Händedruck Ihres sehr
+               ergebenen <lb/>
+               <signed>Arthur Schnitzler</signed>
             </closer>
          </div>
       </body>
@@ -255,12 +289,89 @@
                <idno type="URL" subtype="schnitzler-briefe">https://schnitzler-briefe.acdh.oeaw.ac.at/pmb12543.html</idno>
                <idno type="URL" subtype="schnitzler-kultur">https://schnitzler-kultur.acdh.oeaw.ac.at/pmb12543.html</idno>
                <idno type="URL" subtype="briefedition">https://briefedition.wedekind.h-da.de/view/person/list.xhtml?id=10642652</idno>
-               <figure>
-                  <graphic url="https://upload.wikimedia.org/wikipedia/commons/thumb/a/ad/Romain_Rolland_1915.jpg/250px-Romain_Rolland_1915.jpg"/>
-               </figure>
+            </person>
+            <person xml:id="pmb13212">
+               <persName>
+                  <forename>Stefan</forename>
+                  <surname>Zweig</surname>
+               </persName>
+               <birth>
+                  <date when="1881-11-28">28.11.1881</date>
+                  <settlement ref="pmb50">
+                     <placeName type="pref">Wien</placeName>
+                     <location>
+                        <geo>48,208333 16,373056</geo>
+                     </location>
+                  </settlement>
+               </birth>
+               <death>
+                  <date when="1942-02-23">23.02.1942</date>
+                  <settlement ref="pmb46774">
+                     <placeName type="pref">Petrópolis</placeName>
+                     <location>
+                        <geo>-22,505 -43,17861</geo>
+                     </location>
+                  </settlement>
+               </death>
+               <sex value="male"/>
+               <occupation ref="pmb90">Schriftsteller/Schriftstellerin</occupation>
+               <idno type="URL" subtype="d-nb">https://d-nb.info/gnd/118637479</idno>
+               <idno type="URL" subtype="schnitzler-tagebuch">https://schnitzler-tagebuch.acdh.oeaw.ac.at/person_21614.html</idno>
+               <idno type="URL" subtype="schnitzler-bahr">https://schnitzler-bahr.acdh.oeaw.ac.at/pmb13212.html</idno>
+               <idno type="URL" subtype="pmb">https://pmb.acdh.oeaw.ac.at/entity/13212/</idno>
+               <idno type="URL" subtype="schnitzler-lektueren">https://schnitzler-lektueren.acdh.oeaw.ac.at/pmb13212.html</idno>
+               <idno type="URL" subtype="kraus">https://www.kraus.wienbibliothek.at/legalkraus/pmb13212.html</idno>
+               <idno type="URL" subtype="fackel">https://fackel.oeaw.ac.at/?p=fackelp53600</idno>
+               <idno type="URL" subtype="wikidata">http://www.wikidata.org/entity/Q78491</idno>
+               <idno type="URL" subtype="wikipedia">https://de.wikipedia.org/wiki/Stefan_Zweig</idno>
+               <idno type="URL" subtype="geschichtewiki">https://www.geschichtewiki.wien.gv.at/Special:URIResolver/?curid=8996</idno>
+               <idno type="URL" subtype="dx">https://dx.doi.org/10.1553/0x0001e7ce</idno>
+               <idno type="URL" subtype="schnitzler-kino">https://schnitzler-kino.acdh.oeaw.ac.at/pmb13212.html</idno>
+               <idno type="URL" subtype="schnitzler-interviews">https://schnitzler-interviews.acdh.oeaw.ac.at/pmb13212.html</idno>
+               <idno type="URL" subtype="schnitzler-mikrofilme">https://schnitzler-mikrofilme.acdh.oeaw.ac.at/1416738.html?pmb13212</idno>
+               <idno type="URL" subtype="schubert-digital">https://schubert-digital.at/P-00490.html</idno>
+               <idno type="URL" subtype="bahr-textverzeichnis">https://bahr-textverzeichnis.acdh.oeaw.ac.at/pmb13212.html</idno>
+               <idno type="URL" subtype="stefanzweig">https://www.stefanzweig.digital/o:szd.personen/sdef:TEI/get#SZDPER.1560</idno>
+               <idno type="URL" subtype="brenner">https://brenner.oeaw.ac.at/?p=brennerp11148</idno>
+               <idno type="URL" subtype="schaubuehne">https://schaubuehne.oeaw.ac.at/register.html?author=2</idno>
+               <idno type="URL" subtype="schnitzler-briefe">https://schnitzler-briefe.acdh.oeaw.ac.at/pmb13212.html</idno>
+               <idno type="URL" subtype="schnitzler-kultur">https://schnitzler-kultur.acdh.oeaw.ac.at/pmb13212.html</idno>
+               <idno type="URL" subtype="sk">https://sk.acdh.oeaw.ac.at/pmb13212</idno>
+               <idno type="URL" subtype="sk">https://sk.acdh.oeaw.ac.at/p_53600</idno>
+               <idno type="URL" subtype="briefedition">https://briefedition.wedekind.h-da.de/view/person/list.xhtml?id=8578313</idno>
             </person>
          </listPerson>
          <listPlace>
+            <place xml:id="pmb59">
+               <placeName>IX., Alsergrund</placeName>
+               <placeName type="legacy-name-merge">Wien-Alsergrund</placeName>
+               <desc type="entity_type">A.ADM3</desc>
+               <desc type="entity_type_id">1124</desc>
+               <location type="coords">
+                  <geo>48,22387 16,35641</geo>
+               </location>
+               <location type="located_in_place">
+                  <placeName ref="pmb50">Wien</placeName>
+                  <geo>48,208333 16,373056</geo>
+               </location>
+               <idno type="URL" subtype="geonames">https://sws.geonames.org/2782729/</idno>
+               <idno type="URL" subtype="schnitzler-bahr">https://schnitzler-bahr.acdh.oeaw.ac.at/pmb59.html</idno>
+               <idno type="URL" subtype="pmb">https://pmb.acdh.oeaw.ac.at/entity/59/</idno>
+               <idno type="URL" subtype="kraus">https://www.kraus.wienbibliothek.at/legalkraus/pmb59.html</idno>
+               <idno type="URL" subtype="schnitzler-interviews">https://schnitzler-interviews.acdh.oeaw.ac.at/pmb59.html</idno>
+               <idno type="URL" subtype="pmb">https://pmb.acdh.oeaw.ac.at/entity/143650/</idno>
+               <idno type="URL" subtype="d-nb">https://d-nb.info/gnd/4066013-8</idno>
+               <idno type="URL" subtype="wikidata">http://www.wikidata.org/entity/Q257780</idno>
+               <idno type="URL" subtype="wikipedia">https://de.wikipedia.org/wiki/Alsergrund</idno>
+               <idno type="URL" subtype="wienerschnitzler">https://wienerschnitzler.org/pmb59.html</idno>
+               <idno type="URL" subtype="schnitzler-briefe">https://schnitzler-briefe.acdh.oeaw.ac.at/pmb59.html</idno>
+               <idno type="URL" subtype="schnitzler-kultur">https://schnitzler-kultur.acdh.oeaw.ac.at/pmb59.html</idno>
+               <note type="image">
+                  <figure>
+                     <graphic url="https://iiif.onb.ac.at/images/AKON/AK024_199/199/full/,600/0/native.jpg"/>
+                  </figure>
+               </note>
+            </place>
             <place xml:id="pmb562">
                <placeName>Genf</placeName>
                <placeName type="legacy-name-merge">Drize, Kreis Genf</placeName>
@@ -344,25 +455,29 @@
                   </figure>
                </note>
             </place>
-            <place xml:id="pmb294004">
-               <placeName>Champel</placeName>
-               <desc type="entity_type">kein passender Code gefunden</desc>
-               <desc type="entity_type_id">3474</desc>
+            <place xml:id="pmb168815">
+               <placeName>Sternwartestraße 71</placeName>
+               <desc type="entity_type">Wohngebäude (K.WHS)</desc>
+               <desc type="entity_type_id">36</desc>
                <location type="coords">
-                  <geo>46,18888889 6,15805556</geo>
+                  <geo>48,23188 16,33716</geo>
                </location>
                <location type="located_in_place">
-                  <placeName ref="pmb294001">Hôtel Beau-Séjour</placeName>
-                  <geo>46,1881943314491 6,15002700866006</geo>
+                  <placeName ref="pmb68">XVIII., Währing</placeName>
+                  <geo>48,23333 16,31667</geo>
                </location>
                <location type="located_in_place">
-                  <placeName ref="pmb562">Genf</placeName>
-                  <geo>46,20222 6,14569</geo>
+                  <placeName ref="pmb533">Währinger Cottage</placeName>
+                  <geo>48,233056 16,341944</geo>
                </location>
-               <idno type="URL" subtype="pmb">https://pmb.acdh.oeaw.ac.at/entity/294004/</idno>
-               <idno type="URL" subtype="wikidata">http://www.wikidata.org/entity/Q2948668</idno>
-               <idno type="URL" subtype="geonames">https://sws.geonames.org/6691637/</idno>
-               <idno type="URL" subtype="wikipedia">https://de.wikipedia.org/wiki/Champel</idno>
+               <location type="located_in_place">
+                  <placeName ref="pmb150">Sternwartestraße</placeName>
+                  <geo>48,23099349198 16,340117830625</geo>
+               </location>
+               <idno type="URL" subtype="pmb">https://pmb.acdh.oeaw.ac.at/entity/168815/</idno>
+               <idno type="URL" subtype="wienerschnitzler">https://wienerschnitzler.org/pmb168815.html</idno>
+               <idno type="URL" subtype="schnitzler-briefe">https://schnitzler-briefe.acdh.oeaw.ac.at/pmb168815.html</idno>
+               <idno type="URL" subtype="schnitzler-kultur">https://schnitzler-kultur.acdh.oeaw.ac.at/pmb168815.html</idno>
             </place>
             <place xml:id="pmb294001">
                <placeName>Hôtel Beau-Séjour</placeName>
@@ -374,6 +489,10 @@
                <location type="located_in_place">
                   <placeName ref="pmb562">Genf</placeName>
                   <geo>46,20222 6,14569</geo>
+               </location>
+               <location type="located_in_place">
+                  <placeName ref="pmb294004">Champel</placeName>
+                  <geo>46,18888889 6,15805556</geo>
                </location>
                <idno type="URL" subtype="pmb">https://pmb.acdh.oeaw.ac.at/entity/294001/</idno>
                <idno type="URL" subtype="schnitzler-briefe">https://schnitzler-briefe.acdh.oeaw.ac.at/pmb294001.html</idno>
