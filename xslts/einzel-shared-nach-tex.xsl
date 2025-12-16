@@ -5683,6 +5683,28 @@
          select="normalize-space(document(concat('https://raw.githubusercontent.com/arthur-schnitzler/schnitzler-interviews-data/main/data/editions/', replace(@target, '.html', ''), '.xml'))/descendant::tei:titleStmt/tei:title[@level = 'a'][1])"
       />
    </xsl:template>
+   <xsl:template match="tei:ref[@type = 'schnitzler-mikrofilme']">
+      <xsl:variable name="target-collection" select="tokenize(@target, '_')[1]"/>
+      <xsl:variable name="target-seite" select="tokenize(@target, '_')[2]"/>
+         <xsl:choose>
+            <xsl:when test="@subtype = 'see'">
+               <xsl:text>siehe </xsl:text>
+            </xsl:when>
+            <xsl:when test="@subtype = 'cf'">
+               <xsl:text>vgl. </xsl:text>
+            </xsl:when>
+            <xsl:when test="@subtype = 'See'">
+               <xsl:text>Siehe </xsl:text>
+            </xsl:when>
+            <xsl:when test="@subtype = 'Cf'">
+               <xsl:text>Vgl. </xsl:text>
+            </xsl:when>
+         </xsl:choose>
+         <xsl:text>Arthur Schnitzler: \emph{Mikrofilme}, Sammlung&#160;</xsl:text>
+      <xsl:value-of select="$target-collection"/><xsl:text>, Seite&#160;</xsl:text><xsl:value-of select="$target-seite"/>
+      <xsl:text>.</xsl:text>
+      
+   </xsl:template>
    <xsl:template match="tei:ref[@type = 'schnitzler-bahr']">
       <xsl:if test="not(@subtype = 'date-only')">
          <xsl:choose>
