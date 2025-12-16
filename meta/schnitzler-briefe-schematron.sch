@@ -543,4 +543,14 @@
                 &lt;closer&gt; Text. </sch:assert>
         </sch:rule>
     </sch:pattern>
+    <!-- salute element whitespace restrictions -->
+    <sch:pattern id="salute-whitespace-start">
+        <sch:rule context="tei:salute">
+            <sch:assert
+                test="not(node()[1][self::text()] and matches(node()[1], '^\s') and not(node()[1][matches(., '^\s+$')] and node()[2][self::*]))"
+                > tei:salute darf nur mit Whitespace beginnen, wenn danach ein Element folgt.
+                Erlaubt: &lt;salute&gt;Text, &lt;salute&gt; &lt;element/&gt;. Nicht erlaubt:
+                &lt;salute&gt; Text. </sch:assert>
+        </sch:rule>
+    </sch:pattern>
 </sch:schema>
