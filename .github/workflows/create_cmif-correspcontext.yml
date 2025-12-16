@@ -53,6 +53,8 @@ jobs:
     steps:
       - name: 📥 Repo erneut auschecken (mit neuem Commit)
         uses: actions/checkout@v4
+        with:
+          ref: ${{ github.ref_name }}
 
       - name: 🐍 Python einrichten
         uses: actions/setup-python@v5
@@ -85,6 +87,8 @@ jobs:
     steps:
       - name: 📥 Repo erneut auschecken (mit neuesten Änderungen)
         uses: actions/checkout@v4
+        with:
+          ref: ${{ github.ref_name }}
 
       - name: 🐍 Python einrichten
         uses: actions/setup-python@v5
