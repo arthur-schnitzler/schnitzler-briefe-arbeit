@@ -75,7 +75,7 @@ entstehen Duplikate! -->
                             <xsl:for-each select="$partner/tei:persName">
                                 <xsl:variable name="currentRef" select="@ref"/>
                                 <xsl:variable name="correspGroup" select="key('corresp-lookup', $currentRef, $correspPartner)"/>
-                                <xsl:if test="$correspGroup/@xml:id != 'correspondence_null' and $correspGroup/tei:persName[@ref = $currentRef]/@role = 'main'">
+                                <xsl:if test="$correspGroup/@xml:id != 'correspondence_null'">
                                     <xsl:sequence select="$correspGroup/@xml:id"/>
                                 </xsl:if>
                             </xsl:for-each>
