@@ -517,4 +517,20 @@
             </sch:assert>
         </sch:rule>
     </sch:pattern>
+    <!-- seg element whitespace restrictions -->
+    <sch:pattern id="seg-whitespace-start">
+        <sch:rule context="tei:seg">
+            <sch:assert test="not(node()[1][self::text()] and matches(node()[1], '^\s') and not(node()[1][matches(., '^\s+$')] and node()[2][self::*]))">
+                tei:seg darf nur mit Whitespace beginnen, wenn danach ein Element folgt. Erlaubt: &lt;seg&gt;Text, &lt;seg&gt;  &lt;element/&gt;. Nicht erlaubt: &lt;seg&gt; Text.
+            </sch:assert>
+        </sch:rule>
+    </sch:pattern>
+    <!-- closer element whitespace restrictions -->
+    <sch:pattern id="closer-whitespace-start">
+        <sch:rule context="tei:closer">
+            <sch:assert test="not(node()[1][self::text()] and matches(node()[1], '^\s') and not(node()[1][matches(., '^\s+$')] and node()[2][self::*]))">
+                tei:closer darf nur mit Whitespace beginnen, wenn danach ein Element folgt. Erlaubt: &lt;closer&gt;Text, &lt;closer&gt;  &lt;element/&gt;. Nicht erlaubt: &lt;closer&gt; Text.
+            </sch:assert>
+        </sch:rule>
+    </sch:pattern>
 </sch:schema>
