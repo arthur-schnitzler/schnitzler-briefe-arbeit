@@ -509,4 +509,12 @@
             </sch:assert>
         </sch:rule>
     </sch:pattern>
+    <!-- p element whitespace restrictions -->
+    <sch:pattern id="p-whitespace-start">
+        <sch:rule context="tei:p">
+            <sch:assert test="not(node()[1][self::text()] and matches(node()[1], '^\s') and not(node()[1][matches(., '^\s+$')] and node()[2][self::*]))">
+                tei:p darf nur mit Whitespace beginnen, wenn danach ein Element folgt. Erlaubt: &lt;p&gt;Text, &lt;p&gt;  &lt;element/&gt;. Nicht erlaubt: &lt;p&gt; Text.
+            </sch:assert>
+        </sch:rule>
+    </sch:pattern>
 </sch:schema>
