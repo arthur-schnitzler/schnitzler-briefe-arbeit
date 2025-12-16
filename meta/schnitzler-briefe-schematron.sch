@@ -74,23 +74,29 @@
                 test="(@n = 1 and descendant::tei:measure[@unit = 'zeichenanzahl']) or @n != 1">
                 Wenn @n = 1, muss measure mit @unit='zeichenanzahl' enthalten sein. </sch:assert>
             <sch:assert
-                test="not(tei:objectType/@corresp='karte' and not(descendant::tei:physDesc/tei:objectDesc/@form) and not(descendant::tei:measure/@unit='karte'))">
-                Wenn es sich um eine Karte handelt (und keine Angabe objectDesc/@form vorhanden ist), muss measure/@unit='karte' vorkommen. </sch:assert>
+                test="not(tei:objectType/@corresp = 'karte' and not(descendant::tei:physDesc/tei:objectDesc/@form) and not(descendant::tei:measure/@unit = 'karte'))"
+                > Wenn es sich um eine Karte handelt (und keine Angabe objectDesc/@form vorhanden
+                ist), muss measure/@unit='karte' vorkommen. </sch:assert>
             <sch:assert
-                test="not(tei:objectType/@corresp='brief' and not(descendant::tei:physDesc/tei:objectDesc/@form) and not(descendant::tei:measure/@unit='blatt'))">
-                Wenn es sich um einen Brief handelt (und keine Angabe objectDesc/@form vorhanden ist), muss measure/@unit='blatt' vorkommen. </sch:assert>
+                test="not(tei:objectType/@corresp = 'brief' and not(descendant::tei:physDesc/tei:objectDesc/@form) and not(descendant::tei:measure/@unit = 'blatt'))"
+                > Wenn es sich um einen Brief handelt (und keine Angabe objectDesc/@form vorhanden
+                ist), muss measure/@unit='blatt' vorkommen. </sch:assert>
             <sch:assert
-                test="not(tei:objectType/@corresp='brief' and not(descendant::tei:physDesc/tei:objectDesc/@form) and not(descendant::tei:measure/@unit='seite'))">
-                Wenn es sich um einen Brief handelt (und keine Angabe objectDesc/@form vorhanden ist), muss measure/@unit='seite' vorkommen. </sch:assert>
+                test="not(tei:objectType/@corresp = 'brief' and not(descendant::tei:physDesc/tei:objectDesc/@form) and not(descendant::tei:measure/@unit = 'seite'))"
+                > Wenn es sich um einen Brief handelt (und keine Angabe objectDesc/@form vorhanden
+                ist), muss measure/@unit='seite' vorkommen. </sch:assert>
             <sch:assert
-                test="not(tei:objectType/@corresp='kartenbrief' and not(descendant::tei:physDesc/tei:objectDesc/@form) and not(descendant::tei:measure/@unit='kartenbrief'))">
-                Wenn es sich um einen Kartenbrief handelt (und keine Angabe objectDesc/@form vorhanden ist), muss measure/@unit='kartenbrief' vorkommen. </sch:assert>
+                test="not(tei:objectType/@corresp = 'kartenbrief' and not(descendant::tei:physDesc/tei:objectDesc/@form) and not(descendant::tei:measure/@unit = 'kartenbrief'))"
+                > Wenn es sich um einen Kartenbrief handelt (und keine Angabe objectDesc/@form
+                vorhanden ist), muss measure/@unit='kartenbrief' vorkommen. </sch:assert>
             <sch:assert
-                test="not(tei:objectType/@corresp='telegramm' and not(descendant::tei:physDesc/tei:objectDesc/@form) and not(descendant::tei:measure/@unit='telegramm'))">
-                Wenn es sich um ein Telegramm handelt (und keine Angabe objectDesc/@form vorhanden ist), muss measure/@unit='Telegramm' vorkommen. </sch:assert>
+                test="not(tei:objectType/@corresp = 'telegramm' and not(descendant::tei:physDesc/tei:objectDesc/@form) and not(descendant::tei:measure/@unit = 'telegramm'))"
+                > Wenn es sich um ein Telegramm handelt (und keine Angabe objectDesc/@form vorhanden
+                ist), muss measure/@unit='Telegramm' vorkommen. </sch:assert>
             <sch:assert
-                test="not(tei:objectType/@corresp='widmung' and not(descendant::tei:physDesc/tei:objectDesc/@form) and not(descendant::tei:measure/@unit='widmung'))">
-                Wenn es sich um ein Telegramm handelt (und keine Angabe objectDesc/@form vorhanden ist), muss measure/@unit='Telegramm' vorkommen. </sch:assert>
+                test="not(tei:objectType/@corresp = 'widmung' and not(descendant::tei:physDesc/tei:objectDesc/@form) and not(descendant::tei:measure/@unit = 'widmung'))"
+                > Wenn es sich um ein Telegramm handelt (und keine Angabe objectDesc/@form vorhanden
+                ist), muss measure/@unit='Telegramm' vorkommen. </sch:assert>
         </sch:rule>
     </sch:pattern>
     <!-- physDesc -->
@@ -146,14 +152,12 @@
     <sch:pattern id="stamp-n-unique-ascending">
         <sch:rule context="tei:additions">
             <sch:let name="stamp-ns" value="descendant::tei:stamp/@n"/>
-            <sch:assert test="count($stamp-ns) = count(distinct-values($stamp-ns))">
-                Die @n-Werte von tei:stamp müssen eindeutig sein.
-            </sch:assert>
+            <sch:assert test="count($stamp-ns) = count(distinct-values($stamp-ns))"> Die @n-Werte
+                von tei:stamp müssen eindeutig sein. </sch:assert>
             <sch:assert test="
-                every $i in (1 to count(descendant::tei:stamp) - 1)
-                satisfies xs:integer(descendant::tei:stamp[$i]/@n) lt xs:integer(descendant::tei:stamp[$i + 1]/@n)">
-                Die @n-Werte von tei:stamp müssen aufsteigend sein.
-            </sch:assert>
+                    every $i in (1 to count(descendant::tei:stamp) - 1)
+                        satisfies xs:integer(descendant::tei:stamp[$i]/@n) lt xs:integer(descendant::tei:stamp[$i + 1]/@n)"
+                > Die @n-Werte von tei:stamp müssen aufsteigend sein. </sch:assert>
         </sch:rule>
     </sch:pattern>
     <!-- addSpan -->
@@ -330,19 +334,18 @@
                 > Jedes "note" vom @typ "commentary" oder "textConst" muss ein vorangehendes Element
                 "anchor" haben, das eine zum Attribut @corresp passende @xml:id hat </sch:assert>
             <!-- Regel 1: Punkt-Prüfung -->
-            <sch:assert
-                test="not(count(*) = 1 and tei:ref and string-length(normalize-space(replace(string-join(text(), ''), '\.', ''))) = 0)
-                or ends-with(normalize-space(.), '.')"
-                >
-                Wenn eine note[@type='commentary'] nur aus einem einzigen »ref« und evtl. Whitespace besteht, muss sie mit einem Punkt enden.
-            </sch:assert>
+            <sch:assert test="
+                    not(count(*) = 1 and tei:ref and string-length(normalize-space(replace(string-join(text(), ''), '\.', ''))) = 0)
+                    or ends-with(normalize-space(.), '.')"> Wenn eine
+                note[@type='commentary'] nur aus einem einzigen »ref« und evtl. Whitespace besteht,
+                muss sie mit einem Punkt enden. </sch:assert>
             <!-- Regel 2: subtype-Prüfung -->
-            <sch:assert
-                test="not(count(*) = 1 and tei:ref and string-length(normalize-space(replace(string-join(text(), ''), '\.', ''))) = 0)
-                or (tei:ref/@subtype = 'Cf' or tei:ref/@subtype = 'See' or tei:ref/@subtype = 'date-only' or not(tei:ref/@subtype))"
-                >
-                Wenn eine note[@type='commentary'] nur aus einem einzigen »ref« und evtl. Whitespace besteht, darf dessen @subtype nur »Cf«, »See«, »date-only« oder leer sein (nicht »see« oder »cf«).
-            </sch:assert>
+            <sch:assert test="
+                    not(count(*) = 1 and tei:ref and string-length(normalize-space(replace(string-join(text(), ''), '\.', ''))) = 0)
+                    or (tei:ref/@subtype = 'Cf' or tei:ref/@subtype = 'See' or tei:ref/@subtype = 'date-only' or not(tei:ref/@subtype))"
+                > Wenn eine note[@type='commentary'] nur aus einem einzigen »ref« und evtl.
+                Whitespace besteht, darf dessen @subtype nur »Cf«, »See«, »date-only« oder leer sein
+                (nicht »see« oder »cf«). </sch:assert>
         </sch:rule>
         <sch:rule context="tei:note[@type = 'footnote']">
             <sch:assert test="starts-with(@xml:id, 'F')"> Fußnoten müssen mit 'F' beginnen. </sch:assert>
@@ -356,7 +359,6 @@
                 > Erlaubt sind für subtype nur "see" (siehe), "See" (Siehe), "cf" (vgl.), "Cf."
                 (Vgl) sowie "date-only", wenn nur das Datum des verlinkten Objekts ausgegeben werden
                 soll</sch:assert>
-            
             <sch:assert test="not(@type = 'schnitzler-kultur') or matches(@target, '^pmb\d+$')">
                 Wenn @type = "schnitzler-kultur", muss @target mit "pmb" gefolgt von einer
                 Ziffernfolge beginnen (z. B. "pmb1234"). </sch:assert>
@@ -377,27 +379,33 @@
                     (matches(@target, '^L\d{5}'))"> Wenn @type = "schnitzler-briefe",
                 muss @target vom Aufbau her »L01234« sein. </sch:assert>
             <sch:assert test="
-                not(@type = 'schnitzler-lektueren') or
-                (@target='Deutschsprachige-Literatur' or @target='Polen-Czechen' or @target='Ungarn-etc.' or @target='Frankreich'  or @target='Italien'  or @target='Spanien'
-                or @target='England'  or @target='Norden'  or @target='Russland'  or @target='Griechenland'
-                )"> Zulässige Werte für Target sind:
-                'Deutschsprachige-Literatur', 'Polen-Czechen', 'Ungarn-etc.', Frankreich, Italien, Spanien,
-                Russland, England, Norden, Griechenland
-            </sch:assert>
+                    not(@type = 'schnitzler-lektueren') or
+                    (@target = 'Deutschsprachige-Literatur' or @target = 'Polen-Czechen' or @target = 'Ungarn-etc.' or @target = 'Frankreich' or @target = 'Italien' or @target = 'Spanien'
+                    or @target = 'England' or @target = 'Norden' or @target = 'Russland' or @target = 'Griechenland'
+                    )"> Zulässige Werte für Target sind: 'Deutschsprachige-Literatur',
+                'Polen-Czechen', 'Ungarn-etc.', Frankreich, Italien, Spanien, Russland, England,
+                Norden, Griechenland </sch:assert>
             <sch:assert test="
                     not(@type = 'schnitzler-bahr') or (
                     (matches(@target, '^(D|L)041\d{3}')) or
                     (matches(@target, '^T030\d{3}'))
                     )"> Wenn @type = "schnitzler-bahr", muss @target vom Aufbau her
                 »D041345«, »L041345« oder »T030123« sein. </sch:assert>
-            <sch:assert test="not(@type = 'URL') or matches(@target, '^https?://.*')">
-                Wenn @type = "URL", muss @target eine gültige HTTP- oder HTTPS-URL sein.
-            </sch:assert>
-            <sch:assert test="not(@type = 'DOI') or matches(@target, '^(https://dx\.doi\.org/|https://doi\.org/|doi:)?10\.\d+/.+')">
-                Wenn @type = "DOI", muss @target eine gültige DOI sein (z.B. "10.1234/example" oder "https://doi.org/10.1234/example").
+            <sch:assert test="not(@type = 'URL') or matches(@target, '^https?://.*')"> Wenn @type =
+                "URL", muss @target eine gültige HTTP- oder HTTPS-URL sein. </sch:assert>
+            <sch:assert
+                test="not(@type = 'DOI') or matches(@target, '^(https://dx\.doi\.org/|https://doi\.org/|doi:)?10\.\d+/.+')"
+                > Wenn @type = "DOI", muss @target eine gültige DOI sein (z.B. "10.1234/example"
+                oder "https://doi.org/10.1234/example"). </sch:assert>
+            <sch:assert test="
+                    not(@type = 'schnitzler-zeitungen' or @type = 'schnitzler-mikrofilme') or
+                    (matches(@target, '^\d{6,7}_\d{1,4}$'))"> Wenn @type =
+                "schnitzler-zeitungen" oder "schnitzler-mikrofilme", muss @target dem Format
+                entsprechen: 6- oder 7-stellige Ziffer, Unterstrich, 1-4 Ziffern (z.B. "1234567_123").
             </sch:assert>
             <sch:assert test="
-                (@type = 'schnitzler-tagebuch' or @type = 'schnitzler-briefe' or @type = 'schnitzler-lektueren' or @type = 'schnitzler-bahr' or @type = 'schnitzler-interviews' or @type = 'schnitzler-kultur' or @type = 'wienerschnitzler' or @type = 'URL' or @type = 'DOI')"/>
+                    (@type = 'schnitzler-tagebuch' or @type = 'schnitzler-briefe' or @type = 'schnitzler-lektueren' or @type = 'schnitzler-bahr' or @type = 'schnitzler-interviews' or @type = 'schnitzler-kultur' or @type = 'wienerschnitzler' or @type = 'URL' or @type = 'DOI' or @type = 'schnitzler-mikrofilme' or @type = 'schnitzler-zeitungen')"
+            />
         </sch:rule>
     </sch:pattern>
     <sch:pattern>
@@ -437,100 +445,102 @@
     <!-- Einschränkung von placeName, persName, orgName, eventName auf teiHeader
    oder text/back -->
     <sch:pattern id="entity-name-location-restrictions">
-        <sch:rule context="tei:placeName[not(ancestor::tei:teiHeader) and 
-            not(ancestor::tei:back)]">
-            <sch:assert test="false()">
-                Das Element "placeName" darf nur in tei:teiHeader oder
-                tei:text/tei:back vorkommen.
-            </sch:assert>
+        <sch:rule context="
+                tei:placeName[not(ancestor::tei:teiHeader) and
+                not(ancestor::tei:back)]">
+            <sch:assert test="false()"> Das Element "placeName" darf nur in tei:teiHeader oder
+                tei:text/tei:back vorkommen. </sch:assert>
         </sch:rule>
-        <sch:rule context="tei:persName[not(ancestor::tei:teiHeader) and 
-            not(ancestor::tei:back)]">
-            <sch:assert test="false()">
-                Das Element "persName" darf nur in tei:teiHeader oder
-                tei:text/tei:back vorkommen.
-            </sch:assert>
+        <sch:rule context="
+                tei:persName[not(ancestor::tei:teiHeader) and
+                not(ancestor::tei:back)]">
+            <sch:assert test="false()"> Das Element "persName" darf nur in tei:teiHeader oder
+                tei:text/tei:back vorkommen. </sch:assert>
         </sch:rule>
-        <sch:rule context="tei:orgName[not(ancestor::tei:teiHeader) and 
-            not(ancestor::tei:back)]">
-            <sch:assert test="false()">
-                Das Element "orgName" darf nur in tei:teiHeader oder
-                tei:text/tei:back vorkommen.
-            </sch:assert>
+        <sch:rule context="
+                tei:orgName[not(ancestor::tei:teiHeader) and
+                not(ancestor::tei:back)]">
+            <sch:assert test="false()"> Das Element "orgName" darf nur in tei:teiHeader oder
+                tei:text/tei:back vorkommen. </sch:assert>
         </sch:rule>
-        <sch:rule context="tei:eventName[not(ancestor::tei:teiHeader) and 
-            not(ancestor::tei:back)]">
-            <sch:assert test="false()">
-                Das Element "eventName" darf nur in tei:teiHeader oder
-                tei:text/tei:back vorkommen.
-            </sch:assert>
+        <sch:rule context="
+                tei:eventName[not(ancestor::tei:teiHeader) and
+                not(ancestor::tei:back)]">
+            <sch:assert test="false()"> Das Element "eventName" darf nur in tei:teiHeader oder
+                tei:text/tei:back vorkommen. </sch:assert>
         </sch:rule>
     </sch:pattern>
     <!-- div image restrictions -->
     <sch:pattern id="div-image-restrictions">
         <sch:rule context="tei:div[@type = 'image']">
-            <sch:assert test="not(descendant::tei:p[tei:seg])">
-                tei:div mit @type='image' darf keine tei:p mit tei:seg Kindelementen enthalten. Wenn tei:seg benötigt wird, muss tei:p in tei:seg umgewandelt werden.
-            </sch:assert>
+            <sch:assert test="not(descendant::tei:p[tei:seg])"> tei:div mit @type='image' darf keine
+                tei:p mit tei:seg Kindelementen enthalten. Wenn tei:seg benötigt wird, muss tei:p in
+                tei:seg umgewandelt werden. </sch:assert>
         </sch:rule>
     </sch:pattern>
     <!-- hi element with type underline must have @n -->
     <sch:pattern id="hi-underline-n">
         <sch:rule context="tei:hi[@rend = 'underline']">
-            <sch:assert test="@n">
-                tei:hi mit @type='underline' muss ein Attribut @n haben.
+            <sch:assert test="@n"> tei:hi mit @type='underline' muss ein Attribut @n haben.
             </sch:assert>
         </sch:rule>
     </sch:pattern>
     <!-- hi element with rend spaced-out must not have child elements -->
     <sch:pattern id="hi-spaced-out-no-children">
         <sch:rule context="tei:hi[@rend = 'spaced-out']">
-            <sch:assert test="not(child::*)">
-                tei:hi mit @rend='spaced-out' darf keine Kindelemente enthalten.
-            </sch:assert>
+            <sch:assert test="not(child::*)"> tei:hi mit @rend='spaced-out' darf keine Kindelemente
+                enthalten. </sch:assert>
         </sch:rule>
     </sch:pattern>
     <!-- biblStruct author and editor format -->
     <sch:pattern id="biblStruct-author-editor-format">
         <sch:rule context="tei:biblStruct//tei:author | tei:biblStruct//tei:editor">
-            <sch:assert test="contains(normalize-space(.), '[') or contains(normalize-space(.), ']') or contains(normalize-space(.), '=') or matches(normalize-space(.), '^[^,]+,\s*.+$')">
-                tei:author und tei:editor in biblStruct müssen im Format "Nachname, Vorname" eingegeben werden, es sei denn, sie enthalten eckige Klammern oder "=".
+            <sch:assert
+                test="contains(normalize-space(.), '[') or contains(normalize-space(.), ']') or contains(normalize-space(.), '=') or matches(normalize-space(.), '^[^,]+,\s*.+$')"
+                > tei:author und tei:editor in biblStruct müssen im Format "Nachname, Vorname"
+                eingegeben werden, es sei denn, sie enthalten eckige Klammern oder "=".
             </sch:assert>
         </sch:rule>
     </sch:pattern>
     <!-- rs element whitespace restrictions -->
     <sch:pattern id="rs-whitespace-restrictions">
         <sch:rule context="tei:rs">
-            <sch:assert test="not(node()[1][self::text()] and matches(node()[1], '^\s') and not(node()[1][matches(., '^\s+$')] and node()[2][self::*]))">
-                tei:rs darf nur mit Whitespace beginnen, wenn danach ein Element folgt.
-            </sch:assert>
-            <sch:assert test="not(node()[last()][self::text()] and matches(node()[last()], '\s$') and not(node()[last()][matches(., '^\s+$')] and node()[last()-1][self::*]))">
-                tei:rs darf nur mit Whitespace enden, wenn davor ein Element steht.
-            </sch:assert>
+            <sch:assert
+                test="not(node()[1][self::text()] and matches(node()[1], '^\s') and not(node()[1][matches(., '^\s+$')] and node()[2][self::*]))"
+                > tei:rs darf nur mit Whitespace beginnen, wenn danach ein Element folgt. </sch:assert>
+            <sch:assert
+                test="not(node()[last()][self::text()] and matches(node()[last()], '\s$') and not(node()[last()][matches(., '^\s+$')] and node()[last() - 1][self::*]))"
+                > tei:rs darf nur mit Whitespace enden, wenn davor ein Element steht. </sch:assert>
         </sch:rule>
     </sch:pattern>
     <!-- p element whitespace restrictions -->
     <sch:pattern id="p-whitespace-start">
         <sch:rule context="tei:p">
-            <sch:assert test="not(node()[1][self::text()] and matches(node()[1], '^\s') and not(node()[1][matches(., '^\s+$')] and node()[2][self::*]))">
-                tei:p darf nur mit Whitespace beginnen, wenn danach ein Element folgt. Erlaubt: &lt;p&gt;Text, &lt;p&gt;  &lt;element/&gt;. Nicht erlaubt: &lt;p&gt; Text.
+            <sch:assert
+                test="not(node()[1][self::text()] and matches(node()[1], '^\s') and not(node()[1][matches(., '^\s+$')] and node()[2][self::*]))"
+                > tei:p darf nur mit Whitespace beginnen, wenn danach ein Element folgt. Erlaubt:
+                &lt;p&gt;Text, &lt;p&gt; &lt;element/&gt;. Nicht erlaubt: &lt;p&gt; Text.
             </sch:assert>
         </sch:rule>
     </sch:pattern>
     <!-- seg element whitespace restrictions -->
     <sch:pattern id="seg-whitespace-start">
         <sch:rule context="tei:seg">
-            <sch:assert test="not(node()[1][self::text()] and matches(node()[1], '^\s') and not(node()[1][matches(., '^\s+$')] and node()[2][self::*]))">
-                tei:seg darf nur mit Whitespace beginnen, wenn danach ein Element folgt. Erlaubt: &lt;seg&gt;Text, &lt;seg&gt;  &lt;element/&gt;. Nicht erlaubt: &lt;seg&gt; Text.
+            <sch:assert
+                test="not(node()[1][self::text()] and matches(node()[1], '^\s') and not(node()[1][matches(., '^\s+$')] and node()[2][self::*]))"
+                > tei:seg darf nur mit Whitespace beginnen, wenn danach ein Element folgt. Erlaubt:
+                &lt;seg&gt;Text, &lt;seg&gt; &lt;element/&gt;. Nicht erlaubt: &lt;seg&gt; Text.
             </sch:assert>
         </sch:rule>
     </sch:pattern>
     <!-- closer element whitespace restrictions -->
     <sch:pattern id="closer-whitespace-start">
         <sch:rule context="tei:closer">
-            <sch:assert test="not(node()[1][self::text()] and matches(node()[1], '^\s') and not(node()[1][matches(., '^\s+$')] and node()[2][self::*]))">
-                tei:closer darf nur mit Whitespace beginnen, wenn danach ein Element folgt. Erlaubt: &lt;closer&gt;Text, &lt;closer&gt;  &lt;element/&gt;. Nicht erlaubt: &lt;closer&gt; Text.
-            </sch:assert>
+            <sch:assert
+                test="not(node()[1][self::text()] and matches(node()[1], '^\s') and not(node()[1][matches(., '^\s+$')] and node()[2][self::*]))"
+                > tei:closer darf nur mit Whitespace beginnen, wenn danach ein Element folgt.
+                Erlaubt: &lt;closer&gt;Text, &lt;closer&gt; &lt;element/&gt;. Nicht erlaubt:
+                &lt;closer&gt; Text. </sch:assert>
         </sch:rule>
     </sch:pattern>
 </sch:schema>
