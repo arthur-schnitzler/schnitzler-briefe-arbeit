@@ -42,19 +42,20 @@
         <body>
             <div>
                 <p>Beim Aufrufen eines Dokuments erscheint dieses zuerst in der Leseansicht. Dabei
-                    werden textkritische Auszeichnungen nicht wiedergegeben und erwähnte Entitäten
-                    nicht markiert. Das Faksimile wird, bis auf wenige Ausnahmen, automatisch auf
+                    werden textkritische Auszeichnungen nicht wiedergegeben. Erwähnte Entitäten
+                    sind durch bunte gestrichelte Unterstreichungen markiert. Das Faksimile wird (bis auf wenige Ausnahmen) automatisch auf
                     der rechten Bildschirmseite angezeigt. In den »Einstellungen« unterhalb des
                     edierten Texts kann die Ansicht angepasst werden. Dort können</p>
                 <list>
-                    <item>Faksimiles augeblendet,</item>
-                    <item>textkritische Auszeichnungen wiedergegeben</item>
-                    <item>und Entitäten farblich hervorgehoben werden.</item>
+                    <item>Faksimiles augeblendet werden</item>
+                    <item>Textkritische Auszeichnungen eingeblendet werden</item>
                 </list>
+                <p>Der Menüpunkt »Links« zeigt die verlinkten Entitäten. Sie können hier noch 
+                stärker hervorgehoben werden oder jegliche Hervorhebung kann ausgeschalten werden.</p>
             </div>
             <div>
                 <head>Leseansicht</head>
-                <p>Die default-Leseansicht soll eine einfache Art darstellen, ein Korrespondenzstück
+                <p>Die Standardansicht soll eine einfache Art darstellen, ein Korrespondenzstück
                     lesen zu können. Die Wiedergabe ist zwar textgenau, enthält aber möglichst
                     wenige irritierende Zeichen.</p>
                 <table>
@@ -65,50 +66,71 @@
                         <cell>
                             <hi rend="bold">Wiedergabe</hi>
                         </cell>
+                        <cell>
+                            <hi rend="bold">Beispiel</hi>
+                        </cell>
                     </row>
                     <row>
                         <cell>Textschichten</cell>
-                        <cell>Überschriebenes wird nicht angezeigt</cell>
+                        <cell>Es wird nur die oberste Textschicht angezeigt. Überschriebenes ist ausgeblendet.</cell>
+                        <cell>Textschicht</cell>
                     </row>
                     <row>
                         <cell>Streichungen</cell>
-                        <cell>Gestrichenes wird nicht angezeigt</cell>
+                        <cell>Gestrichenes wird nicht angezeigt.</cell>
+                        <cell></cell>
                     </row>
                     <row>
                         <cell>Einfügungen</cell>
-                        <cell>werden eingefügt, aber ohne Markierung</cell>
+                        <cell>Hinzufügungen sind umgesetzt und nicht markiert.</cell>
+                        <cell>Einfügung</cell>
                     </row>
                     <row>
                         <cell>Unsichere Lesarten</cell>
-                        <cell>erscheinen in normaler Textfarbe</cell>
+                        <cell>… sind nicht markiert, sondern erscheinen in normaler Textfarbe.</cell>
+                        <cell>unsicher</cell>
                     </row>
                     <row>
                         <cell>Textergänzungen der Herausgeberinnen und Herausgeber</cell>
-                        <cell>werden eingefügt, aber ohne Markierung</cell>
+                        <cell>… werden eingefügt, aber ohne Markierung</cell>
+                        <cell>Ergänzung der Herausgeber</cell>
                     </row>
                     <row>
                         <cell>Textverlust durch Beschädigungen an der Vorlage</cell>
-                        <cell>sind nicht markiert</cell>
+                        <cell>… sind nicht markiert</cell>
+                        <cell>Textbeschädigung</cell>
                     </row>
                     <row>
                         <cell>Gedruckter Text</cell>
-                        <cell>wird in blauer Textfarbe wiedergegeben</cell>
+                        <cell>… wird in blauer Textfarbe wiedergegeben</cell>
+                        <cell><hi rend="pre-print">Vordruck</hi></cell>
                     </row>
                     <row>
                         <cell>Gestempelter Text</cell>
                         <cell>wird in lila Textfarbe wiedergegeben</cell>
+                        <cell>
+                            <hi rend="stamp">Stempel</hi>
+                        </cell>
                     </row>
                     <row>
                         <cell>Seitenwechsel</cell>
-                        <cell>werden mit einem senkrechten roten Strich markiert</cell>
+                        <cell>… werden mit einem senkrechten roten Strich markiert</cell>
+                        <cell>
+                            <pb/>
+                            oder <pb facs="https://schnitzler-briefe.acdh.oeaw.ac.at"/>
+                        </cell>
                     </row>
                     <row>
                         <cell>Schriftwechsel zu Lateinschrift</cell>
-                        <cell>werden als Kapitälchen umgesetzt</cell>
+                        <cell>… werden als Kapitälchen umgesetzt</cell>
+                        <cell>
+                            <hi rend="latintype">Lateinschrift</hi>
+                        </cell>
                     </row>
                     <row>
-                        <cell>Schriftwechsel von Fraktur zu Antiqua</cell>
-                        <cell>werden als Kapitälchen umgesetzt</cell>
+                        <cell>Schriftwechsel von gedruckter Fraktur zu Antiqua</cell>
+                        <cell>… werden als Kapitälchen umgesetzt</cell>
+                        
                     </row>
                     <row>
                         <cell>Geminationen</cell>
@@ -118,10 +140,11 @@
                         <cell>Schaft-s »ſ«</cell>
                         <cell>erscheint als »s« (bzw. »ß«, wenn nach einem Schaft-s in deutscher
                             Kurrentschrift ein rundes s kommt)</cell>
+                        <cell>s</cell>
                     </row>
                     <row>
                         <cell>Erwähnte Entitäten</cell>
-                        <cell>sind verlinkt, aber nicht farblich hervorgehoben</cell>
+                        <cell>sind verlinkt und farbig unterstrichen</cell>
                     </row>
                 </table>
             </div>
