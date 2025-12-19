@@ -543,6 +543,16 @@
                 &lt;closer&gt; Text. </sch:assert>
         </sch:rule>
     </sch:pattern>
+    <!-- closer element whitespace restrictions -->
+    <sch:pattern id="date-whitespace-start">
+        <sch:rule context="tei:date">
+            <sch:assert
+                test="not(node()[1][self::text()] and matches(node()[1], '^\s') and not(node()[1][matches(., '^\s+$')] and node()[2][self::*]))"
+                > tei:date darf nur mit Whitespace beginnen, wenn danach ein Element folgt.
+                Erlaubt: &lt;date&gt;Text, &lt;date&gt; &lt;element/&gt;. Nicht erlaubt:
+                &lt;date&gt; Text. </sch:assert>
+        </sch:rule>
+    </sch:pattern>
     <!-- salute element whitespace restrictions -->
     <sch:pattern id="salute-whitespace-start">
         <sch:rule context="tei:salute">
