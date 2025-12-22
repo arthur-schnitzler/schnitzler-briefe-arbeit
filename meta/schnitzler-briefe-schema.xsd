@@ -1628,7 +1628,13 @@
                </xs:restriction>
             </xs:simpleType>
          </xs:attribute>
-         <xs:attribute name="scribe" type="xs:string" use="optional"/>
+         <xs:attribute name="scribe" use="optional">
+            <xs:simpleType>
+               <xs:restriction base="xs:string">
+                  <xs:pattern value="#pmb\d+"/>
+               </xs:restriction>
+            </xs:simpleType>
+         </xs:attribute>
       </xs:complexType>
    </xs:element>
    <xs:element name="title">
