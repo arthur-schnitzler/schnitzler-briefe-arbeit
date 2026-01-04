@@ -413,12 +413,13 @@
             <sch:assert test="
                     following-sibling::node()[1][self::*]
                     or
-                    following-sibling::node()[1][self::text() and not(starts-with(., ' ')) and not(starts-with(., '&#10;'))]
+                    following-sibling::node()[1][self::text() and not(matches(., '^\s'))]
                     or
                     (following-sibling::node()[1][self::text() and normalize-space(.) = ''] and following-sibling::node()[2][self::*])"> Auf das Element
                 "&lt;pb/&gt;" muss unmittelbar der Text kommen. Oder ein Element. Beispiele für
-                Erlaubtes: "&lt;pb/&gt;hier", "&lt;pb/&gt; &lt;element/&gt;" Beispiel für
-                Nicht-Erlaubtes: "&lt;pb/&gt; hier" </sch:assert>
+                Erlaubtes: "&lt;pb/&gt;hier", "&lt;pb/&gt;&lt;element/&gt;", "&lt;pb/&gt; &lt;element/&gt;" Beispiel für
+                Nicht-Erlaubtes: "&lt;pb/&gt; hier", "&lt;pb/&gt;
+                hier" </sch:assert>
             <sch:assert
                 test="ancestor::tei:p or ancestor::tei:seg[not(descendant::tei:seg)] or ancestor::tei:l or ancestor::tei:quote or ancestor::tei:closer or ancestor::tei:dateline or ancestor::tei:addrLine or ancestor::tei:salute or ancestor::tei:stamp or ancestor::tei:cell or parent::tei:desc or parent::tei:support"
                 > &lt;pb/&gt; muss innerhalb eines zeilenbildenden Elements (&lt;p/&gt;,
