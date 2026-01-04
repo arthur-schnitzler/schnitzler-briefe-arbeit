@@ -561,6 +561,11 @@
                 > tei:salute darf nur mit Whitespace beginnen, wenn danach ein Element folgt.
                 Erlaubt: &lt;salute&gt;Text, &lt;salute&gt; &lt;element/&gt;. Nicht erlaubt:
                 &lt;salute&gt; Text. </sch:assert>
+            <sch:assert
+                test="not(node()[last()][self::text()] and matches(node()[last()], '\s$') and not(node()[last()][matches(., '^\s+$')] and node()[last() - 1][self::*]))"
+                > tei:salute darf nur mit Whitespace enden, wenn davor ein Element steht. Erlaubt:
+                &lt;salute&gt;Text, &lt;salute&gt;Text &lt;element/&gt; . Nicht erlaubt:
+                &lt;salute&gt;Text , &lt;salute&gt; Text &lt;element/&gt; text . </sch:assert>
         </sch:rule>
     </sch:pattern>
 </sch:schema>
