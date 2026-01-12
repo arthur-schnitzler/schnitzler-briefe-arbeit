@@ -638,10 +638,6 @@
     <!-- TODO parameter to create <l>...</l> - #1 -->
     <xsl:text>
       </xsl:text>
-    <xsl:if test="contains(@custom, 'type:paragraph') or contains(@custom, 'paragraph {')">
-      <!--<xsl:text>&lt;p&gt;</xsl:text>-->
-      <paragraph-start/>
-    </xsl:if>
     <!--<lb facs="#facs_{$numCurr}_{@id}" n="N{format-number($pos, '000')}"/>-->
     <xsl:apply-templates select="$prepared/text()[not(preceding-sibling::local:m)]"/>
     <xsl:apply-templates select="
@@ -922,6 +918,11 @@
         </hi>
       </xsl:when>
 
+      <xsl:when test="@type = 'paragraph'">
+        <!--<xsl:text>&lt;p&gt;</xsl:text>-->
+        <paragraph-start/>
+      </xsl:when>
+
       <xsl:when test="@type = 'paragraph-begin'">
         <!--<xsl:text>&lt;p&gt;</xsl:text>-->
         <paragraph-start/>
@@ -1094,5 +1095,26 @@
     <xsl:value-of select="translate(., '¬', '')"/>
     <!-\- Zeilenumbruchszeichen entfernen -\->
   </xsl:template>-->
+
+  <xd:doc>
+    <xd:desc>Replace m̄ and n̄ with gemination elements</xd:desc>
+  </xd:doc>
+  <xsl:template match="text()">
+    <xsl:analyze-string select="." regex="m̄|n̄">
+      <xsl:matching-substring>
+        <xsl:choose>
+          <xsl:when test=". = 'm̄'">
+            <c rendition="#gemination-m"/>
+          </xsl:when>
+          <xsl:when test=". = 'n̄'">
+            <c rendition="#gemination-n"/>
+          </xsl:when>
+        </xsl:choose>
+      </xsl:matching-substring>
+      <xsl:non-matching-substring>
+        <xsl:value-of select="."/>
+      </xsl:non-matching-substring>
+    </xsl:analyze-string>
+  </xsl:template>
 
 </xsl:stylesheet>
