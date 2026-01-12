@@ -1,6 +1,10 @@
-<?xml version='1.0' encoding='UTF-8'?>
+<?xml version="1.0" encoding="UTF-8"?>
 <?xml-model href="../meta/schnitzler-briefe-schematron.sch" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
-<TEI xmlns="http://www.tei-c.org/ns/1.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.tei-c.org/ns/1.0 ../meta/schnitzler-briefe-schema.xsd" xml:base="https://id.acdh.oeaw.ac.at/schnitzler/schnitzler-briefe/editions" xml:id="L04020">
+<TEI xmlns="http://www.tei-c.org/ns/1.0"
+     xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+     xsi:schemaLocation="http://www.tei-c.org/ns/1.0 ../meta/schnitzler-briefe-schema.xsd"
+     xml:base="https://id.acdh.oeaw.ac.at/schnitzler/schnitzler-briefe/editions"
+     xml:id="L04020">
    <teiHeader>
       <fileDesc>
          <titleStmt>
@@ -108,12 +112,20 @@
                <persName ref="#pmb12740">Schwarzkopf, Gustav</persName>
                <placeName ref="#pmb50" evidence="conjecture">Wien</placeName>
             </correspAction>
-         <correspContext><ref type="belongsToCorrespondence" target="correspondence_12740">Schwarzkopf, Gustav</ref>
+            <correspContext>
+               <ref type="belongsToCorrespondence" target="correspondence_12740">Schwarzkopf, Gustav</ref>
                <ref subtype="previous_letter" type="withinCollection" target="L01560">Hofmannsthal an Schnitzler, 11. 10. 1905</ref>
                <ref subtype="next_letter" type="withinCollection" target="L04017">Schnitzler an Schwarzkopf, 13. 10. 1905</ref>
-               <ref subtype="previous_letter" type="withinCorrespondence" source="correspondence_12740" target="L04019">Schnitzler an Schwarzkopf, 7. 10. 1905</ref>
-               <ref subtype="next_letter" type="withinCorrespondence" source="correspondence_12740" target="L04017">Schnitzler an Schwarzkopf, 13. 10. 1905</ref>
-            </correspContext></correspDesc>
+               <ref subtype="previous_letter"
+                    type="withinCorrespondence"
+                    source="correspondence_12740"
+                    target="L04019">Schnitzler an Schwarzkopf, 7. 10. 1905</ref>
+               <ref subtype="next_letter"
+                    type="withinCorrespondence"
+                    source="correspondence_12740"
+                    target="L04017">Schnitzler an Schwarzkopf, 13. 10. 1905</ref>
+            </correspContext>
+         </correspDesc>
       </profileDesc>
       <revisionDesc status="proposed">
          <change who="MAM" when="2025-12-10">Export aus Transkribus</change>
@@ -123,17 +135,31 @@
       <body>
          <div type="writingSession" n="1">
             <opener>
-               <seg type="letterhead"><seg type="letterhead" rend="left"><pb facs="MS-SCHNITZLER-B-00096-B-000-00007"/><hi rend="pre-print">Dr. Arthur Schnitzler</hi></seg>
-                  <seg rend="right"><date>12. X. 1905</date></seg>
+               <seg type="letterhead">
+                  <seg type="letterhead" rend="left">
+                     <pb facs="MS-SCHNITZLER-B-00096-B-000-00007"/>
+                     <hi rend="pre-print">Dr. Arthur Schnitzler</hi>
+                  </seg>
+                  <seg rend="right">
+                     <date>12. X. 1905</date>
+                  </seg>
                </seg>
-               <seg type="letterhead"><hi rend="pre-print"><rs type="place" ref="#pmb133">Wien,
-                        XVIII. Spoettelgasse 7</rs>.</hi></seg>
+               <seg type="letterhead">
+                  <hi rend="pre-print">
+                     <rs type="place" ref="#pmb133">Wien,
+                        XVIII. Spoettelgasse 7</rs>.</hi>
+               </seg>
             </opener>
-            <p><salute>lieber Guſtav,</salute> beifolgd 2 Sitze zur <rs type="event" ref="#pmb35077" subtype="implied">
-                  <rs type="work" ref="#pmb29843">Kakadupremière</rs></rs>. – Ob ich morgen den Sitz
+            <p>
+               <salute>lieber Guſtav,</salute> beifolgd 2 Sitze zur <rs type="event" ref="#pmb35077" subtype="implied">
+                  <rs type="work" ref="#pmb29843">Kakadupremière</rs>
+               </rs>. – Ob ich morgen den Sitz
                zum <rs type="event" ref="#pmb305697">
                   <rs type="work" ref="#pmb29903">Zwiſchenſpiel</rs>
-               </rs> an Ihren <anchor type="commentary" xml:id="K_L04020-11"/><rs type="person" ref="#pmb24648" subtype="implied">Bruder</rs> ſenden ka<c rendition="#gemination-n"/><note type="commentary" corresp="K_L04020-11"><ref type="schnitzler-briefe" target="L04017" subtype="See"/>.</note>, weiſs ich in
+               </rs> an Ihren <anchor type="commentary" xml:id="K_L04020-11"/>
+               <rs type="person" ref="#pmb24648" subtype="implied">Bruder</rs> ſenden ka<c rendition="#gemination-n"/>
+               <note type="commentary" corresp="K_L04020-11">
+                  <ref type="schnitzler-briefe" target="L04017" subtype="See"/>.</note>, weiſs ich in
                diesem Moment noch nicht ganz ſicher; we<c rendition="#gemination-n"/> nicht diesmal,
                nächſte Woche beſti<c rendition="#gemination-m"/>t.</p>
             <closer>Herzlich Ihr <signed>A.</signed>
