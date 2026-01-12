@@ -34,15 +34,35 @@
     <xsl:param name="maschinschriftlich" as="xs:string?" select="string($active-param-set/maschinschriftlich)"/>
     <xsl:template match="tei:div">
         <xsl:element name="root"/>
-        <xsl:variable name="letzte-nummer" as="xs:integer">
-            <xsl:for-each select="uri-collection(concat($dir, '/?select=L0*.xml;recurse=yes'))">
-                <xsl:sort select="."/>
-                <xsl:if test="position() = last()">
-                    <xsl:value-of
-                        select="number(substring-before(substring-after(., '/L'), '.xml'))"/>
-                </xsl:if>
-            </xsl:for-each>
+        <xsl:variable name="letzte-nummer-editions" as="xs:integer">
+            <xsl:choose>
+                <xsl:when test="exists(uri-collection(concat($dir, '/?select=L0*.xml;recurse=yes')))">
+                    <xsl:for-each select="uri-collection(concat($dir, '/?select=L0*.xml;recurse=yes'))">
+                        <xsl:sort select="."/>
+                        <xsl:if test="position() = last()">
+                            <xsl:value-of
+                                select="number(substring-before(substring-after(., '/L'), '.xml'))"/>
+                        </xsl:if>
+                    </xsl:for-each>
+                </xsl:when>
+                <xsl:otherwise>0</xsl:otherwise>
+            </xsl:choose>
         </xsl:variable>
+        <xsl:variable name="letzte-nummer-temp" as="xs:integer">
+            <xsl:choose>
+                <xsl:when test="exists(uri-collection('../temp/?select=L0*.xml;recurse=yes'))">
+                    <xsl:for-each select="uri-collection('../temp/?select=L0*.xml;recurse=yes')">
+                        <xsl:sort select="."/>
+                        <xsl:if test="position() = last()">
+                            <xsl:value-of
+                                select="number(substring-before(substring-after(., '/L'), '.xml'))"/>
+                        </xsl:if>
+                    </xsl:for-each>
+                </xsl:when>
+                <xsl:otherwise>0</xsl:otherwise>
+            </xsl:choose>
+        </xsl:variable>
+        <xsl:variable name="letzte-nummer" as="xs:integer" select="max(($letzte-nummer-editions, $letzte-nummer-temp))"/>
         <xsl:variable name="heute" select="format-date(current-date(), '[Y0001]-[M01]-[D01]')"/>
         <xsl:for-each-group select="tei:page"
             group-starting-with="*[starts-with(@type, 'letter-begin')]">
