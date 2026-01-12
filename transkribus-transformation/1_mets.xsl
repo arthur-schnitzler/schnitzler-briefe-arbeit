@@ -638,7 +638,7 @@
     <!-- TODO parameter to create <l>...</l> - #1 -->
     <xsl:text>
       </xsl:text>
-    <xsl:if test="contains(@custom, 'type:paragraph')">
+    <xsl:if test="contains(@custom, 'type:paragraph') or contains(@custom, 'paragraph {')">
       <!--<xsl:text>&lt;p&gt;</xsl:text>-->
       <paragraph-start/>
     </xsl:if>
