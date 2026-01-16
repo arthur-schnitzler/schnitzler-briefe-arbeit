@@ -1,15 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <?xml-model href="../meta/schnitzler-briefe-schematron.sch" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
-<TEI xmlns="http://www.tei-c.org/ns/1.0"
-     xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-     xsi:schemaLocation="http://www.tei-c.org/ns/1.0 ../meta/schnitzler-briefe-schema.xsd"
-     xml:base="https://id.acdh.oeaw.ac.at/schnitzler/schnitzler-briefe/editions"
-     xml:id="L04201">
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+   xsi:schemaLocation="http://www.tei-c.org/ns/1.0 ../meta/schnitzler-briefe-schema.xsd"
+   xml:base="https://id.acdh.oeaw.ac.at/schnitzler/schnitzler-briefe/editions" xml:id="L04200">
    <teiHeader>
       <fileDesc>
          <titleStmt>
             <title level="s">Arthur Schnitzler: Briefwechsel mit Autorinnen und Autoren</title>
-            <title level="a">Arthur Schnitzler an Gustav Schwarzkopf, XXXX</title>
+            <title level="a">Arthur Schnitzler an Gustav Schwarzkopf, [7.&#160;8.&#160;1903?]</title>
             <author ref="#pmb2121">Schnitzler, Arthur</author>
             <editor>
                <persName>Jahnke, Selma</persName>
@@ -73,7 +71,7 @@
          <sourceDesc>
             <listWit>
                <witness n="1">
-                  <objectType corresp="xbrief"/>
+                  <objectType corresp="karte"/>
                   <msDesc>
                      <msIdentifier>
                         <country>GB</country>
@@ -85,13 +83,12 @@
                         <objectDesc>
                            <supportDesc>
                               <extent>
-                                 <measure unit="seite" quantity=""/>
-                                 <measure unit="blatt" quantity=""/>
+                                 <measure unit="karte" quantity="1"/>
                               </extent>
                            </supportDesc>
                         </objectDesc>
                         <handDesc>
-                           <handNote medium="" style="deutsche-kurrent"/>
+                           <handNote medium="bleistift" style="deutsche-kurrent"/>
                         </handDesc>
                      </physDesc>
                   </msDesc>
@@ -106,12 +103,12 @@
          <correspDesc>
             <correspAction type="sent">
                <persName ref="#pmb2121">Schnitzler, Arthur</persName>
-               <date when="" n="01">XXXX</date>
+               <date when="1903-08-07" n="01">[7.&#160;8.&#160;1903?]</date>
                <placeName ref="#pmb50">Wien</placeName>
             </correspAction>
             <correspAction type="received">
                <persName ref="#pmb12740">Schwarzkopf, Gustav</persName>
-               <placeName ref="#pmb50">Wien</placeName>
+               <placeName ref="#pmb50" evidence="conjecture">Wien</placeName>
             </correspAction>
          </correspDesc>
       </profileDesc>
@@ -122,23 +119,20 @@
    <text>
       <body>
          <div type="writingSession" n="1">
-            <opener>
-               <seg>
-                  <pb facs="MS-SCHNITZLER-B-00096-B-000-00393"/>
-                  <hi rend="latintype">
-                     <rs type="place" ref="#pmb168940">Spöttelgasse 7</rs>
-                  </hi>
-               </seg>
-               <dateline>
-                  <rs type="place" ref="#pmb50">Wien</rs>, <date>So<c rendition="#gemination-n"/>tag</date>
-               </dateline>
-            </opener>
-            <p>
-               <salute>lieber Guſtav,</salute> möchten Sie heute <date>So<c rendition="#gemination-n"/>tag</date> bei uns ein Nachtmahl einnehmen,
-               verſchärft durch Vorleſen von fünf unſänglich kauzigen Acten? We<c rendition="#gemination-n"/>
-               <hi rend="underline" n="1">ja</hi>, ſo bitte ſehr, ſeien Sie um 6, ½ 7 bei
-               uns.</p>
-            <p>Geht’s nicht, ſo gilt</p>
+            <p><pb facs="MS-SCHNITZLER-B-00096-B-000-00392"/>
+               <salute>lieber Guſtav,</salute> morgen <date>Samſtag</date> bei jedem Wetter ſind wir
+                  <time>Abend 8</time> in <rs type="place" ref="#pmb63">Hietzing</rs><space unit="chars" quantity="1"/><anchor type="commentary" xml:id="K_L04200-1"/>neues
+               Reſtaurant <hi rend="latintype">
+                  <rs type="place" ref="#pmb304">Kuffner</rs>
+               </hi><note type='commentary' corresp="K_L04200-1">Das erlaubt die Datierung, da <rs type="person" ref="#pmb2121">Schnitzler</rs> in den Jahren <date>1903</date>
+                  und <date>1904</date> nur einmal an einem Samstag im <rs type="place" ref="#pmb304">Ottakringer Bräu (Kuffner)</rs> in <rs type="place" ref="#pmb63">Hietzing</rs>
+                  war, am <ref type="schnitzler-tagebuch" target="1903-08-08" subtype="date-only"/>. <rs type="person" ref="#pmb12740">Schwarzkopf</rs> kam nicht.
+               </note> bei der Dampfhalteſtelle <rs type="place" ref="#pmb334129">Neue Welt</rs>. <rs
+                  type="person" ref="#pmb11740">Hugo</rs> läßt Sie bitten, we<c
+                  rendition="#gemination-n"/> Sie Zeit haben, zu kommen. <rs subtype="implied"
+                  ref="#pmb2173" type="person">Wir</rs> nicht minder.</p>
+            <closer>Ihr <signed>A.</signed>
+            </closer>
          </div>
       </body>
    </text>
