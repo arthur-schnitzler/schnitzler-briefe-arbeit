@@ -115,6 +115,11 @@
                 kleiner als @hands sein. </sch:assert>
             <sch:assert test="not(tei:handNote[not(@corresp)] and tei:handNote[2])"> Nur eine
                 handNote ohne @corresp erlaubt. </sch:assert>
+            <sch:assert test="not(count(tei:handNote) > 1) or @hands"> Wenn mehr als ein handNote-Element
+                vorhanden ist, muss das Attribut @hands vorhanden sein. </sch:assert>
+            <sch:assert test="not(@hands) or @hands = count(distinct-values(descendant::tei:handNote/@corresp))">
+                Der Wert von @hands muss der Anzahl der unterschiedlichen @corresp-Werte in den handNote-Elementen entsprechen.
+            </sch:assert>
         </sch:rule>
     </sch:pattern>
     <!-- typeNote -->
