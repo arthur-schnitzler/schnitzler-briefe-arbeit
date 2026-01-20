@@ -403,9 +403,15 @@
                 > Wenn @type = "DOI", muss @target eine gültige DOI sein (z.B. "10.1234/example"
                 oder "https://doi.org/10.1234/example"). </sch:assert>
             <sch:assert test="
-                    not(@type = 'schnitzler-zeitungen' or @type = 'schnitzler-mikrofilme') or
+                    not(@type = 'schnitzler-mikrofilme') or
                     (matches(@target, '^\d{6,7}_\d{1,4}$') or matches(@target, '^\d{6,7}$'))"> Wenn @type =
-                "schnitzler-zeitungen" oder "schnitzler-mikrofilme", muss @target dem Format
+                 "schnitzler-mikrofilme", muss @target dem Format
+                entsprechen: 6- oder 7-stellige Ziffer und eventuell Unterstrich, 1-4 Ziffern (z.B. "1234567_123").
+            </sch:assert>
+            <sch:assert test="
+                not(@type = 'schnitzler-zeitungen') or
+                (matches(@target, '^\d{6,7}_\d{1,4}$'))"> Wenn @type =
+                "schnitzler-zeitungen", muss @target dem Format
                 entsprechen: 6- oder 7-stellige Ziffer und eventuell Unterstrich, 1-4 Ziffern (z.B. "1234567_123").
             </sch:assert>
             <sch:assert test="
