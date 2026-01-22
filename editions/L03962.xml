@@ -1,6 +1,10 @@
-<?xml version='1.0' encoding='UTF-8'?>
+<?xml version="1.0" encoding="UTF-8"?>
 <?xml-model href="../meta/schnitzler-briefe-schematron.sch" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
-<TEI xmlns="http://www.tei-c.org/ns/1.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.tei-c.org/ns/1.0 ../meta/schnitzler-briefe-schema.xsd" xml:base="https://id.acdh.oeaw.ac.at/schnitzler/schnitzler-briefe/editions" xml:id="L03962">
+<TEI xmlns="http://www.tei-c.org/ns/1.0"
+     xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+     xsi:schemaLocation="http://www.tei-c.org/ns/1.0 ../meta/schnitzler-briefe-schema.xsd"
+     xml:base="https://id.acdh.oeaw.ac.at/schnitzler/schnitzler-briefe/editions"
+     xml:id="L03962">
    <teiHeader>
       <fileDesc>
          <titleStmt>
@@ -83,7 +87,7 @@
                               <extent>
                                  <measure unit="seite" quantity="2"/>
                                  <measure unit="blatt" quantity="2"/>
-                                 <measure unit="zeichenanzahl" quantity="3392"/>
+                                 <measure unit="zeichenanzahl" quantity="3390"/>
                               </extent>
                            </supportDesc>
                         </objectDesc>
@@ -91,7 +95,9 @@
                            <typeNote medium="schreibmaschine"/>
                         </typeDesc>
                         <handDesc hands="1">
-                           <handNote medium="roter-buntstift" style="lateinische-kurrent" corresp="#pmb2121">
+                           <handNote medium="roter-buntstift"
+                                     style="lateinische-kurrent"
+                                     corresp="#pmb2121">
                               <p>beschriftet: »<quote>
                                     <hi rend="underline" n="1">Zuckerkandl</hi>
                                  </quote>«, neun Unterstreichungen</p>
@@ -129,12 +135,20 @@
                <date evidence="conjecture" notBefore="1925-12-24" notAfter="1925-12-27">[24. 12. 1925 – 27. 12. 1925?]</date>
                <placeName ref="#pmb50" evidence="conjecture">Wien</placeName>
             </correspAction>
-            <correspContext><ref type="belongsToCorrespondence" target="correspondence_2312">Zuckerkandl, Berta</ref>
+            <correspContext>
+               <ref type="belongsToCorrespondence" target="correspondence_2312">Zuckerkandl, Berta</ref>
                <ref subtype="previous_letter" type="withinCollection" target="L02459">Schnitzler an Großmann, 24. 12. 1925</ref>
                <ref subtype="next_letter" type="withinCollection" target="L02460">Schnitzler an Braun, 26. 12. 1925</ref>
-               <ref subtype="previous_letter" type="withinCorrespondence" source="correspondence_2312" target="L03961">Schnitzler an Zuckerkandl, 31. 10. 1925</ref>
-               <ref subtype="next_letter" type="withinCorrespondence" source="correspondence_2312" target="L03963">Schnitzler an Zuckerkandl, 2. 1. 1926</ref>
-            </correspContext></correspDesc>
+               <ref subtype="previous_letter"
+                    type="withinCorrespondence"
+                    source="correspondence_2312"
+                    target="L03961">Schnitzler an Zuckerkandl, 31. 10. 1925</ref>
+               <ref subtype="next_letter"
+                    type="withinCorrespondence"
+                    source="correspondence_2312"
+                    target="L03963">Schnitzler an Zuckerkandl, 2. 1. 1926</ref>
+            </correspContext>
+         </correspDesc>
       </profileDesc>
       <revisionDesc status="proposed">
          <change who="MAM" when="2025-10-31">Export aus Transkribus</change>
@@ -170,7 +184,7 @@
                erwähne, in diesem Moment überhaupt noch keine <anchor type="commentary" xml:id="K_L03962-4"/>formelle Autorisation<note type="commentary" corresp="K_L03962-4">Es geht um die <rs type="work" ref="#pmb299314">Übersetzung</rs> von <rs type="work" ref="#pmb30207">Das weite
                   Land</rs>.</note>. Ich lege übrigens einen <anchor type="commentary" xml:id="K_L03962-5"/>ostensiblen Brief<note type="commentary" corresp="K_L03962-5">Beilage, siehe unten</note> gleich in zwei Exemplaren bei, von dem Sie sowohl
                Frau <rs type="person" ref="#pmb14794">Cabire</rs> gegenüber als für <rs type="person" ref="#pmb17611">Gemier</rs> und wo Sie es sonst noch für richtig
-               finden (<rs type="person" ref="#pmb299404">Besnard</rs>) Gebrauch machen können. </p>
+               finden (<rs type="person" ref="#pmb14156">Besnard</rs>) Gebrauch machen können. </p>
             <p>Und nun erlauben sie mir nochmals Sie zu bitten in diesem Fall Ihre Provision nicht
                mit 15, sondern mit 20 <c rendition="#prozent"/> ansetzen zu dürfen und verzeihen Sie
                meine Halsstarrigkeit. </p>
@@ -398,14 +412,37 @@
                <idno type="URL" subtype="pmb">https://pmb.acdh.oeaw.ac.at/entity/117423/</idno>
                <idno type="URL" subtype="sk">https://sk.acdh.oeaw.ac.at/pmb17611</idno>
             </person>
-            <person xml:id="pmb299404">
+            <person xml:id="pmb14156">
                <persName>
-                  <forename>Guillaume</forename>
+                  <forename>Lucien</forename>
                   <surname>Besnard</surname>
                </persName>
+               <persName type="legacy-name-merge">Besnard</persName>
+               <birth>
+                  <date when="1872-01-19">19.01.1872</date>
+                  <settlement ref="pmb48655">
+                     <placeName type="pref">Nonancourt</placeName>
+                     <location>
+                        <geo>48,77086 1,19799</geo>
+                     </location>
+                  </settlement>
+               </birth>
+               <death>
+                  <date when="1955-01-01" notAfter="1955-12-31">1955</date>
+                  <settlement ref="pmb182">
+                     <placeName type="pref">Paris</placeName>
+                     <location>
+                        <geo>48,85341 2,3488</geo>
+                     </location>
+                  </settlement>
+               </death>
                <sex value="male"/>
-               <occupation ref="pmb533">Literaturagent/Literaturagentin</occupation>
-               <idno type="URL" subtype="pmb">https://pmb.acdh.oeaw.ac.at/entity/299404/</idno>
+               <occupation ref="pmb90">Schriftsteller/Schriftstellerin</occupation>
+               <idno type="URL" subtype="schnitzler-tagebuch">https://schnitzler-tagebuch.acdh.oeaw.ac.at/person_13696.html</idno>
+               <idno type="URL" subtype="pmb">https://pmb.acdh.oeaw.ac.at/entity/14156/</idno>
+               <idno type="URL" subtype="wikidata">http://www.wikidata.org/entity/Q3265376</idno>
+               <idno type="URL" subtype="schnitzler-kultur">https://schnitzler-kultur.acdh.oeaw.ac.at/pmb14156.html</idno>
+               <idno type="URL" subtype="pmb">https://pmb.acdh.oeaw.ac.at/entity/14155/</idno>
             </person>
             <person xml:id="pmb23787">
                <persName>
@@ -766,26 +803,41 @@
                <idno type="URL" subtype="schnitzler-briefe">https://schnitzler-briefe.acdh.oeaw.ac.at/pmb151.html</idno>
                <idno type="URL" subtype="sk">https://sk.acdh.oeaw.ac.at/fa_place00002196</idno>
             </place>
-            <place xml:id="pmb687">
-               <placeName>Österreich-Ungarn</placeName>
-               <placeName type="legacy-name-merge">Oesterreich Ungarn</placeName>
-               <desc type="entity_type">Land (A.LND)</desc>
-               <desc type="entity_type_id">38</desc>
+            <place xml:id="pmb41240">
+               <placeName>Österreich</placeName>
+               <placeName type="alternative-name">Republik Österreich</placeName>
+               <placeName type="alternative-name">Republic of Austria</placeName>
+               <placeName type="legacy-name-merge">Deutsch Österreich</placeName>
+               <placeName type="legacy-name-merge">Altoesterreich</placeName>
+               <desc type="entity_type">A.PCLI</desc>
+               <desc type="entity_type_id">1107</desc>
                <location type="coords">
-                  <geo>48,4054 16,4887</geo>
+                  <geo>47,33333 13,33333</geo>
                </location>
                <location type="located_in_place">
                   <placeName ref="pmb468">Europa</placeName>
                   <geo>48,69096 9,14062</geo>
                </location>
-               <idno type="URL" subtype="wikidata">http://www.wikidata.org/entity/Q28513</idno>
-               <idno type="URL" subtype="pmb">https://pmb.acdh.oeaw.ac.at/entity/687/</idno>
-               <idno type="URL" subtype="kraus">https://www.kraus.wienbibliothek.at/legalkraus/pmb687.html</idno>
-               <idno type="URL" subtype="pmb">https://pmb.acdh.oeaw.ac.at/entity/92428/</idno>
-               <idno type="URL" subtype="wikipedia">https://de.wikipedia.org/wiki/%C3%96sterreich-Ungarn</idno>
-               <idno type="URL" subtype="schnitzler-interviews">https://schnitzler-interviews.acdh.oeaw.ac.at/pmb687.html</idno>
-               <idno type="URL" subtype="schnitzler-tagebuch">https://schnitzler-tagebuch.acdh.oeaw.ac.at/pmb687.html</idno>
-               <idno type="URL" subtype="schnitzler-briefe">https://schnitzler-briefe.acdh.oeaw.ac.at/pmb687.html</idno>
+               <location type="located_in_place">
+                  <placeName ref="pmb298373">Cisleithanien</placeName>
+                  <geo>48,5 16,383333333333333</geo>
+               </location>
+               <location type="located_in_place">
+                  <placeName ref="pmb687">Österreich-Ungarn</placeName>
+                  <geo>48,4054 16,4887</geo>
+               </location>
+               <idno type="URL" subtype="geonames">https://sws.geonames.org/2782113/</idno>
+               <idno type="URL" subtype="pmb">https://pmb.acdh.oeaw.ac.at/entity/41240/</idno>
+               <idno type="URL" subtype="kraus">https://www.kraus.wienbibliothek.at/legalkraus/pmb41240.html</idno>
+               <idno type="URL" subtype="pmb">https://pmb.acdh.oeaw.ac.at/entity/92143/</idno>
+               <idno type="URL" subtype="pmb">https://pmb.acdh.oeaw.ac.at/entity/92203/</idno>
+               <idno type="URL" subtype="schnitzler-interviews">https://schnitzler-interviews.acdh.oeaw.ac.at/pmb41240.html</idno>
+               <idno type="URL" subtype="schnitzler-tagebuch">https://schnitzler-tagebuch.acdh.oeaw.ac.at/pmb41240.html</idno>
+               <idno type="URL" subtype="wikipedia">https://de.wikipedia.org/wiki/%C3%96sterreich</idno>
+               <idno type="URL" subtype="wikidata">http://www.wikidata.org/entity/Q40</idno>
+               <idno type="URL" subtype="pmb">https://pmb.acdh.oeaw.ac.at/entity/135092/</idno>
+               <idno type="URL" subtype="d-nb">https://d-nb.info/gnd/4043271-3</idno>
+               <idno type="URL" subtype="schnitzler-briefe">https://schnitzler-briefe.acdh.oeaw.ac.at/pmb41240.html</idno>
             </place>
          </listPlace>
          <listOrg>

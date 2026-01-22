@@ -1,6 +1,10 @@
-<?xml version='1.0' encoding='UTF-8'?>
+<?xml version="1.0" encoding="UTF-8"?>
 <?xml-model href="../meta/schnitzler-briefe-schematron.sch" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
-<TEI xmlns="http://www.tei-c.org/ns/1.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.tei-c.org/ns/1.0 ../meta/schnitzler-briefe-schema.xsd" xml:base="https://id.acdh.oeaw.ac.at/schnitzler/schnitzler-briefe/editions" xml:id="L03959">
+<TEI xmlns="http://www.tei-c.org/ns/1.0"
+     xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+     xsi:schemaLocation="http://www.tei-c.org/ns/1.0 ../meta/schnitzler-briefe-schema.xsd"
+     xml:base="https://id.acdh.oeaw.ac.at/schnitzler/schnitzler-briefe/editions"
+     xml:id="L03959">
    <teiHeader>
       <fileDesc>
          <titleStmt>
@@ -91,7 +95,9 @@
                            <typeNote medium="schreibmaschine"/>
                         </typeDesc>
                         <handDesc hands="1">
-                           <handNote medium="roter-buntstift" style="lateinische-kurrent" corresp="#pmb2121">
+                           <handNote medium="roter-buntstift"
+                                     style="lateinische-kurrent"
+                                     corresp="#pmb2121">
                               <p>beschriftet: »<quote>
                                     <hi rend="underline" n="1">Zuckerkandl</hi>
                                  </quote>« und »<quote>Frkr</quote>«, fünf Unterstreichungen</p>
@@ -119,12 +125,20 @@
                   – 18. 6. 1925?]</date>
                <placeName ref="#pmb50">Wien</placeName>
             </correspAction>
-            <correspContext><ref type="belongsToCorrespondence" target="correspondence_2312">Zuckerkandl, Berta</ref>
+            <correspContext>
+               <ref type="belongsToCorrespondence" target="correspondence_2312">Zuckerkandl, Berta</ref>
                <ref subtype="previous_letter" type="withinCollection" target="L02442">Schnitzler an Mann, 7. 6. 1925</ref>
                <ref subtype="next_letter" type="withinCollection" target="L02443">Brandes an Schnitzler, 21. 6. 1925</ref>
-               <ref subtype="previous_letter" type="withinCorrespondence" source="correspondence_2312" target="L04006">Zuckerkandl an Schnitzler, [23. 5. 1925?]</ref>
-               <ref subtype="next_letter" type="withinCorrespondence" source="correspondence_2312" target="L03960">Schnitzler an Zuckerkandl, 8. 10. 1925</ref>
-            </correspContext></correspDesc>
+               <ref subtype="previous_letter"
+                    type="withinCorrespondence"
+                    source="correspondence_2312"
+                    target="L04006">Zuckerkandl an Schnitzler, [23. 5. 1925?]</ref>
+               <ref subtype="next_letter"
+                    type="withinCorrespondence"
+                    source="correspondence_2312"
+                    target="L03960">Schnitzler an Zuckerkandl, 8. 10. 1925</ref>
+            </correspContext>
+         </correspDesc>
       </profileDesc>
       <revisionDesc status="proposed">
          <change who="MAM" when="2025-10-31">Export aus Transkribus</change>
@@ -153,7 +167,7 @@
                übel findet: »<anchor type="commentary" xml:id="K_L03959-2"/>
                <foreign xml:lang="fr">Quelques retouches suffireraient</foreign>
                <note type="commentary" corresp="K_L03959-2">französisch: Einige Änderungen würden
-                  ausreichen.</note>«. Er, <rs type="person" ref="#pmb7170">Fleg</rs> und <rs type="person" ref="#pmb299404">Besnard</rs> werden, wie ich ja schon von Ihnen
+                  ausreichen.</note>«. Er, <rs type="person" ref="#pmb7170">Fleg</rs> und <rs type="person" ref="#pmb14156">Besnard</rs> werden, wie ich ja schon von Ihnen
                weiss, liebe Frau Hofrätin, den <rs type="work" ref="#pmb299314" subtype="implied">Text</rs> revidieren. Auch <rs type="person" ref="#pmb299366">Nathan</rs> hat
                etwas <anchor type="commentary" xml:id="K_L03959-3"/>von sich hören lassen<note type="commentary" corresp="K_L03959-3">
                   <rs type="person" ref="#pmb299366">Nicolas Nathans</rs> Brief ist nicht
@@ -346,14 +360,37 @@
                <idno type="URL" subtype="schnitzler-tagebuch">https://schnitzler-tagebuch.acdh.oeaw.ac.at/person_15028.html</idno>
                <idno type="URL" subtype="stefanzweig">https://www.stefanzweig.digital/o:szd.personen/sdef:TEI/get#SZDPER.402</idno>
             </person>
-            <person xml:id="pmb299404">
+            <person xml:id="pmb14156">
                <persName>
-                  <forename>Guillaume</forename>
+                  <forename>Lucien</forename>
                   <surname>Besnard</surname>
                </persName>
+               <persName type="legacy-name-merge">Besnard</persName>
+               <birth>
+                  <date when="1872-01-19">19.01.1872</date>
+                  <settlement ref="pmb48655">
+                     <placeName type="pref">Nonancourt</placeName>
+                     <location>
+                        <geo>48,77086 1,19799</geo>
+                     </location>
+                  </settlement>
+               </birth>
+               <death>
+                  <date when="1955-01-01" notAfter="1955-12-31">1955</date>
+                  <settlement ref="pmb182">
+                     <placeName type="pref">Paris</placeName>
+                     <location>
+                        <geo>48,85341 2,3488</geo>
+                     </location>
+                  </settlement>
+               </death>
                <sex value="male"/>
-               <occupation ref="pmb533">Literaturagent/Literaturagentin</occupation>
-               <idno type="URL" subtype="pmb">https://pmb.acdh.oeaw.ac.at/entity/299404/</idno>
+               <occupation ref="pmb90">Schriftsteller/Schriftstellerin</occupation>
+               <idno type="URL" subtype="schnitzler-tagebuch">https://schnitzler-tagebuch.acdh.oeaw.ac.at/person_13696.html</idno>
+               <idno type="URL" subtype="pmb">https://pmb.acdh.oeaw.ac.at/entity/14156/</idno>
+               <idno type="URL" subtype="wikidata">http://www.wikidata.org/entity/Q3265376</idno>
+               <idno type="URL" subtype="schnitzler-kultur">https://schnitzler-kultur.acdh.oeaw.ac.at/pmb14156.html</idno>
+               <idno type="URL" subtype="pmb">https://pmb.acdh.oeaw.ac.at/entity/14155/</idno>
             </person>
             <person xml:id="pmb299366">
                <persName>
