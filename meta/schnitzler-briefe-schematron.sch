@@ -521,6 +521,16 @@
                 > tei:rs darf nur mit Whitespace enden, wenn davor ein Element steht. </sch:assert>
         </sch:rule>
     </sch:pattern>
+    <sch:pattern id="hi-whitespace-restrictions">
+        <sch:rule context="tei:hi">
+            <sch:assert
+                test="not(node()[1][self::text()] and matches(node()[1], '^\s') and not(node()[1][matches(., '^\s+$')] and node()[2][self::*]))"
+                > tei:hi darf nur mit Whitespace beginnen, wenn danach ein Element folgt. </sch:assert>
+            <sch:assert
+                test="not(node()[last()][self::text()] and matches(node()[last()], '\s$') and not(node()[last()][matches(., '^\s+$')] and node()[last() - 1][self::*]))"
+                > tei:hi darf nur mit Whitespace enden, wenn davor ein Element steht. </sch:assert>
+        </sch:rule>
+    </sch:pattern>
     <!-- p element whitespace restrictions -->
     <sch:pattern id="p-whitespace-start">
         <sch:rule context="tei:p">
