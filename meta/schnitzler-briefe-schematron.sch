@@ -510,80 +510,21 @@
             </sch:assert>
         </sch:rule>
     </sch:pattern>
-    <!-- rs element whitespace restrictions -->
-    <sch:pattern id="rs-whitespace-restrictions">
-        <sch:rule context="tei:rs">
+    <!-- Unified whitespace restrictions for multiple elements -->
+    <sch:pattern id="element-whitespace-restrictions">
+        <sch:rule context="tei:rs | tei:hi | tei:salute | tei:p | tei:seg | tei:closer | tei:date | tei:del | tei:add | tei:signed">
             <sch:assert
                 test="not(node()[1][self::text()] and matches(node()[1], '^\s') and not(node()[1][matches(., '^\s+$')] and node()[2][self::*]))"
-                > tei:rs darf nur mit Whitespace beginnen, wenn danach ein Element folgt. </sch:assert>
+                > <sch:name/> darf nur mit Whitespace beginnen, wenn danach ein Element folgt.
+                Erlaubt: &lt;<sch:name/>&gt;Text, &lt;<sch:name/>&gt; &lt;element/&gt;.
+                Nicht erlaubt: &lt;<sch:name/>&gt; Text.
+            </sch:assert>
             <sch:assert
                 test="not(node()[last()][self::text()] and matches(node()[last()], '\s$') and not(node()[last()][matches(., '^\s+$')] and node()[last() - 1][self::*]))"
-                > tei:rs darf nur mit Whitespace enden, wenn davor ein Element steht. </sch:assert>
-        </sch:rule>
-    </sch:pattern>
-    <sch:pattern id="hi-whitespace-restrictions">
-        <sch:rule context="tei:hi">
-            <sch:assert
-                test="not(node()[1][self::text()] and matches(node()[1], '^\s') and not(node()[1][matches(., '^\s+$')] and node()[2][self::*]))"
-                > tei:hi darf nur mit Whitespace beginnen, wenn danach ein Element folgt. </sch:assert>
-            <sch:assert
-                test="not(node()[last()][self::text()] and matches(node()[last()], '\s$') and not(node()[last()][matches(., '^\s+$')] and node()[last() - 1][self::*]))"
-                > tei:hi darf nur mit Whitespace enden, wenn davor ein Element steht. </sch:assert>
-        </sch:rule>
-    </sch:pattern>
-    <!-- p element whitespace restrictions -->
-    <sch:pattern id="p-whitespace-start">
-        <sch:rule context="tei:p">
-            <sch:assert
-                test="not(node()[1][self::text()] and matches(node()[1], '^\s') and not(node()[1][matches(., '^\s+$')] and node()[2][self::*]))"
-                > tei:p darf nur mit Whitespace beginnen, wenn danach ein Element folgt. Erlaubt:
-                &lt;p&gt;Text, &lt;p&gt; &lt;element/&gt;. Nicht erlaubt: &lt;p&gt; Text.
+                > <sch:name/> darf nur mit Whitespace enden, wenn davor ein Element steht.
+                Erlaubt: &lt;<sch:name/>&gt;Text, &lt;<sch:name/>&gt;Text &lt;element/&gt; .
+                Nicht erlaubt: &lt;<sch:name/>&gt;Text , &lt;<sch:name/>&gt; Text &lt;element/&gt; text .
             </sch:assert>
-        </sch:rule>
-    </sch:pattern>
-    <!-- seg element whitespace restrictions -->
-    <sch:pattern id="seg-whitespace-start">
-        <sch:rule context="tei:seg">
-            <sch:assert
-                test="not(node()[1][self::text()] and matches(node()[1], '^\s') and not(node()[1][matches(., '^\s+$')] and node()[2][self::*]))"
-                > tei:seg darf nur mit Whitespace beginnen, wenn danach ein Element folgt. Erlaubt:
-                &lt;seg&gt;Text, &lt;seg&gt; &lt;element/&gt;. Nicht erlaubt: &lt;seg&gt; Text.
-            </sch:assert>
-        </sch:rule>
-    </sch:pattern>
-    <!-- closer element whitespace restrictions -->
-    <sch:pattern id="closer-whitespace-start">
-        <sch:rule context="tei:closer">
-            <sch:assert
-                test="not(node()[1][self::text()] and matches(node()[1], '^\s') and not(node()[1][matches(., '^\s+$')] and node()[2][self::*]))"
-                > tei:closer darf nur mit Whitespace beginnen, wenn danach ein Element folgt.
-                Erlaubt: &lt;closer&gt;Text, &lt;closer&gt; &lt;element/&gt;. Nicht erlaubt:
-                &lt;closer&gt; Text. </sch:assert>
-        </sch:rule>
-    </sch:pattern>
-    <!-- closer element whitespace restrictions -->
-    <sch:pattern id="date-whitespace-start">
-        <sch:rule context="tei:date">
-            <sch:assert
-                test="not(node()[1][self::text()] and matches(node()[1], '^\s') and not(node()[1][matches(., '^\s+$')] and node()[2][self::*]))"
-                > tei:date darf nur mit Whitespace beginnen, wenn danach ein Element folgt. Erlaubt:
-                &lt;date&gt;Text, &lt;date&gt; &lt;element/&gt;. Nicht erlaubt: &lt;date&gt; Text.
-            </sch:assert>
-        </sch:rule>
-    </sch:pattern>
-    <!-- salute element whitespace restrictions -->
-    <sch:pattern id="salute-whitespace-start">
-        <sch:rule context="tei:salute">
-            <sch:assert
-                test="not(node()[1][self::text()] and matches(node()[1], '^\s') and not(node()[1][matches(., '^\s+$')] and node()[2][self::*]))"
-                > tei:salute darf nur mit Whitespace beginnen, wenn danach ein Element folgt.
-                Erlaubt: &lt;salute&gt;Text, &lt;salute&gt; &lt;element/&gt;. Nicht erlaubt:
-                &lt;salute&gt; Text. </sch:assert>
-            <sch:assert
-                test="not(node()[last()][self::text()] and matches(node()[last()], '\s$') and not(node()[last()][matches(., '^\s+$')] and node()[last() - 1][self::*]))"
-                > tei:salute darf nur mit Whitespace enden, wenn davor ein Element steht. Erlaubt:
-                &lt;salute&gt;Text, &lt;salute&gt;Text &lt;element/&gt; . Nicht erlaubt:
-                &lt;salute&gt;Text , &lt;salute&gt; Text &lt;element/&gt; text . </sch:assert>
         </sch:rule>
     </sch:pattern>
 </sch:schema>
