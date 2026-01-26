@@ -110,16 +110,14 @@
     <!-- handDesc -->
     <sch:pattern id="handDesc-rules">
         <sch:rule context="tei:handDesc">
-            <sch:assert test="count(*) >= 1"> handDesc muss mindestens ein Kind haben. </sch:assert>
-            <sch:assert test="not(count(tei:handNote) &lt; @hands)"> Anzahl der handNote darf nicht
-                kleiner als @hands sein. </sch:assert>
+            <sch:assert test="count(child::tei:handNote) >= 1"> handDesc muss mindestens ein Kind
+                haben. </sch:assert>
             <sch:assert test="not(tei:handNote[not(@corresp)] and tei:handNote[2])"> Nur eine
                 handNote ohne @corresp erlaubt. </sch:assert>
-            <sch:assert test="not(count(tei:handNote) > 1) or @hands"> Wenn mehr als ein handNote-Element
-                vorhanden ist, muss das Attribut @hands vorhanden sein. </sch:assert>
-            <sch:assert test="not(@hands) or @hands = count(distinct-values(descendant::tei:handNote/@corresp))">
-                Der Wert von @hands muss der Anzahl der unterschiedlichen @corresp-Werte in den handNote-Elementen entsprechen.
-            </sch:assert>
+            <sch:assert
+                test="(not(tei:handNote[@corresp]) and @hands = '1') or @hands = count(distinct-values(descendant::tei:handNote/@corresp))"
+                > Wenn kein @corresp-Attribut vergeben, muss das Attribut @hands immer "1"
+                sein</sch:assert>
         </sch:rule>
     </sch:pattern>
     <!-- typeNote -->
@@ -404,16 +402,14 @@
                 oder "https://doi.org/10.1234/example"). </sch:assert>
             <sch:assert test="
                     not(@type = 'schnitzler-mikrofilme') or
-                    (matches(@target, '^\d{6,7}_\d{1,4}$') or matches(@target, '^\d{6,7}$'))"> Wenn @type =
-                 "schnitzler-mikrofilme", muss @target dem Format
-                entsprechen: 6- oder 7-stellige Ziffer und eventuell Unterstrich, 1-4 Ziffern (z.B. "1234567_123").
-            </sch:assert>
+                    (matches(@target, '^\d{6,7}_\d{1,4}$') or matches(@target, '^\d{6,7}$'))"
+                > Wenn @type = "schnitzler-mikrofilme", muss @target dem Format entsprechen: 6- oder
+                7-stellige Ziffer und eventuell Unterstrich, 1-4 Ziffern (z.B. "1234567_123"). </sch:assert>
             <sch:assert test="
-                not(@type = 'schnitzler-zeitungen') or
-                (matches(@target, '^\d{6,7}_\d{1,4}$'))"> Wenn @type =
-                "schnitzler-zeitungen", muss @target dem Format
-                entsprechen: 6- oder 7-stellige Ziffer und eventuell Unterstrich, 1-4 Ziffern (z.B. "1234567_123").
-            </sch:assert>
+                    not(@type = 'schnitzler-zeitungen') or
+                    (matches(@target, '^\d{6,7}_\d{1,4}$'))"> Wenn @type =
+                "schnitzler-zeitungen", muss @target dem Format entsprechen: 6- oder 7-stellige
+                Ziffer und eventuell Unterstrich, 1-4 Ziffern (z.B. "1234567_123"). </sch:assert>
             <sch:assert test="
                     (@type = 'schnitzler-tagebuch' or @type = 'schnitzler-briefe' or @type = 'schnitzler-lektueren' or @type = 'schnitzler-bahr' or @type = 'schnitzler-interviews' or @type = 'schnitzler-kultur' or @type = 'wienerschnitzler' or @type = 'URL' or @type = 'DOI' or @type = 'schnitzler-mikrofilme' or @type = 'schnitzler-zeitungen')"
             />
@@ -426,11 +422,11 @@
                     or
                     following-sibling::node()[1][self::text() and not(matches(., '^\s'))]
                     or
-                    (following-sibling::node()[1][self::text() and normalize-space(.) = ''] and following-sibling::node()[2][self::*])"> Auf das Element
-                "&lt;pb/&gt;" muss unmittelbar der Text kommen. Oder ein Element. Beispiele für
-                Erlaubtes: "&lt;pb/&gt;hier", "&lt;pb/&gt;&lt;element/&gt;", "&lt;pb/&gt; &lt;element/&gt;" Beispiel für
-                Nicht-Erlaubtes: "&lt;pb/&gt; hier", "&lt;pb/&gt;
-                hier" </sch:assert>
+                    (following-sibling::node()[1][self::text() and normalize-space(.) = ''] and following-sibling::node()[2][self::*])"
+                > Auf das Element "&lt;pb/&gt;" muss unmittelbar der Text kommen. Oder ein Element.
+                Beispiele für Erlaubtes: "&lt;pb/&gt;hier", "&lt;pb/&gt;&lt;element/&gt;",
+                "&lt;pb/&gt; &lt;element/&gt;" Beispiel für Nicht-Erlaubtes: "&lt;pb/&gt; hier",
+                "&lt;pb/&gt; hier" </sch:assert>
             <sch:assert
                 test="ancestor::tei:p or ancestor::tei:seg[not(descendant::tei:seg)] or ancestor::tei:l or ancestor::tei:quote or ancestor::tei:closer or ancestor::tei:dateline or ancestor::tei:addrLine or ancestor::tei:salute or ancestor::tei:stamp or ancestor::tei:cell or parent::tei:desc or parent::tei:support"
                 > &lt;pb/&gt; muss innerhalb eines zeilenbildenden Elements (&lt;p/&gt;,
@@ -560,9 +556,9 @@
         <sch:rule context="tei:date">
             <sch:assert
                 test="not(node()[1][self::text()] and matches(node()[1], '^\s') and not(node()[1][matches(., '^\s+$')] and node()[2][self::*]))"
-                > tei:date darf nur mit Whitespace beginnen, wenn danach ein Element folgt.
-                Erlaubt: &lt;date&gt;Text, &lt;date&gt; &lt;element/&gt;. Nicht erlaubt:
-                &lt;date&gt; Text. </sch:assert>
+                > tei:date darf nur mit Whitespace beginnen, wenn danach ein Element folgt. Erlaubt:
+                &lt;date&gt;Text, &lt;date&gt; &lt;element/&gt;. Nicht erlaubt: &lt;date&gt; Text.
+            </sch:assert>
         </sch:rule>
     </sch:pattern>
     <!-- salute element whitespace restrictions -->
