@@ -18,7 +18,7 @@
             <sch:assert test="normalize-space(.) = ''">tei:ref darf keinen Textinhalt haben (nur
                 leere Elemente sind erlaubt). </sch:assert>
         </sch:rule>
-    </sch:pattern>mi
+    </sch:pattern>
     <sch:pattern id="title-rules">
         <sch:rule context="tei:title[not(ancestor::tei:back)]">
             <sch:assert test="@level"> Das Attribut @level des tei:title muss vorhanden sein.
