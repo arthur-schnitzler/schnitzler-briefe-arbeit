@@ -1,6 +1,10 @@
-<?xml version='1.0' encoding='UTF-8'?>
+<?xml version="1.0" encoding="UTF-8"?>
 <?xml-model href="../meta/schnitzler-briefe-schematron.sch" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
-<TEI xmlns="http://www.tei-c.org/ns/1.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.tei-c.org/ns/1.0 ../meta/schnitzler-briefe-schema.xsd" xml:id="L03717" xml:base="https://id.acdh.oeaw.ac.at/schnitzler/schnitzler-briefe/editions">
+<TEI xmlns="http://www.tei-c.org/ns/1.0"
+     xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+     xsi:schemaLocation="http://www.tei-c.org/ns/1.0 ../meta/schnitzler-briefe-schema.xsd"
+     xml:id="L03717"
+     xml:base="https://id.acdh.oeaw.ac.at/schnitzler/schnitzler-briefe/editions">
    <teiHeader>
       <fileDesc>
          <titleStmt>
@@ -69,7 +73,7 @@
          <sourceDesc>
             <listWit>
                <witness n="1">
-                  <objectType corresp="kartenbrief"/>
+                  <objectType corresp="karte" ana="visitenkarte"/>
                   <msDesc>
                      <msIdentifier>
                         <country>D</country>
@@ -81,22 +85,14 @@
                         <objectDesc>
                            <supportDesc>
                               <extent>
-                                 <measure unit="kartenbrief" quantity="1"/>
-                                 <measure unit="zeichenanzahl" quantity="419"/>
+                                 <measure unit="karte" quantity="1"/>
+                                 <measure unit="zeichenanzahl" quantity="420"/>
                               </extent>
                            </supportDesc>
                         </objectDesc>
-                        <handDesc hands="1">
+                        <handDesc hands="0">
                            <handNote medium="schwarze-tinte" style="lateinische-kurrent"/>
                         </handDesc>
-                        <additions>
-                           <incident type="additional-information">
-                              <desc>Kartenbrief mit Vordruck auf S. 2: »<quote>
-                                    <hi rend="capitals">Elsa
-                                 Plessner</hi>
-                                 </quote>«</desc>
-                           </incident>
-                        </additions>
                      </physDesc>
                   </msDesc>
                </witness>
@@ -118,76 +114,64 @@
                <date evidence="conjecture" notBefore="1898-10-23" notAfter="1898-10-27">[23. 10. 1898 – 27. 10. 1898?]</date>
                <placeName ref="#pmb50" evidence="conjecture">Wien</placeName>
             </correspAction>
-            <correspContext><ref type="belongsToCorrespondence" target="correspondence_2128">Plessner, Elsa</ref>
+            <correspContext>
+               <ref type="belongsToCorrespondence" target="correspondence_2128">Plessner, Elsa</ref>
                <ref subtype="previous_letter" type="withinCollection" target="L02863">Goldmann an Schnitzler, 21. 10. 1898</ref>
                <ref subtype="next_letter" type="withinCollection" target="L02864">Goldmann an Schnitzler, 3. 11. [1898]</ref>
-               <ref subtype="previous_letter" type="withinCorrespondence" source="correspondence_2128" target="L03716">Plessner an Schnitzler, 23. 10. 1897</ref>
-               <ref subtype="next_letter" type="withinCorrespondence" source="correspondence_2128" target="L03718">Plessner an Schnitzler, 2. 1. 1899</ref>
-            </correspContext></correspDesc>
+               <ref subtype="previous_letter"
+                    type="withinCorrespondence"
+                    source="correspondence_2128"
+                    target="L03716">Plessner an Schnitzler, 23. 10. 1897</ref>
+               <ref subtype="next_letter"
+                    type="withinCorrespondence"
+                    source="correspondence_2128"
+                    target="L03718">Plessner an Schnitzler, 2. 1. 1899</ref>
+            </correspContext>
+         </correspDesc>
       </profileDesc>
-      <revisionDesc status="proposed">
+      <revisionDesc status="candidate">
          <change who="MAM" when="2025-07-03">Export aus Transkribus</change>
          <change who="SJ" when="2025-07-20">Durchsicht</change>
+         <change who="MAM" when="2026-01-28">Durchsicht</change>
+         <change who="MAM" when="2026-01-28">Index check</change>
       </revisionDesc>
    </teiHeader>
+   <facsimile>
+      <graphic url="HS000409661_0054"/>
+      <graphic url="HS000409661_0055"/>
+   </facsimile>
    <text>
       <body>
          <div type="writingSession" n="1">
             <opener>
                <dateline rend="center">
                   <pb facs="HS000409661_0054"/>den <date>22./10. 98</date>.</dateline>
-               <salute>Verehrter Herr Doctor!</salute>
+               <salute rend="inline">Verehrter Herr Doctor!</salute>
             </opener>
-            <p>Bitte seien Sie so lieb wie immer und theilen Sie mir gff. mit, wie Ihre Ansicht über
-               die <anchor type="commentary" xml:id="K_L03717-1"/>beifolgende Geschichte<note type="commentary" corresp="K_L03717-1">Welcher Text dem Schreiben beilag, ist
-                  nicht zu rekonstruieren.</note> ausfällt<c rendition="#dots" n="4"/> Sie wissen ja, wieviel mir stets an
-               Ihrem Urtheil <pb facs="HS000409661_0055"/>liegt!.</p>
-            <p>In einer der nächsten Nummern der »<rs type="work" ref="#pmb43198">Wage</rs>« werden
-               Sie <anchor type="commentary" xml:id="K_L03717-2"/>eine größere <rs type="work" ref="#pmb295201" subtype="implied" cert="low">Novelle</rs>
-               <note type="commentary" corresp="K_L03717-2">
+            <p>Bitte, seien Sie so lieb wie immer und theilen Sie mir <anchor type="commentary" xml:id="K_L03717-1"/>gfl.<note type="commentary" corresp="K_L03717-1">gefällig</note> mit, wie Ihre Ansicht über
+               die <anchor type="commentary" xml:id="K_L03717-2"/>beifolgende Geschichte<note type="commentary" corresp="K_L03717-2">Beilage nicht erhalten. Um welchen ihrer Texte es sich 
+                  gehandelt hat, ist
+                  nicht zu rekonstruieren.</note> ausfällt. – – – Sie wissen ja, wieviel mir stets an
+               Ihrem Urtheil <pb facs="HS000409661_0055"/>liegt! –</p>
+            <p>In einer der <anchor type="commentary" xml:id="K_L03717-3"/>nächsten Nummern der »<rs type="work" ref="#pmb43198">Wage</rs>« werden
+               Sie eine größere <rs type="work" ref="#pmb295201" subtype="implied">Novelle</rs>
+               <note type="commentary" corresp="K_L03717-3">Zu der hier angekündigten Publikation kam es nicht, 
                   <rs type="person" ref="#pmb2128">Elsa Plessner</rs> zog den
-                  Text zurück, wie aus dem Brief vom <ref type="schnitzler-briefe" target="L03718" subtype="date-only"/> hervorgeht. Vermutlich handelte es sich um die Novelle <rs type="work" ref="#pmb295201">Der neue Lehrer</rs>, deren Titel <rs type="person" ref="#pmb2128">Plessner</rs> im Brief vom <ref type="schnitzler-briefe" target="L03720" subtype="date-only"/> erstmals erwähnt und die ihren längsten
-                  überlieferten Prosatext darstellt.</note> von mir finden, deren <subst>
+                  Text zurück, wie aus dem Brief vom <ref type="schnitzler-briefe" target="L03718" subtype="date-only"/> hervorgeht. Es dürfte sich um die Novelle <rs type="work" ref="#pmb295201">Der neue Lehrer</rs> handeln, deren Titel <rs type="person" ref="#pmb2128">Plessner</rs> im Brief vom <ref type="schnitzler-briefe" target="L03720" subtype="date-only"/> erstmals erwähnt. Diese stellt ihren längsten
+                  überlieferten Prosatext aus der Zeit dar.</note> von mir finden, deren <subst>
                   <del rend="overwritten">U</del>
                   <add place="above">Beu</add>
                </subst>rtheil<add place="inline">ung</add> von Ihrer Seite mich schon jetzt
-               außerordentlich interessirt. – Besten herzlichen Dank im Voraus!</p>
+               außerordentlich interessirt. – Besten, herzlichen Dank im Voraus</p>
             <p rend="center">
                <hi rend="pre-print">
                   <hi rend="capitals">Elsa Plessner</hi>
-               </hi></p>
+               </hi>
+            </p>
          </div>
       </body>
       <back>
          <listPerson>
-            <person xml:id="pmb2121">
-               <persName>
-                  <surname>Schnitzler</surname>
-                  <forename>Arthur</forename>
-               </persName>
-               <birth>
-                  <date when="1862-05-15">15. 5. 1862</date>
-                  <settlement ref="pmb50">
-                     <placeName type="pref">Wien</placeName>
-                     <location>
-                        <geo>48,208333 16,373056</geo>
-                     </location>
-                  </settlement>
-               </birth>
-               <death>
-                  <date when="1931-10-21">21. 10. 1931</date>
-                  <settlement ref="pmb50">
-                     <placeName type="pref">Wien</placeName>
-                     <location>
-                        <geo>48,208333 16,373056</geo>
-                     </location>
-                  </settlement>
-               </death>
-               <sex value="male"/>
-               <occupation ref="pmb90">Schriftsteller/Schriftstellerin</occupation>
-               <occupation ref="pmb97">Mediziner/Medizinerin</occupation>
-               <idno type="gnd">https://d-nb.info/gnd/118609807/</idno>
-            </person>
             <person xml:id="pmb2128">
                <persName>
                   <forename>Elsa</forename>
@@ -223,7 +207,7 @@
                </death>
                <sex value="female"/>
                <occupation ref="pmb90">Schriftsteller/Schriftstellerin</occupation>
-               <idno type="URL" subtype="gnd">https://d-nb.info/gnd/1041571119</idno>
+               <idno type="URL" subtype="d-nb">https://d-nb.info/gnd/1041571119</idno>
                <idno type="URL" subtype="schnitzler-tagebuch">https://schnitzler-tagebuch.acdh.oeaw.ac.at/person_15435.html</idno>
                <idno type="URL" subtype="schnitzler-bahr">https://schnitzler-bahr.acdh.oeaw.ac.at/pmb2128.html</idno>
                <idno type="URL" subtype="pmb">https://pmb.acdh.oeaw.ac.at/entity/2128/</idno>
@@ -232,40 +216,102 @@
                <idno type="URL" subtype="wikipedia">https://de.wikipedia.org/wiki/Elsa_Plessner</idno>
                <idno type="URL" subtype="schnitzler-briefe">https://schnitzler-briefe.acdh.oeaw.ac.at/pmb2128.html</idno>
                <idno type="URL" subtype="schnitzler-kultur">https://schnitzler-kultur.acdh.oeaw.ac.at/pmb2128.html</idno>
-               <listEvent>
-                  <event n="Theateruraufführung" when="1896-10-16" ref="pmb42011">
-                     <desc n="1370">teilgenommen an</desc>
-                     <label>Uraufführung von Sein Sohn, 16.10.1896</label>
-                     <idno type="URL" subtype="pmb">https://pmb.acdh.oeaw.ac.at/entity/42011/</idno>
-                     <idno type="URL" subtype="pmb">https://pmb.acdh.oeaw.ac.at/entity/208861/</idno>
-                     <idno type="URL" subtype="schnitzler-briefe">https://schnitzler-briefe.acdh.oeaw.ac.at/pmb42011.html</idno>
-                     <idno type="URL" subtype="schnitzler-kultur">https://schnitzler-kultur.acdh.oeaw.ac.at/pmb42011.html</idno>
-                  </event>
-                  <event n="Theateruraufführung" when="1901-03-16" ref="pmb296012">
-                     <desc n="1370">teilgenommen an</desc>
-                     <label>Uraufführung von Die Ehrlosen, 16.3.1901</label>
-                     <idno type="URL" subtype="pmb">https://pmb.acdh.oeaw.ac.at/entity/296012/</idno>
-                     <idno type="URL" subtype="schnitzler-briefe">https://schnitzler-briefe.acdh.oeaw.ac.at/pmb296012.html</idno>
-                  </event>
-               </listEvent>
-               <figure>
-                  <graphic url="https://upload.wikimedia.org/wikipedia/commons/thumb/5/5e/Elsa_Plessner%2C_Autorin_von_%E2%80%9EDie_Ehrlosen%E2%80%9C.png/250px-Elsa_Plessner%2C_Autorin_von_%E2%80%9EDie_Ehrlosen%E2%80%9C.png"/>
-               </figure>
+               <idno type="URL" subtype="bahr-textverzeichnis">https://bahr-textverzeichnis.acdh.oeaw.ac.at/TSN-listperson.html#pmb158649</idno>
+            </person>
+            <person xml:id="pmb2121">
+               <persName>
+                  <surname>Schnitzler</surname>
+                  <forename>Arthur</forename>
+               </persName>
+               <birth>
+                  <date when="1862-05-15">15. 5. 1862</date>
+                  <settlement ref="pmb50">
+                     <placeName type="pref">Wien</placeName>
+                     <location>
+                        <geo>48,208333 16,373056</geo>
+                     </location>
+                  </settlement>
+               </birth>
+               <death>
+                  <date when="1931-10-21">21. 10. 1931</date>
+                  <settlement ref="pmb50">
+                     <placeName type="pref">Wien</placeName>
+                     <location>
+                        <geo>48,208333 16,373056</geo>
+                     </location>
+                  </settlement>
+               </death>
+               <sex value="male"/>
+               <occupation ref="pmb90">Schriftsteller/Schriftstellerin</occupation>
+               <occupation ref="pmb97">Mediziner/Medizinerin</occupation>
+               <idno type="gnd">https://d-nb.info/gnd/118609807/</idno>
+            </person>
+            <person xml:id="pmb2570">
+               <persName>
+                  <forename>Rudolf</forename>
+                  <surname>Lothar</surname>
+               </persName>
+               <persName type="person_geburtsname_vorname">Rudolph Lothar</persName>
+               <persName type="person_geburtsname_nachname">Spitzer</persName>
+               <persName type="legacy-name-merge">Lothar, Rudolf</persName>
+               <birth>
+                  <date when="1865-02-23">23.2.1865</date>
+                  <settlement ref="pmb43471">
+                     <placeName type="pref">Budapest</placeName>
+                     <location>
+                        <geo>47,49835 19,04045</geo>
+                     </location>
+                  </settlement>
+               </birth>
+               <death>
+                  <date when="1943-10-02">2.10.1943</date>
+                  <settlement ref="pmb43471">
+                     <placeName type="pref">Budapest</placeName>
+                     <location>
+                        <geo>47,49835 19,04045</geo>
+                     </location>
+                  </settlement>
+               </death>
+               <sex value="male"/>
+               <occupation ref="pmb90">Schriftsteller/Schriftstellerin</occupation>
+               <occupation ref="pmb99">Journalist/Journalistin</occupation>
+               <occupation ref="pmb715">Theaterdirektor/Theaterdirektorin</occupation>
+               <idno type="URL" subtype="d-nb">https://d-nb.info/gnd/119545063</idno>
+               <idno type="URL" subtype="schnitzler-tagebuch">https://schnitzler-tagebuch.acdh.oeaw.ac.at/person_17696.html</idno>
+               <idno type="URL" subtype="schnitzler-bahr">https://schnitzler-bahr.acdh.oeaw.ac.at/pmb2570.html</idno>
+               <idno type="URL" subtype="pmb">https://pmb.acdh.oeaw.ac.at/entity/2570/</idno>
+               <idno type="URL" subtype="schnitzler-lektueren">https://schnitzler-lektueren.acdh.oeaw.ac.at/pmb2570.html</idno>
+               <idno type="URL" subtype="doi">https://doi.org/10.1553/0x00284ceb</idno>
+               <idno type="URL" subtype="fackel">https://fackel.oeaw.ac.at/?p=fackelp52589</idno>
+               <idno type="URL" subtype="wikidata">http://www.wikidata.org/entity/Q215158</idno>
+               <idno type="URL" subtype="wikipedia">https://de.wikipedia.org/wiki/Rudolf_Lothar</idno>
+               <idno type="URL" subtype="geschichtewiki">https://www.geschichtewiki.wien.gv.at/Special:URIResolver/?curid=18954</idno>
+               <idno type="URL" subtype="schnitzler-kino">https://schnitzler-kino.acdh.oeaw.ac.at/pmb2570.html</idno>
+               <idno type="URL" subtype="pmb">https://pmb.acdh.oeaw.ac.at/entity/161111/</idno>
+               <idno type="URL" subtype="hanslick">https://hanslick.acdh.oeaw.ac.at/hsl_person_id_2925.html</idno>
+               <idno type="URL" subtype="schnitzler-interviews">https://schnitzler-interviews.acdh.oeaw.ac.at/pmb2570.html</idno>
+               <idno type="URL" subtype="bahr-textverzeichnis">https://bahr-textverzeichnis.acdh.oeaw.ac.at/pmb2570.html</idno>
+               <idno type="URL" subtype="bahr-textverzeichnis">https://bahr-textverzeichnis.acdh.oeaw.ac.at/TSN-listperson.html#pmb2570</idno>
+               <idno type="URL" subtype="brenner">https://brenner.oeaw.ac.at/?p=brennerp37557</idno>
+               <idno type="URL" subtype="schnitzler-briefe">https://schnitzler-briefe.acdh.oeaw.ac.at/pmb2570.html</idno>
+               <idno type="URL" subtype="schnitzler-kultur">https://schnitzler-kultur.acdh.oeaw.ac.at/pmb2570.html</idno>
+               <idno type="URL" subtype="conrad-ansorge">https://conrad-ansorge.github.io/ansorge-static/ansorge_p_476.html</idno>
             </person>
          </listPerson>
          <listBibl>
             <bibl xml:id="pmb43198">
-               <title type="main">Die Wage. Eine Wiener Wochenschrift</title>
+               <title>Die Wage. Eine Wiener Wochenschrift</title>
                <author role="hat-herausgegeben" ref="pmb2570">Lothar, Rudolf</author>
                <date to="1925-01-01">1898-01-01 – 1925</date>
                <idno type="URL" subtype="pmb">https://pmb.acdh.oeaw.ac.at/entity/43198/</idno>
                <idno type="URL" subtype="schnitzler-briefe">https://schnitzler-briefe.acdh.oeaw.ac.at/pmb43198.html</idno>
                <note type="work_kind">Wochenschrift</note>
             </bibl>
-            <bibl xml:id="pmb295201" ana="comment">
-               <title type="main">Der neue Lehrer. Novelle</title>
+            <bibl xml:id="pmb295201" ana="implied">
+               <title>Der neue Lehrer. Novelle</title>
                <title type="werk_bibliografische-angabe">Der neue Lehrer. Novelle. In: Das Magazin für Litteratur, Jg. 69, Nr. 10, 10.3.1900, Sp. 251–256; Nr. 11, 17.3.1900, Sp. 276–282</title>
                <title type="werk_bibliografische-angabe">In: Der Gläserne Käfig. Skizzen und Novellen. Wien: Leopold Weiss 1901, S. 13–37</title>
+               <title type="werk_link">https://archive.org/details/bub_gb_VnkDAAAAYAAJ/page/n105</title>
                <author role="hat-geschaffen" ref="pmb2128">Plessner, Elsa</author>
                <date to="1900-03-17">1900-03-10 – 1900-03-17</date>
                <idno type="URL" subtype="pmb">https://pmb.acdh.oeaw.ac.at/entity/295201/</idno>
@@ -277,16 +323,12 @@
             <place xml:id="pmb50">
                <placeName>Wien</placeName>
                <placeName type="ort_fruherer-name">K.K. Reichshaupt- und Residenzstadt Wien</placeName>
-               <placeName type="legacy-name-merge">Wien</placeName>
                <placeName type="alternative-name">Bécs</placeName>
                <placeName type="alternative-name">Land Wien</placeName>
                <placeName type="alternative-name">Vídeň</placeName>
                <placeName type="alternative-name">Wenia</placeName>
                <placeName type="alternative-name">Beč</placeName>
                <placeName type="ort_fruherer-name">Vindobona</placeName>
-               <placeName type="legacy-name-merge">Vindobona</placeName>
-               <placeName type="alternative-name">Vienna</placeName>
-               <placeName type="legacy-name-merge">Vienna</placeName>
                <placeName type="alternative-name">Vienna</placeName>
                <desc type="entity_type">A.ADM2</desc>
                <desc type="entity_type_id">1135</desc>
@@ -297,27 +339,26 @@
                   <placeName ref="pmb41240">Österreich</placeName>
                   <geo>47,33333 13,33333</geo>
                </location>
+               <location type="located_in_place">
+                  <placeName ref="pmb235218">Windmühlhöhe</placeName>
+                  <geo>48,24077 16,32092</geo>
+               </location>
                <idno type="URL" subtype="geonames">https://sws.geonames.org/2761369/</idno>
-               <idno type="URL" subtype="gnd">https://d-nb.info/gnd/4066009-6</idno>
+               <idno type="URL" subtype="d-nb">https://d-nb.info/gnd/4066009-6</idno>
                <idno type="URL" subtype="schnitzler-bahr">https://schnitzler-bahr.acdh.oeaw.ac.at/pmb50.html</idno>
                <idno type="URL" subtype="pmb">https://pmb.acdh.oeaw.ac.at/entity/50/</idno>
                <idno type="URL" subtype="pmb">https://pmb.acdh.oeaw.ac.at/entity/2316/</idno>
                <idno type="URL" subtype="pmb">https://pmb.acdh.oeaw.ac.at/entity/20954/</idno>
                <idno type="URL" subtype="pmb">https://pmb.acdh.oeaw.ac.at/entity/65221/</idno>
                <idno type="URL" subtype="pmb">https://pmb.acdh.oeaw.ac.at/entity/65223/</idno>
-               <idno type="URL" subtype="legalkraus">https://kraus.wienbibliothek.at/register/orte/pmb50</idno>
+               <idno type="URL" subtype="kraus">https://kraus.wienbibliothek.at/register/orte/pmb50</idno>
                <idno type="URL" subtype="wikidata">http://www.wikidata.org/entity/Q1741</idno>
                <idno type="URL" subtype="wikipedia">https://de.wikipedia.org/wiki/Wien</idno>
                <idno type="URL" subtype="schnitzler-interviews">https://schnitzler-interviews.acdh.oeaw.ac.at/pmb50.html</idno>
                <idno type="URL" subtype="geonames">https://sws.geonames.org/2761333/</idno>
                <idno type="URL" subtype="pmb">https://pmb.acdh.oeaw.ac.at/entity/33999/</idno>
                <idno type="URL" subtype="schnitzler-tagebuch">https://schnitzler-tagebuch.acdh.oeaw.ac.at/pmb50.html</idno>
-               <idno type="URL" subtype="wienerschnitzler">https://wienerschnitzler.org/pmb50.html</idno>
                <idno type="URL" subtype="schnitzler-briefe">https://schnitzler-briefe.acdh.oeaw.ac.at/pmb50.html</idno>
-               <idno type="URL" subtype="schnitzler-kultur">https://schnitzler-kultur.acdh.oeaw.ac.at/pmb50.html</idno>
-               <idno type="URL" subtype="semantickraus">https://sk.acdh.oeaw.ac.at/DWplace00347</idno>
-               <idno type="URL" subtype="semantickraus">https://sk.acdh.oeaw.ac.at/DWplace00066</idno>
-               <idno type="URL" subtype="semantickraus">https://sk.acdh.oeaw.ac.at/DWplace00085</idno>
                <note type="image">
                   <figure>
                      <graphic url="https://iiif.onb.ac.at/images/AKON/AK117_016/016/full/,600/0/native.jpg"/>
