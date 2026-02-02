@@ -1,6 +1,10 @@
-<?xml version='1.0' encoding='UTF-8'?>
+<?xml version="1.0" encoding="UTF-8"?>
 <?xml-model href="../meta/schnitzler-briefe-schematron.sch" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
-<TEI xmlns="http://www.tei-c.org/ns/1.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.tei-c.org/ns/1.0 ../meta/schnitzler-briefe-schema.xsd" xml:id="L03722" xml:base="https://id.acdh.oeaw.ac.at/schnitzler/schnitzler-briefe/editions">
+<TEI xmlns="http://www.tei-c.org/ns/1.0"
+     xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+     xsi:schemaLocation="http://www.tei-c.org/ns/1.0 ../meta/schnitzler-briefe-schema.xsd"
+     xml:id="L03722"
+     xml:base="https://id.acdh.oeaw.ac.at/schnitzler/schnitzler-briefe/editions">
    <teiHeader>
       <fileDesc>
          <titleStmt>
@@ -83,12 +87,12 @@
                               <extent>
                                  <measure unit="seite" quantity="4"/>
                                  <measure unit="blatt" quantity="1"/>
-                                 <measure unit="zeichenanzahl" quantity="1900"/>
+                                 <measure unit="zeichenanzahl" quantity="1904"/>
                               </extent>
                               <support>Briefpapier mit Blumenmotiv (Iris) auf S. 1</support>
                            </supportDesc>
                         </objectDesc>
-                        <handDesc hands="1">
+                        <handDesc hands="0">
                            <handNote medium="schwarze-tinte" style="lateinische-kurrent"/>
                         </handDesc>
                      </physDesc>
@@ -113,18 +117,34 @@
                   – 29. 1. 1899?]</date>
                <placeName ref="#pmb50" evidence="conjecture">Wien</placeName>
             </correspAction>
-            <correspContext><ref type="belongsToCorrespondence" target="correspondence_2128">Plessner, Elsa</ref>
+            <correspContext>
+               <ref type="belongsToCorrespondence" target="correspondence_2128">Plessner, Elsa</ref>
                <ref subtype="previous_letter" type="withinCollection" target="L00882">Brandes an Schnitzler, 22. 1. 1899</ref>
                <ref subtype="next_letter" type="withinCollection" target="L03286">Salten an Schnitzler, [28. 1. 1899]</ref>
-               <ref subtype="previous_letter" type="withinCorrespondence" source="correspondence_2128" target="L03721">Plessner an Schnitzler, 21. 1. 1899</ref>
-               <ref subtype="next_letter" type="withinCorrespondence" source="correspondence_2128" target="L03723">Plessner an Schnitzler, 9. 1. 1900</ref>
-            </correspContext></correspDesc>
+               <ref subtype="previous_letter"
+                    type="withinCorrespondence"
+                    source="correspondence_2128"
+                    target="L03721">Plessner an Schnitzler, 21. 1. 1899</ref>
+               <ref subtype="next_letter"
+                    type="withinCorrespondence"
+                    source="correspondence_2128"
+                    target="L03723">Plessner an Schnitzler, 9. 1. 1900</ref>
+            </correspContext>
+         </correspDesc>
       </profileDesc>
-      <revisionDesc status="proposed">
+      <revisionDesc status="candidate">
          <change who="MAM" when="2025-07-03">Export aus Transkribus</change>
          <change who="SJ" when="2025-07-23">Durchsicht</change>
+         <change who="MAM" when="2026-01-29">Durchsicht</change>
+         <change who="MAM" when="2026-01-29">Index check</change>
       </revisionDesc>
    </teiHeader>
+   <facsimile>
+      <graphic url="HS000409661_0064"/>
+      <graphic url="HS000409661_0065-1"/>
+      <graphic url="HS000409661_0065-2"/>
+      <graphic url="HS000409661_0066"/>
+   </facsimile>
    <text>
       <body>
          <div type="writingSession" n="1">
@@ -132,17 +152,17 @@
                <seg rend="center">
                   <pb facs="HS000409661_0064"/>den <date>26. I. 99</date>.</seg>
                <!-- Zeilenumbruch durch Blume, wird nicht wiedergegeben -->
-               <salute rend="center">Verehrter Herr Doctor!</salute>
+               <salute>Verehrter Herr Doctor!</salute>
             </opener>
             <p>Ihre heutigen lieben <anchor type="commentary" xml:id="K_L03722-1"/>Zeilen<note type="commentary" corresp="K_L03722-1">nicht überliefert</note> haben eine Scene
-               verursacht, die ich ihrer Komik halber Ihnen schildern muss. Also stellen Sie sich,
+               verursacht, die ich ihrer Komik halber Ihnen schildern muss. Also stellen Sie sich
                vor – ich – im Bad, meine <rs type="person" ref="#pmb295662" subtype="implied">Schwester</rs> mit eiligem Schritt mir den <add place="above">(Ihren)</add>
                <space unit="chars" quantity="1"/>
                <anchor type="commentary" xml:id="K_L03722-2"/>Brief<note type="commentary" corresp="K_L03722-2">nicht überliefert</note> überbringend. Ich – mit eiligst
-               getrockneten <del rend="strikethrough">A</del>aber noch immer feuchten Fingern das
+               getrockneten <del rend="strikethrough">l</del> aber noch immer feuchten Fingern das
                unheilvolle Couvert ergreifend und – na – sagen wir aufmachend – (die Stücke
                desselben habe ich nachher nicht mehr finden können) meine <rs type="person" ref="#pmb295662" subtype="implied">Schwester</rs> mir über die Schulter blickend
-               – – und <pb facs="HS000409661_0065-1"/>und? – – – – Und?!<c rendition="#dots" n="2"/></p>
+               – – und <pb facs="HS000409661_0065-1"/>und? – – – Und?! –</p>
             <p>Meine <rs type="person" subtype="implied" ref="#pmb295662">Schwester</rs> schreibt es
                der Wirkung – – d. h. dem Umstande zu, dass ich mich in der angeführten wässrigen
                Situation befand, dass ich nicht einen ordentlichen shoc davongetragen habe. – Sie
@@ -151,21 +171,21 @@
                gehen, da ich mich ja ohnedies im Wasser befände. – – – –</p>
             <p>Nein! — Sie dürfen nicht glauben, dass ich schon so weit bin über meinen neuerlichen
                Missgriff lachen zu können! – Ich habe ja nicht <pb facs="HS000409661_0065-2"/>viel erwartet – aber so
-               gar nichts? – Sie haben mir schon <date>vor zwei Jahren</date> klar gemacht, wie
-               wenig an einem <anchor type="commentary" xml:id="K_L03722-3"/>verfehlten Stück<note type="commentary" corresp="K_L03722-3">
+               gar nichts? – Sie haben mir schon <anchor type="commentary" xml:id="K_L03722-3"/><date>vor zwei Jahren</date><note type="commentary" corresp="K_L03722-3">
                   <rs type="person" ref="#pmb2128">Elsa Plessner</rs> legte <rs type="person" ref="#pmb2121">Schnitzler</rs> am <ref type="schnitzler-briefe" subtype="date-only" target="L03698"/> das Schauspiel <rs type="work" ref="#pmb296028">Heimweh</rs> und am <ref type="schnitzler-briefe" target="L03710" subtype="date-only"/>
                   <space unit="chars" quantity="1"/>
                   <rs type="work" ref="#pmb296030">Orchideen</rs> vor. Seine harte Kritik, besonders beim zweiten
-                  Stück, löste Verzweiflung bei ihr aus, <ref type="schnitzler-briefe" target="L03712" subtype="cf"/>.</note> liegt! – Aber trotzdem! – Obzwar ich mit
+                  Stück, löste Verzweiflung bei ihr aus, <ref type="schnitzler-briefe" target="L03712" subtype="cf"/>.</note> klar gemacht, wie
+               wenig an einem verfehlten Stück liegt! – Aber trotzdem! – Obzwar ich mit
                dem <rs type="work" ref="#pmb295204" subtype="implied">Stück</rs> nicht Literatur,
                sondern Geld machen wollte thut es mir doch so weh, wieder einmal etwas verhauen zu
                haben! – Es wundert mich aber, dass Sie gerade einen Satz herausgegriffen haben, der
-               mir als Phrase nachträglich sehr missfallen hat. – – Ja, ich habe immer Ideen und
+               mir als Phrase nachträglich sehr missfallen hat. – – – Ja, ich habe immer Ideen und
                komme doch damit nicht weiter! – – – – Es ist wirk<pb facs="HS000409661_0066"/>lich schrecklich und
                fängt schon an, mich zu entmuthigen! – Wirklich!! Das soll keine Phrase sein! –</p>
-            <p>Wenn ich nur wüßte was ich da machen soll. Ich arbeite so intensiv ich kann (nicht
-                  <hi rend="underline" n="1">viel</hi> – wie Sie glauben!) (Im ganzen Jahr <hi rend="underline" n="1">nur</hi> den »<rs type="work" ref="#pmb295201">neuen
-                     Lehrer</rs>« und das <rs type="work" ref="#pmb295204" subtype="implied">Stück</rs>!) Ich sehe aber, das mir nichts nützt! Das Beste was ich kann ist doch
+            <p>Wenn ich nur wüsste, was ich da machen soll. Ich arbeite so intensiv ich kann (nicht
+                  <hi rend="underline" n="1">viel</hi> – wie Sie glauben!) – (Im ganzen Jahr <hi rend="underline" n="1">nur</hi> den »<rs type="work" ref="#pmb295201">neuen
+                     Lehrer</rs>« und das <rs type="work" ref="#pmb295204" subtype="implied">Stück</rs>!) Ich sehe aber, das mir nichts nützt: Das Beste was ich kann ist doch
                nicht genug!</p>
             <closer>Herzlichen Dank und herzlichen Gruß<lb/>
                <signed>Elsa Plessner</signed>
@@ -174,34 +194,6 @@
       </body>
       <back>
          <listPerson>
-            <person xml:id="pmb2121">
-               <persName>
-                  <surname>Schnitzler</surname>
-                  <forename>Arthur</forename>
-               </persName>
-               <birth>
-                  <date when="1862-05-15">15. 5. 1862</date>
-                  <settlement ref="pmb50">
-                     <placeName type="pref">Wien</placeName>
-                     <location>
-                        <geo>48,208333 16,373056</geo>
-                     </location>
-                  </settlement>
-               </birth>
-               <death>
-                  <date when="1931-10-21">21. 10. 1931</date>
-                  <settlement ref="pmb50">
-                     <placeName type="pref">Wien</placeName>
-                     <location>
-                        <geo>48,208333 16,373056</geo>
-                     </location>
-                  </settlement>
-               </death>
-               <sex value="male"/>
-               <occupation ref="pmb90">Schriftsteller/Schriftstellerin</occupation>
-               <occupation ref="pmb97">Mediziner/Medizinerin</occupation>
-               <idno type="gnd">https://d-nb.info/gnd/118609807/</idno>
-            </person>
             <person xml:id="pmb2128">
                <persName>
                   <forename>Elsa</forename>
@@ -211,6 +203,7 @@
                <persName type="person_ehename_nachname">Ginsberg</persName>
                <persName type="legacy-name-merge">Plessner, Elsa</persName>
                <persName type="person_namensvariante_nachname">Pleßner</persName>
+               <persName type="person_pseudonym">Lisa Gerstenberg</persName>
                <birth>
                   <date when="1875-08-22">22.08.1875</date>
                   <settlement ref="pmb50">
@@ -237,7 +230,7 @@
                </death>
                <sex value="female"/>
                <occupation ref="pmb90">Schriftsteller/Schriftstellerin</occupation>
-               <idno type="URL" subtype="gnd">https://d-nb.info/gnd/1041571119</idno>
+               <idno type="URL" subtype="d-nb">https://d-nb.info/gnd/1041571119</idno>
                <idno type="URL" subtype="schnitzler-tagebuch">https://schnitzler-tagebuch.acdh.oeaw.ac.at/person_15435.html</idno>
                <idno type="URL" subtype="schnitzler-bahr">https://schnitzler-bahr.acdh.oeaw.ac.at/pmb2128.html</idno>
                <idno type="URL" subtype="pmb">https://pmb.acdh.oeaw.ac.at/entity/2128/</idno>
@@ -246,25 +239,35 @@
                <idno type="URL" subtype="wikipedia">https://de.wikipedia.org/wiki/Elsa_Plessner</idno>
                <idno type="URL" subtype="schnitzler-briefe">https://schnitzler-briefe.acdh.oeaw.ac.at/pmb2128.html</idno>
                <idno type="URL" subtype="schnitzler-kultur">https://schnitzler-kultur.acdh.oeaw.ac.at/pmb2128.html</idno>
-               <listEvent>
-                  <event n="Theateruraufführung" when="1896-10-16" ref="pmb42011">
-                     <desc n="1370">teilgenommen an</desc>
-                     <label>Uraufführung von Sein Sohn, 16.10.1896</label>
-                     <idno type="URL" subtype="pmb">https://pmb.acdh.oeaw.ac.at/entity/42011/</idno>
-                     <idno type="URL" subtype="pmb">https://pmb.acdh.oeaw.ac.at/entity/208861/</idno>
-                     <idno type="URL" subtype="schnitzler-briefe">https://schnitzler-briefe.acdh.oeaw.ac.at/pmb42011.html</idno>
-                     <idno type="URL" subtype="schnitzler-kultur">https://schnitzler-kultur.acdh.oeaw.ac.at/pmb42011.html</idno>
-                  </event>
-                  <event n="Theateruraufführung" when="1901-03-16" ref="pmb296012">
-                     <desc n="1370">teilgenommen an</desc>
-                     <label>Uraufführung von Die Ehrlosen, 16.3.1901</label>
-                     <idno type="URL" subtype="pmb">https://pmb.acdh.oeaw.ac.at/entity/296012/</idno>
-                     <idno type="URL" subtype="schnitzler-briefe">https://schnitzler-briefe.acdh.oeaw.ac.at/pmb296012.html</idno>
-                  </event>
-               </listEvent>
-               <figure>
-                  <graphic url="https://upload.wikimedia.org/wikipedia/commons/thumb/5/5e/Elsa_Plessner%2C_Autorin_von_%E2%80%9EDie_Ehrlosen%E2%80%9C.png/250px-Elsa_Plessner%2C_Autorin_von_%E2%80%9EDie_Ehrlosen%E2%80%9C.png"/>
-               </figure>
+               <idno type="URL" subtype="bahr-textverzeichnis">https://bahr-textverzeichnis.acdh.oeaw.ac.at/TSN-listperson.html#pmb158649</idno>
+            </person>
+            <person xml:id="pmb2121">
+               <persName>
+                  <surname>Schnitzler</surname>
+                  <forename>Arthur</forename>
+               </persName>
+               <birth>
+                  <date when="1862-05-15">15. 5. 1862</date>
+                  <settlement ref="pmb50">
+                     <placeName type="pref">Wien</placeName>
+                     <location>
+                        <geo>48,208333 16,373056</geo>
+                     </location>
+                  </settlement>
+               </birth>
+               <death>
+                  <date when="1931-10-21">21. 10. 1931</date>
+                  <settlement ref="pmb50">
+                     <placeName type="pref">Wien</placeName>
+                     <location>
+                        <geo>48,208333 16,373056</geo>
+                     </location>
+                  </settlement>
+               </death>
+               <sex value="male"/>
+               <occupation ref="pmb90">Schriftsteller/Schriftstellerin</occupation>
+               <occupation ref="pmb97">Mediziner/Medizinerin</occupation>
+               <idno type="gnd">https://d-nb.info/gnd/118609807/</idno>
             </person>
             <person xml:id="pmb295662" ana="implied">
                <persName>
@@ -301,9 +304,10 @@
          </listPerson>
          <listBibl>
             <bibl xml:id="pmb295201">
-               <title type="main">Der neue Lehrer. Novelle</title>
+               <title>Der neue Lehrer. Novelle</title>
                <title type="werk_bibliografische-angabe">Der neue Lehrer. Novelle. In: Das Magazin für Litteratur, Jg. 69, Nr. 10, 10.3.1900, Sp. 251–256; Nr. 11, 17.3.1900, Sp. 276–282</title>
                <title type="werk_bibliografische-angabe">In: Der Gläserne Käfig. Skizzen und Novellen. Wien: Leopold Weiss 1901, S. 13–37</title>
+               <title type="werk_link">https://archive.org/details/bub_gb_VnkDAAAAYAAJ/page/n105</title>
                <author role="hat-geschaffen" ref="pmb2128">Plessner, Elsa</author>
                <date to="1900-03-17">1900-03-10 – 1900-03-17</date>
                <idno type="URL" subtype="pmb">https://pmb.acdh.oeaw.ac.at/entity/295201/</idno>
@@ -311,29 +315,29 @@
                <note type="work_kind">Novelle</note>
             </bibl>
             <bibl xml:id="pmb296028" ana="comment">
-               <title type="main">Heimweh [dreiaktige Tragikomödie]</title>
+               <title>Heimweh [dreiaktige Tragikomödie]</title>
                <author role="hat-geschaffen" ref="pmb2128">Plessner, Elsa</author>
                <idno type="URL" subtype="pmb">https://pmb.acdh.oeaw.ac.at/entity/296028/</idno>
                <idno type="URL" subtype="schnitzler-briefe">https://schnitzler-briefe.acdh.oeaw.ac.at/pmb296028.html</idno>
                <note type="work_kind">Unveröffentlichtes dramatisches Werk</note>
             </bibl>
             <bibl xml:id="pmb296030" ana="comment">
-               <title type="main">Orchideen [Schauspiel in drei Akten]</title>
+               <title>Orchideen [Schauspiel in drei Akten]</title>
                <author role="hat-geschaffen" ref="pmb2128">Plessner, Elsa</author>
                <idno type="URL" subtype="pmb">https://pmb.acdh.oeaw.ac.at/entity/296030/</idno>
                <idno type="URL" subtype="schnitzler-briefe">https://schnitzler-briefe.acdh.oeaw.ac.at/pmb296030.html</idno>
                <note type="work_kind">Unveröffentlichtes dramatisches Werk</note>
             </bibl>
             <bibl xml:id="pmb295204" ana="implied">
-               <title type="main">Die Ehrlosen. Schauspiel in drei Acten</title>
+               <title>Die Ehrlosen. Schauspiel in drei Acten</title>
                <title type="werk_arbeitstitel">Singende Flammen</title>
                <title type="legacy-name-merge">Die Ehrlosen</title>
                <author role="hat-geschaffen" ref="pmb2128">Plessner, Elsa</author>
-               <date when="1901-01-01" notBefore="1901-01-01">1901</date>
+               <date notBefore="1901-01-01" when="1901-01-01">1901</date>
                <idno type="URL" subtype="pmb">https://pmb.acdh.oeaw.ac.at/entity/296183/</idno>
                <idno type="URL" subtype="pmb">https://pmb.acdh.oeaw.ac.at/entity/295204/</idno>
                <idno type="URL" subtype="pmb">https://pmb.acdh.oeaw.ac.at/entity/164619/</idno>
-               <idno type="URL" subtype="bahr-tsn">https://bahr-textverzeichnis.acdh.oeaw.ac.at/TSN-listperson.html#pmb164619</idno>
+               <idno type="URL" subtype="bahr-textverzeichnis">https://bahr-textverzeichnis.acdh.oeaw.ac.at/TSN-listperson.html#pmb164619</idno>
                <idno type="URL" subtype="schnitzler-briefe">https://schnitzler-briefe.acdh.oeaw.ac.at/pmb295204.html</idno>
                <note type="work_kind">Mehraktiges Drama</note>
                <note type="references">  </note>
@@ -343,16 +347,12 @@
             <place xml:id="pmb50">
                <placeName>Wien</placeName>
                <placeName type="ort_fruherer-name">K.K. Reichshaupt- und Residenzstadt Wien</placeName>
-               <placeName type="legacy-name-merge">Wien</placeName>
                <placeName type="alternative-name">Bécs</placeName>
                <placeName type="alternative-name">Land Wien</placeName>
                <placeName type="alternative-name">Vídeň</placeName>
                <placeName type="alternative-name">Wenia</placeName>
                <placeName type="alternative-name">Beč</placeName>
                <placeName type="ort_fruherer-name">Vindobona</placeName>
-               <placeName type="legacy-name-merge">Vindobona</placeName>
-               <placeName type="alternative-name">Vienna</placeName>
-               <placeName type="legacy-name-merge">Vienna</placeName>
                <placeName type="alternative-name">Vienna</placeName>
                <desc type="entity_type">A.ADM2</desc>
                <desc type="entity_type_id">1135</desc>
@@ -363,27 +363,26 @@
                   <placeName ref="pmb41240">Österreich</placeName>
                   <geo>47,33333 13,33333</geo>
                </location>
+               <location type="located_in_place">
+                  <placeName ref="pmb235218">Windmühlhöhe</placeName>
+                  <geo>48,24077 16,32092</geo>
+               </location>
                <idno type="URL" subtype="geonames">https://sws.geonames.org/2761369/</idno>
-               <idno type="URL" subtype="gnd">https://d-nb.info/gnd/4066009-6</idno>
+               <idno type="URL" subtype="d-nb">https://d-nb.info/gnd/4066009-6</idno>
                <idno type="URL" subtype="schnitzler-bahr">https://schnitzler-bahr.acdh.oeaw.ac.at/pmb50.html</idno>
                <idno type="URL" subtype="pmb">https://pmb.acdh.oeaw.ac.at/entity/50/</idno>
                <idno type="URL" subtype="pmb">https://pmb.acdh.oeaw.ac.at/entity/2316/</idno>
                <idno type="URL" subtype="pmb">https://pmb.acdh.oeaw.ac.at/entity/20954/</idno>
                <idno type="URL" subtype="pmb">https://pmb.acdh.oeaw.ac.at/entity/65221/</idno>
                <idno type="URL" subtype="pmb">https://pmb.acdh.oeaw.ac.at/entity/65223/</idno>
-               <idno type="URL" subtype="legalkraus">https://kraus.wienbibliothek.at/register/orte/pmb50</idno>
+               <idno type="URL" subtype="kraus">https://kraus.wienbibliothek.at/register/orte/pmb50</idno>
                <idno type="URL" subtype="wikidata">http://www.wikidata.org/entity/Q1741</idno>
                <idno type="URL" subtype="wikipedia">https://de.wikipedia.org/wiki/Wien</idno>
                <idno type="URL" subtype="schnitzler-interviews">https://schnitzler-interviews.acdh.oeaw.ac.at/pmb50.html</idno>
                <idno type="URL" subtype="geonames">https://sws.geonames.org/2761333/</idno>
                <idno type="URL" subtype="pmb">https://pmb.acdh.oeaw.ac.at/entity/33999/</idno>
                <idno type="URL" subtype="schnitzler-tagebuch">https://schnitzler-tagebuch.acdh.oeaw.ac.at/pmb50.html</idno>
-               <idno type="URL" subtype="wienerschnitzler">https://wienerschnitzler.org/pmb50.html</idno>
                <idno type="URL" subtype="schnitzler-briefe">https://schnitzler-briefe.acdh.oeaw.ac.at/pmb50.html</idno>
-               <idno type="URL" subtype="schnitzler-kultur">https://schnitzler-kultur.acdh.oeaw.ac.at/pmb50.html</idno>
-               <idno type="URL" subtype="semantickraus">https://sk.acdh.oeaw.ac.at/DWplace00347</idno>
-               <idno type="URL" subtype="semantickraus">https://sk.acdh.oeaw.ac.at/DWplace00066</idno>
-               <idno type="URL" subtype="semantickraus">https://sk.acdh.oeaw.ac.at/DWplace00085</idno>
                <note type="image">
                   <figure>
                      <graphic url="https://iiif.onb.ac.at/images/AKON/AK117_016/016/full/,600/0/native.jpg"/>
