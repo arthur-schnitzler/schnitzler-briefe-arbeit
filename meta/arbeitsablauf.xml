@@ -17,12 +17,16 @@
                         <forename>Laura</forename>
                         <surname>Untner</surname>
                     </persName>
+                    <persName>
+                        <forename>Selma</forename>
+                        <surname>Jahnke</surname>
+                    </persName>
                 </author>
             </titleStmt>
             <publicationStmt>
                 <publisher>Austrian Centre for Digital Humanities </publisher>
                 <pubPlace>Vienna</pubPlace>
-                <date when="2023">2023</date>
+                <date when="2023">2026</date>
                 <availability>
                     <licence target="https://creativecommons.org/licenses/by/4.0/">
                         <p>The (CC BY 4.0)-License applies to this document.</p>
@@ -46,9 +50,9 @@
                     anders als durch die Verwendung selbst dokumentiert würde. Eine Darstellung des
                     Arbeitsablaufs kann somit nur eine Momentaufnahme sein, obgleich wir uns
                     bemühen, sie aktuell zu halten und auch Änderungen im Zeitablauf zu
-                    dokumentieren. Der hier geschilderte Stand deckt die zweite Projektlaufzeit
-                    (2021–2024) ab; Adaptionen zur ersten Laufzeit werden weiter unten
-                    beschrieben.</p>
+                    dokumentieren. Der hier geschilderte Stand stellt den Stand nach wenigen Monaten
+                    der dritten Projektlaufzeit (Anfang 2026) ab; Adaptionen zur ersten und zweiten
+                    Laufzeit werden weiter unten beschrieben.</p>
             </div>
             <div type="level1">
                 <head xml:id="Recherche">Recherche</head>
@@ -56,9 +60,9 @@
                     Arbeit und wird im Projektantrag festgehalten. Danach folgt die Abklärung der
                     Rechte. Die Regelschutzfrist in Österreich beträgt 70&#160;Jahre nach dem Tod,
                     am 1.&#160;1. des Folgejahres werden die Rechte an den Texten frei. In wenigen
-                    Fällen besitzen Nachkommen noch Rechte, die sie freundlicherweise zur Verfügung
-                    stellen. An Korrespondenzen, deren Rechte offen sind, beginnen wir nicht zu
-                    arbeiten.</p>
+                    Fällen besitzen Nachkommen noch Rechte. In Fällen, in denen wir diese
+                    freundlicherweise zur Verfügung gestellt bekommen, können wir zu arbeiten
+                    beginnen. Korrespondenzen, deren Rechte offen sind, greifen wir nicht an.</p>
                 <p>Im Anschluss suchen wir einerseits im <ref
                         target="https://de.wikipedia.org/wiki/Arthur_Schnitzlers_Nachlass">Nachlass
                         Schnitzlers</ref> nach Briefen, andererseits in verschiedenen anderen
@@ -69,9 +73,8 @@
                     Nachlässigkeiten abfinden: Wir lassen uns die Bilder so liefern, wie die
                     Institutionen das herkömmlich tun und geben keine eigenen Vorgaben bezüglich
                     Farbprofil, Farbkarte, Dateiformat etc. Bislang sind uns keine erkennbaren
-                    Nachteile daraus erwachsen. Und wir bitten um eine Gesamtaufnahme des Blattes,
-                    leere Rückseiten sind aber wegzulassen. Letzteres hat ausschließlich pekuniäre
-                    Gründe.</p>
+                    Nachteile daraus erwachsen. Und wir verzichten auf leere Rückseiten. Das hat
+                    ausschließlich pekuniäre Gründe.</p>
                 <p>Sofern sich auf einem Faksimile zwei Seiten auf einem Blatt finden, teilen wir
                     das Faksimile mit einem <ref target="https://imagemagick.org/index.php"
                         >ImageMagick</ref>-Skript in zwei Teile mit einer Überlappung von 5<c
@@ -81,61 +84,52 @@
             <div type="level1">
                 <head xml:id="Transkribus">Transkribus</head>
                 <p>Es folgt der Import der Faksimiles in <ref
-                        target="https://readcoop.eu/de/transkribus">Transkribus</ref>, was mit jedem
-                    FTP-Programm (beispielsweise <ref target="https://binarynights.com/"
-                        >Forklift</ref>) schnell und einfach geschieht. Transkribus ist eine in
-                    Innsbruck entwickelte Plattform zur automatischen Texterkennung nicht nur von
-                    gedruckten Texten, sondern auch von Handschriften. Die App ist kostenlos und
-                    kommt mit einem bestimmten Freikontingent. Bei der Menge, mit der wir es zu tun
-                    haben, sind aber (keine sehr hohen) Kosten einzukalkulieren. In Transkribus
-                    erstellen wir für jeden Verfasser, jede Verfasserin eine Collection.
-                    Üblicherweise sind dann mehrere Briefe eines Schreibers, einer Schreiberin in
-                    einer Collection in einem Dokument, beispielsweise alle Objekte von Schnitzler
-                    aus dem Jahr 1899. Noch verwenden wir den Desktop-Client von Transkribus, sind
-                    uns aber bewusst, dass der Umstieg auf die Web-App schon begonnen hat. Wann wir
-                    nachziehen, ist vor allem eine Frage der Verfügbarkeit von Features bzw. wenn
-                    die lokale App nicht mehr unterstützt wird. Momentan kann beides parallel
-                    benützt werden.</p>
-                <p>In Transkribus lassen wir eine automatische Zeilenerkennung laufen, die wir
-                    händisch nachkorrigieren. Das ist eine etwas mühselige Arbeit, die aber für die
-                    folgenden Schritte relevant ist. Im Normalfall wenden wir nämlich eine
-                    automatische Texterkennung an, zuerst mit einem der angebotenen Standardmodelle
-                    von Transkribus. Den erkannten Text korrigieren wir händisch, indem wir Zeile
-                    für Zeile durchgehen. Haben wir zumindest 30&#160;Seiten einer Handschrift
-                    entziffert, trainieren wir ein eigenes Handschriftenmodell. Damit lassen wir die
-                    nächsten Seiten erkennen. In unregelmäßigen Intervallen trainieren wir so
-                    fortlaufend das HTR-Modell neu. Wenn es verlässlich funktioniert, stellen wir
-                    das Modell frei zur Verfügung, wie hier: <ref
-                        target="https://readcoop.eu/de/modelle/paul-goldmann_german-kurrent_1889-96_v1/"
-                        >HTR Paul Goldmann</ref> und <ref
-                        target="https://readcoop.eu/de/modelle/german-letters-felix-salten-1890-1931/"
-                        >HTR Felix Salten</ref>. </p>
-                <p>In Transkribus benutzen wir außerdem bestimmte Tags, die teilweise bereits von
-                    Haus aus vorhanden sind, teilweise aber auch erst von uns unter dem Namen der
-                    TEI-Elemente angelegt wurden. Die Tags nutzen wir, um bestimmte Textphänomene
-                    (z. B. Streichungen) und zu indizierende Stellen (z. B. Personennamen) zu
-                    markieren. Die Möglichkeit, bereits in Transkribus Normdaten einzugeben,
-                    benützen wir nicht. Neben den Tags verwenden wir das Symbol der Absatzmarke in
-                    der Symbolleiste, um zu markieren, wo ein neuer Absatz beginnt. Davon abgeleitet
-                    haben wir ein Element, <code>&lt;letter-begin/&gt;</code>, das wir in die erste
-                    Zeile eines neuen Briefes setzen, um einen Marker zu haben, wo jeweils eine neue
-                    Datei angelegt werden muss (jeder Brief wird in einer eigenen XML-Datei
+                        target="https://readcoop.eu/de/transkribus">Transkribus</ref>. Transkribus
+                    ist eine in Innsbruck entwickelte Plattform zur automatischen Texterkennung
+                    nicht nur von gedruckten Texten, sondern auch von Handschriften. Die Webseite
+                    ist kostenlos und kommt mit einem bestimmten Freikontingent. Bei der Menge, mit
+                    der wir es zu tun haben, sind aber (keine sehr hohen) Kosten einzukalkulieren.
+                    Wir verfügen über einen institutionellen Account der Österreichischen Akademie
+                    der Wissenschaften, ob wir aber Funktionen verwenden, die ausschließlich solchen
+                    zur Verfügung stehen, wissen wir gerade nicht. In Transkribus erstellen wir für
+                    jeden Verfasser, jede Verfasserin eine Collection. Üblicherweise sind dann
+                    mehrere Briefe eines Schreibers, einer Schreiberin in einer Collection in einem
+                    Dokument, üblicherweise alle Briefe einer Korrespondenz in einem bestimmten
+                    Archiv. Mittlerweile ist die Desktop-App von Transkribus eingestellt und wir
+                    sind auf die Web-App umgestiegen.</p>
+                <p>In Transkribus lassen wir zuerst eine automatische Zeilenerkennung laufen, die
+                    wir händisch nachkorrigieren. Das ist eine etwas mühselige Arbeit, die aber für
+                    die folgenden Schritte relevant ist. In Transkribus benutzen wir bestimmte Tags,
+                    die teilweise bereits von Haus aus vorhanden sind, teilweise aber auch erst von
+                    uns unter dem Namen der TEI-Elemente angelegt wurden. Die Tags nutzen wir, um
+                    bestimmte Textphänomene (z. B. Streichungen) und zu indizierende Stellen (z. B.
+                    Personennamen) zu markieren. Die Möglichkeit, bereits in Transkribus Normdaten
+                    einzugeben, benützen wir nicht. Neben den Tags verwenden wir in der ersten Zeile
+                    eines Absatzes ein Element <code>&lt;paragraph/&gt;</code>, um zu markieren, wo
+                    ein neuer Absatz beginnt. Als weitere Idiosynkrasie haben wir ein Element,
+                        <code>&lt;letter-begin/&gt;</code> definiert, das wir in die erste Zeile
+                    eines neuen Briefes setzen. Es dient als Marker, wo jeweils eine neue Datei
+                    angelegt werden muss (jeder Brief wird in einer eigenen XML-Datei
                     gespeichert).</p>
                 <p>Mit dem einmaligen Durcharbeiten eines Briefes und einem einmaligen
                     Korrekturlesen steht üblicherweise die erste Abschrift.</p>
             </div>
             <div type="level1">
                 <head xml:id="OxygenXML">Oxygen</head>
-                <p>Es folgt der Export. Um von Transkribus zu XML/TEI zu gelangen, ist eine <ref
+                <p>Es folgt der Export. Um von Transkribus zu XML/TEI zu gelangen, gab es zeitweise
+                    einen online ablaufenden <ref
                         type="https://github.com/arthur-schnitzler/schnitzler-briefe-arbeit/tree/main/transkribus-transformationen_action"
-                        >Kaskade</ref> von XSL-Transformationen notwendig. Diese kann über eine <ref
-                            target="https://github.com/arthur-schnitzler/schnitzler-briefe-arbeit/blob/main/.github/workflows/download_work.yml"
-                        >GitHub-Action</ref> ausgeführt werden. In <code>split-files-neu.xsl</code>
-                    können davor bestimmte Parameter, die für alle zu exportierenden Briefe gelten
-                    (z. B. die Archivsignatur), gesetzt werden. Es ist aber meistens einfacher, die
-                    Transformationen lokal laufen zu lassen, da sich häufig noch ›&amp;‹ oder
-                    ähnliche Sonderzeichen im Text finden, die bei der Umwandlung Probleme machen.
-                    Jedenfalls wird die exportierte METS-Datei zuerst mit dem im <ref
+                        >Prozess</ref> (<ref
+                        target="https://github.com/arthur-schnitzler/schnitzler-briefe-arbeit/blob/main/.github/workflows/download_work.yml"
+                        >GitHub-Action</ref>), der sich aber als fehleranfällig erwies,
+                    beispielsweise wenn irgendwo im Text ein ›&amp;‹ stand, weswegen wir in
+                    Transkribus nur einen Mets-Download auslösen und die Verarbeitung lokal laufen
+                    lassen. Die heruntergeladenen Dateien werden in den Ordner
+                        <code>transkribus-transformation/transkribus-export</code> gespeichert. In
+                        <code>import-parameter.xml</code> können noch Standardwerte für den Import
+                    gesetzt werden, die für alle zu exportierenden Briefe gelten (z. B. die
+                    Archivsignatur). Jedenfalls wird die exportierte METS-Datei zuerst mit dem im
+                        <ref
                         target="https://github.com/arthur-schnitzler/schnitzler-briefe-arbeit/blob/main/asbw-projekt.xpr"
                         >Oxygen-Projekt</ref> angelegten Transformationsszenario
                         <code>page2tei-1</code>, das Ergebnis dann mit <code>page2tei-2</code>
@@ -144,9 +138,9 @@
                         <code>page2tei-3</code> und
                         <code>back-element-hinzufuegen_facs-normalisieren</code> weiter
                     transformiert.</p>
-                <p>Das Ergebnis sind einzelne Briefdateien im Format XML, bei denen der
-                        <code>&lt;teiHeader/&gt;</code> schon weitgehend ausgefüllt ist. Die Dateien
-                    validieren noch nicht gegen das <ref
+                <p>Das Ergebnis sind einzelne Briefdateien im Format XML in einem separaten Ordner
+                        <code>temp</code>, bei denen der <code>&lt;teiHeader/&gt;</code> schon
+                    weitgehend ausgefüllt ist. Die Dateien validieren noch nicht gegen das <ref
                         target="https://github.com/arthur-schnitzler/schnitzler-briefe-arbeit/blob/main/meta/asbwschema.xsd"
                         >Schema</ref> und es gibt mehrere Probleme, die mit händischer Nacharbeit
                     behoben werden müssen.</p>
@@ -168,13 +162,16 @@
                     mehreren Dateien gleichzeitig, indem beispielsweise folgender XPath alle
                     Personen im Projekt auflistet, die noch keine Nummer aus der PMB haben:
                         <code>//rs[@type='person' and @ref='' or not(@ref)]</code>. Jederzeit kann
-                    das Transformationsszenario
-                        <code>back-element-hinzufuegen_facs-normalisieren</code> erneut durchgeführt
-                    werden. Es zieht aus der PMB die erwähnten Entitäten und schreibt sie in ein
-                        <code>&lt;back/&gt;</code>-Element. Hier finden auch schon Überprüfungen
-                    statt, etwa ob eine Personennummer für ein Werk verwendet wurde: <code>&lt;rs
-                        type="work" ref="#pmb2121"/&gt;</code> würde einen Fehler zeigen, weil die
-                    ID für Arthur Schnitzler für ein Werk verwendet wurde.</p>
+                    das Transformationsszenario <code>brief_ziehen-des-back-elements</code> erneut
+                    durchgeführt werden. Es zieht aus der PMB die erwähnten Entitäten und schreibt
+                    sie in ein <code>&lt;back/&gt;</code>-Element. Hier finden auch schon
+                    Überprüfungen statt, etwa ob eine Personennummer für ein Werk verwendet wurde:
+                        <code>&lt;rs type="work" ref="#pmb2121"/&gt;</code> würde einen Fehler
+                    zeigen, weil die ID für Arthur Schnitzler für ein Werk verwendet wurde.</p>
+                <p>Briefe bleiben so lange im <code>temp</code>-Ordner, bis sie validieren oder
+                    zumindest nur geringfügigere Probleme (beispielsweise eine noch nicht ergänzte
+                    Werknummer) besteht. Ab dem Moment, ab dem ein back-Element gerechnet werden
+                    kann, wird die Datei in den <code>editions</code>-Ordner verschoben.</p>
                 <p>Nun können die Korrespondenzstücke bereits auf die Webseite geladen werden, ihr
                     Entwurfszustand ist aber noch deutlich erkennbar. Zuerst werden die Briefe
                     automatisch aus dem <ref
@@ -191,16 +188,21 @@
                     Suche auch mit ›s‹ funktioniert. Danach holt eine weitere <ref
                         target="https://github.com/arthur-schnitzler/schnitzler-briefe-static/blob/main/.github/workflows/build.yml"
                         >GitHub-Action</ref> die neuen Dateien auf die Webseite.</p>
-                <p>Die Website basiert auf dem <ref target="https://github.com/acdh-oeaw/dse-static-cookiecutter">DSE-Static-Cookiecutter</ref>, die
-                unter der Leitung von Peter Andorfer entwickelte Vorlage für statische Editionen. XSLTs transformieren die TEI-Dateien in HTML-Darstellungen
-                um. Dadurch kann auf eine eigene Datenbank verzichtet werden. Für die Suche kommt <ref target="https://typesense.org/">Typesense</ref> zum Einsatz.</p>
-                <p>Es folgen mehrere Sichtungen den Korrespondenzstücke. Dafür rechnen wir mit den beiden Transformationen
-                        <ref
-                        target="https://github.com/arthur-schnitzler/schnitzler-briefe-arbeit/blob/main/xslts/einzel-1-remove-namespaces.xsl"
-                        >einzel-1-remove-namespaces.xsl</ref> und <ref
-                        target="https://github.com/arthur-schnitzler/schnitzler-briefe-arbeit/blob/main/xslts/einzel-6-korrektur-nach-TeX.xsl"
-                        >einzel-6-korrektur-nach-TeX.xsl</ref> PDFs der Briefe in kritischer
-                    Ansicht. Die TeX-Dateien finden sich in einem eigenen Repositorium, <ref
+                <p>Die Website basiert auf dem <ref
+                        target="https://github.com/acdh-oeaw/dse-static-cookiecutter"
+                        >DSE-Static-Cookiecutter</ref>, die unter der Leitung von Peter Andorfer
+                    entwickelte Vorlage für statische Editionen. XSLTs transformieren die
+                    TEI-Dateien in HTML-Darstellungen um. Dadurch kann auf eine eigene Datenbank
+                    verzichtet werden. Für die Suche kommen <ref target="https://typesense.org/"
+                        >Typesense</ref> und <ref
+                        target="https://www.sketchengine.eu/nosketch-engine/">NoSketch-Engine</ref>
+                    zum Einsatz, die als separate Instanz für viele Projekte auf den Servern der
+                    Akademie betrieben werden.</p>
+                <p>Es folgen mehrere Sichtungen den Korrespondenzstücke. Dafür rechnen wir mit den
+                    beiden Transformationen <ref
+                        target="https://github.com/arthur-schnitzler/schnitzler-briefe-arbeit/blob/main/xslts/einzel-korrektur-nach-TeX.xsl"
+                        >einzel-korrektur-nach-TeX.xsl</ref> PDFs der Briefe in kritischer Ansicht.
+                    Die TeX-Dateien finden sich in einem eigenen Repositorium, <ref
                         target="https://github.com/arthur-schnitzler/schnitzler-briefe-tex/"
                         >schnitzler-briefe-tex</ref>, und liefern eine Korrekturansicht als PDF, in
                     dem auch die vorkommenden Entitäten ausgewiesen sind. (Eine mehr oder weniger
@@ -239,6 +241,25 @@
                     HTML-Seite ist zwar deutlich ausführlicher (›verbose‹), sollte aber, vor allem
                     weil nicht mehr auf eine Datenbank zurückgegriffen werden muss und die aktive
                     Entwicklung abgeschlossen ist, deutlich länger halten.</p>
+            </div>
+            <div type="level1">
+                <head xml:id="Adaption2">Adaption von Projekt 2 zu Projekt 3</head>
+                <p>Diese Laufzeit wurde mit der eigenständigen App von Transkribus bestritten. Auch
+                    haben wir auf die folgende Weise Handschriften trainiert: Im Normalfall wandten
+                    wir eine automatische Texterkennung an, zuerst mit einem der angebotenen
+                    Standardmodelle von Transkribus. Den erkannten Text korrigierten wir händisch,
+                    indem wir Zeile für Zeile durchgingen. Hatten wir zumindest 30&#160;Seiten einer
+                    Handschrift entziffert, trainierten wir ein eigenes Handschriftenmodell. Damit
+                    ließen wir die nächsten Seiten erkennen. In unregelmäßigen Intervallen
+                    trainierten wir so fortlaufend das HTR-Modell neu. Ab dem Zeitpunkt, an dem es
+                    verlässlich funktionierte, stellten wir das Modell frei zur Verfügung, wie hier:
+                        <ref
+                        target="https://readcoop.eu/de/modelle/paul-goldmann_german-kurrent_1889-96_v1/"
+                        >HTR Paul Goldmann</ref> und <ref
+                        target="https://readcoop.eu/de/modelle/german-letters-felix-salten-1890-1931/"
+                        >HTR Felix Salten</ref>. Inzwischen sind die Standardmodelle von Transkribus
+                    aber so gut und dürften auch unsere Trainings enthalten, dass wir auf weitere
+                    Spezialtrainings vorläufig verzichten.</p>
             </div>
         </body>
     </text>
