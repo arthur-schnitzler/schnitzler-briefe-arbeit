@@ -1,6 +1,10 @@
-<?xml version='1.0' encoding='UTF-8'?>
+<?xml version="1.0" encoding="UTF-8"?>
 <?xml-model href="../meta/schnitzler-briefe-schematron.sch" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
-<TEI xmlns="http://www.tei-c.org/ns/1.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.tei-c.org/ns/1.0 ../meta/schnitzler-briefe-schema.xsd" xml:id="L03727" xml:base="https://id.acdh.oeaw.ac.at/schnitzler/schnitzler-briefe/editions">
+<TEI xmlns="http://www.tei-c.org/ns/1.0"
+     xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+     xsi:schemaLocation="http://www.tei-c.org/ns/1.0 ../meta/schnitzler-briefe-schema.xsd"
+     xml:id="L03727"
+     xml:base="https://id.acdh.oeaw.ac.at/schnitzler/schnitzler-briefe/editions">
    <teiHeader>
       <fileDesc>
          <titleStmt>
@@ -87,7 +91,7 @@
                               </extent>
                            </supportDesc>
                         </objectDesc>
-                        <handDesc hands="1">
+                        <handDesc hands="0">
                            <handNote medium="schwarze-tinte" style="lateinische-kurrent"/>
                         </handDesc>
                      </physDesc>
@@ -112,18 +116,32 @@
                   – 11. 10. 1900?]</date>
                <placeName ref="#pmb50" evidence="conjecture">Wien</placeName>
             </correspAction>
-            <correspContext><ref type="belongsToCorrespondence" target="correspondence_2128">Plessner, Elsa</ref>
+            <correspContext>
+               <ref type="belongsToCorrespondence" target="correspondence_2128">Plessner, Elsa</ref>
                <ref subtype="previous_letter" type="withinCollection" target="L02935">Goldmann an Schnitzler, 5. 10. [1900]</ref>
                <ref subtype="next_letter" type="withinCollection" target="L01076">Schnitzler an Bahr, 11. 10. 1900</ref>
-               <ref subtype="previous_letter" type="withinCorrespondence" source="correspondence_2128" target="L03726">Plessner an Schnitzler, 24. 6. 1900</ref>
-               <ref subtype="next_letter" type="withinCorrespondence" source="correspondence_2128" target="L03728">Plessner an Schnitzler, 12. 10. 1900</ref>
-            </correspContext></correspDesc>
+               <ref subtype="previous_letter"
+                    type="withinCorrespondence"
+                    source="correspondence_2128"
+                    target="L03726">Plessner an Schnitzler, 24. 6. 1900</ref>
+               <ref subtype="next_letter"
+                    type="withinCorrespondence"
+                    source="correspondence_2128"
+                    target="L03728">Plessner an Schnitzler, 12. 10. 1900</ref>
+            </correspContext>
+         </correspDesc>
       </profileDesc>
       <revisionDesc status="proposed">
          <change who="MAM" when="2025-07-03">Export aus Transkribus</change>
          <change who="SJ" when="2025-07-24">Durchsicht</change>
       </revisionDesc>
    </teiHeader>
+   <facsimile>
+      <graphic url="HS000409661_0076-1"/>
+      <graphic url="HS000409661_0076-2"/>
+      <graphic url="HS000409661_0077-1"/>
+      <graphic url="HS000409661_0077-2"/>
+   </facsimile>
    <text>
       <body>
          <div type="writingSession" n="1">
@@ -139,74 +157,52 @@
             <p>Da ist also endlich <anchor type="commentary" xml:id="K_L03727-1"/>das <rs type="work" ref="#pmb32230" subtype="implied">Buch</rs>
                <note type="commentary" corresp="K_L03727-1">(Nicht überlieferte) Beilage des Briefes
                   war <rs type="person" ref="#pmb2128">Plessners</rs> neu erschienene Textsammlung
-                     <rs type="work" ref="#pmb32230">Der gläserne Käfig</rs>.</note>, das, wie Sie
-               wissen, eigentlich Ihnen zugeeignet ist. Die Widmung drucken zu lassen, wäre aber
-               geschmacklos gewesen und ich weiß zu genau, wie Sie <anchor type="commentary" xml:id="K_L03727-2"/>darüber denken<note type="commentary" corresp="K_L03727-2">
+                     <rs type="work" ref="#pmb32230">Der gläserne Käfig</rs>.</note>, das, <anchor type="commentary" xml:id="K_L03727-2"/>wie Sie wissen, eigentlich Ihnen
+                  zugeeignet<note type="commentary" corresp="K_L03727-2">Sofern nicht
+                  Korrespondenzstücke verloren gegangen sind, könnte das auch bei einem zufälligen
+                  Gespräch erfolgt sein.</note> ist. Die Widmung drucken zu lassen, wäre aber
+               geschmacklos gewesen und ich weiß zu genau, wie Sie <anchor type="commentary" xml:id="K_L03727-3"/>darüber denken<note type="commentary" corresp="K_L03727-3">
                   <ref type="schnitzler-briefe" target="L03724" subtype="Cf"/>.</note>. –</p>
-            <p>Sie werden natürlich lauter, alte Bekannte unter den Arbeiten finden, die schon
-               früher <anchor type="commentary" xml:id="K_L03727-3"/>Ihrer Kritik überantwortet<note type="commentary" corresp="K_L03727-3">Bereits mit ihrem Brief vom <ref type="schnitzler-briefe" target="L03702" subtype="date-only"/> sandte <rs type="person" ref="#pmb2128">Plessner</rs>
+            <p>Sie werden natürlich lauter alte Bekannte unter den Arbeiten finden, die schon früher
+                  <anchor type="commentary" xml:id="K_L03727-4"/>Ihrer Kritik überantwortet<note type="commentary" corresp="K_L03727-4">Bereits mit ihrem Brief vom <ref type="schnitzler-briefe" target="L03702" subtype="date-only"/> sandte <rs type="person" ref="#pmb2128">Plessner</rs>
                   <space unit="chars" quantity="1"/>
                   <rs type="person" ref="#pmb2121">Schnitzler</rs> zehn kurze Texte als erste
-                  Zusammenstellung ihres <rs type="work" ref="#pmb32230" subtype="implied">Bandes</rs>. Anderen Briefen lagen einzelne Entwürfe bei z. B. <rs type="work" ref="#pmb30265">Der gläserne Käfig</rs> am <ref type="schnitzler-briefe" target="L03732" subtype="date-only"/> und <rs type="work" ref="#pmb295201">Der neue Lehrer</rs> am <ref type="schnitzler-briefe" target="L03718" subtype="date-only"/>.</note> waren, und die Sie meist zur
-               ganzen oder theilweisen Umarbeitung verurtheilt haben.</p>
+                  Zusammenstellung ihres <rs type="work" ref="#pmb32230" subtype="implied">Bandes</rs>. Anderen Briefen lagen einzelne Entwürfe bei z. B. <rs type="work" ref="#pmb30265">Der gläserne Käfig</rs> am <ref type="schnitzler-briefe" target="L03732" subtype="date-only"/> und <rs type="work" ref="#pmb295201">Der
+                     neue Lehrer</rs> am <ref type="schnitzler-briefe" target="L03718" subtype="date-only"/>.</note> waren, und die Sie meist zur ganzen oder
+               theilweisen Umarbeitung verurtheilt haben.</p>
             <p>Seien Sie nicht böse, dass ich Ihnen darin nicht immer Folge geleistet habe. Nur zum
-               kleinsten Theil geschah es aus principiellen Grün<pb facs="HS000409661_0076-2"/>den, dass ich die
-               einmal vorliegende Fassung der Arbeit gegen Ihre Kritik aufrechterhielt. (Siehe »<rs type="work" ref="#pmb32316">Warten</rs>, <rs type="work" ref="#pmb295198">Warum</rs>«) Zum größten Theil war es die mir leider anhaftende Eigenschaft, mich
+               kleinsten Theil geschah es aus principiellen Grün<pb facs="HS000409661_0076-2"/>den,
+               dass ich die einmal vorliegende Fassung der Arbeit gegen Ihre Kritik aufrechterhielt.
+               (Siehe »<rs type="work" ref="#pmb32316">Warten</rs>, <rs type="work" ref="#pmb295198">Warum</rs>«) Zum größten Theil war es die mir leider anhaftende Eigenschaft, mich
                mit einem Stoff, dessen Ausgestaltung – ob gut oder schlecht – fertig vor mir liegt,
                nicht nochmals befassen zu können. Es ist keine Leichtfertigkeit – glauben Sie das ja
                nicht – und auch nicht Mangel an Selbstkritik, denn meistens sagt mir mein
                künstlerisches Gewissen dasselbe, was Ihre Kritik – nur in verschärfter Tonart –
-               bemängelt. Aber ich entwickele mich so rapid, (leider? oder <anchor type="commentary" xml:id="K_L03727-4"/>G. s. D.<note type="commentary" corresp="K_L03727-4">Gott sei
+               bemängelt. Aber ich entwickele mich so rapid, (leider? oder <anchor type="commentary" xml:id="K_L03727-5"/>G. s. D.<note type="commentary" corresp="K_L03727-5">Gott sei
                   Dank</note>?) dass ich in Schnellzugsgeschwindigkeit die Stationen durcheile und
                wenn man von mir verlangt, nach einer überholten Haltestelle zurückzukehren, so finde
-               ich weder Stimmung noch Gedanken der Arbeit <pb facs="HS000409661_0077-1"/>rein und unbeeinträchtigt
-               wieder. Es käme einfach <hi rend="underline" n="1">gar nichts</hi> heraus!</p>
+               ich weder Stimmung noch Gedanken der Arbeit <pb facs="HS000409661_0077-1"/>rein und
+               unbeeinträchtigt wieder. Es käme einfach <hi rend="underline" n="1">gar nichts</hi>
+               heraus! –</p>
             <p>Ich weiß, Sie werden wieder schimpfen. Aber Sie glauben gar nicht, wie dankbar ich
                Ihnen dafür bin und dürfen nicht in die falsche Meinung verfallen, dass Ihre Kritik
                an meinen Arbeiten resultatlos sei. O <hi rend="underline" n="1">nein</hi>!!! Was Sie
-               mir über eine Arbeit sagen, trägt an der nächst folgenden Früchte. So erziehen Sie
-               mich seit fünf Jahren – wahrscheinlich ohne es selbst zu wissen. –</p>
-            <p>Ich will damit nicht sagen dass ich mich nicht manchmal gegen Ihre Meinung auflehne –
-               besonders auf dramatisch-technischem Gebiet –. Aber wäre mein Talent Ihrer Kritik
-               wert, <pb facs="HS000409661_0077-2"/>wenn es sich so rückhaltlos einer anderen künstlerischen
-               Individualität unterordnen könnte?</p>
+               mir über eine Arbeit sagen, trägt an der nächstfolgenden Früchte. So erziehen Sie
+               mich seit fünf Jahren – wahrscheinlich ohne es selbst zu wissen. – –</p>
+            <p>Ich will damit nicht sagen, dass ich mich nicht manchmal gegen Ihre Meinung auflehne
+               – besonders auf dramatisch-technischem Gebiet –. Aber wäre mein Talent Ihrer Kritik
+               wert, <pb facs="HS000409661_0077-2"/>wenn es sich so rückhaltlos einer anderen
+               künstlerischen Individualität unterordnen könnte?</p>
             <p>Ich hoffe, Sie werden über diese literarische Liebeserklärung nicht lachen und nur
                freundlichst Nachricht geben, welchen Eindruck das <rs type="work" ref="#pmb32230" subtype="implied">Buch</rs> in seiner Gesammtheit auf Sie gemacht hat. Ich bin
                sehr gespannt darauf.</p>
-            <closer>Verehrungsvollen <hi rend="underline" n="1">u</hi> herzliche Grüße von<lb/>
-               <signed>Elsa Plessner</signed>.</closer>
+            <closer>Verehrungsvolle <hi rend="underline" n="1">u</hi> herzliche Grüße von<lb/>
+               <signed>Elsa Plessner.</signed>
+            </closer>
          </div>
       </body>
       <back>
          <listPerson>
-            <person xml:id="pmb2121">
-               <persName>
-                  <surname>Schnitzler</surname>
-                  <forename>Arthur</forename>
-               </persName>
-               <birth>
-                  <date when="1862-05-15">15. 5. 1862</date>
-                  <settlement ref="pmb50">
-                     <placeName type="pref">Wien</placeName>
-                     <location>
-                        <geo>48,208333 16,373056</geo>
-                     </location>
-                  </settlement>
-               </birth>
-               <death>
-                  <date when="1931-10-21">21. 10. 1931</date>
-                  <settlement ref="pmb50">
-                     <placeName type="pref">Wien</placeName>
-                     <location>
-                        <geo>48,208333 16,373056</geo>
-                     </location>
-                  </settlement>
-               </death>
-               <sex value="male"/>
-               <occupation ref="pmb90">Schriftsteller/Schriftstellerin</occupation>
-               <occupation ref="pmb97">Mediziner/Medizinerin</occupation>
-               <idno type="gnd">https://d-nb.info/gnd/118609807/</idno>
-            </person>
             <person xml:id="pmb2128">
                <persName>
                   <forename>Elsa</forename>
@@ -216,6 +212,7 @@
                <persName type="person_ehename_nachname">Ginsberg</persName>
                <persName type="legacy-name-merge">Plessner, Elsa</persName>
                <persName type="person_namensvariante_nachname">Pleßner</persName>
+               <persName type="person_pseudonym">Lisa Gerstenberg</persName>
                <birth>
                   <date when="1875-08-22">22.08.1875</date>
                   <settlement ref="pmb50">
@@ -242,7 +239,7 @@
                </death>
                <sex value="female"/>
                <occupation ref="pmb90">Schriftsteller/Schriftstellerin</occupation>
-               <idno type="URL" subtype="gnd">https://d-nb.info/gnd/1041571119</idno>
+               <idno type="URL" subtype="d-nb">https://d-nb.info/gnd/1041571119</idno>
                <idno type="URL" subtype="schnitzler-tagebuch">https://schnitzler-tagebuch.acdh.oeaw.ac.at/person_15435.html</idno>
                <idno type="URL" subtype="schnitzler-bahr">https://schnitzler-bahr.acdh.oeaw.ac.at/pmb2128.html</idno>
                <idno type="URL" subtype="pmb">https://pmb.acdh.oeaw.ac.at/entity/2128/</idno>
@@ -251,8 +248,9 @@
                <idno type="URL" subtype="wikipedia">https://de.wikipedia.org/wiki/Elsa_Plessner</idno>
                <idno type="URL" subtype="schnitzler-briefe">https://schnitzler-briefe.acdh.oeaw.ac.at/pmb2128.html</idno>
                <idno type="URL" subtype="schnitzler-kultur">https://schnitzler-kultur.acdh.oeaw.ac.at/pmb2128.html</idno>
+               <idno type="URL" subtype="bahr-textverzeichnis">https://bahr-textverzeichnis.acdh.oeaw.ac.at/TSN-listperson.html#pmb158649</idno>
                <listEvent>
-                  <event n="Theateruraufführung" when="1896-10-16" ref="pmb42011">
+                  <event n="Theateruraufführung" ref="pmb42011" when="1896-10-16">
                      <desc n="1370">teilgenommen an</desc>
                      <label>Uraufführung von Sein Sohn, 16.10.1896</label>
                      <idno type="URL" subtype="pmb">https://pmb.acdh.oeaw.ac.at/entity/42011/</idno>
@@ -260,7 +258,7 @@
                      <idno type="URL" subtype="schnitzler-briefe">https://schnitzler-briefe.acdh.oeaw.ac.at/pmb42011.html</idno>
                      <idno type="URL" subtype="schnitzler-kultur">https://schnitzler-kultur.acdh.oeaw.ac.at/pmb42011.html</idno>
                   </event>
-                  <event n="Theateruraufführung" when="1901-03-16" ref="pmb296012">
+                  <event n="Theateruraufführung" ref="pmb296012" when="1901-03-16">
                      <desc n="1370">teilgenommen an</desc>
                      <label>Uraufführung von Die Ehrlosen, 16.3.1901</label>
                      <idno type="URL" subtype="pmb">https://pmb.acdh.oeaw.ac.at/entity/296012/</idno>
@@ -271,62 +269,137 @@
                   <graphic url="https://upload.wikimedia.org/wikipedia/commons/thumb/5/5e/Elsa_Plessner%2C_Autorin_von_%E2%80%9EDie_Ehrlosen%E2%80%9C.png/250px-Elsa_Plessner%2C_Autorin_von_%E2%80%9EDie_Ehrlosen%E2%80%9C.png"/>
                </figure>
             </person>
+            <person xml:id="pmb2121">
+               <persName>
+                  <surname>Schnitzler</surname>
+                  <forename>Arthur</forename>
+               </persName>
+               <birth>
+                  <date when="1862-05-15">15. 5. 1862</date>
+                  <settlement ref="pmb50">
+                     <placeName type="pref">Wien</placeName>
+                     <location>
+                        <geo>48,208333 16,373056</geo>
+                     </location>
+                  </settlement>
+               </birth>
+               <death>
+                  <date when="1931-10-21">21. 10. 1931</date>
+                  <settlement ref="pmb50">
+                     <placeName type="pref">Wien</placeName>
+                     <location>
+                        <geo>48,208333 16,373056</geo>
+                     </location>
+                  </settlement>
+               </death>
+               <sex value="male"/>
+               <occupation ref="pmb90">Schriftsteller/Schriftstellerin</occupation>
+               <occupation ref="pmb97">Mediziner/Medizinerin</occupation>
+               <idno type="gnd">https://d-nb.info/gnd/118609807/</idno>
+            </person>
          </listPerson>
          <listBibl>
-            <bibl xml:id="pmb295198">
-               <title type="main">Warum</title>
-               <title type="werk_bibliografische-angabe">Warum. In: Das Magazin für Litteratur, Jg. 67, Nr. 39, 30. September 1898, Sp. 926–928.</title>
-               <title type="werk_bibliografische-angabe">In: Der Gläserne Käfig. Skizzen und Novellen. Wien: Leopold Weiss 1901, S. 57–64</title>
-               <author role="hat-geschaffen" ref="pmb2128">Plessner, Elsa</author>
-               <date when="1898-09-30">1898-09-30</date>
-               <idno type="URL" subtype="pmb">https://pmb.acdh.oeaw.ac.at/entity/295198/</idno>
-               <idno type="URL" subtype="schnitzler-briefe">https://schnitzler-briefe.acdh.oeaw.ac.at/pmb295198.html</idno>
-               <note type="work_kind">Skizze</note>
-            </bibl>
             <bibl xml:id="pmb32316">
-               <title type="main">Warten. Novelle</title>
+               <title>Warten. Novelle</title>
                <title type="werk_bibliografische-angabe">In: Der Gläserne Käfig. Skizzen und Novellen. Wien: Leopold Weiss 1901, S. 39–56</title>
                <title type="werk_arbeitstitel">Blätter</title>
                <title type="werk_bibliografische-angabe">E. Pleßner: Warten. In: Magazin für Litteratur, Jg. 66, Nr. 29, 24. 7. 1897, Sp. 867–875</title>
                <title type="werk_link">https://tudigit.ulb.tu-darmstadt.de/show/Zb-1110-1897-66</title>
-               <author role="hat-geschaffen" ref="pmb2128">Plessner, Elsa</author>
+               <author ref="pmb2128" role="hat-geschaffen">Plessner, Elsa</author>
                <date when="1897-07-24">24.07.1897</date>
                <idno type="URL" subtype="schnitzler-bahr">https://schnitzler-bahr.acdh.oeaw.ac.at/pmb32316.html</idno>
                <idno type="URL" subtype="pmb">https://pmb.acdh.oeaw.ac.at/entity/32316/</idno>
                <idno type="URL" subtype="schnitzler-briefe">https://schnitzler-briefe.acdh.oeaw.ac.at/pmb32316.html</idno>
                <note type="work_kind">Novelle</note>
             </bibl>
-            <bibl xml:id="pmb295201" ana="comment">
-               <title type="main">Der neue Lehrer. Novelle</title>
-               <title type="werk_bibliografische-angabe">Der neue Lehrer. Novelle. In: Das Magazin für Litteratur, Jg. 69, Nr. 10, 10.3.1900, Sp. 251–256; Nr. 11, 17.3.1900, Sp. 276–282</title>
-               <title type="werk_bibliografische-angabe">In: Der Gläserne Käfig. Skizzen und Novellen. Wien: Leopold Weiss 1901, S. 13–37</title>
-               <author role="hat-geschaffen" ref="pmb2128">Plessner, Elsa</author>
-               <date to="1900-03-17">1900-03-10 – 1900-03-17</date>
-               <idno type="URL" subtype="pmb">https://pmb.acdh.oeaw.ac.at/entity/295201/</idno>
-               <idno type="URL" subtype="schnitzler-briefe">https://schnitzler-briefe.acdh.oeaw.ac.at/pmb295201.html</idno>
-               <note type="work_kind">Novelle</note>
+            <bibl xml:id="pmb295198">
+               <title>Warum?</title>
+               <title type="werk_bibliografische-angabe">Warum. In: Das Magazin für Litteratur, Jg. 67, Nr. 39, 30. September 1898, Sp. 926–928.</title>
+               <title type="werk_bibliografische-angabe">In: Der Gläserne Käfig. Skizzen und Novellen. Wien: Leopold Weiss 1901, S. 57–64</title>
+               <title type="werk_link">https://www.google.at/books/edition/Magazin_für_die_Literatur_des_In_und_Au/wHoDAAAAYAAJ?hl=de&amp;pg=PA925&amp;printsec=frontcover</title>
+               <author ref="pmb2128" role="hat-geschaffen">Plessner, Elsa</author>
+               <date when="1898-09-30">1898-09-30</date>
+               <idno type="URL" subtype="pmb">https://pmb.acdh.oeaw.ac.at/entity/295198/</idno>
+               <idno type="URL" subtype="schnitzler-briefe">https://schnitzler-briefe.acdh.oeaw.ac.at/pmb295198.html</idno>
+               <note type="work_kind">Skizze</note>
+            </bibl>
+            <bibl xml:id="pmb32230" ana="implied">
+               <title>Der gläserne Käfig. Skizzen und Novellen</title>
+               <author ref="pmb2128" role="hat-geschaffen">Plessner, Elsa</author>
+               <date notBefore="1901-01-01" when="1901-01-01">1901</date>
+               <idno type="URL" subtype="schnitzler-bahr">https://schnitzler-bahr.acdh.oeaw.ac.at/pmb32230.html</idno>
+               <idno type="URL" subtype="pmb">https://pmb.acdh.oeaw.ac.at/entity/32230/</idno>
+               <idno type="URL" subtype="schnitzler-briefe">https://schnitzler-briefe.acdh.oeaw.ac.at/pmb32230.html</idno>
+               <note type="work_kind">Novellensammlung</note>
             </bibl>
             <bibl xml:id="pmb30265" ana="comment">
-               <title type="main">Der gläserne Käfig. Eine Parabel</title>
+               <title>Der gläserne Käfig. Eine Parabel</title>
                <title type="werk_bibliografische-angabe">Die Zeit, Bd. 12, Nr. 149, 7. 8. 1897</title>
-               <author role="hat-geschaffen" ref="pmb2128">Plessner, Elsa</author>
+               <author ref="pmb2128" role="hat-geschaffen">Plessner, Elsa</author>
                <date when="1897-08-07">07.08.1897</date>
                <idno type="URL" subtype="schnitzler-bahr">https://schnitzler-bahr.acdh.oeaw.ac.at/pmb30265.html</idno>
                <idno type="URL" subtype="pmb">https://pmb.acdh.oeaw.ac.at/entity/30265/</idno>
                <idno type="URL" subtype="schnitzler-briefe">https://schnitzler-briefe.acdh.oeaw.ac.at/pmb30265.html</idno>
                <note type="work_kind">Erzählung</note>
             </bibl>
-            <bibl xml:id="pmb32230" ana="comment">
-               <title type="main">Der gläserne Käfig. Skizzen und Novellen</title>
-               <author role="hat-geschaffen" ref="pmb2128">Plessner, Elsa</author>
-               <date when="1901-01-01" notBefore="1901-01-01">1901</date>
-               <idno type="URL" subtype="schnitzler-bahr">https://schnitzler-bahr.acdh.oeaw.ac.at/pmb32230.html</idno>
-               <idno type="URL" subtype="pmb">https://pmb.acdh.oeaw.ac.at/entity/32230/</idno>
-               <idno type="URL" subtype="schnitzler-briefe">https://schnitzler-briefe.acdh.oeaw.ac.at/pmb32230.html</idno>
-               <note type="work_kind">Novellensammlung</note>
+            <bibl xml:id="pmb295201" ana="comment">
+               <title>Der neue Lehrer. Novelle</title>
+               <title type="werk_bibliografische-angabe">Der neue Lehrer. Novelle. In: Das Magazin für Litteratur, Jg. 69, Nr. 10, 10.3.1900, Sp. 251–256; Nr. 11, 17.3.1900, Sp. 276–282</title>
+               <title type="werk_bibliografische-angabe">In: Der Gläserne Käfig. Skizzen und Novellen. Wien: Leopold Weiss 1901, S. 13–37</title>
+               <title type="werk_link">https://archive.org/details/bub_gb_VnkDAAAAYAAJ/page/n105</title>
+               <author ref="pmb2128" role="hat-geschaffen">Plessner, Elsa</author>
+               <date to="1900-03-17">1900-03-10 – 1900-03-17</date>
+               <idno type="URL" subtype="pmb">https://pmb.acdh.oeaw.ac.at/entity/295201/</idno>
+               <idno type="URL" subtype="schnitzler-briefe">https://schnitzler-briefe.acdh.oeaw.ac.at/pmb295201.html</idno>
+               <note type="work_kind">Novelle</note>
             </bibl>
          </listBibl>
          <listPlace>
+            <place xml:id="pmb50">
+               <placeName>Wien</placeName>
+               <placeName type="ort_fruherer-name">K.K. Reichshaupt- und Residenzstadt Wien</placeName>
+               <placeName type="alternative-name">Bécs</placeName>
+               <placeName type="alternative-name">Land Wien</placeName>
+               <placeName type="alternative-name">Vídeň</placeName>
+               <placeName type="alternative-name">Wenia</placeName>
+               <placeName type="alternative-name">Beč</placeName>
+               <placeName type="ort_fruherer-name">Vindobona</placeName>
+               <placeName type="alternative-name">Vienna</placeName>
+               <desc type="entity_type">A.ADM2</desc>
+               <desc type="entity_type_id">1135</desc>
+               <location type="coords">
+                  <geo>48,208333 16,373056</geo>
+               </location>
+               <location type="located_in_place">
+                  <placeName ref="pmb41240">Österreich</placeName>
+                  <geo>47,33333 13,33333</geo>
+               </location>
+               <location type="located_in_place">
+                  <placeName ref="pmb235218">Windmühlhöhe</placeName>
+                  <geo>48,24077 16,32092</geo>
+               </location>
+               <idno type="URL" subtype="geonames">https://sws.geonames.org/2761369/</idno>
+               <idno type="URL" subtype="d-nb">https://d-nb.info/gnd/4066009-6</idno>
+               <idno type="URL" subtype="schnitzler-bahr">https://schnitzler-bahr.acdh.oeaw.ac.at/pmb50.html</idno>
+               <idno type="URL" subtype="pmb">https://pmb.acdh.oeaw.ac.at/entity/50/</idno>
+               <idno type="URL" subtype="pmb">https://pmb.acdh.oeaw.ac.at/entity/2316/</idno>
+               <idno type="URL" subtype="pmb">https://pmb.acdh.oeaw.ac.at/entity/20954/</idno>
+               <idno type="URL" subtype="pmb">https://pmb.acdh.oeaw.ac.at/entity/65221/</idno>
+               <idno type="URL" subtype="pmb">https://pmb.acdh.oeaw.ac.at/entity/65223/</idno>
+               <idno type="URL" subtype="kraus">https://kraus.wienbibliothek.at/register/orte/pmb50</idno>
+               <idno type="URL" subtype="wikidata">http://www.wikidata.org/entity/Q1741</idno>
+               <idno type="URL" subtype="wikipedia">https://de.wikipedia.org/wiki/Wien</idno>
+               <idno type="URL" subtype="schnitzler-interviews">https://schnitzler-interviews.acdh.oeaw.ac.at/pmb50.html</idno>
+               <idno type="URL" subtype="geonames">https://sws.geonames.org/2761333/</idno>
+               <idno type="URL" subtype="pmb">https://pmb.acdh.oeaw.ac.at/entity/33999/</idno>
+               <idno type="URL" subtype="schnitzler-tagebuch">https://schnitzler-tagebuch.acdh.oeaw.ac.at/pmb50.html</idno>
+               <idno type="URL" subtype="schnitzler-briefe">https://schnitzler-briefe.acdh.oeaw.ac.at/pmb50.html</idno>
+               <note type="image">
+                  <figure>
+                     <graphic url="https://iiif.onb.ac.at/images/AKON/AK117_016/016/full/,600/0/native.jpg"/>
+                  </figure>
+               </note>
+            </place>
             <place xml:id="pmb295173">
                <placeName>Kärntner Straße 10</placeName>
                <desc type="entity_type">Wohngebäude (K.WHS)</desc>
@@ -344,56 +417,6 @@
                </location>
                <idno type="URL" subtype="pmb">https://pmb.acdh.oeaw.ac.at/entity/295173/</idno>
                <idno type="URL" subtype="schnitzler-briefe">https://schnitzler-briefe.acdh.oeaw.ac.at/pmb295173.html</idno>
-            </place>
-            <place xml:id="pmb50">
-               <placeName>Wien</placeName>
-               <placeName type="ort_fruherer-name">K.K. Reichshaupt- und Residenzstadt Wien</placeName>
-               <placeName type="legacy-name-merge">Wien</placeName>
-               <placeName type="alternative-name">Bécs</placeName>
-               <placeName type="alternative-name">Land Wien</placeName>
-               <placeName type="alternative-name">Vídeň</placeName>
-               <placeName type="alternative-name">Wenia</placeName>
-               <placeName type="alternative-name">Beč</placeName>
-               <placeName type="ort_fruherer-name">Vindobona</placeName>
-               <placeName type="legacy-name-merge">Vindobona</placeName>
-               <placeName type="alternative-name">Vienna</placeName>
-               <placeName type="legacy-name-merge">Vienna</placeName>
-               <placeName type="alternative-name">Vienna</placeName>
-               <desc type="entity_type">A.ADM2</desc>
-               <desc type="entity_type_id">1135</desc>
-               <location type="coords">
-                  <geo>48,208333 16,373056</geo>
-               </location>
-               <location type="located_in_place">
-                  <placeName ref="pmb41240">Österreich</placeName>
-                  <geo>47,33333 13,33333</geo>
-               </location>
-               <idno type="URL" subtype="geonames">https://sws.geonames.org/2761369/</idno>
-               <idno type="URL" subtype="gnd">https://d-nb.info/gnd/4066009-6</idno>
-               <idno type="URL" subtype="schnitzler-bahr">https://schnitzler-bahr.acdh.oeaw.ac.at/pmb50.html</idno>
-               <idno type="URL" subtype="pmb">https://pmb.acdh.oeaw.ac.at/entity/50/</idno>
-               <idno type="URL" subtype="pmb">https://pmb.acdh.oeaw.ac.at/entity/2316/</idno>
-               <idno type="URL" subtype="pmb">https://pmb.acdh.oeaw.ac.at/entity/20954/</idno>
-               <idno type="URL" subtype="pmb">https://pmb.acdh.oeaw.ac.at/entity/65221/</idno>
-               <idno type="URL" subtype="pmb">https://pmb.acdh.oeaw.ac.at/entity/65223/</idno>
-               <idno type="URL" subtype="legalkraus">https://kraus.wienbibliothek.at/register/orte/pmb50</idno>
-               <idno type="URL" subtype="wikidata">http://www.wikidata.org/entity/Q1741</idno>
-               <idno type="URL" subtype="wikipedia">https://de.wikipedia.org/wiki/Wien</idno>
-               <idno type="URL" subtype="schnitzler-interviews">https://schnitzler-interviews.acdh.oeaw.ac.at/pmb50.html</idno>
-               <idno type="URL" subtype="geonames">https://sws.geonames.org/2761333/</idno>
-               <idno type="URL" subtype="pmb">https://pmb.acdh.oeaw.ac.at/entity/33999/</idno>
-               <idno type="URL" subtype="schnitzler-tagebuch">https://schnitzler-tagebuch.acdh.oeaw.ac.at/pmb50.html</idno>
-               <idno type="URL" subtype="wienerschnitzler">https://wienerschnitzler.org/pmb50.html</idno>
-               <idno type="URL" subtype="schnitzler-briefe">https://schnitzler-briefe.acdh.oeaw.ac.at/pmb50.html</idno>
-               <idno type="URL" subtype="schnitzler-kultur">https://schnitzler-kultur.acdh.oeaw.ac.at/pmb50.html</idno>
-               <idno type="URL" subtype="semantickraus">https://sk.acdh.oeaw.ac.at/DWplace00347</idno>
-               <idno type="URL" subtype="semantickraus">https://sk.acdh.oeaw.ac.at/DWplace00066</idno>
-               <idno type="URL" subtype="semantickraus">https://sk.acdh.oeaw.ac.at/DWplace00085</idno>
-               <note type="image">
-                  <figure>
-                     <graphic url="https://iiif.onb.ac.at/images/AKON/AK117_016/016/full/,600/0/native.jpg"/>
-                  </figure>
-               </note>
             </place>
          </listPlace>
       </back>
