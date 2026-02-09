@@ -498,9 +498,9 @@
             <xsl:text>\textcolor{red}{XXXX}</xsl:text>
          </xsl:when>
          <xsl:when
-            test="$work-entry/tei:author[@role = 'author' or @role = 'hat-geschaffen'][$author-zaehler]">
+            test="$work-entry/tei:author[@role = 'author' or @role = 'hat-geschaffen' or @role= 'hat-unter-einem-kurzel-veroffentlicht' or @role='hat-unter-pseudonym-geschrieben'][$author-zaehler]">
             <xsl:variable name="author-ref"
-               select="$work-entry/tei:author[@role = 'author' or @role = 'hat-geschaffen'][$author-zaehler]/@ref"/>
+               select="$work-entry/tei:author[@role = 'author' or @role = 'hat-geschaffen' or @role= 'hat-unter-einem-kurzel-veroffentlicht' or @role='hat-unter-pseudonym-geschrieben'][$author-zaehler]/@ref"/>
             <xsl:value-of select="foo:person-in-index(concat('#', $author-ref), $endung, false())"/>
             <xsl:text>!</xsl:text>
          </xsl:when>
@@ -5021,7 +5021,7 @@
       <xsl:param name="first" as="xs:string"/>
       <xsl:param name="endung" as="xs:string"/>
       <xsl:variable name="work-entry-authors"
-         select="key('work-lookup', $first, $works)/tei:author[@role = 'author' or @role = 'hat-geschaffen' or @role = 'abbreviated-name']"/>
+         select="key('work-lookup', $first, $works)/tei:author[@role = 'author' or @role = 'hat-geschaffen' or @role = 'abbreviated-name' or @role= 'hat-unter-einem-kurzel-veroffentlicht' or @role='hat-unter-pseudonym-geschrieben']"/>
       <xsl:variable name="work-entry-authors-count" select="count($work-entry-authors)"/>
       <xsl:choose>
          <xsl:when test="not(key('work-lookup', $first, $works))">
@@ -5093,7 +5093,7 @@
             <xsl:variable name="entry" select="key('work-lookup', replace($first, '#', ''), $works)"
                as="node()?"/>
             <xsl:variable name="author"
-               select="$entry/tei:author[@role = 'author' or @role = 'hat-geschaffen' or @role = 'abbreviated-name']"/>
+               select="$entry/tei:author[@role = 'author' or @role = 'hat-geschaffen' or @role = 'abbreviated-name' or @role= 'hat-unter-einem-kurzel-veroffentlicht' or @role='hat-unter-pseudonym-geschrieben']"/>
             <xsl:choose>
                <xsl:when test="not($entry) or $entry = ''">
                   <xsl:text>\pwindex{XXXX Abgedrucktes Werk, Nummer nicht vorhanden|pwt}</xsl:text>
@@ -5115,7 +5115,7 @@
                      </xsl:when>
                      <xsl:otherwise>
                         <xsl:for-each
-                           select="$entry/tei:author[@role = 'author' or @role = 'hat-geschaffen' or @role = 'abbreviated-name']">
+                           select="$entry/tei:author[@role = 'author' or @role = 'hat-geschaffen' or @role = 'abbreviated-name' or @role= 'hat-unter-einem-kurzel-veroffentlicht' or @role='hat-unter-pseudonym-geschrieben']">
                            <xsl:value-of select="foo:werk-in-index($first, '|pwt', position())"/>
                            <xsl:choose>
                               <xsl:when test="$vorne">
@@ -5145,9 +5145,9 @@
       <xsl:variable name="entry" select="key('work-lookup', $first, $works)"/>
       <xsl:variable name="author-entry" select="$entry/tei:author"/>
       <xsl:if
-         test="$entry/tei:author[@role = 'author' or @role = 'hat-geschaffen' or @role = 'abbreviated-name']/tei:surname/text() != ''">
+         test="$entry/tei:author[@role = 'author' or @role = 'abbreviated-name' or @role = 'hat-geschaffen'  or @role= 'hat-unter-einem-kurzel-veroffentlicht' or @role='hat-unter-pseudonym-geschrieben']/tei:surname/text() != ''">
          <xsl:for-each
-            select="$entry/tei:author[@role = 'author' or @role = 'hat-geschaffen' or @role = 'abbreviated-name']">
+            select="$entry/tei:author[@role = 'author' or @role = 'hat-geschaffen'  or @role= 'hat-unter-einem-kurzel-veroffentlicht' or @role='hat-unter-pseudonym-geschrieben' or @role = 'abbreviated-name']">
             <xsl:choose>
                <xsl:when test="tei:persName/tei:forename = '' and tei:persName/tei:surname = ''">
                   <xsl:text>\textcolor{red}{KEIN NAME}</xsl:text>
