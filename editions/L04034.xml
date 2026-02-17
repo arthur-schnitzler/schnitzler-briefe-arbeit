@@ -1,6 +1,10 @@
-<?xml version='1.0' encoding='UTF-8'?>
+<?xml version="1.0" encoding="UTF-8"?>
 <?xml-model href="../meta/schnitzler-briefe-schematron.sch" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
-<TEI xmlns="http://www.tei-c.org/ns/1.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.tei-c.org/ns/1.0 ../meta/schnitzler-briefe-schema.xsd" xml:base="https://id.acdh.oeaw.ac.at/schnitzler/schnitzler-briefe/editions" xml:id="L04034">
+<TEI xmlns="http://www.tei-c.org/ns/1.0"
+     xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+     xsi:schemaLocation="http://www.tei-c.org/ns/1.0 ../meta/schnitzler-briefe-schema.xsd"
+     xml:base="https://id.acdh.oeaw.ac.at/schnitzler/schnitzler-briefe/editions"
+     xml:id="L04034">
    <teiHeader>
       <fileDesc>
          <titleStmt>
@@ -87,7 +91,7 @@
                               </extent>
                            </supportDesc>
                         </objectDesc>
-                        <handDesc hands="1">
+                        <handDesc hands="0">
                            <handNote medium="schwarze-tinte" style="deutsche-kurrent"/>
                         </handDesc>
                      </physDesc>
@@ -111,12 +115,20 @@
                <date when="1906-05-17" evidence="internal">17. 5. 190[6?]</date>
                <placeName ref="#pmb50" evidence="conjecture">Wien</placeName>
             </correspAction>
-            <correspContext><ref type="belongsToCorrespondence" target="correspondence_12740">Schwarzkopf, Gustav</ref>
+            <correspContext>
+               <ref type="belongsToCorrespondence" target="correspondence_12740">Schwarzkopf, Gustav</ref>
                <ref subtype="previous_letter" type="withinCollection" target="L03005">Schnitzler an Salten, 16. 5. 1906</ref>
                <ref subtype="next_letter" type="withinCollection" target="L03425">Salten an Schnitzler, 17. 5. 1906</ref>
-               <ref subtype="previous_letter" type="withinCorrespondence" source="correspondence_12740" target="L04042">Schnitzler an Schwarzkopf, 14. 4. 1906</ref>
-               <ref subtype="next_letter" type="withinCorrespondence" source="correspondence_12740" target="L04037">Schnitzler an Schwarzkopf, 20. 5. 1906</ref>
-            </correspContext></correspDesc>
+               <ref subtype="previous_letter"
+                    type="withinCorrespondence"
+                    source="correspondence_12740"
+                    target="L04042">Schnitzler an Schwarzkopf, 14. 4. 1906</ref>
+               <ref subtype="next_letter"
+                    type="withinCorrespondence"
+                    source="correspondence_12740"
+                    target="L04037">Schnitzler an Schwarzkopf, 20. 5. 1906</ref>
+            </correspContext>
+         </correspDesc>
       </profileDesc>
       <revisionDesc status="proposed">
          <change who="MAM" when="2025-12-10">Export aus Transkribus</change>
@@ -250,6 +262,8 @@
                   <idno type="URL" subtype="pmb">https://pmb.acdh.oeaw.ac.at/entity/29424/</idno>
                   <idno type="URL" subtype="schnitzler-briefe">https://schnitzler-briefe.acdh.oeaw.ac.at/pmb29424.html</idno>
                   <idno type="URL" subtype="schnitzler-kultur">https://schnitzler-kultur.acdh.oeaw.ac.at/pmb29424.html</idno>
+                  <idno type="URL" subtype="wikidata">http://www.wikidata.org/entity/Q1204520</idno>
+                  <idno type="URL" subtype="wikipedia">https://de.wikipedia.org/wiki/Deutsche_Zeitung_(1871%E2%80%931907)</idno>
                </affiliation>
                <affiliation>
                   <term ref="pmb1182">arbeitet für</term>
@@ -296,6 +310,12 @@
                      <idno type="URL" subtype="pmb">https://pmb.acdh.oeaw.ac.at/entity/184703/</idno>
                      <idno type="URL" subtype="schnitzler-kultur">https://schnitzler-kultur.acdh.oeaw.ac.at/pmb184703.html</idno>
                   </event>
+                  <event n="Probe" ref="pmb192888" when="1893-11-29">
+                     <desc n="1370">teilgenommen an</desc>
+                     <label>Probe von Das Märchen, 29.11.1893</label>
+                     <idno type="URL" subtype="pmb">https://pmb.acdh.oeaw.ac.at/entity/192888/</idno>
+                     <idno type="URL" subtype="schnitzler-kultur">https://schnitzler-kultur.acdh.oeaw.ac.at/pmb192888.html</idno>
+                  </event>
                   <event n="Private Lesung" ref="pmb183853" when="1894-02-04">
                      <desc n="1370">teilgenommen an</desc>
                      <label>Private Lesung von Halb Zwei, 4.2.1894</label>
@@ -319,6 +339,19 @@
                      <label>Private Lesung von Geschichte von einem alten Dichter, 26.12.1894</label>
                      <idno type="URL" subtype="pmb">https://pmb.acdh.oeaw.ac.at/entity/183883/</idno>
                      <idno type="URL" subtype="schnitzler-kultur">https://schnitzler-kultur.acdh.oeaw.ac.at/pmb183883.html</idno>
+                  </event>
+                  <event n="Soirée" ref="pmb199091" when="1895-03-22">
+                     <desc n="1370">teilgenommen an</desc>
+                     <label>Soirée des Wiener Volksbildungsvereins, 22.3.1895</label>
+                     <idno type="URL" subtype="pmb">https://pmb.acdh.oeaw.ac.at/entity/199091/</idno>
+                     <idno type="URL" subtype="schnitzler-kultur">https://schnitzler-kultur.acdh.oeaw.ac.at/pmb199091.html</idno>
+                  </event>
+                  <event n="Theateruraufführung" ref="pmb35203" when="1895-10-09">
+                     <desc n="1370">teilgenommen an</desc>
+                     <label>Uraufführung von Liebelei, Premiere von Rechte der Seele, 9.10.1895</label>
+                     <idno type="URL" subtype="pmb">https://pmb.acdh.oeaw.ac.at/entity/35203/</idno>
+                     <idno type="URL" subtype="schnitzler-briefe">https://schnitzler-briefe.acdh.oeaw.ac.at/pmb35203.html</idno>
+                     <idno type="URL" subtype="schnitzler-kultur">https://schnitzler-kultur.acdh.oeaw.ac.at/pmb35203.html</idno>
                   </event>
                   <event n="Private Lesung" ref="pmb183891" when="1896-06-18">
                      <desc n="1370">teilgenommen an</desc>
@@ -344,6 +377,11 @@
                      <idno type="URL" subtype="pmb">https://pmb.acdh.oeaw.ac.at/entity/200052/</idno>
                      <idno type="URL" subtype="schnitzler-kultur">https://schnitzler-kultur.acdh.oeaw.ac.at/pmb200052.html</idno>
                   </event>
+                  <event n="Theateraufführung" ref="pmb334408" when="1897-04-13">
+                     <desc n="1370">teilgenommen an</desc>
+                     <label>Aufführung von Anime solitaire [Einsame Menschen], 13.4.1897</label>
+                     <idno type="URL" subtype="pmb">https://pmb.acdh.oeaw.ac.at/entity/334408/</idno>
+                  </event>
                   <event n="Private Lesung" ref="pmb142802" when="1897-12-28">
                      <desc n="1370">teilgenommen an</desc>
                      <label>Private Lesung von Das Vermächtnis, 28.12.1897</label>
@@ -368,10 +406,20 @@
                      <idno type="URL" subtype="pmb">https://pmb.acdh.oeaw.ac.at/entity/48949/</idno>
                      <idno type="URL" subtype="schnitzler-kultur">https://schnitzler-kultur.acdh.oeaw.ac.at/pmb48949.html</idno>
                   </event>
+                  <event n="Vergnügungsabend" ref="pmb333793" when="1899-01-07">
+                     <desc n="1370">teilgenommen an</desc>
+                     <label>Besuch des Budapest-Orpheums, 7.1.1899</label>
+                     <idno type="URL" subtype="pmb">https://pmb.acdh.oeaw.ac.at/entity/333793/</idno>
+                  </event>
                   <event n="Lesung" ref="pmb299555" when="1899-02-19">
                      <desc n="1256">mitwirkend an</desc>
                      <label>Lesung von Max Burckhard, Vinzenz Chiavacci, Carl Karlweis und Gustav Schwarzkopf, 19.2.1899</label>
                      <idno type="URL" subtype="pmb">https://pmb.acdh.oeaw.ac.at/entity/299555/</idno>
+                  </event>
+                  <event n="Theateraufführung" ref="pmb333810" when="1899-04-20">
+                     <desc n="1370">teilgenommen an</desc>
+                     <label>Aufführung von Cyrano von Bergerac, 20.4.1899</label>
+                     <idno type="URL" subtype="pmb">https://pmb.acdh.oeaw.ac.at/entity/333810/</idno>
                   </event>
                   <event n="Private Lesung" ref="pmb207030" when="1899-05-07">
                      <desc n="1370">teilgenommen an</desc>
@@ -409,6 +457,12 @@
                      <label>Private Lesung von Der Schleier der Beatrice, 26.11.1899</label>
                      <idno type="URL" subtype="pmb">https://pmb.acdh.oeaw.ac.at/entity/183921/</idno>
                      <idno type="URL" subtype="schnitzler-kultur">https://schnitzler-kultur.acdh.oeaw.ac.at/pmb183921.html</idno>
+                  </event>
+                  <event n="Theaterpremiere" ref="pmb209130" when="1900-01-19">
+                     <desc n="1370">teilgenommen an</desc>
+                     <label>Literarischer Abend (Premiere von Die Frage an das Schicksal, Gläubiger), 19.1.1900</label>
+                     <idno type="URL" subtype="pmb">https://pmb.acdh.oeaw.ac.at/entity/209130/</idno>
+                     <idno type="URL" subtype="schnitzler-kultur">https://schnitzler-kultur.acdh.oeaw.ac.at/pmb209130.html</idno>
                   </event>
                   <event n="Private Lesung" ref="pmb49350" when="1900-10-28">
                      <desc n="1370">teilgenommen an</desc>
@@ -470,6 +524,17 @@
                      <idno type="URL" subtype="pmb">https://pmb.acdh.oeaw.ac.at/entity/183980/</idno>
                      <idno type="URL" subtype="schnitzler-kultur">https://schnitzler-kultur.acdh.oeaw.ac.at/pmb183980.html</idno>
                   </event>
+                  <event n="Theateraufführung" ref="pmb333584" when="1903-03-15">
+                     <desc n="1370">teilgenommen an</desc>
+                     <label>2. Aufführung von Lebendige Stunden, 15.3.1903</label>
+                     <idno type="URL" subtype="pmb">https://pmb.acdh.oeaw.ac.at/entity/333584/</idno>
+                  </event>
+                  <event n="Zirkusvorstellung" ref="pmb209284" when="1903-03-30">
+                     <desc n="1370">teilgenommen an</desc>
+                     <label>Zirkus Schumann, 30.3.1903</label>
+                     <idno type="URL" subtype="pmb">https://pmb.acdh.oeaw.ac.at/entity/209284/</idno>
+                     <idno type="URL" subtype="schnitzler-kultur">https://schnitzler-kultur.acdh.oeaw.ac.at/pmb209284.html</idno>
+                  </event>
                   <event n="Hochzeit" ref="pmb44469" when="1903-08-26">
                      <desc n="1256">mitwirkend an</desc>
                      <label>Eheschließung von Arthur Schnitzler und Olga Gussmann, 26.8.1903</label>
@@ -488,11 +553,29 @@
                      <idno type="URL" subtype="pmb">https://pmb.acdh.oeaw.ac.at/entity/47850/</idno>
                      <idno type="URL" subtype="schnitzler-kultur">https://schnitzler-kultur.acdh.oeaw.ac.at/pmb47850.html</idno>
                   </event>
+                  <event n="Opernaufführung" ref="pmb209334" when="1904-08-29">
+                     <desc n="1370">teilgenommen an</desc>
+                     <label>Aufführung von Hoffmanns Erzählungen, 29.8.1904</label>
+                     <idno type="URL" subtype="pmb">https://pmb.acdh.oeaw.ac.at/entity/209334/</idno>
+                     <idno type="URL" subtype="schnitzler-kultur">https://schnitzler-kultur.acdh.oeaw.ac.at/pmb209334.html</idno>
+                  </event>
+                  <event n="Theateraufführung" ref="pmb45067" when="1904-10-05">
+                     <desc n="1370">teilgenommen an</desc>
+                     <label>Aufführung von Herzogin Crevette, 5.10.1904</label>
+                     <idno type="URL" subtype="pmb">https://pmb.acdh.oeaw.ac.at/entity/45067/</idno>
+                     <idno type="URL" subtype="schnitzler-kultur">https://schnitzler-kultur.acdh.oeaw.ac.at/pmb45067.html</idno>
+                  </event>
                   <event n="Private Lesung" ref="pmb234504" when="1904-10-18">
                      <desc n="1370">teilgenommen an</desc>
                      <label>Private Lesung von Der tapfere Cassian, Das Haus Delorme, 18.10.1904</label>
                      <idno type="URL" subtype="pmb">https://pmb.acdh.oeaw.ac.at/entity/234504/</idno>
                      <idno type="URL" subtype="schnitzler-kultur">https://schnitzler-kultur.acdh.oeaw.ac.at/pmb234504.html</idno>
+                  </event>
+                  <event n="Theateraufführung" ref="pmb209337" when="1904-10-22">
+                     <desc n="1370">teilgenommen an</desc>
+                     <label>Aufführung von Karrnerleut’, Angele, Der Dieb, 22.10.1904</label>
+                     <idno type="URL" subtype="pmb">https://pmb.acdh.oeaw.ac.at/entity/209337/</idno>
+                     <idno type="URL" subtype="schnitzler-kultur">https://schnitzler-kultur.acdh.oeaw.ac.at/pmb209337.html</idno>
                   </event>
                   <event n="Theateraufführung" ref="pmb235507" when="1905-05-11">
                      <desc n="1370">teilgenommen an</desc>
@@ -512,11 +595,41 @@
                      <idno type="URL" subtype="pmb">https://pmb.acdh.oeaw.ac.at/entity/184012/</idno>
                      <idno type="URL" subtype="schnitzler-kultur">https://schnitzler-kultur.acdh.oeaw.ac.at/pmb184012.html</idno>
                   </event>
+                  <event n="Theateraufführung" ref="pmb237582" when="1906-05-21">
+                     <desc n="1370">teilgenommen an</desc>
+                     <label>Aufführung von Traumulus, 21.5.1906</label>
+                     <idno type="URL" subtype="pmb">https://pmb.acdh.oeaw.ac.at/entity/237582/</idno>
+                     <idno type="URL" subtype="schnitzler-kultur">https://schnitzler-kultur.acdh.oeaw.ac.at/pmb237582.html</idno>
+                  </event>
+                  <event n="Theateraufführung" ref="pmb209442" when="1906-08-25">
+                     <desc n="1370">teilgenommen an</desc>
+                     <label>Aufführung von Orpheus in der Unterwelt, 25.8.1906</label>
+                     <idno type="URL" subtype="pmb">https://pmb.acdh.oeaw.ac.at/entity/209442/</idno>
+                     <idno type="URL" subtype="schnitzler-kultur">https://schnitzler-kultur.acdh.oeaw.ac.at/pmb209442.html</idno>
+                  </event>
                   <event n="Theaterpremiere" ref="pmb186202" when="1907-09-27">
                      <desc n="1370">teilgenommen an</desc>
                      <label>Premiere Das Märchen, 27.9.1907</label>
                      <idno type="URL" subtype="pmb">https://pmb.acdh.oeaw.ac.at/entity/186202/</idno>
                      <idno type="URL" subtype="schnitzler-kultur">https://schnitzler-kultur.acdh.oeaw.ac.at/pmb186202.html</idno>
+                  </event>
+                  <event n="Theateraufführung" ref="pmb209550" when="1909-02-15">
+                     <desc n="1370">teilgenommen an</desc>
+                     <label>Aufführung von Die junge Frau, 15.2.1909</label>
+                     <idno type="URL" subtype="pmb">https://pmb.acdh.oeaw.ac.at/entity/209550/</idno>
+                     <idno type="URL" subtype="schnitzler-kultur">https://schnitzler-kultur.acdh.oeaw.ac.at/pmb209550.html</idno>
+                  </event>
+                  <event n="Generalprobe" ref="pmb209552" when="1909-03-04">
+                     <desc n="1370">teilgenommen an</desc>
+                     <label>Generalprobe von Le devin du village, 4.3.1909</label>
+                     <idno type="URL" subtype="pmb">https://pmb.acdh.oeaw.ac.at/entity/209552/</idno>
+                     <idno type="URL" subtype="schnitzler-kultur">https://schnitzler-kultur.acdh.oeaw.ac.at/pmb209552.html</idno>
+                  </event>
+                  <event n="Panoramabesuch" ref="pmb297816" when="1909-03-04">
+                     <desc n="1370">teilgenommen an</desc>
+                     <label>Besuch des Kaiserpanoramas [Wien, Schubertring 4], 4.3.1909</label>
+                     <idno type="URL" subtype="pmb">https://pmb.acdh.oeaw.ac.at/entity/297816/</idno>
+                     <idno type="URL" subtype="schnitzler-kultur">https://schnitzler-kultur.acdh.oeaw.ac.at/pmb297816.html</idno>
                   </event>
                   <event n="Private Lesung" ref="pmb46528" when="1909-11-01">
                      <desc n="1370">teilgenommen an</desc>
@@ -530,6 +643,11 @@
                      <label>Private Lesung von Das weite Land, 29.6.1910</label>
                      <idno type="URL" subtype="pmb">https://pmb.acdh.oeaw.ac.at/entity/48222/</idno>
                      <idno type="URL" subtype="schnitzler-kultur">https://schnitzler-kultur.acdh.oeaw.ac.at/pmb48222.html</idno>
+                  </event>
+                  <event n="Private Lesung" ref="pmb334014" when="1910-11-29">
+                     <desc n="1370">teilgenommen an</desc>
+                     <label>Private Lesung von Der Rosenkavalier, 29.11.1910</label>
+                     <idno type="URL" subtype="pmb">https://pmb.acdh.oeaw.ac.at/entity/334014/</idno>
                   </event>
                   <event n="Wohltätigkeitskonzert" ref="pmb183577" when="1911-03-05">
                      <desc n="1370">teilgenommen an</desc>
@@ -625,6 +743,7 @@
                   <forename>Max</forename>
                   <surname>Schwarzkopf</surname>
                </persName>
+               <persName type="person_pseudonym">Franz Bergleitner</persName>
                <birth>
                   <date when="1857-06-12">12.06.1857</date>
                   <settlement ref="pmb50">
@@ -657,143 +776,24 @@
                   <idno type="URL" subtype="wikidata">http://www.wikidata.org/entity/Q136724778</idno>
                   <idno type="URL" subtype="wikipedia">https://de.wikipedia.org/wiki/Gegen_den_Strom_(K%C3%BCnstlervereinigung)</idno>
                </affiliation>
-            </person>
-            <person xml:id="pmb12701" ana="comment">
-               <persName>
-                  <forename>Louise</forename>
-                  <surname>Schnitzler</surname>
-               </persName>
-               <persName type="person_geburtsname_nachname">Markbreiter</persName>
-               <persName type="person_geburtsname_vorname">Ludovica</persName>
-               <birth>
-                  <date when="1840-07-08">1840-07-08</date>
-                  <settlement ref="pmb35513">
-                     <placeName type="pref">Kőszeg</placeName>
-                     <location>
-                        <geo>47,38922 16,541</geo>
-                     </location>
-                  </settlement>
-               </birth>
-               <death>
-                  <date when="1911-09-09">1911-09-09</date>
-                  <settlement ref="pmb50">
-                     <placeName type="pref">Wien</placeName>
-                     <location>
-                        <geo>48,208333 16,373056</geo>
-                     </location>
-                  </settlement>
-               </death>
-               <sex value="female"/>
-               <idno type="URL" subtype="d-nb">https://d-nb.info/gnd/1141930552</idno>
-               <idno type="URL" subtype="schnitzler-tagebuch">https://schnitzler-tagebuch.acdh.oeaw.ac.at/person_19831.html</idno>
-               <idno type="URL" subtype="schnitzler-bahr">https://schnitzler-bahr.acdh.oeaw.ac.at/pmb12701.html</idno>
-               <idno type="URL" subtype="pmb">https://pmb.acdh.oeaw.ac.at/entity/12701/</idno>
-               <idno type="URL" subtype="wikidata">http://www.wikidata.org/entity/Q94743225</idno>
-               <idno type="URL" subtype="schnitzler-interviews">https://schnitzler-interviews.acdh.oeaw.ac.at/pmb12701.html</idno>
-               <idno type="URL" subtype="schnitzler-briefe">https://schnitzler-briefe.acdh.oeaw.ac.at/pmb12701.html</idno>
-               <idno type="URL" subtype="schnitzler-kultur">https://schnitzler-kultur.acdh.oeaw.ac.at/pmb12701.html</idno>
                <listEvent>
-                  <event n="Hausball" ref="pmb207789" when="1883-02-04">
-                     <desc n="1256">mitwirkend an</desc>
-                     <label>Hausball bei Johann und Louise Schnitzler, 4.2.1883</label>
-                     <idno type="URL" subtype="pmb">https://pmb.acdh.oeaw.ac.at/entity/207789/</idno>
-                     <idno type="URL" subtype="schnitzler-kultur">https://schnitzler-kultur.acdh.oeaw.ac.at/pmb207789.html</idno>
-                  </event>
-                  <event n="Hausball" ref="pmb208095" when="1887-01-30">
-                     <desc n="1256">mitwirkend an</desc>
-                     <label>Hausball bei Johann und Louise Schnitzler, 30.1.1887</label>
-                     <idno type="URL" subtype="pmb">https://pmb.acdh.oeaw.ac.at/entity/208095/</idno>
-                     <idno type="URL" subtype="schnitzler-kultur">https://schnitzler-kultur.acdh.oeaw.ac.at/pmb208095.html</idno>
-                  </event>
-                  <event n="Soirée" ref="pmb208188" when="1888-01-01">
-                     <desc n="1256">mitwirkend an</desc>
-                     <label>Soirée bei Johann und Louise Schnitzler, 1.1.1888</label>
-                     <idno type="URL" subtype="pmb">https://pmb.acdh.oeaw.ac.at/entity/208188/</idno>
-                     <idno type="URL" subtype="schnitzler-kultur">https://schnitzler-kultur.acdh.oeaw.ac.at/pmb208188.html</idno>
-                  </event>
-                  <event n="Hausball" ref="pmb208293" when="1889-01-01">
-                     <desc n="1256">mitwirkend an</desc>
-                     <label>Hausball bei Johann und Louise Schnitzler, 1.1.1889</label>
-                     <idno type="URL" subtype="pmb">https://pmb.acdh.oeaw.ac.at/entity/208293/</idno>
-                     <idno type="URL" subtype="schnitzler-kultur">https://schnitzler-kultur.acdh.oeaw.ac.at/pmb208293.html</idno>
-                  </event>
-                  <event n="Schulaufführung" ref="pmb89901" when="1891-05-13">
+                  <event n="Theateraufführung" ref="pmb333584" when="1903-03-15">
                      <desc n="1370">teilgenommen an</desc>
-                     <label>Aufführung von Das Abenteuer seines Lebens u.a.,  13.5.1891</label>
-                     <idno type="URL" subtype="pmb">https://pmb.acdh.oeaw.ac.at/entity/89901/</idno>
-                     <idno type="URL" subtype="schnitzler-kultur">https://schnitzler-kultur.acdh.oeaw.ac.at/pmb89901.html</idno>
+                     <label>2. Aufführung von Lebendige Stunden, 15.3.1903</label>
+                     <idno type="URL" subtype="pmb">https://pmb.acdh.oeaw.ac.at/entity/333584/</idno>
                   </event>
-                  <event n="Theateraufführung" ref="pmb49365" when="1897-09-17">
+                  <event n="Theateraufführung" ref="pmb305697" when="1905-10-13">
                      <desc n="1370">teilgenommen an</desc>
-                     <label>Aufführung von Die Meistersinger von Nürnberg, 17.9.1897</label>
-                     <idno type="URL" subtype="pmb">https://pmb.acdh.oeaw.ac.at/entity/49365/</idno>
-                     <idno type="URL" subtype="schnitzler-kultur">https://schnitzler-kultur.acdh.oeaw.ac.at/pmb49365.html</idno>
-                  </event>
-                  <event n="Theaterpremiere" ref="pmb35107" when="1902-05-06">
-                     <desc n="1370">teilgenommen an</desc>
-                     <label>Premiere von Lebendige Stunden, 6.5.1902</label>
-                     <idno type="URL" subtype="pmb">https://pmb.acdh.oeaw.ac.at/entity/35107/</idno>
-                     <idno type="URL" subtype="schnitzler-kultur">https://schnitzler-kultur.acdh.oeaw.ac.at/pmb35107.html</idno>
-                  </event>
-                  <event n="Theaterpremiere" ref="pmb35113" when="1904-12-12">
-                     <desc n="1370">teilgenommen an</desc>
-                     <label>Premiere von Literatur, Die letzten Masken, Der Puppenspieler, 12.12.1904</label>
-                     <idno type="URL" subtype="pmb">https://pmb.acdh.oeaw.ac.at/entity/35113/</idno>
-                     <idno type="URL" subtype="schnitzler-kultur">https://schnitzler-kultur.acdh.oeaw.ac.at/pmb35113.html</idno>
-                  </event>
-                  <event n="Theateruraufführung" ref="pmb35173" when="1905-10-12">
-                     <desc n="1370">teilgenommen an</desc>
-                     <label>Uraufführung von Zwischenspiel, 12.10.1905</label>
-                     <idno type="URL" subtype="pmb">https://pmb.acdh.oeaw.ac.at/entity/35173/</idno>
-                     <idno type="URL" subtype="pmb">https://pmb.acdh.oeaw.ac.at/entity/209382/</idno>
-                     <idno type="URL" subtype="schnitzler-briefe">https://schnitzler-briefe.acdh.oeaw.ac.at/pmb35173.html</idno>
-                     <idno type="URL" subtype="schnitzler-kultur">https://schnitzler-kultur.acdh.oeaw.ac.at/pmb35173.html</idno>
-                  </event>
-                  <event n="Theateraufführung" ref="pmb143159" when="1907-04-22">
-                     <desc n="1370">teilgenommen an</desc>
-                     <label>Aufführung von Liebelei, Endlich allein, 22.4.1907</label>
-                     <idno type="URL" subtype="pmb">https://pmb.acdh.oeaw.ac.at/entity/143159/</idno>
-                     <idno type="URL" subtype="schnitzler-kultur">https://schnitzler-kultur.acdh.oeaw.ac.at/pmb143159.html</idno>
-                  </event>
-                  <event n="Theaterpremiere" ref="pmb145196" when="1907-11-09">
-                     <desc n="1370">teilgenommen an</desc>
-                     <label>Premiere Vom andern Ufer, 9.11.1907</label>
-                     <idno type="URL" subtype="pmb">https://pmb.acdh.oeaw.ac.at/entity/145196/</idno>
-                     <idno type="URL" subtype="schnitzler-kultur">https://schnitzler-kultur.acdh.oeaw.ac.at/pmb145196.html</idno>
-                  </event>
-                  <event n="Theaterpremiere" ref="pmb186231" when="1908-11-10">
-                     <desc n="1370">teilgenommen an</desc>
-                     <label>Premiere von Das Vermächtnis, 10.11.1908</label>
-                     <idno type="URL" subtype="pmb">https://pmb.acdh.oeaw.ac.at/entity/186231/</idno>
-                     <idno type="URL" subtype="schnitzler-kultur">https://schnitzler-kultur.acdh.oeaw.ac.at/pmb186231.html</idno>
-                  </event>
-                  <event n="Theateruraufführung" ref="pmb35215" when="1909-01-05">
-                     <desc n="1370">teilgenommen an</desc>
-                     <label>Premiere von Liebelei, deutschsprachige Uraufführung von Komtesse Mizzi, 5.1.1909</label>
-                     <idno type="URL" subtype="pmb">https://pmb.acdh.oeaw.ac.at/entity/35215/</idno>
-                     <idno type="URL" subtype="schnitzler-kultur">https://schnitzler-kultur.acdh.oeaw.ac.at/pmb35215.html</idno>
-                  </event>
-                  <event n="Theaterpremiere" ref="pmb35185" when="1909-12-11">
-                     <desc n="1370">teilgenommen an</desc>
-                     <label>Premiere von Der Ruf des Lebens, 11.12.1909</label>
-                     <idno type="URL" subtype="pmb">https://pmb.acdh.oeaw.ac.at/entity/35185/</idno>
-                     <idno type="URL" subtype="schnitzler-kultur">https://schnitzler-kultur.acdh.oeaw.ac.at/pmb35185.html</idno>
-                  </event>
-                  <event n="Theateruraufführung" ref="pmb35251" when="1910-11-24">
-                     <desc n="1370">teilgenommen an</desc>
-                     <label>Uraufführung von Der junge Medardus, 24.11.1910</label>
-                     <idno type="URL" subtype="pmb">https://pmb.acdh.oeaw.ac.at/entity/35251/</idno>
-                     <idno type="URL" subtype="schnitzler-briefe">https://schnitzler-briefe.acdh.oeaw.ac.at/pmb35251.html</idno>
-                     <idno type="URL" subtype="schnitzler-kultur">https://schnitzler-kultur.acdh.oeaw.ac.at/pmb35251.html</idno>
+                     <label>2. Aufführung von Zwischenspiel, 13.10.1905</label>
+                     <idno type="URL" subtype="pmb">https://pmb.acdh.oeaw.ac.at/entity/305697/</idno>
                   </event>
                </listEvent>
             </person>
          </listPerson>
          <listPlace>
-            <place xml:id="pmb50" ana="comment">
+            <place xml:id="pmb50">
                <placeName>Wien</placeName>
-               <placeName type="ort_fruherer-name">K.K. Reichshaupt- und Residenzstadt
-                  Wien</placeName>
+               <placeName type="ort_fruherer-name">K.K. Reichshaupt- und Residenzstadt Wien</placeName>
                <placeName type="alternative-name">Bécs</placeName>
                <placeName type="alternative-name">Land Wien</placeName>
                <placeName type="alternative-name">Vídeň</placeName>

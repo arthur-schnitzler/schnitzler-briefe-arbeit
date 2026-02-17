@@ -1,6 +1,10 @@
-<?xml version='1.0' encoding='UTF-8'?>
+<?xml version="1.0" encoding="UTF-8"?>
 <?xml-model href="../meta/schnitzler-briefe-schematron.sch" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
-<TEI xmlns="http://www.tei-c.org/ns/1.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.tei-c.org/ns/1.0 ../meta/schnitzler-briefe-schema.xsd" xml:base="https://id.acdh.oeaw.ac.at/schnitzler/schnitzler-briefe/editions" xml:id="L04117">
+<TEI xmlns="http://www.tei-c.org/ns/1.0"
+     xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+     xsi:schemaLocation="http://www.tei-c.org/ns/1.0 ../meta/schnitzler-briefe-schema.xsd"
+     xml:base="https://id.acdh.oeaw.ac.at/schnitzler/schnitzler-briefe/editions"
+     xml:id="L04117">
    <teiHeader>
       <fileDesc>
          <titleStmt>
@@ -82,11 +86,11 @@
                            <supportDesc>
                               <extent>
                                  <measure unit="karte" quantity="1"/>
-                                 <measure unit="zeichenanzahl" quantity="125"/>
+                                 <measure unit="zeichenanzahl" quantity="124"/>
                               </extent>
                            </supportDesc>
                         </objectDesc>
-                        <handDesc hands="1">
+                        <handDesc hands="0">
                            <handNote medium="bleistift" style="deutsche-kurrent"/>
                         </handDesc>
                      </physDesc>
@@ -110,12 +114,20 @@
                <date notBefore="1896-06-17" notAfter="1896-06-18">[17. 6. 1896 – 18. 6. 1896]</date>
                <placeName ref="#pmb50" evidence="conjecture">Wien</placeName>
             </correspAction>
-            <correspContext><ref type="belongsToCorrespondence" target="correspondence_12740">Schwarzkopf, Gustav</ref>
+            <correspContext>
+               <ref type="belongsToCorrespondence" target="correspondence_12740">Schwarzkopf, Gustav</ref>
                <ref subtype="previous_letter" type="withinCollection" target="L02777">Goldmann an Schnitzler, 15. 6. [1896]</ref>
                <ref subtype="next_letter" type="withinCollection" target="L00551">Bahr an Schnitzler, [18. 6. 1896]</ref>
-               <ref subtype="previous_letter" type="withinCorrespondence" source="correspondence_12740" target="L04114">Schnitzler an Schwarzkopf, 21. 5. 1896</ref>
-               <ref subtype="next_letter" type="withinCorrespondence" source="correspondence_12740" target="L04099">Schnitzler an Schwarzkopf, 2. 7. 1896</ref>
-            </correspContext></correspDesc>
+               <ref subtype="previous_letter"
+                    type="withinCorrespondence"
+                    source="correspondence_12740"
+                    target="L04114">Schnitzler an Schwarzkopf, 21. 5. 1896</ref>
+               <ref subtype="next_letter"
+                    type="withinCorrespondence"
+                    source="correspondence_12740"
+                    target="L04099">Schnitzler an Schwarzkopf, 2. 7. 1896</ref>
+            </correspContext>
+         </correspDesc>
       </profileDesc>
       <revisionDesc status="proposed">
          <change who="MAM" when="2025-12-10">Export aus Transkribus</change>
@@ -138,7 +150,7 @@
                      <rs type="place" ref="#pmb190427" subtype="implied">Richard</rs>
                   </rs>
                </rs> –</p>
-            <p>Aber Sie beko<c rendition="#gemination-m"/>en auch Erdbeeren mit <anchor type="commentary" xml:id="K_L04117-3"/>Oberſchaum<note type="commentary" corresp="K_L04117-3">Obers, österreichisch: Schlagsahne</note>!</p>
+            <p>Aber Sie beko<c rendition="#gemination-m"/>en auch Erdbeeren mit <anchor type="commentary" xml:id="K_L04117-1"/>Oberſchaum<note type="commentary" corresp="K_L04117-1">Obers, österreichisch: Schlagsahne</note>!</p>
             <closer>Herzlich Ihr <signed>Arth Schn</signed>
             </closer>
          </div>
@@ -231,6 +243,8 @@
                   <idno type="URL" subtype="pmb">https://pmb.acdh.oeaw.ac.at/entity/29424/</idno>
                   <idno type="URL" subtype="schnitzler-briefe">https://schnitzler-briefe.acdh.oeaw.ac.at/pmb29424.html</idno>
                   <idno type="URL" subtype="schnitzler-kultur">https://schnitzler-kultur.acdh.oeaw.ac.at/pmb29424.html</idno>
+                  <idno type="URL" subtype="wikidata">http://www.wikidata.org/entity/Q1204520</idno>
+                  <idno type="URL" subtype="wikipedia">https://de.wikipedia.org/wiki/Deutsche_Zeitung_(1871%E2%80%931907)</idno>
                </affiliation>
                <affiliation>
                   <term ref="pmb1182">arbeitet für</term>
@@ -307,6 +321,19 @@
                      <idno type="URL" subtype="pmb">https://pmb.acdh.oeaw.ac.at/entity/183883/</idno>
                      <idno type="URL" subtype="schnitzler-kultur">https://schnitzler-kultur.acdh.oeaw.ac.at/pmb183883.html</idno>
                   </event>
+                  <event n="Soirée" ref="pmb199091" when="1895-03-22">
+                     <desc n="1370">teilgenommen an</desc>
+                     <label>Soirée des Wiener Volksbildungsvereins, 22.3.1895</label>
+                     <idno type="URL" subtype="pmb">https://pmb.acdh.oeaw.ac.at/entity/199091/</idno>
+                     <idno type="URL" subtype="schnitzler-kultur">https://schnitzler-kultur.acdh.oeaw.ac.at/pmb199091.html</idno>
+                  </event>
+                  <event n="Theateruraufführung" ref="pmb35203" when="1895-10-09">
+                     <desc n="1370">teilgenommen an</desc>
+                     <label>Uraufführung von Liebelei, Premiere von Rechte der Seele, 9.10.1895</label>
+                     <idno type="URL" subtype="pmb">https://pmb.acdh.oeaw.ac.at/entity/35203/</idno>
+                     <idno type="URL" subtype="schnitzler-briefe">https://schnitzler-briefe.acdh.oeaw.ac.at/pmb35203.html</idno>
+                     <idno type="URL" subtype="schnitzler-kultur">https://schnitzler-kultur.acdh.oeaw.ac.at/pmb35203.html</idno>
+                  </event>
                   <event n="Private Lesung" ref="pmb183891" when="1896-06-18">
                      <desc n="1370">teilgenommen an</desc>
                      <label>Private Lesung von Freiwild, 18.6.1896</label>
@@ -330,6 +357,11 @@
                      <label>Probe für die Vorlesung, 24.3.1897</label>
                      <idno type="URL" subtype="pmb">https://pmb.acdh.oeaw.ac.at/entity/200052/</idno>
                      <idno type="URL" subtype="schnitzler-kultur">https://schnitzler-kultur.acdh.oeaw.ac.at/pmb200052.html</idno>
+                  </event>
+                  <event n="Theateraufführung" ref="pmb334408" when="1897-04-13">
+                     <desc n="1370">teilgenommen an</desc>
+                     <label>Aufführung von Anime solitaire [Einsame Menschen], 13.4.1897</label>
+                     <idno type="URL" subtype="pmb">https://pmb.acdh.oeaw.ac.at/entity/334408/</idno>
                   </event>
                   <event n="Private Lesung" ref="pmb142802" when="1897-12-28">
                      <desc n="1370">teilgenommen an</desc>
@@ -355,10 +387,20 @@
                      <idno type="URL" subtype="pmb">https://pmb.acdh.oeaw.ac.at/entity/48949/</idno>
                      <idno type="URL" subtype="schnitzler-kultur">https://schnitzler-kultur.acdh.oeaw.ac.at/pmb48949.html</idno>
                   </event>
+                  <event n="Vergnügungsabend" ref="pmb333793" when="1899-01-07">
+                     <desc n="1370">teilgenommen an</desc>
+                     <label>Besuch des Budapest-Orpheums, 7.1.1899</label>
+                     <idno type="URL" subtype="pmb">https://pmb.acdh.oeaw.ac.at/entity/333793/</idno>
+                  </event>
                   <event n="Lesung" ref="pmb299555" when="1899-02-19">
                      <desc n="1256">mitwirkend an</desc>
                      <label>Lesung von Max Burckhard, Vinzenz Chiavacci, Carl Karlweis und Gustav Schwarzkopf, 19.2.1899</label>
                      <idno type="URL" subtype="pmb">https://pmb.acdh.oeaw.ac.at/entity/299555/</idno>
+                  </event>
+                  <event n="Theateraufführung" ref="pmb333810" when="1899-04-20">
+                     <desc n="1370">teilgenommen an</desc>
+                     <label>Aufführung von Cyrano von Bergerac, 20.4.1899</label>
+                     <idno type="URL" subtype="pmb">https://pmb.acdh.oeaw.ac.at/entity/333810/</idno>
                   </event>
                   <event n="Private Lesung" ref="pmb207030" when="1899-05-07">
                      <desc n="1370">teilgenommen an</desc>
@@ -396,6 +438,12 @@
                      <label>Private Lesung von Der Schleier der Beatrice, 26.11.1899</label>
                      <idno type="URL" subtype="pmb">https://pmb.acdh.oeaw.ac.at/entity/183921/</idno>
                      <idno type="URL" subtype="schnitzler-kultur">https://schnitzler-kultur.acdh.oeaw.ac.at/pmb183921.html</idno>
+                  </event>
+                  <event n="Theaterpremiere" ref="pmb209130" when="1900-01-19">
+                     <desc n="1370">teilgenommen an</desc>
+                     <label>Literarischer Abend (Premiere von Die Frage an das Schicksal, Gläubiger), 19.1.1900</label>
+                     <idno type="URL" subtype="pmb">https://pmb.acdh.oeaw.ac.at/entity/209130/</idno>
+                     <idno type="URL" subtype="schnitzler-kultur">https://schnitzler-kultur.acdh.oeaw.ac.at/pmb209130.html</idno>
                   </event>
                   <event n="Private Lesung" ref="pmb49350" when="1900-10-28">
                      <desc n="1370">teilgenommen an</desc>
@@ -534,11 +582,35 @@
                      <idno type="URL" subtype="pmb">https://pmb.acdh.oeaw.ac.at/entity/237582/</idno>
                      <idno type="URL" subtype="schnitzler-kultur">https://schnitzler-kultur.acdh.oeaw.ac.at/pmb237582.html</idno>
                   </event>
+                  <event n="Theateraufführung" ref="pmb209442" when="1906-08-25">
+                     <desc n="1370">teilgenommen an</desc>
+                     <label>Aufführung von Orpheus in der Unterwelt, 25.8.1906</label>
+                     <idno type="URL" subtype="pmb">https://pmb.acdh.oeaw.ac.at/entity/209442/</idno>
+                     <idno type="URL" subtype="schnitzler-kultur">https://schnitzler-kultur.acdh.oeaw.ac.at/pmb209442.html</idno>
+                  </event>
                   <event n="Theaterpremiere" ref="pmb186202" when="1907-09-27">
                      <desc n="1370">teilgenommen an</desc>
                      <label>Premiere Das Märchen, 27.9.1907</label>
                      <idno type="URL" subtype="pmb">https://pmb.acdh.oeaw.ac.at/entity/186202/</idno>
                      <idno type="URL" subtype="schnitzler-kultur">https://schnitzler-kultur.acdh.oeaw.ac.at/pmb186202.html</idno>
+                  </event>
+                  <event n="Theateraufführung" ref="pmb209550" when="1909-02-15">
+                     <desc n="1370">teilgenommen an</desc>
+                     <label>Aufführung von Die junge Frau, 15.2.1909</label>
+                     <idno type="URL" subtype="pmb">https://pmb.acdh.oeaw.ac.at/entity/209550/</idno>
+                     <idno type="URL" subtype="schnitzler-kultur">https://schnitzler-kultur.acdh.oeaw.ac.at/pmb209550.html</idno>
+                  </event>
+                  <event n="Generalprobe" ref="pmb209552" when="1909-03-04">
+                     <desc n="1370">teilgenommen an</desc>
+                     <label>Generalprobe von Le devin du village, 4.3.1909</label>
+                     <idno type="URL" subtype="pmb">https://pmb.acdh.oeaw.ac.at/entity/209552/</idno>
+                     <idno type="URL" subtype="schnitzler-kultur">https://schnitzler-kultur.acdh.oeaw.ac.at/pmb209552.html</idno>
+                  </event>
+                  <event n="Panoramabesuch" ref="pmb297816" when="1909-03-04">
+                     <desc n="1370">teilgenommen an</desc>
+                     <label>Besuch des Kaiserpanoramas [Wien, Schubertring 4], 4.3.1909</label>
+                     <idno type="URL" subtype="pmb">https://pmb.acdh.oeaw.ac.at/entity/297816/</idno>
+                     <idno type="URL" subtype="schnitzler-kultur">https://schnitzler-kultur.acdh.oeaw.ac.at/pmb297816.html</idno>
                   </event>
                   <event n="Private Lesung" ref="pmb46528" when="1909-11-01">
                      <desc n="1370">teilgenommen an</desc>
@@ -552,6 +624,11 @@
                      <label>Private Lesung von Das weite Land, 29.6.1910</label>
                      <idno type="URL" subtype="pmb">https://pmb.acdh.oeaw.ac.at/entity/48222/</idno>
                      <idno type="URL" subtype="schnitzler-kultur">https://schnitzler-kultur.acdh.oeaw.ac.at/pmb48222.html</idno>
+                  </event>
+                  <event n="Private Lesung" ref="pmb334014" when="1910-11-29">
+                     <desc n="1370">teilgenommen an</desc>
+                     <label>Private Lesung von Der Rosenkavalier, 29.11.1910</label>
+                     <idno type="URL" subtype="pmb">https://pmb.acdh.oeaw.ac.at/entity/334014/</idno>
                   </event>
                   <event n="Wohltätigkeitskonzert" ref="pmb183577" when="1911-03-05">
                      <desc n="1370">teilgenommen an</desc>
@@ -952,6 +1029,12 @@
                      <idno type="URL" subtype="pmb">https://pmb.acdh.oeaw.ac.at/entity/42318/</idno>
                      <idno type="URL" subtype="schnitzler-kultur">https://schnitzler-kultur.acdh.oeaw.ac.at/pmb42318.html</idno>
                   </event>
+                  <event n="Soirée" ref="pmb199091" when="1895-03-22">
+                     <desc n="1370">teilgenommen an</desc>
+                     <label>Soirée des Wiener Volksbildungsvereins, 22.3.1895</label>
+                     <idno type="URL" subtype="pmb">https://pmb.acdh.oeaw.ac.at/entity/199091/</idno>
+                     <idno type="URL" subtype="schnitzler-kultur">https://schnitzler-kultur.acdh.oeaw.ac.at/pmb199091.html</idno>
+                  </event>
                   <event n="Theateraufführung" ref="pmb42232" when="1895-05-21">
                      <desc n="1370">teilgenommen an</desc>
                      <label>Aufführung von Macbeth, 21.5.1895</label>
@@ -1022,7 +1105,7 @@
                   </event>
                   <event n="Theaterpremiere" ref="pmb35155" when="1897-07-22">
                      <desc n="1370">teilgenommen an</desc>
-                     <label>Premiere von Freiwild. Schauspiel in 3 Akten, 22.7.1897</label>
+                     <label>Premiere von Freiwild, 22.7.1897</label>
                      <idno type="URL" subtype="pmb">https://pmb.acdh.oeaw.ac.at/entity/35155/</idno>
                      <idno type="URL" subtype="schnitzler-kultur">https://schnitzler-kultur.acdh.oeaw.ac.at/pmb35155.html</idno>
                   </event>
@@ -1073,6 +1156,11 @@
                      <label>Premiere von Juana, Abschiedssouper, 18.11.1898</label>
                      <idno type="URL" subtype="pmb">https://pmb.acdh.oeaw.ac.at/entity/35406/</idno>
                      <idno type="URL" subtype="schnitzler-kultur">https://schnitzler-kultur.acdh.oeaw.ac.at/pmb35406.html</idno>
+                  </event>
+                  <event n="Vergnügungsabend" ref="pmb333793" when="1899-01-07">
+                     <desc n="1370">teilgenommen an</desc>
+                     <label>Besuch des Budapest-Orpheums, 7.1.1899</label>
+                     <idno type="URL" subtype="pmb">https://pmb.acdh.oeaw.ac.at/entity/333793/</idno>
                   </event>
                   <event n="Private Lesung" ref="pmb57577" when="1899-01-17">
                      <desc n="1370">teilgenommen an</desc>
@@ -1200,9 +1288,15 @@
                   </event>
                   <event n="Generalprobe" ref="pmb47684" when="1909-01-09">
                      <desc n="1370">teilgenommen an</desc>
-                     <label>Generalprobe von Anatols Hochzeitsmorgen, Besuch in der Dämmerung, Eine florentinische Tragöide, Der Pechvogel, 9.1.1909</label>
+                     <label>Generalprobe von Anatols Hochzeitsmorgen, Besuch in der Dämmerung, Eine florentinische Tragödie, Der Pechvogel, 9.1.1909</label>
                      <idno type="URL" subtype="pmb">https://pmb.acdh.oeaw.ac.at/entity/47684/</idno>
                      <idno type="URL" subtype="schnitzler-kultur">https://schnitzler-kultur.acdh.oeaw.ac.at/pmb47684.html</idno>
+                  </event>
+                  <event n="Generalprobe" ref="pmb209552" when="1909-03-04">
+                     <desc n="1370">teilgenommen an</desc>
+                     <label>Generalprobe von Le devin du village, 4.3.1909</label>
+                     <idno type="URL" subtype="pmb">https://pmb.acdh.oeaw.ac.at/entity/209552/</idno>
+                     <idno type="URL" subtype="schnitzler-kultur">https://schnitzler-kultur.acdh.oeaw.ac.at/pmb209552.html</idno>
                   </event>
                   <event n="Theaterpremiere" ref="pmb46480" when="1909-03-24">
                      <desc n="1370">teilgenommen an</desc>
@@ -1235,6 +1329,11 @@
                      <idno type="URL" subtype="pmb">https://pmb.acdh.oeaw.ac.at/entity/35251/</idno>
                      <idno type="URL" subtype="schnitzler-briefe">https://schnitzler-briefe.acdh.oeaw.ac.at/pmb35251.html</idno>
                      <idno type="URL" subtype="schnitzler-kultur">https://schnitzler-kultur.acdh.oeaw.ac.at/pmb35251.html</idno>
+                  </event>
+                  <event n="Private Lesung" ref="pmb334014" when="1910-11-29">
+                     <desc n="1370">teilgenommen an</desc>
+                     <label>Private Lesung von Der Rosenkavalier, 29.11.1910</label>
+                     <idno type="URL" subtype="pmb">https://pmb.acdh.oeaw.ac.at/entity/334014/</idno>
                   </event>
                   <event n="Liederkonzert" ref="pmb183571" when="1911-02-05">
                      <desc n="1370">teilgenommen an</desc>
@@ -1491,9 +1590,9 @@
                </listPerson>
                <listPlace>
                   <place>
-                     <placeName role="veranstaltet in" ref="pmb338">Wollzeile</placeName>
+                     <placeName role="veranstaltet in" ref="pmb190427">Wollzeile 15 (»Berthahof«)</placeName>
                      <location>
-                        <geo>48,20852 16,37592</geo>
+                        <geo>48,208656 16,375924</geo>
                      </location>
                   </place>
                </listPlace>
