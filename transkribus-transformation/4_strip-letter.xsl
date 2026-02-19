@@ -24,7 +24,7 @@
     <xsl:template match="tei:letter | tei:letter-begin" priority="5">
         <xsl:apply-templates select="node()"/>
     </xsl:template>
-    <xsl:template match="tei:page[@type = 'letter-begin']">
+    <xsl:template match="tei:page">
         <xsl:apply-templates/>
     </xsl:template>
 </xsl:stylesheet>

@@ -28,9 +28,9 @@
     <xsl:mode on-no-match="shallow-copy"/>
     
 
-    
-    <xsl:template match="tei:paragraph">
-        <xsl:apply-templates/>
+
+    <xsl:template match="tei:paragraph-start">
+        <!-- paragraph-start Milestones werden entfernt, da sie nur für Gruppierung verwendet werden -->
     </xsl:template>
     
     <!-- Sonderbehandlung für opener, date, dateline, postscript -->
@@ -54,28 +54,21 @@
     <xsl:template match="tei:div[@type='writingSession']" priority="1">
         <xsl:copy>
             <xsl:apply-templates select="@*"/>
-            <xsl:for-each-group select="node()" group-starting-with="self::tei:paragraph | self::tei:closer">
-                
+            <xsl:for-each-group select="node()"
+                group-starting-with="tei:paragraph-start | tei:closer | tei:dateline | tei:postscript | tei:opener">
+
                 <xsl:variable name="first" select="current-group()[1]"/>
-                
-                <xsl:message>
-                    Verarbeite Gruppe. Erster Knoten: <xsl:value-of select="name($first)"/>.
-                </xsl:message>
-                
+
                 <xsl:choose>
-                    <xsl:when test="$first[self::tei:paragraph]">
-                        <xsl:message>  -> Gruppe startet mit PARAGRAPH.</xsl:message>
+                    <xsl:when test="$first[self::tei:paragraph-start]">
                         <p xmlns="http://www.tei-c.org/ns/1.0">
-                            <xsl:apply-templates select="current-group()"/>
+                            <xsl:apply-templates select="current-group()[position() > 1]"/>
                         </p>
                     </xsl:when>
-                    <xsl:when test="$first[self::tei:closer]">
-                        <xsl:message>  -> Gruppe startet mit CLOSER.</xsl:message>
-                        <xsl:apply-templates select="$first"/>
-                        <xsl:apply-templates select="current-group()[position() > 1]"/>
+                    <xsl:when test="$first[self::tei:closer or self::tei:dateline or self::tei:postscript or self::tei:opener]">
+                        <xsl:apply-templates select="current-group()"/>
                     </xsl:when>
                     <xsl:otherwise>
-                        <xsl:message>  -> Anonyme Gruppe (kein spezifischer Startschlüssel).</xsl:message>
                         <xsl:apply-templates select="current-group()"/>
                     </xsl:otherwise>
                 </xsl:choose>
