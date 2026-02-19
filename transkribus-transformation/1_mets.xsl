@@ -639,6 +639,9 @@
     <xsl:text>
       </xsl:text>
     <!--<lb facs="#facs_{$numCurr}_{@id}" n="N{format-number($pos, '000')}"/>-->
+    <xsl:if test="$custom[starts-with(., 'paragraph')]">
+      <paragraph-start/>
+    </xsl:if>
     <xsl:apply-templates select="$prepared/text()[not(preceding-sibling::local:m)]"/>
     <xsl:apply-templates select="
         $prepared/local:m[@pos = 's']
@@ -918,19 +921,11 @@
         </hi>
       </xsl:when>
 
-      <xsl:when test="@type = 'paragraph'">
-        <!--<xsl:text>&lt;p&gt;</xsl:text>-->
-        <paragraph-start/>
-      </xsl:when>
-
-      <xsl:when test="@type = 'paragraph-begin'">
-        <!--<xsl:text>&lt;p&gt;</xsl:text>-->
-        <paragraph-start/>
-      </xsl:when>
-
-      <xsl:when test="@type = 'paragraph-start'">
-        <!--<xsl:text>&lt;p&gt;</xsl:text>-->
-        <paragraph-start/>
+      <xsl:when test="@type = ('paragraph', 'paragraph-begin', 'paragraph-start')">
+        <!-- paragraph-start wird am Zeilenanfang gesetzt; hier nur den Inhalt durchreichen -->
+        <xsl:call-template name="elem">
+          <xsl:with-param name="elem" select="$elem"/>
+        </xsl:call-template>
       </xsl:when>
 
       <!--<xsl:when test="@type = 'paragraph-end'">
