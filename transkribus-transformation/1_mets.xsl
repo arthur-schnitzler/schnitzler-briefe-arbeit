@@ -306,6 +306,9 @@
       </xsl:choose>
       <xsl:variable name="facsname" as="xs:string">
         <xsl:choose>
+          <xsl:when test="ends-with($type, '.jpeg')">
+            <xsl:value-of select="substring-before($type, '.jpeg')"/>
+          </xsl:when>
           <xsl:when test="ends-with($type, '.jpg')">
             <xsl:value-of select="substring-before($type, '.jpg')"/>
           </xsl:when>
