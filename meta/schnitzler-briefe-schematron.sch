@@ -415,6 +415,17 @@
             />
         </sch:rule>
     </sch:pattern>
+    <!-- note: kein Leerzeichen am Ende eines Textknotens vor tei:note -->
+    <sch:pattern id="note-whitespace-before">
+        <sch:rule context="tei:note[ancestor::tei:body]">
+            <sch:assert
+                test="not(preceding-sibling::node()[1][self::text() and matches(., '\s$') and not(matches(., '^\s+$'))])">
+                Vor &lt;tei:note/&gt; darf kein Textknoten stehen, der mit Leerzeichen endet.
+                Erlaubt: text&lt;tei:note/&gt;, &lt;element/&gt; &lt;tei:note/&gt;, &lt;p&gt; &lt;tei:note/&gt; &lt;/p&gt;.
+                Nicht erlaubt: text &lt;tei:note/&gt;
+            </sch:assert>
+        </sch:rule>
+    </sch:pattern>
     <sch:pattern>
         <sch:rule context="tei:pb">
             <sch:assert test="
