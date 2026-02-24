@@ -11,9 +11,19 @@
             <!-- Copy existing attributes first -->
             <xsl:apply-templates select="@*"/>
             <!-- Add or update @hands attribute if there is more than one handNote -->
-            <xsl:variable name="handNoteCount" select="count(tei:handNote)"/>
-            <xsl:variable name="distinctCorrespCount"
-                select="count(distinct-values(descendant::tei:handNote/@corresp))"/>
+            <xsl:variable name="handNoteCount" select="count(descendant::tei:handNote)"/>
+            <xsl:variable name="distinctCorrespCount">
+                <xsl:choose>
+                    <xsl:when
+                        test="descendant::tei:handNote[1] and not(descendant::tei:handNote[2])">
+                        <xsl:value-of select="1"/>
+                    </xsl:when>
+                    <xsl:otherwise>
+                        <xsl:value-of
+                            select="count(distinct-values(descendant::tei:handNote/@corresp))"/>
+                    </xsl:otherwise>
+                </xsl:choose>
+            </xsl:variable>
             <xsl:attribute name="hands">
                 <xsl:value-of select="$distinctCorrespCount"/>
             </xsl:attribute>
