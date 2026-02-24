@@ -216,7 +216,7 @@ class PMBProcessor:
             """Check if element is inside a note[@type='commentary']"""
             current = elem
             while current is not None:
-                if current.tag == f"{{{self.tei_ns}}}note" and current.get("type") == "commentary":
+                if current.tag == f"{{{self.tei_ns}}}note" and current.get("type") in ("commentary", "textConst"):
                     return True
                 current = current.getparent() if hasattr(current, 'getparent') else None
             return False

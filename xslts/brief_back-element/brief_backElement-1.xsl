@@ -18,7 +18,7 @@
                                 <xsl:element name="listPerson"
                                     namespace="http://www.tei-c.org/ns/1.0">
                                     <xsl:for-each
-                                        select="distinct-values($tei-root/descendant::*[(@type = 'person' or name() = 'persName' or name() = 'author') and not(@subtype = 'implied') and not(ancestor::tei:back) and not(ancestor::tei:note[@type = 'commentary'])]/@ref/tokenize(., '#'))">
+                                        select="distinct-values($tei-root/descendant::*[(@type = 'person' or name() = 'persName' or name() = 'author') and not(@subtype = 'implied') and not(ancestor::tei:back) and not(ancestor::tei:note[@type = ('commentary', 'textConst')])]/@ref/tokenize(., '#'))">
                                         <xsl:if test="normalize-space(.) != ''">
                                             <xsl:element name="person"
                                                 namespace="http://www.tei-c.org/ns/1.0">
@@ -34,7 +34,7 @@
                                 <xsl:element name="listPerson"
                                     namespace="http://www.tei-c.org/ns/1.0">
                                     <xsl:for-each
-                                        select="distinct-values($tei-root/descendant::tei:rs[@type = 'person' and @subtype = 'implied' and not(ancestor::tei:back) and not(ancestor::tei:note[@type = 'commentary'])]/@ref/tokenize(., '#'))">
+                                        select="distinct-values($tei-root/descendant::tei:rs[@type = 'person' and @subtype = 'implied' and not(ancestor::tei:back) and not(ancestor::tei:note[@type = ('commentary', 'textConst')])]/@ref/tokenize(., '#'))">
                                         <xsl:if test="normalize-space(.) != ''">
                                             <xsl:element name="person"
                                                 namespace="http://www.tei-c.org/ns/1.0">
@@ -48,7 +48,7 @@
                             </xsl:variable>
                             <xsl:copy-of select="$person-im-text/*"/>
                             <xsl:for-each
-                                select="distinct-values($tei-root/descendant::tei:note[@type = 'commentary']/descendant::tei:rs[@type = 'person']/@ref/tokenize(., '#'))">
+                                select="distinct-values($tei-root/descendant::tei:note[@type = ('commentary', 'textConst')]/descendant::tei:rs[@type = 'person']/@ref/tokenize(., '#'))">
                                 <xsl:variable name="current" select="."/>
                                 <xsl:if
                                     test="normalize-space(.) != '' and not($person-im-text//tei:person/@xml:id = $current)">
@@ -102,7 +102,7 @@
                                 <xsl:element name="listPerson"
                                     namespace="http://www.tei-c.org/ns/1.0">
                                     <xsl:for-each
-                                        select="distinct-values($tei-root/descendant::tei:*[(@type = 'person' or name() = 'persName' or name() = 'author') and not(ancestor::tei:note[@type = 'commentary'])]/@ref/tokenize(., ' '))">
+                                        select="distinct-values($tei-root/descendant::tei:*[(@type = 'person' or name() = 'persName' or name() = 'author') and not(ancestor::tei:note[@type = ('commentary', 'textConst')])]/@ref/tokenize(., ' '))">
                                         <xsl:if test="normalize-space(.) != ''">
                                             <xsl:element name="person"
                                                 namespace="http://www.tei-c.org/ns/1.0">
@@ -118,7 +118,7 @@
                                 <xsl:element name="listPerson"
                                     namespace="http://www.tei-c.org/ns/1.0">
                                     <xsl:for-each
-                                        select="distinct-values($tei-root/descendant::tei:rs[@type = 'person' and @subtype = 'implied' and not(ancestor::tei:back) and not(ancestor::tei:note[@type = 'commentary'])]/@ref/tokenize(., ' '))">
+                                        select="distinct-values($tei-root/descendant::tei:rs[@type = 'person' and @subtype = 'implied' and not(ancestor::tei:back) and not(ancestor::tei:note[@type = ('commentary', 'textConst')])]/@ref/tokenize(., ' '))">
                                         <xsl:if test="normalize-space(.) != ''">
                                             <xsl:element name="person"
                                                 namespace="http://www.tei-c.org/ns/1.0">
@@ -132,7 +132,7 @@
                             </xsl:variable>
                             <xsl:copy-of select="$person-im-text/*"/>
                             <xsl:for-each
-                                select="distinct-values($tei-root/descendant::tei:note[@type = 'commentary']/descendant::tei:rs[@type = 'person']/@ref/tokenize(., '#'))">
+                                select="distinct-values($tei-root/descendant::tei:note[@type = ('commentary', 'textConst')]/descendant::tei:rs[@type = 'person']/@ref/tokenize(., '#'))">
                                 <xsl:variable name="current" select="."/>
                                 <xsl:if
                                     test="normalize-space(.) != '' and not($person-im-text//tei:person/@xml:id = $current)">
@@ -186,10 +186,10 @@
                 <xsl:element name="listBibl" namespace="http://www.tei-c.org/ns/1.0">
                     <xsl:variable name="bibl-im-text">
                         <xsl:if
-                            test="$tei-root/descendant::tei:rs[@type = 'work' and not(@subtype = 'implied') and not(ancestor::tei:back) and not(ancestor::tei:note[@type = 'commentary'])]/@ref[contains(., '#')][1]">
+                            test="$tei-root/descendant::tei:rs[@type = 'work' and not(@subtype = 'implied') and not(ancestor::tei:back) and not(ancestor::tei:note[@type = ('commentary', 'textConst')])]/@ref[contains(., '#')][1]">
                             <!-- rs mit Raute -->
                             <xsl:for-each
-                                select="distinct-values($tei-root/descendant::tei:rs[@type = 'work' and not(@subtype = 'implied') and not(ancestor::tei:back) and not(ancestor::tei:note[@type = 'commentary'])]/@ref/tokenize(., '#'))">
+                                select="distinct-values($tei-root/descendant::tei:rs[@type = 'work' and not(@subtype = 'implied') and not(ancestor::tei:back) and not(ancestor::tei:note[@type = ('commentary', 'textConst')])]/@ref/tokenize(., '#'))">
                                 <xsl:if test="normalize-space(.) != ''">
                                     <xsl:element name="bibl" namespace="http://www.tei-c.org/ns/1.0">
                                         <xsl:attribute name="xml:id">
@@ -202,7 +202,7 @@
                     </xsl:variable>
                     <xsl:variable name="bibl-implied">
                         <xsl:for-each
-                            select="distinct-values($tei-root/descendant::tei:rs[@type = 'work' and @subtype = 'implied' and not(ancestor::tei:back) and not(ancestor::tei:note[@type = 'commentary'])]/@ref/tokenize(., '#'))">
+                            select="distinct-values($tei-root/descendant::tei:rs[@type = 'work' and @subtype = 'implied' and not(ancestor::tei:back) and not(ancestor::tei:note[@type = ('commentary', 'textConst')])]/@ref/tokenize(., '#'))">
                             <xsl:if test="normalize-space(.) != ''">
                                 <xsl:element name="bibl" namespace="http://www.tei-c.org/ns/1.0">
                                     <xsl:attribute name="xml:id">
@@ -214,10 +214,10 @@
                     </xsl:variable>
                     <xsl:copy-of select="$bibl-im-text/*"/>
                     <xsl:if
-                        test="$tei-root/tei:text[1]/tei:body[1]/descendant::tei:note[@type = 'commentary']/descendant::tei:rs[@type = 'work']/@ref[contains(., '#')]">
+                        test="$tei-root/tei:text[1]/tei:body[1]/descendant::tei:note[@type = ('commentary', 'textConst')]/descendant::tei:rs[@type = 'work']/@ref[contains(., '#')]">
                         <!-- Works that appear only in commentary -->
                         <xsl:for-each
-                            select="distinct-values($tei-root/tei:text[1]/tei:body[1]/descendant::tei:note[@type = 'commentary']/descendant::tei:rs[@type = 'work']/@ref/tokenize(., '#'))">
+                            select="distinct-values($tei-root/tei:text[1]/tei:body[1]/descendant::tei:note[@type = ('commentary', 'textConst')]/descendant::tei:rs[@type = 'work']/@ref/tokenize(., '#'))">
                             <xsl:variable name="current" select="replace(., '#', '')"/>
                             <xsl:if
                                 test="normalize-space($current) != '' and not($bibl-im-text//tei:bibl/@xml:id = $current)">
@@ -271,7 +271,7 @@
                         <xsl:when test="$tei-root/descendant::tei:rs/@ref[contains(., '#')][1]">
                             <!-- rs mit Raute -->
                             <xsl:variable name="place-in-text"><xsl:for-each
-                                select="distinct-values($tei-root/descendant::tei:*[(@type = 'place' or name() = 'placeName') and not(@subtype = 'implied') and not(ancestor::tei:back) and not(ancestor::tei:note[@type = 'commentary'])]/@ref/tokenize(., '#'))">
+                                select="distinct-values($tei-root/descendant::tei:*[(@type = 'place' or name() = 'placeName') and not(@subtype = 'implied') and not(ancestor::tei:back) and not(ancestor::tei:note[@type = ('commentary', 'textConst')])]/@ref/tokenize(., '#'))">
                                 <xsl:if test="normalize-space(.) != ''">
                                     <xsl:element name="place"
                                         namespace="http://www.tei-c.org/ns/1.0">
@@ -283,7 +283,7 @@
                             </xsl:for-each></xsl:variable>
                             <xsl:variable name="place-implied">
                                 <xsl:for-each
-                                    select="distinct-values($tei-root/descendant::tei:rs[@type = 'place' and @subtype = 'implied' and not(ancestor::tei:back) and not(ancestor::tei:note[@type = 'commentary'])]/@ref/tokenize(., '#'))">
+                                    select="distinct-values($tei-root/descendant::tei:rs[@type = 'place' and @subtype = 'implied' and not(ancestor::tei:back) and not(ancestor::tei:note[@type = ('commentary', 'textConst')])]/@ref/tokenize(., '#'))">
                                     <xsl:if test="normalize-space(.) != ''">
                                         <xsl:element name="place"
                                             namespace="http://www.tei-c.org/ns/1.0">
@@ -296,7 +296,7 @@
                             </xsl:variable>
                             <xsl:copy-of select="$place-in-text/*"/>
                             <xsl:for-each
-                                select="distinct-values($tei-root/tei:text[1]/tei:body[1]/descendant::tei:note[@type='commentary']/descendant::tei:rs[@type = 'place']/@ref/tokenize(., '#'))">
+                                select="distinct-values($tei-root/tei:text[1]/tei:body[1]/descendant::tei:note[@type=('commentary', 'textConst')]/descendant::tei:rs[@type = 'place']/@ref/tokenize(., '#'))">
                                 <xsl:variable name="current" select="."/>
                                 <xsl:if test="normalize-space(.) != '' and not($place-in-text/descendant::tei:place/@ref= $current)">
                                     <xsl:element name="place"
@@ -328,7 +328,7 @@
                         <xsl:otherwise>
                             <xsl:variable name="place-in-text">
                                 <xsl:for-each
-                                select="distinct-values($tei-root/descendant::tei:*[(@type = 'place' or name() = 'placeName') and not(ancestor::tei:back) and not(ancestor::tei:note[@type = 'commentary'])]/@ref/tokenize(., ' '))">
+                                select="distinct-values($tei-root/descendant::tei:*[(@type = 'place' or name() = 'placeName') and not(ancestor::tei:back) and not(ancestor::tei:note[@type = ('commentary', 'textConst')])]/@ref/tokenize(., ' '))">
                                 <xsl:if test="normalize-space(.) != ''">
                                     <xsl:element name="place"
                                         namespace="http://www.tei-c.org/ns/1.0">
@@ -340,7 +340,7 @@
                             </xsl:for-each></xsl:variable>
                             <xsl:variable name="place-implied">
                                 <xsl:for-each
-                                    select="distinct-values($tei-root/descendant::tei:rs[@type = 'place' and @subtype = 'implied' and not(ancestor::tei:back) and not(ancestor::tei:note[@type = 'commentary'])]/@ref/tokenize(., ' '))">
+                                    select="distinct-values($tei-root/descendant::tei:rs[@type = 'place' and @subtype = 'implied' and not(ancestor::tei:back) and not(ancestor::tei:note[@type = ('commentary', 'textConst')])]/@ref/tokenize(., ' '))">
                                     <xsl:if test="normalize-space(.) != ''">
                                         <xsl:element name="place"
                                             namespace="http://www.tei-c.org/ns/1.0">
@@ -353,7 +353,7 @@
                             </xsl:variable>
                             <xsl:copy-of select="$place-in-text/*"/>
                             <xsl:for-each
-                                select="distinct-values($tei-root/tei:text[1]/tei:body[1]/descendant::tei:note[@type='commentary']/descendant::tei:rs[@type = 'place']/@ref/tokenize(., ' '))">
+                                select="distinct-values($tei-root/tei:text[1]/tei:body[1]/descendant::tei:note[@type=('commentary', 'textConst')]/descendant::tei:rs[@type = 'place']/@ref/tokenize(., ' '))">
                                 <xsl:variable name="current" select="."/>
                                 <xsl:if test="normalize-space(.) != '' and not($place-in-text/descendant::tei:place/@ref= $current)">
                                     <xsl:element name="place"
@@ -389,7 +389,7 @@
                         <xsl:when test="$tei-root/descendant::tei:rs/@ref[contains(., '#')][1]">
                             <!-- rs mit Raute -->
                             <xsl:variable name="org-in-text"><xsl:for-each
-                                select="distinct-values($tei-root/descendant::tei:*[(@type = 'org' or name() = 'orgName') and not(@subtype = 'implied') and not(ancestor::tei:back) and not(ancestor::tei:note[@type = 'commentary'])]/@ref/tokenize(., '#'))">
+                                select="distinct-values($tei-root/descendant::tei:*[(@type = 'org' or name() = 'orgName') and not(@subtype = 'implied') and not(ancestor::tei:back) and not(ancestor::tei:note[@type = ('commentary', 'textConst')])]/@ref/tokenize(., '#'))">
                                 <xsl:if test="normalize-space(.) != ''">
                                     <xsl:element name="org" namespace="http://www.tei-c.org/ns/1.0">
                                         <xsl:attribute name="xml:id">
@@ -400,7 +400,7 @@
                             </xsl:for-each></xsl:variable>
                             <xsl:variable name="org-implied">
                                 <xsl:for-each
-                                    select="distinct-values($tei-root/descendant::tei:rs[@type = 'org' and @subtype = 'implied' and not(ancestor::tei:back) and not(ancestor::tei:note[@type = 'commentary'])]/@ref/tokenize(., '#'))">
+                                    select="distinct-values($tei-root/descendant::tei:rs[@type = 'org' and @subtype = 'implied' and not(ancestor::tei:back) and not(ancestor::tei:note[@type = ('commentary', 'textConst')])]/@ref/tokenize(., '#'))">
                                     <xsl:if test="normalize-space(.) != ''">
                                         <xsl:element name="org" namespace="http://www.tei-c.org/ns/1.0">
                                             <xsl:attribute name="xml:id">
@@ -412,7 +412,7 @@
                             </xsl:variable>
                             <xsl:copy-of select="$org-in-text/*"/>
                             <xsl:for-each
-                                select="distinct-values($tei-root/tei:text[1]/tei:body[1]/descendant::tei:note[@type='commentary']/descendant::tei:rs[@type = 'org']/@ref/tokenize(., '#'))">
+                                select="distinct-values($tei-root/tei:text[1]/tei:body[1]/descendant::tei:note[@type=('commentary', 'textConst')]/descendant::tei:rs[@type = 'org']/@ref/tokenize(., '#'))">
                                 <xsl:variable name="current" select="."/>
                                 <xsl:if test="normalize-space(.) != '' and not($org-in-text/descendant::tei:org/@ref= $current)">
                                     <xsl:element name="org"
@@ -444,7 +444,7 @@
                         <xsl:otherwise>
                             <xsl:variable name="org-in-text">
                                 <xsl:for-each
-                                select="distinct-values($tei-root/descendant::tei:*[(@type = 'org' or name() = 'orgName') and not(ancestor::tei:back) and not(ancestor::tei:note[@type = 'commentary'])]/@ref/tokenize(., ' '))">
+                                select="distinct-values($tei-root/descendant::tei:*[(@type = 'org' or name() = 'orgName') and not(ancestor::tei:back) and not(ancestor::tei:note[@type = ('commentary', 'textConst')])]/@ref/tokenize(., ' '))">
                                 <xsl:if test="normalize-space(.) != ''">
                                     <xsl:element name="org" namespace="http://www.tei-c.org/ns/1.0">
                                         <xsl:attribute name="xml:id">
@@ -455,7 +455,7 @@
                             </xsl:for-each></xsl:variable>
                             <xsl:variable name="org-implied">
                                 <xsl:for-each
-                                    select="distinct-values($tei-root/descendant::tei:rs[@type = 'org' and @subtype = 'implied' and not(ancestor::tei:back) and not(ancestor::tei:note[@type = 'commentary'])]/@ref/tokenize(., ' '))">
+                                    select="distinct-values($tei-root/descendant::tei:rs[@type = 'org' and @subtype = 'implied' and not(ancestor::tei:back) and not(ancestor::tei:note[@type = ('commentary', 'textConst')])]/@ref/tokenize(., ' '))">
                                     <xsl:if test="normalize-space(.) != ''">
                                         <xsl:element name="org" namespace="http://www.tei-c.org/ns/1.0">
                                             <xsl:attribute name="xml:id">
@@ -467,7 +467,7 @@
                             </xsl:variable>
                             <xsl:copy-of select="$org-in-text/*"/>
                             <xsl:for-each
-                                select="distinct-values($tei-root/tei:text[1]/tei:body[1]/descendant::tei:note[@type='commentary']/descendant::tei:rs[@type = 'org']/@ref/tokenize(., ' '))">
+                                select="distinct-values($tei-root/tei:text[1]/tei:body[1]/descendant::tei:note[@type=('commentary', 'textConst')]/descendant::tei:rs[@type = 'org']/@ref/tokenize(., ' '))">
                                 <xsl:variable name="current" select="."/>
                                 <xsl:if test="normalize-space(.) != '' and not($org-in-text/descendant::tei:org/@ref= $current)">
                                     <xsl:element name="org"
@@ -503,7 +503,7 @@
                         <xsl:when test="$tei-root/descendant::tei:rs/@ref[contains(., '#')][1]">
                             <!-- rs mit Raute -->
                             <xsl:variable name="event-in-text"><xsl:for-each
-                                select="distinct-values($tei-root/descendant::tei:*[(@type = 'event' or name() = 'eventName') and not(@subtype = 'implied') and not(ancestor::tei:back) and not(ancestor::tei:note[@type = 'commentary'])]/@ref/tokenize(., '#'))">
+                                select="distinct-values($tei-root/descendant::tei:*[(@type = 'event' or name() = 'eventName') and not(@subtype = 'implied') and not(ancestor::tei:back) and not(ancestor::tei:note[@type = ('commentary', 'textConst')])]/@ref/tokenize(., '#'))">
                                 <xsl:if test="normalize-space(.) != ''">
                                     <xsl:element name="event"
                                         namespace="http://www.tei-c.org/ns/1.0">
@@ -515,7 +515,7 @@
                             </xsl:for-each></xsl:variable>
                             <xsl:variable name="event-implied">
                                 <xsl:for-each
-                                    select="distinct-values($tei-root/descendant::tei:rs[@type = 'event' and @subtype = 'implied' and not(ancestor::tei:back) and not(ancestor::tei:note[@type = 'commentary'])]/@ref/tokenize(., '#'))">
+                                    select="distinct-values($tei-root/descendant::tei:rs[@type = 'event' and @subtype = 'implied' and not(ancestor::tei:back) and not(ancestor::tei:note[@type = ('commentary', 'textConst')])]/@ref/tokenize(., '#'))">
                                     <xsl:if test="normalize-space(.) != ''">
                                         <xsl:element name="event"
                                             namespace="http://www.tei-c.org/ns/1.0">
@@ -528,7 +528,7 @@
                             </xsl:variable>
                             <xsl:copy-of select="$event-in-text/*"/>
                             <xsl:for-each
-                                select="distinct-values($tei-root/tei:text[1]/tei:body[1]/descendant::tei:note[@type='commentary']/descendant::tei:rs[@type = 'event']/@ref/tokenize(., '#'))">
+                                select="distinct-values($tei-root/tei:text[1]/tei:body[1]/descendant::tei:note[@type=('commentary', 'textConst')]/descendant::tei:rs[@type = 'event']/@ref/tokenize(., '#'))">
                                 <xsl:variable name="current" select="."/>
                                 <xsl:if test="normalize-space(.) != '' and not($event-in-text/descendant::tei:event/@ref= $current)">
                                     <xsl:element name="event"
@@ -560,7 +560,7 @@
                         <xsl:otherwise>
                             <xsl:variable name="event-in-text">
                                 <xsl:for-each
-                                select="distinct-values($tei-root/descendant::tei:*[(@type = 'event' or name() = 'eventName') and not(ancestor::tei:back) and not(ancestor::tei:note[@type = 'commentary'])]/@ref/tokenize(., ' '))">
+                                select="distinct-values($tei-root/descendant::tei:*[(@type = 'event' or name() = 'eventName') and not(ancestor::tei:back) and not(ancestor::tei:note[@type = ('commentary', 'textConst')])]/@ref/tokenize(., ' '))">
                                 <xsl:if test="normalize-space(.) != ''">
                                     <xsl:element name="event"
                                         namespace="http://www.tei-c.org/ns/1.0">
@@ -572,7 +572,7 @@
                             </xsl:for-each></xsl:variable>
                             <xsl:variable name="event-implied">
                                 <xsl:for-each
-                                    select="distinct-values($tei-root/descendant::tei:rs[@type = 'event' and @subtype = 'implied' and not(ancestor::tei:back) and not(ancestor::tei:note[@type = 'commentary'])]/@ref/tokenize(., ' '))">
+                                    select="distinct-values($tei-root/descendant::tei:rs[@type = 'event' and @subtype = 'implied' and not(ancestor::tei:back) and not(ancestor::tei:note[@type = ('commentary', 'textConst')])]/@ref/tokenize(., ' '))">
                                     <xsl:if test="normalize-space(.) != ''">
                                         <xsl:element name="event"
                                             namespace="http://www.tei-c.org/ns/1.0">
@@ -585,7 +585,7 @@
                             </xsl:variable>
                             <xsl:copy-of select="$event-in-text/*"/>
                             <xsl:for-each
-                                select="distinct-values($tei-root/tei:text[1]/tei:body[1]/descendant::tei:note[@type='commentary']/descendant::tei:rs[@type = 'event']/@ref/tokenize(., ' '))">
+                                select="distinct-values($tei-root/tei:text[1]/tei:body[1]/descendant::tei:note[@type=('commentary', 'textConst')]/descendant::tei:rs[@type = 'event']/@ref/tokenize(., ' '))">
                                 <xsl:variable name="current" select="."/>
                                 <xsl:if test="normalize-space(.) != '' and not($event-in-text/descendant::tei:event/@ref= $current)">
                                     <xsl:element name="event"
