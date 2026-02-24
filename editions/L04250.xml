@@ -1,14 +1,14 @@
-<?xml version="1.0" encoding="UTF-8"?>
+<?xml version='1.0' encoding='UTF-8'?>
 <?xml-model href="../meta/schnitzler-briefe-schematron.sch" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
-<TEI xmlns="http://www.tei-c.org/ns/1.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-   xsi:schemaLocation="http://www.tei-c.org/ns/1.0 ../meta/schnitzler-briefe-schema.xsd"
-   xml:base="https://id.acdh.oeaw.ac.at/schnitzler/schnitzler-briefe/editions" xml:id="L04314">
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.tei-c.org/ns/1.0 ../meta/schnitzler-briefe-schema.xsd" xml:base="https://id.acdh.oeaw.ac.at/schnitzler/schnitzler-briefe/editions" xml:id="L04250">
    <teiHeader>
       <fileDesc>
          <titleStmt>
             <title level="s">Arthur Schnitzler: Briefwechsel mit Autorinnen und Autoren</title>
-            <title level="a">Gustav Schwarzkopf an Arthur Schnitzler, XXXX</title>
-            <author ref="#pmb12740">Schwarzkopf, Gustav</author>
+            <title level="a">Felix und Ottilie Salten an Arthur Schnitzler,
+               12. 8. 1907</title>
+            <author ref="#pmb2167">Salten, Felix</author>
+            <author ref="#pmb23918">Salten, Ottilie</author>
             <editor>
                <persName>Jahnke, Selma</persName>
                <persName>Müller, Martin Anton</persName>
@@ -71,7 +71,7 @@
          <sourceDesc>
             <listWit>
                <witness n="1">
-                  <objectType corresp="xkarte" ana="xbildpostkarte"/>
+                  <objectType corresp="karte" ana="bildpostkarte"/>
                   <msDesc>
                      <msIdentifier>
                         <country>GB</country>
@@ -83,14 +83,24 @@
                         <objectDesc>
                            <supportDesc>
                               <extent>
-                                 <measure unit="seite" quantity=""/>
-                                 <measure unit="blatt" quantity=""/>
+                                 <measure unit="karte" quantity="1"/>
                               </extent>
                            </supportDesc>
                         </objectDesc>
                         <handDesc>
-                           <handNote medium="" style="deutsche-kurrent"/>
+                           <handNote medium="schwarze-tinte" style="lateinische-kurrent"/>
                         </handDesc>
+                        <additions>
+                           <incident type="postal">
+                              <desc>
+                                 <stamp n="1">
+                                    <placeName ref="#pmb772">Marienbad</placeName>
+                                    <date when="1907-08-12">12. VIII. 07</date>
+                                    <time>XI</time>
+                                 </stamp>
+                              </desc>
+                           </incident>
+                        </additions>
                      </physDesc>
                   </msDesc>
                </witness>
@@ -103,15 +113,21 @@
          </langUsage>
          <correspDesc>
             <correspAction type="sent">
-               <persName ref="#pmb12740">Schwarzkopf, Gustav</persName>
-               <date when="" n="01">XXXX</date>
-               <placeName ref="#50" evidence="conjecture">Wien</placeName>
+               <persName ref="#pmb2167">Salten, Felix</persName>
+               <persName ref="#pmb23918">Salten, Ottilie</persName>
+               <date when="1907-08-12" n="01">12. 8. 1907</date>
+               <placeName ref="#pmb772">Marienbad</placeName>
             </correspAction>
             <correspAction type="received">
                <persName ref="#pmb2121">Schnitzler, Arthur</persName>
-               <placeName ref="#50" evidence="conjecture">Wien</placeName>
+               <placeName ref="#pmb428">Welsberg</placeName>
             </correspAction>
-         </correspDesc>
+         <correspContext><ref type="belongsToCorrespondence" target="correspondence_2167">Salten, Felix</ref>
+               <ref subtype="previous_letter" type="withinCollection" target="L03255">Goldmann an Schnitzler, 7. 8. 1907</ref>
+               <ref subtype="next_letter" type="withinCollection" target="L01699">Schnitzler, Schnitzler an Beer-Hofmann, 13. 8. 1907</ref>
+               <ref subtype="previous_letter" type="withinCorrespondence" source="correspondence_2167" target="L03009">Schnitzler an Salten, 5. 8. 1907</ref>
+               <ref subtype="next_letter" type="withinCorrespondence" source="correspondence_2167" target="L03510">Salten an Schnitzler, 15. 8. 1907</ref>
+            </correspContext></correspDesc>
       </profileDesc>
       <revisionDesc status="proposed">
          <change who="MAM" when="2026-02-20">Export aus Transkribus</change>
@@ -121,33 +137,33 @@
       <body>
          <div type="address">
             <address>
-               <addrLine>
-                  <pb facs="MS-SCHNITZLER-B-00096-A-000-00155"/>Herrn <hi rend="latintype">D<hi
-                        rend="superscript">r</hi> Arthur Schnitzler</hi>
-               </addrLine>
-               <addrLine>
-                  <rs type="place" ref="">XVIII Spöttelgaſſe 7 <hi rend="latintype">Wien</hi>
-                  </rs>
-               </addrLine>
+               <addrLine><pb facs="MS-SCHNITZLER-B-00096-A-000-00024"/>Herrn D<hi rend="superscript">r</hi> Arthur Schnitzler</addrLine>
+               <addrLine><rs type="place" ref="#pmb723">Wildbad Waldbrunn</rs></addrLine>
+               <addrLine>bei <rs type="place" ref="#pmb428">Welsberg (Pustertal)
+                  Tirol</rs></addrLine>
             </address>
          </div>
+         <div type="image">
+            <seg>
+               <seg rend="left">
+                  <hi rend="pre-print"><pb facs="MS-SCHNITZLER-B-00096-A-000-00023"/><rs type="place" ref="#pmb147712">Forstwarte</rs>.</hi>
+               </seg>
+               <seg rend="right">
+                  <hi rend="pre-print">
+                     <rs type="place" ref="#pmb772">Marienbad</rs>.</hi>
+               </seg>
+            </seg>
+         </div>
          <div type="writingSession" n="1">
-            <opener>
-               <dateline rend="right"><pb facs="MS-SCHNITZLER-B-00096-A-000-00156"/>
-                  <date>27.&#160;II.&#160;04</date>
-               </dateline>
-            </opener>
-            <p>
-               <salute>Lieber Arthur!</salute> Beſten Dank, aber es geht leider nicht. <rs
-                  type="person" ref="#pmb24648">Max</rs> hat ſchon früher eine Verabredung mit einem Collegen
-               getroffen und ich muß ein <rs type="place" ref="">Böſendorferſaal</rs> einen <rs
-                  type="event" ref="">Liederabend</rs> mitmachen, zu dem man mir – ich weiß nicht
-               warum – eine Karte in’s Haus geſchickt hat. Da ich nun einmal dankend zugeſagt habe,
-               muß ich wol gehen. – Ihre <rs type="person" ref="#pmb2173" subtype="implied"
-                  >Frau</rs> und Sie herzlichſt grüßend</p>
-            <closer>Ihr<lb/>
-               <signed>Gustav.</signed>
+            <p><pb facs="MS-SCHNITZLER-B-00096-A-000-00023"/>
+               <salute>Lieber,</salute> Danke herzlich für Ihren <anchor type="commentary" xml:id="K_L04250-1"/>Brief<note type="commentary" corresp="K_L04250-1"><ref type="schnitzler-briefe" target="L03009"/>.</note>. Ich schreibe Ihnen morgen
+               ausführlich. Inzwischen nur eilig viele Grüße von uns zu Ihnen.</p>
+            <closer>Ihr <signed>Salten</signed>
             </closer>
+         </div>
+         <div type="writingSession" n="2">
+            <p><handShift scribe="#pmb23918"/>Viele Grüße</p>
+            <closer><signed>Otti</signed></closer>
          </div>
       </body>
    </text>
