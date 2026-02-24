@@ -1,6 +1,10 @@
-<?xml version='1.0' encoding='UTF-8'?>
+<?xml version="1.0" encoding="UTF-8"?>
 <?xml-model href="../meta/schnitzler-briefe-schematron.sch" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
-<TEI xmlns="http://www.tei-c.org/ns/1.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.tei-c.org/ns/1.0 ../meta/schnitzler-briefe-schema.xsd" xml:base="https://id.acdh.oeaw.ac.at/schnitzler/schnitzler-briefe/editions" xml:id="L04009">
+<TEI xmlns="http://www.tei-c.org/ns/1.0"
+     xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+     xsi:schemaLocation="http://www.tei-c.org/ns/1.0 ../meta/schnitzler-briefe-schema.xsd"
+     xml:base="https://id.acdh.oeaw.ac.at/schnitzler/schnitzler-briefe/editions"
+     xml:id="L04009">
    <teiHeader>
       <fileDesc>
          <titleStmt>
@@ -83,18 +87,20 @@
                               <extent>
                                  <measure unit="seite" quantity="8"/>
                                  <measure unit="blatt" quantity="2"/>
-                                 <measure unit="zeichenanzahl" quantity="2048"/>
+                                 <measure unit="zeichenanzahl" quantity="2043"/>
                               </extent>
                            </supportDesc>
                         </objectDesc>
-                        <handDesc hands="1">
+                        <handDesc hands="0">
                            <handNote medium="schwarze-tinte" style="lateinische-kurrent">
                               <p>Nummerierung des zweiten Bogens: »<quote>II.</quote>«</p>
                            </handNote>
                         </handDesc>
                         <additions>
-                           <incident type="receiver">
-                              <desc>beschriftet: »<quote>Zuckerkand<unclear>l</unclear>
+                           <incident type="receiver" rend="bleistift">
+                              <desc>Vermerk: »<quote>
+                                    <hi rend="latintype">Zuckerkand</hi>
+                                    <unclear>l</unclear>
                                  </quote>«</desc>
                            </incident>
                         </additions>
@@ -112,25 +118,34 @@
             <correspAction type="sent">
                <persName ref="#pmb2312">Zuckerkandl, Berta</persName>
                <date when="1911-07-25" n="01">25. 7. [1911]</date>
-               <placeName ref="#pmb50" evidence="conjecture">Wien</placeName>
+               <placeName ref="#pmb53227">Axenstein</placeName>
             </correspAction>
             <correspAction type="received">
                <persName ref="#pmb2121">Schnitzler, Arthur</persName>
-               <date evidence="conjecture" notBefore="1911-07-25" notAfter="1911-07-28">[25. 7. 1911
-                  – 28. 7. 1911?]</date>
+               <date evidence="conjecture" when="1911-08-01">[1. 8. 1911?]</date>
                <placeName ref="#pmb50" evidence="conjecture">Wien</placeName>
             </correspAction>
-            <correspContext><ref type="belongsToCorrespondence" target="correspondence_2312">Zuckerkandl, Berta</ref>
+            <correspContext>
+               <ref type="belongsToCorrespondence" target="correspondence_2312">Zuckerkandl, Berta</ref>
                <ref subtype="previous_letter" type="withinCollection" target="L03792">Schnitzler an Zweig, 8. 7. 1911</ref>
                <ref subtype="next_letter" type="withinCollection" target="L03553">Salten an Schnitzler, 16. 8. 1911</ref>
-               <ref subtype="previous_letter" type="withinCorrespondence" source="correspondence_2312" target="L03995">Zuckerkandl an Schnitzler, [23. 6. 1911?]</ref>
-               <ref subtype="next_letter" type="withinCorrespondence" source="correspondence_2312" target="L03999">Zuckerkandl an Schnitzler, [9. oder
+               <ref subtype="previous_letter"
+                    type="withinCorrespondence"
+                    source="correspondence_2312"
+                    target="L03995">Zuckerkandl an Schnitzler, [23. 6. 1911?]</ref>
+               <ref subtype="next_letter"
+                    type="withinCorrespondence"
+                    source="correspondence_2312"
+                    target="L03999">Zuckerkandl an Schnitzler, [9. oder
                   10. 9. 1911?]</ref>
-            </correspContext></correspDesc>
+            </correspContext>
+         </correspDesc>
       </profileDesc>
-      <revisionDesc status="proposed">
+      <revisionDesc status="candidate">
          <change who="MAM" when="2025-11-11">Export aus Transkribus</change>
          <change who="SJ" when="2025-11-19">Durchsicht</change>
+         <change who="MAM" when="2026-02-24">Durchsicht</change>
+         <change who="MAM" when="2026-02-24">Index check</change>
       </revisionDesc>
    </teiHeader>
    <facsimile>
@@ -151,7 +166,7 @@
                   <pb facs="MS-SCHNITZLER-B-00200-000-00054"/>
                   <hi rend="capitals">
                      <hi rend="pre-print">
-                        <rs type="place" ref="#pmb53636"/>Park Hotel Axenstein </hi>
+                        <rs type="place" ref="#pmb53636"/>Park Hotel Axenstein</hi>
                   </hi>
                </seg>
                <seg type="letterhead" rend="right">
@@ -175,40 +190,44 @@
                   <date>gestern</date> erhielt ich den Bescheid des Direktor <rs type="person" ref="#pmb299681">Herz</rs> hieher, dass er trotzdem sie <anchor type="commentary" xml:id="K_L04009-1"/>
                <foreign xml:lang="fr">entusiasmés de la <rs type="work" ref="#pmb29937" subtype="implied">pièce</rs>
                </foreign>
-               <note type="commentary" corresp="K_L04009-1">französisch <foreign xml:lang="fr">enthousiasmés de la pièce</foreign>: begeistert vom Stück</note> wären, dies<subst>
+               <note type="commentary" corresp="K_L04009-1">
+                  <foreign xml:lang="fr">enthousiasmés de la pièce</foreign>, französisch: begeistert vom Stück</note> wären, dies<subst>
                   <del rend="strikethrough">es</del>
                   <add place="inline">e</add>
                </subst> nach reiflicher Erwägung <pb facs="MS-SCHNITZLER-B-00200-000-00056"/>nicht
-               zur Aufführung bringen könnten. Und zwar weil I<hi rend="superscript">sten</hi> Für
+               zur Aufführung bringen könnten. Und zwar weil I<hi rend="superscript">stns</hi> Für
                diese Saison <date>1911–12</date> die <rs type="org" ref="#pmb299684">Porte St.
                   Martin</rs> kontraktlich bereits abgeschlossen habe: Ein <rs type="work" ref="#pmb300074" subtype="implied">Lustspiel</rs> von <rs type="person" ref="#pmb11337">Flers</rs> u <rs type="person" ref="#pmb6571">Caillavet</rs>; <hi rend="underline" n="1">zwei</hi>
                <space unit="chars" quantity="1"/>
                <anchor type="commentary" xml:id="K_L04009-2"/>
                <rs type="work" ref="#pmb305723 #pmb305733">Stücke</rs> von <rs type="person" ref="#pmb13801">Bataille</rs>
-               <note type="commentary" corresp="K_L04009-2">Am <date>5. 10. 1911</date> hatte <rs type="person" ref="#pmb13801">Batailles</rs> Schauspiel <rs type="work" ref="#pmb305723">La femme nue</rs> am <rs type="place" ref="#pmb299685">Théâtre
-                     de la Porte Saint-Martin</rs><space unit="chars" quantity="1"/><rs type="event" subtype="implied" ref="#pmb305729">Premiere</rs>, das bereits <date>1908</date> am <rs type="place" ref="#pmb93533">Théâtre de la Renaissance</rs> seine <rs type="event" ref="#pmb305725" subtype="implied">Uraufführung</rs> erlebt hatte.
+               <note type="commentary" corresp="K_L04009-2">Am <date>5. 10. 1911</date> hatte <rs type="person" ref="#pmb13801">Henri Batailles</rs> Schauspiel <rs type="work" ref="#pmb305723">La femme nue</rs> am <rs type="place" ref="#pmb299685">Théâtre
+                     de la Porte Saint-Martin</rs>
+                  <space unit="chars" quantity="1"/>
+                  <rs type="event" subtype="implied" ref="#pmb305729">Premiere</rs>, das bereits <date>1908</date> am <rs type="place" ref="#pmb93533">Théâtre de la Renaissance</rs> seine <rs type="event" ref="#pmb305725" subtype="implied">Uraufführung</rs> erlebt hatte.
                   Die nächste Premiere von einem Schauspiel <rs type="person" ref="#pmb13801">Batailles</rs> am <rs type="place" ref="#pmb299685">Théâtre de la Porte
                      Saint-Martin</rs>, die <rs type="event" ref="#pmb305735">Uraufführung von <rs type="work" ref="#pmb305733">Les Flambeaux</rs>
-                  </rs>, gab es erst in der nächsten Spielzeit am <date>26. 11. 1912</date>.</note>.
+                  </rs>, gab es erst in der nächsten Spielzeit, am <date>26. 11. 1912</date>.</note>.
                Lauter Lustspiele die leicht zu montieren <pb facs="MS-SCHNITZLER-B-00200-000-00057"/>sind, gar nichts kosten. Der <anchor type="commentary" xml:id="K_L04009-3"/>
                <foreign xml:lang="fr">Eschek</foreign>
-               <note type="commentary" corresp="K_L04009-3">französisch l'échec: Misserfolg; jiddisch heisik/hêsek: Schaden.</note> des <anchor type="commentary" xml:id="K_L04009-4"/>
+               <note type="commentary" corresp="K_L04009-3">
+                  <foreign xml:lang="fr">l’échec</foreign>, französisch: Misserfolg;  heisik/hêsek, jiddisch: Schaden.</note> des <anchor type="commentary" xml:id="K_L04009-4"/>
                <rs type="work" ref="#pmb300084">Chantekler</rs>
                <note type="commentary" corresp="K_L04009-4">Die <rs type="event" ref="#pmb300086" subtype="implied">Uraufführung</rs> des neuen Stückes <rs type="work" ref="#pmb300084">Chantecler</rs> des Erfolgsautors von <rs type="work" ref="#pmb31073">Cyrano de Bergerac</rs>, <rs type="person" ref="#pmb12567">Edmond Rostand</rs> im Vorjahr, war mit Spannung erwartet und mehrfach
                   verschoben worden. Die Inszenierung des <rs type="work" ref="#pmb300084" subtype="implied">Dramas</rs>, das über 70 Charaktere und noch mehr Kostüme
                   vorsah, war sehr aufwendig.</note> hat <rs type="person" ref="#pmb299681">Herz</rs> u <rs type="person" ref="#pmb117889">Coquelin</rs> abgeschreckt – das
-               grosse Schauspiel zu pflegen, u sie suchen ihr <rs type="org" ref="#pmb299684" subtype="implied">Théater</rs> auf eine kleinere Basis zu stellen. Zufolge dessen
+               grosse Schauspiel zu pflegen, u sie suchen ihr <rs type="org" ref="#pmb299684" subtype="implied">Théater</rs> auf eine kleinere Basis zu stellen. Infolge dessen
                wurde ein grosser Teil des Personals als überflüssig entlassen. Sie müssten für den
                   <pb facs="MS-SCHNITZLER-B-00200-000-00058"/>
                <rs type="work" ref="#pmb29937">Medardus</rs> (der jeden Falls erst <date>Oktober
-                  1912</date> hätte dran ko<c rendition="#gemination-m"/>en können) Alles wieder
+                  1912</date> hätte dranko<c rendition="#gemination-m"/>en können) Alles wieder
                anders einrichten. Trotzdem liessen mich die <rs type="person" ref="#pmb299681 #pmb117889" subtype="implied">Direktoren</rs> auf diesen Bescheid
                wochenlang warten. Weil wie mir <rs type="person" ref="#pmb299874">Albert Clemen<pb facs="MS-SCHNITZLER-B-00200-000-00059"/>ceau</rs> noch am <date>Tag vor meiner
                   Abreise</date> sagte – die grösste Lust besteht <rs type="work" ref="#pmb29937">Medardus</rs> zu bringen. In der <rs type="place" ref="#pmb300077">Auvergne</rs>
                wo beide <rs type="person" ref="#pmb117889 #pmb299681" subtype="implied">Direktoren</rs> ihr Ferien zubringen, scheint nun leider doch der mir mitgeteilte
                Entschluss gereift zu sein.</p>
             <p>
-               <pb facs="MS-SCHNITZLER-B-00200-000-00060"/>Es ist mir so leid Ihnen die Mühe des <rs type="work" ref="#pmb29937" subtype="implied">Scenario</rs> verursacht zu haben.
+               <pb facs="MS-SCHNITZLER-B-00200-000-00060"/>Es ist mir so leid Ihnen die Mühe des <rs type="work" ref="#pmb334987" subtype="implied">Scenario</rs> verursacht zu haben.
                Vielleicht ist dieselbe aber nicht ganz verloren. D<hi rend="superscript">r</hi>
                <space unit="chars" quantity="1"/>
                <rs type="person" ref="#pmb16710">Frischauer</rs> schreibt mir eben – ich möge meine
@@ -218,13 +237,14 @@
                in <rs type="place" ref="#pmb182">Paris</rs> möglich ist. Wenn Sie also Geduld <pb facs="MS-SCHNITZLER-B-00200-000-00061"/>haben wollen – so könnten wir abwarten.</p>
             <p>Wegen des <rs type="work" ref="#pmb30207">weiten Landes</rs> dencke ich an <rs type="person" ref="#pmb17611">Gémier</rs>. Ich werde wol im
                   <date>Spätherbst</date> wieder in <rs type="place" ref="#pmb182">Paris</rs> sein –
-               ich bin bereits (ohne das er weiss weshalb) in Relation mit ihm. Dafür muss ich nun
+               <c rendition="#kaufmannsund"/> bin bereits (ohne das er weiss weshalb) in Relation mit ihm. Dafür muss ich nun
                aber noch Ihre besondere Autorisation haben –. <date>Ende September</date> also in
                   <rs type="place" ref="#pmb50">Wien</rs>. Bitte verzeihen Sie – <pb facs="MS-SCHNITZLER-B-00200-000-00058"/>
-               <anchor type="textConst" xml:id="T_L04009-1"/>dass es nicht gelang –. Ihrer Frau <rs type="person" ref="#pmb2173">Gemahlin</rs> u Ihnen herzlichste Grüsse. Ihre
+               <anchor type="textConst" xml:id="T_L04009-1"/>dass es nicht gelang –. Ihrer Frau <rs type="person" ref="#pmb2173">Gemahlin</rs> u Ihnen herzlichste Grüsse.<lb/>Ihre
                ergebene <signed>B. Zuckerkandl</signed>
                <note type="textConst" corresp="T_L04009-1">Der Briefschluss befindet sich am unteren
-                  Rand der fünften Seite.</note></p>
+                  Rand der fünften Seite.</note>
+            </p>
          </div>
       </body>
       <back>
@@ -372,6 +392,12 @@
                      <idno type="URL" subtype="pmb">https://pmb.acdh.oeaw.ac.at/entity/210307/</idno>
                      <idno type="URL" subtype="schnitzler-kultur">https://schnitzler-kultur.acdh.oeaw.ac.at/pmb210307.html</idno>
                   </event>
+                  <event n="Generalprobe" ref="pmb210344" when="1925-05-22">
+                     <desc n="1370">teilgenommen an</desc>
+                     <label>Generalprobe von Der Schleier der Beatrice, 22.5.1925</label>
+                     <idno type="URL" subtype="pmb">https://pmb.acdh.oeaw.ac.at/entity/210344/</idno>
+                     <idno type="URL" subtype="schnitzler-kultur">https://schnitzler-kultur.acdh.oeaw.ac.at/pmb210344.html</idno>
+                  </event>
                </listEvent>
                <figure>
                   <graphic url="https://upload.wikimedia.org/wikipedia/commons/thumb/3/34/Berta_Zuckerkandl-Szeps_%281864%E2%80%931945%29_%C2%A9_Ludwig_Schwab_%28~1900%E2%80%931939%29_OeNB_8035865.jpg/250px-Berta_Zuckerkandl-Szeps_%281864%E2%80%931945%29_%C2%A9_Ludwig_Schwab_%28~1900%E2%80%931939%29_OeNB_8035865.jpg"/>
@@ -480,6 +506,20 @@
                <idno type="URL" subtype="wikipedia">https://de.wikipedia.org/wiki/Robert_de_Flers</idno>
                <idno type="URL" subtype="schnitzler-kino">https://schnitzler-kino.acdh.oeaw.ac.at/pmb11337.html</idno>
                <idno type="URL" subtype="schnitzler-kultur">https://schnitzler-kultur.acdh.oeaw.ac.at/pmb11337.html</idno>
+               <affiliation notBefore="1920-01-01" when="1920-01-01" notAfter="1920-12-31">
+                  <term ref="pmb1182">arbeitet für</term>
+                  <orgName ref="pmb29397">Société des Auteurs et Compositeurs Dramatiques</orgName>
+                  <idno type="URL" subtype="pmb">https://pmb.acdh.oeaw.ac.at/entity/29397/</idno>
+                  <idno type="URL" subtype="schnitzler-interviews">https://schnitzler-interviews.acdh.oeaw.ac.at/pmb29397.html</idno>
+                  <idno type="URL" subtype="schnitzler-briefe">https://schnitzler-briefe.acdh.oeaw.ac.at/pmb29397.html</idno>
+               </affiliation>
+               <listEvent>
+                  <event n="Konferenz" ref="pmb334396" when="1926-06-12">
+                     <desc n="1256">mitwirkend an</desc>
+                     <label>Kongress zur Gründung der Confédération Internationale des Sociétés d'Auteurs et Compositeurs</label>
+                     <idno type="URL" subtype="pmb">https://pmb.acdh.oeaw.ac.at/entity/334396/</idno>
+                  </event>
+               </listEvent>
                <figure>
                   <graphic url="https://upload.wikimedia.org/wikipedia/commons/thumb/8/86/Robert_de_Flers_1921.jpg/250px-Robert_de_Flers_1921.jpg"/>
                </figure>
@@ -704,6 +744,20 @@
                <idno type="URL" subtype="wikidata">http://www.wikidata.org/entity/Q1132691</idno>
                <idno type="URL" subtype="pmb">https://pmb.acdh.oeaw.ac.at/entity/117423/</idno>
                <idno type="URL" subtype="sk">https://sk.acdh.oeaw.ac.at/pmb17611</idno>
+               <affiliation notBefore="1906-01-01" when="1906-01-01" notAfter="1906-12-31">
+                  <term ref="pmb1182">arbeitet für</term>
+                  <orgName ref="pmb88613">Théâtre Antoine</orgName>
+                  <idno type="URL" subtype="pmb">https://pmb.acdh.oeaw.ac.at/entity/88613/</idno>
+                  <idno type="URL" subtype="schnitzler-briefe">https://schnitzler-briefe.acdh.oeaw.ac.at/pmb88613.html</idno>
+               </affiliation>
+               <affiliation notBefore="1922-01-01" when="1922-01-01" notAfter="1922-12-31">
+                  <term ref="pmb1182">arbeitet für</term>
+                  <orgName ref="pmb93494">Odéon</orgName>
+                  <idno type="URL" subtype="pmb">https://pmb.acdh.oeaw.ac.at/entity/93494/</idno>
+                  <idno type="URL" subtype="d-nb">https://d-nb.info/gnd/3023355-0</idno>
+                  <idno type="URL" subtype="wikidata">http://www.wikidata.org/entity/Q113531639</idno>
+                  <idno type="URL" subtype="schnitzler-briefe">https://schnitzler-briefe.acdh.oeaw.ac.at/pmb93494.html</idno>
+               </affiliation>
             </person>
             <person xml:id="pmb2173">
                <persName>
@@ -716,6 +770,7 @@
                <persName type="legacy-name-merge">Schnitzler, Olga</persName>
                <persName type="legacy-name-merge">Schnitzler, Olga</persName>
                <persName type="person_namensvariante_nachname">Guzmann</persName>
+               <persName type="legacy-name-merge">Schnitzler, Olga</persName>
                <birth>
                   <date when="1882-01-17">17.01.1882</date>
                   <settlement ref="pmb50">
@@ -727,6 +782,12 @@
                </birth>
                <death>
                   <date when="1970-01-13">13.01.1970</date>
+                  <settlement ref="pmb885">
+                     <placeName type="pref">Lugano</placeName>
+                     <location>
+                        <geo>46,01008 8,96004</geo>
+                     </location>
+                  </settlement>
                   <settlement ref="pmb885">
                      <placeName type="pref">Lugano</placeName>
                      <location>
@@ -752,6 +813,8 @@
                <idno type="URL" subtype="schnitzler-briefe">https://schnitzler-briefe.acdh.oeaw.ac.at/pmb2173.html</idno>
                <idno type="URL" subtype="schnitzler-kultur">https://schnitzler-kultur.acdh.oeaw.ac.at/pmb2173.html</idno>
                <idno type="URL" subtype="wikipedia">https://de.wikipedia.org/wiki/Olga_Schnitzler</idno>
+               <idno type="URL" subtype="pmb">https://pmb.acdh.oeaw.ac.at/entity/303976/</idno>
+               <idno type="URL" subtype="briefedition">https://briefedition.wedekind.h-da.de/view/person/list.xhtml?id=10653251</idno>
                <affiliation>
                   <term ref="pmb3415">Lernender/Lernende an</term>
                   <orgName ref="pmb29805">Konservatorium der Gesellschaft der Musikfreunde</orgName>
@@ -881,6 +944,12 @@
                      <idno type="URL" subtype="pmb">https://pmb.acdh.oeaw.ac.at/entity/35110/</idno>
                      <idno type="URL" subtype="schnitzler-kultur">https://schnitzler-kultur.acdh.oeaw.ac.at/pmb35110.html</idno>
                   </event>
+                  <event n="Zirkusvorstellung" ref="pmb209284" when="1903-03-30">
+                     <desc n="1370">teilgenommen an</desc>
+                     <label>Zirkus Schumann, 30.3.1903</label>
+                     <idno type="URL" subtype="pmb">https://pmb.acdh.oeaw.ac.at/entity/209284/</idno>
+                     <idno type="URL" subtype="schnitzler-kultur">https://schnitzler-kultur.acdh.oeaw.ac.at/pmb209284.html</idno>
+                  </event>
                   <event n="Konzert" ref="pmb232617" when="1903-04-07">
                      <desc n="1370">teilgenommen an</desc>
                      <label>Chopin-Abend, 7.4.1903</label>
@@ -965,6 +1034,12 @@
                      <idno type="URL" subtype="pmb">https://pmb.acdh.oeaw.ac.at/entity/183987/</idno>
                      <idno type="URL" subtype="schnitzler-kultur">https://schnitzler-kultur.acdh.oeaw.ac.at/pmb183987.html</idno>
                   </event>
+                  <event n="Opernaufführung" ref="pmb209334" when="1904-08-29">
+                     <desc n="1370">teilgenommen an</desc>
+                     <label>Aufführung von Hoffmanns Erzählungen, 29.8.1904</label>
+                     <idno type="URL" subtype="pmb">https://pmb.acdh.oeaw.ac.at/entity/209334/</idno>
+                     <idno type="URL" subtype="schnitzler-kultur">https://schnitzler-kultur.acdh.oeaw.ac.at/pmb209334.html</idno>
+                  </event>
                   <event n="Theateraufführung" ref="pmb41447" when="1904-10-06">
                      <desc n="1370">teilgenommen an</desc>
                      <label>Gastspiel Eleonora Duse in Kameliendame, 6.10.1904</label>
@@ -982,6 +1057,12 @@
                      <label>Private Lesung von Der tapfere Cassian, Das Haus Delorme, 18.10.1904</label>
                      <idno type="URL" subtype="pmb">https://pmb.acdh.oeaw.ac.at/entity/234504/</idno>
                      <idno type="URL" subtype="schnitzler-kultur">https://schnitzler-kultur.acdh.oeaw.ac.at/pmb234504.html</idno>
+                  </event>
+                  <event n="Theateraufführung" ref="pmb209337" when="1904-10-22">
+                     <desc n="1370">teilgenommen an</desc>
+                     <label>Aufführung von Karrnerleut’, Angele, Der Dieb, 22.10.1904</label>
+                     <idno type="URL" subtype="pmb">https://pmb.acdh.oeaw.ac.at/entity/209337/</idno>
+                     <idno type="URL" subtype="schnitzler-kultur">https://schnitzler-kultur.acdh.oeaw.ac.at/pmb209337.html</idno>
                   </event>
                   <event n="Theaterpremiere" ref="pmb35113" when="1904-12-12">
                      <desc n="1370">teilgenommen an</desc>
@@ -1056,6 +1137,12 @@
                      <idno type="URL" subtype="pmb">https://pmb.acdh.oeaw.ac.at/entity/184012/</idno>
                      <idno type="URL" subtype="schnitzler-kultur">https://schnitzler-kultur.acdh.oeaw.ac.at/pmb184012.html</idno>
                   </event>
+                  <event n="Theateraufführung" ref="pmb209374" when="1905-09-01">
+                     <desc n="1370">teilgenommen an</desc>
+                     <label>Aufführung von Die Haubenlerche, 1.9.1905</label>
+                     <idno type="URL" subtype="pmb">https://pmb.acdh.oeaw.ac.at/entity/209374/</idno>
+                     <idno type="URL" subtype="schnitzler-kultur">https://schnitzler-kultur.acdh.oeaw.ac.at/pmb209374.html</idno>
+                  </event>
                   <event n="Private Lesung" ref="pmb184027" when="1905-09-16">
                      <desc n="1370">teilgenommen an</desc>
                      <label>Private Lesung Der Ruf des Lebens, 16.9.1905</label>
@@ -1118,6 +1205,12 @@
                      <idno type="URL" subtype="pmb">https://pmb.acdh.oeaw.ac.at/entity/59624/</idno>
                      <idno type="URL" subtype="schnitzler-kultur">https://schnitzler-kultur.acdh.oeaw.ac.at/pmb59624.html</idno>
                   </event>
+                  <event n="Theateraufführung" ref="pmb237582" when="1906-05-21">
+                     <desc n="1370">teilgenommen an</desc>
+                     <label>Aufführung von Traumulus, 21.5.1906</label>
+                     <idno type="URL" subtype="pmb">https://pmb.acdh.oeaw.ac.at/entity/237582/</idno>
+                     <idno type="URL" subtype="schnitzler-kultur">https://schnitzler-kultur.acdh.oeaw.ac.at/pmb237582.html</idno>
+                  </event>
                   <event n="Theaterpremiere" ref="pmb35170" when="1906-06-05">
                      <desc n="1370">teilgenommen an</desc>
                      <label>Premiere von Sanna, 5.6.1906</label>
@@ -1129,6 +1222,12 @@
                      <label>Konzert von Oda Nielsen, 26.7.1906</label>
                      <idno type="URL" subtype="pmb">https://pmb.acdh.oeaw.ac.at/entity/238135/</idno>
                      <idno type="URL" subtype="schnitzler-kultur">https://schnitzler-kultur.acdh.oeaw.ac.at/pmb238135.html</idno>
+                  </event>
+                  <event n="Theateraufführung" ref="pmb209442" when="1906-08-25">
+                     <desc n="1370">teilgenommen an</desc>
+                     <label>Aufführung von Orpheus in der Unterwelt, 25.8.1906</label>
+                     <idno type="URL" subtype="pmb">https://pmb.acdh.oeaw.ac.at/entity/209442/</idno>
+                     <idno type="URL" subtype="schnitzler-kultur">https://schnitzler-kultur.acdh.oeaw.ac.at/pmb209442.html</idno>
                   </event>
                   <event n="Probe" ref="pmb46300" when="1907-01-02">
                      <desc n="1370">teilgenommen an</desc>
@@ -1291,6 +1390,12 @@
                      <label>Private Lesung von Ritterlichkeit, 23.2.1908</label>
                      <idno type="URL" subtype="pmb">https://pmb.acdh.oeaw.ac.at/entity/245875/</idno>
                      <idno type="URL" subtype="schnitzler-kultur">https://schnitzler-kultur.acdh.oeaw.ac.at/pmb245875.html</idno>
+                  </event>
+                  <event n="Theateraufführung" ref="pmb209496" when="1908-03-06">
+                     <desc n="1370">teilgenommen an</desc>
+                     <label>Aufführung von Der Teufel, 6.3.1908</label>
+                     <idno type="URL" subtype="pmb">https://pmb.acdh.oeaw.ac.at/entity/209496/</idno>
+                     <idno type="URL" subtype="schnitzler-kultur">https://schnitzler-kultur.acdh.oeaw.ac.at/pmb209496.html</idno>
                   </event>
                   <event n="Ausstellungsbesuch" ref="pmb246061" when="1908-04-01">
                      <desc n="1370">teilgenommen an</desc>
@@ -2343,18 +2448,19 @@
                <idno type="URL" subtype="schnitzler-mikrofilme">https://schnitzler-mikrofilme.acdh.oeaw.ac.at/1416714.html?pmb29937</idno>
                <idno type="URL" subtype="schnitzler-briefe">https://schnitzler-briefe.acdh.oeaw.ac.at/pmb29937.html</idno>
                <idno type="URL" subtype="schnitzler-kultur">https://schnitzler-kultur.acdh.oeaw.ac.at/pmb29937.html</idno>
+               <idno type="URL" subtype="briefedition">https://briefedition.wedekind.h-da.de/view/work/list.xhtml?id=10794903</idno>
                <note type="work_kind">Mehraktiges Drama</note>
             </bibl>
             <bibl xml:id="pmb305723">
                <title>La femme nue, pièce en quatre actes</title>
-               <author role="hat-geschaffen" ref="pmb13801">Bataille, Henri</author>
+               <author ref="pmb13801" role="hat-geschaffen">Bataille, Henri</author>
                <date when="1908-02-27">1908-02-27</date>
                <idno type="URL" subtype="pmb">https://pmb.acdh.oeaw.ac.at/entity/305723/</idno>
                <note type="work_kind">Mehraktiges Drama</note>
             </bibl>
             <bibl xml:id="pmb305733">
                <title>Les Flambeaux, pièce en trois actes</title>
-               <author role="hat-geschaffen" ref="pmb13801">Bataille, Henri</author>
+               <author ref="pmb13801" role="hat-geschaffen">Bataille, Henri</author>
                <date when="1912-11-26">1912-11-26</date>
                <idno type="URL" subtype="pmb">https://pmb.acdh.oeaw.ac.at/entity/305733/</idno>
                <note type="work_kind">Mehraktiges Drama</note>
@@ -2389,17 +2495,21 @@
                <idno type="URL" subtype="schnitzler-interviews">https://schnitzler-interviews.acdh.oeaw.ac.at/pmb30207.html</idno>
                <idno type="URL" subtype="schnitzler-briefe">https://schnitzler-briefe.acdh.oeaw.ac.at/pmb30207.html</idno>
                <idno type="URL" subtype="schnitzler-kultur">https://schnitzler-kultur.acdh.oeaw.ac.at/pmb30207.html</idno>
+               <idno type="URL" subtype="briefedition">https://briefedition.wedekind.h-da.de/view/work/list.xhtml?id=10662651</idno>
                <note type="work_kind">Mehraktiges Drama</note>
                <note type="references">Die russische Uraufführung am 20.10.1910 vor der deutschsprachigen</note>
             </bibl>
             <bibl xml:id="pmb31073" ana="comment">
                <title>Cyrano de Bergerac. Comédie héroïque en cinq actes en vers</title>
+               <title type="legacy-name-merge">Cyrano de Bergerac</title>
                <author ref="pmb12567" role="hat-geschaffen">Rostand, Edmond</author>
                <date when="1897-12-28">1897-12-28</date>
                <idno type="URL" subtype="schnitzler-bahr">https://schnitzler-bahr.acdh.oeaw.ac.at/pmb31073.html</idno>
                <idno type="URL" subtype="pmb">https://pmb.acdh.oeaw.ac.at/entity/31073/</idno>
                <idno type="URL" subtype="wikidata">http://www.wikidata.org/entity/Q1048916</idno>
                <idno type="URL" subtype="wikipedia">https://de.wikipedia.org/wiki/Cyrano_de_Bergerac_(Rostand)</idno>
+               <idno type="URL" subtype="pmb">https://pmb.acdh.oeaw.ac.at/entity/306316/</idno>
+               <idno type="URL" subtype="briefedition">https://briefedition.wedekind.h-da.de/view/work/list.xhtml?id=11000130</idno>
                <note type="work_kind">Mehraktiges Drama</note>
             </bibl>
             <bibl xml:id="pmb300074" ana="implied">
@@ -2410,8 +2520,43 @@
                <idno type="URL" subtype="pmb">https://pmb.acdh.oeaw.ac.at/entity/300074/</idno>
                <note type="work_kind">Mehraktiges Drama</note>
             </bibl>
+            <bibl xml:id="pmb334987" ana="implied">
+               <title>Der junge Medardus. (Zur Übersetzung ins Französische)</title>
+               <title type="werk_link">https://schnitzler-mikrofilme.acdh.oeaw.ac.at/1428195_0004.html</title>
+               <author role="hat-geschaffen" ref="pmb2121">Schnitzler, Arthur</author>
+               <date to="1911-06-20">1911-06-16 – 1911-06-20</date>
+               <idno type="URL" subtype="pmb">https://pmb.acdh.oeaw.ac.at/entity/334987/</idno>
+               <note type="work_kind">Szenarium</note>
+            </bibl>
          </listBibl>
          <listPlace>
+            <place xml:id="pmb53227">
+               <placeName>Axenstein</placeName>
+               <desc type="entity_type">Ausflugsziel</desc>
+               <desc type="entity_type_id">62</desc>
+               <location type="coords">
+                  <geo>46,98666 8,61554</geo>
+               </location>
+               <location type="located_in_place">
+                  <placeName ref="pmb49170">Morschach</placeName>
+                  <geo>46,97149 8,64802</geo>
+               </location>
+               <location type="located_in_place">
+                  <placeName ref="pmb43435">Schweiz</placeName>
+                  <geo>47,00016 8,01427</geo>
+               </location>
+               <idno type="URL" subtype="pmb">https://pmb.acdh.oeaw.ac.at/entity/53227/</idno>
+               <idno type="URL" subtype="pmb">https://pmb.acdh.oeaw.ac.at/entity/90290/</idno>
+               <idno type="URL" subtype="geonames">https://sws.geonames.org/2661656/</idno>
+               <idno type="URL" subtype="schnitzler-tagebuch">https://schnitzler-tagebuch.acdh.oeaw.ac.at/pmb90290.html</idno>
+               <idno type="URL" subtype="wienerschnitzler">https://wienerschnitzler.org/pmb53227.html</idno>
+               <idno type="URL" subtype="schnitzler-briefe">https://schnitzler-briefe.acdh.oeaw.ac.at/pmb53227.html</idno>
+               <note type="image">
+                  <figure>
+                     <graphic url="https://iiif.onb.ac.at/images/AKON/AK104_524/524/full/,600/0/native.jpg"/>
+                  </figure>
+               </note>
+            </place>
             <place xml:id="pmb50">
                <placeName>Wien</placeName>
                <placeName type="ort_fruherer-name">K.K. Reichshaupt- und Residenzstadt Wien</placeName>
@@ -2495,33 +2640,6 @@
                <idno type="URL" subtype="wikipedia">https://de.wikipedia.org/wiki/Vierwaldst%C3%A4ttersee</idno>
                <idno type="URL" subtype="wienerschnitzler">https://wienerschnitzler.org/pmb39755.html</idno>
                <idno type="URL" subtype="schnitzler-briefe">https://schnitzler-briefe.acdh.oeaw.ac.at/pmb39755.html</idno>
-            </place>
-            <place xml:id="pmb53227">
-               <placeName>Axenstein</placeName>
-               <desc type="entity_type">Ausflugsziel</desc>
-               <desc type="entity_type_id">62</desc>
-               <location type="coords">
-                  <geo>46,98666 8,61554</geo>
-               </location>
-               <location type="located_in_place">
-                  <placeName ref="pmb49170">Morschach</placeName>
-                  <geo>46,97149 8,64802</geo>
-               </location>
-               <location type="located_in_place">
-                  <placeName ref="pmb43435">Schweiz</placeName>
-                  <geo>47,00016 8,01427</geo>
-               </location>
-               <idno type="URL" subtype="pmb">https://pmb.acdh.oeaw.ac.at/entity/53227/</idno>
-               <idno type="URL" subtype="pmb">https://pmb.acdh.oeaw.ac.at/entity/90290/</idno>
-               <idno type="URL" subtype="geonames">https://sws.geonames.org/2661656/</idno>
-               <idno type="URL" subtype="schnitzler-tagebuch">https://schnitzler-tagebuch.acdh.oeaw.ac.at/pmb90290.html</idno>
-               <idno type="URL" subtype="wienerschnitzler">https://wienerschnitzler.org/pmb53227.html</idno>
-               <idno type="URL" subtype="schnitzler-briefe">https://schnitzler-briefe.acdh.oeaw.ac.at/pmb53227.html</idno>
-               <note type="image">
-                  <figure>
-                     <graphic url="https://iiif.onb.ac.at/images/AKON/AK104_524/524/full/,600/0/native.jpg"/>
-                  </figure>
-               </note>
             </place>
             <place xml:id="pmb182">
                <placeName>Paris</placeName>
