@@ -240,6 +240,26 @@
             <sch:assert test="not((tei:div[@n = 1])[2])"> </sch:assert>
         </sch:rule>
     </sch:pattern>
+    <!-- div[@type='writingSession'] must have @n, unique and ascending -->
+    <sch:pattern id="writingSession-n-required">
+        <sch:rule context="tei:div[@type = 'writingSession']">
+            <sch:assert test="@n"> tei:div[@type='writingSession'] muss ein Attribut @n haben.
+            </sch:assert>
+        </sch:rule>
+    </sch:pattern>
+    <sch:pattern id="writingSession-n-unique-ascending">
+        <sch:rule context="tei:body">
+            <sch:let name="sessions" value="tei:div[@type = 'writingSession'][@n]"/>
+            <sch:let name="ns" value="$sessions/@n"/>
+            <sch:assert test="count($ns) = count(distinct-values($ns))"> Die @n-Werte von
+                tei:div[@type='writingSession'] müssen eindeutig sein. </sch:assert>
+            <sch:assert test="
+                    every $i in (1 to count($sessions) - 1)
+                        satisfies xs:integer($sessions[$i]/@n) lt xs:integer($sessions[$i + 1]/@n)"
+                > Die @n-Werte von tei:div[@type='writingSession'] müssen aufsteigend sein.
+            </sch:assert>
+        </sch:rule>
+    </sch:pattern>
     <!-- lg (line group) -->
     <sch:pattern id="lg-structure">
         <sch:rule context="tei:lg">
