@@ -543,7 +543,7 @@
     </sch:pattern>
     <!-- Unified whitespace restrictions for multiple elements -->
     <sch:pattern id="element-whitespace-restrictions">
-        <sch:rule context="tei:rs | tei:hi | tei:salute | tei:p | tei:seg | tei:closer | tei:date | tei:del | tei:add | tei:signed | tei:dateline">
+        <sch:rule context="tei:rs | tei:hi | tei:salute | tei:p | tei:seg | tei:closer | tei:date | tei:del | tei:add | tei:signed | tei:dateline | tei:unclear">
             <sch:assert
                 test="not(node()[1][self::text()] and matches(node()[1], '^\s') and not(node()[1][matches(., '^\s+$')] and node()[2][self::*]))"
                 > <sch:name/> darf nur mit Whitespace beginnen, wenn danach ein Element folgt.
