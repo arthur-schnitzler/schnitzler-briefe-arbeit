@@ -180,7 +180,7 @@
                                             <xsl:for-each
                                                 select="descendant::tei:correspAction[@type = 'received']/tei:persName">
                                                 <item>
-                                                    <xsl:value-of select="concat(@key, /@ref)"/>
+                                                    <xsl:value-of select="concat(@key, @ref)"/>
                                                 </item>
                                             </xsl:for-each>
                                         </list>
