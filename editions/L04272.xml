@@ -1,13 +1,11 @@
-<?xml version="1.0" encoding="UTF-8"?>
+<?xml version='1.0' encoding='UTF-8'?>
 <?xml-model href="../meta/schnitzler-briefe-schematron.sch" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
-<TEI xmlns="http://www.tei-c.org/ns/1.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-   xsi:schemaLocation="http://www.tei-c.org/ns/1.0 ../meta/schnitzler-briefe-schema.xsd"
-   xml:base="https://id.acdh.oeaw.ac.at/schnitzler/schnitzler-briefe/editions" xml:id="L04272">
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.tei-c.org/ns/1.0 ../meta/schnitzler-briefe-schema.xsd" xml:base="https://id.acdh.oeaw.ac.at/schnitzler/schnitzler-briefe/editions" xml:id="L04272">
    <teiHeader>
       <fileDesc>
          <titleStmt>
             <title level="s">Arthur Schnitzler: Briefwechsel mit Autorinnen und Autoren</title>
-            <title level="a">Gustav und Max Schwarzkopf an Arthur Schnitzler, 15.&#160;9.&#160;1909</title>
+            <title level="a">Gustav und Max Schwarzkopf an Arthur Schnitzler, 15. 9. 1909</title>
             <author ref="#pmb12740">Schwarzkopf, Gustav</author>
             <author ref="#pmb24648">Schwarzkopf, Max</author>
             <editor>
@@ -90,7 +88,7 @@
                         </objectDesc>
                         <handDesc hands="2">
                            <handNote medium="schwarze-tinte" style="deutsche-kurrent" corresp="#pmb12740"/>
-                           <handNote medium="schwarze-tinte" style="deutsche-kurrent" corresp="#pmb24648"></handNote>
+                           <handNote medium="schwarze-tinte" style="deutsche-kurrent" corresp="#pmb24648"/>
                         </handDesc>
                         <additions>
                            <incident type="receiver" rend="bleistift">
@@ -111,14 +109,19 @@
             <correspAction type="sent">
                <persName ref="#pmb12740">Schwarzkopf, Gustav</persName>
                <persName ref="#pmb24648">Schwarzkopf, Max</persName>
-               <date when="1909-09-15" n="01">15.&#160;9.&#160;1909</date>
+               <date when="1909-09-15" n="01">15. 9. 1909</date>
                <placeName ref="#pmb50">Wien</placeName>
             </correspAction>
             <correspAction type="received">
                <persName ref="#pmb2121">Schnitzler, Arthur</persName>
                <placeName ref="#pmb50" evidence="conjecture">Wien</placeName>
             </correspAction>
-         </correspDesc>
+         <correspContext><ref type="belongsToCorrespondence" target="correspondence_12740">Schwarzkopf, Gustav</ref>
+               <ref subtype="previous_letter" type="withinCollection" target="L04154">Schnitzler an Schwarzkopf, 14. 9. 1909</ref>
+               <ref subtype="next_letter" type="withinCollection" target="L01874">Bahr an Schnitzler, 15. 9. 1909</ref>
+               <ref subtype="previous_letter" type="withinCorrespondence" source="correspondence_12740" target="L04154">Schnitzler an Schwarzkopf, 14. 9. 1909</ref>
+               <ref subtype="next_letter" type="withinCorrespondence" source="correspondence_12740" target="L04182">Schnitzler an Schwarzkopf, [1. 10. 1909?]</ref>
+            </correspContext></correspDesc>
       </profileDesc>
       <revisionDesc status="proposed">
          <change who="MAM" when="2026-02-20">Export aus Transkribus</change>
@@ -129,18 +132,14 @@
          <div type="writingSession" n="1">
             <opener>
                <dateline rend="right"><pb facs="MS-SCHNITZLER-B-00096-A-000-00069"/>
-                  <date>15.&#160;IX&#160;09</date>
+                  <date>15. IX 09</date>
                </dateline>
             </opener>
             <p>
                <salute>Lieber Arthur,</salute> ich freue mich, daß Ihr Wunſch erfüllt wurde, daß
-               alles gut gegangen iſt und gratulire. Ihrer <rs type="person" ref="#pmb2173"
-                  subtype="implied">Frau</rs> und Ihnen herzlichſt. Pünktlich ist <rs type="person"
-                  ref="#pmb2238" subtype="implied">ſie</rs> übrigens geweſen, die junge <rs
-                  type="person" ref="#pmb2238" subtype="implied">Dame</rs>, das muß man ihr laſſen.
+               alles gut gegangen iſt und gratulire. Ihrer <rs type="person" ref="#pmb2173" subtype="implied">Frau</rs> und Ihnen herzlichſt. Pünktlich ist <rs type="person" ref="#pmb2238" subtype="implied">ſie</rs> übrigens geweſen, die junge <rs type="person" ref="#pmb2238" subtype="implied">Dame</rs>, das muß man ihr laſſen.
                   <pb facs="MS-SCHNITZLER-B-00096-A-000-00070"/>We<c rendition="#gemination-n"/>
-               mein Halsweh es geſtattet, werde ich mir erlauben mich dem Fräulein <rs type="person"
-                  ref="#pmb2238">Lili</rs> vorzuſtellen.</p>
+               mein Halsweh es geſtattet, werde ich mir erlauben mich dem Fräulein <rs type="person" ref="#pmb2238">Lili</rs> vorzuſtellen.</p>
             <closer>Ihre <rs type="person" ref="#pmb2173" subtype="implied">Frau</rs> und Sie herzlichſt<lb/>grüßend<lb/>Ihr<lb/>
                <signed>Gustav.</signed>
             </closer>
