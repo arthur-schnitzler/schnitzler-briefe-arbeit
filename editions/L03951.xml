@@ -1,6 +1,10 @@
-<?xml version='1.0' encoding='UTF-8'?>
+<?xml version="1.0" encoding="UTF-8"?>
 <?xml-model href="../meta/schnitzler-briefe-schematron.sch" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
-<TEI xmlns="http://www.tei-c.org/ns/1.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.tei-c.org/ns/1.0 ../meta/schnitzler-briefe-schema.xsd" xml:base="https://id.acdh.oeaw.ac.at/schnitzler/schnitzler-briefe/editions" xml:id="L03951">
+<TEI xmlns="http://www.tei-c.org/ns/1.0"
+     xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+     xsi:schemaLocation="http://www.tei-c.org/ns/1.0 ../meta/schnitzler-briefe-schema.xsd"
+     xml:base="https://id.acdh.oeaw.ac.at/schnitzler/schnitzler-briefe/editions"
+     xml:id="L03951">
    <teiHeader>
       <fileDesc>
          <titleStmt>
@@ -83,7 +87,7 @@
                               <extent>
                                  <measure unit="seite" quantity="2"/>
                                  <measure unit="blatt" quantity="1"/>
-                                 <measure unit="zeichenanzahl" quantity="1074"/>
+                                 <measure unit="zeichenanzahl" quantity="1069"/>
                               </extent>
                            </supportDesc>
                         </objectDesc>
@@ -91,10 +95,19 @@
                            <typeNote medium="schreibmaschine"/>
                         </typeDesc>
                         <handDesc hands="1">
-                           <handNote medium="roter-buntstift" style="lateinische-kurrent" corresp="#pmb2121">
+                           <handNote medium="roter-buntstift"
+                                     style="lateinische-kurrent"
+                                     corresp="#pmb2121">
                               <p>beschriftet: »<quote>
-                                    <hi rend="underline" n="1">Zuckerkandl</hi>
-                                 </quote>« und »<quote>Frk</quote>«, vier Unterstreichungen</p>
+                                    <hi rend="underline" n="1">
+                                       <hi rend="latintype">Zuckerkandl</hi>
+                                    </hi>
+                              </quote>« und »<quote><rs type="place" ref="#pmb166">
+                                    <hi rend="latintype">Fr</hi>
+                                    <supplied>an</supplied>
+                                    <hi rend="latintype">k</hi>
+                                    <supplied>reich</supplied></rs>
+                                 </quote>«, vier Unterstreichungen</p>
                            </handNote>
                         </handDesc>
                      </physDesc>
@@ -119,16 +132,26 @@
                   – 12. 12. 1911?]</date>
                <placeName ref="#pmb50">Wien</placeName>
             </correspAction>
-            <correspContext><ref type="belongsToCorrespondence" target="correspondence_2312">Zuckerkandl, Berta</ref>
+            <correspContext>
+               <ref type="belongsToCorrespondence" target="correspondence_2312">Zuckerkandl, Berta</ref>
                <ref subtype="previous_letter" type="withinCollection" target="L02049">Brandes an Schnitzler, vor dem 2. 12. 1911</ref>
                <ref subtype="next_letter" type="withinCollection" target="L03790">Schnitzler an Zweig, 1[1]. 1[2]. 1911</ref>
-               <ref subtype="previous_letter" type="withinCorrespondence" source="correspondence_2312" target="L04003">Zuckerkandl an Schnitzler, [25. 11. 1911?]</ref>
-               <ref subtype="next_letter" type="withinCorrespondence" source="correspondence_2312" target="L03945">Schnitzler an Zuckerkandl, 8. 1. 1912</ref>
-            </correspContext></correspDesc>
+               <ref subtype="previous_letter"
+                    type="withinCorrespondence"
+                    source="correspondence_2312"
+                    target="L04003">Zuckerkandl an Schnitzler, [25. 11. 1911?]</ref>
+               <ref subtype="next_letter"
+                    type="withinCorrespondence"
+                    source="correspondence_2312"
+                    target="L03945">Schnitzler an Zuckerkandl, 8. 1. 1912</ref>
+            </correspContext>
+         </correspDesc>
       </profileDesc>
-      <revisionDesc status="proposed">
+      <revisionDesc status="candidate">
          <change who="MAM" when="2025-10-31">Export aus Transkribus</change>
          <change who="SJ" when="2025-12-12">Durchsicht</change>
+         <change who="MAM" when="2026-02-27">Durchsicht</change>
+         <change who="MAM" when="2026-02-27">Index check</change>
       </revisionDesc>
    </teiHeader>
    <facsimile>
@@ -145,12 +168,12 @@
                <salute rend="center">Verehrte gnädige Frau.</salute>
             </opener>
             <p>Herzlichen Dank für die freundliche Uebersendung des <anchor type="commentary" xml:id="K_L03951-1"/>Briefes von Madame <rs type="person" ref="#pmb299369">Lefèvre</rs>
-               <note type="commentary" corresp="K_L03951-1">nicht
-                  überliefert<!-- Es gibt einen Brief von Lefèvre an Schnitzler (CUL), datiert 5.1.1913 - bei Gelegenheit prüfen, ob das Datum wirklich stimmt, ich vermute 1912. --></note>.
-               Ich habe also gleich <anchor type="commentary" xml:id="K_L03951-2"/>an sie
-                  geschrieben<note type="commentary" corresp="K_L03951-2">Es sind keine Briefe <rs type="person" ref="#pmb2121">Schnitzlers</rs> an <rs type="person" ref="#pmb299369">Levèvre</rs> überliefert.</note> und sie vor allem um
-               Beantwortung der Frage ersucht, ob <del rend="strikethrough">Ghui</del>
-               <space unit="chars" quantity="1"/>
+               <note type="commentary" corresp="K_L03951-1">Dieser Brief ist nicht überliefert. In der <bibl><publisher>Cambridge University Library</publisher></bibl>
+                  liegt ein Brief von <rs type="person" ref="#pmb299369">Anne Lefèvre</rs> an <rs type="person" ref="#pmb2121">Schnitzler</rs>, der mit
+                  <date>5.&#160;1.&#160;1913</date> datiert ist. Erhaltene Gegenbriefe sind keine bekannt.</note>.
+               Ich habe also gleich an sie
+                  geschrieben und sie vor allem um
+               Beantwortung der Frage ersucht, ob <!-- hier wird Streichung nicht wiedergegeben -->
                <rs type="person" ref="#pmb17533">Guitry</rs> im nächsten Jahre bei <rs type="person" ref="#pmb2211">Antoine</rs> sein wird, ferner ob sie überzeugt ist, dass <rs type="person" ref="#pmb2211">Antoine</rs> ihr eine Uebersetzung besonders gerne
                anvertrauen würde. Denn schliesslich Herr <rs type="person" ref="#pmb23787">Remon</rs> hat mir über seine Verbindung mit <rs type="person" ref="#pmb2211">Antoine</rs> ungefähr <anchor type="commentary" xml:id="K_L03951-3"/>dasselbe
                   geschrieben<note type="commentary" corresp="K_L03951-3">
@@ -163,7 +186,7 @@
                dass seine <rs subtype="implied" type="work" ref="#pmb46129">Uebersetzung</rs> der
                   »<rs type="work" ref="#pmb29865">Frau mit dem Dolch</rs>« heuer bei <rs type="person" ref="#pmb2211">Antoine</rs> zur Aufführung kommen soll. Nebstbei
                scheint er doch in direkter Verbindung mit <rs type="person" ref="#pmb17533">Guitry</rs> zu stehen und es kommt in der Angelegenheit des »<rs type="work" ref="#pmb30207">Weiten Landes</rs>« doch mehr auf <rs type="person" ref="#pmb17533">Guitry</rs> an als auf <rs type="person" ref="#pmb2211">Antoine</rs>, umso mehr als <rs type="person" ref="#pmb2211">Antoine</rs> es
-               nicht einmal der Mühe wert hält mir auf meinen direkten und klare Fragen
+               nicht einma<supplied>l</supplied> der Mühe wert hält mir auf meinen direkten und klare Fragen
                formulierenden <anchor type="commentary" xml:id="K_L03951-4"/>Brief<note type="commentary" corresp="K_L03951-4">
                   <rs type="person" ref="#pmb2121">Arthur Schnitzler</rs> an <rs type="person" ref="#pmb2211">André Antoine</rs>, <date>20. 11. 1911</date>, <bibl>
                      <publisher>Deutsches Literaturarchiv Marbach</publisher>,
@@ -171,7 +194,7 @@
                nun die Antwort der Frau <rs type="person" ref="#pmb299369">Lefèvre</rs> abwarten und
                dann weiter sehen.</p>
             <closer>Mit wiederholtem Dank für Ihre Bemühungen und Ihr liebenswürdiges Interesse mit
-               vielen<lb/> Grüssen<lb/> Ihr aufrichtig ergebener</closer>
+               vielen Grüssen<lb/> Ihr aufrichtig ergebener</closer>
             <space dim="vertical" unit="line" quantity="1"/>
             <postscript>
                <p>Frau Berta Zuckerkandl, <rs type="place" ref="#pmb50">Wien</rs>.</p>
@@ -350,6 +373,12 @@
                      <label>Konzert von Jean Untermeyer, 17.10.1924</label>
                      <idno type="URL" subtype="pmb">https://pmb.acdh.oeaw.ac.at/entity/210307/</idno>
                      <idno type="URL" subtype="schnitzler-kultur">https://schnitzler-kultur.acdh.oeaw.ac.at/pmb210307.html</idno>
+                  </event>
+                  <event n="Generalprobe" ref="pmb210344" when="1925-05-22">
+                     <desc n="1370">teilgenommen an</desc>
+                     <label>Generalprobe von Der Schleier der Beatrice, 22.5.1925</label>
+                     <idno type="URL" subtype="pmb">https://pmb.acdh.oeaw.ac.at/entity/210344/</idno>
+                     <idno type="URL" subtype="schnitzler-kultur">https://schnitzler-kultur.acdh.oeaw.ac.at/pmb210344.html</idno>
                   </event>
                </listEvent>
                <figure>
@@ -540,8 +569,7 @@
             <bibl xml:id="pmb30207">
                <title>Das weite Land. Tragikomödie in fünf Akten</title>
                <title type="werk_link">http://www.literature.at/alo?objid=12113</title>
-               <title type="werk_bibliografische-angabe">Arthur Schnitzler: Das weite Land.
-                  Tragikomödie in fünf Akten. Erste Auflage. Berlin: S. Fischer 1911,</title>
+               <title type="werk_bibliografische-angabe">Arthur Schnitzler: Das weite Land. Tragikomödie in fünf Akten. Erste Auflage. Berlin: S. Fischer 1911,</title>
                <title type="werk_arbeitstitel">Frieberg</title>
                <author ref="pmb2121" role="hat-geschaffen">Schnitzler, Arthur</author>
                <date>1910-10-20</date>
@@ -561,14 +589,14 @@
                <idno type="URL" subtype="schnitzler-interviews">https://schnitzler-interviews.acdh.oeaw.ac.at/pmb30207.html</idno>
                <idno type="URL" subtype="schnitzler-briefe">https://schnitzler-briefe.acdh.oeaw.ac.at/pmb30207.html</idno>
                <idno type="URL" subtype="schnitzler-kultur">https://schnitzler-kultur.acdh.oeaw.ac.at/pmb30207.html</idno>
+               <idno type="URL" subtype="briefedition">https://briefedition.wedekind.h-da.de/view/work/list.xhtml?id=10662651</idno>
                <note type="work_kind">Mehraktiges Drama</note>
                <note type="references">Die russische Uraufführung am 20.10.1910 vor der deutschsprachigen</note>
             </bibl>
             <bibl xml:id="pmb46129" ana="implied">
                <title>La femme au poignard</title>
                <title type="namensvariante">Die Frau mit dem Dolche</title>
-               <title type="werk_bibliografische-angabe">La femme au poignard. In: Revue de Paris,
-                  Jg. 19, Reihe 3 (Mai-Juni), 15.5.1912, S. 225–238.</title>
+               <title type="werk_bibliografische-angabe">La femme au poignard. In: Revue de Paris, Jg. 19, Reihe 3 (Mai-Juni), 15.5.1912, S. 225–238.</title>
                <title type="werk_link">https://gallica.bnf.fr/ark:/12148/bpt6k17525k/f225.image</title>
                <author ref="pmb2121" role="hat-geschaffen">Schnitzler, Arthur</author>
                <author ref="pmb23787" role="hat-ubersetzt">Rémon, Maurice</author>
@@ -583,8 +611,7 @@
          <listPlace>
             <place xml:id="pmb50">
                <placeName>Wien</placeName>
-               <placeName type="ort_fruherer-name">K.K. Reichshaupt- und Residenzstadt
-                  Wien</placeName>
+               <placeName type="ort_fruherer-name">K.K. Reichshaupt- und Residenzstadt Wien</placeName>
                <placeName type="alternative-name">Bécs</placeName>
                <placeName type="alternative-name">Land Wien</placeName>
                <placeName type="alternative-name">Vídeň</placeName>
