@@ -32,6 +32,10 @@
                 in correspDesc. </sch:assert>
             <sch:assert test="not(descendant::tei:correspAction[position() &gt; 1]/tei:date/@n)">
                 Nur das erste correspAction darf ein date/@n haben. </sch:assert>
+            <sch:assert test="count(tei:correspAction[@type = 'sent']) le 1"> Es darf nur ein
+                correspAction[@type='sent'] vorhanden sein. </sch:assert>
+            <sch:assert test="count(tei:correspAction[@type = 'received']) le 1"> Es darf nur ein
+                correspAction[@type='received'] vorhanden sein. </sch:assert>
         </sch:rule>
     </sch:pattern>
     <sch:pattern id="correspAction1-rules">
