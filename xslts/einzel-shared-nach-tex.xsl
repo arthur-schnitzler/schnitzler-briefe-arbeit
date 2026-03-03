@@ -3982,7 +3982,7 @@
          <xsl:if test="position() eq 1">
             <xsl:apply-templates select="current-group()[position() != last()]" mode="lemma"/>
             <xsl:text>}\,{]} </xsl:text>
-            <xsl:apply-templates select="current-group()[position() = last()]" mode="text"/>
+            <xsl:apply-templates select="current-group()[position() = last()]/node()"/>
             <xsl:text>\end{minipage}\par}</xsl:text>
          </xsl:if>
       </xsl:for-each-group>
