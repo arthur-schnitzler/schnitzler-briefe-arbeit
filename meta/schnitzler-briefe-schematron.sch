@@ -67,6 +67,9 @@
                 test="tei:placeName[(starts-with(@ref, '#pmb') and not(@ref = '#pmb') and (string(number(substring-after(@ref, '#pmb'))) != 'NaN') and not(contains(@ref, ' ')))] or not(child::tei:placeName)"
                 > Wenn placeName existiert, muss @ref gültig sein (#pmb..., keine Leerzeichen, keine
                 mehrfachen Ortsnummern). </sch:assert>
+            <sch:assert test="count(tei:persName/@ref) = count(distinct-values(tei:persName/@ref))">
+                Innerhalb von correspAction muss jeder Wert von persName/@ref eindeutig sein (keine
+                Dubletten). </sch:assert>
         </sch:rule>
     </sch:pattern>
     <!-- witness -->
