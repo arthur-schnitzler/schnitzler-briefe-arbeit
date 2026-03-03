@@ -1,10 +1,6 @@
-<?xml version="1.0" encoding="UTF-8"?>
+<?xml version='1.0' encoding='UTF-8'?>
 <?xml-model href="../meta/schnitzler-briefe-schematron.sch" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
-<TEI xmlns="http://www.tei-c.org/ns/1.0"
-     xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-     xsi:schemaLocation="http://www.tei-c.org/ns/1.0 ../meta/schnitzler-briefe-schema.xsd"
-     xml:base="https://id.acdh.oeaw.ac.at/schnitzler/schnitzler-briefe/editions"
-     xml:id="L04307">
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.tei-c.org/ns/1.0 ../meta/schnitzler-briefe-schema.xsd" xml:base="https://id.acdh.oeaw.ac.at/schnitzler/schnitzler-briefe/editions" xml:id="L04307">
    <teiHeader>
       <fileDesc>
          <titleStmt>
@@ -115,7 +111,12 @@
                <date evidence="conjecture" notBefore="1902-08-14" notAfter="1902-08-18">[14. 8. 1902 – 18. 8. 1902?]</date>
                <placeName ref="#pmb50" evidence="conjecture">Wien</placeName>
             </correspAction>
-         </correspDesc>
+         <correspContext><ref type="belongsToCorrespondence" target="correspondence_12740">Schwarzkopf, Gustav</ref>
+               <ref subtype="previous_letter" type="withinCollection" target="L03219">Goldmann an Schnitzler, 12. 8. [1902]</ref>
+               <ref subtype="next_letter" type="withinCollection" target="L03523">Goldmann an Gussmann, 16. 8. 1902</ref>
+               <ref subtype="previous_letter" type="withinCorrespondence" source="correspondence_12740" target="L04073">Schnitzler an Schwarzkopf, 11. 8. 1902</ref>
+               <ref subtype="next_letter" type="withinCorrespondence" source="correspondence_12740" target="L04075">Schnitzler an Schwarzkopf, 19. 8. 1902</ref>
+            </correspContext></correspDesc>
       </profileDesc>
       <revisionDesc status="proposed">
          <change who="MAM" when="2026-02-20">Export aus Transkribus</change>
