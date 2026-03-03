@@ -1,12 +1,16 @@
-<?xml version='1.0' encoding='UTF-8'?>
+<?xml version="1.0" encoding="UTF-8"?>
 <?xml-model href="../meta/schnitzler-briefe-schematron.sch" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
-<TEI xmlns="http://www.tei-c.org/ns/1.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.tei-c.org/ns/1.0 ../meta/schnitzler-briefe-schema.xsd" xml:base="https://id.acdh.oeaw.ac.at/schnitzler/schnitzler-briefe/editions" xml:id="L04149">
+<TEI xmlns="http://www.tei-c.org/ns/1.0"
+     xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+     xsi:schemaLocation="http://www.tei-c.org/ns/1.0 ../meta/schnitzler-briefe-schema.xsd"
+     xml:base="https://id.acdh.oeaw.ac.at/schnitzler/schnitzler-briefe/editions"
+     xml:id="L04309">
    <teiHeader>
       <fileDesc>
          <titleStmt>
             <title level="s">Arthur Schnitzler: Briefwechsel mit Autorinnen und Autoren</title>
-            <title level="a">Arthur Schnitzler an Gustav Schwarzkopf, 24. 12. 1903</title>
-            <author ref="#pmb2121">Schnitzler, Arthur</author>
+            <title level="a">Gustav Schwarzkopf an Arthur Schnitzler, 24. 12. 1903</title>
+            <author ref="#pmb12740">Schwarzkopf, Gustav</author>
             <editor>
                <persName>Jahnke, Selma</persName>
                <persName>Müller, Martin Anton</persName>
@@ -34,7 +38,7 @@
          <publicationStmt>
             <publisher>Austrian Centre for Digital Humanities</publisher>
             <pubPlace>Vienna</pubPlace>
-            <date when="2025">2025</date>
+            <date when="2026">2026</date>
             <availability>
                <licence target="https://creativecommons.org/licenses/by/4.0/deed.de">
                   <p>Sie dürfen: Teilen — das Material in jedwedem Format oder Medium
@@ -75,36 +79,36 @@
                         <country>GB</country>
                         <settlement>Cambridge</settlement>
                         <repository>University Library</repository>
-                        <idno>Schnitzler, B 96</idno>
+                        <idno>Schnitzler, B 96a</idno>
                      </msIdentifier>
                      <physDesc>
                         <objectDesc>
                            <supportDesc>
                               <extent>
                                  <measure unit="karte" quantity="1"/>
-                                 <measure unit="zeichenanzahl" quantity="187"/>
+                                 <measure unit="zeichenanzahl" quantity="301"/>
                               </extent>
                            </supportDesc>
                         </objectDesc>
                         <handDesc hands="1">
-                           <handNote medium="bleistift" style="deutsche-kurrent"/>
+                           <handNote medium="schwarze-tinte" style="deutsche-kurrent"/>
                         </handDesc>
                         <additions>
                            <incident type="postal">
                               <desc>
                                  <stamp n="1">
-                                    <placeName ref="#pmb68">Wien 18/1 110</placeName>
-                                    <date when="1903-12-24">24 XII 03</date>
-                                    <time>3 40N</time>
+                                    <placeName ref="#pmb51">1/1 Wien 1</placeName>
+                                    <date when="1903-12-24">24. 12. 03</date>
+                                    <time>10–11N</time>
                                  </stamp>
                               </desc>
                            </incident>
                            <incident type="postal">
                               <desc>
                                  <stamp n="2">
-                                    <placeName ref="#pmb51">Wien 1/1</placeName>
-                                    <date when="1903-12-24">24 XII 03</date>
-                                    <time>4 40N</time>
+                                    <placeName ref="#pmb68">18/1 Wien 110</placeName>
+                                    <date when="1903-12-24">24. 12. 03</date>
+                                    <time>10–11N</time>
                                  </stamp>
                               </desc>
                            </incident>
@@ -121,99 +125,73 @@
          </langUsage>
          <correspDesc>
             <correspAction type="sent">
-               <persName ref="#pmb2121">Schnitzler, Arthur</persName>
-               <date when="1903-12-24" n="01">24. 12. 1903</date>
+               <persName ref="#pmb12740">Schwarzkopf, Gustav</persName>
+               <date when="1903-12-24" n="03">24. 12. 1903</date>
                <placeName ref="#pmb50">Wien</placeName>
             </correspAction>
             <correspAction type="transmitted">
-               <date when="1903-12-24" n="01">24. 12. 1903</date>
-               <placeName ref="#pmb50">Wien</placeName>
-            </correspAction>
-            <correspAction type="delivered">
                <date when="1903-12-24">24. 12. 1903</date>
                <placeName ref="#pmb50">Wien</placeName>
             </correspAction>
             <correspAction type="received">
-               <persName ref="#pmb12740">Schwarzkopf, Gustav</persName>
-               <date when="1903-12-24">24. 12. 1903</date>
+               <date when="1903-12-25">25. 12. 1903</date>
                <placeName ref="#pmb50">Wien</placeName>
             </correspAction>
-            <correspContext><ref type="belongsToCorrespondence" target="correspondence_12740">Schwarzkopf, Gustav</ref>
-               <ref subtype="previous_letter" type="withinCollection" target="L01352">Bahr an Schnitzler, 16. 12. [1903]</ref>
-               <ref subtype="next_letter" type="withinCollection" target="L01331">Hofmannsthal an Schnitzler, 24. [12?.] 1903</ref>
-               <ref subtype="previous_letter" type="withinCorrespondence" source="correspondence_12740" target="L04146">Schnitzler an Schwarzkopf, 10. 11. 1903</ref>
-               <ref subtype="next_letter" type="withinCorrespondence" source="correspondence_12740" target="L04056">Schnitzler an Schwarzkopf, 22. 1. 1904</ref>
-            </correspContext></correspDesc>
+            <correspAction type="received">
+               <persName ref="#pmb2121">Schnitzler, Arthur</persName>
+               <date when="1903-12-25">25. 12. 1903</date>
+               <placeName ref="#pmb50">Wien</placeName>
+            </correspAction>
+         </correspDesc>
       </profileDesc>
       <revisionDesc status="proposed">
-         <change who="MAM" when="2025-12-10">Export aus Transkribus</change>
+         <change who="MAM" when="2026-02-20">Export aus Transkribus</change>
       </revisionDesc>
    </teiHeader>
    <facsimile>
-      <graphic url="MS-SCHNITZLER-B-00096-B-000-00283"/>
-      <graphic url="MS-SCHNITZLER-B-00096-B-000-00284"/>
+      <graphic url="MS-SCHNITZLER-B-00096-A-000-00145"/>
+      <graphic url="MS-SCHNITZLER-B-00096-A-000-00146"/>
    </facsimile>
    <text>
       <body>
          <div type="address">
             <address>
                <addrLine>
-                  <pb facs="MS-SCHNITZLER-B-00096-B-000-00283"/>Herrn Guſtav Schwarzkopf</addrLine>
+                  <pb facs="MS-SCHNITZLER-B-00096-A-000-00145"/>Herrn <hi rend="latintype">D<hi rend="superscript">r</hi> Arthur Schnitzler</hi>
+               </addrLine>
                <addrLine>
-                  <rs type="place" ref="#pmb51">Wien I</rs></addrLine>
+                  <rs type="place" ref="#pmb68">
+                     <hi rend="latintype">Wien</hi>, Währing (XVIII<supplied>)</supplied>
+                  </rs>
+                  <supplied>)</supplied>
+               </addrLine>
                <addrLine>
-                  <rs type="place" ref="#pmb207296">Tiefer Graben 23</rs></addrLine>
+                  <rs type="place" ref="#pmb168940">Spöttelgaſſe 7</rs> (?)</addrLine>
             </address>
          </div>
          <div type="writingSession" n="1">
+            <opener>
+               <dateline rend="right">
+                  <pb facs="MS-SCHNITZLER-B-00096-A-000-00146"/>
+                  <date>24. XII. 03</date>
+               </dateline>
+            </opener>
             <p>
-               <pb facs="MS-SCHNITZLER-B-00096-B-000-00284"/>
-               <salute>lieber Guſtav,</salute> möchten Sie mit Ihrem <rs type="person" ref="#pmb24648" subtype="implied">Bruder</rs> am <anchor type="commentary" xml:id="K_L04149-1"/>
-               <date>Samſtag</date>
-               <note type="commentary" corresp="K_L04149-1">Samstag, der
-                     <ref type="schnitzler-tagebuch" target="1903-12-26" subtype="date-only"/> war Stefanitag.</note>
-               <space unit="chars" quantity="1"/>
-               <add place="below">(Feiertag)</add> bei uns<note type="footnote" xml:id="F_L04149_1">
-                  <p>
-                     <hi rend="latintype">
-                        <rs type="place" ref="#pmb168940">Spöttelgasse</rs>
-                     </hi>. –</p>
-               </note> nachtmahlen? Kommen Sie bitte nicht ſpät, zwiſchen <time>6 u 7</time>.</p>
-            <closer>Herzlichſt Ihr<lb/>
-               <signed>A.</signed>
+               <salute>Lieber Arthur,</salute> mein <rs type="person" ref="#pmb24648" subtype="implied">Bruder</rs> und ich ſind ſchon ſeit 8 Tagen für <date>Samstag</date>, den zweiten
+               Feiertag, zu <hi rend="latintype">
+                  <rs type="person" ref="#pmb2154">Chiavacci</rs>
+               </hi> eingeladen und haben zugeſagt.</p>
+            <closer>Mit beſtem Dank, aufrichtigem<lb/>Bedauern und herzlichen Grüßen<lb/>Ihr<lb/>
+               <signed>Gustav.</signed>
             </closer>
+            <postscript>
+               <p>
+                  <rs type="place" ref="#pmb207296">I. Tiefer Graben 23. Th. 6</rs>.</p>
+            </postscript>
          </div>
       </body>
       <back>
          <listPerson>
-            <person xml:id="pmb2121">
-               <persName>
-                  <surname>Schnitzler</surname>
-                  <forename>Arthur</forename>
-               </persName>
-               <birth>
-                  <date when="1862-05-15">15. 5. 1862</date>
-                  <settlement ref="pmb50">
-                     <placeName type="pref">Wien</placeName>
-                     <location>
-                        <geo>48,208333 16,373056</geo>
-                     </location>
-                  </settlement>
-               </birth>
-               <death>
-                  <date when="1931-10-21">21. 10. 1931</date>
-                  <settlement ref="pmb50">
-                     <placeName type="pref">Wien</placeName>
-                     <location>
-                        <geo>48,208333 16,373056</geo>
-                     </location>
-                  </settlement>
-               </death>
-               <sex value="male"/>
-               <occupation ref="pmb90">Schriftsteller/Schriftstellerin</occupation>
-               <occupation ref="pmb97">Mediziner/Medizinerin</occupation>
-               <idno type="gnd">https://d-nb.info/gnd/118609807/</idno>
-            </person>
             <person xml:id="pmb12740">
                <persName>
                   <forename>Gustav</forename>
@@ -748,6 +726,134 @@
                   <graphic url="https://upload.wikimedia.org/wikipedia/commons/3/3c/Gustav_Schwarzkopf_auf_einer_Schnellfotografie.png"/>
                </figure>
             </person>
+            <person xml:id="pmb2121">
+               <persName>
+                  <surname>Schnitzler</surname>
+                  <forename>Arthur</forename>
+               </persName>
+               <birth>
+                  <date when="1862-05-15">15. 5. 1862</date>
+                  <settlement ref="pmb50">
+                     <placeName type="pref">Wien</placeName>
+                     <location>
+                        <geo>48,208333 16,373056</geo>
+                     </location>
+                  </settlement>
+               </birth>
+               <death>
+                  <date when="1931-10-21">21. 10. 1931</date>
+                  <settlement ref="pmb50">
+                     <placeName type="pref">Wien</placeName>
+                     <location>
+                        <geo>48,208333 16,373056</geo>
+                     </location>
+                  </settlement>
+               </death>
+               <sex value="male"/>
+               <occupation ref="pmb90">Schriftsteller/Schriftstellerin</occupation>
+               <occupation ref="pmb97">Mediziner/Medizinerin</occupation>
+               <idno type="gnd">https://d-nb.info/gnd/118609807/</idno>
+            </person>
+            <person xml:id="pmb2154">
+               <persName>
+                  <forename>Vincenz</forename>
+                  <surname>Chiavacci</surname>
+               </persName>
+               <persName type="legacy-name-merge">Chiavacci, Vincenz</persName>
+               <birth>
+                  <date when="1847-06-15">15.06.1847</date>
+                  <settlement ref="pmb50">
+                     <placeName type="pref">Wien</placeName>
+                     <location>
+                        <geo>48,208333 16,373056</geo>
+                     </location>
+                  </settlement>
+               </birth>
+               <death>
+                  <date when="1916-02-02">02.02.1916</date>
+                  <settlement ref="pmb50">
+                     <placeName type="pref">Wien</placeName>
+                     <location>
+                        <geo>48,208333 16,373056</geo>
+                     </location>
+                  </settlement>
+               </death>
+               <sex value="male"/>
+               <occupation ref="pmb90">Schriftsteller/Schriftstellerin</occupation>
+               <occupation ref="pmb99">Journalist/Journalistin</occupation>
+               <occupation ref="pmb1472">Beamter/Beamte</occupation>
+               <idno type="URL" subtype="d-nb">https://d-nb.info/gnd/116504854</idno>
+               <idno type="URL" subtype="schnitzler-tagebuch">https://schnitzler-tagebuch.acdh.oeaw.ac.at/person_14195.html</idno>
+               <idno type="URL" subtype="schnitzler-bahr">https://schnitzler-bahr.acdh.oeaw.ac.at/pmb2154.html</idno>
+               <idno type="URL" subtype="pmb">https://pmb.acdh.oeaw.ac.at/entity/2154/</idno>
+               <idno type="URL" subtype="fackel">https://fackel.oeaw.ac.at/?p=fackelp54940</idno>
+               <idno type="URL" subtype="wikidata">http://www.wikidata.org/entity/Q1585734</idno>
+               <idno type="URL" subtype="wikipedia">https://de.wikipedia.org/wiki/Vinzenz_Chiavacci</idno>
+               <idno type="URL" subtype="geschichtewiki">https://www.geschichtewiki.wien.gv.at/Special:URIResolver/?curid=18421</idno>
+               <idno type="URL" subtype="doi">https://doi.org/10.1553/0x002811d2</idno>
+               <idno type="URL" subtype="pmb">https://pmb.acdh.oeaw.ac.at/entity/159623/</idno>
+               <idno type="URL" subtype="bahr-textverzeichnis">https://bahr-textverzeichnis.acdh.oeaw.ac.at/pmb2154.html</idno>
+               <idno type="URL" subtype="schnitzler-interviews">https://schnitzler-interviews.acdh.oeaw.ac.at/pmb2154.html</idno>
+               <idno type="URL" subtype="bahr-textverzeichnis">https://bahr-textverzeichnis.acdh.oeaw.ac.at/TSN-listperson.html#pmb2154</idno>
+               <idno type="URL" subtype="schnitzler-briefe">https://schnitzler-briefe.acdh.oeaw.ac.at/pmb2154.html</idno>
+               <idno type="URL" subtype="schnitzler-kultur">https://schnitzler-kultur.acdh.oeaw.ac.at/pmb2154.html</idno>
+               <affiliation notBefore="1895-01-01" when="1895-01-01" notAfter="1895-12-31">
+                  <term ref="pmb1182">arbeitet für</term>
+                  <orgName ref="pmb167535">Das Bunte Blatt. Zeitschrift für die Familie</orgName>
+                  <idno type="URL" subtype="pmb">https://pmb.acdh.oeaw.ac.at/entity/167535/</idno>
+               </affiliation>
+               <affiliation when="1896-01-12">
+                  <term ref="pmb1182">arbeitet für</term>
+                  <orgName ref="pmb29724">Wiener Bilder. Illustrirtes Sonntagsblatt</orgName>
+                  <idno type="URL" subtype="schnitzler-bahr">https://schnitzler-bahr.acdh.oeaw.ac.at/pmb29724.html</idno>
+                  <idno type="URL" subtype="pmb">https://pmb.acdh.oeaw.ac.at/entity/29724/</idno>
+               </affiliation>
+               <affiliation>
+                  <term ref="pmb1182">arbeitet für</term>
+                  <orgName ref="pmb29634">Verein der Literaturfreunde</orgName>
+                  <idno type="URL" subtype="schnitzler-bahr">https://schnitzler-bahr.acdh.oeaw.ac.at/pmb29634.html</idno>
+                  <idno type="URL" subtype="pmb">https://pmb.acdh.oeaw.ac.at/entity/29634/</idno>
+                  <idno type="URL" subtype="schnitzler-briefe">https://schnitzler-briefe.acdh.oeaw.ac.at/pmb29634.html</idno>
+                  <idno type="URL" subtype="schnitzler-kultur">https://schnitzler-kultur.acdh.oeaw.ac.at/pmb29634.html</idno>
+               </affiliation>
+               <affiliation>
+                  <term ref="pmb1182">arbeitet für</term>
+                  <orgName ref="pmb29794">Die Saubermänner. Tischgesellschaft</orgName>
+                  <idno type="URL" subtype="schnitzler-bahr">https://schnitzler-bahr.acdh.oeaw.ac.at/pmb29794.html</idno>
+                  <idno type="URL" subtype="pmb">https://pmb.acdh.oeaw.ac.at/entity/29794/</idno>
+                  <idno type="URL" subtype="schnitzler-briefe">https://schnitzler-briefe.acdh.oeaw.ac.at/pmb29794.html</idno>
+                  <idno type="URL" subtype="schnitzler-kultur">https://schnitzler-kultur.acdh.oeaw.ac.at/pmb29794.html</idno>
+               </affiliation>
+               <listEvent>
+                  <event n="Vereinstreffen" ref="pmb184530" when="1894-05-01">
+                     <desc n="1370">teilgenommen an</desc>
+                     <label>Vereinstreffen Saubermänner, 1.5.1894</label>
+                     <idno type="URL" subtype="pmb">https://pmb.acdh.oeaw.ac.at/entity/184530/</idno>
+                     <idno type="URL" subtype="schnitzler-kultur">https://schnitzler-kultur.acdh.oeaw.ac.at/pmb184530.html</idno>
+                  </event>
+                  <event n="Probe" ref="pmb200677" when="1898-02-18">
+                     <desc n="1370">teilgenommen an</desc>
+                     <label>Probe mit Yvette Guilbert, 18.2.1898</label>
+                     <idno type="URL" subtype="pmb">https://pmb.acdh.oeaw.ac.at/entity/200677/</idno>
+                     <idno type="URL" subtype="schnitzler-kultur">https://schnitzler-kultur.acdh.oeaw.ac.at/pmb200677.html</idno>
+                  </event>
+                  <event n="Lesung" ref="pmb299555" when="1899-02-19">
+                     <desc n="1256">mitwirkend an</desc>
+                     <label>Lesung von Max Burckhard, Vinzenz Chiavacci, Carl Karlweis und Gustav Schwarzkopf, 19.2.1899</label>
+                     <idno type="URL" subtype="pmb">https://pmb.acdh.oeaw.ac.at/entity/299555/</idno>
+                  </event>
+                  <event n="Bankett" ref="pmb143820" when="1900-04-15">
+                     <desc n="1370">teilgenommen an</desc>
+                     <label>Bankett für Ludwig Speidel, 15.4.1900</label>
+                     <idno type="URL" subtype="pmb">https://pmb.acdh.oeaw.ac.at/entity/143820/</idno>
+                     <idno type="URL" subtype="schnitzler-kultur">https://schnitzler-kultur.acdh.oeaw.ac.at/pmb143820.html</idno>
+                  </event>
+               </listEvent>
+               <note type="references">None </note>
+               <figure>
+                  <graphic url="https://upload.wikimedia.org/wikipedia/commons/thumb/d/d7/Vinzenz_Chiavacci_1892_Vilimek.jpg/250px-Vinzenz_Chiavacci_1892_Vilimek.jpg"/>
+               </figure>
+            </person>
             <person xml:id="pmb24648" ana="implied">
                <persName>
                   <forename>Max</forename>
@@ -801,6 +907,38 @@
             </person>
          </listPerson>
          <listPlace>
+            <place xml:id="pmb51">
+               <placeName>I., Innere Stadt</placeName>
+               <placeName type="alternative-name">Inner city</placeName>
+               <placeName type="alternative-name">Wien,Innere Stadt</placeName>
+               <placeName type="alternative-name">1. Wiener Gemeindebezirk</placeName>
+               <placeName type="legacy-name-merge">Wien-Innere Stadt</placeName>
+               <desc type="entity_type">A.ADM3</desc>
+               <desc type="entity_type_id">1124</desc>
+               <location type="coords">
+                  <geo>48,20769 16,37049</geo>
+               </location>
+               <location type="located_in_place">
+                  <placeName ref="pmb41240">Österreich</placeName>
+                  <geo>47,33333 13,33333</geo>
+               </location>
+               <location type="located_in_place">
+                  <placeName ref="pmb50">Wien</placeName>
+                  <geo>48,208333 16,373056</geo>
+               </location>
+               <idno type="URL" subtype="schnitzler-bahr">https://schnitzler-bahr.acdh.oeaw.ac.at/pmb51.html</idno>
+               <idno type="URL" subtype="pmb">https://pmb.acdh.oeaw.ac.at/entity/51/</idno>
+               <idno type="URL" subtype="pmb">https://pmb.acdh.oeaw.ac.at/entity/36789/</idno>
+               <idno type="URL" subtype="pmb">https://pmb.acdh.oeaw.ac.at/entity/51010/</idno>
+               <idno type="URL" subtype="geonames">https://sws.geonames.org/2775259/</idno>
+               <idno type="URL" subtype="kraus">https://www.kraus.wienbibliothek.at/legalkraus/pmb51.html</idno>
+               <idno type="URL" subtype="schnitzler-interviews">https://schnitzler-interviews.acdh.oeaw.ac.at/pmb51.html</idno>
+               <idno type="URL" subtype="wikidata">http://www.wikidata.org/entity/Q267329</idno>
+               <idno type="URL" subtype="wikipedia">https://de.wikipedia.org/wiki/Innere_Stadt_(Wien)</idno>
+               <idno type="URL" subtype="wienerschnitzler">https://wienerschnitzler.org/pmb51.html</idno>
+               <idno type="URL" subtype="schnitzler-briefe">https://schnitzler-briefe.acdh.oeaw.ac.at/pmb51.html</idno>
+               <idno type="URL" subtype="schnitzler-kultur">https://schnitzler-kultur.acdh.oeaw.ac.at/pmb51.html</idno>
+            </place>
             <place xml:id="pmb68">
                <placeName>XVIII., Währing</placeName>
                <placeName type="legacy-name-merge">Währing</placeName>
@@ -834,38 +972,6 @@
                      <graphic url="https://iiif.onb.ac.at/images/AKON/AK072_600/600/full/,600/0/native.jpg"/>
                   </figure>
                </note>
-            </place>
-            <place xml:id="pmb51">
-               <placeName>I., Innere Stadt</placeName>
-               <placeName type="alternative-name">Inner city</placeName>
-               <placeName type="alternative-name">Wien,Innere Stadt</placeName>
-               <placeName type="alternative-name">1. Wiener Gemeindebezirk</placeName>
-               <placeName type="legacy-name-merge">Wien-Innere Stadt</placeName>
-               <desc type="entity_type">A.ADM3</desc>
-               <desc type="entity_type_id">1124</desc>
-               <location type="coords">
-                  <geo>48,20769 16,37049</geo>
-               </location>
-               <location type="located_in_place">
-                  <placeName ref="pmb41240">Österreich</placeName>
-                  <geo>47,33333 13,33333</geo>
-               </location>
-               <location type="located_in_place">
-                  <placeName ref="pmb50">Wien</placeName>
-                  <geo>48,208333 16,373056</geo>
-               </location>
-               <idno type="URL" subtype="schnitzler-bahr">https://schnitzler-bahr.acdh.oeaw.ac.at/pmb51.html</idno>
-               <idno type="URL" subtype="pmb">https://pmb.acdh.oeaw.ac.at/entity/51/</idno>
-               <idno type="URL" subtype="pmb">https://pmb.acdh.oeaw.ac.at/entity/36789/</idno>
-               <idno type="URL" subtype="pmb">https://pmb.acdh.oeaw.ac.at/entity/51010/</idno>
-               <idno type="URL" subtype="geonames">https://sws.geonames.org/2775259/</idno>
-               <idno type="URL" subtype="kraus">https://www.kraus.wienbibliothek.at/legalkraus/pmb51.html</idno>
-               <idno type="URL" subtype="schnitzler-interviews">https://schnitzler-interviews.acdh.oeaw.ac.at/pmb51.html</idno>
-               <idno type="URL" subtype="wikidata">http://www.wikidata.org/entity/Q267329</idno>
-               <idno type="URL" subtype="wikipedia">https://de.wikipedia.org/wiki/Innere_Stadt_(Wien)</idno>
-               <idno type="URL" subtype="wienerschnitzler">https://wienerschnitzler.org/pmb51.html</idno>
-               <idno type="URL" subtype="schnitzler-briefe">https://schnitzler-briefe.acdh.oeaw.ac.at/pmb51.html</idno>
-               <idno type="URL" subtype="schnitzler-kultur">https://schnitzler-kultur.acdh.oeaw.ac.at/pmb51.html</idno>
             </place>
             <place xml:id="pmb50">
                <placeName>Wien</placeName>
@@ -912,24 +1018,6 @@
                   </figure>
                </note>
             </place>
-            <place xml:id="pmb207296">
-               <placeName>Tiefer Graben 23</placeName>
-               <desc type="entity_type">Wohngebäude (K.WHS)</desc>
-               <desc type="entity_type_id">36</desc>
-               <location type="coords">
-                  <geo>48,213038 16,368738</geo>
-               </location>
-               <location type="located_in_place">
-                  <placeName ref="pmb50825">Tiefer Graben</placeName>
-                  <geo>48,2125 16,368333</geo>
-               </location>
-               <location type="located_in_place">
-                  <placeName ref="pmb51">I., Innere Stadt</placeName>
-                  <geo>48,20769 16,37049</geo>
-               </location>
-               <idno type="URL" subtype="pmb">https://pmb.acdh.oeaw.ac.at/entity/207296/</idno>
-               <idno type="URL" subtype="wienerschnitzler">https://wienerschnitzler.org/pmb207296.html</idno>
-            </place>
             <place xml:id="pmb168940">
                <placeName>Edmund-Weiß-Gasse 7</placeName>
                <placeName type="ort_fruherer-name">Spöttelgasse 7</placeName>
@@ -954,6 +1042,24 @@
                <idno type="URL" subtype="wienerschnitzler">https://wienerschnitzler.org/pmb168940.html</idno>
                <idno type="URL" subtype="schnitzler-briefe">https://schnitzler-briefe.acdh.oeaw.ac.at/pmb168940.html</idno>
                <idno type="URL" subtype="schnitzler-kultur">https://schnitzler-kultur.acdh.oeaw.ac.at/pmb168940.html</idno>
+            </place>
+            <place xml:id="pmb207296">
+               <placeName>Tiefer Graben 23</placeName>
+               <desc type="entity_type">Wohngebäude (K.WHS)</desc>
+               <desc type="entity_type_id">36</desc>
+               <location type="coords">
+                  <geo>48,213038 16,368738</geo>
+               </location>
+               <location type="located_in_place">
+                  <placeName ref="pmb50825">Tiefer Graben</placeName>
+                  <geo>48,2125 16,368333</geo>
+               </location>
+               <location type="located_in_place">
+                  <placeName ref="pmb51">I., Innere Stadt</placeName>
+                  <geo>48,20769 16,37049</geo>
+               </location>
+               <idno type="URL" subtype="pmb">https://pmb.acdh.oeaw.ac.at/entity/207296/</idno>
+               <idno type="URL" subtype="wienerschnitzler">https://wienerschnitzler.org/pmb207296.html</idno>
             </place>
          </listPlace>
       </back>

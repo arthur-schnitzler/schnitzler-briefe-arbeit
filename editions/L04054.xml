@@ -1,6 +1,10 @@
-<?xml version='1.0' encoding='UTF-8'?>
+<?xml version="1.0" encoding="UTF-8"?>
 <?xml-model href="../meta/schnitzler-briefe-schematron.sch" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
-<TEI xmlns="http://www.tei-c.org/ns/1.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.tei-c.org/ns/1.0 ../meta/schnitzler-briefe-schema.xsd" xml:base="https://id.acdh.oeaw.ac.at/schnitzler/schnitzler-briefe/editions" xml:id="L04054">
+<TEI xmlns="http://www.tei-c.org/ns/1.0"
+     xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+     xsi:schemaLocation="http://www.tei-c.org/ns/1.0 ../meta/schnitzler-briefe-schema.xsd"
+     xml:base="https://id.acdh.oeaw.ac.at/schnitzler/schnitzler-briefe/editions"
+     xml:id="L04054">
    <teiHeader>
       <fileDesc>
          <titleStmt>
@@ -82,7 +86,7 @@
                            <supportDesc>
                               <extent>
                                  <measure unit="karte" quantity="1"/>
-                                 <measure unit="zeichenanzahl" quantity="252"/>
+                                 <measure unit="zeichenanzahl" quantity="251"/>
                               </extent>
                            </supportDesc>
                         </objectDesc>
@@ -129,15 +133,23 @@
             </correspAction>
             <correspAction type="received">
                <persName ref="#pmb12740">Schwarzkopf, Gustav</persName>
-               <date when="1904-02-27" n="01">27. 2. 1904</date>
+               <date when="1904-02-27">27. 2. 1904</date>
                <placeName ref="#pmb50">Wien</placeName>
             </correspAction>
-            <correspContext><ref type="belongsToCorrespondence" target="correspondence_12740">Schwarzkopf, Gustav</ref>
+            <correspContext>
+               <ref type="belongsToCorrespondence" target="correspondence_12740">Schwarzkopf, Gustav</ref>
                <ref subtype="previous_letter" type="withinCollection" target="L01376">Schnitzler an Bahr, 22. 2. 1904</ref>
                <ref subtype="next_letter" type="withinCollection" target="L01388">Brandes an Schnitzler, [März 1904]</ref>
-               <ref subtype="previous_letter" type="withinCorrespondence" source="correspondence_12740" target="L04055">Schnitzler an Schwarzkopf, 19. 2. 1904</ref>
-               <ref subtype="next_letter" type="withinCorrespondence" source="correspondence_12740" target="L04207">Schnitzler an Schwarzkopf, 20. 3. 1904</ref>
-            </correspContext></correspDesc>
+               <ref subtype="previous_letter"
+                    type="withinCorrespondence"
+                    source="correspondence_12740"
+                    target="L04055">Schnitzler an Schwarzkopf, 19. 2. 1904</ref>
+               <ref subtype="next_letter"
+                    type="withinCorrespondence"
+                    source="correspondence_12740"
+                    target="L04207">Schnitzler an Schwarzkopf, 20. 3. 1904</ref>
+            </correspContext>
+         </correspDesc>
       </profileDesc>
       <revisionDesc status="proposed">
          <change who="MAM" when="2025-12-10">Export aus Transkribus</change>
@@ -155,19 +167,22 @@
                   <pb facs="MS-SCHNITZLER-B-00096-B-000-00071"/>Herrn Guſtav
                   Schwarzkopf</addrLine>
                <addrLine>
-                  <rs type="place" ref="#pmb51">Wien I</rs></addrLine>
+                  <rs type="place" ref="#pmb51">Wien I</rs>
+               </addrLine>
                <addrLine>
-                  <rs type="place" ref="#pmb207296">Tiefer Graben 23</rs></addrLine>
+                  <rs type="place" ref="#pmb207296">Tiefer Graben 23</rs>
+               </addrLine>
             </address>
          </div>
          <div type="writingSession" n="1">
             <p>
                <pb facs="MS-SCHNITZLER-B-00096-B-000-00072"/>
-               <salute>lieber Guſtav,</salute> wollen Sie <rs type="person" ref="#pmb24648" subtype="implied">beide</rs> morgen <date>So<c rendition="#gemination-n"/>tag</date> Abends <anchor type="commentary" xml:id="K_L04054-1"/>bei uns
-                  nachtmahlen<note type="commentary" corresp="K_L04054-1">
-                  <rs type="person" ref="#pmb12740">Schwarzkopf</rs> sagte ab, <ref type="schnitzler-briefe" target=""/> XXXX.</note>, ſo wär es uns ſehr
-               erfreulich und Sie würden von ½ 7 an erwartet. We<c rendition="#gemination-n"/>
-               ja, Antwort überflüſſig. We<c rendition="#gemination-n"/> nein, bitte <hi rend="latintype">Pneuma</hi>-Antwort</p>
+               <salute>lieber Guſtav,</salute> wollen Sie <rs type="person" ref="#pmb24648" subtype="implied">beide</rs> morgen <date>So<c rendition="#gemination-n"/>tag</date> Abends bei uns
+                  nachtmahlen, ſo wär es uns ſehr
+               erfreulich und Sie würden von <time>½ 7</time> an erwartet. We<c rendition="#gemination-n"/>
+               ja, Antwort überflüſſig. We<c rendition="#gemination-n"/> nein, bitte <anchor type="commentary" xml:id="K_L04054-1"/>
+               <hi rend="latintype">Pneuma</hi>-Antwort<note type="commentary" corresp="K_L04054-1">pneumatisch: mittels Rohrpost</note>
+            </p>
             <closer>Herzlichſt Ihr <signed>A.</signed>
             </closer>
          </div>
