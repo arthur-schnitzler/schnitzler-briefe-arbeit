@@ -1,6 +1,10 @@
-<?xml version='1.0' encoding='UTF-8'?>
+<?xml version="1.0" encoding="UTF-8"?>
 <?xml-model href="../meta/schnitzler-briefe-schematron.sch" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
-<TEI xmlns="http://www.tei-c.org/ns/1.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.tei-c.org/ns/1.0 ../meta/schnitzler-briefe-schema.xsd" xml:id="L03694" xml:base="https://id.acdh.oeaw.ac.at/schnitzler/schnitzler-briefe/editions">
+<TEI xmlns="http://www.tei-c.org/ns/1.0"
+     xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+     xsi:schemaLocation="http://www.tei-c.org/ns/1.0 ../meta/schnitzler-briefe-schema.xsd"
+     xml:id="L03694"
+     xml:base="https://id.acdh.oeaw.ac.at/schnitzler/schnitzler-briefe/editions">
    <teiHeader>
       <fileDesc>
          <titleStmt>
@@ -135,7 +139,7 @@
          <correspDesc>
             <correspAction type="sent">
                <persName ref="#pmb2128">Plessner, Elsa</persName>
-               <date notBefore="1897-04-15" notAfter="1897-04-21" n="02">[Mitte April 1897]</date>
+               <date notBefore="1897-04-15" notAfter="1897-04-22" n="02">[Mitte April 1897]</date>
                <placeName ref="#pmb50">Wien</placeName>
             </correspAction>
             <correspAction type="received">
@@ -143,12 +147,20 @@
                <date when="1897-04-22">22. 4. 1897</date>
                <placeName ref="#pmb182">Paris</placeName>
             </correspAction>
-            <correspContext><ref type="belongsToCorrespondence" target="correspondence_2128">Plessner, Elsa</ref>
+            <correspContext>
+               <ref type="belongsToCorrespondence" target="correspondence_2128">Plessner, Elsa</ref>
                <ref subtype="previous_letter" type="withinCollection" target="L00665">Schnitzler an Beer-Hofmann, 10. 4. 1897</ref>
                <ref subtype="next_letter" type="withinCollection" target="L02808">Goldmann an Schnitzler, 17. 4. [1897]</ref>
-               <ref subtype="previous_letter" type="withinCorrespondence" source="correspondence_2128" target="L03713">Plessner an Schnitzler, 23. 3. 1897</ref>
-               <ref subtype="next_letter" type="withinCorrespondence" source="correspondence_2128" target="L03695">Plessner an Schnitzler, 15. 5. 1897</ref>
-            </correspContext></correspDesc>
+               <ref subtype="previous_letter"
+                    type="withinCorrespondence"
+                    source="correspondence_2128"
+                    target="L03713">Plessner an Schnitzler, 23. 3. 1897</ref>
+               <ref subtype="next_letter"
+                    type="withinCorrespondence"
+                    source="correspondence_2128"
+                    target="L03695">Plessner an Schnitzler, 15. 5. 1897</ref>
+            </correspContext>
+         </correspDesc>
       </profileDesc>
       <revisionDesc status="approved">
          <change who="MAM" when="2016-11-30">Angelegt aus Abschrift</change>
@@ -158,6 +170,7 @@
          <change who="SJ" when="2025-07-30">Ergänzungen</change>
          <change who="MAM" when="2025-12-15">Durchsicht</change>
          <change who="MAM" when="2025-12-15">Index check</change>
+         <change who="SJ" when="2026-03-12">Durchsicht</change>
       </revisionDesc>
    </teiHeader>
    <facsimile>
@@ -175,8 +188,8 @@
             </opener>
             <p>Schon wieder einmal komme ich Sie um etwas zu bitten!! – Aber Sie sind ja immer so
                gut. Also die Sache ist die, dass ich bei Herrn <rs type="person" ref="#pmb10815">H.
-                  Bahr</rs> die Novelle, die Sie »<rs type="work" ref="#pmb32316">Warten</rs>«
-               getauft haben, (bei mir hieß sie zuerst »Blätter«) – an die Sie sich hoffentlich
+                  Bahr</rs> die <rs type="work" subtype="implied" ref="#pmb32316">Novelle</rs>, die Sie »<rs type="work" ref="#pmb32316">Warten</rs>«
+               getauft haben, (bei mir hieß sie zuerst »<rs type="work" ref="#pmb32316">Blätter</rs>«) – an die Sie sich hoffentlich
                   <anchor type="commentary" xml:id="K_L03694-1"/>noch erinnern<note type="commentary" corresp="K_L03694-1">
                   <rs type="person" ref="#pmb2128">Plessner</rs> hatte die <rs type="work" ref="#pmb32316" subtype="implied">Erzählung</rs> am <ref type="schnitzler-briefe" target="L03700" subtype="date-only"/>
                   <space unit="chars" quantity="1"/>
@@ -192,7 +205,7 @@
                seinerzeit gefiel. Aber – Sie wissen ja, wie das ist, – ein empfehlendes Wort
                Ihrerseits ist doch zehnmal gewichtiger als die beste Arbeit einer <anchor type="commentary" xml:id="K_L03694-3"/>
                <foreign xml:lang="fr">obscurité</foreign>
-               <note type="commentary" corresp="K_L03694-3">französisch, sinngemäß:
+               <note type="commentary" corresp="K_L03694-3">französisch: Dunkel, hier sinngemäß:
                   Unerkannten</note>. – Also – besten herzlichsten Dank im voraus!</p>
             <closer>In steter Verehrung<lb/>
                <signed>Elsa Plessner</signed>
@@ -210,6 +223,7 @@
                <persName type="person_ehename_nachname">Ginsberg</persName>
                <persName type="legacy-name-merge">Plessner, Elsa</persName>
                <persName type="person_namensvariante_nachname">Pleßner</persName>
+               <persName type="person_pseudonym">Lisa Gerstenberg</persName>
                <birth>
                   <date when="1875-08-22">22.08.1875</date>
                   <settlement ref="pmb50">
@@ -245,6 +259,7 @@
                <idno type="URL" subtype="wikipedia">https://de.wikipedia.org/wiki/Elsa_Plessner</idno>
                <idno type="URL" subtype="schnitzler-briefe">https://schnitzler-briefe.acdh.oeaw.ac.at/pmb2128.html</idno>
                <idno type="URL" subtype="schnitzler-kultur">https://schnitzler-kultur.acdh.oeaw.ac.at/pmb2128.html</idno>
+               <idno type="URL" subtype="bahr-textverzeichnis">https://bahr-textverzeichnis.acdh.oeaw.ac.at/TSN-listperson.html#pmb158649</idno>
                <listEvent>
                   <event n="Theateruraufführung" ref="pmb42011" when="1896-10-16">
                      <desc n="1370">teilgenommen an</desc>
@@ -329,6 +344,8 @@
                   <idno type="URL" subtype="pmb">https://pmb.acdh.oeaw.ac.at/entity/29424/</idno>
                   <idno type="URL" subtype="schnitzler-briefe">https://schnitzler-briefe.acdh.oeaw.ac.at/pmb29424.html</idno>
                   <idno type="URL" subtype="schnitzler-kultur">https://schnitzler-kultur.acdh.oeaw.ac.at/pmb29424.html</idno>
+                  <idno type="URL" subtype="wikidata">http://www.wikidata.org/entity/Q1204520</idno>
+                  <idno type="URL" subtype="wikipedia">https://de.wikipedia.org/wiki/Deutsche_Zeitung_(1871%E2%80%931907)</idno>
                </affiliation>
                <affiliation when="1894-10-06">
                   <term ref="pmb1153">in Bezug zu</term>
@@ -665,11 +682,9 @@
          <listBibl>
             <bibl xml:id="pmb32316">
                <title>Warten. Novelle</title>
-               <title type="werk_bibliografische-angabe">In: Der Gläserne Käfig. Skizzen und
-                  Novellen. Wien: Leopold Weiss 1901, S. 39–56</title>
+               <title type="werk_bibliografische-angabe">In: Der Gläserne Käfig. Skizzen und Novellen. Wien: Leopold Weiss 1901, S. 39–56</title>
                <title type="werk_arbeitstitel">Blätter</title>
-               <title type="werk_bibliografische-angabe">E. Pleßner: Warten. In: Magazin für
-                  Litteratur, Jg. 66, Nr. 29, 24. 7. 1897, Sp. 867–875</title>
+               <title type="werk_bibliografische-angabe">E. Pleßner: Warten. In: Magazin für Litteratur, Jg. 66, Nr. 29, 24. 7. 1897, Sp. 867–875</title>
                <title type="werk_link">https://tudigit.ulb.tu-darmstadt.de/show/Zb-1110-1897-66</title>
                <author ref="pmb2128" role="hat-geschaffen">Plessner, Elsa</author>
                <date when="1897-07-24">24.07.1897</date>
@@ -682,8 +697,7 @@
          <listPlace>
             <place xml:id="pmb50">
                <placeName>Wien</placeName>
-               <placeName type="ort_fruherer-name">K.K. Reichshaupt- und Residenzstadt
-                  Wien</placeName>
+               <placeName type="ort_fruherer-name">K.K. Reichshaupt- und Residenzstadt Wien</placeName>
                <placeName type="alternative-name">Bécs</placeName>
                <placeName type="alternative-name">Land Wien</placeName>
                <placeName type="alternative-name">Vídeň</placeName>
