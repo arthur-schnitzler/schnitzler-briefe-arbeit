@@ -1,6 +1,10 @@
-<?xml version='1.0' encoding='UTF-8'?>
+<?xml version="1.0" encoding="UTF-8"?>
 <?xml-model href="../meta/schnitzler-briefe-schematron.sch" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
-<TEI xmlns="http://www.tei-c.org/ns/1.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.tei-c.org/ns/1.0 ../meta/schnitzler-briefe-schema.xsd" xml:base="https://id.acdh.oeaw.ac.at/schnitzler/schnitzler-briefe/editions" xml:id="L04004">
+<TEI xmlns="http://www.tei-c.org/ns/1.0"
+     xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+     xsi:schemaLocation="http://www.tei-c.org/ns/1.0 ../meta/schnitzler-briefe-schema.xsd"
+     xml:base="https://id.acdh.oeaw.ac.at/schnitzler/schnitzler-briefe/editions"
+     xml:id="L04004">
    <teiHeader>
       <fileDesc>
          <titleStmt>
@@ -87,7 +91,7 @@
                               </extent>
                            </supportDesc>
                         </objectDesc>
-                        <handDesc hands="0">
+                        <handDesc hands="1">
                            <handNote medium="schwarze-tinte" style="lateinische-kurrent"/>
                         </handDesc>
                         <additions>
@@ -125,12 +129,20 @@
                <date evidence="conjecture" notBefore="1911-11-07" notAfter="1911-11-10">[7. 11. 1911 – 10. 11. 1911?]</date>
                <placeName ref="#pmb50" evidence="external">Wien</placeName>
             </correspAction>
-            <correspContext><ref type="belongsToCorrespondence" target="correspondence_2312">Zuckerkandl, Berta</ref>
+            <correspContext>
+               <ref type="belongsToCorrespondence" target="correspondence_2312">Zuckerkandl, Berta</ref>
                <ref subtype="previous_letter" type="withinCollection" target="L02043">Schnitzler, Schnitzler an Beer-Hofmann, 7. 11. 1911</ref>
                <ref subtype="next_letter" type="withinCollection" target="L02044">Burckhard an Schnitzler, 8. 11. 1911</ref>
-               <ref subtype="previous_letter" type="withinCorrespondence" source="correspondence_2312" target="L04005">Zuckerkandl an Schnitzler, [9. 10. 1911?]</ref>
-               <ref subtype="next_letter" type="withinCorrespondence" source="correspondence_2312" target="L04003">Zuckerkandl an Schnitzler, [25. 11. 1911?]</ref>
-            </correspContext></correspDesc>
+               <ref subtype="previous_letter"
+                    type="withinCorrespondence"
+                    source="correspondence_2312"
+                    target="L04005">Zuckerkandl an Schnitzler, [9. 10. 1911?]</ref>
+               <ref subtype="next_letter"
+                    type="withinCorrespondence"
+                    source="correspondence_2312"
+                    target="L04003">Zuckerkandl an Schnitzler, [25. 11. 1911?]</ref>
+            </correspContext>
+         </correspDesc>
       </profileDesc>
       <revisionDesc status="candidate">
          <change who="MAM" when="2025-11-11">Export aus Transkribus</change>
@@ -214,7 +226,7 @@
                         werden diesem <rs type="work" ref="#pmb30207" subtype="implied">Stück</rs>,
                         einem Meisterwerk, einen besonderen Platz in der Hochachtung aller Kenner
                         sichern. Die Hauptrolle, ein großer Industrieller, war für <rs type="person" ref="#pmb11851">Joseph Kainz</rs> bestimmt, den großen Schauspieler, um
-                        dessen Verlust <rs type="place" ref="#pmb687">Österreich</rs> noch immer
+                           dessen Verlust <rs type="place" ref="#pmb41240">Österreich</rs> noch immer
                         trauert!</quote>«</note> »<anchor type="commentary" xml:id="K_L04004-5"/>L’âme
                      d’autrui, vois-tu, c’est une forêt obscure<note type="commentary" corresp="K_L04004-5">Das Zitat stammt nicht aus <rs type="person" ref="#pmb2412">Shakespeares</rs> Werken sondern aus dem 17. Kapitel von
                            <rs type="person" ref="#pmb26238">Ivan Sergeevič Turgenevs</rs> Roman <rs ref="#pmb80013" type="work">Dvorjanskoe gnezdo</rs> (deutsch: <rs type="work" ref="#pmb80007">Das adelige Nest</rs>).</note>
@@ -1076,7 +1088,7 @@
                <idno type="URL" subtype="schnitzler-briefe">https://schnitzler-briefe.acdh.oeaw.ac.at/pmb468.html</idno>
                <idno type="URL" subtype="sk">https://sk.acdh.oeaw.ac.at/fa_place00004333</idno>
             </place>
-            <place xml:id="pmb687" ana="comment">
+            <place xml:id="pmb687">
                <placeName>Österreich-Ungarn</placeName>
                <placeName type="legacy-name-merge">Oesterreich Ungarn</placeName>
                <desc type="entity_type">Land (A.LND)</desc>
@@ -1328,6 +1340,42 @@
                      <graphic url="https://iiif.onb.ac.at/images/AKON/AK077_451/451/full/,600/0/native.jpg"/>
                   </figure>
                </note>
+            </place>
+            <place xml:id="pmb41240" ana="comment">
+               <placeName>Österreich</placeName>
+               <placeName type="alternative-name">Republik Österreich</placeName>
+               <placeName type="alternative-name">Republic of Austria</placeName>
+               <placeName type="legacy-name-merge">Deutsch Österreich</placeName>
+               <placeName type="legacy-name-merge">Altoesterreich</placeName>
+               <desc type="entity_type">A.PCLI</desc>
+               <desc type="entity_type_id">1107</desc>
+               <location type="coords">
+                  <geo>47,33333 13,33333</geo>
+               </location>
+               <location type="located_in_place">
+                  <placeName ref="pmb468">Europa</placeName>
+                  <geo>48,69096 9,14062</geo>
+               </location>
+               <location type="located_in_place">
+                  <placeName ref="pmb298373">Cisleithanien</placeName>
+                  <geo>48,5 16,383333333333333</geo>
+               </location>
+               <location type="located_in_place">
+                  <placeName ref="pmb687">Österreich-Ungarn</placeName>
+                  <geo>48,4054 16,4887</geo>
+               </location>
+               <idno type="URL" subtype="geonames">https://sws.geonames.org/2782113/</idno>
+               <idno type="URL" subtype="pmb">https://pmb.acdh.oeaw.ac.at/entity/41240/</idno>
+               <idno type="URL" subtype="kraus">https://www.kraus.wienbibliothek.at/legalkraus/pmb41240.html</idno>
+               <idno type="URL" subtype="pmb">https://pmb.acdh.oeaw.ac.at/entity/92143/</idno>
+               <idno type="URL" subtype="pmb">https://pmb.acdh.oeaw.ac.at/entity/92203/</idno>
+               <idno type="URL" subtype="schnitzler-interviews">https://schnitzler-interviews.acdh.oeaw.ac.at/pmb41240.html</idno>
+               <idno type="URL" subtype="schnitzler-tagebuch">https://schnitzler-tagebuch.acdh.oeaw.ac.at/pmb41240.html</idno>
+               <idno type="URL" subtype="wikipedia">https://de.wikipedia.org/wiki/%C3%96sterreich</idno>
+               <idno type="URL" subtype="wikidata">http://www.wikidata.org/entity/Q40</idno>
+               <idno type="URL" subtype="pmb">https://pmb.acdh.oeaw.ac.at/entity/135092/</idno>
+               <idno type="URL" subtype="d-nb">https://d-nb.info/gnd/4043271-3</idno>
+               <idno type="URL" subtype="schnitzler-briefe">https://schnitzler-briefe.acdh.oeaw.ac.at/pmb41240.html</idno>
             </place>
          </listPlace>
          <listOrg>
