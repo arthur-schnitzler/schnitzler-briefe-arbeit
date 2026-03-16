@@ -1,6 +1,10 @@
-<?xml version='1.0' encoding='UTF-8'?>
+<?xml version="1.0" encoding="UTF-8"?>
 <?xml-model href="../meta/schnitzler-briefe-schematron.sch" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
-<TEI xmlns="http://www.tei-c.org/ns/1.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.tei-c.org/ns/1.0 ../meta/schnitzler-briefe-schema.xsd" xml:id="L03717" xml:base="https://id.acdh.oeaw.ac.at/schnitzler/schnitzler-briefe/editions">
+<TEI xmlns="http://www.tei-c.org/ns/1.0"
+     xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+     xsi:schemaLocation="http://www.tei-c.org/ns/1.0 ../meta/schnitzler-briefe-schema.xsd"
+     xml:id="L03717"
+     xml:base="https://id.acdh.oeaw.ac.at/schnitzler/schnitzler-briefe/editions">
    <teiHeader>
       <fileDesc>
          <titleStmt>
@@ -110,18 +114,27 @@
                <date evidence="conjecture" notBefore="1898-10-23" notAfter="1898-10-27">[23. 10. 1898 – 27. 10. 1898?]</date>
                <placeName ref="#pmb50" evidence="conjecture">Wien</placeName>
             </correspAction>
-            <correspContext><ref type="belongsToCorrespondence" target="correspondence_2128">Plessner, Elsa</ref>
+            <correspContext>
+               <ref type="belongsToCorrespondence" target="correspondence_2128">Plessner, Elsa</ref>
                <ref subtype="previous_letter" type="withinCollection" target="L02863">Goldmann an Schnitzler, 21. 10. 1898</ref>
                <ref subtype="next_letter" type="withinCollection" target="L02864">Goldmann an Schnitzler, 3. 11. [1898]</ref>
-               <ref subtype="previous_letter" type="withinCorrespondence" source="correspondence_2128" target="L03716">Plessner an Schnitzler, 23. 10. 1897</ref>
-               <ref subtype="next_letter" type="withinCorrespondence" source="correspondence_2128" target="L03718">Plessner an Schnitzler, 2. 1. 1899</ref>
-            </correspContext></correspDesc>
+               <ref subtype="previous_letter"
+                    type="withinCorrespondence"
+                    source="correspondence_2128"
+                    target="L03716">Plessner an Schnitzler, 23. 10. 1897</ref>
+               <ref subtype="next_letter"
+                    type="withinCorrespondence"
+                    source="correspondence_2128"
+                    target="L03718">Plessner an Schnitzler, 2. 1. 1899</ref>
+            </correspContext>
+         </correspDesc>
       </profileDesc>
-      <revisionDesc status="candidate">
+      <revisionDesc status="approved">
          <change who="MAM" when="2025-07-03">Export aus Transkribus</change>
          <change who="SJ" when="2025-07-20">Durchsicht</change>
          <change who="MAM" when="2026-01-28">Durchsicht</change>
          <change who="MAM" when="2026-01-28">Index check</change>
+         <change who="SJ" when="2026-03-16">Durchsicht</change>
       </revisionDesc>
    </teiHeader>
    <facsimile>
@@ -153,7 +166,9 @@
                außerordentlich interessirt. – Besten, herzlichen Dank im Voraus</p>
             <p rend="center">
                <hi rend="pre-print">
+                  <anchor type="textConst" xml:id="T_L03717-1"/>
                   <hi rend="capitals">Elsa Plessner</hi>
+                  <note type="textConst" corresp="T_L03717-1">Der gedruckte Name befindet sich in der Kartenmitte.</note>
                </hi>
             </p>
          </div>
@@ -169,6 +184,7 @@
                <persName type="person_ehename_nachname">Ginsberg</persName>
                <persName type="legacy-name-merge">Plessner, Elsa</persName>
                <persName type="person_namensvariante_nachname">Pleßner</persName>
+               <persName type="person_pseudonym">Lisa Gerstenberg</persName>
                <birth>
                   <date when="1875-08-22">22.08.1875</date>
                   <settlement ref="pmb50">
@@ -205,6 +221,25 @@
                <idno type="URL" subtype="schnitzler-briefe">https://schnitzler-briefe.acdh.oeaw.ac.at/pmb2128.html</idno>
                <idno type="URL" subtype="schnitzler-kultur">https://schnitzler-kultur.acdh.oeaw.ac.at/pmb2128.html</idno>
                <idno type="URL" subtype="bahr-textverzeichnis">https://bahr-textverzeichnis.acdh.oeaw.ac.at/TSN-listperson.html#pmb158649</idno>
+               <listEvent>
+                  <event n="Theateruraufführung" ref="pmb42011" when="1896-10-16">
+                     <desc n="1370">teilgenommen an</desc>
+                     <label>Uraufführung von Sein Sohn, 16.10.1896</label>
+                     <idno type="URL" subtype="pmb">https://pmb.acdh.oeaw.ac.at/entity/42011/</idno>
+                     <idno type="URL" subtype="pmb">https://pmb.acdh.oeaw.ac.at/entity/208861/</idno>
+                     <idno type="URL" subtype="schnitzler-briefe">https://schnitzler-briefe.acdh.oeaw.ac.at/pmb42011.html</idno>
+                     <idno type="URL" subtype="schnitzler-kultur">https://schnitzler-kultur.acdh.oeaw.ac.at/pmb42011.html</idno>
+                  </event>
+                  <event n="Theateruraufführung" ref="pmb296012" when="1901-03-16">
+                     <desc n="1370">teilgenommen an</desc>
+                     <label>Uraufführung von Die Ehrlosen, 16.3.1901</label>
+                     <idno type="URL" subtype="pmb">https://pmb.acdh.oeaw.ac.at/entity/296012/</idno>
+                     <idno type="URL" subtype="schnitzler-briefe">https://schnitzler-briefe.acdh.oeaw.ac.at/pmb296012.html</idno>
+                  </event>
+               </listEvent>
+               <figure>
+                  <graphic url="https://upload.wikimedia.org/wikipedia/commons/thumb/5/5e/Elsa_Plessner%2C_Autorin_von_%E2%80%9EDie_Ehrlosen%E2%80%9C.png/250px-Elsa_Plessner%2C_Autorin_von_%E2%80%9EDie_Ehrlosen%E2%80%9C.png"/>
+               </figure>
             </person>
             <person xml:id="pmb2121">
                <persName>
@@ -284,12 +319,66 @@
                <idno type="URL" subtype="schnitzler-briefe">https://schnitzler-briefe.acdh.oeaw.ac.at/pmb2570.html</idno>
                <idno type="URL" subtype="schnitzler-kultur">https://schnitzler-kultur.acdh.oeaw.ac.at/pmb2570.html</idno>
                <idno type="URL" subtype="conrad-ansorge">https://conrad-ansorge.github.io/ansorge-static/ansorge_p_476.html</idno>
+               <affiliation notBefore="1889-01-01" when="1889-01-01" notAfter="1889-12-31">
+                  <term ref="pmb1182">arbeitet für</term>
+                  <orgName ref="pmb29351">Neue Freie Presse</orgName>
+                  <idno type="URL" subtype="schnitzler-bahr">https://schnitzler-bahr.acdh.oeaw.ac.at/pmb29351.html</idno>
+                  <idno type="URL" subtype="pmb">https://pmb.acdh.oeaw.ac.at/entity/29351/</idno>
+                  <idno type="URL" subtype="kraus">https://www.kraus.wienbibliothek.at/legalkraus/pmb29351.html</idno>
+                  <idno type="URL" subtype="schnitzler-interviews">https://schnitzler-interviews.acdh.oeaw.ac.at/pmb29351.html</idno>
+                  <idno type="URL" subtype="wikidata">http://www.wikidata.org/entity/Q2919142</idno>
+                  <idno type="URL" subtype="schnitzler-briefe">https://schnitzler-briefe.acdh.oeaw.ac.at/pmb29351.html</idno>
+                  <idno type="URL" subtype="schnitzler-kultur">https://schnitzler-kultur.acdh.oeaw.ac.at/pmb29351.html</idno>
+               </affiliation>
+               <affiliation when="1912-09-19">
+                  <term ref="pmb1182">arbeitet für</term>
+                  <orgName ref="pmb61746">Komödienhaus [Berlin|</orgName>
+                  <idno type="URL" subtype="pmb">https://pmb.acdh.oeaw.ac.at/entity/61746/</idno>
+                  <idno type="URL" subtype="wikidata">http://www.wikidata.org/entity/Q45408100</idno>
+                  <idno type="URL" subtype="wikipedia">https://de.wikipedia.org/wiki/Kom%C3%B6dienhaus_(Berlin)</idno>
+                  <idno type="URL" subtype="schnitzler-interviews">https://schnitzler-interviews.acdh.oeaw.ac.at/pmb61746.html</idno>
+               </affiliation>
+               <affiliation>
+                  <term ref="pmb1182">arbeitet für</term>
+                  <orgName ref="pmb237824">Die Wage. Eine Wiener Wochenschrift</orgName>
+                  <idno type="URL" subtype="pmb">https://pmb.acdh.oeaw.ac.at/entity/237824/</idno>
+               </affiliation>
+               <listEvent>
+                  <event n="Theateraufführung" ref="pmb167665" when="1888-04-12">
+                     <desc n="1370">teilgenommen an</desc>
+                     <label>Aufführung von Faust, 12.4.1888</label>
+                     <idno type="URL" subtype="pmb">https://pmb.acdh.oeaw.ac.at/entity/167665/</idno>
+                     <idno type="URL" subtype="schnitzler-kultur">https://schnitzler-kultur.acdh.oeaw.ac.at/pmb167665.html</idno>
+                  </event>
+                  <event n="Feier" ref="pmb184703" when="1893-10-02">
+                     <desc n="1370">teilgenommen an</desc>
+                     <label>Festmahl zu Ehren Ferdinand von Saars. 2.10.1893</label>
+                     <idno type="URL" subtype="pmb">https://pmb.acdh.oeaw.ac.at/entity/184703/</idno>
+                     <idno type="URL" subtype="schnitzler-kultur">https://schnitzler-kultur.acdh.oeaw.ac.at/pmb184703.html</idno>
+                  </event>
+                  <event n="Probe" ref="pmb200677" when="1898-02-18">
+                     <desc n="1370">teilgenommen an</desc>
+                     <label>Probe mit Yvette Guilbert, 18.2.1898</label>
+                     <idno type="URL" subtype="pmb">https://pmb.acdh.oeaw.ac.at/entity/200677/</idno>
+                     <idno type="URL" subtype="schnitzler-kultur">https://schnitzler-kultur.acdh.oeaw.ac.at/pmb200677.html</idno>
+                  </event>
+                  <event n="Bankett" ref="pmb143820" when="1900-04-15">
+                     <desc n="1370">teilgenommen an</desc>
+                     <label>Bankett für Ludwig Speidel, 15.4.1900</label>
+                     <idno type="URL" subtype="pmb">https://pmb.acdh.oeaw.ac.at/entity/143820/</idno>
+                     <idno type="URL" subtype="schnitzler-kultur">https://schnitzler-kultur.acdh.oeaw.ac.at/pmb143820.html</idno>
+                  </event>
+               </listEvent>
+               <note type="references"> </note>
+               <figure>
+                  <graphic url="https://upload.wikimedia.org/wikipedia/commons/thumb/8/85/Rudolf_Lothar_%28BerlLeben_1908-12%29.jpg/250px-Rudolf_Lothar_%28BerlLeben_1908-12%29.jpg"/>
+               </figure>
             </person>
          </listPerson>
          <listBibl>
             <bibl xml:id="pmb43198">
                <title>Die Wage. Eine Wiener Wochenschrift</title>
-               <author role="hat-herausgegeben" ref="pmb2570">Lothar, Rudolf</author>
+               <author ref="pmb2570" role="hat-herausgegeben">Lothar, Rudolf</author>
                <date to="1925-01-01">1898-01-01 – 1925</date>
                <idno type="URL" subtype="pmb">https://pmb.acdh.oeaw.ac.at/entity/43198/</idno>
                <idno type="URL" subtype="schnitzler-briefe">https://schnitzler-briefe.acdh.oeaw.ac.at/pmb43198.html</idno>
@@ -300,7 +389,7 @@
                <title type="werk_bibliografische-angabe">Der neue Lehrer. Novelle. In: Das Magazin für Litteratur, Jg. 69, Nr. 10, 10.3.1900, Sp. 251–256; Nr. 11, 17.3.1900, Sp. 276–282</title>
                <title type="werk_bibliografische-angabe">In: Der Gläserne Käfig. Skizzen und Novellen. Wien: Leopold Weiss 1901, S. 13–37</title>
                <title type="werk_link">https://archive.org/details/bub_gb_VnkDAAAAYAAJ/page/n105</title>
-               <author role="hat-geschaffen" ref="pmb2128">Plessner, Elsa</author>
+               <author ref="pmb2128" role="hat-geschaffen">Plessner, Elsa</author>
                <date to="1900-03-17">1900-03-10 – 1900-03-17</date>
                <idno type="URL" subtype="pmb">https://pmb.acdh.oeaw.ac.at/entity/295201/</idno>
                <idno type="URL" subtype="schnitzler-briefe">https://schnitzler-briefe.acdh.oeaw.ac.at/pmb295201.html</idno>
