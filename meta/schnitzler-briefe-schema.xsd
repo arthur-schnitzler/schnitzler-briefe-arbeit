@@ -338,12 +338,12 @@
    <xs:element name="repository" type="xs:string"/>
    <xs:element name="physDesc">
       <xs:complexType>
-         <xs:all>
+         <xs:sequence>
             <xs:element ref="tei:objectDesc" minOccurs="1" maxOccurs="1"/>
             <xs:element ref="tei:handDesc" minOccurs="0" maxOccurs="1"/>
             <xs:element ref="tei:typeDesc" minOccurs="0" maxOccurs="1"/>
             <xs:element ref="tei:additions" minOccurs="0" maxOccurs="1"/>
-         </xs:all>
+         </xs:sequence>
       </xs:complexType>
    </xs:element>
    <xs:element name="handDesc">
