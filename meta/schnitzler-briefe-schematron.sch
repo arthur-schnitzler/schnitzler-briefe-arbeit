@@ -11,6 +11,16 @@
         <sch:rule context="tei:back">
             <sch:assert test="not(descendant::*:error)"> Kein Nachfahre darf ein Element namens
                 "error" enthalten. </sch:assert>
+            <sch:assert
+                test="every $id in descendant::tei:place/@xml:id satisfies matches($id, '^pmb\d+$')"
+                > Jedes tei:place/@xml:id im back-Element muss dem Muster 'pmb' gefolgt von einer
+                Zahl entsprechen (z.B. 'pmb50'). Werte wie 'place__...' oder 'pmbplace__...'
+                deuten auf einen Fehler in der XSL-Transformation hin. </sch:assert>
+            <sch:assert
+                test="every $ref in descendant::tei:placeName/@ref satisfies matches($ref, '^pmb\d+$')"
+                > Jedes tei:placeName/@ref im back-Element muss dem Muster 'pmb' gefolgt von einer
+                Zahl entsprechen (z.B. 'pmb50'). Werte wie 'pmbplace__...' deuten auf einen Fehler
+                in der XSL-Transformation hin. </sch:assert>
         </sch:rule>
     </sch:pattern>
     <sch:pattern id="ref-rule-fuer-verweise">

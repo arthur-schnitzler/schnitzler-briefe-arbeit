@@ -220,7 +220,7 @@
             </xsl:choose>
         </xsl:attribute>
     </xsl:template>
-    <xsl:template match="tei:back//tei:listOrg/tei:org/tei:location/tei:note">
+    <xsl:template match="tei:back//tei:listOrg/tei:org/tei:location/tei:note[not(@type = 'IDNO')]">
         <xsl:copy>
             <xsl:apply-templates select="@* | node()"/>
         </xsl:copy>

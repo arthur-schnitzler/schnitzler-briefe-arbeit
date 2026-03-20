@@ -186,7 +186,7 @@
         <xsl:variable name="source-list" select="."/>
         <xsl:element name="listPlace" namespace="http://www.tei-c.org/ns/1.0">
             <xsl:for-each select="distinct-values(tei:place/@xml:id)">
-                <xsl:variable name="current-id" select="replace(replace(., '#', ''), 'pmb', '')"/>
+                <xsl:variable name="current-id" select="replace(replace(replace(., '#', ''), 'place__', ''), 'pmb', '')"/>
                 <xsl:variable name="current-xml-id" select="."/>
                 <xsl:variable name="ana-attribute" select="$source-list/tei:place[@xml:id = $current-xml-id]/@ana"/>
                 <xsl:choose>
