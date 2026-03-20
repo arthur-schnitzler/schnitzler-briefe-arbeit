@@ -220,6 +220,11 @@
             </xsl:choose>
         </xsl:attribute>
     </xsl:template>
+    <xsl:template match="tei:back//tei:listOrg/tei:org/tei:location/tei:note">
+        <xsl:copy>
+            <xsl:apply-templates select="@* | node()"/>
+        </xsl:copy>
+    </xsl:template>
     <xsl:template match="tei:back//tei:note[@type = 'IDNO']">
         <xsl:element name="idno" namespace="http://www.tei-c.org/ns/1.0">
             <xsl:attribute name="type">
