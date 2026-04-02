@@ -14,6 +14,7 @@ from pathlib import Path
 from typing import Set, Dict, Optional
 import requests
 import copy
+import time
 
 
 class PMBProcessor:
@@ -377,6 +378,17 @@ class PMBProcessor:
             refs.append(elem.get("key"))
         return refs
 
+    def _validate_pmb_ref(self, ref_id: str) -> bool:
+        """Check if a reference ID can be converted to a valid PMB ID"""
+        clean = ref_id.replace("#", "").strip()
+        if not clean:
+            return False
+        # After cleaning, it should result in pmb followed by digits
+        pmb_id = re.sub(r'^.*__', 'pmb', clean)
+        if not pmb_id.startswith('pmb'):
+            pmb_id = f'pmb{pmb_id}'
+        return bool(re.match(r'^pmb\d+$', pmb_id))
+
     def _create_back_element(self, root: ET.Element, refs: Dict[str, Dict[str, Set[str]]]) -> ET.Element:
         """Create back element with placeholder lists (Step 1)"""
         # Find or create text element
@@ -391,6 +403,13 @@ class PMBProcessor:
 
         # Create new back element
         back_elem = ET.SubElement(text_elem, f"{{{self.tei_ns}}}back")
+
+        # Log invalid PMB references (but keep them so they can be found and corrected)
+        for ref_type, ref_dict in refs.items():
+            for key in ref_dict:
+                invalid = {r for r in ref_dict[key] if not self._validate_pmb_ref(r)}
+                if invalid:
+                    print(f"⚠️ Invalid PMB references found in {ref_type}/{key}: {sorted(invalid)}")
 
         # Create list elements with empty placeholders
         for list_type, ref_dict in refs.items():
@@ -532,7 +551,13 @@ class PMBProcessor:
             if not clean_id.startswith('pmb'):
                 clean_id = f'pmb{clean_id}'
 
-            print(f"🔍 Looking up: {original_id} -> {clean_id} (entity_type: {entity_type})")
+            # Validate PMB ID format — mark invalid but keep for manual review
+            if not self._is_valid_pmb_id(clean_id):
+                print(f"⚠️ Invalid PMB ID format: {original_id} -> {clean_id}")
+                error = ET.SubElement(entity, "error")
+                error.set("type", "invalid-pmb-id")
+                error.text = f"{original_id} - invalid format, expected pmb followed by digits"
+                continue
 
             # Special case for Arthur Schnitzler
             if clean_id == 'pmb2121' and entity_type == 'person':
@@ -634,61 +659,103 @@ class PMBProcessor:
         idno.set("type", "gnd")
         idno.text = "https://d-nb.info/gnd/118609807/"
 
+    def _is_valid_pmb_id(self, pmb_id: str) -> bool:
+        """Check if a PMB ID has a valid format (pmb followed by digits)"""
+        return bool(re.match(r'^pmb\d+$', pmb_id))
+
     def _fetch_from_api(self, entity: ET.Element, pmb_id: str, entity_type: str, ana_attribute: Optional[str] = None):
-        """Fetch entity data from PMB API"""
+        """Fetch entity data from PMB API with retry logic"""
         number = pmb_id.replace('pmb', '')
-        url = f"https://pmb.acdh.oeaw.ac.at/apis/tei/{entity_type}/{number}"
+
+        # Validate PMB ID format
+        if not number.isdigit():
+            print(f"⚠️ Skipping invalid PMB ID (non-numeric): {pmb_id}")
+            error = ET.SubElement(entity, "error")
+            error.set("type", entity_type)
+            error.text = f"{pmb_id} - invalid ID format"
+            self.stats["api_failures"] += 1
+            return
+
+        # The PMB API uses 'work' for bibliographic entries, not 'bibl'
+        api_entity_type = "work" if entity_type == "bibl" else entity_type
+        url = f"https://pmb.acdh.oeaw.ac.at/apis/tei/{api_entity_type}/{number}"
 
         self.stats["api_calls"] += 1
         print(f"🌐 Making API call for {pmb_id}: {url}")
 
-        try:
-            headers = {
-                "Content-type": "application/xml; charset=utf-8",
-                "Accept-Charset": "utf-8",
-            }
-            response = requests.get(url, headers=headers, timeout=5)  # Reduced timeout
-            if response.status_code == 200:
-                self.stats["api_success"] += 1
-                print(f"✅ API success for {pmb_id}")
-            else:
-                self.stats["api_failures"] += 1
-                print(f"❌ API failed for {pmb_id}: HTTP {response.status_code}")
+        headers = {
+            "Content-type": "application/xml; charset=utf-8",
+            "Accept-Charset": "utf-8",
+        }
 
-            if response.status_code == 200:
-                # Parse the response and add to entity
-                api_root = ET.fromstring(response.content.decode("utf-8"))
-                entity.clear()
-                entity.set("{http://www.w3.org/XML/1998/namespace}id", pmb_id)
-                # Restore ana attribute if it existed
-                if ana_attribute:
-                    entity.set("ana", ana_attribute)
-                
-                # Copy relevant children based on entity type
-                if entity_type == "person":
-                    for child in api_root.findall(".//*"):
-                        if child.tag.endswith(('persName', 'birth', 'death', 'sex', 'occupation', 'idno')):
-                            if not (child.tag.endswith('persName') and child.get('type') == 'loschen'):
-                                entity.append(child)
-                elif entity_type == "bibl":
-                    for child in api_root.findall(".//*"):
-                        if child.tag.endswith(('title', 'author', 'date', 'note', 'idno')):
-                            if not (child.tag.endswith('title') and child.get('type') == 'loschen'):
-                                entity.append(child)
+        # Retry logic with exponential backoff
+        max_retries = 3
+        for attempt in range(max_retries):
+            try:
+                timeout = 15 + (attempt * 10)  # 15s, 25s, 35s
+                response = self.api_session.get(url, headers=headers, timeout=timeout)
+
+                if response.status_code == 200:
+                    self.stats["api_success"] += 1
+                    print(f"✅ API success for {pmb_id}" + (f" (attempt {attempt + 1})" if attempt > 0 else ""))
+
+                    # Parse the response and add to entity
+                    api_root = ET.fromstring(response.content.decode("utf-8"))
+                    entity.clear()
+                    entity.set("{http://www.w3.org/XML/1998/namespace}id", pmb_id)
+                    if ana_attribute:
+                        entity.set("ana", ana_attribute)
+
+                    # Copy relevant children based on entity type
+                    if entity_type == "person":
+                        for child in api_root.findall(".//*"):
+                            if child.tag.endswith(('persName', 'birth', 'death', 'sex', 'occupation', 'idno')):
+                                if not (child.tag.endswith('persName') and child.get('type') == 'loschen'):
+                                    entity.append(child)
+                    elif entity_type == "bibl":
+                        for child in api_root.findall(".//*"):
+                            if child.tag.endswith(('title', 'author', 'date', 'note', 'idno')):
+                                if not (child.tag.endswith('title') and child.get('type') == 'loschen'):
+                                    entity.append(child)
+                    else:
+                        for child in api_root:
+                            entity.append(child)
+                    return  # Success
+
+                elif response.status_code == 404:
+                    # Entity genuinely doesn't exist — no retry needed
+                    self.stats["api_failures"] += 1
+                    print(f"❌ API 404 for {pmb_id}: entity not found in PMB")
+                    error = ET.SubElement(entity, "error")
+                    error.set("type", entity_type)
+                    error.text = f"{number} - not found in PMB (404)"
+                    return
+
                 else:
-                    # For place, org, event - copy all children
-                    for child in api_root:
-                        entity.append(child)
-            else:
-                # Add error element
-                error = ET.SubElement(entity, "error")
-                error.set("type", entity_type)
-                error.text = number
-        except Exception as e:
-            # Add error element
-            error = ET.SubElement(entity, "error")
-            error.set("type", entity_type)
-            error.text = f"{number} - {str(e)}"
+                    # Other HTTP error — retry
+                    print(f"⚠️ API returned HTTP {response.status_code} for {pmb_id} (attempt {attempt + 1}/{max_retries})")
+                    if attempt < max_retries - 1:
+                        wait = 2 ** attempt  # 1s, 2s
+                        print(f"⏳ Waiting {wait}s before retry...")
+                        time.sleep(wait)
+
+            except (requests.exceptions.Timeout, requests.exceptions.ConnectionError) as e:
+                print(f"⚠️ API timeout/connection error for {pmb_id} (attempt {attempt + 1}/{max_retries}): {e}")
+                if attempt < max_retries - 1:
+                    wait = 2 ** (attempt + 1)  # 2s, 4s
+                    print(f"⏳ Waiting {wait}s before retry...")
+                    time.sleep(wait)
+
+            except Exception as e:
+                print(f"❌ Unexpected error for {pmb_id}: {e}")
+                break  # Don't retry unexpected errors
+
+        # All retries exhausted
+        self.stats["api_failures"] += 1
+        print(f"❌ All {max_retries} API attempts failed for {pmb_id}")
+        error = ET.SubElement(entity, "error")
+        error.set("type", entity_type)
+        error.text = f"{number} - API failed after {max_retries} attempts"
 
     def _add_persons_from_bibliography(self, root: ET.Element) -> ET.Element:
         """Add persons from bibliography authors to listPerson (Step 3 - brief_backElement-3.xsl)"""
@@ -1023,9 +1090,17 @@ class PMBProcessor:
 
             with open(output_file, 'w', encoding='utf-8') as f:
                 f.write(content)
-            
+
+            # Check for remaining error elements in the output
+            error_count = content.count('<error ')
+            if error_count > 0:
+                print(f"\n⚠️ WARNING: {error_count} <error> element(s) remaining in {Path(output_file).name}")
+                # Extract error details for reporting
+                for match in re.finditer(r'xml:id="([^"]*)"[^>]*><error[^>]*>([^<]*)</error>', content):
+                    print(f"   - {match.group(1)}: {match.group(2)}")
+
             return output_file
-            
+
         except Exception as e:
             print(f"Error processing {input_file}: {e}")
             return ""

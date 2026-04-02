@@ -256,7 +256,7 @@ def main():
     # Summary
     end_time = time.time()
     duration = end_time - start_time
-    
+
     print(f"\n{'='*50}")
     print(f"Batch processing completed!")
     print(f"Total files: {len(xml_files)}")
@@ -265,7 +265,49 @@ def main():
     print(f"Duration: {duration:.1f} seconds")
     print(f"Average: {duration/len(xml_files):.1f} seconds per file")
     print(f"{'='*50}")
-    
+
+    # Scan for remaining <error> elements in processed files
+    print(f"\n🔍 Scanning for remaining <error> elements in editions/...")
+    sys.stdout.flush()
+
+    import re
+    error_report = {}
+    for xml_file in xml_files:
+        try:
+            with open(xml_file, 'r', encoding='utf-8') as f:
+                content = f.read()
+            errors_in_file = re.findall(
+                r'xml:id="([^"]*)"[^>]*><error[^>]*type="([^"]*)"[^>]*>([^<]*)</error>',
+                content
+            )
+            if errors_in_file:
+                error_report[Path(xml_file).name] = errors_in_file
+        except Exception:
+            pass
+
+    if error_report:
+        total_errors = sum(len(errs) for errs in error_report.values())
+        print(f"\n⚠️ ERROR REPORT: {total_errors} <error> element(s) in {len(error_report)} file(s):")
+        print(f"{'='*70}")
+        for filename, errors in sorted(error_report.items()):
+            for pmb_id, err_type, err_text in errors:
+                print(f"  {filename}: {pmb_id} ({err_type}) - {err_text}")
+        print(f"{'='*70}")
+
+        # Write error report to file for easy review
+        report_path = Path(__file__).parent / '../error-report-back-elements.txt'
+        with open(report_path, 'w', encoding='utf-8') as f:
+            f.write(f"Back Element Error Report\n")
+            f.write(f"Generated: {time.strftime('%Y-%m-%d %H:%M:%S')}\n")
+            f.write(f"Total errors: {total_errors} in {len(error_report)} files\n")
+            f.write(f"{'='*70}\n\n")
+            for filename, errors in sorted(error_report.items()):
+                for pmb_id, err_type, err_text in errors:
+                    f.write(f"{filename}\t{pmb_id}\t{err_type}\t{err_text}\n")
+        print(f"\n📄 Error report written to: {report_path}")
+    else:
+        print(f"\n✅ No <error> elements found - all entities resolved successfully!")
+
     if failed > 0:
         sys.exit(1)
 
