@@ -4,7 +4,16 @@ on:
   schedule:
     # Läuft am 1. jeden Monats um 2:00 UTC
     - cron: '0 2 1 * *'
-  workflow_dispatch: # Ermöglicht manuellen Start
+  workflow_dispatch:
+    inputs:
+      file_from:
+        description: 'Erste Datei (z.B. L00001), leer = ab Anfang'
+        required: false
+        default: ''
+      file_to:
+        description: 'Letzte Datei (z.B. L03000), leer = bis Ende'
+        required: false
+        default: ''
 
 jobs:
   update-back-elements:
@@ -38,21 +47,28 @@ jobs:
     - name: Check for changes in editions folder in the last month
       id: check-changes
       run: |
+        # Bei manuellem Start mit Dateibereich: immer ausführen
+        if [ "${{ github.event_name }}" == "workflow_dispatch" ]; then
+          echo "Manual dispatch detected - skipping change check"
+          echo "has_changes=true" >> $GITHUB_OUTPUT
+          exit 0
+        fi
+
         # Datum vor einem Monat berechnen
         LAST_MONTH=$(date -d "1 month ago" +%Y-%m-%d)
         echo "Checking for changes since: $LAST_MONTH"
-        
+
         # Prüfen ob es Änderungen in ./editions/ seit dem letzten Monat gab
         CHANGES=$(git log --since="$LAST_MONTH" --oneline --name-only -- editions/ | wc -l)
         echo "Found $CHANGES changes in editions/ folder"
-        
+
         if [ $CHANGES -eq 0 ]; then
           echo "No changes found in editions/ folder since $LAST_MONTH"
           echo "has_changes=false" >> $GITHUB_OUTPUT
         else
           echo "Changes found in editions/ folder since $LAST_MONTH"
           echo "has_changes=true" >> $GITHUB_OUTPUT
-          
+
           # Liste der geänderten Dateien für das Commit-Message
           git log --since="$LAST_MONTH" --name-only --pretty=format: -- editions/ | sort | uniq | head -10 > changed_files.txt
           echo "Changed files (first 10):"
@@ -76,7 +92,17 @@ jobs:
         echo "🔄 Step 3: Running parallel processing on editions/ folder (3 processes)..."
         echo "💾 Intermediate commits will be created every 100 successful files"
         echo ""
-        python -u python/batch_process_back-element.py --parallel 3 --commit-interval 100 || echo "Batch processing finished with some errors/timeouts, but continuing..."
+        FILE_FROM="${{ github.event.inputs.file_from }}"
+        FILE_TO="${{ github.event.inputs.file_to }}"
+        CMD="python -u python/batch_process_back-element.py --parallel 3 --commit-interval 100"
+        if [ -n "$FILE_FROM" ]; then
+          CMD="$CMD --file-from $FILE_FROM"
+        fi
+        if [ -n "$FILE_TO" ]; then
+          CMD="$CMD --file-to $FILE_TO"
+        fi
+        echo "Running: $CMD"
+        $CMD || echo "Batch processing finished with some errors/timeouts, but continuing..."
         echo "Batch processing step completed"
     
     - name: Check for actual file changes after processing
@@ -123,10 +149,31 @@ jobs:
         git commit -F commit_message.txt
         
         echo "Committed final changes, attempting to push..."
-        # Pull latest changes first in case of intermediate commits
-        git pull --rebase
-        git push
-        
+
+        # Fetch und prüfen ob Remote-Änderungen unsere Dateien betreffen
+        git fetch origin
+        BRANCH=$(git rev-parse --abbrev-ref HEAD)
+        MERGE_BASE=$(git merge-base HEAD origin/$BRANCH)
+        REMOTE_CHANGED=$(git diff --name-only $MERGE_BASE origin/$BRANCH || true)
+
+        if [ -z "$REMOTE_CHANGED" ]; then
+          echo "Keine Remote-Änderungen, pushe direkt..."
+          git push
+        else
+          LOCAL_CHANGED=$(git diff --name-only $MERGE_BASE HEAD)
+          # Prüfe ob es Überschneidungen gibt
+          CONFLICTS=$(comm -12 <(echo "$LOCAL_CHANGED" | sort) <(echo "$REMOTE_CHANGED" | sort))
+          if [ -n "$CONFLICTS" ]; then
+            echo "❌ Konflikt: Folgende Dateien wurden auch remote geändert:"
+            echo "$CONFLICTS" | head -10
+            echo "Push wird abgebrochen, um Remote-Änderungen nicht zu überschreiben."
+            exit 1
+          fi
+          echo "Remote hat Änderungen, aber keine Überschneidung mit unseren Dateien. Rebase und Push..."
+          git pull --rebase
+          git push
+        fi
+
         echo "✅ Successfully pushed final back element updates"
     
     - name: Create workflow summary

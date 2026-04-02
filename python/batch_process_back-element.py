@@ -17,6 +17,42 @@ from concurrent.futures import ThreadPoolExecutor, as_completed
 sys.stdout.reconfigure(line_buffering=True)
 sys.stderr.reconfigure(line_buffering=True)
 
+def safe_push():
+    """Push nur wenn keine Dateien überschrieben werden, die sich remote geändert haben."""
+    try:
+        subprocess.run(['git', 'fetch', 'origin'], check=True)
+        branch = subprocess.run(['git', 'rev-parse', '--abbrev-ref', 'HEAD'],
+                                capture_output=True, text=True, check=True).stdout.strip()
+        merge_base = subprocess.run(['git', 'merge-base', 'HEAD', f'origin/{branch}'],
+                                    capture_output=True, text=True, check=True).stdout.strip()
+        # Dateien, die sich remote seit dem gemeinsamen Vorfahren geändert haben
+        remote_changed = subprocess.run(
+            ['git', 'diff', '--name-only', merge_base, f'origin/{branch}'],
+            capture_output=True, text=True, check=True).stdout.strip().splitlines()
+        if not remote_changed:
+            # Keine Remote-Änderungen – einfach pushen
+            subprocess.run(['git', 'push'], check=True)
+            return True
+        # Dateien, die wir lokal seit dem gemeinsamen Vorfahren geändert haben
+        local_changed = subprocess.run(
+            ['git', 'diff', '--name-only', merge_base, 'HEAD'],
+            capture_output=True, text=True, check=True).stdout.strip().splitlines()
+        conflicts = set(remote_changed) & set(local_changed)
+        if conflicts:
+            print(f"❌ Konflikt: {len(conflicts)} Datei(en) wurden auch remote geändert:")
+            for f in sorted(conflicts)[:10]:
+                print(f"   - {f}")
+            print("Push wird abgebrochen, um Remote-Änderungen nicht zu überschreiben.")
+            return False
+        # Keine Überschneidung – rebase und push
+        subprocess.run(['git', 'pull', '--rebase'], check=True)
+        subprocess.run(['git', 'push'], check=True)
+        return True
+    except subprocess.CalledProcessError as e:
+        print(f"⚠️ Push fehlgeschlagen: {e}")
+        return False
+
+
 def commit_progress(processed, total, batch_num):
     """Create intermediate commit and push current progress"""
     try:
@@ -39,29 +75,23 @@ def commit_progress(processed, total, batch_num):
         
         print(f"✅ Committed progress: {processed}/{total} files (batch {batch_num})")
         
-        # Push immediately to avoid conflicts later
+        # Push – aber nur wenn keine Konflikte mit Remote-Änderungen
         print(f"🚀 Pushing intermediate commit...")
         sys.stdout.flush()
-        
-        subprocess.run(['git', 'push'], check=True)
-        
-        print(f"✅ Successfully pushed batch {batch_num} to remote")
-        sys.stdout.flush()
-        return True
-        
-    except subprocess.CalledProcessError as e:
-        print(f"⚠️ Failed to commit/push progress: {e}")
-        # Try to recover by pulling latest changes
-        try:
-            print(f"🔄 Attempting to pull latest changes and retry...")
-            subprocess.run(['git', 'pull', '--rebase'], check=True)
-            subprocess.run(['git', 'push'], check=True)
-            print(f"✅ Successfully recovered and pushed batch {batch_num}")
-            return True
-        except subprocess.CalledProcessError as e2:
-            print(f"❌ Recovery failed: {e2}")
+
+        if safe_push():
+            print(f"✅ Successfully pushed batch {batch_num} to remote")
             sys.stdout.flush()
-            return False
+            return True
+        else:
+            print(f"⚠️ Push für batch {batch_num} übersprungen (Konflikt mit Remote-Änderungen)")
+            sys.stdout.flush()
+            return True  # Commit ist lokal gespeichert, Push wird später versucht
+
+    except subprocess.CalledProcessError as e:
+        print(f"⚠️ Failed to commit progress: {e}")
+        sys.stdout.flush()
+        return False
 
 def process_file(xml_file, processor_script):
     """Process a single XML file"""
@@ -159,6 +189,10 @@ def main():
                        help='Skip PMB lists download')
     parser.add_argument('--commit-interval', type=int, default=100,
                        help='Create intermediate commit every N successfully processed files (default: 100, 0 to disable)')
+    parser.add_argument('--file-from',
+                       help='Start processing from this file prefix (e.g. L00001)')
+    parser.add_argument('--file-to',
+                       help='Stop processing after this file prefix (e.g. L03000)')
     
     args = parser.parse_args()
     
@@ -190,6 +224,14 @@ def main():
         print(f"No files matching '{args.pattern}' found in {editions_dir}")
         return
     
+    # Filter by file range if requested
+    if args.file_from:
+        xml_files = [f for f in xml_files if Path(f).stem >= args.file_from]
+        print(f"Starting from file: {args.file_from}")
+    if args.file_to:
+        xml_files = [f for f in xml_files if Path(f).stem <= args.file_to]
+        print(f"Ending at file: {args.file_to}")
+
     # Limit files if requested
     if args.limit:
         xml_files = xml_files[:args.limit]
