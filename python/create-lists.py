@@ -227,7 +227,14 @@ for ent in entities:
         "Accept-Charset": "utf-8",
     }
     r = requests.get(ent["url"], headers=headers)
-    source_tree = ET.ElementTree(ET.fromstring(r.content.decode("utf-8")))
+    if r.status_code != 200 or not r.content.strip():
+        print(f"⚠️ Überspringe {ent['output']}: Download fehlgeschlagen (Status {r.status_code}, {len(r.content)} Bytes)")
+        continue
+    try:
+        source_tree = ET.ElementTree(ET.fromstring(r.content.decode("utf-8")))
+    except ET.XMLSyntaxError as e:
+        print(f"⚠️ Überspringe {ent['output']}: XML-Parsing fehlgeschlagen: {e}")
+        continue
     source_root = source_tree.getroot()
 
     # 2. Erwähnte IDs laden
