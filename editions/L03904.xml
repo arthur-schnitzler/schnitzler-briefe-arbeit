@@ -1,7 +1,11 @@
-<?xml version='1.0' encoding='UTF-8'?>
+<?xml version="1.0" encoding="UTF-8"?>
 <?xml-model href="../meta/schnitzler-briefe-schematron.sch" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
 <?xml-model href="../meta/schnitzler-briefe-schematron.sch" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
-<TEI xmlns="http://www.tei-c.org/ns/1.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.tei-c.org/ns/1.0 ../meta/schnitzler-briefe-schema.xsd" xml:base="https://id.acdh.oeaw.ac.at/schnitzler/schnitzler-briefe/editions" xml:id="L03904">
+<TEI xmlns="http://www.tei-c.org/ns/1.0"
+     xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+     xsi:schemaLocation="http://www.tei-c.org/ns/1.0 ../meta/schnitzler-briefe-schema.xsd"
+     xml:base="https://id.acdh.oeaw.ac.at/schnitzler/schnitzler-briefe/editions"
+     xml:id="L03904">
    <teiHeader>
       <fileDesc>
          <titleStmt>
@@ -84,7 +88,7 @@
                               <extent>
                                  <measure unit="seite" quantity="3"/>
                                  <measure unit="blatt" quantity="1"/>
-                                 <measure unit="zeichenanzahl" quantity="877"/>
+                                 <measure unit="zeichenanzahl" quantity="884"/>
                               </extent>
                               <support>Briefpapier mit Trauerrand</support>
                            </supportDesc>
@@ -116,16 +120,24 @@
             </correspAction>
             <correspAction type="received">
                <persName ref="#pmb11673">Herzl, Theodor</persName>
-               <date evidence="conjecture" notBefore="1893-08-04" notAfter="1893-08-07">[4. 8. 1893
-                  – 7. 8. 1893?]</date>
-               <placeName ref="#pmb50" evidence="conjecture">Wien</placeName>
+               <date evidence="conjecture" notBefore="1893-08-05" notAfter="1893-08-06">[5. 8. 1893
+                  – 6. 8. 1893]</date>
+               <placeName ref="#pmb182" evidence="external">Paris</placeName>
             </correspAction>
-            <correspContext><ref type="belongsToCorrespondence" target="correspondence_11673">Herzl, Theodor</ref>
+            <correspContext>
+               <ref type="belongsToCorrespondence" target="correspondence_11673">Herzl, Theodor</ref>
                <ref subtype="previous_letter" type="withinCollection" target="L00249">Schnitzler an Beer-Hofmann, 3. 8. 1893</ref>
                <ref subtype="next_letter" type="withinCollection" target="L03832">Herzl an Schnitzler, 6. 8. 1893</ref>
-               <ref subtype="previous_letter" type="withinCorrespondence" source="correspondence_11673" target="L03903">Schnitzler an Herzl, 1. 7. 1893</ref>
-               <ref subtype="next_letter" type="withinCorrespondence" source="correspondence_11673" target="L03832">Herzl an Schnitzler, 6. 8. 1893</ref>
-            </correspContext></correspDesc>
+               <ref subtype="previous_letter"
+                    type="withinCorrespondence"
+                    source="correspondence_11673"
+                    target="L03903">Schnitzler an Herzl, 1. 7. 1893</ref>
+               <ref subtype="next_letter"
+                    type="withinCorrespondence"
+                    source="correspondence_11673"
+                    target="L03832">Herzl an Schnitzler, 6. 8. 1893</ref>
+            </correspContext>
+         </correspDesc>
       </profileDesc>
       <revisionDesc status="candidate">
          <change who="MAM" when="2025-10-20">Export aus Transkribus</change>
@@ -164,19 +176,23 @@
                      In: <rs type="work" ref="#pmb36374">Neue Freie Presse</rs>, Nr. 10.398,
                         <date>4. 8. 1893</date>, Morgenblatt, S. 1–3</bibl>. </note> sind. –</p>
             <p>— Ich gehe vielleicht <anchor type="commentary" xml:id="K_L03904-3"/>am <date>20.
-                  Auguſt</date> wieder auf 8–10 Tage weg<note type="commentary" corresp="K_L03904-3">Zwischen <ref type="wienerschnitzler" target="1893-08-22" subtype="date-only"/> und <ref type="wienerschnitzler" target="1893-08-31" subtype="date-only"/> war <rs type="person" ref="#pmb2121">Schnitzler</rs> in
-                     <rs type="place" ref="#pmb969">Südtirol</rs>, <rs type="place" ref="#pmb651">Kärnten</rs>, der <rs type="place" ref="#pmb17">Steiermark</rs> und <rs type="place" ref="#pmb1003">Niederösterreich</rs>. </note>.– Für alle Fälle
-               hoff ich bald wieder mit 2 Worten zu erfahren, daß Sie u all d<unclear>ie</unclear>
-               Ihren wohl ſind.–</p>
+                  Auguſt</date> wieder auf 8–10 Tage weg<note type="commentary" corresp="K_L03904-3">Zwischen <ref type="wienerschnitzler" target="1893-08-22" subtype="date-only"/>
+                  und <ref type="wienerschnitzler" target="1893-08-31" subtype="date-only"/> reiste <rs type="person" ref="#pmb2121">Schnitzler</rs> in <rs type="place" ref="#pmb969">Südtirol</rs>, <rs type="place" ref="#pmb651">Kärnten</rs>, der <rs type="place" ref="#pmb17">Steiermark</rs> und <rs type="place" ref="#pmb1003">Niederösterreich</rs>.</note>
+               <subst>
+                  <del rend="strikethrough">,</del>
+                  <add place="inline">.</add>
+               </subst> – Für alle Fälle hoff ich bald wieder mit 2
+               Worten zu erfahren, daß Sie u all d<unclear>ie</unclear> Ihren wohl ſind. –</p>
             <p>Von meiner Sti<c rendition="#gemination-m"/>ung will ich lieber gar nicht reden; –
-               der Strohhalm, mit dem ich mich an die Lebensfreude kla<c rendition="#gemination-m"/>ere, <pb facs="H1_1924_9_003"/>iſt augenblicklich das <hi rend="latintype">Bicycle</hi>! – Haben Sie ſich auf Ihrer Reiſe nicht mit dem Drama eingelassen? –
-               Sich nicht ausgeruht, indem Sie ein neues Lustspiel ſchrieben? Refrain: Für alle
+               der Strohhalm, mit dem ich mich an die Lebensfreude kla<c rendition="#gemination-m"/>ere, <pb facs="H1_1924_9_003"/>iſt augenblicklich das <hi rend="latintype">Bicycle</hi>! –</p>
+            <p>— Haben Sie ſich auf Ihrer Reiſe nicht mit dem Drama eingelaſſen? –
+               Sich nicht ausgeruht, indem Sie ein neues Lustſpiel ſchrieben? – Refrain: Für alle
                Fälle hoffe ich bald wieder <c rendition="#dots" n="3"/>
                <space unit="chars" quantity="1"/>
-               <hi rend="latintype">etc.</hi>
+               <hi rend="latintype">etc</hi>
                <space unit="chars" quantity="1"/>
-               <hi rend="latintype">etc.</hi>–</p>
-            <closer>Herzlichen Gruß!<lb/>Ganz der Ihre<lb/>
+               <hi rend="latintype">etc.</hi> –</p>
+            <closer>Herzlichen Gruſs!<lb/>Ganz der Ihre<lb/>
                <signed>ArthurSchnitzler</signed>
             </closer>
          </div>
