@@ -991,14 +991,17 @@ class PMBProcessor:
             print(f"📝 File size: {len(original_content):,} characters")
             sys.stdout.flush()
             
-            # Extract processing instructions from original file
+            # Extract processing instructions from original file (deduped,
+            # so already-duplicated files get healed on the next run)
             print(f"🔍 Extracting processing instructions...")
             processing_instructions = []
-            lines = original_content.split('\n')
-            for line in lines:
-                line = line.strip()
+            seen_pis = set()
+            for raw_line in original_content.split('\n'):
+                line = raw_line.strip()
                 if line.startswith('<?') and line.endswith('?>') and not line.startswith('<?xml '):
-                    processing_instructions.append(line)
+                    if line not in seen_pis:
+                        seen_pis.add(line)
+                        processing_instructions.append(line)
                 elif line.startswith('<') and not line.startswith('<?'):
                     break  # Stop at first actual XML element
             
@@ -1044,8 +1047,15 @@ class PMBProcessor:
             if output_file is None:
                 output_file = input_file
 
-            # Write with lxml (lxml doesn't support short_empty_elements parameter)
-            tree.write(output_file, encoding="utf-8", xml_declaration=True, pretty_print=False)
+            # Serialize only the root element — not the ElementTree — so that
+            # any top-level PIs lxml attached during parse() are NOT written.
+            # We re-insert the extracted PIs manually below. Without this,
+            # a <?xml-model?> already in the tree would be written by lxml AND
+            # prepended below, yielding duplicates.
+            root_bytes = ET.tostring(tree.getroot(), encoding="utf-8", pretty_print=False)
+            with open(output_file, 'wb') as f:
+                f.write(b"<?xml version='1.0' encoding='UTF-8'?>\n")
+                f.write(root_bytes)
             
             # Print statistics
             print(f"\n📊 PMB Processing Statistics:")
