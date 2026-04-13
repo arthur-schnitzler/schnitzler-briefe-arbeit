@@ -81,7 +81,12 @@ def cleanup_duplicate_pis(file_path):
                 if last_end < len(line):
                     result_parts.append(line[last_end:])
 
-                cleaned_lines.append(''.join(result_parts))
+                rebuilt = ''.join(result_parts)
+                # If removing the duplicate PI leaves the line empty (or
+                # whitespace-only), drop the line entirely instead of leaving
+                # a blank line between the xml decl / remaining PIs and root.
+                if rebuilt.strip():
+                    cleaned_lines.append(rebuilt)
                 continue
 
         cleaned_lines.append(line)
