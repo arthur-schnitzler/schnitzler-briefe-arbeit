@@ -168,110 +168,121 @@
                                     </xsl:element>-->
                                 </xsl:element>
                                 <xsl:element name="note" namespace="http://www.tei-c.org/ns/1.0">
-                                <xsl:if test="tei:text/tei:back/tei:listPerson">
-                                    <xsl:variable name="briefpartner" as="node()">
-                                        <list>
-                                            <xsl:for-each
-                                                select="descendant::tei:correspAction[@type = 'sent']/tei:persName">
-                                                <item>
-                                                    <xsl:value-of select="concat(@key, @ref)"/>
-                                                </item>
-                                            </xsl:for-each>
-                                            <xsl:for-each
-                                                select="descendant::tei:correspAction[@type = 'received']/tei:persName">
-                                                <item>
-                                                    <xsl:value-of select="concat(@key, @ref)"/>
-                                                </item>
-                                            </xsl:for-each>
-                                        </list>
-                                    </xsl:variable>
-                                    <xsl:for-each
-                                        select="tei:text/tei:back/tei:listPerson/tei:person[(not(@xml:id = '#pmb2121') and not(@xml:id = 'pmb2121')) and not(replace(replace(@xml:id, '#', ''), 'pmb', '') = replace(replace($briefpartner/*:item, '#', ''), 'pmb', ''))]">
-                                        <!-- schnitzler nicht -->
-                                        <xsl:element name="ref"
-                                            namespace="http://www.tei-c.org/ns/1.0">
-                                            <xsl:attribute name="type">
-                                                <xsl:text>https://lod.academy/cmif/vocab/terms#mentionsPerson</xsl:text>
-                                            </xsl:attribute>
-                                            <xsl:attribute name="target">
-                                                <xsl:value-of select="@xml:id"/>
-                                            </xsl:attribute>
+                                    <xsl:if test="tei:text/tei:back/tei:listPerson">
+                                        <xsl:variable name="briefpartner" as="node()">
+                                            <list>
+                                                <xsl:for-each
+                                                  select="descendant::tei:correspAction[@type = 'sent']/tei:persName">
+                                                  <item>
+                                                  <xsl:value-of select="concat(@key, @ref)"/>
+                                                  </item>
+                                                </xsl:for-each>
+                                                <xsl:for-each
+                                                  select="descendant::tei:correspAction[@type = 'received']/tei:persName">
+                                                  <item>
+                                                  <xsl:value-of select="concat(@key, @ref)"/>
+                                                  </item>
+                                                </xsl:for-each>
+                                            </list>
+                                        </xsl:variable>
+                                        <xsl:for-each
+                                            select="tei:text/tei:back/tei:listPerson/tei:person">
+                                            <xsl:variable name="xml-id_ohne"
+                                                select="replace(replace(@xml:id, '#', ''), 'pmb', '')"
+                                                as="xs:string"/>
                                             <xsl:choose>
+                                                <!-- schnitzler nicht -->
+                                                <xsl:when test="$xml-id_ohne = '2121'"/>
+                                                <!-- briefpartner nicht -->
                                                 <xsl:when
-                                                    test="tei:persName[1][tei:surname and tei:forename]">
-                                                    <xsl:value-of
-                                                        select="concat(tei:persName[1]/tei:forename, ' ', tei:persName[1]/tei:surname)"
-                                                    />
-                                                </xsl:when>
+                                                  test="$briefpartner/*:item[. = concat('#pmb', $xml-id_ohne)]"/>
                                                 <xsl:otherwise>
-                                                    <xsl:value-of select="tei:persName[1]"/>
+                                                  <xsl:element name="ref"
+                                                  namespace="http://www.tei-c.org/ns/1.0">
+                                                  <xsl:attribute name="type">
+                                                  <xsl:text>https://lod.academy/cmif/vocab/terms#mentionsPerson</xsl:text>
+                                                  </xsl:attribute>
+                                                  <xsl:attribute name="target">
+                                                  <xsl:value-of select="@xml:id"/>
+                                                  </xsl:attribute>
+                                                  <xsl:choose>
+                                                  <xsl:when
+                                                  test="tei:persName[1][tei:surname and tei:forename]">
+                                                  <xsl:value-of
+                                                  select="concat(tei:persName[1]/tei:forename, ' ', tei:persName[1]/tei:surname)"
+                                                  />
+                                                  </xsl:when>
+                                                  <xsl:otherwise>
+                                                  <xsl:value-of select="tei:persName[1]"/>
+                                                  </xsl:otherwise>
+                                                  </xsl:choose>
+                                                  </xsl:element>
                                                 </xsl:otherwise>
                                             </xsl:choose>
-                                        </xsl:element>
-                                    </xsl:for-each>
-                                </xsl:if>
-                                <xsl:for-each
-                                    select="tei:text/tei:back/tei:*[not(name() = 'listPerson')]">
-                                    <xsl:variable name="currentList" select="name()"
-                                        as="xs:string"/>
-                                    <xsl:variable name="currentListItemName" as="xs:string">
-                                        <xsl:choose>
-                                            <xsl:when test="$currentList = 'listPlace'">
-                                                <xsl:text>place</xsl:text>
-                                            </xsl:when>
-                                            <xsl:when test="$currentList = 'listBibl'">
-                                                <xsl:text>bibl</xsl:text>
-                                            </xsl:when>
-                                            <xsl:when test="$currentList = 'listOrg'">
-                                                <xsl:text>org</xsl:text>
-                                            </xsl:when>
-                                            <xsl:when test="$currentList = 'listEvent'">
-                                                <xsl:text>event</xsl:text>
-                                            </xsl:when>
-                                        </xsl:choose>
-                                    </xsl:variable>
+                                        </xsl:for-each>
+                                    </xsl:if>
                                     <xsl:for-each
-                                        select="child::*[name() = $currentListItemName]">
-                                        <xsl:element name="ref"
-                                            namespace="http://www.tei-c.org/ns/1.0">
-                                            <xsl:attribute name="type">
+                                        select="tei:text/tei:back/tei:*[not(name() = 'listPerson')]">
+                                        <xsl:variable name="currentList" select="name()"
+                                            as="xs:string"/>
+                                        <xsl:variable name="currentListItemName" as="xs:string">
+                                            <xsl:choose>
+                                                <xsl:when test="$currentList = 'listPlace'">
+                                                  <xsl:text>place</xsl:text>
+                                                </xsl:when>
+                                                <xsl:when test="$currentList = 'listBibl'">
+                                                  <xsl:text>bibl</xsl:text>
+                                                </xsl:when>
+                                                <xsl:when test="$currentList = 'listOrg'">
+                                                  <xsl:text>org</xsl:text>
+                                                </xsl:when>
+                                                <xsl:when test="$currentList = 'listEvent'">
+                                                  <xsl:text>event</xsl:text>
+                                                </xsl:when>
+                                            </xsl:choose>
+                                        </xsl:variable>
+                                        <xsl:for-each
+                                            select="child::*[name() = $currentListItemName]">
+                                            <xsl:element name="ref"
+                                                namespace="http://www.tei-c.org/ns/1.0">
+                                                <xsl:attribute name="type">
+                                                  <xsl:value-of
+                                                  select="concat('https://lod.academy/cmif/vocab/terms#mentions', replace($currentList, 'list', ''))"
+                                                  />
+                                                </xsl:attribute>
+                                                <xsl:attribute name="target">
+                                                  <xsl:value-of select="@xml:id"/>
+                                                </xsl:attribute>
                                                 <xsl:value-of
-                                                    select="concat('https://lod.academy/cmif/vocab/terms#mentions', replace($currentList, 'list', ''))"
+                                                  select="child::*[contains(name(), 'Name') or name() = 'title'][1]"
                                                 />
-                                            </xsl:attribute>
-                                            <xsl:attribute name="target">
-                                                <xsl:value-of select="@xml:id"/>
-                                            </xsl:attribute>
-                                            <xsl:value-of
-                                                select="child::*[contains(name(), 'Name') or name() = 'title'][1]"
-                                            />
-                                        </xsl:element>
+                                            </xsl:element>
+                                        </xsl:for-each>
                                     </xsl:for-each>
-                                </xsl:for-each>
-                                <xsl:element name="ref" namespace="http://www.tei-c.org/ns/1.0">
-                                    <xsl:attribute name="type">
-                                        <xsl:text>https://lod.academy/cmif/vocab/terms#hasLanguage</xsl:text>
-                                    </xsl:attribute>
-                                    <xsl:attribute name="target">
+                                    <xsl:element name="ref" namespace="http://www.tei-c.org/ns/1.0">
+                                        <xsl:attribute name="type">
+                                            <xsl:text>https://lod.academy/cmif/vocab/terms#hasLanguage</xsl:text>
+                                        </xsl:attribute>
+                                        <xsl:attribute name="target">
+                                            <xsl:value-of
+                                                select="substring(descendant::tei:profileDesc[1]/tei:langUsage[1]/tei:language[1]/@ident, 1, 2)"
+                                            />
+                                        </xsl:attribute>
                                         <xsl:value-of
-                                            select="substring(descendant::tei:profileDesc[1]/tei:langUsage[1]/tei:language[1]/@ident, 1, 2)"
+                                            select="descendant::tei:profileDesc[1]/tei:langUsage[1]/tei:language[1]"
                                         />
-                                    </xsl:attribute>
-                                    <xsl:value-of
-                                        select="descendant::tei:profileDesc[1]/tei:langUsage[1]/tei:language[1]"
-                                    />
+                                    </xsl:element>
+                                    <xsl:element name="ref" namespace="http://www.tei-c.org/ns/1.0">
+                                        <xsl:attribute name="type">
+                                            <xsl:text>https://lod.academy/cmif/vocab/terms#isAvailableAsTEIfile</xsl:text>
+                                        </xsl:attribute>
+                                        <xsl:attribute name="target">
+                                            <xsl:value-of
+                                                select="concat('https://raw.githubusercontent.com/arthur-schnitzler/schnitzler-briefe-data/refs/heads/main/data/editions/', @xml:id, '.xml')"
+                                            />
+                                        </xsl:attribute>
+                                    </xsl:element>
                                 </xsl:element>
-                                <xsl:element name="ref" namespace="http://www.tei-c.org/ns/1.0">
-                                    <xsl:attribute name="type">
-                                        <xsl:text>https://lod.academy/cmif/vocab/terms#isAvailableAsTEIfile</xsl:text>
-                                    </xsl:attribute>
-                                    <xsl:attribute name="target">
-                                        <xsl:value-of
-                                            select="concat('https://raw.githubusercontent.com/arthur-schnitzler/schnitzler-briefe-data/refs/heads/main/data/editions/', @xml:id, '.xml')"
-                                        />
-                                    </xsl:attribute>
-                                </xsl:element>
-                            </xsl:element>
                             </xsl:element>
                         </xsl:if>
                     </xsl:for-each>
