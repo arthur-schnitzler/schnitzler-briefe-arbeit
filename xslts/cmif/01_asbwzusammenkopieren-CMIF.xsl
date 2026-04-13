@@ -186,7 +186,7 @@
                                         </list>
                                     </xsl:variable>
                                     <xsl:for-each
-                                        select="tei:text/tei:back/tei:listPerson/tei:person[not(@xml:id = 'pmb2121') and not(replace(replace(@xml:id, '#', ''), 'pmb', '') = replace(replace($briefpartner/*:item, '#', ''), 'pmb', ''))]">
+                                        select="tei:text/tei:back/tei:listPerson/tei:person[(not(@xml:id = '#pmb2121') and not(@xml:id = 'pmb2121')) and not(replace(replace(@xml:id, '#', ''), 'pmb', '') = replace(replace($briefpartner/*:item, '#', ''), 'pmb', ''))]">
                                         <!-- schnitzler nicht -->
                                         <xsl:element name="ref"
                                             namespace="http://www.tei-c.org/ns/1.0">
