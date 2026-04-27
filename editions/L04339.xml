@@ -1,6 +1,10 @@
-<?xml version='1.0' encoding='UTF-8'?>
+<?xml version="1.0" encoding="UTF-8"?>
 <?xml-model href="../meta/schnitzler-briefe-schematron.sch" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
-<TEI xmlns="http://www.tei-c.org/ns/1.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.tei-c.org/ns/1.0 ../meta/schnitzler-briefe-schema.xsd" xml:base="https://id.acdh.oeaw.ac.at/schnitzler/schnitzler-briefe/editions" xml:id="L04339">
+<TEI xmlns="http://www.tei-c.org/ns/1.0"
+     xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+     xsi:schemaLocation="http://www.tei-c.org/ns/1.0 ../meta/schnitzler-briefe-schema.xsd"
+     xml:base="https://id.acdh.oeaw.ac.at/schnitzler/schnitzler-briefe/editions"
+     xml:id="L04339">
    <teiHeader>
       <fileDesc>
          <titleStmt>
@@ -83,7 +87,7 @@
                               <extent>
                                  <measure unit="seite" quantity="2"/>
                                  <measure unit="blatt" quantity="1"/>
-                                 <measure unit="zeichenanzahl" quantity="847"/>
+                                 <measure unit="zeichenanzahl" quantity="845"/>
                               </extent>
                            </supportDesc>
                         </objectDesc>
@@ -91,7 +95,9 @@
                            <handNote medium="bleistift" style="nicht-anzuwenden" corresp="schreibkraft">
                               <p>Ergänzungen von Satzzeichen</p>
                            </handNote>
-                           <handNote medium="roter-buntstift" style="lateinische-kurrent" corresp="#pmb2121">
+                           <handNote medium="roter-buntstift"
+                                     style="lateinische-kurrent"
+                                     corresp="#pmb2121">
                               <p>Vermerk »<quote>Ginsberg</quote>« und drei Unterstreichungen</p>
                            </handNote>
                         </handDesc>
@@ -116,18 +122,28 @@
             </correspAction>
             <correspAction type="received">
                <persName ref="#pmb2128">Plessner, Elsa</persName>
-               <date evidence="conjecture" notBefore="1916-01-13" notAfter="1916-01-17">[13. 1. 1916 – 17. 1. 1916?]</date>
+               <date evidence="conjecture" notBefore="1916-01-13" notAfter="1916-01-17">[13. 1. 1916
+                  – 17. 1. 1916?]</date>
                <placeName ref="#pmb45258">München</placeName>
             </correspAction>
-         <correspContext><ref type="belongsToCorrespondence" target="correspondence_2128">Plessner, Elsa</ref>
+            <correspContext>
+               <ref type="belongsToCorrespondence" target="correspondence_2128">Plessner, Elsa</ref>
                <ref subtype="previous_letter" type="withinCollection" target="L03730">Plessner an Schnitzler, 9. 1. 1916</ref>
                <ref subtype="next_letter" type="withinCollection" target="L03731">Plessner an Schnitzler, 13. 1. 1916</ref>
-               <ref subtype="previous_letter" type="withinCorrespondence" source="correspondence_2128" target="L03730">Plessner an Schnitzler, 9. 1. 1916</ref>
-               <ref subtype="next_letter" type="withinCorrespondence" source="correspondence_2128" target="L03731">Plessner an Schnitzler, 13. 1. 1916</ref>
-            </correspContext></correspDesc>
+               <ref subtype="previous_letter"
+                    type="withinCorrespondence"
+                    source="correspondence_2128"
+                    target="L03730">Plessner an Schnitzler, 9. 1. 1916</ref>
+               <ref subtype="next_letter"
+                    type="withinCorrespondence"
+                    source="correspondence_2128"
+                    target="L03731">Plessner an Schnitzler, 13. 1. 1916</ref>
+            </correspContext>
+         </correspDesc>
       </profileDesc>
       <revisionDesc status="approved">
-         <change who="MAM" when="2026-04-24">Export aus Transkribus</change><change who="SJ" when="2026-04-27">Durchsicht</change>
+         <change who="MAM" when="2026-04-24">Export aus Transkribus</change>
+         <change who="SJ" when="2026-04-27">Durchsicht</change>
       </revisionDesc>
    </teiHeader>
    <facsimile>
@@ -143,16 +159,18 @@
                   <date>12. 1. 1916</date>.</dateline>
                <salute rend="center">Sehr geehrte gnädige Frau.</salute>
             </opener>
-            <p>Eben langen drei Couverts von Ihnen rekommandiert bei mir an, in denen ich
-               wahrscheinlich nicht mit Unrecht ein <rs type="work" ref="#pmb296218" subtype="implied">Manuscript</rs> vermute. Sollte dies der Fall sein, so möchte
-               ich Sie recht sehr bitten mich von der Lektüre entheben zu wollen. Aus Gründen, deren
-               Erörterung zu weit führen würde, habe ich es endlich verschworen Manuscripte zu
-               lesen, zu prüfen, zu beurteilen; und ich möchte auch Ihr Neues <rs type="work" ref="#pmb296218" subtype="implied">Werk</rs>, was es immer sein mag, erst kennen
-               lernen, bis es gedruckt vorliegt. Die drei Couverts bleiben also bis zum Eintreffen
-               Ihrer Antwort verschlossen bei mir liegen.</p>
+            <p>Eben langen <anchor type="commentary" xml:id="K_L04339-1"/>drei Couverts<note type="commentary" corresp="K_L04339-1">Wie aus <rs type="person" ref="#pmb2128">Plessners</rs> Antwortschreiben vom <ref type="schnitzler-briefe" target="L03731" subtype="date-only"/> hervorgeht, befand sich im mit
+                  »<quote>I</quote>« markierten Couvert neben dem ersten von drei Teilen des Werkmanuskriptes von <rs type="work" ref="#pmb296218">Musik</rs> ihr Anschreiben (<ref type="schnitzler-briefe" target="L03730"/>).</note> von
+               Ihnen rekommandiert bei mir an, in denen ich wahrscheinlich nicht mit Unrecht ein <rs type="work" ref="#pmb296218" subtype="implied">Manuscript</rs> vermute. Sollte
+               dies der Fall sein, so möchte ich Sie recht sehr bitten mich von der Lektüre entheben
+               zu wollen. Aus Gründen, deren Erörterung zu weit führen würde, habe ich es endlich
+               verschworen Manuscripte zu lesen, zu prüfen, zu beurteilen; und ich möchte auch Ihr
+               Neues <rs type="work" ref="#pmb296218" subtype="implied">Werk</rs>, was es immer sein
+               mag, erst kennen lernen, bis es gedruckt vorliegt. Die drei Couverts bleiben also bis
+               zum Eintreffen Ihrer Antwort verschlossen bei mir liegen.</p>
             <p>Von <rs type="person" ref="#pmb142471">Ziegel</rs> ist bisher keinerlei Anfrage an
                mich gerichtet worden. Entschuldigen Sie bei dieser Gelegenheit, dass ich Ihnen den
-               Empfang Ihres liebenswürdigen <anchor type="commentary" xml:id="K_L04339-1"/>Schreibens<note type="commentary" corresp="K_L04339-1">
+               Empfang Ihres liebenswürdigen <anchor type="commentary" xml:id="K_L04339-2"/>Schreibens<note type="commentary" corresp="K_L04339-2">
                   <ref type="schnitzler-briefe" target="L03729"/>.</note> erst <pb facs="HS1985.1.829_D20260424-901"/>heute mit herzlichem Dank bestätige.</p>
             <closer>Mit verbindlichen Grüssen<lb/>Ihr sehr ergebener</closer>
          </div>
@@ -227,7 +245,6 @@
                <occupation ref="pmb90">Schriftsteller/Schriftstellerin</occupation>
                <occupation ref="pmb105">Schauspieler/Schauspielerin</occupation>
                <idno type="URL" subtype="d-nb">https://d-nb.info/gnd/1041571119</idno>
-               <idno type="URL" subtype="schnitzler-tagebuch">https://schnitzler-tagebuch.acdh.oeaw.ac.at/person_15435.html</idno>
                <idno type="URL" subtype="schnitzler-bahr">https://schnitzler-bahr.acdh.oeaw.ac.at/pmb2128.html</idno>
                <idno type="URL" subtype="pmb">https://pmb.acdh.oeaw.ac.at/entity/2128/</idno>
                <idno type="URL" subtype="fackel">https://fackel.oeaw.ac.at/?p=fackelp51544</idno>
@@ -241,6 +258,7 @@
                <idno type="URL" subtype="pmb">https://pmb.acdh.oeaw.ac.at/entity/337573/</idno>
                <idno type="URL" subtype="dla-marbach">https://www.dla-marbach.de/find/opac/id/PE00031055</idno>
                <idno type="URL" subtype="pmb">https://pmb.acdh.oeaw.ac.at/entity/337574/</idno>
+               <idno type="URL" subtype="schnitzler-tagebuch">https://schnitzler-tagebuch.acdh.oeaw.ac.at/pmb2128.html</idno>
             </person>
             <person xml:id="pmb142471">
                <persName>
@@ -271,7 +289,6 @@
                <occupation ref="pmb104">Regisseur/Regisseurin</occupation>
                <occupation ref="pmb105">Schauspieler/Schauspielerin</occupation>
                <occupation ref="pmb727">Dramatiker/Dramatikerin</occupation>
-               <idno type="URL" subtype="schnitzler-tagebuch">https://schnitzler-tagebuch.acdh.oeaw.ac.at/person_21545.html</idno>
                <idno type="URL" subtype="pmb">https://pmb.acdh.oeaw.ac.at/entity/142471/</idno>
                <idno type="URL" subtype="d-nb">https://d-nb.info/gnd/116986395</idno>
                <idno type="URL" subtype="wikidata">http://www.wikidata.org/entity/Q1353576</idno>
@@ -282,6 +299,7 @@
                <idno type="URL" subtype="briefedition">https://briefedition.wedekind.h-da.de/view/person/single.xhtml?id=8578312</idno>
                <idno type="URL" subtype="biblio">https://biblio.ub.uni-freiburg.de/sf/#pmb142471</idno>
                <idno type="URL" subtype="dla-marbach">https://www.dla-marbach.de/find/opac/id/PE00051209</idno>
+               <idno type="URL" subtype="schnitzler-tagebuch">https://schnitzler-tagebuch.acdh.oeaw.ac.at/pmb142471.html</idno>
             </person>
          </listPerson>
          <listBibl>

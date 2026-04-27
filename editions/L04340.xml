@@ -1,6 +1,10 @@
-<?xml version='1.0' encoding='UTF-8'?>
+<?xml version="1.0" encoding="UTF-8"?>
 <?xml-model href="../meta/schnitzler-briefe-schematron.sch" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
-<TEI xmlns="http://www.tei-c.org/ns/1.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.tei-c.org/ns/1.0 ../meta/schnitzler-briefe-schema.xsd" xml:base="https://id.acdh.oeaw.ac.at/schnitzler/schnitzler-briefe/editions" xml:id="L04340">
+<TEI xmlns="http://www.tei-c.org/ns/1.0"
+     xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+     xsi:schemaLocation="http://www.tei-c.org/ns/1.0 ../meta/schnitzler-briefe-schema.xsd"
+     xml:base="https://id.acdh.oeaw.ac.at/schnitzler/schnitzler-briefe/editions"
+     xml:id="L04340">
    <teiHeader>
       <fileDesc>
          <titleStmt>
@@ -83,7 +87,7 @@
                               <extent>
                                  <measure unit="seite" quantity="5"/>
                                  <measure unit="blatt" quantity="3"/>
-                                 <measure unit="zeichenanzahl" quantity="3886"/>
+                                 <measure unit="zeichenanzahl" quantity="3890"/>
                               </extent>
                            </supportDesc>
                         </objectDesc>
@@ -91,16 +95,15 @@
                            <handNote medium="bleistift" style="nicht-anzuwenden" corresp="schreibkraft">
                               <p>Ergänzungen von Satzzeichen</p>
                            </handNote>
-                           <handNote medium="roter-buntstift" style="lateinische-kurrent" corresp="#pmb2121">
-                              <p>Vermerk »<quote>Ginsberg</quote>« und
-                                    »<quote>
+                           <handNote medium="roter-buntstift"
+                                     style="lateinische-kurrent"
+                                     corresp="#pmb2121">
+                              <p>Vermerk »<quote>Ginsberg</quote>« und »<quote>
                                     <unclear>Pl</unclear>
-                                 </quote>« auf jedem Blatt und eine
-                                 Unterstreichung</p>
+                                 </quote>« auf jedem Blatt und eine Unterstreichung</p>
                            </handNote>
                            <handNote medium="bleistift" style="lateinische-kurrent" corresp="#pmb2121">
-                              <p>Ergänzung der Datumsangabe auf Blatt 2 und 3:
-                                       »<quote>
+                              <p>Ergänzung der Datumsangabe auf Blatt 2 und 3: »<quote>
                                     <date>17/1 916</date>
                                  </quote>«</p>
                            </handNote>
@@ -126,17 +129,23 @@
             </correspAction>
             <correspAction type="received">
                <persName ref="#pmb2128">Plessner, Elsa</persName>
-               <date evidence="conjecture" notBefore="1916-01-18" notAfter="1916-01-22">[18. 1. 1916 – 22. 1. 1916?]</date>
+               <date evidence="conjecture" notBefore="1916-01-18" notAfter="1916-01-22">[18. 1. 1916
+                  – 22. 1. 1916?]</date>
                <placeName ref="#pmb45258">München</placeName>
             </correspAction>
-         <correspContext><ref type="belongsToCorrespondence" target="correspondence_2128">Plessner, Elsa</ref>
+            <correspContext>
+               <ref type="belongsToCorrespondence" target="correspondence_2128">Plessner, Elsa</ref>
                <ref subtype="previous_letter" type="withinCollection" target="L03731">Plessner an Schnitzler, 13. 1. 1916</ref>
                <ref subtype="next_letter" type="withinCollection" target="L03657">Zweig an Schnitzler, 18. 1. 1916</ref>
-               <ref subtype="previous_letter" type="withinCorrespondence" source="correspondence_2128" target="L03731">Plessner an Schnitzler, 13. 1. 1916</ref>
-            </correspContext></correspDesc>
+               <ref subtype="previous_letter"
+                    type="withinCorrespondence"
+                    source="correspondence_2128"
+                    target="L03731">Plessner an Schnitzler, 13. 1. 1916</ref>
+            </correspContext>
+         </correspDesc>
       </profileDesc>
-      <revisionDesc status="proposed">
-         <change who="MAM" when="2026-04-24">Export aus Transkribus</change>
+      <revisionDesc status="approved">
+         <change who="MAM" when="2026-04-24">Export aus Transkribus</change><change who="SJ" when="2026-04-27">Durchsicht</change>
       </revisionDesc>
    </teiHeader>
    <facsimile>
@@ -156,7 +165,9 @@
                <salute rend="center">Verehrte gnädige Frau.</salute>
             </opener>
             <p>Ihrem freundlichen Wunsch entsprechend habe ich das erste Couvert eröffnet und Ihren
-               Brief gelesen. Die darin enthaltene Entstehungsanalyse Ihres <rs type="work" ref="#pmb296218" subtype="implied">Stücks</rs> hat mich so weit angeregt, dass ich
+                  <anchor type="commentary" xml:id="K_L04340-1"/>Brief<note type="commentary" corresp="K_L04340-1">
+                  <ref type="schnitzler-briefe" target="L03730"/>.</note>
+               gelesen. Die darin enthaltene Entstehungsanalyse Ihres <rs type="work" ref="#pmb296218" subtype="implied">Stücks</rs> hat mich so weit angeregt, dass ich
                von meinem Prinzip abgehend mich an die <rs type="work" ref="#pmb296218" subtype="implied">Lektüre</rs> herangewagt habe. Nachdem ich sie beendet kann ich
                Ihnen meine Empfindung nicht verschweigen, dass Sie in der Ausführung um ein
                Beträchtliches hinter Ihren Absichten zurückgeblieben sind. Was Ihnen als Stil
@@ -164,47 +175,52 @@
                entscheidenden Momenten Dürftigkeit der Diktion dar und wo es auf das Wort ankäme
                sehe ich nicht viel mehr (zuweilen) als Pantomine. Sie könnten mir vielleicht
                antworten, dass gerade in den grossen entscheidenden Momenten des Daseins das Wort
-               notwendig versagt; aber wäre ich selbst <pb facs="HS1985.1.829_D20260424-903"/>geneigt eine solche
-               Entschuldigung auch im Drama gelten zu lassen, so müsste ich zumindest verlangen,
-               dass mir die Gestalt, der das dramatische Wort nicht gegeben ist, mir vorher
-               interessant und lebendig genug wurde, um mir auch noch in ihrem Schweigen oder in der
-               Schwächlichkeit ihrer Ausdrucksweise interessant, lebendig – und verständlich zu
-               sein. Aber Ihre Gestalten auch <rs type="work" ref="#pmb296218" subtype="implied">Reiter</rs> und <rs type="work" ref="#pmb296218" subtype="implied">Jolanthe</rs>
-               sind recht blass geblieben. Es fehlt das charakteristische Detail, das geheimnisvoll
-               Atmosphärische, jenes Undefinierbare, das der erdichteten Figur innerhalb des
-               Kunstwerks Vergangenheit, Zukunft und damit erst die richtige Gegenwart verleiht.
-               Warum glaube ich nicht an die Liebe auf den ersten Blick zwischen <rs type="work" ref="#pmb296218" subtype="implied">Jolanthe</rs> und <rs type="work" ref="#pmb296218" subtype="implied">Reiter</rs>? Weil ich an sie selber nicht
-               glaube. Aber nehme ich selbst diese Tatsache, was mir ohne Liebestrank und ohne
-               musikalische Begleitung schwer genug fiele, als gegeben hin, so wehre ich mich
-               durchaus gegen alles, was folgt als theaterhaft <pb facs="HS1985.1.829_D20260424-904"/>und jeder
-               Wahrheit bar. Hier ist nicht nur äussere Unwahrscheinlichkeit, wogegen sich auch
-               schon genug einwenden liesse, hier ist ein Mangel an innerer Wahrheit, den durch die
-               Gesetze theatralischer Verkürzung, auch nicht durch den besonderen Stil, den Sie hier
-               vielleicht gefunden zu haben glauben, gerechtfertigt erscheint. Das ganze Gebahren
-                  der <rs type="work" ref="#pmb296218" subtype="implied">Jolanthe</rs> wäre durch
-               eine pathologische Disposition zu erklären; diese ist aber vorher weder angedeutet,
-               noch vorbereitet und so sehen wir uns der Willkür des Autors hilflos ausgeliefert,
-               was als eine Hauptquelle des ästhetischen Unbehagens gelten darf. All dem gegenüber
-               fallen die kleineren Peinlichkeiten kaum mehr ins Gewicht, die gewissermassen nur aus
-               der ungenügenden Beherrschung des Stoffes entspringen und milder als scenische
-               Ungeschichlichkei- ten anzusprechen wären. Dass <rs type="work" ref="#pmb296218" subtype="implied">Jolanthe</rs> am Ende durch ihren Selbstmordversuch erblindet,
-               wirkt keineswegs tragisch, sondern als ein unglück<pb facs="HS1985.1.829_D20260424-905"/>seliger
-               Zufall, wie sich ihn wohl de<unclear>r</unclear><space unit="chars" quantity="1"/><damage agent="other"><supplied>liebe</supplied><space unit="chars" quantity="1"/><unclear>Gott</unclear></damage> erlauben darf, aber niemals der dramatische Autor. Die
-               Musik in Ihrem <rs type="work" ref="#pmb296218" subtype="implied">Stück</rs> vermag
-               ich nicht zu spüren. Ob der Fehler an Ihnen liegt oder an mir müssen wir
-               dahingestellt sein lassen; mir bleibt am Ende nichts übrig, auf die Gefahr des
-               Irrtums hin, als Ihnen von meinem rein persönlichen Eindruck zu berichten, der sich
-               vor allem<!-- Einfügung durch die Sekretärin, also nicht ausgewiesen --> auf das
-               Ganze Ihrer Arbeit bezieht. Wenn ich Ihnen zum Schluss noch sage, dass ich im Dialog
-               da und dort manche feine und kluge Bemerkung gefunden habe, und dass der technische
-               Aufbau Ihres dramatischen Gerüstes eine keineswegs ungeübte Hand, dass endlich die
+               notwendig versagt; aber wäre ich selbst <pb facs="HS1985.1.829_D20260424-903"/>geneigt eine solche Entschuldigung auch im Drama gelten zu lassen, so müsste ich
+               zumindest verlangen, dass mir die Gestalt, der das dramatische Wort nicht gegeben
+               ist, mir vorher interessant und lebendig genug wurde, um mir auch noch in ihrem
+               Schweigen oder in der Schwächlichkeit ihrer Ausdrucksweise interessant, lebendig –
+               und verständlich zu sein. Aber Ihre Gestalten auch <rs type="work" ref="#pmb296218" subtype="implied">Reiter</rs> und <rs type="work" ref="#pmb296218" subtype="implied">Jolanthe</rs> sind recht blass geblieben. Es fehlt das
+               charakteristische Detail, das geheimnisvoll Atmosphärische, jenes Undefinierbare, das
+               der erdichteten Figur innerhalb des Kunstwerks Vergangenheit, Zukunft und damit erst
+               die richtige Gegenwart verleiht. Warum glaube ich nicht an die Liebe auf den ersten
+               Blick zwischen <rs type="work" ref="#pmb296218" subtype="implied">Jolanthe</rs> und
+                  <rs type="work" ref="#pmb296218" subtype="implied">Reiter</rs>? Weil ich an sie
+               selber nicht glaube. Aber nehme ich selbst diese Tatsache, was mir ohne Liebestrank
+               und ohne musikalische Begleitung schwer genug fiele, als gegeben hin, so wehre ich
+               mich durchaus gegen alles, was folgt als theaterhaft <pb facs="HS1985.1.829_D20260424-904"/>und jeder Wahrheit bar. Hier ist nicht nur
+               äussere Unwahrscheinlichkeit, wogegen sich auch schon genug einwenden liesse, hier
+               ist ein Mangel an innerer Wahrheit, den durch die Gesetze theatralischer Verkürzung,
+               auch nicht durch den besonderen Stil, den Sie hier vielleicht gefunden zu haben
+               glauben, gerechtfertigt erscheint. Das ganze Gebahren der <rs type="work" ref="#pmb296218" subtype="implied">Jolanthe</rs> wäre durch eine pathologische
+               Disposition zu erklären; diese ist aber vorher weder angedeutet, noch vorbereitet und
+               so sehen wir uns der Willkür des Autors hilflos ausgeliefert, was als eine
+               Hauptquelle des ästhetischen Unbehagens gelten darf. All dem gegenüber fallen die
+               kleineren Peinlichkeiten kaum mehr ins Gewicht, die gewissermassen nur aus der
+               ungenügenden Beherrschung des Stoffes entspringen und milder als scenische
+               Ungeschichlichkeiten anzusprechen wären. Dass <rs type="work" ref="#pmb296218" subtype="implied">Jolanthe</rs> am Ende durch ihren Selbstmordversuch erblindet,
+               wirkt keineswegs tragisch, sondern als ein unglück<pb facs="HS1985.1.829_D20260424-905"/>seliger Zufall, wie sich ihn wohl
+                  de<unclear>r</unclear>
+               <space unit="chars" quantity="1"/>
+               <damage agent="other">
+                  <supplied>liebe</supplied>
+                  <space unit="chars" quantity="1"/>
+                  <unclear>Gott</unclear>
+               </damage> erlauben darf, aber niemals der dramatische Autor. Die Musik in Ihrem <rs type="work" ref="#pmb296218" subtype="implied">Stück</rs> vermag ich nicht zu
+               spüren. Ob der Fehler an Ihnen liegt oder an mir müssen wir dahingestellt sein
+               lassen; mir bleibt am Ende nichts übrig, auf die Gefahr des Irrtums hin, als Ihnen
+               von meinem rein persönlichen Eindruck zu berichten, der sich vor
+               allem<!-- Einfügung durch die Sekretärin, also nicht ausgewiesen --> auf das Ganze
+               Ihrer Arbeit bezieht. Wenn ich Ihnen zum Schluss noch sage, dass ich im Dialog da und
+               dort manche feine und kluge Bemerkung gefunden habe, und dass der technische Aufbau
+               Ihres dramatischen Gerüstes eine keineswegs ungeübte Hand, dass endlich die
                Problemstellung als solche eine gewisse theatralische und sogar seelische Courage
                verrät, so ist Ihnen nicht viel damit geholfen, aber ich möchte doch auch nicht, dass
                Sie als Höflichkeitsphrasen nehmen, was geradeso ehrlich gemeint ist, wie das minder
                Höfliche, was ich Ihnen im ersten Teil meines Briefes vorgebracht habe.</p>
             <p>
-               <pb facs="HS1985.1.829_D20260424-906"/>Ihrem zweiten Briefe lag keine Postkarte bei. Ich erwarte
-               nun eine Weisung von Ihnen wohin ich Ihr Manuscript zu senden habe.</p>
+               <pb facs="HS1985.1.829_D20260424-906"/>Ihrem zweiten <anchor type="commentary" xml:id="K_L04340-2"/>Briefe<note type="commentary" corresp="K_L04340-2">
+                  <ref type="schnitzler-briefe" target="L03731"/>.</note> lag keine Postkarte bei.
+               Ich erwarte nun eine Weisung von Ihnen wohin ich Ihr <rs type="work" ref="#pmb296218" subtype="implied">Manuscript</rs> zu senden habe.</p>
             <closer>Mit verbindlichsten Grüssen<lb/>Ihr Sie aufrichtig schätzender und keineswegs
                unfehlbarer</closer>
          </div>
@@ -279,7 +295,6 @@
                <occupation ref="pmb90">Schriftsteller/Schriftstellerin</occupation>
                <occupation ref="pmb105">Schauspieler/Schauspielerin</occupation>
                <idno type="URL" subtype="d-nb">https://d-nb.info/gnd/1041571119</idno>
-               <idno type="URL" subtype="schnitzler-tagebuch">https://schnitzler-tagebuch.acdh.oeaw.ac.at/person_15435.html</idno>
                <idno type="URL" subtype="schnitzler-bahr">https://schnitzler-bahr.acdh.oeaw.ac.at/pmb2128.html</idno>
                <idno type="URL" subtype="pmb">https://pmb.acdh.oeaw.ac.at/entity/2128/</idno>
                <idno type="URL" subtype="fackel">https://fackel.oeaw.ac.at/?p=fackelp51544</idno>
@@ -293,6 +308,7 @@
                <idno type="URL" subtype="pmb">https://pmb.acdh.oeaw.ac.at/entity/337573/</idno>
                <idno type="URL" subtype="dla-marbach">https://www.dla-marbach.de/find/opac/id/PE00031055</idno>
                <idno type="URL" subtype="pmb">https://pmb.acdh.oeaw.ac.at/entity/337574/</idno>
+               <idno type="URL" subtype="schnitzler-tagebuch">https://schnitzler-tagebuch.acdh.oeaw.ac.at/pmb2128.html</idno>
             </person>
          </listPerson>
          <listBibl>
