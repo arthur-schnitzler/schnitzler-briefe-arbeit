@@ -4682,7 +4682,15 @@
          </xsl:when>
          <!-- hier könnte man noch Verwendung von Initialen einbauen -->
          <xsl:otherwise>
-            <xsl:value-of select="$scribe-nachname"/>
+            <xsl:choose>
+               <xsl:when test="string-length($scribe-vorname) &gt; 0 and string-length($scribe-nachname) = 0">
+                  <xsl:value-of select="$scribe-vorname"/>
+               </xsl:when>
+               <xsl:otherwise>
+                  <xsl:value-of select="$scribe-nachname"/>
+               </xsl:otherwise>
+            </xsl:choose>
+            
          </xsl:otherwise>
       </xsl:choose>
       <xsl:text>:{]} </xsl:text>
@@ -6144,5 +6152,10 @@
             </xsl:choose>
          </xsl:otherwise>
       </xsl:choose>
+   </xsl:template>
+   <xsl:template match="tei:ref[@type='DOI' or @type='URL' and not(ancestor::tei:biblStruct)]">
+      <xsl:text>\url{</xsl:text>
+      <xsl:value-of select="@target"/>
+      <xsl:text>}</xsl:text>
    </xsl:template>
 </xsl:stylesheet>
