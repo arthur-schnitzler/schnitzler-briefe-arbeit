@@ -1,10 +1,6 @@
-<?xml version="1.0" encoding="UTF-8"?>
+<?xml version='1.0' encoding='UTF-8'?>
 <?xml-model href="../meta/schnitzler-briefe-schematron.sch" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
-<TEI xmlns="http://www.tei-c.org/ns/1.0"
-     xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-     xsi:schemaLocation="http://www.tei-c.org/ns/1.0 ../meta/schnitzler-briefe-schema.xsd"
-     xml:base="https://id.acdh.oeaw.ac.at/schnitzler/schnitzler-briefe/editions"
-     xml:id="L04348">
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.tei-c.org/ns/1.0 ../meta/schnitzler-briefe-schema.xsd" xml:base="https://id.acdh.oeaw.ac.at/schnitzler/schnitzler-briefe/editions" xml:id="L04348">
    <teiHeader>
       <fileDesc>
          <titleStmt>
@@ -97,21 +93,11 @@
                         </objectDesc>
                         <handDesc hands="6">
                            <handNote corresp="#pmb2537" style="lateinische-kurrent" medium="blaue-tinte"/>
-                           <handNote corresp="#pmb27074"
-                                     medium="schwarze-tinte"
-                                     style="lateinische-kurrent"/>
-                           <handNote corresp="#pmb11485"
-                                     medium="schwarze-tinte"
-                                     style="deutsche-kurrent"/>
-                           <handNote corresp="#pmb10879"
-                                     medium="schwarze-tinte"
-                                     style="lateinische-kurrent"/>
-                           <handNote corresp="#pmb342708"
-                                     medium="schwarze-tinte"
-                                     style="lateinische-kurrent"/>
-                           <handNote corresp="#pmb11391"
-                                     medium="schwarze-tinte"
-                                     style="deutsche-kurrent"/>
+                           <handNote corresp="#pmb27074" medium="schwarze-tinte" style="lateinische-kurrent"/>
+                           <handNote corresp="#pmb11485" medium="schwarze-tinte" style="deutsche-kurrent"/>
+                           <handNote corresp="#pmb10879" medium="schwarze-tinte" style="lateinische-kurrent"/>
+                           <handNote corresp="#pmb342708" medium="schwarze-tinte" style="lateinische-kurrent"/>
+                           <handNote corresp="#pmb11391" medium="schwarze-tinte" style="deutsche-kurrent"/>
                         </handDesc>
                         <additions>
                            <incident type="postal">
@@ -173,7 +159,12 @@
                <date when="1902-09-19">[19. 9. 1902]</date>
                <placeName ref="#pmb50">Wien</placeName>
             </correspAction>
-         </correspDesc>
+         <correspContext><ref type="belongsToCorrespondence" target="correspondence_11485">Goldmann, Paul</ref>
+               <ref subtype="previous_letter" type="withinCollection" target="L03224">Goldmann an Schnitzler, 16. 9. [1902]</ref>
+               <ref subtype="next_letter" type="withinCollection" target="L03534">Goldmann an Gussmann, 29. 9. [1902]</ref>
+               <ref subtype="previous_letter" type="withinCorrespondence" source="correspondence_11485" target="L03224">Goldmann an Schnitzler, 16. 9. [1902]</ref>
+               <ref subtype="next_letter" type="withinCorrespondence" source="correspondence_11485" target="L03534">Goldmann an Gussmann, 29. 9. [1902]</ref>
+            </correspContext></correspDesc>
       </profileDesc>
       <revisionDesc status="proposed">
          <change who="MAM" when="2026-05-28">Manuell angelegt</change>
