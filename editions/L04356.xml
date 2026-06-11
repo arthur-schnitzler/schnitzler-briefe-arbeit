@@ -1,10 +1,6 @@
-<?xml version="1.0" encoding="UTF-8"?>
+<?xml version='1.0' encoding='UTF-8'?>
 <?xml-model href="../meta/schnitzler-briefe-schematron.sch" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
-<TEI xmlns="http://www.tei-c.org/ns/1.0"
-     xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-     xsi:schemaLocation="http://www.tei-c.org/ns/1.0 ../meta/schnitzler-briefe-schema.xsd"
-     xml:base="https://id.acdh.oeaw.ac.at/schnitzler/schnitzler-briefe/editions"
-     xml:id="L04356">
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.tei-c.org/ns/1.0 ../meta/schnitzler-briefe-schema.xsd" xml:base="https://id.acdh.oeaw.ac.at/schnitzler/schnitzler-briefe/editions" xml:id="L04356">
    <teiHeader>
       <fileDesc>
          <titleStmt>
@@ -129,7 +125,12 @@
                <date evidence="conjecture" notBefore="1925-01-14" notAfter="1925-01-18">[14. 1. 1925 – 18. 1. 1925?]</date>
                <placeName ref="#pmb50">Wien</placeName>
             </correspAction>
-         </correspDesc>
+         <correspContext><ref type="belongsToCorrespondence" target="correspondence_12740">Schwarzkopf, Gustav</ref>
+               <ref subtype="previous_letter" type="withinCollection" target="L02430">Mann an Schnitzler, 9. 1. 1925</ref>
+               <ref subtype="next_letter" type="withinCollection" target="L02431">Schnitzler an Beer-Hofmann, 23. 1. 1925</ref>
+               <ref subtype="previous_letter" type="withinCorrespondence" source="correspondence_12740" target="L04353">Schnitzler an Schwarzkopf, 4. 1. 1925</ref>
+               <ref subtype="next_letter" type="withinCorrespondence" source="correspondence_12740" target="L04354">Schnitzler an Schwarzkopf, 25. 8. 1925</ref>
+            </correspContext></correspDesc>
       </profileDesc>
       <revisionDesc status="proposed">
          <change who="MAM" when="2026-06-11">Export aus Transkribus</change>
@@ -176,9 +177,7 @@
                   <date>13. 1. 925</date>
                </dateline>
             </opener>
-            <p>Nun hab ich drei <rs type="event"
-                   ref="#pmb183497 #pmb183503 #pmb183512"
-                   subtype="implied">Vorlesungen</rs>
+            <p>Nun hab ich drei <rs type="event" ref="#pmb183497 #pmb183503 #pmb183512" subtype="implied">Vorlesungen</rs>
                <space unit="chars" quantity="1"/>
                <anchor type="commentary" xml:id="K_L04356-1"/>
                <rs type="event" subtype="implied" ref="#pmb183497">
