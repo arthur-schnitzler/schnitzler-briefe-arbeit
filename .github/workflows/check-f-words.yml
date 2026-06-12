@@ -14,8 +14,9 @@ jobs:
       - name: Install hunspell with German dictionaries
         run: |
           sudo apt-get update
-          # de-de-1901: alte Rechtschreibung (Einfluß, gefaßt etc.)
-          sudo apt-get install -y hunspell hunspell-de-de hunspell-de-at hunspell-de-de-1901
+          # myspell-de-de-1901: alte Rechtschreibung (Einfluß, gefaßt etc.),
+          # installiert /usr/share/hunspell/de_DE-1901.dic
+          sudo apt-get install -y hunspell hunspell-de-de hunspell-de-at myspell-de-de-1901
           # Alle installierten deutschen Wörterbücher ermitteln
           DICTS=$(ls /usr/share/hunspell/de_*.dic | xargs -n1 basename | sed 's/\.dic$//' | paste -sd, -)
           echo "Verwendete Wörterbücher: $DICTS"
