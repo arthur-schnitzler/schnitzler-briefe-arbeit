@@ -1,0 +1,54 @@
+name: "Prüfung: Wörter mit kleinem f ohne Wörterbuch-Eintrag"
+
+on:
+  workflow_dispatch: # nur manueller Start
+
+jobs:
+  check-f-words:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Install hunspell with German dictionaries
+        run: |
+          sudo apt-get update
+          # de-de-1901: alte Rechtschreibung (Einfluß, gefaßt etc.)
+          sudo apt-get install -y hunspell hunspell-de-de hunspell-de-at hunspell-de-de-1901
+          # Alle installierten deutschen Wörterbücher ermitteln
+          DICTS=$(ls /usr/share/hunspell/de_*.dic | xargs -n1 basename | sed 's/\.dic$//' | paste -sd, -)
+          echo "Verwendete Wörterbücher: $DICTS"
+          echo "DICTS=$DICTS" >> $GITHUB_ENV
+
+      - name: Set up Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: '3.11'
+
+      - name: Install Python dependencies
+        run: |
+          python -m pip install --upgrade pip
+          pip install lxml
+
+      - name: Run f-word check
+        run: python python/check-f-words.py --dicts "$DICTS"
+
+      - name: Write workflow summary
+        if: always()
+        run: |
+          if [ -f f-words-summary.md ]; then
+            cat f-words-summary.md >> $GITHUB_STEP_SUMMARY
+          else
+            echo "❌ Prüfung fehlgeschlagen – siehe Logs." >> $GITHUB_STEP_SUMMARY
+          fi
+
+      - name: Upload word list as artifact
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: f-words-report
+          path: |
+            f-words-report.txt
+            f-words-summary.md
+          if-no-files-found: warn

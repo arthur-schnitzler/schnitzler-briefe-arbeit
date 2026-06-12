@@ -40,8 +40,6 @@
         <sch:rule context="tei:correspDesc">
             <sch:assert test="not(descendant::tei:supplied)"> Kein &lt;supplied&gt;-Element erlaubt
                 in correspDesc. </sch:assert>
-            <sch:assert test="not(descendant::tei:correspAction[position() &gt; 1]/tei:date/@n)">
-                Nur das erste correspAction darf ein date/@n haben. </sch:assert>
             <sch:assert test="count(tei:correspAction[@type = 'sent']) le 1"> Es darf nur ein
                 correspAction[@type='sent'] vorhanden sein. </sch:assert>
             <sch:assert test="count(tei:correspAction[@type = 'received']) le 1"> Es darf nur ein
@@ -72,7 +70,10 @@
             <sch:assert test="tei:persName/@ref or not(tei:persName)"> Wenn persName vorhanden ist,
                 muss @ref vorhanden sein. </sch:assert>
             <sch:assert test="not(tei:date) or tei:date[not(matches(., '\n\s+\n\s+'))]"> Inhalt von
-                tei:date darf keine mehrfachen Zeilenumbrüche enthalten. </sch:assert>
+                tei:date darf keine mehrfachen Zeilenumbrüche enthalten.</sch:assert>
+            <sch:assert test="(tei:date/@n and not(preceding-sibling::tei:correspAction)) or (not(tei:date/@n))">
+                Nur das erste correspAction darf ein date mit dem Attribut @n haben
+            </sch:assert>
             <sch:assert
                 test="tei:placeName[(starts-with(@ref, '#pmb') and not(@ref = '#pmb') and (string(number(substring-after(@ref, '#pmb'))) != 'NaN') and not(contains(@ref, ' ')))] or not(child::tei:placeName)"
                 > Wenn placeName existiert, muss @ref gültig sein (#pmb..., keine Leerzeichen, keine
@@ -80,6 +81,19 @@
             <sch:assert test="count(tei:persName/@ref) = count(distinct-values(tei:persName/@ref))">
                 Innerhalb von correspAction muss jeder Wert von persName/@ref eindeutig sein (keine
                 Dubletten). </sch:assert>
+        </sch:rule>
+    </sch:pattern>
+    <sch:pattern id="correspAction-date-n">
+        <sch:rule context="tei:correspAction[1]/tei:date">
+            <sch:assert test="@n">
+                Das erste correspAction-Element muss ein tei:date mit @n haben.
+            </sch:assert>
+        </sch:rule>
+        
+        <sch:rule context="tei:correspAction[position() gt 1]/tei:date">
+            <sch:assert test="not(@n)">
+                Nur das erste correspAction-Element darf tei:date/@n haben.
+            </sch:assert>
         </sch:rule>
     </sch:pattern>
     <!-- witness -->
