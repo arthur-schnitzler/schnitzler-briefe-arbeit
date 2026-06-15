@@ -135,8 +135,15 @@ jobs:
             sys.exit(main())
         PYEOF
 
+        # NB: validate_back_elements.py exits with the NUMBER of problematic
+        # files (nonzero == problems found). The GitHub Actions default shell
+        # runs with `set -e`, which would abort this step on that nonzero exit
+        # before we ever capture $? or write found_problems. Disable -e around
+        # the call so we can read the result from problematic_files.txt.
+        set +e
         python validate_back_elements.py
         EXIT_CODE=$?
+        set -e
 
         if [ -f "problematic_files.txt" ]; then
           PROBLEM_COUNT=$(wc -l < problematic_files.txt)
@@ -250,8 +257,13 @@ jobs:
       if: steps.validation.outputs.found_problems == 'true'
       run: |
         echo "Running final validation..."
+        # Same as the first validation step: the script exits with the count of
+        # remaining problematic files, so disable -e to read it instead of
+        # aborting. Remaining issues here are reported, not treated as failure.
+        set +e
         python validate_back_elements.py
         FINAL_EXIT_CODE=$?
+        set -e
 
         if [ $FINAL_EXIT_CODE -eq 0 ]; then
           echo "Final validation passed: All issues resolved!"
