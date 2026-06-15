@@ -33,13 +33,17 @@ jobs:
           pip install lxml
 
       - name: Run f-word check
-        run: python python/check-f-words.py --dicts "$DICTS"
+        run: |
+          mkdir -p python-temp
+          python python/check-f-words.py --dicts "$DICTS" \
+            --report python-temp/f-words-report.txt \
+            --summary python-temp/f-words-summary.md
 
       - name: Write workflow summary
         if: always()
         run: |
-          if [ -f f-words-summary.md ]; then
-            cat f-words-summary.md >> $GITHUB_STEP_SUMMARY
+          if [ -f python-temp/f-words-summary.md ]; then
+            cat python-temp/f-words-summary.md >> $GITHUB_STEP_SUMMARY
           else
             echo "❌ Prüfung fehlgeschlagen – siehe Logs." >> $GITHUB_STEP_SUMMARY
           fi
@@ -50,6 +54,6 @@ jobs:
         with:
           name: f-words-report
           path: |
-            f-words-report.txt
-            f-words-summary.md
+            python-temp/f-words-report.txt
+            python-temp/f-words-summary.md
           if-no-files-found: warn

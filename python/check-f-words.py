@@ -54,6 +54,14 @@ def local_name(el):
     return etree.QName(el).localname
 
 
+def last_char(parts):
+    """Letztes bereits gesammeltes Zeichen (None am Anfang)."""
+    for p in reversed(parts):
+        if p:
+            return p[-1]
+    return None
+
+
 def extract_text(el, parts):
     name = local_name(el)
     lang = el.get(XML_LANG)
@@ -63,7 +71,19 @@ def extract_text(el, parts):
             parts.append(el.tail)
         return
     if name in BREAK_ELEMENTS and el.get("break") != "no":
-        parts.append(" ")
+        boundary = True
+        if name == "pb":
+            prev = last_char(parts)
+            nxt = el.tail[0] if el.tail else None
+            # <pb/> ohne Abstand davor und danach steht mitten im Wort
+            # (z. B. Ver<pb/>faſſer) und gilt nicht als Wortgrenze
+            if (
+                prev is not None and not prev.isspace()
+                and nxt is not None and not nxt.isspace()
+            ):
+                boundary = False
+        if boundary:
+            parts.append(" ")
     if name == "space":
         parts.append(" ")
     if name == "c":
@@ -132,7 +152,9 @@ def load_allowlist(path):
             for line in f:
                 line = line.strip()
                 if line and not line.startswith("#"):
-                    allow.add(line)
+                    # nur das erste Wort (vor Leerzeichen/Tab), damit Zeilen
+                    # direkt aus f-words-report.txt kopiert werden können
+                    allow.add(line.split()[0])
     return allow
 
 
@@ -184,12 +206,14 @@ def main():
         f.write(f"**{len(hits)}** Wörter gefunden ")
         f.write(f"({sum(hits.values())} Vorkommen insgesamt).\n\n")
         if ranked:
-            f.write("| Wort | Anzahl | Dateien |\n|---|---|---|\n")
+            f.write("| Wort | Normalisiert | Anzahl | Dateien |\n|---|---|---|---|\n")
             for word, count in ranked[: args.max_summary_words]:
                 files = sorted(occurrences[word])
                 shown = ", ".join(files[:5])
                 more = f" … (+{len(files) - 5})" if len(files) > 5 else ""
-                f.write(f"| {word} | {count} | {shown}{more} |\n")
+                f.write(
+                    f"| {word} | {normalized[word]} | {count} | {shown}{more} |\n"
+                )
             if len(ranked) > args.max_summary_words:
                 f.write(
                     f"\n… und {len(ranked) - args.max_summary_words} weitere – "
