@@ -21,10 +21,35 @@ def is_file_fresh(filepath, max_age_hours=24):
     """Check if file exists and is younger than max_age_hours"""
     if not filepath.exists():
         return False
-    
+
     file_age = time.time() - filepath.stat().st_mtime
     max_age_seconds = max_age_hours * 3600
     return file_age < max_age_seconds
+
+def ensure_normalized(filepath):
+    """Guarantee a (cached/fresh) list uses normalized pmb<digits> ids.
+
+    The Actions cache can restore a list that was never run through the
+    transform (still in raw work__/person__ format). The freshness check would
+    then skip it, leaving raw ids that the back-element lookup cannot match,
+    forcing every entity onto the slow PMB API. If we detect raw ids, rewrite
+    the file normalized in place. Idempotent: a no-op on already-normalized files."""
+    try:
+        with open(filepath, 'r', encoding='utf-8') as f:
+            head = f.read(1_000_000)  # raw ids appear from the very top; a sample suffices
+        if not re.search(r'(xml:id|key)="[^"]*__', head):
+            return  # already normalized
+        print(f"🔧 {filepath.name} still has raw PMB ids - normalizing cached copy in place...")
+        sys.stdout.flush()
+        with open(filepath, 'r', encoding='utf-8') as f:
+            content = f.read()
+        with open(filepath, 'w', encoding='utf-8') as f:
+            f.write(normalize_xml_content(content))
+        print(f"✅ Normalized {filepath.name}")
+        sys.stdout.flush()
+    except Exception as e:
+        print(f"⚠️ Could not verify/normalize {filepath.name}: {e}")
+        sys.stdout.flush()
 
 def download_pmb_files():
     urls = [
@@ -51,6 +76,10 @@ def download_pmb_files():
     if all_files_fresh:
         print("✅ All PMB files are fresh (less than 24 hours old), skipping download")
         sys.stdout.flush()
+        # Still verify the cached copies are normalized (a raw list may have been
+        # restored from the Actions cache) before relying on them.
+        for url in urls:
+            ensure_normalized(output_dir / url.split("/")[-1])
         return
     
     print("🔄 PMB files are stale or missing, downloading...")
@@ -63,6 +92,7 @@ def download_pmb_files():
         # Skip download if this specific file is fresh
         if is_file_fresh(filepath):
             print(f"Skipping {filename} (file is fresh)")
+            ensure_normalized(filepath)
             continue
             
         print(f"📥 Downloading {filename}...")

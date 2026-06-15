@@ -4657,7 +4657,7 @@
          <!-- alle Namen, außer dem aktuellen -->
          <xsl:element name="listPerson">
             <xsl:for-each
-               select="ancestor::tei:TEI/tei:text/tei:back/tei:listPerson/tei:person[@xml:id = $scribes/tei:scribe/@xml:id and not(@xml:id = $scribe)]">
+               select="ancestor::tei:TEI/tei:text/tei:back/tei:listPerson/tei:person[@xml:id = $scribes/scribe/@id and not(@xml:id = $scribe)]">
                <xsl:element name="person">
                   <xsl:attribute name="id">
                      <xsl:value-of select="@xml:id"/>
@@ -4677,8 +4677,16 @@
             <xsl:text>XXXX Namendopplung</xsl:text>
          </xsl:when>
          <xsl:when test="$scribes-namen[descendant::tei:surname = $scribe-nachname][1]">
-            <!-- es gibt mindestens einen anderen Schreiber mit dem gleichen Nachnamen -->
-            <xsl:value-of select="fn:concat($scribe-vorname, ' ', $scribe-nachname)"/>
+            <!-- es gibt mindestens einen anderen Schreiber mit dem gleichen Nachnamen,
+               daher zur Unterscheidung der Vorname als Initiale, z. B. "A. Schnitzler" / "O. Schnitzler" -->
+            <xsl:choose>
+               <xsl:when test="string-length($scribe-vorname) &gt; 0">
+                  <xsl:value-of select="fn:concat(substring($scribe-vorname, 1, 1), '. ', $scribe-nachname)"/>
+               </xsl:when>
+               <xsl:otherwise>
+                  <xsl:value-of select="$scribe-nachname"/>
+               </xsl:otherwise>
+            </xsl:choose>
          </xsl:when>
          <!-- hier könnte man noch Verwendung von Initialen einbauen -->
          <xsl:otherwise>

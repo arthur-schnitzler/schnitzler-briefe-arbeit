@@ -81,7 +81,15 @@ class PMBProcessor:
                     if elem.tag.endswith(entity_type) or (entity_type == "work" and elem.tag.endswith("bibl")):
                         xml_id = elem.get(f"{{{self.xml_ns}}}id")
                         if xml_id:
-                            self.pmb_index[xml_id] = entity_type
+                            # Index by normalized id (pmb<digits>) so lookups succeed
+                            # whether the local lists were normalized by the transform
+                            # step (pmb30033) or are still in the raw PMB format
+                            # (work__30033). Keep the original id so the entity can be
+                            # located in the file regardless of format. Without this,
+                            # the lookup (which uses pmb<digits>) never matches a raw
+                            # list and EVERY entity falls through to the slow PMB API.
+                            normalized_id = re.sub(r'^.*__', 'pmb', xml_id)
+                            self.pmb_index[normalized_id] = (entity_type, xml_id)
                             count += 1
                         elem.clear()  # Free memory immediately
                         
@@ -105,16 +113,17 @@ class PMBProcessor:
             return self.pmb_cache[pmb_id]
         
         # Check if we know this entity type from our index
-        entity_type = self.pmb_index.get(pmb_id)
-        if not entity_type:
+        indexed = self.pmb_index.get(pmb_id)
+        if not indexed:
             print(f"❓ {pmb_id} not found in PMB index - will try API")
             sys.stdout.flush()
             return None
-            
+
+        entity_type, original_id = indexed
         # Load specific entity from file using targeted parsing
-        return self._load_single_entity_from_file(pmb_id, entity_type)
+        return self._load_single_entity_from_file(pmb_id, entity_type, original_id)
     
-    def _load_single_entity_from_file(self, pmb_id: str, entity_type: str) -> Optional[ET.Element]:
+    def _load_single_entity_from_file(self, pmb_id: str, entity_type: str, original_id: Optional[str] = None) -> Optional[ET.Element]:
         """Load a single entity from PMB file using full tree parsing"""
         filename_map = {
             "person": "listperson.xml",
@@ -140,11 +149,14 @@ class PMBProcessor:
             tree = ET.parse(filepath)
             root = tree.getroot()
             
-            # Find the specific entity using xpath
+            # Find the specific entity using xpath. Look up by the original id
+            # stored in the index (e.g. work__30033) so raw, un-normalized lists
+            # are found too; fall back to the normalized id for already-normalized lists.
+            lookup_id = original_id or pmb_id
             if entity_type == "work":
-                entity = root.find(f".//tei:bibl[@xml:id='{pmb_id}']", self.ns)
+                entity = root.find(f".//tei:bibl[@xml:id='{lookup_id}']", self.ns)
             else:
-                entity = root.find(f".//tei:{entity_type}[@xml:id='{pmb_id}']", self.ns)
+                entity = root.find(f".//tei:{entity_type}[@xml:id='{lookup_id}']", self.ns)
             
             if entity is not None:
                 # Create a deep copy to avoid reference issues
@@ -948,18 +960,27 @@ class PMBProcessor:
         if back_elem is None:
             return
         
-        # Remove listBibl elements with bibl[@type='collections'] and note[@type='collections']
+        # Remove listBibl elements with bibl[@type='collections'] and note[@type='collections'].
+        # Match by local element name (namespace-agnostic): entities fetched from the PMB API
+        # arrive WITHOUT the TEI namespace (the API serves TEI without an xmlns declaration),
+        # so a namespaced XPath like "tei:note[@type='collections']" silently misses them and
+        # the invalid <note type="collections"> survives into the output.
         elements_to_remove = []
-        
-        # Find all listBibl elements that contain bibl[@type='collections']
-        for listbibl in back_elem.findall(".//tei:listBibl", self.ns):
-            bibls_with_collections = listbibl.findall("tei:bibl[@type='collections']", self.ns)
-            if bibls_with_collections:
-                elements_to_remove.append(listbibl)
-        
-        # Find all note[@type='collections'] elements
-        for note in back_elem.findall(".//tei:note[@type='collections']", self.ns):
-            elements_to_remove.append(note)
+
+        def _local(tag):
+            return tag.split('}')[-1] if isinstance(tag, str) else None
+
+        for elem in back_elem.iter():
+            local = _local(elem.tag)
+            # note[@type='collections'] -> always invalid in the back, remove it
+            if local == "note" and elem.get("type") == "collections":
+                elements_to_remove.append(elem)
+            # listBibl that directly contains a bibl[@type='collections'] -> remove whole list
+            elif local == "listBibl":
+                for child in elem:
+                    if _local(child.tag) == "bibl" and child.get("type") == "collections":
+                        elements_to_remove.append(elem)
+                        break
         
         # Remove found elements
         for element in elements_to_remove:
