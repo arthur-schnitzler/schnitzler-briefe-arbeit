@@ -948,18 +948,27 @@ class PMBProcessor:
         if back_elem is None:
             return
         
-        # Remove listBibl elements with bibl[@type='collections'] and note[@type='collections']
+        # Remove listBibl elements with bibl[@type='collections'] and note[@type='collections'].
+        # Match by local element name (namespace-agnostic): entities fetched from the PMB API
+        # arrive WITHOUT the TEI namespace (the API serves TEI without an xmlns declaration),
+        # so a namespaced XPath like "tei:note[@type='collections']" silently misses them and
+        # the invalid <note type="collections"> survives into the output.
         elements_to_remove = []
-        
-        # Find all listBibl elements that contain bibl[@type='collections']
-        for listbibl in back_elem.findall(".//tei:listBibl", self.ns):
-            bibls_with_collections = listbibl.findall("tei:bibl[@type='collections']", self.ns)
-            if bibls_with_collections:
-                elements_to_remove.append(listbibl)
-        
-        # Find all note[@type='collections'] elements
-        for note in back_elem.findall(".//tei:note[@type='collections']", self.ns):
-            elements_to_remove.append(note)
+
+        def _local(tag):
+            return tag.split('}')[-1] if isinstance(tag, str) else None
+
+        for elem in back_elem.iter():
+            local = _local(elem.tag)
+            # note[@type='collections'] -> always invalid in the back, remove it
+            if local == "note" and elem.get("type") == "collections":
+                elements_to_remove.append(elem)
+            # listBibl that directly contains a bibl[@type='collections'] -> remove whole list
+            elif local == "listBibl":
+                for child in elem:
+                    if _local(child.tag) == "bibl" and child.get("type") == "collections":
+                        elements_to_remove.append(elem)
+                        break
         
         # Remove found elements
         for element in elements_to_remove:

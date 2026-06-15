@@ -83,6 +83,16 @@ jobs:
                 if empty_idnos:
                     issues.append(f"{len(empty_idnos)} empty idno element(s)")
 
+                # Check for invalid note[@type='collections'] elements.
+                # These are PMB collections metadata that must be stripped from
+                # the back. They slip through when an entity is fetched from the
+                # PMB API (which serves TEI without a namespace declaration), so
+                # we match both namespaced and un-namespaced variants.
+                collections_notes = tree.xpath("//tei:note[@type='collections']", namespaces=ns)
+                collections_notes += tree.xpath("//note[@type='collections']")
+                if collections_notes:
+                    issues.append(f"{len(collections_notes)} invalid note[@type='collections'] element(s)")
+
                 return issues
 
             except Exception as e:
