@@ -893,13 +893,13 @@ class PMBProcessor:
         # Convert key to ref attributes
         for elem in root.findall(".//*[@key]"):
             key = elem.get("key")
-            if not key.startswith('pmb'):
-                if key.startswith('pmbperson__'):
-                    key = f'pmb{key[11:]}'  # Remove 'pmbperson__' prefix
-                elif key.startswith('person__'):
-                    key = f'pmb{key[8:]}'   # Remove 'person__' prefix
-                else:
-                    key = f'pmb{key}'
+            if "__" in key:
+                # Raw PMB ids of any entity type (person__/work__/place__/org__/
+                # event__) and doubly-prefixed variants (pmbplace__…) -> pmb<digits>
+                key = re.sub(r'^.*__', 'pmb', key)
+            elif not key.startswith('pmb'):
+                # bare number -> pmb<number>
+                key = f'pmb{key}'
             elem.set("ref", key)
             del elem.attrib["key"]
         
