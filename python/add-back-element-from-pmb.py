@@ -718,19 +718,39 @@ class PMBProcessor:
                     if ana_attribute:
                         entity.set("ana", ana_attribute)
 
-                    # Copy relevant children based on entity type
-                    if entity_type == "person":
-                        for child in api_root.findall(".//*"):
-                            if child.tag.endswith(('persName', 'birth', 'death', 'sex', 'occupation', 'idno')):
-                                if not (child.tag.endswith('persName') and child.get('type') == 'loschen'):
-                                    entity.append(child)
-                    elif entity_type == "bibl":
-                        for child in api_root.findall(".//*"):
-                            if child.tag.endswith(('title', 'author', 'date', 'note', 'idno')):
-                                if not (child.tag.endswith('title') and child.get('type') == 'loschen'):
-                                    entity.append(child)
+                    # Copy only the same minimal fields that the minified PMB
+                    # lists keep, so back entries built from the API match those
+                    # built from the lists (xslts/minify-pmb-lists/minify-lists.xsl):
+                    #   person -> persName[1], birth, death
+                    #   bibl   -> title, author
+                    #   place  -> placeName, location
+                    #   org    -> orgName, location
+                    #   event  -> eventName, listPlace
+                    keep_children = {
+                        "person": ("persName", "birth", "death"),
+                        "bibl": ("title", "author"),
+                        "place": ("placeName", "location"),
+                        "org": ("orgName", "location"),
+                        "event": ("eventName", "listPlace"),
+                    }.get(entity_type)
+
+                    if keep_children is None:
+                        for child in list(api_root):
+                            entity.append(child)
                     else:
-                        for child in api_root:
+                        seen_persname = False
+                        for child in list(api_root):
+                            local = child.tag.split("}")[-1]  # API has no namespace
+                            if local not in keep_children:
+                                continue
+                            # Skip deleted ("loschen") name variants
+                            if local in ("persName", "title") and child.get("type") == "loschen":
+                                continue
+                            # Persons keep only the first persName (mirrors persName[1])
+                            if entity_type == "person" and local == "persName":
+                                if seen_persname:
+                                    continue
+                                seen_persname = True
                             entity.append(child)
                     return  # Success
 
