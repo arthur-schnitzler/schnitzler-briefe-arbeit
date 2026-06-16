@@ -44,7 +44,9 @@ jobs:
 
       - name: Download Saxon-HE
         run: |
-          SAXON_VERSION="12.4"
+          # Saxon-HE 10.x läuft als eigenständiges Jar mit `java -jar` (kein
+          # externer xmlresolver nötig – das wird erst ab Saxon 11/12 verlangt).
+          SAXON_VERSION="10.9"
           SAXON_JAR_FILE="Saxon-HE-${SAXON_VERSION}.jar"
           wget -q "https://repo1.maven.org/maven2/net/sf/saxon/Saxon-HE/${SAXON_VERSION}/${SAXON_JAR_FILE}" -O "${SAXON_JAR_FILE}"
           echo "SAXON_JAR=${SAXON_JAR_FILE}" >> $GITHUB_ENV
