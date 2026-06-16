@@ -78,10 +78,6 @@
                                     </location>
                                 </settlement>
                             </death>
-                            <sex value="male"/>
-                            <occupation ref="pmb90">Schriftsteller/Schriftstellerin</occupation>
-                            <occupation ref="pmb97">Mediziner/Medizinerin</occupation>
-                            <idno type="gnd">https://d-nb.info/gnd/118609807/</idno>
                         </xsl:element>
                     </xsl:when>
                     <xsl:when test="key('listperson-lookup', concat('pmb', $current-id), $listperson)[1][child::*]">
@@ -90,7 +86,8 @@
                             <xsl:if test="$ana-attribute">
                                 <xsl:copy-of select="$ana-attribute"/>
                             </xsl:if>
-                            <xsl:copy-of select="key('listperson-lookup', concat('pmb', $current-id), $listperson)[1]/node()"/>
+                            <xsl:variable name="entry" select="key('listperson-lookup', concat('pmb', $current-id), $listperson)[1]"/>
+                            <xsl:copy-of select="$entry/tei:persName[1] | $entry/tei:birth | $entry/tei:death"/>
                         </xsl:element>
                     </xsl:when>
                     <xsl:otherwise>
@@ -109,7 +106,7 @@
                                     </xsl:if>
                                     <xsl:variable name="eintrag_inhalt"
                                         select="document($eintrag)/person"/> <xsl:apply-templates
-                                            select="$eintrag_inhalt/persName[not(@type = 'loschen')] | $eintrag_inhalt/birth | $eintrag_inhalt/death | $eintrag_inhalt/sex | $eintrag_inhalt/occupation | $eintrag_inhalt/idno"
+                                            select="$eintrag_inhalt/persName[not(@type = 'loschen')][1] | $eintrag_inhalt/birth | $eintrag_inhalt/death"
                                             mode="copy-no-namespaces"/>
                                 </xsl:element>
                             </xsl:when>
@@ -144,7 +141,8 @@
                             <xsl:if test="$ana-attribute">
                                 <xsl:copy-of select="$ana-attribute"/>
                             </xsl:if>
-                            <xsl:copy-of select="key('listbibl-lookup', concat('pmb', $current-id), $listbibl)[1]/node()"/>
+                            <xsl:variable name="entry" select="key('listbibl-lookup', concat('pmb', $current-id), $listbibl)[1]"/>
+                            <xsl:copy-of select="$entry/tei:title | $entry/tei:author"/>
                         </xsl:element>
                     </xsl:when>
                     <xsl:when test="doc-available($eintrag)">
@@ -157,7 +155,7 @@
                             </xsl:if>
                             <xsl:variable name="eintrag_inhalt" select="document($eintrag)/bibl"/>
                             <xsl:apply-templates
-                                select="$eintrag_inhalt/title[not(@type = 'loschen')] | $eintrag_inhalt/author | $eintrag_inhalt/date | $eintrag_inhalt/note[@type] | $eintrag_inhalt/idno"
+                                select="$eintrag_inhalt/title[not(@type = 'loschen')] | $eintrag_inhalt/author"
                                 mode="copy-no-namespaces"/>
                         </xsl:element>
                     </xsl:when>
@@ -204,8 +202,6 @@
                             <placeName type="alternative-name">Beč</placeName>
                             <placeName type="ort_fruherer-name">Vindobona</placeName>
                             <placeName type="alternative-name">Vienna</placeName>
-                            <desc type="entity_type">A.ADM2</desc>
-                            <desc type="entity_type_id">1135</desc>
                             <location type="coords">
                                 <geo>48,208333 16,373056</geo>
                             </location>
@@ -217,27 +213,6 @@
                                 <placeName ref="pmb235218">Windmühlhöhe</placeName>
                                 <geo>48,24077 16,32092</geo>
                             </location>
-                            <idno type="URL" subtype="geonames">https://sws.geonames.org/2761369/</idno>
-                            <idno type="URL" subtype="d-nb">https://d-nb.info/gnd/4066009-6</idno>
-                            <idno type="URL" subtype="schnitzler-bahr">https://schnitzler-bahr.acdh.oeaw.ac.at/pmb50.html</idno>
-                            <idno type="URL" subtype="pmb">https://pmb.acdh.oeaw.ac.at/entity/50/</idno>
-                            <idno type="URL" subtype="pmb">https://pmb.acdh.oeaw.ac.at/entity/2316/</idno>
-                            <idno type="URL" subtype="pmb">https://pmb.acdh.oeaw.ac.at/entity/20954/</idno>
-                            <idno type="URL" subtype="pmb">https://pmb.acdh.oeaw.ac.at/entity/65221/</idno>
-                            <idno type="URL" subtype="pmb">https://pmb.acdh.oeaw.ac.at/entity/65223/</idno>
-                            <idno type="URL" subtype="kraus">https://kraus.wienbibliothek.at/register/orte/pmb50</idno>
-                            <idno type="URL" subtype="wikidata">http://www.wikidata.org/entity/Q1741</idno>
-                            <idno type="URL" subtype="wikipedia">https://de.wikipedia.org/wiki/Wien</idno>
-                            <idno type="URL" subtype="schnitzler-interviews">https://schnitzler-interviews.acdh.oeaw.ac.at/pmb50.html</idno>
-                            <idno type="URL" subtype="geonames">https://sws.geonames.org/2761333/</idno>
-                            <idno type="URL" subtype="pmb">https://pmb.acdh.oeaw.ac.at/entity/33999/</idno>
-                            <idno type="URL" subtype="schnitzler-tagebuch">https://schnitzler-tagebuch.acdh.oeaw.ac.at/pmb50.html</idno>
-                            <idno type="URL" subtype="schnitzler-briefe">https://schnitzler-briefe.acdh.oeaw.ac.at/pmb50.html</idno>
-                            <note type="image">
-                                <figure>
-                                    <graphic url="https://iiif.onb.ac.at/images/AKON/AK117_016/016/full/,600/0/native.jpg"/>
-                                </figure>
-                            </note>
                         </place>
                     </xsl:when>
                     <xsl:when test="key('listplace-lookup', concat('pmb', $current-id), $listplace)[1][child::*]">
@@ -246,7 +221,8 @@
                             <xsl:if test="$ana-attribute">
                                 <xsl:copy-of select="$ana-attribute"/>
                             </xsl:if>
-                            <xsl:copy-of select="key('listplace-lookup', concat('pmb', $current-id), $listplace)[1]/node()"/>
+                            <xsl:variable name="entry" select="key('listplace-lookup', concat('pmb', $current-id), $listplace)[1]"/>
+                            <xsl:copy-of select="$entry/tei:placeName | $entry/tei:location"/>
                         </xsl:element>
                     </xsl:when>
                     <xsl:otherwise><xsl:variable name="eintrag"
@@ -264,7 +240,7 @@
                                     <xsl:if test="$ana-attribute">
                                         <xsl:copy-of select="$ana-attribute"/>
                                     </xsl:if>
-                                    <xsl:apply-templates select="$api-content/node()" mode="copy-no-namespaces"/>
+                                    <xsl:apply-templates select="$api-content/placeName | $api-content/location" mode="copy-no-namespaces"/>
                                 </xsl:element>
                             </xsl:when>
                             <xsl:otherwise>
@@ -306,7 +282,8 @@
                             <xsl:if test="$ana-attribute">
                                 <xsl:copy-of select="$ana-attribute"/>
                             </xsl:if>
-                            <xsl:copy-of select="key('listorg-lookup', concat('pmb', $current-id), $listorg)[1]/node()"/>
+                            <xsl:variable name="entry" select="key('listorg-lookup', concat('pmb', $current-id), $listorg)[1]"/>
+                            <xsl:copy-of select="$entry/tei:orgName | $entry/tei:location"/>
                         </xsl:element>
                     </xsl:when>
                     <xsl:when test="doc-available($eintrag)">
@@ -320,7 +297,7 @@
                                     <xsl:if test="$ana-attribute">
                                         <xsl:copy-of select="$ana-attribute"/>
                                     </xsl:if>
-                                    <xsl:apply-templates select="$api-content/node()" mode="copy-no-namespaces"/>
+                                    <xsl:apply-templates select="$api-content/orgName | $api-content/location" mode="copy-no-namespaces"/>
                                 </xsl:element>
                             </xsl:when>
                             <xsl:otherwise>
@@ -362,7 +339,8 @@
                             <xsl:if test="$ana-attribute">
                                 <xsl:copy-of select="$ana-attribute"/>
                             </xsl:if>
-                            <xsl:copy-of select="key('listevent-lookup', concat('pmb', $current-id), $listevent)[1]/node()"/>
+                            <xsl:variable name="entry" select="key('listevent-lookup', concat('pmb', $current-id), $listevent)[1]"/>
+                            <xsl:copy-of select="$entry/tei:eventName | $entry/tei:listPlace"/>
                         </xsl:element>
                     </xsl:when>
                     <xsl:when test="doc-available($eintrag)">
@@ -373,7 +351,8 @@
                             <xsl:if test="$ana-attribute">
                                 <xsl:copy-of select="$ana-attribute"/>
                             </xsl:if>
-                            <xsl:apply-templates select="document($eintrag)/*[local-name()='event']/node()" mode="copy-no-namespaces"/>
+                            <xsl:variable name="ev" select="document($eintrag)/*[local-name()='event']"/>
+                            <xsl:apply-templates select="$ev/eventName | $ev/listPlace" mode="copy-no-namespaces"/>
                         </xsl:element>
                     </xsl:when>
                     <xsl:otherwise>

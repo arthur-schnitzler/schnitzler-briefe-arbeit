@@ -90,6 +90,11 @@
     <xsl:template match="@key">
         <xsl:attribute name="ref">
             <xsl:choose>
+                <xsl:when test="contains(., '__')">
+                    <!-- Raw PMB id of any type (person__/work__/place__/org__/
+                         event__) and doubly-prefixed pmbplace__… -> pmb<digits> -->
+                    <xsl:value-of select="concat('pmb', tokenize(., '__')[last()])"/>
+                </xsl:when>
                 <xsl:when test="contains(., 'pmb')">
                     <xsl:value-of select="."/>
                 </xsl:when>
@@ -100,9 +105,9 @@
         </xsl:attribute>
     </xsl:template>
     <xsl:template
-        match="tei:placeName/@ref[contains(., 'place__')] | tei:placeName/@key[contains(., 'place__')]">
+        match="tei:placeName/@ref[contains(., '__')] | tei:placeName/@key[contains(., '__')]">
         <xsl:attribute name="ref">
-            <xsl:value-of select="concat('pmb', replace(., 'place__', ''))"/>
+            <xsl:value-of select="concat('pmb', tokenize(., '__')[last()])"/>
         </xsl:attribute>
     </xsl:template>
     <xsl:template match="tei:back//tei:title/@type[. = 'main']"/>
