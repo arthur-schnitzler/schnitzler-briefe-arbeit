@@ -42,19 +42,25 @@ jobs:
           java-version: '17'
           distribution: 'temurin'
 
-      - name: Download Saxon-HE
+      - name: Download Saxon-HE und XML Resolver
         run: |
           SAXON_VERSION="12.4"
           SAXON_JAR_FILE="Saxon-HE-${SAXON_VERSION}.jar"
           wget -q "https://repo1.maven.org/maven2/net/sf/saxon/Saxon-HE/${SAXON_VERSION}/${SAXON_JAR_FILE}" -O "${SAXON_JAR_FILE}"
           echo "SAXON_JAR=${SAXON_JAR_FILE}" >> $GITHUB_ENV
 
+          # Saxon-HE 12.x benötigt xmlresolver zur Laufzeit (org.xmlresolver.Resolver)
+          RESOLVER_VERSION="5.2.1"
+          RESOLVER_JAR_FILE="xmlresolver-${RESOLVER_VERSION}.jar"
+          wget -q "https://repo1.maven.org/maven2/org/xmlresolver/xmlresolver/${RESOLVER_VERSION}/${RESOLVER_JAR_FILE}" -O "${RESOLVER_JAR_FILE}"
+          echo "RESOLVER_JAR=${RESOLVER_JAR_FILE}" >> $GITHUB_ENV
+
       - name: Schritt 1 – Listen auf relevante Informationen kürzen
         run: |
           XSLT="xslts/minify-pmb-lists/minify-lists.xsl"
           for file in python-temp/list*.xml; do
             echo "Kürze $file ..."
-            java -jar "${SAXON_JAR}" -s:"$file" -xsl:"$XSLT" -o:"${file}.tmp"
+            java -cp "${SAXON_JAR}:${RESOLVER_JAR}" net.sf.saxon.Transform -s:"$file" -xsl:"$XSLT" -o:"${file}.tmp"
             mv "${file}.tmp" "$file"
             echo "  -> $(du -h "$file" | cut -f1)"
           done
