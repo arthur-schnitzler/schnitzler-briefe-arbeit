@@ -36,14 +36,11 @@ jobs:
         python -m pip install --upgrade pip
         pip install requests lxml
     
-    - name: Cache PMB files
-      uses: actions/cache@v3
-      with:
-        path: python-temp/
-        key: pmb-files-${{ github.run_id }}-${{ github.run_attempt }}
-        restore-keys: |
-          pmb-files-
-    
+    # Kein Cache und kein Download mehr: Die gekürzten PMB-Listen liegen bereits
+    # (von download-pmb-lists-minify.yml committed) im Repository unter python-temp/
+    # und werden mit dem Checkout geladen. Ein Cache würde diese kleineren Listen
+    # nur durch ältere (ggf. ungekürzte) Versionen überschreiben.
+
     - name: Check for changes in editions folder in the last month
       id: check-changes
       run: |
@@ -87,14 +84,14 @@ jobs:
       continue-on-error: true  # Workflow soll auch bei Timeouts oder Fehlern weiterlaufen
       run: |
         echo "Starting optimized batch processing of back elements..."
-        echo "📥 Step 1: Downloading/checking PMB lists (listperson.xml, listbibl.xml, etc.)..."
+        echo "📥 Step 1: Using the minified PMB lists committed under python-temp/ (no download)..."
         echo "⚙️  Step 2: Using optimized PMB loading system (minimal memory usage, fast startup)..."
         echo "🔄 Step 3: Running parallel processing on editions/ folder (3 processes)..."
         echo "💾 Intermediate commits will be created every 100 successful files"
         echo ""
         FILE_FROM="${{ github.event.inputs.file_from }}"
         FILE_TO="${{ github.event.inputs.file_to }}"
-        CMD="python -u python/batch_process_back-element.py --parallel 3 --commit-interval 100"
+        CMD="python -u python/batch_process_back-element.py --parallel 3 --commit-interval 100 --skip-download"
         if [ -n "$FILE_FROM" ]; then
           CMD="$CMD --file-from $FILE_FROM"
         fi

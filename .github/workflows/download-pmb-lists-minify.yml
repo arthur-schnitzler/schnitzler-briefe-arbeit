@@ -1,12 +1,10 @@
-name: Download PMB Listen (obsolet)
-
-# OBSOLET: Ersetzt durch download-pmb-lists-minify.yml, das die Listen herunterlädt,
-# kürzt und committet. Dieser Workflow lädt die ungekürzten Volllisten und würde die
-# kleineren Listen in python-temp/ wieder überschreiben. Deshalb ist der Zeitplan
-# deaktiviert – die Datei bleibt nur für den manuellen Notfall-Download erhalten.
+name: Download PMB Listen
 
 on:
-  workflow_dispatch: # Nur noch manuell auslösbar
+  schedule:
+    # Läuft jeden zweiten Mittwoch um 3 Uhr morgens UTC
+    - cron: '0 3 */14 * 3'
+  workflow_dispatch: # Ermöglicht manuelles Auslösen
 
 jobs:
   download-lists:
@@ -14,7 +12,7 @@ jobs:
 
     steps:
       - name: Checkout Repository
-        uses: actions/checkout@v4
+        uses: actions/checkout@v5
 
       - name: Erstelle python-temp Verzeichnis
         run: mkdir -p python-temp
@@ -37,6 +35,35 @@ jobs:
           curl -f -o python-temp/listevent.xml https://pmb.acdh.oeaw.ac.at/media/listevent.xml
 
           echo "Alle Listen erfolgreich heruntergeladen."
+
+      - name: Set up JDK 17
+        uses: actions/setup-java@v4
+        with:
+          java-version: '17'
+          distribution: 'temurin'
+
+      - name: Download Saxon-HE
+        run: |
+          SAXON_VERSION="12.4"
+          SAXON_JAR_FILE="Saxon-HE-${SAXON_VERSION}.jar"
+          wget -q "https://repo1.maven.org/maven2/net/sf/saxon/Saxon-HE/${SAXON_VERSION}/${SAXON_JAR_FILE}" -O "${SAXON_JAR_FILE}"
+          echo "SAXON_JAR=${SAXON_JAR_FILE}" >> $GITHUB_ENV
+
+      - name: Schritt 1 – Listen auf relevante Informationen kürzen
+        run: |
+          XSLT="xslts/minify-pmb-lists/minify-lists.xsl"
+          for file in python-temp/list*.xml; do
+            echo "Kürze $file ..."
+            java -jar "${SAXON_JAR}" -s:"$file" -xsl:"$XSLT" -o:"${file}.tmp"
+            mv "${file}.tmp" "$file"
+            echo "  -> $(du -h "$file" | cut -f1)"
+          done
+
+      - name: Schritt 2 – Präfixe person__/work__/place__/event__/org__ durch pmb ersetzen
+        run: |
+          for file in python-temp/list*.xml; do
+            sed -i -E 's/(person|work|place|event|org)__/pmb/g' "$file"
+          done
 
       - name: Prüfe auf Änderungen
         id: check_changes
