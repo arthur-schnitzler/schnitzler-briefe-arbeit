@@ -46,7 +46,8 @@
                                         <xsl:text>comment</xsl:text>
                                     </xsl:attribute>
                                 </xsl:if>
-                                <xsl:copy-of select="key('listperson-lookup', $current-id, $listperson)[1]/node()"/>
+                                <xsl:variable name="entry" select="key('listperson-lookup', $current-id, $listperson)[1]"/>
+                                <xsl:copy-of select="$entry/tei:persName[1] | $entry/tei:birth | $entry/tei:death"/>
                             </xsl:element>
                         </xsl:when>
                         <xsl:otherwise>
@@ -70,7 +71,7 @@
                                   <xsl:variable name="eintrag_inhalt"
                                   select="document($eintrag)/person"/>
                                   <xsl:apply-templates
-                                  select="$eintrag_inhalt/persName[not(@type = 'loschen')] | $eintrag_inhalt/birth | $eintrag_inhalt/death | $eintrag_inhalt/sex | $eintrag_inhalt/occupation | $eintrag_inhalt/idno"
+                                  select="$eintrag_inhalt/persName[not(@type = 'loschen')][1] | $eintrag_inhalt/birth | $eintrag_inhalt/death"
                                   mode="copy-no-namespaces"/>
                                   </xsl:element>
                                 </xsl:when>
