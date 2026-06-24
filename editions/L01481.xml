@@ -1,6 +1,10 @@
-<?xml version='1.0' encoding='UTF-8'?>
+<?xml version="1.0" encoding="UTF-8"?>
 <?xml-model href="../meta/schnitzler-briefe-schematron.sch" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
-<TEI xmlns="http://www.tei-c.org/ns/1.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.tei-c.org/ns/1.0 ../meta/schnitzler-briefe-schema.xsd" xml:id="L01481" xml:base="https://id.acdh.oeaw.ac.at/schnitzler/schnitzler-briefe/editions">
+<TEI xmlns="http://www.tei-c.org/ns/1.0"
+     xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+     xsi:schemaLocation="http://www.tei-c.org/ns/1.0 ../meta/schnitzler-briefe-schema.xsd"
+     xml:id="L01481"
+     xml:base="https://id.acdh.oeaw.ac.at/schnitzler/schnitzler-briefe/editions">
    <teiHeader>
       <fileDesc>
          <titleStmt>
@@ -82,7 +86,7 @@
                            <supportDesc>
                               <extent>
                                  <measure unit="telegramm" quantity="1"/>
-                                 <measure unit="zeichenanzahl" quantity="255"/>
+                                 <measure unit="zeichenanzahl" quantity="253"/>
                               </extent>
                            </supportDesc>
                         </objectDesc>
@@ -155,12 +159,20 @@
                <date when="1904-12-23">23. 12. 1904</date>
                <placeName ref="#pmb168">Berlin</placeName>
             </correspAction>
-            <correspContext><ref type="belongsToCorrespondence" target="correspondence_10863">Beer-Hofmann, Richard</ref>
+            <correspContext>
+               <ref type="belongsToCorrespondence" target="correspondence_10863">Beer-Hofmann, Richard</ref>
                <ref subtype="previous_letter" type="withinCollection" target="L03403">Salten an Schnitzler, [22. 12. 1904?]</ref>
                <ref subtype="next_letter" type="withinCollection" target="L02994">Schnitzler an Salten, [23. 12. 1904?]</ref>
-               <ref subtype="previous_letter" type="withinCorrespondence" source="correspondence_10863" target="L01472">Schnitzler an Beer-Hofmann, 28. 11. 1904</ref>
-               <ref subtype="next_letter" type="withinCorrespondence" source="correspondence_10863" target="L01484">Schnitzler, Schnitzler an Beer-Hofmann, 28. 12. 1904</ref>
-            </correspContext></correspDesc>
+               <ref subtype="previous_letter"
+                    type="withinCorrespondence"
+                    source="correspondence_10863"
+                    target="L01472">Schnitzler an Beer-Hofmann, 28. 11. 1904</ref>
+               <ref subtype="next_letter"
+                    type="withinCorrespondence"
+                    source="correspondence_10863"
+                    target="L01484">Schnitzler, Schnitzler an Beer-Hofmann, 28. 12. 1904</ref>
+            </correspContext>
+         </correspDesc>
       </profileDesc>
       <revisionDesc status="approved">
          <change who="MAM" when="2019-06-12">Automatisch angelegt aus Buchausgabe</change>
@@ -179,7 +191,8 @@
                <addrLine>
                   <pb facs="1904_AS_RBH_2_00037"/>richard beerhofmann berlin</addrLine>
                <addrLine>
-                  <rs ref="#pmb720" type="place">neues theater.=</rs></addrLine>
+                  <rs ref="#pmb720" type="place">neues theater.=</rs>
+               </addrLine>
             </address>
          </div>
          <div type="writingSession" n="1">
@@ -190,42 +203,140 @@
                   lll.-580 3l <date>23</date>
                   <time>9 40–m</time>=</dateline>
             </opener>
-            <p>dieser wunsch sei meinem freund geweiht dass in seinem sehr geliebten <rs type="work" ref="#pmb30233" subtype="implied">werke</rs> jeder alle weichheit alle staerke
-               einer ungebrochenen menschlichkeit keiner den beruehmten <anchor type="commentary" xml:id="K_L01481-1"/>bruch<note type="commentary" corresp="K_L01481-1">Zwischen dem dritten
+            <p>dieser <anchor type="commentary" xml:id="K_L01481-1"/>
+               <rs type="event" subtype="implied" ref="#pmb42033">wunsch sei meinem freund geweiht</rs>
+               <note type="commentary" corresp="K_L01481-1">Am <date when="1904-12-23">23. 12. 1904</date> fand
+                  die <rs type="event" ref="#pmb42033">Uraufführung von <rs type="work" ref="#pmb30233">Der Graf von Charolais</rs> von <rs type="person" ref="#pmb10863">Beer-Hofmann</rs>
+                  </rs> im <rs type="place" ref="#pmb720">Neuen Theater</rs> statt.</note> dass in seinem sehr geliebten <rs type="work" ref="#pmb30233" subtype="implied">werke</rs> jeder alle weichheit alle staerke
+               einer ungebrochenen menschlichkeit keiner den beruehmten <anchor type="commentary" xml:id="K_L01481-2"/>bruch<note type="commentary" corresp="K_L01481-2">Zwischen dem dritten
                   und vierten Akt sind Psychologie und Motivierung der Figuren nicht völlig stringent,
                   was auch von der Kritik wahrgenommen wurde.</note> bemerke =
-                  <signed>= arthur +</signed></p>
+                  <signed>= arthur +</signed>
+            </p>
          </div>
       </body>
-      <back><listPerson><person xml:id="pmb10863"><persName>
-      <forename>Richard</forename>
-      <surname>Beer-Hofmann</surname>
-  </persName><birth>
-    <date when="1866-07-11">1866-07-11</date>
-      <settlement ref="pmb50">
-        <placeName type="pref">Wien</placeName>
-        <location><geo>48,208333 16,373056</geo></location>
-      </settlement>
-  </birth><death>
-    <date when="1945-09-26">1945-09-26</date>
-      <settlement ref="pmb44053">
-        <placeName type="pref">New York City</placeName>
-        <location><geo>40,71427 -74,00597</geo></location>
-      </settlement>
-  </death></person><person xml:id="pmb2121"><persName><surname>Schnitzler</surname><forename>Arthur</forename></persName><birth><date when="1862-05-15">15. 5. 1862</date><settlement ref="pmb50"><placeName type="pref">Wien</placeName><location><geo>48,208333 16,373056</geo></location></settlement></birth><death><date when="1931-10-21">21. 10. 1931</date><settlement ref="pmb50"><placeName type="pref">Wien</placeName><location><geo>48,208333 16,373056</geo></location></settlement></death><sex value="male"/><occupation ref="pmb90">Schriftsteller/Schriftstellerin</occupation><occupation ref="pmb97">Mediziner/Medizinerin</occupation><idno type="gnd">https://d-nb.info/gnd/118609807/</idno></person></listPerson><listBibl><bibl xml:id="pmb30233" ana="implied"><title type="main">Der Graf von Charolais. Ein Trauerspiel</title><title type="werk_arbeitstitel">Die unseelige Mitgift</title><title type="legacy-name-merge">Der Graf von Charolais</title><title type="legacy-name-merge">Der Graf von Charolais</title><author role="hat-geschaffen" ref="pmb10863">Beer-Hofmann, Richard</author></bibl></listBibl><listPlace><place xml:id="pmb168"><placeName>Berlin</placeName><placeName type="alternative-name">Hauptstadt Berlin</placeName><placeName type="alternative-name">Barlīn</placeName><placeName type="alternative-name">Reichshauptstadt Berlin</placeName><placeName type="alternative-name">Berolino</placeName><placeName type="legacy-name-merge">B-n</placeName><location type="coords">
-  <geo>52,52437 13,41053</geo>
-</location><location type="located_in_place">
-  <placeName ref="pmb151">Deutschland</placeName>
-  <geo>51,5 10,5</geo>
-</location></place><place xml:id="pmb50"><placeName>Wien</placeName><placeName type="ort_fruherer-name">K.K. Reichshaupt- und Residenzstadt Wien</placeName><placeName type="legacy-name-merge">Wien</placeName><placeName type="alternative-name">Bécs</placeName><placeName type="alternative-name">Land Wien</placeName><placeName type="alternative-name">Vídeň</placeName><placeName type="alternative-name">Wenia</placeName><placeName type="alternative-name">Beč</placeName><placeName type="ort_fruherer-name">Vindobona</placeName><placeName type="legacy-name-merge">Vindobona</placeName><placeName type="alternative-name">Vienna</placeName><placeName type="legacy-name-merge">Vienna</placeName><placeName type="alternative-name">Vienna</placeName><location type="coords">
-  <geo>48,208333 16,373056</geo>
-</location><location type="located_in_place">
-  <placeName ref="pmb41240">Österreich</placeName>
-  <geo>47,33333 13,33333</geo>
-</location></place><place xml:id="pmb720"><placeName>Neues Theater [Berlin]</placeName><location type="coords">
-  <geo>52,521667 13,386111</geo>
-</location><location type="located_in_place">
-  <placeName ref="pmb168">Berlin</placeName>
-  <geo>52,52437 13,41053</geo>
-</location></place></listPlace></back></text>
+      <back>
+         <listPerson>
+            <person xml:id="pmb2121">
+               <persName>
+                  <surname>Schnitzler</surname>
+                  <forename>Arthur</forename>
+               </persName>
+               <birth>
+                  <date when="1862-05-15">15. 5. 1862</date>
+                  <settlement ref="pmb50">
+                     <placeName type="pref">Wien</placeName>
+                     <location>
+                        <geo>48,208333 16,373056</geo>
+                     </location>
+                  </settlement>
+               </birth>
+               <death>
+                  <date when="1931-10-21">21. 10. 1931</date>
+                  <settlement ref="pmb50">
+                     <placeName type="pref">Wien</placeName>
+                     <location>
+                        <geo>48,208333 16,373056</geo>
+                     </location>
+                  </settlement>
+               </death>
+            </person>
+            <person xml:id="pmb10863">
+               <persName>
+                  <forename>Richard</forename>
+                  <surname>Beer-Hofmann</surname>
+               </persName>
+               <birth>
+                  <date when="1866-07-11">1866-07-11</date>
+                  <settlement ref="pmb50">
+                     <placeName type="pref">Wien</placeName>
+                     <location>
+                        <geo>48,208333 16,373056</geo>
+                     </location>
+                  </settlement>
+               </birth>
+               <death>
+                  <date when="1945-09-26">1945-09-26</date>
+                  <settlement ref="pmb44053">
+                     <placeName type="pref">New York City</placeName>
+                     <location>
+                        <geo>40,71427 -74,00597</geo>
+                     </location>
+                  </settlement>
+               </death>
+            </person>
+         </listPerson>
+         <listBibl>
+            <bibl xml:id="pmb30233" ana="implied">
+               <title>Der Graf von Charolais. Ein Trauerspiel</title>
+               <title type="werk_arbeitstitel">Die unseelige Mitgift</title>
+               <title type="legacy-name-merge">Der Graf von Charolais</title>
+               <title type="legacy-name-merge">Der Graf von Charolais</title>
+               <author ref="pmb10863" role="hat-geschaffen">Beer-Hofmann, Richard</author>
+            </bibl>
+         </listBibl>
+         <listPlace>
+            <place xml:id="pmb168">
+               <placeName>Berlin</placeName>
+               <placeName type="alternative-name">Hauptstadt Berlin</placeName>
+               <placeName type="alternative-name">Barlīn</placeName>
+               <placeName type="alternative-name">Reichshauptstadt Berlin</placeName>
+               <placeName type="alternative-name">Berolino</placeName>
+               <placeName type="legacy-name-merge">B-n</placeName>
+               <location type="coords">
+                  <geo>52,52437 13,41053</geo>
+               </location>
+               <location type="located_in_place">
+                  <placeName ref="pmb151">Deutschland</placeName>
+                  <geo>51,5 10,5</geo>
+               </location>
+            </place>
+            <place xml:id="pmb50">
+               <placeName>Wien</placeName>
+               <placeName type="ort_fruherer-name">K.K. Reichshaupt- und Residenzstadt Wien</placeName>
+               <placeName type="alternative-name">Bécs</placeName>
+               <placeName type="alternative-name">Land Wien</placeName>
+               <placeName type="alternative-name">Vídeň</placeName>
+               <placeName type="alternative-name">Wenia</placeName>
+               <placeName type="alternative-name">Beč</placeName>
+               <placeName type="ort_fruherer-name">Vindobona</placeName>
+               <placeName type="alternative-name">Vienna</placeName>
+               <location type="coords">
+                  <geo>48,208333 16,373056</geo>
+               </location>
+               <location type="located_in_place">
+                  <placeName ref="pmb41240">Österreich</placeName>
+                  <geo>47,33333 13,33333</geo>
+               </location>
+               <location type="located_in_place">
+                  <placeName ref="pmb235218">Windmühlhöhe</placeName>
+                  <geo>48,24077 16,32092</geo>
+               </location>
+            </place>
+            <place xml:id="pmb720" ana="comment">
+               <placeName>Neues Theater [Berlin]</placeName>
+               <location type="coords">
+                  <geo>52,521667 13,386111</geo>
+               </location>
+               <location type="located_in_place">
+                  <placeName ref="pmb168">Berlin</placeName>
+                  <geo>52,52437 13,41053</geo>
+               </location>
+            </place>
+         </listPlace>
+         <listEvent>
+            <event xml:id="pmb42033" ana="implied">
+               <eventName n="Theateruraufführung">Uraufführung von Der Graf von Charolais, 23.12.1904</eventName>
+               <listPlace>
+                  <place>
+                     <placeName role="veranstaltet in" ref="pmb720">Neues Theater [Berlin]</placeName>
+                     <location>
+                        <geo>52,521667 13,386111</geo>
+                     </location>
+                  </place>
+               </listPlace>
+            </event>
+         </listEvent>
+      </back>
+   </text>
 </TEI>
