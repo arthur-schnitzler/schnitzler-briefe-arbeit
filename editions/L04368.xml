@@ -1,10 +1,6 @@
-<?xml version="1.0" encoding="UTF-8"?>
+<?xml version='1.0' encoding='UTF-8'?>
 <?xml-model href="../meta/schnitzler-briefe-schematron.sch" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
-<TEI xmlns="http://www.tei-c.org/ns/1.0"
-     xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-     xsi:schemaLocation="http://www.tei-c.org/ns/1.0 ../meta/schnitzler-briefe-schema.xsd"
-     xml:base="https://id.acdh.oeaw.ac.at/schnitzler/schnitzler-briefe/editions"
-     xml:id="L04368">
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.tei-c.org/ns/1.0 ../meta/schnitzler-briefe-schema.xsd" xml:base="https://id.acdh.oeaw.ac.at/schnitzler/schnitzler-briefe/editions" xml:id="L04368">
    <teiHeader>
       <fileDesc>
          <titleStmt>
@@ -124,7 +120,12 @@
                <date evidence="conjecture" notBefore="1914-06-04" notAfter="1914-06-08">[4. 6. 1914 – 8. 6. 1914?]</date>
                <placeName ref="#pmb50">Wien</placeName>
             </correspAction>
-         </correspDesc>
+         <correspContext><ref type="belongsToCorrespondence" target="correspondence_12740">Schwarzkopf, Gustav</ref>
+               <ref subtype="previous_letter" type="withinCollection" target="L02555">Schnitzler, Schnitzler an Beer-Hofmann, Beer-Hofmann, 24. 5. 1914</ref>
+               <ref subtype="next_letter" type="withinCollection" target="L02181">Schnitzler an Bahr, 12. 6. 1914</ref>
+               <ref subtype="previous_letter" type="withinCorrespondence" source="correspondence_12740" target="L04254">Schwarzkopf an Schnitzler, 26. 1. 1914</ref>
+               <ref subtype="next_letter" type="withinCorrespondence" source="correspondence_12740" target="L04249">Schwarzkopf an Schnitzler, 3. 7. 1914</ref>
+            </correspContext></correspDesc>
       </profileDesc>
       <revisionDesc status="proposed">
          <change who="MAM" when="2026-06-11">Export aus Transkribus</change>
@@ -161,7 +162,7 @@
          <div type="image">
             <p rend="center"/>
          </div>
-         <div type="image" >
+         <div type="image">
             <seg>
                <pb facs="HS00048772X_0039"/>
                <hi rend="pre-print">Panorama vom <rs type="place" ref="#pmb52262">Starnbergersee</rs>
