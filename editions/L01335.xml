@@ -1,6 +1,10 @@
-<?xml version='1.0' encoding='UTF-8'?>
+<?xml version="1.0" encoding="UTF-8"?>
 <?xml-model href="../meta/schnitzler-briefe-schematron.sch" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
-<TEI xmlns="http://www.tei-c.org/ns/1.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xml:id="L01335" xsi:schemaLocation="http://www.tei-c.org/ns/1.0 ../meta/schnitzler-briefe-schema.xsd" xml:base="https://id.acdh.oeaw.ac.at/schnitzler/schnitzler-briefe/editions">
+<TEI xmlns="http://www.tei-c.org/ns/1.0"
+     xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+     xml:id="L01335"
+     xsi:schemaLocation="http://www.tei-c.org/ns/1.0 ../meta/schnitzler-briefe-schema.xsd"
+     xml:base="https://id.acdh.oeaw.ac.at/schnitzler/schnitzler-briefe/editions">
    <teiHeader>
       <fileDesc>
          <titleStmt>
@@ -83,7 +87,7 @@
                               <extent>
                                  <measure unit="blatt" quantity="1"/>
                                  <measure unit="seite" quantity="4"/>
-                                 <measure unit="zeichenanzahl" quantity="827"/>
+                                 <measure unit="zeichenanzahl" quantity="828"/>
                               </extent>
                            </supportDesc>
                         </objectDesc>
@@ -129,12 +133,20 @@
                   – 8. 11. 1903?]</date>
                <placeName ref="#pmb50">Wien</placeName>
             </correspAction>
-            <correspContext><ref type="belongsToCorrespondence" target="correspondence_11740">Hofmannsthal, Hugo von</ref>
+            <correspContext>
+               <ref type="belongsToCorrespondence" target="correspondence_11740">Hofmannsthal, Hugo von</ref>
                <ref subtype="previous_letter" type="withinCollection" target="L01334">Hofmannsthal an Schnitzler, 3. 11. [1903]</ref>
                <ref subtype="next_letter" type="withinCollection" target="L01336">Hofmannsthal an Schnitzler, 6. 11. 1903</ref>
-               <ref subtype="previous_letter" type="withinCorrespondence" source="correspondence_11740" target="L01334">Hofmannsthal an Schnitzler, 3. 11. [1903]</ref>
-               <ref subtype="next_letter" type="withinCorrespondence" source="correspondence_11740" target="L01336">Hofmannsthal an Schnitzler, 6. 11. 1903</ref>
-            </correspContext></correspDesc>
+               <ref subtype="previous_letter"
+                    type="withinCorrespondence"
+                    source="correspondence_11740"
+                    target="L01334">Hofmannsthal an Schnitzler, 3. 11. [1903]</ref>
+               <ref subtype="next_letter"
+                    type="withinCorrespondence"
+                    source="correspondence_11740"
+                    target="L01336">Hofmannsthal an Schnitzler, 6. 11. 1903</ref>
+            </correspContext>
+         </correspDesc>
       </profileDesc>
       <revisionDesc status="approved">
          <change who="MAM" when="2019-07-31">Angelegt aus Buchausgabe</change>
@@ -177,11 +189,15 @@
                <space unit="chars" quantity="1"/>
                <time>Abend ½ 7</time> recht wäre. Fragen Sie auch gleich den <rs ref="#pmb10863" type="person">Richard</rs>.</p>
             <p>Dieſer Tage iſt die <anchor type="commentary" xml:id="K_L01335-3"/>
-               <rs ref="#pmb29843 #pmb58367" type="work">
-                  <hi rend="latintype">Kakadu</hi>
+               <rs type="event" ref="#pmb44739">
+                  <rs ref="#pmb29843 #pmb58367" type="work">
+                     <hi rend="latintype">Kakadu</hi>
+                  </rs>
+                  <hi rend="latintype">première</hi> in <rs ref="#pmb182" type="place">Paris</rs>
                </rs>
-               <hi rend="latintype">première</hi> in <rs ref="#pmb182" type="place">Paris</rs>
-               <note type="commentary" corresp="K_L01335-3">am <date>7. 11. 1903</date>
+               <note type="commentary" corresp="K_L01335-3">
+                  Die <rs type="event" ref="#pmb44739">Premiere von <rs type="work" ref="#pmb58367">Au Perroquet Vert</rs> 
+                  </rs> fand am <date when="1903-11-07">7. 11. 1903</date> am <rs type="org" ref="#pmb88613">Théâtre Antoine</rs> im <rs type="place" ref="#pmb610">Théâtre Antoine-Simone Berriau</rs> statt.
                </note>; <rs ref="#pmb2211" type="person">
                   <hi rend="latintype">Antoine</hi>
                </rs>
@@ -203,173 +219,509 @@
             </closer>
          </div>
       </body>
-      <back><listPerson><person xml:id="pmb10863"><persName>
-      <forename>Richard</forename>
-      <surname>Beer-Hofmann</surname>
-  </persName><birth>
-    <date when="1866-07-11">1866-07-11</date>
-      <settlement ref="pmb50">
-        <placeName type="pref">Wien</placeName>
-        <location><geo>48,208333 16,373056</geo></location>
-      </settlement>
-  </birth><death>
-    <date when="1945-09-26">1945-09-26</date>
-      <settlement ref="pmb44053">
-        <placeName type="pref">New York City</placeName>
-        <location><geo>40,71427 -74,00597</geo></location>
-      </settlement>
-  </death></person><person xml:id="pmb10986"><persName>
-      <forename>Otto</forename>
-      <surname>Brahm</surname>
-  </persName><birth>
-    <date when="1856-02-05">1856-02-05</date>
-      <settlement ref="pmb506">
-        <placeName type="pref">Hamburg</placeName>
-        <location><geo>53,55055 9,993333</geo></location>
-      </settlement>
-  </birth><death>
-    <date when="1912-11-28">1912-11-28</date>
-      <settlement ref="pmb168">
-        <placeName type="pref">Berlin</placeName>
-        <location><geo>52,52437 13,41053</geo></location>
-      </settlement>
-      <settlement ref="pmb253956">
-        <placeName type="pref">Ungersche Klinik</placeName>
-        <location><geo>52,5037 13,3567</geo></location>
-      </settlement>
-  </death></person><person xml:id="pmb11485"><persName>
-      <forename>Paul</forename>
-      <surname>Goldmann</surname>
-  </persName><birth>
-    <date when="1865-01-31">1865-01-31</date>
-      <settlement ref="pmb677">
-        <placeName type="pref">Breslau</placeName>
-        <location><geo>51,10773 17,03533</geo></location>
-      </settlement>
-  </birth><death>
-    <date when="1935-09-25">1935-09-25</date>
-      <settlement ref="pmb50">
-        <placeName type="pref">Wien</placeName>
-        <location><geo>48,208333 16,373056</geo></location>
-      </settlement>
-  </death></person><person xml:id="pmb11740"><persName>
-      <forename>Hugo von</forename>
-      <surname>Hofmannsthal</surname>
-  </persName><birth>
-    <date when="1874-02-01">1874-02-01</date>
-      <settlement ref="pmb50">
-        <placeName type="pref">Wien</placeName>
-        <location><geo>48,208333 16,373056</geo></location>
-      </settlement>
-  </birth><death>
-    <date when="1929-07-15">1929-07-15</date>
-      <settlement ref="pmb173">
-        <placeName type="pref">Rodaun</placeName>
-        <location><geo>48,132793312328 16,256152195922</geo></location>
-      </settlement>
-  </death></person><person xml:id="pmb2121"><persName><surname>Schnitzler</surname><forename>Arthur</forename></persName><birth><date when="1862-05-15">15. 5. 1862</date><settlement ref="pmb50"><placeName type="pref">Wien</placeName><location><geo>48,208333 16,373056</geo></location></settlement></birth><death><date when="1931-10-21">21. 10. 1931</date><settlement ref="pmb50"><placeName type="pref">Wien</placeName><location><geo>48,208333 16,373056</geo></location></settlement></death><sex value="male"/><occupation ref="pmb90">Schriftsteller/Schriftstellerin</occupation><occupation ref="pmb97">Mediziner/Medizinerin</occupation><idno type="gnd">https://d-nb.info/gnd/118609807/</idno></person><person xml:id="pmb2211"><persName>
-      <forename>André</forename>
-      <surname>Antoine</surname>
-  </persName><birth>
-    <date when="1858-01-31">1858-01-31</date>
-      <settlement ref="pmb47377">
-        <placeName type="pref">Limoges</placeName>
-        <location><geo>45,83362 1,24759</geo></location>
-      </settlement>
-  </birth><death>
-    <date when="1943-10-23">1943-10-23</date>
-      <settlement ref="pmb53788">
-        <placeName type="pref">Le Pouliguen</placeName>
-        <location><geo>47,27187 -2,43319</geo></location>
-      </settlement>
-  </death></person><person xml:id="pmb2292"><persName>
-      <forename>Gertrude von</forename>
-      <surname>Hofmannsthal</surname>
-  </persName><birth>
-    <date when="1880-03-16">1880-03-16</date>
-      <settlement ref="pmb50">
-        <placeName type="pref">Wien</placeName>
-        <location><geo>48,208333 16,373056</geo></location>
-      </settlement>
-      <settlement ref="pmb207076">
-        <placeName type="pref">Strauchgasse 1</placeName>
-        <location><geo>48,210922 16,366201</geo></location>
-      </settlement>
-  </birth><death>
-    <date when="1959-11-09">1959-11-09</date>
-      <settlement ref="pmb46885">
-        <placeName type="pref">Paddington</placeName>
-        <location><geo>51,51558 -0,1763</geo></location>
-      </settlement>
-  </death></person><person xml:id="pmb2693"><persName>
-      <surname>Sophokles</surname>
-  </persName><birth>
-    <date when="0001-01-01">497/496? v. u. Z.</date>
-      <settlement ref="pmb53840">
-        <placeName type="pref">Kolonos</placeName>
-        <location><geo>37,99495 23,7139</geo></location>
-      </settlement>
-  </birth><death>
-    <date>406/405 v. u. Z.</date>
-      <settlement ref="pmb505">
-        <placeName type="pref">Athen</placeName>
-        <location><geo>37,97945 23,71622</geo></location>
-      </settlement>
-  </death></person><person xml:id="pmb3244" ana="implied"><persName>
-      <forename>Franz von</forename>
-      <surname>Hofmannsthal</surname>
-  </persName><birth>
-    <date when="1903-10-20">1903-10-20</date>
-      <settlement ref="pmb50">
-        <placeName type="pref">Wien</placeName>
-        <location><geo>48,208333 16,373056</geo></location>
-      </settlement>
-  </birth><death>
-    <date when="1929-07-13">1929-07-13</date>
-      <settlement ref="pmb50">
-        <placeName type="pref">Wien</placeName>
-        <location><geo>48,208333 16,373056</geo></location>
-      </settlement>
-  </death></person></listPerson><listBibl><bibl xml:id="pmb29843"><title type="main">Der grüne Kakadu. Groteske in einem Akt</title><title type="werk_bibliografische-angabe">Neue Deutsche Rundschau, Jg. 10, H. 3, März 1899, S. 282–308.</title><title type="legacy-name-merge">Der grüne Kakadu</title><title type="legacy-name-merge">Der grüne Kakadu</title><author role="hat-geschaffen" ref="pmb2121">Schnitzler, Arthur</author></bibl><bibl xml:id="pmb30633"><title type="main">Elektra. Tragödie in einem Aufzug</title><title type="legacy-name-merge">Elektra</title><title type="legacy-name-merge">Elektra</title><author role="hat-geschaffen" ref="pmb11740">Hofmannsthal, Hugo von</author></bibl><bibl xml:id="pmb58367"><title type="main">Au Perroquet Vert</title><title type="namensvariante">Der grüne Kakadu</title><author role="hat-geschaffen" ref="pmb2121">Schnitzler, Arthur</author><author role="hat-ubersetzt" ref="pmb2199">Epstein, Stephan</author><author role="hat-ubersetzt" ref="pmb2206">Lutz, Émile</author></bibl><bibl xml:id="pmb29985" ana="implied"><title type="main">Der einsame Weg. Schauspiel in fünf Akten</title><title type="werk_link">https://archive.org/details/dereinsamewegsc00schngoog/</title><title type="werk_arbeitstitel">Junggeselle</title><title type="werk_arbeitstitel">Junggesellenstück</title><title type="werk_arbeitstitel">Die Egoisten</title><title type="werk_arbeitstitel">Einsame Wege</title><title type="werk_arbeitstitel">Wege ins Dunkle</title><title type="werk_arbeitstitel">Weg zum Licht</title><title type="legacy-name-merge">Der einsame Weg</title><title type="werk_arbeitstitel">Herbst</title><title type="werk_link">https://www.degruyter.com/document/doi/10.1515/9783111334066/html</title><author role="hat-geschaffen" ref="pmb2121">Schnitzler, Arthur</author></bibl><bibl xml:id="pmb43255" ana="implied"><title type="main">Elektra. Tragödie</title><title type="legacy-name-merge">Elektra</title><author role="hat-geschaffen" ref="pmb2693">Sophokles</author></bibl><bibl xml:id="pmb44744" ana="implied"><title type="main">Aus Berlin [Elektra-Premiere]</title><title type="werk_link">https://anno.onb.ac.at/cgi-content/anno?aid=nfp&amp;datum=19031031&amp;seite=11</title><title type="werk_bibliografische-angabe">[O. V.], Neue Freie Presse, Nr. 14073, 31.10.1903, Morgenblatt, S. 11</title><author role="hat-anonym-veroffentlicht" ref="pmb11485">Goldmann, Paul</author></bibl></listBibl><listPlace><place xml:id="pmb168940"><placeName>Edmund-Weiß-Gasse 7</placeName><placeName type="ort_fruherer-name">Spöttelgasse 7</placeName><location type="coords">
-  <geo>48,2304 16,33472</geo>
-</location><location type="located_in_place">
-  <placeName ref="pmb68">XVIII., Währing</placeName>
-  <geo>48,23333 16,31667</geo>
-</location><location type="located_in_place">
-  <placeName ref="pmb533">Währinger Cottage</placeName>
-  <geo>48,233056 16,341944</geo>
-</location><location type="located_in_place">
-  <placeName ref="pmb133">Edmund-Weiß-Gasse</placeName>
-  <geo>48,23056 16,3348</geo>
-</location></place><place xml:id="pmb182"><placeName>Paris</placeName><placeName type="alternative-name">P'ariz</placeName><placeName type="legacy-name-merge">Paris</placeName><placeName type="alternative-name">Pariž</placeName><placeName type="alternative-name">Parisius</placeName><placeName type="alternative-name">Île-de-France</placeName><location type="coords">
-  <geo>48,85341 2,3488</geo>
-</location><location type="located_in_place">
-  <placeName ref="pmb166">Frankreich</placeName>
-  <geo>46,0 2,0</geo>
-</location></place><place xml:id="pmb189"><placeName>Semmering</placeName><placeName type="alternative-name">Gemeinde Semmering</placeName><placeName type="alternative-name">Semmering-Semmering-Kurort</placeName><placeName type="alternative-name">Kurort Semmering</placeName><placeName type="alternative-name">Semmering-Kurort</placeName><placeName type="alternative-name">Heilklimatischer Höhenluftkurort Semmering</placeName><placeName type="alternative-name">Semmering- Kurort Semmering</placeName><placeName type="legacy-name-merge">Semmering</placeName><placeName type="legacy-name-merge">Semmering</placeName><location type="coords">
-  <geo>47,64224 15,8241</geo>
-</location><location type="located_in_place">
-  <placeName ref="pmb41240">Österreich</placeName>
-  <geo>47,33333 13,33333</geo>
-</location></place><place xml:id="pmb50"><placeName>Wien</placeName><placeName type="ort_fruherer-name">K.K. Reichshaupt- und Residenzstadt Wien</placeName><placeName type="legacy-name-merge">Wien</placeName><placeName type="alternative-name">Bécs</placeName><placeName type="alternative-name">Land Wien</placeName><placeName type="alternative-name">Vídeň</placeName><placeName type="alternative-name">Wenia</placeName><placeName type="alternative-name">Beč</placeName><placeName type="ort_fruherer-name">Vindobona</placeName><placeName type="legacy-name-merge">Vindobona</placeName><placeName type="alternative-name">Vienna</placeName><placeName type="legacy-name-merge">Vienna</placeName><placeName type="alternative-name">Vienna</placeName><location type="coords">
-  <geo>48,208333 16,373056</geo>
-</location><location type="located_in_place">
-  <placeName ref="pmb41240">Österreich</placeName>
-  <geo>47,33333 13,33333</geo>
-</location></place></listPlace><listOrg><org xml:id="pmb36247"><orgName>Burgtheater</orgName><orgName type="institution_namensvariante">Burgtheater GmbH</orgName><location type="located_in_place">
-  <placeName ref="pmb44649">Schlosstheater Schönbrunn</placeName>
-  <geo>48,186667 16,3125</geo>
-  <idno type="URL" subtype="pmb">https://pmb.acdh.oeaw.ac.at/entity/44649/</idno><idno type="URL" subtype="wikidata">http://www.wikidata.org/entity/Q2244724</idno><idno type="URL" subtype="wikipedia">https://de.wikipedia.org/wiki/Schlosstheater_Sch%C3%B6nbrunn</idno><idno type="URL" subtype="schnitzler-interviews">https://schnitzler-interviews.acdh.oeaw.ac.at/pmb44649.html</idno><idno type="URL" subtype="wienerschnitzler">https://wienerschnitzler.org/pmb44649.html</idno><idno type="URL" subtype="schnitzler-briefe">https://schnitzler-briefe.acdh.oeaw.ac.at/pmb44649.html</idno><idno type="URL" subtype="schnitzler-kultur">https://schnitzler-kultur.acdh.oeaw.ac.at/pmb44649.html</idno></location><location type="located_in_place">
-  <placeName ref="pmb48198">Redoutensaal</placeName>
-  <geo>48,206783 16,366551</geo>
-  <idno type="URL" subtype="pmb">https://pmb.acdh.oeaw.ac.at/entity/48198/</idno><idno type="URL" subtype="geschichtewiki">https://www.geschichtewiki.wien.gv.at/Redoutensäle</idno><idno type="URL" subtype="wienerschnitzler">https://wienerschnitzler.org/pmb48198.html</idno><idno type="URL" subtype="schnitzler-kultur">https://schnitzler-kultur.acdh.oeaw.ac.at/pmb48198.html</idno></location><location type="located_in_place">
-  <placeName ref="pmb51">I., Innere Stadt</placeName>
-  <geo>48,20769 16,37049</geo>
-  <idno type="URL" subtype="schnitzler-bahr">https://schnitzler-bahr.acdh.oeaw.ac.at/pmb51.html</idno><idno type="URL" subtype="pmb">https://pmb.acdh.oeaw.ac.at/entity/51/</idno><idno type="URL" subtype="pmb">https://pmb.acdh.oeaw.ac.at/entity/36789/</idno><idno type="URL" subtype="pmb">https://pmb.acdh.oeaw.ac.at/entity/51010/</idno><idno type="URL" subtype="geonames">https://sws.geonames.org/2775259/</idno><idno type="URL" subtype="kraus">https://www.kraus.wienbibliothek.at/legalkraus/pmb51.html</idno><idno type="URL" subtype="schnitzler-interviews">https://schnitzler-interviews.acdh.oeaw.ac.at/pmb51.html</idno><idno type="URL" subtype="wikidata">http://www.wikidata.org/entity/Q267329</idno><idno type="URL" subtype="wikipedia">https://de.wikipedia.org/wiki/Innere_Stadt_(Wien)</idno><idno type="URL" subtype="wienerschnitzler">https://wienerschnitzler.org/pmb51.html</idno><idno type="URL" subtype="schnitzler-briefe">https://schnitzler-briefe.acdh.oeaw.ac.at/pmb51.html</idno><idno type="URL" subtype="schnitzler-kultur">https://schnitzler-kultur.acdh.oeaw.ac.at/pmb51.html</idno></location><location type="located_in_place">
-  <placeName ref="pmb14">Burgtheater</placeName>
-  <geo>48,210333 16,361139</geo>
-  <idno type="URL" subtype="schnitzler-bahr">https://schnitzler-bahr.acdh.oeaw.ac.at/pmb14.html</idno><idno type="URL" subtype="pmb">https://pmb.acdh.oeaw.ac.at/entity/14/</idno><idno type="URL" subtype="geonames">https://www.geonames.org/6354992/</idno><idno type="URL" subtype="schnitzler-interviews">https://schnitzler-interviews.acdh.oeaw.ac.at/pmb14.html</idno><idno type="URL" subtype="schnitzler-tagebuch">https://schnitzler-tagebuch.acdh.oeaw.ac.at/pmb14.html</idno><idno type="URL" subtype="wienerschnitzler">https://wienerschnitzler.org/pmb14.html</idno><idno type="URL" subtype="wikidata">http://www.wikidata.org/entity/Q109377820</idno><idno type="URL" subtype="schnitzler-briefe">https://schnitzler-briefe.acdh.oeaw.ac.at/pmb14.html</idno><idno type="URL" subtype="schnitzler-kultur">https://schnitzler-kultur.acdh.oeaw.ac.at/pmb14.html</idno></location><location type="located_in_place">
-  <placeName ref="pmb185621">Burgtheater [Altes Burgtheater]</placeName>
-  <geo>48,20778 16,36645</geo>
-  <idno type="URL" subtype="pmb">https://pmb.acdh.oeaw.ac.at/entity/185621/</idno><idno type="URL" subtype="wikidata">http://www.wikidata.org/entity/Q45350189</idno><idno type="URL" subtype="wienerschnitzler">https://wienerschnitzler.org/pmb185621.html</idno><idno type="URL" subtype="schnitzler-briefe">https://schnitzler-briefe.acdh.oeaw.ac.at/pmb185621.html</idno><idno type="URL" subtype="schnitzler-kultur">https://schnitzler-kultur.acdh.oeaw.ac.at/pmb185621.html</idno></location></org></listOrg></back></text>
+      <back>
+         <listPerson>
+            <person xml:id="pmb2121">
+               <persName>
+                  <surname>Schnitzler</surname>
+                  <forename>Arthur</forename>
+               </persName>
+               <birth>
+                  <date when="1862-05-15">15. 5. 1862</date>
+                  <settlement ref="pmb50">
+                     <placeName type="pref">Wien</placeName>
+                     <location>
+                        <geo>48,208333 16,373056</geo>
+                     </location>
+                  </settlement>
+               </birth>
+               <death>
+                  <date when="1931-10-21">21. 10. 1931</date>
+                  <settlement ref="pmb50">
+                     <placeName type="pref">Wien</placeName>
+                     <location>
+                        <geo>48,208333 16,373056</geo>
+                     </location>
+                  </settlement>
+               </death>
+            </person>
+            <person xml:id="pmb11740">
+               <persName>
+                  <forename>Hugo von</forename>
+                  <surname>Hofmannsthal</surname>
+               </persName>
+               <birth>
+                  <date when="1874-02-01">1874-02-01</date>
+                  <settlement ref="pmb50">
+                     <placeName type="pref">Wien</placeName>
+                     <location>
+                        <geo>48,208333 16,373056</geo>
+                     </location>
+                  </settlement>
+               </birth>
+               <death>
+                  <date when="1929-07-15">1929-07-15</date>
+                  <settlement ref="pmb173">
+                     <placeName type="pref">Rodaun</placeName>
+                     <location>
+                        <geo>48,132793312328 16,256152195922</geo>
+                     </location>
+                  </settlement>
+               </death>
+            </person>
+            <person xml:id="pmb11485">
+               <persName>
+                  <forename>Paul</forename>
+                  <surname>Goldmann</surname>
+               </persName>
+               <birth>
+                  <date when="1865-01-31">1865-01-31</date>
+                  <settlement ref="pmb677">
+                     <placeName type="pref">Breslau</placeName>
+                     <location>
+                        <geo>51,10773 17,03533</geo>
+                     </location>
+                  </settlement>
+               </birth>
+               <death>
+                  <date when="1935-09-25">1935-09-25</date>
+                  <settlement ref="pmb50">
+                     <placeName type="pref">Wien</placeName>
+                     <location>
+                        <geo>48,208333 16,373056</geo>
+                     </location>
+                  </settlement>
+               </death>
+            </person>
+            <person xml:id="pmb10986">
+               <persName>
+                  <forename>Otto</forename>
+                  <surname>Brahm</surname>
+               </persName>
+               <birth>
+                  <date when="1856-02-05">1856-02-05</date>
+                  <settlement ref="pmb506">
+                     <placeName type="pref">Hamburg</placeName>
+                     <location>
+                        <geo>53,55055 9,993333</geo>
+                     </location>
+                  </settlement>
+               </birth>
+               <death>
+                  <date when="1912-11-28">1912-11-28</date>
+                  <settlement ref="pmb168">
+                     <placeName type="pref">Berlin</placeName>
+                     <location>
+                        <geo>52,52437 13,41053</geo>
+                     </location>
+                  </settlement>
+                  <settlement ref="pmb253956">
+                     <placeName type="pref">Ungersche Klinik</placeName>
+                     <location>
+                        <geo>52,5037 13,3567</geo>
+                     </location>
+                  </settlement>
+               </death>
+            </person>
+            <person xml:id="pmb10863">
+               <persName>
+                  <forename>Richard</forename>
+                  <surname>Beer-Hofmann</surname>
+               </persName>
+               <birth>
+                  <date when="1866-07-11">1866-07-11</date>
+                  <settlement ref="pmb50">
+                     <placeName type="pref">Wien</placeName>
+                     <location>
+                        <geo>48,208333 16,373056</geo>
+                     </location>
+                  </settlement>
+               </birth>
+               <death>
+                  <date when="1945-09-26">1945-09-26</date>
+                  <settlement ref="pmb44053">
+                     <placeName type="pref">New York City</placeName>
+                     <location>
+                        <geo>40,71427 -74,00597</geo>
+                     </location>
+                  </settlement>
+               </death>
+            </person>
+            <person xml:id="pmb2211">
+               <persName>
+                  <forename>André</forename>
+                  <surname>Antoine</surname>
+               </persName>
+               <birth>
+                  <date when="1858-01-31">1858-01-31</date>
+                  <settlement ref="pmb47377">
+                     <placeName type="pref">Limoges</placeName>
+                     <location>
+                        <geo>45,83362 1,24759</geo>
+                     </location>
+                  </settlement>
+               </birth>
+               <death>
+                  <date when="1943-10-23">1943-10-23</date>
+                  <settlement ref="pmb53788">
+                     <placeName type="pref">Le Pouliguen</placeName>
+                     <location>
+                        <geo>47,27187 -2,43319</geo>
+                     </location>
+                  </settlement>
+               </death>
+            </person>
+            <person xml:id="pmb2292">
+               <persName>
+                  <forename>Gertrude von</forename>
+                  <surname>Hofmannsthal</surname>
+               </persName>
+               <birth>
+                  <date when="1880-03-16">1880-03-16</date>
+                  <settlement ref="pmb50">
+                     <placeName type="pref">Wien</placeName>
+                     <location>
+                        <geo>48,208333 16,373056</geo>
+                     </location>
+                  </settlement>
+                  <settlement ref="pmb207076">
+                     <placeName type="pref">Strauchgasse 1</placeName>
+                     <location>
+                        <geo>48,210922 16,366201</geo>
+                     </location>
+                  </settlement>
+               </birth>
+               <death>
+                  <date when="1959-11-09">1959-11-09</date>
+                  <settlement ref="pmb46885">
+                     <placeName type="pref">Paddington</placeName>
+                     <location>
+                        <geo>51,51558 -0,1763</geo>
+                     </location>
+                  </settlement>
+               </death>
+            </person>
+            <person xml:id="pmb2693">
+               <persName>
+                  <surname>Sophokles</surname>
+               </persName>
+               <birth>
+                  <date when="0001-01-01">497/496? v. u. Z.</date>
+                  <settlement ref="pmb53840">
+                     <placeName type="pref">Kolonos</placeName>
+                     <location>
+                        <geo>37,99495 23,7139</geo>
+                     </location>
+                  </settlement>
+               </birth>
+               <death>
+                  <date>406/405 v. u. Z.</date>
+                  <settlement ref="pmb505">
+                     <placeName type="pref">Athen</placeName>
+                     <location>
+                        <geo>37,97945 23,71622</geo>
+                     </location>
+                  </settlement>
+               </death>
+            </person>
+            <person xml:id="pmb3244" ana="implied">
+               <persName>
+                  <forename>Franz von</forename>
+                  <surname>Hofmannsthal</surname>
+               </persName>
+               <birth>
+                  <date when="1903-10-20">1903-10-20</date>
+                  <settlement ref="pmb50">
+                     <placeName type="pref">Wien</placeName>
+                     <location>
+                        <geo>48,208333 16,373056</geo>
+                     </location>
+                  </settlement>
+               </birth>
+               <death>
+                  <date when="1929-07-13">1929-07-13</date>
+                  <settlement ref="pmb50">
+                     <placeName type="pref">Wien</placeName>
+                     <location>
+                        <geo>48,208333 16,373056</geo>
+                     </location>
+                  </settlement>
+               </death>
+            </person>
+            <person xml:id="pmb2199">
+               <persName>
+                  <forename>Stephan</forename>
+                  <surname>Epstein</surname>
+               </persName>
+               <birth>
+                  <date when="1866-11-12">1866-11-12</date>
+                  <settlement ref="pmb888">
+                     <placeName type="pref">Warschau</placeName>
+                     <location>
+                        <geo>52,22977 21,01178</geo>
+                     </location>
+                  </settlement>
+               </birth>
+               <death>
+                  <date when="1941-01-01" notAfter="1941-12-31">1941</date>
+                  <settlement ref="pmb182">
+                     <placeName type="pref">Paris</placeName>
+                     <location>
+                        <geo>48,85341 2,3488</geo>
+                     </location>
+                  </settlement>
+               </death>
+            </person>
+            <person xml:id="pmb2206">
+               <persName>
+                  <forename>Émile</forename>
+                  <surname>Lutz</surname>
+               </persName>
+               <birth>
+                  <date when="1868-04-08">1868-04-08</date>
+                  <settlement ref="pmb53286">
+                     <placeName type="pref">Saint-Étienne-du-Rouvray</placeName>
+                     <location>
+                        <geo>49,37794 1,10467</geo>
+                     </location>
+                  </settlement>
+               </birth>
+               <death>
+                  <date when="1940-01-18">1940-01-18</date>
+                  <settlement ref="pmb182">
+                     <placeName type="pref">Paris</placeName>
+                     <location>
+                        <geo>48,85341 2,3488</geo>
+                     </location>
+                  </settlement>
+               </death>
+            </person>
+         </listPerson>
+         <listBibl>
+            <bibl xml:id="pmb30633">
+               <title>Elektra. Tragödie in einem Aufzug</title>
+               <title type="legacy-name-merge">Elektra</title>
+               <title type="legacy-name-merge">Elektra</title>
+               <author ref="pmb11740" role="hat-geschaffen">Hofmannsthal, Hugo von</author>
+            </bibl>
+            <bibl xml:id="pmb29843">
+               <title>Der grüne Kakadu. Groteske in einem Akt</title>
+               <title type="werk_bibliografische-angabe">Neue Deutsche Rundschau, Jg. 10, H. 3, März 1899, S. 282–308.</title>
+               <title type="legacy-name-merge">Der grüne Kakadu</title>
+               <title type="legacy-name-merge">Der grüne Kakadu</title>
+               <author ref="pmb2121" role="hat-geschaffen">Schnitzler, Arthur</author>
+            </bibl>
+            <bibl xml:id="pmb58367">
+               <title>Au Perroquet Vert</title>
+               <title type="namensvariante">Der grüne Kakadu</title>
+               <author ref="pmb2121" role="hat-geschaffen">Schnitzler, Arthur</author>
+               <author ref="pmb2199" role="hat-ubersetzt">Epstein, Stephan</author>
+               <author ref="pmb2206" role="hat-ubersetzt">Lutz, Émile</author>
+            </bibl>
+            <bibl xml:id="pmb44744" ana="implied">
+               <title>Aus Berlin [Elektra-Premiere]</title>
+               <title type="werk_link">https://anno.onb.ac.at/cgi-content/anno?aid=nfp&amp;datum=19031031&amp;seite=11</title>
+               <title type="werk_bibliografische-angabe">[O. V.], Neue Freie Presse, Nr. 14073, 31.10.1903, Morgenblatt, S. 11</title>
+               <author ref="pmb11485" role="hat-anonym-veroffentlicht">Goldmann, Paul</author>
+            </bibl>
+            <bibl xml:id="pmb29985" ana="implied">
+               <title>Der einsame Weg. Schauspiel in fünf Akten</title>
+               <title type="werk_link">https://archive.org/details/dereinsamewegsc00schngoog/</title>
+               <title type="werk_arbeitstitel">Junggeselle</title>
+               <title type="werk_arbeitstitel">Junggesellenstück</title>
+               <title type="werk_arbeitstitel">Die Egoisten</title>
+               <title type="werk_arbeitstitel">Einsame Wege</title>
+               <title type="werk_arbeitstitel">Wege ins Dunkle</title>
+               <title type="werk_arbeitstitel">Weg zum Licht</title>
+               <title type="legacy-name-merge">Der einsame Weg</title>
+               <title type="werk_arbeitstitel">Herbst</title>
+               <title type="werk_link">https://www.degruyter.com/document/doi/10.1515/9783111334066/html</title>
+               <author ref="pmb2121" role="hat-geschaffen">Schnitzler, Arthur</author>
+            </bibl>
+            <bibl xml:id="pmb43255" ana="implied">
+               <title>Elektra. Tragödie</title>
+               <title type="legacy-name-merge">Elektra</title>
+               <author ref="pmb2693" role="hat-geschaffen">Sophokles</author>
+            </bibl>
+         </listBibl>
+         <listPlace>
+            <place xml:id="pmb50">
+               <placeName>Wien</placeName>
+               <placeName type="ort_fruherer-name">K.K. Reichshaupt- und Residenzstadt Wien</placeName>
+               <placeName type="alternative-name">Bécs</placeName>
+               <placeName type="alternative-name">Land Wien</placeName>
+               <placeName type="alternative-name">Vídeň</placeName>
+               <placeName type="alternative-name">Wenia</placeName>
+               <placeName type="alternative-name">Beč</placeName>
+               <placeName type="ort_fruherer-name">Vindobona</placeName>
+               <placeName type="alternative-name">Vienna</placeName>
+               <location type="coords">
+                  <geo>48,208333 16,373056</geo>
+               </location>
+               <location type="located_in_place">
+                  <placeName ref="pmb41240">Österreich</placeName>
+                  <geo>47,33333 13,33333</geo>
+               </location>
+               <location type="located_in_place">
+                  <placeName ref="pmb235218">Windmühlhöhe</placeName>
+                  <geo>48,24077 16,32092</geo>
+               </location>
+            </place>
+            <place xml:id="pmb168940">
+               <placeName>Edmund-Weiß-Gasse 7</placeName>
+               <placeName type="ort_fruherer-name">Spöttelgasse 7</placeName>
+               <location type="coords">
+                  <geo>48,2304 16,33472</geo>
+               </location>
+               <location type="located_in_place">
+                  <placeName ref="pmb68">XVIII., Währing</placeName>
+                  <geo>48,23333 16,31667</geo>
+               </location>
+               <location type="located_in_place">
+                  <placeName ref="pmb533">Währinger Cottage</placeName>
+                  <geo>48,233056 16,341944</geo>
+               </location>
+               <location type="located_in_place">
+                  <placeName ref="pmb133">Edmund-Weiß-Gasse</placeName>
+                  <geo>48,23056 16,3348</geo>
+               </location>
+            </place>
+            <place xml:id="pmb189">
+               <placeName>Semmering</placeName>
+               <placeName type="alternative-name">Gemeinde Semmering</placeName>
+               <placeName type="alternative-name">Semmering-Semmering-Kurort</placeName>
+               <placeName type="alternative-name">Kurort Semmering</placeName>
+               <placeName type="alternative-name">Semmering-Kurort</placeName>
+               <placeName type="alternative-name">Heilklimatischer Höhenluftkurort Semmering</placeName>
+               <placeName type="alternative-name">Semmering- Kurort Semmering</placeName>
+               <location type="coords">
+                  <geo>47,64224 15,8241</geo>
+               </location>
+               <location type="located_in_place">
+                  <placeName ref="pmb41240">Österreich</placeName>
+                  <geo>47,33333 13,33333</geo>
+               </location>
+            </place>
+            <place xml:id="pmb182">
+               <placeName>Paris</placeName>
+               <placeName type="alternative-name">P'ariz</placeName>
+               <placeName type="alternative-name">Pariž</placeName>
+               <placeName type="alternative-name">Parisius</placeName>
+               <placeName type="alternative-name">Île-de-France</placeName>
+               <location type="coords">
+                  <geo>48,85341 2,3488</geo>
+               </location>
+               <location type="located_in_place">
+                  <placeName ref="pmb166">Frankreich</placeName>
+                  <geo>46,0 2,0</geo>
+               </location>
+            </place>
+            <place xml:id="pmb610" ana="comment">
+               <placeName>Théâtre Antoine-Simone Berriau</placeName>
+               <placeName type="ort_fruherer-name">Théâtre Libre</placeName>
+               <placeName type="ort_fruherer-name">Théatre Antoine</placeName>
+               <placeName type="ort_fruherer-name">Théâtre des Menus-Plaisirs</placeName>
+               <placeName type="ort_fruherer-name">Théâtre des Arts</placeName>
+               <placeName type="ort_fruherer-name">Opéra-Bouffe</placeName>
+               <placeName type="ort_fruherer-name">Comédie-Parisienne</placeName>
+               <location type="coords">
+                  <geo>48,870558 2,355367</geo>
+               </location>
+               <location type="located_in_place">
+                  <placeName ref="pmb182">Paris</placeName>
+                  <geo>48,85341 2,3488</geo>
+               </location>
+            </place>
+         </listPlace>
+         <listOrg>
+            <org xml:id="pmb36247">
+               <orgName>Burgtheater</orgName>
+               <orgName type="institution_namensvariante">Burgtheater GmbH</orgName>
+               <location type="located_in_place">
+                  <placeName ref="pmb44649">Schlosstheater Schönbrunn</placeName>
+                  <geo>48,186667 16,3125</geo>
+                  <idno type="URL" subtype="pmb">https://pmb.acdh.oeaw.ac.at/entity/44649/</idno>
+                  <idno type="URL" subtype="wikidata">http://www.wikidata.org/entity/Q2244724</idno>
+                  <idno type="URL" subtype="wikipedia">https://de.wikipedia.org/wiki/Schlosstheater_Sch%C3%B6nbrunn</idno>
+                  <idno type="URL" subtype="schnitzler-interviews">https://schnitzler-interviews.acdh.oeaw.ac.at/pmb44649.html</idno>
+                  <idno type="URL" subtype="wienerschnitzler">https://wienerschnitzler.org/pmb44649.html</idno>
+                  <idno type="URL" subtype="schnitzler-briefe">https://schnitzler-briefe.acdh.oeaw.ac.at/pmb44649.html</idno>
+                  <idno type="URL" subtype="schnitzler-kultur">https://schnitzler-kultur.acdh.oeaw.ac.at/pmb44649.html</idno>
+               </location>
+               <location type="located_in_place">
+                  <placeName ref="pmb48198">Redoutensaal</placeName>
+                  <geo>48,206783 16,366551</geo>
+                  <idno type="URL" subtype="pmb">https://pmb.acdh.oeaw.ac.at/entity/48198/</idno>
+                  <idno type="URL" subtype="www">https://www.geschichtewiki.wien.gv.at/Redoutensäle</idno>
+                  <idno type="URL" subtype="wienerschnitzler">https://wienerschnitzler.org/pmb48198.html</idno>
+                  <idno type="URL" subtype="schnitzler-kultur">https://schnitzler-kultur.acdh.oeaw.ac.at/pmb48198.html</idno>
+               </location>
+               <location type="located_in_place">
+                  <placeName ref="pmb51">I., Innere Stadt</placeName>
+                  <geo>48,20769 16,37049</geo>
+                  <idno type="URL" subtype="schnitzler-bahr">https://schnitzler-bahr.acdh.oeaw.ac.at/pmb51.html</idno>
+                  <idno type="URL" subtype="pmb">https://pmb.acdh.oeaw.ac.at/entity/51/</idno>
+                  <idno type="URL" subtype="pmb">https://pmb.acdh.oeaw.ac.at/entity/36789/</idno>
+                  <idno type="URL" subtype="pmb">https://pmb.acdh.oeaw.ac.at/entity/51010/</idno>
+                  <idno type="URL" subtype="geonames">https://sws.geonames.org/2775259/</idno>
+                  <idno type="URL" subtype="www">https://www.kraus.wienbibliothek.at/legalkraus/pmb51.html</idno>
+                  <idno type="URL" subtype="schnitzler-interviews">https://schnitzler-interviews.acdh.oeaw.ac.at/pmb51.html</idno>
+                  <idno type="URL" subtype="wikidata">http://www.wikidata.org/entity/Q267329</idno>
+                  <idno type="URL" subtype="wikipedia">https://de.wikipedia.org/wiki/Innere_Stadt_(Wien)</idno>
+                  <idno type="URL" subtype="wienerschnitzler">https://wienerschnitzler.org/pmb51.html</idno>
+                  <idno type="URL" subtype="schnitzler-briefe">https://schnitzler-briefe.acdh.oeaw.ac.at/pmb51.html</idno>
+                  <idno type="URL" subtype="schnitzler-kultur">https://schnitzler-kultur.acdh.oeaw.ac.at/pmb51.html</idno>
+               </location>
+               <location type="located_in_place">
+                  <placeName ref="pmb14">Burgtheater</placeName>
+                  <geo>48,210333 16,361139</geo>
+                  <idno type="URL" subtype="schnitzler-bahr">https://schnitzler-bahr.acdh.oeaw.ac.at/pmb14.html</idno>
+                  <idno type="URL" subtype="pmb">https://pmb.acdh.oeaw.ac.at/entity/14/</idno>
+                  <idno type="URL" subtype="geonames">https://www.geonames.org/6354992/</idno>
+                  <idno type="URL" subtype="schnitzler-interviews">https://schnitzler-interviews.acdh.oeaw.ac.at/pmb14.html</idno>
+                  <idno type="URL" subtype="schnitzler-tagebuch">https://schnitzler-tagebuch.acdh.oeaw.ac.at/pmb14.html</idno>
+                  <idno type="URL" subtype="wienerschnitzler">https://wienerschnitzler.org/pmb14.html</idno>
+                  <idno type="URL" subtype="wikidata">http://www.wikidata.org/entity/Q109377820</idno>
+                  <idno type="URL" subtype="schnitzler-briefe">https://schnitzler-briefe.acdh.oeaw.ac.at/pmb14.html</idno>
+                  <idno type="URL" subtype="schnitzler-kultur">https://schnitzler-kultur.acdh.oeaw.ac.at/pmb14.html</idno>
+               </location>
+               <location type="located_in_place">
+                  <placeName ref="pmb185621">Burgtheater [Altes Burgtheater]</placeName>
+                  <geo>48,20778 16,36645</geo>
+                  <idno type="URL" subtype="pmb">https://pmb.acdh.oeaw.ac.at/entity/185621/</idno>
+                  <idno type="URL" subtype="wikidata">http://www.wikidata.org/entity/Q45350189</idno>
+                  <idno type="URL" subtype="wienerschnitzler">https://wienerschnitzler.org/pmb185621.html</idno>
+                  <idno type="URL" subtype="schnitzler-briefe">https://schnitzler-briefe.acdh.oeaw.ac.at/pmb185621.html</idno>
+                  <idno type="URL" subtype="schnitzler-kultur">https://schnitzler-kultur.acdh.oeaw.ac.at/pmb185621.html</idno>
+               </location>
+            </org>
+            <org xml:id="pmb88613" ana="comment">
+               <orgName>Théâtre Antoine</orgName>
+               <location type="located_in_place">
+                  <placeName ref="pmb610">Théâtre Antoine-Simone Berriau</placeName>
+                  <geo>48,870558 2,355367</geo>
+                  <idno type="URL" subtype="schnitzler-bahr">https://schnitzler-bahr.acdh.oeaw.ac.at/pmb610.html</idno>
+                  <idno type="URL" subtype="pmb">https://pmb.acdh.oeaw.ac.at/entity/610/</idno>
+                  <idno type="URL" subtype="wikidata">http://www.wikidata.org/entity/Q3097818</idno>
+                  <idno type="URL" subtype="schnitzler-interviews">https://schnitzler-interviews.acdh.oeaw.ac.at/pmb610.html</idno>
+                  <idno type="URL" subtype="wikipedia">https://de.wikipedia.org/wiki/Th%C3%A9%C3%A2tre_Antoine</idno>
+                  <idno type="URL" subtype="schnitzler-briefe">https://schnitzler-briefe.acdh.oeaw.ac.at/pmb610.html</idno>
+               </location>
+            </org>
+         </listOrg>
+         <listEvent>
+            <event xml:id="pmb44739" ana="comment">
+               <eventName n="Theaterpremiere">Premiere von Au Perroquet Vert, 7.11.1903</eventName>
+               <listPlace>
+                  <place>
+                     <placeName role="veranstaltet in" ref="pmb610">Théâtre Antoine-Simone Berriau</placeName>
+                     <location>
+                        <geo>48,870558 2,355367</geo>
+                     </location>
+                  </place>
+               </listPlace>
+            </event>
+         </listEvent>
+      </back>
+   </text>
 </TEI>
