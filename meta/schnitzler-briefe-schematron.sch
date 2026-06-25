@@ -35,6 +35,15 @@
             </sch:assert>
         </sch:rule>
     </sch:pattern>
+    <!-- titleStmt -->
+    <sch:pattern id="titleStmt-author-count">
+        <sch:rule context="tei:titleStmt">
+            <sch:assert
+                test="count(//tei:titleStmt/tei:author) &lt;= count(//tei:correspDesc/tei:correspAction[@type='sent']/tei:persName)"
+                > Die Anzahl der tei:author in titleStmt darf nicht größer sein als die Anzahl der
+                tei:persName in correspDesc/correspAction. </sch:assert>
+        </sch:rule>
+    </sch:pattern>
     <!-- correspDesc -->
     <sch:pattern id="correspDesc-rules">
         <sch:rule context="tei:correspDesc">
@@ -44,6 +53,10 @@
                 correspAction[@type='sent'] vorhanden sein. </sch:assert>
             <sch:assert test="count(tei:correspAction[@type = 'received']) le 1"> Es darf nur ein
                 correspAction[@type='received'] vorhanden sein. </sch:assert>
+            <sch:assert
+                test="count(//tei:titleStmt/tei:author) &lt;= count(//tei:correspDesc/tei:correspAction/tei:persName)"
+                > Die Anzahl der tei:author in titleStmt darf nicht größer sein als die Anzahl der
+                tei:persName in correspDesc/correspAction. </sch:assert>
         </sch:rule>
     </sch:pattern>
     <sch:pattern id="correspAction1-rules">
