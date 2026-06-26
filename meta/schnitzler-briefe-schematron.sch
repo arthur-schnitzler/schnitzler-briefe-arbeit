@@ -42,6 +42,9 @@
                 test="count(//tei:titleStmt/tei:author) &lt;= count(//tei:correspDesc/tei:correspAction[@type='sent']/tei:persName)"
                 > Die Anzahl der tei:author in titleStmt darf nicht größer sein als die Anzahl der
                 tei:persName in correspDesc/correspAction. </sch:assert>
+            <sch:assert test="count(tei:author/@ref) = count(distinct-values(tei:author/@ref))">
+                Innerhalb von titleStmt muss jeder Wert von author/@ref eindeutig sein (keine
+                Dubletten). </sch:assert>
         </sch:rule>
     </sch:pattern>
     <!-- correspDesc -->
