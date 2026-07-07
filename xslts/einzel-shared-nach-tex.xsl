@@ -4681,7 +4681,8 @@
                daher zur Unterscheidung der Vorname als Initiale, z. B. "A. Schnitzler" / "O. Schnitzler" -->
             <xsl:choose>
                <xsl:when test="string-length($scribe-vorname) &gt; 0">
-                  <xsl:value-of select="fn:concat(substring($scribe-vorname, 1, 1), '. ', $scribe-nachname)"/>
+                  <xsl:value-of
+                     select="fn:concat(substring($scribe-vorname, 1, 1), '. ', $scribe-nachname)"/>
                </xsl:when>
                <xsl:otherwise>
                   <xsl:value-of select="$scribe-nachname"/>
@@ -4691,14 +4692,14 @@
          <!-- hier könnte man noch Verwendung von Initialen einbauen -->
          <xsl:otherwise>
             <xsl:choose>
-               <xsl:when test="string-length($scribe-vorname) &gt; 0 and string-length($scribe-nachname) = 0">
+               <xsl:when
+                  test="string-length($scribe-vorname) &gt; 0 and string-length($scribe-nachname) = 0">
                   <xsl:value-of select="$scribe-vorname"/>
                </xsl:when>
                <xsl:otherwise>
                   <xsl:value-of select="$scribe-nachname"/>
                </xsl:otherwise>
             </xsl:choose>
-            
          </xsl:otherwise>
       </xsl:choose>
       <xsl:text>:{]} </xsl:text>
@@ -5671,8 +5672,17 @@
    </xsl:template>
    <xsl:template match="tei:ref[@type = 'schnitzler-kultur']">
       <xsl:variable name="target" select="replace(@target, '#', '')"/>
+      <xsl:variable name="event" as="node()?"
+         select="document('https://raw.githubusercontent.com/arthur-schnitzler/schnitzler-kultur/main/data/editions/listevent.xml')/tei:TEI/tei:text[1]/tei:body[1]/tei:listEvent[1]/tei:event[@xml:id = $target]"/>
+      <xsl:variable name="title-from-event" as="xs:string"
+         select="normalize-space($event/*:eventName)"/>
+      <xsl:variable name="date-from-event" as="xs:date" select="$event/@when-iso"/>
       <xsl:choose>
-         <xsl:when test="@subtype = 'date-only'"/>
+         <xsl:when test="@subtype = 'date-only'">
+            <xsl:value-of select="
+                  format-date($date-from-event,
+                  '[D1].&#8239;[M1].&#8239;[Y0001]')"/>
+         </xsl:when>
          <xsl:otherwise>
             <xsl:choose>
                <xsl:when test="@subtype = 'see'">
@@ -5688,14 +5698,15 @@
                   <xsl:text>Vgl. </xsl:text>
                </xsl:when>
             </xsl:choose>
-            <xsl:text>A.&#8239;S.: \emph{Kulturveranstaltungen}, </xsl:text>
+            <xsl:if test="$title-from-event != ''">
+               <xsl:value-of select="$title-from-event"/>
+               <xsl:text>. In: </xsl:text>
+            </xsl:if>
+            <xsl:text>A.&#8239;S.: \emph{Kulturveranstaltungen}, \url{</xsl:text>
+            <xsl:value-of select="concat('https://schnitzler-kultur.acdh.oeaw.ac.at/', $target, '.html')"/>
+            <xsl:text>}</xsl:text>
          </xsl:otherwise>
       </xsl:choose>
-      <xsl:variable name="date-from-event" as="xs:date"
-         select="document('https://raw.githubusercontent.com/arthur-schnitzler/schnitzler-kultur/main/data/editions/listevent.xml')/tei:TEI/tei:text[1]/tei:body[1]/tei:listEvent[1]/tei:event[@xml:id = $target]/@when-iso"/>
-      <xsl:value-of select="
-            format-date($date-from-event,
-            '[D1].&#8239;[M1].&#8239;[Y0001]')"/>
    </xsl:template>
    <xsl:template match="tei:ref[@type = 'schnitzler-interviews']">
       <xsl:if test="not(@subtype = 'date-only')">
@@ -6161,7 +6172,7 @@
          </xsl:otherwise>
       </xsl:choose>
    </xsl:template>
-   <xsl:template match="tei:ref[@type='DOI' or @type='URL' and not(ancestor::tei:biblStruct)]">
+   <xsl:template match="tei:ref[@type = 'DOI' or @type = 'URL' and not(ancestor::tei:biblStruct)]">
       <xsl:text>\url{</xsl:text>
       <xsl:value-of select="@target"/>
       <xsl:text>}</xsl:text>
