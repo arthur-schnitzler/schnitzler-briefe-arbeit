@@ -9,7 +9,7 @@ jobs:
 
     steps:
       - name: 📥 Checkout Repo
-        uses: actions/checkout@v4
+        uses: actions/checkout@v5
         with:
           persist-credentials: false
 
@@ -52,7 +52,7 @@ jobs:
 
     steps:
       - name: 📥 Repo erneut auschecken (mit neuem Commit)
-        uses: actions/checkout@v4
+        uses: actions/checkout@v5
         with:
           ref: ${{ github.ref_name }}
 
@@ -86,7 +86,7 @@ jobs:
 
     steps:
       - name: 📥 Repo erneut auschecken (mit neuesten Änderungen)
-        uses: actions/checkout@v4
+        uses: actions/checkout@v5
         with:
           ref: ${{ github.ref_name }}
 
