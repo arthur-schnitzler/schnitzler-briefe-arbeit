@@ -1,6 +1,10 @@
-<?xml version='1.0' encoding='UTF-8'?>
+<?xml version="1.0" encoding="UTF-8"?>
 <?xml-model href="../meta/schnitzler-briefe-schematron.sch" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
-<TEI xmlns="http://www.tei-c.org/ns/1.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.tei-c.org/ns/1.0 ../meta/schnitzler-briefe-schema.xsd" xml:id="L03714" xml:base="https://id.acdh.oeaw.ac.at/schnitzler/schnitzler-briefe/editions">
+<TEI xmlns="http://www.tei-c.org/ns/1.0"
+     xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+     xsi:schemaLocation="http://www.tei-c.org/ns/1.0 ../meta/schnitzler-briefe-schema.xsd"
+     xml:id="L03714"
+     xml:base="https://id.acdh.oeaw.ac.at/schnitzler/schnitzler-briefe/editions">
    <teiHeader>
       <fileDesc>
          <titleStmt>
@@ -83,7 +87,7 @@
                               <extent>
                                  <measure unit="seite" quantity="2"/>
                                  <measure unit="blatt" quantity="1"/>
-                                 <measure unit="zeichenanzahl" quantity="482"/>
+                                 <measure unit="zeichenanzahl" quantity="481"/>
                               </extent>
                            </supportDesc>
                         </objectDesc>
@@ -112,12 +116,20 @@
                   – 10. 8. 1897?]</date>
                <placeName ref="#pmb50" evidence="conjecture">Wien</placeName>
             </correspAction>
-            <correspContext><ref type="belongsToCorrespondence" target="correspondence_2128">Plessner, Elsa</ref>
+            <correspContext>
+               <ref type="belongsToCorrespondence" target="correspondence_2128">Plessner, Elsa</ref>
                <ref subtype="previous_letter" type="withinCollection" target="L03697">Plessner an Schnitzler, 7. 8. [1897]</ref>
                <ref subtype="next_letter" type="withinCollection" target="L00715">Hofmannsthal an Schnitzler, [9. 8. 1897]</ref>
-               <ref subtype="previous_letter" type="withinCorrespondence" source="correspondence_2128" target="L03697">Plessner an Schnitzler, 7. 8. [1897]</ref>
-               <ref subtype="next_letter" type="withinCorrespondence" source="correspondence_2128" target="L03715">Plessner an Schnitzler, 9. 8. 1897</ref>
-            </correspContext></correspDesc>
+               <ref subtype="previous_letter"
+                    type="withinCorrespondence"
+                    source="correspondence_2128"
+                    target="L03697">Plessner an Schnitzler, 7. 8. [1897]</ref>
+               <ref subtype="next_letter"
+                    type="withinCorrespondence"
+                    source="correspondence_2128"
+                    target="L03715">Plessner an Schnitzler, 9. 8. 1897</ref>
+            </correspContext>
+         </correspDesc>
       </profileDesc>
       <revisionDesc status="candidate">
          <change who="SJ" when="2025-07-03">Export aus Transkribus</change>
@@ -144,8 +156,7 @@
             </opener>
             <p>Ich thue es doch nicht – d. h. die <anchor type="commentary" xml:id="K_L03714-1"/>höchstpersönliche Correctur<note type="commentary" corresp="K_L03714-1">
                   <rs type="person" ref="#pmb2128">Plessners</rs> Text <rs type="work" ref="#pmb30265">Der gläserne Käfig</rs> erschien im Erstdruck (<bibl>
-                     <rs type="org" ref="#pmb29209">Die Zeit</rs>, Bd. 12, Nr. 149, <date>7. 8.
-                        1897</date>, S. 95–96</bibl>) mit unautorisierten Änderungen, u. a. mit der
+                     <rs type="work" ref="#pmb36340">Die Zeit</rs>, Bd. 12, Nr. 149, <date>7. 8. 1897</date>, S. 95–96</bibl>) mit unautorisierten Änderungen, u. a. mit der
                   nicht von der Autorin vorgesehenen Gattungsbezeichnung »eine Parabel«. Als erste
                   wutentbrannte Reaktion darauf hatte <rs type="person" ref="#pmb2128">Plessner</rs>
                   angekündigt, die ausliegenden Zeitungsexemplare in allen wichtigen Kaffeehäusern
@@ -164,46 +175,192 @@
             </closer>
          </div>
       </body>
-      <back><listPerson><person xml:id="pmb2121"><persName><surname>Schnitzler</surname><forename>Arthur</forename></persName><birth><date when="1862-05-15">15. 5. 1862</date><settlement ref="pmb50"><placeName type="pref">Wien</placeName><location><geo>48,208333 16,373056</geo></location></settlement></birth><death><date when="1931-10-21">21. 10. 1931</date><settlement ref="pmb50"><placeName type="pref">Wien</placeName><location><geo>48,208333 16,373056</geo></location></settlement></death><sex value="male"/><occupation ref="pmb90">Schriftsteller/Schriftstellerin</occupation><occupation ref="pmb97">Mediziner/Medizinerin</occupation><idno type="gnd">https://d-nb.info/gnd/118609807/</idno></person><person xml:id="pmb2128"><persName>
-      <forename>Elsa</forename>
-      <surname>Plessner</surname>
-  </persName><birth>
-    <date when="1875-08-22">1875-08-22</date>
-      <settlement ref="pmb50">
-        <placeName type="pref">Wien</placeName>
-        <location><geo>48,208333 16,373056</geo></location>
-      </settlement>
-  </birth><death>
-    <date when="1932-05-07">1932-05-07</date>
-      <settlement ref="pmb49185">
-        <placeName type="pref">Alicante</placeName>
-        <location><geo>38,34517 -0,48149</geo></location>
-      </settlement>
-      <settlement ref="pmb296401">
-        <placeName type="pref">calle Gravina 15</placeName>
-        <location><geo>38,3456446 -0,47927879</geo></location>
-      </settlement>
-  </death></person></listPerson><listBibl><bibl xml:id="pmb30265" ana="comment"><title type="main">Der gläserne Käfig. Eine Parabel</title><title type="werk_link">https://www.google.at/books/edition/Der_arme_Teufel/W8R5i3Til3oC?hl=de&amp;gbpv=1&amp;pg=PA326&amp;printsec=frontcover</title><title type="werk_bibliografische-angabe">Elsa Pleßner: Der gläserne Käfig. Eine Parabel (Aus der „Wiener Zeit“.). In: Der arme Teufel, Vol. 13, Nr. 665, 29.8.1897, S. 323</title><title type="werk_bibliografische-angabe">Die Zeit, Bd. 12, Nr. 149, 7.8.1897, S. 95–96</title><author role="hat-geschaffen" ref="pmb2128">Plessner, Elsa</author></bibl></listBibl><listPlace><place xml:id="pmb295164"><placeName>Fröschelgasse 6</placeName><location type="coords">
-  <geo>48,252282 16,32192</geo>
-</location><location type="located_in_place">
-  <placeName ref="pmb288">Sievering</placeName>
-  <geo>48,252222 16,320833</geo>
-</location><location type="located_in_place">
-  <placeName ref="pmb820">Fröschelgasse</placeName>
-  <geo>48,252123207149 16,321191055407</geo>
-</location><location type="located_in_place">
-  <placeName ref="pmb69">XIX., Döbling</placeName>
-  <geo>48,25 16,33306</geo>
-</location></place><place xml:id="pmb50"><placeName>Wien</placeName><placeName type="ort_fruherer-name">K.K. Reichshaupt- und Residenzstadt Wien</placeName><placeName type="legacy-name-merge">Wien</placeName><placeName type="alternative-name">Bécs</placeName><placeName type="alternative-name">Land Wien</placeName><placeName type="alternative-name">Vídeň</placeName><placeName type="alternative-name">Wenia</placeName><placeName type="alternative-name">Beč</placeName><placeName type="ort_fruherer-name">Vindobona</placeName><placeName type="legacy-name-merge">Vindobona</placeName><placeName type="alternative-name">Vienna</placeName><placeName type="legacy-name-merge">Vienna</placeName><placeName type="alternative-name">Vienna</placeName><location type="coords">
-  <geo>48,208333 16,373056</geo>
-</location><location type="located_in_place">
-  <placeName ref="pmb41240">Österreich</placeName>
-  <geo>47,33333 13,33333</geo>
-</location></place></listPlace><listOrg><org xml:id="pmb29209" ana="comment"><orgName>Die Zeit. Wiener Wochenschrift [Redaktion]</orgName><location type="located_in_place">
-  <placeName ref="pmb296">Günthergasse</placeName>
-  <geo>48,216599877109 16,358330000258</geo>
-  <idno type="URL" subtype="schnitzler-bahr">https://schnitzler-bahr.acdh.oeaw.ac.at/pmb296.html</idno><idno type="URL" subtype="pmb">https://pmb.acdh.oeaw.ac.at/entity/296/</idno><idno type="URL" subtype="schnitzler-interviews">https://schnitzler-interviews.acdh.oeaw.ac.at/pmb296.html</idno><idno type="URL" subtype="schnitzler-briefe">https://schnitzler-briefe.acdh.oeaw.ac.at/pmb296.html</idno></location><location type="located_in_place">
-  <placeName ref="pmb50">Wien</placeName>
-  <geo>48,208333 16,373056</geo>
-  <idno type="URL" subtype="geonames">https://sws.geonames.org/2761369/</idno><idno type="URL" subtype="d-nb">https://d-nb.info/gnd/4066009-6</idno><idno type="URL" subtype="schnitzler-bahr">https://schnitzler-bahr.acdh.oeaw.ac.at/pmb50.html</idno><idno type="URL" subtype="pmb">https://pmb.acdh.oeaw.ac.at/entity/50/</idno><idno type="URL" subtype="pmb">https://pmb.acdh.oeaw.ac.at/entity/2316/</idno><idno type="URL" subtype="pmb">https://pmb.acdh.oeaw.ac.at/entity/20954/</idno><idno type="URL" subtype="pmb">https://pmb.acdh.oeaw.ac.at/entity/65221/</idno><idno type="URL" subtype="pmb">https://pmb.acdh.oeaw.ac.at/entity/65223/</idno><idno type="URL" subtype="kraus">https://www.kraus.wienbibliothek.at/legalkraus/pmb50.html</idno><idno type="URL" subtype="wikidata">http://www.wikidata.org/entity/Q1741</idno><idno type="URL" subtype="wikipedia">https://de.wikipedia.org/wiki/Wien</idno><idno type="URL" subtype="schnitzler-interviews">https://schnitzler-interviews.acdh.oeaw.ac.at/pmb50.html</idno><idno type="URL" subtype="geonames">https://sws.geonames.org/2761333/</idno><idno type="URL" subtype="pmb">https://pmb.acdh.oeaw.ac.at/entity/33999/</idno><idno type="URL" subtype="schnitzler-tagebuch">https://schnitzler-tagebuch.acdh.oeaw.ac.at/pmb50.html</idno><idno type="URL" subtype="wienerschnitzler">https://wienerschnitzler.org/pmb50.html</idno><idno type="URL" subtype="schnitzler-briefe">https://schnitzler-briefe.acdh.oeaw.ac.at/pmb50.html</idno><idno type="URL" subtype="schnitzler-kultur">https://schnitzler-kultur.acdh.oeaw.ac.at/pmb50.html</idno><idno type="URL" subtype="sk">https://sk.acdh.oeaw.ac.at/DWplace00347</idno><idno type="URL" subtype="sk">https://sk.acdh.oeaw.ac.at/DWplace00066</idno><idno type="URL" subtype="sk">https://sk.acdh.oeaw.ac.at/DWplace00085</idno><idno type="URL" subtype="biblio">https://biblio.ub.uni-freiburg.de/sf/#pmb50</idno><idno type="URL" subtype="schoenberg-ue">https://www.schoenberg-ue.at/ue/places/place.9.11</idno></location></org></listOrg></back></text>
+      <back>
+         <listPerson>
+            <person xml:id="pmb2128">
+               <persName>
+                  <forename>Elsa</forename>
+                  <surname>Plessner</surname>
+               </persName>
+               <birth>
+                  <date when="1875-08-22">1875-08-22</date>
+                  <settlement ref="pmb50">
+                     <placeName type="pref">Wien</placeName>
+                     <location>
+                        <geo>48,208333 16,373056</geo>
+                     </location>
+                  </settlement>
+               </birth>
+               <death>
+                  <date when="1932-05-07">1932-05-07</date>
+                  <settlement ref="pmb49185">
+                     <placeName type="pref">Alicante</placeName>
+                     <location>
+                        <geo>38,34517 -0,48149</geo>
+                     </location>
+                  </settlement>
+                  <settlement ref="pmb296401">
+                     <placeName type="pref">calle Gravina 15</placeName>
+                     <location>
+                        <geo>38,3456446 -0,47927879</geo>
+                     </location>
+                  </settlement>
+               </death>
+            </person>
+            <person xml:id="pmb2121">
+               <persName>
+                  <surname>Schnitzler</surname>
+                  <forename>Arthur</forename>
+               </persName>
+               <birth>
+                  <date when="1862-05-15">15. 5. 1862</date>
+                  <settlement ref="pmb50">
+                     <placeName type="pref">Wien</placeName>
+                     <location>
+                        <geo>48,208333 16,373056</geo>
+                     </location>
+                  </settlement>
+               </birth>
+               <death>
+                  <date when="1931-10-21">21. 10. 1931</date>
+                  <settlement ref="pmb50">
+                     <placeName type="pref">Wien</placeName>
+                     <location>
+                        <geo>48,208333 16,373056</geo>
+                     </location>
+                  </settlement>
+               </death>
+            </person>
+            <person xml:id="pmb12790" ana="comment">
+               <persName>
+                  <forename>Isidor</forename>
+                  <surname>Singer</surname>
+               </persName>
+               <birth>
+                  <date when="1857-01-16">1857-01-16</date>
+                  <settlement ref="pmb43471">
+                     <placeName type="pref">Budapest</placeName>
+                     <location>
+                        <geo>47,49835 19,04045</geo>
+                     </location>
+                  </settlement>
+               </birth>
+               <death>
+                  <date when="1927-12-08">1927-12-08</date>
+                  <settlement ref="pmb50">
+                     <placeName type="pref">Wien</placeName>
+                     <location>
+                        <geo>48,208333 16,373056</geo>
+                     </location>
+                  </settlement>
+               </death>
+            </person>
+            <person xml:id="pmb11867" ana="comment">
+               <persName>
+                  <forename>Heinrich</forename>
+                  <surname>Kanner</surname>
+               </persName>
+               <birth>
+                  <date when="1864-11-09">1864-11-09</date>
+                  <settlement ref="pmb36202">
+                     <placeName type="pref">Galați</placeName>
+                     <location>
+                        <geo>45,43687 28,05028</geo>
+                     </location>
+                  </settlement>
+               </birth>
+               <death>
+                  <date when="1930-02-15">1930-02-15</date>
+                  <settlement ref="pmb50">
+                     <placeName type="pref">Wien</placeName>
+                     <location>
+                        <geo>48,208333 16,373056</geo>
+                     </location>
+                  </settlement>
+               </death>
+            </person>
+            <person xml:id="pmb10815" ana="comment">
+               <persName>
+                  <forename>Hermann</forename>
+                  <surname>Bahr</surname>
+               </persName>
+               <birth>
+                  <date when="1863-07-19">1863-07-19</date>
+                  <settlement ref="pmb332">
+                     <placeName type="pref">Linz</placeName>
+                     <location>
+                        <geo>48,3 14,28333</geo>
+                     </location>
+                  </settlement>
+               </birth>
+               <death>
+                  <date when="1934-01-15">1934-01-15</date>
+                  <settlement ref="pmb45258">
+                     <placeName type="pref">München</placeName>
+                     <location>
+                        <geo>48,13743 11,57549</geo>
+                     </location>
+                  </settlement>
+               </death>
+            </person>
+         </listPerson>
+         <listBibl>
+            <bibl xml:id="pmb30265" ana="comment">
+               <title>Der gläserne Käfig. Eine Parabel</title>
+               <title type="werk_link">https://www.google.at/books/edition/Der_arme_Teufel/W8R5i3Til3oC?hl=de&amp;gbpv=1&amp;pg=PA326&amp;printsec=frontcover</title>
+               <title type="werk_bibliografische-angabe">Elsa Pleßner: Der gläserne Käfig. Eine Parabel (Aus der „Wiener Zeit“.). In: Der arme Teufel, Vol. 13, Nr. 665, 29.8.1897, S. 323</title>
+               <title type="werk_bibliografische-angabe">Die Zeit, Bd. 12, Nr. 149, 7.8.1897, S. 95–96</title>
+               <author ref="pmb2128" role="hat-geschaffen">Plessner, Elsa</author>
+            </bibl>
+            <bibl xml:id="pmb36340" ana="comment">
+               <title>Die Zeit. Wiener Wochenschrift</title>
+               <author ref="pmb12790" role="hat-herausgegeben">Singer, Isidor</author>
+               <author ref="pmb11867" role="hat-herausgegeben">Kanner, Heinrich</author>
+               <author ref="pmb10815" role="hat-herausgegeben">Bahr, Hermann</author>
+            </bibl>
+         </listBibl>
+         <listPlace>
+            <place xml:id="pmb50">
+               <placeName>Wien</placeName>
+               <placeName type="ort_fruherer-name">K.K. Reichshaupt- und Residenzstadt Wien</placeName>
+               <placeName type="alternative-name">Bécs</placeName>
+               <placeName type="alternative-name">Land Wien</placeName>
+               <placeName type="alternative-name">Vídeň</placeName>
+               <placeName type="alternative-name">Wenia</placeName>
+               <placeName type="alternative-name">Beč</placeName>
+               <placeName type="ort_fruherer-name">Vindobona</placeName>
+               <placeName type="alternative-name">Vienna</placeName>
+               <location type="coords">
+                  <geo>48,208333 16,373056</geo>
+               </location>
+               <location type="located_in_place">
+                  <placeName ref="pmb41240">Österreich</placeName>
+                  <geo>47,33333 13,33333</geo>
+               </location>
+               <location type="located_in_place">
+                  <placeName ref="pmb235218">Windmühlhöhe</placeName>
+                  <geo>48,24077 16,32092</geo>
+               </location>
+            </place>
+            <place xml:id="pmb295164">
+               <placeName>Fröschelgasse 6</placeName>
+               <location type="coords">
+                  <geo>48,252282 16,32192</geo>
+               </location>
+               <location type="located_in_place">
+                  <placeName ref="pmb288">Sievering</placeName>
+                  <geo>48,252222 16,320833</geo>
+               </location>
+               <location type="located_in_place">
+                  <placeName ref="pmb820">Fröschelgasse</placeName>
+                  <geo>48,252123207149 16,321191055407</geo>
+               </location>
+               <location type="located_in_place">
+                  <placeName ref="pmb69">XIX., Döbling</placeName>
+                  <geo>48,25 16,33306</geo>
+               </location>
+            </place>
+         </listPlace>
+      </back>
+   </text>
 </TEI>
