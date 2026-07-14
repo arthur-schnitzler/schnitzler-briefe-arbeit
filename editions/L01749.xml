@@ -1,6 +1,10 @@
-<?xml version='1.0' encoding='UTF-8'?>
+<?xml version="1.0" encoding="UTF-8"?>
 <?xml-model href="../meta/schnitzler-briefe-schematron.sch" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
-<TEI xmlns="http://www.tei-c.org/ns/1.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xml:id="L01749" xsi:schemaLocation="http://www.tei-c.org/ns/1.0 ../meta/schnitzler-briefe-schema.xsd" xml:base="https://id.acdh.oeaw.ac.at/schnitzler/schnitzler-briefe/editions">
+<TEI xmlns="http://www.tei-c.org/ns/1.0"
+     xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+     xml:id="L01749"
+     xsi:schemaLocation="http://www.tei-c.org/ns/1.0 ../meta/schnitzler-briefe-schema.xsd"
+     xml:base="https://id.acdh.oeaw.ac.at/schnitzler/schnitzler-briefe/editions">
    <teiHeader>
       <fileDesc>
          <titleStmt>
@@ -154,12 +158,20 @@
                   – 13. 1. 1908?]</date>
                <placeName ref="#pmb50">Wien</placeName>
             </correspAction>
-            <correspContext><ref type="belongsToCorrespondence" target="correspondence_11740">Hofmannsthal, Hugo von</ref>
+            <correspContext>
+               <ref type="belongsToCorrespondence" target="correspondence_11740">Hofmannsthal, Hugo von</ref>
                <ref subtype="previous_letter" type="withinCollection" target="L01748">Schnitzler an Beer-Hofmann, [1908?]</ref>
                <ref subtype="next_letter" type="withinCollection" target="L01750">Schnitzler an Bahr, 13. 1. 1908</ref>
-               <ref subtype="previous_letter" type="withinCorrespondence" source="correspondence_11740" target="L01745">Hofmannsthal an Schnitzler, 24. 12. 1907</ref>
-               <ref subtype="next_letter" type="withinCorrespondence" source="correspondence_11740" target="L01753">Hofmannsthal an Schnitzler, 17. 1. 1908</ref>
-            </correspContext></correspDesc>
+               <ref subtype="previous_letter"
+                    type="withinCorrespondence"
+                    source="correspondence_11740"
+                    target="L01745">Hofmannsthal an Schnitzler, 24. 12. 1907</ref>
+               <ref subtype="next_letter"
+                    type="withinCorrespondence"
+                    source="correspondence_11740"
+                    target="L01753">Hofmannsthal an Schnitzler, 17. 1. 1908</ref>
+            </correspContext>
+         </correspDesc>
       </profileDesc>
       <revisionDesc status="approved">
          <change who="MAM" when="2019-07-31">Angelegt aus Buchausgabe</change>
@@ -178,11 +190,15 @@
             <address>
                <addrLine>
                   <pb facs="MS-SCHNITZLER-B-00043-B-00002-000-00293"/>
-                  <hi rend="latintype">Herrn</hi></addrLine>
+                  <hi rend="latintype">Herrn</hi>
+               </addrLine>
                <addrLine>
-                  <hi rend="latintype">D<hi rend="superscript">r</hi> Arthur Schnitzler</hi></addrLine>
+                  <hi rend="latintype">D<hi rend="superscript">r</hi> Arthur
+                  Schnitzler</hi>
+               </addrLine>
                <addrLine>
-                  <rs type="place" ref="#pmb50">Wien</rs></addrLine>
+                  <rs type="place" ref="#pmb50">Wien</rs>
+               </addrLine>
                <addrLine>
                   <rs ref="#pmb168940" type="place">XVIII Spöttelgasse 7</rs>.</addrLine>
             </address>
@@ -192,12 +208,16 @@
                <pb facs="MS-SCHNITZLER-B-00043-B-00002-000-00294"/>
                <hi rend="pre-print">
                   <anchor type="commentary" xml:id="K_L01749-1"/>Ädvözlet <rs ref="#pmb44686" type="place">Diószegről</rs>
-                  <note type="commentary" corresp="K_L01749-1">ungarisch: Schöne Grüße aus <rs ref="#pmb44686" type="place">Diószeg</rs> (heute <rs ref="#pmb44686" type="place">Sládkovičovo</rs>)</note>.</hi></p>
+                  <note type="commentary" corresp="K_L01749-1">ungarisch: Schöne Grüße aus <rs ref="#pmb44686" type="place">Diószeg</rs> (heute <rs ref="#pmb44686" type="place">Sládkovičovo</rs>)</note>.</hi>
+            </p>
             <p rend="center">
                <hi rend="pre-print">
                   <rs type="place" ref="#pmb46382">
-                     <anchor type="commentary" xml:id="K_L01749-2"/>Kastély<note type="commentary" corresp="K_L01749-2">Im <rs type="place" ref="#pmb46382">Kuffner-Schloss</rs> lebten Verwandte <rs type="person" ref="#pmb11740">Hofmannsthals</rs>s mütterlicherseits.</note>
-                  </rs>.</hi></p>
+                     <anchor type="commentary" xml:id="K_L01749-2"/>Kastély<note type="commentary" corresp="K_L01749-2">Im <rs type="place" ref="#pmb46382">Kuffner-Schloss</rs> lebten Verwandte <rs type="person" ref="#pmb11740">Hofmannsthals</rs>
+                        <space unit="chars" quantity="1"/>
+                        <rs type="person" ref="#pmb18404" subtype="implied">mütterlicherseits</rs>.</note>
+                  </rs>.</hi>
+            </p>
          </div>
          <div type="writingSession" n="1">
             <opener>
@@ -214,80 +234,199 @@
             </closer>
          </div>
       </body>
-      <back><listPerson><person xml:id="pmb11740"><persName>
-      <forename>Hugo von</forename>
-      <surname>Hofmannsthal</surname>
-  </persName><birth>
-    <date when="1874-02-01">1874-02-01</date>
-      <settlement ref="pmb50">
-        <placeName type="pref">Wien</placeName>
-        <location><geo>48,208333 16,373056</geo></location>
-      </settlement>
-  </birth><death>
-    <date when="1929-07-15">1929-07-15</date>
-      <settlement ref="pmb173">
-        <placeName type="pref">Rodaun</placeName>
-        <location><geo>48,132793312328 16,256152195922</geo></location>
-      </settlement>
-  </death></person><person xml:id="pmb2121"><persName><surname>Schnitzler</surname><forename>Arthur</forename></persName><birth><date when="1862-05-15">15. 5. 1862</date><settlement ref="pmb50"><placeName type="pref">Wien</placeName><location><geo>48,208333 16,373056</geo></location></settlement></birth><death><date when="1931-10-21">21. 10. 1931</date><settlement ref="pmb50"><placeName type="pref">Wien</placeName><location><geo>48,208333 16,373056</geo></location></settlement></death><sex value="male"/><occupation ref="pmb90">Schriftsteller/Schriftstellerin</occupation><occupation ref="pmb97">Mediziner/Medizinerin</occupation><idno type="gnd">https://d-nb.info/gnd/118609807/</idno></person><person xml:id="pmb2173"><persName>
-      <forename>Olga</forename>
-      <surname>Schnitzler</surname>
-  </persName><birth>
-    <date when="1882-01-17">1882-01-17</date>
-      <settlement ref="pmb50">
-        <placeName type="pref">Wien</placeName>
-        <location><geo>48,208333 16,373056</geo></location>
-      </settlement>
-  </birth><death>
-    <date when="1970-01-13">1970-01-13</date>
-      <settlement ref="pmb885">
-        <placeName type="pref">Lugano</placeName>
-        <location><geo>46,01008 8,96004</geo></location>
-      </settlement>
-  </death></person><person xml:id="pmb2292" ana="implied"><persName>
-      <forename>Gertrude von</forename>
-      <surname>Hofmannsthal</surname>
-  </persName><birth>
-    <date when="1880-03-16">1880-03-16</date>
-      <settlement ref="pmb50">
-        <placeName type="pref">Wien</placeName>
-        <location><geo>48,208333 16,373056</geo></location>
-      </settlement>
-      <settlement ref="pmb207076">
-        <placeName type="pref">Strauchgasse 1</placeName>
-        <location><geo>48,210922 16,366201</geo></location>
-      </settlement>
-  </birth><death>
-    <date when="1959-11-09">1959-11-09</date>
-      <settlement ref="pmb46885">
-        <placeName type="pref">Paddington</placeName>
-        <location><geo>51,51558 -0,1763</geo></location>
-      </settlement>
-  </death></person></listPerson><listPlace><place xml:id="pmb168940"><placeName>Edmund-Weiß-Gasse 7</placeName><placeName type="ort_fruherer-name">Spöttelgasse 7</placeName><location type="coords">
-  <geo>48,2304 16,33472</geo>
-</location><location type="located_in_place">
-  <placeName ref="pmb68">XVIII., Währing</placeName>
-  <geo>48,23333 16,31667</geo>
-</location><location type="located_in_place">
-  <placeName ref="pmb533">Währinger Cottage</placeName>
-  <geo>48,233056 16,341944</geo>
-</location><location type="located_in_place">
-  <placeName ref="pmb133">Edmund-Weiß-Gasse</placeName>
-  <geo>48,23056 16,3348</geo>
-</location></place><place xml:id="pmb44686"><placeName>Sládkovičovo</placeName><placeName type="ort_fruherer-name">Diószeg</placeName><location type="coords">
-  <geo>48,203056 17,646944</geo>
-</location><location type="located_in_place">
-  <placeName ref="pmb34478">Slowakei</placeName>
-  <geo>48,66667 19,5</geo>
-</location></place><place xml:id="pmb46382"><placeName>Kaštiel Kuffnerovcov</placeName><location type="coords">
-  <geo>48,206158 17,646048</geo>
-</location><location type="located_in_place">
-  <placeName ref="pmb44686">Sládkovičovo</placeName>
-  <geo>48,203056 17,646944</geo>
-</location></place><place xml:id="pmb50"><placeName>Wien</placeName><placeName type="ort_fruherer-name">K.K. Reichshaupt- und Residenzstadt Wien</placeName><placeName type="legacy-name-merge">Wien</placeName><placeName type="alternative-name">Bécs</placeName><placeName type="alternative-name">Land Wien</placeName><placeName type="alternative-name">Vídeň</placeName><placeName type="alternative-name">Wenia</placeName><placeName type="alternative-name">Beč</placeName><placeName type="ort_fruherer-name">Vindobona</placeName><placeName type="legacy-name-merge">Vindobona</placeName><placeName type="alternative-name">Vienna</placeName><placeName type="legacy-name-merge">Vienna</placeName><placeName type="alternative-name">Vienna</placeName><location type="coords">
-  <geo>48,208333 16,373056</geo>
-</location><location type="located_in_place">
-  <placeName ref="pmb41240">Österreich</placeName>
-  <geo>47,33333 13,33333</geo>
-</location></place></listPlace></back></text>
+      <back>
+         <listPerson>
+            <person xml:id="pmb11740">
+               <persName>
+                  <forename>Hugo von</forename>
+                  <surname>Hofmannsthal</surname>
+               </persName>
+               <birth>
+                  <date when="1874-02-01">1874-02-01</date>
+                  <settlement ref="pmb50">
+                     <placeName type="pref">Wien</placeName>
+                     <location>
+                        <geo>48,208333 16,373056</geo>
+                     </location>
+                  </settlement>
+               </birth>
+               <death>
+                  <date when="1929-07-15">1929-07-15</date>
+                  <settlement ref="pmb173">
+                     <placeName type="pref">Rodaun</placeName>
+                     <location>
+                        <geo>48,132793312328 16,256152195922</geo>
+                     </location>
+                  </settlement>
+               </death>
+            </person>
+            <person xml:id="pmb2121">
+               <persName>
+                  <surname>Schnitzler</surname>
+                  <forename>Arthur</forename>
+               </persName>
+               <birth>
+                  <date when="1862-05-15">15. 5. 1862</date>
+                  <settlement ref="pmb50">
+                     <placeName type="pref">Wien</placeName>
+                     <location>
+                        <geo>48,208333 16,373056</geo>
+                     </location>
+                  </settlement>
+               </birth>
+               <death>
+                  <date when="1931-10-21">21. 10. 1931</date>
+                  <settlement ref="pmb50">
+                     <placeName type="pref">Wien</placeName>
+                     <location>
+                        <geo>48,208333 16,373056</geo>
+                     </location>
+                  </settlement>
+               </death>
+            </person>
+            <person xml:id="pmb2173">
+               <persName>
+                  <forename>Olga</forename>
+                  <surname>Schnitzler</surname>
+               </persName>
+               <birth>
+                  <date when="1882-01-17">1882-01-17</date>
+                  <settlement ref="pmb50">
+                     <placeName type="pref">Wien</placeName>
+                     <location>
+                        <geo>48,208333 16,373056</geo>
+                     </location>
+                  </settlement>
+               </birth>
+               <death>
+                  <date when="1970-01-13">1970-01-13</date>
+                  <settlement ref="pmb885">
+                     <placeName type="pref">Lugano</placeName>
+                     <location>
+                        <geo>46,01008 8,96004</geo>
+                     </location>
+                  </settlement>
+               </death>
+            </person>
+            <person xml:id="pmb18404" ana="comment">
+               <persName>
+                  <forename>Anna von</forename>
+                  <surname>Hofmannsthal</surname>
+               </persName>
+               <birth>
+                  <date when="1849-01-27">1849-01-27</date>
+                  <settlement ref="pmb50">
+                     <placeName type="pref">Wien</placeName>
+                     <location>
+                        <geo>48,208333 16,373056</geo>
+                     </location>
+                  </settlement>
+               </birth>
+               <death>
+                  <date when="1904-03-22">1904-03-22</date>
+                  <settlement ref="pmb40511">
+                     <placeName type="pref">Sanatorium Fürth</placeName>
+                     <location>
+                        <geo>48,210713 16,352811</geo>
+                     </location>
+                  </settlement>
+               </death>
+            </person>
+            <person xml:id="pmb2292" ana="implied">
+               <persName>
+                  <forename>Gertrude von</forename>
+                  <surname>Hofmannsthal</surname>
+               </persName>
+               <birth>
+                  <date when="1880-03-16">1880-03-16</date>
+                  <settlement ref="pmb50">
+                     <placeName type="pref">Wien</placeName>
+                     <location>
+                        <geo>48,208333 16,373056</geo>
+                     </location>
+                  </settlement>
+                  <settlement ref="pmb207076">
+                     <placeName type="pref">Strauchgasse 1</placeName>
+                     <location>
+                        <geo>48,210922 16,366201</geo>
+                     </location>
+                  </settlement>
+               </birth>
+               <death>
+                  <date when="1959-11-09">1959-11-09</date>
+                  <settlement ref="pmb46885">
+                     <placeName type="pref">Paddington</placeName>
+                     <location>
+                        <geo>51,51558 -0,1763</geo>
+                     </location>
+                  </settlement>
+               </death>
+            </person>
+         </listPerson>
+         <listPlace>
+            <place xml:id="pmb44686" ana="comment">
+               <placeName>Sládkovičovo</placeName>
+               <placeName type="ort_fruherer-name">Diószeg</placeName>
+               <location type="coords">
+                  <geo>48,203056 17,646944</geo>
+               </location>
+               <location type="located_in_place">
+                  <placeName ref="pmb34478">Slowakei</placeName>
+                  <geo>48,66667 19,5</geo>
+               </location>
+            </place>
+            <place xml:id="pmb50">
+               <placeName>Wien</placeName>
+               <placeName type="ort_fruherer-name">K.K. Reichshaupt- und Residenzstadt Wien</placeName>
+               <placeName type="alternative-name">Bécs</placeName>
+               <placeName type="alternative-name">Land Wien</placeName>
+               <placeName type="alternative-name">Vídeň</placeName>
+               <placeName type="alternative-name">Wenia</placeName>
+               <placeName type="alternative-name">Beč</placeName>
+               <placeName type="ort_fruherer-name">Vindobona</placeName>
+               <placeName type="alternative-name">Vienna</placeName>
+               <location type="coords">
+                  <geo>48,208333 16,373056</geo>
+               </location>
+               <location type="located_in_place">
+                  <placeName ref="pmb41240">Österreich</placeName>
+                  <geo>47,33333 13,33333</geo>
+               </location>
+               <location type="located_in_place">
+                  <placeName ref="pmb235218">Windmühlhöhe</placeName>
+                  <geo>48,24077 16,32092</geo>
+               </location>
+            </place>
+            <place xml:id="pmb168940">
+               <placeName>Edmund-Weiß-Gasse 7</placeName>
+               <placeName type="ort_fruherer-name">Spöttelgasse 7</placeName>
+               <location type="coords">
+                  <geo>48,2304 16,33472</geo>
+               </location>
+               <location type="located_in_place">
+                  <placeName ref="pmb68">XVIII., Währing</placeName>
+                  <geo>48,23333 16,31667</geo>
+               </location>
+               <location type="located_in_place">
+                  <placeName ref="pmb533">Währinger Cottage</placeName>
+                  <geo>48,233056 16,341944</geo>
+               </location>
+               <location type="located_in_place">
+                  <placeName ref="pmb133">Edmund-Weiß-Gasse</placeName>
+                  <geo>48,23056 16,3348</geo>
+               </location>
+            </place>
+            <place xml:id="pmb46382" ana="comment">
+               <placeName>Kaštiel Kuffnerovcov</placeName>
+               <location type="coords">
+                  <geo>48,206158 17,646048</geo>
+               </location>
+               <location type="located_in_place">
+                  <placeName ref="pmb44686">Sládkovičovo</placeName>
+                  <geo>48,203056 17,646944</geo>
+               </location>
+            </place>
+         </listPlace>
+      </back>
+   </text>
 </TEI>
