@@ -1,10 +1,6 @@
-<?xml version="1.0" encoding="UTF-8"?>
+<?xml version='1.0' encoding='UTF-8'?>
 <?xml-model href="../meta/schnitzler-briefe-schematron.sch" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
-<TEI xmlns="http://www.tei-c.org/ns/1.0"
-     xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-     xsi:schemaLocation="http://www.tei-c.org/ns/1.0 ../meta/schnitzler-briefe-schema.xsd"
-     xml:base="https://id.acdh.oeaw.ac.at/schnitzler/schnitzler-briefe/editions"
-     xml:id="L04500">
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.tei-c.org/ns/1.0 ../meta/schnitzler-briefe-schema.xsd" xml:base="https://id.acdh.oeaw.ac.at/schnitzler/schnitzler-briefe/editions" xml:id="L04500">
    <teiHeader>
       <fileDesc>
          <titleStmt>
@@ -117,8 +113,8 @@
                               <desc>
                                  <stamp n="2">
                                     <placeName ref="#pmb51">Wien 1/1 1</placeName>
-                                    <date when="1901-04-10">
-                                       <unclear>10.</unclear> 4. 1901</date>
+                                    <date when="1901-04-11">
+                                       <unclear>11.</unclear> 4. 1901</date>
                                     <time>10–11½ V.</time>
                                     <addSpan>bestellt</addSpan>
                                  </stamp>
@@ -138,7 +134,7 @@
          <correspDesc>
             <correspAction type="sent">
                <persName ref="#pmb2121">Schnitzler, Arthur</persName>
-               <date when="1901-04-09" n="01">9. 4. 1901</date>
+               <date when="1901-04-09" n="02">9. 4. 1901</date>
                <placeName ref="#pmb445">Rom</placeName>
             </correspAction>
             <correspAction type="transmitted">
@@ -146,15 +142,20 @@
                <placeName ref="#pmb445">Rom</placeName>
             </correspAction>
             <correspAction type="delivered">
-               <date when="1901-04-10">[10]. 4. 1901</date>
+               <date when="1901-04-11">1[1]. 4. 1901</date>
                <placeName ref="#pmb51">I., Innere Stadt</placeName>
             </correspAction>
             <correspAction type="received">
                <persName ref="#pmb12740">Schwarzkopf, Gustav</persName>
-               <date evidence="conjecture" notBefore="1901-04-10" notAfter="1901-04-14">[10. 4. 1901 – 14. 4. 1901?]</date>
+               <date when="1901-04-11" evidence="conjecture">1[1]. 4. 1901</date>
                <placeName ref="#pmb50">Wien</placeName>
             </correspAction>
-         </correspDesc>
+         <correspContext><ref type="belongsToCorrespondence" target="correspondence_12740">Schwarzkopf, Gustav</ref>
+               <ref subtype="previous_letter" type="withinCollection" target="L01107">Schnitzler an Beer-Hofmann, 9. 4. 1901</ref>
+               <ref subtype="next_letter" type="withinCollection" target="L03879">Herzl an Schnitzler, 11. 4. 1901</ref>
+               <ref subtype="previous_letter" type="withinCorrespondence" source="correspondence_12740" target="L04501">Schnitzler an Schwarzkopf, 29. 3. 1901</ref>
+               <ref subtype="next_letter" type="withinCorrespondence" source="correspondence_12740" target="L04519">Schnitzler an Schwarzkopf, 14. 4. 1901</ref>
+            </correspContext></correspDesc>
       </profileDesc>
       <revisionDesc status="proposed">
          <change who="MAM" when="2026-06-11">Export aus
@@ -204,7 +205,7 @@
             <opener>
                <dateline rend="right">
                   <pb facs="HS00048772X_0309"/>
-                  <date>9.&#160;4.&#160;901</date>
+                  <date>9. 4. 901</date>
                </dateline>
             </opener>
             <p>Ich hab es wirklich ſo geſehen. Herzlichſt Ihr<lb/>

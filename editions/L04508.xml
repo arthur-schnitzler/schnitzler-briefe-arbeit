@@ -1,8 +1,6 @@
-<?xml version="1.0" encoding="UTF-8"?>
+<?xml version='1.0' encoding='UTF-8'?>
 <?xml-model href="../meta/schnitzler-briefe-schematron.sch" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
-<TEI xmlns="http://www.tei-c.org/ns/1.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-   xsi:schemaLocation="http://www.tei-c.org/ns/1.0 ../meta/schnitzler-briefe-schema.xsd"
-   xml:base="https://id.acdh.oeaw.ac.at/schnitzler/schnitzler-briefe/editions" xml:id="L04508">
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.tei-c.org/ns/1.0 ../meta/schnitzler-briefe-schema.xsd" xml:base="https://id.acdh.oeaw.ac.at/schnitzler/schnitzler-briefe/editions" xml:id="L04508">
    <teiHeader>
       <fileDesc>
          <titleStmt>
@@ -129,7 +127,7 @@
          <correspDesc>
             <correspAction type="sent">
                <persName ref="#pmb2121">Schnitzler, Arthur</persName>
-               <date when="1913-07-23" n="01">23. 7. 1913</date>
+               <date when="1913-07-23" n="02">23. 7. 1913</date>
                <placeName ref="#pmb50">Wien</placeName>
             </correspAction>
             <correspAction type="transmitted">
@@ -146,7 +144,12 @@
                   – 5. 8. 1913?]</date>
                <placeName ref="#pmb50">Wien</placeName>
             </correspAction>
-         </correspDesc>
+         <correspContext><ref type="belongsToCorrespondence" target="correspondence_12740">Schwarzkopf, Gustav</ref>
+               <ref subtype="previous_letter" type="withinCollection" target="L02145">Schnitzler an Beer-Hofmann, 23. 7. 1913</ref>
+               <ref subtype="next_letter" type="withinCollection" target="L02146">Beer-Hofmann an Schnitzler, 4. 8. 1913</ref>
+               <ref subtype="previous_letter" type="withinCorrespondence" source="correspondence_12740" target="L04223">Schnitzler an Schwarzkopf, 18. 7. 1913</ref>
+               <ref subtype="next_letter" type="withinCorrespondence" source="correspondence_12740" target="L04260">Schwarzkopf an Schnitzler, 5. 8. 1913</ref>
+            </correspContext></correspDesc>
       </profileDesc>
       <revisionDesc status="proposed">
          <change who="MAM" when="2026-06-11">Export aus Transkribus</change>
@@ -184,18 +187,12 @@
                </dateline>
             </opener>
             <p>
-               <salute>lieber Guſtav,</salute> ich weiſs nicht ob Sie <anchor type="commentary"
-                  xml:id="K_L04508-1"/>meine letzte Karte<note type="commentary"
-                  corresp="K_L04508-1">
-                  <ref type="schnitzler-briefe" target="L04223"/>. Offenbar hatte <rs type="person"
-                     ref="#pmb12740">Schwarzkopf</rs> die Karte mit der Information zum geplanten
-                  Ankunftsdatums der Familie <rs type="person"
-                     ref="#pmb2121 #pmb2173 #pmb12692 #pmb2238" subtype="implied">Schnitzler</rs> in
-                     <rs type="place" ref="#pmb19862">Brijuni</rs> erhalten, denn am <ref
-                     type="schnitzler-tagebuch" target="1913-07-25" subtype="date-only"/>, dem Tag darauf, traf er
+               <salute>lieber Guſtav,</salute> ich weiſs nicht ob Sie <anchor type="commentary" xml:id="K_L04508-1"/>meine letzte Karte<note type="commentary" corresp="K_L04508-1">
+                  <ref type="schnitzler-briefe" target="L04223"/>. Offenbar hatte <rs type="person" ref="#pmb12740">Schwarzkopf</rs> die Karte mit der Information zum geplanten
+                  Ankunftsdatums der Familie <rs type="person" ref="#pmb2121 #pmb2173 #pmb12692 #pmb2238" subtype="implied">Schnitzler</rs> in
+                     <rs type="place" ref="#pmb19862">Brijuni</rs> erhalten, denn am <ref type="schnitzler-tagebuch" target="1913-07-25" subtype="date-only"/>, dem Tag darauf, traf er
                   selbst dort ein und besuchte sie an den folgenden beiden Tagen. Die vorliegende
-                  Karte erreichte ihn dagegen erst nach seiner Rückkehr nach <rs type="place"
-                     ref="#pmb50">Wien</rs>, wie aus der Umadressierung zu schließen ist, also erst
+                  Karte erreichte ihn dagegen erst nach seiner Rückkehr nach <rs type="place" ref="#pmb50">Wien</rs>, wie aus der Umadressierung zu schließen ist, also erst
                   nach dem <date>27. 7. 1913</date>. Er dürfte, als die Karte in seinem Urlaubsort
                      <rs type="place" ref="#pmb38096">Opatija</rs> eintraf schon auf dem Weg nach
                      <rs type="place" ref="#pmb851">Pula</rs> gewesen sein, wo er sich
