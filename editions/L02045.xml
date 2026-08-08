@@ -1,6 +1,10 @@
-<?xml version='1.0' encoding='UTF-8'?>
+<?xml version="1.0" encoding="UTF-8"?>
 <?xml-model href="../meta/schnitzler-briefe-schematron.sch" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
-<TEI xmlns="http://www.tei-c.org/ns/1.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.tei-c.org/ns/1.0 ../meta/schnitzler-briefe-schema.xsd" xml:id="L02045" xml:base="https://id.acdh.oeaw.ac.at/schnitzler/schnitzler-briefe/editions">
+<TEI xmlns="http://www.tei-c.org/ns/1.0"
+     xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+     xsi:schemaLocation="http://www.tei-c.org/ns/1.0 ../meta/schnitzler-briefe-schema.xsd"
+     xml:id="L02045"
+     xml:base="https://id.acdh.oeaw.ac.at/schnitzler/schnitzler-briefe/editions">
    <teiHeader>
       <fileDesc>
          <titleStmt>
@@ -132,12 +136,20 @@
                <date evidence="conjecture" notBefore="1911-11-15" notAfter="1911-11-19">[15. 11. 1911 – 19. 11. 1911?]</date>
                <placeName ref="#pmb50">Wien</placeName>
             </correspAction>
-            <correspContext><ref type="belongsToCorrespondence" target="correspondence_10863">Beer-Hofmann, Richard</ref>
+            <correspContext>
+               <ref type="belongsToCorrespondence" target="correspondence_10863">Beer-Hofmann, Richard</ref>
                <ref subtype="previous_letter" type="withinCollection" target="L03789">Schnitzler an Zweig, 9. 11. 1911</ref>
                <ref subtype="next_letter" type="withinCollection" target="L04521">Schnitzler, Schnitzler, Steinrück an Schwarzkopf, 14. 11. 1911</ref>
-               <ref subtype="previous_letter" type="withinCorrespondence" source="correspondence_10863" target="L02043">Schnitzler, Schnitzler an Beer-Hofmann, 7. 11. 1911</ref>
-               <ref subtype="next_letter" type="withinCorrespondence" source="correspondence_10863" target="L02565">Schnitzler an Beer-Hofmann, [30. 11. 1911?]</ref>
-            </correspContext></correspDesc>
+               <ref subtype="previous_letter"
+                    type="withinCorrespondence"
+                    source="correspondence_10863"
+                    target="L02043">Schnitzler, Schnitzler an Beer-Hofmann, 7. 11. 1911</ref>
+               <ref subtype="next_letter"
+                    type="withinCorrespondence"
+                    source="correspondence_10863"
+                    target="L02565">Schnitzler an Beer-Hofmann, [30. 11. 1911?]</ref>
+            </correspContext>
+         </correspDesc>
       </profileDesc>
       <revisionDesc status="approved">
          <change who="MAM" when="2021-02-04">Angelegt</change>
@@ -156,12 +168,19 @@
             <address>
                <addrLine>
                   <pb facs="1911_AS_RBH_1_00009"/>Herrn <hi rend="latintype">Dr. Rich
-                     Beer-Hofmann</hi></addrLine>
+                     Beer-Hofmann</hi>
+               </addrLine>
                <addrLine>
-                  <rs type="place" ref="#pmb68">Wien XVIII</rs></addrLine>
+                  <rs type="place" ref="#pmb68">Wien XVIII</rs>
+               </addrLine>
                <addrLine>
                   <hi rend="latintype">
-                     <rs type="place" ref="#pmb237633">Hasenauerstr 46</rs>.</hi></addrLine>
+                     <anchor type="commentary" xml:id="K_L02045-1"/>
+                     <rs type="place" ref="#pmb237633">Hasenauerstr 46</rs>
+                     <note type="commentary" corresp="K_L02045-1">Verwechslung <rs type="person" ref="#pmb2121">Schnitzlers</rs>, hier wohnten <rs type="person" ref="#pmb2646">Felix</rs> und
+                        <rs type="person" ref="#pmb2642">Else Speidel</rs>, <rs type="person" ref="#pmb10863 #pmb10860">Beer-Hofmanns</rs> wohnten auf
+                        Nummer <rs type="place" ref="#pmb235251">59</rs>.</note>.</hi>
+               </addrLine>
             </address>
          </div>
          <div type="image">
@@ -169,7 +188,8 @@
                <pb facs="1911_AS_RBH_1_00008"/>
                <hi rend="pre-print">
                   <rs type="place" ref="#pmb2318">Partenkirchen</rs> und <rs type="place" ref="#pmb52102">St. Anton</rs>
-               </hi></p>
+               </hi>
+            </p>
          </div>
          <div type="writingSession" n="1">
             <opener>
@@ -192,85 +212,276 @@
             </closer>
          </div>
       </body>
-      <back><listPerson><person xml:id="pmb10863"><persName>
-      <forename>Richard</forename>
-      <surname>Beer-Hofmann</surname>
-  </persName><birth>
-    <date when="1866-07-11">1866-07-11</date>
-      <settlement ref="pmb50">
-        <placeName type="pref">Wien</placeName>
-        <location><geo>48,208333 16,373056</geo></location>
-      </settlement>
-  </birth><death>
-    <date when="1945-09-26">1945-09-26</date>
-      <settlement ref="pmb44053">
-        <placeName type="pref">New York City</placeName>
-        <location><geo>40,71427 -74,00597</geo></location>
-      </settlement>
-  </death></person><person xml:id="pmb2121"><persName><surname>Schnitzler</surname><forename>Arthur</forename></persName><birth><date when="1862-05-15">15. 5. 1862</date><settlement ref="pmb50"><placeName type="pref">Wien</placeName><location><geo>48,208333 16,373056</geo></location></settlement></birth><death><date when="1931-10-21">21. 10. 1931</date><settlement ref="pmb50"><placeName type="pref">Wien</placeName><location><geo>48,208333 16,373056</geo></location></settlement></death><sex value="male"/><occupation ref="pmb90">Schriftsteller/Schriftstellerin</occupation><occupation ref="pmb97">Mediziner/Medizinerin</occupation><idno type="gnd">https://d-nb.info/gnd/118609807/</idno></person><person xml:id="pmb2173"><persName>
-      <forename>Olga</forename>
-      <surname>Schnitzler</surname>
-  </persName><birth>
-    <date when="1882-01-17">1882-01-17</date>
-      <settlement ref="pmb50">
-        <placeName type="pref">Wien</placeName>
-        <location><geo>48,208333 16,373056</geo></location>
-      </settlement>
-  </birth><death>
-    <date when="1970-01-13">1970-01-13</date>
-      <settlement ref="pmb885">
-        <placeName type="pref">Lugano</placeName>
-        <location><geo>46,01008 8,96004</geo></location>
-      </settlement>
-  </death></person><person xml:id="pmb2315"><persName>
-      <forename>Elisabeth</forename>
-      <surname>Steinrück</surname>
-  </persName><birth>
-    <date when="1885-11-19">1885-11-19</date>
-  </birth><death>
-    <date when="1920-04-07">1920-04-07</date>
-      <settlement ref="pmb2318">
-        <placeName type="pref">Partenkirchen</placeName>
-        <location><geo>47,4956 11,1097</geo></location>
-      </settlement>
-  </death></person></listPerson><listPlace><place xml:id="pmb2318"><placeName>Partenkirchen</placeName><location type="coords">
-  <geo>47,4956 11,1097</geo>
-</location><location type="located_in_place">
-  <placeName ref="pmb667">Garmisch-Partenkirchen</placeName>
-  <geo>47,49209 11,09576</geo>
-</location></place><place xml:id="pmb237633"><placeName>Hasenauerstraße 46</placeName><location type="coords">
-  <geo>48,234039 16,338443</geo>
-</location><location type="located_in_place">
-  <placeName ref="pmb68">XVIII., Währing</placeName>
-  <geo>48,23333 16,31667</geo>
-</location><location type="located_in_place">
-  <placeName ref="pmb533">Währinger Cottage</placeName>
-  <geo>48,233056 16,341944</geo>
-</location><location type="located_in_place">
-  <placeName ref="pmb383">Hasenauerstraße</placeName>
-  <geo>48,233816866614 16,337927920952</geo>
-</location></place><place xml:id="pmb50"><placeName>Wien</placeName><placeName type="ort_fruherer-name">K.K. Reichshaupt- und Residenzstadt Wien</placeName><placeName type="legacy-name-merge">Wien</placeName><placeName type="alternative-name">Bécs</placeName><placeName type="alternative-name">Land Wien</placeName><placeName type="alternative-name">Vídeň</placeName><placeName type="alternative-name">Wenia</placeName><placeName type="alternative-name">Beč</placeName><placeName type="ort_fruherer-name">Vindobona</placeName><placeName type="legacy-name-merge">Vindobona</placeName><placeName type="alternative-name">Vienna</placeName><placeName type="legacy-name-merge">Vienna</placeName><placeName type="alternative-name">Vienna</placeName><location type="coords">
-  <geo>48,208333 16,373056</geo>
-</location><location type="located_in_place">
-  <placeName ref="pmb41240">Österreich</placeName>
-  <geo>47,33333 13,33333</geo>
-</location></place><place xml:id="pmb52102"><placeName>St. Anton [Partenkirchen]</placeName><location type="coords">
-  <geo>47,498525 11,111318</geo>
-</location><location type="located_in_place">
-  <placeName ref="pmb2318">Partenkirchen</placeName>
-  <geo>47,4956 11,1097</geo>
-</location></place><place xml:id="pmb667"><placeName>Garmisch-Partenkirchen</placeName><location type="coords">
-  <geo>47,49209 11,09576</geo>
-</location><location type="located_in_place">
-  <placeName ref="pmb314">Bayern</placeName>
-  <geo>49,0 11,5</geo>
-</location></place><place xml:id="pmb68"><placeName>XVIII., Währing</placeName><placeName type="legacy-name-merge">Währing</placeName><location type="coords">
-  <geo>48,23333 16,31667</geo>
-</location><location type="located_in_place">
-  <placeName ref="pmb41240">Österreich</placeName>
-  <geo>47,33333 13,33333</geo>
-</location><location type="located_in_place">
-  <placeName ref="pmb50">Wien</placeName>
-  <geo>48,208333 16,373056</geo>
-</location></place></listPlace></back></text>
+      <back>
+         <listPerson>
+            <person xml:id="pmb2121">
+               <persName>
+                  <surname>Schnitzler</surname>
+                  <forename>Arthur</forename>
+               </persName>
+               <birth>
+                  <date when="1862-05-15">15. 5. 1862</date>
+                  <settlement ref="pmb50">
+                     <placeName type="pref">Wien</placeName>
+                     <location>
+                        <geo>48,208333 16,373056</geo>
+                     </location>
+                  </settlement>
+               </birth>
+               <death>
+                  <date when="1931-10-21">21. 10. 1931</date>
+                  <settlement ref="pmb50">
+                     <placeName type="pref">Wien</placeName>
+                     <location>
+                        <geo>48,208333 16,373056</geo>
+                     </location>
+                  </settlement>
+               </death>
+            </person>
+            <person xml:id="pmb2173">
+               <persName>
+                  <forename>Olga</forename>
+                  <surname>Schnitzler</surname>
+               </persName>
+               <birth>
+                  <date when="1882-01-17">1882-01-17</date>
+                  <settlement ref="pmb50">
+                     <placeName type="pref">Wien</placeName>
+                     <location>
+                        <geo>48,208333 16,373056</geo>
+                     </location>
+                  </settlement>
+               </birth>
+               <death>
+                  <date when="1970-01-13">1970-01-13</date>
+                  <settlement ref="pmb885">
+                     <placeName type="pref">Lugano</placeName>
+                     <location>
+                        <geo>46,01008 8,96004</geo>
+                     </location>
+                  </settlement>
+               </death>
+            </person>
+            <person xml:id="pmb2315">
+               <persName>
+                  <forename>Elisabeth</forename>
+                  <surname>Steinrück</surname>
+               </persName>
+               <birth>
+                  <date when="1885-11-19">1885-11-19</date>
+               </birth>
+               <death>
+                  <date when="1920-04-07">1920-04-07</date>
+                  <settlement ref="pmb2318">
+                     <placeName type="pref">Partenkirchen</placeName>
+                     <location>
+                        <geo>47,4956 11,1097</geo>
+                     </location>
+                  </settlement>
+               </death>
+            </person>
+            <person xml:id="pmb10863" ana="comment">
+               <persName>
+                  <forename>Richard</forename>
+                  <surname>Beer-Hofmann</surname>
+               </persName>
+               <birth>
+                  <date when="1866-07-11">1866-07-11</date>
+                  <settlement ref="pmb50">
+                     <placeName type="pref">Wien</placeName>
+                     <location>
+                        <geo>48,208333 16,373056</geo>
+                     </location>
+                  </settlement>
+               </birth>
+               <death>
+                  <date when="1945-09-26">1945-09-26</date>
+                  <settlement ref="pmb44053">
+                     <placeName type="pref">New York City</placeName>
+                     <location>
+                        <geo>40,71427 -74,00597</geo>
+                     </location>
+                  </settlement>
+               </death>
+            </person>
+            <person xml:id="pmb2646" ana="comment">
+               <persName>
+                  <forename>Felix</forename>
+                  <surname>Speidel</surname>
+               </persName>
+               <birth>
+                  <date when="1875-07-02">1875-07-02</date>
+                  <settlement ref="pmb872">
+                     <placeName type="pref">Stuttgart</placeName>
+                     <location>
+                        <geo>48,78232 9,17702</geo>
+                     </location>
+                  </settlement>
+               </birth>
+               <death>
+                  <date when="1952-10-03">1952-10-03</date>
+                  <settlement ref="pmb877">
+                     <placeName type="pref">Unterach am Attersee</placeName>
+                     <location>
+                        <geo>47,80494 13,48728</geo>
+                     </location>
+                  </settlement>
+               </death>
+            </person>
+            <person xml:id="pmb2642" ana="comment">
+               <persName>
+                  <forename>Else</forename>
+                  <surname>Speidel-Haeberle</surname>
+               </persName>
+               <birth>
+                  <date when="1877-07-11">1877-07-11</date>
+                  <settlement ref="pmb872">
+                     <placeName type="pref">Stuttgart</placeName>
+                     <location>
+                        <geo>48,78232 9,17702</geo>
+                     </location>
+                  </settlement>
+               </birth>
+               <death>
+                  <date when="1937-07-21">1937-07-21</date>
+                  <settlement ref="pmb46544">
+                     <placeName type="pref">Augustenfeld</placeName>
+                     <location>
+                        <geo>52,7529 7,70918</geo>
+                     </location>
+                  </settlement>
+               </death>
+            </person>
+            <person xml:id="pmb10860" ana="comment">
+               <persName>
+                  <forename>Paula</forename>
+                  <surname>Beer-Hofmann</surname>
+               </persName>
+               <birth>
+                  <date when="1879-02-25">1879-02-25</date>
+                  <settlement ref="pmb50">
+                     <placeName type="pref">Wien</placeName>
+                     <location>
+                        <geo>48,208333 16,373056</geo>
+                     </location>
+                  </settlement>
+               </birth>
+               <death>
+                  <date when="1939-10-30">1939-10-30</date>
+                  <settlement ref="pmb484">
+                     <placeName type="pref">Zürich</placeName>
+                     <location>
+                        <geo>47,37174 8,54226</geo>
+                     </location>
+                  </settlement>
+               </death>
+            </person>
+         </listPerson>
+         <listPlace>
+            <place xml:id="pmb2318">
+               <placeName>Partenkirchen</placeName>
+               <location type="coords">
+                  <geo>47,4956 11,1097</geo>
+               </location>
+               <location type="located_in_place">
+                  <placeName ref="pmb667">Garmisch-Partenkirchen</placeName>
+                  <geo>47,49209 11,09576</geo>
+               </location>
+            </place>
+            <place xml:id="pmb667">
+               <placeName>Garmisch-Partenkirchen</placeName>
+               <location type="coords">
+                  <geo>47,49209 11,09576</geo>
+               </location>
+               <location type="located_in_place">
+                  <placeName ref="pmb314">Bayern</placeName>
+                  <geo>49,0 11,5</geo>
+               </location>
+            </place>
+            <place xml:id="pmb50">
+               <placeName>Wien</placeName>
+               <placeName type="ort_fruherer-name">K.K. Reichshaupt- und Residenzstadt Wien</placeName>
+               <placeName type="alternative-name">Bécs</placeName>
+               <placeName type="alternative-name">Land Wien</placeName>
+               <placeName type="alternative-name">Vídeň</placeName>
+               <placeName type="alternative-name">Wenia</placeName>
+               <placeName type="alternative-name">Beč</placeName>
+               <placeName type="ort_fruherer-name">Vindobona</placeName>
+               <placeName type="alternative-name">Vienna</placeName>
+               <location type="coords">
+                  <geo>48,208333 16,373056</geo>
+               </location>
+               <location type="located_in_place">
+                  <placeName ref="pmb41240">Österreich</placeName>
+                  <geo>47,33333 13,33333</geo>
+               </location>
+               <location type="located_in_place">
+                  <placeName ref="pmb235218">Windmühlhöhe</placeName>
+                  <geo>48,24077 16,32092</geo>
+               </location>
+            </place>
+            <place xml:id="pmb68">
+               <placeName>XVIII., Währing</placeName>
+               <placeName type="legacy-name-merge">Währing</placeName>
+               <location type="coords">
+                  <geo>48,23333 16,31667</geo>
+               </location>
+               <location type="located_in_place">
+                  <placeName ref="pmb41240">Österreich</placeName>
+                  <geo>47,33333 13,33333</geo>
+               </location>
+               <location type="located_in_place">
+                  <placeName ref="pmb50">Wien</placeName>
+                  <geo>48,208333 16,373056</geo>
+               </location>
+            </place>
+            <place xml:id="pmb237633">
+               <placeName>Hasenauerstraße 46</placeName>
+               <location type="coords">
+                  <geo>48,234039 16,338443</geo>
+               </location>
+               <location type="located_in_place">
+                  <placeName ref="pmb68">XVIII., Währing</placeName>
+                  <geo>48,23333 16,31667</geo>
+               </location>
+               <location type="located_in_place">
+                  <placeName ref="pmb533">Währinger Cottage</placeName>
+                  <geo>48,233056 16,341944</geo>
+               </location>
+               <location type="located_in_place">
+                  <placeName ref="pmb383">Hasenauerstraße</placeName>
+                  <geo>48,233816866614 16,337927920952</geo>
+               </location>
+            </place>
+            <place xml:id="pmb52102">
+               <placeName>St. Anton [Partenkirchen]</placeName>
+               <location type="coords">
+                  <geo>47,498525 11,111318</geo>
+               </location>
+               <location type="located_in_place">
+                  <placeName ref="pmb2318">Partenkirchen</placeName>
+                  <geo>47,4956 11,1097</geo>
+               </location>
+            </place>
+            <place xml:id="pmb235251" ana="comment">
+               <placeName>Hasenauerstraße 59</placeName>
+               <location type="coords">
+                  <geo>48,23365 16,33494</geo>
+               </location>
+               <location type="located_in_place">
+                  <placeName ref="pmb68">XVIII., Währing</placeName>
+                  <geo>48,23333 16,31667</geo>
+               </location>
+               <location type="located_in_place">
+                  <placeName ref="pmb533">Währinger Cottage</placeName>
+                  <geo>48,233056 16,341944</geo>
+               </location>
+               <location type="located_in_place">
+                  <placeName ref="pmb383">Hasenauerstraße</placeName>
+                  <geo>48,233816866614 16,337927920952</geo>
+               </location>
+            </place>
+         </listPlace>
+      </back>
+   </text>
 </TEI>
