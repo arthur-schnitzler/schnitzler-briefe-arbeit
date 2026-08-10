@@ -307,6 +307,26 @@
             </sch:assert>
         </sch:rule>
     </sch:pattern>
+    <!-- div order: address before image before writingSession -->
+    <sch:pattern id="div-type-order">
+        <sch:rule context="tei:body">
+            <sch:let name="address-divs" value="tei:div[@type = 'address']"/>
+            <sch:let name="image-divs" value="tei:div[@type = 'image']"/>
+            <sch:let name="writingSession-divs" value="tei:div[@type = 'writingSession']"/>
+            <sch:assert
+                test="every $a in $address-divs, $i in $image-divs satisfies $a &lt;&lt; $i">
+                tei:div[@type='address'] muss vor tei:div[@type='image'] stehen.
+            </sch:assert>
+            <sch:assert
+                test="every $i in $image-divs, $w in $writingSession-divs satisfies $i &lt;&lt; $w">
+                tei:div[@type='image'] muss vor tei:div[@type='writingSession'] stehen.
+            </sch:assert>
+            <sch:assert
+                test="every $a in $address-divs, $w in $writingSession-divs satisfies $a &lt;&lt; $w">
+                tei:div[@type='address'] muss vor tei:div[@type='writingSession'] stehen.
+            </sch:assert>
+        </sch:rule>
+    </sch:pattern>
     <!-- lg (line group) -->
     <sch:pattern id="lg-structure">
         <sch:rule context="tei:lg">
