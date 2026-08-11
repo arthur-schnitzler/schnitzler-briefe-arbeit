@@ -1,6 +1,10 @@
-<?xml version='1.0' encoding='UTF-8'?>
+<?xml version="1.0" encoding="UTF-8"?>
 <?xml-model href="../meta/schnitzler-briefe-schematron.sch" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
-<TEI xmlns="http://www.tei-c.org/ns/1.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.tei-c.org/ns/1.0 ../meta/schnitzler-briefe-schema.xsd" xml:id="L02473" xml:base="https://id.acdh.oeaw.ac.at/schnitzler/schnitzler-briefe/editions">
+<TEI xmlns="http://www.tei-c.org/ns/1.0"
+     xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+     xsi:schemaLocation="http://www.tei-c.org/ns/1.0 ../meta/schnitzler-briefe-schema.xsd"
+     xml:id="L02473"
+     xml:base="https://id.acdh.oeaw.ac.at/schnitzler/schnitzler-briefe/editions">
    <teiHeader>
       <fileDesc>
          <titleStmt>
@@ -127,12 +131,20 @@
                   – 10. 5. 1926?]</date>
                <placeName ref="#pmb50">Wien</placeName>
             </correspAction>
-            <correspContext><ref type="belongsToCorrespondence" target="correspondence_10863">Beer-Hofmann, Richard</ref>
+            <correspContext>
+               <ref type="belongsToCorrespondence" target="correspondence_10863">Beer-Hofmann, Richard</ref>
                <ref subtype="previous_letter" type="withinCollection" target="L02472">Schnitzler an Brandes, 1. 5. 1926</ref>
                <ref subtype="next_letter" type="withinCollection" target="L02474">Mann, Mann an Schnitzler, 23. 5. 1926</ref>
-               <ref subtype="previous_letter" type="withinCorrespondence" source="correspondence_10863" target="L02471">Schnitzler, Schnitzler an Beer-Hofmann, 29. 4. 1926</ref>
-               <ref subtype="next_letter" type="withinCorrespondence" source="correspondence_10863" target="L02479">Beer-Hofmann an Schnitzler, 12. 10. 1926</ref>
-            </correspContext></correspDesc>
+               <ref subtype="previous_letter"
+                    type="withinCorrespondence"
+                    source="correspondence_10863"
+                    target="L02471">Schnitzler, Schnitzler an Beer-Hofmann, 29. 4. 1926</ref>
+               <ref subtype="next_letter"
+                    type="withinCorrespondence"
+                    source="correspondence_10863"
+                    target="L02479">Beer-Hofmann an Schnitzler, 12. 10. 1926</ref>
+            </correspContext>
+         </correspDesc>
       </profileDesc>
       <revisionDesc status="approved">
          <change who="MAM" when="2021-02-17">Angelegt</change>
@@ -150,13 +162,17 @@
             <address>
                <addrLine>
                   <pb facs="1926_AS_RBH_1_00004"/>Hrn <add place="above">Dr.</add> Richard
-                     Beer-Hofma<c rendition="#gemination-n"/></addrLine>
+                     Beer-Hofma<c rendition="#gemination-n"/>
+               </addrLine>
                <addrLine>
-                  <rs type="place" ref="#pmb68">Wien XVIII</rs></addrLine>
+                  <rs type="place" ref="#pmb68">Wien XVIII</rs>
+               </addrLine>
                <addrLine>
-                  <rs ref="#pmb235251" type="place">Hasenauerstr 59</rs></addrLine>
+                  <rs ref="#pmb235251" type="place">Hasenauerstr 59</rs>
+               </addrLine>
                <addrLine>
-                  <rs type="place" ref="#pmb41240">Austria</rs></addrLine>
+                  <rs type="place" ref="#pmb41240">Austria</rs>
+               </addrLine>
                <addrLine>
                   <rs type="place" ref="#pmb50">Vienna</rs>.</addrLine>
             </address>
@@ -164,93 +180,341 @@
          <div type="image">
             <p rend="center">
                <pb facs="1926_AS_RBH_1_00003"/>
-               <hi rend="pre-print">Doppelschrauben-Schnelldampfer »<rs type="org" ref="#pmb334383">Antonio Delfino</rs>.«</hi></p>
+               <hi rend="pre-print">Doppelschrauben-Schnelldampfer »<rs type="org" ref="#pmb334383">Antonio Delfino</rs>.«</hi>
+            </p>
          </div>
          <div type="writingSession" n="1">
             <opener>
-               <dateline>
+               <seg type="letterhead" rend="center">
                   <pb facs="1926_AS_RBH_1_00004"/>
+                  <hi rend="pre-print">
+                     <hi rend="capitals">
+                        <rs type="org" ref="#pmb363834">Hamburg-Südamerikanische Dampfschifffahrtsgesellschaft</rs>.</hi>
+                  </hi>
+               </seg>
+               <seg rend="center" type="letterhead">
+                  <hi rend="pre-print">Doppelschrauben-Schnelldampfer</hi>
+               </seg>
+               <seg type="letterhead" rend="center">
+                  <hi rend="pre-print">»<hi rend="capitals">
+                        <rs type="org" ref="#pmb334383">Antonio Delfino</rs>
+                     </hi>«</hi>
+               </seg>
+               <seg rend="center" type="letterhead">
+                  <hi rend="pre-print">14 000 Brutto-Registertons.</hi>
+               </seg>
+               <dateline>
                   <date>5. 5. 926</date>
                </dateline>
             </opener>
-            <p>Herzliche Grüße, auf der Fahrt <rs type="place" ref="#pmb44097">Las Palmas</rs> – <rs type="place" ref="#pmb15227">Lissabon</rs> – <rs type="place" ref="#pmb506">Hamburg</rs></p>
+            <p>Herzliche Grüße, auf der Fahrt <rs type="place" ref="#pmb44097">Las Palmas</rs> – <rs type="place" ref="#pmb15227">Lissabon</rs> – <rs type="place" ref="#pmb506">Hamburg</rs>
+            </p>
             <closer>Ihr<lb/>
                <signed>A.</signed>
             </closer>
          </div>
       </body>
-      <back><listPerson><person xml:id="pmb10863"><persName>
-      <forename>Richard</forename>
-      <surname>Beer-Hofmann</surname>
-  </persName><birth>
-    <date when="1866-07-11">1866-07-11</date>
-      <settlement ref="pmb50">
-        <placeName type="pref">Wien</placeName>
-        <location><geo>48,208333 16,373056</geo></location>
-      </settlement>
-  </birth><death>
-    <date when="1945-09-26">1945-09-26</date>
-      <settlement ref="pmb44053">
-        <placeName type="pref">New York City</placeName>
-        <location><geo>40,71427 -74,00597</geo></location>
-      </settlement>
-  </death></person><person xml:id="pmb2121"><persName><surname>Schnitzler</surname><forename>Arthur</forename></persName><birth><date when="1862-05-15">15. 5. 1862</date><settlement ref="pmb50"><placeName type="pref">Wien</placeName><location><geo>48,208333 16,373056</geo></location></settlement></birth><death><date when="1931-10-21">21. 10. 1931</date><settlement ref="pmb50"><placeName type="pref">Wien</placeName><location><geo>48,208333 16,373056</geo></location></settlement></death><sex value="male"/><occupation ref="pmb90">Schriftsteller/Schriftstellerin</occupation><occupation ref="pmb97">Mediziner/Medizinerin</occupation><idno type="gnd">https://d-nb.info/gnd/118609807/</idno></person></listPerson><listPlace><place xml:id="pmb15227"><placeName>Lissabon</placeName><placeName type="legacy-name-merge">Lisabon</placeName><placeName type="alternative-name">Lissabon</placeName><placeName type="legacy-name-merge">Lisbon</placeName><placeName type="legacy-name-merge">Lissabon</placeName><location type="coords">
-  <geo>38,71667 -9,13333</geo>
-</location><location type="located_in_place">
-  <placeName ref="pmb45663">Portugal</placeName>
-  <geo>18,5642 121,03087</geo>
-</location></place><place xml:id="pmb235251"><placeName>Hasenauerstraße 59</placeName><location type="coords">
-  <geo>48,23365 16,33494</geo>
-</location><location type="located_in_place">
-  <placeName ref="pmb68">XVIII., Währing</placeName>
-  <geo>48,23333 16,31667</geo>
-</location><location type="located_in_place">
-  <placeName ref="pmb533">Währinger Cottage</placeName>
-  <geo>48,233056 16,341944</geo>
-</location><location type="located_in_place">
-  <placeName ref="pmb383">Hasenauerstraße</placeName>
-  <geo>48,233816866614 16,337927920952</geo>
-</location></place><place xml:id="pmb41016"><placeName>Mittelmeer</placeName><placeName type="ort_namensvariante">Mittelländisches Meer</placeName><placeName type="ort_namensvariante">Europäisches Mittelmeer</placeName><location type="coords">
-  <geo>35,0 18,0</geo>
-</location><location type="located_in_place">
-  <placeName ref="pmb12376">Atlantischer Ozean</placeName>
-  <geo>7,0 -31,0</geo>
-</location></place><place xml:id="pmb41240"><placeName>Österreich</placeName><placeName type="alternative-name">Republik Österreich</placeName><placeName type="legacy-name-merge">Österreich</placeName><placeName type="alternative-name">Republic of Austria</placeName><placeName type="legacy-name-merge">Österreich</placeName><placeName type="legacy-name-merge">Deutsch Österreich</placeName><placeName type="legacy-name-merge">Altoesterreich</placeName><location type="coords">
-  <geo>47,33333 13,33333</geo>
-</location><location type="located_in_place">
-  <placeName ref="pmb468">Europa</placeName>
-  <geo>48,69096 9,14062</geo>
-</location><location type="located_in_place">
-  <placeName ref="pmb298373">Cisleithanien</placeName>
-  <geo>48,5 16,383333333333333</geo>
-</location><location type="located_in_place">
-  <placeName ref="pmb687">Österreich-Ungarn</placeName>
-  <geo>48,4054 16,4887</geo>
-</location></place><place xml:id="pmb44097"><placeName>Las Palmas de Gran Canaria</placeName><placeName type="alternative-name">Las Palmas de Gran Canaria</placeName><placeName type="legacy-name">Las Palmas de Gran Canaria</placeName><placeName type="legacy-name-merge">Las Palmas de Gran Canaria</placeName><location type="coords">
-  <geo>28,09973 -15,41343</geo>
-</location><location type="located_in_place">
-  <placeName ref="pmb1098">Gran Canaria</placeName>
-  <geo>27,966667 -15,6</geo>
-</location><location type="located_in_place">
-  <placeName ref="pmb388">Spanien</placeName>
-  <geo>40,0 -4,0</geo>
-</location></place><place xml:id="pmb50"><placeName>Wien</placeName><placeName type="ort_fruherer-name">K.K. Reichshaupt- und Residenzstadt Wien</placeName><placeName type="legacy-name-merge">Wien</placeName><placeName type="alternative-name">Bécs</placeName><placeName type="alternative-name">Land Wien</placeName><placeName type="alternative-name">Vídeň</placeName><placeName type="alternative-name">Wenia</placeName><placeName type="alternative-name">Beč</placeName><placeName type="ort_fruherer-name">Vindobona</placeName><placeName type="legacy-name-merge">Vindobona</placeName><placeName type="alternative-name">Vienna</placeName><placeName type="legacy-name-merge">Vienna</placeName><placeName type="alternative-name">Vienna</placeName><location type="coords">
-  <geo>48,208333 16,373056</geo>
-</location><location type="located_in_place">
-  <placeName ref="pmb41240">Österreich</placeName>
-  <geo>47,33333 13,33333</geo>
-</location></place><place xml:id="pmb506"><placeName>Hamburg</placeName><placeName type="legacy-name-merge">Hamburg</placeName><placeName type="alternative-name">Hamburg</placeName><location type="coords">
-  <geo>53,55055 9,993333</geo>
-</location><location type="located_in_place">
-  <placeName ref="pmb151">Deutschland</placeName>
-  <geo>51,5 10,5</geo>
-</location></place><place xml:id="pmb68"><placeName>XVIII., Währing</placeName><placeName type="legacy-name-merge">Währing</placeName><location type="coords">
-  <geo>48,23333 16,31667</geo>
-</location><location type="located_in_place">
-  <placeName ref="pmb41240">Österreich</placeName>
-  <geo>47,33333 13,33333</geo>
-</location><location type="located_in_place">
-  <placeName ref="pmb50">Wien</placeName>
-  <geo>48,208333 16,373056</geo>
-</location></place></listPlace></back></text>
+      <back>
+         <listPerson>
+            <person xml:id="pmb2121">
+               <persName>
+                  <surname>Schnitzler</surname>
+                  <forename>Arthur</forename>
+               </persName>
+               <birth>
+                  <date when="1862-05-15">15. 5. 1862</date>
+                  <settlement ref="pmb50">
+                     <placeName type="pref">Wien</placeName>
+                     <location>
+                        <geo>48,208333 16,373056</geo>
+                     </location>
+                  </settlement>
+               </birth>
+               <death>
+                  <date when="1931-10-21">21. 10. 1931</date>
+                  <settlement ref="pmb50">
+                     <placeName type="pref">Wien</placeName>
+                     <location>
+                        <geo>48,208333 16,373056</geo>
+                     </location>
+                  </settlement>
+               </death>
+            </person>
+            <person xml:id="pmb10863">
+               <persName>
+                  <forename>Richard</forename>
+                  <surname>Beer-Hofmann</surname>
+               </persName>
+               <birth>
+                  <date when="1866-07-11">1866-07-11</date>
+                  <settlement ref="pmb50">
+                     <placeName type="pref">Wien</placeName>
+                     <location>
+                        <geo>48,208333 16,373056</geo>
+                     </location>
+                  </settlement>
+               </birth>
+               <death>
+                  <date when="1945-09-26">1945-09-26</date>
+                  <settlement ref="pmb44053">
+                     <placeName type="pref">New York City</placeName>
+                     <location>
+                        <geo>40,71427 -74,00597</geo>
+                     </location>
+                  </settlement>
+               </death>
+            </person>
+         </listPerson>
+         <listPlace>
+            <place xml:id="pmb506">
+               <placeName>Hamburg</placeName>
+               <location type="coords">
+                  <geo>53,55055 9,993333</geo>
+               </location>
+               <location type="located_in_place">
+                  <placeName ref="pmb151">Deutschland</placeName>
+                  <geo>51,5 10,5</geo>
+               </location>
+            </place>
+            <place xml:id="pmb41016">
+               <placeName>Mittelmeer</placeName>
+               <placeName type="ort_namensvariante">Mittelländisches Meer</placeName>
+               <placeName type="ort_namensvariante">Europäisches Mittelmeer</placeName>
+               <location type="coords">
+                  <geo>35,0 18,0</geo>
+               </location>
+               <location type="located_in_place">
+                  <placeName ref="pmb12376">Atlantischer Ozean</placeName>
+                  <geo>7,0 -31,0</geo>
+               </location>
+            </place>
+            <place xml:id="pmb50">
+               <placeName>Wien</placeName>
+               <placeName type="ort_fruherer-name">K.K. Reichshaupt- und Residenzstadt Wien</placeName>
+               <placeName type="alternative-name">Bécs</placeName>
+               <placeName type="alternative-name">Land Wien</placeName>
+               <placeName type="alternative-name">Vídeň</placeName>
+               <placeName type="alternative-name">Wenia</placeName>
+               <placeName type="alternative-name">Beč</placeName>
+               <placeName type="ort_fruherer-name">Vindobona</placeName>
+               <placeName type="alternative-name">Vienna</placeName>
+               <location type="coords">
+                  <geo>48,208333 16,373056</geo>
+               </location>
+               <location type="located_in_place">
+                  <placeName ref="pmb41240">Österreich</placeName>
+                  <geo>47,33333 13,33333</geo>
+               </location>
+               <location type="located_in_place">
+                  <placeName ref="pmb235218">Windmühlhöhe</placeName>
+                  <geo>48,24077 16,32092</geo>
+               </location>
+            </place>
+            <place xml:id="pmb68">
+               <placeName>XVIII., Währing</placeName>
+               <placeName type="legacy-name-merge">Währing</placeName>
+               <location type="coords">
+                  <geo>48,23333 16,31667</geo>
+               </location>
+               <location type="located_in_place">
+                  <placeName ref="pmb41240">Österreich</placeName>
+                  <geo>47,33333 13,33333</geo>
+               </location>
+               <location type="located_in_place">
+                  <placeName ref="pmb50">Wien</placeName>
+                  <geo>48,208333 16,373056</geo>
+               </location>
+            </place>
+            <place xml:id="pmb235251">
+               <placeName>Hasenauerstraße 59</placeName>
+               <location type="coords">
+                  <geo>48,23365 16,33494</geo>
+               </location>
+               <location type="located_in_place">
+                  <placeName ref="pmb68">XVIII., Währing</placeName>
+                  <geo>48,23333 16,31667</geo>
+               </location>
+               <location type="located_in_place">
+                  <placeName ref="pmb533">Währinger Cottage</placeName>
+                  <geo>48,233056 16,341944</geo>
+               </location>
+               <location type="located_in_place">
+                  <placeName ref="pmb383">Hasenauerstraße</placeName>
+                  <geo>48,233816866614 16,337927920952</geo>
+               </location>
+            </place>
+            <place xml:id="pmb41240">
+               <placeName>Österreich</placeName>
+               <placeName type="alternative-name">Republik Österreich</placeName>
+               <placeName type="alternative-name">Republic of Austria</placeName>
+               <placeName type="legacy-name-merge">Deutsch Österreich</placeName>
+               <placeName type="legacy-name-merge">Altoesterreich</placeName>
+               <location type="coords">
+                  <geo>47,33333 13,33333</geo>
+               </location>
+               <location type="located_in_place">
+                  <placeName ref="pmb468">Europa</placeName>
+                  <geo>48,69096 9,14062</geo>
+               </location>
+               <location type="located_in_place">
+                  <placeName ref="pmb298373">Cisleithanien</placeName>
+                  <geo>48,5 16,383333333333333</geo>
+               </location>
+               <location type="located_in_place">
+                  <placeName ref="pmb687">Österreich-Ungarn</placeName>
+                  <geo>48,4054 16,4887</geo>
+               </location>
+            </place>
+            <place xml:id="pmb44097">
+               <placeName>Las Palmas de Gran Canaria</placeName>
+               <location type="coords">
+                  <geo>28,09973 -15,41343</geo>
+               </location>
+               <location type="located_in_place">
+                  <placeName ref="pmb1098">Gran Canaria</placeName>
+                  <geo>27,966667 -15,6</geo>
+               </location>
+               <location type="located_in_place">
+                  <placeName ref="pmb388">Spanien</placeName>
+                  <geo>40,0 -4,0</geo>
+               </location>
+            </place>
+            <place xml:id="pmb15227">
+               <placeName>Lissabon</placeName>
+               <placeName type="legacy-name-merge">Lisabon</placeName>
+               <placeName type="legacy-name-merge">Lisbon</placeName>
+               <location type="coords">
+                  <geo>38,71667 -9,13333</geo>
+               </location>
+               <location type="located_in_place">
+                  <placeName ref="pmb45663">Portugal</placeName>
+                  <geo>18,5642 121,03087</geo>
+               </location>
+            </place>
+         </listPlace>
+         <listOrg>
+            <org xml:id="pmb334383">
+               <orgName>Antonio Delfino</orgName>
+               <location type="located_in_place">
+                  <placeName ref="pmb44097">Las Palmas de Gran Canaria</placeName>
+                  <geo>28,09973 -15,41343</geo>
+                  <idno type="URL" subtype="pmb">https://pmb.acdh.oeaw.ac.at/entity/1096/</idno>
+                  <idno type="URL" subtype="pmb">https://pmb.acdh.oeaw.ac.at/entity/44097/</idno>
+                  <idno type="URL" subtype="geonames">https://sws.geonames.org/2515270/</idno>
+                  <idno type="URL" subtype="pmb">https://pmb.acdh.oeaw.ac.at/entity/115681/</idno>
+                  <idno type="URL" subtype="wikidata">http://www.wikidata.org/entity/Q11974</idno>
+                  <idno type="URL" subtype="d-nb">https://d-nb.info/gnd/4252447-7</idno>
+                  <idno type="URL" subtype="schnitzler-tagebuch">https://schnitzler-tagebuch.acdh.oeaw.ac.at/pmb44097.html</idno>
+                  <idno type="URL" subtype="wikipedia">https://de.wikipedia.org/wiki/Las_Palmas_de_Gran_Canaria</idno>
+                  <idno type="URL" subtype="wienerschnitzler">https://wienerschnitzler.org/pmb44097.html</idno>
+                  <idno type="URL" subtype="schnitzler-briefe">https://schnitzler-briefe.acdh.oeaw.ac.at/pmb44097.html</idno>
+               </location>
+               <location type="located_in_place">
+                  <placeName ref="pmb15227">Lissabon</placeName>
+                  <geo>38,71667 -9,13333</geo>
+                  <idno type="URL" subtype="pmb">https://pmb.acdh.oeaw.ac.at/entity/14406/</idno>
+                  <idno type="URL" subtype="pmb">https://pmb.acdh.oeaw.ac.at/entity/15227/</idno>
+                  <idno type="URL" subtype="pmb">https://pmb.acdh.oeaw.ac.at/entity/91155/</idno>
+                  <idno type="URL" subtype="geonames">https://sws.geonames.org/2267057/</idno>
+                  <idno type="URL" subtype="pmb">https://pmb.acdh.oeaw.ac.at/entity/114574/</idno>
+                  <idno type="URL" subtype="d-nb">https://d-nb.info/gnd/4035919-0</idno>
+                  <idno type="URL" subtype="wikidata">http://www.wikidata.org/entity/Q597</idno>
+                  <idno type="URL" subtype="wikipedia">https://de.wikipedia.org/wiki/Lissabon</idno>
+                  <idno type="URL" subtype="schnitzler-tagebuch">https://schnitzler-tagebuch.acdh.oeaw.ac.at/pmb15227.html</idno>
+                  <idno type="URL" subtype="wienerschnitzler">https://wienerschnitzler.org/pmb15227.html</idno>
+                  <idno type="URL" subtype="sk">https://sk.acdh.oeaw.ac.at/DWplace00443</idno>
+                  <idno type="URL" subtype="sk">https://sk.acdh.oeaw.ac.at/fa_place00003571</idno>
+                  <idno type="URL" subtype="schnitzler-briefe">https://schnitzler-briefe.acdh.oeaw.ac.at/pmb15227.html</idno>
+                  <idno type="URL" subtype="biblio">https://biblio.ub.uni-freiburg.de/sf/#pmb15227</idno>
+               </location>
+               <location type="located_in_place">
+                  <placeName ref="pmb40362">Vigo di Fassa</placeName>
+                  <geo>46,41898 11,67418</geo>
+                  <idno type="URL" subtype="geonames">https://sws.geonames.org/3164330/</idno>
+                  <idno type="URL" subtype="pmb">https://pmb.acdh.oeaw.ac.at/entity/40362/</idno>
+                  <idno type="URL" subtype="schnitzler-tagebuch">https://schnitzler-tagebuch.acdh.oeaw.ac.at/pmb40362.html</idno>
+                  <idno type="URL" subtype="wienerschnitzler">https://wienerschnitzler.org/pmb40362.html</idno>
+                  <idno type="URL" subtype="schnitzler-briefe">https://schnitzler-briefe.acdh.oeaw.ac.at/pmb40362.html</idno>
+               </location>
+               <location type="located_in_place">
+                  <placeName ref="pmb54953">Boulogne-sur-Mer</placeName>
+                  <geo>50,72571 1,61392</geo>
+                  <idno type="URL" subtype="pmb">https://pmb.acdh.oeaw.ac.at/entity/3276/</idno>
+                  <idno type="URL" subtype="pmb">https://pmb.acdh.oeaw.ac.at/entity/54953/</idno>
+                  <idno type="URL" subtype="geonames">https://sws.geonames.org/3031133/</idno>
+                  <idno type="URL" subtype="d-nb">https://d-nb.info/gnd/4080492-6</idno>
+                  <idno type="URL" subtype="wikidata">http://www.wikidata.org/entity/Q81997</idno>
+                  <idno type="URL" subtype="wikipedia">https://de.wikipedia.org/wiki/Boulogne-sur-Mer</idno>
+                  <idno type="URL" subtype="schnitzler-tagebuch">https://schnitzler-tagebuch.acdh.oeaw.ac.at/pmb54953.html</idno>
+                  <idno type="URL" subtype="pmb">https://pmb.acdh.oeaw.ac.at/entity/114803/</idno>
+                  <idno type="URL" subtype="wienerschnitzler">https://wienerschnitzler.org/pmb54953.html</idno>
+               </location>
+               <location type="located_in_place">
+                  <placeName ref="pmb506">Hamburg</placeName>
+                  <geo>53,55055 9,993333</geo>
+                  <idno type="URL" subtype="wikidata">http://www.wikidata.org/entity/Q1055</idno>
+                  <idno type="URL" subtype="schnitzler-bahr">https://schnitzler-bahr.acdh.oeaw.ac.at/pmb506.html</idno>
+                  <idno type="URL" subtype="pmb">https://pmb.acdh.oeaw.ac.at/entity/506/</idno>
+                  <idno type="URL" subtype="pmb">https://pmb.acdh.oeaw.ac.at/entity/44883/</idno>
+                  <idno type="URL" subtype="d-nb">https://d-nb.info/gnd/4023118-5</idno>
+                  <idno type="URL" subtype="pmb">https://pmb.acdh.oeaw.ac.at/entity/64301/</idno>
+                  <idno type="URL" subtype="geonames">https://sws.geonames.org/2911298/</idno>
+                  <idno type="URL" subtype="www">https://www.kraus.wienbibliothek.at/legalkraus/pmb506.html</idno>
+                  <idno type="URL" subtype="wikipedia">https://de.wikipedia.org/wiki/Hamburg</idno>
+                  <idno type="URL" subtype="schnitzler-tagebuch">https://schnitzler-tagebuch.acdh.oeaw.ac.at/pmb506.html</idno>
+                  <idno type="URL" subtype="schnitzler-interviews">https://schnitzler-interviews.acdh.oeaw.ac.at/pmb506.html</idno>
+                  <idno type="URL" subtype="wienerschnitzler">https://wienerschnitzler.org/pmb506.html</idno>
+                  <idno type="URL" subtype="sk">https://sk.acdh.oeaw.ac.at/DWplace00057</idno>
+                  <idno type="URL" subtype="sk">https://sk.acdh.oeaw.ac.at/fa_place00001825</idno>
+                  <idno type="URL" subtype="sk">https://sk.acdh.oeaw.ac.at/pmb506</idno>
+                  <idno type="URL" subtype="biblio">https://biblio.ub.uni-freiburg.de/sf/#pmb506</idno>
+                  <idno type="URL" subtype="schnitzler-briefe">https://schnitzler-briefe.acdh.oeaw.ac.at/pmb506.html</idno>
+                  <idno type="URL" subtype="www">https://www.schoenberg-ue.at/ue/places/place.2.40</idno>
+               </location>
+               <location type="located_in_place">
+                  <placeName ref="pmb12376">Atlantischer Ozean</placeName>
+                  <geo>7,0 -31,0</geo>
+                  <idno type="URL" subtype="pmb">https://pmb.acdh.oeaw.ac.at/entity/5140/</idno>
+                  <idno type="URL" subtype="pmb">https://pmb.acdh.oeaw.ac.at/entity/10846/</idno>
+                  <idno type="URL" subtype="pmb">https://pmb.acdh.oeaw.ac.at/entity/12376/</idno>
+                  <idno type="URL" subtype="pmb">https://pmb.acdh.oeaw.ac.at/entity/17450/</idno>
+                  <idno type="URL" subtype="pmb">https://pmb.acdh.oeaw.ac.at/entity/19369/</idno>
+                  <idno type="URL" subtype="pmb">https://pmb.acdh.oeaw.ac.at/entity/24425/</idno>
+                  <idno type="URL" subtype="pmb">https://pmb.acdh.oeaw.ac.at/entity/52737/</idno>
+                  <idno type="URL" subtype="geonames">https://sws.geonames.org/3373405/</idno>
+                  <idno type="URL" subtype="wikidata">http://www.wikidata.org/entity/Q97</idno>
+                  <idno type="URL" subtype="wikipedia">https://de.wikipedia.org/wiki/Atlantischer_Ozean</idno>
+                  <idno type="URL" subtype="wienerschnitzler">https://wienerschnitzler.org/pmb12376.html</idno>
+                  <idno type="URL" subtype="schnitzler-briefe">https://schnitzler-briefe.acdh.oeaw.ac.at/pmb12376.html</idno>
+               </location>
+            </org>
+            <org xml:id="pmb363834">
+               <orgName>Hamburg Süd</orgName>
+               <orgName type="institution_fruherer-name">Hamburg-Südamerikanische Dampfschiffahrts-Gesellschaft</orgName>
+               <location type="located_in_place">
+                  <placeName ref="pmb506">Hamburg</placeName>
+                  <geo>53,55055 9,993333</geo>
+                  <idno type="URL" subtype="wikidata">http://www.wikidata.org/entity/Q1055</idno>
+                  <idno type="URL" subtype="schnitzler-bahr">https://schnitzler-bahr.acdh.oeaw.ac.at/pmb506.html</idno>
+                  <idno type="URL" subtype="pmb">https://pmb.acdh.oeaw.ac.at/entity/506/</idno>
+                  <idno type="URL" subtype="pmb">https://pmb.acdh.oeaw.ac.at/entity/44883/</idno>
+                  <idno type="URL" subtype="d-nb">https://d-nb.info/gnd/4023118-5</idno>
+                  <idno type="URL" subtype="pmb">https://pmb.acdh.oeaw.ac.at/entity/64301/</idno>
+                  <idno type="URL" subtype="geonames">https://sws.geonames.org/2911298/</idno>
+                  <idno type="URL" subtype="www">https://www.kraus.wienbibliothek.at/legalkraus/pmb506.html</idno>
+                  <idno type="URL" subtype="wikipedia">https://de.wikipedia.org/wiki/Hamburg</idno>
+                  <idno type="URL" subtype="schnitzler-tagebuch">https://schnitzler-tagebuch.acdh.oeaw.ac.at/pmb506.html</idno>
+                  <idno type="URL" subtype="schnitzler-interviews">https://schnitzler-interviews.acdh.oeaw.ac.at/pmb506.html</idno>
+                  <idno type="URL" subtype="wienerschnitzler">https://wienerschnitzler.org/pmb506.html</idno>
+                  <idno type="URL" subtype="sk">https://sk.acdh.oeaw.ac.at/DWplace00057</idno>
+                  <idno type="URL" subtype="sk">https://sk.acdh.oeaw.ac.at/fa_place00001825</idno>
+                  <idno type="URL" subtype="sk">https://sk.acdh.oeaw.ac.at/pmb506</idno>
+                  <idno type="URL" subtype="biblio">https://biblio.ub.uni-freiburg.de/sf/#pmb506</idno>
+                  <idno type="URL" subtype="www">https://www.schoenberg-ue.at/ue/places/place.2.40</idno>
+                  <idno type="URL" subtype="schnitzler-briefe">https://schnitzler-briefe.acdh.oeaw.ac.at/pmb506.html</idno>
+               </location>
+            </org>
+         </listOrg>
+      </back>
+   </text>
 </TEI>
