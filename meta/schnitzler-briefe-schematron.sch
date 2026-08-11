@@ -307,6 +307,18 @@
             </sch:assert>
         </sch:rule>
     </sch:pattern>
+    <!-- first div of each @type (e.g. first writingSession, first image, ...) must start
+         with pb, before any text, however deeply nested -->
+    <sch:pattern id="first-div-of-type-starts-with-pb">
+        <sch:rule context="tei:body/tei:div">
+            <sch:let name="own-type" value="@type"/>
+            <sch:assert
+                test="preceding-sibling::tei:div[@type = $own-type] or ((.//tei:pb)[1] and not((.//text()[normalize-space(.)])[1] &lt;&lt; (.//tei:pb)[1]))">
+                Am Anfang des ersten tei:div eines jeden @type-Werts muss ein tei:pb stehen,
+                bevor anderer Text folgt (das tei:pb kann dabei tief verschachtelt sein).
+            </sch:assert>
+        </sch:rule>
+    </sch:pattern>
     <!-- div order: address before image before writingSession -->
     <sch:pattern id="div-type-order">
         <sch:rule context="tei:body">
