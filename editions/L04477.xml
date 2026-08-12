@@ -4,14 +4,17 @@
      xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
      xsi:schemaLocation="http://www.tei-c.org/ns/1.0 ../meta/schnitzler-briefe-schema.xsd"
      xml:base="https://id.acdh.oeaw.ac.at/schnitzler/schnitzler-briefe/editions"
-     xml:id="L04478">
+     xml:id="L04477">
    <teiHeader>
       <fileDesc>
          <titleStmt>
             <title level="s">Arthur Schnitzler: Briefwechsel mit Autorinnen und
                                     Autoren</title>
-            <title level="a">Arthur Schnitzler an Gustav Schwarzkopf, 20. 6. 1928</title>
+            <title level="a">Arthur Schnitzler, Paul Marx, Eva und Paul Goldmann an Gustav Schwarzkopf, 31. 12. 1926</title>
             <author ref="#pmb2121">Schnitzler, Arthur</author>
+            <author ref="#pmb21647">Marx, Paul</author>
+            <author ref="#pmb17164">Goldmann, Eva</author>
+            <author ref="#pmb11485">Goldmann, Paul</author>
             <editor>
                <persName>Jahnke, Selma</persName>
                <persName>Müller, Martin Anton</persName>
@@ -95,29 +98,25 @@
                            <supportDesc>
                               <extent>
                                  <measure unit="karte" quantity="1"/>
-                                 <measure unit="zeichenanzahl" quantity="487"/>
+                                 <measure unit="zeichenanzahl" quantity="226"/>
                               </extent>
                            </supportDesc>
                         </objectDesc>
-                        <handDesc hands="1">
-                           <handNote medium="bleistift" style="lateinische-kurrent"/>
+                        <handDesc hands="4">
+                           <handNote corresp="#pmb2121" medium="bleistift" style="deutsche-kurrent"/>
+                           <handNote corresp="#pmb21647" medium="bleistift" style="deutsche-kurrent"/>
+                           <handNote corresp="#pmb17164"
+                                     medium="schwarze-tinte"
+                                     style="deutsche-kurrent"/>
+                           <handNote corresp="#pmb11485" medium="lila-tinte" style="lateinische-kurrent"/>
                         </handDesc>
                         <additions>
                            <incident type="postal">
                               <desc>
                                  <stamp n="1">
-                                    <placeName ref="#pmb213">Bad Ischl</placeName>
-                                    <date when="1928-06-20">2<unclear>0</unclear>. VI. 28</date>
-                                    <time>1<gap reason="illegible" unit="chars" quantity="1"/>
-                                    </time>
-                                 </stamp>
-                              </desc>
-                           </incident>
-                           <incident type="postal">
-                              <desc>
-                                 <stamp n="2">
-                                    <addSpan>Gebrauchet die heilkräftigen Solbäder <rs type="place" ref="#pmb213">Bad Ischl’s</rs>
-                                    </addSpan>
+                                    <placeName ref="#pmb168">Berlin</placeName>
+                                    <date when="1927-01-01">1. 1. 1927</date>
+                                    <time>6–7 N</time>
                                  </stamp>
                               </desc>
                            </incident>
@@ -135,16 +134,19 @@
          <correspDesc>
             <correspAction type="sent">
                <persName ref="#pmb2121">Schnitzler, Arthur</persName>
-               <date when="1928-06-20" n="01">20. 6. 1928</date>
-               <placeName ref="#pmb213">Bad Ischl</placeName>
+               <persName ref="#pmb21647">Marx, Paul</persName>
+               <persName ref="#pmb17164">Goldmann, Eva</persName>
+               <persName ref="#pmb11485">Goldmann, Paul</persName>
+               <date when="1926-12-31" n="01">31. 12. 1926</date>
+               <placeName ref="#pmb168">Berlin</placeName>
             </correspAction>
             <correspAction type="transmitted">
-               <date when="1928-06-20">20. 6. 1928</date>
-               <placeName ref="#pmb213">Bad Ischl</placeName>
+               <date when="1927-01-01">1. 1. 1927</date>
+               <placeName ref="#pmb168">Berlin</placeName>
             </correspAction>
             <correspAction type="received">
                <persName ref="#pmb12740">Schwarzkopf, Gustav</persName>
-               <date evidence="conjecture" notBefore="1928-06-21" notAfter="1928-06-25">[21. 6. 1928 – 25. 6. 1928?]</date>
+               <date evidence="conjecture" notBefore="1927-01-01" notAfter="1927-01-05">[1. 1. 1927 – 5. 1. 1927?]</date>
                <placeName ref="#pmb50">Wien</placeName>
             </correspAction>
          </correspDesc>
@@ -156,56 +158,69 @@
       </revisionDesc>
    </teiHeader>
    <facsimile>
-      <graphic url="HS00048772X_0264"/>
-      <graphic url=""/>
-      <graphic url="HS00048772X_0263"/>
-      <graphic url="HS00048772X_0264"/>
-      <graphic url="HS00048772X_0263"/>
+      <graphic url="HS00048772X_0262"/>
+      <graphic url="HS00048772X_0261"/>
+      <graphic url="HS00048772X_0262"/>
    </facsimile>
    <text>
       <body>
          <div type="address">
             <address>
                <addrLine>
-                  <pb facs="HS00048772X_0264"/>Hr Guſtav Schwarzkopf</addrLine>
-               <addrLine>
-                  <rs type="place" ref="#pmb51">Wien I</rs>
+                  <pb facs="HS00048772X_0262"/>Hr <hi rend="latintype">Gustav Schwarzkopf</hi>
                </addrLine>
                <addrLine>
-                  <rs type="place" ref="#pmb207301">Tiefer Graben 17</rs>
+                  <rs type="place" ref="#pmb51">
+                     <hi rend="latintype">Wien I</hi>
+                  </rs>
+               </addrLine>
+               <addrLine>
+                  <rs type="place" ref="#pmb207301">
+                     <hi rend="latintype">Tiefer Graben 17</hi>
+                  </rs>
                </addrLine>
             </address>
          </div>
          <div type="image">
             <p rend="center">
-               <pb facs="HS00048772X_0263"/>
-               <hi rend="pre-print">41. <rs type="place" ref="#pmb213">Bad Ischl</rs> g d. <rs type="place" ref="#pmb45943">Dachstein</rs>.</hi>
+               <pb facs="HS00048772X_0261"/>
+               <hi rend="pre-print">
+                  <rs type="place" ref="#pmb245">Hotel Esplanade, Berlin</rs>.</hi>
             </p>
          </div>
          <div type="writingSession" n="1">
-            <opener>
-               <dateline rend="right">
-                  <pb facs="HS00048772X_0264"/>
-                  <rs type="place" ref="#pmb213">Ischl</rs>
-                  <space unit="chars" quantity="1"/>
-                  <date>20/6 928</date>
-               </dateline>
-            </opener>
             <p>
-               <salute>lieber Guſtav,</salute> so leid es mir thut
-               dß Sie nicht geko<c rendition="#gemination-m"/>en sind –
-      ich ka<c rendition="#gemination-n"/> es nur für mich – nicht für
-      Sie bedauern – de<c rendition="#gemination-n"/> seit 8 Tagen
-      regnet es fast ununterbrochen –
-      wie es wirklich nur hier regnen kann.
-      Trotzdem ist der Aufenthalt angenehm
-      und das gute <rs type="place" ref="#pmb715" subtype="implied">Hotel</rs>, der unverwüstliche
-               <rs type="place" ref="#pmb232919">Zauner</rs> und liebenswürdge Gesellschaft
-            <pb facs="HS00048772X_0263"/>lassen Verdrossenheit nicht aufko<c rendition="#gemination-m"/>en.</p>
-            <p>
-               <date>Freitag</date> hoff ich wieder zu Hause zu sein.</p>
-            <closer>Ich grüße Sie herzlich, Fr. <rs type="person" ref="#pmb12435">P.</rs> desgleichen<lb/>Ihr <signed>A.</signed>
+               <pb facs="HS00048772X_0262"/>Herzliche Neujahrsgrüße!</p>
+            <closer>Ihr<lb/>
+               <signed>Arthur Sch</signed>
             </closer>
+         </div>
+         <div type="writingSession" n="2">
+            <opener>
+               <salute>
+                  <handShift scribe="#pmb21647"/>Sehr verehrter Herr Schwarzkopf!</salute>
+            </opener>
+            <closer>Die herzlichsten Grüße<lb/>von Ihrem <signed>Paul Marx</signed>
+               <lb/>
+            </closer>
+         </div>
+         <div type="writingSession" n="3">
+            <closer>
+               <signed>
+                  <handShift scribe="#pmb17164"/>Eva Goldmann</signed>,</closer>
+         </div>
+         <div type="writingSession" n="4">
+            <p>
+               <handShift scribe="#pmb11485"/>Herzliche Grüsse in alter Freundschaft</p>
+            <closer>
+               <signed>Paul Goldmann</signed>
+            </closer>
+            <postscript>
+               <dateline>
+                  <anchor type="textConst" xml:id="T_L04477-1"/>
+                  <date>31. 12. 26</date>.<note type="textConst" corresp="T_L04477-1">Die Datumszeile von <rs type="person" ref="#pmb11485">Paul Goldmanns</rs> Hand befindet sich am oberen Rand.</note>
+               </dateline>
+            </postscript>
          </div>
       </body>
       <back>
@@ -226,6 +241,78 @@
                </birth>
                <death>
                   <date when="1931-10-21">21. 10. 1931</date>
+                  <settlement ref="pmb50">
+                     <placeName type="pref">Wien</placeName>
+                     <location>
+                        <geo>48,208333 16,373056</geo>
+                     </location>
+                  </settlement>
+               </death>
+            </person>
+            <person xml:id="pmb21647">
+               <persName>
+                  <forename>Paul</forename>
+                  <surname>Marx</surname>
+               </persName>
+               <birth>
+                  <date when="1879-07-21">1879-07-21</date>
+                  <settlement ref="pmb50">
+                     <placeName type="pref">Wien</placeName>
+                     <location>
+                        <geo>48,208333 16,373056</geo>
+                     </location>
+                  </settlement>
+               </birth>
+               <death>
+                  <date when="1956-10-30">1956-10-30</date>
+                  <settlement ref="pmb50">
+                     <placeName type="pref">Wien</placeName>
+                     <location>
+                        <geo>48,208333 16,373056</geo>
+                     </location>
+                  </settlement>
+               </death>
+            </person>
+            <person xml:id="pmb17164">
+               <persName>
+                  <forename>Eva Marie</forename>
+                  <surname>Goldmann</surname>
+               </persName>
+               <birth>
+                  <date when="1877-10-27">1877-10-27</date>
+                  <settlement ref="pmb50">
+                     <placeName type="pref">Wien</placeName>
+                     <location>
+                        <geo>48,208333 16,373056</geo>
+                     </location>
+                  </settlement>
+               </birth>
+               <death>
+                  <date when="1937-11-02">1937-11-02</date>
+                  <settlement ref="pmb50">
+                     <placeName type="pref">Wien</placeName>
+                     <location>
+                        <geo>48,208333 16,373056</geo>
+                     </location>
+                  </settlement>
+               </death>
+            </person>
+            <person xml:id="pmb11485">
+               <persName>
+                  <forename>Paul</forename>
+                  <surname>Goldmann</surname>
+               </persName>
+               <birth>
+                  <date when="1865-01-31">1865-01-31</date>
+                  <settlement ref="pmb677">
+                     <placeName type="pref">Breslau</placeName>
+                     <location>
+                        <geo>51,10773 17,03533</geo>
+                     </location>
+                  </settlement>
+               </birth>
+               <death>
+                  <date when="1935-09-25">1935-09-25</date>
                   <settlement ref="pmb50">
                      <placeName type="pref">Wien</placeName>
                      <location>
@@ -258,40 +345,21 @@
                   </settlement>
                </death>
             </person>
-            <person xml:id="pmb12435">
-               <persName>
-                  <forename>Clara Katharina</forename>
-                  <surname>Pollaczek</surname>
-               </persName>
-               <birth>
-                  <date when="1875-01-15">1875-01-15</date>
-                  <settlement ref="pmb50">
-                     <placeName type="pref">Wien</placeName>
-                     <location>
-                        <geo>48,208333 16,373056</geo>
-                     </location>
-                  </settlement>
-               </birth>
-               <death>
-                  <date when="1951-07-22">1951-07-22</date>
-                  <settlement ref="pmb50">
-                     <placeName type="pref">Wien</placeName>
-                     <location>
-                        <geo>48,208333 16,373056</geo>
-                     </location>
-                  </settlement>
-               </death>
-            </person>
          </listPerson>
          <listPlace>
-            <place xml:id="pmb213">
-               <placeName>Bad Ischl</placeName>
+            <place xml:id="pmb168">
+               <placeName>Berlin</placeName>
+               <placeName type="alternative-name">Hauptstadt Berlin</placeName>
+               <placeName type="alternative-name">Barlīn</placeName>
+               <placeName type="alternative-name">Reichshauptstadt Berlin</placeName>
+               <placeName type="alternative-name">Berolino</placeName>
+               <placeName type="legacy-name-merge">B-n</placeName>
                <location type="coords">
-                  <geo>47,71109 13,61893</geo>
+                  <geo>52,52437 13,41053</geo>
                </location>
                <location type="located_in_place">
-                  <placeName ref="pmb429">Salzkammergut</placeName>
-                  <geo>47,75 13,5</geo>
+                  <placeName ref="pmb151">Deutschland</placeName>
+                  <geo>51,5 10,5</geo>
                </location>
             </place>
             <place xml:id="pmb50">
@@ -348,34 +416,14 @@
                   <geo>48,20769 16,37049</geo>
                </location>
             </place>
-            <place xml:id="pmb45943">
-               <placeName>Dachstein</placeName>
+            <place xml:id="pmb245">
+               <placeName>Hotel Esplanade [Berlin]</placeName>
                <location type="coords">
-                  <geo>47,475153 13,605774</geo>
+                  <geo>52,51 13,374444</geo>
                </location>
                <location type="located_in_place">
-                  <placeName ref="pmb519">Oberösterreich</placeName>
-                  <geo>48,25 14,0</geo>
-               </location>
-            </place>
-            <place xml:id="pmb232919">
-               <placeName>Konditorei Zauner</placeName>
-               <location type="coords">
-                  <geo>47,71088 13,62184</geo>
-               </location>
-               <location type="located_in_place">
-                  <placeName ref="pmb213">Bad Ischl</placeName>
-                  <geo>47,71109 13,61893</geo>
-               </location>
-            </place>
-            <place xml:id="pmb715" ana="implied">
-               <placeName>Hotel Kaiserin Elisabeth [Bad Ischl]</placeName>
-               <location type="coords">
-                  <geo>47,7105 13,62173</geo>
-               </location>
-               <location type="located_in_place">
-                  <placeName ref="pmb213">Bad Ischl</placeName>
-                  <geo>47,71109 13,61893</geo>
+                  <placeName ref="pmb168">Berlin</placeName>
+                  <geo>52,52437 13,41053</geo>
                </location>
             </place>
          </listPlace>
