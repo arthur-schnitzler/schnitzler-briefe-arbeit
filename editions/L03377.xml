@@ -1,6 +1,10 @@
-<?xml version='1.0' encoding='UTF-8'?>
+<?xml version="1.0" encoding="UTF-8"?>
 <?xml-model href="../meta/schnitzler-briefe-schematron.sch" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
-<TEI xmlns="http://www.tei-c.org/ns/1.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.tei-c.org/ns/1.0 ../meta/schnitzler-briefe-schema.xsd" xml:id="L03377" xml:base="https://id.acdh.oeaw.ac.at/schnitzler/schnitzler-briefe/editions">
+<TEI xmlns="http://www.tei-c.org/ns/1.0"
+     xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+     xsi:schemaLocation="http://www.tei-c.org/ns/1.0 ../meta/schnitzler-briefe-schema.xsd"
+     xml:id="L03377"
+     xml:base="https://id.acdh.oeaw.ac.at/schnitzler/schnitzler-briefe/editions">
    <teiHeader>
       <fileDesc>
          <titleStmt>
@@ -122,12 +126,20 @@
                   – 22. 7. 1903?]</date>
                <placeName ref="#pmb50">Wien</placeName>
             </correspAction>
-            <correspContext><ref type="belongsToCorrespondence" target="correspondence_11485">Goldmann, Paul</ref>
+            <correspContext>
+               <ref type="belongsToCorrespondence" target="correspondence_11485">Goldmann, Paul</ref>
                <ref subtype="previous_letter" type="withinCollection" target="L01304">Schnitzler an Bahr, 19. 7. 1903</ref>
                <ref subtype="next_letter" type="withinCollection" target="L03378">Goldmann an Schnitzler, 23. 7. [1903]</ref>
-               <ref subtype="previous_letter" type="withinCorrespondence" source="correspondence_11485" target="L03376">Goldmann an Schnitzler, 29. 6. 1903</ref>
-               <ref subtype="next_letter" type="withinCorrespondence" source="correspondence_11485" target="L03378">Goldmann an Schnitzler, 23. 7. [1903]</ref>
-            </correspContext></correspDesc>
+               <ref subtype="previous_letter"
+                    type="withinCorrespondence"
+                    source="correspondence_11485"
+                    target="L03376">Goldmann an Schnitzler, 29. 6. 1903</ref>
+               <ref subtype="next_letter"
+                    type="withinCorrespondence"
+                    source="correspondence_11485"
+                    target="L03378">Goldmann an Schnitzler, 23. 7. [1903]</ref>
+            </correspContext>
+         </correspDesc>
       </profileDesc>
       <revisionDesc status="approved">
          <change who="LU" when="2023-10-16">Export aus Transkribus</change>
@@ -200,7 +212,9 @@
                </hi> (seid <del rend="strikethrough">
                   <gap reason="illegible" quantity="2" unit="chars"/>
                </del> Ihr nun <anchor type="commentary" xml:id="K_L03377-6"/>verheirathet<note type="commentary" corresp="K_L03377-6">
-                  <rs type="person" ref="#pmb2121">Arhtur Schnitzler</rs> und <rs type="person" ref="#pmb2173">Olga Gussmann</rs> heirateten am <ref type="schnitzler-tagebuch" target="1903-08-26" subtype="date-only"/>.</note>
+                  <rs type="person" ref="#pmb2121">Arthur Schnitzler</rs> und <rs type="person" ref="#pmb2173">Olga Gussmann</rs>
+                  <space unit="chars" quantity="1"/>
+                  <rs type="event" subtype="implied" ref="#pmb44469">heirateten</rs> am <ref type="schnitzler-tagebuch" target="1903-08-26" subtype="date-only"/>.</note>
                oder nicht?) und ſei ſelbſt tauſendmal gegrüßt von <lb/>Deinem getreuen <lb/>
                <signed>Paul Goldmann</signed>
             </closer>
@@ -228,164 +242,403 @@
             </postscript>
          </div>
       </body>
-      <back><listPerson><person xml:id="pmb10863"><persName>
-      <forename>Richard</forename>
-      <surname>Beer-Hofmann</surname>
-  </persName><birth>
-    <date when="1866-07-11">1866-07-11</date>
-      <settlement ref="pmb50">
-        <placeName type="pref">Wien</placeName>
-        <location><geo>48,208333 16,373056</geo></location>
-      </settlement>
-  </birth><death>
-    <date when="1945-09-26">1945-09-26</date>
-      <settlement ref="pmb44053">
-        <placeName type="pref">New York City</placeName>
-        <location><geo>40,71427 -74,00597</geo></location>
-      </settlement>
-  </death></person><person xml:id="pmb11485"><persName>
-      <forename>Paul</forename>
-      <surname>Goldmann</surname>
-  </persName><birth>
-    <date when="1865-01-31">1865-01-31</date>
-      <settlement ref="pmb677">
-        <placeName type="pref">Breslau</placeName>
-        <location><geo>51,10773 17,03533</geo></location>
-      </settlement>
-  </birth><death>
-    <date when="1935-09-25">1935-09-25</date>
-      <settlement ref="pmb50">
-        <placeName type="pref">Wien</placeName>
-        <location><geo>48,208333 16,373056</geo></location>
-      </settlement>
-  </death></person><person xml:id="pmb2121"><persName><surname>Schnitzler</surname><forename>Arthur</forename></persName><birth><date when="1862-05-15">15. 5. 1862</date><settlement ref="pmb50"><placeName type="pref">Wien</placeName><location><geo>48,208333 16,373056</geo></location></settlement></birth><death><date when="1931-10-21">21. 10. 1931</date><settlement ref="pmb50"><placeName type="pref">Wien</placeName><location><geo>48,208333 16,373056</geo></location></settlement></death><sex value="male"/><occupation ref="pmb90">Schriftsteller/Schriftstellerin</occupation><occupation ref="pmb97">Mediziner/Medizinerin</occupation><idno type="gnd">https://d-nb.info/gnd/118609807/</idno></person><person xml:id="pmb2173"><persName>
-      <forename>Olga</forename>
-      <surname>Schnitzler</surname>
-  </persName><birth>
-    <date when="1882-01-17">1882-01-17</date>
-      <settlement ref="pmb50">
-        <placeName type="pref">Wien</placeName>
-        <location><geo>48,208333 16,373056</geo></location>
-      </settlement>
-  </birth><death>
-    <date when="1970-01-13">1970-01-13</date>
-      <settlement ref="pmb885">
-        <placeName type="pref">Lugano</placeName>
-        <location><geo>46,01008 8,96004</geo></location>
-      </settlement>
-  </death></person><person xml:id="pmb4138"><persName>
-      <forename>Friedrich Wilhelm</forename>
-      <surname>Riemer</surname>
-  </persName><birth>
-    <date when="1774-04-19">1774-04-19</date>
-      <settlement ref="pmb148042">
-        <placeName type="pref">Kłodzko</placeName>
-        <location><geo>50,43488 16,66145</geo></location>
-      </settlement>
-  </birth><death>
-    <date when="1845-12-19">1845-12-19</date>
-      <settlement ref="pmb197">
-        <placeName type="pref">Weimar</placeName>
-        <location><geo>50,97361 11,33806</geo></location>
-      </settlement>
-  </death></person><person xml:id="pmb8204"><persName>
-      <forename>Rudyard</forename>
-      <surname>Kipling</surname>
-  </persName><birth>
-    <date when="1865-12-30">1865-12-30</date>
-      <settlement ref="pmb64555">
-        <placeName type="pref">Mumbai</placeName>
-        <location><geo>19,07283 72,88261</geo></location>
-      </settlement>
-  </birth><death>
-    <date when="1936-01-18">1936-01-18</date>
-      <settlement ref="pmb224">
-        <placeName type="pref">London</placeName>
-        <location><geo>51,50853 -0,12574</geo></location>
-      </settlement>
-  </death></person><person xml:id="pmb23674" ana="comment"><persName>
-      <forename>Theodore</forename>
-      <surname>Rottenberg</surname>
-  </persName><birth>
-    <date when="1875-09-07">1875-09-07</date>
-  </birth><death>
-    <date when="1945-04-05">1945-04-05</date>
-      <settlement ref="pmb43292">
-        <placeName type="pref">Limburg an der Lahn</placeName>
-        <location><geo>50,3836 8,0503</geo></location>
-      </settlement>
-  </death></person><person xml:id="pmb8744" ana="comment"><persName>
-      <forename>Bertold</forename>
-      <surname>Löffler</surname>
-  </persName><birth>
-    <date when="1874-09-28">1874-09-28</date>
-      <settlement ref="pmb47966">
-        <placeName type="pref">Liberec</placeName>
-        <location><geo>50,76711 15,05619</geo></location>
-      </settlement>
-  </birth><death>
-    <date when="1960-03-23">1960-03-23</date>
-      <settlement ref="pmb50">
-        <placeName type="pref">Wien</placeName>
-        <location><geo>48,208333 16,373056</geo></location>
-      </settlement>
-  </death></person></listPerson><listBibl><bibl xml:id="pmb146994"><title type="main">Das Mädchen aus Birma</title><author role="hat-geschaffen" ref="pmb8204">Kipling, Rudyard</author></bibl><bibl xml:id="pmb146996" ana="comment"><title type="main">Das Mädchen aus Birma und andere Geschichten</title><title type="werk_bibliografische-angabe">Rudyard Kipling: Das Mädchen aus Birma und andere Geschichten. Autorisierte Übersetzung aus dem Englischen. Umschlag von Berthold Löffler. Wien/Leipzig: Wiener Verlag 1903. (Bibliothek berühmter Autoren 8)</title><author role="hat-illustriert" ref="pmb8744">Löffler, Bertold</author><author role="hat-geschaffen" ref="pmb8204">Kipling, Rudyard</author></bibl><bibl xml:id="pmb147003" ana="comment"><title type="main">Bibliothek berühmter Autoren</title></bibl><bibl xml:id="pmb148044" ana="comment"><title type="main">Mittheilungen über Goethe. Aus mündlichen und schriftlichen, gedruckten und ungedruckten Quellen</title><author role="hat-geschaffen" ref="pmb4138">Riemer, Friedrich Wilhelm</author></bibl></listBibl><listPlace><place xml:id="pmb146"><placeName>Frankfurt am Main</placeName><placeName type="ort_namensvariante">Frankfurt a. Main</placeName><placeName type="ort_namensvariante">Frankfurt/Main</placeName><location type="coords">
-  <geo>50,11552 8,68417</geo>
-</location><location type="located_in_place">
-  <placeName ref="pmb151">Deutschland</placeName>
-  <geo>51,5 10,5</geo>
-</location></place><place xml:id="pmb168"><placeName>Berlin</placeName><placeName type="alternative-name">Hauptstadt Berlin</placeName><placeName type="alternative-name">Barlīn</placeName><placeName type="alternative-name">Reichshauptstadt Berlin</placeName><placeName type="alternative-name">Berolino</placeName><placeName type="legacy-name-merge">B-n</placeName><location type="coords">
-  <geo>52,52437 13,41053</geo>
-</location><location type="located_in_place">
-  <placeName ref="pmb151">Deutschland</placeName>
-  <geo>51,5 10,5</geo>
-</location></place><place xml:id="pmb36485"><placeName>Eppan an der Weinstraße</placeName><placeName type="alternative-name">Eppan an der Weinstraße</placeName><placeName type="legacy-name">Eppan</placeName><location type="coords">
-  <geo>46,45472 11,26178</geo>
-</location><location type="located_in_place">
-  <placeName ref="pmb969">Südtirol</placeName>
-  <geo>46,71667 11,5</geo>
-</location><location type="located_in_place">
-  <placeName ref="pmb40306">Italien</placeName>
-  <geo>42,83333 12,83333</geo>
-</location></place><place xml:id="pmb40583"><placeName>Dessauer Straße</placeName><location type="coords">
-  <geo>52,504956 13,378587</geo>
-</location><location type="located_in_place">
-  <placeName ref="pmb168">Berlin</placeName>
-  <geo>52,52437 13,41053</geo>
-</location></place><place xml:id="pmb428"><placeName>Welsberg-Taisten</placeName><placeName type="legacy-name-merge">Welsberg</placeName><placeName type="legacy-name-merge">Welsberg</placeName><placeName type="legacy-name-merge">Welsberg-Taisten</placeName><location type="coords">
-  <geo>46,75774 12,10556</geo>
-</location><location type="located_in_place">
-  <placeName ref="pmb969">Südtirol</placeName>
-  <geo>46,71667 11,5</geo>
-</location><location type="located_in_place">
-  <placeName ref="pmb724">Pustertal</placeName>
-  <geo>46,75 12,33333</geo>
-</location></place><place xml:id="pmb50"><placeName>Wien</placeName><placeName type="ort_fruherer-name">K.K. Reichshaupt- und Residenzstadt Wien</placeName><placeName type="legacy-name-merge">Wien</placeName><placeName type="alternative-name">Bécs</placeName><placeName type="alternative-name">Land Wien</placeName><placeName type="alternative-name">Vídeň</placeName><placeName type="alternative-name">Wenia</placeName><placeName type="alternative-name">Beč</placeName><placeName type="ort_fruherer-name">Vindobona</placeName><placeName type="legacy-name-merge">Vindobona</placeName><placeName type="alternative-name">Vienna</placeName><placeName type="legacy-name-merge">Vienna</placeName><placeName type="alternative-name">Vienna</placeName><location type="coords">
-  <geo>48,208333 16,373056</geo>
-</location><location type="located_in_place">
-  <placeName ref="pmb41240">Österreich</placeName>
-  <geo>47,33333 13,33333</geo>
-</location></place><place xml:id="pmb969"><placeName>Südtirol</placeName><placeName type="legacy-name-merge">Südtirol</placeName><placeName type="namensvariante">Autonome Provinz Bozen</placeName><location type="coords">
-  <geo>46,71667 11,5</geo>
-</location><location type="located_in_place">
-  <placeName ref="pmb40306">Italien</placeName>
-  <geo>42,83333 12,83333</geo>
-</location><location type="located_in_place">
-  <placeName ref="pmb39933">Trentino-Alto Adige</placeName>
-  <geo>46,5 11,33333</geo>
-</location><location type="located_in_place">
-  <placeName ref="pmb298373">Cisleithanien</placeName>
-  <geo>48,5 16,383333333333333</geo>
-</location></place><place xml:id="pmb864" ana="comment"><placeName>Leipzig</placeName><placeName type="alternative-name">Gross-Leipzig</placeName><placeName type="legacy-name-merge">Leipzig</placeName><location type="coords">
-  <geo>51,33962 12,37129</geo>
-</location><location type="located_in_place">
-  <placeName ref="pmb151">Deutschland</placeName>
-  <geo>51,5 10,5</geo>
-</location></place></listPlace><listOrg><org xml:id="pmb29636" ana="comment"><orgName>Wiener Verlag</orgName><orgName type="legacy-name-merge">Wiener Verlag, (Verlag)</orgName><location type="located_in_place">
-  <placeName ref="pmb50">Wien</placeName>
-  <geo>48,208333 16,373056</geo>
-  <idno type="URL" subtype="geonames">https://sws.geonames.org/2761369/</idno><idno type="URL" subtype="d-nb">https://d-nb.info/gnd/4066009-6</idno><idno type="URL" subtype="schnitzler-bahr">https://schnitzler-bahr.acdh.oeaw.ac.at/pmb50.html</idno><idno type="URL" subtype="pmb">https://pmb.acdh.oeaw.ac.at/entity/50/</idno><idno type="URL" subtype="pmb">https://pmb.acdh.oeaw.ac.at/entity/2316/</idno><idno type="URL" subtype="pmb">https://pmb.acdh.oeaw.ac.at/entity/20954/</idno><idno type="URL" subtype="pmb">https://pmb.acdh.oeaw.ac.at/entity/65221/</idno><idno type="URL" subtype="pmb">https://pmb.acdh.oeaw.ac.at/entity/65223/</idno><idno type="URL" subtype="kraus">https://www.kraus.wienbibliothek.at/legalkraus/pmb50.html</idno><idno type="URL" subtype="wikidata">http://www.wikidata.org/entity/Q1741</idno><idno type="URL" subtype="wikipedia">https://de.wikipedia.org/wiki/Wien</idno><idno type="URL" subtype="schnitzler-interviews">https://schnitzler-interviews.acdh.oeaw.ac.at/pmb50.html</idno><idno type="URL" subtype="geonames">https://sws.geonames.org/2761333/</idno><idno type="URL" subtype="pmb">https://pmb.acdh.oeaw.ac.at/entity/33999/</idno><idno type="URL" subtype="schnitzler-tagebuch">https://schnitzler-tagebuch.acdh.oeaw.ac.at/pmb50.html</idno><idno type="URL" subtype="wienerschnitzler">https://wienerschnitzler.org/pmb50.html</idno><idno type="URL" subtype="schnitzler-kultur">https://schnitzler-kultur.acdh.oeaw.ac.at/pmb50.html</idno><idno type="URL" subtype="sk">https://sk.acdh.oeaw.ac.at/DWplace00347</idno><idno type="URL" subtype="sk">https://sk.acdh.oeaw.ac.at/DWplace00066</idno><idno type="URL" subtype="sk">https://sk.acdh.oeaw.ac.at/DWplace00085</idno><idno type="URL" subtype="biblio">https://biblio.ub.uni-freiburg.de/sf/#pmb50</idno><idno type="URL" subtype="schnitzler-briefe">https://schnitzler-briefe.acdh.oeaw.ac.at/pmb50.html</idno><idno type="URL" subtype="schoenberg-ue">https://www.schoenberg-ue.at/ue/places/place.9.11</idno></location><location type="located_in_place">
-  <placeName ref="pmb864">Leipzig</placeName>
-  <geo>51,33962 12,37129</geo>
-  <idno type="URL" subtype="wikidata">http://www.wikidata.org/entity/Q2079</idno><idno type="URL" subtype="geonames">https://sws.geonames.org/2879139/</idno><idno type="URL" subtype="schnitzler-bahr">https://schnitzler-bahr.acdh.oeaw.ac.at/pmb864.html</idno><idno type="URL" subtype="pmb">https://pmb.acdh.oeaw.ac.at/entity/864/</idno><idno type="URL" subtype="pmb">https://pmb.acdh.oeaw.ac.at/entity/44885/</idno><idno type="URL" subtype="d-nb">https://d-nb.info/gnd/4035206-7</idno><idno type="URL" subtype="kraus">https://www.kraus.wienbibliothek.at/legalkraus/pmb864.html</idno><idno type="URL" subtype="wikipedia">https://de.wikipedia.org/wiki/Leipzig</idno><idno type="URL" subtype="schnitzler-tagebuch">https://schnitzler-tagebuch.acdh.oeaw.ac.at/pmb864.html</idno><idno type="URL" subtype="schnitzler-interviews">https://schnitzler-interviews.acdh.oeaw.ac.at/pmb864.html</idno><idno type="URL" subtype="wienerschnitzler">https://wienerschnitzler.org/pmb864.html</idno><idno type="URL" subtype="schnitzler-kultur">https://schnitzler-kultur.acdh.oeaw.ac.at/pmb864.html</idno><idno type="URL" subtype="sk">https://sk.acdh.oeaw.ac.at/DWplace00065</idno><idno type="URL" subtype="sk">https://sk.acdh.oeaw.ac.at/fa_place00004028</idno><idno type="URL" subtype="sk">https://sk.acdh.oeaw.ac.at/pmb864</idno><idno type="URL" subtype="biblio">https://biblio.ub.uni-freiburg.de/sf/#pmb864</idno><idno type="URL" subtype="schnitzler-briefe">https://schnitzler-briefe.acdh.oeaw.ac.at/pmb864.html</idno><idno type="URL" subtype="schoenberg-ue">https://www.schoenberg-ue.at/ue/places/place.2.20</idno></location></org></listOrg></back></text>
+      <back>
+         <listPerson>
+            <person xml:id="pmb11485">
+               <persName>
+                  <forename>Paul</forename>
+                  <surname>Goldmann</surname>
+               </persName>
+               <birth>
+                  <date when="1865-01-31">1865-01-31</date>
+                  <settlement ref="pmb677">
+                     <placeName type="pref">Breslau</placeName>
+                     <location>
+                        <geo>51,10773 17,03533</geo>
+                     </location>
+                  </settlement>
+               </birth>
+               <death>
+                  <date when="1935-09-25">1935-09-25</date>
+                  <settlement ref="pmb50">
+                     <placeName type="pref">Wien</placeName>
+                     <location>
+                        <geo>48,208333 16,373056</geo>
+                     </location>
+                  </settlement>
+               </death>
+            </person>
+            <person xml:id="pmb2121">
+               <persName>
+                  <surname>Schnitzler</surname>
+                  <forename>Arthur</forename>
+               </persName>
+               <birth>
+                  <date when="1862-05-15">15. 5. 1862</date>
+                  <settlement ref="pmb50">
+                     <placeName type="pref">Wien</placeName>
+                     <location>
+                        <geo>48,208333 16,373056</geo>
+                     </location>
+                  </settlement>
+               </birth>
+               <death>
+                  <date when="1931-10-21">21. 10. 1931</date>
+                  <settlement ref="pmb50">
+                     <placeName type="pref">Wien</placeName>
+                     <location>
+                        <geo>48,208333 16,373056</geo>
+                     </location>
+                  </settlement>
+               </death>
+            </person>
+            <person xml:id="pmb10863">
+               <persName>
+                  <forename>Richard</forename>
+                  <surname>Beer-Hofmann</surname>
+               </persName>
+               <birth>
+                  <date when="1866-07-11">1866-07-11</date>
+                  <settlement ref="pmb50">
+                     <placeName type="pref">Wien</placeName>
+                     <location>
+                        <geo>48,208333 16,373056</geo>
+                     </location>
+                  </settlement>
+               </birth>
+               <death>
+                  <date when="1945-09-26">1945-09-26</date>
+                  <settlement ref="pmb44053">
+                     <placeName type="pref">New York City</placeName>
+                     <location>
+                        <geo>40,71427 -74,00597</geo>
+                     </location>
+                  </settlement>
+               </death>
+            </person>
+            <person xml:id="pmb2173">
+               <persName>
+                  <forename>Olga</forename>
+                  <surname>Schnitzler</surname>
+               </persName>
+               <birth>
+                  <date when="1882-01-17">1882-01-17</date>
+                  <settlement ref="pmb50">
+                     <placeName type="pref">Wien</placeName>
+                     <location>
+                        <geo>48,208333 16,373056</geo>
+                     </location>
+                  </settlement>
+               </birth>
+               <death>
+                  <date when="1970-01-13">1970-01-13</date>
+                  <settlement ref="pmb885">
+                     <placeName type="pref">Lugano</placeName>
+                     <location>
+                        <geo>46,01008 8,96004</geo>
+                     </location>
+                  </settlement>
+               </death>
+            </person>
+            <person xml:id="pmb4138">
+               <persName>
+                  <forename>Friedrich Wilhelm</forename>
+                  <surname>Riemer</surname>
+               </persName>
+               <birth>
+                  <date when="1774-04-19">1774-04-19</date>
+                  <settlement ref="pmb148042">
+                     <placeName type="pref">Kłodzko</placeName>
+                     <location>
+                        <geo>50,43488 16,66145</geo>
+                     </location>
+                  </settlement>
+               </birth>
+               <death>
+                  <date when="1845-12-19">1845-12-19</date>
+                  <settlement ref="pmb197">
+                     <placeName type="pref">Weimar</placeName>
+                     <location>
+                        <geo>50,97361 11,33806</geo>
+                     </location>
+                  </settlement>
+               </death>
+            </person>
+            <person xml:id="pmb8204">
+               <persName>
+                  <forename>Rudyard</forename>
+                  <surname>Kipling</surname>
+               </persName>
+               <birth>
+                  <date when="1865-12-30">1865-12-30</date>
+                  <settlement ref="pmb64555">
+                     <placeName type="pref">Mumbai</placeName>
+                     <location>
+                        <geo>19,07283 72,88261</geo>
+                     </location>
+                  </settlement>
+               </birth>
+               <death>
+                  <date when="1936-01-18">1936-01-18</date>
+                  <settlement ref="pmb224">
+                     <placeName type="pref">London</placeName>
+                     <location>
+                        <geo>51,50853 -0,12574</geo>
+                     </location>
+                  </settlement>
+               </death>
+            </person>
+            <person xml:id="pmb23674" ana="implied">
+               <persName>
+                  <forename>Theodore</forename>
+                  <surname>Rottenberg</surname>
+               </persName>
+               <birth>
+                  <date when="1875-09-07">1875-09-07</date>
+               </birth>
+               <death>
+                  <date when="1945-04-05">1945-04-05</date>
+                  <settlement ref="pmb43292">
+                     <placeName type="pref">Limburg an der Lahn</placeName>
+                     <location>
+                        <geo>50,3836 8,0503</geo>
+                     </location>
+                  </settlement>
+               </death>
+            </person>
+            <person xml:id="pmb8744" ana="comment">
+               <persName>
+                  <forename>Bertold</forename>
+                  <surname>Löffler</surname>
+               </persName>
+               <birth>
+                  <date when="1874-09-28">1874-09-28</date>
+                  <settlement ref="pmb47966">
+                     <placeName type="pref">Liberec</placeName>
+                     <location>
+                        <geo>50,76711 15,05619</geo>
+                     </location>
+                  </settlement>
+               </birth>
+               <death>
+                  <date when="1960-03-23">1960-03-23</date>
+                  <settlement ref="pmb50">
+                     <placeName type="pref">Wien</placeName>
+                     <location>
+                        <geo>48,208333 16,373056</geo>
+                     </location>
+                  </settlement>
+               </death>
+            </person>
+         </listPerson>
+         <listBibl>
+            <bibl xml:id="pmb146994">
+               <title>Das Mädchen aus Birma</title>
+               <author ref="pmb8204" role="hat-geschaffen">Kipling, Rudyard</author>
+            </bibl>
+            <bibl xml:id="pmb148044" ana="comment">
+               <title>Mittheilungen über Goethe. Aus mündlichen und schriftlichen, gedruckten und ungedruckten Quellen</title>
+               <author ref="pmb4138" role="hat-geschaffen">Riemer, Friedrich Wilhelm</author>
+            </bibl>
+            <bibl xml:id="pmb146996" ana="comment">
+               <title>Das Mädchen aus Birma und andere Geschichten</title>
+               <title type="werk_bibliografische-angabe">Rudyard Kipling: Das Mädchen aus Birma und andere Geschichten. Autorisierte Übersetzung aus dem Englischen. Umschlag von Berthold Löffler. Wien/Leipzig: Wiener Verlag 1903. (Bibliothek berühmter Autoren 8)</title>
+               <author ref="pmb8744" role="hat-illustriert">Löffler, Bertold</author>
+               <author ref="pmb8204" role="hat-geschaffen">Kipling, Rudyard</author>
+            </bibl>
+            <bibl xml:id="pmb147003" ana="comment">
+               <title>Bibliothek berühmter Autoren</title>
+            </bibl>
+         </listBibl>
+         <listPlace>
+            <place xml:id="pmb168">
+               <placeName>Berlin</placeName>
+               <placeName type="alternative-name">Hauptstadt Berlin</placeName>
+               <placeName type="alternative-name">Barlīn</placeName>
+               <placeName type="alternative-name">Reichshauptstadt Berlin</placeName>
+               <placeName type="alternative-name">Berolino</placeName>
+               <placeName type="legacy-name-merge">B-n</placeName>
+               <location type="coords">
+                  <geo>52,52437 13,41053</geo>
+               </location>
+               <location type="located_in_place">
+                  <placeName ref="pmb151">Deutschland</placeName>
+                  <geo>51,5 10,5</geo>
+               </location>
+            </place>
+            <place xml:id="pmb50" ana="comment">
+               <placeName>Wien</placeName>
+               <placeName type="ort_fruherer-name">K.K. Reichshaupt- und Residenzstadt Wien</placeName>
+               <placeName type="alternative-name">Bécs</placeName>
+               <placeName type="alternative-name">Land Wien</placeName>
+               <placeName type="alternative-name">Vídeň</placeName>
+               <placeName type="alternative-name">Wenia</placeName>
+               <placeName type="alternative-name">Beč</placeName>
+               <placeName type="ort_fruherer-name">Vindobona</placeName>
+               <placeName type="alternative-name">Vienna</placeName>
+               <location type="coords">
+                  <geo>48,208333 16,373056</geo>
+               </location>
+               <location type="located_in_place">
+                  <placeName ref="pmb41240">Österreich</placeName>
+                  <geo>47,33333 13,33333</geo>
+               </location>
+               <location type="located_in_place">
+                  <placeName ref="pmb235218">Windmühlhöhe</placeName>
+                  <geo>48,24077 16,32092</geo>
+               </location>
+            </place>
+            <place xml:id="pmb40583">
+               <placeName>Dessauer Straße</placeName>
+               <location type="coords">
+                  <geo>52,504956 13,378587</geo>
+               </location>
+               <location type="located_in_place">
+                  <placeName ref="pmb168">Berlin</placeName>
+                  <geo>52,52437 13,41053</geo>
+               </location>
+            </place>
+            <place xml:id="pmb146">
+               <placeName>Frankfurt am Main</placeName>
+               <placeName type="ort_namensvariante">Frankfurt a. Main</placeName>
+               <placeName type="ort_namensvariante">Frankfurt/Main</placeName>
+               <location type="coords">
+                  <geo>50,11552 8,68417</geo>
+               </location>
+               <location type="located_in_place">
+                  <placeName ref="pmb151">Deutschland</placeName>
+                  <geo>51,5 10,5</geo>
+               </location>
+            </place>
+            <place xml:id="pmb969">
+               <placeName>Südtirol</placeName>
+               <placeName type="namensvariante">Autonome Provinz Bozen</placeName>
+               <location type="coords">
+                  <geo>46,71667 11,5</geo>
+               </location>
+               <location type="located_in_place">
+                  <placeName ref="pmb40306">Italien</placeName>
+                  <geo>42,83333 12,83333</geo>
+               </location>
+               <location type="located_in_place">
+                  <placeName ref="pmb39933">Trentino-Alto Adige</placeName>
+                  <geo>46,5 11,33333</geo>
+               </location>
+               <location type="located_in_place">
+                  <placeName ref="pmb298373">Cisleithanien</placeName>
+                  <geo>48,5 16,383333333333333</geo>
+               </location>
+            </place>
+            <place xml:id="pmb428">
+               <placeName>Welsberg-Taisten</placeName>
+               <placeName type="legacy-name-merge">Welsberg</placeName>
+               <location type="coords">
+                  <geo>46,75774 12,10556</geo>
+               </location>
+               <location type="located_in_place">
+                  <placeName ref="pmb969">Südtirol</placeName>
+                  <geo>46,71667 11,5</geo>
+               </location>
+               <location type="located_in_place">
+                  <placeName ref="pmb724">Pustertal</placeName>
+                  <geo>46,75 12,33333</geo>
+               </location>
+            </place>
+            <place xml:id="pmb36485" ana="comment">
+               <placeName>Eppan an der Weinstraße</placeName>
+               <placeName type="legacy-name">Eppan</placeName>
+               <location type="coords">
+                  <geo>46,45472 11,26178</geo>
+               </location>
+               <location type="located_in_place">
+                  <placeName ref="pmb969">Südtirol</placeName>
+                  <geo>46,71667 11,5</geo>
+               </location>
+               <location type="located_in_place">
+                  <placeName ref="pmb40306">Italien</placeName>
+                  <geo>42,83333 12,83333</geo>
+               </location>
+            </place>
+            <place xml:id="pmb864" ana="comment">
+               <placeName>Leipzig</placeName>
+               <placeName type="alternative-name">Gross-Leipzig</placeName>
+               <location type="coords">
+                  <geo>51,33962 12,37129</geo>
+               </location>
+               <location type="located_in_place">
+                  <placeName ref="pmb151">Deutschland</placeName>
+                  <geo>51,5 10,5</geo>
+               </location>
+            </place>
+         </listPlace>
+         <listOrg>
+            <org xml:id="pmb29636" ana="comment">
+               <orgName>Wiener Verlag</orgName>
+               <orgName type="legacy-name-merge">Wiener Verlag, (Verlag)</orgName>
+               <location type="located_in_place">
+                  <placeName ref="pmb50">Wien</placeName>
+                  <geo>48,208333 16,373056</geo>
+                  <idno type="URL" subtype="geonames">https://sws.geonames.org/2761369/</idno>
+                  <idno type="URL" subtype="d-nb">https://d-nb.info/gnd/4066009-6</idno>
+                  <idno type="URL" subtype="schnitzler-bahr">https://schnitzler-bahr.acdh.oeaw.ac.at/pmb50.html</idno>
+                  <idno type="URL" subtype="pmb">https://pmb.acdh.oeaw.ac.at/entity/50/</idno>
+                  <idno type="URL" subtype="pmb">https://pmb.acdh.oeaw.ac.at/entity/2316/</idno>
+                  <idno type="URL" subtype="pmb">https://pmb.acdh.oeaw.ac.at/entity/20954/</idno>
+                  <idno type="URL" subtype="pmb">https://pmb.acdh.oeaw.ac.at/entity/65221/</idno>
+                  <idno type="URL" subtype="pmb">https://pmb.acdh.oeaw.ac.at/entity/65223/</idno>
+                  <idno type="URL" subtype="www">https://www.kraus.wienbibliothek.at/legalkraus/pmb50.html</idno>
+                  <idno type="URL" subtype="wikidata">http://www.wikidata.org/entity/Q1741</idno>
+                  <idno type="URL" subtype="wikipedia">https://de.wikipedia.org/wiki/Wien</idno>
+                  <idno type="URL" subtype="schnitzler-interviews">https://schnitzler-interviews.acdh.oeaw.ac.at/pmb50.html</idno>
+                  <idno type="URL" subtype="geonames">https://sws.geonames.org/2761333/</idno>
+                  <idno type="URL" subtype="pmb">https://pmb.acdh.oeaw.ac.at/entity/33999/</idno>
+                  <idno type="URL" subtype="schnitzler-tagebuch">https://schnitzler-tagebuch.acdh.oeaw.ac.at/pmb50.html</idno>
+                  <idno type="URL" subtype="wienerschnitzler">https://wienerschnitzler.org/pmb50.html</idno>
+                  <idno type="URL" subtype="schnitzler-kultur">https://schnitzler-kultur.acdh.oeaw.ac.at/pmb50.html</idno>
+                  <idno type="URL" subtype="sk">https://sk.acdh.oeaw.ac.at/DWplace00347</idno>
+                  <idno type="URL" subtype="sk">https://sk.acdh.oeaw.ac.at/DWplace00066</idno>
+                  <idno type="URL" subtype="sk">https://sk.acdh.oeaw.ac.at/DWplace00085</idno>
+                  <idno type="URL" subtype="biblio">https://biblio.ub.uni-freiburg.de/sf/#pmb50</idno>
+                  <idno type="URL" subtype="schnitzler-briefe">https://schnitzler-briefe.acdh.oeaw.ac.at/pmb50.html</idno>
+                  <idno type="URL" subtype="www">https://www.schoenberg-ue.at/ue/places/place.9.11</idno>
+               </location>
+               <location type="located_in_place">
+                  <placeName ref="pmb864">Leipzig</placeName>
+                  <geo>51,33962 12,37129</geo>
+                  <idno type="URL" subtype="wikidata">http://www.wikidata.org/entity/Q2079</idno>
+                  <idno type="URL" subtype="geonames">https://sws.geonames.org/2879139/</idno>
+                  <idno type="URL" subtype="schnitzler-bahr">https://schnitzler-bahr.acdh.oeaw.ac.at/pmb864.html</idno>
+                  <idno type="URL" subtype="pmb">https://pmb.acdh.oeaw.ac.at/entity/864/</idno>
+                  <idno type="URL" subtype="pmb">https://pmb.acdh.oeaw.ac.at/entity/44885/</idno>
+                  <idno type="URL" subtype="d-nb">https://d-nb.info/gnd/4035206-7</idno>
+                  <idno type="URL" subtype="www">https://www.kraus.wienbibliothek.at/legalkraus/pmb864.html</idno>
+                  <idno type="URL" subtype="wikipedia">https://de.wikipedia.org/wiki/Leipzig</idno>
+                  <idno type="URL" subtype="schnitzler-tagebuch">https://schnitzler-tagebuch.acdh.oeaw.ac.at/pmb864.html</idno>
+                  <idno type="URL" subtype="schnitzler-interviews">https://schnitzler-interviews.acdh.oeaw.ac.at/pmb864.html</idno>
+                  <idno type="URL" subtype="wienerschnitzler">https://wienerschnitzler.org/pmb864.html</idno>
+                  <idno type="URL" subtype="schnitzler-kultur">https://schnitzler-kultur.acdh.oeaw.ac.at/pmb864.html</idno>
+                  <idno type="URL" subtype="sk">https://sk.acdh.oeaw.ac.at/DWplace00065</idno>
+                  <idno type="URL" subtype="sk">https://sk.acdh.oeaw.ac.at/fa_place00004028</idno>
+                  <idno type="URL" subtype="sk">https://sk.acdh.oeaw.ac.at/pmb864</idno>
+                  <idno type="URL" subtype="biblio">https://biblio.ub.uni-freiburg.de/sf/#pmb864</idno>
+                  <idno type="URL" subtype="schnitzler-briefe">https://schnitzler-briefe.acdh.oeaw.ac.at/pmb864.html</idno>
+                  <idno type="URL" subtype="www">https://www.schoenberg-ue.at/ue/places/place.2.20</idno>
+               </location>
+            </org>
+         </listOrg>
+         <listEvent>
+            <event xml:id="pmb44469" ana="comment">
+               <eventName n="Hochzeit">Eheschließung von Arthur Schnitzler und Olga Gussmann, 26.8.1903</eventName>
+               <listPlace>
+                  <place>
+                     <placeName role="veranstaltet in" ref="pmb232701">Währinger Tempel</placeName>
+                     <location>
+                        <geo>48,2242 16,3406</geo>
+                     </location>
+                  </place>
+               </listPlace>
+            </event>
+         </listEvent>
+      </back>
+   </text>
 </TEI>
