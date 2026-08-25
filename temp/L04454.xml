@@ -10,8 +10,9 @@
          <titleStmt>
             <title level="s">Arthur Schnitzler: Briefwechsel mit Autorinnen und
                                     Autoren</title>
-            <title level="a">Arthur Schnitzler an Gustav Schwarzkopf, XXXX</title>
+            <title level="a">Arthur und Olga Schnitzler an Gustav Schwarzkopf, [13.?]&#160;5.&#160;1912</title>
             <author ref="#pmb2121">Schnitzler, Arthur</author>
+            <author ref="#pmb2173">Schnitzler, Olga</author>
             <editor>
                <persName>Jahnke, Selma</persName>
                <persName>Müller, Martin Anton</persName>
@@ -99,9 +100,22 @@
                               </extent>
                            </supportDesc>
                         </objectDesc>
-                        <handDesc>
-                           <handNote medium="" style="deutsche-kurrent"/>
+                        <handDesc hands="2">
+                           <handNote corresp="#pmb2121" medium="bleistift" style="deutsche-kurrent"/>
+                           <handNote corresp="#pmb2173" medium="bleistift" style="lateinische-kurrent"></handNote>
                         </handDesc>
+                        <additions>
+                           <incident type="postal">
+                              <desc>
+                                 <stamp n="1">
+                                    <placeName ref="#pmb873">Triest</placeName>
+                                    <date when="1912-05-14">14.&#160;V.&#160;12</date>
+                                    <time>4</time>
+                                    <addSpan>Trieste</addSpan>
+                                 </stamp>
+                              </desc>
+                           </incident>
+                        </additions>
                      </physDesc>
                   </msDesc>
                </witness>
@@ -115,9 +129,12 @@
          <correspDesc>
             <correspAction type="sent">
                <persName ref="#pmb2121">Schnitzler, Arthur</persName>
-               <date when="" n="01">XXXX</date>
-               <placeName ref="#50" evidence="conjecture">Wien</placeName>
+               <persName type="#pmb2173">Schnitzler, Olga</persName>
+               <date when="1912-05-13" n="01">[13.?]&#160;5.&#160;1912</date>
+               <placeName ref="#pmb45260">Brioni</placeName>
             </correspAction>
+            <correspAction type="transmitted"><date when="1912-05-14">14.&#160;5.&#160;1912</date>
+               <placeName ref="#pmb873">Triest</placeName></correspAction>
             <correspAction type="received">
                <persName ref="#pmb12740">Schwarzkopf, Gustav</persName>
                <placeName ref="#pmb50">Wien</placeName>
@@ -126,34 +143,30 @@
       </profileDesc>
       <revisionDesc status="proposed">
          <change who="MAM" when="2026-06-11">Export aus
-                                Transkribus</change>
+                                Transkribus</change><change who="SJ" when="2026-08-25">Durchsicht</change>
       </revisionDesc>
    </teiHeader>
    <text>
       <body>
+         <div type="address">
+            <address>
+               <addrLine><pb facs="HS00048772X_0214"/>Herrn Guſtav Schwarzkopf</addrLine>
+               <addrLine><rs type="place" ref="#pmb51">Wien&#160;<subst><del rend="strikethrough">X</del><add place="inline">I</add></subst></rs></addrLine>
+               <addrLine><rs type="place" ref="#pmb207301"><hi rend="latintype">Tiefer Graben&#160;17</hi></rs></addrLine>
+            </address>
+         </div>
+         <div type="image"><p rend="center"><pb facs="HS00048772X_0215"/><hi rend="pre-print">
+                  <rs type="place" ref="#pmb254866">Brioni-Paradies</rs>.</hi></p><p rend="center"><handShift scribe="#pmb2121"/><anchor type="textConst" xml:id="T_L04454-1"/><rs type="place" ref="#pmb45260">Brioni</rs><note type='textConst' corresp="T_L04454-1"><rs type="person" ref="#pmb2121">Schnitzler</rs> beschriftet das Bildmotiv in der Mitte der Bildseite.</note></p></div>
          <div type="writingSession" n="1">
-            <pb facs="HS00048772X_0213"/>
-            <rs type="place" ref="#pmb45260">Brioni</rs>
-            <pb facs="HS00048772X_0214"/>
-            <hi rend="pre-print">
-               <rs type="place" ref="">Brioni-Paradies</rs>.</hi>
-            <p>Herzliche Grüße. Es iſt
+            <p><pb facs="HS00048772X_0214"/><salute>Herzliche Grüße.</salute> Es iſt
       hier über <unclear>alles Erwarten</unclear> 
       ſchön. Wir fahren nach
-      <rs type="place" ref="#pmb873">Trieſt</rs> – <rs type="place" ref="#pmb462">Venedig</rs>.
-      </p>
-            <closer>Ihr <signed>Arthur</signed>
-            <lb/>Herzlichst<lb/>
-               <signed>Olga.</signed>
-            </closer>
-            <addrLine>Herrn Gustav Schwarzkopf</addrLine>
-            <addrLine>
-               <rs type="place" ref="#pmb50">Wien <del rend="strikethrough">X</del> I</rs>
-            </addrLine>
-            <addrLine>
-               <rs type="place" ref="">Tiefer Graben 17</rs>
-            </addrLine>
-            <pb facs="HS00048772X_0215"/>
+      <rs type="place" ref="#pmb873">Trieſt</rs> – <rs type="place" ref="#pmb462">Venedig</rs>.</p>
+            <closer>Ihr <signed>Arthur</signed></closer></div>
+            <div type="writingSession" n="2"><p>Herzlichst<lb/>
+               <signed>Olga.</signed></p></div>
+            
+                        <pb facs="HS00048772X_0215"/>
             <pb facs="HS00048772X_0216"/>
             <dateline>
                <date>30/7 912</date>
