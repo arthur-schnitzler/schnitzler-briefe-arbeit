@@ -4858,7 +4858,7 @@
       <xsl:text>] </xsl:text>
    </xsl:template>
    <!-- Dieses Template bereitet den Schriftwechsel für griechische Zeichen vor -->
-   <xsl:template match="tei:foreign[starts-with(@lang, 'el') or starts-with(@xml:lang, 'el')]">
+   <xsl:template match="tei:foreign[starts-with(@lang, 'el') or starts-with(@xml:lang, 'el') or starts-with(@lang, 'gr') or starts-with(@xml:lang, 'gr')]">
       <xsl:text>\griechisch{</xsl:text>
       <xsl:apply-templates/>
       <xsl:text>}</xsl:text>
