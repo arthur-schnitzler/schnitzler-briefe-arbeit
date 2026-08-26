@@ -588,6 +588,13 @@
                 tei:text/tei:back vorkommen. </sch:assert>
         </sch:rule>
     </sch:pattern>
+    <!-- persName outside back may only carry @ref, no other attributes -->
+    <sch:pattern id="persName-outside-back-only-ref">
+        <sch:rule context="tei:persName[not(ancestor::tei:back)]">
+            <sch:assert test="not(@*[not(name() = 'ref')])"> tei:persName darf außerhalb von
+                tei:back kein anderes Attribut als @ref haben. </sch:assert>
+        </sch:rule>
+    </sch:pattern>
     <!-- div image restrictions -->
     <sch:pattern id="div-image-restrictions">
         <sch:rule context="tei:div[@type = 'image']">
