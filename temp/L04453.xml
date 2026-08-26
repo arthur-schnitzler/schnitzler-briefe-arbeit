@@ -10,8 +10,9 @@
          <titleStmt>
             <title level="s">Arthur Schnitzler: Briefwechsel mit Autorinnen und
                                     Autoren</title>
-            <title level="a">Arthur Schnitzler an Gustav Schwarzkopf, XXXX</title>
+            <title level="a">Arthur und Olga Schnitzler an Gustav Schwarzkopf, 18. 5. 1912</title>
             <author ref="#pmb2121">Schnitzler, Arthur</author>
+            <author ref="#pmb2173">Schnitzler, Olga</author>
             <editor>
                <persName>Jahnke, Selma</persName>
                <persName>Müller, Martin Anton</persName>
@@ -95,13 +96,26 @@
                            <supportDesc>
                               <extent>
                                  <measure unit="karte" quantity="1"/>
-                                 
+                                 <measure unit="zeichenanzahl" quantity="92"/>
                               </extent>
                            </supportDesc>
                         </objectDesc>
-                        <handDesc>
-                           <handNote medium="" style="deutsche-kurrent"/>
+                        <handDesc hands="2">
+                           <handNote corresp="#pmb2121" medium="bleistift" style="deutsche-kurrent"/>
+                           <handNote corresp="#pmb2173" medium="bleistift" style="lateinische-kurrent"/>
                         </handDesc>
+                        <additions>
+                           <incident type="postal">
+                              <desc>
+                                 <stamp n="1">
+                                    <placeName ref="#pmb462">Venezia</placeName>
+                                    <date when="1912-05-17">17. 5. 1912</date>
+                                    <time>22</time>
+                                    <addSpan>Ferrovia</addSpan>
+                                 </stamp>
+                              </desc>
+                           </incident>
+                        </additions>
                      </physDesc>
                   </msDesc>
                </witness>
@@ -115,11 +129,13 @@
          <correspDesc>
             <correspAction type="sent">
                <persName ref="#pmb2121">Schnitzler, Arthur</persName>
-               <date when="" n="01">XXXX</date>
-               <placeName ref="#50" evidence="conjecture">Wien</placeName>
+               <persName ref="#pmb2173">Schnitzler, Olga</persName>
+               <date when="1912-05-18" n="01">18. 5. 1912</date>
+               <placeName ref="#pmb462">Venedig</placeName>
             </correspAction>
             <correspAction type="received">
                <persName ref="#pmb12740">Schwarzkopf, Gustav</persName>
+               <date evidence="conjecture" notBefore="1912-05-19" notAfter="1912-05-23">[19. 5. 1912 – 23. 5. 1912?]</date>
                <placeName ref="#pmb50">Wien</placeName>
             </correspAction>
          </correspDesc>
@@ -127,41 +143,254 @@
       <revisionDesc status="proposed">
          <change who="MAM" when="2026-06-11">Export aus
                                 Transkribus</change>
+         <change who="SJ" when="2026-08-26">Durchsicht</change>
       </revisionDesc>
    </teiHeader>
+   <facsimile>
+      <graphic url="HS00048772X_0212"/>
+      <graphic url="HS00048772X_0211"/>
+      <graphic url="HS00048772X_0212"/>
+   </facsimile>
    <text>
       <body>
-         <div type="writingSession" n="1">
-            <pb facs="HS00048772X_0211"/>
-            <hi rend="pre-print">
-               <rs type="place" ref="">
-                  Venezia – Ganal Grande</rs> preso dall’ <rs type="place" ref="">Accademia</rs> e <rs type="place" ref="">Palazzo Franchetti</rs>
-            </hi>
-            <pb facs="HS00048772X_0212"/>
-            <addrLine>
-               <rs type="place" ref="#pmb41240">Austria</rs>
-            </addrLine>
-            <addrLine>Herrn Gustav</addrLine>
-            <addrLine>Schwarzkopf</addrLine>
-            <addrLine>
-               <rs type="place" ref="#pmb50">Wien I</rs>
-            </addrLine>
-            <addrLine>
-               <rs type="place" ref="">Tiefer Graben 17</rs>
-            </addrLine>
+         <div type="address">
+            <address>
+               <addrLine>
+                  <pb facs="HS00048772X_0212"/>
+                  <rs type="place" ref="#pmb41240">
+                     <hi rend="latintype">Austria</hi>
+                  </rs>
+               </addrLine>
+               <addrLine>Herrn <hi rend="latintype">Gustav Schwarzkopf</hi>
+               </addrLine>
+               <addrLine>
+                  <rs type="place" ref="#pmb51">Wien I</rs>
+               </addrLine>
+               <addrLine>
+                  <rs type="place" ref="#pmb207301">
+                     <hi rend="latintype">Tiefer Graben 17</hi>
+                  </rs>
+               </addrLine>
+            </address>
+         </div>
+         <div type="image">
             <p>
-               Herzliche Grüße!
+               <pb facs="HS00048772X_0211"/>
+               <hi rend="pre-print">
+                  <rs type="place" ref="#pmb34052">Venezia – Ganal Grande</rs> preso dall’ <rs type="place" ref="#pmb43220">Accademia</rs> e <rs type="place" ref="#pmb364094">Palazzo Franchetti</rs>
+               </hi>
             </p>
+         </div>
+         <div type="writingSession" n="1">
+            <p>
+               <pb facs="HS00048772X_0212"/>Herzliche Grüße!</p>
             <closer>Ihr <signed>Arthur</signed>
-            <lb/>
-               <signed>Olga.</signed>
+               <lb/>
+               <signed>
+                  <handShift scribe="#pmb2173"/>Olga.</signed>
             </closer>
-            <dateline>
-               <date>18.&#160;5.&#160;912</date>
-               
-            </dateline>
-            
+            <postscript>
+               <dateline>
+                  <handShift scribe="#pmb2121"/>
+                  <date>18. 5. 912</date>
+               </dateline>
+            </postscript>
          </div>
       </body>
+      <back>
+         <listPerson>
+            <person xml:id="pmb2121">
+               <persName>
+                  <surname>Schnitzler</surname>
+                  <forename>Arthur</forename>
+               </persName>
+               <birth>
+                  <date when="1862-05-15">15. 5. 1862</date>
+                  <settlement ref="pmb50">
+                     <placeName type="pref">Wien</placeName>
+                     <location>
+                        <geo>48,208333 16,373056</geo>
+                     </location>
+                  </settlement>
+               </birth>
+               <death>
+                  <date when="1931-10-21">21. 10. 1931</date>
+                  <settlement ref="pmb50">
+                     <placeName type="pref">Wien</placeName>
+                     <location>
+                        <geo>48,208333 16,373056</geo>
+                     </location>
+                  </settlement>
+               </death>
+            </person>
+            <person xml:id="pmb2173">
+               <persName>
+                  <forename>Olga</forename>
+                  <surname>Schnitzler</surname>
+               </persName>
+               <birth>
+                  <date when="1882-01-17">1882-01-17</date>
+                  <settlement ref="pmb50">
+                     <placeName type="pref">Wien</placeName>
+                     <location>
+                        <geo>48,208333 16,373056</geo>
+                     </location>
+                  </settlement>
+               </birth>
+               <death>
+                  <date when="1970-01-13">1970-01-13</date>
+                  <settlement ref="pmb885">
+                     <placeName type="pref">Lugano</placeName>
+                     <location>
+                        <geo>46,01008 8,96004</geo>
+                     </location>
+                  </settlement>
+               </death>
+            </person>
+            <person xml:id="pmb12740">
+               <persName>
+                  <forename>Gustav</forename>
+                  <surname>Schwarzkopf</surname>
+               </persName>
+               <birth>
+                  <date when="1853-11-07">1853-11-07</date>
+                  <settlement ref="pmb50">
+                     <placeName type="pref">Wien</placeName>
+                     <location>
+                        <geo>48,208333 16,373056</geo>
+                     </location>
+                  </settlement>
+               </birth>
+               <death>
+                  <date when="1939-11-13">1939-11-13</date>
+                  <settlement ref="pmb50">
+                     <placeName type="pref">Wien</placeName>
+                     <location>
+                        <geo>48,208333 16,373056</geo>
+                     </location>
+                  </settlement>
+               </death>
+            </person>
+         </listPerson>
+         <listPlace>
+            <place xml:id="pmb462">
+               <placeName>Venedig</placeName>
+               <placeName type="legacy-name-merge">Venice</placeName>
+               <location type="coords">
+                  <geo>45,43713 12,33265</geo>
+               </location>
+               <location type="located_in_place">
+                  <placeName ref="pmb40306">Italien</placeName>
+                  <geo>42,83333 12,83333</geo>
+               </location>
+            </place>
+            <place xml:id="pmb50">
+               <placeName>Wien</placeName>
+               <placeName type="ort_fruherer-name">K.K. Reichshaupt- und Residenzstadt Wien</placeName>
+               <placeName type="alternative-name">Bécs</placeName>
+               <placeName type="alternative-name">Land Wien</placeName>
+               <placeName type="alternative-name">Vídeň</placeName>
+               <placeName type="alternative-name">Wenia</placeName>
+               <placeName type="alternative-name">Beč</placeName>
+               <placeName type="ort_fruherer-name">Vindobona</placeName>
+               <placeName type="alternative-name">Vienna</placeName>
+               <location type="coords">
+                  <geo>48,208333 16,373056</geo>
+               </location>
+               <location type="located_in_place">
+                  <placeName ref="pmb41240">Österreich</placeName>
+                  <geo>47,33333 13,33333</geo>
+               </location>
+               <location type="located_in_place">
+                  <placeName ref="pmb235218">Windmühlhöhe</placeName>
+                  <geo>48,24077 16,32092</geo>
+               </location>
+            </place>
+            <place xml:id="pmb41240">
+               <placeName>Österreich</placeName>
+               <placeName type="alternative-name">Republik Österreich</placeName>
+               <placeName type="alternative-name">Republic of Austria</placeName>
+               <placeName type="legacy-name-merge">Deutsch Österreich</placeName>
+               <placeName type="legacy-name-merge">Altoesterreich</placeName>
+               <location type="coords">
+                  <geo>47,33333 13,33333</geo>
+               </location>
+               <location type="located_in_place">
+                  <placeName ref="pmb468">Europa</placeName>
+                  <geo>48,69096 9,14062</geo>
+               </location>
+               <location type="located_in_place">
+                  <placeName ref="pmb298373">Cisleithanien</placeName>
+                  <geo>48,5 16,383333333333333</geo>
+               </location>
+               <location type="located_in_place">
+                  <placeName ref="pmb687">Österreich-Ungarn</placeName>
+                  <geo>48,4054 16,4887</geo>
+               </location>
+            </place>
+            <place xml:id="pmb51">
+               <placeName>I., Innere Stadt</placeName>
+               <placeName type="alternative-name">Inner city</placeName>
+               <placeName type="alternative-name">Wien,Innere Stadt</placeName>
+               <placeName type="alternative-name">1. Wiener Gemeindebezirk</placeName>
+               <placeName type="legacy-name-merge">Wien-Innere Stadt</placeName>
+               <location type="coords">
+                  <geo>48,20769 16,37049</geo>
+               </location>
+               <location type="located_in_place">
+                  <placeName ref="pmb41240">Österreich</placeName>
+                  <geo>47,33333 13,33333</geo>
+               </location>
+               <location type="located_in_place">
+                  <placeName ref="pmb50">Wien</placeName>
+                  <geo>48,208333 16,373056</geo>
+               </location>
+            </place>
+            <place xml:id="pmb207301">
+               <placeName>Tiefer Graben 17</placeName>
+               <location type="coords">
+                  <geo>48,212284 16,367725</geo>
+               </location>
+               <location type="located_in_place">
+                  <placeName ref="pmb50825">Tiefer Graben</placeName>
+                  <geo>48,2125 16,368333</geo>
+               </location>
+               <location type="located_in_place">
+                  <placeName ref="pmb51">I., Innere Stadt</placeName>
+                  <geo>48,20769 16,37049</geo>
+               </location>
+            </place>
+            <place xml:id="pmb34052">
+               <placeName>Canal Grande</placeName>
+               <location type="coords">
+                  <geo>45,436312 12,33118</geo>
+               </location>
+               <location type="located_in_place">
+                  <placeName ref="pmb462">Venedig</placeName>
+                  <geo>45,43713 12,33265</geo>
+               </location>
+            </place>
+            <place xml:id="pmb43220">
+               <placeName>Gallerie dell’Accademia</placeName>
+               <location type="coords">
+                  <geo>45,431245 12,32798</geo>
+               </location>
+               <location type="located_in_place">
+                  <placeName ref="pmb462">Venedig</placeName>
+                  <geo>45,43713 12,33265</geo>
+               </location>
+            </place>
+            <place xml:id="pmb364094">
+               <placeName>Palazzo Cavalli-Franchetti</placeName>
+               <location type="coords">
+                  <geo>45,431718 12,329614</geo>
+               </location>
+               <location type="located_in_place">
+                  <placeName ref="pmb462">Venedig</placeName>
+                  <geo>45,43713 12,33265</geo>
+               </location>
+            </place>
+         </listPlace>
+      </back>
    </text>
 </TEI>
