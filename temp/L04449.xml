@@ -10,8 +10,9 @@
          <titleStmt>
             <title level="s">Arthur Schnitzler: Briefwechsel mit Autorinnen und
                                     Autoren</title>
-            <title level="a">Arthur Schnitzler an Gustav Schwarzkopf, XXXX</title>
+            <title level="a">Arthur Schnitzler und Olga Gussmann an Gustav Schwarzkopf, 12. 11. 1901</title>
             <author ref="#pmb2121">Schnitzler, Arthur</author>
+            <author ref="#pmb2173">Gussmann, Olga</author>
             <editor>
                <persName>Jahnke, Selma</persName>
                <persName>Müller, Martin Anton</persName>
@@ -95,13 +96,36 @@
                            <supportDesc>
                               <extent>
                                  <measure unit="karte" quantity="1"/>
-                                 
+                                 <measure unit="zeichenanzahl" quantity="143"/>
                               </extent>
                            </supportDesc>
                         </objectDesc>
-                        <handDesc>
-                           <handNote medium="" style="deutsche-kurrent"/>
+                        <handDesc hands="2">
+                           <handNote corresp="#pmb2121" medium="bleistift" style="deutsche-kurrent"/>
+                           <handNote corresp="#pmb2173" medium="bleistift" style="lateinische-kurrent"/>
                         </handDesc>
+                        <additions>
+                           <incident type="postal">
+                              <desc>
+                                 <stamp n="1">
+                                    <placeName ref="#pmb483">
+                                       <unclear>Re</unclear>ichenau</placeName>
+                                    <date when="1901-11-12">12 <unclear>11</unclear> 01</date>
+                                 </stamp>
+                              </desc>
+                           </incident>
+                           <incident type="postal">
+                              <desc>
+                                 <stamp n="2">
+                                    <placeName ref="#pmb51">Wien 1/1 1</placeName>
+                                    <date when="1901-11-12">12. 11. <supplied>01</supplied>
+                                    </date>
+                                    <time>6½–8 N</time>
+                                    <addSpan>bestellt</addSpan>
+                                 </stamp>
+                              </desc>
+                           </incident>
+                        </additions>
                      </physDesc>
                   </msDesc>
                </witness>
@@ -115,11 +139,21 @@
          <correspDesc>
             <correspAction type="sent">
                <persName ref="#pmb2121">Schnitzler, Arthur</persName>
-               <date when="" n="01">XXXX</date>
-               <placeName ref="#50" evidence="conjecture">Wien</placeName>
+               <persName ref="#pmb2173">Gussmann, Olga</persName>
+               <date when="1901-11-12" n="01">12. 11. 1901</date>
+               <placeName ref="#pmb483">Reichenau an der Rax</placeName>
+            </correspAction>
+            <correspAction type="transmitted">
+               <date when="1901-11-12">12. 11. 1901</date>
+               <placeName ref="#pmb483">Reichenau an der Rax</placeName>
+            </correspAction>
+            <correspAction type="delivered">
+               <date when="1901-11-12">12. 11. 1901</date>
+               <placeName ref="#pmb51">I., Innere Stadt</placeName>
             </correspAction>
             <correspAction type="received">
                <persName ref="#pmb12740">Schwarzkopf, Gustav</persName>
+               <date when="1901-11-12">12. 11. 1901</date>
                <placeName ref="#pmb50">Wien</placeName>
             </correspAction>
          </correspDesc>
@@ -127,34 +161,193 @@
       <revisionDesc status="proposed">
          <change who="MAM" when="2026-06-11">Export aus
                                 Transkribus</change>
+         <change who="SJ" when="2026-08-27">Durchsicht</change>
       </revisionDesc>
    </teiHeader>
+   <facsimile>
+      <graphic url="HS00048772X_0204"/>
+      <graphic url="HS00048772X_0203"/>
+   </facsimile>
    <text>
       <body>
+         <div type="address">
+            <address>
+               <addrLine>
+                  <pb facs="HS00048772X_0204"/>Herrn Guſtav Schwarzkopf</addrLine>
+               <addrLine>
+                  <rs type="place" ref="#pmb50">Wien</rs>
+               </addrLine>
+               <addrLine>
+                  <rs type="place" ref="#pmb207296">I. Tiefer Graben 23</rs>.</addrLine>
+            </address>
+         </div>
+         <div type="image">
+            <p>
+               <pb facs="HS00048772X_0203"/>
+               <hi rend="pre-print">
+                  <rs type="place" ref="#pmb483">Reichenau</rs>.</hi>
+            </p>
+         </div>
          <div type="writingSession" n="1">
-            <pb facs="HS00048772X_0203"/>
-            <hi rend="pre-print">
-               <rs type="place" ref="">Reichenau</rs>
-               .</hi>
-            <date>
-               <dateline>12.11.901</dateline>
-               
-            </date>
-            
-            <p>Herrliches Wetter und herrliche Ruhe.
-      </p>
+            <opener>
+               <dateline>
+                  <pb facs="HS00048772X_0203"/>
+                  <date>12. 11. 901</date>
+               </dateline>
+            </opener>
+            <p>Herrliches Wetter und herrliche Ruhe.</p>
             <closer>Viele herzliche Grüße<lb/>Ihr <signed>Arthur</signed>
-            <lb/>Viele Grüße!<lb/>
-               <signed>O.G.</signed>
             </closer>
-            <pb facs="HS00048772X_0204"/>
-            <addrLine>Herrn Gustav Schwarzkopf</addrLine>
-            <addrLine>
-               <rs type="place" ref="#pmb50">Wien</rs>
-            </addrLine>
-            <addrLine>
-               <rs type="place" ref="#pmb207296">I. Tiefer Graben 23</rs>.</addrLine>
+         </div>
+         <div type="writingSession" n="2">
+            <p>
+               <handShift scribe="#pmb2173"/>Viele Grüße!<lb/>
+               <signed>O. G.</signed>
+            </p>
          </div>
       </body>
+      <back>
+         <listPerson>
+            <person xml:id="pmb2121">
+               <persName>
+                  <surname>Schnitzler</surname>
+                  <forename>Arthur</forename>
+               </persName>
+               <birth>
+                  <date when="1862-05-15">15. 5. 1862</date>
+                  <settlement ref="pmb50">
+                     <placeName type="pref">Wien</placeName>
+                     <location>
+                        <geo>48,208333 16,373056</geo>
+                     </location>
+                  </settlement>
+               </birth>
+               <death>
+                  <date when="1931-10-21">21. 10. 1931</date>
+                  <settlement ref="pmb50">
+                     <placeName type="pref">Wien</placeName>
+                     <location>
+                        <geo>48,208333 16,373056</geo>
+                     </location>
+                  </settlement>
+               </death>
+            </person>
+            <person xml:id="pmb2173">
+               <persName>
+                  <forename>Olga</forename>
+                  <surname>Schnitzler</surname>
+               </persName>
+               <birth>
+                  <date when="1882-01-17">1882-01-17</date>
+                  <settlement ref="pmb50">
+                     <placeName type="pref">Wien</placeName>
+                     <location>
+                        <geo>48,208333 16,373056</geo>
+                     </location>
+                  </settlement>
+               </birth>
+               <death>
+                  <date when="1970-01-13">1970-01-13</date>
+                  <settlement ref="pmb885">
+                     <placeName type="pref">Lugano</placeName>
+                     <location>
+                        <geo>46,01008 8,96004</geo>
+                     </location>
+                  </settlement>
+               </death>
+            </person>
+            <person xml:id="pmb12740">
+               <persName>
+                  <forename>Gustav</forename>
+                  <surname>Schwarzkopf</surname>
+               </persName>
+               <birth>
+                  <date when="1853-11-07">1853-11-07</date>
+                  <settlement ref="pmb50">
+                     <placeName type="pref">Wien</placeName>
+                     <location>
+                        <geo>48,208333 16,373056</geo>
+                     </location>
+                  </settlement>
+               </birth>
+               <death>
+                  <date when="1939-11-13">1939-11-13</date>
+                  <settlement ref="pmb50">
+                     <placeName type="pref">Wien</placeName>
+                     <location>
+                        <geo>48,208333 16,373056</geo>
+                     </location>
+                  </settlement>
+               </death>
+            </person>
+         </listPerson>
+         <listPlace>
+            <place xml:id="pmb483">
+               <placeName>Reichenau an der Rax</placeName>
+               <placeName type="legacy-name-merge">Reichenau im Mühlkreis</placeName>
+               <location type="coords">
+                  <geo>47,7 15,83333</geo>
+               </location>
+               <location type="located_in_place">
+                  <placeName ref="pmb1003">Niederösterreich</placeName>
+                  <geo>48,33333 15,75</geo>
+               </location>
+            </place>
+            <place xml:id="pmb51">
+               <placeName>I., Innere Stadt</placeName>
+               <placeName type="alternative-name">Inner city</placeName>
+               <placeName type="alternative-name">Wien,Innere Stadt</placeName>
+               <placeName type="alternative-name">1. Wiener Gemeindebezirk</placeName>
+               <placeName type="legacy-name-merge">Wien-Innere Stadt</placeName>
+               <location type="coords">
+                  <geo>48,20769 16,37049</geo>
+               </location>
+               <location type="located_in_place">
+                  <placeName ref="pmb41240">Österreich</placeName>
+                  <geo>47,33333 13,33333</geo>
+               </location>
+               <location type="located_in_place">
+                  <placeName ref="pmb50">Wien</placeName>
+                  <geo>48,208333 16,373056</geo>
+               </location>
+            </place>
+            <place xml:id="pmb50">
+               <placeName>Wien</placeName>
+               <placeName type="ort_fruherer-name">K.K. Reichshaupt- und Residenzstadt Wien</placeName>
+               <placeName type="alternative-name">Bécs</placeName>
+               <placeName type="alternative-name">Land Wien</placeName>
+               <placeName type="alternative-name">Vídeň</placeName>
+               <placeName type="alternative-name">Wenia</placeName>
+               <placeName type="alternative-name">Beč</placeName>
+               <placeName type="ort_fruherer-name">Vindobona</placeName>
+               <placeName type="alternative-name">Vienna</placeName>
+               <location type="coords">
+                  <geo>48,208333 16,373056</geo>
+               </location>
+               <location type="located_in_place">
+                  <placeName ref="pmb41240">Österreich</placeName>
+                  <geo>47,33333 13,33333</geo>
+               </location>
+               <location type="located_in_place">
+                  <placeName ref="pmb235218">Windmühlhöhe</placeName>
+                  <geo>48,24077 16,32092</geo>
+               </location>
+            </place>
+            <place xml:id="pmb207296">
+               <placeName>Tiefer Graben 23</placeName>
+               <location type="coords">
+                  <geo>48,213038 16,368738</geo>
+               </location>
+               <location type="located_in_place">
+                  <placeName ref="pmb50825">Tiefer Graben</placeName>
+                  <geo>48,2125 16,368333</geo>
+               </location>
+               <location type="located_in_place">
+                  <placeName ref="pmb51">I., Innere Stadt</placeName>
+                  <geo>48,20769 16,37049</geo>
+               </location>
+            </place>
+         </listPlace>
+      </back>
    </text>
 </TEI>
