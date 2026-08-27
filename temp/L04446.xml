@@ -10,8 +10,9 @@
          <titleStmt>
             <title level="s">Arthur Schnitzler: Briefwechsel mit Autorinnen und
                                     Autoren</title>
-            <title level="a">Arthur Schnitzler an Gustav Schwarzkopf, XXXX</title>
+            <title level="a">Arthur und Olga Schnitzler an Gustav Schwarzkopf, 18.&#160;4.&#160;1911</title>
             <author ref="#pmb2121">Schnitzler, Arthur</author>
+            <author ref="#pmb2173">Schnitzler, Olga</author>
             <editor>
                <persName>Jahnke, Selma</persName>
                <persName>Müller, Martin Anton</persName>
@@ -99,9 +100,21 @@
                               </extent>
                            </supportDesc>
                         </objectDesc>
-                        <handDesc>
-                           <handNote medium="" style="deutsche-kurrent"/>
+                        <handDesc hands="2">
+                           <handNote corresp="#pmb2121" medium="bleistift" style="deutsche-kurrent"/>
+                           <handNote corresp="#pmb2173" medium="bleistift" style="lateinische-kurrent"></handNote>
                         </handDesc>
+                        <additions>
+                           <incident type="postal">
+                              <desc>
+                                 <stamp n="1">
+                                    <placeName ref="#pmb36456">Menton<space unit="chars" quantity="2"/>Alpes Maritimes</placeName>
+                                    <date when="1911-04-18">18–4&#160;11</date>
+                                    <time>2<hi rend="subscript">e</hi>&#160;15</time>
+                                 </stamp>
+                              </desc>
+                           </incident>
+                        </additions>
                      </physDesc>
                   </msDesc>
                </witness>
@@ -115,9 +128,12 @@
          <correspDesc>
             <correspAction type="sent">
                <persName ref="#pmb2121">Schnitzler, Arthur</persName>
-               <date when="" n="01">XXXX</date>
-               <placeName ref="#50" evidence="conjecture">Wien</placeName>
+               <persName ref="#pmb2173">Schnitzler, Olga</persName>
+               <date when="1911-04-18" n="01">18.&#160;4.&#160;1911</date>
+               <placeName ref="#pmb36456">Menton</placeName>
             </correspAction>
+            <correspAction type="transmitted"><date when="1911-04-18">18.&#160;4.&#160;1911</date>
+               <placeName ref="#pmb36456">Menton</placeName></correspAction>
             <correspAction type="received">
                <persName ref="#pmb12740">Schwarzkopf, Gustav</persName>
                <placeName ref="#pmb50">Wien</placeName>
@@ -126,16 +142,24 @@
       </profileDesc>
       <revisionDesc status="proposed">
          <change who="MAM" when="2026-06-11">Export aus
-                                Transkribus</change>
+                                Transkribus</change><change who="SJ" when="2026-08-27">Durchsicht</change>
       </revisionDesc>
    </teiHeader>
    <text>
       <body>
+         <div type="address">
+            <address>
+               <addrLine><pb facs="HS00048772X_0198"/><hi rend="latintype"><rs type="place" ref="#pmb41240">Autriche</rs></hi></addrLine>
+               <addrLine>Herrn <hi rend="latintype">Gustav Schwarzkopf</hi></addrLine>
+               <addrLine><rs type="place" ref="#pmb51">Wien&#160;I</rs></addrLine>
+               <addrLine><rs type="place" ref="#pmb207296"><hi rend="latintype">I. Tiefer Graben&#160;23</hi></rs></addrLine>
+            </address>
+         </div>
          <div type="writingSession" n="1">
             <pb facs="HS00048772X_0197"/>
             <hi rend="capitals">
                <hi rend="pre-print">
-                  <rs type="place" ref="">Menton</rs>
+                  <rs type="place" ref="#pmb36456">Menton</rs>
                   . – La <rs type="place" ref="">ville</rs> et le <rs type="place" ref="">quai</rs>
                </hi>
                <rs type="place" ref="">ville</rs> et le <rs type="place" ref="">quai</rs>
