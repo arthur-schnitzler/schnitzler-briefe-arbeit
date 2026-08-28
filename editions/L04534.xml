@@ -1,10 +1,6 @@
-<?xml version="1.0" encoding="UTF-8"?>
+<?xml version='1.0' encoding='UTF-8'?>
 <?xml-model href="../meta/schnitzler-briefe-schematron.sch" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
-<TEI xmlns="http://www.tei-c.org/ns/1.0"
-     xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-     xsi:schemaLocation="http://www.tei-c.org/ns/1.0 ../meta/schnitzler-briefe-schema.xsd"
-     xml:base="https://id.acdh.oeaw.ac.at/schnitzler/schnitzler-briefe/editions"
-     xml:id="L04534">
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.tei-c.org/ns/1.0 ../meta/schnitzler-briefe-schema.xsd" xml:base="https://id.acdh.oeaw.ac.at/schnitzler/schnitzler-briefe/editions" xml:id="L04534">
    <teiHeader>
       <fileDesc>
          <titleStmt>
@@ -141,7 +137,11 @@
                <persName ref="#pmb2121">Schnitzler, Arthur</persName>
                <placeName ref="#pmb50" evidence="conjecture">Wien</placeName>
             </correspAction>
-         </correspDesc>
+         <correspContext><ref type="belongsToCorrespondence" target="correspondence_9531">Rilke, Rainer Maria</ref>
+               <ref subtype="previous_letter" type="withinCollection" target="L02769">Goldmann an Schnitzler, 1. 4. [1896]</ref>
+               <ref subtype="next_letter" type="withinCollection" target="L04539">Rilke an Schnitzler, 1. 4. 1896</ref>
+               <ref subtype="next_letter" type="withinCorrespondence" source="correspondence_9531" target="L04539">Rilke an Schnitzler, 1. 4. 1896</ref>
+            </correspContext></correspDesc>
       </profileDesc>
       <revisionDesc status="proposed">
          <change who="MAM" when="2026-08-28">Export aus Transkribus</change>
@@ -157,7 +157,7 @@
             <opener>
                <dateline rend="center">
                   <pb facs="MS-SCHNITZLER-B-00084-000-00003"/>
-                  <rs type="place" ref="#pmb652">Prag</rs>, im <anchor type="commentary" xml:id="K_L04534-55"/><date>April 1896</date><note type='commentary' corresp="K_L04534-55">Mutmaßlich zeitgleich mit dem Widmungsexemplar vom <ref type="schnitzler-briefe" subtype="date-only" target="L04539"/> versandt.</note>.</dateline>
+                  <rs type="place" ref="#pmb652">Prag</rs>, im <anchor type="commentary" xml:id="K_L04534-55"/><date>April 1896</date><note type="commentary" corresp="K_L04534-55">Mutmaßlich zeitgleich mit dem Widmungsexemplar vom <ref type="schnitzler-briefe" subtype="date-only" target="L04539"/> versandt.</note>.</dateline>
                <seg rend="center">
                   <hi rend="stamp">
                      <rs type="place" ref="#pmb340520">Prag II. Wassergasse 15<hi rend="superscript">B</hi> I.</rs>
