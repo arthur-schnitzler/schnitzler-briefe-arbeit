@@ -1,6 +1,8 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <?xml-model href="../meta/schnitzler-briefe-schematron.sch" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
-<TEI xmlns="http://www.tei-c.org/ns/1.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.tei-c.org/ns/1.0 ../meta/schnitzler-briefe-schema.xsd" xml:base="https://id.acdh.oeaw.ac.at/schnitzler/schnitzler-briefe/editions" xml:id="L04344">
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+   xsi:schemaLocation="http://www.tei-c.org/ns/1.0 ../meta/schnitzler-briefe-schema.xsd"
+   xml:base="https://id.acdh.oeaw.ac.at/schnitzler/schnitzler-briefe/editions" xml:id="L04344">
    <teiHeader>
       <fileDesc>
          <titleStmt>
@@ -94,6 +96,41 @@
                   </msDesc>
                </witness>
             </listWit>
+            <listBibl>
+               <biblStruct>
+                  <analytic>
+                     <title level="a">Rainer Maria Rilke und Arthur Schnitzler. Ihr
+                        Briefwechsel</title>
+                     <respStmt>
+                        <resp>Mit Anmerkungen herausgegeben von</resp>
+                        <persName>Schnitzler, Heinrich</persName>
+                     </respStmt>
+                  </analytic>
+                  <monogr>
+                     <title level="j">Wort und Wahrheit</title>
+                     <biblScope unit="nr">4</biblScope>
+                     <biblScope unit="jg">13</biblScope>
+                     <imprint>
+                        <date when="1958">1958</date>
+                     </imprint>
+                     <biblScope unit="pp">282–298, hier S. 289</biblScope>
+                  </monogr>
+               </biblStruct>
+               <biblStruct corresp="ASB1">
+                  <monogr>
+                     <author ref="#pmb2121">Schnitzler, Arthur</author>
+                     <title level="m">Briefe 1875–1912</title>
+                     <editor>Nickl, Therese</editor>
+                     <editor>Schnitzler, Heinrich</editor>
+                     <imprint>
+                        <pubPlace>Frankfurt am Main</pubPlace>
+                        <publisher>S. Fischer</publisher>
+                        <date when="1981">1981</date>
+                     </imprint>
+                     <biblScope unit="pp">439</biblScope>
+                  </monogr>
+               </biblStruct>
+            </listBibl>
          </sourceDesc>
       </fileDesc>
       <profileDesc>
@@ -108,14 +145,21 @@
             </correspAction>
             <correspAction type="received">
                <persName ref="#pmb9531">Rilke, Rainer Maria</persName>
-               <date evidence="conjecture" notBefore="1901-12-08" notAfter="1901-12-12">[8. 12. 1901 – 12. 12. 1901?]</date>
+               <date evidence="conjecture" notBefore="1901-12-08" notAfter="1901-12-12">[8. 12. 1901
+                  – 12. 12. 1901?]</date>
                <placeName evidence="conjecture" ref="#pmb258929">Westerwede</placeName>
             </correspAction>
-         <correspContext><ref type="belongsToCorrespondence" target="correspondence_9531">Rilke, Rainer Maria</ref>
-               <ref subtype="previous_letter" type="withinCollection" target="L03094">Goldmann an Schnitzler, 6. 12. [1901]</ref>
-               <ref subtype="next_letter" type="withinCollection" target="L04347">d’Albert, Olden, Goldmann, Friedmann, Friedmann,  an Schnitzler, [8. 12. 1901]</ref>
-               <ref subtype="previous_letter" type="withinCorrespondence" source="correspondence_9531" target="L04343">Schnitzler an Rilke, 4. 7. 1901</ref>
-               <ref subtype="next_letter" type="withinCorrespondence" source="correspondence_9531" target="L04345">Schnitzler an Rilke, 17. Januar 1902</ref>
+            <correspContext>
+               <ref type="belongsToCorrespondence" target="correspondence_9531">Rilke, Rainer
+                  Maria</ref>
+               <ref subtype="previous_letter" type="withinCollection" target="L03094">Goldmann an
+                  Schnitzler, 6. 12. [1901]</ref>
+               <ref subtype="next_letter" type="withinCollection" target="L04347">d’Albert, Olden,
+                  Goldmann, Friedmann, Friedmann, an Schnitzler, [8. 12. 1901]</ref>
+               <ref subtype="previous_letter" type="withinCorrespondence"
+                  source="correspondence_9531" target="L04343">Schnitzler an Rilke, 4. 7. 1901</ref>
+               <ref subtype="next_letter" type="withinCorrespondence" source="correspondence_9531"
+                  target="L04345">Schnitzler an Rilke, 17. Januar 1902</ref>
             </correspContext></correspDesc>
       </profileDesc>
       <revisionDesc status="proposed">
@@ -133,38 +177,46 @@
          <div type="writingSession" n="1">
             <p>
                <pb facs="HS01329601_0001"/>
-               <salute>mein lieber Herr Rilke,</salute> es iſt kaum
-               denkbar, ſchöner über mein kleines <rs type="work" ref="#pmb29957" subtype="implied">Stück</rs> auszuſprechen, als Sie in Ihrem letzten <anchor type="commentary" xml:id="K_L04344-1"/>Briefe<note type="commentary" corresp="K_L04344-1">
+               <salute>mein lieber Herr Rilke,</salute> es iſt kaum denkbar, ſchöner über mein
+               kleines <rs type="work" ref="#pmb29957" subtype="implied">Stück</rs> auszuſprechen,
+               als Sie in Ihrem letzten <anchor type="commentary" xml:id="K_L04344-1"/>Briefe<note
+                  type="commentary" corresp="K_L04344-1">
                   <ref type="schnitzler-briefe" target=""/>.</note> gethan, und ich danke Ihnen
                herzlich für Ihr Verſtehen und für Ihre Freundschaft.</p>
-            <p>Mit der Zuſendung Ihres <rs type="work" ref="#pmb364146" subtype="implied">Buches</rs> haben
-               Sie mir Freude gemacht. Die erſte <anchor type="commentary" xml:id="K_L04344-2"/>
-               <rs type="work" ref="#pmb364149">Skizze</rs> kannte ich ſchon
-               aus den <rs type="work" ref="#pmb364131" subtype="implied">Flugblättern</rs>
+            <p>Mit der Zuſendung Ihres <rs type="work" ref="#pmb364146" subtype="implied"
+                  >Buches</rs> haben Sie mir Freude gemacht. Die erſte <anchor type="commentary"
+                  xml:id="K_L04344-2"/>
+               <rs type="work" ref="#pmb364149">Skizze</rs> kannte ich ſchon aus den <rs type="work"
+                  ref="#pmb364131" subtype="implied">Flugblättern</rs>
                <note type="commentary" corresp="K_L04344-2">
-                  <ref type="schnitzler-briefe" subtype="Cf" target="L04343"/>.</note>; ſie ſcheint mir <pb facs="HS01329601_0002"/>geiſtreicher als lebendig. Die Novellette »<rs type="work" ref="#pmb364153">Der Liebende</rs>« ſähe ich am liebſten als Einakter. Ich
-               glaube es bräuchte nicht viel, um ein ſehr feines Drama draus zu machen. Vielleicht
-               nur einige Striche. – Die »<rs type="work" ref="#pmb364157">Letzten</rs>« haben mir auch direkt
-               einen Fehler, um den Sie <add place="above">von</add> manchen beneidet werden könnten. Es iſt zu
-               viel drin – ein letzte<supplied>s</supplied> Kapitel, in das Sie den Inhalt <pb facs="HS01329601_0003"/>alles des vorhergegangnen, verſchwiegnen hineindrängen
-               wollten. So ſind ſie nicht durchaus zur h<unclear>öch</unclear>ſten Klarheit
-               gekommen. Allerdings war das auch nicht Ihre Abſicht.</p>
+                  <ref type="schnitzler-briefe" subtype="Cf" target="L04343"/>.</note>; ſie ſcheint
+               mir <pb facs="HS01329601_0002"/>geiſtreicher als lebendig. Die Novellette »<rs
+                  type="work" ref="#pmb364153">Der Liebende</rs>« ſähe ich am liebſten als Einakter.
+               Ich glaube es bräuchte nicht viel, um ein ſehr feines Drama draus zu machen.
+               Vielleicht nur einige Striche. – Die »<rs type="work" ref="#pmb364157">Letzten</rs>«
+               haben mir auch direkt einen Fehler, um den Sie <add place="above">von</add> manchen
+               beneidet werden könnten. Es iſt zu viel drin – ein letzte<supplied>s</supplied>
+               Kapitel, in das Sie den Inhalt <pb facs="HS01329601_0003"/>alles des vorhergegangnen,
+               verſchwiegnen hineindrängen wollten. So ſind ſie nicht durchaus zur
+                  h<unclear>öch</unclear>ſten Klarheit gekommen. Allerdings war das auch nicht Ihre
+               Abſicht.</p>
             <p>Wie gern möcht ich noch mehr und über allerlei andres mit Ihnen reden – mit Ihnen:
-               das heißt: auch gleich Ihre Gegenrede hören. Kommen Sie nicht wieder einmal nach <rs type="place" ref="#pmb50">Wien</rs>? <pb facs="HS01329601_0004"/>Oder wenigſtens
+               das heißt: auch gleich Ihre Gegenrede hören. Kommen Sie nicht wieder einmal nach <rs
+                  type="place" ref="#pmb50">Wien</rs>? <pb facs="HS01329601_0004"/>Oder wenigſtens
                nach <rs type="place" ref="#pmb168">Berlin</rs> (wo ich <date>Anfang Jänner</date>
                ſein dürfte?) Auf Ihr <anchor type="commentary" xml:id="K_L04344-3"/>
-               <rs type="work" ref="#pmb79052" subtype="implied">Stück</rs>
-               bin ich ſchon durch <rs type="person" ref="#pmb10883">Berger</rs>
-               <note type="commentary" corresp="K_L04344-3">Vermutlich bei ihrem
-                  Gespräch am <ref type="schnitzler-tagebuch" target="1901-10-30"/>.</note> geſpannt worden, der mir
-               neulich davon geſprochen hat.</p>
-            <closer>Ich grüße Sie vielmals und herzlich.<lb/>Auch Ihrer verehrten <rs type="person" ref="#pmb353122" subtype="implied">Frau</rs> danke ich für die freundliche Theilnahme an
-               meinen Sachen.<lb/>Ihr <signed>Arth Schnitzler</signed>
+               <rs type="work" ref="#pmb79052" subtype="implied">Stück</rs> bin ich ſchon durch <rs
+                  type="person" ref="#pmb10883">Berger</rs>
+               <note type="commentary" corresp="K_L04344-3">Vermutlich bei ihrem Gespräch am <ref
+                     type="schnitzler-tagebuch" target="1901-10-30"/>.</note> geſpannt worden, der
+               mir neulich davon geſprochen hat.</p>
+            <closer>Ich grüße Sie vielmals und herzlich.<lb/>Auch Ihrer verehrten <rs type="person"
+                  ref="#pmb353122" subtype="implied">Frau</rs> danke ich für die freundliche
+               Theilnahme an meinen Sachen.<lb/>Ihr <signed>Arth Schnitzler</signed>
             </closer>
             <postscript>
                <dateline>
-                  <rs type="place" ref="#pmb50">Wien</rs>,
-                  <date>7. 12. 901</date>.</dateline>
+                  <rs type="place" ref="#pmb50">Wien</rs>, <date>7. 12. 901</date>.</dateline>
             </postscript>
          </div>
       </body>
@@ -288,8 +340,10 @@
          <listBibl>
             <bibl xml:id="pmb364149">
                <title>Im Gespräch</title>
-               <title type="werk_bibliografische-angabe">Im Gespräch. In: Frühling. Moderne Flugblätter, Jg. 1, H. 4, April 1901, S. 7–11.</title>
-               <title type="werk_link">https://www.ndk.cz/view/uuid:74441f30-19ea-11e3-b62e-005056825209?page=uuid:a84ce9c0-19fd-11e3-bd38-5ef3fc9ae867</title>
+               <title type="werk_bibliografische-angabe">Im Gespräch. In: Frühling. Moderne
+                  Flugblätter, Jg. 1, H. 4, April 1901, S. 7–11.</title>
+               <title type="werk_link"
+                  >https://www.ndk.cz/view/uuid:74441f30-19ea-11e3-b62e-005056825209?page=uuid:a84ce9c0-19fd-11e3-bd38-5ef3fc9ae867</title>
                <author role="hat-geschaffen" ref="pmb9531">Rilke, Rainer Maria</author>
             </bibl>
             <bibl xml:id="pmb364153">
@@ -303,7 +357,8 @@
             <bibl xml:id="pmb29957" ana="implied">
                <title>Lebendige Stunden</title>
                <title type="legacy-name-merge">Lebendige Stunden</title>
-               <title type="werk_bibliografische-angabe">Neue Deutsche Rundschau, Jg. 12,  H. 12, Dezember 1901</title>
+               <title type="werk_bibliografische-angabe">Neue Deutsche Rundschau, Jg. 12, H. 12,
+                  Dezember 1901</title>
                <author ref="pmb2121" role="hat-geschaffen">Schnitzler, Arthur</author>
             </bibl>
             <bibl xml:id="pmb364146" ana="implied">
@@ -312,19 +367,22 @@
             </bibl>
             <bibl xml:id="pmb364131" ana="implied">
                <title>Frühling. Moderne Flugblätter. 4. Heft</title>
-               <title type="werk_link">https://ndk.cz/uuid/uuid:a7e8d0c0-19fd-11e3-bd38-5ef3fc9ae867</title>
+               <title type="werk_link"
+                  >https://ndk.cz/uuid/uuid:a7e8d0c0-19fd-11e3-bd38-5ef3fc9ae867</title>
                <author role="hat-herausgegeben" ref="pmb99138">Leppin, Paul</author>
             </bibl>
             <bibl xml:id="pmb79052" ana="implied">
                <title>Das tägliche Leben. Drama in zwei Akten</title>
-               <title type="werk_bibliografische-angabe">Das tägliche Leben. Drama in zwei Akten. München 1902.</title>
+               <title type="werk_bibliografische-angabe">Das tägliche Leben. Drama in zwei Akten.
+                  München 1902.</title>
                <author ref="pmb9531" role="hat-geschaffen">Rilke, Rainer Maria</author>
             </bibl>
          </listBibl>
          <listPlace>
             <place xml:id="pmb50">
                <placeName>Wien</placeName>
-               <placeName type="ort_fruherer-name">K.K. Reichshaupt- und Residenzstadt Wien</placeName>
+               <placeName type="ort_fruherer-name">K.K. Reichshaupt- und Residenzstadt
+                  Wien</placeName>
                <placeName type="alternative-name">Bécs</placeName>
                <placeName type="alternative-name">Land Wien</placeName>
                <placeName type="alternative-name">Vídeň</placeName>
