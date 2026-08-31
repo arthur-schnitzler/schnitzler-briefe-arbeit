@@ -10,7 +10,7 @@
          <titleStmt>
             <title level="s">Arthur Schnitzler: Briefwechsel mit Autorinnen und
                                     Autoren</title>
-            <title level="a">Arthur Schnitzler an Gustav Schwarzkopf, XXXX</title>
+            <title level="a">Arthur Schnitzler an Gustav Schwarzkopf, 3.&#160;4.&#160;1900</title>
             <author ref="#pmb2121">Schnitzler, Arthur</author>
             <editor>
                <persName>Jahnke, Selma</persName>
@@ -99,8 +99,18 @@
                            </supportDesc>
                         </objectDesc>
                         <handDesc>
-                           <handNote medium="" style="deutsche-kurrent"/>
+                           <handNote medium="bleistift" style="deutsche-kurrent"/>
                         </handDesc>
+                        <additions>
+                           <incident type="postal">
+                              <desc>
+                                 <stamp n="1">
+                                    <placeName ref="#pmb4231" >Spljet Spalato</placeName>
+                                    <date when="1900-04-08">8.&#160;<unclear>4</unclear>&#160;00</date>
+                                 </stamp>
+                              </desc>
+                           </incident>
+                        </additions>
                      </physDesc>
                   </msDesc>
                </witness>
@@ -114,8 +124,12 @@
          <correspDesc>
             <correspAction type="sent">
                <persName ref="#pmb2121">Schnitzler, Arthur</persName>
-               <date when="" n="01">XXXX</date>
-               <placeName ref="#50" evidence="conjecture">Wien</placeName>
+               <date when="1900-04-03" n="01">3.&#160;4.&#160;1900</date>
+               <placeName ref="#pmb453" >Salona</placeName>
+            </correspAction>
+            <correspAction type="transmitted">
+               <date when="1900-04-08" >8.&#160;4.&#160;1900</date>
+               <placeName ref="#pmb4231" >Split</placeName>
             </correspAction>
             <correspAction type="received">
                <persName ref="#pmb12740">Schwarzkopf, Gustav</persName>
@@ -130,29 +144,40 @@
    </teiHeader>
    <text>
       <body>
+         <div type="address">
+            <address>
+               
+               <addrLine><pb facs="HS00048772X_0064"/>Herrn <hi rend="latintype">Gustav Schwarzkopf</hi></addrLine>
+               <addrLine>
+                  <rs type="place" ref="#pmb50">Wien</rs>
+               </addrLine>
+               <addrLine>
+                  <rs type="place" ref="#pmb207296">
+                     <hi rend="latintype"><hi rend="latintype">I. Tiefer Graben 23</hi></hi>
+                  </rs>
+               </addrLine>
+            </address>
+         </div>
+         <div type="image">
+            <seg><seg rend="left"><pb facs="HS00048772X_0063"/>
+            <hi rend="pre-print">
+               <rs type="place" ref="#pmb453">Salona</rs>. – <rs type="place" ref="#pmb453">Solin</rs>.</hi></seg>
+            <seg rend="right">
+               <hi rend="pre-print">
+                  <rs type="place" ref="#pmb364276"><foreign xml:lang="it">Basilica e <anchor type="textConst" xml:id="T_L04378-1"/>cimiterio<note type='textConst' corresp="T_L04378-1">Druckfehler: »<quote>bimiterio</quote>«.</note> Cristiano</foreign></rs>.</hi>
+            </seg></seg>
+         </div>
          <div type="writingSession" n="1">
-            <pb facs="HS00048772X_0063"/>
-            <hi rend="pre-print">
-               <rs type="place" ref="#pmb91643">Salona</rs>
-               . – <rs type="place" ref="">Solin</rs>.</hi>
-            <hi rend="pre-print">
-               <rs type="place" ref="">Basilica</rs> e <rs type="place" ref="">bimiterio Cristiano</rs>.</hi>
-            <dateline>
+            
+            
+            <opener><dateline><pb facs="HS00048772X_0063"/>
                <date>3. 4. 900</date>
-            </dateline>
-            <closer>Herzliche Grüße!
-               <signed>Arthur Sch</signed>
+            </dateline></opener>
+            <p>Herzliche Grüße!</p>
+            <closer>
+               <signed>ArthurSch</signed>
             </closer>
-            <pb facs="HS00048772X_0064"/>
-            <addrLine>Herrn Gustav Schwarzkopf</addrLine>
-            <addrLine>
-               <rs type="place" ref="#pmb50">Wien</rs>
-            </addrLine>
-            <addrLine>
-               <rs type="place" ref="#pmb207296">
-                  <hi rend="latintype">I. Tiefer Graben 23</hi>
-               </rs>
-            </addrLine>
+           
          </div>
       </body>
    </text>
