@@ -1,6 +1,10 @@
-<?xml version='1.0' encoding='UTF-8'?>
+<?xml version="1.0" encoding="UTF-8"?>
 <?xml-model href="../meta/schnitzler-briefe-schematron.sch" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
-<TEI xmlns="http://www.tei-c.org/ns/1.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.tei-c.org/ns/1.0 ../meta/schnitzler-briefe-schema.xsd" xml:base="https://id.acdh.oeaw.ac.at/schnitzler/schnitzler-briefe/editions" xml:id="L04541">
+<TEI xmlns="http://www.tei-c.org/ns/1.0"
+     xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+     xsi:schemaLocation="http://www.tei-c.org/ns/1.0 ../meta/schnitzler-briefe-schema.xsd"
+     xml:base="https://id.acdh.oeaw.ac.at/schnitzler/schnitzler-briefe/editions"
+     xml:id="L04537">
    <teiHeader>
       <fileDesc>
          <titleStmt>
@@ -108,12 +112,20 @@
                <date evidence="conjecture" notBefore="1901-12-04" notAfter="1901-12-08">[4. 12. 1901 – 8. 12. 1901?]</date>
                <placeName ref="#pmb50" evidence="conjecture">Wien</placeName>
             </correspAction>
-         <correspContext><ref type="belongsToCorrespondence" target="correspondence_9531">Rilke, Rainer Maria</ref>
+            <correspContext>
+               <ref type="belongsToCorrespondence" target="correspondence_9531">Rilke, Rainer Maria</ref>
                <ref subtype="previous_letter" type="withinCollection" target="L04540">Rilke an Schnitzler, 3. 12. 1901</ref>
                <ref subtype="next_letter" type="withinCollection" target="L03093">Goldmann an Schnitzler, 4. 12. [1901]</ref>
-               <ref subtype="previous_letter" type="withinCorrespondence" source="correspondence_9531" target="L04540">Rilke an Schnitzler, 3. 12. 1901</ref>
-               <ref subtype="next_letter" type="withinCorrespondence" source="correspondence_9531" target="L04344">Schnitzler an Rilke, 7. 12. 1901</ref>
-            </correspContext></correspDesc>
+               <ref subtype="previous_letter"
+                    type="withinCorrespondence"
+                    source="correspondence_9531"
+                    target="L04540">Rilke an Schnitzler, 3. 12. 1901</ref>
+               <ref subtype="next_letter"
+                    type="withinCorrespondence"
+                    source="correspondence_9531"
+                    target="L04344">Schnitzler an Rilke, 7. 12. 1901</ref>
+            </correspContext>
+         </correspDesc>
       </profileDesc>
       <revisionDesc status="proposed">
          <change who="MAM" when="2026-08-31">Angelegt aus Heinrich S. Ausgabe</change>
@@ -132,42 +144,100 @@
             </p>
             <postscript>
                <dateline>
-                  <rs type="place" ref="#pmb258929">Westerwede</rs>, im <anchor type="commentary" xml:id="K_L04541-1"/><date>Nov. 1901</date><note type="commentary" corresp="K_L04541-1">Der Versand
+                  <rs type="place" ref="#pmb258929">Westerwede</rs>, im <anchor type="commentary" xml:id="K_L04541-1"/>
+                  <date>Nov. 1901</date>
+                  <note type="commentary" corresp="K_L04541-1">Der Versand
                      erfolgte gemeinsam mit dem Brief vom <ref type="schnitzler-briefe" subtype="date-only" target="L04540"/>.</note>.</dateline>
             </postscript>
          </div>
       </body>
-      <back><listPerson><person xml:id="pmb2121"><persName><surname>Schnitzler</surname><forename>Arthur</forename></persName><birth><date when="1862-05-15">15. 5. 1862</date><settlement ref="pmb50"><placeName type="pref">Wien</placeName><location><geo>48,208333 16,373056</geo></location></settlement></birth><death><date when="1931-10-21">21. 10. 1931</date><settlement ref="pmb50"><placeName type="pref">Wien</placeName><location><geo>48,208333 16,373056</geo></location></settlement></death><sex value="male"/><occupation ref="pmb90">Schriftsteller/Schriftstellerin</occupation><occupation ref="pmb97">Mediziner/Medizinerin</occupation><idno type="gnd">https://d-nb.info/gnd/118609807/</idno></person><person xml:id="pmb9531"><persName>
-      <forename>Rainer Maria</forename>
-      <surname>Rilke</surname>
-  </persName><birth>
-    <date when="1875-12-04">1875-12-04</date>
-      <settlement ref="pmb652">
-        <placeName type="pref">Prag</placeName>
-        <location><geo>50,08333 14,46667</geo></location>
-      </settlement>
-  </birth><death>
-    <date when="1926-12-29">1926-12-29</date>
-      <settlement ref="pmb40482">
-        <placeName type="pref">Montreux</placeName>
-        <location><geo>46,45179 6,94084</geo></location>
-      </settlement>
-  </death></person></listPerson><listBibl><bibl xml:id="pmb364146"><title type="main">Die Letzten</title>
-
-
-
-
-  <author role="hat-geschaffen" ref="pmb9531">Rilke, Rainer Maria</author>
-
-
-
-
-</bibl></listBibl><listPlace><place xml:id="pmb258929"><placeName>Westerwede</placeName><location type="coords">
-  <geo>53,19852 8,92013</geo>
-</location></place><place xml:id="pmb50"><placeName>Wien</placeName><placeName type="ort_fruherer-name">K.K. Reichshaupt- und Residenzstadt Wien</placeName><placeName type="legacy-name-merge">Wien</placeName><placeName type="alternative-name">Bécs</placeName><placeName type="alternative-name">Land Wien</placeName><placeName type="alternative-name">Vídeň</placeName><placeName type="alternative-name">Wenia</placeName><placeName type="alternative-name">Beč</placeName><placeName type="ort_fruherer-name">Vindobona</placeName><placeName type="legacy-name-merge">Vindobona</placeName><placeName type="alternative-name">Vienna</placeName><placeName type="legacy-name-merge">Vienna</placeName><placeName type="alternative-name">Vienna</placeName><location type="coords">
-  <geo>48,208333 16,373056</geo>
-</location><location type="located_in_place">
-  <placeName ref="pmb41240">Österreich</placeName>
-  <geo>47,33333 13,33333</geo>
-</location></place></listPlace></back></text>
+      <back>
+         <listPerson>
+            <person xml:id="pmb9531">
+               <persName>
+                  <forename>Rainer Maria</forename>
+                  <surname>Rilke</surname>
+               </persName>
+               <birth>
+                  <date when="1875-12-04">1875-12-04</date>
+                  <settlement ref="pmb652">
+                     <placeName type="pref">Prag</placeName>
+                     <location>
+                        <geo>50,08333 14,46667</geo>
+                     </location>
+                  </settlement>
+               </birth>
+               <death>
+                  <date when="1926-12-29">1926-12-29</date>
+                  <settlement ref="pmb40482">
+                     <placeName type="pref">Montreux</placeName>
+                     <location>
+                        <geo>46,45179 6,94084</geo>
+                     </location>
+                  </settlement>
+               </death>
+            </person>
+            <person xml:id="pmb2121">
+               <persName>
+                  <surname>Schnitzler</surname>
+                  <forename>Arthur</forename>
+               </persName>
+               <birth>
+                  <date when="1862-05-15">15. 5. 1862</date>
+                  <settlement ref="pmb50">
+                     <placeName type="pref">Wien</placeName>
+                     <location>
+                        <geo>48,208333 16,373056</geo>
+                     </location>
+                  </settlement>
+               </birth>
+               <death>
+                  <date when="1931-10-21">21. 10. 1931</date>
+                  <settlement ref="pmb50">
+                     <placeName type="pref">Wien</placeName>
+                     <location>
+                        <geo>48,208333 16,373056</geo>
+                     </location>
+                  </settlement>
+               </death>
+            </person>
+         </listPerson>
+         <listBibl>
+            <bibl xml:id="pmb364146">
+               <title>Die Letzten</title>
+               <author role="hat-geschaffen" ref="pmb9531">Rilke, Rainer Maria</author>
+            </bibl>
+         </listBibl>
+         <listPlace>
+            <place xml:id="pmb258929">
+               <placeName>Westerwede</placeName>
+               <location type="coords">
+                  <geo>53,19852 8,92013</geo>
+               </location>
+            </place>
+            <place xml:id="pmb50">
+               <placeName>Wien</placeName>
+               <placeName type="ort_fruherer-name">K.K. Reichshaupt- und Residenzstadt Wien</placeName>
+               <placeName type="alternative-name">Bécs</placeName>
+               <placeName type="alternative-name">Land Wien</placeName>
+               <placeName type="alternative-name">Vídeň</placeName>
+               <placeName type="alternative-name">Wenia</placeName>
+               <placeName type="alternative-name">Beč</placeName>
+               <placeName type="ort_fruherer-name">Vindobona</placeName>
+               <placeName type="alternative-name">Vienna</placeName>
+               <location type="coords">
+                  <geo>48,208333 16,373056</geo>
+               </location>
+               <location type="located_in_place">
+                  <placeName ref="pmb41240">Österreich</placeName>
+                  <geo>47,33333 13,33333</geo>
+               </location>
+               <location type="located_in_place">
+                  <placeName ref="pmb235218">Windmühlhöhe</placeName>
+                  <geo>48,24077 16,32092</geo>
+               </location>
+            </place>
+         </listPlace>
+      </back>
+   </text>
 </TEI>
