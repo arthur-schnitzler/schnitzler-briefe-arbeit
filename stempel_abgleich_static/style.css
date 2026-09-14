@@ -1,0 +1,343 @@
+:root {
+  --bg: #f6f5f2;
+  --panel: #ffffff;
+  --border: #ddd8ce;
+  --text: #2b2a27;
+  --dim: #8a857a;
+  --accent: #a8532f;
+  --accent-soft: #f1e2d8;
+  --stamp: #3c6e71;
+  --stamp-soft: #e3efef;
+  --action: #5b4b8a;
+  --action-soft: #eae5f4;
+  --ok: #3c7a4b;
+  --warn: #b9862c;
+  --err: #b23b3b;
+}
+
+* { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+  background: var(--bg);
+  color: var(--text);
+  font-size: 14px;
+}
+
+#toolbar {
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  background: var(--panel);
+  border-bottom: 1px solid var(--border);
+  padding: 10px 16px;
+}
+
+.toolbar-row {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+
+.jump { display: flex; align-items: center; gap: 6px; }
+.jump span { color: var(--dim); }
+.jump input {
+  width: 110px;
+  padding: 5px 8px;
+  border: 1px solid var(--border);
+  border-radius: 4px;
+  font-size: 14px;
+}
+
+button, .btn-link {
+  padding: 6px 12px;
+  border: 1px solid var(--border);
+  border-radius: 5px;
+  background: var(--panel);
+  color: var(--text);
+  cursor: pointer;
+  font-size: 13px;
+  text-decoration: none;
+  display: inline-block;
+}
+button:hover, .btn-link:hover { border-color: var(--accent); color: var(--accent); }
+button:disabled { opacity: .4; cursor: default; }
+button:disabled:hover { border-color: var(--border); color: var(--text); }
+
+.spacer { flex: 1; }
+.dim { color: var(--dim); }
+.mismatch-toggle { display: flex; align-items: center; gap: 4px; color: var(--dim); }
+
+#statusLine { margin-top: 6px; min-height: 1.2em; font-size: 12.5px; }
+#statusLine.err { color: var(--err); }
+#statusLine.ok { color: var(--ok); }
+
+#matchGrid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px 16px;
+  padding: 16px;
+  max-width: 1200px;
+  margin: 0 auto;
+  align-items: start;
+}
+@media (max-width: 760px) {
+  #matchGrid { grid-template-columns: 1fr; }
+}
+
+.grid-header {
+  font-size: 14px;
+  text-transform: uppercase;
+  letter-spacing: .04em;
+  color: var(--dim);
+  font-weight: 600;
+  padding: 0 0 4px 4px;
+}
+
+.grid-cell { min-width: 0; } /* verhindert Grid-Overflow bei langen XML-Zeilen im Textfeld */
+
+.empty-cell {
+  border: 1px dashed var(--border);
+  border-radius: 8px;
+  padding: 10px 12px;
+  min-height: 40px;
+  display: flex;
+  align-items: center;
+  color: var(--dim);
+  font-size: 12.5px;
+  font-style: italic;
+}
+
+.empty-row-msg { padding: 20px 4px; grid-column: 1 / -1; }
+
+.dateline-cell {
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  padding: 10px 12px;
+  background: var(--panel);
+}
+.dateline-cell .dateline-value {
+  color: var(--err);
+  font-weight: 600;
+  font-size: 13.5px;
+}
+
+.weekday {
+  font-size: 11px;
+  font-weight: 400;
+  color: var(--dim);
+}
+
+.card {
+  background: var(--panel);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  padding: 10px 12px;
+  transition: box-shadow .15s, border-color .15s;
+}
+
+.stamp-card { border-left: 4px solid var(--stamp); cursor: pointer; }
+.stamp-card:hover { box-shadow: 0 1px 6px rgba(0,0,0,.06); }
+.stamp-card.active { border-color: var(--stamp); box-shadow: 0 0 0 2px var(--stamp); }
+
+.action-card { border-left: 4px solid var(--action); }
+.action-card.suggested { outline: 2px dashed var(--action); outline-offset: -2px; }
+.action-card.matchable { cursor: pointer; }
+.action-card.matchable:hover { box-shadow: 0 1px 6px rgba(0,0,0,.06); }
+
+.card-head {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 4px;
+}
+
+.badge {
+  font-size: 11px;
+  font-weight: 600;
+  padding: 2px 7px;
+  border-radius: 999px;
+  text-transform: uppercase;
+  letter-spacing: .02em;
+  /* Hintergrund-/Textfarbe kommt inline pro Typ (siehe TYPE_COLORS in app.js) */
+}
+
+.card-n { color: var(--dim); font-size: 12px; }
+
+.card-body { font-size: 13.5px; line-height: 1.5; }
+.field-label { color: var(--dim); font-size: 11.5px; }
+.empty-field { color: var(--dim); font-style: italic; }
+
+.attrs {
+  margin-top: 6px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 4px 8px;
+}
+.attr-chip {
+  font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+  font-size: 11px;
+  background: var(--bg);
+  border: 1px solid var(--border);
+  border-radius: 4px;
+  padding: 1px 5px;
+  color: var(--dim);
+}
+.attr-key { color: var(--text); }
+.attr-val { color: var(--accent); }
+
+.raw-editor {
+  margin-top: 8px;
+  border-top: 1px dashed var(--border);
+  padding-top: 6px;
+}
+.raw-editor summary {
+  cursor: pointer;
+  font-size: 11.5px;
+  color: var(--dim);
+  font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+  user-select: none;
+}
+.raw-editor summary:hover { color: var(--accent); }
+.dirty-dot { color: var(--warn); }
+.raw-editor textarea {
+  width: 100%;
+  margin-top: 6px;
+  font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+  font-size: 12px;
+  line-height: 1.45;
+  padding: 8px;
+  border: 1px solid var(--border);
+  border-radius: 5px;
+  background: var(--bg);
+  color: var(--text);
+  resize: vertical;
+}
+.raw-editor .card-actions { margin-top: 6px; }
+
+.card-actions {
+  margin-top: 8px;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  flex-wrap: wrap;
+}
+.card-actions select {
+  padding: 4px 6px;
+  border: 1px solid var(--border);
+  border-radius: 4px;
+  font-size: 12.5px;
+}
+.card-actions button { font-size: 12px; padding: 4px 9px; }
+.hint { font-size: 11.5px; color: var(--dim); margin-top: 4px; }
+
+.empty-column {
+  color: var(--dim);
+  font-style: italic;
+  padding: 20px 4px;
+}
+
+#toast {
+  position: fixed;
+  bottom: 18px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: var(--text);
+  color: #fff;
+  padding: 8px 16px;
+  border-radius: 6px;
+  font-size: 13px;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity .2s;
+  max-width: 80vw;
+  text-align: center;
+}
+#toast.show { opacity: .95; }
+#toast.err { background: var(--err); }
+
+/* --- Brieftext ------------------------------------------------------- */
+#bodySection {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 16px 40px;
+}
+#bodySection h2 {
+  font-size: 14px;
+  text-transform: uppercase;
+  letter-spacing: .04em;
+  color: var(--dim);
+  margin: 0 0 10px 4px;
+  font-weight: 600;
+}
+#bodySection h2 .dim { text-transform: none; letter-spacing: normal; font-weight: 400; }
+#bodySection h2 mark.body-date { padding: 0 4px; border-radius: 3px; }
+
+#bodyText {
+  background: var(--panel);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  padding: 20px 24px;
+  font-size: 15px;
+  line-height: 1.7;
+  font-family: Georgia, "Iowan Old Style", "Palatino Linotype", serif;
+}
+
+#bodyText mark.body-date {
+  background: none;
+  color: var(--err);
+  font-weight: 600;
+}
+
+#bodyText .body-div { margin: 0 0 .9em; }
+#bodyText .body-p { margin: 0 0 .9em; }
+#bodyText .body-p:last-child { margin-bottom: 0; }
+
+#bodyText .body-div-address {
+  font-style: normal;
+  color: var(--dim);
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+  font-size: 13px;
+}
+#bodyText .body-addrLine { display: block; }
+
+#bodyText .body-closer,
+#bodyText .body-opener,
+#bodyText .body-postscript {
+  margin: .9em 0;
+}
+
+#bodyText .body-pb {
+  display: inline-block;
+  width: 1px;
+  height: .9em;
+  vertical-align: text-bottom;
+  border-left: 1px dotted var(--border);
+  margin: 0 2px;
+}
+
+#bodyText .rend-bold { font-weight: 700; }
+#bodyText .rend-latintype { font-style: italic; }
+#bodyText .rend-underline { text-decoration: underline; }
+#bodyText .rend-superscript { vertical-align: super; font-size: .75em; }
+#bodyText .rend-spaced-out { letter-spacing: .12em; }
+#bodyText .rend-center { display: block; text-align: center; }
+#bodyText .rend-small-caps { font-variant: small-caps; }
+
+#bodyText .body-del { color: var(--dim); text-decoration: line-through; }
+#bodyText .body-add { text-decoration: underline; text-decoration-style: dotted; }
+#bodyText .body-supplied::before { content: "⟨"; }
+#bodyText .body-supplied::after { content: "⟩"; }
+#bodyText .body-unclear { text-decoration: underline dotted var(--warn); text-decoration-thickness: 1px; }
+#bodyText .body-gap { color: var(--dim); }
+
+#bodyText .body-note {
+  font-size: .82em;
+  color: var(--action);
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+}
+
+#bodyText .body-rs { color: var(--text); }
+#bodyText .body-signed { font-style: italic; }

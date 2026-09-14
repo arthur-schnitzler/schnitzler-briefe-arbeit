@@ -97,7 +97,7 @@
                         <additions>
                            <incident type="postal">
                               <desc>
-                                 <stamp n="1" type="delivery">
+                                 <stamp n="1" type="transmission">
                                     <placeName ref="#pmb50">Wien</placeName>
                                     <date when="1892-02-01">1. 2. 92</date>
                                     <time>5–6 N</time>
@@ -107,7 +107,7 @@
                            <incident type="postal">
                               <desc>
                                  <stamp n="2" type="delivery">
-                                    <placeName ref="#pmb50">Wien <unclear>3</unclear>/2
+                                    <placeName ref="#pmb53">Wien <unclear>3</unclear>/2
                                        45</placeName>
                                     <date when="1892-02-02">2-2 <unclear>92</unclear>
                                     </date>
@@ -133,6 +133,10 @@
                <date when="1892-02-01" n="04">1. 2. 1892</date>
                <placeName ref="#pmb50">Wien</placeName>
             </correspAction>
+            <correspAction type="transmitted">
+               <date when="1892-02-01">1. 2. 1892</date>
+               <placeName ref="#pmb50">Wien</placeName>
+            </correspAction>
             <correspAction type="delivered">
                <date when="1892-02-02">2. 2. 1892</date>
                <placeName ref="#pmb50">Wien</placeName>
@@ -140,7 +144,7 @@
             <correspAction type="received">
                <persName ref="#pmb10863">Beer-Hofmann, Richard</persName>
                <date when="1892-02-02">2. 2. 1892</date>
-               <placeName ref="#pmb50">Wien</placeName>
+               <placeName ref="#pmb730">Wien</placeName>
             </correspAction>
             <correspContext>
                <ref type="belongsToCorrespondence" target="correspondence_10863">Beer-Hofmann, Richard</ref>
@@ -192,11 +196,18 @@
          <div type="writingSession" n="1">
             <p>
                <pb facs="1892_AS_RBH_1_00034"/>
-               <salute>Lieber Richard.</salute> Morgen nichts. Eventuell ko<c rendition="#gemination-m"/> ich um <time>7</time> ins <rs ref="#pmb34" type="place">
+               <salute>Lieber Richard.</salute>
+               <space unit="chars" quantity="1"/>
+               <anchor type="commentary" xml:id="K_L00069-"/><date>Morgen</date> nichts<note type='commentary' corresp="K_L00069-"></note>. Eventuell ko<c rendition="#gemination-m"/> ich um <time>7</time> ins <rs ref="#pmb34" type="place">
                   <hi rend="latintype">Griensteidl</hi>
-               </rs>. Gewiſs um <time>10</time>. – Auch <date>So<c rendition="#gemination-n"/>tag</date> wird ſich nichts machen laſſen, weil da <rs ref="#pmb11491" type="person">
-                  <hi rend="latintype">Goldschmidt</hi>
-               </rs> iſt <pb facs="1892_AS_RBH_1_00035"/>u ich Abend eingeladen bin. Ich ſchrieb
+               </rs>. Gewiſs um <time>10</time>. – Auch <date>So<c rendition="#gemination-n"/>tag</date> wird ſich nichts machen laſſen, weil da <anchor type="commentary" xml:id="K_L00069-1"/>
+               <rs ref="#pmb11491" type="person">
+                  <rs type="event" subtype="implied" ref="#pmb190928">
+                     <hi rend="latintype">Goldschmidt</hi>
+                  </rs>
+               </rs>
+               <note type="commentary" corresp="K_L00069-1">
+                  <ref type="schnitzler-kultur" subtype="Cf" target="pmb190928"/>.</note> iſt <pb facs="1892_AS_RBH_1_00035"/>u ich Abend eingeladen bin. Ich ſchrieb
                eben an <rs ref="#pmb11740" type="person">
                   <hi rend="latintype">Loris</hi>
                </rs> wegen eines Wochenabends, eventuell <date>Samſtag</date>
@@ -208,6 +219,30 @@
       </body>
       <back>
          <listPerson>
+            <person xml:id="pmb2121">
+               <persName>
+                  <surname>Schnitzler</surname>
+                  <forename>Arthur</forename>
+               </persName>
+               <birth>
+                  <date when="1862-05-15">15. 5. 1862</date>
+                  <settlement ref="pmb50">
+                     <placeName type="pref">Wien</placeName>
+                     <location>
+                        <geo>48,208333 16,373056</geo>
+                     </location>
+                  </settlement>
+               </birth>
+               <death>
+                  <date when="1931-10-21">21. 10. 1931</date>
+                  <settlement ref="pmb50">
+                     <placeName type="pref">Wien</placeName>
+                     <location>
+                        <geo>48,208333 16,373056</geo>
+                     </location>
+                  </settlement>
+               </death>
+            </person>
             <person xml:id="pmb10863">
                <persName>
                   <forename>Richard</forename>
@@ -280,60 +315,17 @@
                   </settlement>
                </death>
             </person>
-            <person xml:id="pmb2121">
-               <persName>
-                  <surname>Schnitzler</surname>
-                  <forename>Arthur</forename>
-               </persName>
-               <birth>
-                  <date when="1862-05-15">15. 5. 1862</date>
-                  <settlement ref="pmb50">
-                     <placeName type="pref">Wien</placeName>
-                     <location>
-                        <geo>48,208333 16,373056</geo>
-                     </location>
-                  </settlement>
-               </birth>
-               <death>
-                  <date when="1931-10-21">21. 10. 1931</date>
-                  <settlement ref="pmb50">
-                     <placeName type="pref">Wien</placeName>
-                     <location>
-                        <geo>48,208333 16,373056</geo>
-                     </location>
-                  </settlement>
-               </death>
-               <sex value="male"/>
-               <occupation ref="pmb90">Schriftsteller/Schriftstellerin</occupation>
-               <occupation ref="pmb97">Mediziner/Medizinerin</occupation>
-               <idno type="gnd">https://d-nb.info/gnd/118609807/</idno>
-            </person>
          </listPerson>
          <listPlace>
-            <place xml:id="pmb34">
-               <placeName>Café Griensteidl</placeName>
-               <placeName type="legacy-name-merge">Griensteidl</placeName>
-               <location type="coords">
-                  <geo>48,208258 16,366111</geo>
-               </location>
-               <location type="located_in_place">
-                  <placeName ref="pmb51">I., Innere Stadt</placeName>
-                  <geo>48,20769 16,37049</geo>
-               </location>
-            </place>
             <place xml:id="pmb50">
                <placeName>Wien</placeName>
                <placeName type="ort_fruherer-name">K.K. Reichshaupt- und Residenzstadt Wien</placeName>
-               <placeName type="legacy-name-merge">Wien</placeName>
                <placeName type="alternative-name">Bécs</placeName>
                <placeName type="alternative-name">Land Wien</placeName>
                <placeName type="alternative-name">Vídeň</placeName>
                <placeName type="alternative-name">Wenia</placeName>
                <placeName type="alternative-name">Beč</placeName>
                <placeName type="ort_fruherer-name">Vindobona</placeName>
-               <placeName type="legacy-name-merge">Vindobona</placeName>
-               <placeName type="alternative-name">Vienna</placeName>
-               <placeName type="legacy-name-merge">Vienna</placeName>
                <placeName type="alternative-name">Vienna</placeName>
                <location type="coords">
                   <geo>48,208333 16,373056</geo>
@@ -341,6 +333,10 @@
                <location type="located_in_place">
                   <placeName ref="pmb41240">Österreich</placeName>
                   <geo>47,33333 13,33333</geo>
+               </location>
+               <location type="located_in_place">
+                  <placeName ref="pmb235218">Windmühlhöhe</placeName>
+                  <geo>48,24077 16,32092</geo>
                </location>
             </place>
             <place xml:id="pmb730">
@@ -353,7 +349,31 @@
                   <geo>48,19811 16,39482</geo>
                </location>
             </place>
+            <place xml:id="pmb34">
+               <placeName>Café Griensteidl</placeName>
+               <placeName type="legacy-name-merge">Griensteidl</placeName>
+               <location type="coords">
+                  <geo>48,208258 16,366111</geo>
+               </location>
+               <location type="located_in_place">
+                  <placeName ref="pmb51">I., Innere Stadt</placeName>
+                  <geo>48,20769 16,37049</geo>
+               </location>
+            </place>
          </listPlace>
+         <listEvent>
+            <event xml:id="pmb190928" ana="implied">
+               <eventName n="Lesung">Lesung von Emanuel Reicher, 7.2.1892</eventName>
+               <listPlace>
+                  <place>
+                     <placeName role="veranstaltet in" ref="pmb190925">Opernring 6</placeName>
+                     <location>
+                        <geo>48,203161 16,367459</geo>
+                     </location>
+                  </place>
+               </listPlace>
+            </event>
+         </listEvent>
       </back>
    </text>
 </TEI>

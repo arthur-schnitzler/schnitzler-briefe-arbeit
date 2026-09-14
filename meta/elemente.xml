@@ -939,8 +939,18 @@
                                 <p>Das Attribut <code>@n</code> zählt die Stempel innerhalb des
                                     Dokuments chronologisch. Ein Aufgabestempel kommt vor einem
                                     Zustellstempel. </p>
-                                <p>Die meisten Stempel sind in Blockbuchstaben geschrieben, das wird
-                                    nicht berücksichtigt. </p>
+                                <p>Das Attribut <code>@type</code> unterscheidet folgende Stempel:</p>
+                                <list>
+                                    <item>»<code>non-postal</code>« (Nebenstempel)</item>
+                                    <item>»<code>transmission</code>« (Aufgabestempel)</item>
+                                    <item>»<code>transit</code>« (Transitstempel)</item>
+                                    <item>»<code>arrival</code>« (Ankunftsstempel)</item>
+                                    <item>»<code>delivery</code>« (Zustellstempel)</item>
+                                    <item>»<code>redirection</code>« (Weiterleitungsstempel)</item>
+                                    <item>»<code>other</code>« (Sonderfälle)</item>
+                                </list>
+                                <p>Viele Stempel sind in Blockbuchstaben geschrieben, das wird
+                                    nicht berücksichtigt.</p>
                                 <p>Ein Stempel kann aus maximal vier Elementen bestehen: </p>
                                 <list>
                                     <item><code>placeName</code> mit <code>@ref</code>
@@ -979,24 +989,35 @@
                         Übermittlungsvorgang wird in zumindest zwei verschiedenen
                             <code>correspAction</code>-Elementen dargestellt, wobei das erste immer
                             <code>correspAction[@type="sent"]</code> und das letzte immer
-                            <code>correspAction[@type="received"]</code> ist. Dazwischen können
-                        weitere Vorgänge liegen, vor allem die offiziell empfohlenen:
-                            »<code>transmitted</code>« (Übermittlung, beispielsweise Aufgabe am
-                        Postamt), »<code>forwarded</code>« (Weiterleitung),
-                        »<code>redirected</code>« (neue Adressierung). Diese sind dann anzuwenden,
-                        wenn sich verschiedene Abweichungen ergeben sollten – etwa, dass eine
-                        Postkarte an einem anderen Tag datiert ist als der Aufgabestempel. Eine
-                        zusätzliche Spezifierung wurde mit »delivered« eingeführt, für
-                        Korrespondenzstücke, die zwar ihren Zielort erreichten, aber der Adressat,
-                        die Adressatin nicht angetroffen und von diesem oder dieser erst später in
-                        Empfang genommen wurde. Die etwaigen Zwischenstationen werden nur dann
-                        ausgewiesen, wenn sich Abweichungen zu den Haupttypisierungen
-                            <code>@type='sent'</code> und <code>@type='received'</code> ergeben.
-                        Wenn beispielsweise eine Postkarte unmittelbar am selben Tag versandt wurde
-                        oder nur durch den Poststempel datierbar ist, wird angenommen, dass 'sent' =
-                        'transmitted' und letzteres wird übergangen. Ähnlich verhält es sich am
-                        anderen Ende des Vorgang, bei dem implizit angenommen wird, dass 'delivered'
-                        = 'received'.</p>
+                            <code>correspAction[@type="received"]</code> ist.</p>
+                    <p>Dazwischen können
+                        weitere Vorgänge liegen, die vor allem (aber nicht ausschließlich) durch die ausgezeichneten Stempel 
+                        nachgezeichnet werden können:</p>
+                   <list>
+                       <item>»<code>transmitted</code>« (Aufgabestempel)</item>
+                       <item>»<code>transit</code>« (Transitstempel)</item>
+                       <item>»<code>arrival</code>« (Ankunftsstempel, Ankunft im Ziellort)</item>
+                       <item>»<code>delivered</code>« (Zustellstempel)</item>
+                       <item>»<code>redirected</code>« (Nachsendestempel) </item>
+                   </list> 
+                   <p>Im September 2026 wurde eine Überarbeitung vorgenommen, so dass die durch 
+                       die Stempel und die Adressangaben mögliche genauere geografische Verortung
+                       auch in den Daten von <code>corresAction</code> aufscheint. Das heißt, dass ein Stempel aus dem 3. Wiener Gemeindebezirk 
+                       nicht einfach als »Wien« erfasst wird, sondern dem Bezirk zugeordnet. Und eine
+                       Postkarte, die in die Sternwartestraße 71 adressiert ist, verweist nunmehr
+                       auf das Haus, nicht mehr auf die Stadt.</p>
+                    <p>Implizite Annahmen, die getroffen werden, lauten:</p>
+                    <list>
+                        <item>Wenn der oder die Schreibende in einem bestimmten Bezirk wohnt und der Aufgabestempel aus dem gleichen Bezirk oder
+                            von einem naheliegenden Postamt stamt, wird angenommen, dass das Korrespondenzstück zu Hause verfasst wurde.</item>
+                        <item>Das Lesedatum wird – wenn sich nichts Anderweitiges bestimmen lässt – mit dem Zustelldatum gleichgesetzt.</item>
+                        <item>Korrespondenzstücke sind, wenn nicht anders angegeben, an die jeweilige Wohnadresse gerichtet.</item>
+                    </list>
+                    
+                    <p>Das ist eine Verfeinerung (und damit Abweichung) von den Richtlinien von <code>correspDesc</code>. Im 
+                        Export der CMIF-Datei wird diese Verfeinerung deswegen wieder rückgängig gemacht und nur die geografischen
+                        Städte und Dörfer ausgewiesen.</p>
+                    
                     <div type="level3">
                         <head xml:id="correspaction">correspAction</head>
                         <p>Neben dem verpflichtenden Attribut <code>@type</code> gibt es drei

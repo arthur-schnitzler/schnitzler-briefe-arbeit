@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="utf-8">
+<title>Stempel-Abgleich</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header id="toolbar">
+  <div class="toolbar-row">
+    <label class="jump">
+      <span>Brief</span>
+      <input id="jumpInput" placeholder="z. B. L01933" autocomplete="off">
+    </label>
+    <button id="jumpBtn">Laden</button>
+    <button id="prevBtn" title="Voriger Kandidat">&larr;</button>
+    <button id="nextBtn" title="Nächster Kandidat">&rarr;</button>
+    <span id="posIndicator" class="dim"></span>
+    <label class="mismatch-toggle">
+      <input type="checkbox" id="mismatchOnly">
+      nur Diskrepanzen
+    </label>
+    <span class="spacer"></span>
+    <a id="browserBtn" class="btn-link" target="_blank" rel="noopener">Im Browser öffnen ↗</a>
+    <button id="oxygenBtn" title="Datei in Oxygen XML Editor öffnen">In Oxygen öffnen</button>
+  </div>
+  <div id="statusLine" class="dim"></div>
+</header>
+
+<main id="matchGrid">
+  <div class="grid-header stamp-col">Poststempel</div>
+  <div class="grid-header action-col">correspAction</div>
+</main>
+
+<section id="bodySection">
+  <h2>Brieftext <span class="dim">(date-Elemente <mark class="body-date">rot</mark> markiert)</span></h2>
+  <div id="bodyText"></div>
+</section>
+
+<div id="toast"></div>
+
+<script src="app.js"></script>
+</body>
+</html>
