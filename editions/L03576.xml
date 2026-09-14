@@ -1,15 +1,9 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<?xml-model href="../meta/schnitzler-briefe-schematron.sch" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
-<TEI xmlns="http://www.tei-c.org/ns/1.0"
-     xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-     xsi:schemaLocation="http://www.tei-c.org/ns/1.0 ../meta/schnitzler-briefe-schema.xsd"
-     xml:id="L03576"
-     xml:base="https://id.acdh.oeaw.ac.at/schnitzler/schnitzler-briefe/editions">
+<?xml version="1.0" encoding="UTF-8"?><?xml-model href="../meta/schnitzler-briefe-schematron.sch" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI xmlns="http://www.tei-c.org/ns/1.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.tei-c.org/ns/1.0 ../meta/schnitzler-briefe-schema.xsd" xml:id="L03576" xml:base="https://id.acdh.oeaw.ac.at/schnitzler/schnitzler-briefe/editions">
    <teiHeader>
       <fileDesc>
          <titleStmt>
             <title level="s">Arthur Schnitzler: Briefwechsel mit Autorinnen und Autoren</title>
-            <title level="a">Felix Salten an Arthur Schnitzler, 29. 3. 1922</title>
+            <title level="a">Felix Salten an Arthur Schnitzler, [28. oder 29]. 3. 1922</title>
             <author ref="#pmb2167">Salten, Felix</author>
             <editor>
                <name>Müller, Martin Anton</name>
@@ -96,7 +90,7 @@
                         <additions>
                            <incident type="postal">
                               <desc>
-                                 <stamp n="1">
+                                 <stamp n="1" type="non-postal_marking">
                                     <addSpan>Pregate i vostri corrispondenti di aggiungere
                                        all’indirizzo il numero del quartiere postale</addSpan>
                                  </stamp>
@@ -104,7 +98,7 @@
                            </incident>
                            <incident type="postal">
                               <desc>
-                                 <stamp n="2">
+                                 <stamp n="2" type="transmission">
                                     <placeName ref="#pmb850">Venezia Ferrovia</placeName>
                                     <date when="1922-03-29">29. III 1922</date>
                                     <time>23–24</time>
@@ -133,7 +127,11 @@
          <correspDesc>
             <correspAction type="sent">
                <persName ref="#pmb2167">Salten, Felix</persName>
-               <date when="1922-03-29" n="01">29. 3. 1922</date>
+               <date n="01" notBefore="1922-03-28" notAfter="1922-03-29">[28. oder 29]. 3. 1922</date>
+               <placeName ref="#pmb462">Venedig</placeName>
+            </correspAction>
+            <correspAction type="transmitted">
+               <date when="1922-03-29">29. 3. 1922</date>
                <placeName ref="#pmb462">Venedig</placeName>
             </correspAction>
             <correspAction type="received">
@@ -146,14 +144,8 @@
                <ref type="belongsToCorrespondence" target="correspondence_2167">Salten, Felix</ref>
                <ref subtype="previous_letter" type="withinCollection" target="L02377">Schnitzler an Hauptmann, 17. 3. 1922</ref>
                <ref subtype="next_letter" type="withinCollection" target="L03577">Salten an Schnitzler, 2. 4. 1922</ref>
-               <ref subtype="previous_letter"
-                    type="withinCorrespondence"
-                    source="correspondence_2167"
-                    target="L03595">Salten an Schnitzler, [22. 2. 1922?]</ref>
-               <ref subtype="next_letter"
-                    type="withinCorrespondence"
-                    source="correspondence_2167"
-                    target="L03577">Salten an Schnitzler, 2. 4. 1922</ref>
+               <ref subtype="previous_letter" type="withinCorrespondence" source="correspondence_2167" target="L03595">Salten an Schnitzler, [22. 2. 1922?]</ref>
+               <ref subtype="next_letter" type="withinCorrespondence" source="correspondence_2167" target="L03577">Salten an Schnitzler, 2. 4. 1922</ref>
             </correspContext>
          </correspDesc>
       </profileDesc>

@@ -521,10 +521,12 @@
          <xs:attribute name="type" use="optional">
             <xs:simpleType>
                <xs:restriction base="xs:NCName">
+                  <xs:enumeration value="non-postal_marking"/>
+                  <xs:enumeration value="arrival_postmark"/>
                   <xs:enumeration value="transmission"/>
                   <xs:enumeration value="redirection"/>
                   <xs:enumeration value="delivery"/>
-                  <xs:enumeration value="forwarding"/>
+                  <xs:enumeration value="transit"/>
                   <xs:enumeration value="other"/>
                </xs:restriction>
             </xs:simpleType>
