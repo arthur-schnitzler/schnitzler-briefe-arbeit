@@ -13,6 +13,14 @@
       <input id="jumpInput" placeholder="z. B. L01933" autocomplete="off">
     </label>
     <button id="jumpBtn">Laden</button>
+    <label class="jump">
+      <span>Bearbeiter</span>
+      <select id="editorSelect">
+        <option value="">–</option>
+        <option value="SJ">SJ</option>
+        <option value="MAM">MAM</option>
+      </select>
+    </label>
     <button id="prevBtn" title="Voriger Kandidat">&larr;</button>
     <button id="nextBtn" title="Nächster Kandidat">&rarr;</button>
     <span id="posIndicator" class="dim"></span>
@@ -33,7 +41,7 @@
 </main>
 
 <section id="bodySection">
-  <h2>Brieftext <span class="dim">(date-Elemente <mark class="body-date">rot</mark> markiert)</span></h2>
+  <h2>Brieftext <span id="bodyTitle" class="dim"></span></h2>
   <div id="bodyText"></div>
 </section>
 

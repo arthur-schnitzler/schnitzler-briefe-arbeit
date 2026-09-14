@@ -8,8 +8,7 @@ const TYPE_COLORS = {
   delivery: "#3c8a53", delivered: "#3c8a53",
   redirection: "#b9862c", redirected: "#b9862c",
   arrival: "#2f8f95", arrived: "#2f8f95",
-  forwarded: "#7d5bb5", // seit der Vokabular-Vereinheitlichung ohne stamp-Pendant (wie sent/received)
-  "transit": "#8a6a4b",
+  transit: "#8a6a4b", in_transit: "#8a6a4b",
   "non-postal": "#8a857a",
   "other": "#a8532f",
   sent: "#5b6b7a",
@@ -35,7 +34,24 @@ function badgeHtml(type) {
   return `<span class="badge" style="${style}">${esc(type || "?")}</span>`;
 }
 
-const ACTION_TYPE_ORDER = ["sent", "transmitted", "redirected", "forwarded", "arrived", "delivered", "received"];
+const ACTION_TYPE_ORDER = ["sent", "transmitted", "redirected", "in_transit", "arrived", "delivered", "received"];
+
+const CHANGE_DATIERUNG_STEMPEL_TEXT = "Datierung und Stempel überprüft";
+
+const EDITOR_STORAGE_KEY = "stempelAbgleich.editor";
+
+function loadStoredEditor() {
+  try {
+    const v = localStorage.getItem(EDITOR_STORAGE_KEY);
+    return v === "SJ" || v === "MAM" ? v : "";
+  } catch {
+    return "";
+  }
+}
+
+function storeEditor(v) {
+  try { localStorage.setItem(EDITOR_STORAGE_KEY, v); } catch { /* privater Modus o. ä. - egal */ }
+}
 
 const state = {
   candidates: [],
@@ -46,6 +62,7 @@ const state = {
   activeStamp: null, // index des aktiven Stempels für manuelles Matchen
   openRaw: { stamp: new Set(), correspAction: new Set() }, // aufgeklappte XML-Editoren
   pendingRaw: {},    // "kind:index" -> noch ungespeicherter Textarea-Inhalt
+  editor: loadStoredEditor(), // "SJ" | "MAM" | "" - für revisionDesc-Eintrag bei "weiter"
 };
 
 const el = (id) => document.getElementById(id);
@@ -107,9 +124,14 @@ async function loadCandidates() {
 }
 
 function applyFilter() {
-  state.filtered = state.mismatchOnly
-    ? state.candidates.filter((c) => c.mismatch)
-    : state.candidates;
+  // bereits abgeschlossene Briefe ("Datierung und Stempel überprüft")
+  // fallen grundsätzlich aus der Warteschlange raus
+  let list = state.candidates.filter((c) => !c.reviewed);
+  if (state.mismatchOnly) list = list.filter((c) => c.mismatch);
+  // SJ arbeitet die Liste von hinten nach vorne durch, MAM (bzw. niemand
+  // gewählt) von vorne nach hinten - beide treffen sich so in der Mitte
+  if (state.editor === "SJ") list = list.slice().reverse();
+  state.filtered = list;
   updatePosIndicator();
 }
 
@@ -186,8 +208,8 @@ function render() {
 }
 
 // Baut die Zeilen des Abgleichs-Rasters: pro correspAction-Typ (in
-// kanonischer Reihenfolge sent/transmitted/forwarded/redirected/delivered/
-// received) werden gleichtypige Stempel und correspAction paarweise auf
+// kanonischer Reihenfolge sent/transmitted/redirected/in_transit/arrived/
+// delivered/received) werden gleichtypige Stempel und correspAction paarweise auf
 // dieselbe Zeile gesetzt (Stempel[i] neben correspAction[i]); reichen die
 // Stempel oder die correspAction nicht, bleibt die jeweils andere Seite in
 // der Zeile leer. Stempeltypen ohne correspAction-Entsprechung (z. B.
@@ -286,10 +308,13 @@ function renderGrid() {
 
 function renderBody() {
   const container = el("bodyText");
+  const titleEl = el("bodyTitle");
   if (!state.file) {
     container.innerHTML = "";
+    titleEl.textContent = "";
     return;
   }
+  titleEl.textContent = state.file.title || "";
   container.innerHTML = state.file.bodyHtml
     ? state.file.bodyHtml
     : '<div class="empty-column">Kein Brieftext.</div>';
@@ -328,6 +353,48 @@ function attrChipsHtml(attrs) {
     .map(([k, v]) => `<span class="attr-chip"><span class="attr-key">${esc(k)}</span>=<span class="attr-val">"${esc(v)}"</span></span>`)
     .join(" ");
   return `<div class="attrs">${chips}</div>`;
+}
+
+// Orte für correspAction: Auswahl aus allen placeName in der Adresse
+// (div[@type='address']) und den Poststempeln (incident[@type='postal']),
+// damit sich Orte per Klick statt Handarbeit im XML anpassen lassen.
+function placeSelectHtml(a) {
+  const options = state.file.placeOptions || [];
+  const currentLabel = a.place && a.place.text
+    ? `${a.place.text}${a.place.ref ? ` (${a.place.ref})` : ""}`
+    : "– kein Ort –";
+  const optionsHtml = options
+    .map((c, i) => `<option value="${i}">${esc(c.text)}${c.ref ? ` (${esc(c.ref)})` : ""}</option>`)
+    .join("");
+  return `
+    <select data-role="placeSelect" class="place-select" title="Ort aus Adresse/Poststempeln übernehmen">
+      <option value="-1" selected>${esc(currentLabel)}</option>
+      ${optionsHtml}
+    </select>`;
+}
+
+function wirePlaceSelect(card, a) {
+  const select = card.querySelector('[data-role="placeSelect"]');
+  if (!select) return;
+  select.addEventListener("click", (ev) => ev.stopPropagation());
+  select.addEventListener("change", async (ev) => {
+    ev.stopPropagation();
+    const placeIndex = Number(select.value);
+    if (placeIndex < 0) return;
+    select.disabled = true;
+    try {
+      const data = await apiPost(`/api/file/${state.currentId}/set-place`, {
+        actionIndex: a.index,
+        placeIndex,
+      });
+      state.file = data;
+      render();
+      toast(`Ort von correspAction[@type="${a.type}"] übernommen.`);
+    } catch (e) {
+      toast(e.message, true);
+      select.disabled = false;
+    }
+  });
 }
 
 function rawEditorHtml(kind, idx, raw) {
@@ -475,7 +542,6 @@ function createActionCard(a) {
     + (activeStamp ? " matchable" : "");
 
   const persons = a.persons.map((p) => esc(p.text)).join(", ");
-  const placeStr = a.place && a.place.text ? a.place.text : null;
 
   let compareHtml = "";
   if (mapped.length === 1) {
@@ -497,23 +563,53 @@ function createActionCard(a) {
     compareHtml = `<div class="hint">${mapped.length} Stempel vom Typ „${esc(mapped[0].type)}“ vorhanden – Auswahl links per Klick.</div>`;
   }
 
+  // Titel + correspAction[@type='sent']/date als "[Vortag oder Tag]"
+  // markieren (XSLT brief_normalisierung_datum-plusminus-1-tag.xsl)
+  const dateUncertainHtml = a.type === "sent" ? `
+    <div class="card-actions">
+      <button data-role="date-uncertain" ${a.date && a.date.when ? "" : "disabled"}
+        title="Titel und dieses Datum als '[Vortag oder Tag]' markieren, @when durch @notBefore/@notAfter ersetzen (XSLT: brief_normalisierung_datum-plusminus-1-tag.xsl)">
+        Datum unsicher (±1 Tag)
+      </button>
+    </div>` : "";
+
   card.innerHTML = `
     <div class="card-head">
       ${badgeHtml(a.type)}
     </div>
     <div class="card-body">
       <div>${persons ? esc(persons) : '<span class="empty-field">keine Person</span>'}</div>
-      <div>${placeStr ? esc(placeStr) : '<span class="empty-field">kein Ort</span>'}</div>
+      <div>${placeSelectHtml(a)}</div>
       <div>${dateWithWeekdayHtml(a.date)}</div>
     </div>
     ${attrChipsHtml(a.attrs)}
     ${compareHtml}
+    ${dateUncertainHtml}
     ${rawEditorHtml("correspAction", a.index, a.raw)}
   `;
 
+  wirePlaceSelect(card, a);
+
+  const dateUncertainBtn = card.querySelector('[data-role="date-uncertain"]');
+  if (dateUncertainBtn) {
+    dateUncertainBtn.addEventListener("click", async (ev) => {
+      ev.stopPropagation();
+      dateUncertainBtn.disabled = true;
+      try {
+        const data = await apiPost(`/api/file/${state.currentId}/date-uncertain`, {});
+        state.file = data;
+        render();
+        toast(`Datum als "±1 Tag unsicher" markiert (Titel + correspAction[@type="sent"]).`);
+      } catch (e) {
+        toast(e.message, true);
+        dateUncertainBtn.disabled = false;
+      }
+    });
+  }
+
   if (activeStamp) {
     card.addEventListener("click", async (ev) => {
-      if (ev.target.closest(".card-actions, .raw-editor")) return;
+      if (ev.target.closest(".card-actions, .raw-editor, .place-select")) return;
       try {
         const data = await apiPost(`/api/file/${state.currentId}/update`, {
           stampIndex: activeStamp.index,
@@ -556,13 +652,54 @@ function createActionCard(a) {
 // ---------------------------------------------------------------------------
 // Init
 // ---------------------------------------------------------------------------
+function updateNextBtnTitle() {
+  el("nextBtn").title = state.editor
+    ? `Nächster Kandidat (ergänzt vorher revisionDesc/change "${CHANGE_DATIERUNG_STEMPEL_TEXT}" als ${state.editor})`
+    : "Nächster Kandidat";
+}
+
 function wireToolbar() {
   el("jumpBtn").addEventListener("click", () => loadFile(el("jumpInput").value));
   el("jumpInput").addEventListener("keydown", (ev) => {
     if (ev.key === "Enter") loadFile(el("jumpInput").value);
   });
+
+  const editorSelect = el("editorSelect");
+  editorSelect.value = state.editor;
+  updateNextBtnTitle();
+  editorSelect.addEventListener("change", (ev) => {
+    state.editor = ev.target.value;
+    storeEditor(state.editor);
+    updateNextBtnTitle();
+    applyFilter();
+  });
+
   el("prevBtn").addEventListener("click", () => stepCandidate(-1));
-  el("nextBtn").addEventListener("click", () => stepCandidate(1));
+  el("nextBtn").addEventListener("click", async () => {
+    if (state.currentId && state.editor) {
+      try {
+        const idx = state.filtered.findIndex((c) => c.id === state.currentId);
+        await apiPost(`/api/file/${state.currentId}/revision-change`, { who: state.editor });
+        toast(`${state.currentId}: revisionDesc ergänzt ("${CHANGE_DATIERUNG_STEMPEL_TEXT}", ${state.editor}).`);
+        // Datei ist ab jetzt "reviewed" und fällt aus der Warteschlange -
+        // an genau der Stelle weitermachen, an der sie eben noch stand
+        const entry = state.candidates.find((c) => c.id === state.currentId);
+        if (entry) entry.reviewed = true;
+        applyFilter();
+        if (idx >= 0 && idx < state.filtered.length) {
+          await loadFile(state.filtered[idx].id);
+        } else if (state.filtered.length) {
+          await loadFile(state.filtered[state.filtered.length - 1].id);
+        } else {
+          toast("Keine weiteren Kandidaten.");
+        }
+        return;
+      } catch (e) {
+        toast(e.message, true);
+      }
+    }
+    stepCandidate(1);
+  });
   el("mismatchOnly").addEventListener("change", (ev) => {
     state.mismatchOnly = ev.target.checked;
     applyFilter();

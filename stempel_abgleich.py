@@ -9,7 +9,7 @@ den correspAction-Einträgen (correspDesc/correspAction) in editions/*.xml.
 Links werden alle Stempel eines Briefs angezeigt, rechts alle correspAction.
 Für jeden Stempel wird der passende correspAction-Typ vorgeschlagen
 (transmission→transmitted, delivery→delivered, redirection→redirected,
-arrival→arrived). Man kann daraus entweder eine neue correspAction
+arrival→arrived, transit→in_transit). Man kann daraus entweder eine neue correspAction
 einfügen oder Datum/Ort einer bestehenden correspAction aus dem Stempel
 übernehmen ("matchen"). Ein Button öffnet die Datei zusätzlich auf
 schnitzler-briefe.acdh.oeaw.ac.at.
@@ -29,7 +29,9 @@ import json
 import re
 import subprocess
 import sys
+import tempfile
 import webbrowser
+from datetime import date
 from http.server import BaseHTTPRequestHandler, ThreadingHTTPServer
 from pathlib import Path
 from urllib.parse import urlparse
@@ -45,6 +47,8 @@ SCHEMA_PATH = REPO / "meta" / "schnitzler-briefe-schema.xsd"
 STATIC_DIR = REPO / "stempel_abgleich_static"
 HTML_BASE = "https://schnitzler-briefe.acdh.oeaw.ac.at/{fid}.html"
 OXYGEN_APP = "/Applications/Oxygen XML Editor/Oxygen XML Editor.app"
+SAXON_JAR = REPO / "saxon" / "saxon-he-9.9.1-7.jar"
+XSLT_DATE_UNCERTAIN = REPO / "xslts" / "brief_normalisierungen" / "brief_normalisierung_datum-plusminus-1-tag.xsl"
 
 TEI_NS = "http://www.tei-c.org/ns/1.0"
 NS = {"tei": TEI_NS}
@@ -54,11 +58,9 @@ STAMP_TO_ACTION = {
     "delivery": "delivered",
     "redirection": "redirected",
     "arrival": "arrived",
+    "transit": "in_transit",
 }
-# "forwarded" hat seit der Vokabular-Vereinheitlichung kein stamp-Pendant
-# mehr (das frühere "forwarding" wurde aus der stamp-Enumeration entfernt);
-# es bleibt wie sent/received ein rein correspAction-seitiger Typ.
-ACTION_TYPE_ORDER = ["sent", "transmitted", "redirected", "forwarded", "arrived", "delivered", "received"]
+ACTION_TYPE_ORDER = ["sent", "transmitted", "redirected", "in_transit", "arrived", "delivered", "received"]
 ACTION_RANK = {t: i for i, t in enumerate(ACTION_TYPE_ORDER)}
 MAPPED_STAMP_TYPES = tuple(STAMP_TO_ACTION.keys())
 MAPPED_ACTION_TYPES = tuple(STAMP_TO_ACTION.values())
@@ -70,6 +72,12 @@ RAW_BLOCK_RE = {"stamp": STAMP_RE, "correspAction": CORRESP_ACTION_RE}
 TYPE_ATTR_RE = re.compile(r'\btype="([^"]*)"')
 DATE_CHILD_RE = re.compile(r'<date\b[^>]*(?:/>|>.*?</date>)', re.S)
 PLACE_CHILD_RE = re.compile(r'<placeName\b[^>]*(?:/>|>.*?</placeName>)', re.S)
+TITLE_A_RE = re.compile(r'<title level="a">.*?</title>', re.S)
+REVISION_DESC_RE = re.compile(r'<revisionDesc\b[^>]*>.*?</revisionDesc>', re.S)
+CHANGE_RE = re.compile(r'<change\b[^>]*(?:/>|>.*?</change>)', re.S)
+EDITORS = ("SJ", "MAM")
+CHANGE_DATIERUNG_STEMPEL_TEXT = "Datierung und Stempel überprüft"
+REVIEWED_MARKER_RE = re.compile(re.escape(f">{CHANGE_DATIERUNG_STEMPEL_TEXT}</change>"))
 PERSNAME_RE = re.compile(r'<persName\b[^>]*>.*?</persName>', re.S)
 
 _schema = "unloaded"
@@ -262,6 +270,37 @@ def extract_dateline_date(root):
     return extract_date(date) if date is not None else None
 
 
+def extract_title(root):
+    title = root.find(f".//{q('titleStmt')}/{q('title')}[@level='a']")
+    return norm_text(title) if title is not None else None
+
+
+def extract_place_candidates(root):
+    """Alle placeName aus der Adresse (div[@type='address']) und den
+    Poststempeln (incident[@type='postal']), dazu die rs[@type='place'] in
+    den addrLine der Adresse (dort werden Orte oft so statt als placeName
+    ausgezeichnet) - als Auswahlliste, aus der Orte für correspAction
+    übernommen werden können. Dedupliziert nach @ref (bzw. nach Text, wenn
+    kein ref vorhanden ist), erster Fund zählt."""
+    nodes = root.xpath(
+        ".//tei:div[@type='address']//tei:placeName"
+        " | .//tei:incident[@type='postal']//tei:placeName"
+        " | .//tei:div[@type='address']/tei:address/tei:addrLine/descendant::tei:rs[@type='place']",
+        namespaces=NS,
+    )
+    seen = set()
+    options = []
+    for el in nodes:
+        ref = el.get("ref")
+        text = norm_text(el)
+        key = ref or text
+        if not key or key in seen:
+            continue
+        seen.add(key)
+        options.append({"ref": ref, "text": text})
+    return options
+
+
 def build_file_payload(fid):
     text = load_text(fid)
     root = parse_root(text)
@@ -270,8 +309,10 @@ def build_file_payload(fid):
     return {
         "id": fid,
         "htmlUrl": HTML_BASE.format(fid=fid),
+        "title": extract_title(root),
         "stamps": stamps,
         "correspActions": actions,
+        "placeOptions": extract_place_candidates(root),
         "bodyHtml": render_body_html(root),
         "datelineDate": extract_dateline_date(root),
     }
@@ -306,6 +347,7 @@ def _candidate_row(fid, text, stamp_count=None):
         "stampCount": stamp_count,
         "correspCount": len(re.findall(r"<correspAction\b", text)),
         "mismatch": mapped_stamps > mapped_actions,
+        "reviewed": bool(REVIEWED_MARKER_RE.search(text)),
     }
 
 
@@ -375,7 +417,28 @@ def validate_and_save(fid, old_text, new_text):
     refresh_candidate(fid)
 
 
-def build_date_elem(date):
+def format_normalized_stamp_date(date, date_el):
+    """(D)D.&#160;(M)M.&#160;JJJJ aus @when, ohne führende Nullen bei Tag/
+    Monat - das in diesem Projekt übliche Muster für normierte
+    Datumsangaben (vgl. z. B. editions/L00015.xml). Ein <supplied>
+    irgendwo im stamp/date-Element ergibt eckige Klammern um die ganze
+    Wiedergabe, ein <gap> ein angehängtes "?"."""
+    when = (date or {}).get("when")
+    if not when:
+        return None
+    m = re.match(r"^(\d{4})-(\d{2})-(\d{2})$", when)
+    if not m:
+        return None
+    year, month, day = m.group(1), int(m.group(2)), int(m.group(3))
+    rendered = f"{day}.&#160;{month}.&#160;{year}"
+    if date_el is not None and date_el.find(f".//{q('gap')}") is not None:
+        rendered += "?"
+    if date_el is not None and date_el.find(f".//{q('supplied')}") is not None:
+        rendered = f"[{rendered}]"
+    return rendered
+
+
+def build_date_elem(date, date_el=None, normalize=False):
     if not date or not (date.get("text") or date.get("when")):
         return None
     attrs = ""
@@ -385,6 +448,10 @@ def build_date_elem(date):
         attrs += f' notBefore="{escape_attr(date["notBefore"])}"'
     if date.get("notAfter"):
         attrs += f' notAfter="{escape_attr(date["notAfter"])}"'
+    if normalize:
+        normalized = format_normalized_stamp_date(date, date_el)
+        if normalized is not None:
+            return f'<date{attrs}>{normalized}</date>'
     text = date.get("text") or ""
     if not text:
         return f'<date{attrs}/>'
@@ -407,6 +474,8 @@ def insert_corresp_action(fid, stamp_index, target_type):
     if not (0 <= stamp_index < len(stamps)):
         raise ValueError("ungültiger Stempel-Index")
     stamp = stamps[stamp_index]
+    stamp_els = list(root.iter(q("stamp")))
+    stamp_date_el = stamp_els[stamp_index].find(q("date")) if stamp_index < len(stamp_els) else None
 
     desc_m = CORRESP_DESC_RE.search(text)
     if not desc_m:
@@ -438,7 +507,7 @@ def insert_corresp_action(fid, stamp_index, target_type):
     child_indent = child_m.group(1) if child_m else indent + "   "
 
     lines = [f'{indent}<correspAction type="{escape_attr(target_type)}">']
-    date_elem = build_date_elem(stamp.get("date"))
+    date_elem = build_date_elem(stamp.get("date"), date_el=stamp_date_el, normalize=True)
     if date_elem:
         lines.append(f'{child_indent}{date_elem}')
     place_elem = build_place_elem(stamp.get("place"))
@@ -492,20 +561,61 @@ def update_corresp_action(fid, stamp_index, action_index):
 
     new_place_elem = build_place_elem(stamp.get("place"))
     if new_place_elem:
-        if PLACE_CHILD_RE.search(new_block_text):
-            new_block_text = PLACE_CHILD_RE.sub(lambda m: new_place_elem, new_block_text, count=1)
-        else:
-            date_matches = list(DATE_CHILD_RE.finditer(new_block_text))
-            if date_matches:
-                pos = date_matches[-1].end()
-            else:
-                pers_matches = list(PERSNAME_RE.finditer(new_block_text))
-                if pers_matches:
-                    pos = pers_matches[-1].end()
-                else:
-                    open_line = re.match(r'[^\n]*\n', new_block_text)
-                    pos = open_line.end() if open_line else 0
-            new_block_text = new_block_text[:pos] + f'\n{child_indent}{new_place_elem}' + new_block_text[pos:]
+        new_block_text = apply_place_to_block(new_block_text, child_indent, new_place_elem)
+
+    new_text = text[:block.start()] + new_block_text + text[block.end():]
+    validate_and_save(fid, text, new_text)
+    return build_file_payload(fid)
+
+
+def _place_insert_pos(block_text):
+    date_matches = list(DATE_CHILD_RE.finditer(block_text))
+    if date_matches:
+        return date_matches[-1].end()
+    pers_matches = list(PERSNAME_RE.finditer(block_text))
+    if pers_matches:
+        return pers_matches[-1].end()
+    open_line = re.match(r'[^\n]*\n', block_text)
+    return open_line.end() if open_line else 0
+
+
+def apply_place_to_block(block_text, child_indent, new_place_elem):
+    """Ersetzt die placeName eines correspAction-Blocks (Textform) durch
+    new_place_elem, oder fügt sie an der schema-korrekten Stelle ein
+    (nach persName/date, vor dem schließenden Tag), falls noch keine da ist."""
+    if PLACE_CHILD_RE.search(block_text):
+        return PLACE_CHILD_RE.sub(lambda m: new_place_elem, block_text, count=1)
+    pos = _place_insert_pos(block_text)
+    return block_text[:pos] + f'\n{child_indent}{new_place_elem}' + block_text[pos:]
+
+
+def set_action_place(fid, action_index, place_index):
+    """Übernimmt einen Ort aus den Kandidaten (Adresse/Poststempel, siehe
+    extract_place_candidates) als placeName einer bestehenden correspAction."""
+    text = load_text(fid)
+    root = parse_root(text)
+    actions = extract_corresp_actions(root)
+    if not (0 <= action_index < len(actions)):
+        raise ValueError("ungültiger correspAction-Index")
+
+    candidates = extract_place_candidates(root)
+    if not (0 <= place_index < len(candidates)):
+        raise ValueError("ungültiger Orts-Index")
+
+    blocks = list(CORRESP_ACTION_RE.finditer(text))
+    if action_index >= len(blocks):
+        raise ValueError("correspAction nicht gefunden")
+    block = blocks[action_index]
+    block_text = block.group(0)
+
+    indent = indent_of(text, block.start())
+    child_m = re.search(r'\n([ \t]+)<\w', block_text)
+    child_indent = child_m.group(1) if child_m else indent + "   "
+
+    new_place_elem = build_place_elem(candidates[place_index])
+    if not new_place_elem:
+        raise ValueError("gewählter Ort hat keinen Text")
+    new_block_text = apply_place_to_block(block_text, child_indent, new_place_elem)
 
     new_text = text[:block.start()] + new_block_text + text[block.end():]
     validate_and_save(fid, text, new_text)
@@ -539,6 +649,108 @@ def replace_raw_block(fid, kind, index, new_xml):
     block = blocks[index]
 
     new_text = text[:block.start()] + new_xml + text[block.end():]
+    validate_and_save(fid, text, new_text)
+    return build_file_payload(fid)
+
+
+def _run_saxon(input_path, xslt_path):
+    if not SAXON_JAR.exists():
+        raise ValueError(f"Saxon-JAR nicht gefunden unter {SAXON_JAR}")
+    if not xslt_path.exists():
+        raise ValueError(f"XSLT nicht gefunden unter {xslt_path}")
+    with tempfile.TemporaryDirectory() as tmp_dir:
+        out_path = Path(tmp_dir) / "out.xml"
+        cmd = ["java", "-jar", str(SAXON_JAR), f"-s:{input_path}", f"-xsl:{xslt_path}", f"-o:{out_path}"]
+        result = subprocess.run(cmd, capture_output=True, text=True)
+        if result.returncode != 0:
+            msg = (result.stderr or result.stdout or "unbekannter Fehler").strip()
+            raise ValueError(f"XSLT-Transformation fehlgeschlagen: {msg}")
+        return out_path.read_text(encoding="utf-8")
+
+
+def _xml_text_with_nbsp_entity(raw_text):
+    """Wie escape_text, aber ein echtes NBSP-Zeichen (von Saxon aus '&#160;'
+    im XSLT aufgelöst) wird für die Ablage zurück in die Entity-Schreibweise
+    &#160; übersetzt - Editionskonvention, siehe z. B. editions/L00015.xml."""
+    return escape_text(raw_text).replace(" ", "&#160;")
+
+
+def apply_date_uncertain(fid):
+    """Wendet xslts/brief_normalisierungen/brief_normalisierung_datum-plusminus-1-tag.xsl
+    per Saxon an (Datum "±1 Tag unsicher": Titel und
+    correspAction[@type='sent']/date bekommen die "[Vortag oder Tag]"-
+    Notation, @when wird durch @notBefore/@notAfter ersetzt). Nur die
+    dadurch tatsächlich geänderten Stellen werden chirurgisch in den
+    Originaltext übernommen, damit der Rest der Datei (z. B. handformatierte
+    mehrzeilige Start-Tags) nicht durch Saxons Serialisierung verändert wird."""
+    text = load_text(fid)
+    path = EDITIONS / f"{fid}.xml"
+    if not path.exists():
+        raise FileNotFoundError(f"{fid}.xml nicht gefunden")
+
+    out_text = _run_saxon(path, XSLT_DATE_UNCERTAIN)
+    out_root = etree.fromstring(out_text.encode("utf-8"))
+
+    new_text = text
+
+    new_title_el = out_root.find(f".//{q('titleStmt')}/{q('title')}[@level='a']")
+    if new_title_el is not None:
+        title_m = TITLE_A_RE.search(new_text)
+        if title_m:
+            new_title_block = f'<title level="a">{_xml_text_with_nbsp_entity(new_title_el.text or "")}</title>'
+            new_text = new_text[:title_m.start()] + new_title_block + new_text[title_m.end():]
+
+    new_date_el = out_root.find(
+        f".//{q('correspDesc')}/{q('correspAction')}[@type='sent']/{q('date')}")
+    if new_date_el is not None:
+        blocks = list(CORRESP_ACTION_RE.finditer(new_text))
+        sent_block = next(
+            (b for b in blocks if TYPE_ATTR_RE.search(b.group(0)).group(1) == "sent"), None)
+        if sent_block is not None:
+            block_text = sent_block.group(0)
+            date_m = DATE_CHILD_RE.search(block_text)
+            if date_m:
+                attrs_str = "".join(
+                    f' {k}="{escape_attr(v)}"' for k, v in new_date_el.attrib.items())
+                new_date_block = (
+                    f'<date{attrs_str}>{_xml_text_with_nbsp_entity(new_date_el.text or "")}</date>')
+                new_block_text = block_text[:date_m.start()] + new_date_block + block_text[date_m.end():]
+                new_text = new_text[:sent_block.start()] + new_block_text + new_text[sent_block.end():]
+
+    validate_and_save(fid, text, new_text)
+    return build_file_payload(fid)
+
+
+def add_revision_change(fid, who, change_text=CHANGE_DATIERUNG_STEMPEL_TEXT):
+    """Ergänzt teiHeader/revisionDesc um einen neuen change-Eintrag, ans
+    Ende der bestehenden change-Liste angehängt (chronologisch, wie in der
+    Edition üblich)."""
+    if who not in EDITORS:
+        raise ValueError(f"unbekannter Bearbeiter: {who}")
+
+    text = load_text(fid)
+    rd_m = REVISION_DESC_RE.search(text)
+    if not rd_m:
+        raise ValueError("revisionDesc nicht gefunden")
+    block = rd_m.group(0)
+
+    new_change = f'<change who="{escape_attr(who)}" when="{date.today().isoformat()}">{escape_text(change_text)}</change>'
+
+    changes = list(CHANGE_RE.finditer(block))
+    if changes:
+        last = changes[-1]
+        indent = indent_of(block, last.start())
+        insert_at = last.end()
+        if block[insert_at:insert_at + 1] == "\n":
+            insert_at += 1
+        new_block = block[:insert_at] + f'{indent}{new_change}\n' + block[insert_at:]
+    else:
+        rd_indent = indent_of(text, rd_m.start())
+        child_indent = rd_indent + "   "
+        open_tag_end = block.index(">") + 1
+        new_block = block[:open_tag_end] + f'\n{child_indent}{new_change}' + block[open_tag_end:]
+
+    new_text = text[:rd_m.start()] + new_block + text[rd_m.end():]
     validate_and_save(fid, text, new_text)
     return build_file_payload(fid)
 
@@ -621,7 +833,8 @@ class Handler(BaseHTTPRequestHandler):
             return
 
         try:
-            m = re.match(r"^/api/file/([^/]+)/(insert|update|raw)$", path)
+            m = re.match(
+                r"^/api/file/([^/]+)/(insert|update|raw|set-place|date-uncertain|revision-change)$", path)
             if not m:
                 self.send_error(404)
                 return
@@ -632,6 +845,13 @@ class Handler(BaseHTTPRequestHandler):
             elif action == "update":
                 result = update_corresp_action(
                     fid, int(payload["stampIndex"]), int(payload["actionIndex"]))
+            elif action == "set-place":
+                result = set_action_place(
+                    fid, int(payload["actionIndex"]), int(payload["placeIndex"]))
+            elif action == "date-uncertain":
+                result = apply_date_uncertain(fid)
+            elif action == "revision-change":
+                result = add_revision_change(fid, payload["who"])
             else:
                 result = replace_raw_block(
                     fid, payload["kind"], int(payload["index"]), payload["xml"])

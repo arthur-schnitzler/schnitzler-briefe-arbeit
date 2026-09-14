@@ -145,14 +145,14 @@
          <correspDesc>
             <correspAction type="sent">
                <persName ref="#pmb2121">Schnitzler, Arthur</persName>
-               <date when="1890-09-01" n="01">[Anfang September] 1890</date>
-               <placeName ref="#pmb50">Wien</placeName>
+               <date notBefore="1890-09-01" notAfter="1890-09-10" n="01">[Anfang September] 1890</date>
+               <placeName ref="#pmb167789">Ordination Arthur Schnitzler [Bösendorferstraße 11]</placeName>
             </correspAction>
             <correspAction type="received">
                <persName ref="#pmb11061">Bölsche, Wilhelm</persName>
-               <date evidence="conjecture" notBefore="1890-09-02" notAfter="1890-09-06">[2. 9. 1890
-                  – 6. 9. 1890?]</date>
-               <placeName ref="#pmb168">Berlin</placeName>
+               <date evidence="conjecture" notBefore="1890-09-02" notAfter="1890-09-17">[2. 9. 1890
+                  – 17. 9. 1890?]</date>
+               <placeName ref="#pmb364699">Linkstraße 25</placeName>
             </correspAction>
             <correspContext>
                <ref type="belongsToCorrespondence" target="correspondence_11061">Bölsche, Wilhelm</ref>
@@ -214,37 +214,13 @@
       </body>
       <back>
          <listPerson>
-            <person xml:id="pmb11061">
-               <persName>
-                  <forename>Wilhelm</forename>
-                  <surname>Bölsche</surname>
-               </persName>
-               <birth>
-                  <date when="1861-01-02">1861-01-02</date>
-                  <settlement ref="pmb145">
-                     <placeName type="pref">Köln</placeName>
-                     <location>
-                        <geo>50,93835 6,95427</geo>
-                     </location>
-                  </settlement>
-               </birth>
-               <death>
-                  <date when="1939-08-31">1939-08-31</date>
-                  <settlement ref="pmb34528">
-                     <placeName type="pref">Szklarska Poręba</placeName>
-                     <location>
-                        <geo>50,82567 15,52274</geo>
-                     </location>
-                  </settlement>
-               </death>
-            </person>
             <person xml:id="pmb2121">
                <persName>
                   <surname>Schnitzler</surname>
                   <forename>Arthur</forename>
                </persName>
                <birth>
-                  <date when="1862-05-15">15. 5. 1862</date>
+                  <date when="1862-05-15">15. 5. 1862</date>
                   <settlement ref="pmb50">
                      <placeName type="pref">Wien</placeName>
                      <location>
@@ -253,7 +229,7 @@
                   </settlement>
                </birth>
                <death>
-                  <date when="1931-10-21">21. 10. 1931</date>
+                  <date when="1931-10-21">21. 10. 1931</date>
                   <settlement ref="pmb50">
                      <placeName type="pref">Wien</placeName>
                      <location>
@@ -261,10 +237,6 @@
                      </location>
                   </settlement>
                </death>
-               <sex value="male"/>
-               <occupation ref="pmb90">Schriftsteller/Schriftstellerin</occupation>
-               <occupation ref="pmb97">Mediziner/Medizinerin</occupation>
-               <idno type="gnd">https://d-nb.info/gnd/118609807/</idno>
             </person>
             <person xml:id="pmb3227">
                <persName>
@@ -290,17 +262,71 @@
                   </settlement>
                </death>
             </person>
+            <person xml:id="pmb11061">
+               <persName>
+                  <forename>Wilhelm</forename>
+                  <surname>Bölsche</surname>
+               </persName>
+               <birth>
+                  <date when="1861-01-02">1861-01-02</date>
+                  <settlement ref="pmb145">
+                     <placeName type="pref">Köln</placeName>
+                     <location>
+                        <geo>50,93835 6,95427</geo>
+                     </location>
+                  </settlement>
+               </birth>
+               <death>
+                  <date when="1939-08-31">1939-08-31</date>
+                  <settlement ref="pmb34528">
+                     <placeName type="pref">Szklarska Poręba</placeName>
+                     <location>
+                        <geo>50,82567 15,52274</geo>
+                     </location>
+                  </settlement>
+               </death>
+            </person>
+            <person xml:id="pmb10986">
+               <persName>
+                  <forename>Otto</forename>
+                  <surname>Brahm</surname>
+               </persName>
+               <birth>
+                  <date when="1856-02-05">1856-02-05</date>
+                  <settlement ref="pmb506">
+                     <placeName type="pref">Hamburg</placeName>
+                     <location>
+                        <geo>53,55055 9,993333</geo>
+                     </location>
+                  </settlement>
+               </birth>
+               <death>
+                  <date when="1912-11-28">1912-11-28</date>
+                  <settlement ref="pmb168">
+                     <placeName type="pref">Berlin</placeName>
+                     <location>
+                        <geo>52,52437 13,41053</geo>
+                     </location>
+                  </settlement>
+                  <settlement ref="pmb253956">
+                     <placeName type="pref">Ungersche Klinik</placeName>
+                     <location>
+                        <geo>52,5037 13,3567</geo>
+                     </location>
+                  </settlement>
+               </death>
+            </person>
          </listPerson>
          <listBibl>
             <bibl xml:id="pmb36149">
-               <title type="main">Freie Bühne für modernes Leben</title>
-               <author role="hat-herausgegeben" ref="pmb10986">Brahm, Otto</author>
-               <author role="hat-herausgegeben" ref="pmb11061">Bölsche, Wilhelm</author>
+               <title>Freie Bühne für modernes Leben</title>
+               <author ref="pmb10986" role="hat-herausgegeben">Brahm, Otto</author>
+               <author ref="pmb11061" role="hat-herausgegeben">Bölsche, Wilhelm</author>
             </bibl>
-            <bibl xml:id="pmb33688" ana="comment">
-               <title type="main">Aus der Kaffeehausecke</title>
+            <bibl xml:id="pmb33688" ana="implied">
+               <title>Aus der Kaffeehausecke</title>
                <title type="legacy-name-merge">Aus der Kaffeehausecke</title>
-               <author role="hat-geschaffen" ref="pmb2121">Schnitzler, Arthur</author>
+               <author ref="pmb2121" role="hat-geschaffen">Schnitzler, Arthur</author>
             </bibl>
          </listBibl>
          <listPlace>
@@ -326,41 +352,18 @@
                   <geo>48,20143 16,37196</geo>
                </location>
             </place>
-            <place xml:id="pmb168">
-               <placeName>Berlin</placeName>
-               <placeName type="alternative-name">Hauptstadt Berlin</placeName>
-               <placeName type="alternative-name">Barlīn</placeName>
-               <placeName type="alternative-name">Reichshauptstadt Berlin</placeName>
-               <placeName type="alternative-name">Berolino</placeName>
-               <placeName type="legacy-name-merge">B-n</placeName>
+            <place xml:id="pmb364699">
+               <placeName>Linkstraße 25</placeName>
                <location type="coords">
+                  <geo>52,507 13,37459</geo>
+               </location>
+               <location type="located_in_place">
+                  <placeName ref="pmb168">Berlin</placeName>
                   <geo>52,52437 13,41053</geo>
                </location>
                <location type="located_in_place">
-                  <placeName ref="pmb151">Deutschland</placeName>
-                  <geo>51,5 10,5</geo>
-               </location>
-            </place>
-            <place xml:id="pmb50">
-               <placeName>Wien</placeName>
-               <placeName type="ort_fruherer-name">K.K. Reichshaupt- und Residenzstadt Wien</placeName>
-               <placeName type="legacy-name-merge">Wien</placeName>
-               <placeName type="alternative-name">Bécs</placeName>
-               <placeName type="alternative-name">Land Wien</placeName>
-               <placeName type="alternative-name">Vídeň</placeName>
-               <placeName type="alternative-name">Wenia</placeName>
-               <placeName type="alternative-name">Beč</placeName>
-               <placeName type="ort_fruherer-name">Vindobona</placeName>
-               <placeName type="legacy-name-merge">Vindobona</placeName>
-               <placeName type="alternative-name">Vienna</placeName>
-               <placeName type="legacy-name-merge">Vienna</placeName>
-               <placeName type="alternative-name">Vienna</placeName>
-               <location type="coords">
-                  <geo>48,208333 16,373056</geo>
-               </location>
-               <location type="located_in_place">
-                  <placeName ref="pmb41240">Österreich</placeName>
-                  <geo>47,33333 13,33333</geo>
+                  <placeName ref="pmb1272">Linkstraße</placeName>
+                  <geo>52,50809 13,37555</geo>
                </location>
             </place>
          </listPlace>
