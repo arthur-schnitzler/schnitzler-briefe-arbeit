@@ -2129,7 +2129,7 @@
             </xsl:for-each>
          </xsl:if>
          <xsl:choose>
-            <xsl:when test="tei:placeName">
+            <xsl:when test="child::tei:placeName">
                <xsl:text> in </xsl:text>
                <xsl:for-each select="tei:placeName">
                   <xsl:value-of select="."/>
@@ -2139,7 +2139,7 @@
                </xsl:for-each>
             </xsl:when>
             <xsl:otherwise>
-               <xsl:text> \textbf{Ort fehlend} </xsl:text>
+               <xsl:text> [ohne Ort]</xsl:text>
             </xsl:otherwise>
          </xsl:choose>
          <xsl:if test="fn:position() != last()">
