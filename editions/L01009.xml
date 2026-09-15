@@ -1,10 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <?xml-model href="../meta/schnitzler-briefe-schematron.sch" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
-<TEI xmlns="http://www.tei-c.org/ns/1.0"
-     xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-     xsi:schemaLocation="http://www.tei-c.org/ns/1.0 ../meta/schnitzler-briefe-schema.xsd"
-     xml:id="L01009"
-     xml:base="https://id.acdh.oeaw.ac.at/schnitzler/schnitzler-briefe/editions">
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+   xsi:schemaLocation="http://www.tei-c.org/ns/1.0 ../meta/schnitzler-briefe-schema.xsd"
+   xml:id="L01009" xml:base="https://id.acdh.oeaw.ac.at/schnitzler/schnitzler-briefe/editions">
    <teiHeader>
       <fileDesc>
          <titleStmt>
@@ -130,6 +128,10 @@
                <date when="1900-02-01" n="01">1. 2. 1900</date>
                <placeName ref="#pmb50">Wien</placeName>
             </correspAction>
+            <correspAction type="transmitted">
+               <date when="1900-02-01">1.&#160;2.&#160;1900</date>
+               <placeName ref="#pmb59">Wien 9/3</placeName>
+            </correspAction>
             <correspAction type="delivered">
                <date when="1900-02-02">2. 2. 1900</date>
                <placeName ref="#pmb51">I., Innere Stadt</placeName>
@@ -137,20 +139,20 @@
             <correspAction type="received">
                <persName ref="#pmb10863">Beer-Hofmann, Richard</persName>
                <date when="1900-02-02">2. 2. 1900</date>
-               <placeName ref="#pmb50">Wien</placeName>
+               <placeName ref="#pmb338">I. Wollzeile 1 3 5</placeName>
             </correspAction>
             <correspContext>
-               <ref type="belongsToCorrespondence" target="correspondence_10863">Beer-Hofmann, Richard</ref>
-               <ref subtype="previous_letter" type="withinCollection" target="L04226">Sosnosky an Schnitzler, 29. 1. 1900</ref>
-               <ref subtype="next_letter" type="withinCollection" target="L04092">Schnitzler an Schwarzkopf, 1. 2. [1900?]</ref>
-               <ref subtype="previous_letter"
-                    type="withinCorrespondence"
-                    source="correspondence_10863"
-                    target="L01008">Schnitzler an Beer-Hofmann, 25. 12. 1899</ref>
-               <ref subtype="next_letter"
-                    type="withinCorrespondence"
-                    source="correspondence_10863"
-                    target="L01010">Beer-Hofmann an Schnitzler, 4. 2. 1900</ref>
+               <ref type="belongsToCorrespondence" target="correspondence_10863">Beer-Hofmann,
+                  Richard</ref>
+               <ref subtype="previous_letter" type="withinCollection" target="L04226">Sosnosky an
+                  Schnitzler, 29. 1. 1900</ref>
+               <ref subtype="next_letter" type="withinCollection" target="L04092">Schnitzler an
+                  Schwarzkopf, 1. 2. [1900?]</ref>
+               <ref subtype="previous_letter" type="withinCorrespondence"
+                  source="correspondence_10863" target="L01008">Schnitzler an Beer-Hofmann,
+                  25. 12. 1899</ref>
+               <ref subtype="next_letter" type="withinCorrespondence" source="correspondence_10863"
+                  target="L01010">Beer-Hofmann an Schnitzler, 4. 2. 1900</ref>
             </correspContext>
          </correspDesc>
       </profileDesc>
@@ -158,6 +160,7 @@
          <change who="GHS" when="2020-07-26">angelegt aus Faksimile</change>
          <change who="MAM" when="2020-10-02">Index check</change>
          <change when="2020-10-03" who="MAM">Durchsicht</change>
+         <change who="MAM" when="2026-09-15">Datierung und Stempel überprüft</change>
       </revisionDesc>
    </teiHeader>
    <facsimile>
@@ -193,7 +196,10 @@
                   <rs type="work" ref="#pmb32426" subtype="implied">Vorleſung</rs>
                </rs>
                <note type="commentary" corresp="K_L01009-1">
-                  <rs type="person" ref="#pmb2167">Salten</rs> las sein Stück <rs type="work" ref="#pmb32426">Der Gemeine</rs> vor.</note> von <rs type="person" ref="#pmb2167">S.</rs> iſt morgen etwas ſpäter, <time>
+                  <rs type="person" ref="#pmb2167">Salten</rs> las am <ref type="schnitzler-kultur"
+                     subtype="date-only" target="pmb141489"/> sein Stück <rs type="work"
+                     ref="#pmb32426">Der Gemeine</rs> vor.</note> von <rs type="person"
+                  ref="#pmb2167">S.</rs> iſt morgen etwas ſpäter, <time>
                   <hi rend="underline" n="1">6</hi> Uhr</time>. Bitte kommen Sie wo möglich.</p>
             <closer>Herzlichſt<lb/>Ihr<signed>Arthur</signed>
             </closer>
@@ -297,7 +303,8 @@
             </place>
             <place xml:id="pmb50">
                <placeName>Wien</placeName>
-               <placeName type="ort_fruherer-name">K.K. Reichshaupt- und Residenzstadt Wien</placeName>
+               <placeName type="ort_fruherer-name">K.K. Reichshaupt- und Residenzstadt
+                  Wien</placeName>
                <placeName type="legacy-name-merge">Wien</placeName>
                <placeName type="alternative-name">Bécs</placeName>
                <placeName type="alternative-name">Land Wien</placeName>

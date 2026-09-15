@@ -396,12 +396,19 @@ function attrChipsHtml(attrs) {
 // (div[@type='address']) und den Poststempeln (incident[@type='postal']),
 // damit sich Orte per Klick statt Handarbeit im XML anpassen lassen.
 function placeSelectHtml(a) {
-  const options = state.file.placeOptions || [];
+  const allOptions = state.file.placeOptions || [];
+  const currentKey = (a.place && (a.place.ref || a.place.text)) || null;
   const currentLabel = a.place && a.place.text
     ? `${a.place.text}${a.place.ref ? ` (${a.place.ref})` : ""}`
     : "– kein Ort –";
-  const optionsHtml = options
-    .map((c, i) => `<option value="${i}">${esc(c.text)}${c.ref ? ` (${esc(c.ref)})` : ""}</option>`)
+
+  // aktuellen Wert nicht nochmal als normale Option auflisten - sonst
+  // erscheint dieselbe PMB-Nummer doppelt (einmal als Vorauswahl, einmal
+  // als Eintrag darunter)
+  const optionsHtml = allOptions
+    .map((c, i) => ({ c, i }))
+    .filter(({ c }) => (c.ref || c.text) !== currentKey)
+    .map(({ c, i }) => `<option value="${i}">${esc(c.text)}${c.ref ? ` (${esc(c.ref)})` : ""}</option>`)
     .join("");
   return `
     <select data-role="placeSelect" class="place-select" title="Ort aus Adresse/Poststempeln übernehmen">
