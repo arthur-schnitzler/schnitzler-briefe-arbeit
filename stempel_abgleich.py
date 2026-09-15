@@ -55,6 +55,7 @@ HTML_BASE = "https://schnitzler-briefe.acdh.oeaw.ac.at/{fid}.html"
 OXYGEN_APP = "/Applications/Oxygen XML Editor/Oxygen XML Editor.app"
 SAXON_JAR = REPO / "saxon" / "saxon-he-9.9.1-7.jar"
 XSLT_DATE_UNCERTAIN = REPO / "xslts" / "brief_normalisierungen" / "brief_normalisierung_datum-plusminus-1-tag.xsl"
+WOHNADRESSEN_PATH = REPO / "meta" / "wohnadressen.json"
 
 TEI_NS = "http://www.tei-c.org/ns/1.0"
 NS = {"tei": TEI_NS}
@@ -162,15 +163,76 @@ def extract_corresp_actions(root):
     actions = []
     for i, a in enumerate(root.iter(q("correspAction"))):
         persons = [{"text": norm_text(p), "ref": p.get("ref")} for p in a.findall(q("persName"))]
+        date_dict = extract_date(a.find(q("date")))
+        action_type = a.get("type")
         actions.append({
             "index": i,
-            "type": a.get("type"),
+            "type": action_type,
             "attrs": dict(a.attrib),
             "persons": persons,
-            "date": extract_date(a.find(q("date"))),
+            "date": date_dict,
             "place": extract_place(a.find(q("placeName"))),
+            "residenceOptions": (
+                residence_options_for_action(persons, date_dict) if action_type == "sent" else []),
         })
     return actions
+
+
+_wohnadressen = None  # personRef -> Liste von {placeRef, placeName, start, end}, lazy geladen
+
+
+def load_wohnadressen():
+    """Kurzfassung der "wohnhaft in"-Relationen aus relations.csv (siehe
+    meta/wohnadressen_aus_relations.py) - liegt als kleine, committete
+    JSON-Datei vor, weil relations.csv selbst (52 MB, PMB-Export) nicht im
+    Repo ist. Fehlt die Datei, wird einfach nichts vorgeschlagen."""
+    global _wohnadressen
+    if _wohnadressen is None:
+        _wohnadressen = {}
+        try:
+            with WOHNADRESSEN_PATH.open(encoding="utf-8") as f:
+                entries = json.load(f)
+        except (FileNotFoundError, json.JSONDecodeError):
+            entries = []
+        for e in entries:
+            _wohnadressen.setdefault(e["personRef"], []).append(e)
+    return _wohnadressen
+
+
+def _best_date_for_filter(date_dict):
+    if not date_dict:
+        return None
+    return date_dict.get("when") or date_dict.get("notBefore") or date_dict.get("notAfter")
+
+
+def residence_options_for_action(persons, date_dict):
+    """Wohnadressen der genannten Personen (persName/@ref), deren Zeitraum
+    das Datum der correspAction plausibel einschließt - "nur
+    berücksichtigen, wenn der Brief tatsächlich aus dem Ort versandt wurde"
+    (siehe meta/wohnadressen_aus_relations.py). Ohne brauchbares Datum oder
+    ohne genannte Person(en) wird nichts vorgeschlagen; fehlender Beginn/
+    Ende einer Wohnadresse in den Daten gilt als offene Grenze."""
+    when = _best_date_for_filter(date_dict)
+    if not when or not persons:
+        return []
+    addresses = load_wohnadressen()
+    seen = set()
+    options = []
+    for p in persons:
+        ref = p.get("ref")
+        if not ref:
+            continue
+        for entry in addresses.get(ref, []):
+            if entry["start"] and when < entry["start"]:
+                continue
+            if entry["end"] and when > entry["end"]:
+                continue
+            key = entry["placeRef"]
+            if key in seen:
+                continue
+            seen.add(key)
+            options.append({"ref": entry["placeRef"], "text": entry["placeName"]})
+    return options
 
 
 def attach_raw(items, text, tag):
@@ -739,16 +801,27 @@ def apply_place_to_block(block_text, child_indent, new_place_elem):
     return block_text[:pos] + f'\n{child_indent}{new_place_elem}' + block_text[pos:]
 
 
-def set_action_place(fid, action_index, place_index):
-    """Übernimmt einen Ort aus den Kandidaten (Adresse/Poststempel, siehe
-    extract_place_candidates) als placeName einer bestehenden correspAction."""
+def set_action_place(fid, action_index, place_index, source="candidate"):
+    """Übernimmt einen Ort als placeName einer bestehenden correspAction.
+    source="candidate" (Default): aus extract_place_candidates (Adresse/
+    Poststempel). source="residence": aus den Wohnadressen der genannten
+    Personen zum Datum der correspAction (siehe residence_options_for_action)
+    - für correspAction[@type='sent'] gedacht. Beide Kandidatenlisten
+    werden hier frisch aus der Datei neu berechnet, nicht vom Client
+    übernommen."""
     text = load_text(fid)
     root = parse_root(text)
     actions = extract_corresp_actions(root)
     if not (0 <= action_index < len(actions)):
         raise ValueError("ungültiger correspAction-Index")
 
-    candidates = extract_place_candidates(root)
+    if source == "residence":
+        action = actions[action_index]
+        candidates = residence_options_for_action(action["persons"], action["date"])
+    elif source == "candidate":
+        candidates = extract_place_candidates(root)
+    else:
+        raise ValueError(f"unbekannte Orts-Quelle: {source}")
     if not (0 <= place_index < len(candidates)):
         raise ValueError("ungültiger Orts-Index")
 
@@ -1039,7 +1112,8 @@ class Handler(BaseHTTPRequestHandler):
                     fid, int(payload["stampIndex"]), int(payload["actionIndex"]))
             elif action == "set-place":
                 result = set_action_place(
-                    fid, int(payload["actionIndex"]), int(payload["placeIndex"]))
+                    fid, int(payload["actionIndex"]), int(payload["placeIndex"]),
+                    source=payload.get("source", "candidate"))
             elif action == "set-stamp-type":
                 result = set_stamp_type(fid, int(payload["stampIndex"]), payload["type"])
             elif action == "date-uncertain":

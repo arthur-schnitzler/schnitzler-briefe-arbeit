@@ -2093,11 +2093,14 @@
             <xsl:when test="@type = 'transmitted'">
                <xsl:text>Übermittlung </xsl:text>
             </xsl:when>
-            <xsl:when test="@type = 'forwarded'">
-               <xsl:text>Weiterleitung </xsl:text>
+            <xsl:when test="@type = 'forwarded' or @type='in_transit'">
+               <xsl:text>In Transit </xsl:text>
             </xsl:when>
             <xsl:when test="@type = 'redirected'">
                <xsl:text>Umleitung </xsl:text>
+            </xsl:when>
+            <xsl:when test="@type = 'arrived'">
+               <xsl:text>Am Zielort </xsl:text>
             </xsl:when>
             <xsl:when test="@type = 'delivered'">
                <xsl:text>Zustellung </xsl:text>

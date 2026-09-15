@@ -411,8 +411,13 @@ function attrChipsHtml(attrs) {
 // Orte für correspAction: Auswahl aus allen placeName in der Adresse
 // (div[@type='address']) und den Poststempeln (incident[@type='postal']),
 // damit sich Orte per Klick statt Handarbeit im XML anpassen lassen.
+function placeOptionHtml(c, source, i) {
+  return `<option value="${source}:${i}">${esc(c.text)}${c.ref ? ` (${esc(c.ref)})` : ""}</option>`;
+}
+
 function placeSelectHtml(a) {
   const allOptions = state.file.placeOptions || [];
+  const residenceOptions = a.residenceOptions || [];
   const currentKey = (a.place && (a.place.ref || a.place.text)) || null;
   const currentLabel = a.place && a.place.text
     ? `${a.place.text}${a.place.ref ? ` (${a.place.ref})` : ""}`
@@ -421,13 +426,30 @@ function placeSelectHtml(a) {
   // aktuellen Wert nicht nochmal als normale Option auflisten - sonst
   // erscheint dieselbe PMB-Nummer doppelt (einmal als Vorauswahl, einmal
   // als Eintrag darunter)
-  const optionsHtml = allOptions
+  const notCurrent = (c) => (c.ref || c.text) !== currentKey;
+
+  const residenceHtml = residenceOptions
     .map((c, i) => ({ c, i }))
-    .filter(({ c }) => (c.ref || c.text) !== currentKey)
-    .map(({ c, i }) => `<option value="${i}">${esc(c.text)}${c.ref ? ` (${esc(c.ref)})` : ""}</option>`)
+    .filter(({ c }) => notCurrent(c))
+    .map(({ c, i }) => placeOptionHtml(c, "residence", i))
     .join("");
+  const candidateHtml = allOptions
+    .map((c, i) => ({ c, i }))
+    .filter(({ c }) => notCurrent(c))
+    .map(({ c, i }) => placeOptionHtml(c, "candidate", i))
+    .join("");
+
+  // bei correspAction[@type='sent'] stehen ggf. Wohnadressen der
+  // genannten Personen zum Briefdatum als eigene Gruppe oben (siehe
+  // residence_options_for_action) - separat von den generischen
+  // Adress-/Poststempel-Kandidaten
+  const optionsHtml = residenceHtml
+    ? `<optgroup label="Wohnadresse zum Zeitpunkt">${residenceHtml}</optgroup>`
+      + (candidateHtml ? `<optgroup label="Adresse/Poststempel">${candidateHtml}</optgroup>` : "")
+    : candidateHtml;
+
   return `
-    <select data-role="placeSelect" class="place-select" title="Ort aus Adresse/Poststempeln übernehmen">
+    <select data-role="placeSelect" class="place-select" title="Ort aus Adresse/Poststempeln bzw. Wohnadresse übernehmen">
       <option value="-1" selected>${esc(currentLabel)}</option>
       ${optionsHtml}
     </select>`;
@@ -439,13 +461,15 @@ function wirePlaceSelect(card, a) {
   select.addEventListener("click", (ev) => ev.stopPropagation());
   select.addEventListener("change", async (ev) => {
     ev.stopPropagation();
-    const placeIndex = Number(select.value);
-    if (placeIndex < 0) return;
+    if (select.value === "-1") return;
+    const [source, idxStr] = select.value.split(":");
+    const placeIndex = Number(idxStr);
     select.disabled = true;
     try {
       const data = await apiPost(`/api/file/${state.currentId}/set-place`, {
         actionIndex: a.index,
         placeIndex,
+        source,
       });
       state.file = data;
       render();
