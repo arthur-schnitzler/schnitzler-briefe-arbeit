@@ -1,6 +1,10 @@
-<?xml version='1.0' encoding='UTF-8'?>
+<?xml version="1.0" encoding="UTF-8"?>
 <?xml-model href="../meta/schnitzler-briefe-schematron.sch" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
-<TEI xmlns="http://www.tei-c.org/ns/1.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.tei-c.org/ns/1.0 ../meta/schnitzler-briefe-schema.xsd" xml:id="L02486" xml:base="https://id.acdh.oeaw.ac.at/schnitzler/schnitzler-briefe/editions">
+<TEI xmlns="http://www.tei-c.org/ns/1.0"
+     xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+     xsi:schemaLocation="http://www.tei-c.org/ns/1.0 ../meta/schnitzler-briefe-schema.xsd"
+     xml:id="L02486"
+     xml:base="https://id.acdh.oeaw.ac.at/schnitzler/schnitzler-briefe/editions">
    <teiHeader>
       <fileDesc>
          <titleStmt>
@@ -130,8 +134,14 @@
                <ref type="belongsToCorrespondence" target="correspondence_11002">Braun, Felix</ref>
                <ref subtype="previous_letter" type="withinCollection" target="L02485">Adam an Schnitzler, 1. 5. 1927</ref>
                <ref subtype="next_letter" type="withinCollection" target="L03970">Schnitzler an Zuckerkandl, 14. 5. 1927</ref>
-               <ref subtype="previous_letter" type="withinCorrespondence" source="correspondence_11002" target="L02469">Schnitzler an Braun, [nach dem 15. 3. 1926?]</ref>
-               <ref subtype="next_letter" type="withinCorrespondence" source="correspondence_11002" target="L02487">Schnitzler an Braun, 28. 5. 1927</ref>
+               <ref subtype="previous_letter"
+                    type="withinCorrespondence"
+                    source="correspondence_11002"
+                    target="L02469">Schnitzler an Braun, [nach dem 15. 3. 1926?]</ref>
+               <ref subtype="next_letter"
+                    type="withinCorrespondence"
+                    source="correspondence_11002"
+                    target="L02487">Schnitzler an Braun, 28. 5. 1927</ref>
             </correspContext>
          </correspDesc>
       </profileDesc>
@@ -186,27 +196,103 @@
             </closer>
          </div>
       </body>
-      <back><listPerson><person xml:id="pmb11002"><persName>
-      <forename>Felix</forename>
-      <surname>Braun</surname>
-  </persName><birth>
-    <date when="1885-11-04">1885-11-04</date>
-      <settlement ref="pmb50">
-        <placeName type="pref">Wien</placeName>
-        <location><geo>48,208333 16,373056</geo></location>
-      </settlement>
-  </birth><death>
-    <date when="1973-11-29">1973-11-29</date>
-      <settlement ref="pmb865">
-        <placeName type="pref">Klosterneuburg</placeName>
-        <location><geo>48,30521 16,32522</geo></location>
-      </settlement>
-  </death></person><person xml:id="pmb2121"><persName><surname>Schnitzler</surname><forename>Arthur</forename></persName><birth><date when="1862-05-15">15. 5. 1862</date><settlement ref="pmb50"><placeName type="pref">Wien</placeName><location><geo>48,208333 16,373056</geo></location></settlement></birth><death><date when="1931-10-21">21. 10. 1931</date><settlement ref="pmb50"><placeName type="pref">Wien</placeName><location><geo>48,208333 16,373056</geo></location></settlement></death><sex value="male"/><occupation ref="pmb90">Schriftsteller/Schriftstellerin</occupation><occupation ref="pmb97">Mediziner/Medizinerin</occupation><idno type="gnd">https://d-nb.info/gnd/118609807/</idno></person><person xml:id="pmb53267" ana="implied"><persName>
-      <surname>?? [Leser von Spiel im Morgengrauen 1927]</surname>
-  </persName></person></listPerson><listBibl><bibl xml:id="pmb30775"><title type="main">Der Gang zum Weiher. Dramatische Dichtung</title><title type="werk_arbeitstitel">Der weise Vater</title><title type="werk_arbeitstitel">Der Weiher</title><author role="hat-geschaffen" ref="pmb2121">Schnitzler, Arthur</author></bibl><bibl xml:id="pmb32131" ana="implied"><title type="main">Spiel im Morgengrauen. Novelle</title><title type="werk_bibliografische-angabe">Berliner Illustrirte Zeitung, 5. 12. 1926 – 9. 1. 1927</title><author role="hat-geschaffen" ref="pmb2121">Schnitzler, Arthur</author></bibl></listBibl><listPlace><place xml:id="pmb50"><placeName>Wien</placeName><placeName type="ort_fruherer-name">K.K. Reichshaupt- und Residenzstadt Wien</placeName><placeName type="legacy-name-merge">Wien</placeName><placeName type="alternative-name">Bécs</placeName><placeName type="alternative-name">Land Wien</placeName><placeName type="alternative-name">Vídeň</placeName><placeName type="alternative-name">Wenia</placeName><placeName type="alternative-name">Beč</placeName><placeName type="ort_fruherer-name">Vindobona</placeName><placeName type="legacy-name-merge">Vindobona</placeName><placeName type="alternative-name">Vienna</placeName><placeName type="legacy-name-merge">Vienna</placeName><placeName type="alternative-name">Vienna</placeName><location type="coords">
-  <geo>48,208333 16,373056</geo>
-</location><location type="located_in_place">
-  <placeName ref="pmb41240">Österreich</placeName>
-  <geo>47,33333 13,33333</geo>
-</location></place></listPlace></back></text>
+      <back>
+         <listPerson>
+            <person xml:id="pmb11002">
+               <persName>
+                  <forename>Felix</forename>
+                  <surname>Braun</surname>
+               </persName>
+               <birth>
+                  <date when="1885-11-04">1885-11-04</date>
+                  <settlement ref="pmb50">
+                     <placeName type="pref">Wien</placeName>
+                     <location>
+                        <geo>48,208333 16,373056</geo>
+                     </location>
+                  </settlement>
+               </birth>
+               <death>
+                  <date when="1973-11-29">1973-11-29</date>
+                  <settlement ref="pmb865">
+                     <placeName type="pref">Klosterneuburg</placeName>
+                     <location>
+                        <geo>48,30521 16,32522</geo>
+                     </location>
+                  </settlement>
+               </death>
+            </person>
+            <person xml:id="pmb2121">
+               <persName>
+                  <surname>Schnitzler</surname>
+                  <forename>Arthur</forename>
+               </persName>
+               <birth>
+                  <date when="1862-05-15">15. 5. 1862</date>
+                  <settlement ref="pmb50">
+                     <placeName type="pref">Wien</placeName>
+                     <location>
+                        <geo>48,208333 16,373056</geo>
+                     </location>
+                  </settlement>
+               </birth>
+               <death>
+                  <date when="1931-10-21">21. 10. 1931</date>
+                  <settlement ref="pmb50">
+                     <placeName type="pref">Wien</placeName>
+                     <location>
+                        <geo>48,208333 16,373056</geo>
+                     </location>
+                  </settlement>
+               </death>
+               <sex value="male"/>
+               <occupation ref="pmb90">Schriftsteller/Schriftstellerin</occupation>
+               <occupation ref="pmb97">Mediziner/Medizinerin</occupation>
+               <idno type="gnd">https://d-nb.info/gnd/118609807/</idno>
+            </person>
+            <person xml:id="pmb53267" ana="implied">
+               <persName>
+                  <surname>?? [Leser von Spiel im Morgengrauen 1927]</surname>
+               </persName>
+            </person>
+         </listPerson>
+         <listBibl>
+            <bibl xml:id="pmb30775">
+               <title type="main">Der Gang zum Weiher. Dramatische Dichtung</title>
+               <title type="werk_arbeitstitel">Der weise Vater</title>
+               <title type="werk_arbeitstitel">Der Weiher</title>
+               <author role="hat-geschaffen" ref="pmb2121">Schnitzler, Arthur</author>
+            </bibl>
+            <bibl xml:id="pmb32131" ana="implied">
+               <title type="main">Spiel im Morgengrauen. Novelle</title>
+               <title type="werk_bibliografische-angabe">Berliner Illustrirte Zeitung, 5. 12. 1926 – 9. 1. 1927</title>
+               <author role="hat-geschaffen" ref="pmb2121">Schnitzler, Arthur</author>
+            </bibl>
+         </listBibl>
+         <listPlace>
+            <place xml:id="pmb50">
+               <placeName>Wien</placeName>
+               <placeName type="ort_fruherer-name">K.K. Reichshaupt- und Residenzstadt Wien</placeName>
+               <placeName type="legacy-name-merge">Wien</placeName>
+               <placeName type="alternative-name">Bécs</placeName>
+               <placeName type="alternative-name">Land Wien</placeName>
+               <placeName type="alternative-name">Vídeň</placeName>
+               <placeName type="alternative-name">Wenia</placeName>
+               <placeName type="alternative-name">Beč</placeName>
+               <placeName type="ort_fruherer-name">Vindobona</placeName>
+               <placeName type="legacy-name-merge">Vindobona</placeName>
+               <placeName type="alternative-name">Vienna</placeName>
+               <placeName type="legacy-name-merge">Vienna</placeName>
+               <placeName type="alternative-name">Vienna</placeName>
+               <location type="coords">
+                  <geo>48,208333 16,373056</geo>
+               </location>
+               <location type="located_in_place">
+                  <placeName ref="pmb41240">Österreich</placeName>
+                  <geo>47,33333 13,33333</geo>
+               </location>
+            </place>
+         </listPlace>
+      </back>
+   </text>
 </TEI>

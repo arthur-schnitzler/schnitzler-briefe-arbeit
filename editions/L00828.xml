@@ -1,6 +1,10 @@
-<?xml version='1.0' encoding='UTF-8'?>
+<?xml version="1.0" encoding="UTF-8"?>
 <?xml-model href="../meta/schnitzler-briefe-schematron.sch" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
-<TEI xmlns="http://www.tei-c.org/ns/1.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.tei-c.org/ns/1.0 ../meta/schnitzler-briefe-schema.xsd" xml:id="L00828" xml:base="https://id.acdh.oeaw.ac.at/schnitzler/schnitzler-briefe/editions">
+<TEI xmlns="http://www.tei-c.org/ns/1.0"
+     xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+     xsi:schemaLocation="http://www.tei-c.org/ns/1.0 ../meta/schnitzler-briefe-schema.xsd"
+     xml:id="L00828"
+     xml:base="https://id.acdh.oeaw.ac.at/schnitzler/schnitzler-briefe/editions">
    <teiHeader>
       <fileDesc>
          <titleStmt>
@@ -134,8 +138,14 @@
                <ref type="belongsToCorrespondence" target="correspondence_10863">Beer-Hofmann, Richard</ref>
                <ref subtype="previous_letter" type="withinCollection" target="L03280">Salten an Schnitzler, 30. 7. 1898</ref>
                <ref subtype="next_letter" type="withinCollection" target="L00829">Hofmannsthal an Schnitzler, 3. 8. [1898]</ref>
-               <ref subtype="previous_letter" type="withinCorrespondence" source="correspondence_10863" target="L00827">Schnitzler an Beer-Hofmann, 24. 7. 1898</ref>
-               <ref subtype="next_letter" type="withinCorrespondence" source="correspondence_10863" target="L00833">Schnitzler an Beer-Hofmann, 9. 8. 1898</ref>
+               <ref subtype="previous_letter"
+                    type="withinCorrespondence"
+                    source="correspondence_10863"
+                    target="L00827">Schnitzler an Beer-Hofmann, 24. 7. 1898</ref>
+               <ref subtype="next_letter"
+                    type="withinCorrespondence"
+                    source="correspondence_10863"
+                    target="L00833">Schnitzler an Beer-Hofmann, 9. 8. 1898</ref>
             </correspContext>
          </correspDesc>
       </profileDesc>
@@ -195,50 +205,126 @@
             </closer>
          </div>
       </body>
-      <back><listPerson><person xml:id="pmb10863"><persName>
-      <forename>Richard</forename>
-      <surname>Beer-Hofmann</surname>
-  </persName><birth>
-    <date when="1866-07-11">1866-07-11</date>
-      <settlement ref="pmb50">
-        <placeName type="pref">Wien</placeName>
-        <location><geo>48,208333 16,373056</geo></location>
-      </settlement>
-  </birth><death>
-    <date when="1945-09-26">1945-09-26</date>
-      <settlement ref="pmb44053">
-        <placeName type="pref">New York City</placeName>
-        <location><geo>40,71427 -74,00597</geo></location>
-      </settlement>
-  </death></person><person xml:id="pmb2121"><persName><surname>Schnitzler</surname><forename>Arthur</forename></persName><birth><date when="1862-05-15">15. 5. 1862</date><settlement ref="pmb50"><placeName type="pref">Wien</placeName><location><geo>48,208333 16,373056</geo></location></settlement></birth><death><date when="1931-10-21">21. 10. 1931</date><settlement ref="pmb50"><placeName type="pref">Wien</placeName><location><geo>48,208333 16,373056</geo></location></settlement></death><sex value="male"/><occupation ref="pmb90">Schriftsteller/Schriftstellerin</occupation><occupation ref="pmb97">Mediziner/Medizinerin</occupation><idno type="gnd">https://d-nb.info/gnd/118609807/</idno></person></listPerson><listPlace><place xml:id="pmb34048"><placeName>Hotel Post [Tegernsee]</placeName><location type="coords">
-  <geo>47,70896 11,75367</geo>
-</location><location type="located_in_place">
-  <placeName ref="pmb39752">Tegernsee</placeName>
-  <geo>47,7123 11,7582</geo>
-</location></place><place xml:id="pmb34860"><placeName>Steindorf am Ossiacher See</placeName><placeName type="legacy-name-merge">Steindorf am Ossiacher See</placeName><placeName type="legacy-name-merge">Steindorf am Ossiacher See</placeName><location type="coords">
-  <geo>46,6992 13,98892</geo>
-</location><location type="located_in_place">
-  <placeName ref="pmb41240">Österreich</placeName>
-  <geo>47,33333 13,33333</geo>
-</location></place><place xml:id="pmb39752"><placeName>Tegernsee</placeName><placeName type="legacy-name">Tegernsee</placeName><location type="coords">
-  <geo>47,7123 11,7582</geo>
-</location><location type="located_in_place">
-  <placeName ref="pmb151">Deutschland</placeName>
-  <geo>51,5 10,5</geo>
-</location></place><place xml:id="pmb40374"><placeName>Ossiacher See</placeName><location type="coords">
-  <geo>46,670278 13,963889</geo>
-</location><location type="located_in_place">
-  <placeName ref="pmb651">Kärnten</placeName>
-  <geo>46,75 13,83333</geo>
-</location></place><place xml:id="pmb42905"><placeName>Café am See</placeName><location type="coords">
-  <geo>47,71317 11,75237</geo>
-</location><location type="located_in_place">
-  <placeName ref="pmb39752">Tegernsee</placeName>
-  <geo>47,7123 11,7582</geo>
-</location></place><place xml:id="pmb651"><placeName>Kärnten</placeName><location type="coords">
-  <geo>46,75 13,83333</geo>
-</location><location type="located_in_place">
-  <placeName ref="pmb41240">Österreich</placeName>
-  <geo>47,33333 13,33333</geo>
-</location></place></listPlace></back></text>
+      <back>
+         <listPerson>
+            <person xml:id="pmb10863">
+               <persName>
+                  <forename>Richard</forename>
+                  <surname>Beer-Hofmann</surname>
+               </persName>
+               <birth>
+                  <date when="1866-07-11">1866-07-11</date>
+                  <settlement ref="pmb50">
+                     <placeName type="pref">Wien</placeName>
+                     <location>
+                        <geo>48,208333 16,373056</geo>
+                     </location>
+                  </settlement>
+               </birth>
+               <death>
+                  <date when="1945-09-26">1945-09-26</date>
+                  <settlement ref="pmb44053">
+                     <placeName type="pref">New York City</placeName>
+                     <location>
+                        <geo>40,71427 -74,00597</geo>
+                     </location>
+                  </settlement>
+               </death>
+            </person>
+            <person xml:id="pmb2121">
+               <persName>
+                  <surname>Schnitzler</surname>
+                  <forename>Arthur</forename>
+               </persName>
+               <birth>
+                  <date when="1862-05-15">15. 5. 1862</date>
+                  <settlement ref="pmb50">
+                     <placeName type="pref">Wien</placeName>
+                     <location>
+                        <geo>48,208333 16,373056</geo>
+                     </location>
+                  </settlement>
+               </birth>
+               <death>
+                  <date when="1931-10-21">21. 10. 1931</date>
+                  <settlement ref="pmb50">
+                     <placeName type="pref">Wien</placeName>
+                     <location>
+                        <geo>48,208333 16,373056</geo>
+                     </location>
+                  </settlement>
+               </death>
+               <sex value="male"/>
+               <occupation ref="pmb90">Schriftsteller/Schriftstellerin</occupation>
+               <occupation ref="pmb97">Mediziner/Medizinerin</occupation>
+               <idno type="gnd">https://d-nb.info/gnd/118609807/</idno>
+            </person>
+         </listPerson>
+         <listPlace>
+            <place xml:id="pmb34048">
+               <placeName>Hotel Post [Tegernsee]</placeName>
+               <location type="coords">
+                  <geo>47,70896 11,75367</geo>
+               </location>
+               <location type="located_in_place">
+                  <placeName ref="pmb39752">Tegernsee</placeName>
+                  <geo>47,7123 11,7582</geo>
+               </location>
+            </place>
+            <place xml:id="pmb34860">
+               <placeName>Steindorf am Ossiacher See</placeName>
+               <placeName type="legacy-name-merge">Steindorf am Ossiacher See</placeName>
+               <placeName type="legacy-name-merge">Steindorf am Ossiacher See</placeName>
+               <location type="coords">
+                  <geo>46,6992 13,98892</geo>
+               </location>
+               <location type="located_in_place">
+                  <placeName ref="pmb41240">Österreich</placeName>
+                  <geo>47,33333 13,33333</geo>
+               </location>
+            </place>
+            <place xml:id="pmb39752">
+               <placeName>Tegernsee</placeName>
+               <placeName type="legacy-name">Tegernsee</placeName>
+               <location type="coords">
+                  <geo>47,7123 11,7582</geo>
+               </location>
+               <location type="located_in_place">
+                  <placeName ref="pmb151">Deutschland</placeName>
+                  <geo>51,5 10,5</geo>
+               </location>
+            </place>
+            <place xml:id="pmb40374">
+               <placeName>Ossiacher See</placeName>
+               <location type="coords">
+                  <geo>46,670278 13,963889</geo>
+               </location>
+               <location type="located_in_place">
+                  <placeName ref="pmb651">Kärnten</placeName>
+                  <geo>46,75 13,83333</geo>
+               </location>
+            </place>
+            <place xml:id="pmb42905">
+               <placeName>Café am See</placeName>
+               <location type="coords">
+                  <geo>47,71317 11,75237</geo>
+               </location>
+               <location type="located_in_place">
+                  <placeName ref="pmb39752">Tegernsee</placeName>
+                  <geo>47,7123 11,7582</geo>
+               </location>
+            </place>
+            <place xml:id="pmb651">
+               <placeName>Kärnten</placeName>
+               <location type="coords">
+                  <geo>46,75 13,83333</geo>
+               </location>
+               <location type="located_in_place">
+                  <placeName ref="pmb41240">Österreich</placeName>
+                  <geo>47,33333 13,33333</geo>
+               </location>
+            </place>
+         </listPlace>
+      </back>
+   </text>
 </TEI>
