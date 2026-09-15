@@ -56,6 +56,8 @@ OXYGEN_APP = "/Applications/Oxygen XML Editor/Oxygen XML Editor.app"
 SAXON_JAR = REPO / "saxon" / "saxon-he-9.9.1-7.jar"
 XSLT_DATE_UNCERTAIN = REPO / "xslts" / "brief_normalisierungen" / "brief_normalisierung_datum-plusminus-1-tag.xsl"
 WOHNADRESSEN_PATH = REPO / "meta" / "wohnadressen.json"
+AUFENTHALTE_PATH = REPO / "meta" / "aufenthalte.json"
+ARTHUR_SCHNITZLER_REF = "#pmb2121"
 
 TEI_NS = "http://www.tei-c.org/ns/1.0"
 NS = {"tei": TEI_NS}
@@ -199,6 +201,24 @@ def load_wohnadressen():
     return _wohnadressen
 
 
+_aufenthalte = None
+
+
+def load_aufenthalte():
+    """Tage, an denen Arthur Schnitzler laut dem Wiener-Schnitzler-Projekt
+    nicht (nur) in Wien war, mit den dafür verzeichneten Orten (siehe
+    meta/aufenthalte_aus_wienerschnitzler.py) - ergänzt die Wohnadressen um
+    die Reisetage. Fehlt die Datei, wird einfach nichts vorgeschlagen."""
+    global _aufenthalte
+    if _aufenthalte is None:
+        try:
+            with AUFENTHALTE_PATH.open(encoding="utf-8") as f:
+                _aufenthalte = json.load(f)
+        except (FileNotFoundError, json.JSONDecodeError):
+            _aufenthalte = {}
+    return _aufenthalte
+
+
 def _best_date_for_filter(date_dict):
     if not date_dict:
         return None
@@ -209,15 +229,29 @@ def residence_options_for_action(persons, date_dict):
     """Wohnadressen der genannten Personen (persName/@ref), deren Zeitraum
     das Datum der correspAction plausibel einschließt - "nur
     berücksichtigen, wenn der Brief tatsächlich aus dem Ort versandt wurde"
-    (siehe meta/wohnadressen_aus_relations.py). Ohne brauchbares Datum oder
-    ohne genannte Person(en) wird nichts vorgeschlagen; fehlender Beginn/
-    Ende einer Wohnadresse in den Daten gilt als offene Grenze."""
+    (siehe meta/wohnadressen_aus_relations.py). Ist Arthur Schnitzler unter
+    den genannten Personen und gibt es ein exaktes @when, kommen zusätzlich
+    (zuerst, weil genauer) seine an diesem Tag verzeichneten Aufenthalte
+    außerhalb Wiens dazu (siehe meta/aufenthalte_aus_wienerschnitzler.py).
+    Ohne brauchbares Datum oder ohne genannte Person(en) wird nichts
+    vorgeschlagen; fehlender Beginn/Ende einer Wohnadresse in den Daten
+    gilt als offene Grenze."""
     when = _best_date_for_filter(date_dict)
     if not when or not persons:
         return []
-    addresses = load_wohnadressen()
     seen = set()
     options = []
+
+    exact_when = (date_dict or {}).get("when")
+    if exact_when and any(p.get("ref") == ARTHUR_SCHNITZLER_REF for p in persons):
+        for entry in load_aufenthalte().get(exact_when, []):
+            key = entry["ref"]
+            if key in seen:
+                continue
+            seen.add(key)
+            options.append({"ref": entry["ref"], "text": entry["text"], "kind": "aufenthalt"})
+
+    addresses = load_wohnadressen()
     for p in persons:
         ref = p.get("ref")
         if not ref:
@@ -231,7 +265,7 @@ def residence_options_for_action(persons, date_dict):
             if key in seen:
                 continue
             seen.add(key)
-            options.append({"ref": entry["placeRef"], "text": entry["placeName"]})
+            options.append({"ref": entry["placeRef"], "text": entry["placeName"], "kind": "wohnadresse"})
     return options
 
 

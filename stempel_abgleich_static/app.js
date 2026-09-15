@@ -428,9 +428,22 @@ function placeSelectHtml(a) {
   // als Eintrag darunter)
   const notCurrent = (c) => (c.ref || c.text) !== currentKey;
 
-  const residenceHtml = residenceOptions
+  // bei correspAction[@type='sent'] stehen ggf. Vorschläge aus
+  // residence_options_for_action oben: Arthur Schnitzlers Aufenthalte
+  // außerhalb Wiens am genauen Briefdatum (aus dem Wiener-Schnitzler-
+  // Projekt) vor den Wohnadressen (Zeitraum schließt das Datum nur
+  // plausibel ein) - beide separat von den generischen Adress-/
+  // Poststempel-Kandidaten. Nur mehr als eine Gruppe bekommt sichtbare
+  // <optgroup>-Überschriften, bei nur einer bleibt es eine flache Liste.
+  const residenceIndexed = residenceOptions
     .map((c, i) => ({ c, i }))
-    .filter(({ c }) => notCurrent(c))
+    .filter(({ c }) => notCurrent(c));
+  const aufenthaltHtml = residenceIndexed
+    .filter(({ c }) => c.kind === "aufenthalt")
+    .map(({ c, i }) => placeOptionHtml(c, "residence", i))
+    .join("");
+  const wohnadresseHtml = residenceIndexed
+    .filter(({ c }) => c.kind !== "aufenthalt")
     .map(({ c, i }) => placeOptionHtml(c, "residence", i))
     .join("");
   const candidateHtml = allOptions
@@ -439,14 +452,14 @@ function placeSelectHtml(a) {
     .map(({ c, i }) => placeOptionHtml(c, "candidate", i))
     .join("");
 
-  // bei correspAction[@type='sent'] stehen ggf. Wohnadressen der
-  // genannten Personen zum Briefdatum als eigene Gruppe oben (siehe
-  // residence_options_for_action) - separat von den generischen
-  // Adress-/Poststempel-Kandidaten
-  const optionsHtml = residenceHtml
-    ? `<optgroup label="Wohnadresse zum Zeitpunkt">${residenceHtml}</optgroup>`
-      + (candidateHtml ? `<optgroup label="Adresse/Poststempel">${candidateHtml}</optgroup>` : "")
-    : candidateHtml;
+  const groups = [
+    ["Aufenthalt (nicht Wien)", aufenthaltHtml],
+    ["Wohnadresse zum Zeitpunkt", wohnadresseHtml],
+    ["Adresse/Poststempel", candidateHtml],
+  ].filter(([, html]) => html);
+  const optionsHtml = groups.length > 1
+    ? groups.map(([label, html]) => `<optgroup label="${label}">${html}</optgroup>`).join("")
+    : groups.map(([, html]) => html).join("");
 
   return `
     <select data-role="placeSelect" class="place-select" title="Ort aus Adresse/Poststempeln bzw. Wohnadresse übernehmen">
