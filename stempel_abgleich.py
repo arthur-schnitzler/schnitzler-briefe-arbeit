@@ -14,9 +14,15 @@ einfügen oder Datum/Ort einer bestehenden correspAction aus dem Stempel
 übernehmen ("matchen"). Ein Button öffnet die Datei zusätzlich auf
 schnitzler-briefe.acdh.oeaw.ac.at.
 
-Jede Schreiboperation prüft vorher/nachher gegen das TEI-Schema
-(meta/schnitzler-briefe-schema.xsd): war die Datei vorher schemagültig, wird
-eine Änderung, die das verletzt, abgelehnt.
+Jede Schreiboperation prüft danach, ob das Ergebnis noch wohlgeformtes XML
+ist (siehe validate_and_save) - eine echte Prüfung gegen das TEI-Schema
+(meta/schnitzler-briefe-schema.xsd) findet nicht statt, weil es an einer
+Stelle maxOccurs>1 innerhalb von xs:all nutzt, ein XSD-1.1-Feature, das die
+hier verwendete Standardbibliothek nicht kennt.
+
+Braucht außer Python 3 (Standardbibliothek, kein pip install nötig) nur
+Java + saxon/saxon-he-9.9.1-7.jar, und auch das nur für den Button
+"Datum unsicher (±1 Tag)".
 
 Aufruf (aus dem Repo-Wurzelverzeichnis):
     python3 stempel_abgleich.py                # Server starten, Browser öffnet sich
@@ -36,7 +42,7 @@ from http.server import BaseHTTPRequestHandler, ThreadingHTTPServer
 from pathlib import Path
 from urllib.parse import urlparse
 
-from lxml import etree
+import xml.etree.ElementTree as etree
 
 # ---------------------------------------------------------------------------
 # Konfiguration
@@ -81,30 +87,27 @@ CHANGE_DATIERUNG_STEMPEL_TEXT = "Datierung und Stempel überprüft"
 REVIEWED_MARKER_RE = re.compile(re.escape(f">{CHANGE_DATIERUNG_STEMPEL_TEXT}</change>"))
 PERSNAME_RE = re.compile(r'<persName\b[^>]*>.*?</persName>', re.S)
 
-_schema = "unloaded"
 _schema_warned = False
 
 
 def get_schema():
-    """Lädt das TEI-Schema, falls möglich. Das Projektschema nutzt an einer
-    Stelle maxOccurs>1 innerhalb von xs:all (correspAction in correspDesc) -
-    ein XSD-1.1-Feature, das libxml2/lxml (nur XSD 1.0) nicht validieren
-    kann. In dem Fall wird nur noch auf Wohlgeformtheit geprüft."""
-    global _schema, _schema_warned
-    if _schema == "unloaded":
-        try:
-            _schema = etree.XMLSchema(etree.parse(str(SCHEMA_PATH)))
-        except etree.XMLSchemaParseError as e:
-            _schema = None
-            if not _schema_warned:
-                _schema_warned = True
-                print(f"Hinweis: Schema kann von lxml nicht geladen werden ({e}); "
-                      f"es wird nur auf Wohlgeformtheit geprüft.", file=sys.stderr)
-    return _schema
+    """Liefert immer None: die Python-Standardbibliothek (xml.etree, ohne
+    lxml-Abhängigkeit, damit das Tool ohne Installation läuft) kann keine
+    XSD-Schemata validieren. Schreibaktionen prüfen dadurch nur noch auf
+    Wohlgeformtheit (siehe validate_and_save) - das Projektschema nutzte
+    ohnehin schon vorher maxOccurs>1 innerhalb von xs:all, ein
+    XSD-1.1-Feature, das auch lxml/libxml2 (nur XSD 1.0) nicht validieren
+    konnte, echte Schema-Validierung fand also auch damit nie statt."""
+    global _schema_warned
+    if not _schema_warned:
+        _schema_warned = True
+        print("Hinweis: Schema-Validierung ist ohne lxml nicht verfügbar; "
+              "es wird nur auf Wohlgeformtheit geprüft.", file=sys.stderr)
+    return None
 
 
 # ---------------------------------------------------------------------------
-# Lesen / Extrahieren (lxml, namespace-bewusst)
+# Lesen / Extrahieren (xml.etree, namespace-bewusst)
 # ---------------------------------------------------------------------------
 def q(tag):
     return f"{{{TEI_NS}}}{tag}"
@@ -174,7 +177,7 @@ def attach_raw(items, text, tag):
     raws = [m.group(0) for m in RAW_BLOCK_RE[tag].finditer(text)]
     if len(raws) != len(items):
         raise ValueError(
-            f"Interner Zählfehler bei <{tag}>: {len(items)} über lxml, "
+            f"Interner Zählfehler bei <{tag}>: {len(items)} über Baum-Suche, "
             f"{len(raws)} über Text-Suche - Datei bitte manuell prüfen.")
     for item, raw in zip(items, raws):
         item["raw"] = raw
@@ -282,6 +285,27 @@ def extract_title(root):
     return norm_text(title) if title is not None else None
 
 
+def _walk_place_candidate_nodes(elem, in_address, in_postal, in_addrline, out):
+    """Rekursiver Baum-Durchlauf in Dokumentreihenfolge (Ersatz für die
+    lxml-XPath-Vereinigung ".//div[@type=address]//placeName |
+    .//incident[@type=postal]//placeName |
+    .//div[@type=address]/address/addrLine/descendant::rs[@type=place]" -
+    xml.etree kennt keine XPath-Vereinigung, dafür läuft es ohne separat
+    zu installierendes lxml)."""
+    name = local_name(elem.tag)
+    in_address = in_address or (name == "div" and elem.get("type") == "address")
+    in_postal = in_postal or (name == "incident" and elem.get("type") == "postal")
+    in_addrline = in_addrline or (in_address and name == "addrLine")
+
+    if name == "placeName" and (in_address or in_postal):
+        out.append(elem)
+    elif name == "rs" and in_addrline and elem.get("type") == "place":
+        out.append(elem)
+
+    for child in elem:
+        _walk_place_candidate_nodes(child, in_address, in_postal, in_addrline, out)
+
+
 def extract_place_candidates(root):
     """Alle placeName aus der Adresse (div[@type='address']) und den
     Poststempeln (incident[@type='postal']), dazu die rs[@type='place'] in
@@ -289,12 +313,8 @@ def extract_place_candidates(root):
     ausgezeichnet) - als Auswahlliste, aus der Orte für correspAction
     übernommen werden können. Dedupliziert nach @ref (bzw. nach Text, wenn
     kein ref vorhanden ist), erster Fund zählt."""
-    nodes = root.xpath(
-        ".//tei:div[@type='address']//tei:placeName"
-        " | .//tei:incident[@type='postal']//tei:placeName"
-        " | .//tei:div[@type='address']/tei:address/tei:addrLine/descendant::tei:rs[@type='place']",
-        namespaces=NS,
-    )
+    nodes = []
+    _walk_place_candidate_nodes(root, False, False, False, nodes)
     seen = set()
     options = []
     for el in nodes:
@@ -381,7 +401,7 @@ def refresh_candidate(fid):
 
 # ---------------------------------------------------------------------------
 # Schreiben (gezielte Textchirurgie, Formatierung des restlichen Dokuments
-# bleibt unangetastet; lxml wird nur zur Validierung benutzt)
+# bleibt unangetastet; xml.etree wird nur zur Wohlgeformtheitsprüfung benutzt)
 # ---------------------------------------------------------------------------
 def escape_attr(s):
     return (s or "").replace("&", "&amp;").replace('"', "&quot;").replace("<", "&lt;")
@@ -402,25 +422,15 @@ def indent_of(text, offset):
 
 def validate_and_save(fid, old_text, new_text):
     try:
-        new_root = etree.fromstring(new_text.encode("utf-8"))
-    except etree.XMLSyntaxError as e:
+        etree.fromstring(new_text.encode("utf-8"))
+    except etree.ParseError as e:
         raise ValueError(f"Ergebnis ist kein wohlgeformtes XML: {e}")
 
-    schema = get_schema()
-    if schema is not None:
-        try:
-            old_root = etree.fromstring(old_text.encode("utf-8"))
-            was_valid = schema.validate(old_root)
-        except etree.XMLSyntaxError:
-            was_valid = False
-
-        is_valid = schema.validate(new_root)
-        if was_valid and not is_valid:
-            msg = "; ".join(str(e) for e in schema.error_log)
-            raise ValueError(f"Änderung verletzt das TEI-Schema: {msg}")
+    get_schema()  # nur für den einmaligen Hinweis, dass keine Schema-Validierung stattfindet
 
     path = EDITIONS / f"{fid}.xml"
-    path.write_text(new_text, encoding="utf-8", newline="")
+    with path.open("w", encoding="utf-8", newline="") as f:
+        f.write(new_text)
     refresh_candidate(fid)
 
 
@@ -817,7 +827,7 @@ def replace_raw_block(fid, kind, index, new_xml):
         raise ValueError(f"Element muss mit </{tag}> enden")
     try:
         etree.fromstring(new_xml.encode("utf-8"))
-    except etree.XMLSyntaxError as e:
+    except etree.ParseError as e:
         raise ValueError(f"XML-Fragment ist nicht wohlgeformt: {e}")
 
     text = load_text(fid)
