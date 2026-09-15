@@ -1,10 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <?xml-model href="../meta/schnitzler-briefe-schematron.sch" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
-<TEI xmlns="http://www.tei-c.org/ns/1.0"
-     xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-     xsi:schemaLocation="http://www.tei-c.org/ns/1.0 ../meta/schnitzler-briefe-schema.xsd"
-     xml:id="L00124"
-     xml:base="https://id.acdh.oeaw.ac.at/schnitzler/schnitzler-briefe/editions">
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+   xsi:schemaLocation="http://www.tei-c.org/ns/1.0 ../meta/schnitzler-briefe-schema.xsd"
+   xml:id="L00124" xml:base="https://id.acdh.oeaw.ac.at/schnitzler/schnitzler-briefe/editions">
    <teiHeader>
       <fileDesc>
          <titleStmt>
@@ -111,7 +109,7 @@
                            <incident type="postal">
                               <desc>
                                  <stamp n="2" type="delivery">
-                                    <placeName ref="#pmb40">Wien 1/1</placeName>
+                                    <placeName ref="#pmb51">Wien 1/1</placeName>
                                     <date when="1892-09-21">21/9 92</date>
                                     <time>9–9½ V.</time>
                                     <addSpan>Bestellt</addSpan>
@@ -151,9 +149,13 @@
                <date when="1892-09-19" n="01">19. 9. 1892</date>
                <placeName ref="#pmb462">Venedig</placeName>
             </correspAction>
+            <correspAction type="transmitted">
+               <date when="1892-09-19">19.&#160;[9.&#160;1892]</date>
+               <placeName ref="#pmb462">Venezia</placeName>
+            </correspAction>
             <correspAction type="delivered">
                <date when="1892-09-21">21. 9. 1892</date>
-               <placeName ref="#pmb40">Theater in der Josefstadt</placeName>
+               <placeName ref="#pmb51">Theater in der Josefstadt</placeName>
             </correspAction>
             <correspAction type="received">
                <persName ref="#pmb10863">Beer-Hofmann, Richard</persName>
@@ -161,18 +163,17 @@
                <placeName ref="#pmb190427">I Wollzeile 15</placeName>
             </correspAction>
             <correspContext>
-               <ref type="belongsToCorrespondence" target="correspondence_10863">Beer-Hofmann, Richard</ref>
-               <ref subtype="previous_letter" type="withinCollection" target="L00123">Schnitzler an Beer-Hofmann, 13. 9. 1892</ref>
-               <ref subtype="next_letter" type="withinCollection" target="L00120">Schnitzler an Beer-Hofmann, [zwischen 24. 9. 1892 und
-                  1. 5. 1901]</ref>
-               <ref subtype="previous_letter"
-                    type="withinCorrespondence"
-                    source="correspondence_10863"
-                    target="L00123">Schnitzler an Beer-Hofmann, 13. 9. 1892</ref>
-               <ref subtype="next_letter"
-                    type="withinCorrespondence"
-                    source="correspondence_10863"
-                    target="L00120">Schnitzler an Beer-Hofmann, [zwischen 24. 9. 1892 und
+               <ref type="belongsToCorrespondence" target="correspondence_10863">Beer-Hofmann,
+                  Richard</ref>
+               <ref subtype="previous_letter" type="withinCollection" target="L00123">Schnitzler an
+                  Beer-Hofmann, 13. 9. 1892</ref>
+               <ref subtype="next_letter" type="withinCollection" target="L00120">Schnitzler an
+                  Beer-Hofmann, [zwischen 24. 9. 1892 und 1. 5. 1901]</ref>
+               <ref subtype="previous_letter" type="withinCorrespondence"
+                  source="correspondence_10863" target="L00123">Schnitzler an Beer-Hofmann,
+                  13. 9. 1892</ref>
+               <ref subtype="next_letter" type="withinCorrespondence" source="correspondence_10863"
+                  target="L00120">Schnitzler an Beer-Hofmann, [zwischen 24. 9. 1892 und
                   1. 5. 1901]</ref>
             </correspContext>
          </correspDesc>
@@ -182,6 +183,7 @@
          <change who="GHS" when="2019-09-18">überprüft am Faksimile</change>
          <change who="MAM" when="2019-10-07">Index check</change>
          <change who="MAM" when="2019-10-18">Finalisiert</change>
+         <change who="MAM" when="2026-09-15">Datierung und Stempel überprüft</change>
       </revisionDesc>
    </teiHeader>
    <facsimile>
@@ -214,8 +216,12 @@
          </div>
          <div type="writingSession" n="1">
             <p>
-               <pb facs="1892_AS_RBH_2_00031"/>Ich will Ihnen nur, <salute>mein lieber Richard,</salute> aus <rs ref="#pmb462" type="place">Venedig</rs> die herzlichſten Grüße
-               ſagen. Wir ſehn uns wohl bald wieder. Für alle Fälle mögen Sie wiſſen, <pb facs="1892_AS_RBH_2_00032"/>daß ich Montag den <date>26. September</date> Abends
+               <pb facs="1892_AS_RBH_2_00031"/>Ich will Ihnen nur, <salute>mein lieber
+                  Richard,</salute> aus <rs ref="#pmb462" type="place">Venedig</rs> die herzlichſten
+               Grüße ſagen. Wir ſehn uns wohl bald wieder. Für alle Fälle mögen Sie wiſſen, <pb
+                  facs="1892_AS_RBH_2_00032"/>daß ich <anchor type="commentary" xml:id="K_L00124-1"/>Montag den <date>26. September</date><note type='commentary' corresp="K_L00124-1">
+                     <ref type="wienerschnitzler" target="1892-09-26" subtype="Cf"/>.
+                  </note> Abends
                nach <time>zehn Uhr</time> im Café <rs ref="#pmb46" type="place">
                   <hi rend="latintype">Kremser</hi>
                </rs> zu ſein beabſichtige.</p>
@@ -363,7 +369,8 @@
             </place>
             <place xml:id="pmb50">
                <placeName>Wien</placeName>
-               <placeName type="ort_fruherer-name">K.K. Reichshaupt- und Residenzstadt Wien</placeName>
+               <placeName type="ort_fruherer-name">K.K. Reichshaupt- und Residenzstadt
+                  Wien</placeName>
                <placeName type="legacy-name-merge">Wien</placeName>
                <placeName type="alternative-name">Bécs</placeName>
                <placeName type="alternative-name">Land Wien</placeName>

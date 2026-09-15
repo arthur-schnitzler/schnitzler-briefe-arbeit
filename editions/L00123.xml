@@ -86,7 +86,7 @@
                            <supportDesc>
                               <extent>
                                  <measure unit="kartenbrief" quantity="1"/>
-                                 <measure unit="zeichenanzahl" quantity="895"/>
+                                 <measure unit="zeichenanzahl" quantity="893"/>
                               </extent>
                            </supportDesc>
                         </objectDesc>
@@ -157,12 +157,20 @@
             <correspAction type="sent">
                <persName ref="#pmb2121">Schnitzler, Arthur</persName>
                <date when="1892-09-13" n="01">13. 9. 1892</date>
+               <placeName ref="#pmb364779">?? [Hotel von Arthur Schnitzler in Riva, 1892]</placeName>
+            </correspAction>
+            <correspAction type="transmitted">
+               <date when="1892-09-13">13. 9. 1892</date>
                <placeName ref="#pmb465">Riva del Garda</placeName>
+            </correspAction>
+            <correspAction type="delivered">
+               <date when="1892-09-14">14. 9. [1892]</date>
+               <placeName ref="#pmb213">Bad Ischl</placeName>
             </correspAction>
             <correspAction type="received">
                <persName ref="#pmb10863">Beer-Hofmann, Richard</persName>
                <date when="1892-09-14">14. 9. 1892</date>
-               <placeName ref="#pmb1220">Grazerstraße 4</placeName>
+               <placeName ref="#pmb1220">Grazer Straße [Bad Ischl]</placeName>
             </correspAction>
             <correspContext>
                <ref type="belongsToCorrespondence" target="correspondence_10863">Beer-Hofmann, Richard</ref>
@@ -185,6 +193,7 @@
          <change who="GHS" when="2019-09-18">überprüft am Faksimile</change>
          <change who="MAM" when="2019-10-07">Index check</change>
          <change who="MAM" when="2019-10-22">Finalisiert</change>
+         <change who="MAM" when="2026-09-15">Datierung und Stempel überprüft</change>
       </revisionDesc>
    </teiHeader>
    <facsimile>
@@ -231,7 +240,7 @@
                iſt. – Ein Balkon, auf dem die Sonne liegt, und unten der Park, und weiter, nun
                natürlich, der <rs type="place" ref="#pmb39975" subtype="implied">See</rs>, der See,
                der tiefblaue <rs type="place" ref="#pmb39975" subtype="implied">See</rs>. Uns
-               gegenüber Berge. – Das Hotel deutſch, poſirt nur ein wenig das <rs ref="#pmb40306" type="place">italien</rs>iſche durch Fliegen und zarte Unreinlichkeit. Schön, ſehr
+               gegenüber Berge. – Das <rs type="place" ref="#pmb364779" subtype="implied">Hotel</rs> deutſch, poſirt nur ein wenig das <rs ref="#pmb40306" type="place">italien</rs>iſche durch Fliegen und zarte Unreinlichkeit. Schön, ſehr
                ſchön. – Und ich verſti<c rendition="#gemination-m"/>t. We<c rendition="#gemination-n"/> ich mich nicht ſchämte, würd ich ſagen: traurig. –</p>
             <closer>Viele herzliche Grüße<lb/>
                <signed>Arthur</signed>
@@ -240,6 +249,30 @@
       </body>
       <back>
          <listPerson>
+            <person xml:id="pmb2121">
+               <persName>
+                  <surname>Schnitzler</surname>
+                  <forename>Arthur</forename>
+               </persName>
+               <birth>
+                  <date when="1862-05-15">15. 5. 1862</date>
+                  <settlement ref="pmb50">
+                     <placeName type="pref">Wien</placeName>
+                     <location>
+                        <geo>48,208333 16,373056</geo>
+                     </location>
+                  </settlement>
+               </birth>
+               <death>
+                  <date when="1931-10-21">21. 10. 1931</date>
+                  <settlement ref="pmb50">
+                     <placeName type="pref">Wien</placeName>
+                     <location>
+                        <geo>48,208333 16,373056</geo>
+                     </location>
+                  </settlement>
+               </death>
+            </person>
             <person xml:id="pmb10863">
                <persName>
                   <forename>Richard</forename>
@@ -264,36 +297,35 @@
                   </settlement>
                </death>
             </person>
-            <person xml:id="pmb2121">
-               <persName>
-                  <surname>Schnitzler</surname>
-                  <forename>Arthur</forename>
-               </persName>
-               <birth>
-                  <date when="1862-05-15">15. 5. 1862</date>
-                  <settlement ref="pmb50">
-                     <placeName type="pref">Wien</placeName>
-                     <location>
-                        <geo>48,208333 16,373056</geo>
-                     </location>
-                  </settlement>
-               </birth>
-               <death>
-                  <date when="1931-10-21">21. 10. 1931</date>
-                  <settlement ref="pmb50">
-                     <placeName type="pref">Wien</placeName>
-                     <location>
-                        <geo>48,208333 16,373056</geo>
-                     </location>
-                  </settlement>
-               </death>
-               <sex value="male"/>
-               <occupation ref="pmb90">Schriftsteller/Schriftstellerin</occupation>
-               <occupation ref="pmb97">Mediziner/Medizinerin</occupation>
-               <idno type="gnd">https://d-nb.info/gnd/118609807/</idno>
-            </person>
          </listPerson>
          <listPlace>
+            <place xml:id="pmb465">
+               <placeName>Riva del Garda</placeName>
+               <location type="coords">
+                  <geo>45,88576 10,84118</geo>
+               </location>
+               <location type="located_in_place">
+                  <placeName ref="pmb40306">Italien</placeName>
+                  <geo>42,83333 12,83333</geo>
+               </location>
+            </place>
+            <place xml:id="pmb213">
+               <placeName>Bad Ischl</placeName>
+               <location type="coords">
+                  <geo>47,71109 13,61893</geo>
+               </location>
+               <location type="located_in_place">
+                  <placeName ref="pmb429">Salzkammergut</placeName>
+                  <geo>47,75 13,5</geo>
+               </location>
+            </place>
+            <place xml:id="pmb364779">
+               <placeName>?? [Hotel von Arthur Schnitzler in Riva, 1892]</placeName>
+               <location type="located_in_place">
+                  <placeName ref="pmb465">Riva del Garda</placeName>
+                  <geo>45,88576 10,84118</geo>
+               </location>
+            </place>
             <place xml:id="pmb1220">
                <placeName>Grazer Straße [Bad Ischl]</placeName>
                <location type="coords">
@@ -304,23 +336,10 @@
                   <geo>47,71109 13,61893</geo>
                </location>
             </place>
-            <place xml:id="pmb213">
-               <placeName>Bad Ischl</placeName>
-               <placeName type="legacy-name-merge">Bad Ischl</placeName>
-               <placeName type="legacy-name-merge">Bad Ischl</placeName>
-               <location type="coords">
-                  <geo>47,71109 13,61893</geo>
-               </location>
-               <location type="located_in_place">
-                  <placeName ref="pmb429">Salzkammergut</placeName>
-                  <geo>47,75 13,5</geo>
-               </location>
-            </place>
             <place xml:id="pmb40306">
                <placeName>Italien</placeName>
                <placeName type="alternative-name">Italian Republic</placeName>
                <placeName type="alternative-name">Republic of Italy</placeName>
-               <placeName type="legacy-name-merge">Italien</placeName>
                <placeName type="legacy-name-merge">Italy</placeName>
                <location type="coords">
                   <geo>42,83333 12,83333</geo>
@@ -330,23 +349,10 @@
                   <geo>48,69096 9,14062</geo>
                </location>
             </place>
-            <place xml:id="pmb465">
-               <placeName>Riva del Garda</placeName>
-               <placeName type="alternative-name">Riva del Garda</placeName>
-               <placeName type="legacy-name-merge">Riva del Garda</placeName>
-               <location type="coords">
-                  <geo>45,88576 10,84118</geo>
-               </location>
-               <location type="located_in_place">
-                  <placeName ref="pmb40306">Italien</placeName>
-                  <geo>42,83333 12,83333</geo>
-               </location>
-            </place>
             <place xml:id="pmb39975" ana="implied">
                <placeName>Lago di Garda</placeName>
                <placeName type="alternative-name">Gardasee</placeName>
                <placeName type="alternative-name">Lake Garda</placeName>
-               <placeName type="legacy-name-merge">Gardasee</placeName>
                <location type="coords">
                   <geo>45,6316 10,660517</geo>
                </location>
