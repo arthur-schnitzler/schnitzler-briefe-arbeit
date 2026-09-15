@@ -150,7 +150,11 @@
             <correspAction type="sent">
                <persName ref="#pmb10815">Bahr, Hermann</persName>
                <date when="1901-10-29" n="01">29. 10. 1901</date>
-               <placeName ref="#pmb50">Wien</placeName>
+               <placeName ref="#pmb207274">Haus Bahr</placeName>
+            </correspAction>
+            <correspAction type="transmitted">
+               <date when="1901-10-30">30. 10. 1901</date>
+               <placeName ref="#pmb63">XIII., Hietzing</placeName>
             </correspAction>
             <correspAction type="delivered">
                <placeName ref="#pmb59">IX., Alsergrund</placeName>
@@ -158,7 +162,7 @@
             <correspAction type="received">
                <persName ref="#pmb2121">Schnitzler, Arthur</persName>
                <date when="1901-10-30">30. 10. 01</date>
-               <placeName ref="#pmb50">Wien</placeName>
+               <placeName ref="#pmb168934">Frankgasse 1</placeName>
             </correspAction>
             <correspContext>
                <ref type="belongsToCorrespondence" target="correspondence_10815">Bahr, Hermann</ref>
@@ -181,6 +185,7 @@
          <change who="MAM" when="2018-07-15">Überführt aus Bahr–Schnitzler-Daten</change>
          <change who="GHS" when="2020-01-08">finalisiert</change>
          <change when="2020-01-09" who="MAM">Index check</change>
+         <change who="MAM" when="2026-09-15">Datierung und Stempel überprüft</change>
       </revisionDesc>
    </teiHeader>
    <facsimile>
@@ -198,7 +203,8 @@
                   <rs ref="#pmb59" type="place">Wien IX</rs>
                </addrLine>
                <addrLine>
-                  <rs ref="#pmb168934" type="place">Frankgaſſe</rs> 1</addrLine>
+                  <rs ref="#pmb168934" type="place">Frankgaſſe 1</rs>
+               </addrLine>
             </address>
          </div>
          <div type="writingSession" n="1">
@@ -209,7 +215,7 @@
                </dateline>
                <salute>Lieber Arthur!</salute>
             </opener>
-            <p>Ich glaube, <rs ref="#pmb10883" type="person">Berger</rs> iſt <anchor type="commentary" xml:id="K_L01186-1"/>noch hier<note type="commentary" corresp="K_L01186-1">Am <date>30. 10. 1901</date> kam <rs ref="#pmb10883" type="person">Berger</rs> zu <rs ref="#pmb2121" type="person">Schnitzler</rs>.</note>; Du kannſt es, da er Telephon hat, ſofort erfahren.</p>
+            <p>Ich glaube, <rs ref="#pmb10883" type="person">Berger</rs> iſt <anchor type="commentary" xml:id="K_L01186-1"/>noch hier<note type="commentary" corresp="K_L01186-1">Am <ref type="schnitzler-tagebuch" subtype="date-only" target="1901-10-30"/> kam <rs ref="#pmb10883" type="person">Berger</rs> zu <rs ref="#pmb2121" type="person">Schnitzler</rs>.</note>; Du kannſt es, da er Telephon hat, ſofort erfahren.</p>
             <p>– <rs ref="#pmb29853" type="work">
                   <hi rend="latintype">Gustl</hi>
                </rs> – <rs ref="#pmb2185" type="person">Guttmann</rs> iſt echt. Es gibt nur ein <rs ref="#pmb50" type="place">Wien</rs>, beſonders für Dichter.</p>
@@ -244,6 +250,30 @@
                   </settlement>
                </death>
             </person>
+            <person xml:id="pmb2121">
+               <persName>
+                  <surname>Schnitzler</surname>
+                  <forename>Arthur</forename>
+               </persName>
+               <birth>
+                  <date when="1862-05-15">15. 5. 1862</date>
+                  <settlement ref="pmb50">
+                     <placeName type="pref">Wien</placeName>
+                     <location>
+                        <geo>48,208333 16,373056</geo>
+                     </location>
+                  </settlement>
+               </birth>
+               <death>
+                  <date when="1931-10-21">21. 10. 1931</date>
+                  <settlement ref="pmb50">
+                     <placeName type="pref">Wien</placeName>
+                     <location>
+                        <geo>48,208333 16,373056</geo>
+                     </location>
+                  </settlement>
+               </death>
+            </person>
             <person xml:id="pmb10883">
                <persName>
                   <forename>Alfred von</forename>
@@ -267,34 +297,6 @@
                      </location>
                   </settlement>
                </death>
-            </person>
-            <person xml:id="pmb2121">
-               <persName>
-                  <surname>Schnitzler</surname>
-                  <forename>Arthur</forename>
-               </persName>
-               <birth>
-                  <date when="1862-05-15">15. 5. 1862</date>
-                  <settlement ref="pmb50">
-                     <placeName type="pref">Wien</placeName>
-                     <location>
-                        <geo>48,208333 16,373056</geo>
-                     </location>
-                  </settlement>
-               </birth>
-               <death>
-                  <date when="1931-10-21">21. 10. 1931</date>
-                  <settlement ref="pmb50">
-                     <placeName type="pref">Wien</placeName>
-                     <location>
-                        <geo>48,208333 16,373056</geo>
-                     </location>
-                  </settlement>
-               </death>
-               <sex value="male"/>
-               <occupation ref="pmb90">Schriftsteller/Schriftstellerin</occupation>
-               <occupation ref="pmb97">Mediziner/Medizinerin</occupation>
-               <idno type="gnd">https://d-nb.info/gnd/118609807/</idno>
             </person>
             <person xml:id="pmb2185">
                <persName>
@@ -323,14 +325,53 @@
          </listPerson>
          <listBibl>
             <bibl xml:id="pmb29853">
-               <title type="main">Lieutenant Gustl. Novelle</title>
+               <title>Lieutenant Gustl. Novelle</title>
                <title type="werk_bibliografische-angabe">Arthur Schnitzler: Lieutenant Gustl. In: Neue Freie Presse, Nr. 13053, 25. 12. 1900, Morgenblatt, S. 34–41</title>
                <title type="werk_link">http://anno.onb.ac.at/cgi-content/anno?aid=nfp&amp;datum=19001225&amp;seite=34</title>
                <title type="werk_namensvariante">Leutnant Gustl</title>
-               <author role="hat-geschaffen" ref="pmb2121">Schnitzler, Arthur</author>
+               <author ref="pmb2121" role="hat-geschaffen">Schnitzler, Arthur</author>
             </bibl>
          </listBibl>
          <listPlace>
+            <place xml:id="pmb63">
+               <placeName>XIII., Hietzing</placeName>
+               <placeName type="legacy-name-merge">Hietzing</placeName>
+               <location type="coords">
+                  <geo>48,17547 16,29101</geo>
+               </location>
+               <location type="located_in_place">
+                  <placeName ref="pmb50">Wien</placeName>
+                  <geo>48,208333 16,373056</geo>
+               </location>
+            </place>
+            <place xml:id="pmb59">
+               <placeName>IX., Alsergrund</placeName>
+               <placeName type="legacy-name-merge">Thurygrund</placeName>
+               <placeName type="legacy-name-merge">Wien-Alsergrund</placeName>
+               <location type="coords">
+                  <geo>48,22387 16,35641</geo>
+               </location>
+               <location type="located_in_place">
+                  <placeName ref="pmb50">Wien</placeName>
+                  <geo>48,208333 16,373056</geo>
+               </location>
+            </place>
+            <place xml:id="pmb207274">
+               <placeName>Haus Bahr</placeName>
+               <placeName type="ort_fruherer-name">Veitlissengasse 5a</placeName>
+               <placeName type="ort_namensvariante">Winzergasse 22</placeName>
+               <location type="coords">
+                  <geo>48,186771 16,261305</geo>
+               </location>
+               <location type="located_in_place">
+                  <placeName ref="pmb220">Veitlissengasse</placeName>
+                  <geo>48,186622327678 16,259712159437</geo>
+               </location>
+               <location type="located_in_place">
+                  <placeName ref="pmb63">XIII., Hietzing</placeName>
+                  <geo>48,17547 16,29101</geo>
+               </location>
+            </place>
             <place xml:id="pmb168934">
                <placeName>Frankgasse 1</placeName>
                <location type="coords">
@@ -348,16 +389,12 @@
             <place xml:id="pmb50">
                <placeName>Wien</placeName>
                <placeName type="ort_fruherer-name">K.K. Reichshaupt- und Residenzstadt Wien</placeName>
-               <placeName type="legacy-name-merge">Wien</placeName>
                <placeName type="alternative-name">Bécs</placeName>
                <placeName type="alternative-name">Land Wien</placeName>
                <placeName type="alternative-name">Vídeň</placeName>
                <placeName type="alternative-name">Wenia</placeName>
                <placeName type="alternative-name">Beč</placeName>
                <placeName type="ort_fruherer-name">Vindobona</placeName>
-               <placeName type="legacy-name-merge">Vindobona</placeName>
-               <placeName type="alternative-name">Vienna</placeName>
-               <placeName type="legacy-name-merge">Vienna</placeName>
                <placeName type="alternative-name">Vienna</placeName>
                <location type="coords">
                   <geo>48,208333 16,373056</geo>
@@ -366,28 +403,9 @@
                   <placeName ref="pmb41240">Österreich</placeName>
                   <geo>47,33333 13,33333</geo>
                </location>
-            </place>
-            <place xml:id="pmb59">
-               <placeName>IX., Alsergrund</placeName>
-               <placeName type="legacy-name-merge">Thurygrund</placeName>
-               <placeName type="legacy-name-merge">Wien-Alsergrund</placeName>
-               <location type="coords">
-                  <geo>48,22387 16,35641</geo>
-               </location>
                <location type="located_in_place">
-                  <placeName ref="pmb50">Wien</placeName>
-                  <geo>48,208333 16,373056</geo>
-               </location>
-            </place>
-            <place xml:id="pmb63">
-               <placeName>XIII., Hietzing</placeName>
-               <placeName type="legacy-name-merge">Hietzing</placeName>
-               <location type="coords">
-                  <geo>48,17547 16,29101</geo>
-               </location>
-               <location type="located_in_place">
-                  <placeName ref="pmb50">Wien</placeName>
-                  <geo>48,208333 16,373056</geo>
+                  <placeName ref="pmb235218">Windmühlhöhe</placeName>
+                  <geo>48,24077 16,32092</geo>
                </location>
             </place>
          </listPlace>
