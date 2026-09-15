@@ -160,6 +160,21 @@ async function loadCandidates() {
   applyFilter();
 }
 
+// Holt die Kandidatenliste frisch vom Server (statt der Momentaufnahme vom
+// letzten Laden) und wendet den Filter neu an - wichtig, weil SJ und MAM
+// gleichzeitig in getrennten Browser-Sessions arbeiten: sonst zeigt eine
+// schon länger offene Seite Briefe, die die andere Person zwischenzeitlich
+// schon als "Datierung und Stempel überprüft" markiert hat.
+async function refreshCandidatesAndFilter() {
+  try {
+    const data = await apiGet("/api/list");
+    state.candidates = data.files;
+  } catch (e) {
+    toast(e.message, true); // mit dem lokalen Stand weitermachen statt hängen zu bleiben
+  }
+  applyFilter();
+}
+
 function applyFilter() {
   // bereits abgeschlossene Briefe ("Datierung und Stempel überprüft")
   // fallen grundsätzlich aus der Warteschlange raus
@@ -181,7 +196,8 @@ function updatePosIndicator() {
   el("nextBtn").disabled = idx < 0 || idx >= state.filtered.length - 1;
 }
 
-function stepCandidate(delta) {
+async function stepCandidate(delta) {
+  await refreshCandidatesAndFilter();
   const idx = state.filtered.findIndex((c) => c.id === state.currentId);
   let next;
   if (idx < 0) {
@@ -729,11 +745,16 @@ function wireToolbar() {
   const editorSelect = el("editorSelect");
   editorSelect.value = state.editor;
   updateNextBtnTitle();
-  editorSelect.addEventListener("change", (ev) => {
+  editorSelect.addEventListener("change", async (ev) => {
     state.editor = ev.target.value;
     storeEditor(state.editor);
     updateNextBtnTitle();
-    applyFilter();
+    // sofort zum richtigen Startpunkt springen (SJ: allerletzter Brief,
+    // MAM: allererster) statt nur die künftige Richtung umzustellen
+    await refreshCandidatesAndFilter();
+    if (state.filtered.length) {
+      await loadFile(state.filtered[0].id);
+    }
   });
 
   el("prevBtn").addEventListener("click", () => stepCandidate(-1));
@@ -744,10 +765,11 @@ function wireToolbar() {
         await apiPost(`/api/file/${state.currentId}/revision-change`, { who: state.editor });
         toast(`${state.currentId}: revisionDesc ergänzt ("${CHANGE_DATIERUNG_STEMPEL_TEXT}", ${state.editor}).`);
         // Datei ist ab jetzt "reviewed" und fällt aus der Warteschlange -
-        // an genau der Stelle weitermachen, an der sie eben noch stand
-        const entry = state.candidates.find((c) => c.id === state.currentId);
-        if (entry) entry.reviewed = true;
-        applyFilter();
+        // Liste frisch vom Server holen (nicht nur lokal patchen), damit
+        // auch Briefe rausfallen, die MAM/SJ zwischenzeitlich in einer
+        // anderen Session abgeschlossen hat, und an ungefähr der Stelle
+        // weitermachen, an der der Brief eben noch stand
+        await refreshCandidatesAndFilter();
         if (idx >= 0 && idx < state.filtered.length) {
           await loadFile(state.filtered[idx].id);
         } else if (state.filtered.length) {
