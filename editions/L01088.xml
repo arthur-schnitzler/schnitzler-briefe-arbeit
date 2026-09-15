@@ -1,10 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <?xml-model href="../meta/schnitzler-briefe-schematron.sch" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
-<TEI xmlns="http://www.tei-c.org/ns/1.0"
-     xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-     xml:id="L01088"
-     xsi:schemaLocation="http://www.tei-c.org/ns/1.0 ../meta/schnitzler-briefe-schema.xsd"
-     xml:base="https://id.acdh.oeaw.ac.at/schnitzler/schnitzler-briefe/editions">
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+   xml:id="L01088"
+   xsi:schemaLocation="http://www.tei-c.org/ns/1.0 ../meta/schnitzler-briefe-schema.xsd"
+   xml:base="https://id.acdh.oeaw.ac.at/schnitzler/schnitzler-briefe/editions">
    <teiHeader>
       <fileDesc>
          <titleStmt>
@@ -91,9 +90,8 @@
                            </supportDesc>
                         </objectDesc>
                         <handDesc hands="1">
-                           <handNote medium="schwarze-tinte"
-                                     style="deutsche-kurrent"
-                                     corresp="#pmb11740"/>
+                           <handNote medium="schwarze-tinte" style="deutsche-kurrent"
+                              corresp="#pmb11740"/>
                         </handDesc>
                         <additions>
                            <incident type="postal">
@@ -125,8 +123,8 @@
                                  </quote>«</desc>
                            </incident>
                            <incident type="archival" rend="bleistift">
-                              <desc>von unbekannter Hand mehrfach nummeriert, diese
-                                 gestrichen und zuletzt geändert zu: »<quote>170</quote>«</desc>
+                              <desc>von unbekannter Hand mehrfach nummeriert, diese gestrichen und
+                                 zuletzt geändert zu: »<quote>170</quote>«</desc>
                            </incident>
                         </additions>
                      </physDesc>
@@ -162,23 +160,31 @@
                <date when="1900-12-22" n="02">22. 12. 1900</date>
                <placeName ref="#pmb50">Wien</placeName>
             </correspAction>
+            <correspAction type="transmitted">
+               <date when="1900-12-22">22.&#160;12.&#160;1900</date>
+               <placeName ref="#pmb53">Wien 3/3</placeName>
+            </correspAction>
+            <correspAction type="delivered">
+               <date when="1900-12-22">22.&#160;12.&#160;1900</date>
+               <placeName ref="#pmb59">Wien 9/2</placeName>
+            </correspAction>
             <correspAction type="received">
                <persName ref="#pmb2121">Schnitzler, Arthur</persName>
                <date when="1900-12-22">22. 12. 1900</date>
-               <placeName ref="#pmb50">Wien</placeName>
+               <placeName ref="#pmb168934">IX. Franckgasse 1.</placeName>
             </correspAction>
             <correspContext>
-               <ref type="belongsToCorrespondence" target="correspondence_11740">Hofmannsthal, Hugo von</ref>
-               <ref subtype="previous_letter" type="withinCollection" target="L03938">Schnitzler an Herzl, 22. 12. 1900</ref>
-               <ref subtype="next_letter" type="withinCollection" target="L03877">Herzl an Schnitzler, 23. 12. 1900</ref>
-               <ref subtype="previous_letter"
-                    type="withinCorrespondence"
-                    source="correspondence_11740"
-                    target="L01087">Hofmannsthal an Schnitzler, 21. 12. 1900</ref>
-               <ref subtype="next_letter"
-                    type="withinCorrespondence"
-                    source="correspondence_11740"
-                    target="L01091">Hofmannsthal an Schnitzler, 1[6?] 1. 1901</ref>
+               <ref type="belongsToCorrespondence" target="correspondence_11740">Hofmannsthal, Hugo
+                  von</ref>
+               <ref subtype="previous_letter" type="withinCollection" target="L03938">Schnitzler an
+                  Herzl, 22. 12. 1900</ref>
+               <ref subtype="next_letter" type="withinCollection" target="L03877">Herzl an
+                  Schnitzler, 23. 12. 1900</ref>
+               <ref subtype="previous_letter" type="withinCorrespondence"
+                  source="correspondence_11740" target="L01087">Hofmannsthal an Schnitzler,
+                  21. 12. 1900</ref>
+               <ref subtype="next_letter" type="withinCorrespondence" source="correspondence_11740"
+                  target="L01091">Hofmannsthal an Schnitzler, 1[6?] 1. 1901</ref>
             </correspContext>
          </correspDesc>
       </profileDesc>
@@ -187,6 +193,7 @@
          <change who="GHS" when="2020-03-27">Durchsicht</change>
          <change who="MAM" when="2020-03-30">Index check</change>
          <change who="MAM" when="2020-05-04">Durchsicht</change>
+         <change who="MAM" when="2026-09-15">Datierung und Stempel überprüft</change>
       </revisionDesc>
    </teiHeader>
    <facsimile>
@@ -199,7 +206,8 @@
             <address>
                <addrLine>
                   <hi rend="latintype">
-                     <pb facs="MS-SCHNITZLER-B-00043-B-00001-000-00365"/>Herrn D<hi rend="superscript">r</hi> Arthur Schnitzler</hi>
+                     <pb facs="MS-SCHNITZLER-B-00043-B-00001-000-00365"/>Herrn D<hi
+                        rend="superscript">r</hi> Arthur Schnitzler</hi>
                </addrLine>
                <addrLine>
                   <hi rend="latintype">
@@ -216,10 +224,12 @@
          <div type="writingSession" n="1">
             <p>
                <pb facs="MS-SCHNITZLER-B-00043-B-00001-000-00366"/>
-               <salute>lieber Arthur,</salute> ich bin auch morgen <date>Sonntag</date> wieder bei
-                  <rs ref="#pmb10863" type="person">Richard</rs>, vielleicht daſs Sie gegen
-                  <time>¾ 8</time> hinko<c rendition="#gemination-m"/>en, mich abzuholen oder
-               gemeinſam dortzubleiben, das wäre ſehr ſchön.</p>
+               <salute>lieber Arthur,</salute> ich bin auch morgen <anchor type="commentary"
+                  xml:id="K_L01088-11"/><date>Sonntag</date> wieder bei <rs ref="#pmb10863"
+                  type="person">Richard</rs><note type="commentary" corresp="K_L01088-11"><ref
+                     type="schnitzler-tagebuch" target="1900-12-23" subtype="Cf"/>.</note>,
+               vielleicht daſs Sie gegen <time>¾ 8</time> hinko<c rendition="#gemination-m"/>en,
+               mich abzuholen oder gemeinſam dortzubleiben, das wäre ſehr ſchön.</p>
             <closer>Herzlich<lb/>
                <signed>Hugo</signed>
             </closer>
@@ -229,11 +239,14 @@
                <p>Man kann Sie nun ruhig den <anchor type="commentary" xml:id="K_L01088-1"/>
                   <rs type="person" ref="#pmb8316" subtype="implied">
                      <hi rend="latintype">Kotzebue</hi>
-                  </rs> der Novelle<note type="commentary" corresp="K_L01088-1">Die Bemerkung erfolgt anlässlich der 
-                     bevorstehenden und bereits beworbenen Veröffentlichung von <rs type="work" ref="#pmb29853">Lieutenant
-                        Gustl</rs> am <ref type="schnitzler-tagebuch" subtype="date-only" target="1900-12-25"/> in der <rs type="work" ref="#pmb36374">Neuen Freie Presse</rs>. Es handelt sich um einen foppenden Vergleich mit <rs type="person" ref="#pmb8316">August von Kotzebue</rs>,
-                     der ein sehr
-                     umfangreiches Theaterwerk von über 200 Stücken hinterlassen hat.</note> nennen.</p>
+                  </rs> der Novelle<note type="commentary" corresp="K_L01088-1">Die Bemerkung
+                     erfolgt anlässlich der bevorstehenden und bereits beworbenen Veröffentlichung
+                     von <rs type="work" ref="#pmb29853">Lieutenant Gustl</rs> am <ref
+                        type="schnitzler-tagebuch" subtype="date-only" target="1900-12-25"/> in der
+                        <rs type="work" ref="#pmb36374">Neuen Freie Presse</rs>. Es handelt sich um
+                     einen foppenden Vergleich mit <rs type="person" ref="#pmb8316">August von
+                        Kotzebue</rs>, der ein sehr umfangreiches Theaterwerk von über 200 Stücken
+                     hinterlassen hat.</note> nennen.</p>
             </postscript>
          </div>
       </body>
@@ -343,8 +356,10 @@
          <listBibl>
             <bibl xml:id="pmb29853" ana="comment">
                <title type="main">Lieutenant Gustl. Novelle</title>
-               <title type="werk_bibliografische-angabe">Arthur Schnitzler: Lieutenant Gustl. In: Neue Freie Presse, Nr. 13053, 25. 12. 1900, Morgenblatt, S. 34–41</title>
-               <title type="werk_link">http://anno.onb.ac.at/cgi-content/anno?aid=nfp&amp;datum=19001225&amp;seite=34</title>
+               <title type="werk_bibliografische-angabe">Arthur Schnitzler: Lieutenant Gustl. In:
+                  Neue Freie Presse, Nr. 13053, 25. 12. 1900, Morgenblatt, S. 34–41</title>
+               <title type="werk_link"
+                  >http://anno.onb.ac.at/cgi-content/anno?aid=nfp&amp;datum=19001225&amp;seite=34</title>
                <title type="werk_namensvariante">Leutnant Gustl</title>
                <author role="hat-geschaffen" ref="pmb2121">Schnitzler, Arthur</author>
             </bibl>
@@ -374,7 +389,8 @@
             </place>
             <place xml:id="pmb50">
                <placeName>Wien</placeName>
-               <placeName type="ort_fruherer-name">K.K. Reichshaupt- und Residenzstadt Wien</placeName>
+               <placeName type="ort_fruherer-name">K.K. Reichshaupt- und Residenzstadt
+                  Wien</placeName>
                <placeName type="legacy-name-merge">Wien</placeName>
                <placeName type="alternative-name">Bécs</placeName>
                <placeName type="alternative-name">Land Wien</placeName>
