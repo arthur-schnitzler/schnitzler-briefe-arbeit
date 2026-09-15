@@ -1,10 +1,6 @@
-<?xml version="1.0" encoding="UTF-8"?>
+<?xml version='1.0' encoding='UTF-8'?>
 <?xml-model href="../meta/schnitzler-briefe-schematron.sch" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
-<TEI xmlns="http://www.tei-c.org/ns/1.0"
-     xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-     xsi:schemaLocation="http://www.tei-c.org/ns/1.0 ../meta/schnitzler-briefe-schema.xsd"
-     xml:id="L00696"
-     xml:base="https://id.acdh.oeaw.ac.at/schnitzler/schnitzler-briefe/editions">
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.tei-c.org/ns/1.0 ../meta/schnitzler-briefe-schema.xsd" xml:id="L00696" xml:base="https://id.acdh.oeaw.ac.at/schnitzler/schnitzler-briefe/editions">
    <teiHeader>
       <fileDesc>
          <titleStmt>
@@ -142,14 +138,8 @@
                <ref type="belongsToCorrespondence" target="correspondence_10992">Brandes, Georg</ref>
                <ref subtype="previous_letter" type="withinCollection" target="L00695">Bahr an Schnitzler, 8. 7. 1897</ref>
                <ref subtype="next_letter" type="withinCollection" target="L00697">Hofmannsthal an Schnitzler, 9. [7. 1897]</ref>
-               <ref subtype="previous_letter"
-                    type="withinCorrespondence"
-                    source="correspondence_10992"
-                    target="L00643">Schnitzler an Brandes, 3. 2. 1897</ref>
-               <ref subtype="next_letter"
-                    type="withinCorrespondence"
-                    source="correspondence_10992"
-                    target="L00701">Brandes an Schnitzler, [13. 7. 1897]</ref>
+               <ref subtype="previous_letter" type="withinCorrespondence" source="correspondence_10992" target="L00643">Schnitzler an Brandes, 3. 2. 1897</ref>
+               <ref subtype="next_letter" type="withinCorrespondence" source="correspondence_10992" target="L00701">Brandes an Schnitzler, [13. 7. 1897]</ref>
             </correspContext>
          </correspDesc>
       </profileDesc>
@@ -208,131 +198,41 @@
             </closer>
          </div>
       </body>
-      <back>
-         <listPerson>
-            <person xml:id="pmb10992">
-               <persName>
-                  <forename>Georg</forename>
-                  <surname>Brandes</surname>
-               </persName>
-               <birth>
-                  <date when="1842-02-04">1842-02-04</date>
-                  <settlement ref="pmb36300">
-                     <placeName type="pref">Kopenhagen</placeName>
-                     <location>
-                        <geo>55,67594 12,56553</geo>
-                     </location>
-                  </settlement>
-               </birth>
-               <death>
-                  <date when="1927-02-19">1927-02-19</date>
-                  <settlement ref="pmb36300">
-                     <placeName type="pref">Kopenhagen</placeName>
-                     <location>
-                        <geo>55,67594 12,56553</geo>
-                     </location>
-                  </settlement>
-               </death>
-            </person>
-            <person xml:id="pmb2121">
-               <persName>
-                  <surname>Schnitzler</surname>
-                  <forename>Arthur</forename>
-               </persName>
-               <birth>
-                  <date when="1862-05-15">15. 5. 1862</date>
-                  <settlement ref="pmb50">
-                     <placeName type="pref">Wien</placeName>
-                     <location>
-                        <geo>48,208333 16,373056</geo>
-                     </location>
-                  </settlement>
-               </birth>
-               <death>
-                  <date when="1931-10-21">21. 10. 1931</date>
-                  <settlement ref="pmb50">
-                     <placeName type="pref">Wien</placeName>
-                     <location>
-                        <geo>48,208333 16,373056</geo>
-                     </location>
-                  </settlement>
-               </death>
-               <sex value="male"/>
-               <occupation ref="pmb90">Schriftsteller/Schriftstellerin</occupation>
-               <occupation ref="pmb97">Mediziner/Medizinerin</occupation>
-               <idno type="gnd">https://d-nb.info/gnd/118609807/</idno>
-            </person>
-         </listPerson>
-         <listBibl>
-            <bibl xml:id="pmb32159">
-               <title type="main">William Shakespeare</title>
-               <author role="hat-geschaffen" ref="pmb10992">Brandes, Georg</author>
-            </bibl>
-            <bibl xml:id="pmb33279" ana="comment">
-               <title type="main">[Krankheit von Georg Brandes]</title>
-               <title type="werk_bibliografische-angabe">Agramer Zeitung, 9. 7. 1897</title>
-            </bibl>
-         </listBibl>
-         <listPlace>
-            <place xml:id="pmb213">
-               <placeName>Bad Ischl</placeName>
-               <placeName type="legacy-name-merge">Bad Ischl</placeName>
-               <placeName type="legacy-name-merge">Bad Ischl</placeName>
-               <location type="coords">
-                  <geo>47,71109 13,61893</geo>
-               </location>
-               <location type="located_in_place">
-                  <placeName ref="pmb429">Salzkammergut</placeName>
-                  <geo>47,75 13,5</geo>
-               </location>
-            </place>
-            <place xml:id="pmb36300">
-               <placeName>Kopenhagen</placeName>
-               <placeName type="alternative-name">Kopenhagen</placeName>
-               <placeName type="legacy-name">Kopenhagen</placeName>
-               <placeName type="legacy-name-merge">Kopenhagen</placeName>
-               <placeName type="alternative-name">Copenhagen</placeName>
-               <placeName type="legacy-name-merge">Copenhagen</placeName>
-               <location type="coords">
-                  <geo>55,67594 12,56553</geo>
-               </location>
-               <location type="located_in_place">
-                  <placeName ref="pmb43570">Dänemark</placeName>
-                  <geo>56,0 10,0</geo>
-               </location>
-            </place>
-            <place xml:id="pmb414">
-               <placeName>Hotel und Pension Rudolfshöhe (Leopold Petter)</placeName>
-               <placeName type="legacy-name-merge">Rudolfshöhe</placeName>
-               <location type="coords">
-                  <geo>47,706537 13,609575</geo>
-               </location>
-               <location type="located_in_place">
-                  <placeName ref="pmb213">Bad Ischl</placeName>
-                  <geo>47,71109 13,61893</geo>
-               </location>
-               <location type="located_in_place">
-                  <placeName ref="pmb43015">Kaltenbach</placeName>
-                  <geo>47,69778 13,60913</geo>
-               </location>
-            </place>
-         </listPlace>
-         <listOrg>
-            <org xml:id="pmb29506" ana="comment">
-               <orgName>Agramer Zeitung</orgName>
-               <location type="located_in_place">
-                  <placeName ref="pmb39955">Zagreb</placeName>
-                  <geo>45,81444 15,97798</geo>
-                  <idno type="URL" subtype="geonames">https://sws.geonames.org/3186886/</idno>
-                  <idno type="URL" subtype="pmb">https://pmb.acdh.oeaw.ac.at/entity/39955/</idno>
-                  <idno type="URL" subtype="schnitzler-tagebuch">https://schnitzler-tagebuch.acdh.oeaw.ac.at/pmb39955.html</idno>
-                  <idno type="URL" subtype="sk">https://sk.acdh.oeaw.ac.at/fa_place00001501</idno>
-                  <idno type="URL" subtype="sk">https://sk.acdh.oeaw.ac.at/fa_place00005558</idno>
-                  <idno type="URL" subtype="biblio">https://biblio.ub.uni-freiburg.de/sf/#pmb39955</idno>
-                  <idno type="URL" subtype="schoenberg-ue">https://www.schoenberg-ue.at/ue/places/place.6.2</idno>
-               </location>
-            </org>
-         </listOrg>
-      </back>
-   </text>
+      <back><listPerson><person xml:id="pmb10992"><persName>
+      <forename>Georg</forename>
+      <surname>Brandes</surname>
+  </persName><birth>
+    <date when="1842-02-04">1842-02-04</date>
+      <settlement ref="pmb36300">
+        <placeName type="pref">Kopenhagen</placeName>
+        <location><geo>55,67594 12,56553</geo></location>
+      </settlement>
+  </birth><death>
+    <date when="1927-02-19">1927-02-19</date>
+      <settlement ref="pmb36300">
+        <placeName type="pref">Kopenhagen</placeName>
+        <location><geo>55,67594 12,56553</geo></location>
+      </settlement>
+  </death></person><person xml:id="pmb2121"><persName><surname>Schnitzler</surname><forename>Arthur</forename></persName><birth><date when="1862-05-15">15. 5. 1862</date><settlement ref="pmb50"><placeName type="pref">Wien</placeName><location><geo>48,208333 16,373056</geo></location></settlement></birth><death><date when="1931-10-21">21. 10. 1931</date><settlement ref="pmb50"><placeName type="pref">Wien</placeName><location><geo>48,208333 16,373056</geo></location></settlement></death><sex value="male"/><occupation ref="pmb90">Schriftsteller/Schriftstellerin</occupation><occupation ref="pmb97">Mediziner/Medizinerin</occupation><idno type="gnd">https://d-nb.info/gnd/118609807/</idno></person></listPerson><listBibl><bibl xml:id="pmb32159"><title type="main">William Shakespeare</title><author role="hat-geschaffen" ref="pmb10992">Brandes, Georg</author></bibl><bibl xml:id="pmb33279" ana="comment"><title type="main">[Krankheit von Georg Brandes]</title><title type="werk_bibliografische-angabe">Agramer Zeitung, 9. 7. 1897</title></bibl></listBibl><listPlace><place xml:id="pmb213"><placeName>Bad Ischl</placeName><placeName type="legacy-name-merge">Bad Ischl</placeName><placeName type="legacy-name-merge">Bad Ischl</placeName><location type="coords">
+  <geo>47,71109 13,61893</geo>
+</location><location type="located_in_place">
+  <placeName ref="pmb429">Salzkammergut</placeName>
+  <geo>47,75 13,5</geo>
+</location></place><place xml:id="pmb36300"><placeName>Kopenhagen</placeName><placeName type="alternative-name">Kopenhagen</placeName><placeName type="legacy-name">Kopenhagen</placeName><placeName type="legacy-name-merge">Kopenhagen</placeName><placeName type="alternative-name">Copenhagen</placeName><placeName type="legacy-name-merge">Copenhagen</placeName><location type="coords">
+  <geo>55,67594 12,56553</geo>
+</location><location type="located_in_place">
+  <placeName ref="pmb43570">Dänemark</placeName>
+  <geo>56,0 10,0</geo>
+</location></place><place xml:id="pmb414"><placeName>Hotel und Pension Rudolfshöhe (Leopold Petter)</placeName><placeName type="legacy-name-merge">Rudolfshöhe</placeName><location type="coords">
+  <geo>47,706537 13,609575</geo>
+</location><location type="located_in_place">
+  <placeName ref="pmb213">Bad Ischl</placeName>
+  <geo>47,71109 13,61893</geo>
+</location><location type="located_in_place">
+  <placeName ref="pmb43015">Kaltenbach</placeName>
+  <geo>47,69778 13,60913</geo>
+</location></place></listPlace><listOrg><org xml:id="pmb29506" ana="comment"><orgName>Agramer Zeitung</orgName><location type="located_in_place">
+  <placeName ref="pmb39955">Zagreb</placeName>
+  <geo>45,81444 15,97798</geo>
+  <idno type="URL" subtype="geonames">https://sws.geonames.org/3186886/</idno><idno type="URL" subtype="pmb">https://pmb.acdh.oeaw.ac.at/entity/39955/</idno><idno type="URL" subtype="schnitzler-tagebuch">https://schnitzler-tagebuch.acdh.oeaw.ac.at/pmb39955.html</idno><idno type="URL" subtype="sk">https://sk.acdh.oeaw.ac.at/fa_place00001501</idno><idno type="URL" subtype="sk">https://sk.acdh.oeaw.ac.at/fa_place00005558</idno><idno type="URL" subtype="biblio">https://biblio.ub.uni-freiburg.de/sf/#pmb39955</idno><idno type="URL" subtype="schoenberg-ue">https://www.schoenberg-ue.at/ue/places/place.6.2</idno></location></org></listOrg></back></text>
 </TEI>
