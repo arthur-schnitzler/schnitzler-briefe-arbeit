@@ -1,10 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <?xml-model href="../meta/schnitzler-briefe-schematron.sch" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
-<TEI xmlns="http://www.tei-c.org/ns/1.0"
-     xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-     xsi:schemaLocation="http://www.tei-c.org/ns/1.0 ../meta/schnitzler-briefe-schema.xsd"
-     xml:id="L01158"
-     xml:base="https://id.acdh.oeaw.ac.at/schnitzler/schnitzler-briefe/editions">
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+   xsi:schemaLocation="http://www.tei-c.org/ns/1.0 ../meta/schnitzler-briefe-schema.xsd"
+   xml:id="L01158" xml:base="https://id.acdh.oeaw.ac.at/schnitzler/schnitzler-briefe/editions">
    <teiHeader>
       <fileDesc>
          <titleStmt>
@@ -94,7 +92,8 @@
                         </objectDesc>
                         <handDesc hands="1">
                            <handNote medium="bleistift" style="deutsche-kurrent" corresp="#pmb2121"/>
-                           <handNote medium="schwarze-tinte" style="deutsche-kurrent" corresp="#pmb2121">
+                           <handNote medium="schwarze-tinte" style="deutsche-kurrent"
+                              corresp="#pmb2121">
                               <p>Umschlag</p>
                            </handNote>
                         </handDesc>
@@ -156,23 +155,31 @@
                <date when="1901-08-10" n="01">10. 8. 1901</date>
                <placeName ref="#pmb946">Vahrn</placeName>
             </correspAction>
+            <correspAction type="transmitted">
+               <date when="1901-08-10">10.&#160;8.&#160;1901</date>
+               <placeName ref="#pmb946">Vahrn</placeName>
+            </correspAction>
+            <correspAction type="delivered">
+               <date when="1901-08-11">11.&#160;8.&#160;1901</date>
+               <placeName ref="#pmb44278">Pörtschach am See</placeName>
+            </correspAction>
             <correspAction type="received">
                <persName ref="#pmb10863">Beer-Hofmann, Richard</persName>
                <date when="1901-08-11">11. 8. 1901</date>
-               <placeName ref="#pmb44278">Pörtschach am Wörthersee</placeName>
+               <placeName ref="#pmb1110">Villa Arnstein</placeName>
             </correspAction>
             <correspContext>
-               <ref type="belongsToCorrespondence" target="correspondence_10863">Beer-Hofmann, Richard</ref>
-               <ref subtype="previous_letter" type="withinCollection" target="L03078">Goldmann an Schnitzler, 7. 8. 1901</ref>
-               <ref subtype="next_letter" type="withinCollection" target="L01159">Schnitzler an Hofmannsthal, 10. 8. 1901</ref>
-               <ref subtype="previous_letter"
-                    type="withinCorrespondence"
-                    source="correspondence_10863"
-                    target="L01157">Beer-Hofmann, Beer-Hofmann, Goldmann an Schnitzler, 2. 8. 1901</ref>
-               <ref subtype="next_letter"
-                    type="withinCorrespondence"
-                    source="correspondence_10863"
-                    target="L01160">Beer-Hofmann an Schnitzler, 11.  8. 1901</ref>
+               <ref type="belongsToCorrespondence" target="correspondence_10863">Beer-Hofmann,
+                  Richard</ref>
+               <ref subtype="previous_letter" type="withinCollection" target="L03078">Goldmann an
+                  Schnitzler, 7. 8. 1901</ref>
+               <ref subtype="next_letter" type="withinCollection" target="L01159">Schnitzler an
+                  Hofmannsthal, 10. 8. 1901</ref>
+               <ref subtype="previous_letter" type="withinCorrespondence"
+                  source="correspondence_10863" target="L01157">Beer-Hofmann, Beer-Hofmann, Goldmann
+                  an Schnitzler, 2. 8. 1901</ref>
+               <ref subtype="next_letter" type="withinCorrespondence" source="correspondence_10863"
+                  target="L01160">Beer-Hofmann an Schnitzler, 11.  8. 1901</ref>
             </correspContext>
          </correspDesc>
       </profileDesc>
@@ -181,6 +188,7 @@
          <change who="GHS" when="2020-07-04">Durchsicht</change>
          <change who="MAM" when="2020-10-19">Index check</change>
          <change who="MAM" when="2020-11-23">Durchsicht</change>
+         <change who="MAM" when="2026-09-15">Datierung und Stempel überprüft</change>
       </revisionDesc>
    </teiHeader>
    <facsimile>
@@ -214,36 +222,45 @@
          <div type="writingSession" n="1">
             <p>
                <pb facs="1901_AS_RBH_2_00037"/>
-               <salute>mein lieber Richard,</salute> am <date>Montag</date> fahren wir
-                nach <rs ref="#pmb40260" type="place">Bozen</rs>, wo Rendez vous mit <rs type="person" ref="#pmb11485">Paul</rs>, den ich
-               <anchor type="commentary" xml:id="K_L01158-1"/>neulich in <hi rend="latintype">
+               <salute>mein lieber Richard,</salute> am <date>Montag</date> fahren wir nach <rs
+                  ref="#pmb40260" type="place">Bozen</rs>, wo Rendez vous mit <rs type="person"
+                  ref="#pmb11485">Paul</rs>, den ich <anchor type="commentary" xml:id="K_L01158-1"
+               />neulich in <hi rend="latintype">
                   <rs ref="#pmb428" type="place">Welsberg</rs>
                </hi>
                <note type="commentary" corresp="K_L01158-1">
-                  <ref type="schnitzler-tagebuch" subtype="Cf" target="1901-08-07"/>.</note> ſprach. Da<c rendition="#gemination-n"/>
+                  <ref type="schnitzler-tagebuch" subtype="Cf" target="1901-08-07"/>.</note> ſprach.
+                  Da<c rendition="#gemination-n"/>
                <space unit="chars" quantity="1"/>
-               <rs type="place" ref="#pmb954">Trient</rs>. <date>Freitag</date> wollen wir in <hi rend="latintype">
+               <rs type="place" ref="#pmb954">Trient</rs>. <date>Freitag</date> wollen wir in <hi
+                  rend="latintype">
                   <rs ref="#pmb428" type="place">Welsberg</rs>
                </hi> (<rs ref="#pmb724" type="place">Puſterthal</rs>) ſein, haben dort Zimmer
                genommen (<hi rend="latintype">Pens. <rs type="place" ref="#pmb723">Waldbrunn</rs>
                </hi>, entzückend gelegen, 1150 <hi rend="latintype">meter</hi>, 20 Minuten von der
-               Bahn) wollen dort die letzten 14 Tage <c rendition="#dots" n="3"/> ich mei<pb facs="1901_AS_RBH_2_00038"/>ne die letzten 14 Tage vor <rs ref="#pmb50" type="place">Wien</rs> (kümmert man ſich dort oben um meine »Meinung?«)
+               Bahn) wollen dort die letzten 14 Tage <c rendition="#dots" n="3"/> ich mei<pb
+                  facs="1901_AS_RBH_2_00038"/>ne die letzten 14 Tage vor <rs ref="#pmb50"
+                  type="place">Wien</rs> (kümmert man ſich dort oben um meine »Meinung?«)
                verbringen. Es wäre wirklich hübſch von Ihnen, we<c rendition="#gemination-n"/> Sie
                auch dorthin kämen. Ich will auch arbeiten. Nebſtbei haben Sie’s ſo nah. –</p>
             <p>We<c rendition="#gemination-n"/> Sie mir <hi rend="underline" n="1">gleich</hi>
-                antworten, bitte <rs type="place" ref="#pmb954">Trient</rs>
+               antworten, bitte <rs type="place" ref="#pmb954">Trient</rs>
                <space unit="chars" quantity="1"/>
                <hi rend="latintype">postrest</hi> (thun Sie das!).</p>
             <p>
-               <pb facs="1901_AS_RBH_2_00038"/>Leben Sie wohl und grüßen Sie Ihre <rs type="person" ref="#pmb10860" subtype="implied">Frau</rs> und Ihre <rs type="person" ref="#pmb13923 #pmb13923 #pmb2668" subtype="implied">Kinder</rs>, ſoweit sie es
+               <pb facs="1901_AS_RBH_2_00038"/>Leben Sie wohl und grüßen Sie Ihre <rs type="person"
+                  ref="#pmb10860" subtype="implied">Frau</rs> und Ihre <rs type="person"
+                  ref="#pmb13923 #pmb13923 #pmb2668" subtype="implied">Kinder</rs>, ſoweit sie es
                verſtehen.</p>
             <closer>Herzlichſt Ihr<lb/>
                <signed>Arth.</signed>
             </closer>
-            <p>
-               <rs ref="#pmb946" type="place">
-                  <hi rend="latintype">Vahrn</hi>
-               </rs>, <date when="1901-08-10">10. 8. 901</date>.</p>
+            <postscript>
+               <dateline>
+                  <rs ref="#pmb946" type="place">
+                     <hi rend="latintype">Vahrn</hi>
+                  </rs>, <date when="1901-08-10">10. 8. 901</date>.</dateline>
+            </postscript>
          </div>
       </body>
       <back>
@@ -465,7 +482,8 @@
             </place>
             <place xml:id="pmb50">
                <placeName>Wien</placeName>
-               <placeName type="ort_fruherer-name">K.K. Reichshaupt- und Residenzstadt Wien</placeName>
+               <placeName type="ort_fruherer-name">K.K. Reichshaupt- und Residenzstadt
+                  Wien</placeName>
                <placeName type="legacy-name-merge">Wien</placeName>
                <placeName type="alternative-name">Bécs</placeName>
                <placeName type="alternative-name">Land Wien</placeName>
