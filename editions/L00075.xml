@@ -157,17 +157,17 @@
                <placeName ref="#pmb50">Wien</placeName>
             </correspAction>
             <correspAction type="transmitted">
-               <date when="1892-02-24">24.&#160;2.&#160;1892</date>
-               <placeName ref="#pmb53">Wien 3/3 40</placeName>
+               <date when="1892-02-24">24. 2. 1892</date>
+               <placeName ref="#pmb53">III., Landstraße</placeName>
             </correspAction>
             <correspAction type="delivered">
-               <date when="1892-02-24">24.&#160;2.&#160;1892</date>
+               <date when="1892-02-24">24. 2. 1892</date>
                <placeName ref="#pmb50">Wien</placeName>
             </correspAction>
             <correspAction type="received">
                <persName ref="#pmb2121">Schnitzler, Arthur</persName>
                <date when="1892-02-24">24. 2. 1892</date>
-               <placeName ref="#pmb167805">I Kärnthnerstrassering 12</placeName>
+               <placeName ref="#pmb167805">Kärntnerring 12/Bösendorferstraße 11</placeName>
             </correspAction>
             <correspContext>
                <ref type="belongsToCorrespondence" target="correspondence_11740">Hofmannsthal, Hugo von</ref>
@@ -189,6 +189,7 @@
          <change who="MAM" when="2019-01-14">Durchsicht</change>
          <change who="MAM" when="2019-01-15">Index check</change>
          <change who="GHS" when="2019-09-11">finalisiert</change>
+         <change who="MAM" when="2026-09-15">Datierung und Stempel überprüft</change>
       </revisionDesc>
    </teiHeader>
    <facsimile>
@@ -222,14 +223,13 @@
                   <date>Dienstag</date>
                   <note type="commentary" corresp="K_L00075-1">
                      <rs ref="#pmb11740" type="person">Hofmannsthal</rs> schrieb die Karte
-                     unmittelbar nach dem Besuch von <rs ref="#pmb30433" type="work">Feodora</rs>,
+                     unmittelbar nach dem <rs type="event" subtype="implied" ref="#pmb364770">Besuch von <rs ref="#pmb30433" type="work">Feodora</rs></rs>,
                      dem zweiten Auftritt von <rs ref="#pmb11201" type="person">Eleonora Duse</rs>
                      bei ihrem ersten <rs ref="#pmb50" type="place">Wien</rs>er Gastspiel. Entgegen
                      seiner Ankündigung, auch noch <rs ref="#pmb32358" type="work">Fernande</rs>
                      sehen zu wollen, wurden bis zum <date>26. 2. 1892</date> nur <rs ref="#pmb31395" type="work">Nora oder Ein Puppenheim</rs> und die <rs ref="#pmb30641" type="work">Kameliendame</rs> gegeben. <rs ref="#pmb2121" type="person">Schnitzler</rs> erlebte sie erst zwei Monate später, bei ihrem
-                     zweiten Gastspiel: am <date>17. 5. 1892</date> und <date>24. 5. 1892</date> sah
-                     er <rs ref="#pmb31395" type="work">Nora</rs> und <rs ref="#pmb32358" type="work">Fernande</rs>. (<bibl>
-                        <publisher>Cambridge University Library</publisher>, A 179a</bibl>.)</note>
+                     zweiten Gastspiel: am <ref type="schnitzler-kultur" subtype="date-only" target="pmb208558"/> und <ref type="schnitzler-kultur" subtype="date-only" target="pmb31395"/> sah
+                     er  <rs ref="#pmb32358" type="work">Fernande</rs> und <rs ref="#pmb31395" type="work">Nora</rs>.</note>
                   <space unit="chars" quantity="1"/>
                   <time>11 Uhr nachts</time>
                </dateline>
@@ -254,30 +254,6 @@
       </body>
       <back>
          <listPerson>
-            <person xml:id="pmb11201">
-               <persName>
-                  <forename>Eleonora</forename>
-                  <surname>Duse</surname>
-               </persName>
-               <birth>
-                  <date when="1858-10-03">1858-10-03</date>
-                  <settlement ref="pmb58890">
-                     <placeName type="pref">Vigevano</placeName>
-                     <location>
-                        <geo>45,31407 8,85437</geo>
-                     </location>
-                  </settlement>
-               </birth>
-               <death>
-                  <date when="1924-04-21">1924-04-21</date>
-                  <settlement ref="pmb56126">
-                     <placeName type="pref">Pittsburgh</placeName>
-                     <location>
-                        <geo>40,44062 -79,99589</geo>
-                     </location>
-                  </settlement>
-               </death>
-            </person>
             <person xml:id="pmb11740">
                <persName>
                   <forename>Hugo von</forename>
@@ -308,7 +284,7 @@
                   <forename>Arthur</forename>
                </persName>
                <birth>
-                  <date when="1862-05-15">15. 5. 1862</date>
+                  <date when="1862-05-15">15. 5. 1862</date>
                   <settlement ref="pmb50">
                      <placeName type="pref">Wien</placeName>
                      <location>
@@ -317,7 +293,7 @@
                   </settlement>
                </birth>
                <death>
-                  <date when="1931-10-21">21. 10. 1931</date>
+                  <date when="1931-10-21">21. 10. 1931</date>
                   <settlement ref="pmb50">
                      <placeName type="pref">Wien</placeName>
                      <location>
@@ -325,37 +301,169 @@
                      </location>
                   </settlement>
                </death>
-               <sex value="male"/>
-               <occupation ref="pmb90">Schriftsteller/Schriftstellerin</occupation>
-               <occupation ref="pmb97">Mediziner/Medizinerin</occupation>
-               <idno type="gnd">https://d-nb.info/gnd/118609807/</idno>
+            </person>
+            <person xml:id="pmb11201">
+               <persName>
+                  <forename>Eleonora</forename>
+                  <surname>Duse</surname>
+               </persName>
+               <birth>
+                  <date when="1858-10-03">1858-10-03</date>
+                  <settlement ref="pmb58890">
+                     <placeName type="pref">Vigevano</placeName>
+                     <location>
+                        <geo>45,31407 8,85437</geo>
+                     </location>
+                  </settlement>
+               </birth>
+               <death>
+                  <date when="1924-04-21">1924-04-21</date>
+                  <settlement ref="pmb56126">
+                     <placeName type="pref">Pittsburgh</placeName>
+                     <location>
+                        <geo>40,44062 -79,99589</geo>
+                     </location>
+                  </settlement>
+               </death>
+            </person>
+            <person xml:id="pmb11798">
+               <persName>
+                  <forename>Henrik</forename>
+                  <surname>Ibsen</surname>
+               </persName>
+               <birth>
+                  <date when="1828-03-20">1828-03-20</date>
+                  <settlement ref="pmb61065">
+                     <placeName type="pref">Skien</placeName>
+                     <location>
+                        <geo>59,20962 9,60897</geo>
+                     </location>
+                  </settlement>
+               </birth>
+               <death>
+                  <date when="1906-05-23">1906-05-23</date>
+                  <settlement ref="pmb36296">
+                     <placeName type="pref">Oslo</placeName>
+                     <location>
+                        <geo>59,91273 10,74609</geo>
+                     </location>
+                  </settlement>
+               </death>
+            </person>
+            <person xml:id="pmb12624">
+               <persName>
+                  <forename>Victorien</forename>
+                  <surname>Sardou</surname>
+               </persName>
+               <birth>
+                  <date when="1831-09-07">1831-09-07</date>
+                  <settlement ref="pmb182">
+                     <placeName type="pref">Paris</placeName>
+                     <location>
+                        <geo>48,85341 2,3488</geo>
+                     </location>
+                  </settlement>
+               </birth>
+               <death>
+                  <date when="1908-11-08">1908-11-08</date>
+                  <settlement ref="pmb182">
+                     <placeName type="pref">Paris</placeName>
+                     <location>
+                        <geo>48,85341 2,3488</geo>
+                     </location>
+                  </settlement>
+               </death>
+            </person>
+            <person xml:id="pmb15512" ana="comment">
+               <persName>
+                  <forename>Alexandre fils</forename>
+                  <surname>Dumas</surname>
+               </persName>
+               <birth>
+                  <date when="1824-07-28">1824-07-28</date>
+                  <settlement ref="pmb182">
+                     <placeName type="pref">Paris</placeName>
+                     <location>
+                        <geo>48,85341 2,3488</geo>
+                     </location>
+                  </settlement>
+               </birth>
+               <death>
+                  <date when="1895-11-27">1895-11-27</date>
+                  <settlement ref="pmb54919">
+                     <placeName type="pref">Marly-le-Roi</placeName>
+                     <location>
+                        <geo>48,86667 2,08333</geo>
+                     </location>
+                  </settlement>
+               </death>
             </person>
          </listPerson>
          <listBibl>
             <bibl xml:id="pmb31395">
-               <title type="main">Nora oder ein Puppenheim. Schauspiel in drei Akten</title>
+               <title>Nora oder ein Puppenheim. Schauspiel in drei Akten</title>
                <title type="legacy-name-merge">Nora oder Ein Puppenheim</title>
                <title type="legacy-name-merge">Nora</title>
                <title type="legacy-name-merge">Nora oder Ein Puppenheim</title>
                <title type="legacy-name-merge">Nora oder Ein Puppenheim</title>
-               <author role="hat-geschaffen" ref="pmb11798">Ibsen, Henrik</author>
+               <author ref="pmb11798" role="hat-geschaffen">Ibsen, Henrik</author>
             </bibl>
             <bibl xml:id="pmb32358">
-               <title type="main">Fernanda. Commedia in 4 atti</title>
-               <author role="hat-geschaffen" ref="pmb12624">Sardou, Victorien</author>
+               <title>Fernanda. Commedia in 4 atti</title>
+               <author ref="pmb12624" role="hat-geschaffen">Sardou, Victorien</author>
             </bibl>
             <bibl xml:id="pmb30433" ana="comment">
-               <title type="main">Fédora</title>
+               <title>Fédora</title>
                <title type="namensvariante">Feodora</title>
-               <author role="hat-geschaffen" ref="pmb12624">Sardou, Victorien</author>
+               <author ref="pmb12624" role="hat-geschaffen">Sardou, Victorien</author>
             </bibl>
             <bibl xml:id="pmb30641" ana="comment">
-               <title type="main">La Dame aux camélias (théâtre)</title>
+               <title>La Dame aux camélias (théâtre)</title>
                <title type="werk_namensvariante">Die Kameliendame. Drama in  fünf Akten</title>
-               <author role="hat-geschaffen" ref="pmb15512">Dumas, Alexandre fils</author>
+               <author ref="pmb15512" role="hat-geschaffen">Dumas, Alexandre fils</author>
             </bibl>
          </listBibl>
          <listPlace>
+            <place xml:id="pmb53">
+               <placeName>III., Landstraße</placeName>
+               <placeName type="alternative-name">Landstraße</placeName>
+               <placeName type="legacy-name-merge">Landstraßer Hauptstraße</placeName>
+               <placeName type="legacy-name-merge">Wien-Landstraße</placeName>
+               <placeName type="legacy-name-merge">Gemeindebezirk Landstrasse</placeName>
+               <location type="coords">
+                  <geo>48,19811 16,39482</geo>
+               </location>
+               <location type="located_in_place">
+                  <placeName ref="pmb41240">Österreich</placeName>
+                  <geo>47,33333 13,33333</geo>
+               </location>
+               <location type="located_in_place">
+                  <placeName ref="pmb50">Wien</placeName>
+                  <geo>48,208333 16,373056</geo>
+               </location>
+            </place>
+            <place xml:id="pmb50" ana="comment">
+               <placeName>Wien</placeName>
+               <placeName type="ort_fruherer-name">K.K. Reichshaupt- und Residenzstadt Wien</placeName>
+               <placeName type="alternative-name">Bécs</placeName>
+               <placeName type="alternative-name">Land Wien</placeName>
+               <placeName type="alternative-name">Vídeň</placeName>
+               <placeName type="alternative-name">Wenia</placeName>
+               <placeName type="alternative-name">Beč</placeName>
+               <placeName type="ort_fruherer-name">Vindobona</placeName>
+               <placeName type="alternative-name">Vienna</placeName>
+               <location type="coords">
+                  <geo>48,208333 16,373056</geo>
+               </location>
+               <location type="located_in_place">
+                  <placeName ref="pmb41240">Österreich</placeName>
+                  <geo>47,33333 13,33333</geo>
+               </location>
+               <location type="located_in_place">
+                  <placeName ref="pmb235218">Windmühlhöhe</placeName>
+                  <geo>48,24077 16,32092</geo>
+               </location>
+            </place>
             <place xml:id="pmb167805">
                <placeName>Kärntnerring 12/Bösendorferstraße 11</placeName>
                <placeName type="ort_fruherer-name">Giselastraße 11</placeName>
@@ -373,28 +481,6 @@
                <location type="located_in_place">
                   <placeName ref="pmb542">Bösendorferstraße</placeName>
                   <geo>48,201213 16,371141</geo>
-               </location>
-            </place>
-            <place xml:id="pmb50">
-               <placeName>Wien</placeName>
-               <placeName type="ort_fruherer-name">K.K. Reichshaupt- und Residenzstadt Wien</placeName>
-               <placeName type="legacy-name-merge">Wien</placeName>
-               <placeName type="alternative-name">Bécs</placeName>
-               <placeName type="alternative-name">Land Wien</placeName>
-               <placeName type="alternative-name">Vídeň</placeName>
-               <placeName type="alternative-name">Wenia</placeName>
-               <placeName type="alternative-name">Beč</placeName>
-               <placeName type="ort_fruherer-name">Vindobona</placeName>
-               <placeName type="legacy-name-merge">Vindobona</placeName>
-               <placeName type="alternative-name">Vienna</placeName>
-               <placeName type="legacy-name-merge">Vienna</placeName>
-               <placeName type="alternative-name">Vienna</placeName>
-               <location type="coords">
-                  <geo>48,208333 16,373056</geo>
-               </location>
-               <location type="located_in_place">
-                  <placeName ref="pmb41240">Österreich</placeName>
-                  <geo>47,33333 13,33333</geo>
                </location>
             </place>
          </listPlace>
