@@ -138,6 +138,18 @@ button:disabled:hover { border-color: var(--border); color: var(--text); }
   color: var(--dim);
 }
 
+.date-flag {
+  font-size: 10px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: .02em;
+  padding: 1px 5px;
+  border-radius: 999px;
+  margin-left: 2px;
+}
+.date-flag-gap { background: rgba(178, 59, 59, .12); color: var(--err); }
+.date-flag-supplied { background: rgba(185, 134, 44, .15); color: var(--warn); }
+
 .card {
   background: var(--panel);
   border: 1px solid var(--border);
@@ -171,6 +183,19 @@ button:disabled:hover { border-color: var(--border); color: var(--text); }
   letter-spacing: .02em;
   /* Hintergrund-/Textfarbe kommt inline pro Typ (siehe TYPE_COLORS in app.js) */
 }
+
+.badge-select {
+  font-size: 11px;
+  font-weight: 600;
+  padding: 2px 18px 2px 7px;
+  border-radius: 999px;
+  border: none;
+  text-transform: uppercase;
+  letter-spacing: .02em;
+  cursor: pointer;
+  /* Hintergrund-/Textfarbe kommt inline pro Typ (siehe TYPE_COLORS in app.js) */
+}
+.badge-select:hover, .badge-select:focus { outline: 1px solid currentColor; }
 
 .card-n { color: var(--dim); font-size: 12px; }
 

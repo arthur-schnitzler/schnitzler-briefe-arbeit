@@ -60,6 +60,7 @@ STAMP_TO_ACTION = {
     "arrival": "arrived",
     "transit": "in_transit",
 }
+STAMP_TYPES = ("non-postal", "arrival", "transmission", "redirection", "delivery", "transit", "other")
 ACTION_TYPE_ORDER = ["sent", "transmitted", "redirected", "in_transit", "arrived", "delivered", "received"]
 ACTION_RANK = {t: i for i, t in enumerate(ACTION_TYPE_ORDER)}
 MAPPED_STAMP_TYPES = tuple(STAMP_TO_ACTION.keys())
@@ -135,15 +136,21 @@ def extract_place(elem):
 def extract_stamps(root):
     stamps = []
     for i, s in enumerate(root.iter(q("stamp"))):
+        date_el = s.find(q("date"))
+        date_dict = extract_date(date_el)
+        has_gap, has_supplied, _ = stamp_date_field_flags(date_el)
         stamps.append({
             "index": i,
             "n": s.get("n"),
             "type": s.get("type"),
             "attrs": dict(s.attrib),
             "place": extract_place(s.find(q("placeName"))),
-            "date": extract_date(s.find(q("date"))),
+            "date": date_dict,
             "time": norm_text(s.find(q("time"))) or None,
             "suggestedType": STAMP_TO_ACTION.get(s.get("type")),
+            "dateHasGap": has_gap,
+            "dateHasSupplied": has_supplied,
+            "dateNormalizedPreview": format_normalized_stamp_date(date_dict, date_el),
         })
     return stamps
 
@@ -417,25 +424,139 @@ def validate_and_save(fid, old_text, new_text):
     refresh_candidate(fid)
 
 
+_INDENT_WS_RE = re.compile(r"\s*\n\s*")
+
+
+def _strip_pretty_print_ws(s):
+    """Entfernt reinen Pretty-Print-Zeilenumbruch samt Einrückung (immer
+    an einem \\n erkennbar), belässt aber echte, inline getippte
+    Trennzeichen wie ein einzelnes Leerzeichen zwischen Tag und Monat."""
+    return _INDENT_WS_RE.sub("", s)
+
+
+def _collect_chars_with_supplied_flag(el, supplied):
+    """Flache Liste aus (Zeichen, ist_innerhalb_von_supplied) für den
+    gesamten Text-Inhalt von el (rekursiv, inkl. tail-Text von Kindern,
+    dem jeweils der supplied-Status des Elternelements zugeordnet wird,
+    da tail-Text außerhalb des Kindelements liegt). Pretty-Print-Umbrüche
+    zwischen z. B. <unclear> und <supplied> werden herausgefiltert, damit
+    sie nicht fälschlich als Tag/Monat/Jahr-Trenner gezählt werden."""
+    chars = []
+    is_supplied_here = supplied or local_name(el.tag) == "supplied"
+    if el.text:
+        chars.extend((c, is_supplied_here) for c in _strip_pretty_print_ws(el.text))
+    for child in el:
+        chars.extend(_collect_chars_with_supplied_flag(child, is_supplied_here))
+        if child.tail:
+            chars.extend((c, is_supplied_here) for c in _strip_pretty_print_ws(child.tail))
+    return chars
+
+
+MONTH_NAME_TOKENS = {
+    1: ("jan",), 2: ("feb",), 3: ("mär", "mar", "mrz"), 4: ("apr",),
+    5: ("mai", "may"), 6: ("jun",), 7: ("jul",), 8: ("aug",),
+    9: ("sep",), 10: ("okt", "oct"), 11: ("nov",), 12: ("dez", "dec"),
+}
+
+
+def stamp_date_field_flags(date_el, day=None, month=None, year=None):
+    """Ermittelt für ein stamp/date-Element:
+    - hasGap: enthält irgendwo ein <gap>
+    - hasSupplied: enthält irgendwo ein <supplied>
+    - field_supplied: je ein bool für Tag/Monat/Jahr - True, wenn die im
+      Text stehende Ziffernfolge für genau diesen (aus @when bekannten)
+      Wert mindestens teilweise innerhalb eines <supplied> liegt. Nur
+      gesetzt, wenn day/month/year übergeben werden.
+
+      Gesucht wird gezielt nach dem jeweils erwarteten Wert (arabisch,
+      mit und ohne führende Null; beim Jahr zusätzlich als zweistelliges
+      Fragment) in der Ziffern-Teilfolge des Texts, von links nach
+      rechts, je Feld ab der Fundstelle des vorherigen Felds weitersuchend.
+      Das bleibt auch robust, wenn eine Stelle im Text gar keine Ziffern
+      hat (<gap>, römische Monatszahl) - dann wird für dieses Feld
+      einfach nichts markiert, statt eine andere Stelle fälschlich als
+      "das ist der supplied-Teil" zu deuten."""
+    if date_el is None:
+        return False, False, [False, False, False]
+
+    has_gap = date_el.find(f".//{q('gap')}") is not None
+    chars = _collect_chars_with_supplied_flag(date_el, False)
+    has_supplied = any(s for _, s in chars)
+
+    field_supplied = [False, False, False]
+    if day is not None and month is not None and year is not None:
+        digit_chars = [(c, s) for c, s in chars if c.isdigit()]
+        digits_str = "".join(c for c, _ in digit_chars)
+        candidates_per_field = [
+            [str(day), f"{day:02d}"],
+            [str(month), f"{month:02d}"],
+            [str(year), f"{year % 100:02d}"],
+        ]
+        cursor = 0
+        month_found = False
+        for i, candidates in enumerate(candidates_per_field):
+            for cand in dict.fromkeys(candidates):  # dedupe, Reihenfolge erhalten
+                pos = digits_str.find(cand, cursor)
+                if pos != -1:
+                    field_supplied[i] = any(s for _, s in digit_chars[pos:pos + len(cand)])
+                    cursor = pos + len(cand)
+                    if i == 1:
+                        month_found = True
+                    break
+
+        # Fallback für als Monatsnamen geschriebene Monate (z. B. "Nov",
+        # "Sep") - da nicht als Ziffer im Text, verpasst die Digit-Suche
+        # oben das grundsätzlich; hier nur EIN Name-Token gesucht (nicht
+        # cursor-geführt wie bei den Ziffern, da Name und Ziffern in
+        # unterschiedlichen Projektionen des Texts gesucht werden).
+        if not month_found:
+            text_lower = "".join(c for c, _ in chars).lower()
+            for token in MONTH_NAME_TOKENS.get(month, ()):
+                pos = text_lower.find(token)
+                if pos != -1:
+                    field_supplied[1] = any(s for _, s in chars[pos:pos + len(token)])
+                    break
+
+    return has_gap, has_supplied, field_supplied
+
+
 def format_normalized_stamp_date(date, date_el):
     """(D)D.&#160;(M)M.&#160;JJJJ aus @when, ohne führende Nullen bei Tag/
     Monat - das in diesem Projekt übliche Muster für normierte
-    Datumsangaben (vgl. z. B. editions/L00015.xml). Ein <supplied>
-    irgendwo im stamp/date-Element ergibt eckige Klammern um die ganze
-    Wiedergabe, ein <gap> ein angehängtes "?"."""
+    Datumsangaben (vgl. z. B. editions/L00015.xml). Nur der Teil (Tag,
+    Monat und/oder Jahr), der im stamp/date auf einem <supplied> beruht,
+    bekommt eckige Klammern - nicht die ganze Wiedergabe. Sind mehrere
+    Felder in Folge supplied (z. B. Tag+Monat gemeinsam in einem
+    <supplied>), bekommen sie EINE gemeinsame Klammer statt je einer
+    eigenen (["15.&#160;8"] statt [15].&#160;[8]) - nicht zusammenhängend
+    supplied-e Felder (z. B. Tag+Jahr ohne Monat) bekommen weiterhin
+    getrennte Klammern. <gap> fließt hier nicht mehr ein (siehe
+    stamp_date_field_flags/dateHasGap: das steuert stattdessen eine
+    Rückfrage im Frontend)."""
     when = (date or {}).get("when")
     if not when:
         return None
     m = re.match(r"^(\d{4})-(\d{2})-(\d{2})$", when)
     if not m:
         return None
-    year, month, day = m.group(1), int(m.group(2)), int(m.group(3))
-    rendered = f"{day}.&#160;{month}.&#160;{year}"
-    if date_el is not None and date_el.find(f".//{q('gap')}") is not None:
-        rendered += "?"
-    if date_el is not None and date_el.find(f".//{q('supplied')}") is not None:
-        rendered = f"[{rendered}]"
-    return rendered
+    year, month, day = int(m.group(1)), int(m.group(2)), int(m.group(3))
+    _, _, field_supplied = stamp_date_field_flags(date_el, day, month, year)
+    values = [str(day), str(month), str(year)]
+    sep = ".&#160;"
+
+    parts = []
+    i = 0
+    while i < 3:
+        if field_supplied[i]:
+            j = i
+            while j + 1 < 3 and field_supplied[j + 1]:
+                j += 1
+            parts.append("[" + sep.join(values[i:j + 1]) + "]")
+            i = j + 1
+        else:
+            parts.append(values[i])
+            i += 1
+    return sep.join(parts)
 
 
 def build_date_elem(date, date_el=None, normalize=False):
@@ -465,7 +586,19 @@ def build_place_elem(place):
     return f'<placeName{ref_attr}>{escape_text(place["text"])}</placeName>'
 
 
-def insert_corresp_action(fid, stamp_index, target_type):
+_AUTO_DATE = object()  # Sentinel: automatische Normierung (Default)
+
+
+def insert_corresp_action(fid, stamp_index, target_type, date_override=_AUTO_DATE):
+    """date_override steuert, was als <date> in die neue correspAction
+    kommt:
+    - _AUTO_DATE (Default): automatisch normierte Wiedergabe aus dem
+      Stempel (siehe format_normalized_stamp_date).
+    - None: kein <date>-Element (z. B. wenn der Stempel eine Lücke/gap
+      hat und im Frontend "kein Datum" gewählt wurde).
+    - ein String: dieser Text wird wörtlich übernommen (freie Eingabe im
+      Frontend-Popup), @when/@notBefore/@notAfter bleiben trotzdem vom
+      Stempel erhalten, sofern vorhanden."""
     if target_type not in ACTION_RANK:
         raise ValueError(f"unbekannter correspAction-Typ: {target_type}")
     text = load_text(fid)
@@ -507,7 +640,14 @@ def insert_corresp_action(fid, stamp_index, target_type):
     child_indent = child_m.group(1) if child_m else indent + "   "
 
     lines = [f'{indent}<correspAction type="{escape_attr(target_type)}">']
-    date_elem = build_date_elem(stamp.get("date"), date_el=stamp_date_el, normalize=True)
+    if date_override is _AUTO_DATE:
+        date_elem = build_date_elem(stamp.get("date"), date_el=stamp_date_el, normalize=True)
+    elif date_override is None or not str(date_override).strip():
+        date_elem = None
+    else:
+        override_date = dict(stamp.get("date") or {})
+        override_date["text"] = str(date_override).strip()
+        date_elem = build_date_elem(override_date)
     if date_elem:
         lines.append(f'{child_indent}{date_elem}')
     place_elem = build_place_elem(stamp.get("place"))
@@ -617,6 +757,44 @@ def set_action_place(fid, action_index, place_index):
         raise ValueError("gewählter Ort hat keinen Text")
     new_block_text = apply_place_to_block(block_text, child_indent, new_place_elem)
 
+    new_text = text[:block.start()] + new_block_text + text[block.end():]
+    validate_and_save(fid, text, new_text)
+    return build_file_payload(fid)
+
+
+STAMP_OPEN_TAG_RE = re.compile(r'<stamp\b([^>]*)>')
+STAMP_TYPE_ATTR_RE = re.compile(r'\btype="[^"]*"')
+STAMP_N_ATTR_RE = re.compile(r'\bn="[^"]*"')
+
+
+def set_stamp_type(fid, stamp_index, new_type):
+    """Setzt (bzw. ergänzt, falls noch nicht vorhanden) das @type eines
+    Stempels - für Stempel, die noch gar kein @type haben, gibt es sonst
+    keine Möglichkeit, das über die Oberfläche statt per Hand im
+    XML zu setzen."""
+    if new_type not in STAMP_TYPES:
+        raise ValueError(f"unbekannter Stempeltyp: {new_type}")
+
+    text = load_text(fid)
+    blocks = list(STAMP_RE.finditer(text))
+    if not (0 <= stamp_index < len(blocks)):
+        raise ValueError("ungültiger Stempel-Index")
+    block = blocks[stamp_index]
+    block_text = block.group(0)
+
+    open_m = STAMP_OPEN_TAG_RE.match(block_text)
+    if not open_m:
+        raise ValueError("stamp-Starttag nicht gefunden")
+    attrs = open_m.group(1)
+
+    if STAMP_TYPE_ATTR_RE.search(attrs):
+        new_attrs = STAMP_TYPE_ATTR_RE.sub(f'type="{escape_attr(new_type)}"', attrs, count=1)
+    else:
+        n_m = STAMP_N_ATTR_RE.search(attrs)
+        insert_pos = n_m.end() if n_m else len(attrs)
+        new_attrs = f'{attrs[:insert_pos]} type="{escape_attr(new_type)}"{attrs[insert_pos:]}'
+
+    new_block_text = f'<stamp{new_attrs}>' + block_text[open_m.end():]
     new_text = text[:block.start()] + new_block_text + text[block.end():]
     validate_and_save(fid, text, new_text)
     return build_file_payload(fid)
@@ -834,20 +1012,26 @@ class Handler(BaseHTTPRequestHandler):
 
         try:
             m = re.match(
-                r"^/api/file/([^/]+)/(insert|update|raw|set-place|date-uncertain|revision-change)$", path)
+                r"^/api/file/([^/]+)/"
+                r"(insert|update|raw|set-place|set-stamp-type|date-uncertain|revision-change)$", path)
             if not m:
                 self.send_error(404)
                 return
             fid, action = m.group(1), m.group(2)
             if action == "insert":
+                kwargs = {}
+                if "dateOverride" in payload:
+                    kwargs["date_override"] = payload["dateOverride"]
                 result = insert_corresp_action(
-                    fid, int(payload["stampIndex"]), payload["targetType"])
+                    fid, int(payload["stampIndex"]), payload["targetType"], **kwargs)
             elif action == "update":
                 result = update_corresp_action(
                     fid, int(payload["stampIndex"]), int(payload["actionIndex"]))
             elif action == "set-place":
                 result = set_action_place(
                     fid, int(payload["actionIndex"]), int(payload["placeIndex"]))
+            elif action == "set-stamp-type":
+                result = set_stamp_type(fid, int(payload["stampIndex"]), payload["type"])
             elif action == "date-uncertain":
                 result = apply_date_uncertain(fid)
             elif action == "revision-change":

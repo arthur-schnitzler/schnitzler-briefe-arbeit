@@ -34,6 +34,43 @@ function badgeHtml(type) {
   return `<span class="badge" style="${style}">${esc(type || "?")}</span>`;
 }
 
+const STAMP_TYPES = ["non-postal", "arrival", "transmission", "redirection", "delivery", "transit", "other"];
+
+// Badge als editierbares Dropdown, für Stempel ohne (oder mit falschem)
+// @type - schreibt @type direkt ins stamp-Element.
+function stampTypeSelectHtml(s) {
+  const color = typeColor(s.type || "");
+  const style = `background:${hexToRgba(color, 0.15)}; color:${color};`;
+  const placeholder = s.type ? "" : '<option value="" selected disabled>– Typ wählen –</option>';
+  const options = STAMP_TYPES
+    .map((t) => `<option value="${t}" ${t === s.type ? "selected" : ""}>${esc(t)}</option>`)
+    .join("");
+  return `<select data-role="stampType" class="badge-select" style="${style}" title="Stempeltyp setzen">${placeholder}${options}</select>`;
+}
+
+function wireStampTypeSelect(card, s) {
+  const select = card.querySelector('[data-role="stampType"]');
+  if (!select) return;
+  select.addEventListener("click", (ev) => ev.stopPropagation());
+  select.addEventListener("change", async () => {
+    const newType = select.value;
+    if (!newType) return;
+    select.disabled = true;
+    try {
+      const data = await apiPost(`/api/file/${state.currentId}/set-stamp-type`, {
+        stampIndex: s.index,
+        type: newType,
+      });
+      state.file = data;
+      render();
+      toast(`Stempel Nr. ${s.n}: Typ auf "${newType}" gesetzt.`);
+    } catch (e) {
+      toast(e.message, true);
+      select.disabled = false;
+    }
+  });
+}
+
 const ACTION_TYPE_ORDER = ["sent", "transmitted", "redirected", "in_transit", "arrived", "delivered", "received"];
 
 const CHANGE_DATIERUNG_STEMPEL_TEXT = "Datierung und Stempel überprüft";
@@ -481,12 +518,15 @@ function createStampCard(s) {
 
   card.innerHTML = `
     <div class="card-head">
-      ${badgeHtml(s.type)}
+      ${stampTypeSelectHtml(s)}
       <span class="card-n">Stempel Nr. ${esc(s.n ?? "?")}</span>
     </div>
     <div class="card-body">
       <div>${placeStr ? esc(placeStr) : '<span class="empty-field">kein Ort</span>'}</div>
-      <div>${dStr ? esc(dStr) : '<span class="empty-field">kein Datum</span>'}${s.time ? " · " + esc(s.time) + " Uhr" : ""}</div>
+      <div>${dStr ? esc(dStr) : '<span class="empty-field">kein Datum</span>'}${s.time ? " · " + esc(s.time) + " Uhr" : ""}
+        ${s.dateHasGap ? ' <span class="date-flag date-flag-gap" title="Lücke (gap) im Datum">gap</span>' : ""}
+        ${s.dateHasSupplied ? ' <span class="date-flag date-flag-supplied" title="Teil des Datums ergänzt (supplied)">supplied</span>' : ""}
+      </div>
     </div>
     ${attrChipsHtml(s.attrs)}
     <div class="card-actions">
@@ -499,8 +539,10 @@ function createStampCard(s) {
     ${rawEditorHtml("stamp", s.index, s.raw)}
   `;
 
+  wireStampTypeSelect(card, s);
+
   card.addEventListener("click", (ev) => {
-    if (ev.target.closest(".card-actions, .raw-editor")) return; // Klicks in Formularzeile/XML-Editor nicht als Auswahl werten
+    if (ev.target.closest(".card-actions, .raw-editor, .badge-select")) return; // Klicks in Formularzeile/XML-Editor/Typ-Auswahl nicht als Auswahl werten
     state.activeStamp = state.activeStamp === s.index ? null : s.index;
     render();
   });
@@ -510,15 +552,28 @@ function createStampCard(s) {
     const select = card.querySelector('[data-role="targetType"]');
     const targetType = select.value;
     const btn = ev.currentTarget;
+
+    // Stempel-Datum mit einer Lücke (gap): statt automatisch zu normieren
+    // (das Datum könnte ja gerade deshalb unsicher sein) vorher nachfragen.
+    const body = { stampIndex: s.index, targetType };
+    if (s.dateHasGap) {
+      const entered = window.prompt(
+        "Der Stempel hat eine Lücke (gap) im Datum. Datum für die neue correspAction eingeben, " +
+        "oder Feld leeren/Abbrechen für kein <date>-Element:",
+        s.dateNormalizedPreview || ""
+      );
+      body.dateOverride = (entered == null || entered.trim() === "") ? null : entered.trim();
+    }
+
     btn.disabled = true;
     try {
-      const data = await apiPost(`/api/file/${state.currentId}/insert`, {
-        stampIndex: s.index,
-        targetType,
-      });
+      const data = await apiPost(`/api/file/${state.currentId}/insert`, body);
       state.file = data;
       render();
-      toast(`Neue correspAction[@type="${targetType}"] aus Stempel Nr. ${s.n} eingefügt.`);
+      const dateNote = "dateOverride" in body
+        ? (body.dateOverride === null ? " (ohne Datum)" : ` (Datum: "${body.dateOverride}")`)
+        : "";
+      toast(`Neue correspAction[@type="${targetType}"] aus Stempel Nr. ${s.n} eingefügt${dateNote}.`);
     } catch (e) {
       toast(e.message, true);
     } finally {
