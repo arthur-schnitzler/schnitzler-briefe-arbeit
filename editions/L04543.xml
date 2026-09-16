@@ -1,6 +1,10 @@
-<?xml version='1.0' encoding='UTF-8'?>
+<?xml version="1.0" encoding="UTF-8"?>
 <?xml-model href="../meta/schnitzler-briefe-schematron.sch" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
-<TEI xmlns="http://www.tei-c.org/ns/1.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.tei-c.org/ns/1.0 ../meta/schnitzler-briefe-schema.xsd" xml:base="https://id.acdh.oeaw.ac.at/schnitzler/schnitzler-briefe/editions" xml:id="L04543">
+<TEI xmlns="http://www.tei-c.org/ns/1.0"
+     xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+     xsi:schemaLocation="http://www.tei-c.org/ns/1.0 ../meta/schnitzler-briefe-schema.xsd"
+     xml:base="https://id.acdh.oeaw.ac.at/schnitzler/schnitzler-briefe/editions"
+     xml:id="L04543">
    <teiHeader>
       <fileDesc>
          <titleStmt>
@@ -37,17 +41,17 @@
             <date when="2026">2026</date>
             <availability>
                <licence target="https://creativecommons.org/licenses/by/4.0/deed.de">
-                  <p>Sie dürfen: Teilen — das Material in jedwedem Format oder Medium
-                     vervielfältigen und weiterverbreiten Bearbeiten — das Material remixen,
+                  <p>Sie dürfen: Teilen – das Material in jedwedem Format oder Medium
+                     vervielfältigen und weiterverbreiten Bearbeiten – das Material remixen,
                      verändern und darauf aufbauen und zwar für beliebige Zwecke, sogar
                      kommerziell.</p>
                   <p>Der Lizenzgeber kann diese Freiheiten nicht widerrufen solange Sie sich an die
                      Lizenzbedingungen halten. Unter folgenden Bedingungen:</p>
-                  <p>Namensnennung — Sie müssen angemessene Urheber- und Rechteangaben machen, einen
+                  <p>Namensnennung – Sie müssen angemessene Urheber- und Rechteangaben machen, einen
                      Link zur Lizenz beifügen und angeben, ob Änderungen vorgenommen wurden. Diese
                      Angaben dürfen in jeder angemessenen Art und Weise gemacht werden, allerdings
                      nicht so, dass der Eindruck entsteht, der Lizenzgeber unterstütze gerade Sie
-                     oder Ihre Nutzung besonders. Keine weiteren Einschränkungen — Sie dürfen keine
+                     oder Ihre Nutzung besonders. Keine weiteren Einschränkungen – Sie dürfen keine
                      zusätzlichen Klauseln oder technische Verfahren einsetzen, die anderen
                      rechtlich irgendetwas untersagen, was die Lizenz erlaubt.</p>
                   <p>Hinweise:</p>
@@ -67,6 +71,51 @@
             <p>Machine-Readable Transcriptions of the Correspondences of Arthur Schnitzler</p>
          </seriesStmt>
          <sourceDesc>
+            <listWit>
+               <witness n="1">
+                  <objectType corresp="brief"/>
+                  <msDesc>
+                     <msIdentifier>
+                        <country>D</country>
+                        <settlement>Marbach am Neckar</settlement>
+                        <repository>Deutsches Literaturarchiv</repository>
+                        <idno>A:Rilke-Archiv Gernsbach/Kopien und Abschriften, HS.2022.81</idno>
+                     </msIdentifier>
+                     <physDesc>
+                        <objectDesc form="fotokopie">
+                           <supportDesc>
+                              <extent>
+                                 <measure unit="blatt" quantity="1"/>
+                                 <measure unit="seite" quantity="2"/>
+                                 <measure unit="zeichenanzahl" quantity="1539"/>
+                              </extent>
+                           </supportDesc>
+                        </objectDesc>
+                        <handDesc hands="1">
+                           <handNote medium="schwarze-tinte" style="deutsche-kurrent"/>
+                        </handDesc>
+                        <additions>
+                           <incident type="receiver" rend="bleistift">
+                              <desc>Vermerk: »<quote>
+                                    <hi rend="latintype">Rilke</hi>
+                                 </quote>«</desc>
+                           </incident>
+                           <incident type="archival">
+                              <desc>Die Fotokopien wurden zwischen <date>30. 12. 1930</date> und
+                                    <date>14. 1. 1931</date> durch <rs type="person" ref="#pmb258927">Carl Sieber</rs> veranlasst, bevor die
+                                 Originale an <rs type="person" ref="#pmb2121">Schnitzler</rs>
+                                 zurückgestellt wurden.</desc>
+                           </incident>
+                           <incident type="archival">
+                              <desc>Der vorliegende Brief wurde am <date>22. 8. 1937</date> als Teil
+                                 einer umfangreicheren Schenkung von <rs type="person" ref="#pmb12692">Heinrich Schnitzler</rs> an <rs type="person" ref="#pmb4342">Sándor Wolf</rs> übergeben. Die Existenz keines
+                                 Objekts der Schenkung ist derzeit nachweisbar.</desc>
+                           </incident>
+                        </additions>
+                     </physDesc>
+                  </msDesc>
+               </witness>
+            </listWit>
             <listBibl>
                <biblStruct>
                   <analytic>
@@ -105,70 +154,86 @@
             </correspAction>
             <correspAction type="received">
                <persName ref="#pmb2121">Schnitzler, Arthur</persName>
-               <date evidence="conjecture" notBefore="1902-01-20" notAfter="1902-01-25">[20. 1. 1902 – 25. 1. 1902?]</date>
+               <date evidence="conjecture" notBefore="1902-01-20" notAfter="1902-01-25">[20. 1. 1902
+                  – 25. 1. 1902?]</date>
                <placeName ref="#pmb50" evidence="conjecture">Wien</placeName>
             </correspAction>
-            <correspContext><ref type="belongsToCorrespondence" target="correspondence_9531">Rilke, Rainer Maria</ref>
+            <correspContext>
+               <ref type="belongsToCorrespondence" target="correspondence_9531">Rilke, Rainer Maria</ref>
                <ref subtype="previous_letter" type="withinCollection" target="L04545">Rilke an Schnitzler, [18. 1. 1902]</ref>
                <ref subtype="next_letter" type="withinCollection" target="L04074">Schnitzler an Schwarzkopf, 20. 1. 1902</ref>
-               <ref subtype="previous_letter" type="withinCorrespondence" source="correspondence_9531" target="L04545">Rilke an Schnitzler, [18. 1. 1902]</ref>
-               <ref subtype="next_letter" type="withinCorrespondence" source="correspondence_9531" target="L04546">Rilke an Schnitzler, 15. 5. 1912</ref>
-            </correspContext></correspDesc>
+               <ref subtype="previous_letter"
+                    type="withinCorrespondence"
+                    source="correspondence_9531"
+                    target="L04545">Rilke an Schnitzler, [18. 1. 1902]</ref>
+               <ref subtype="next_letter"
+                    type="withinCorrespondence"
+                    source="correspondence_9531"
+                    target="L04546">Rilke an Schnitzler, 15. 5. 1912</ref>
+            </correspContext>
+         </correspDesc>
       </profileDesc>
       <revisionDesc status="proposed">
          <change who="MAM" when="2026-09-02">Angelegt aus Heinrich S. Ausgabe</change>
+         <change who="MAM" when="2026-09-16">Durchsicht mit Nasskopie aus DLA</change>
       </revisionDesc>
    </teiHeader>
    <facsimile>
-      <graphic url="1958-rilke_XII_1"/>
-      <graphic url="1958-rilke_XII_2.jp2"/>
+      <graphic url="DA2026-0294_002"/>
+      <graphic url="DA2026-0294_002"/>
    </facsimile>
    <text>
       <body>
          <div type="writingSession" n="1">
             <opener>
-               <dateline rend="right">
-                  <pb facs="1958-rilke_XIV_1.jp2"/>
-                  <rs type="place" ref="#pmb258929">Westerwede bei Worpswede</rs>, am <anchor type="commentary" xml:id="K_L04543-1"/>
-                  <date when="1902-01-19">19. Jan. 1902</date>
-                  <note type="commentary" corresp="K_L04543-1">Die Originale eines Briefes und einer Karte von <rs type="person" ref="#pmb9531">Rilke</rs> an <rs type="person" ref="#pmb2121">Schnitzler</rs> fehlen in der Überlieferung
-                     im Nachlass <rs type="person" ref="#pmb2121">Schnitzlers</rs>. Die Karte ist diese: <ref type="schnitzler-briefe" target="L04541"/>. Der vorliegende
-                     Brief wurde am <date>22. 8. 1937</date> als Teil einer umfangreicheren Schenkung von <rs type="person" ref="#pmb12692">Heinrich Schnitzler</rs> an 
-                     <rs type="person" ref="#pmb4342">Sándor Wolf</rs> übergeben. Die Existenz keines Objekts der Schenkung ist bislang nachweisbar.</note>
-               </dateline>
+               <dateline>
+                  <pb facs="DA2026-0294_002"/>
+                  <rs type="place" ref="#pmb258929">Weſterwede bei Worpswede</rs>, am <date when="1902-01-19">19. Jan. 1902</date>.</dateline>
                <salute>Mein lieber Doctor Schnitzler,</salute>
             </opener>
-            <p>alles was Sie tun, (und wie lieb, daß Sie es versuchen wollen!) ist mir recht. Ich
-               vertraue Ihnen ganz. Sie können <rs type="person" ref="#pmb10815">Bahr</rs> oder
-               <rs type="person" ref="#pmb12790">Singer</rs> ins Vertrauen ziehen und wen Sie sonst
-               wollen. — <rs type="person" ref="#pmb10815">Bahr</rs> ist ja wohl, seit seiner
-               Trennung von der »<rs type="org" ref="#pmb29209">Zeit</rs>«, an einer <pb facs="1958-rilke_XIV_2.jp2"/>
-               <anchor type="commentary" xml:id="K_L04543-2"/>großen Tageszeitung<note type="commentary" corresp="K_L04543-2">Tatsächlich arbeitete
-                      <rs type="person" ref="#pmb10815">Bahr</rs> seit <date>Oktober 1899</date> für das <rs type="org" ref="#pmb29414">Neue Wiener Tagblatt</rs>
-                      und die <rs type="org" ref="#pmb29421">Österreichische Volks-Zeitung</rs>, die beide zum <rs type="org" ref="#pmb29277">Steyrermühl-Konzern</rs>
-                   gehörten.</note> tätig? Für eine richtige
-               journalistische Beschäftigung fehlt es mir ja wohl an Manchem, aber regelmäßige
-               Berichte, besonders nach außen, könnte ich in gleichem Maße für Zeitungen wie für
-               Zeitschriften auf dem neulich angedeuteten Gebiete übernehmen. Wenn ich Ihnen später
-               Auskunft über einige Punkte geben soll, bin ich natürlich jeden Augenblick dazu
-               bereit, wie ich, wo es not tut, — schriftlich jede Verbindung anknüpfen würde, zu der
-               Sie raten. Und vielen herzlichen Dank für alles. Ich hätte auch <rs type="person" ref="#pmb13055">Wassermann</rs> von meiner Situation geschrieben, — der ja
-               ein Zeitgenosse meiner <anchor type="commentary" xml:id="K_L04543-3"/>
-               <rs type="place" ref="#pmb45258">Münchner</rs> Tage<note type="commentary" corresp="K_L04543-3">
-                  <rs type="person" ref="#pmb9531">Rilke</rs> lebte
-                  zwischen <date>Herbst 1896</date> und <date>Sommer 1897</date> in <rs type="place" ref="#pmb45258">München</rs>. Durch <rs type="person" ref="#pmb13055">Jakob Wassermann</rs> wurde
-                  er hier mit <rs type="person" ref="#pmb10762">Lou Andreas-Salomé</rs> bekannt gemacht.</note> ist — aber
-               es fällt mir schwer<c rendition="#dots" n="3"/> Wenn Sie meinen, daß er etwas tun kann, würde ich es trotzdem
-               versuchen. Es ist eine bange Zeit.</p>
-            <p>Gestern habe ich Ihnen »<rs type="work" ref="#pmb79052">Das tägliche
-                  Leben</rs>« geschickt. Nach dem <rs type="event" subtype="implied" ref="#pmb364282">
-                  <rs type="place" ref="#pmb168">berliner</rs> Lacherfolg</rs> haben mir Direktor <rs type="person" ref="#pmb2598">Lautenburg</rs> und der Regisseur Doktor <rs type="person" ref="#pmb119608">Zickel</rs> sehr liebe Briefe geschrieben voll
-               Vertrauen und Freude an meiner Arbeit. Und in mir selbst ist das treue
-               zu-meinem-Stücke-halten auch nicht einen Augenblick erschüttert worden. Es ist mir
-               lieb, wie vorher, und deshalb sende ich es Ihnen. Und würde mich sehr freuen, wenn es
-               an Ihnen einen Freund gewänne!</p>
-            <closer>Dankbar der Ihre:
-               <signed>Rainer Maria Rilke</signed>
+            <p>alles was Sie thun, (und wie lieb, daſs Sie es verſuchen wollen!) iſt mir recht. Ich
+               vertraue Ihnen ganz. Sie können <hi rend="latintype">
+                  <rs type="person" ref="#pmb10815">Bahr</rs>
+               </hi> oder <hi rend="latintype">
+                  <rs type="person" ref="#pmb12790">Singer</rs>
+               </hi> ins Vertrauen ziehen und wen Sie ſonſt wollen. – <hi rend="latintype">
+                  <rs type="person" ref="#pmb10815">Bahr</rs>
+               </hi> iſt ja wohl, ſeit ſeiner Trennung von der »<hi rend="latintype">
+                  <rs type="org" ref="#pmb29209">Zeit</rs>
+               </hi>«, an einer <anchor type="commentary" xml:id="K_L04543-1"/>großen
+                  Tageszeitung<note type="commentary" corresp="K_L04543-1">Tatsächlich arbeitete <rs type="person" ref="#pmb10815">Bahr</rs> seit <date>Oktober 1899</date> für das
+                     <rs type="org" ref="#pmb29414">Neue Wiener Tagblatt</rs> und die <rs type="org" ref="#pmb29421">Österreichische Volks-Zeitung</rs>, die beide zum <rs type="org" ref="#pmb29277">Steyrermühl-Konzern</rs> gehörten.</note> thätig? Für
+               eine richtige journaliſtiſche Beſchäftigung fehlt es mir ja wohl an Manchem, aber
+               regelmäßige Berichte, beſonders nach außen, könnte ich in gleichem Maße für Zeitungen
+               wie für Zeitſchriften auf dem <anchor type="commentary" xml:id="K_L04543-2"/>neulich<note type="commentary" corresp="K_L04543-2">
+                  <ref type="schnitzler-briefe" target="L04542"/>. </note> angedeuteten Gebiete
+               übernehmen. Wenn ich Ihnen ſpäter Auskünfte über einzelne Punkte geben ſoll, bin ich
+               natürlich jeden Augenblick dazu ebenſo bereit, wie ich, wo es noth tut, – ſchriftlich jede
+               Verbindung anknüpfen würde, zu der Sie rathen. Und vielen herzlichen Dank für alles.
+               Ich hätte auch <hi rend="latintype">
+                  <rs type="person" ref="#pmb13055">Wassermann</rs>
+               </hi> von meiner Situation geſchrieben, – der ja ein Zeitgenoſſe meiner <anchor type="commentary" xml:id="K_L04543-3"/>
+               <rs type="place" ref="#pmb45258">münchner</rs> Tage<note type="commentary" corresp="K_L04543-3">
+                  <rs type="person" ref="#pmb9531">Rilke</rs> lebte zwischen <date>Herbst
+                     1896</date> und <date>Sommer 1897</date> in <rs type="place" ref="#pmb45258">München</rs>. Durch <rs type="person" ref="#pmb13055">Jakob Wassermann</rs>
+                  wurde er hier mit <rs type="person" ref="#pmb10762">Lou Andreas-Salomé</rs>
+                  bekannt gemacht.</note> iſt – aber es fällt mir ſchwer<c rendition="#dots" n="4"/>
+               Wenn <pb facs="DA2026-0294_003"/>Sie meinen, daſs er etwas thun kann, – würde ich es
+               trotzdem verſuchen.</p>
+            <p>Es iſt eine bange Zeit.</p>
+            <p>Geſtern habe ich Ihnen »<hi rend="latintype">
+                  <rs type="work" ref="#pmb79052">Das tägliche Leben</rs>
+               </hi>« geſchickt. Nach dem <rs type="event" subtype="implied" ref="#pmb364282">
+                  <rs type="place" ref="#pmb168">berliner</rs> Lacherfolg</rs> haben <add place="above">mir</add> Direktor <hi rend="latintype">
+                  <rs type="person" ref="#pmb2598">Lautenburg</rs>
+               </hi> und der Regiſſeur Doctor <hi rend="latintype">
+                  <rs type="person" ref="#pmb119608">Zickel</rs>
+               </hi> ſehr
+               liebe Briefe geſchrieben voll Vertrauen und Freude an meiner Arbeit. Und in mir
+               ſelbſt iſt das treue Zu-meinem-Stücke-halten auch nicht einen Augenblick erſchüttert
+               worden. Es iſt mir lieb, wie vorher. Und deshalb ſende ich es Ihnen. Und würde mich
+               ſehr freuen, wenn es an Ihnen einen Freund gewänne!</p>
+            <closer>Dankbar der Ihre: <signed>Rainer Maria Rilke</signed>
             </closer>
          </div>
       </body>
@@ -198,6 +263,18 @@
                   </settlement>
                </death>
             </person>
+            <person xml:id="pmb258927">
+               <persName>
+                  <forename>Carl</forename>
+                  <surname>Sieber</surname>
+               </persName>
+               <birth>
+                  <date notBefore="1897-01-01" when="1897-01-01" notAfter="1897-12-31">1897</date>
+               </birth>
+               <death>
+                  <date when="1945-01-01" notAfter="1945-12-31">1945</date>
+               </death>
+            </person>
             <person xml:id="pmb2121">
                <persName>
                   <surname>Schnitzler</surname>
@@ -218,6 +295,60 @@
                      <placeName type="pref">Wien</placeName>
                      <location>
                         <geo>48,208333 16,373056</geo>
+                     </location>
+                  </settlement>
+               </death>
+            </person>
+            <person xml:id="pmb12692">
+               <persName>
+                  <forename>Heinrich</forename>
+                  <surname>Schnitzler</surname>
+               </persName>
+               <birth>
+                  <date when="1902-08-09">1902-08-09</date>
+                  <settlement ref="pmb75">
+                     <placeName type="pref">Hinterbrühl</placeName>
+                     <location>
+                        <geo>48,08611 16,24809</geo>
+                     </location>
+                  </settlement>
+                  <settlement ref="pmb145165">
+                     <placeName type="pref">Hauptstraße 56</placeName>
+                     <location>
+                        <geo>48,08736 16,24924</geo>
+                     </location>
+                  </settlement>
+               </birth>
+               <death>
+                  <date when="1982-07-12">1982-07-12</date>
+                  <settlement ref="pmb50">
+                     <placeName type="pref">Wien</placeName>
+                     <location>
+                        <geo>48,208333 16,373056</geo>
+                     </location>
+                  </settlement>
+               </death>
+            </person>
+            <person xml:id="pmb4342">
+               <persName>
+                  <forename>Sándor</forename>
+                  <surname>Wolf</surname>
+               </persName>
+               <birth>
+                  <date when="1871-12-21">1871-12-21</date>
+                  <settlement ref="pmb49163">
+                     <placeName type="pref">Eisenstadt</placeName>
+                     <location>
+                        <geo>47,84565 16,52327</geo>
+                     </location>
+                  </settlement>
+               </birth>
+               <death>
+                  <date when="1946-01-02">1946-01-02</date>
+                  <settlement ref="pmb55980">
+                     <placeName type="pref">Haifa</placeName>
+                     <location>
+                        <geo>32,81841 34,9885</geo>
                      </location>
                   </settlement>
                </death>
@@ -334,60 +465,6 @@
                </birth>
                <death>
                   <date when="1932-01-01" notAfter="1932-12-31">1932</date>
-               </death>
-            </person>
-            <person xml:id="pmb12692" ana="comment">
-               <persName>
-                  <forename>Heinrich</forename>
-                  <surname>Schnitzler</surname>
-               </persName>
-               <birth>
-                  <date when="1902-08-09">1902-08-09</date>
-                  <settlement ref="pmb75">
-                     <placeName type="pref">Hinterbrühl</placeName>
-                     <location>
-                        <geo>48,08611 16,24809</geo>
-                     </location>
-                  </settlement>
-                  <settlement ref="pmb145165">
-                     <placeName type="pref">Hauptstraße 56</placeName>
-                     <location>
-                        <geo>48,08736 16,24924</geo>
-                     </location>
-                  </settlement>
-               </birth>
-               <death>
-                  <date when="1982-07-12">1982-07-12</date>
-                  <settlement ref="pmb50">
-                     <placeName type="pref">Wien</placeName>
-                     <location>
-                        <geo>48,208333 16,373056</geo>
-                     </location>
-                  </settlement>
-               </death>
-            </person>
-            <person xml:id="pmb4342" ana="comment">
-               <persName>
-                  <forename>Sándor</forename>
-                  <surname>Wolf</surname>
-               </persName>
-               <birth>
-                  <date when="1871-12-21">1871-12-21</date>
-                  <settlement ref="pmb49163">
-                     <placeName type="pref">Eisenstadt</placeName>
-                     <location>
-                        <geo>47,84565 16,52327</geo>
-                     </location>
-                  </settlement>
-               </birth>
-               <death>
-                  <date when="1946-01-02">1946-01-02</date>
-                  <settlement ref="pmb55980">
-                     <placeName type="pref">Haifa</placeName>
-                     <location>
-                        <geo>32,81841 34,9885</geo>
-                     </location>
-                  </settlement>
                </death>
             </person>
             <person xml:id="pmb10762" ana="comment">
