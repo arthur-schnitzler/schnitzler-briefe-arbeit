@@ -2093,11 +2093,14 @@
             <xsl:when test="@type = 'transmitted'">
                <xsl:text>Übermittlung </xsl:text>
             </xsl:when>
-            <xsl:when test="@type = 'forwarded'">
-               <xsl:text>Weiterleitung </xsl:text>
+            <xsl:when test="@type = 'forwarded' or @type='in_transit'">
+               <xsl:text>In Transit </xsl:text>
             </xsl:when>
             <xsl:when test="@type = 'redirected'">
                <xsl:text>Umleitung </xsl:text>
+            </xsl:when>
+            <xsl:when test="@type = 'arrived'">
+               <xsl:text>Am Zielort </xsl:text>
             </xsl:when>
             <xsl:when test="@type = 'delivered'">
                <xsl:text>Zustellung </xsl:text>
@@ -2129,7 +2132,7 @@
             </xsl:for-each>
          </xsl:if>
          <xsl:choose>
-            <xsl:when test="tei:placeName">
+            <xsl:when test="child::tei:placeName">
                <xsl:text> in </xsl:text>
                <xsl:for-each select="tei:placeName">
                   <xsl:value-of select="."/>
@@ -2139,7 +2142,7 @@
                </xsl:for-each>
             </xsl:when>
             <xsl:otherwise>
-               <xsl:text> \textbf{Ort fehlend} </xsl:text>
+               <xsl:text> [ohne Ort]</xsl:text>
             </xsl:otherwise>
          </xsl:choose>
          <xsl:if test="fn:position() != last()">

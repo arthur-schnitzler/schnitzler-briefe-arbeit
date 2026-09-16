@@ -1,10 +1,6 @@
-<?xml version="1.0" encoding="UTF-8"?>
+<?xml version='1.0' encoding='UTF-8'?>
 <?xml-model href="../meta/schnitzler-briefe-schematron.sch" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
-<TEI xmlns="http://www.tei-c.org/ns/1.0"
-     xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-     xsi:schemaLocation="http://www.tei-c.org/ns/1.0 ../meta/schnitzler-briefe-schema.xsd"
-     xml:id="L03459"
-     xml:base="https://id.acdh.oeaw.ac.at/schnitzler/schnitzler-briefe/editions">
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.tei-c.org/ns/1.0 ../meta/schnitzler-briefe-schema.xsd" xml:id="L03459" xml:base="https://id.acdh.oeaw.ac.at/schnitzler/schnitzler-briefe/editions">
    <teiHeader>
       <fileDesc>
          <titleStmt>
@@ -137,7 +133,7 @@
                <persName ref="#pmb2461">Hajek, Gisela</persName>
                <persName ref="#pmb28004">Vallo, Margot</persName>
                <date when="1907-08-27" n="01">[27. 8. 1907?]</date>
-               <placeName ref="#pmb167610">Hühnerspiel</placeName>
+               <placeName ref="#pmb167610">Hühnerspielalm</placeName>
             </correspAction>
             <correspAction type="transmitted">
                <date when="1907-08-28">28. 8. 1907</date>
@@ -146,22 +142,14 @@
             <correspAction type="received">
                <persName ref="#pmb2121">Schnitzler, Arthur</persName>
                <date evidence="conjecture" when="1907-09-13">[13. 9. 1907?]</date>
-               <placeName ref="#pmb50" evidence="conjecture">Wien</placeName>
+               <placeName ref="#pmb168940">Edmund-Weiß-Gasse 7</placeName>
             </correspAction>
-            <correspContext>
-               <ref type="belongsToCorrespondence" target="correspondence_11485">Goldmann, Paul</ref>
+            <correspContext><ref type="belongsToCorrespondence" target="correspondence_11485">Goldmann, Paul</ref>
                <ref subtype="previous_letter" type="withinCollection" target="L01702">Schnitzler an Beer-Hofmann, 25. 8. 1907</ref>
-               <ref subtype="next_letter" type="withinCollection" target="L04470">Schnitzler, Schnitzler an Schwarzkopf, [28. 8.?] 1907</ref>
-               <ref subtype="previous_letter"
-                    type="withinCorrespondence"
-                    source="correspondence_11485"
-                    target="L03257">Goldmann an Schnitzler, 18. 8. 1907</ref>
-               <ref subtype="next_letter"
-                    type="withinCorrespondence"
-                    source="correspondence_11485"
-                    target="L03258">Goldmann an Schnitzler, 6. 9. 1907</ref>
-            </correspContext>
-         </correspDesc>
+               <ref subtype="next_letter" type="withinCollection" target="L04470">Schnitzler, Schnitzler an Schwarzkopf, [28.] 8. 1907</ref>
+               <ref subtype="previous_letter" type="withinCorrespondence" source="correspondence_11485" target="L03257">Goldmann an Schnitzler, 18. 8. 1907</ref>
+               <ref subtype="next_letter" type="withinCorrespondence" source="correspondence_11485" target="L03258">Goldmann an Schnitzler, 6. 9. 1907</ref>
+            </correspContext></correspDesc>
       </profileDesc>
       <revisionDesc status="approved">
          <change who="LU" when="2023-11-13">Export aus Transkribus</change>
@@ -222,219 +210,105 @@
             </p>
          </div>
       </body>
-      <back>
-         <listPerson>
-            <person xml:id="pmb11485">
-               <persName>
-                  <forename>Paul</forename>
-                  <surname>Goldmann</surname>
-               </persName>
-               <birth>
-                  <date when="1865-01-31">1865-01-31</date>
-                  <settlement ref="pmb677">
-                     <placeName type="pref">Breslau</placeName>
-                     <location>
-                        <geo>51,10773 17,03533</geo>
-                     </location>
-                  </settlement>
-               </birth>
-               <death>
-                  <date when="1935-09-25">1935-09-25</date>
-                  <settlement ref="pmb50">
-                     <placeName type="pref">Wien</placeName>
-                     <location>
-                        <geo>48,208333 16,373056</geo>
-                     </location>
-                  </settlement>
-               </death>
-            </person>
-            <person xml:id="pmb2121">
-               <persName>
-                  <surname>Schnitzler</surname>
-                  <forename>Arthur</forename>
-               </persName>
-               <birth>
-                  <date when="1862-05-15">15. 5. 1862</date>
-                  <settlement ref="pmb50">
-                     <placeName type="pref">Wien</placeName>
-                     <location>
-                        <geo>48,208333 16,373056</geo>
-                     </location>
-                  </settlement>
-               </birth>
-               <death>
-                  <date when="1931-10-21">21. 10. 1931</date>
-                  <settlement ref="pmb50">
-                     <placeName type="pref">Wien</placeName>
-                     <location>
-                        <geo>48,208333 16,373056</geo>
-                     </location>
-                  </settlement>
-               </death>
-               <sex value="male"/>
-               <occupation ref="pmb90">Schriftsteller/Schriftstellerin</occupation>
-               <occupation ref="pmb97">Mediziner/Medizinerin</occupation>
-               <idno type="gnd">https://d-nb.info/gnd/118609807/</idno>
-            </person>
-            <person xml:id="pmb2284">
-               <persName>
-                  <forename>Markus</forename>
-                  <surname>Hajek</surname>
-               </persName>
-               <birth>
-                  <date when="1861-11-25">1861-11-25</date>
-                  <settlement ref="pmb46727">
-                     <placeName type="pref">Vršac</placeName>
-                     <location>
-                        <geo>45,11667 21,30361</geo>
-                     </location>
-                  </settlement>
-               </birth>
-               <death>
-                  <date when="1941-04-04">1941-04-04</date>
-                  <settlement ref="pmb224">
-                     <placeName type="pref">London</placeName>
-                     <location>
-                        <geo>51,50853 -0,12574</geo>
-                     </location>
-                  </settlement>
-               </death>
-            </person>
-            <person xml:id="pmb2461">
-               <persName>
-                  <forename>Gisela</forename>
-                  <surname>Hajek</surname>
-               </persName>
-               <birth>
-                  <date when="1867-12-20">1867-12-20</date>
-                  <settlement ref="pmb50">
-                     <placeName type="pref">Wien</placeName>
-                     <location>
-                        <geo>48,208333 16,373056</geo>
-                     </location>
-                  </settlement>
-               </birth>
-               <death>
-                  <date when="1953-02-03">1953-02-03</date>
-                  <settlement ref="pmb893">
-                     <placeName type="pref">Cambridge</placeName>
-                     <location>
-                        <geo>52,2 0,11667</geo>
-                     </location>
-                  </settlement>
-               </death>
-            </person>
-            <person xml:id="pmb28004">
-               <persName>
-                  <forename>Margot</forename>
-                  <surname>Vallo</surname>
-               </persName>
-               <birth>
-                  <date when="1892-09-24">1892-09-24</date>
-                  <settlement ref="pmb46189">
-                     <placeName type="pref">Pont-Sainte-Marie</placeName>
-                     <location>
-                        <geo>48,31848 4,09447</geo>
-                     </location>
-                  </settlement>
-               </birth>
-               <death>
-                  <date when="1969-12-17">1969-12-17</date>
-                  <settlement ref="pmb46191">
-                     <placeName type="pref">São Paulo</placeName>
-                     <location>
-                        <geo>-23,5475 -46,63611</geo>
-                     </location>
-                  </settlement>
-               </death>
-            </person>
-         </listPerson>
-         <listPlace>
-            <place xml:id="pmb147506">
-               <placeName>Hühnerspiel</placeName>
-               <placeName type="ort_namensvariante">Amthorspitze</placeName>
-               <location type="coords">
-                  <geo>46,94455 11,502201</geo>
-               </location>
-               <location type="located_in_place">
-                  <placeName ref="pmb969">Südtirol</placeName>
-                  <geo>46,71667 11,5</geo>
-               </location>
-            </place>
-            <place xml:id="pmb167610">
-               <placeName>Hühnerspielalm</placeName>
-               <location type="coords">
-                  <geo>46,94244075 11,468729461</geo>
-               </location>
-               <location type="located_in_place">
-                  <placeName ref="pmb969">Südtirol</placeName>
-                  <geo>46,71667 11,5</geo>
-               </location>
-               <location type="located_in_place">
-                  <placeName ref="pmb147506">Hühnerspiel</placeName>
-                  <geo>46,94455 11,502201</geo>
-               </location>
-            </place>
-            <place xml:id="pmb168940">
-               <placeName>Edmund-Weiß-Gasse 7</placeName>
-               <placeName type="ort_fruherer-name">Spöttelgasse 7</placeName>
-               <location type="coords">
-                  <geo>48,2304 16,33472</geo>
-               </location>
-               <location type="located_in_place">
-                  <placeName ref="pmb68">XVIII., Währing</placeName>
-                  <geo>48,23333 16,31667</geo>
-               </location>
-               <location type="located_in_place">
-                  <placeName ref="pmb533">Währinger Cottage</placeName>
-                  <geo>48,233056 16,341944</geo>
-               </location>
-               <location type="located_in_place">
-                  <placeName ref="pmb133">Edmund-Weiß-Gasse</placeName>
-                  <geo>48,23056 16,3348</geo>
-               </location>
-            </place>
-            <place xml:id="pmb40474">
-               <placeName>Gossensaß</placeName>
-               <location type="coords">
-                  <geo>46,93857 11,44245</geo>
-               </location>
-               <location type="located_in_place">
-                  <placeName ref="pmb40473">Vipiteno</placeName>
-                  <geo>46,89253 11,43007</geo>
-               </location>
-               <location type="located_in_place">
-                  <placeName ref="pmb40306">Italien</placeName>
-                  <geo>42,83333 12,83333</geo>
-               </location>
-               <location type="located_in_place">
-                  <placeName ref="pmb969">Südtirol</placeName>
-                  <geo>46,71667 11,5</geo>
-               </location>
-            </place>
-            <place xml:id="pmb50">
-               <placeName>Wien</placeName>
-               <placeName type="ort_fruherer-name">K.K. Reichshaupt- und Residenzstadt Wien</placeName>
-               <placeName type="legacy-name-merge">Wien</placeName>
-               <placeName type="alternative-name">Bécs</placeName>
-               <placeName type="alternative-name">Land Wien</placeName>
-               <placeName type="alternative-name">Vídeň</placeName>
-               <placeName type="alternative-name">Wenia</placeName>
-               <placeName type="alternative-name">Beč</placeName>
-               <placeName type="ort_fruherer-name">Vindobona</placeName>
-               <placeName type="legacy-name-merge">Vindobona</placeName>
-               <placeName type="alternative-name">Vienna</placeName>
-               <placeName type="legacy-name-merge">Vienna</placeName>
-               <placeName type="alternative-name">Vienna</placeName>
-               <location type="coords">
-                  <geo>48,208333 16,373056</geo>
-               </location>
-               <location type="located_in_place">
-                  <placeName ref="pmb41240">Österreich</placeName>
-                  <geo>47,33333 13,33333</geo>
-               </location>
-            </place>
-         </listPlace>
-      </back>
-   </text>
+      <back><listPerson><person xml:id="pmb11485"><persName>
+      <forename>Paul</forename>
+      <surname>Goldmann</surname>
+  </persName><birth>
+    <date when="1865-01-31">1865-01-31</date>
+      <settlement ref="pmb677">
+        <placeName type="pref">Breslau</placeName>
+        <location><geo>51,10773 17,03533</geo></location>
+      </settlement>
+  </birth><death>
+    <date when="1935-09-25">1935-09-25</date>
+      <settlement ref="pmb50">
+        <placeName type="pref">Wien</placeName>
+        <location><geo>48,208333 16,373056</geo></location>
+      </settlement>
+  </death></person><person xml:id="pmb2121"><persName><surname>Schnitzler</surname><forename>Arthur</forename></persName><birth><date when="1862-05-15">15. 5. 1862</date><settlement ref="pmb50"><placeName type="pref">Wien</placeName><location><geo>48,208333 16,373056</geo></location></settlement></birth><death><date when="1931-10-21">21. 10. 1931</date><settlement ref="pmb50"><placeName type="pref">Wien</placeName><location><geo>48,208333 16,373056</geo></location></settlement></death><sex value="male"/><occupation ref="pmb90">Schriftsteller/Schriftstellerin</occupation><occupation ref="pmb97">Mediziner/Medizinerin</occupation><idno type="gnd">https://d-nb.info/gnd/118609807/</idno></person><person xml:id="pmb2284"><persName>
+      <forename>Markus</forename>
+      <surname>Hajek</surname>
+  </persName><birth>
+    <date when="1861-11-25">1861-11-25</date>
+      <settlement ref="pmb46727">
+        <placeName type="pref">Vršac</placeName>
+        <location><geo>45,11667 21,30361</geo></location>
+      </settlement>
+  </birth><death>
+    <date when="1941-04-04">1941-04-04</date>
+      <settlement ref="pmb224">
+        <placeName type="pref">London</placeName>
+        <location><geo>51,50853 -0,12574</geo></location>
+      </settlement>
+  </death></person><person xml:id="pmb2461"><persName>
+      <forename>Gisela</forename>
+      <surname>Hajek</surname>
+  </persName><birth>
+    <date when="1867-12-20">1867-12-20</date>
+      <settlement ref="pmb50">
+        <placeName type="pref">Wien</placeName>
+        <location><geo>48,208333 16,373056</geo></location>
+      </settlement>
+  </birth><death>
+    <date when="1953-02-03">1953-02-03</date>
+      <settlement ref="pmb893">
+        <placeName type="pref">Cambridge</placeName>
+        <location><geo>52,2 0,11667</geo></location>
+      </settlement>
+  </death></person><person xml:id="pmb28004"><persName>
+      <forename>Margot</forename>
+      <surname>Vallo</surname>
+  </persName><birth>
+    <date when="1892-09-24">1892-09-24</date>
+      <settlement ref="pmb46189">
+        <placeName type="pref">Pont-Sainte-Marie</placeName>
+        <location><geo>48,31848 4,09447</geo></location>
+      </settlement>
+  </birth><death>
+    <date when="1969-12-17">1969-12-17</date>
+      <settlement ref="pmb46191">
+        <placeName type="pref">São Paulo</placeName>
+        <location><geo>-23,5475 -46,63611</geo></location>
+      </settlement>
+  </death></person></listPerson><listPlace><place xml:id="pmb147506"><placeName>Hühnerspiel</placeName><placeName type="ort_namensvariante">Amthorspitze</placeName><location type="coords">
+  <geo>46,94455 11,502201</geo>
+</location><location type="located_in_place">
+  <placeName ref="pmb969">Südtirol</placeName>
+  <geo>46,71667 11,5</geo>
+</location></place><place xml:id="pmb167610"><placeName>Hühnerspielalm</placeName><location type="coords">
+  <geo>46,94244075 11,468729461</geo>
+</location><location type="located_in_place">
+  <placeName ref="pmb969">Südtirol</placeName>
+  <geo>46,71667 11,5</geo>
+</location><location type="located_in_place">
+  <placeName ref="pmb147506">Hühnerspiel</placeName>
+  <geo>46,94455 11,502201</geo>
+</location></place><place xml:id="pmb168940"><placeName>Edmund-Weiß-Gasse 7</placeName><placeName type="ort_fruherer-name">Spöttelgasse 7</placeName><location type="coords">
+  <geo>48,2304 16,33472</geo>
+</location><location type="located_in_place">
+  <placeName ref="pmb68">XVIII., Währing</placeName>
+  <geo>48,23333 16,31667</geo>
+</location><location type="located_in_place">
+  <placeName ref="pmb533">Währinger Cottage</placeName>
+  <geo>48,233056 16,341944</geo>
+</location><location type="located_in_place">
+  <placeName ref="pmb133">Edmund-Weiß-Gasse</placeName>
+  <geo>48,23056 16,3348</geo>
+</location></place><place xml:id="pmb40474"><placeName>Gossensaß</placeName><location type="coords">
+  <geo>46,93857 11,44245</geo>
+</location><location type="located_in_place">
+  <placeName ref="pmb40473">Vipiteno</placeName>
+  <geo>46,89253 11,43007</geo>
+</location><location type="located_in_place">
+  <placeName ref="pmb40306">Italien</placeName>
+  <geo>42,83333 12,83333</geo>
+</location><location type="located_in_place">
+  <placeName ref="pmb969">Südtirol</placeName>
+  <geo>46,71667 11,5</geo>
+</location></place><place xml:id="pmb50"><placeName>Wien</placeName><placeName type="ort_fruherer-name">K.K. Reichshaupt- und Residenzstadt Wien</placeName><placeName type="legacy-name-merge">Wien</placeName><placeName type="alternative-name">Bécs</placeName><placeName type="alternative-name">Land Wien</placeName><placeName type="alternative-name">Vídeň</placeName><placeName type="alternative-name">Wenia</placeName><placeName type="alternative-name">Beč</placeName><placeName type="ort_fruherer-name">Vindobona</placeName><placeName type="legacy-name-merge">Vindobona</placeName><placeName type="alternative-name">Vienna</placeName><placeName type="legacy-name-merge">Vienna</placeName><placeName type="alternative-name">Vienna</placeName><location type="coords">
+  <geo>48,208333 16,373056</geo>
+</location><location type="located_in_place">
+  <placeName ref="pmb41240">Österreich</placeName>
+  <geo>47,33333 13,33333</geo>
+</location></place></listPlace></back></text>
 </TEI>
