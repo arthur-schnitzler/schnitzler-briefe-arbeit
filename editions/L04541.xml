@@ -1,6 +1,10 @@
-<?xml version='1.0' encoding='UTF-8'?>
+<?xml version="1.0" encoding="UTF-8"?>
 <?xml-model href="../meta/schnitzler-briefe-schematron.sch" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
-<TEI xmlns="http://www.tei-c.org/ns/1.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.tei-c.org/ns/1.0 ../meta/schnitzler-briefe-schema.xsd" xml:base="https://id.acdh.oeaw.ac.at/schnitzler/schnitzler-briefe/editions" xml:id="L04541">
+<TEI xmlns="http://www.tei-c.org/ns/1.0"
+     xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+     xsi:schemaLocation="http://www.tei-c.org/ns/1.0 ../meta/schnitzler-briefe-schema.xsd"
+     xml:base="https://id.acdh.oeaw.ac.at/schnitzler/schnitzler-briefe/editions"
+     xml:id="L04541">
    <teiHeader>
       <fileDesc>
          <titleStmt>
@@ -67,6 +71,48 @@
             <p>Machine-Readable Transcriptions of the Correspondences of Arthur Schnitzler</p>
          </seriesStmt>
          <sourceDesc>
+            <listWit>
+               <witness n="1">
+                  <objectType corresp="karte" ana="bildpostkarte"/>
+                  <msDesc>
+                     <msIdentifier>
+                        <country>D</country>
+                        <settlement>Marbach am Neckar</settlement>
+                        <repository>Deutsches Literaturarchiv</repository>
+                        <idno>A:Rilke-Archiv Gernsbach/Kopien und Abschriften, HS.2022.81</idno>
+                     </msIdentifier>
+                     <physDesc>
+                        <objectDesc form="fotokopie">
+                           <supportDesc>
+                              <extent>
+                                 <measure unit="karte" quantity="1"/>
+                                 <measure unit="zeichenanzahl" quantity="271"/>
+                              </extent>
+                           </supportDesc>
+                        </objectDesc>
+                        <handDesc hands="1">
+                           <handNote medium="schwarze-tinte" style="deutsche-kurrent"/>
+                        </handDesc>
+                        <additions>
+                           <incident type="receiver" rend="bleistift">
+                              <desc>datiert: »<quote>
+                                    <date>Ende 901</date>.</quote>«</desc>
+                           </incident>
+                           <incident type="archival">
+                              <desc>Die Fotokopien wurden zwischen <date>30. 12. 1930</date> und
+                                 <date>14. 1. 1931</date> durch <rs type="person" ref="#pmb258927">Carl Sieber</rs> veranlasst, bevor die
+                                 Originale an <rs type="person" ref="#pmb2121">Schnitzler</rs>
+                                 zurückgestellt wurden. Die Adressseite der Karte wurde nicht abgelichtet.</desc>
+                           </incident>
+                           <incident type="archival">
+                              <desc>Das Original dieser Karte ist nicht erhalten. Es dürfte von <rs type="person" ref="#pmb12692">Heinrich Schnitzler</rs> am <date>15. 8. 1936</date> an
+                                  <rs type="person" ref="#pmb21647">Paul Marx</rs> geschenkt worden sein.</desc>
+                           </incident>
+                        </additions>
+                     </physDesc>
+                  </msDesc>
+               </witness>
+            </listWit>
             <listBibl>
                <biblStruct>
                   <analytic>
@@ -86,9 +132,6 @@
                      </imprint>
                      <biblScope unit="pp">282–298, hier S. 289</biblScope>
                   </monogr>
-                  <note type="zeichenanzahl">
-                     <measure unit="zeichenanzahl" quantity="270"/>
-                  </note>
                </biblStruct>
             </listBibl>
          </sourceDesc>
@@ -101,23 +144,31 @@
             <correspAction type="sent">
                <persName ref="#pmb9531">Rilke, Rainer Maria</persName>
                <date when="1901-12-31" n="02">[31. 12. 1901]</date>
-               <placeName ref="#pmb258929" evidence="conjecture">Westerwede</placeName>
+               <placeName ref="#pmb364288" evidence="conjecture">?? [Bauernhaus von Clara und Rainer Maria Rilke in Westerwede]</placeName>
             </correspAction>
             <correspAction type="received">
                <persName ref="#pmb2121">Schnitzler, Arthur</persName>
-               <date evidence="conjecture" notBefore="1901-12-04" error="Zeitabfolge Fehler 1" notAfter="1901-12-07">[4. 12. 1901
-                  – 7. 12. 1901?]</date>
-               <placeName ref="#pmb50" evidence="conjecture">Wien</placeName>
+               <date evidence="conjecture" when="1902-01-07">[7. 1. 1902?]</date>
+               <placeName ref="#pmb168934" evidence="conjecture">Frankgasse 1</placeName>
             </correspAction>
-            <correspContext><ref type="belongsToCorrespondence" target="correspondence_9531">Rilke, Rainer Maria</ref>
+            <correspContext>
+               <ref type="belongsToCorrespondence" target="correspondence_9531">Rilke, Rainer Maria</ref>
                <ref subtype="previous_letter" type="withinCollection" target="L03099">Goldmann an Schnitzler, 31. 12. [1901]</ref>
                <ref subtype="next_letter" type="withinCollection" target="L02550">Schnitzler an Dehmel, [1. 1. 1902?]</ref>
-               <ref subtype="previous_letter" type="withinCorrespondence" source="correspondence_9531" target="L04344">Schnitzler an Rilke, 7. 12. 1901</ref>
-               <ref subtype="next_letter" type="withinCorrespondence" source="correspondence_9531" target="L04542">Rilke an Schnitzler, 14. 1. 1902</ref>
-            </correspContext></correspDesc>
+               <ref subtype="previous_letter"
+                    type="withinCorrespondence"
+                    source="correspondence_9531"
+                    target="L04344">Schnitzler an Rilke, 7. 12. 1901</ref>
+               <ref subtype="next_letter"
+                    type="withinCorrespondence"
+                    source="correspondence_9531"
+                    target="L04542">Rilke an Schnitzler, 14. 1. 1902</ref>
+            </correspContext>
+         </correspDesc>
       </profileDesc>
       <revisionDesc status="proposed">
          <change who="MAM" when="2026-09-02">Angelegt aus Heinrich S. Ausgabe</change>
+         <change who="MAM" when="2026-09-16">Durchsicht mit Nasskopie aus DLA</change>
       </revisionDesc>
    </teiHeader>
    <facsimile>
@@ -125,22 +176,27 @@
    </facsimile>
    <text>
       <body>
+         <div type="image">
+            <seg rend="center">
+               <pb facs="DA2026-0294_001"/>
+               <hi rend="pre-print">Torfſtich im Moor.</hi>
+            </seg>
+            <seg rend="center">
+               <hi rend="pre-print">Gruss sendet</hi>
+            </seg>
+         </div>
          <div type="writingSession" n="1">
             <p>
-               <pb facs="1958-rilke_XI"/>Grüße zum <anchor type="commentary" xml:id="K_L04541-1"/>kommenden Jahr<note type="commentary" corresp="K_L04541-1">Das Original dieser Karte ist nicht erhalten. <date>Ende 1930</date>
-                  übermittelte <rs type="person" ref="#pmb2121">Schnitzler</rs> acht Briefe und eine Karte an das <rs type="org" ref="#pmb364339">Rilke-Archiv</rs>, wo die Objekte fotografiert und
-                  umgehend zurückgestellt wurden (<bibl>
-                     <publisher>Cambridge University Library</publisher>, B 298</bibl>). Sechs Briefe sind im Nachlass <rs type="person" ref="#pmb2121">Schnitzlers</rs>
-                  überliefert. Die vorliegende Karte dürfte <rs type="person" ref="#pmb12692">Heinrich Schnitzler</rs> am <date>15. 8. 1936</date> an
-                  an <rs type="person" ref="#pmb21647">Paul Marx</rs> geschenkt haben.  Von <rs type="person" ref="#pmb12692">Heinrich Schnitzler</rs>
-               wurde, einer Beschriftung seines Vaters folgend, die Karte auf »<quote>
-                     <date>Anfang 1902</date>
-                  </quote>« datiert, doch dürfte sie eher als Neujahrswunsch im ›alten‹ Jahr verfasst sein und <rs type="person" ref="#pmb2121">Arthur Schnitzler</rs> den Empfang datiert haben.</note>! Von mir und meiner Frau, <rs type="person" ref="#pmb353122">Clara Westhoff</rs>! Ich werde leider <anchor type="commentary" xml:id="K_L04541-2"/>
+               <pb facs="DA2026-0294_001"/>Grüße zum kommenden Jahr! Von mir und meiner Frau, <hi rend="latintype">
+                  <rs type="person" ref="#pmb353122">Clara Westhoff</rs>
+               </hi>! Ich werde leider <anchor type="commentary" xml:id="K_L04541-1"/>
                <rs type="event" subtype="implied" ref="#pmb35104">zum <date>4.</date>
-               </rs> nicht in <rs type="place" ref="#pmb168">Berlin</rs>
-               <note type="commentary" corresp="K_L04541-2">
-                  <ref type="schnitzler-kultur" target="pmb35104" subtype="Cf"/>.</note> sein können. Nicht selbst: aber mit Gedanken und
-               Wünschen! Dank für Ihren lieben <anchor type="commentary" xml:id="K_L04541-3"/>Brief<note type="commentary" corresp="K_L04541-3">
+               </rs> nicht in <hi rend="latintype">
+                  <rs type="place" ref="#pmb168">Berlin</rs>
+               </hi>
+               <note type="commentary" corresp="K_L04541-1">
+                  <ref type="schnitzler-kultur" target="pmb35104" subtype="Cf"/>.</note> ſein können. Nicht ſelbſt: aber mit Gedanken und
+               Wünſchen! Dank für Ihren lieben <anchor type="commentary" xml:id="K_L04541-2"/>Brief<note type="commentary" corresp="K_L04541-2">
                   <ref type="schnitzler-briefe" target="L04344"/>.</note>, auf den ich noch ausführlich zurückkomme im neuen
                Jahre:</p>
             <closer>der Ihre:<lb/>
@@ -174,6 +230,18 @@
                   </settlement>
                </death>
             </person>
+            <person xml:id="pmb258927">
+               <persName>
+                  <forename>Carl</forename>
+                  <surname>Sieber</surname>
+               </persName>
+               <birth>
+                  <date notBefore="1897-01-01" when="1897-01-01" notAfter="1897-12-31">1897</date>
+               </birth>
+               <death>
+                  <date when="1945-01-01" notAfter="1945-12-31">1945</date>
+               </death>
+            </person>
             <person xml:id="pmb2121">
                <persName>
                   <surname>Schnitzler</surname>
@@ -190,6 +258,60 @@
                </birth>
                <death>
                   <date when="1931-10-21">21. 10. 1931</date>
+                  <settlement ref="pmb50">
+                     <placeName type="pref">Wien</placeName>
+                     <location>
+                        <geo>48,208333 16,373056</geo>
+                     </location>
+                  </settlement>
+               </death>
+            </person>
+            <person xml:id="pmb12692">
+               <persName>
+                  <forename>Heinrich</forename>
+                  <surname>Schnitzler</surname>
+               </persName>
+               <birth>
+                  <date when="1902-08-09">1902-08-09</date>
+                  <settlement ref="pmb75">
+                     <placeName type="pref">Hinterbrühl</placeName>
+                     <location>
+                        <geo>48,08611 16,24809</geo>
+                     </location>
+                  </settlement>
+                  <settlement ref="pmb145165">
+                     <placeName type="pref">Hauptstraße 56</placeName>
+                     <location>
+                        <geo>48,08736 16,24924</geo>
+                     </location>
+                  </settlement>
+               </birth>
+               <death>
+                  <date when="1982-07-12">1982-07-12</date>
+                  <settlement ref="pmb50">
+                     <placeName type="pref">Wien</placeName>
+                     <location>
+                        <geo>48,208333 16,373056</geo>
+                     </location>
+                  </settlement>
+               </death>
+            </person>
+            <person xml:id="pmb21647">
+               <persName>
+                  <forename>Paul</forename>
+                  <surname>Marx</surname>
+               </persName>
+               <birth>
+                  <date when="1879-07-21">1879-07-21</date>
+                  <settlement ref="pmb50">
+                     <placeName type="pref">Wien</placeName>
+                     <location>
+                        <geo>48,208333 16,373056</geo>
+                     </location>
+                  </settlement>
+               </birth>
+               <death>
+                  <date when="1956-10-30">1956-10-30</date>
                   <settlement ref="pmb50">
                      <placeName type="pref">Wien</placeName>
                      <location>
@@ -222,88 +344,27 @@
                   </settlement>
                </death>
             </person>
-            <person xml:id="pmb12692" ana="comment">
-               <persName>
-                  <forename>Heinrich</forename>
-                  <surname>Schnitzler</surname>
-               </persName>
-               <birth>
-                  <date when="1902-08-09">1902-08-09</date>
-                  <settlement ref="pmb75">
-                     <placeName type="pref">Hinterbrühl</placeName>
-                     <location>
-                        <geo>48,08611 16,24809</geo>
-                     </location>
-                  </settlement>
-                  <settlement ref="pmb145165">
-                     <placeName type="pref">Hauptstraße 56</placeName>
-                     <location>
-                        <geo>48,08736 16,24924</geo>
-                     </location>
-                  </settlement>
-               </birth>
-               <death>
-                  <date when="1982-07-12">1982-07-12</date>
-                  <settlement ref="pmb50">
-                     <placeName type="pref">Wien</placeName>
-                     <location>
-                        <geo>48,208333 16,373056</geo>
-                     </location>
-                  </settlement>
-               </death>
-            </person>
-            <person xml:id="pmb21647" ana="comment">
-               <persName>
-                  <forename>Paul</forename>
-                  <surname>Marx</surname>
-               </persName>
-               <birth>
-                  <date when="1879-07-21">1879-07-21</date>
-                  <settlement ref="pmb50">
-                     <placeName type="pref">Wien</placeName>
-                     <location>
-                        <geo>48,208333 16,373056</geo>
-                     </location>
-                  </settlement>
-               </birth>
-               <death>
-                  <date when="1956-10-30">1956-10-30</date>
-                  <settlement ref="pmb50">
-                     <placeName type="pref">Wien</placeName>
-                     <location>
-                        <geo>48,208333 16,373056</geo>
-                     </location>
-                  </settlement>
-               </death>
-            </person>
          </listPerson>
          <listPlace>
-            <place xml:id="pmb258929">
-               <placeName>Westerwede</placeName>
-               <location type="coords">
+            <place xml:id="pmb364288">
+               <placeName>?? [Bauernhaus von Clara und Rainer Maria Rilke in Westerwede]</placeName>
+               <location type="located_in_place">
+                  <placeName ref="pmb258929">Westerwede</placeName>
                   <geo>53,19852 8,92013</geo>
                </location>
             </place>
-            <place xml:id="pmb50">
-               <placeName>Wien</placeName>
-               <placeName type="ort_fruherer-name">K.K. Reichshaupt- und Residenzstadt Wien</placeName>
-               <placeName type="alternative-name">Bécs</placeName>
-               <placeName type="alternative-name">Land Wien</placeName>
-               <placeName type="alternative-name">Vídeň</placeName>
-               <placeName type="alternative-name">Wenia</placeName>
-               <placeName type="alternative-name">Beč</placeName>
-               <placeName type="ort_fruherer-name">Vindobona</placeName>
-               <placeName type="alternative-name">Vienna</placeName>
+            <place xml:id="pmb168934">
+               <placeName>Frankgasse 1</placeName>
                <location type="coords">
-                  <geo>48,208333 16,373056</geo>
+                  <geo>48,21533 16,35736</geo>
                </location>
                <location type="located_in_place">
-                  <placeName ref="pmb41240">Österreich</placeName>
-                  <geo>47,33333 13,33333</geo>
+                  <placeName ref="pmb59">IX., Alsergrund</placeName>
+                  <geo>48,22387 16,35641</geo>
                </location>
                <location type="located_in_place">
-                  <placeName ref="pmb235218">Windmühlhöhe</placeName>
-                  <geo>48,24077 16,32092</geo>
+                  <placeName ref="pmb397">Frankgasse</placeName>
+                  <geo>48,215516628628 16,356475515829</geo>
                </location>
             </place>
             <place xml:id="pmb168">
@@ -322,44 +383,6 @@
                </location>
             </place>
          </listPlace>
-         <listOrg>
-            <org xml:id="pmb364339" ana="comment">
-               <orgName>Rilke Archiv</orgName>
-               <location type="located_in_place">
-                  <placeName ref="pmb197">Weimar</placeName>
-                  <geo>50,97361 11,33806</geo>
-                  <idno type="URL" subtype="wikidata">http://www.wikidata.org/entity/Q3955</idno>
-                  <idno type="URL" subtype="schnitzler-bahr">https://schnitzler-bahr.acdh.oeaw.ac.at/pmb197.html</idno>
-                  <idno type="URL" subtype="pmb">https://pmb.acdh.oeaw.ac.at/entity/197/</idno>
-                  <idno type="URL" subtype="pmb">https://pmb.acdh.oeaw.ac.at/entity/64225/</idno>
-                  <idno type="URL" subtype="geonames">https://sws.geonames.org/2812479/</idno>
-                  <idno type="URL" subtype="pmb">https://pmb.acdh.oeaw.ac.at/entity/92063/</idno>
-                  <idno type="URL" subtype="pmb">https://pmb.acdh.oeaw.ac.at/entity/95650/</idno>
-                  <idno type="URL" subtype="d-nb">https://d-nb.info/gnd/4065105-8</idno>
-                  <idno type="URL" subtype="wikipedia">https://de.wikipedia.org/wiki/Weimar</idno>
-                  <idno type="URL" subtype="schnitzler-interviews">https://schnitzler-interviews.acdh.oeaw.ac.at/pmb197.html</idno>
-                  <idno type="URL" subtype="schnitzler-tagebuch">https://schnitzler-tagebuch.acdh.oeaw.ac.at/pmb197.html</idno>
-                  <idno type="URL" subtype="wienerschnitzler">https://wienerschnitzler.org/pmb197.html</idno>
-                  <idno type="URL" subtype="sk">https://sk.acdh.oeaw.ac.at/DWplace00151</idno>
-                  <idno type="URL" subtype="sk">https://sk.acdh.oeaw.ac.at/fa_place00003567</idno>
-                  <idno type="URL" subtype="sk">https://sk.acdh.oeaw.ac.at/fa_place00001943</idno>
-                  <idno type="URL" subtype="biblio">https://biblio.ub.uni-freiburg.de/sf/#pmb197</idno>
-                  <idno type="URL" subtype="schnitzler-briefe">https://schnitzler-briefe.acdh.oeaw.ac.at/pmb197.html</idno>
-               </location>
-               <location type="located_in_place">
-                  <placeName ref="pmb90703">Gernsbach</placeName>
-                  <geo>48,77034 8,34306</geo>
-                  <idno type="URL" subtype="pmb">https://pmb.acdh.oeaw.ac.at/entity/90703/</idno>
-                  <idno type="URL" subtype="schnitzler-tagebuch">https://schnitzler-tagebuch.acdh.oeaw.ac.at/pmb90703.html</idno>
-                  <idno type="URL" subtype="pmb">https://pmb.acdh.oeaw.ac.at/entity/259986/</idno>
-                  <idno type="URL" subtype="wikipedia">https://de.wikipedia.org/wiki/Gernsbach</idno>
-                  <idno type="URL" subtype="wikidata">http://www.wikidata.org/entity/Q520119</idno>
-                  <idno type="URL" subtype="d-nb">https://d-nb.info/gnd/4092873-1</idno>
-                  <idno type="URL" subtype="geonames">https://sws.geonames.org/6558042/</idno>
-                  <idno type="URL" subtype="wienerschnitzler">https://wienerschnitzler.org/pmb90703.html</idno>
-               </location>
-            </org>
-         </listOrg>
          <listEvent>
             <event xml:id="pmb35104" ana="implied">
                <eventName n="Theateruraufführung">Uraufführung von Lebendige Stunden, 4.1.1902</eventName>
