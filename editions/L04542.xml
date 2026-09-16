@@ -1,6 +1,10 @@
-<?xml version='1.0' encoding='UTF-8'?>
+<?xml version="1.0" encoding="UTF-8"?>
 <?xml-model href="../meta/schnitzler-briefe-schematron.sch" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
-<TEI xmlns="http://www.tei-c.org/ns/1.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.tei-c.org/ns/1.0 ../meta/schnitzler-briefe-schema.xsd" xml:base="https://id.acdh.oeaw.ac.at/schnitzler/schnitzler-briefe/editions" xml:id="L04542">
+<TEI xmlns="http://www.tei-c.org/ns/1.0"
+     xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+     xsi:schemaLocation="http://www.tei-c.org/ns/1.0 ../meta/schnitzler-briefe-schema.xsd"
+     xml:base="https://id.acdh.oeaw.ac.at/schnitzler/schnitzler-briefe/editions"
+     xml:id="L04542">
    <teiHeader>
       <fileDesc>
          <titleStmt>
@@ -81,26 +85,30 @@
                         <objectDesc>
                            <supportDesc>
                               <extent>
-                                 <measure unit="blatt" quantity="2"/>
+                                 <measure unit="blatt" quantity="1"/>
+                                 <measure unit="seite" quantity="4"/>
                                  <measure unit="zeichenanzahl" quantity="3617"/>
                               </extent>
                            </supportDesc>
                         </objectDesc>
                         <handDesc hands="1">
-                           <handNote medium="" style=""/>
+                           <handNote medium="schwarze-tinte" style="deutsche-kurrent"/>
                         </handDesc>
                         <additions>
+                           <incident type="receiver" rend="roter-buntstift">
+                              <desc>eine Unterstreichung</desc>
+                           </incident>
                            <incident type="archival">
                               <desc>Die Originale zweier Briefe und einer Karte von <rs type="person" ref="#pmb9531">Rilke</rs> an <rs type="person" ref="#pmb2121">Schnitzler</rs> fehlen in der Überlieferung im
                                  Nachlass <rs type="person" ref="#pmb2121">Schnitzlers</rs>. Die
                                  Karte ist diese: <ref type="schnitzler-briefe" target="L04541"/>.
-                                 Der vorliegende Briefe wird von <rs type="person" ref="#pmb12692">Heinrich
-                                    Schnitzler</rs> in der ersten Edition (S. 293) als in seinem Privatbesitz 
-                                 befindlich ausgewiesen. Im <date>März 1996</date> wurde er 
-                                 vom Auktionshaus <bibl>
+                                 Der vorliegende Briefe wird von <rs type="person" ref="#pmb12692">Heinrich Schnitzler</rs> in der ersten Edition (S. 293) als in
+                                 seinem Privatbesitz befindlich ausgewiesen.</desc>
+                           </incident>
+                           <incident type="archival">
+                              <desc>Im <date>März 1996</date> wurde der Brief vom Auktionshaus <bibl>
                                     <publisher>Stargardt</publisher>
-                                 </bibl> verkauft (Nr. 663, S. 117, Nr. 310) und vom 
-                                 <bibl>
+                                 </bibl> verkauft (Nr. 663, S. 117, Nr. 310) und vom <bibl>
                                     <publisher>Deutschen Literaturarchiv Marbach</publisher>
                                  </bibl> erstanden.</desc>
                            </incident>
@@ -143,90 +151,113 @@
             <correspAction type="sent">
                <persName ref="#pmb9531">Rilke, Rainer Maria</persName>
                <date when="1902-01-14" n="02">14. 1. 1902</date>
-               <placeName ref="#pmb258929">Westerwede</placeName>
+               <placeName ref="#pmb364288">?? [Bauernhaus von Clara und Rainer Maria Rilke in Westerwede]</placeName>
             </correspAction>
             <correspAction type="received">
                <persName ref="#pmb2121">Schnitzler, Arthur</persName>
                <date evidence="external" notBefore="1902-01-15" notAfter="1902-01-17">[15. 1. 1902 –
                   17. 1. 1902?]</date>
-               <placeName ref="#pmb50" evidence="conjecture">Wien</placeName>
+               <placeName ref="#pmb168934" evidence="conjecture">Frankgasse 1</placeName>
             </correspAction>
-            <correspContext><ref type="belongsToCorrespondence" target="correspondence_9531">Rilke, Rainer Maria</ref>
+            <correspContext>
+               <ref type="belongsToCorrespondence" target="correspondence_9531">Rilke, Rainer Maria</ref>
                <ref subtype="previous_letter" type="withinCollection" target="L03192">Goldmann an Schnitzler, 14. 1. [1902]</ref>
                <ref subtype="next_letter" type="withinCollection" target="L04181">Schnitzler an Schwarzkopf, [15. 1. 1902?]</ref>
-               <ref subtype="previous_letter" type="withinCorrespondence" source="correspondence_9531" target="L04541">Rilke an Schnitzler, [31. 12. 1901]</ref>
-               <ref subtype="next_letter" type="withinCorrespondence" source="correspondence_9531" target="L04345">Schnitzler an Rilke, 17. Januar 1902</ref>
-            </correspContext></correspDesc>
+               <ref subtype="previous_letter"
+                    type="withinCorrespondence"
+                    source="correspondence_9531"
+                    target="L04541">Rilke an Schnitzler, [31. 12. 1901]</ref>
+               <ref subtype="next_letter"
+                    type="withinCorrespondence"
+                    source="correspondence_9531"
+                    target="L04345">Schnitzler an Rilke, 17. Januar 1902</ref>
+            </correspContext>
+         </correspDesc>
       </profileDesc>
       <revisionDesc status="proposed">
          <change who="MAM" when="2026-09-02">Angelegt aus Heinrich S. Ausgabe</change>
+         <change who="MAM" when="2026-09-16">Durchsicht mit Faksimile aus DLA</change>
       </revisionDesc>
    </teiHeader>
    <facsimile>
-      <graphic url="1958-rilke_XII_1"/>
-      <graphic url="1958-rilke_XII_2.jp2"/>
+      <graphic url="DA2026-0294_118-0"/>
+      <graphic url="DA2026-0294_118-1"/>
+      <graphic url="DA2026-0294_119-0"/>
+      <graphic url="DA2026-0294_119-1"/>
    </facsimile>
    <text>
       <body>
          <div type="writingSession" n="1">
             <opener>
                <dateline rend="right">
-                  <pb facs="1958-rilke_XII_1"/>
-                  <rs type="place" ref="#pmb258929">Westerwede bei Worpswede (über Bremen)</rs> am
-                     <date>14. Jan. 1902</date>
-               </dateline>
-               <salute>Mein verehrter Arthur Schnitzler,</salute>
+                  <pb facs="DA2026-0294_118-1"/>
+                  <rs type="place" ref="#pmb258929">Weſterwede bei <hi rend="latintype">Worpswede</hi>
+                     <lb/>(über <hi rend="latintype">Bremen</hi>)</rs> am <date>14. Jan.
+                  1902</date>.</dateline>
+               <salute>Mein verehrter <hi rend="latintype">Arthur Schnitzler</hi>,</salute>
             </opener>
-            <p>es muß ein schöner <rs type="event" subtype="implied" ref="#pmb35104">Abend</rs>
-               gewesen sein in <rs type="place" ref="#pmb168">Berlin</rs>! Soweit man das aus dem
-               Zeitungsdeutsch erkennen konnte, hab’ ich es erkannt und aus einer geschickteren
-               Besprechung kann ich sogar die Art der »<rs type="work" ref="#pmb29877">letzten
+            <p>es muſs ein ſchöner <rs type="event" subtype="implied" ref="#pmb35104">Abend</rs>
+               geweſen ſein in <hi rend="latintype">
+                  <rs type="place" ref="#pmb168">Berlin</rs>
+               </hi>! Soweit man das aus dem
+               Zeitungsdeutſch erkennen konnte, hab’ ich es erkannt, und aus einer geſchickteren
+               Beſprechung kann ich ſogar die Art der »<rs type="work" ref="#pmb29877">letzten
                   Masken</rs>« vermuthen!</p>
-            <p>Indessen: ich habe heute von etwas Anderem zu sprechen, von etwas Schwerem, das mich
-               betroffen hat, nicht ganz unerwartet, aber immerhin mit jener Gewaltsamkeit, die jede
+            <p>Indeſſen: ich habe heute von etwas Anderem zu ſprechen, von etwas Schwerem, das mich
+               betroffen hat, nicht ganz unerwartet, aber immerhin mit jener Gewaltſamkeit, die jede
                Wirklichkeit vor dem Gefürchteten voraus hat.</p>
-            <p>Sie wissen, daß ich mir erst ganz kürzlich ein <rs type="place" ref="#pmb364288" subtype="implied">Heim</rs> in dieser Einsamkeit geschaffen habe und daß meine
-               Hoffnung war, in der Stille dieses <rs type="place" ref="#pmb364288" subtype="implied">Heims</rs>, einige Fortschritte zu machen, die ich jetzt kommen
-               fühlte und die mich in meiner neuen, geründeten und durch ihre Geschlossenheit
-               wahrhaften Welt bereiter finden sollten und fähiger mit ihnen zu gehen. Nun will es
-               ein Verhängnis, daß ich gerade jetzt einen Zuschuß verliere, von dem wir fast
-               ausschließlich gelebt haben, (denn meine Bücher und Arbeiten tragen, trotz
-               jahrelanger Bemühungen, so gut wie nichts —) — so daß ich, da ein Verdienen von hier
-               aus, das nur durch die vertrauensvolle Hülfe eines Verlegers möglich gewesen wäre, —
-               ausgeschlossen ist, alles verlassen und in die Fremde gehen muß, mir und
-                  <supplied>den</supplied> meinen Brot zu holen. Denken Sie meine Bestürzung: der
-               Zusammenhang mit der Zeit fehlt mir ganz, den fast jede Beschäftigung, die Geld
-               einbringt, verlangt und ich weiß, daß es für meine Kunst keine größere Feindschaft
-               giebt als die Zeit, das Tägliche <c rendition="#dots" n="3"/> das Allzutägliche!
-               Trotzdem muß etwas gefunden werden, bald, besser heute, als morgen, und ich kann froh
-               sein, wenn es etwas ist, was mir ermöglicht meinen Weg nicht ganz aufzugeben, ihn
-               wenigstens mit den Augen festzuhalten, wenn auch die Hände eine Weile von ihm lassen
-               müssen. Ich habe mich in diesen Tagen der Angst nach mehreren Seiten gewandt, und es
-               ist nicht unmöglich, daß ich nach <rs type="place" ref="#pmb50">Wien</rs> komme, um
-               dort eine Korrespondenz für eine Zeitschrift zu übernehmen. Dieser Posten würde aber
-               nicht genügen und ich müßte nebenbei noch andere regelmäßige Korrespondenzen und
-               Mitarbeiterschaften ev. auch an Zeitungen im Ausland oder im übrigen <rs type="place" ref="#pmb41240">Oesterreich</rs> übernehmen dürfen (Gebiet: bildende Künste,
-               Litteratur, ev. auch Theater<c rendition="#dots" n="3"/>) wenn mir damit wirklich
-               gedient sein soll. Ich schreibe Ihnen jedenfalls wie sich die Sache mit dem
-               Korrespondentenposten entwickelt und bitte Sie, wenn Sie gelegentlich (was doch
-               leicht möglich ist) von Vakanzen hören, sich meiner zu erinnern: Sie thun mir <pb facs="1958-rilke_XII_2.jp2"/>einen großen Dienst, verehrter Herr Schnitzler. Ich
-               stehe mit meinen Lieben an diesem bösen Kreuzweg im argen Winde und warte wohin die
-               Nothwendigkeit mich drängt, herzlich bereit, aus dem Leben, das sie mir zumuthet,
-               mein Leben zu machen.</p>
+            <p>Sie wiſſen, daſs ich mir erſt ganz kürzlich ein <rs type="place" ref="#pmb364288" subtype="implied">Heim</rs> in dieſer Einſamkeit geſchaffen habe und daſs meine
+               Hoffnung war, in der Stille dieſes <rs type="place" ref="#pmb364288" subtype="implied">Heims</rs>, einige Fortſchritte zu machen, die ich jetzt kommen
+               fühlte und die mich in meiner neuen, geründeten und durch ihre Geſchloſſenheit
+               wahrhaften Welt <pb facs="DA2026-0294_119-0"/>bereiter finden ſollten und fähiger mit
+               ihnen zu gehen. Nun will es ein Verhängnis, daſs ich gerade jetzt einen Zuſchuſs
+               verliere, von dem wir faſt ausſchließlich gelebt haben, (denn meine Bücher und
+               Arbeiten tragen, trotz jahrelanger Bemühungen,<del rend="strikethrough">)</del> ſo gut wie nichts –) – ſo daſs ich, da
+               ein Verdienen von hier aus, das nur durch die vertrauensvolle Hülfe eines Verlegers
+               möglich geweſen wäre, – ausgeſchloſſen iſt, alles verlaſſen und in die Fremde gehen
+               muſs, mir und <supplied>den</supplied> meinen Brot zu holen. Denken Sie meine
+               Beſtürzung: der Zuſammenhang mit der Zeit fehlt mir ganz, den faſt jede
+               Beſchäftigung, die Geld einbringt, verlangt und ich weiß, daſs es für meine Kunſt
+               keine größere Feindſchaft giebt als die Zeit, das Tägliche <c rendition="#dots" n="3"/> das Allzutägliche! Trotzdem muſs etwas gefunden werden, bald, beſſer heute, als
+               morgen, und ich kann froh ſein, wenn es etwas iſt, was mir ermöglicht meinen Weg
+               nicht ganz aufzugeben, ihn wenigstens mit den Augen feſtzuhalten, wenn <pb facs="DA2026-0294_119-1"/>auch die Hände eine Weile von ihm laſſen müſſen. Ich
+               habe mich in dieſen Tagen der Angſt nach mehreren Seiten gewandt, und es iſt nicht
+               unmöglich, daſs ich nach <hi rend="latintype">
+                  <rs type="place" ref="#pmb50">Wien</rs>
+               </hi> komme, um dort eine
+                  <hi rend="latintype">Korrespondenz</hi> für eine Zeitſchrift zu übernehmen. Dieſer
+               Poſten würde aber nicht genügen und ich müſste nebenbei noch andere regelmäßige <hi rend="latintype">Korrespondenzen</hi> und Mitarbeiterſchaften ev. auch an
+               Zeitungen im Ausland oder im übrigen <hi rend="latintype">
+                  <rs type="place" ref="#pmb41240">Oesterreich</rs>
+               </hi> übernehmen dürfen (Gebiet: bildende Künſte, Litteratur, ev. auch
+                  <hi rend="latintype">Theater</hi>
+               <c rendition="#dots" n="3"/>) wenn mir damit wirklich gedient ſein ſoll.
+               Ich ſchreibe Ihnen jedenfalls wie ſich die Sache mit dem <subst>
+                  <del rend="overwritten">
+                     <hi rend="latintype">C</hi>
+                  </del>
+                  <add place="inline">
+                     <hi rend="latintype">K</hi>
+                  </add>
+               </subst>o<hi rend="latintype">rrespondentenposten</hi> entwickelt und bitte Sie, wenn
+               Sie gelegentlich (was doch leicht möglich iſt) von <hi rend="latintype">Vakanzen</hi>
+               hören, ſich meiner zu erinnern: Sie thun mir einen großen Dienſt, verehrter Herr <hi rend="latintype">Schnitzler</hi>. Ich ſtehe mit meinen <rs subtype="implied" type="person" ref="#pmb353122 #pmb258928">Lieben</rs> an dieſem böſen
+               Kreuzweg im argen Winde und warte wohin die Nothwendigkeit <pb facs="DA2026-0294_118-0"/>mich drängt, herzlich bereit, aus dem Leben, das ſie mir
+               zumuthet, <hi rend="latintype">mein</hi> Leben zu machen.</p>
             <p>Meine <rs type="person" ref="#pmb353122 #pmb258928" subtype="implied">Lieben</rs>,
                (d. h. meine <rs type="person" subtype="implied" ref="#pmb353122">Frau</rs> und
-               unsere kleine <rs type="person" ref="#pmb258928" subtype="implied">Tochter</rs>)
-               bleiben im <rs type="place" ref="#pmb364288">Westerweder Hause</rs> zurück; trotzdem
-               fiele die Nothwendigkeit eines getrennten Hausstandes pekuniär nicht arg ins Gewicht,
-               weil das Leben hier ungewöhnlich billig ist und beide Haushalte lange nicht so viel
-               kosten würden, wie ein gemeinsames Wohnen in dem theueren <rs type="place" ref="#pmb50">Wien</rs>. Auch hängt die Kunst meiner <rs type="person" subtype="implied" ref="#pmb353122">Frau</rs> zu sehr mit diesem Lande zusammen,
-               als daß ich ihr jetzt eine Trennung davon zumuthen dürfte. Es bleibt also nur ein
-               einziger, schmerzhafter Ausweg. Nun hoffe ich, daß ich den Posten in <rs type="place" ref="#pmb50">Wien</rs> bekomme, denn ich würde gern in <rs type="place" ref="#pmb50">Wien</rs> sein und glaube wohl, daß ich mir da auch Raum schaffen und
-               Gutes leisten könnte! Sie hören bald mehr und inzwischen wissen Sie mir vielleicht
-               auch einen bestimmten Rath zu geben … daran zu denken, daß ich Ihnen nahe wäre, hat
-               viel Schönes und Liebes für mich!</p>
-            <closer>Ihr:<lb/>
-               <signed>Rainer Maria Rilke</signed>
+               unſere kleine <rs type="person" ref="#pmb258928" subtype="implied">Tochter</rs>)
+               bleiben im <rs type="place" ref="#pmb364288">
+                  <hi rend="latintype">Westerweder</hi> Hauſe</rs> zurück; trotzdem fiele die
+               Nothwendigkeit eines getrennten Hausſtandes pekuniär nicht arg ins Gewicht, weil das
+               Leben hier ungewöhnlich billig iſt und beide Haushalte lange nicht ſoviel koſten
+               würden, wie ein gemeinſames Wohnen in dem theueren <rs type="place" ref="#pmb50">Wien</rs>. Auch hängt die <hi rend="latintype">Kunst</hi> meiner <rs type="person" subtype="implied" ref="#pmb353122">Frau</rs> zu ſehr mit dieſem Lande zuſammen, als daſs ich ihr
+               jetzt eine Trennung davon zumuthen dürfte. Es bleibt alſo nur ein einziger,
+               ſchmerzhafter Ausweg. Nun hoffe ich, daſs ich den Poſten in <hi rend="latintype"><rs type="place" ref="#pmb50">Wien</rs></hi> bekomme, denn ich würde gern in <hi rend="latintype"><rs type="place" ref="#pmb50">Wien</rs></hi> ſein und glaube wohl, daſs ich mir da auch Raum ſchaffen
+               und Gutes leiſten könnte! Sie hören bald mehr und inzwiſchen wiſſen Sie mir
+               vielleicht auch einen beſtimmten Rath zu geben<c rendition="#dots" n="4"/> daran zu
+               denken, daſs ich Ihnen nahe wäre, hat viel Schönes und Liebes für mich!</p>
+            <closer>Ihr: <signed>Rainer Maria Rilke</signed>
             </closer>
          </div>
       </body>
@@ -361,10 +392,46 @@
             </bibl>
          </listBibl>
          <listPlace>
+            <place xml:id="pmb364288">
+               <placeName>?? [Bauernhaus von Clara und Rainer Maria Rilke in Westerwede]</placeName>
+               <location type="located_in_place">
+                  <placeName ref="pmb258929">Westerwede</placeName>
+                  <geo>53,19852 8,92013</geo>
+               </location>
+            </place>
+            <place xml:id="pmb168934">
+               <placeName>Frankgasse 1</placeName>
+               <location type="coords">
+                  <geo>48,21533 16,35736</geo>
+               </location>
+               <location type="located_in_place">
+                  <placeName ref="pmb59">IX., Alsergrund</placeName>
+                  <geo>48,22387 16,35641</geo>
+               </location>
+               <location type="located_in_place">
+                  <placeName ref="pmb397">Frankgasse</placeName>
+                  <geo>48,215516628628 16,356475515829</geo>
+               </location>
+            </place>
             <place xml:id="pmb258929">
                <placeName>Westerwede</placeName>
                <location type="coords">
                   <geo>53,19852 8,92013</geo>
+               </location>
+            </place>
+            <place xml:id="pmb168">
+               <placeName>Berlin</placeName>
+               <placeName type="alternative-name">Hauptstadt Berlin</placeName>
+               <placeName type="alternative-name">Barlīn</placeName>
+               <placeName type="alternative-name">Reichshauptstadt Berlin</placeName>
+               <placeName type="alternative-name">Berolino</placeName>
+               <placeName type="legacy-name-merge">B-n</placeName>
+               <location type="coords">
+                  <geo>52,52437 13,41053</geo>
+               </location>
+               <location type="located_in_place">
+                  <placeName ref="pmb151">Deutschland</placeName>
+                  <geo>51,5 10,5</geo>
                </location>
             </place>
             <place xml:id="pmb50">
@@ -389,21 +456,6 @@
                   <geo>48,24077 16,32092</geo>
                </location>
             </place>
-            <place xml:id="pmb168">
-               <placeName>Berlin</placeName>
-               <placeName type="alternative-name">Hauptstadt Berlin</placeName>
-               <placeName type="alternative-name">Barlīn</placeName>
-               <placeName type="alternative-name">Reichshauptstadt Berlin</placeName>
-               <placeName type="alternative-name">Berolino</placeName>
-               <placeName type="legacy-name-merge">B-n</placeName>
-               <location type="coords">
-                  <geo>52,52437 13,41053</geo>
-               </location>
-               <location type="located_in_place">
-                  <placeName ref="pmb151">Deutschland</placeName>
-                  <geo>51,5 10,5</geo>
-               </location>
-            </place>
             <place xml:id="pmb41240">
                <placeName>Österreich</placeName>
                <placeName type="alternative-name">Republik Österreich</placeName>
@@ -424,13 +476,6 @@
                <location type="located_in_place">
                   <placeName ref="pmb687">Österreich-Ungarn</placeName>
                   <geo>48,4054 16,4887</geo>
-               </location>
-            </place>
-            <place xml:id="pmb364288">
-               <placeName>?? [Bauernhaus von Clara und Rainer Maria Rilke in Westerwede]</placeName>
-               <location type="located_in_place">
-                  <placeName ref="pmb258929">Westerwede</placeName>
-                  <geo>53,19852 8,92013</geo>
                </location>
             </place>
          </listPlace>
