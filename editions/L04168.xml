@@ -1,12 +1,10 @@
-<?xml version='1.0' encoding='UTF-8'?>
-<?xml-model href="../meta/schnitzler-briefe-schematron.sch" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
-<TEI xmlns="http://www.tei-c.org/ns/1.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.tei-c.org/ns/1.0 ../meta/schnitzler-briefe-schema.xsd" xml:base="https://id.acdh.oeaw.ac.at/schnitzler/schnitzler-briefe/editions" xml:id="L04168">
+<?xml version="1.0" encoding="UTF-8"?><?xml-model href="../meta/schnitzler-briefe-schematron.sch" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI xmlns="http://www.tei-c.org/ns/1.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.tei-c.org/ns/1.0 ../meta/schnitzler-briefe-schema.xsd" xml:base="https://id.acdh.oeaw.ac.at/schnitzler/schnitzler-briefe/editions" xml:id="L04168">
    <teiHeader>
       <fileDesc>
          <titleStmt>
             <title level="s">Arthur Schnitzler: Briefwechsel mit Autorinnen und
                                     Autoren</title>
-            <title level="a">Arthur Schnitzler an Gustav Schwarzkopf, 11. 10. 1910</title>
+            <title level="a">Arthur Schnitzler an Gustav Schwarzkopf, [10. oder 11]. 10. 1910</title>
             <author ref="#pmb2121">Schnitzler, Arthur</author>
             <editor>
                <persName>Jahnke, Selma</persName>
@@ -101,7 +99,8 @@
                         <additions>
                            <incident type="postal">
                               <desc>
-                                 <stamp n="1">
+                                 <stamp n="1" type="transmission">
+                                    <placeName ref="#pmb59">9<unclear>/1</unclear><space unit="chars" quantity="1"/><supplied>Wien</supplied></placeName>
                                     <date when="1910-10-11">11 X 10</date>
                                     <time>
                                        <unclear>5</unclear>
@@ -123,8 +122,12 @@
          <correspDesc>
             <correspAction type="sent">
                <persName ref="#pmb2121">Schnitzler, Arthur</persName>
-               <date when="1910-10-11" n="01">11. 10. 1910</date>
-               <placeName ref="#pmb50">Wien</placeName>
+               <date n="01" notBefore="1910-10-10" notAfter="1910-10-11">[10. oder 11]. 10. 1910</date>
+               <placeName ref="#pmb168815">Sternwartestraße 71</placeName>
+            </correspAction>
+            <correspAction type="transmitted">
+               <date when="1910-10-11">11. 10. 1910</date>
+               <placeName ref="#pmb59">9/1Wien</placeName>
             </correspAction>
             <correspAction type="received">
                <persName ref="#pmb12740">Schwarzkopf, Gustav</persName>
