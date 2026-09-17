@@ -1,6 +1,10 @@
-<?xml version='1.0' encoding='UTF-8'?>
+<?xml version="1.0" encoding="UTF-8"?>
 <?xml-model href="../meta/schnitzler-briefe-schematron.sch" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
-<TEI xmlns="http://www.tei-c.org/ns/1.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.tei-c.org/ns/1.0 ../meta/schnitzler-briefe-schema.xsd" xml:id="L00374" xml:base="https://id.acdh.oeaw.ac.at/schnitzler/schnitzler-briefe/editions">
+<TEI xmlns="http://www.tei-c.org/ns/1.0"
+     xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+     xsi:schemaLocation="http://www.tei-c.org/ns/1.0 ../meta/schnitzler-briefe-schema.xsd"
+     xml:id="L00374"
+     xml:base="https://id.acdh.oeaw.ac.at/schnitzler/schnitzler-briefe/editions">
    <teiHeader>
       <fileDesc>
          <titleStmt>
@@ -83,7 +87,7 @@
                               <extent>
                                  <measure unit="blatt" quantity="1"/>
                                  <measure unit="seite" quantity="1"/>
-                                 <measure unit="zeichenanzahl" quantity="1150"/>
+                                 <measure unit="zeichenanzahl" quantity="1147"/>
                               </extent>
                            </supportDesc>
                         </objectDesc>
@@ -132,12 +136,20 @@
                <date when="1894-10-02">2. 10. 1894</date>
                <placeName ref="#pmb263">Florenz</placeName>
             </correspAction>
-            <correspContext><ref type="belongsToCorrespondence" target="correspondence_10863">Beer-Hofmann, Richard</ref>
+            <correspContext>
+               <ref type="belongsToCorrespondence" target="correspondence_10863">Beer-Hofmann, Richard</ref>
                <ref subtype="previous_letter" type="withinCollection" target="L00373">Beer-Hofmann an Schnitzler, 2[6?]. 9. 189</ref>
                <ref subtype="next_letter" type="withinCollection" target="L00375">Beer-Hofmann an Schnitzler, [2. 10. 1894]</ref>
-               <ref subtype="previous_letter" type="withinCorrespondence" source="correspondence_10863" target="L00373">Beer-Hofmann an Schnitzler, 2[6?]. 9. 189</ref>
-               <ref subtype="next_letter" type="withinCorrespondence" source="correspondence_10863" target="L00375">Beer-Hofmann an Schnitzler, [2. 10. 1894]</ref>
-            </correspContext></correspDesc>
+               <ref subtype="previous_letter"
+                    type="withinCorrespondence"
+                    source="correspondence_10863"
+                    target="L00373">Beer-Hofmann an Schnitzler, 2[6?]. 9. 189</ref>
+               <ref subtype="next_letter"
+                    type="withinCorrespondence"
+                    source="correspondence_10863"
+                    target="L00375">Beer-Hofmann an Schnitzler, [2. 10. 1894]</ref>
+            </correspContext>
+         </correspDesc>
       </profileDesc>
       <revisionDesc status="approved">
          <change who="MAM" when="2019-06-12">Automatisch angelegt aus Buchausgabe</change>
@@ -161,11 +173,13 @@
             <p>
                <salute>Lieber Richard,</salute>
                <space unit="chars" quantity="1"/>
+               <anchor type="commentary" xml:id="K_L00374-1"/>
                <hi rend="underline" n="1">zwei</hi> (due) Karten hab ich Ihnen nach <rs ref="#pmb44205" type="place">Pallanza</rs> geschrieben – das ist doch mehr als
-               Mau? – Sie sind offenbar verloren gegangen.</p>
+              Mau? – Sie sind offenbar verloren<note type="commentary" corresp="K_L00374-1">Die beiden angesprochenen Karten sind tatsächlich nicht überliefert.</note> gegangen.</p>
             <p>(Wer, – ich? (<rs ref="#pmb2337" type="person">Leon</rs> und <rs ref="#pmb26602" type="person">Waldberg</rs>, <rs ref="#pmb14328" type="person">Blumenthal</rs> und
                   <rs ref="#pmb11845" type="person">Kadelburg</rs>, <rs ref="#pmb3442" type="person">Brociner</rs> und <rs ref="#pmb28530" type="person">Gerhard</rs>)). –</p>
-            <p>Gestern Eröffnung <rs ref="#pmb40" type="place">Josefstadt</rs>; mit Dank des Herrn
+            <p>Gestern <rs type="event" ref="#pmb38885" subtype="implied">Eröffnung <rs ref="#pmb40" type="place">Josefstadt</rs>
+               </rs>; mit Dank des Herrn
                   <rs ref="#pmb2337" type="person">Léon</rs> im Frack, mit gekränkter Miene. Sehr
                amüsant, abgesehn vom <rs type="work" ref="#pmb38879" subtype="implied">1.
                Akt</rs>. –</p>
@@ -175,7 +189,8 @@
             <p>Wie fühlen Sie sich? »Fliesst die Arbeit munter fort?« –</p>
             <p>
                <pb facs="AS_Beer-Hofmann_Abschrift_00312"/>»<rs ref="#pmb36340" type="work">Zeit</rs>« soll besorgt werden. – Bitte schreiben Sie häufiger – die
-               Gemäldegalerie, die so hoffnungsvoll begonnen, hat rasch geendet. –</p>
+              <anchor type="commentary" xml:id="K_L00374-2"/>Gemäldegalerie<note type="commentary" corresp="K_L00374-2">
+                  <ref type="schnitzler-briefe" subtype="Cf" target="L00369"/>.</note>, die so hoffnungsvoll begonnen, hat rasch geendet. –</p>
             <closer>Herzlich der Ihre<lb/>
                <signed>
                   <del rend="strikethrough">Richard</del> entschuldigen – Arthur.</signed>
@@ -199,136 +214,650 @@
             </postscript>
          </div>
       </body>
-      <back><listPerson><person xml:id="pmb10863"><persName>
-      <forename>Richard</forename>
-      <surname>Beer-Hofmann</surname>
-  </persName><birth>
-    <date when="1866-07-11">1866-07-11</date>
-      <settlement ref="pmb50">
-        <placeName type="pref">Wien</placeName>
-        <location><geo>48,208333 16,373056</geo></location>
-      </settlement>
-  </birth><death>
-    <date when="1945-09-26">1945-09-26</date>
-      <settlement ref="pmb44053">
-        <placeName type="pref">New York City</placeName>
-        <location><geo>40,71427 -74,00597</geo></location>
-      </settlement>
-  </death></person><person xml:id="pmb11845"><persName>
-      <forename>Gustav</forename>
-      <surname>Kadelburg</surname>
-  </persName><birth>
-    <date when="1851-07-26">1851-07-26</date>
-      <settlement ref="pmb43471">
-        <placeName type="pref">Budapest</placeName>
-        <location><geo>47,49835 19,04045</geo></location>
-      </settlement>
-  </birth><death>
-    <date when="1925-09-11">1925-09-11</date>
-      <settlement ref="pmb168">
-        <placeName type="pref">Berlin</placeName>
-        <location><geo>52,52437 13,41053</geo></location>
-      </settlement>
-  </death></person><person xml:id="pmb14328"><persName>
-      <forename>Oskar</forename>
-      <surname>Blumenthal</surname>
-  </persName><birth>
-    <date when="1852-03-13">1852-03-13</date>
-      <settlement ref="pmb168">
-        <placeName type="pref">Berlin</placeName>
-        <location><geo>52,52437 13,41053</geo></location>
-      </settlement>
-  </birth><death>
-    <date when="1917-04-24">1917-04-24</date>
-      <settlement ref="pmb168">
-        <placeName type="pref">Berlin</placeName>
-        <location><geo>52,52437 13,41053</geo></location>
-      </settlement>
-  </death></person><person xml:id="pmb2121"><persName><surname>Schnitzler</surname><forename>Arthur</forename></persName><birth><date when="1862-05-15">15. 5. 1862</date><settlement ref="pmb50"><placeName type="pref">Wien</placeName><location><geo>48,208333 16,373056</geo></location></settlement></birth><death><date when="1931-10-21">21. 10. 1931</date><settlement ref="pmb50"><placeName type="pref">Wien</placeName><location><geo>48,208333 16,373056</geo></location></settlement></death><sex value="male"/><occupation ref="pmb90">Schriftsteller/Schriftstellerin</occupation><occupation ref="pmb97">Mediziner/Medizinerin</occupation><idno type="gnd">https://d-nb.info/gnd/118609807/</idno></person><person xml:id="pmb2337"><persName>
-      <forename>Victor</forename>
-      <surname>Léon</surname>
-  </persName><birth>
-    <date when="1858-01-04">1858-01-04</date>
-      <settlement ref="pmb45111">
-        <placeName type="pref">Senica</placeName>
-        <location><geo>48,67922 17,36697</geo></location>
-      </settlement>
-  </birth><death>
-    <date when="1940-02-23">1940-02-23</date>
-      <settlement ref="pmb50">
-        <placeName type="pref">Wien</placeName>
-        <location><geo>48,208333 16,373056</geo></location>
-      </settlement>
-  </death></person><person xml:id="pmb26602"><persName>
-      <forename>Heinrich von</forename>
-      <surname>Waldberg</surname>
-  </persName><birth>
-    <date when="1860-03-02">1860-03-02</date>
-      <settlement ref="pmb38876">
-        <placeName type="pref">Iași</placeName>
-        <location><geo>47,16667 27,6</geo></location>
-      </settlement>
-  </birth><death>
-    <date when="1942-10-20">1942-10-20</date>
-      <settlement ref="pmb2258">
-        <placeName type="pref">Ghetto Theresienstadt</placeName>
-        <location><geo>50,513639 14,164694</geo></location>
-      </settlement>
-  </death></person><person xml:id="pmb28530"><persName>
-      <forename>Leopold</forename>
-      <surname>Geiringer</surname>
-  </persName><birth>
-    <date when="1851-06-27">1851-06-27</date>
-      <settlement ref="pmb50">
-        <placeName type="pref">Wien</placeName>
-        <location><geo>48,208333 16,373056</geo></location>
-      </settlement>
-  </birth><death>
-    <date when="1900-05-29">1900-05-29</date>
-      <settlement ref="pmb50">
-        <placeName type="pref">Wien</placeName>
-        <location><geo>48,208333 16,373056</geo></location>
-      </settlement>
-  </death></person><person xml:id="pmb3442"><persName>
-      <forename>Marco</forename>
-      <surname>Brociner</surname>
-  </persName><birth>
-    <date when="1852-10-20">1852-10-20</date>
-      <settlement ref="pmb38876">
-        <placeName type="pref">Iași</placeName>
-        <location><geo>47,16667 27,6</geo></location>
-      </settlement>
-  </birth><death>
-    <date when="1942-04-12">1942-04-12</date>
-      <settlement ref="pmb50">
-        <placeName type="pref">Wien</placeName>
-        <location><geo>48,208333 16,373056</geo></location>
-      </settlement>
-  </death></person></listPerson><listBibl><bibl xml:id="pmb36340"><title type="main">Die Zeit. Wiener Wochenschrift</title><author role="hat-herausgegeben" ref="pmb12790">Singer, Isidor</author><author role="hat-herausgegeben" ref="pmb11867">Kanner, Heinrich</author><author role="hat-herausgegeben" ref="pmb10815">Bahr, Hermann</author></bibl><bibl xml:id="pmb42158"><title type="main">Der Floh</title><title type="legacy-name-merge">Der Floh</title><title type="werk_link">https://anno.onb.ac.at/cgi-content/anno-plus?aid=flo</title><author role="hat-herausgegeben" ref="pmb7218">Franzos, Karl Emil</author><author role="hat-herausgegeben" ref="pmb11687">Hevesi, Ludwig</author><author role="hat-herausgegeben" ref="pmb2150">Bauer, Julius</author><author role="hat-herausgegeben" ref="pmb11673">Herzl, Theodor</author><author role="hat-herausgegeben" ref="pmb2577">Landesberg, Alexander</author><author role="hat-herausgegeben" ref="pmb12674">Schlesinger, Sigmund</author><author role="hat-herausgegeben" ref="pmb11406">Gans-Ludassy, Julius von</author><author role="hat-herausgegeben" ref="pmb26666">Walzel, Camillo</author></bibl><bibl xml:id="pmb42160"><title type="main">Die Bombe</title><title type="werk_link">http://anno.onb.ac.at/cgi-content/anno?aid=bom</title></bibl><bibl xml:id="pmb42162"><title type="main">Wiener Caricaturen</title><title type="werk_link">http://anno.onb.ac.at/cgi-content/anno?aid=wcc</title></bibl><bibl xml:id="pmb42166"><title type="main">Wiener Witzblatt</title></bibl><bibl xml:id="pmb29917" ana="implied"><title type="main">Liebelei. Schauspiel in drei Akten</title><title type="werk_link">https://www.deutschestextarchiv.de/book/show/schnitzler_liebelei_1896</title><title type="werk_arbeitstitel">Das arme Mädl</title><author role="hat-geschaffen" ref="pmb2121">Schnitzler, Arthur</author></bibl><bibl xml:id="pmb38879" ana="implied"><title type="main">Tata-Toto. Vaudeville in drei Akten</title><title type="legacy-name-merge">Tata-Toto</title><author role="hat-geschaffen" ref="pmb14211">Bilhaud, Paul</author><author role="hat-geschaffen" ref="pmb13768">Barré, Albert</author><author role="hat-vertont" ref="pmb13716">Banès, Antoine</author><author role="hat-ubersetzt" ref="pmb2337">Léon, Victor</author><author role="hat-ubersetzt" ref="pmb26666">Walzel, Camillo</author></bibl></listBibl><listPlace><place xml:id="pmb263"><placeName>Florenz</placeName><placeName type="alternative-name">Florence</placeName><placeName type="alternative-name">Florenz</placeName><placeName type="legacy-name-merge">Florenz</placeName><placeName type="legacy-name-merge">Florence</placeName><location type="coords">
-  <geo>43,77925 11,24626</geo>
-</location><location type="located_in_place">
-  <placeName ref="pmb40306">Italien</placeName>
-  <geo>42,83333 12,83333</geo>
-</location></place><place xml:id="pmb40"><placeName>Theater in der Josefstadt</placeName><placeName type="legacy-name-merge">Josefst.-Th.</placeName><location type="coords">
-  <geo>48,209583 16,351111</geo>
-</location><location type="located_in_place">
-  <placeName ref="pmb58">VIII., Josefstadt</placeName>
-  <geo>48,21126 16,34706</geo>
-</location><location type="located_in_place">
-  <placeName ref="pmb51915">Josefstädter Straße</placeName>
-  <geo>48,20995865037859 16,347448769410484</geo>
-</location></place><place xml:id="pmb44205"><placeName>Pallanza</placeName><placeName type="alternative-name">Verbania-Pallanza</placeName><placeName type="legacy-name-merge">Pallanza</placeName><placeName type="legacy-name">Pallanza</placeName><placeName type="legacy-name-merge">Pallanza</placeName><location type="coords">
-  <geo>45,92298 8,55045</geo>
-</location><location type="located_in_place">
-  <placeName ref="pmb49193">Verbania</placeName>
-  <geo>45,93333 8,55</geo>
-</location><location type="located_in_place">
-  <placeName ref="pmb40306">Italien</placeName>
-  <geo>42,83333 12,83333</geo>
-</location></place><place xml:id="pmb50"><placeName>Wien</placeName><placeName type="ort_fruherer-name">K.K. Reichshaupt- und Residenzstadt Wien</placeName><placeName type="legacy-name-merge">Wien</placeName><placeName type="alternative-name">Bécs</placeName><placeName type="alternative-name">Land Wien</placeName><placeName type="alternative-name">Vídeň</placeName><placeName type="alternative-name">Wenia</placeName><placeName type="alternative-name">Beč</placeName><placeName type="ort_fruherer-name">Vindobona</placeName><placeName type="legacy-name-merge">Vindobona</placeName><placeName type="alternative-name">Vienna</placeName><placeName type="legacy-name-merge">Vienna</placeName><placeName type="alternative-name">Vienna</placeName><location type="coords">
-  <geo>48,208333 16,373056</geo>
-</location><location type="located_in_place">
-  <placeName ref="pmb41240">Österreich</placeName>
-  <geo>47,33333 13,33333</geo>
-</location></place></listPlace></back></text>
+      <back>
+         <listPerson>
+            <person xml:id="pmb2121">
+               <persName>
+                  <surname>Schnitzler</surname>
+                  <forename>Arthur</forename>
+               </persName>
+               <birth>
+                  <date when="1862-05-15">15. 5. 1862</date>
+                  <settlement ref="pmb50">
+                     <placeName type="pref">Wien</placeName>
+                     <location>
+                        <geo>48,208333 16,373056</geo>
+                     </location>
+                  </settlement>
+               </birth>
+               <death>
+                  <date when="1931-10-21">21. 10. 1931</date>
+                  <settlement ref="pmb50">
+                     <placeName type="pref">Wien</placeName>
+                     <location>
+                        <geo>48,208333 16,373056</geo>
+                     </location>
+                  </settlement>
+               </death>
+            </person>
+            <person xml:id="pmb10863">
+               <persName>
+                  <forename>Richard</forename>
+                  <surname>Beer-Hofmann</surname>
+               </persName>
+               <birth>
+                  <date when="1866-07-11">1866-07-11</date>
+                  <settlement ref="pmb50">
+                     <placeName type="pref">Wien</placeName>
+                     <location>
+                        <geo>48,208333 16,373056</geo>
+                     </location>
+                  </settlement>
+               </birth>
+               <death>
+                  <date when="1945-09-26">1945-09-26</date>
+                  <settlement ref="pmb44053">
+                     <placeName type="pref">New York City</placeName>
+                     <location>
+                        <geo>40,71427 -74,00597</geo>
+                     </location>
+                  </settlement>
+               </death>
+            </person>
+            <person xml:id="pmb2337">
+               <persName>
+                  <forename>Victor</forename>
+                  <surname>Léon</surname>
+               </persName>
+               <birth>
+                  <date when="1858-01-04">1858-01-04</date>
+                  <settlement ref="pmb45111">
+                     <placeName type="pref">Senica</placeName>
+                     <location>
+                        <geo>48,67922 17,36697</geo>
+                     </location>
+                  </settlement>
+               </birth>
+               <death>
+                  <date when="1940-02-23">1940-02-23</date>
+                  <settlement ref="pmb50">
+                     <placeName type="pref">Wien</placeName>
+                     <location>
+                        <geo>48,208333 16,373056</geo>
+                     </location>
+                  </settlement>
+               </death>
+            </person>
+            <person xml:id="pmb26602">
+               <persName>
+                  <forename>Heinrich von</forename>
+                  <surname>Waldberg</surname>
+               </persName>
+               <birth>
+                  <date when="1860-03-02">1860-03-02</date>
+                  <settlement ref="pmb38876">
+                     <placeName type="pref">Iași</placeName>
+                     <location>
+                        <geo>47,16667 27,6</geo>
+                     </location>
+                  </settlement>
+               </birth>
+               <death>
+                  <date when="1942-10-20">1942-10-20</date>
+                  <settlement ref="pmb2258">
+                     <placeName type="pref">Ghetto Theresienstadt</placeName>
+                     <location>
+                        <geo>50,513639 14,164694</geo>
+                     </location>
+                  </settlement>
+               </death>
+            </person>
+            <person xml:id="pmb14328">
+               <persName>
+                  <forename>Oskar</forename>
+                  <surname>Blumenthal</surname>
+               </persName>
+               <birth>
+                  <date when="1852-03-13">1852-03-13</date>
+                  <settlement ref="pmb168">
+                     <placeName type="pref">Berlin</placeName>
+                     <location>
+                        <geo>52,52437 13,41053</geo>
+                     </location>
+                  </settlement>
+               </birth>
+               <death>
+                  <date when="1917-04-24">1917-04-24</date>
+                  <settlement ref="pmb168">
+                     <placeName type="pref">Berlin</placeName>
+                     <location>
+                        <geo>52,52437 13,41053</geo>
+                     </location>
+                  </settlement>
+               </death>
+            </person>
+            <person xml:id="pmb11845">
+               <persName>
+                  <forename>Gustav</forename>
+                  <surname>Kadelburg</surname>
+               </persName>
+               <birth>
+                  <date when="1851-07-26">1851-07-26</date>
+                  <settlement ref="pmb43471">
+                     <placeName type="pref">Budapest</placeName>
+                     <location>
+                        <geo>47,49835 19,04045</geo>
+                     </location>
+                  </settlement>
+               </birth>
+               <death>
+                  <date when="1925-09-11">1925-09-11</date>
+                  <settlement ref="pmb168">
+                     <placeName type="pref">Berlin</placeName>
+                     <location>
+                        <geo>52,52437 13,41053</geo>
+                     </location>
+                  </settlement>
+               </death>
+            </person>
+            <person xml:id="pmb3442">
+               <persName>
+                  <forename>Marco</forename>
+                  <surname>Brociner</surname>
+               </persName>
+               <birth>
+                  <date when="1852-10-20">1852-10-20</date>
+                  <settlement ref="pmb38876">
+                     <placeName type="pref">Iași</placeName>
+                     <location>
+                        <geo>47,16667 27,6</geo>
+                     </location>
+                  </settlement>
+               </birth>
+               <death>
+                  <date when="1942-04-12">1942-04-12</date>
+                  <settlement ref="pmb50">
+                     <placeName type="pref">Wien</placeName>
+                     <location>
+                        <geo>48,208333 16,373056</geo>
+                     </location>
+                  </settlement>
+               </death>
+            </person>
+            <person xml:id="pmb28530">
+               <persName>
+                  <forename>Leopold</forename>
+                  <surname>Geiringer</surname>
+               </persName>
+               <birth>
+                  <date when="1851-06-27">1851-06-27</date>
+                  <settlement ref="pmb50">
+                     <placeName type="pref">Wien</placeName>
+                     <location>
+                        <geo>48,208333 16,373056</geo>
+                     </location>
+                  </settlement>
+               </birth>
+               <death>
+                  <date when="1900-05-29">1900-05-29</date>
+                  <settlement ref="pmb50">
+                     <placeName type="pref">Wien</placeName>
+                     <location>
+                        <geo>48,208333 16,373056</geo>
+                     </location>
+                  </settlement>
+               </death>
+            </person>
+            <person xml:id="pmb12790">
+               <persName>
+                  <forename>Isidor</forename>
+                  <surname>Singer</surname>
+               </persName>
+               <birth>
+                  <date when="1857-01-16">1857-01-16</date>
+                  <settlement ref="pmb43471">
+                     <placeName type="pref">Budapest</placeName>
+                     <location>
+                        <geo>47,49835 19,04045</geo>
+                     </location>
+                  </settlement>
+               </birth>
+               <death>
+                  <date when="1927-12-08">1927-12-08</date>
+                  <settlement ref="pmb50">
+                     <placeName type="pref">Wien</placeName>
+                     <location>
+                        <geo>48,208333 16,373056</geo>
+                     </location>
+                  </settlement>
+               </death>
+            </person>
+            <person xml:id="pmb11867">
+               <persName>
+                  <forename>Heinrich</forename>
+                  <surname>Kanner</surname>
+               </persName>
+               <birth>
+                  <date when="1864-11-09">1864-11-09</date>
+                  <settlement ref="pmb36202">
+                     <placeName type="pref">Galați</placeName>
+                     <location>
+                        <geo>45,43687 28,05028</geo>
+                     </location>
+                  </settlement>
+               </birth>
+               <death>
+                  <date when="1930-02-15">1930-02-15</date>
+                  <settlement ref="pmb50">
+                     <placeName type="pref">Wien</placeName>
+                     <location>
+                        <geo>48,208333 16,373056</geo>
+                     </location>
+                  </settlement>
+               </death>
+            </person>
+            <person xml:id="pmb10815">
+               <persName>
+                  <forename>Hermann</forename>
+                  <surname>Bahr</surname>
+               </persName>
+               <birth>
+                  <date when="1863-07-19">1863-07-19</date>
+                  <settlement ref="pmb332">
+                     <placeName type="pref">Linz</placeName>
+                     <location>
+                        <geo>48,3 14,28333</geo>
+                     </location>
+                  </settlement>
+               </birth>
+               <death>
+                  <date when="1934-01-15">1934-01-15</date>
+                  <settlement ref="pmb45258">
+                     <placeName type="pref">München</placeName>
+                     <location>
+                        <geo>48,13743 11,57549</geo>
+                     </location>
+                  </settlement>
+               </death>
+            </person>
+            <person xml:id="pmb7218">
+               <persName>
+                  <forename>Karl Emil</forename>
+                  <surname>Franzos</surname>
+               </persName>
+               <birth>
+                  <date when="1848-10-25">1848-10-25</date>
+                  <settlement ref="pmb45274">
+                     <placeName type="pref">Tschortkiw</placeName>
+                     <location>
+                        <geo>49,01701 25,79808</geo>
+                     </location>
+                  </settlement>
+               </birth>
+               <death>
+                  <date when="1904-01-28">1904-01-28</date>
+                  <settlement ref="pmb168">
+                     <placeName type="pref">Berlin</placeName>
+                     <location>
+                        <geo>52,52437 13,41053</geo>
+                     </location>
+                  </settlement>
+               </death>
+            </person>
+            <person xml:id="pmb11687">
+               <persName>
+                  <forename>Ludwig</forename>
+                  <surname>Hevesi</surname>
+               </persName>
+               <birth>
+                  <date when="1843-12-20">1843-12-20</date>
+                  <settlement ref="pmb61046">
+                     <placeName type="pref">Heves</placeName>
+                     <location>
+                        <geo>47,6 20,28333</geo>
+                     </location>
+                  </settlement>
+               </birth>
+               <death>
+                  <date when="1910-02-27">1910-02-27</date>
+                  <settlement ref="pmb50">
+                     <placeName type="pref">Wien</placeName>
+                     <location>
+                        <geo>48,208333 16,373056</geo>
+                     </location>
+                  </settlement>
+               </death>
+            </person>
+            <person xml:id="pmb2150">
+               <persName>
+                  <forename>Julius</forename>
+                  <surname>Bauer</surname>
+               </persName>
+               <birth>
+                  <date when="1853-10-15">1853-10-15</date>
+                  <settlement ref="pmb49199">
+                     <placeName type="pref">Szigetvár</placeName>
+                     <location>
+                        <geo>46,04865 17,80554</geo>
+                     </location>
+                  </settlement>
+               </birth>
+               <death>
+                  <date when="1941-06-11">1941-06-11</date>
+                  <settlement ref="pmb50">
+                     <placeName type="pref">Wien</placeName>
+                     <location>
+                        <geo>48,208333 16,373056</geo>
+                     </location>
+                  </settlement>
+               </death>
+            </person>
+            <person xml:id="pmb11673">
+               <persName>
+                  <forename>Theodor</forename>
+                  <surname>Herzl</surname>
+               </persName>
+               <birth>
+                  <date when="1860-05-02">1860-05-02</date>
+                  <settlement ref="pmb43471">
+                     <placeName type="pref">Budapest</placeName>
+                     <location>
+                        <geo>47,49835 19,04045</geo>
+                     </location>
+                  </settlement>
+               </birth>
+               <death>
+                  <date when="1904-07-03">1904-07-03</date>
+                  <settlement ref="pmb470">
+                     <placeName type="pref">Edlach</placeName>
+                     <location>
+                        <geo>47,69255 15,80915</geo>
+                     </location>
+                  </settlement>
+               </death>
+            </person>
+            <person xml:id="pmb2577">
+               <persName>
+                  <forename>Alexander</forename>
+                  <surname>Landesberg</surname>
+               </persName>
+               <birth>
+                  <date when="1848-07-15">1848-07-15</date>
+                  <settlement ref="pmb39487">
+                     <placeName type="pref">Oradea</placeName>
+                     <location>
+                        <geo>47,0458 21,91833</geo>
+                     </location>
+                  </settlement>
+               </birth>
+               <death>
+                  <date when="1916-06-14">1916-06-14</date>
+                  <settlement ref="pmb50">
+                     <placeName type="pref">Wien</placeName>
+                     <location>
+                        <geo>48,208333 16,373056</geo>
+                     </location>
+                  </settlement>
+               </death>
+            </person>
+            <person xml:id="pmb12674">
+               <persName>
+                  <forename>Sigmund</forename>
+                  <surname>Schlesinger</surname>
+               </persName>
+               <birth>
+                  <date when="1832-06-15">1832-06-15</date>
+                  <settlement ref="pmb38409">
+                     <placeName type="pref">Nové Mesto nad Váhom</placeName>
+                     <location>
+                        <geo>48,75763 17,8309</geo>
+                     </location>
+                  </settlement>
+               </birth>
+               <death>
+                  <date when="1918-03-07">1918-03-07</date>
+                  <settlement ref="pmb50">
+                     <placeName type="pref">Wien</placeName>
+                     <location>
+                        <geo>48,208333 16,373056</geo>
+                     </location>
+                  </settlement>
+               </death>
+            </person>
+            <person xml:id="pmb11406">
+               <persName>
+                  <forename>Julius von</forename>
+                  <surname>Gans-Ludassy</surname>
+               </persName>
+               <birth>
+                  <date when="1858-04-13">1858-04-13</date>
+                  <settlement ref="pmb50">
+                     <placeName type="pref">Wien</placeName>
+                     <location>
+                        <geo>48,208333 16,373056</geo>
+                     </location>
+                  </settlement>
+               </birth>
+               <death>
+                  <date when="1922-09-30">1922-09-30</date>
+                  <settlement ref="pmb50">
+                     <placeName type="pref">Wien</placeName>
+                     <location>
+                        <geo>48,208333 16,373056</geo>
+                     </location>
+                  </settlement>
+               </death>
+            </person>
+            <person xml:id="pmb26666">
+               <persName>
+                  <forename>Camillo</forename>
+                  <surname>Walzel</surname>
+               </persName>
+               <birth>
+                  <date when="1829-02-11">1829-02-11</date>
+                  <settlement ref="pmb918">
+                     <placeName type="pref">Magdeburg</placeName>
+                     <location>
+                        <geo>52,14167 11,64444</geo>
+                     </location>
+                  </settlement>
+               </birth>
+               <death>
+                  <date when="1895-03-17">1895-03-17</date>
+                  <settlement ref="pmb50">
+                     <placeName type="pref">Wien</placeName>
+                     <location>
+                        <geo>48,208333 16,373056</geo>
+                     </location>
+                  </settlement>
+               </death>
+            </person>
+            <person xml:id="pmb14211">
+               <persName>
+                  <forename>Paul</forename>
+                  <surname>Bilhaud</surname>
+               </persName>
+               <birth>
+                  <date when="1854-12-31">1854-12-31</date>
+                  <settlement ref="pmb53955">
+                     <placeName type="pref">Allichamps</placeName>
+                     <location>
+                        <geo>48,5614 4,89392</geo>
+                     </location>
+                  </settlement>
+               </birth>
+               <death>
+                  <date when="1932-01-08">1932-01-08</date>
+               </death>
+            </person>
+            <person xml:id="pmb13768">
+               <persName>
+                  <forename>Albert</forename>
+                  <surname>Barré</surname>
+               </persName>
+               <birth>
+                  <date when="1854-12-29">1854-12-29</date>
+                  <settlement ref="pmb182">
+                     <placeName type="pref">Paris</placeName>
+                     <location>
+                        <geo>48,85341 2,3488</geo>
+                     </location>
+                  </settlement>
+               </birth>
+               <death>
+                  <date when="1910-05-31">1910-05-31</date>
+                  <settlement ref="pmb182">
+                     <placeName type="pref">Paris</placeName>
+                     <location>
+                        <geo>48,85341 2,3488</geo>
+                     </location>
+                  </settlement>
+               </death>
+            </person>
+            <person xml:id="pmb13716">
+               <persName>
+                  <forename>Antoine</forename>
+                  <surname>Banès</surname>
+               </persName>
+               <birth>
+                  <date when="1856-06-08">1856-06-08</date>
+                  <settlement ref="pmb182">
+                     <placeName type="pref">Paris</placeName>
+                     <location>
+                        <geo>48,85341 2,3488</geo>
+                     </location>
+                  </settlement>
+               </birth>
+               <death>
+                  <date when="1924-01-01">1924</date>
+               </death>
+            </person>
+         </listPerson>
+         <listBibl>
+            <bibl xml:id="pmb36340">
+               <title>Die Zeit. Wiener Wochenschrift</title>
+               <author ref="pmb12790" role="hat-herausgegeben">Singer, Isidor</author>
+               <author ref="pmb11867" role="hat-herausgegeben">Kanner, Heinrich</author>
+               <author ref="pmb10815" role="hat-herausgegeben">Bahr, Hermann</author>
+            </bibl>
+            <bibl xml:id="pmb42162">
+               <title>Wiener Caricaturen</title>
+               <title type="werk_link">http://anno.onb.ac.at/cgi-content/anno?aid=wcc</title>
+            </bibl>
+            <bibl xml:id="pmb42158">
+               <title>Der Floh</title>
+               <title type="legacy-name-merge">Der Floh</title>
+               <title type="werk_link">https://anno.onb.ac.at/cgi-content/anno-plus?aid=flo</title>
+               <author ref="pmb7218" role="hat-herausgegeben">Franzos, Karl Emil</author>
+               <author ref="pmb11687" role="hat-herausgegeben">Hevesi, Ludwig</author>
+               <author ref="pmb2150" role="hat-herausgegeben">Bauer, Julius</author>
+               <author ref="pmb11673" role="hat-herausgegeben">Herzl, Theodor</author>
+               <author ref="pmb2577" role="hat-herausgegeben">Landesberg, Alexander</author>
+               <author ref="pmb12674" role="hat-herausgegeben">Schlesinger, Sigmund</author>
+               <author ref="pmb11406" role="hat-herausgegeben">Gans-Ludassy, Julius von</author>
+               <author ref="pmb26666" role="hat-herausgegeben">Walzel, Camillo</author>
+            </bibl>
+            <bibl xml:id="pmb42160">
+               <title>Die Bombe</title>
+               <title type="werk_link">http://anno.onb.ac.at/cgi-content/anno?aid=bom</title>
+            </bibl>
+            <bibl xml:id="pmb42166">
+               <title>Wiener Witzblatt</title>
+            </bibl>
+            <bibl xml:id="pmb38879" ana="implied">
+               <title>Tata-Toto. Vaudeville in drei Akten</title>
+               <title type="legacy-name-merge">Tata-Toto</title>
+               <author ref="pmb14211" role="hat-geschaffen">Bilhaud, Paul</author>
+               <author ref="pmb13768" role="hat-geschaffen">Barré, Albert</author>
+               <author ref="pmb13716" role="hat-vertont">Banès, Antoine</author>
+               <author ref="pmb2337" role="hat-ubersetzt">Léon, Victor</author>
+               <author ref="pmb26666" role="hat-ubersetzt">Walzel, Camillo</author>
+            </bibl>
+            <bibl xml:id="pmb29917" ana="implied">
+               <title>Liebelei. Schauspiel in drei Akten</title>
+               <title type="werk_link">https://www.deutschestextarchiv.de/book/show/schnitzler_liebelei_1896</title>
+               <title type="werk_arbeitstitel">Das arme Mädl</title>
+               <author ref="pmb2121" role="hat-geschaffen">Schnitzler, Arthur</author>
+            </bibl>
+         </listBibl>
+         <listPlace>
+            <place xml:id="pmb50">
+               <placeName>Wien</placeName>
+               <placeName type="ort_fruherer-name">K.K. Reichshaupt- und Residenzstadt Wien</placeName>
+               <placeName type="alternative-name">Bécs</placeName>
+               <placeName type="alternative-name">Land Wien</placeName>
+               <placeName type="alternative-name">Vídeň</placeName>
+               <placeName type="alternative-name">Wenia</placeName>
+               <placeName type="alternative-name">Beč</placeName>
+               <placeName type="ort_fruherer-name">Vindobona</placeName>
+               <placeName type="alternative-name">Vienna</placeName>
+               <location type="coords">
+                  <geo>48,208333 16,373056</geo>
+               </location>
+               <location type="located_in_place">
+                  <placeName ref="pmb41240">Österreich</placeName>
+                  <geo>47,33333 13,33333</geo>
+               </location>
+               <location type="located_in_place">
+                  <placeName ref="pmb235218">Windmühlhöhe</placeName>
+                  <geo>48,24077 16,32092</geo>
+               </location>
+            </place>
+            <place xml:id="pmb263">
+               <placeName>Florenz</placeName>
+               <placeName type="alternative-name">Florence</placeName>
+               <location type="coords">
+                  <geo>43,77925 11,24626</geo>
+               </location>
+               <location type="located_in_place">
+                  <placeName ref="pmb40306">Italien</placeName>
+                  <geo>42,83333 12,83333</geo>
+               </location>
+            </place>
+            <place xml:id="pmb44205">
+               <placeName>Pallanza</placeName>
+               <placeName type="alternative-name">Verbania-Pallanza</placeName>
+               <location type="coords">
+                  <geo>45,92298 8,55045</geo>
+               </location>
+               <location type="located_in_place">
+                  <placeName ref="pmb49193">Verbania</placeName>
+                  <geo>45,93333 8,55</geo>
+               </location>
+               <location type="located_in_place">
+                  <placeName ref="pmb40306">Italien</placeName>
+                  <geo>42,83333 12,83333</geo>
+               </location>
+            </place>
+            <place xml:id="pmb40">
+               <placeName>Theater in der Josefstadt</placeName>
+               <placeName type="legacy-name-merge">Josefst.-Th.</placeName>
+               <location type="coords">
+                  <geo>48,209583 16,351111</geo>
+               </location>
+               <location type="located_in_place">
+                  <placeName ref="pmb58">VIII., Josefstadt</placeName>
+                  <geo>48,21126 16,34706</geo>
+               </location>
+               <location type="located_in_place">
+                  <placeName ref="pmb51915">Josefstädter Straße</placeName>
+                  <geo>48,20995865037859 16,347448769410484</geo>
+               </location>
+            </place>
+         </listPlace>
+         <listEvent>
+            <event xml:id="pmb38885" ana="implied">
+               <eventName n="Theateraufführung">Wohltätigkeitsaufführung von Tata-Toto, 28.9.1894</eventName>
+               <listPlace>
+                  <place>
+                     <placeName role="veranstaltet in" ref="pmb40">Theater in der Josefstadt</placeName>
+                     <location>
+                        <geo>48,209583 16,351111</geo>
+                     </location>
+                  </place>
+               </listPlace>
+            </event>
+         </listEvent>
+      </back>
+   </text>
 </TEI>
