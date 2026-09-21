@@ -381,36 +381,38 @@ def extract_title(root):
     return norm_text(title) if title is not None else None
 
 
-def _walk_place_candidate_nodes(elem, in_address, in_postal, in_addrline, out):
+def _walk_place_candidate_nodes(elem, in_address, in_postal, in_addrline, in_opener, out):
     """Rekursiver Baum-Durchlauf in Dokumentreihenfolge (Ersatz für die
     lxml-XPath-Vereinigung ".//div[@type=address]//placeName |
     .//incident[@type=postal]//placeName |
-    .//div[@type=address]/address/addrLine/descendant::rs[@type=place]" -
+    .//div[@type=address]/address/addrLine/descendant::rs[@type=place] |
+    .//opener/descendant::rs[@type=place]" -
     xml.etree kennt keine XPath-Vereinigung, dafür läuft es ohne separat
     zu installierendes lxml)."""
     name = local_name(elem.tag)
     in_address = in_address or (name == "div" and elem.get("type") == "address")
     in_postal = in_postal or (name == "incident" and elem.get("type") == "postal")
     in_addrline = in_addrline or (in_address and name == "addrLine")
+    in_opener = in_opener or (name == "opener")
 
     if name == "placeName" and (in_address or in_postal):
         out.append(elem)
-    elif name == "rs" and in_addrline and elem.get("type") == "place":
+    elif name == "rs" and (in_addrline or in_opener) and elem.get("type") == "place":
         out.append(elem)
 
     for child in elem:
-        _walk_place_candidate_nodes(child, in_address, in_postal, in_addrline, out)
+        _walk_place_candidate_nodes(child, in_address, in_postal, in_addrline, in_opener, out)
 
 
 def extract_place_candidates(root):
     """Alle placeName aus der Adresse (div[@type='address']) und den
     Poststempeln (incident[@type='postal']), dazu die rs[@type='place'] in
-    den addrLine der Adresse (dort werden Orte oft so statt als placeName
-    ausgezeichnet) - als Auswahlliste, aus der Orte für correspAction
-    übernommen werden können. Dedupliziert nach @ref (bzw. nach Text, wenn
-    kein ref vorhanden ist), erster Fund zählt."""
+    den addrLine der Adresse und im opener (dort werden Orte oft so statt
+    als placeName ausgezeichnet) - als Auswahlliste, aus der Orte für
+    correspAction übernommen werden können. Dedupliziert nach @ref (bzw.
+    nach Text, wenn kein ref vorhanden ist), erster Fund zählt."""
     nodes = []
-    _walk_place_candidate_nodes(root, False, False, False, nodes)
+    _walk_place_candidate_nodes(root, False, False, False, False, nodes)
     seen = set()
     options = []
     for el in nodes:
