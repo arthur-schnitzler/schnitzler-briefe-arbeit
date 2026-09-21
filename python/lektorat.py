@@ -10,13 +10,13 @@ Der Bearbeitungsstand wird in LEKTORAT.status.json gespeichert und ist über
 mehrere Sitzungen hinweg fortsetzbar.
 
 Aufruf (aus dem Repo-Wurzelverzeichnis):
-    python3 lektorat.py            # offene Befunde durchgehen
-    python3 lektorat.py --all      # auch bereits klassifizierte
-    python3 lektorat.py --section 1
-    python3 lektorat.py --file L03728
-    python3 lektorat.py --stats
-    python3 lektorat.py --list
-    python3 lektorat.py --no-open  # Apps nicht automatisch öffnen
+    python3 python/lektorat.py            # offene Befunde durchgehen
+    python3 python/lektorat.py --all      # auch bereits klassifizierte
+    python3 python/lektorat.py --section 1
+    python3 python/lektorat.py --file L03728
+    python3 python/lektorat.py --stats
+    python3 python/lektorat.py --list
+    python3 python/lektorat.py --no-open  # Apps nicht automatisch öffnen
 """
 
 import argparse
@@ -30,7 +30,7 @@ from pathlib import Path
 # ---------------------------------------------------------------------------
 # Konfiguration
 # ---------------------------------------------------------------------------
-REPO = Path(__file__).resolve().parent
+REPO = Path(__file__).resolve().parent.parent
 LEKTORAT_MD = REPO / "LEKTORAT.md"
 STATUS_JSON = REPO / "LEKTORAT.status.json"
 EDITIONS = REPO / "editions"

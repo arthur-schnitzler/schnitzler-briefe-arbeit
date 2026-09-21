@@ -36,7 +36,7 @@ angehängt und anschließend mit dem vorhandenen Werkzeug abgearbeitet werden
 kann:
 
 ```bash
-python3 lektorat.py --file L03971
+python3 python/lektorat.py --file L03971
 ```
 
 ## `pruefe_brief.py`

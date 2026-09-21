@@ -25,9 +25,9 @@ Java + saxon/saxon-he-9.9.1-7.jar, und auch das nur für den Button
 "Datum unsicher (±1 Tag)".
 
 Aufruf (aus dem Repo-Wurzelverzeichnis):
-    python3 stempel_abgleich.py                # Server starten, Browser öffnet sich
-    python3 stempel_abgleich.py --port 8899
-    python3 stempel_abgleich.py --no-open       # Browser nicht automatisch öffnen
+    python3 python/stempel_abgleich.py                # Server starten, Browser öffnet sich
+    python3 python/stempel_abgleich.py --port 8899
+    python3 python/stempel_abgleich.py --no-open       # Browser nicht automatisch öffnen
 """
 
 import argparse
@@ -47,7 +47,7 @@ import xml.etree.ElementTree as etree
 # ---------------------------------------------------------------------------
 # Konfiguration
 # ---------------------------------------------------------------------------
-REPO = Path(__file__).resolve().parent
+REPO = Path(__file__).resolve().parent.parent
 EDITIONS = REPO / "editions"
 SCHEMA_PATH = REPO / "meta" / "schnitzler-briefe-schema.xsd"
 STATIC_DIR = REPO / "stempel_abgleich_static"

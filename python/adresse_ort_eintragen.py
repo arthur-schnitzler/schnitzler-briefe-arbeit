@@ -73,7 +73,7 @@ from stempel_abgleich import (  # noqa: E402
 )
 
 NS = {"tei": "http://www.tei-c.org/ns/1.0"}
-REPO = Path(__file__).resolve().parent
+REPO = Path(__file__).resolve().parent.parent
 LISTPLACE_PATH = REPO / "indices" / "listplace.xml"
 
 

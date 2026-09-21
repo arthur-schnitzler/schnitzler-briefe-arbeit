@@ -209,7 +209,7 @@ Standarddeutsch; hier gilt jede Abweichung als Fehler.
 Die Befunde werden als Markdown-Liste ausgegeben – ein Listenpunkt pro Befund,
 in der Reihenfolge: verifizierte Fehler zuerst, danach Prüffälle. Das Format
 entspricht dem von `LEKTORAT.md` (Abschnitt 4), damit die Liste dort angehängt
-und mit `python3 lektorat.py` abgearbeitet werden kann:
+und mit `python3 python/lektorat.py` abgearbeitet werden kann:
 
 ```markdown
 ## Lektorat L04318 (Datum)

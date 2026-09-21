@@ -21,13 +21,13 @@ berechnet (auf beiden Rechnern identisch) – eine Person arbeitet sie mit
 --von-hinten von hinten durch, die andere per Default von vorne.
 
 Aufruf (aus dem Repo-Wurzelverzeichnis):
-    python3 poststempel.py             # Kandidaten von vorne durchgehen
-    python3 poststempel.py --von-hinten  # von hinten durchgehen
-    python3 poststempel.py --file L04529
-    python3 poststempel.py --stats
-    python3 poststempel.py --list
-    python3 poststempel.py --all       # auch bereits klassifizierte
-    python3 poststempel.py --no-open   # Apps nicht automatisch öffnen
+    python3 python/poststempel.py             # Kandidaten von vorne durchgehen
+    python3 python/poststempel.py --von-hinten  # von hinten durchgehen
+    python3 python/poststempel.py --file L04529
+    python3 python/poststempel.py --stats
+    python3 python/poststempel.py --list
+    python3 python/poststempel.py --all       # auch bereits klassifizierte
+    python3 python/poststempel.py --no-open   # Apps nicht automatisch öffnen
 """
 
 import argparse
@@ -42,7 +42,7 @@ from lxml import etree
 # ---------------------------------------------------------------------------
 # Konfiguration
 # ---------------------------------------------------------------------------
-REPO = Path(__file__).resolve().parent
+REPO = Path(__file__).resolve().parent.parent
 EDITIONS = REPO / "editions"
 STATUS_JSON_DEFAULT = REPO / "poststempel.status.json"
 HTML_BASE = "https://schnitzler-briefe.acdh.oeaw.ac.at/{fid}.html"
