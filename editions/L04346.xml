@@ -1,11 +1,15 @@
-<?xml version='1.0' encoding='UTF-8'?>
+<?xml version="1.0" encoding="UTF-8"?>
 <?xml-model href="../meta/schnitzler-briefe-schematron.sch" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
-<TEI xmlns="http://www.tei-c.org/ns/1.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.tei-c.org/ns/1.0 ../meta/schnitzler-briefe-schema.xsd" xml:base="https://id.acdh.oeaw.ac.at/schnitzler/schnitzler-briefe/editions" xml:id="L04346">
+<TEI xmlns="http://www.tei-c.org/ns/1.0"
+     xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+     xsi:schemaLocation="http://www.tei-c.org/ns/1.0 ../meta/schnitzler-briefe-schema.xsd"
+     xml:base="https://id.acdh.oeaw.ac.at/schnitzler/schnitzler-briefe/editions"
+     xml:id="L04346">
    <teiHeader>
       <fileDesc>
          <titleStmt>
             <title level="s">Arthur Schnitzler: Briefwechsel mit Autorinnen und Autoren</title>
-            <title level="a">Arthur Schnitzler an Rainer Maria Rilke, [zwischen 20. 5. und
+            <title level="a">Arthur Schnitzler an Rainer Maria Rilke, [zwischen 18. 5. und
                20. 6. 1901?]</title>
             <author ref="#pmb2121">Schnitzler, Arthur</author>
             <editor>
@@ -124,23 +128,31 @@
          <correspDesc>
             <correspAction type="sent">
                <persName ref="#pmb2121">Schnitzler, Arthur</persName>
-               <date notBefore="1901-05-20" notAfter="1901-06-20" n="02">[zwischen 20. 5. und
+               <date notBefore="1901-05-18" notAfter="1901-06-20" n="02">[zwischen 18. 5. und
                   20. 6. 1901?]</date>
-               <placeName ref="#pmb50" evidence="conjecture">Wien</placeName>
+               <placeName ref="#pmb168934">Frankgasse 1</placeName>
             </correspAction>
             <correspAction type="received">
                <persName ref="#pmb9531">Rilke, Rainer Maria</persName>
-               <date notBefore="1901-05-21" notAfter="1901-06-21">[zwischen 21. 5. und
+               <date notBefore="1901-05-27" notAfter="1901-06-21">[zwischen 27. 5. und
                   21. 6. 1901?]</date>
-               <placeName ref="#pmb866" evidence="conjecture">Dresden</placeName>
+               <placeName ref="#pmb364288" evidence="conjecture">?? [Bauernhaus von Clara und Rainer Maria Rilke in Westerwede]</placeName>
             </correspAction>
-            <correspContext><ref type="belongsToCorrespondence" target="correspondence_9531">Rilke, Rainer Maria</ref>
+            <correspContext>
+               <ref type="belongsToCorrespondence" target="correspondence_9531">Rilke, Rainer Maria</ref>
                <ref subtype="previous_letter" type="withinCollection" target="L01122">Schnitzler an Bahr, [20.?] 5. 1901</ref>
                <ref subtype="next_letter" type="withinCollection" target="L01123">Brandes an Schnitzler, 22. 5. 1901</ref>
-               <ref subtype="previous_letter" type="withinCorrespondence" source="correspondence_9531" target="L04538">Rilke an Schnitzler, [zwischen 5. und
+               <ref subtype="previous_letter"
+                    type="withinCorrespondence"
+                    source="correspondence_9531"
+                    target="L04538">Rilke an Schnitzler, [zwischen 5. und
                   16.? 5. 1901]</ref>
-               <ref subtype="next_letter" type="withinCorrespondence" source="correspondence_9531" target="L04399">Rilke an Schnitzler, 24. 6. 1901</ref>
-            </correspContext></correspDesc>
+               <ref subtype="next_letter"
+                    type="withinCorrespondence"
+                    source="correspondence_9531"
+                    target="L04399">Rilke an Schnitzler, 24. 6. 1901</ref>
+            </correspContext>
+         </correspDesc>
       </profileDesc>
       <revisionDesc status="proposed">
          <change who="MAM" when="2026-05-04">Export aus Transkribus</change>
@@ -187,7 +199,7 @@
                   <forename>Arthur</forename>
                </persName>
                <birth>
-                  <date when="1862-05-15">15. 5. 1862</date>
+                  <date when="1862-05-15">15. 5. 1862</date>
                   <settlement ref="pmb50">
                      <placeName type="pref">Wien</placeName>
                      <location>
@@ -196,7 +208,7 @@
                   </settlement>
                </birth>
                <death>
-                  <date when="1931-10-21">21. 10. 1931</date>
+                  <date when="1931-10-21">21. 10. 1931</date>
                   <settlement ref="pmb50">
                      <placeName type="pref">Wien</placeName>
                      <location>
@@ -204,10 +216,6 @@
                      </location>
                   </settlement>
                </death>
-               <sex value="male"/>
-               <occupation ref="pmb90">Schriftsteller/Schriftstellerin</occupation>
-               <occupation ref="pmb97">Mediziner/Medizinerin</occupation>
-               <idno type="gnd">https://d-nb.info/gnd/118609807/</idno>
             </person>
             <person xml:id="pmb9531">
                <persName>
@@ -257,60 +265,124 @@
                   </settlement>
                </death>
             </person>
+            <person xml:id="pmb258928" ana="comment">
+               <persName>
+                  <forename>Ruth</forename>
+                  <surname>Sieber</surname>
+               </persName>
+               <birth>
+                  <date when="1901-12-12">1901-12-12</date>
+                  <settlement ref="pmb258929">
+                     <placeName type="pref">Westerwede</placeName>
+                     <location>
+                        <geo>53,19852 8,92013</geo>
+                     </location>
+                  </settlement>
+               </birth>
+               <death>
+                  <date when="1972-11-27">1972-11-27</date>
+               </death>
+            </person>
+            <person xml:id="pmb258927" ana="comment">
+               <persName>
+                  <forename>Carl</forename>
+                  <surname>Sieber</surname>
+               </persName>
+               <birth>
+                  <date notBefore="1897-01-01" when="1897-01-01" notAfter="1897-12-31">1897</date>
+               </birth>
+               <death>
+                  <date when="1945-01-01" notAfter="1945-12-31">1945</date>
+               </death>
+            </person>
          </listPerson>
          <listBibl>
             <bibl xml:id="pmb29853" ana="comment">
-               <title type="main">Lieutenant Gustl. Novelle</title>
-               <title type="werk_bibliografische-angabe">Arthur Schnitzler: Lieutenant Gustl. In:
-                  Neue Freie Presse, Nr. 13053, 25. 12. 1900, Morgenblatt, S. 34–41</title>
+               <title>Lieutenant Gustl. Novelle</title>
+               <title type="werk_bibliografische-angabe">Arthur Schnitzler: Lieutenant Gustl. In: Neue Freie Presse, Nr. 13053, 25. 12. 1900, Morgenblatt, S. 34–41</title>
                <title type="werk_link">http://anno.onb.ac.at/cgi-content/anno?aid=nfp&amp;datum=19001225&amp;seite=34</title>
                <title type="werk_namensvariante">Leutnant Gustl</title>
-               <author role="hat-geschaffen" ref="pmb2121">Schnitzler, Arthur</author>
+               <author ref="pmb2121" role="hat-geschaffen">Schnitzler, Arthur</author>
             </bibl>
          </listBibl>
          <listPlace>
-            <place xml:id="pmb50">
-               <placeName>Wien</placeName>
-               <placeName type="ort_fruherer-name">K.K. Reichshaupt- und Residenzstadt
-                  Wien</placeName>
-               <placeName type="legacy-name-merge">Wien</placeName>
-               <placeName type="alternative-name">Bécs</placeName>
-               <placeName type="alternative-name">Land Wien</placeName>
-               <placeName type="alternative-name">Vídeň</placeName>
-               <placeName type="alternative-name">Wenia</placeName>
-               <placeName type="alternative-name">Beč</placeName>
-               <placeName type="ort_fruherer-name">Vindobona</placeName>
-               <placeName type="legacy-name-merge">Vindobona</placeName>
-               <placeName type="alternative-name">Vienna</placeName>
-               <placeName type="legacy-name-merge">Vienna</placeName>
-               <placeName type="alternative-name">Vienna</placeName>
+            <place xml:id="pmb168934">
+               <placeName>Frankgasse 1</placeName>
                <location type="coords">
-                  <geo>48,208333 16,373056</geo>
+                  <geo>48,21533 16,35736</geo>
                </location>
                <location type="located_in_place">
-                  <placeName ref="pmb41240">Österreich</placeName>
-                  <geo>47,33333 13,33333</geo>
+                  <placeName ref="pmb59">IX., Alsergrund</placeName>
+                  <geo>48,22387 16,35641</geo>
+               </location>
+               <location type="located_in_place">
+                  <placeName ref="pmb397">Frankgasse</placeName>
+                  <geo>48,215516628628 16,356475515829</geo>
                </location>
             </place>
-            <place xml:id="pmb866">
-               <placeName>Dresden</placeName>
-               <placeName type="alternative-name">Landeshauptstadt Dresden</placeName>
-               <placeName type="legacy-name-merge">Dresden</placeName>
-               <placeName type="alternative-name">Dresden</placeName>
-               <placeName type="legacy-name-merge">Kreisfreie Stadt Dresden</placeName>
-               <placeName type="legacy-name-merge">Dresden</placeName>
+            <place xml:id="pmb364288">
+               <placeName>?? [Bauernhaus von Clara und Rainer Maria Rilke in Westerwede]</placeName>
+               <location type="located_in_place">
+                  <placeName ref="pmb258929">Westerwede</placeName>
+                  <geo>53,19852 8,92013</geo>
+               </location>
+            </place>
+            <place xml:id="pmb182" ana="comment">
+               <placeName>Paris</placeName>
+               <placeName type="alternative-name">P'ariz</placeName>
+               <placeName type="alternative-name">Pariž</placeName>
+               <placeName type="alternative-name">Parisius</placeName>
+               <placeName type="alternative-name">Île-de-France</placeName>
                <location type="coords">
-                  <geo>51,0833 13,7666</geo>
+                  <geo>48,85341 2,3488</geo>
                </location>
                <location type="located_in_place">
-                  <placeName ref="pmb151">Deutschland</placeName>
-                  <geo>51,5 10,5</geo>
+                  <placeName ref="pmb166">Frankreich</placeName>
+                  <geo>46,0 2,0</geo>
                </location>
             </place>
          </listPlace>
+         <listOrg>
+            <org xml:id="pmb364339" ana="comment">
+               <orgName>Rilke Archiv</orgName>
+               <location type="located_in_place">
+                  <placeName ref="pmb197">Weimar</placeName>
+                  <geo>50,97361 11,33806</geo>
+                  <idno type="URL" subtype="wikidata">http://www.wikidata.org/entity/Q3955</idno>
+                  <idno type="URL" subtype="schnitzler-bahr">https://schnitzler-bahr.acdh.oeaw.ac.at/pmb197.html</idno>
+                  <idno type="URL" subtype="pmb">https://pmb.acdh.oeaw.ac.at/entity/197/</idno>
+                  <idno type="URL" subtype="pmb">https://pmb.acdh.oeaw.ac.at/entity/64225/</idno>
+                  <idno type="URL" subtype="geonames">https://sws.geonames.org/2812479/</idno>
+                  <idno type="URL" subtype="pmb">https://pmb.acdh.oeaw.ac.at/entity/92063/</idno>
+                  <idno type="URL" subtype="pmb">https://pmb.acdh.oeaw.ac.at/entity/95650/</idno>
+                  <idno type="URL" subtype="d-nb">https://d-nb.info/gnd/4065105-8</idno>
+                  <idno type="URL" subtype="wikipedia">https://de.wikipedia.org/wiki/Weimar</idno>
+                  <idno type="URL" subtype="schnitzler-interviews">https://schnitzler-interviews.acdh.oeaw.ac.at/pmb197.html</idno>
+                  <idno type="URL" subtype="schnitzler-tagebuch">https://schnitzler-tagebuch.acdh.oeaw.ac.at/pmb197.html</idno>
+                  <idno type="URL" subtype="wienerschnitzler">https://wienerschnitzler.org/pmb197.html</idno>
+                  <idno type="URL" subtype="schnitzler-briefe">https://schnitzler-briefe.acdh.oeaw.ac.at/pmb197.html</idno>
+                  <idno type="URL" subtype="sk">https://sk.acdh.oeaw.ac.at/DWplace00151</idno>
+                  <idno type="URL" subtype="sk">https://sk.acdh.oeaw.ac.at/fa_place00003567</idno>
+                  <idno type="URL" subtype="sk">https://sk.acdh.oeaw.ac.at/fa_place00001943</idno>
+                  <idno type="URL" subtype="biblio">https://biblio.ub.uni-freiburg.de/sf/#pmb197</idno>
+               </location>
+               <location type="located_in_place">
+                  <placeName ref="pmb90703">Gernsbach</placeName>
+                  <geo>48,77034 8,34306</geo>
+                  <idno type="URL" subtype="pmb">https://pmb.acdh.oeaw.ac.at/entity/90703/</idno>
+                  <idno type="URL" subtype="schnitzler-tagebuch">https://schnitzler-tagebuch.acdh.oeaw.ac.at/pmb90703.html</idno>
+                  <idno type="URL" subtype="pmb">https://pmb.acdh.oeaw.ac.at/entity/259986/</idno>
+                  <idno type="URL" subtype="wikipedia">https://de.wikipedia.org/wiki/Gernsbach</idno>
+                  <idno type="URL" subtype="wikidata">http://www.wikidata.org/entity/Q520119</idno>
+                  <idno type="URL" subtype="d-nb">https://d-nb.info/gnd/4092873-1</idno>
+                  <idno type="URL" subtype="geonames">https://sws.geonames.org/6558042/</idno>
+                  <idno type="URL" subtype="wienerschnitzler">https://wienerschnitzler.org/pmb90703.html</idno>
+               </location>
+            </org>
+         </listOrg>
          <listEvent>
             <event xml:id="pmb364195" ana="comment">
-               <eventName n="Hochzeit">Hochzeit von Clara Westhoff und Rainer Maria Rilke, 28.4.1901</eventName>
+               <eventName n="Hochzeit">Hochzeit von Clara Westhoff und Rainer Maria Rilke, 29.4.1901</eventName>
                <listPlace>
                   <place>
                      <placeName role="veranstaltet in" ref="pmb891">Bremen</placeName>

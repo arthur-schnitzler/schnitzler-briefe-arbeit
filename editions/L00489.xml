@@ -1,6 +1,8 @@
-<?xml version='1.0' encoding='UTF-8'?>
+<?xml version="1.0" encoding="UTF-8"?>
 <?xml-model href="../meta/schnitzler-briefe-schematron.sch" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
-<TEI xmlns="http://www.tei-c.org/ns/1.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.tei-c.org/ns/1.0 ../meta/schnitzler-briefe-schema.xsd" xml:id="L00489" xml:base="https://id.acdh.oeaw.ac.at/schnitzler/schnitzler-briefe/editions">
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+   xsi:schemaLocation="http://www.tei-c.org/ns/1.0 ../meta/schnitzler-briefe-schema.xsd"
+   xml:id="L00489" xml:base="https://id.acdh.oeaw.ac.at/schnitzler/schnitzler-briefe/editions">
    <teiHeader>
       <fileDesc>
          <titleStmt>
@@ -84,13 +86,14 @@
                                  <measure unit="kuvert" quantity="1"/>
                                  <measure unit="blatt" quantity="2"/>
                                  <measure unit="seite" quantity="8"/>
-                                 <measure unit="zeichenanzahl" quantity="1899"/>
+                                 <measure unit="zeichenanzahl" quantity="1897"/>
                               </extent>
                            </supportDesc>
                         </objectDesc>
                         <handDesc hands="1">
                            <handNote medium="bleistift" style="deutsche-kurrent" corresp="#pmb2121"/>
-                           <handNote medium="schwarze-tinte" style="deutsche-kurrent" corresp="#pmb2121">
+                           <handNote medium="schwarze-tinte" style="deutsche-kurrent"
+                              corresp="#pmb2121">
                               <p>Umschlag</p>
                            </handNote>
                         </handDesc>
@@ -105,14 +108,14 @@
                            <incident type="postal">
                               <desc>
                                  <stamp n="1" type="transmission">
-                                    <placeName ref="#pmb50">Wien</placeName>
+                                    <placeName ref="#pmb59">Wien 7<unclear>2</unclear></placeName>
                                     <date when="1895-09-21">21. 9. <unclear>9</unclear>5</date>
                                  </stamp>
                               </desc>
                            </incident>
                            <incident type="postal">
                               <desc>
-                                 <stamp n="2" type="forwarding">
+                                 <stamp n="2" type="transit">
                                     <placeName ref="#pmb465">
                                        <pb facs="1895_AS_RBH_3_00044"/>Riva</placeName>
                                     <date when="1895-09-22">22. 9. 95</date>
@@ -158,29 +161,46 @@
             <correspAction type="sent">
                <persName ref="#pmb2121">Schnitzler, Arthur</persName>
                <date when="1895-09-21" n="01">21. 9. 1895</date>
-               <placeName ref="#pmb50">Wien</placeName>
+               <placeName ref="#pmb168934">Frankgasse 1</placeName>
+            </correspAction>
+            <correspAction type="transmitted">
+               <date when="1895-09-21">21. 9. 1895</date>
+               <placeName ref="#pmb59">Wien</placeName>
             </correspAction>
             <correspAction type="in_transit">
                <date when="1895-09-22">22. 9. 1895</date>
                <placeName ref="#pmb465">Riva del Garda</placeName>
+            </correspAction>
+            <correspAction type="delivered">
+               <date when="1895-09-24">24. 9. 1895</date>
+               <placeName ref="#pmb374">Gardone Riviera</placeName>
             </correspAction>
             <correspAction type="received">
                <persName ref="#pmb10863">Beer-Hofmann, Richard</persName>
                <date when="1895-09-24">24. 9. 1895</date>
                <placeName ref="#pmb374">Gardone Riviera</placeName>
             </correspAction>
-            <correspContext><ref type="belongsToCorrespondence" target="correspondence_10863">Beer-Hofmann, Richard</ref>
-               <ref subtype="previous_letter" type="withinCollection" target="L00488">Fels an Schnitzler, 19. 9. 1895</ref>
-               <ref subtype="next_letter" type="withinCollection" target="L00490">Schnitzler an Beer-Hofmann, 23. 9. 1895</ref>
-               <ref subtype="previous_letter" type="withinCorrespondence" source="correspondence_10863" target="L00487">Schnitzler an Beer-Hofmann, 19. 9. 1895</ref>
-               <ref subtype="next_letter" type="withinCorrespondence" source="correspondence_10863" target="L00490">Schnitzler an Beer-Hofmann, 23. 9. 1895</ref>
-            </correspContext></correspDesc>
+            <correspContext>
+               <ref type="belongsToCorrespondence" target="correspondence_10863">Beer-Hofmann,
+                  Richard</ref>
+               <ref subtype="previous_letter" type="withinCollection" target="L00488">Fels an
+                  Schnitzler, 19. 9. 1895</ref>
+               <ref subtype="next_letter" type="withinCollection" target="L00490">Schnitzler an
+                  Beer-Hofmann, 23. 9. 1895</ref>
+               <ref subtype="previous_letter" type="withinCorrespondence"
+                  source="correspondence_10863" target="L00487">Schnitzler an Beer-Hofmann,
+                  19. 9. 1895</ref>
+               <ref subtype="next_letter" type="withinCorrespondence" source="correspondence_10863"
+                  target="L00490">Schnitzler an Beer-Hofmann, 23. 9. 1895</ref>
+            </correspContext>
+         </correspDesc>
       </profileDesc>
       <revisionDesc status="approved">
          <change who="MAM" when="2019-06-12">Automatisch angelegt aus Buchausgabe</change>
          <change who="MAM" when="2019-10-17">Index check</change>
          <change who="GHS" when="2019-10-22">finalisiert</change>
          <change who="MAM" when="2020-09-24">Durchsicht</change>
+         <change who="MAM" when="2026-09-21">Datierung und Stempel überprüft</change>
       </revisionDesc>
    </teiHeader>
    <facsimile>
@@ -222,26 +242,36 @@
                </dateline>
             </opener>
             <p>
-               <salute>Lieber Richard,</salute> meine Karte haben Sie wohl. In <rs ref="#pmb465" type="place">
+               <salute>Lieber Richard,</salute> meine <anchor type="commentary" xml:id="K_L00489-1"
+                  />Karte<note type="commentary" corresp="K_L00489-1">
+                  <ref type="schnitzler-briefe" target="L00487"/>.</note> haben Sie wohl. In <rs
+                  ref="#pmb465" type="place">
                   <hi rend="latintype">Riva</hi>
-               </rs> iſt es <hi rend="underline" n="1">mir</hi> nemlich vor 3 Jahren paſſirt, daſs
-               der Poſtbeamte mir die Briefe an mich nicht gab – ich verlangte damals die Einläufe
+               </rs> iſt es <hi rend="underline" n="1">mir</hi> nemlich <anchor type="commentary"
+                  xml:id="K_L00489-2"/>vor 3 Jahren<note type="commentary" corresp="K_L00489-2">
+                  <rs type="person" ref="#pmb2121">Schnitzler</rs> war zwischen <ref
+                     type="wienerschnitzler" subtype="date-only" target="1892-09-12"/> und <ref
+                     type="wienerschnitzler" subtype="date-only" target="1892-09-16"/> in <rs
+                     ref="#pmb465" type="place">Riva del Garda</rs>. </note> paſſirt, daſs der
+               Poſtbeamte mir die Briefe an mich nicht gab – ich verlangte damals die Einläufe
                durchzuſehen, da entdeckte ich meine Briefe. Und ich hatte nicht gepfiffen! –</p>
             <p>
-               <pb facs="1895_AS_RBH_3_00046"/>Die <anchor type="commentary" xml:id="K_L00489-1"/>
+               <pb facs="1895_AS_RBH_3_00046"/>Die <anchor type="commentary" xml:id="K_L00489-3"/>
                <rs type="work" ref="#pmb29917" subtype="implied">Leſeprobe</rs>
-               <note type="commentary" corresp="K_L00489-1">
-                  <ref target="1895-09-18" subtype="Cf" type="schnitzler-tagebuch"/>.
-               </note> fiel gut aus. Frl. <rs ref="#pmb12618" type="person">S.</rs> ignorirte mich,
-               aber that ſehr ergriffen von dem <rs type="work" ref="#pmb29917" subtype="implied">Stück</rs>, Nachmittag telephonirte ſie <anchor type="commentary" xml:id="K_L00489-2"/>
+               <note type="commentary" corresp="K_L00489-3">
+                  <ref target="1895-09-18" subtype="Cf" type="schnitzler-tagebuch"/>. </note> fiel
+               gut aus. Frl. <rs ref="#pmb12618" type="person">S.</rs> ignorirte mich, aber that
+               ſehr ergriffen von dem <rs type="work" ref="#pmb29917" subtype="implied">Stück</rs>,
+               Nachmittag telephonirte ſie <anchor type="commentary" xml:id="K_L00489-4"/>
                <hi rend="latintype">en bon camerade</hi>
-               <note type="commentary" corresp="K_L00489-2">französisch: kameradschaftlich</note>.
+               <note type="commentary" corresp="K_L00489-4">französisch: kameradschaftlich</note>.
                   <rs ref="#pmb12809" type="person">So<c rendition="#gemination-n"/>enthal</rs> hat
                »gute Hoffnung«. Beim <rs type="work" ref="#pmb29917" subtype="implied">1. Akt</rs>
                wurde viel gelacht. Vom <rs type="work" ref="#pmb29917" subtype="implied">3.</rs>
-               verſpricht man ſich ſichre Wirkung. Dem <rs type="work" ref="#pmb29917" subtype="implied">2.</rs>
-               <space unit="chars" quantity="1"/>ſcheint man am wenigſtens zu vertrauen.
-                  <pb facs="1895_AS_RBH_3_00046"/>
+               verſpricht man ſich ſichre Wirkung. Dem <rs type="work" ref="#pmb29917"
+                  subtype="implied">2.</rs>
+               <space unit="chars" quantity="1"/>ſcheint man am wenigſtens zu vertrauen. <pb
+                  facs="1895_AS_RBH_3_00046"/>
                <rs ref="#pmb12265" type="person">
                   <hi rend="latintype">Mitterwurzer</hi>
                </rs> war nicht anweſend; er ſpielt aber ſicher, ließ ſich officiell entſchuldigen.
@@ -254,317 +284,820 @@
                </rs>
                <space unit="chars" quantity="1"/>
                <rs ref="#pmb31711" type="work">Rechte der Seele</rs> geben; während der Leſeprobe
-               half er den <anchor type="commentary" xml:id="K_L00489-3"/>
+               half er den <anchor type="commentary" xml:id="K_L00489-5"/>
                <rs ref="#pmb2702" type="person">
                   <hi rend="latintype">Laube</hi>
                </rs> in <rs ref="#pmb1004" type="place">Sprottau</rs>
-               <note type="commentary" corresp="K_L00489-3">Die Enthüllung des Denkmals für <rs ref="#pmb2702" type="person">Heinrich Laube</rs> in dessen Geburtsstadt fand
-                  ebenfalls am <date>18. 9. 1895</date> statt.</note> ent<pb facs="1895_AS_RBH_3_00047"/>hüllen. Ich wünſchte ihm angenehme Enthüllung. Er
-               ſagte, die Enthüllung des Fräulein <anchor type="commentary" xml:id="K_L00489-4"/>
+               <note type="commentary" corresp="K_L00489-5">Die Enthüllung des Denkmals für <rs
+                     ref="#pmb2702" type="person">Heinrich Laube</rs> in dessen Geburtsstadt fand
+                  ebenfalls am <date>18. 9. 1895</date> statt.</note> ent<pb
+                  facs="1895_AS_RBH_3_00047"/>hüllen. Ich wünſchte ihm angenehme Enthüllung. Er
+               ſagte, die Enthüllung des Fräulein <anchor type="commentary" xml:id="K_L00489-6"/>
                <rs ref="#pmb4501" type="person">
                   <hi rend="latintype">Dandler</hi>
                </rs>
-               <note type="commentary" corresp="K_L00489-4">
-                  <rs ref="#pmb4501" type="person">Anna Dandler</rs> war zeitlebens für das <rs type="org" ref="#pmb44112">Münchner Hoftheater</rs> tätig. Ob hier eine
-                  sexuelle Zote (anzunehmen) oder der Wunsch ausgedrückt wird, sie ans <rs type="org" ref="#pmb36247">Burgtheater</rs> zu holen (weniger wahrscheinlich),
+               <note type="commentary" corresp="K_L00489-6">
+                  <rs ref="#pmb4501" type="person">Anna Dandler</rs> war zeitlebens für das <rs
+                     type="org" ref="#pmb44112">Münchner Hoftheater</rs> tätig. Ob hier eine
+                  sexuelle Zote (anzunehmen) oder der Wunsch ausgedrückt wird, sie ans <rs
+                     type="org" ref="#pmb36247">Burgtheater</rs> zu holen (weniger wahrscheinlich),
                   kann nicht geklärt werden.</note> zöge er vor. –</p>
             <p>
                <rs ref="#pmb2450" type="person">
                   <hi rend="latintype">Fels</hi>
                </rs>
-               <space unit="chars" quantity="1"/>ſchreibt mir <anchor type="commentary" xml:id="K_L00489-5"/>heute<note type="commentary" corresp="K_L00489-5">
+               <space unit="chars" quantity="1"/>ſchreibt mir <anchor type="commentary"
+                  xml:id="K_L00489-7"/>heute<note type="commentary" corresp="K_L00489-7">
                   <ref type="schnitzler-briefe" target="L00488"/>.</note>. Sie können ſich denken.
                Er appellirt an uns zuſa<c rendition="#gemination-m"/>en, die Summe iſt 25 fl. Ich
                hab ihm gleich 10 fl <pb facs="1895_AS_RBH_3_00048"/>geſchickt. Darf ich ihm auch für
                Sie was ſchicken? Auch an <rs ref="#pmb11740" type="person">Hugo</rs> wandt ich mich
                bereits. –</p>
-            <p>Geſtern war ich beim »<anchor type="commentary" xml:id="K_L00489-6"/>
-               <rs ref="#pmb41136" type="work">Pelikan</rs>
-               <note type="commentary" corresp="K_L00489-6">im <rs type="place" ref="#pmb14">Burgtheater</rs>
-               </note>«. Dieſes Blaßwerden guter Stücke iſt ſeltſam. – <anchor type="commentary" xml:id="K_L00489-7"/>Heute<note type="commentary" corresp="K_L00489-7">Gegeben wurde
-                  zum ersten Mal <rs ref="#pmb41143" type="work">Die Doppelhochzeit</rs> von <rs ref="#pmb2337" type="person">Victor Léon</rs> und <rs ref="#pmb26602" type="person">Heinrich von Waldberg</rs>, Musik von <rs ref="#pmb18093" type="person">Josef Hellmesberger</rs>.</note> geh ich zur Eröffnung der <rs ref="#pmb40" type="place">
-                  <hi rend="latintype">Josefstadt</hi>
-               </rs>. – Gearbeitet hab ich noch i<c rendition="#gemination-m"/>er gar nichts; heute
-                  <pb facs="1895_AS_RBH_3_00049"/>Nacht will ich anfangen. Glauben Sie? –</p>
+            <p>Geſtern war ich beim »<anchor type="commentary" xml:id="K_L00489-8"/>
+               <rs type="event" subtype="implied" ref="#pmb48875">
+                  <rs ref="#pmb41136" type="work">Pelikan</rs>
+               </rs>
+               <note type="commentary" corresp="K_L00489-8">Die <rs type="event" ref="#pmb48875"
+                     >Aufführung von <rs type="work" ref="#pmb41136">Ein Pelikan. Schauspiel in fünf
+                        Aufzügen</rs> von <rs type="person" ref="#pmb2815">Émile Augier</rs>
+                  </rs> fand am <date when="1895-09-20">20. 9. 1895</date> im <rs type="place"
+                     ref="#pmb14">Burgtheater</rs> statt.</note>«. Dieſes Blaßwerden guter Stücke
+               iſt ſeltſam. – Heute geh ich zur <anchor type="commentary" xml:id="K_L00489-9"
+               />Eröffnung der <rs type="event" ref="#pmb41148" subtype="implied">
+                  <rs ref="#pmb40" type="place">
+                     <hi rend="latintype">Josefstadt</hi>
+                  </rs>
+               </rs>
+               <note type="commentary" corresp="K_L00489-9">Im <rs type="place" ref="#pmb40"
+                     >Theater in der Josefstadt</rs> fand die <rs type="event" ref="#pmb41148"
+                     >Uraufführung von <rs type="work" ref="#pmb41143">Die
+                        Doppelhochzeit</rs> von <rs type="person" ref="#pmb2337">Victor Léon</rs> und
+                     <rs type="person" ref="#pmb26602">Heinrich von Waldberg</rs>
+                  </rs>  statt.</note>. – Gearbeitet hab ich noch i<c
+                  rendition="#gemination-m"/>er gar nichts; heute <pb facs="1895_AS_RBH_3_00049"
+               />Nacht will ich anfangen. Glauben Sie? –</p>
             <p>Das Datum der <rs ref="#pmb29917" type="work">L.</rs> iſt noch nicht
                feſtgeſtellt. –</p>
             <p>Den <rs ref="#pmb11740" type="person">Hugo</rs> hab ich geſtern begegnet, vorgeſtern
                iſt er zurückgeko<c rendition="#gemination-m"/>en. Er ſieht gut aus,
-               »wettergebräunt«. Nach und nach wird man zu allen Worten Anführungszeichen <pb facs="1895_AS_RBH_3_00049"/>machen müſſen – das wird dann das Ende der Literatur
+               »wettergebräunt«. Nach und nach wird man zu allen Worten Anführungszeichen <pb
+                  facs="1895_AS_RBH_3_00049"/>machen müſſen – das wird dann das Ende der Literatur
                sein.</p>
             <p>Wie geht’s Ihnen? Nächſtens ſchreiben Sie mir einen Brief ſtatt einer Depeſche; da
                werde ich weniger erſchrecken und mich beſſer unterhalten. Ich wünſche Ihnen weiter
-               gute Laune, <pb facs="1895_AS_RBH_3_00050"/>gutes Wetter, gute Sti<c rendition="#gemination-m"/>ung und lebhafte Empfindung Ihrer Freiheit und Ihres
+               gute Laune, <pb facs="1895_AS_RBH_3_00050"/>gutes Wetter, gute Sti<c
+                  rendition="#gemination-m"/>ung und lebhafte Empfindung Ihrer Freiheit und Ihres
                Lebens.</p>
             <closer>Herzliche Grüße Ihr<lb/>
                <signed>Arthur</signed>
             </closer>
          </div>
       </body>
-      <back><listPerson><person xml:id="pmb10863"><persName>
-      <forename>Richard</forename>
-      <surname>Beer-Hofmann</surname>
-  </persName><birth>
-    <date when="1866-07-11">1866-07-11</date>
-      <settlement ref="pmb50">
-        <placeName type="pref">Wien</placeName>
-        <location><geo>48,208333 16,373056</geo></location>
-      </settlement>
-  </birth><death>
-    <date when="1945-09-26">1945-09-26</date>
-      <settlement ref="pmb44053">
-        <placeName type="pref">New York City</placeName>
-        <location><geo>40,71427 -74,00597</geo></location>
-      </settlement>
-  </death></person><person xml:id="pmb11036"><persName>
-      <forename>Max Eugen</forename>
-      <surname>Burckhard</surname>
-  </persName><birth>
-    <date when="1854-07-14">1854-07-14</date>
-      <settlement ref="pmb61010">
-        <placeName type="pref">Korneuburg</placeName>
-        <location><geo>48,35 16,33333</geo></location>
-      </settlement>
-  </birth><death>
-    <date when="1912-03-16">1912-03-16</date>
-      <settlement ref="pmb50">
-        <placeName type="pref">Wien</placeName>
-        <location><geo>48,208333 16,373056</geo></location>
-      </settlement>
-  </death></person><person xml:id="pmb11431"><persName>
-      <forename>Giuseppe</forename>
-      <surname>Giacosa</surname>
-  </persName><birth>
-    <date when="1847-10-21">1847-10-21</date>
-      <settlement ref="pmb39590">
-        <placeName type="pref">Colleretto Giacosa</placeName>
-        <location><geo>45,43286 7,79852</geo></location>
-      </settlement>
-  </birth><death>
-    <date when="1906-09-02">1906-09-02</date>
-      <settlement ref="pmb39590">
-        <placeName type="pref">Colleretto Giacosa</placeName>
-        <location><geo>45,43286 7,79852</geo></location>
-      </settlement>
-  </death></person><person xml:id="pmb11740"><persName>
-      <forename>Hugo von</forename>
-      <surname>Hofmannsthal</surname>
-  </persName><birth>
-    <date when="1874-02-01">1874-02-01</date>
-      <settlement ref="pmb50">
-        <placeName type="pref">Wien</placeName>
-        <location><geo>48,208333 16,373056</geo></location>
-      </settlement>
-  </birth><death>
-    <date when="1929-07-15">1929-07-15</date>
-      <settlement ref="pmb173">
-        <placeName type="pref">Rodaun</placeName>
-        <location><geo>48,132793312328 16,256152195922</geo></location>
-      </settlement>
-  </death></person><person xml:id="pmb11860"><persName>
-      <forename>Anna</forename>
-      <surname>Kallina</surname>
-  </persName><birth>
-    <date when="1874-03-31">1874-03-31</date>
-      <settlement ref="pmb50">
-        <placeName type="pref">Wien</placeName>
-        <location><geo>48,208333 16,373056</geo></location>
-      </settlement>
-  </birth><death>
-    <date when="1948-01-04">1948-01-04</date>
-      <settlement ref="pmb50">
-        <placeName type="pref">Wien</placeName>
-        <location><geo>48,208333 16,373056</geo></location>
-      </settlement>
-  </death></person><person xml:id="pmb12265"><persName>
-      <forename>Friedrich</forename>
-      <surname>Mitterwurzer</surname>
-  </persName><birth>
-    <date when="1844-10-16">1844-10-16</date>
-      <settlement ref="pmb866">
-        <placeName type="pref">Dresden</placeName>
-        <location><geo>51,0833 13,7666</geo></location>
-      </settlement>
-  </birth><death>
-    <date when="1897-02-13">1897-02-13</date>
-      <settlement ref="pmb50">
-        <placeName type="pref">Wien</placeName>
-        <location><geo>48,208333 16,373056</geo></location>
-      </settlement>
-  </death></person><person xml:id="pmb12618"><persName>
-      <forename>Adele</forename>
-      <surname>Sandrock</surname>
-  </persName><birth>
-    <date when="1863-08-19">1863-08-19</date>
-      <settlement ref="pmb44303">
-        <placeName type="pref">Rotterdam</placeName>
-        <location><geo>51,9225 4,47917</geo></location>
-      </settlement>
-  </birth><death>
-    <date when="1937-08-30">1937-08-30</date>
-      <settlement ref="pmb168">
-        <placeName type="pref">Berlin</placeName>
-        <location><geo>52,52437 13,41053</geo></location>
-      </settlement>
-  </death></person><person xml:id="pmb12809"><persName>
-      <forename>Adolf von</forename>
-      <surname>Sonnenthal</surname>
-  </persName><birth>
-    <date when="1834-12-21">1834-12-21</date>
-      <settlement ref="pmb43471">
-        <placeName type="pref">Budapest</placeName>
-        <location><geo>47,49835 19,04045</geo></location>
-      </settlement>
-  </birth><death>
-    <date when="1909-04-04">1909-04-04</date>
-      <settlement ref="pmb652">
-        <placeName type="pref">Prag</placeName>
-        <location><geo>50,08333 14,46667</geo></location>
-      </settlement>
-  </death></person><person xml:id="pmb2121"><persName><surname>Schnitzler</surname><forename>Arthur</forename></persName><birth><date when="1862-05-15">15. 5. 1862</date><settlement ref="pmb50"><placeName type="pref">Wien</placeName><location><geo>48,208333 16,373056</geo></location></settlement></birth><death><date when="1931-10-21">21. 10. 1931</date><settlement ref="pmb50"><placeName type="pref">Wien</placeName><location><geo>48,208333 16,373056</geo></location></settlement></death><sex value="male"/><occupation ref="pmb90">Schriftsteller/Schriftstellerin</occupation><occupation ref="pmb97">Mediziner/Medizinerin</occupation><idno type="gnd">https://d-nb.info/gnd/118609807/</idno></person><person xml:id="pmb2450"><persName>
-      <forename>Friedrich Michael</forename>
-      <surname>Fels</surname>
-  </persName><birth>
-    <date when="1864-01-01" notAfter="1864-12-31" notBefore="1864-01-01">1864</date>
-      <settlement ref="pmb41882">
-        <placeName type="pref">Bad Dürkheim</placeName>
-        <location><geo>49,4618 8,17236</geo></location>
-      </settlement>
-  </birth></person><person xml:id="pmb2702"><persName>
-      <forename>Heinrich</forename>
-      <surname>Laube</surname>
-  </persName><birth>
-    <date when="1806-09-18">1806-09-18</date>
-      <settlement ref="pmb1004">
-        <placeName type="pref">Sprottau</placeName>
-        <location><geo>51,56563 15,53664</geo></location>
-      </settlement>
-  </birth><death>
-    <date when="1884-08-01">1884-08-01</date>
-      <settlement ref="pmb50">
-        <placeName type="pref">Wien</placeName>
-        <location><geo>48,208333 16,373056</geo></location>
-      </settlement>
-      <settlement ref="pmb50">
-        <placeName type="pref">Wien</placeName>
-        <location><geo>48,208333 16,373056</geo></location>
-      </settlement>
-  </death></person><person xml:id="pmb4501"><persName>
-      <forename>Anna</forename>
-      <surname>Dandler</surname>
-  </persName><birth>
-    <date when="1862-03-14">1862-03-14</date>
-      <settlement ref="pmb872">
-        <placeName type="pref">Stuttgart</placeName>
-        <location><geo>48,78232 9,17702</geo></location>
-      </settlement>
-  </birth><death>
-    <date when="1930-09-17">1930-09-17</date>
-      <settlement ref="pmb883">
-        <placeName type="pref">Wiesbaden</placeName>
-        <location><geo>50,08258 8,24932</geo></location>
-      </settlement>
-  </death></person><person xml:id="pmb18093" ana="comment"><persName>
-      <forename>Josef</forename>
-      <surname>Hellmesberger</surname>
-  </persName><birth>
-    <date when="1855-04-09">1855-04-09</date>
-      <settlement ref="pmb50">
-        <placeName type="pref">Wien</placeName>
-        <location><geo>48,208333 16,373056</geo></location>
-      </settlement>
-  </birth><death>
-    <date when="1907-04-26">1907-04-26</date>
-      <settlement ref="pmb50">
-        <placeName type="pref">Wien</placeName>
-        <location><geo>48,208333 16,373056</geo></location>
-      </settlement>
-  </death></person><person xml:id="pmb2337" ana="comment"><persName>
-      <forename>Victor</forename>
-      <surname>Léon</surname>
-  </persName><birth>
-    <date when="1858-01-04">1858-01-04</date>
-      <settlement ref="pmb45111">
-        <placeName type="pref">Senica</placeName>
-        <location><geo>48,67922 17,36697</geo></location>
-      </settlement>
-  </birth><death>
-    <date when="1940-02-23">1940-02-23</date>
-      <settlement ref="pmb50">
-        <placeName type="pref">Wien</placeName>
-        <location><geo>48,208333 16,373056</geo></location>
-      </settlement>
-  </death></person><person xml:id="pmb26602" ana="comment"><persName>
-      <forename>Heinrich von</forename>
-      <surname>Waldberg</surname>
-  </persName><birth>
-    <date when="1860-03-02">1860-03-02</date>
-      <settlement ref="pmb38876">
-        <placeName type="pref">Iași</placeName>
-        <location><geo>47,16667 27,6</geo></location>
-      </settlement>
-  </birth><death>
-    <date when="1942-10-20">1942-10-20</date>
-      <settlement ref="pmb2258">
-        <placeName type="pref">Ghetto Theresienstadt</placeName>
-        <location><geo>50,513639 14,164694</geo></location>
-      </settlement>
-  </death></person></listPerson><listBibl><bibl xml:id="pmb29917"><title type="main">Liebelei. Schauspiel in drei Akten</title><title type="werk_link">https://www.deutschestextarchiv.de/book/show/schnitzler_liebelei_1896</title><title type="werk_arbeitstitel">Das arme Mädl</title><author role="hat-geschaffen" ref="pmb2121">Schnitzler, Arthur</author></bibl><bibl xml:id="pmb31711"><title type="main">Rechte der Seele. Schauspiel in einem Act</title><author role="hat-geschaffen" ref="pmb11431">Giacosa, Giuseppe</author><author role="hat-ubersetzt" ref="pmb4076">Eisenschitz, Otto</author></bibl><bibl xml:id="pmb41136"><title type="main">Ein Pelikan. Schauspiel in fünf Aufzügen</title><title type="werk_link">https://reader.digitale-sammlungen.de/de/fs1/object/display/bsb11323252_00010.html</title><title type="namensvariante">Le Fils de Giboyer</title><title type="legacy-name-merge">Der Pelikan</title><author role="hat-geschaffen" ref="pmb2815">Augier, Émile</author><author role="hat-ubersetzt" ref="pmb2702">Laube, Heinrich</author></bibl><bibl xml:id="pmb41143" ana="comment"><title type="main">Die Doppelhochzeit</title><author role="hat-geschaffen" ref="pmb2337">Léon, Victor</author><author role="hat-geschaffen" ref="pmb26602">Waldberg, Heinrich von</author><author role="hat-vertont" ref="pmb18093">Hellmesberger, Josef</author></bibl></listBibl><listPlace><place xml:id="pmb1004"><placeName>Sprottau</placeName><placeName type="ort_namensvariante">Szprotawa</placeName><location type="coords">
-  <geo>51,56563 15,53664</geo>
-</location><location type="located_in_place">
-  <placeName ref="pmb313">Polen</placeName>
-  <geo>52,0 20,0</geo>
-</location></place><place xml:id="pmb374"><placeName>Gardone Riviera</placeName><placeName type="alternative-name">Gardone Riviera</placeName><placeName type="legacy-name">Gardone</placeName><placeName type="legacy-name-merge">Gardone Riviera</placeName><placeName type="alternative-name">Gardone Riviera</placeName><placeName type="legacy-name-merge">Gardone Riviera</placeName><location type="coords">
-  <geo>45,62499 10,56527</geo>
-</location><location type="located_in_place">
-  <placeName ref="pmb40306">Italien</placeName>
-  <geo>42,83333 12,83333</geo>
-</location></place><place xml:id="pmb40"><placeName>Theater in der Josefstadt</placeName><placeName type="legacy-name-merge">Josefst.-Th.</placeName><location type="coords">
-  <geo>48,209583 16,351111</geo>
-</location><location type="located_in_place">
-  <placeName ref="pmb58">VIII., Josefstadt</placeName>
-  <geo>48,21126 16,34706</geo>
-</location><location type="located_in_place">
-  <placeName ref="pmb51915">Josefstädter Straße</placeName>
-  <geo>48,20995865037859 16,347448769410484</geo>
-</location></place><place xml:id="pmb465"><placeName>Riva del Garda</placeName><placeName type="alternative-name">Riva del Garda</placeName><placeName type="legacy-name-merge">Riva del Garda</placeName><location type="coords">
-  <geo>45,88576 10,84118</geo>
-</location><location type="located_in_place">
-  <placeName ref="pmb40306">Italien</placeName>
-  <geo>42,83333 12,83333</geo>
-</location></place><place xml:id="pmb50"><placeName>Wien</placeName><placeName type="ort_fruherer-name">K.K. Reichshaupt- und Residenzstadt Wien</placeName><placeName type="legacy-name-merge">Wien</placeName><placeName type="alternative-name">Bécs</placeName><placeName type="alternative-name">Land Wien</placeName><placeName type="alternative-name">Vídeň</placeName><placeName type="alternative-name">Wenia</placeName><placeName type="alternative-name">Beč</placeName><placeName type="ort_fruherer-name">Vindobona</placeName><placeName type="legacy-name-merge">Vindobona</placeName><placeName type="alternative-name">Vienna</placeName><placeName type="legacy-name-merge">Vienna</placeName><placeName type="alternative-name">Vienna</placeName><location type="coords">
-  <geo>48,208333 16,373056</geo>
-</location><location type="located_in_place">
-  <placeName ref="pmb41240">Österreich</placeName>
-  <geo>47,33333 13,33333</geo>
-</location></place><place xml:id="pmb14" ana="comment"><placeName>Burgtheater</placeName><location type="coords">
-  <geo>48,210333 16,361139</geo>
-</location><location type="located_in_place">
-  <placeName ref="pmb51">I., Innere Stadt</placeName>
-  <geo>48,20769 16,37049</geo>
-</location><location type="located_in_place">
-  <placeName ref="pmb235695">Universitätsring</placeName>
-  <geo>48,2136 16,3614</geo>
-</location></place></listPlace><listOrg><org xml:id="pmb36247" ana="comment"><orgName>Burgtheater</orgName><orgName type="institution_namensvariante">Burgtheater GmbH</orgName><location type="located_in_place">
-  <placeName ref="pmb44649">Schlosstheater Schönbrunn</placeName>
-  <geo>48,186667 16,3125</geo>
-  <idno type="URL" subtype="pmb">https://pmb.acdh.oeaw.ac.at/entity/44649/</idno><idno type="URL" subtype="wikidata">http://www.wikidata.org/entity/Q2244724</idno><idno type="URL" subtype="wikipedia">https://de.wikipedia.org/wiki/Schlosstheater_Sch%C3%B6nbrunn</idno><idno type="URL" subtype="schnitzler-interviews">https://schnitzler-interviews.acdh.oeaw.ac.at/pmb44649.html</idno><idno type="URL" subtype="wienerschnitzler">https://wienerschnitzler.org/pmb44649.html</idno><idno type="URL" subtype="schnitzler-kultur">https://schnitzler-kultur.acdh.oeaw.ac.at/pmb44649.html</idno><idno type="URL" subtype="schnitzler-briefe">https://schnitzler-briefe.acdh.oeaw.ac.at/pmb44649.html</idno></location><location type="located_in_place">
-  <placeName ref="pmb48198">Redoutensaal</placeName>
-  <geo>48,206783 16,366551</geo>
-  <idno type="URL" subtype="pmb">https://pmb.acdh.oeaw.ac.at/entity/48198/</idno><idno type="URL" subtype="geschichtewiki">https://www.geschichtewiki.wien.gv.at/Redoutensäle</idno><idno type="URL" subtype="wienerschnitzler">https://wienerschnitzler.org/pmb48198.html</idno><idno type="URL" subtype="schnitzler-kultur">https://schnitzler-kultur.acdh.oeaw.ac.at/pmb48198.html</idno></location><location type="located_in_place">
-  <placeName ref="pmb51">I., Innere Stadt</placeName>
-  <geo>48,20769 16,37049</geo>
-  <idno type="URL" subtype="schnitzler-bahr">https://schnitzler-bahr.acdh.oeaw.ac.at/pmb51.html</idno><idno type="URL" subtype="pmb">https://pmb.acdh.oeaw.ac.at/entity/51/</idno><idno type="URL" subtype="pmb">https://pmb.acdh.oeaw.ac.at/entity/36789/</idno><idno type="URL" subtype="pmb">https://pmb.acdh.oeaw.ac.at/entity/51010/</idno><idno type="URL" subtype="geonames">https://sws.geonames.org/2775259/</idno><idno type="URL" subtype="kraus">https://www.kraus.wienbibliothek.at/legalkraus/pmb51.html</idno><idno type="URL" subtype="schnitzler-interviews">https://schnitzler-interviews.acdh.oeaw.ac.at/pmb51.html</idno><idno type="URL" subtype="wikidata">http://www.wikidata.org/entity/Q267329</idno><idno type="URL" subtype="wikipedia">https://de.wikipedia.org/wiki/Innere_Stadt_(Wien)</idno><idno type="URL" subtype="wienerschnitzler">https://wienerschnitzler.org/pmb51.html</idno><idno type="URL" subtype="schnitzler-kultur">https://schnitzler-kultur.acdh.oeaw.ac.at/pmb51.html</idno><idno type="URL" subtype="schnitzler-briefe">https://schnitzler-briefe.acdh.oeaw.ac.at/pmb51.html</idno></location><location type="located_in_place">
-  <placeName ref="pmb14">Burgtheater</placeName>
-  <geo>48,210333 16,361139</geo>
-  <idno type="URL" subtype="schnitzler-bahr">https://schnitzler-bahr.acdh.oeaw.ac.at/pmb14.html</idno><idno type="URL" subtype="pmb">https://pmb.acdh.oeaw.ac.at/entity/14/</idno><idno type="URL" subtype="geonames">https://www.geonames.org/6354992/</idno><idno type="URL" subtype="schnitzler-interviews">https://schnitzler-interviews.acdh.oeaw.ac.at/pmb14.html</idno><idno type="URL" subtype="schnitzler-tagebuch">https://schnitzler-tagebuch.acdh.oeaw.ac.at/pmb14.html</idno><idno type="URL" subtype="wienerschnitzler">https://wienerschnitzler.org/pmb14.html</idno><idno type="URL" subtype="wikidata">http://www.wikidata.org/entity/Q109377820</idno><idno type="URL" subtype="schnitzler-kultur">https://schnitzler-kultur.acdh.oeaw.ac.at/pmb14.html</idno><idno type="URL" subtype="schnitzler-briefe">https://schnitzler-briefe.acdh.oeaw.ac.at/pmb14.html</idno></location><location type="located_in_place">
-  <placeName ref="pmb185621">Burgtheater [Altes Burgtheater]</placeName>
-  <geo>48,20778 16,36645</geo>
-  <idno type="URL" subtype="pmb">https://pmb.acdh.oeaw.ac.at/entity/185621/</idno><idno type="URL" subtype="wikidata">http://www.wikidata.org/entity/Q45350189</idno><idno type="URL" subtype="wienerschnitzler">https://wienerschnitzler.org/pmb185621.html</idno><idno type="URL" subtype="schnitzler-briefe">https://schnitzler-briefe.acdh.oeaw.ac.at/pmb185621.html</idno><idno type="URL" subtype="schnitzler-kultur">https://schnitzler-kultur.acdh.oeaw.ac.at/pmb185621.html</idno></location></org><org xml:id="pmb44112" ana="comment"><orgName>Nationaltheater München</orgName><orgName type="namensvariante">Königliche Hof- und Nationaltheater München</orgName><location type="located_in_place">
-  <placeName ref="pmb9">Königlich Bayerische Hoftheater</placeName>
-  <geo>48,139944 11,578786</geo>
-  <idno type="URL" subtype="wikidata">http://www.wikidata.org/entity/Q812446</idno><idno type="URL" subtype="schnitzler-bahr">https://schnitzler-bahr.acdh.oeaw.ac.at/pmb9.html</idno><idno type="URL" subtype="pmb">https://pmb.acdh.oeaw.ac.at/entity/9/</idno><idno type="URL" subtype="wikipedia">https://de.wikipedia.org/wiki/Bayerisches_Staatsschauspiel</idno><idno type="URL" subtype="wienerschnitzler">https://wienerschnitzler.org/pmb9.html</idno><idno type="URL" subtype="schnitzler-kultur">https://schnitzler-kultur.acdh.oeaw.ac.at/pmb9.html</idno></location><location type="located_in_place">
-  <placeName ref="pmb45258">München</placeName>
-  <geo>48,13743 11,57549</geo>
-  <idno type="URL" subtype="d-nb">https://d-nb.info/gnd/4127793-4</idno><idno type="URL" subtype="pmb">https://pmb.acdh.oeaw.ac.at/entity/38129/</idno><idno type="URL" subtype="pmb">https://pmb.acdh.oeaw.ac.at/entity/45258/</idno><idno type="URL" subtype="geonames">https://sws.geonames.org/2867714/</idno><idno type="URL" subtype="kraus">https://www.kraus.wienbibliothek.at/legalkraus/pmb45258.html</idno><idno type="URL" subtype="wikidata">http://www.wikidata.org/entity/Q1726</idno><idno type="URL" subtype="wikipedia">https://de.wikipedia.org/wiki/M%C3%BCnchen</idno><idno type="URL" subtype="schnitzler-interviews">https://schnitzler-interviews.acdh.oeaw.ac.at/pmb45258.html</idno><idno type="URL" subtype="schnitzler-tagebuch">https://schnitzler-tagebuch.acdh.oeaw.ac.at/pmb45258.html</idno><idno type="URL" subtype="pmb">https://pmb.acdh.oeaw.ac.at/entity/263246/</idno><idno type="URL" subtype="wienerschnitzler">https://wienerschnitzler.org/pmb45258.html</idno><idno type="URL" subtype="schnitzler-kultur">https://schnitzler-kultur.acdh.oeaw.ac.at/pmb45258.html</idno><idno type="URL" subtype="sk">https://sk.acdh.oeaw.ac.at/DWplace00383</idno><idno type="URL" subtype="sk">https://sk.acdh.oeaw.ac.at/pmb45258</idno><idno type="URL" subtype="sk">https://sk.acdh.oeaw.ac.at/fa_place00000329</idno><idno type="URL" subtype="schnitzler-briefe">https://schnitzler-briefe.acdh.oeaw.ac.at/pmb45258.html</idno><idno type="URL" subtype="biblio">https://biblio.ub.uni-freiburg.de/sf/#pmb45258</idno></location></org></listOrg></back></text>
+      <back>
+         <listPerson>
+            <person xml:id="pmb2121">
+               <persName>
+                  <surname>Schnitzler</surname>
+                  <forename>Arthur</forename>
+               </persName>
+               <birth>
+                  <date when="1862-05-15">15. 5. 1862</date>
+                  <settlement ref="pmb50">
+                     <placeName type="pref">Wien</placeName>
+                     <location>
+                        <geo>48,208333 16,373056</geo>
+                     </location>
+                  </settlement>
+               </birth>
+               <death>
+                  <date when="1931-10-21">21. 10. 1931</date>
+                  <settlement ref="pmb50">
+                     <placeName type="pref">Wien</placeName>
+                     <location>
+                        <geo>48,208333 16,373056</geo>
+                     </location>
+                  </settlement>
+               </death>
+            </person>
+            <person xml:id="pmb10863">
+               <persName>
+                  <forename>Richard</forename>
+                  <surname>Beer-Hofmann</surname>
+               </persName>
+               <birth>
+                  <date when="1866-07-11">1866-07-11</date>
+                  <settlement ref="pmb50">
+                     <placeName type="pref">Wien</placeName>
+                     <location>
+                        <geo>48,208333 16,373056</geo>
+                     </location>
+                  </settlement>
+               </birth>
+               <death>
+                  <date when="1945-09-26">1945-09-26</date>
+                  <settlement ref="pmb44053">
+                     <placeName type="pref">New York City</placeName>
+                     <location>
+                        <geo>40,71427 -74,00597</geo>
+                     </location>
+                  </settlement>
+               </death>
+            </person>
+            <person xml:id="pmb12618">
+               <persName>
+                  <forename>Adele</forename>
+                  <surname>Sandrock</surname>
+               </persName>
+               <birth>
+                  <date when="1863-08-19">1863-08-19</date>
+                  <settlement ref="pmb44303">
+                     <placeName type="pref">Rotterdam</placeName>
+                     <location>
+                        <geo>51,9225 4,47917</geo>
+                     </location>
+                  </settlement>
+               </birth>
+               <death>
+                  <date when="1937-08-30">1937-08-30</date>
+                  <settlement ref="pmb168">
+                     <placeName type="pref">Berlin</placeName>
+                     <location>
+                        <geo>52,52437 13,41053</geo>
+                     </location>
+                  </settlement>
+               </death>
+            </person>
+            <person xml:id="pmb12809">
+               <persName>
+                  <forename>Adolf von</forename>
+                  <surname>Sonnenthal</surname>
+               </persName>
+               <birth>
+                  <date when="1834-12-21">1834-12-21</date>
+                  <settlement ref="pmb43471">
+                     <placeName type="pref">Budapest</placeName>
+                     <location>
+                        <geo>47,49835 19,04045</geo>
+                     </location>
+                  </settlement>
+               </birth>
+               <death>
+                  <date when="1909-04-04">1909-04-04</date>
+                  <settlement ref="pmb652">
+                     <placeName type="pref">Prag</placeName>
+                     <location>
+                        <geo>50,08333 14,46667</geo>
+                     </location>
+                  </settlement>
+               </death>
+            </person>
+            <person xml:id="pmb12265">
+               <persName>
+                  <forename>Friedrich</forename>
+                  <surname>Mitterwurzer</surname>
+               </persName>
+               <birth>
+                  <date when="1844-10-16">1844-10-16</date>
+                  <settlement ref="pmb866">
+                     <placeName type="pref">Dresden</placeName>
+                     <location>
+                        <geo>51,0833 13,7666</geo>
+                     </location>
+                  </settlement>
+               </birth>
+               <death>
+                  <date when="1897-02-13">1897-02-13</date>
+                  <settlement ref="pmb50">
+                     <placeName type="pref">Wien</placeName>
+                     <location>
+                        <geo>48,208333 16,373056</geo>
+                     </location>
+                  </settlement>
+               </death>
+            </person>
+            <person xml:id="pmb11860">
+               <persName>
+                  <forename>Anna</forename>
+                  <surname>Kallina</surname>
+               </persName>
+               <birth>
+                  <date when="1874-03-31">1874-03-31</date>
+                  <settlement ref="pmb50">
+                     <placeName type="pref">Wien</placeName>
+                     <location>
+                        <geo>48,208333 16,373056</geo>
+                     </location>
+                  </settlement>
+               </birth>
+               <death>
+                  <date when="1948-01-04">1948-01-04</date>
+                  <settlement ref="pmb50">
+                     <placeName type="pref">Wien</placeName>
+                     <location>
+                        <geo>48,208333 16,373056</geo>
+                     </location>
+                  </settlement>
+               </death>
+            </person>
+            <person xml:id="pmb11036">
+               <persName>
+                  <forename>Max Eugen</forename>
+                  <surname>Burckhard</surname>
+               </persName>
+               <birth>
+                  <date when="1854-07-14">1854-07-14</date>
+                  <settlement ref="pmb61010">
+                     <placeName type="pref">Korneuburg</placeName>
+                     <location>
+                        <geo>48,35 16,33333</geo>
+                     </location>
+                  </settlement>
+               </birth>
+               <death>
+                  <date when="1912-03-16">1912-03-16</date>
+                  <settlement ref="pmb50">
+                     <placeName type="pref">Wien</placeName>
+                     <location>
+                        <geo>48,208333 16,373056</geo>
+                     </location>
+                  </settlement>
+               </death>
+            </person>
+            <person xml:id="pmb11431">
+               <persName>
+                  <forename>Giuseppe</forename>
+                  <surname>Giacosa</surname>
+               </persName>
+               <birth>
+                  <date when="1847-10-21">1847-10-21</date>
+                  <settlement ref="pmb39590">
+                     <placeName type="pref">Colleretto Giacosa</placeName>
+                     <location>
+                        <geo>45,43286 7,79852</geo>
+                     </location>
+                  </settlement>
+               </birth>
+               <death>
+                  <date when="1906-09-02">1906-09-02</date>
+                  <settlement ref="pmb39590">
+                     <placeName type="pref">Colleretto Giacosa</placeName>
+                     <location>
+                        <geo>45,43286 7,79852</geo>
+                     </location>
+                  </settlement>
+               </death>
+            </person>
+            <person xml:id="pmb2702">
+               <persName>
+                  <forename>Heinrich</forename>
+                  <surname>Laube</surname>
+               </persName>
+               <birth>
+                  <date when="1806-09-18">1806-09-18</date>
+                  <settlement ref="pmb1004">
+                     <placeName type="pref">Sprottau</placeName>
+                     <location>
+                        <geo>51,56563 15,53664</geo>
+                     </location>
+                  </settlement>
+               </birth>
+               <death>
+                  <date when="1884-08-01">1884-08-01</date>
+                  <settlement ref="pmb50">
+                     <placeName type="pref">Wien</placeName>
+                     <location>
+                        <geo>48,208333 16,373056</geo>
+                     </location>
+                  </settlement>
+                  <settlement ref="pmb50">
+                     <placeName type="pref">Wien</placeName>
+                     <location>
+                        <geo>48,208333 16,373056</geo>
+                     </location>
+                  </settlement>
+               </death>
+            </person>
+            <person xml:id="pmb4501">
+               <persName>
+                  <forename>Anna</forename>
+                  <surname>Dandler</surname>
+               </persName>
+               <birth>
+                  <date when="1862-03-14">1862-03-14</date>
+                  <settlement ref="pmb872">
+                     <placeName type="pref">Stuttgart</placeName>
+                     <location>
+                        <geo>48,78232 9,17702</geo>
+                     </location>
+                  </settlement>
+               </birth>
+               <death>
+                  <date when="1930-09-17">1930-09-17</date>
+                  <settlement ref="pmb883">
+                     <placeName type="pref">Wiesbaden</placeName>
+                     <location>
+                        <geo>50,08258 8,24932</geo>
+                     </location>
+                  </settlement>
+               </death>
+            </person>
+            <person xml:id="pmb2450">
+               <persName>
+                  <forename>Friedrich Michael</forename>
+                  <surname>Fels</surname>
+               </persName>
+               <birth>
+                  <date notBefore="1864-01-01" when="1864-01-01" notAfter="1864-12-31">1864</date>
+                  <settlement ref="pmb41882">
+                     <placeName type="pref">Bad Dürkheim</placeName>
+                     <location>
+                        <geo>49,4618 8,17236</geo>
+                     </location>
+                  </settlement>
+               </birth>
+            </person>
+            <person xml:id="pmb11740">
+               <persName>
+                  <forename>Hugo von</forename>
+                  <surname>Hofmannsthal</surname>
+               </persName>
+               <birth>
+                  <date when="1874-02-01">1874-02-01</date>
+                  <settlement ref="pmb50">
+                     <placeName type="pref">Wien</placeName>
+                     <location>
+                        <geo>48,208333 16,373056</geo>
+                     </location>
+                  </settlement>
+               </birth>
+               <death>
+                  <date when="1929-07-15">1929-07-15</date>
+                  <settlement ref="pmb173">
+                     <placeName type="pref">Rodaun</placeName>
+                     <location>
+                        <geo>48,132793312328 16,256152195922</geo>
+                     </location>
+                  </settlement>
+               </death>
+            </person>
+            <person xml:id="pmb2815" ana="comment">
+               <persName>
+                  <forename>Émile</forename>
+                  <surname>Augier</surname>
+               </persName>
+               <birth>
+                  <date when="1820-09-17">1820-09-17</date>
+                  <settlement ref="pmb54891">
+                     <placeName type="pref">Valence</placeName>
+                     <location>
+                        <geo>44,9256 4,90956</geo>
+                     </location>
+                  </settlement>
+               </birth>
+               <death>
+                  <date when="1889-10-25">1889-10-25</date>
+                  <settlement ref="pmb49876">
+                     <placeName type="pref">Croissy-sur-Seine</placeName>
+                     <location>
+                        <geo>48,87925 2,13836</geo>
+                     </location>
+                  </settlement>
+               </death>
+            </person>
+            <person xml:id="pmb2337" ana="comment">
+               <persName>
+                  <forename>Victor</forename>
+                  <surname>Léon</surname>
+               </persName>
+               <birth>
+                  <date when="1858-01-04">1858-01-04</date>
+                  <settlement ref="pmb45111">
+                     <placeName type="pref">Senica</placeName>
+                     <location>
+                        <geo>48,67922 17,36697</geo>
+                     </location>
+                  </settlement>
+               </birth>
+               <death>
+                  <date when="1940-02-23">1940-02-23</date>
+                  <settlement ref="pmb50">
+                     <placeName type="pref">Wien</placeName>
+                     <location>
+                        <geo>48,208333 16,373056</geo>
+                     </location>
+                  </settlement>
+               </death>
+            </person>
+            <person xml:id="pmb26602" ana="comment">
+               <persName>
+                  <forename>Heinrich von</forename>
+                  <surname>Waldberg</surname>
+               </persName>
+               <birth>
+                  <date when="1860-03-02">1860-03-02</date>
+                  <settlement ref="pmb38876">
+                     <placeName type="pref">Iași</placeName>
+                     <location>
+                        <geo>47,16667 27,6</geo>
+                     </location>
+                  </settlement>
+               </birth>
+               <death>
+                  <date when="1942-10-20">1942-10-20</date>
+                  <settlement ref="pmb2258">
+                     <placeName type="pref">Ghetto Theresienstadt</placeName>
+                     <location>
+                        <geo>50,513639 14,164694</geo>
+                     </location>
+                  </settlement>
+               </death>
+            </person>
+            <person xml:id="pmb4076">
+               <persName>
+                  <forename>Otto</forename>
+                  <surname>Eisenschitz</surname>
+               </persName>
+               <birth>
+                  <date when="1863-02-22">1863-02-22</date>
+                  <settlement ref="pmb50">
+                     <placeName type="pref">Wien</placeName>
+                     <location>
+                        <geo>48,208333 16,373056</geo>
+                     </location>
+                  </settlement>
+               </birth>
+               <death>
+                  <date when="1942-09-11">1942-09-11</date>
+                  <settlement ref="pmb2258">
+                     <placeName type="pref">Ghetto Theresienstadt</placeName>
+                     <location>
+                        <geo>50,513639 14,164694</geo>
+                     </location>
+                  </settlement>
+               </death>
+            </person>
+            <person xml:id="pmb18093" ana="comment">
+               <persName>
+                  <forename>Josef</forename>
+                  <surname>Hellmesberger</surname>
+               </persName>
+               <birth>
+                  <date when="1855-04-09">1855-04-09</date>
+                  <settlement ref="pmb50">
+                     <placeName type="pref">Wien</placeName>
+                     <location>
+                        <geo>48,208333 16,373056</geo>
+                     </location>
+                  </settlement>
+               </birth>
+               <death>
+                  <date when="1907-04-26">1907-04-26</date>
+                  <settlement ref="pmb50">
+                     <placeName type="pref">Wien</placeName>
+                     <location>
+                        <geo>48,208333 16,373056</geo>
+                     </location>
+                  </settlement>
+               </death>
+            </person>
+         </listPerson>
+         <listBibl>
+            <bibl xml:id="pmb31711">
+               <title>Rechte der Seele. Schauspiel in einem Act</title>
+               <author ref="pmb11431" role="hat-geschaffen">Giacosa, Giuseppe</author>
+               <author ref="pmb4076" role="hat-ubersetzt">Eisenschitz, Otto</author>
+            </bibl>
+            <bibl xml:id="pmb41136">
+               <title>Ein Pelikan. Schauspiel in fünf Aufzügen</title>
+               <title type="werk_link"
+                  >https://reader.digitale-sammlungen.de/de/fs1/object/display/bsb11323252_00010.html</title>
+               <title type="namensvariante">Le Fils de Giboyer</title>
+               <title type="legacy-name-merge">Der Pelikan</title>
+               <author ref="pmb2815" role="hat-geschaffen">Augier, Émile</author>
+               <author ref="pmb2702" role="hat-ubersetzt">Laube, Heinrich</author>
+            </bibl>
+            <bibl xml:id="pmb29917">
+               <title>Liebelei. Schauspiel in drei Akten</title>
+               <title type="werk_link"
+                  >https://www.deutschestextarchiv.de/book/show/schnitzler_liebelei_1896</title>
+               <title type="werk_arbeitstitel">Das arme Mädl</title>
+               <author ref="pmb2121" role="hat-geschaffen">Schnitzler, Arthur</author>
+            </bibl>
+            <bibl xml:id="pmb41143" ana="comment">
+               <title>Die Doppelhochzeit</title>
+               <author ref="pmb2337" role="hat-geschaffen">Léon, Victor</author>
+               <author ref="pmb26602" role="hat-geschaffen">Waldberg, Heinrich von</author>
+               <author ref="pmb18093" role="hat-vertont">Hellmesberger, Josef</author>
+            </bibl>
+         </listBibl>
+         <listPlace>
+            <place xml:id="pmb374">
+               <placeName>Gardone Riviera</placeName>
+               <placeName type="legacy-name">Gardone</placeName>
+               <location type="coords">
+                  <geo>45,62499 10,56527</geo>
+               </location>
+               <location type="located_in_place">
+                  <placeName ref="pmb40306">Italien</placeName>
+                  <geo>42,83333 12,83333</geo>
+               </location>
+            </place>
+            <place xml:id="pmb50">
+               <placeName>Wien</placeName>
+               <placeName type="ort_fruherer-name">K.K. Reichshaupt- und Residenzstadt
+                  Wien</placeName>
+               <placeName type="alternative-name">Bécs</placeName>
+               <placeName type="alternative-name">Land Wien</placeName>
+               <placeName type="alternative-name">Vídeň</placeName>
+               <placeName type="alternative-name">Wenia</placeName>
+               <placeName type="alternative-name">Beč</placeName>
+               <placeName type="ort_fruherer-name">Vindobona</placeName>
+               <placeName type="alternative-name">Vienna</placeName>
+               <location type="coords">
+                  <geo>48,208333 16,373056</geo>
+               </location>
+               <location type="located_in_place">
+                  <placeName ref="pmb41240">Österreich</placeName>
+                  <geo>47,33333 13,33333</geo>
+               </location>
+               <location type="located_in_place">
+                  <placeName ref="pmb235218">Windmühlhöhe</placeName>
+                  <geo>48,24077 16,32092</geo>
+               </location>
+            </place>
+            <place xml:id="pmb465" ana="comment">
+               <placeName>Riva del Garda</placeName>
+               <location type="coords">
+                  <geo>45,88576 10,84118</geo>
+               </location>
+               <location type="located_in_place">
+                  <placeName ref="pmb40306">Italien</placeName>
+                  <geo>42,83333 12,83333</geo>
+               </location>
+            </place>
+            <place xml:id="pmb1004">
+               <placeName>Sprottau</placeName>
+               <placeName type="ort_namensvariante">Szprotawa</placeName>
+               <location type="coords">
+                  <geo>51,56563 15,53664</geo>
+               </location>
+               <location type="located_in_place">
+                  <placeName ref="pmb313">Polen</placeName>
+                  <geo>52,0 20,0</geo>
+               </location>
+            </place>
+            <place xml:id="pmb40" ana="comment">
+               <placeName>Theater in der Josefstadt</placeName>
+               <placeName type="legacy-name-merge">Josefst.-Th.</placeName>
+               <location type="coords">
+                  <geo>48,209583 16,351111</geo>
+               </location>
+               <location type="located_in_place">
+                  <placeName ref="pmb58">VIII., Josefstadt</placeName>
+                  <geo>48,21126 16,34706</geo>
+               </location>
+               <location type="located_in_place">
+                  <placeName ref="pmb51915">Josefstädter Straße</placeName>
+                  <geo>48,20995865037859 16,347448769410484</geo>
+               </location>
+            </place>
+            <place xml:id="pmb14" ana="comment">
+               <placeName>Burgtheater</placeName>
+               <location type="coords">
+                  <geo>48,210333 16,361139</geo>
+               </location>
+               <location type="located_in_place">
+                  <placeName ref="pmb51">I., Innere Stadt</placeName>
+                  <geo>48,20769 16,37049</geo>
+               </location>
+               <location type="located_in_place">
+                  <placeName ref="pmb235695">Universitätsring</placeName>
+                  <geo>48,2136 16,3614</geo>
+               </location>
+            </place>
+         </listPlace>
+         <listOrg>
+            <org xml:id="pmb44112" ana="comment">
+               <orgName>Nationaltheater München</orgName>
+               <orgName type="namensvariante">Königliche Hof- und Nationaltheater München</orgName>
+               <location type="located_in_place">
+                  <placeName ref="pmb9">Königlich Bayerische Hoftheater</placeName>
+                  <geo>48,139944 11,578786</geo>
+                  <idno type="URL" subtype="wikidata">http://www.wikidata.org/entity/Q812446</idno>
+                  <idno type="URL" subtype="schnitzler-bahr"
+                     >https://schnitzler-bahr.acdh.oeaw.ac.at/pmb9.html</idno>
+                  <idno type="URL" subtype="pmb">https://pmb.acdh.oeaw.ac.at/entity/9/</idno>
+                  <idno type="URL" subtype="wikipedia"
+                     >https://de.wikipedia.org/wiki/Bayerisches_Staatsschauspiel</idno>
+                  <idno type="URL" subtype="wienerschnitzler"
+                     >https://wienerschnitzler.org/pmb9.html</idno>
+                  <idno type="URL" subtype="schnitzler-kultur"
+                     >https://schnitzler-kultur.acdh.oeaw.ac.at/pmb9.html</idno>
+               </location>
+               <location type="located_in_place">
+                  <placeName ref="pmb45258">München</placeName>
+                  <geo>48,13743 11,57549</geo>
+                  <idno type="URL" subtype="d-nb">https://d-nb.info/gnd/4127793-4</idno>
+                  <idno type="URL" subtype="pmb">https://pmb.acdh.oeaw.ac.at/entity/38129/</idno>
+                  <idno type="URL" subtype="pmb">https://pmb.acdh.oeaw.ac.at/entity/45258/</idno>
+                  <idno type="URL" subtype="geonames">https://sws.geonames.org/2867714/</idno>
+                  <idno type="URL" subtype="www"
+                     >https://www.kraus.wienbibliothek.at/legalkraus/pmb45258.html</idno>
+                  <idno type="URL" subtype="wikidata">http://www.wikidata.org/entity/Q1726</idno>
+                  <idno type="URL" subtype="wikipedia"
+                     >https://de.wikipedia.org/wiki/M%C3%BCnchen</idno>
+                  <idno type="URL" subtype="schnitzler-interviews"
+                     >https://schnitzler-interviews.acdh.oeaw.ac.at/pmb45258.html</idno>
+                  <idno type="URL" subtype="schnitzler-tagebuch"
+                     >https://schnitzler-tagebuch.acdh.oeaw.ac.at/pmb45258.html</idno>
+                  <idno type="URL" subtype="pmb">https://pmb.acdh.oeaw.ac.at/entity/263246/</idno>
+                  <idno type="URL" subtype="wienerschnitzler"
+                     >https://wienerschnitzler.org/pmb45258.html</idno>
+                  <idno type="URL" subtype="schnitzler-kultur"
+                     >https://schnitzler-kultur.acdh.oeaw.ac.at/pmb45258.html</idno>
+                  <idno type="URL" subtype="sk">https://sk.acdh.oeaw.ac.at/DWplace00383</idno>
+                  <idno type="URL" subtype="sk">https://sk.acdh.oeaw.ac.at/pmb45258</idno>
+                  <idno type="URL" subtype="sk">https://sk.acdh.oeaw.ac.at/fa_place00000329</idno>
+                  <idno type="URL" subtype="schnitzler-briefe"
+                     >https://schnitzler-briefe.acdh.oeaw.ac.at/pmb45258.html</idno>
+                  <idno type="URL" subtype="biblio"
+                     >https://biblio.ub.uni-freiburg.de/sf/#pmb45258</idno>
+               </location>
+            </org>
+            <org xml:id="pmb36247" ana="comment">
+               <orgName>Burgtheater</orgName>
+               <orgName type="institution_namensvariante">Burgtheater GmbH</orgName>
+               <location type="located_in_place">
+                  <placeName ref="pmb44649">Schlosstheater Schönbrunn</placeName>
+                  <geo>48,186667 16,3125</geo>
+                  <idno type="URL" subtype="pmb">https://pmb.acdh.oeaw.ac.at/entity/44649/</idno>
+                  <idno type="URL" subtype="wikidata">http://www.wikidata.org/entity/Q2244724</idno>
+                  <idno type="URL" subtype="wikipedia"
+                     >https://de.wikipedia.org/wiki/Schlosstheater_Sch%C3%B6nbrunn</idno>
+                  <idno type="URL" subtype="schnitzler-interviews"
+                     >https://schnitzler-interviews.acdh.oeaw.ac.at/pmb44649.html</idno>
+                  <idno type="URL" subtype="wienerschnitzler"
+                     >https://wienerschnitzler.org/pmb44649.html</idno>
+                  <idno type="URL" subtype="schnitzler-kultur"
+                     >https://schnitzler-kultur.acdh.oeaw.ac.at/pmb44649.html</idno>
+                  <idno type="URL" subtype="schnitzler-briefe"
+                     >https://schnitzler-briefe.acdh.oeaw.ac.at/pmb44649.html</idno>
+               </location>
+               <location type="located_in_place">
+                  <placeName ref="pmb48198">Redoutensaal</placeName>
+                  <geo>48,206783 16,366551</geo>
+                  <idno type="URL" subtype="pmb">https://pmb.acdh.oeaw.ac.at/entity/48198/</idno>
+                  <idno type="URL" subtype="www"
+                     >https://www.geschichtewiki.wien.gv.at/Redoutensäle</idno>
+                  <idno type="URL" subtype="wienerschnitzler"
+                     >https://wienerschnitzler.org/pmb48198.html</idno>
+                  <idno type="URL" subtype="schnitzler-kultur"
+                     >https://schnitzler-kultur.acdh.oeaw.ac.at/pmb48198.html</idno>
+               </location>
+               <location type="located_in_place">
+                  <placeName ref="pmb51">I., Innere Stadt</placeName>
+                  <geo>48,20769 16,37049</geo>
+                  <idno type="URL" subtype="schnitzler-bahr"
+                     >https://schnitzler-bahr.acdh.oeaw.ac.at/pmb51.html</idno>
+                  <idno type="URL" subtype="pmb">https://pmb.acdh.oeaw.ac.at/entity/51/</idno>
+                  <idno type="URL" subtype="pmb">https://pmb.acdh.oeaw.ac.at/entity/36789/</idno>
+                  <idno type="URL" subtype="pmb">https://pmb.acdh.oeaw.ac.at/entity/51010/</idno>
+                  <idno type="URL" subtype="geonames">https://sws.geonames.org/2775259/</idno>
+                  <idno type="URL" subtype="www"
+                     >https://www.kraus.wienbibliothek.at/legalkraus/pmb51.html</idno>
+                  <idno type="URL" subtype="schnitzler-interviews"
+                     >https://schnitzler-interviews.acdh.oeaw.ac.at/pmb51.html</idno>
+                  <idno type="URL" subtype="wikidata">http://www.wikidata.org/entity/Q267329</idno>
+                  <idno type="URL" subtype="wikipedia"
+                     >https://de.wikipedia.org/wiki/Innere_Stadt_(Wien)</idno>
+                  <idno type="URL" subtype="wienerschnitzler"
+                     >https://wienerschnitzler.org/pmb51.html</idno>
+                  <idno type="URL" subtype="schnitzler-kultur"
+                     >https://schnitzler-kultur.acdh.oeaw.ac.at/pmb51.html</idno>
+                  <idno type="URL" subtype="schnitzler-briefe"
+                     >https://schnitzler-briefe.acdh.oeaw.ac.at/pmb51.html</idno>
+               </location>
+               <location type="located_in_place">
+                  <placeName ref="pmb14">Burgtheater</placeName>
+                  <geo>48,210333 16,361139</geo>
+                  <idno type="URL" subtype="schnitzler-bahr"
+                     >https://schnitzler-bahr.acdh.oeaw.ac.at/pmb14.html</idno>
+                  <idno type="URL" subtype="pmb">https://pmb.acdh.oeaw.ac.at/entity/14/</idno>
+                  <idno type="URL" subtype="geonames">https://www.geonames.org/6354992/</idno>
+                  <idno type="URL" subtype="schnitzler-interviews"
+                     >https://schnitzler-interviews.acdh.oeaw.ac.at/pmb14.html</idno>
+                  <idno type="URL" subtype="schnitzler-tagebuch"
+                     >https://schnitzler-tagebuch.acdh.oeaw.ac.at/pmb14.html</idno>
+                  <idno type="URL" subtype="wienerschnitzler"
+                     >https://wienerschnitzler.org/pmb14.html</idno>
+                  <idno type="URL" subtype="wikidata"
+                     >http://www.wikidata.org/entity/Q109377820</idno>
+                  <idno type="URL" subtype="schnitzler-kultur"
+                     >https://schnitzler-kultur.acdh.oeaw.ac.at/pmb14.html</idno>
+                  <idno type="URL" subtype="schnitzler-briefe"
+                     >https://schnitzler-briefe.acdh.oeaw.ac.at/pmb14.html</idno>
+               </location>
+               <location type="located_in_place">
+                  <placeName ref="pmb185621">Burgtheater [Altes Burgtheater]</placeName>
+                  <geo>48,20778 16,36645</geo>
+                  <idno type="URL" subtype="pmb">https://pmb.acdh.oeaw.ac.at/entity/185621/</idno>
+                  <idno type="URL" subtype="wikidata"
+                     >http://www.wikidata.org/entity/Q45350189</idno>
+                  <idno type="URL" subtype="wienerschnitzler"
+                     >https://wienerschnitzler.org/pmb185621.html</idno>
+                  <idno type="URL" subtype="schnitzler-briefe"
+                     >https://schnitzler-briefe.acdh.oeaw.ac.at/pmb185621.html</idno>
+                  <idno type="URL" subtype="schnitzler-kultur"
+                     >https://schnitzler-kultur.acdh.oeaw.ac.at/pmb185621.html</idno>
+               </location>
+            </org>
+            <org xml:id="pmb39689" ana="comment">
+               <orgName>Theater in der Josefstadt</orgName>
+               <orgName type="institution_namensvariante">Josefstädtisches Theater</orgName>
+               <location type="located_in_place">
+                  <placeName ref="pmb58">VIII., Josefstadt</placeName>
+                  <geo>48,21126 16,34706</geo>
+                  <idno type="URL" subtype="geonames">https://sws.geonames.org/2775027/</idno>
+                  <idno type="URL" subtype="d-nb">https://d-nb.info/gnd/4108158-4</idno>
+                  <idno type="URL" subtype="schnitzler-bahr"
+                     >https://schnitzler-bahr.acdh.oeaw.ac.at/pmb58.html</idno>
+                  <idno type="URL" subtype="pmb">https://pmb.acdh.oeaw.ac.at/entity/58/</idno>
+                  <idno type="URL" subtype="pmb">https://pmb.acdh.oeaw.ac.at/entity/15566/</idno>
+                  <idno type="URL" subtype="www"
+                     >https://www.kraus.wienbibliothek.at/legalkraus/pmb58.html</idno>
+                  <idno type="URL" subtype="wikidata">http://www.wikidata.org/entity/Q256778</idno>
+                  <idno type="URL" subtype="wikipedia"
+                     >https://de.wikipedia.org/wiki/Josefstadt_(Wien)</idno>
+                  <idno type="URL" subtype="schnitzler-interviews"
+                     >https://schnitzler-interviews.acdh.oeaw.ac.at/pmb58.html</idno>
+                  <idno type="URL" subtype="schnitzler-tagebuch"
+                     >https://schnitzler-tagebuch.acdh.oeaw.ac.at/pmb58.html</idno>
+                  <idno type="URL" subtype="wienerschnitzler"
+                     >https://wienerschnitzler.org/pmb58.html</idno>
+                  <idno type="URL" subtype="schnitzler-briefe"
+                     >https://schnitzler-briefe.acdh.oeaw.ac.at/pmb58.html</idno>
+                  <idno type="URL" subtype="www"
+                     >https://www.schoenberg-ue.at/ue/places/place.9.11.7</idno>
+               </location>
+               <location type="located_in_place">
+                  <placeName ref="pmb40">Theater in der Josefstadt</placeName>
+                  <geo>48,209583 16,351111</geo>
+                  <idno type="URL" subtype="schnitzler-bahr"
+                     >https://schnitzler-bahr.acdh.oeaw.ac.at/pmb40.html</idno>
+                  <idno type="URL" subtype="pmb">https://pmb.acdh.oeaw.ac.at/entity/40/</idno>
+                  <idno type="URL" subtype="pmb">https://pmb.acdh.oeaw.ac.at/entity/92311/</idno>
+                  <idno type="URL" subtype="wikidata">http://www.wikidata.org/entity/Q167619</idno>
+                  <idno type="URL" subtype="wikipedia"
+                     >https://de.wikipedia.org/wiki/Theater_in_der_Josefstadt</idno>
+                  <idno type="URL" subtype="schnitzler-interviews"
+                     >https://schnitzler-interviews.acdh.oeaw.ac.at/pmb40.html</idno>
+                  <idno type="URL" subtype="schnitzler-tagebuch"
+                     >https://schnitzler-tagebuch.acdh.oeaw.ac.at/pmb40.html</idno>
+                  <idno type="URL" subtype="wienerschnitzler"
+                     >https://wienerschnitzler.org/pmb40.html</idno>
+                  <idno type="URL" subtype="schnitzler-kultur"
+                     >https://schnitzler-kultur.acdh.oeaw.ac.at/pmb40.html</idno>
+                  <idno type="URL" subtype="schnitzler-briefe"
+                     >https://schnitzler-briefe.acdh.oeaw.ac.at/pmb40.html</idno>
+               </location>
+               <location type="located_in_place">
+                  <placeName ref="pmb51915">Josefstädter Straße</placeName>
+                  <geo>48,20995865037859 16,347448769410484</geo>
+                  <idno type="URL" subtype="pmb">https://pmb.acdh.oeaw.ac.at/entity/51915/</idno>
+                  <idno type="URL" subtype="www"
+                     >https://www.kraus.wienbibliothek.at/legalkraus/pmb51915.html</idno>
+                  <idno type="URL" subtype="schnitzler-interviews"
+                     >https://schnitzler-interviews.acdh.oeaw.ac.at/pmb51915.html</idno>
+                  <idno type="URL" subtype="schnitzler-briefe"
+                     >https://schnitzler-briefe.acdh.oeaw.ac.at/pmb51915.html</idno>
+               </location>
+            </org>
+         </listOrg>
+         <listEvent>
+            <event xml:id="pmb48875" ana="implied">
+               <eventName n="Theateraufführung">Aufführung von Ein Pelikan, 20.9.1895</eventName>
+               <listPlace>
+                  <place>
+                     <placeName role="veranstaltet in" ref="pmb14">Burgtheater</placeName>
+                     <location>
+                        <geo>48,210333 16,361139</geo>
+                     </location>
+                  </place>
+               </listPlace>
+            </event>
+            <event xml:id="pmb41148" ana="implied">
+               <eventName n="Theateruraufführung">Uraufführung von Die Doppelhochzeit, 21.9.1895</eventName>
+               <listPlace>
+                  <place>
+                     <placeName role="veranstaltet in" ref="pmb40">Theater in der
+                        Josefstadt</placeName>
+                     <location>
+                        <geo>48,209583 16,351111</geo>
+                     </location>
+                  </place>
+               </listPlace>
+            </event>
+         </listEvent>
+      </back>
+   </text>
 </TEI>
