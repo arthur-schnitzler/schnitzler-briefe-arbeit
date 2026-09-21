@@ -1,14 +1,17 @@
-<?xml version='1.0' encoding='UTF-8'?>
+<?xml version="1.0" encoding="UTF-8"?>
 <?xml-model href="../meta/schnitzler-briefe-schematron.sch" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
-<TEI xmlns="http://www.tei-c.org/ns/1.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.tei-c.org/ns/1.0 ../meta/schnitzler-briefe-schema.xsd" xml:base="https://id.acdh.oeaw.ac.at/schnitzler/schnitzler-briefe/editions" xml:id="L04517">
+<TEI xmlns="http://www.tei-c.org/ns/1.0"
+     xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+     xsi:schemaLocation="http://www.tei-c.org/ns/1.0 ../meta/schnitzler-briefe-schema.xsd"
+     xml:base="https://id.acdh.oeaw.ac.at/schnitzler/schnitzler-briefe/editions"
+     xml:id="L04199">
    <teiHeader>
       <fileDesc>
          <titleStmt>
             <title level="s">Arthur Schnitzler: Briefwechsel mit Autorinnen und
                                     Autoren</title>
-            <title level="a">Arthur und Olga Schnitzler an Gustav Schwarzkopf, 6. 10. 1911</title>
+            <title level="a">Arthur Schnitzler an Gustav Schwarzkopf, [24. 4. 1908?]</title>
             <author ref="#pmb2121">Schnitzler, Arthur</author>
-            <author ref="#pmb2173"/>
             <editor>
                <persName>Jahnke, Selma</persName>
                <persName>Müller, Martin Anton</persName>
@@ -36,7 +39,7 @@
          <publicationStmt>
             <publisher>Austrian Centre for Digital Humanities</publisher>
             <pubPlace>Vienna</pubPlace>
-            <date when="2026">2026</date>
+            <date when="2025">2025</date>
             <availability>
                <licence target="https://creativecommons.org/licenses/by/4.0/deed.de">
                   <p>Sie dürfen: Teilen — das Material in jedwedem Format oder
@@ -79,38 +82,26 @@
          <sourceDesc>
             <listWit>
                <witness n="1">
-                  <objectType corresp="karte" ana="bildpostkarte"/>
+                  <objectType corresp="karte" ana="visitenkarte"/>
                   <msDesc>
                      <msIdentifier>
-                        <country>D</country>
-                        <settlement>Marbach am Neckar</settlement>
-                        <repository>Deutsches Literaturarchiv</repository>
-                        <idno>A:Schnitzler, HS.1985.1.1897</idno>
+                        <country>GB</country>
+                        <settlement>Cambridge</settlement>
+                        <repository>University Library</repository>
+                        <idno>Schnitzler, B 96</idno>
                      </msIdentifier>
                      <physDesc>
                         <objectDesc>
                            <supportDesc>
                               <extent>
                                  <measure unit="karte" quantity="1"/>
-                                 <measure unit="zeichenanzahl" quantity="250"/>
+                                 <measure unit="zeichenanzahl" quantity="125"/>
                               </extent>
                            </supportDesc>
                         </objectDesc>
-                        <handDesc hands="2">
-                           <handNote corresp="#pmb2121" medium="bleistift" style="deutsche-kurrent"/>
-                           <handNote corresp="#pmb2173" medium="bleistift" style="lateinische-kurrent"/>
+                        <handDesc hands="1">
+                           <handNote medium="bleistift" style="deutsche-kurrent"/>
                         </handDesc>
-                        <additions>
-                           <incident type="postal">
-                              <desc>
-                                 <stamp n="1" type="transmission">
-                                    <placeName ref="#pmb189">Semmering 1</placeName>
-                                    <date when="1911-10-06">6. X. 11</date>
-                                    <time>9</time>
-                                 </stamp>
-                              </desc>
-                           </incident>
-                        </additions>
                      </physDesc>
                   </msDesc>
                </witness>
@@ -124,93 +115,50 @@
          <correspDesc>
             <correspAction type="sent">
                <persName ref="#pmb2121">Schnitzler, Arthur</persName>
-               <persName ref="#pmb2173">Schnitzler, Olga</persName>
-               <date when="1911-10-06" n="01">6. 10. 1911</date>
-               <placeName ref="#pmb189">Semmering</placeName>
-            </correspAction>
-            <correspAction type="transmitted">
-               <date when="1911-10-06">6. 10. 1911</date>
-               <placeName ref="#pmb189">Semmering</placeName>
+               <date when="1908-04-24" n="01">[24. 4. 1908?]</date>
+               <placeName ref="#pmb168940">Edmund-Weiß-Gasse</placeName>
             </correspAction>
             <correspAction type="received">
                <persName ref="#pmb12740">Schwarzkopf, Gustav</persName>
-               <date evidence="conjecture" notBefore="1911-10-07" notAfter="1911-10-11">[7. 10. 1911 – 11. 10. 1911?]</date>
+               <date when="1908-04-24">[24. 4. 1908?]</date>
                <placeName ref="#pmb207296">Tiefer Graben 23</placeName>
             </correspAction>
-            <correspContext><ref type="belongsToCorrespondence" target="correspondence_12740">Schwarzkopf, Gustav</ref>
-               <ref subtype="previous_letter" type="withinCollection" target="L03541">Goldmann an Schnitzler, 1. 10. 1911</ref>
-               <ref subtype="next_letter" type="withinCollection" target="L02033">Brandes an Schnitzler, 6. 10. 1911</ref>
-               <ref subtype="previous_letter" type="withinCorrespondence" source="correspondence_12740" target="L04388">Schnitzler, Schnitzler an Schwarzkopf, 12. 8. 1911</ref>
-               <ref subtype="next_letter" type="withinCorrespondence" source="correspondence_12740" target="L04107">Schnitzler an Schwarzkopf, 13. 10. 1911</ref>
-            </correspContext></correspDesc>
+         </correspDesc>
       </profileDesc>
       <revisionDesc status="proposed">
-         <change who="MAM" when="2026-06-11">Export aus
+         <change who="MAM" when="2025-12-10">Export aus
                                 Transkribus</change>
-         <change who="SJ" when="2026-07-06">Durchsicht</change>
-         <change who="SJ" when="2026-09-15">Datierung und Stempel überprüft</change>
       </revisionDesc>
    </teiHeader>
    <facsimile>
-      <graphic url="HS00048772X_0347"/>
-      <graphic url="HS00048772X_0348"/>
+      <graphic url="MS-SCHNITZLER-B-00096-B-000-00391"/>
    </facsimile>
    <text>
       <body>
-         <div type="address">
-            <address>
-               <addrLine>
-                  <pb facs="HS00048772X_0348"/>Herrn <hi rend="latintype">Gustav Schwarzkopf</hi>
-               </addrLine>
-               <addrLine>
-                  <rs type="place" ref="#pmb50">
-                     <hi rend="latintype">Wien I</hi>
-                  </rs>
-               </addrLine>
-               <addrLine>
-                  <rs type="place" ref="#pmb207296">
-                     <hi rend="latintype">Tiefer Graben 23</hi>
-                  </rs>
-               </addrLine>
-            </address>
-         </div>
-         <div type="image">
-            <p>
-               <pb facs="HS00048772X_0347"/>
-               <hi rend="pre-print">
-                  <rs type="place" ref="#pmb353718">Villa Meran</rs>.</hi>
-               <space unit="chars" quantity="5"/>
-               <hi rend="pre-print">
-                  <rs type="place" ref="#pmb27068">Schneeberg</rs>, 2075 m.</hi>
-               <space unit="chars" quantity="5"/>
-               <hi rend="pre-print">
-                  <rs type="place" ref="#pmb442">Kurhaus Semmering, N.-Oe</rs>.</hi>
-            </p>
-         </div>
          <div type="writingSession" n="1">
-            <opener>
-               <dateline rend="right">
-                  <pb facs="HS00048772X_0348"/>
-                  <date>6. X. 911</date>
-               </dateline>
-            </opener>
             <p>
-               <p>Herzliche Grüße!</p> Ich bin hier ſeit <date>So<c rendition="#gemination-n"/>tag</date>
-      bei <rs type="person" ref="#pmb2173">Olga</rs>, der es ſchon <anchor type="commentary" xml:id="K_L04517-1"/>viel viel
-               beſſer<note type="commentary" corresp="K_L04517-1">
-                  <rs type="person" ref="#pmb2173">Olga Schnitzler</rs> litt an einem Katarrh, <ref type="schnitzler-tagebuch" target="1911-09-30" subtype="cf"/>.</note> geht, fahre <date>So<c rendition="#gemination-n"/>tag</date> wieder
-               hinein. <rs type="person" ref="#pmb2173">Olga</rs> wird zur <anchor type="commentary" xml:id="K_L04517-2"/>
-               <rs type="event" ref="#pmb88534" subtype="implied">Premiere</rs>
-               <note type="commentary" corresp="K_L04517-2">
-                  <ref type="schnitzler-kultur" target="pmb88534"/>.</note>
-      wahrſcheinlich auch ſchon in <rs type="place" ref="#pmb50">Wien</rs>
-      ſein. Auf Wiederſehn.<lb/>Ihr <signed>A.</signed>
+               <pb facs="MS-SCHNITZLER-B-00096-B-000-00391"/>Wir reiſen vorläufig nicht.</p>
+            <p rend="center">
+               <hi rend="pre-print">Dr Arthur Schnitzler</hi>
             </p>
-         </div>
-         <div type="writingSession" n="2">
             <p rend="right">
-               <handShift scribe="#pmb2173"/>Ihre <signed>O. S.</signed>
+               <hi rend="pre-print">
+                  <rs type="place" ref="#pmb50">Wien</rs>
+               </hi>
             </p>
+            <p>Wenn Sie <anchor type="commentary" xml:id="K_L04199-1"/>heute <date>Freitag</date>
+               <note type="commentary" corresp="K_L04199-1">Die Visitenkarte ist undatiert. Eine weitere Visitenkarte dieses Typs (bei der
+                  die beiden Unterstriche unter der Hochstellung bei »<quote>D<hi rend="superscript">r</hi>
+                  </quote>« waagrecht verlaufen) verwendete <rs type="person" ref="#pmb2121">Schnitzler</rs>
+                  am <ref type="schnitzler-briefe" target="L03809" subtype="date-only"/>, so dass eine zeitliche Einordnung möglich ist.
+                  Gleicht man das mit dem <rs type="work" ref="#pmb33243">Tagebuch</rs> ab, so dürfte die
+                  vorliegende Karte am <ref type="schnitzler-tagebuch" subtype="date-only" target="1908-04-24"/> verfasst
+                  sein, da an diesem Tag alle in der <rs type="place" ref="#pmb168934">Frankgasse 1</rs> zusammentrafen. Am nächsten
+                  Tag reisten <rs type="person" ref="#pmb2121">Arthur</rs> und <rs type="person" ref="#pmb2173">Olga Schnitzler</rs>
+                  ab.</note> abend
+            <rs type="place" ref="#pmb168934">Frankgaſſe</rs> kämen, würde ſich
+      (abgeſehen von den andern) <rs type="person" ref="#pmb12701" subtype="implied">Mama</rs> ſehr
+      freuen. –</p>
          </div>
       </body>
       <back>
@@ -239,30 +187,6 @@
                   </settlement>
                </death>
             </person>
-            <person xml:id="pmb2173">
-               <persName>
-                  <forename>Olga</forename>
-                  <surname>Schnitzler</surname>
-               </persName>
-               <birth>
-                  <date when="1882-01-17">1882-01-17</date>
-                  <settlement ref="pmb50">
-                     <placeName type="pref">Wien</placeName>
-                     <location>
-                        <geo>48,208333 16,373056</geo>
-                     </location>
-                  </settlement>
-               </birth>
-               <death>
-                  <date when="1970-01-13">1970-01-13</date>
-                  <settlement ref="pmb885">
-                     <placeName type="pref">Lugano</placeName>
-                     <location>
-                        <geo>46,01008 8,96004</geo>
-                     </location>
-                  </settlement>
-               </death>
-            </person>
             <person xml:id="pmb12740">
                <persName>
                   <forename>Gustav</forename>
@@ -287,22 +211,90 @@
                   </settlement>
                </death>
             </person>
+            <person xml:id="pmb2173" ana="comment">
+               <persName>
+                  <forename>Olga</forename>
+                  <surname>Schnitzler</surname>
+               </persName>
+               <birth>
+                  <date when="1882-01-17">1882-01-17</date>
+                  <settlement ref="pmb50">
+                     <placeName type="pref">Wien</placeName>
+                     <location>
+                        <geo>48,208333 16,373056</geo>
+                     </location>
+                  </settlement>
+               </birth>
+               <death>
+                  <date when="1970-01-13">1970-01-13</date>
+                  <settlement ref="pmb885">
+                     <placeName type="pref">Lugano</placeName>
+                     <location>
+                        <geo>46,01008 8,96004</geo>
+                     </location>
+                  </settlement>
+               </death>
+            </person>
+            <person xml:id="pmb12701" ana="implied">
+               <persName>
+                  <forename>Louise</forename>
+                  <surname>Schnitzler</surname>
+               </persName>
+               <birth>
+                  <date when="1840-07-08">1840-07-08</date>
+                  <settlement ref="pmb35513">
+                     <placeName type="pref">Kőszeg</placeName>
+                     <location>
+                        <geo>47,38922 16,541</geo>
+                     </location>
+                  </settlement>
+               </birth>
+               <death>
+                  <date when="1911-09-09">1911-09-09</date>
+                  <settlement ref="pmb50">
+                     <placeName type="pref">Wien</placeName>
+                     <location>
+                        <geo>48,208333 16,373056</geo>
+                     </location>
+                  </settlement>
+               </death>
+            </person>
          </listPerson>
+         <listBibl>
+            <bibl xml:id="pmb33243" ana="comment">
+               <title>Tagebuch</title>
+               <title type="werk_link">https://schnitzler-tagebuch.acdh.oeaw.ac.at</title>
+               <author ref="pmb2121" role="hat-geschaffen">Schnitzler, Arthur</author>
+            </bibl>
+         </listBibl>
          <listPlace>
-            <place xml:id="pmb189">
-               <placeName>Semmering</placeName>
-               <placeName type="alternative-name">Gemeinde Semmering</placeName>
-               <placeName type="alternative-name">Semmering-Semmering-Kurort</placeName>
-               <placeName type="alternative-name">Kurort Semmering</placeName>
-               <placeName type="alternative-name">Semmering-Kurort</placeName>
-               <placeName type="alternative-name">Heilklimatischer Höhenluftkurort Semmering</placeName>
-               <placeName type="alternative-name">Semmering- Kurort Semmering</placeName>
+            <place xml:id="pmb133">
+               <placeName>Edmund-Weiß-Gasse</placeName>
+               <placeName type="ort_fruherer-name">Spöttelgasse</placeName>
                <location type="coords">
-                  <geo>47,64224 15,8241</geo>
+                  <geo>48,23056 16,3348</geo>
                </location>
                <location type="located_in_place">
-                  <placeName ref="pmb41240">Österreich</placeName>
-                  <geo>47,33333 13,33333</geo>
+                  <placeName ref="pmb68">XVIII., Währing</placeName>
+                  <geo>48,23333 16,31667</geo>
+               </location>
+               <location type="located_in_place">
+                  <placeName ref="pmb533">Währinger Cottage</placeName>
+                  <geo>48,233056 16,341944</geo>
+               </location>
+            </place>
+            <place xml:id="pmb207296">
+               <placeName>Tiefer Graben 23</placeName>
+               <location type="coords">
+                  <geo>48,213038 16,368738</geo>
+               </location>
+               <location type="located_in_place">
+                  <placeName ref="pmb50825">Tiefer Graben</placeName>
+                  <geo>48,2125 16,368333</geo>
+               </location>
+               <location type="located_in_place">
+                  <placeName ref="pmb51">I., Innere Stadt</placeName>
+                  <geo>48,20769 16,37049</geo>
                </location>
             </place>
             <place xml:id="pmb50">
@@ -327,68 +319,21 @@
                   <geo>48,24077 16,32092</geo>
                </location>
             </place>
-            <place xml:id="pmb207296">
-               <placeName>Tiefer Graben 23</placeName>
+            <place xml:id="pmb168934" ana="comment">
+               <placeName>Frankgasse 1</placeName>
                <location type="coords">
-                  <geo>48,213038 16,368738</geo>
+                  <geo>48,21533 16,35736</geo>
                </location>
                <location type="located_in_place">
-                  <placeName ref="pmb50825">Tiefer Graben</placeName>
-                  <geo>48,2125 16,368333</geo>
+                  <placeName ref="pmb59">IX., Alsergrund</placeName>
+                  <geo>48,22387 16,35641</geo>
                </location>
                <location type="located_in_place">
-                  <placeName ref="pmb51">I., Innere Stadt</placeName>
-                  <geo>48,20769 16,37049</geo>
-               </location>
-            </place>
-            <place xml:id="pmb353718">
-               <placeName>Villa Meran</placeName>
-               <location type="coords">
-                  <geo>47,65124876541222 15,824421808704264</geo>
-               </location>
-               <location type="located_in_place">
-                  <placeName ref="pmb189">Semmering</placeName>
-                  <geo>47,64224 15,8241</geo>
-               </location>
-            </place>
-            <place xml:id="pmb27068">
-               <placeName>Schneeberg</placeName>
-               <location type="coords">
-                  <geo>47,775833 15,8075</geo>
-               </location>
-               <location type="located_in_place">
-                  <placeName ref="pmb1003">Niederösterreich</placeName>
-                  <geo>48,33333 15,75</geo>
-               </location>
-               <location type="located_in_place">
-                  <placeName ref="pmb117">Alpen</placeName>
-                  <geo>46,41667 10,0</geo>
-               </location>
-            </place>
-            <place xml:id="pmb442">
-               <placeName>Kurhaus Semmering</placeName>
-               <location type="coords">
-                  <geo>47,652222 15,826389</geo>
-               </location>
-               <location type="located_in_place">
-                  <placeName ref="pmb189">Semmering</placeName>
-                  <geo>47,64224 15,8241</geo>
+                  <placeName ref="pmb397">Frankgasse</placeName>
+                  <geo>48,215516628628 16,356475515829</geo>
                </location>
             </place>
          </listPlace>
-         <listEvent>
-            <event xml:id="pmb88534" ana="implied">
-               <eventName n="Theaterpremiere">Premiere von Das weite Land, 14.10.1911 [I.]</eventName>
-               <listPlace>
-                  <place>
-                     <placeName role="veranstaltet in" ref="pmb14">Burgtheater</placeName>
-                     <location>
-                        <geo>48,210333 16,361139</geo>
-                     </location>
-                  </place>
-               </listPlace>
-            </event>
-         </listEvent>
       </back>
    </text>
 </TEI>

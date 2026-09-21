@@ -9,7 +9,7 @@
       <fileDesc>
          <titleStmt>
             <title level="s">Arthur Schnitzler: Briefwechsel mit Autorinnen und Autoren</title>
-            <title level="a">Arthur Schnitzler an Gustav Schwarzkopf, XXXX</title>
+            <title level="a">Arthur Schnitzler an Gustav Schwarzkopf, [zwischen 1897 und Mitte 1898?]</title>
             <author ref="#pmb2121">Schnitzler, Arthur</author>
             <editor>
                <persName>Jahnke, Selma</persName>
@@ -87,10 +87,11 @@
                               <extent>
                                  <measure unit="seite" quantity="2"/>
                                  <measure unit="blatt" quantity="1"/>
+                                 <measure unit="zeichenanzahl" quantity="104"/>
                               </extent>
                            </supportDesc>
                         </objectDesc>
-                        <handDesc>
+                        <handDesc hands="1">
                            <handNote medium="bleistift" style="deutsche-kurrent"/>
                         </handDesc>
                      </physDesc>
@@ -106,11 +107,12 @@
          <correspDesc>
             <correspAction type="sent">
                <persName ref="#pmb2121">Schnitzler, Arthur</persName>
-               <date when="" n="01">XXXX</date>
+               <date notBefore="1897-01-01" notAfter="1898-06-30" n="01">[zwischen 1897 und Mitte 1898?]</date>
                <placeName ref="#pmb50">Wien</placeName>
             </correspAction>
             <correspAction type="received">
                <persName ref="#pmb12740">Schwarzkopf, Gustav</persName>
+               <date notBefore="1897-01-01" notAfter="1898-06-30">[zwischen 1897 und Mitte 1898?]</date>
                <placeName ref="#pmb50">Wien</placeName>
             </correspAction>
          </correspDesc>
@@ -119,12 +121,19 @@
          <change who="MAM" when="2025-12-10">Export aus Transkribus</change>
       </revisionDesc>
    </teiHeader>
+   <facsimile>
+      <graphic url="MS-SCHNITZLER-B-00096-B-000-00367"/>
+      <graphic url="MS-SCHNITZLER-B-00096-B-000-00368"/>
+   </facsimile>
    <text>
       <body>
          <div type="writingSession" n="1">
             <opener>
                <salute>
-                  <pb facs="MS-SCHNITZLER-B-00096-B-000-00367"/>Lieber Guſtav,</salute>
+                  <pb facs="MS-SCHNITZLER-B-00096-B-000-00367"/>
+                  <anchor type="commentary" xml:id="K_L04189-1"/>Lieber Guſtav<note type="commentary" corresp="K_L04189-1">Das Blatt ist undatiert. Durch die Verwendung der Anrede »<quote>Lieber Guſtav</quote>« dürfte
+                     es frühestens <date>1897</date> übermittelt sein. Das häufige Frequentieren des <rs type="place" ref="#pmb104">Café Arkaden</rs> endete spätestens im <date>Frühjahr 1898</date>, womit eine hintere 
+                  zeitliche Grenze vorzuliegen scheint.</note>,</salute>
             </opener>
             <p>bitte mich nicht abzuholen. Vielleicht ſehen <pb facs="MS-SCHNITZLER-B-00096-B-000-00368"/>wir uns heut Abd im <hi rend="latintype">
                   <rs type="place" ref="#pmb104">Arkaden</rs>
@@ -133,5 +142,96 @@
             </closer>
          </div>
       </body>
+      <back>
+         <listPerson>
+            <person xml:id="pmb2121">
+               <persName>
+                  <surname>Schnitzler</surname>
+                  <forename>Arthur</forename>
+               </persName>
+               <birth>
+                  <date when="1862-05-15">15. 5. 1862</date>
+                  <settlement ref="pmb50">
+                     <placeName type="pref">Wien</placeName>
+                     <location>
+                        <geo>48,208333 16,373056</geo>
+                     </location>
+                  </settlement>
+               </birth>
+               <death>
+                  <date when="1931-10-21">21. 10. 1931</date>
+                  <settlement ref="pmb50">
+                     <placeName type="pref">Wien</placeName>
+                     <location>
+                        <geo>48,208333 16,373056</geo>
+                     </location>
+                  </settlement>
+               </death>
+            </person>
+            <person xml:id="pmb12740">
+               <persName>
+                  <forename>Gustav</forename>
+                  <surname>Schwarzkopf</surname>
+               </persName>
+               <birth>
+                  <date when="1853-11-07">1853-11-07</date>
+                  <settlement ref="pmb50">
+                     <placeName type="pref">Wien</placeName>
+                     <location>
+                        <geo>48,208333 16,373056</geo>
+                     </location>
+                  </settlement>
+               </birth>
+               <death>
+                  <date when="1939-11-13">1939-11-13</date>
+                  <settlement ref="pmb50">
+                     <placeName type="pref">Wien</placeName>
+                     <location>
+                        <geo>48,208333 16,373056</geo>
+                     </location>
+                  </settlement>
+               </death>
+            </person>
+         </listPerson>
+         <listPlace>
+            <place xml:id="pmb50">
+               <placeName>Wien</placeName>
+               <placeName type="ort_fruherer-name">K.K. Reichshaupt- und Residenzstadt Wien</placeName>
+               <placeName type="alternative-name">Bécs</placeName>
+               <placeName type="alternative-name">Land Wien</placeName>
+               <placeName type="alternative-name">Vídeň</placeName>
+               <placeName type="alternative-name">Wenia</placeName>
+               <placeName type="alternative-name">Beč</placeName>
+               <placeName type="ort_fruherer-name">Vindobona</placeName>
+               <placeName type="alternative-name">Vienna</placeName>
+               <location type="coords">
+                  <geo>48,208333 16,373056</geo>
+               </location>
+               <location type="located_in_place">
+                  <placeName ref="pmb41240">Österreich</placeName>
+                  <geo>47,33333 13,33333</geo>
+               </location>
+               <location type="located_in_place">
+                  <placeName ref="pmb235218">Windmühlhöhe</placeName>
+                  <geo>48,24077 16,32092</geo>
+               </location>
+            </place>
+            <place xml:id="pmb104" ana="comment">
+               <placeName>Café Arkaden</placeName>
+               <placeName type="ort_namensvariante">Wiener Arcaden-Café</placeName>
+               <location type="coords">
+                  <geo>48,2139714 16,3589854</geo>
+               </location>
+               <location type="located_in_place">
+                  <placeName ref="pmb51">I., Innere Stadt</placeName>
+                  <geo>48,20769 16,37049</geo>
+               </location>
+               <location type="located_in_place">
+                  <placeName ref="pmb653">Universitätsstraße</placeName>
+                  <geo>48,214120366337 16,358756425131</geo>
+               </location>
+            </place>
+         </listPlace>
+      </back>
    </text>
 </TEI>

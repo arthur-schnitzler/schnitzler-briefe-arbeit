@@ -9,7 +9,7 @@
       <fileDesc>
          <titleStmt>
             <title level="s">Arthur Schnitzler: Briefwechsel mit Autorinnen und Autoren</title>
-            <title level="a">Arthur Schnitzler an Gustav Schwarzkopf, XXXX</title>
+            <title level="a">Arthur Schnitzler an Gustav Schwarzkopf, [zwischen 1893 und  Mitte 1894?]</title>
             <author ref="#pmb2121">Schnitzler, Arthur</author>
             <editor>
                <persName>Jahnke, Selma</persName>
@@ -73,7 +73,7 @@
          <sourceDesc>
             <listWit>
                <witness n="1">
-                  <objectType corresp="xbrief"/>
+                  <objectType corresp="brief"/>
                   <msDesc>
                      <msIdentifier>
                         <country>GB</country>
@@ -85,13 +85,14 @@
                         <objectDesc>
                            <supportDesc>
                               <extent>
-                                 <measure unit="seite" quantity=""/>
-                                 <measure unit="blatt" quantity=""/>
+                                 <measure unit="seite" quantity="1"/>
+                                 <measure unit="blatt" quantity="1"/>
+                                 <measure unit="zeichenanzahl" quantity="156"/>
                               </extent>
                            </supportDesc>
                         </objectDesc>
-                        <handDesc>
-                           <handNote medium="" style="deutsche-kurrent"/>
+                        <handDesc hands="1">
+                           <handNote medium="bleistift" style="deutsche-kurrent"/>
                         </handDesc>
                      </physDesc>
                   </msDesc>
@@ -106,12 +107,13 @@
          <correspDesc>
             <correspAction type="sent">
                <persName ref="#pmb2121">Schnitzler, Arthur</persName>
-               <date when="" n="01">XXXX</date>
+               <date notBefore="1893-01-01" notAfter="1894-06-30" n="01">[zwischen 1893 und  Mitte 1894?]</date>
                <placeName ref="#pmb50">Wien</placeName>
             </correspAction>
             <correspAction type="received">
                <persName ref="#pmb12740">Schwarzkopf, Gustav</persName>
-               <placeName ref="#pmb50">Wien</placeName>
+               <date notBefore="1893-01-01" notAfter="1894-06-30">[zwischen 1893 und  Mitte 1894?]</date>
+               <placeName ref="#pmb50" evidence="conjecture">Wien</placeName>
             </correspAction>
          </correspDesc>
       </profileDesc>
@@ -119,6 +121,9 @@
          <change who="MAM" when="2025-12-10">Export aus Transkribus</change>
       </revisionDesc>
    </teiHeader>
+   <facsimile>
+      <graphic url="MS-SCHNITZLER-B-00096-B-000-00379"/>
+   </facsimile>
    <text>
       <body>
          <div type="writingSession" n="1">
@@ -132,7 +137,11 @@
                   </seg>
                   <seg rend="right">Mittg.</seg>
                </seg>
-               <salute>Verehrteſter Freund,</salute>
+               <salute>
+                  <anchor type="commentary" xml:id="K_L03971-1"/>Verehrteſter Freund<note type="commentary" corresp="K_L03971-1">Das Blatt ist undatiert. Die
+               verwendete Grußformel deutet aber auf den Zeitraum <date>1893</date> bis <date>Mitte 1894</date> hin, in dem 
+               <rs type="person" ref="#pmb2121">Schnitzler</rs> häufig Anreden an <rs type="person" ref="#pmb12740">Schwarzkopf</rs> mit »Verehrter« und
+               »Verehrtester« verwendet.</note>,</salute>
             </opener>
             <p>leider kann ich Sie heute nicht abholen! Auf hoffentlich ſehr baldiges
                Wiederſehen,</p>
@@ -141,5 +150,81 @@
             </closer>
          </div>
       </body>
+      <back>
+         <listPerson>
+            <person xml:id="pmb2121">
+               <persName>
+                  <surname>Schnitzler</surname>
+                  <forename>Arthur</forename>
+               </persName>
+               <birth>
+                  <date when="1862-05-15">15. 5. 1862</date>
+                  <settlement ref="pmb50">
+                     <placeName type="pref">Wien</placeName>
+                     <location>
+                        <geo>48,208333 16,373056</geo>
+                     </location>
+                  </settlement>
+               </birth>
+               <death>
+                  <date when="1931-10-21">21. 10. 1931</date>
+                  <settlement ref="pmb50">
+                     <placeName type="pref">Wien</placeName>
+                     <location>
+                        <geo>48,208333 16,373056</geo>
+                     </location>
+                  </settlement>
+               </death>
+            </person>
+            <person xml:id="pmb12740">
+               <persName>
+                  <forename>Gustav</forename>
+                  <surname>Schwarzkopf</surname>
+               </persName>
+               <birth>
+                  <date when="1853-11-07">1853-11-07</date>
+                  <settlement ref="pmb50">
+                     <placeName type="pref">Wien</placeName>
+                     <location>
+                        <geo>48,208333 16,373056</geo>
+                     </location>
+                  </settlement>
+               </birth>
+               <death>
+                  <date when="1939-11-13">1939-11-13</date>
+                  <settlement ref="pmb50">
+                     <placeName type="pref">Wien</placeName>
+                     <location>
+                        <geo>48,208333 16,373056</geo>
+                     </location>
+                  </settlement>
+               </death>
+            </person>
+         </listPerson>
+         <listPlace>
+            <place xml:id="pmb50">
+               <placeName>Wien</placeName>
+               <placeName type="ort_fruherer-name">K.K. Reichshaupt- und Residenzstadt Wien</placeName>
+               <placeName type="alternative-name">Bécs</placeName>
+               <placeName type="alternative-name">Land Wien</placeName>
+               <placeName type="alternative-name">Vídeň</placeName>
+               <placeName type="alternative-name">Wenia</placeName>
+               <placeName type="alternative-name">Beč</placeName>
+               <placeName type="ort_fruherer-name">Vindobona</placeName>
+               <placeName type="alternative-name">Vienna</placeName>
+               <location type="coords">
+                  <geo>48,208333 16,373056</geo>
+               </location>
+               <location type="located_in_place">
+                  <placeName ref="pmb41240">Österreich</placeName>
+                  <geo>47,33333 13,33333</geo>
+               </location>
+               <location type="located_in_place">
+                  <placeName ref="pmb235218">Windmühlhöhe</placeName>
+                  <geo>48,24077 16,32092</geo>
+               </location>
+            </place>
+         </listPlace>
+      </back>
    </text>
 </TEI>
