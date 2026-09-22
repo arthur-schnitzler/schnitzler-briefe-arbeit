@@ -1,12 +1,10 @@
-<?xml version='1.0' encoding='UTF-8'?>
-<?xml-model href="../meta/schnitzler-briefe-schematron.sch" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
-<TEI xmlns="http://www.tei-c.org/ns/1.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.tei-c.org/ns/1.0 ../meta/schnitzler-briefe-schema.xsd" xml:base="https://id.acdh.oeaw.ac.at/schnitzler/schnitzler-briefe/editions" xml:id="L04053">
+<?xml version="1.0" encoding="UTF-8"?><?xml-model href="../meta/schnitzler-briefe-schematron.sch" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI xmlns="http://www.tei-c.org/ns/1.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.tei-c.org/ns/1.0 ../meta/schnitzler-briefe-schema.xsd" xml:base="https://id.acdh.oeaw.ac.at/schnitzler/schnitzler-briefe/editions" xml:id="L04053">
    <teiHeader>
       <fileDesc>
          <titleStmt>
             <title level="s">Arthur Schnitzler: Briefwechsel mit Autorinnen und
                                     Autoren</title>
-            <title level="a">Arthur Schnitzler an Gustav Schwarzkopf, 25. 8. 1904</title>
+            <title level="a">Arthur Schnitzler an Gustav Schwarzkopf, [24. oder 25]. 8. 1904</title>
             <author ref="#pmb2121">Schnitzler, Arthur</author>
             <editor>
                <persName>Jahnke, Selma</persName>
@@ -122,8 +120,12 @@
          <correspDesc>
             <correspAction type="sent">
                <persName ref="#pmb2121">Schnitzler, Arthur</persName>
-               <date when="1904-08-25" n="01">25. 8. 1904</date>
-               <placeName ref="#pmb50">Wien</placeName>
+               <date n="01" notBefore="1904-08-24" notAfter="1904-08-25">[24. oder 25]. 8. 1904</date>
+               <placeName ref="#pmb168940">Edmund-Weiß-Gasse 7</placeName>
+            </correspAction>
+            <correspAction type="transmitted">
+               <date when="1904-08-25">25. 8. 1904</date>
+               <placeName ref="#pmb68">18/1 Wien 110</placeName>
             </correspAction>
             <correspAction type="received">
                <persName ref="#pmb12740">Schwarzkopf, Gustav</persName>
@@ -140,6 +142,7 @@
       <revisionDesc status="proposed">
          <change who="MAM" when="2025-12-10">Export aus
                                 Transkribus</change>
+         <change who="SJ" when="2026-09-22">Datierung und Stempel überprüft</change>
       </revisionDesc>
    </teiHeader>
    <facsimile>
@@ -166,7 +169,7 @@
                   <rs type="work" ref="#pmb77023">Hofm. Erzählg</rs>.</rs>
                <space unit="chars" quantity="1"/>
                <hi rend="underline" n="1">Loge 7, 3. Galerie, rechts</hi>, und
-      freuen <del rend="strikethrough">Sie</del> uns Sie dortſelbſt zu begrüßen.</p>
+               freuen <del rend="strikethrough">Sie</del> uns <anchor type="commentary" xml:id="K_L04053-1"/>Sie dortſelbſt zu begrüßen<note type='commentary' corresp="K_L04053-1"><rs type="person" ref="#pmb12740">Schwarzkopf</rs> kam der Einladung nach, <ref type="schnitzler-tagebuch" target="1904-08-29" subtype="cf"></ref>.</note>.</p>
             <p>Bitte jedenfalls um eine Zeile dſs Sie
       dieſe Karte erhalten haben.</p>
             <closer>Herzlichen Gruſs, Ihr<lb/>
