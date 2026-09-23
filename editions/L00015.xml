@@ -1,6 +1,10 @@
-<?xml version='1.0' encoding='UTF-8'?>
+<?xml version="1.0" encoding="UTF-8"?>
 <?xml-model href="../meta/schnitzler-briefe-schematron.sch" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
-<TEI xmlns="http://www.tei-c.org/ns/1.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.tei-c.org/ns/1.0 ../meta/schnitzler-briefe-schema.xsd" xml:id="L00015" xml:base="https://id.acdh.oeaw.ac.at/schnitzler/schnitzler-briefe/editions">
+<TEI xmlns="http://www.tei-c.org/ns/1.0"
+     xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+     xsi:schemaLocation="http://www.tei-c.org/ns/1.0 ../meta/schnitzler-briefe-schema.xsd"
+     xml:id="L00015"
+     xml:base="https://id.acdh.oeaw.ac.at/schnitzler/schnitzler-briefe/editions">
    <teiHeader>
       <fileDesc>
          <titleStmt>
@@ -83,7 +87,7 @@
                               <extent>
                                  <measure unit="karte" quantity="1"/>
                                  <measure unit="kuvert" quantity="1"/>
-                                 <measure unit="zeichenanzahl" quantity="500"/>
+                                 <measure unit="zeichenanzahl" quantity="501"/>
                               </extent>
                            </supportDesc>
                         </objectDesc>
@@ -148,7 +152,7 @@
          <correspDesc>
             <correspAction type="sent">
                <persName ref="#pmb2121">Schnitzler, Arthur</persName>
-               <date n="02" notBefore="1891-05-22" notAfter="1891-05-23">[22. oder 23]. 5. 1891</date>
+               <date notBefore="1891-05-22" notAfter="1891-05-23" n="02">[22. oder 23]. 5. 1891</date>
                <placeName ref="#pmb50">Wien</placeName>
             </correspAction>
             <correspAction type="transmitted">
@@ -168,12 +172,20 @@
                <date when="1891-05-24">24. 5. 1891</date>
                <placeName ref="#pmb40154">Hotel Neuhauser</placeName>
             </correspAction>
-            <correspContext><ref type="belongsToCorrespondence" target="correspondence_10863">Beer-Hofmann, Richard</ref>
+            <correspContext>
+               <ref type="belongsToCorrespondence" target="correspondence_10863">Beer-Hofmann, Richard</ref>
                <ref subtype="previous_letter" type="withinCollection" target="L00014">Schnitzler an Burckhard, [20.] 5. 1891</ref>
                <ref subtype="next_letter" type="withinCollection" target="L03102">Salten an Schnitzler, [23. 5. 1891]</ref>
-               <ref subtype="previous_letter" type="withinCorrespondence" source="correspondence_10863" target="L00013">Beer-Hofmann an Schnitzler, 19. 5. 1891</ref>
-               <ref subtype="next_letter" type="withinCorrespondence" source="correspondence_10863" target="L00016">Beer-Hofmann an Schnitzler, 30. 5. 1891</ref>
-            </correspContext></correspDesc>
+               <ref subtype="previous_letter"
+                    type="withinCorrespondence"
+                    source="correspondence_10863"
+                    target="L00013">Beer-Hofmann an Schnitzler, 19. 5. 1891</ref>
+               <ref subtype="next_letter"
+                    type="withinCorrespondence"
+                    source="correspondence_10863"
+                    target="L00016">Beer-Hofmann an Schnitzler, 30. 5. 1891</ref>
+            </correspContext>
+         </correspDesc>
       </profileDesc>
       <revisionDesc status="approved">
          <change who="GHS" when="2019-09-09">nachträglich angelegt aus Buchausgabe und mit Original
@@ -231,67 +243,155 @@
             </closer>
          </div>
       </body>
-      <back><listPerson><person xml:id="pmb10863"><persName>
-      <forename>Richard</forename>
-      <surname>Beer-Hofmann</surname>
-  </persName><birth>
-    <date when="1866-07-11">1866-07-11</date>
-      <settlement ref="pmb50">
-        <placeName type="pref">Wien</placeName>
-        <location><geo>48,208333 16,373056</geo></location>
-      </settlement>
-  </birth><death>
-    <date when="1945-09-26">1945-09-26</date>
-      <settlement ref="pmb44053">
-        <placeName type="pref">New York City</placeName>
-        <location><geo>40,71427 -74,00597</geo></location>
-      </settlement>
-  </death></person><person xml:id="pmb2121"><persName><surname>Schnitzler</surname><forename>Arthur</forename></persName><birth><date when="1862-05-15">15. 5. 1862</date><settlement ref="pmb50"><placeName type="pref">Wien</placeName><location><geo>48,208333 16,373056</geo></location></settlement></birth><death><date when="1931-10-21">21. 10. 1931</date><settlement ref="pmb50"><placeName type="pref">Wien</placeName><location><geo>48,208333 16,373056</geo></location></settlement></death><sex value="male"/><occupation ref="pmb90">Schriftsteller/Schriftstellerin</occupation><occupation ref="pmb97">Mediziner/Medizinerin</occupation><idno type="gnd">https://d-nb.info/gnd/118609807/</idno></person><person xml:id="pmb2167"><persName>
-      <forename>Felix</forename>
-      <surname>Salten</surname>
-  </persName><birth>
-    <date when="1869-09-06">1869-09-06</date>
-      <settlement ref="pmb43471">
-        <placeName type="pref">Budapest</placeName>
-        <location><geo>47,49835 19,04045</geo></location>
-      </settlement>
-  </birth><death>
-    <date when="1945-10-08">1945-10-08</date>
-      <settlement ref="pmb484">
-        <placeName type="pref">Zürich</placeName>
-        <location><geo>47,37174 8,54226</geo></location>
-      </settlement>
-  </death></person></listPerson><listPlace><place xml:id="pmb167789"><placeName>Ordination Arthur Schnitzler [Bösendorferstraße 11]</placeName><location type="coords">
-  <geo>48,2012 16,37188</geo>
-</location><location type="located_in_place">
-  <placeName ref="pmb51">I., Innere Stadt</placeName>
-  <geo>48,20769 16,37049</geo>
-</location><location type="located_in_place">
-  <placeName ref="pmb501">Kärntnerring</placeName>
-  <geo>48,201874800905 16,371985203093</geo>
-</location><location type="located_in_place">
-  <placeName ref="pmb542">Bösendorferstraße</placeName>
-  <geo>48,201213 16,371141</geo>
-</location><location type="located_in_place">
-  <placeName ref="pmb167805">Kärntnerring 12/Bösendorferstraße 11</placeName>
-  <geo>48,20143 16,37196</geo>
-</location></place><place xml:id="pmb40154"><placeName>Hotel Neuhauser</placeName><location type="coords">
-  <geo>49,19294 16,61001</geo>
-</location><location type="located_in_place">
-  <placeName ref="pmb833">Brünn</placeName>
-  <geo>49,19522 16,60796</geo>
-</location></place><place xml:id="pmb50"><placeName>Wien</placeName><placeName type="ort_fruherer-name">K.K. Reichshaupt- und Residenzstadt Wien</placeName><placeName type="legacy-name-merge">Wien</placeName><placeName type="alternative-name">Bécs</placeName><placeName type="alternative-name">Land Wien</placeName><placeName type="alternative-name">Vídeň</placeName><placeName type="alternative-name">Wenia</placeName><placeName type="alternative-name">Beč</placeName><placeName type="ort_fruherer-name">Vindobona</placeName><placeName type="legacy-name-merge">Vindobona</placeName><placeName type="alternative-name">Vienna</placeName><placeName type="legacy-name-merge">Vienna</placeName><placeName type="alternative-name">Vienna</placeName><location type="coords">
-  <geo>48,208333 16,373056</geo>
-</location><location type="located_in_place">
-  <placeName ref="pmb41240">Österreich</placeName>
-  <geo>47,33333 13,33333</geo>
-</location></place><place xml:id="pmb833"><placeName>Brünn</placeName><placeName type="alternative-name">Brunna</placeName><placeName type="legacy-name-merge">Brünn</placeName><placeName type="alternative-name">Eburodunum</placeName><placeName type="namensvariante">Brno</placeName><placeName type="alternative-name">Brno</placeName><placeName type="alternative-name">Brünn</placeName><placeName type="legacy-name-merge">Brno</placeName><placeName type="legacy-name-merge">Brünn</placeName><placeName type="legacy-name-merge">Brünn (Mähren)</placeName><location type="coords">
-  <geo>49,19522 16,60796</geo>
-</location><location type="located_in_place">
-  <placeName ref="pmb43430">Tschechien</placeName>
-  <geo>49,75 15,0</geo>
-</location><location type="located_in_place">
-  <placeName ref="pmb40823">Mähren</placeName>
-  <geo>49,5 17,0</geo>
-</location></place></listPlace></back></text>
+      <back>
+         <listPerson>
+            <person xml:id="pmb2121">
+               <persName>
+                  <surname>Schnitzler</surname>
+                  <forename>Arthur</forename>
+               </persName>
+               <birth>
+                  <date when="1862-05-15">15. 5. 1862</date>
+                  <settlement ref="pmb50">
+                     <placeName type="pref">Wien</placeName>
+                     <location>
+                        <geo>48,208333 16,373056</geo>
+                     </location>
+                  </settlement>
+               </birth>
+               <death>
+                  <date when="1931-10-21">21. 10. 1931</date>
+                  <settlement ref="pmb50">
+                     <placeName type="pref">Wien</placeName>
+                     <location>
+                        <geo>48,208333 16,373056</geo>
+                     </location>
+                  </settlement>
+               </death>
+            </person>
+            <person xml:id="pmb10863">
+               <persName>
+                  <forename>Richard</forename>
+                  <surname>Beer-Hofmann</surname>
+               </persName>
+               <birth>
+                  <date when="1866-07-11">1866-07-11</date>
+                  <settlement ref="pmb50">
+                     <placeName type="pref">Wien</placeName>
+                     <location>
+                        <geo>48,208333 16,373056</geo>
+                     </location>
+                  </settlement>
+               </birth>
+               <death>
+                  <date when="1945-09-26">1945-09-26</date>
+                  <settlement ref="pmb44053">
+                     <placeName type="pref">New York City</placeName>
+                     <location>
+                        <geo>40,71427 -74,00597</geo>
+                     </location>
+                  </settlement>
+               </death>
+            </person>
+            <person xml:id="pmb2167">
+               <persName>
+                  <forename>Felix</forename>
+                  <surname>Salten</surname>
+               </persName>
+               <birth>
+                  <date when="1869-09-06">1869-09-06</date>
+                  <settlement ref="pmb43471">
+                     <placeName type="pref">Budapest</placeName>
+                     <location>
+                        <geo>47,49835 19,04045</geo>
+                     </location>
+                  </settlement>
+               </birth>
+               <death>
+                  <date when="1945-10-08">1945-10-08</date>
+                  <settlement ref="pmb484">
+                     <placeName type="pref">Zürich</placeName>
+                     <location>
+                        <geo>47,37174 8,54226</geo>
+                     </location>
+                  </settlement>
+               </death>
+            </person>
+         </listPerson>
+         <listPlace>
+            <place xml:id="pmb50">
+               <placeName>Wien</placeName>
+               <placeName type="ort_fruherer-name">K.K. Reichshaupt- und Residenzstadt Wien</placeName>
+               <placeName type="alternative-name">Bécs</placeName>
+               <placeName type="alternative-name">Land Wien</placeName>
+               <placeName type="alternative-name">Vídeň</placeName>
+               <placeName type="alternative-name">Wenia</placeName>
+               <placeName type="alternative-name">Beč</placeName>
+               <placeName type="ort_fruherer-name">Vindobona</placeName>
+               <placeName type="alternative-name">Vienna</placeName>
+               <location type="coords">
+                  <geo>48,208333 16,373056</geo>
+               </location>
+               <location type="located_in_place">
+                  <placeName ref="pmb41240">Österreich</placeName>
+                  <geo>47,33333 13,33333</geo>
+               </location>
+               <location type="located_in_place">
+                  <placeName ref="pmb235218">Windmühlhöhe</placeName>
+                  <geo>48,24077 16,32092</geo>
+               </location>
+            </place>
+            <place xml:id="pmb833">
+               <placeName>Brünn</placeName>
+               <placeName type="alternative-name">Brunna</placeName>
+               <placeName type="alternative-name">Eburodunum</placeName>
+               <placeName type="namensvariante">Brno</placeName>
+               <placeName type="legacy-name-merge">Brünn (Mähren)</placeName>
+               <location type="coords">
+                  <geo>49,19522 16,60796</geo>
+               </location>
+               <location type="located_in_place">
+                  <placeName ref="pmb43430">Tschechien</placeName>
+                  <geo>49,75 15,0</geo>
+               </location>
+               <location type="located_in_place">
+                  <placeName ref="pmb40823">Mähren</placeName>
+                  <geo>49,5 17,0</geo>
+               </location>
+            </place>
+            <place xml:id="pmb40154">
+               <placeName>Hotel Neuhauser</placeName>
+               <location type="coords">
+                  <geo>49,19294 16,61001</geo>
+               </location>
+               <location type="located_in_place">
+                  <placeName ref="pmb833">Brünn</placeName>
+                  <geo>49,19522 16,60796</geo>
+               </location>
+            </place>
+            <place xml:id="pmb167789">
+               <placeName>Ordination Arthur Schnitzler [Bösendorferstraße 11]</placeName>
+               <location type="coords">
+                  <geo>48,2012 16,37188</geo>
+               </location>
+               <location type="located_in_place">
+                  <placeName ref="pmb51">I., Innere Stadt</placeName>
+                  <geo>48,20769 16,37049</geo>
+               </location>
+               <location type="located_in_place">
+                  <placeName ref="pmb501">Kärntnerring</placeName>
+                  <geo>48,201874800905 16,371985203093</geo>
+               </location>
+               <location type="located_in_place">
+                  <placeName ref="pmb542">Bösendorferstraße</placeName>
+                  <geo>48,201213 16,371141</geo>
+               </location>
+               <location type="located_in_place">
+                  <placeName ref="pmb167805">Kärntnerring 12/Bösendorferstraße 11</placeName>
+                  <geo>48,20143 16,37196</geo>
+               </location>
+            </place>
+         </listPlace>
+      </back>
+   </text>
 </TEI>
