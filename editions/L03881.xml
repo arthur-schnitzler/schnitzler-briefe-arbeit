@@ -1,6 +1,10 @@
-<?xml version='1.0' encoding='UTF-8'?>
+<?xml version="1.0" encoding="UTF-8"?>
 <?xml-model href="../meta/schnitzler-briefe-schematron.sch" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
-<TEI xmlns="http://www.tei-c.org/ns/1.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.tei-c.org/ns/1.0 ../meta/schnitzler-briefe-schema.xsd" xml:id="L03881" xml:base="https://id.acdh.oeaw.ac.at/schnitzler/schnitzler-briefe/editions">
+<TEI xmlns="http://www.tei-c.org/ns/1.0"
+     xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+     xsi:schemaLocation="http://www.tei-c.org/ns/1.0 ../meta/schnitzler-briefe-schema.xsd"
+     xml:id="L03881"
+     xml:base="https://id.acdh.oeaw.ac.at/schnitzler/schnitzler-briefe/editions">
    <teiHeader>
       <fileDesc>
          <titleStmt>
@@ -105,7 +109,7 @@
                            </incident>
                            <incident type="postal">
                               <desc>
-                                 <stamp n="2" type="forwarding">
+                                 <stamp n="2" type="transit">
                                     <placeName ref="#pmb68">18 Wien 110</placeName>
                                     <date when="1931-08-22">22. VIII. 31</date>
                                     <time>11</time>
@@ -146,7 +150,7 @@
                <persName ref="#pmb5295">Goldstein, Franz</persName>
                <persName ref="#pmb12176">Mann, Thomas</persName>
                <date when="1931-08-19" n="01">19. 8. 1931</date>
-               <placeName ref="#pmb298432">Nida</placeName>
+               <placeName ref="#pmb298436">Hotel Hermann Blode</placeName>
             </correspAction>
             <correspAction type="transmitted">
                <date when="1931-08-20">20. 8. 1931</date>
@@ -160,16 +164,22 @@
                <persName ref="#pmb2121">Schnitzler, Arthur</persName>
                <date evidence="conjecture" notBefore="1931-08-23" notAfter="1931-08-25">[23. 8. 1931
                   – 25. 8. 1931?]</date>
-               <placeName ref="#pmb874">Gmunden</placeName>
+               <placeName ref="#pmb245236">Hotel Austria [Gmunden]</placeName>
             </correspAction>
-            <correspContext><ref type="belongsToCorrespondence" target="correspondence_12176">Mann, Thomas</ref>
+            <correspContext>
+               <ref type="belongsToCorrespondence" target="correspondence_12176">Mann, Thomas</ref>
                <ref subtype="previous_letter" type="withinCollection" target="L02545">Hofmannsthal an Schnitzler, 12. 8. 1931</ref>
                <ref subtype="next_letter" type="withinCollection" target="L03483">Goldmann an Schnitzler, 22. 8. 1931</ref>
-               <ref subtype="previous_letter" type="withinCorrespondence" source="correspondence_12176" target="L02540">Mann an Schnitzler, [5. 12. 1930]</ref>
-            </correspContext></correspDesc>
+               <ref subtype="previous_letter"
+                    type="withinCorrespondence"
+                    source="correspondence_12176"
+                    target="L02540">Mann an Schnitzler, [5. 12. 1930]</ref>
+            </correspContext>
+         </correspDesc>
       </profileDesc>
       <revisionDesc status="proposed">
          <change who="MAM" when="2025-09-23">Angelegt</change>
+         <change who="SJ" when="2026-09-23">Datierung und Stempel überprüft</change>
       </revisionDesc>
    </teiHeader>
    <facsimile>
@@ -238,120 +248,256 @@
             </closer>
          </div>
       </body>
-      <back><listPerson><person xml:id="pmb12176"><persName>
-      <forename>Thomas</forename>
-      <surname>Mann</surname>
-  </persName><birth>
-    <date when="1875-06-06">1875-06-06</date>
-      <settlement ref="pmb884">
-        <placeName type="pref">Lübeck</placeName>
-        <location><geo>53,86893 10,68729</geo></location>
-      </settlement>
-  </birth><death>
-    <date when="1955-08-12">1955-08-12</date>
-      <settlement ref="pmb484">
-        <placeName type="pref">Zürich</placeName>
-        <location><geo>47,37174 8,54226</geo></location>
-      </settlement>
-  </death></person><person xml:id="pmb2121"><persName><surname>Schnitzler</surname><forename>Arthur</forename></persName><birth><date when="1862-05-15">15. 5. 1862</date><settlement ref="pmb50"><placeName type="pref">Wien</placeName><location><geo>48,208333 16,373056</geo></location></settlement></birth><death><date when="1931-10-21">21. 10. 1931</date><settlement ref="pmb50"><placeName type="pref">Wien</placeName><location><geo>48,208333 16,373056</geo></location></settlement></death><sex value="male"/><occupation ref="pmb90">Schriftsteller/Schriftstellerin</occupation><occupation ref="pmb97">Mediziner/Medizinerin</occupation><idno type="gnd">https://d-nb.info/gnd/118609807/</idno></person><person xml:id="pmb5295"><persName>
-      <forename>Franz</forename>
-      <surname>Goldstein</surname>
-  </persName><birth>
-    <date when="1898-12-09">1898-12-09</date>
-      <settlement ref="pmb49137">
-        <placeName type="pref">Katowice</placeName>
-        <location><geo>50,25841 19,02754</geo></location>
-      </settlement>
-  </birth><death>
-    <date when="1982-01-01" notAfter="1982-12-31">1982</date>
-      <settlement ref="pmb5297">
-        <placeName type="pref">Jerusalem</placeName>
-        <location><geo>31,76904 35,21633</geo></location>
-      </settlement>
-  </death></person><person xml:id="pmb12173" ana="implied"><persName>
-      <forename>Katia</forename>
-      <surname>Mann</surname>
-  </persName><birth>
-    <date when="1883-07-24">1883-07-24</date>
-      <settlement ref="pmb53150">
-        <placeName type="pref">Feldafing</placeName>
-        <location><geo>47,94602 11,29326</geo></location>
-      </settlement>
-  </birth><death>
-    <date when="1980-04-25">1980-04-25</date>
-      <settlement ref="pmb47482">
-        <placeName type="pref">Kilchberg</placeName>
-        <location><geo>47,32438 8,54548</geo></location>
-      </settlement>
-  </death></person></listPerson><listPlace><place xml:id="pmb168815"><placeName>Sternwartestraße 71</placeName><location type="coords">
-  <geo>48,23188 16,33716</geo>
-</location><location type="located_in_place">
-  <placeName ref="pmb68">XVIII., Währing</placeName>
-  <geo>48,23333 16,31667</geo>
-</location><location type="located_in_place">
-  <placeName ref="pmb533">Währinger Cottage</placeName>
-  <geo>48,233056 16,341944</geo>
-</location><location type="located_in_place">
-  <placeName ref="pmb150">Sternwartestraße</placeName>
-  <geo>48,23099349198 16,340117830625</geo>
-</location></place><place xml:id="pmb245236"><placeName>Hotel Austria [Gmunden]</placeName><location type="coords">
-  <geo>47,91762 13,79877</geo>
-</location><location type="located_in_place">
-  <placeName ref="pmb874">Gmunden</placeName>
-  <geo>47,91839 13,79933</geo>
-</location></place><place xml:id="pmb298432"><placeName>Nida</placeName><placeName type="ort_fruherer-name">Nidden</placeName><location type="coords">
-  <geo>55,303973 21,00532</geo>
-</location><location type="located_in_place">
-  <placeName ref="pmb46787">Litauen</placeName>
-  <geo>55,41667 24,0</geo>
-</location></place><place xml:id="pmb298436"><placeName>Hotel Hermann Blode</placeName><location type="coords">
-  <geo>55,310876 21,010934</geo>
-</location><location type="located_in_place">
-  <placeName ref="pmb298432">Nida</placeName>
-  <geo>55,303973 21,00532</geo>
-</location></place><place xml:id="pmb298441"><placeName>Parnidis Düne</placeName><location type="coords">
-  <geo>55,29166667 20,99444444</geo>
-</location><location type="located_in_place">
-  <placeName ref="pmb298443">Kurische Nehrung</placeName>
-  <geo>55,274444444444 20,970833333333</geo>
-</location></place><place xml:id="pmb298443"><placeName>Kurische Nehrung</placeName><location type="coords">
-  <geo>55,274444444444 20,970833333333</geo>
-</location><location type="located_in_place">
-  <placeName ref="pmb46787">Litauen</placeName>
-  <geo>55,41667 24,0</geo>
-</location></place><place xml:id="pmb41240"><placeName>Österreich</placeName><placeName type="alternative-name">Republik Österreich</placeName><placeName type="legacy-name-merge">Österreich</placeName><placeName type="alternative-name">Republic of Austria</placeName><placeName type="legacy-name-merge">Österreich</placeName><placeName type="legacy-name-merge">Deutsch Österreich</placeName><placeName type="legacy-name-merge">Altoesterreich</placeName><location type="coords">
-  <geo>47,33333 13,33333</geo>
-</location><location type="located_in_place">
-  <placeName ref="pmb468">Europa</placeName>
-  <geo>48,69096 9,14062</geo>
-</location><location type="located_in_place">
-  <placeName ref="pmb298373">Cisleithanien</placeName>
-  <geo>48,5 16,383333333333333</geo>
-</location><location type="located_in_place">
-  <placeName ref="pmb687">Österreich-Ungarn</placeName>
-  <geo>48,4054 16,4887</geo>
-</location></place><place xml:id="pmb46787"><placeName>Litauen</placeName><placeName type="alternative-name">Lithuanian Soviet Socialist Republic</placeName><placeName type="alternative-name">Litauen</placeName><location type="coords">
-  <geo>55,41667 24,0</geo>
-</location></place><place xml:id="pmb50"><placeName>Wien</placeName><placeName type="ort_fruherer-name">K.K. Reichshaupt- und Residenzstadt Wien</placeName><placeName type="legacy-name-merge">Wien</placeName><placeName type="alternative-name">Bécs</placeName><placeName type="alternative-name">Land Wien</placeName><placeName type="alternative-name">Vídeň</placeName><placeName type="alternative-name">Wenia</placeName><placeName type="alternative-name">Beč</placeName><placeName type="ort_fruherer-name">Vindobona</placeName><placeName type="legacy-name-merge">Vindobona</placeName><placeName type="alternative-name">Vienna</placeName><placeName type="legacy-name-merge">Vienna</placeName><placeName type="alternative-name">Vienna</placeName><location type="coords">
-  <geo>48,208333 16,373056</geo>
-</location><location type="located_in_place">
-  <placeName ref="pmb41240">Österreich</placeName>
-  <geo>47,33333 13,33333</geo>
-</location></place><place xml:id="pmb68"><placeName>XVIII., Währing</placeName><placeName type="legacy-name-merge">Währing</placeName><location type="coords">
-  <geo>48,23333 16,31667</geo>
-</location><location type="located_in_place">
-  <placeName ref="pmb41240">Österreich</placeName>
-  <geo>47,33333 13,33333</geo>
-</location><location type="located_in_place">
-  <placeName ref="pmb50">Wien</placeName>
-  <geo>48,208333 16,373056</geo>
-</location></place><place xml:id="pmb874"><placeName>Gmunden</placeName><placeName type="legacy-name-merge">Gmunden</placeName><location type="coords">
-  <geo>47,91839 13,79933</geo>
-</location><location type="located_in_place">
-  <placeName ref="pmb429">Salzkammergut</placeName>
-  <geo>47,75 13,5</geo>
-</location><location type="located_in_place">
-  <placeName ref="pmb519">Oberösterreich</placeName>
-  <geo>48,25 14,0</geo>
-</location></place></listPlace></back></text>
+      <back>
+         <listPerson>
+            <person xml:id="pmb5295">
+               <persName>
+                  <forename>Franz</forename>
+                  <surname>Goldstein</surname>
+               </persName>
+               <birth>
+                  <date when="1898-12-09">1898-12-09</date>
+                  <settlement ref="pmb49137">
+                     <placeName type="pref">Katowice</placeName>
+                     <location>
+                        <geo>50,25841 19,02754</geo>
+                     </location>
+                  </settlement>
+               </birth>
+               <death>
+                  <date when="1982-01-01" notAfter="1982-12-31">1982</date>
+                  <settlement ref="pmb5297">
+                     <placeName type="pref">Jerusalem</placeName>
+                     <location>
+                        <geo>31,76904 35,21633</geo>
+                     </location>
+                  </settlement>
+               </death>
+            </person>
+            <person xml:id="pmb12176">
+               <persName>
+                  <forename>Thomas</forename>
+                  <surname>Mann</surname>
+               </persName>
+               <birth>
+                  <date when="1875-06-06">1875-06-06</date>
+                  <settlement ref="pmb884">
+                     <placeName type="pref">Lübeck</placeName>
+                     <location>
+                        <geo>53,86893 10,68729</geo>
+                     </location>
+                  </settlement>
+               </birth>
+               <death>
+                  <date when="1955-08-12">1955-08-12</date>
+                  <settlement ref="pmb484">
+                     <placeName type="pref">Zürich</placeName>
+                     <location>
+                        <geo>47,37174 8,54226</geo>
+                     </location>
+                  </settlement>
+               </death>
+            </person>
+            <person xml:id="pmb2121">
+               <persName>
+                  <surname>Schnitzler</surname>
+                  <forename>Arthur</forename>
+               </persName>
+               <birth>
+                  <date when="1862-05-15">15. 5. 1862</date>
+                  <settlement ref="pmb50">
+                     <placeName type="pref">Wien</placeName>
+                     <location>
+                        <geo>48,208333 16,373056</geo>
+                     </location>
+                  </settlement>
+               </birth>
+               <death>
+                  <date when="1931-10-21">21. 10. 1931</date>
+                  <settlement ref="pmb50">
+                     <placeName type="pref">Wien</placeName>
+                     <location>
+                        <geo>48,208333 16,373056</geo>
+                     </location>
+                  </settlement>
+               </death>
+            </person>
+            <person xml:id="pmb12173" ana="implied">
+               <persName>
+                  <forename>Katia</forename>
+                  <surname>Mann</surname>
+               </persName>
+               <birth>
+                  <date when="1883-07-24">1883-07-24</date>
+                  <settlement ref="pmb53150">
+                     <placeName type="pref">Feldafing</placeName>
+                     <location>
+                        <geo>47,94602 11,29326</geo>
+                     </location>
+                  </settlement>
+               </birth>
+               <death>
+                  <date when="1980-04-25">1980-04-25</date>
+                  <settlement ref="pmb47482">
+                     <placeName type="pref">Kilchberg</placeName>
+                     <location>
+                        <geo>47,32438 8,54548</geo>
+                     </location>
+                  </settlement>
+               </death>
+            </person>
+         </listPerson>
+         <listPlace>
+            <place xml:id="pmb298432">
+               <placeName>Nida</placeName>
+               <placeName type="ort_fruherer-name">Nidden</placeName>
+               <location type="coords">
+                  <geo>55,303973 21,00532</geo>
+               </location>
+               <location type="located_in_place">
+                  <placeName ref="pmb46787">Litauen</placeName>
+                  <geo>55,41667 24,0</geo>
+               </location>
+            </place>
+            <place xml:id="pmb68">
+               <placeName>XVIII., Währing</placeName>
+               <placeName type="legacy-name-merge">Währing</placeName>
+               <location type="coords">
+                  <geo>48,23333 16,31667</geo>
+               </location>
+               <location type="located_in_place">
+                  <placeName ref="pmb41240">Österreich</placeName>
+                  <geo>47,33333 13,33333</geo>
+               </location>
+               <location type="located_in_place">
+                  <placeName ref="pmb50">Wien</placeName>
+                  <geo>48,208333 16,373056</geo>
+               </location>
+            </place>
+            <place xml:id="pmb50">
+               <placeName>Wien</placeName>
+               <placeName type="ort_fruherer-name">K.K. Reichshaupt- und Residenzstadt Wien</placeName>
+               <placeName type="alternative-name">Bécs</placeName>
+               <placeName type="alternative-name">Land Wien</placeName>
+               <placeName type="alternative-name">Vídeň</placeName>
+               <placeName type="alternative-name">Wenia</placeName>
+               <placeName type="alternative-name">Beč</placeName>
+               <placeName type="ort_fruherer-name">Vindobona</placeName>
+               <placeName type="alternative-name">Vienna</placeName>
+               <location type="coords">
+                  <geo>48,208333 16,373056</geo>
+               </location>
+               <location type="located_in_place">
+                  <placeName ref="pmb41240">Österreich</placeName>
+                  <geo>47,33333 13,33333</geo>
+               </location>
+               <location type="located_in_place">
+                  <placeName ref="pmb235218">Windmühlhöhe</placeName>
+                  <geo>48,24077 16,32092</geo>
+               </location>
+            </place>
+            <place xml:id="pmb874">
+               <placeName>Gmunden</placeName>
+               <location type="coords">
+                  <geo>47,91839 13,79933</geo>
+               </location>
+               <location type="located_in_place">
+                  <placeName ref="pmb429">Salzkammergut</placeName>
+                  <geo>47,75 13,5</geo>
+               </location>
+               <location type="located_in_place">
+                  <placeName ref="pmb519">Oberösterreich</placeName>
+                  <geo>48,25 14,0</geo>
+               </location>
+            </place>
+            <place xml:id="pmb245236">
+               <placeName>Hotel Austria [Gmunden]</placeName>
+               <location type="coords">
+                  <geo>47,91762 13,79877</geo>
+               </location>
+               <location type="located_in_place">
+                  <placeName ref="pmb874">Gmunden</placeName>
+                  <geo>47,91839 13,79933</geo>
+               </location>
+            </place>
+            <place xml:id="pmb298436">
+               <placeName>Hotel Hermann Blode</placeName>
+               <location type="coords">
+                  <geo>55,310876 21,010934</geo>
+               </location>
+               <location type="located_in_place">
+                  <placeName ref="pmb298432">Nida</placeName>
+                  <geo>55,303973 21,00532</geo>
+               </location>
+            </place>
+            <place xml:id="pmb168815">
+               <placeName>Sternwartestraße 71</placeName>
+               <location type="coords">
+                  <geo>48,23188 16,33716</geo>
+               </location>
+               <location type="located_in_place">
+                  <placeName ref="pmb68">XVIII., Währing</placeName>
+                  <geo>48,23333 16,31667</geo>
+               </location>
+               <location type="located_in_place">
+                  <placeName ref="pmb533">Währinger Cottage</placeName>
+                  <geo>48,233056 16,341944</geo>
+               </location>
+               <location type="located_in_place">
+                  <placeName ref="pmb150">Sternwartestraße</placeName>
+                  <geo>48,23099349198 16,340117830625</geo>
+               </location>
+            </place>
+            <place xml:id="pmb41240">
+               <placeName>Österreich</placeName>
+               <placeName type="alternative-name">Republik Österreich</placeName>
+               <placeName type="alternative-name">Republic of Austria</placeName>
+               <placeName type="legacy-name-merge">Deutsch Österreich</placeName>
+               <placeName type="legacy-name-merge">Altoesterreich</placeName>
+               <location type="coords">
+                  <geo>47,33333 13,33333</geo>
+               </location>
+               <location type="located_in_place">
+                  <placeName ref="pmb468">Europa</placeName>
+                  <geo>48,69096 9,14062</geo>
+               </location>
+               <location type="located_in_place">
+                  <placeName ref="pmb298373">Cisleithanien</placeName>
+                  <geo>48,5 16,383333333333333</geo>
+               </location>
+               <location type="located_in_place">
+                  <placeName ref="pmb687">Österreich-Ungarn</placeName>
+                  <geo>48,4054 16,4887</geo>
+               </location>
+            </place>
+            <place xml:id="pmb298443">
+               <placeName>Kurische Nehrung</placeName>
+               <location type="coords">
+                  <geo>55,274444444444 20,970833333333</geo>
+               </location>
+               <location type="located_in_place">
+                  <placeName ref="pmb46787">Litauen</placeName>
+                  <geo>55,41667 24,0</geo>
+               </location>
+            </place>
+            <place xml:id="pmb298441">
+               <placeName>Parnidis Düne</placeName>
+               <location type="coords">
+                  <geo>55,29166667 20,99444444</geo>
+               </location>
+               <location type="located_in_place">
+                  <placeName ref="pmb298443">Kurische Nehrung</placeName>
+                  <geo>55,274444444444 20,970833333333</geo>
+               </location>
+            </place>
+            <place xml:id="pmb46787">
+               <placeName>Litauen</placeName>
+               <placeName type="alternative-name">Lithuanian Soviet Socialist Republic</placeName>
+               <location type="coords">
+                  <geo>55,41667 24,0</geo>
+               </location>
+            </place>
+         </listPlace>
+      </back>
+   </text>
 </TEI>
