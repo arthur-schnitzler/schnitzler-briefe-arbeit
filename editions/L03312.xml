@@ -1,11 +1,9 @@
-<?xml version='1.0' encoding='UTF-8'?>
-<?xml-model href="../meta/schnitzler-briefe-schematron.sch" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
-<TEI xmlns="http://www.tei-c.org/ns/1.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.tei-c.org/ns/1.0 ../meta/schnitzler-briefe-schema.xsd" xml:id="L03312" xml:base="https://id.acdh.oeaw.ac.at/schnitzler/schnitzler-briefe/editions">
+<?xml version="1.0" encoding="UTF-8"?><?xml-model href="../meta/schnitzler-briefe-schematron.sch" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI xmlns="http://www.tei-c.org/ns/1.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.tei-c.org/ns/1.0 ../meta/schnitzler-briefe-schema.xsd" xml:id="L03312" xml:base="https://id.acdh.oeaw.ac.at/schnitzler/schnitzler-briefe/editions">
    <teiHeader>
       <fileDesc>
          <titleStmt>
             <title level="s">Arthur Schnitzler: Briefwechsel mit Autorinnen und Autoren</title>
-            <title level="a">Felix Salten an Arthur Schnitzler, 20. 8. 1900</title>
+            <title level="a">Felix Salten an Arthur Schnitzler, [19. oder 20]. 8. 1900</title>
             <author ref="#pmb2167">Salten, Felix</author>
             <editor>
                <name>Müller, Martin Anton</name>
@@ -96,7 +94,7 @@
                                     <placeName ref="#pmb895">Strobl</placeName>
                                     <date when="1900-08-20">20 8 00</date>
                                  </stamp>
-                                 <stamp n="2" type="delivery">
+                                 <stamp n="2" type="transit">
                                     <placeName ref="#pmb34946">Pontresina</placeName>
                                     <date when="1900-08-23">23. VIII. 00.</date>
                                     <time>4</time>
@@ -131,8 +129,20 @@
          <correspDesc>
             <correspAction type="sent">
                <persName ref="#pmb2167">Salten, Felix</persName>
-               <date when="1900-08-20" n="01">20. 8. 1900</date>
+               <date n="01" notBefore="1900-08-19" notAfter="1900-08-20">[19. oder 20]. 8. 1900</date>
                <placeName ref="#pmb895">Strobl</placeName>
+            </correspAction>
+            <correspAction type="transmitted">
+               <date when="1900-08-20">20. 8. 1900</date>
+               <placeName ref="#pmb895">Strobl</placeName>
+            </correspAction>
+            <correspAction type="in_transit">
+               <date when="1900-08-23">23. 8. 1900</date>
+               <placeName ref="#pmb34946">Pontresina</placeName>
+            </correspAction>
+            <correspAction type="delivered">
+               <date when="1900-08-23">23. 8. 1900</date>
+               <placeName ref="#pmb34946">Pontresina</placeName>
             </correspAction>
             <correspAction type="received">
                <persName ref="#pmb2121">Schnitzler, Arthur</persName>
@@ -151,6 +161,7 @@
          <change who="LU" when="2024-04-02">Durchsicht</change>
          <change when="2024-04-03" who="LU">Index check</change>
          <change who="MAM" when="2024-05-22">Durchsicht</change>
+         <change who="SJ" when="2026-09-24">Datierung und Stempel überprüft</change>
       </revisionDesc>
    </teiHeader>
    <facsimile>
@@ -174,7 +185,7 @@
                <pb facs="MS-SCHNITZLER-B-00089-A-00002-000-00054-R"/>
                <salute>Lieber,</salute>
                <space unit="chars" quantity="1"/>
-               <date when="1900-08-20">heute</date> erhielt ich Ihre Carte. Ich möchte von <rs type="place" ref="#pmb213">Ischl</rs>
+               <date when="1900-08-20">heute</date> erhielt ich Ihre <anchor type="commentary" xml:id="K_L03312-3"/>Carte<note type="commentary" corresp="K_L03312-3">nicht überliefert</note>. Ich möchte von <rs type="place" ref="#pmb213">Ischl</rs>
                <space unit="chars" quantity="1"/>
                <hi rend="underline" n="1">so</hi> fortfahren, dass ich gleichzeitig mit Ihnen in
                   <anchor type="commentary" xml:id="K_L03312-1"/>
