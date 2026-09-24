@@ -1,11 +1,9 @@
-<?xml version='1.0' encoding='UTF-8'?>
-<?xml-model href="../meta/schnitzler-briefe-schematron.sch" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
-<TEI xmlns="http://www.tei-c.org/ns/1.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.tei-c.org/ns/1.0 ../meta/schnitzler-briefe-schema.xsd" xml:id="L03424" xml:base="https://id.acdh.oeaw.ac.at/schnitzler/schnitzler-briefe/editions">
+<?xml version="1.0" encoding="UTF-8"?><?xml-model href="../meta/schnitzler-briefe-schematron.sch" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI xmlns="http://www.tei-c.org/ns/1.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.tei-c.org/ns/1.0 ../meta/schnitzler-briefe-schema.xsd" xml:id="L03424" xml:base="https://id.acdh.oeaw.ac.at/schnitzler/schnitzler-briefe/editions">
    <teiHeader>
       <fileDesc>
          <titleStmt>
             <title level="s">Arthur Schnitzler: Briefwechsel mit Autorinnen und Autoren</title>
-            <title level="a">Felix Salten an Arthur Schnitzler, 9. 6. 1906</title>
+            <title level="a">Felix Salten an Arthur Schnitzler, [8. oder 9]. 6. 1906</title>
             <author ref="#pmb2167">Salten, Felix</author>
             <editor>
                <name>Müller, Martin Anton</name>
@@ -92,21 +90,14 @@
                         <additions>
                            <incident type="postal">
                               <desc>
-                                 <stamp n="1">
+                                 <stamp n="1" type="non-postal">
                                     <placeName ref="#pmb191">Goethe-Haus Weimar</placeName>
                                  </stamp>
                               </desc>
                            </incident>
                            <incident type="postal">
                               <desc>
-                                 <stamp n="2">
-                                    <placeName ref="#pmb191">Goethe-Haus Weimar</placeName>
-                                 </stamp>
-                              </desc>
-                           </incident>
-                           <incident type="postal">
-                              <desc>
-                                 <stamp n="3" type="delivery">
+                                 <stamp n="2" type="transmission">
                                     <placeName ref="#pmb197">Weimar 1</placeName>
                                     <date when="1906-06-09">9<supplied>.</supplied> 6. 06</date>
                                  </stamp>
@@ -129,8 +120,12 @@
          <correspDesc>
             <correspAction type="sent">
                <persName ref="#pmb2167">Salten, Felix</persName>
-               <date when="1906-06-09" n="01">9. 6. 1906</date>
+               <date n="01" notBefore="1906-06-08" notAfter="1906-06-09">[8. oder 9]. 6. 1906</date>
                <placeName ref="#pmb197">Weimar</placeName>
+            </correspAction>
+            <correspAction type="transmitted">
+               <date when="1906-06-09">9. 6. 1906</date>
+               <placeName ref="#pmb197">Weimar 1</placeName>
             </correspAction>
             <correspAction type="received">
                <persName ref="#pmb2121">Schnitzler, Arthur</persName>
@@ -150,6 +145,7 @@
          <change who="LU" when="2024-05-14">Durchsicht</change>
          <change when="2024-05-15" who="LU">Index check</change>
          <change who="MAM" when="2024-06-17">Durchsicht</change>
+         <change who="SJ" when="2026-09-24">Datierung und Stempel überprüft</change>
       </revisionDesc>
    </teiHeader>
    <facsimile>
