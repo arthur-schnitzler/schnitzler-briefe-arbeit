@@ -100,7 +100,7 @@
                            <incident type="postal">
                               <desc>
                                  <stamp n="1" type="transmission">
-                                    <placeName ref="#pmb59">Wien 9/1</placeName>
+                                    <placeName ref="#pmb365266">Wien 9/1 66</placeName>
                                     <date when="1899-10-21">21 X 99</date>
                                     <time>1210N</time>
                                  </stamp>
@@ -109,7 +109,7 @@
                            <incident type="postal">
                               <desc>
                                  <stamp n="2" type="delivery">
-                                    <placeName ref="#pmb51">Wien 1/1</placeName>
+                                    <placeName ref="#pmb365269">Wien 1/1 2</placeName>
                                     <date when="1899-10-21">21 X 99</date>
                                     <time>1240N</time>
                                  </stamp>
@@ -130,7 +130,15 @@
             <correspAction type="sent">
                <persName ref="#pmb2121">Schnitzler, Arthur</persName>
                <date when="1899-10-21" n="01">21. 10. 1899</date>
-               <placeName ref="#pmb50">Wien</placeName>
+               <placeName ref="#pmb168934">Frankgasse 1</placeName>
+            </correspAction>
+            <correspAction type="transmitted">
+               <date when="1899-10-21">21. 10. 1899</date>
+               <placeName ref="#pmb365266">9/1 Post- und Telegraphenamt 66</placeName>
+            </correspAction>
+            <correspAction type="delivered">
+               <date when="1899-10-21">21. 10. 1899</date>
+               <placeName ref="#pmb365269">1/1 Post- und Telegraphenamt 2</placeName>
             </correspAction>
             <correspAction type="received">
                <persName ref="#pmb10863">Beer-Hofmann, Richard</persName>
@@ -156,6 +164,7 @@
          <change who="GHS" when="2019-12-14">angelegt aus Faksimile</change>
          <change who="MAM" when="2020-01-09">Durchsicht</change>
          <change when="2020-01-10" who="MAM">Index check</change>
+         <change who="MAM" when="2026-09-25">Datierung und Stempel überprüft</change>
       </revisionDesc>
    </teiHeader>
    <facsimile>
@@ -269,34 +278,60 @@
             </person>
          </listPerson>
          <listPlace>
-            <place xml:id="pmb59">
-               <placeName>IX., Alsergrund</placeName>
-               <placeName type="legacy-name-merge">Thurygrund</placeName>
-               <placeName type="legacy-name-merge">Wien-Alsergrund</placeName>
+            <place xml:id="pmb365266">
+               <placeName>9/1 Post- und Telegraphenamt 66</placeName>
                <location type="coords">
+                  <geo>48,219619 16,3617</geo>
+               </location>
+               <location type="located_in_place">
+                  <placeName ref="pmb59">IX., Alsergrund</placeName>
                   <geo>48,22387 16,35641</geo>
                </location>
                <location type="located_in_place">
-                  <placeName ref="pmb50">Wien</placeName>
-                  <geo>48,208333 16,373056</geo>
+                  <placeName ref="pmb436">Porzellangasse</placeName>
+                  <geo>48,222287836145 16,362457240723</geo>
                </location>
             </place>
-            <place xml:id="pmb51">
-               <placeName>I., Innere Stadt</placeName>
-               <placeName type="alternative-name">Inner city</placeName>
-               <placeName type="alternative-name">Wien,Innere Stadt</placeName>
-               <placeName type="alternative-name">1. Wiener Gemeindebezirk</placeName>
-               <placeName type="legacy-name-merge">Wien-Innere Stadt</placeName>
+            <place xml:id="pmb365269">
+               <placeName>1/1 Post- und Telegraphenamt 2</placeName>
                <location type="coords">
+                  <geo>48,210441 16,378488</geo>
+               </location>
+               <location type="located_in_place">
+                  <placeName ref="pmb51">I., Innere Stadt</placeName>
                   <geo>48,20769 16,37049</geo>
                </location>
                <location type="located_in_place">
-                  <placeName ref="pmb41240">Österreich</placeName>
-                  <geo>47,33333 13,33333</geo>
+                  <placeName ref="pmb50667">Fleischmarkt</placeName>
+                  <geo>48,211117 16,376627</geo>
+               </location>
+            </place>
+            <place xml:id="pmb168934">
+               <placeName>Frankgasse 1</placeName>
+               <location type="coords">
+                  <geo>48,21533 16,35736</geo>
                </location>
                <location type="located_in_place">
-                  <placeName ref="pmb50">Wien</placeName>
-                  <geo>48,208333 16,373056</geo>
+                  <placeName ref="pmb59">IX., Alsergrund</placeName>
+                  <geo>48,22387 16,35641</geo>
+               </location>
+               <location type="located_in_place">
+                  <placeName ref="pmb397">Frankgasse</placeName>
+                  <geo>48,215516628628 16,356475515829</geo>
+               </location>
+            </place>
+            <place xml:id="pmb190427">
+               <placeName>Wollzeile 15 (»Berthahof«)</placeName>
+               <location type="coords">
+                  <geo>48,208656 16,375924</geo>
+               </location>
+               <location type="located_in_place">
+                  <placeName ref="pmb338">Wollzeile</placeName>
+                  <geo>48,20852 16,37592</geo>
+               </location>
+               <location type="located_in_place">
+                  <placeName ref="pmb51">I., Innere Stadt</placeName>
+                  <geo>48,20769 16,37049</geo>
                </location>
             </place>
             <place xml:id="pmb50">
@@ -319,20 +354,6 @@
                <location type="located_in_place">
                   <placeName ref="pmb235218">Windmühlhöhe</placeName>
                   <geo>48,24077 16,32092</geo>
-               </location>
-            </place>
-            <place xml:id="pmb190427">
-               <placeName>Wollzeile 15 (»Berthahof«)</placeName>
-               <location type="coords">
-                  <geo>48,208656 16,375924</geo>
-               </location>
-               <location type="located_in_place">
-                  <placeName ref="pmb338">Wollzeile</placeName>
-                  <geo>48,20852 16,37592</geo>
-               </location>
-               <location type="located_in_place">
-                  <placeName ref="pmb51">I., Innere Stadt</placeName>
-                  <geo>48,20769 16,37049</geo>
                </location>
             </place>
          </listPlace>

@@ -88,7 +88,7 @@
                                  <measure unit="blatt" quantity="1"/>
                                  <measure unit="seite" quantity="3"/>
                                  <measure unit="kuvert" quantity="1"/>
-                                 <measure unit="zeichenanzahl" quantity="1041"/>
+                                 <measure unit="zeichenanzahl" quantity="1040"/>
                               </extent>
                            </supportDesc>
                         </objectDesc>
@@ -145,15 +145,15 @@
             <correspAction type="sent">
                <persName ref="#pmb2121">Schnitzler, Arthur</persName>
                <date when="1899-10-08" n="01">8. 10. 1899</date>
-               <placeName ref="#pmb545">Berlin</placeName>
+               <placeName ref="#pmb545">Hotel Savoy [Berlin]</placeName>
             </correspAction>
             <correspAction type="transmitted">
-               <date when="1899-10-08">8.&#160;10.&#160;1899</date>
+               <date when="1899-10-08">8. 10. 1899</date>
                <placeName ref="#pmb168">Berlin</placeName>
             </correspAction>
             <correspAction type="delivered">
-               <date when="1899-10-10">10.&#160;10.&#160;1899</date>
-               <placeName ref="#pmb40832">St. Michael in Eppan</placeName>
+               <date when="1899-10-10">10. 10. 1899</date>
+               <placeName ref="#pmb40832">Sankt Michael</placeName>
             </correspAction>
             <correspAction type="received">
                <persName ref="#pmb10863">Beer-Hofmann, Richard</persName>
@@ -180,6 +180,7 @@
          <change who="GHS" when="2019-12-13">überprüft am Faksimile</change>
          <change who="MAM" when="2020-01-09">Durchsicht</change>
          <change when="2020-01-10" who="MAM">Index check</change>
+         <change who="MAM" when="2026-09-25">Datierung und Stempel überprüft</change>
       </revisionDesc>
    </teiHeader>
    <facsimile>
@@ -232,7 +233,7 @@
                <rs ref="#pmb11485" type="person">Paul</rs> noch in <rs ref="#pmb50" type="place">Wien</rs> antreffen –?</p>
             <p>Ich habe geſtern dem <rs ref="#pmb10986" type="person">Brahm</rs> die <rs ref="#pmb29857" type="work">
                   <hi rend="latintype">Beatrice</hi>
-            </rs>, mit guter Wirkung, glaub ich, <rs type="event" subtype="implied" ref="#pmb141501">vorgeleſen</rs>. Er hat kaum gemerkt, wie viel ich
+               </rs>, mit guter Wirkung, glaub ich, <rs type="event" subtype="implied" ref="#pmb141501">vorgeleſen</rs>. Er hat kaum gemerkt, wie viel ich
                noch dran zu machen habe. Die ungeſtrichene Aufführg würde fünf Stunden <pb facs="1899_AS_RBH_3_00027"/>dauern.</p>
             <p>Ihre Ermahnung kam zu ſpät – ich hatte <rs ref="#pmb10986" type="person">Brahm</rs>
                <space unit="chars" quantity="1"/>ſchon eine »beſſere Meinung« beigebracht. So grüßt
@@ -469,6 +470,20 @@
                   <geo>46,45472 11,26178</geo>
                </location>
             </place>
+            <place xml:id="pmb545">
+               <placeName>Hotel Savoy [Berlin]</placeName>
+               <location type="coords">
+                  <geo>52,521572 13,388194</geo>
+               </location>
+               <location type="located_in_place">
+                  <placeName ref="pmb168">Berlin</placeName>
+                  <geo>52,52437 13,41053</geo>
+               </location>
+               <location type="located_in_place">
+                  <placeName ref="pmb482">Friedrichstraße [Berlin]</placeName>
+                  <geo>52,50319 13,39108</geo>
+               </location>
+            </place>
             <place xml:id="pmb423">
                <placeName>Tirol</placeName>
                <location type="coords">
@@ -502,6 +517,19 @@
                </location>
             </place>
          </listPlace>
+         <listEvent>
+            <event xml:id="pmb141501" ana="implied">
+               <eventName n="Private Lesung">Private Lesung von Der Schleier der Beatrice, 7.10.1899</eventName>
+               <listPlace>
+                  <place>
+                     <placeName role="veranstaltet in" ref="pmb237374">Luisenplatz 2</placeName>
+                     <location>
+                        <geo>52,520522 13,299819</geo>
+                     </location>
+                  </place>
+               </listPlace>
+            </event>
+         </listEvent>
       </back>
    </text>
 </TEI>
