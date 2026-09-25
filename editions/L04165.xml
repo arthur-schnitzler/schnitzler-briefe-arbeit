@@ -1,6 +1,10 @@
-<?xml version='1.0' encoding='UTF-8'?>
+<?xml version="1.0" encoding="UTF-8"?>
 <?xml-model href="../meta/schnitzler-briefe-schematron.sch" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
-<TEI xmlns="http://www.tei-c.org/ns/1.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.tei-c.org/ns/1.0 ../meta/schnitzler-briefe-schema.xsd" xml:base="https://id.acdh.oeaw.ac.at/schnitzler/schnitzler-briefe/editions" xml:id="L04165">
+<TEI xmlns="http://www.tei-c.org/ns/1.0"
+     xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+     xsi:schemaLocation="http://www.tei-c.org/ns/1.0 ../meta/schnitzler-briefe-schema.xsd"
+     xml:base="https://id.acdh.oeaw.ac.at/schnitzler/schnitzler-briefe/editions"
+     xml:id="L04165">
    <teiHeader>
       <fileDesc>
          <titleStmt>
@@ -110,12 +114,20 @@
                <date evidence="conjecture" notBefore="1910-01-25" notAfter="1910-01-28">[25. 1. 1910 – 28. 1. 1910?]</date>
                <placeName ref="#pmb50" evidence="conjecture">Wien</placeName>
             </correspAction>
-            <correspContext><ref type="belongsToCorrespondence" target="correspondence_12740">Schwarzkopf, Gustav</ref>
+            <correspContext>
+               <ref type="belongsToCorrespondence" target="correspondence_12740">Schwarzkopf, Gustav</ref>
                <ref subtype="previous_letter" type="withinCollection" target="L02553">Schnitzler an Beer-Hofmann, 23. 1. 1910</ref>
                <ref subtype="next_letter" type="withinCollection" target="L03544">Salten an Schnitzler, 2[9?]. 1. 1910</ref>
-               <ref subtype="previous_letter" type="withinCorrespondence" source="correspondence_12740" target="L04267">Schwarzkopf an Schnitzler, 19. 1. 1910</ref>
-               <ref subtype="next_letter" type="withinCorrespondence" source="correspondence_12740" target="L04266">Schwarzkopf an Schnitzler, Schnitzler, [14. oder 15.? 4. 1910]</ref>
-            </correspContext></correspDesc>
+               <ref subtype="previous_letter"
+                    type="withinCorrespondence"
+                    source="correspondence_12740"
+                    target="L04267">Schwarzkopf an Schnitzler, 19. 1. 1910</ref>
+               <ref subtype="next_letter"
+                    type="withinCorrespondence"
+                    source="correspondence_12740"
+                    target="L04266">Schwarzkopf an Schnitzler, Schnitzler, [14. oder 15.? 4. 1910]</ref>
+            </correspContext>
+         </correspDesc>
       </profileDesc>
       <revisionDesc status="proposed">
          <change who="MAM" when="2025-12-10">Export aus Transkribus</change>
@@ -167,13 +179,13 @@
       </body>
       <back>
          <listPerson>
-            <person xml:id="pmb11771">
+            <person xml:id="pmb2121">
                <persName>
-                  <forename>Rudolf</forename>
-                  <surname>Holzer</surname>
+                  <surname>Schnitzler</surname>
+                  <forename>Arthur</forename>
                </persName>
                <birth>
-                  <date when="1875-07-28">1875-07-28</date>
+                  <date when="1862-05-15">15. 5. 1862</date>
                   <settlement ref="pmb50">
                      <placeName type="pref">Wien</placeName>
                      <location>
@@ -182,7 +194,7 @@
                   </settlement>
                </birth>
                <death>
-                  <date when="1965-07-17">1965-07-17</date>
+                  <date when="1931-10-21">21. 10. 1931</date>
                   <settlement ref="pmb50">
                      <placeName type="pref">Wien</placeName>
                      <location>
@@ -215,13 +227,13 @@
                   </settlement>
                </death>
             </person>
-            <person xml:id="pmb2121">
+            <person xml:id="pmb11771">
                <persName>
-                  <surname>Schnitzler</surname>
-                  <forename>Arthur</forename>
+                  <forename>Rudolf</forename>
+                  <surname>Holzer</surname>
                </persName>
                <birth>
-                  <date when="1862-05-15">15. 5. 1862</date>
+                  <date when="1875-07-28">1875-07-28</date>
                   <settlement ref="pmb50">
                      <placeName type="pref">Wien</placeName>
                      <location>
@@ -230,7 +242,7 @@
                   </settlement>
                </birth>
                <death>
-                  <date when="1931-10-21">21. 10. 1931</date>
+                  <date when="1965-07-17">1965-07-17</date>
                   <settlement ref="pmb50">
                      <placeName type="pref">Wien</placeName>
                      <location>
@@ -238,10 +250,6 @@
                      </location>
                   </settlement>
                </death>
-               <sex value="male"/>
-               <occupation ref="pmb90">Schriftsteller/Schriftstellerin</occupation>
-               <occupation ref="pmb97">Mediziner/Medizinerin</occupation>
-               <idno type="gnd">https://d-nb.info/gnd/118609807/</idno>
             </person>
             <person xml:id="pmb18651" ana="comment">
                <persName>
@@ -267,7 +275,7 @@
                   </settlement>
                </death>
             </person>
-            <person xml:id="pmb333985" ana="comment">
+            <person xml:id="pmb333985" ana="implied">
                <persName>
                   <forename>Thea</forename>
                   <surname>Holzer</surname>
@@ -303,29 +311,92 @@
                   </settlement>
                </death>
             </person>
+            <person xml:id="pmb11165" ana="comment">
+               <persName>
+                  <forename>Ernst von</forename>
+                  <surname>Dohnányi</surname>
+               </persName>
+               <birth>
+                  <date when="1877-07-27">1877-07-27</date>
+                  <settlement ref="pmb39615">
+                     <placeName type="pref">Bratislava</placeName>
+                     <location>
+                        <geo>48,14816 17,10674</geo>
+                     </location>
+                  </settlement>
+               </birth>
+               <death>
+                  <date when="1960-02-09">1960-02-09</date>
+                  <settlement ref="pmb44053">
+                     <placeName type="pref">New York City</placeName>
+                     <location>
+                        <geo>40,71427 -74,00597</geo>
+                     </location>
+                  </settlement>
+               </death>
+            </person>
+            <person xml:id="pmb120689" ana="comment">
+               <persName>
+                  <forename>Karl</forename>
+                  <surname>Ehmann</surname>
+               </persName>
+               <birth>
+                  <date when="1882-08-13">1882-08-13</date>
+                  <settlement ref="pmb50">
+                     <placeName type="pref">Wien</placeName>
+                     <location>
+                        <geo>48,208333 16,373056</geo>
+                     </location>
+                  </settlement>
+               </birth>
+               <death>
+                  <date when="1967-11-01">1967-11-01</date>
+               </death>
+            </person>
          </listPerson>
          <listBibl>
             <bibl xml:id="pmb30215" ana="comment">
-               <title type="main">Der Schleier der Pierrette. Pantomime in drei Bildern</title>
+               <title>Der Schleier der Pierrette. Pantomime in drei Bildern</title>
                <title type="legacy-name-merge">Der Schleier der Pierrette</title>
                <title type="werk_arbeitstitel">Pantomime</title>
-               <author role="hat-geschaffen" ref="pmb2121">Schnitzler, Arthur</author>
-               <author role="hat-vertont" ref="pmb11165">Dohnányi, Ernst von</author>
+               <author ref="pmb2121" role="hat-geschaffen">Schnitzler, Arthur</author>
+               <author ref="pmb11165" role="hat-vertont">Dohnányi, Ernst von</author>
             </bibl>
             <bibl xml:id="pmb334006" ana="comment">
-               <title type="main">Wer das Kleine nicht ehrt</title>
-               <author role="hat-geschaffen" ref="pmb120689">Ehmann, Karl</author>
-               <author role="hat-einen-beitrag-geschaffen-zu" ref="pmb18651">Hetsey-Holzer, Alice</author>
-               <author role="hat-einen-beitrag-geschaffen-zu" ref="pmb333985">Holzer, Thea</author>
+               <title>Wer das Kleine nicht ehrt</title>
+               <author ref="pmb120689" role="hat-geschaffen">Ehmann, Karl</author>
+               <author ref="pmb18651" role="hat-einen-beitrag-geschaffen-zu">Hetsey-Holzer, Alice</author>
+               <author ref="pmb333985" role="hat-einen-beitrag-geschaffen-zu">Holzer, Thea</author>
             </bibl>
          </listBibl>
          <listPlace>
-            <place xml:id="pmb133">
-               <placeName>Edmund-Weiß-Gasse</placeName>
-               <placeName type="ort_fruherer-name">Spöttelgasse</placeName>
-               <placeName type="legacy-name-merge">Spöttelgasse</placeName>
+            <place xml:id="pmb50" ana="comment">
+               <placeName>Wien</placeName>
+               <placeName type="ort_fruherer-name">K.K. Reichshaupt- und Residenzstadt Wien</placeName>
+               <placeName type="alternative-name">Bécs</placeName>
+               <placeName type="alternative-name">Land Wien</placeName>
+               <placeName type="alternative-name">Vídeň</placeName>
+               <placeName type="alternative-name">Wenia</placeName>
+               <placeName type="alternative-name">Beč</placeName>
+               <placeName type="ort_fruherer-name">Vindobona</placeName>
+               <placeName type="alternative-name">Vienna</placeName>
                <location type="coords">
-                  <geo>48,23056 16,3348</geo>
+                  <geo>48,208333 16,373056</geo>
+               </location>
+               <location type="located_in_place">
+                  <placeName ref="pmb41240">Österreich</placeName>
+                  <geo>47,33333 13,33333</geo>
+               </location>
+               <location type="located_in_place">
+                  <placeName ref="pmb235218">Windmühlhöhe</placeName>
+                  <geo>48,24077 16,32092</geo>
+               </location>
+            </place>
+            <place xml:id="pmb168940">
+               <placeName>Edmund-Weiß-Gasse 7</placeName>
+               <placeName type="ort_fruherer-name">Spöttelgasse 7</placeName>
+               <location type="coords">
+                  <geo>48,2304 16,33472</geo>
                </location>
                <location type="located_in_place">
                   <placeName ref="pmb68">XVIII., Währing</placeName>
@@ -335,36 +406,15 @@
                   <placeName ref="pmb533">Währinger Cottage</placeName>
                   <geo>48,233056 16,341944</geo>
                </location>
-            </place>
-            <place xml:id="pmb50">
-               <placeName>Wien</placeName>
-               <placeName type="ort_fruherer-name">K.K. Reichshaupt- und Residenzstadt Wien</placeName>
-               <placeName type="legacy-name-merge">Wien</placeName>
-               <placeName type="alternative-name">Bécs</placeName>
-               <placeName type="alternative-name">Land Wien</placeName>
-               <placeName type="alternative-name">Vídeň</placeName>
-               <placeName type="alternative-name">Wenia</placeName>
-               <placeName type="alternative-name">Beč</placeName>
-               <placeName type="ort_fruherer-name">Vindobona</placeName>
-               <placeName type="legacy-name-merge">Vindobona</placeName>
-               <placeName type="alternative-name">Vienna</placeName>
-               <placeName type="legacy-name-merge">Vienna</placeName>
-               <placeName type="alternative-name">Vienna</placeName>
-               <location type="coords">
-                  <geo>48,208333 16,373056</geo>
-               </location>
                <location type="located_in_place">
-                  <placeName ref="pmb41240">Österreich</placeName>
-                  <geo>47,33333 13,33333</geo>
+                  <placeName ref="pmb133">Edmund-Weiß-Gasse</placeName>
+                  <geo>48,23056 16,3348</geo>
                </location>
             </place>
             <place xml:id="pmb866">
                <placeName>Dresden</placeName>
                <placeName type="alternative-name">Landeshauptstadt Dresden</placeName>
-               <placeName type="legacy-name-merge">Dresden</placeName>
-               <placeName type="alternative-name">Dresden</placeName>
                <placeName type="legacy-name-merge">Kreisfreie Stadt Dresden</placeName>
-               <placeName type="legacy-name-merge">Dresden</placeName>
                <location type="coords">
                   <geo>51,0833 13,7666</geo>
                </location>
@@ -375,7 +425,7 @@
             </place>
          </listPlace>
          <listEvent>
-            <event xml:id="pmb35373" ana="comment">
+            <event xml:id="pmb35373" ana="implied">
                <eventName n="Theateruraufführung">Uraufführung von Der Schleier der Pierrette, Premiere von Versiegelt, 22.1.1910</eventName>
                <listPlace>
                   <place>

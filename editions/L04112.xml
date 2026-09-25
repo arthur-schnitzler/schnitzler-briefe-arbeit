@@ -1,6 +1,10 @@
-<?xml version='1.0' encoding='UTF-8'?>
+<?xml version="1.0" encoding="UTF-8"?>
 <?xml-model href="../meta/schnitzler-briefe-schematron.sch" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
-<TEI xmlns="http://www.tei-c.org/ns/1.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.tei-c.org/ns/1.0 ../meta/schnitzler-briefe-schema.xsd" xml:base="https://id.acdh.oeaw.ac.at/schnitzler/schnitzler-briefe/editions" xml:id="L04112">
+<TEI xmlns="http://www.tei-c.org/ns/1.0"
+     xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+     xsi:schemaLocation="http://www.tei-c.org/ns/1.0 ../meta/schnitzler-briefe-schema.xsd"
+     xml:base="https://id.acdh.oeaw.ac.at/schnitzler/schnitzler-briefe/editions"
+     xml:id="L04112">
    <teiHeader>
       <fileDesc>
          <titleStmt>
@@ -125,11 +129,11 @@
             <correspAction type="sent">
                <persName ref="#pmb2121">Schnitzler, Arthur</persName>
                <date when="1897-04-26" n="04">26. 4. 1897</date>
-               <placeName ref="#pmb592">5, rue de Mauberge</placeName>
+               <placeName ref="#pmb592">5, rue de Maubeuge</placeName>
             </correspAction>
             <correspAction type="transmitted">
                <date when="1897-04-26">26. 4. 1897</date>
-               <placeName ref="#pmb186">Paris R. Lafayette</placeName>
+               <placeName ref="#pmb186">Lueg</placeName>
             </correspAction>
             <correspAction type="delivered">
                <date when="1897-04-28">28. 4. 1897</date>
@@ -140,12 +144,20 @@
                <date when="1897-04-28">28. 4. 1897</date>
                <placeName ref="#pmb207296">Tiefer Graben 23</placeName>
             </correspAction>
-            <correspContext><ref type="belongsToCorrespondence" target="correspondence_12740">Schwarzkopf, Gustav</ref>
+            <correspContext>
+               <ref type="belongsToCorrespondence" target="correspondence_12740">Schwarzkopf, Gustav</ref>
                <ref subtype="previous_letter" type="withinCollection" target="L02963">Schnitzler an Salten, 26. 4. 1897</ref>
                <ref subtype="next_letter" type="withinCollection" target="L00672">Schnitzler an Hofmannsthal, 28. 4. 1897</ref>
-               <ref subtype="previous_letter" type="withinCorrespondence" source="correspondence_12740" target="L04194">Schnitzler an Schwarzkopf, [13.–14. 3. 1897?]</ref>
-               <ref subtype="next_letter" type="withinCorrespondence" source="correspondence_12740" target="L04283">Schwarzkopf an Schnitzler, 3. 5. 1897</ref>
-            </correspContext></correspDesc>
+               <ref subtype="previous_letter"
+                    type="withinCorrespondence"
+                    source="correspondence_12740"
+                    target="L04194">Schnitzler an Schwarzkopf, [13.–14. 3. 1897?]</ref>
+               <ref subtype="next_letter"
+                    type="withinCorrespondence"
+                    source="correspondence_12740"
+                    target="L04283">Schwarzkopf an Schnitzler, 3. 5. 1897</ref>
+            </correspContext>
+         </correspDesc>
       </profileDesc>
       <revisionDesc status="proposed">
          <change who="MAM" when="2025-12-10">Export aus Transkribus</change>
@@ -211,6 +223,30 @@
       </body>
       <back>
          <listPerson>
+            <person xml:id="pmb2121">
+               <persName>
+                  <surname>Schnitzler</surname>
+                  <forename>Arthur</forename>
+               </persName>
+               <birth>
+                  <date when="1862-05-15">15. 5. 1862</date>
+                  <settlement ref="pmb50">
+                     <placeName type="pref">Wien</placeName>
+                     <location>
+                        <geo>48,208333 16,373056</geo>
+                     </location>
+                  </settlement>
+               </birth>
+               <death>
+                  <date when="1931-10-21">21. 10. 1931</date>
+                  <settlement ref="pmb50">
+                     <placeName type="pref">Wien</placeName>
+                     <location>
+                        <geo>48,208333 16,373056</geo>
+                     </location>
+                  </settlement>
+               </death>
+            </person>
             <person xml:id="pmb12740">
                <persName>
                   <forename>Gustav</forename>
@@ -234,34 +270,6 @@
                      </location>
                   </settlement>
                </death>
-            </person>
-            <person xml:id="pmb2121">
-               <persName>
-                  <surname>Schnitzler</surname>
-                  <forename>Arthur</forename>
-               </persName>
-               <birth>
-                  <date when="1862-05-15">15. 5. 1862</date>
-                  <settlement ref="pmb50">
-                     <placeName type="pref">Wien</placeName>
-                     <location>
-                        <geo>48,208333 16,373056</geo>
-                     </location>
-                  </settlement>
-               </birth>
-               <death>
-                  <date when="1931-10-21">21. 10. 1931</date>
-                  <settlement ref="pmb50">
-                     <placeName type="pref">Wien</placeName>
-                     <location>
-                        <geo>48,208333 16,373056</geo>
-                     </location>
-                  </settlement>
-               </death>
-               <sex value="male"/>
-               <occupation ref="pmb90">Schriftsteller/Schriftstellerin</occupation>
-               <occupation ref="pmb97">Mediziner/Medizinerin</occupation>
-               <idno type="gnd">https://d-nb.info/gnd/118609807/</idno>
             </person>
             <person xml:id="pmb3787">
                <persName>
@@ -287,37 +295,70 @@
                   </settlement>
                </death>
             </person>
+            <person xml:id="pmb13088">
+               <persName>
+                  <forename>Edmund</forename>
+                  <surname>Wengraf</surname>
+               </persName>
+               <birth>
+                  <date when="1860-01-09">1860-01-09</date>
+                  <settlement ref="pmb40412">
+                     <placeName type="pref">Mikulov</placeName>
+                     <location>
+                        <geo>48,80556 16,6378</geo>
+                     </location>
+                  </settlement>
+               </birth>
+               <death>
+                  <date when="1933-12-08">1933-12-08</date>
+                  <settlement ref="pmb50">
+                     <placeName type="pref">Wien</placeName>
+                     <location>
+                        <geo>48,208333 16,373056</geo>
+                     </location>
+                  </settlement>
+               </death>
+            </person>
+            <person xml:id="pmb2509">
+               <persName>
+                  <forename>Heinrich</forename>
+                  <surname>Osten</surname>
+               </persName>
+               <birth>
+                  <date when="1855-08-16">1855-08-16</date>
+                  <settlement ref="pmb53820">
+                     <placeName type="pref">Brody [Ukraine]</placeName>
+                     <location>
+                        <geo>50,08791 25,15027</geo>
+                     </location>
+                  </settlement>
+               </birth>
+               <death>
+                  <date when="1931-08-01">1931-08-01</date>
+                  <settlement ref="pmb50">
+                     <placeName type="pref">Wien</placeName>
+                     <location>
+                        <geo>48,208333 16,373056</geo>
+                     </location>
+                  </settlement>
+               </death>
+            </person>
          </listPerson>
          <listBibl>
             <bibl xml:id="pmb42078">
-               <title type="main">Neue Revue. Wiener Literatur-Zeitung</title>
+               <title>Neue Revue. Wiener Literatur-Zeitung</title>
                <title type="legacy-name-merge">Neue Revue. Wiener Literatur-Zeitung</title>
-               <author role="hat-herausgegeben" ref="pmb13088">Wengraf, Edmund</author>
-               <author role="hat-herausgegeben" ref="pmb2509">Osten, Heinrich</author>
+               <author ref="pmb13088" role="hat-herausgegeben">Wengraf, Edmund</author>
+               <author ref="pmb2509" role="hat-herausgegeben">Osten, Heinrich</author>
             </bibl>
             <bibl xml:id="pmb333721" ana="implied">
-               <title type="main">Die italienische Gastspiel-Gesellschaft</title>
+               <title>Die italienische Gastspiel-Gesellschaft</title>
                <title type="werk_bibliografische-angabe">G. Sch.: Die italienische Gastspiel-Gesellschaft. In: Neue Revue, Bd. 1, H. 17, 23. April 1897, S. 526–528.</title>
                <title type="werk_unter-diesem-namen-oder-kurzel-veroffentlicht">G. Sch.</title>
-               <author role="hat-unter-einem-kurzel-veroffentlicht" ref="pmb12740">Schwarzkopf, Gustav</author>
+               <author ref="pmb12740" role="hat-unter-einem-kurzel-veroffentlicht">Schwarzkopf, Gustav</author>
             </bibl>
          </listBibl>
          <listPlace>
-            <place xml:id="pmb182">
-               <placeName>Paris</placeName>
-               <placeName type="alternative-name">P'ariz</placeName>
-               <placeName type="legacy-name-merge">Paris</placeName>
-               <placeName type="alternative-name">Pariž</placeName>
-               <placeName type="alternative-name">Parisius</placeName>
-               <placeName type="alternative-name">Île-de-France</placeName>
-               <location type="coords">
-                  <geo>48,85341 2,3488</geo>
-               </location>
-               <location type="located_in_place">
-                  <placeName ref="pmb166">Frankreich</placeName>
-                  <geo>46,0 2,0</geo>
-               </location>
-            </place>
             <place xml:id="pmb186">
                <placeName>Lueg</placeName>
                <location type="coords">
@@ -328,49 +369,12 @@
                   <geo>47,76667 13,36667</geo>
                </location>
             </place>
-            <place xml:id="pmb207296">
-               <placeName>Tiefer Graben 23</placeName>
-               <location type="coords">
-                  <geo>48,213038 16,368738</geo>
-               </location>
-               <location type="located_in_place">
-                  <placeName ref="pmb50825">Tiefer Graben</placeName>
-                  <geo>48,2125 16,368333</geo>
-               </location>
-               <location type="located_in_place">
-                  <placeName ref="pmb51">I., Innere Stadt</placeName>
-                  <geo>48,20769 16,37049</geo>
-               </location>
-            </place>
-            <place xml:id="pmb50">
-               <placeName>Wien</placeName>
-               <placeName type="ort_fruherer-name">K.K. Reichshaupt- und Residenzstadt Wien</placeName>
-               <placeName type="legacy-name-merge">Wien</placeName>
-               <placeName type="alternative-name">Bécs</placeName>
-               <placeName type="alternative-name">Land Wien</placeName>
-               <placeName type="alternative-name">Vídeň</placeName>
-               <placeName type="alternative-name">Wenia</placeName>
-               <placeName type="alternative-name">Beč</placeName>
-               <placeName type="ort_fruherer-name">Vindobona</placeName>
-               <placeName type="legacy-name-merge">Vindobona</placeName>
-               <placeName type="alternative-name">Vienna</placeName>
-               <placeName type="legacy-name-merge">Vienna</placeName>
-               <placeName type="alternative-name">Vienna</placeName>
-               <location type="coords">
-                  <geo>48,208333 16,373056</geo>
-               </location>
-               <location type="located_in_place">
-                  <placeName ref="pmb41240">Österreich</placeName>
-                  <geo>47,33333 13,33333</geo>
-               </location>
-            </place>
             <place xml:id="pmb51">
                <placeName>I., Innere Stadt</placeName>
                <placeName type="alternative-name">Inner city</placeName>
                <placeName type="alternative-name">Wien,Innere Stadt</placeName>
                <placeName type="alternative-name">1. Wiener Gemeindebezirk</placeName>
                <placeName type="legacy-name-merge">Wien-Innere Stadt</placeName>
-               <placeName type="legacy-name-merge">Inner city</placeName>
                <location type="coords">
                   <geo>48,20769 16,37049</geo>
                </location>
@@ -392,6 +396,56 @@
                <location type="located_in_place">
                   <placeName ref="pmb182">Paris</placeName>
                   <geo>48,85341 2,3488</geo>
+               </location>
+            </place>
+            <place xml:id="pmb207296">
+               <placeName>Tiefer Graben 23</placeName>
+               <location type="coords">
+                  <geo>48,213038 16,368738</geo>
+               </location>
+               <location type="located_in_place">
+                  <placeName ref="pmb50825">Tiefer Graben</placeName>
+                  <geo>48,2125 16,368333</geo>
+               </location>
+               <location type="located_in_place">
+                  <placeName ref="pmb51">I., Innere Stadt</placeName>
+                  <geo>48,20769 16,37049</geo>
+               </location>
+            </place>
+            <place xml:id="pmb50">
+               <placeName>Wien</placeName>
+               <placeName type="ort_fruherer-name">K.K. Reichshaupt- und Residenzstadt Wien</placeName>
+               <placeName type="alternative-name">Bécs</placeName>
+               <placeName type="alternative-name">Land Wien</placeName>
+               <placeName type="alternative-name">Vídeň</placeName>
+               <placeName type="alternative-name">Wenia</placeName>
+               <placeName type="alternative-name">Beč</placeName>
+               <placeName type="ort_fruherer-name">Vindobona</placeName>
+               <placeName type="alternative-name">Vienna</placeName>
+               <location type="coords">
+                  <geo>48,208333 16,373056</geo>
+               </location>
+               <location type="located_in_place">
+                  <placeName ref="pmb41240">Österreich</placeName>
+                  <geo>47,33333 13,33333</geo>
+               </location>
+               <location type="located_in_place">
+                  <placeName ref="pmb235218">Windmühlhöhe</placeName>
+                  <geo>48,24077 16,32092</geo>
+               </location>
+            </place>
+            <place xml:id="pmb182">
+               <placeName>Paris</placeName>
+               <placeName type="alternative-name">P'ariz</placeName>
+               <placeName type="alternative-name">Pariž</placeName>
+               <placeName type="alternative-name">Parisius</placeName>
+               <placeName type="alternative-name">Île-de-France</placeName>
+               <location type="coords">
+                  <geo>48,85341 2,3488</geo>
+               </location>
+               <location type="located_in_place">
+                  <placeName ref="pmb166">Frankreich</placeName>
+                  <geo>46,0 2,0</geo>
                </location>
             </place>
          </listPlace>

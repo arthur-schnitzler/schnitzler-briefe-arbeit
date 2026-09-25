@@ -1,6 +1,10 @@
-<?xml version='1.0' encoding='UTF-8'?>
+<?xml version="1.0" encoding="UTF-8"?>
 <?xml-model href="../meta/schnitzler-briefe-schematron.sch" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
-<TEI xmlns="http://www.tei-c.org/ns/1.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.tei-c.org/ns/1.0 ../meta/schnitzler-briefe-schema.xsd" xml:base="https://id.acdh.oeaw.ac.at/schnitzler/schnitzler-briefe/editions" xml:id="L04074">
+<TEI xmlns="http://www.tei-c.org/ns/1.0"
+     xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+     xsi:schemaLocation="http://www.tei-c.org/ns/1.0 ../meta/schnitzler-briefe-schema.xsd"
+     xml:base="https://id.acdh.oeaw.ac.at/schnitzler/schnitzler-briefe/editions"
+     xml:id="L04074">
    <teiHeader>
       <fileDesc>
          <titleStmt>
@@ -130,7 +134,7 @@
             </correspAction>
             <correspAction type="transmitted">
                <date when="1902-01-20">20. 1. 1902</date>
-               <placeName ref="#pmb365217">I., Innere Stadt</placeName>
+               <placeName ref="#pmb365217">1/1 Post- und Telegraphenamt 10</placeName>
             </correspAction>
             <correspAction type="delivered">
                <date when="1902-01-20">20. 1. 1902</date>
@@ -141,12 +145,20 @@
                <date when="1902-01-20">20. 1. 1902</date>
                <placeName ref="#pmb207296">Tiefer Graben 23</placeName>
             </correspAction>
-            <correspContext><ref type="belongsToCorrespondence" target="correspondence_12740">Schwarzkopf, Gustav</ref>
+            <correspContext>
+               <ref type="belongsToCorrespondence" target="correspondence_12740">Schwarzkopf, Gustav</ref>
                <ref subtype="previous_letter" type="withinCollection" target="L04543">Rilke an Schnitzler, 19. 1. 1902</ref>
                <ref subtype="next_letter" type="withinCollection" target="L03194">Goldmann an Schnitzler, 20. 1. [1902]</ref>
-               <ref subtype="previous_letter" type="withinCorrespondence" source="correspondence_12740" target="L04179">Schnitzler an Schwarzkopf, [16. 1. 1902?]</ref>
-               <ref subtype="next_letter" type="withinCorrespondence" source="correspondence_12740" target="L04180">Schnitzler an Schwarzkopf, [26. 1. 1902?]</ref>
-            </correspContext></correspDesc>
+               <ref subtype="previous_letter"
+                    type="withinCorrespondence"
+                    source="correspondence_12740"
+                    target="L04179">Schnitzler an Schwarzkopf, [16. 1. 1902?]</ref>
+               <ref subtype="next_letter"
+                    type="withinCorrespondence"
+                    source="correspondence_12740"
+                    target="L04180">Schnitzler an Schwarzkopf, [26. 1. 1902?]</ref>
+            </correspContext>
+         </correspDesc>
       </profileDesc>
       <revisionDesc status="proposed">
          <change who="MAM" when="2025-12-10">Export aus Transkribus</change>
@@ -296,6 +308,20 @@
             </person>
          </listPerson>
          <listPlace>
+            <place xml:id="pmb365217">
+               <placeName>1/1 Post- und Telegraphenamt 10</placeName>
+               <location type="coords">
+                  <geo>48,210234 16,357213</geo>
+               </location>
+               <location type="located_in_place">
+                  <placeName ref="pmb51">I., Innere Stadt</placeName>
+                  <geo>48,20769 16,37049</geo>
+               </location>
+               <location type="located_in_place">
+                  <placeName ref="pmb95">Lichtenfelsgasse</placeName>
+                  <geo>48,210037490674 16,357104381105</geo>
+               </location>
+            </place>
             <place xml:id="pmb51">
                <placeName>I., Innere Stadt</placeName>
                <placeName type="alternative-name">Inner city</placeName>

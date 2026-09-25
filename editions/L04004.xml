@@ -1,6 +1,10 @@
-<?xml version='1.0' encoding='UTF-8'?>
+<?xml version="1.0" encoding="UTF-8"?>
 <?xml-model href="../meta/schnitzler-briefe-schematron.sch" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
-<TEI xmlns="http://www.tei-c.org/ns/1.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.tei-c.org/ns/1.0 ../meta/schnitzler-briefe-schema.xsd" xml:base="https://id.acdh.oeaw.ac.at/schnitzler/schnitzler-briefe/editions" xml:id="L04004">
+<TEI xmlns="http://www.tei-c.org/ns/1.0"
+     xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+     xsi:schemaLocation="http://www.tei-c.org/ns/1.0 ../meta/schnitzler-briefe-schema.xsd"
+     xml:base="https://id.acdh.oeaw.ac.at/schnitzler/schnitzler-briefe/editions"
+     xml:id="L04004">
    <teiHeader>
       <fileDesc>
          <titleStmt>
@@ -125,12 +129,20 @@
                <date evidence="conjecture" notBefore="1911-11-07" notAfter="1911-11-10">[7. 11. 1911 – 10. 11. 1911?]</date>
                <placeName ref="#pmb50" evidence="external">Wien</placeName>
             </correspAction>
-            <correspContext><ref type="belongsToCorrespondence" target="correspondence_2312">Zuckerkandl, Berta</ref>
+            <correspContext>
+               <ref type="belongsToCorrespondence" target="correspondence_2312">Zuckerkandl, Berta</ref>
                <ref subtype="previous_letter" type="withinCollection" target="L04515">Schnitzler, Schnitzler an Schwarzkopf, 7. 11. 1911</ref>
                <ref subtype="next_letter" type="withinCollection" target="L02044">Burckhard an Schnitzler, 8. 11. 1911</ref>
-               <ref subtype="previous_letter" type="withinCorrespondence" source="correspondence_2312" target="L04005">Zuckerkandl an Schnitzler, [9. 10. 1911?]</ref>
-               <ref subtype="next_letter" type="withinCorrespondence" source="correspondence_2312" target="L04003">Zuckerkandl an Schnitzler, [25. 11. 1911?]</ref>
-            </correspContext></correspDesc>
+               <ref subtype="previous_letter"
+                    type="withinCorrespondence"
+                    source="correspondence_2312"
+                    target="L04005">Zuckerkandl an Schnitzler, [9. 10. 1911?]</ref>
+               <ref subtype="next_letter"
+                    type="withinCorrespondence"
+                    source="correspondence_2312"
+                    target="L04003">Zuckerkandl an Schnitzler, [25. 11. 1911?]</ref>
+            </correspContext>
+         </correspDesc>
       </profileDesc>
       <revisionDesc status="candidate">
          <change who="MAM" when="2025-11-11">Export aus Transkribus</change>
@@ -280,82 +292,6 @@
       </body>
       <back>
          <listPerson>
-            <person xml:id="pmb11851">
-               <persName>
-                  <forename>Josef</forename>
-                  <surname>Kainz</surname>
-               </persName>
-               <birth>
-                  <date when="1858-01-02">1858-01-02</date>
-                  <settlement ref="pmb43475">
-                     <placeName type="pref">Mosonmagyaróvár</placeName>
-                     <location>
-                        <geo>47,86789 17,26994</geo>
-                     </location>
-                  </settlement>
-               </birth>
-               <death>
-                  <date when="1910-09-20">1910-09-20</date>
-                  <settlement ref="pmb50">
-                     <placeName type="pref">Wien</placeName>
-                     <location>
-                        <geo>48,208333 16,373056</geo>
-                     </location>
-                  </settlement>
-               </death>
-            </person>
-            <person xml:id="pmb17533">
-               <persName>
-                  <forename>Lucien</forename>
-                  <surname>Guitry</surname>
-               </persName>
-               <birth>
-                  <date when="1860-12-13">1860-12-13</date>
-                  <settlement ref="pmb182">
-                     <placeName type="pref">Paris</placeName>
-                     <location>
-                        <geo>48,85341 2,3488</geo>
-                     </location>
-                  </settlement>
-               </birth>
-               <death>
-                  <date when="1925-06-01">1925-06-01</date>
-                  <settlement ref="pmb182">
-                     <placeName type="pref">Paris</placeName>
-                     <location>
-                        <geo>48,85341 2,3488</geo>
-                     </location>
-                  </settlement>
-               </death>
-            </person>
-            <person xml:id="pmb2121">
-               <persName>
-                  <surname>Schnitzler</surname>
-                  <forename>Arthur</forename>
-               </persName>
-               <birth>
-                  <date when="1862-05-15">15. 5. 1862</date>
-                  <settlement ref="pmb50">
-                     <placeName type="pref">Wien</placeName>
-                     <location>
-                        <geo>48,208333 16,373056</geo>
-                     </location>
-                  </settlement>
-               </birth>
-               <death>
-                  <date when="1931-10-21">21. 10. 1931</date>
-                  <settlement ref="pmb50">
-                     <placeName type="pref">Wien</placeName>
-                     <location>
-                        <geo>48,208333 16,373056</geo>
-                     </location>
-                  </settlement>
-               </death>
-               <sex value="male"/>
-               <occupation ref="pmb90">Schriftsteller/Schriftstellerin</occupation>
-               <occupation ref="pmb97">Mediziner/Medizinerin</occupation>
-               <idno type="gnd">https://d-nb.info/gnd/118609807/</idno>
-            </person>
             <person xml:id="pmb2312">
                <persName>
                   <forename>Berta</forename>
@@ -376,6 +312,30 @@
                      <placeName type="pref">Paris</placeName>
                      <location>
                         <geo>48,85341 2,3488</geo>
+                     </location>
+                  </settlement>
+               </death>
+            </person>
+            <person xml:id="pmb2121">
+               <persName>
+                  <surname>Schnitzler</surname>
+                  <forename>Arthur</forename>
+               </persName>
+               <birth>
+                  <date when="1862-05-15">15. 5. 1862</date>
+                  <settlement ref="pmb50">
+                     <placeName type="pref">Wien</placeName>
+                     <location>
+                        <geo>48,208333 16,373056</geo>
+                     </location>
+                  </settlement>
+               </birth>
+               <death>
+                  <date when="1931-10-21">21. 10. 1931</date>
+                  <settlement ref="pmb50">
+                     <placeName type="pref">Wien</placeName>
+                     <location>
+                        <geo>48,208333 16,373056</geo>
                      </location>
                   </settlement>
                </death>
@@ -404,6 +364,30 @@
                   </settlement>
                </death>
             </person>
+            <person xml:id="pmb17533">
+               <persName>
+                  <forename>Lucien</forename>
+                  <surname>Guitry</surname>
+               </persName>
+               <birth>
+                  <date when="1860-12-13">1860-12-13</date>
+                  <settlement ref="pmb182">
+                     <placeName type="pref">Paris</placeName>
+                     <location>
+                        <geo>48,85341 2,3488</geo>
+                     </location>
+                  </settlement>
+               </birth>
+               <death>
+                  <date when="1925-06-01">1925-06-01</date>
+                  <settlement ref="pmb182">
+                     <placeName type="pref">Paris</placeName>
+                     <location>
+                        <geo>48,85341 2,3488</geo>
+                     </location>
+                  </settlement>
+               </death>
+            </person>
             <person xml:id="pmb2412">
                <persName>
                   <forename>William</forename>
@@ -424,6 +408,30 @@
                      <placeName type="pref">Stratford-upon-Avon</placeName>
                      <location>
                         <geo>52,19166 -1,70734</geo>
+                     </location>
+                  </settlement>
+               </death>
+            </person>
+            <person xml:id="pmb11851">
+               <persName>
+                  <forename>Josef</forename>
+                  <surname>Kainz</surname>
+               </persName>
+               <birth>
+                  <date when="1858-01-02">1858-01-02</date>
+                  <settlement ref="pmb43475">
+                     <placeName type="pref">Mosonmagyaróvár</placeName>
+                     <location>
+                        <geo>47,86789 17,26994</geo>
+                     </location>
+                  </settlement>
+               </birth>
+               <death>
+                  <date when="1910-09-20">1910-09-20</date>
+                  <settlement ref="pmb50">
+                     <placeName type="pref">Wien</placeName>
+                     <location>
+                        <geo>48,208333 16,373056</geo>
                      </location>
                   </settlement>
                </death>
@@ -476,79 +484,100 @@
                   </settlement>
                </death>
             </person>
+            <person xml:id="pmb23481">
+               <persName>
+                  <forename>Henri de</forename>
+                  <surname>Rochefort</surname>
+               </persName>
+               <birth>
+                  <date when="1830-01-31">1830-01-31</date>
+                  <settlement ref="pmb182">
+                     <placeName type="pref">Paris</placeName>
+                     <location>
+                        <geo>48,85341 2,3488</geo>
+                     </location>
+                  </settlement>
+               </birth>
+               <death>
+                  <date when="1913-06-30">1913-06-30</date>
+                  <settlement ref="pmb23483">
+                     <placeName type="pref">Aix-les-Bains</placeName>
+                  </settlement>
+               </death>
+            </person>
+            <person xml:id="pmb26414">
+               <persName>
+                  <forename>Maurice</forename>
+                  <surname>Vaucaire</surname>
+               </persName>
+               <birth>
+                  <date when="1863-07-02">1863-07-02</date>
+                  <settlement ref="pmb36549">
+                     <placeName type="pref">Versailles</placeName>
+                     <location>
+                        <geo>48,80359 2,13424</geo>
+                     </location>
+                  </settlement>
+               </birth>
+               <death>
+                  <date when="1918-02-10">1918-02-10</date>
+                  <settlement ref="pmb36749">
+                     <placeName type="pref">Neuilly-sur-Seine</placeName>
+                     <location>
+                        <geo>48,8846 2,26965</geo>
+                     </location>
+                  </settlement>
+               </death>
+            </person>
          </listPerson>
          <listBibl>
-            <bibl xml:id="pmb185653">
-               <title type="main">Souper d’Adieu</title>
-               <author role="hat-geschaffen" ref="pmb2121">Schnitzler, Arthur</author>
-               <author role="hat-ubersetzt" ref="pmb26414">Vaucaire, Maurice</author>
-            </bibl>
-            <bibl xml:id="pmb30005">
-               <title type="main">Abschiedssouper</title>
-               <author role="hat-geschaffen" ref="pmb2121">Schnitzler, Arthur</author>
+            <bibl xml:id="pmb88803">
+               <title>Le Figaro</title>
+               <title type="werk_link">https://gallica.bnf.fr/ark:/12148/cb34355551z/date</title>
+               <author ref="pmb23481" role="hat-herausgegeben">Rochefort, Henri de</author>
             </bibl>
             <bibl xml:id="pmb300097">
-               <title type="main">Courrier des Théatres. Au jour le jour. [Shakespeare disait…]</title>
+               <title>Courrier des Théatres. Au jour le jour. [Shakespeare disait…]</title>
                <title type="werk_link">https://gallica.bnf.fr/ark:/12148/bpt6k289386r/f6.item</title>
                <title type="werk_bibliografische-angabe">O.V. [=Berta Zuckerkandl|: Courrier des Théatres. Au jour le jour. [Shakespeare disait…]. In: Le Figaro, Jg. 57, Serie 3, Nr. 304, 31.10.1911, S. 6.</title>
-               <author role="hat-anonym-veroffentlicht" ref="pmb2312">Zuckerkandl, Berta</author>
+               <author ref="pmb2312" role="hat-anonym-veroffentlicht">Zuckerkandl, Berta</author>
+            </bibl>
+            <bibl xml:id="pmb185653">
+               <title>Souper d’Adieu</title>
+               <author ref="pmb2121" role="hat-geschaffen">Schnitzler, Arthur</author>
+               <author ref="pmb26414" role="hat-ubersetzt">Vaucaire, Maurice</author>
+            </bibl>
+            <bibl xml:id="pmb30005">
+               <title>Abschiedssouper</title>
+               <author ref="pmb2121" role="hat-geschaffen">Schnitzler, Arthur</author>
             </bibl>
             <bibl xml:id="pmb30207">
-               <title type="main">Das weite Land. Tragikomödie in fünf Akten</title>
+               <title>Das weite Land. Tragikomödie in fünf Akten</title>
                <title type="werk_link">http://www.literature.at/alo?objid=12113</title>
                <title type="werk_bibliografische-angabe">Arthur Schnitzler: Das weite Land. Tragikomödie in fünf Akten. Erste Auflage. Berlin: S. Fischer 1911,</title>
                <title type="werk_arbeitstitel">Frieberg</title>
-               <author role="hat-geschaffen" ref="pmb2121">Schnitzler, Arthur</author>
-            </bibl>
-            <bibl xml:id="pmb88803">
-               <title type="main">Le Figaro</title>
-               <title type="werk_link">https://gallica.bnf.fr/ark:/12148/cb34355551z/date</title>
-               <author role="hat-herausgegeben" ref="pmb23481">Rochefort, Henri de</author>
-            </bibl>
-            <bibl xml:id="pmb80007" ana="comment">
-               <title type="main">Das adelige Nest</title>
-               <title type="werk_bibliografische-angabe">Das adelige Nest. Übersetzt von P. Fuchs. Leipzig 1862.</title>
-               <author role="hat-geschaffen" ref="pmb26238">Turgenev, Ivan Sergeevič</author>
+               <author ref="pmb2121" role="hat-geschaffen">Schnitzler, Arthur</author>
             </bibl>
             <bibl xml:id="pmb80013" ana="comment">
-               <title type="main">Dvorjanskoe gnezdo</title>
-               <author role="hat-geschaffen" ref="pmb26238">Turgenev, Ivan Sergeevič</author>
+               <title>Dvorjanskoe gnezdo</title>
+               <author ref="pmb26238" role="hat-geschaffen">Turgenev, Ivan Sergeevič</author>
+            </bibl>
+            <bibl xml:id="pmb80007" ana="comment">
+               <title>Das adelige Nest</title>
+               <title type="werk_bibliografische-angabe">Das adelige Nest. Übersetzt von P. Fuchs. Leipzig 1862.</title>
+               <author ref="pmb26238" role="hat-geschaffen">Turgenev, Ivan Sergeevič</author>
             </bibl>
          </listBibl>
          <listPlace>
-            <place xml:id="pmb166">
-               <placeName>Frankreich</placeName>
-               <placeName type="alternative-name">France</placeName>
-               <placeName type="alternative-name">Frankreich</placeName>
-               <placeName type="legacy-name-merge">Frankreich</placeName>
-               <placeName type="legacy-name-merge">France</placeName>
-               <location type="coords">
-                  <geo>46,0 2,0</geo>
-               </location>
-               <location type="located_in_place">
-                  <placeName ref="pmb468">Europa</placeName>
-                  <geo>48,69096 9,14062</geo>
-               </location>
-            </place>
-            <place xml:id="pmb468">
-               <placeName>Europa</placeName>
-               <location type="coords">
-                  <geo>48,69096 9,14062</geo>
-               </location>
-            </place>
-            <place xml:id="pmb50">
+            <place xml:id="pmb50" ana="comment">
                <placeName>Wien</placeName>
                <placeName type="ort_fruherer-name">K.K. Reichshaupt- und Residenzstadt Wien</placeName>
-               <placeName type="legacy-name-merge">Wien</placeName>
                <placeName type="alternative-name">Bécs</placeName>
                <placeName type="alternative-name">Land Wien</placeName>
                <placeName type="alternative-name">Vídeň</placeName>
                <placeName type="alternative-name">Wenia</placeName>
                <placeName type="alternative-name">Beč</placeName>
                <placeName type="ort_fruherer-name">Vindobona</placeName>
-               <placeName type="legacy-name-merge">Vindobona</placeName>
-               <placeName type="alternative-name">Vienna</placeName>
-               <placeName type="legacy-name-merge">Vienna</placeName>
                <placeName type="alternative-name">Vienna</placeName>
                <location type="coords">
                   <geo>48,208333 16,373056</geo>
@@ -556,6 +585,16 @@
                <location type="located_in_place">
                   <placeName ref="pmb41240">Österreich</placeName>
                   <geo>47,33333 13,33333</geo>
+               </location>
+               <location type="located_in_place">
+                  <placeName ref="pmb235218">Windmühlhöhe</placeName>
+                  <geo>48,24077 16,32092</geo>
+               </location>
+            </place>
+            <place xml:id="pmb468" ana="comment">
+               <placeName>Europa</placeName>
+               <location type="coords">
+                  <geo>48,69096 9,14062</geo>
                </location>
             </place>
             <place xml:id="pmb687">
@@ -567,6 +606,45 @@
                <location type="located_in_place">
                   <placeName ref="pmb468">Europa</placeName>
                   <geo>48,69096 9,14062</geo>
+               </location>
+            </place>
+            <place xml:id="pmb166" ana="comment">
+               <placeName>Frankreich</placeName>
+               <placeName type="alternative-name">France</placeName>
+               <location type="coords">
+                  <geo>46,0 2,0</geo>
+               </location>
+               <location type="located_in_place">
+                  <placeName ref="pmb468">Europa</placeName>
+                  <geo>48,69096 9,14062</geo>
+               </location>
+            </place>
+            <place xml:id="pmb652" ana="comment">
+               <placeName>Prag</placeName>
+               <placeName type="alternative-name">Hauptstadt Prag</placeName>
+               <placeName type="legacy-name-merge">Prag-Smichow</placeName>
+               <placeName type="legacy-name-merge">Bohnitz bei Prag</placeName>
+               <placeName type="legacy-name-merge">Prag-Dejwitz</placeName>
+               <placeName type="legacy-name-merge">Hlavní město Praha</placeName>
+               <placeName type="legacy-name-merge">Prague</placeName>
+               <location type="coords">
+                  <geo>50,08333 14,46667</geo>
+               </location>
+               <location type="located_in_place">
+                  <placeName ref="pmb43430">Tschechien</placeName>
+                  <geo>49,75 15,0</geo>
+               </location>
+            </place>
+            <place xml:id="pmb866" ana="comment">
+               <placeName>Dresden</placeName>
+               <placeName type="alternative-name">Landeshauptstadt Dresden</placeName>
+               <placeName type="legacy-name-merge">Kreisfreie Stadt Dresden</placeName>
+               <location type="coords">
+                  <geo>51,0833 13,7666</geo>
+               </location>
+               <location type="located_in_place">
+                  <placeName ref="pmb151">Deutschland</placeName>
+                  <geo>51,5 10,5</geo>
                </location>
             </place>
             <place xml:id="pmb168" ana="comment">
@@ -584,12 +662,47 @@
                   <geo>51,5 10,5</geo>
                </location>
             </place>
+            <place xml:id="pmb506" ana="comment">
+               <placeName>Hamburg</placeName>
+               <location type="coords">
+                  <geo>53,55055 9,993333</geo>
+               </location>
+               <location type="located_in_place">
+                  <placeName ref="pmb151">Deutschland</placeName>
+                  <geo>51,5 10,5</geo>
+               </location>
+            </place>
+            <place xml:id="pmb45258" ana="comment">
+               <placeName>München</placeName>
+               <placeName type="legacy-name-merge">München?</placeName>
+               <placeName type="legacy-name-merge">Munich</placeName>
+               <placeName type="alternative-name">Monacho</placeName>
+               <location type="coords">
+                  <geo>48,13743 11,57549</geo>
+               </location>
+               <location type="located_in_place">
+                  <placeName ref="pmb314">Bayern</placeName>
+                  <geo>49,0 11,5</geo>
+               </location>
+               <location type="located_in_place">
+                  <placeName ref="pmb151">Deutschland</placeName>
+                  <geo>51,5 10,5</geo>
+               </location>
+            </place>
+            <place xml:id="pmb667" ana="comment">
+               <placeName>Garmisch-Partenkirchen</placeName>
+               <location type="coords">
+                  <geo>47,49209 11,09576</geo>
+               </location>
+               <location type="located_in_place">
+                  <placeName ref="pmb314">Bayern</placeName>
+                  <geo>49,0 11,5</geo>
+               </location>
+            </place>
             <place xml:id="pmb41240" ana="comment">
                <placeName>Österreich</placeName>
                <placeName type="alternative-name">Republik Österreich</placeName>
-               <placeName type="legacy-name-merge">Österreich</placeName>
                <placeName type="alternative-name">Republic of Austria</placeName>
-               <placeName type="legacy-name-merge">Österreich</placeName>
                <placeName type="legacy-name-merge">Deutsch Österreich</placeName>
                <placeName type="legacy-name-merge">Altoesterreich</placeName>
                <location type="coords">
@@ -608,85 +721,9 @@
                   <geo>48,4054 16,4887</geo>
                </location>
             </place>
-            <place xml:id="pmb45258" ana="comment">
-               <placeName>München</placeName>
-               <placeName type="alternative-name">München</placeName>
-               <placeName type="legacy-name-merge">München?</placeName>
-               <placeName type="legacy-name-merge">München</placeName>
-               <placeName type="legacy-name-merge">Munich</placeName>
-               <placeName type="alternative-name">Monacho</placeName>
-               <placeName type="alternative-name">Munich</placeName>
-               <placeName type="legacy-name">München</placeName>
-               <placeName type="legacy-name-merge">München?</placeName>
-               <location type="coords">
-                  <geo>48,13743 11,57549</geo>
-               </location>
-               <location type="located_in_place">
-                  <placeName ref="pmb314">Bayern</placeName>
-                  <geo>49,0 11,5</geo>
-               </location>
-               <location type="located_in_place">
-                  <placeName ref="pmb151">Deutschland</placeName>
-                  <geo>51,5 10,5</geo>
-               </location>
-            </place>
-            <place xml:id="pmb506" ana="comment">
-               <placeName>Hamburg</placeName>
-               <placeName type="legacy-name-merge">Hamburg</placeName>
-               <placeName type="alternative-name">Hamburg</placeName>
-               <location type="coords">
-                  <geo>53,55055 9,993333</geo>
-               </location>
-               <location type="located_in_place">
-                  <placeName ref="pmb151">Deutschland</placeName>
-                  <geo>51,5 10,5</geo>
-               </location>
-            </place>
-            <place xml:id="pmb652" ana="comment">
-               <placeName>Prag</placeName>
-               <placeName type="alternative-name">Hauptstadt Prag</placeName>
-               <placeName type="legacy-name-merge">Prag</placeName>
-               <placeName type="legacy-name-merge">Prag-Smichow</placeName>
-               <placeName type="legacy-name-merge">Bohnitz bei Prag</placeName>
-               <placeName type="legacy-name-merge">Prag-Dejwitz</placeName>
-               <placeName type="legacy-name-merge">Hlavní město Praha</placeName>
-               <placeName type="legacy-name-merge">Prague</placeName>
-               <location type="coords">
-                  <geo>50,08333 14,46667</geo>
-               </location>
-               <location type="located_in_place">
-                  <placeName ref="pmb43430">Tschechien</placeName>
-                  <geo>49,75 15,0</geo>
-               </location>
-            </place>
-            <place xml:id="pmb667" ana="comment">
-               <placeName>Garmisch-Partenkirchen</placeName>
-               <location type="coords">
-                  <geo>47,49209 11,09576</geo>
-               </location>
-               <location type="located_in_place">
-                  <placeName ref="pmb314">Bayern</placeName>
-                  <geo>49,0 11,5</geo>
-               </location>
-            </place>
-            <place xml:id="pmb866" ana="comment">
-               <placeName>Dresden</placeName>
-               <placeName type="alternative-name">Landeshauptstadt Dresden</placeName>
-               <placeName type="legacy-name-merge">Dresden</placeName>
-               <placeName type="alternative-name">Dresden</placeName>
-               <placeName type="legacy-name-merge">Kreisfreie Stadt Dresden</placeName>
-               <placeName type="legacy-name-merge">Dresden</placeName>
-               <location type="coords">
-                  <geo>51,0833 13,7666</geo>
-               </location>
-               <location type="located_in_place">
-                  <placeName ref="pmb151">Deutschland</placeName>
-                  <geo>51,5 10,5</geo>
-               </location>
-            </place>
          </listPlace>
          <listOrg>
-            <org xml:id="pmb36247">
+            <org xml:id="pmb36247" ana="comment">
                <orgName>Burgtheater</orgName>
                <orgName type="institution_namensvariante">Burgtheater GmbH</orgName>
                <location type="located_in_place">
@@ -704,7 +741,7 @@
                   <placeName ref="pmb48198">Redoutensaal</placeName>
                   <geo>48,206783 16,366551</geo>
                   <idno type="URL" subtype="pmb">https://pmb.acdh.oeaw.ac.at/entity/48198/</idno>
-                  <idno type="URL" subtype="geschichtewiki">https://www.geschichtewiki.wien.gv.at/Redoutensäle</idno>
+                  <idno type="URL" subtype="www">https://www.geschichtewiki.wien.gv.at/Redoutensäle</idno>
                   <idno type="URL" subtype="wienerschnitzler">https://wienerschnitzler.org/pmb48198.html</idno>
                   <idno type="URL" subtype="schnitzler-kultur">https://schnitzler-kultur.acdh.oeaw.ac.at/pmb48198.html</idno>
                </location>
@@ -716,7 +753,7 @@
                   <idno type="URL" subtype="pmb">https://pmb.acdh.oeaw.ac.at/entity/36789/</idno>
                   <idno type="URL" subtype="pmb">https://pmb.acdh.oeaw.ac.at/entity/51010/</idno>
                   <idno type="URL" subtype="geonames">https://sws.geonames.org/2775259/</idno>
-                  <idno type="URL" subtype="kraus">https://www.kraus.wienbibliothek.at/legalkraus/pmb51.html</idno>
+                  <idno type="URL" subtype="www">https://www.kraus.wienbibliothek.at/legalkraus/pmb51.html</idno>
                   <idno type="URL" subtype="schnitzler-interviews">https://schnitzler-interviews.acdh.oeaw.ac.at/pmb51.html</idno>
                   <idno type="URL" subtype="wikidata">http://www.wikidata.org/entity/Q267329</idno>
                   <idno type="URL" subtype="wikipedia">https://de.wikipedia.org/wiki/Innere_Stadt_(Wien)</idno>
@@ -749,7 +786,7 @@
             </org>
          </listOrg>
          <listEvent>
-            <event xml:id="pmb88534" ana="comment">
+            <event xml:id="pmb88534" ana="implied">
                <eventName n="Theaterpremiere">Premiere von Das weite Land, 14.10.1911 [I.]</eventName>
                <listPlace>
                   <place>

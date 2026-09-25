@@ -1,6 +1,10 @@
-<?xml version='1.0' encoding='UTF-8'?>
+<?xml version="1.0" encoding="UTF-8"?>
 <?xml-model href="../meta/schnitzler-briefe-schematron.sch" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
-<TEI xmlns="http://www.tei-c.org/ns/1.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.tei-c.org/ns/1.0 ../meta/schnitzler-briefe-schema.xsd" xml:base="https://id.acdh.oeaw.ac.at/schnitzler/schnitzler-briefe/editions" xml:id="L04285">
+<TEI xmlns="http://www.tei-c.org/ns/1.0"
+     xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+     xsi:schemaLocation="http://www.tei-c.org/ns/1.0 ../meta/schnitzler-briefe-schema.xsd"
+     xml:base="https://id.acdh.oeaw.ac.at/schnitzler/schnitzler-briefe/editions"
+     xml:id="L04285">
    <teiHeader>
       <fileDesc>
          <titleStmt>
@@ -128,23 +132,31 @@
             </correspAction>
             <correspAction type="transmitted">
                <date when="1897-01-12">12. 1. 1897</date>
-               <placeName ref="#pmb59">Wien 9/1 66</placeName>
+               <placeName ref="#pmb59">IX., Alsergrund</placeName>
             </correspAction>
             <correspAction type="delivered">
                <date when="1897-01-12">12. 1. 1897</date>
-               <placeName ref="#pmb59">Wien 9/1 66</placeName>
+               <placeName ref="#pmb59">IX., Alsergrund</placeName>
             </correspAction>
             <correspAction type="received">
                <persName ref="#pmb2121">Schnitzler, Arthur</persName>
                <date when="1897-01-12">12. 1. 1897</date>
                <placeName ref="#pmb168934">Frankgasse 1</placeName>
             </correspAction>
-            <correspContext><ref type="belongsToCorrespondence" target="correspondence_12740">Schwarzkopf, Gustav</ref>
+            <correspContext>
+               <ref type="belongsToCorrespondence" target="correspondence_12740">Schwarzkopf, Gustav</ref>
                <ref subtype="previous_letter" type="withinCollection" target="L00636">Schnitzler an Brandes, 11. 1. 1897</ref>
                <ref subtype="next_letter" type="withinCollection" target="L03712">Plessner an Schnitzler, 13. 1. 1897</ref>
-               <ref subtype="previous_letter" type="withinCorrespondence" source="correspondence_12740" target="L04189">Schnitzler an Schwarzkopf, [zwischen 1897 und Mitte 1898?]</ref>
-               <ref subtype="next_letter" type="withinCorrespondence" source="correspondence_12740" target="L04113">Schnitzler, Salten an Schwarzkopf, 23. 1. 1897</ref>
-            </correspContext></correspDesc>
+               <ref subtype="previous_letter"
+                    type="withinCorrespondence"
+                    source="correspondence_12740"
+                    target="L04189">Schnitzler an Schwarzkopf, [zwischen 1897 und Mitte 1898?]</ref>
+               <ref subtype="next_letter"
+                    type="withinCorrespondence"
+                    source="correspondence_12740"
+                    target="L04113">Schnitzler, Salten an Schwarzkopf, 23. 1. 1897</ref>
+            </correspContext>
+         </correspDesc>
       </profileDesc>
       <revisionDesc status="proposed">
          <change who="MAM" when="2026-02-20">Export aus Transkribus</change>
@@ -192,30 +204,6 @@
       </body>
       <back>
          <listPerson>
-            <person xml:id="pmb11402">
-               <persName>
-                  <forename>Ludwig</forename>
-                  <surname>Ganghofer</surname>
-               </persName>
-               <birth>
-                  <date when="1855-07-07">1855-07-07</date>
-                  <settlement ref="pmb47256">
-                     <placeName type="pref">Kaufbeuren</placeName>
-                     <location>
-                        <geo>47,88238 10,62192</geo>
-                     </location>
-                  </settlement>
-               </birth>
-               <death>
-                  <date when="1920-07-24">1920-07-24</date>
-                  <settlement ref="pmb39752">
-                     <placeName type="pref">Tegernsee</placeName>
-                     <location>
-                        <geo>47,7123 11,7582</geo>
-                     </location>
-                  </settlement>
-               </death>
-            </person>
             <person xml:id="pmb12740">
                <persName>
                   <forename>Gustav</forename>
@@ -236,6 +224,78 @@
                      <placeName type="pref">Wien</placeName>
                      <location>
                         <geo>48,208333 16,373056</geo>
+                     </location>
+                  </settlement>
+               </death>
+            </person>
+            <person xml:id="pmb2121">
+               <persName>
+                  <surname>Schnitzler</surname>
+                  <forename>Arthur</forename>
+               </persName>
+               <birth>
+                  <date when="1862-05-15">15. 5. 1862</date>
+                  <settlement ref="pmb50">
+                     <placeName type="pref">Wien</placeName>
+                     <location>
+                        <geo>48,208333 16,373056</geo>
+                     </location>
+                  </settlement>
+               </birth>
+               <death>
+                  <date when="1931-10-21">21. 10. 1931</date>
+                  <settlement ref="pmb50">
+                     <placeName type="pref">Wien</placeName>
+                     <location>
+                        <geo>48,208333 16,373056</geo>
+                     </location>
+                  </settlement>
+               </death>
+            </person>
+            <person xml:id="pmb335064">
+               <persName>
+                  <forename>Katharina</forename>
+                  <surname>Ganghofer</surname>
+               </persName>
+               <birth>
+                  <date when="1856-07-07">1856-07-07</date>
+                  <settlement ref="pmb151079">
+                     <placeName type="pref">Pest</placeName>
+                     <location>
+                        <geo>47,5 19,1</geo>
+                     </location>
+                  </settlement>
+               </birth>
+               <death>
+                  <date when="1930-04-08">1930-04-08</date>
+                  <settlement ref="pmb45258">
+                     <placeName type="pref">München</placeName>
+                     <location>
+                        <geo>48,13743 11,57549</geo>
+                     </location>
+                  </settlement>
+               </death>
+            </person>
+            <person xml:id="pmb11402">
+               <persName>
+                  <forename>Ludwig</forename>
+                  <surname>Ganghofer</surname>
+               </persName>
+               <birth>
+                  <date when="1855-07-07">1855-07-07</date>
+                  <settlement ref="pmb47256">
+                     <placeName type="pref">Kaufbeuren</placeName>
+                     <location>
+                        <geo>47,88238 10,62192</geo>
+                     </location>
+                  </settlement>
+               </birth>
+               <death>
+                  <date when="1920-07-24">1920-07-24</date>
+                  <settlement ref="pmb39752">
+                     <placeName type="pref">Tegernsee</placeName>
+                     <location>
+                        <geo>47,7123 11,7582</geo>
                      </location>
                   </settlement>
                </death>
@@ -264,60 +324,48 @@
                   </settlement>
                </death>
             </person>
-            <person xml:id="pmb2121">
-               <persName>
-                  <surname>Schnitzler</surname>
-                  <forename>Arthur</forename>
-               </persName>
-               <birth>
-                  <date when="1862-05-15">15. 5. 1862</date>
-                  <settlement ref="pmb50">
-                     <placeName type="pref">Wien</placeName>
-                     <location>
-                        <geo>48,208333 16,373056</geo>
-                     </location>
-                  </settlement>
-               </birth>
-               <death>
-                  <date when="1931-10-21">21. 10. 1931</date>
-                  <settlement ref="pmb50">
-                     <placeName type="pref">Wien</placeName>
-                     <location>
-                        <geo>48,208333 16,373056</geo>
-                     </location>
-                  </settlement>
-               </death>
-               <sex value="male"/>
-               <occupation ref="pmb90">Schriftsteller/Schriftstellerin</occupation>
-               <occupation ref="pmb97">Mediziner/Medizinerin</occupation>
-               <idno type="gnd">https://d-nb.info/gnd/118609807/</idno>
-            </person>
-            <person xml:id="pmb335064">
-               <persName>
-                  <forename>Katharina</forename>
-                  <surname>Ganghofer</surname>
-               </persName>
-               <birth>
-                  <date when="1856-07-07">1856-07-07</date>
-                  <settlement ref="pmb151079">
-                     <placeName type="pref">Pest</placeName>
-                     <location>
-                        <geo>47,5 19,1</geo>
-                     </location>
-                  </settlement>
-               </birth>
-               <death>
-                  <date when="1930-04-08">1930-04-08</date>
-                  <settlement ref="pmb45258">
-                     <placeName type="pref">München</placeName>
-                     <location>
-                        <geo>48,13743 11,57549</geo>
-                     </location>
-                  </settlement>
-               </death>
-            </person>
          </listPerson>
          <listPlace>
+            <place xml:id="pmb59">
+               <placeName>IX., Alsergrund</placeName>
+               <placeName type="legacy-name-merge">Thurygrund</placeName>
+               <placeName type="legacy-name-merge">Wien-Alsergrund</placeName>
+               <location type="coords">
+                  <geo>48,22387 16,35641</geo>
+               </location>
+               <location type="located_in_place">
+                  <placeName ref="pmb50">Wien</placeName>
+                  <geo>48,208333 16,373056</geo>
+               </location>
+            </place>
+            <place xml:id="pmb365208">
+               <placeName>9/3 Post- und Telegraphenamt 72</placeName>
+               <location type="coords">
+                  <geo>48,216197 16,356623</geo>
+               </location>
+               <location type="located_in_place">
+                  <placeName ref="pmb59">IX., Alsergrund</placeName>
+                  <geo>48,22387 16,35641</geo>
+               </location>
+               <location type="located_in_place">
+                  <placeName ref="pmb731">Garnisongasse</placeName>
+                  <geo>48,216533356678 16,356214321972</geo>
+               </location>
+            </place>
+            <place xml:id="pmb207296">
+               <placeName>Tiefer Graben 23</placeName>
+               <location type="coords">
+                  <geo>48,213038 16,368738</geo>
+               </location>
+               <location type="located_in_place">
+                  <placeName ref="pmb50825">Tiefer Graben</placeName>
+                  <geo>48,2125 16,368333</geo>
+               </location>
+               <location type="located_in_place">
+                  <placeName ref="pmb51">I., Innere Stadt</placeName>
+                  <geo>48,20769 16,37049</geo>
+               </location>
+            </place>
             <place xml:id="pmb168934">
                <placeName>Frankgasse 1</placeName>
                <location type="coords">
@@ -335,16 +383,12 @@
             <place xml:id="pmb50">
                <placeName>Wien</placeName>
                <placeName type="ort_fruherer-name">K.K. Reichshaupt- und Residenzstadt Wien</placeName>
-               <placeName type="legacy-name-merge">Wien</placeName>
                <placeName type="alternative-name">Bécs</placeName>
                <placeName type="alternative-name">Land Wien</placeName>
                <placeName type="alternative-name">Vídeň</placeName>
                <placeName type="alternative-name">Wenia</placeName>
                <placeName type="alternative-name">Beč</placeName>
                <placeName type="ort_fruherer-name">Vindobona</placeName>
-               <placeName type="legacy-name-merge">Vindobona</placeName>
-               <placeName type="alternative-name">Vienna</placeName>
-               <placeName type="legacy-name-merge">Vienna</placeName>
                <placeName type="alternative-name">Vienna</placeName>
                <location type="coords">
                   <geo>48,208333 16,373056</geo>
@@ -353,17 +397,9 @@
                   <placeName ref="pmb41240">Österreich</placeName>
                   <geo>47,33333 13,33333</geo>
                </location>
-            </place>
-            <place xml:id="pmb59">
-               <placeName>IX., Alsergrund</placeName>
-               <placeName type="legacy-name-merge">Thurygrund</placeName>
-               <placeName type="legacy-name-merge">Wien-Alsergrund</placeName>
-               <location type="coords">
-                  <geo>48,22387 16,35641</geo>
-               </location>
                <location type="located_in_place">
-                  <placeName ref="pmb50">Wien</placeName>
-                  <geo>48,208333 16,373056</geo>
+                  <placeName ref="pmb235218">Windmühlhöhe</placeName>
+                  <geo>48,24077 16,32092</geo>
                </location>
             </place>
          </listPlace>

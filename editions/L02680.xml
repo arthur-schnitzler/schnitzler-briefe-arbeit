@@ -1,6 +1,10 @@
-<?xml version='1.0' encoding='UTF-8'?>
+<?xml version="1.0" encoding="UTF-8"?>
 <?xml-model href="../meta/schnitzler-briefe-schematron.sch" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
-<TEI xmlns="http://www.tei-c.org/ns/1.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.tei-c.org/ns/1.0 ../meta/schnitzler-briefe-schema.xsd" xml:id="L02680" xml:base="https://id.acdh.oeaw.ac.at/schnitzler/schnitzler-briefe/editions">
+<TEI xmlns="http://www.tei-c.org/ns/1.0"
+     xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+     xsi:schemaLocation="http://www.tei-c.org/ns/1.0 ../meta/schnitzler-briefe-schema.xsd"
+     xml:id="L02680"
+     xml:base="https://id.acdh.oeaw.ac.at/schnitzler/schnitzler-briefe/editions">
    <teiHeader>
       <fileDesc>
          <titleStmt>
@@ -138,12 +142,20 @@
                <date when="1899-03-20">20. 3. 1899</date>
                <placeName ref="#pmb168934">Frankgasse 1</placeName>
             </correspAction>
-            <correspContext><ref type="belongsToCorrespondence" target="correspondence_11485">Goldmann, Paul</ref>
+            <correspContext>
+               <ref type="belongsToCorrespondence" target="correspondence_11485">Goldmann, Paul</ref>
                <ref subtype="previous_letter" type="withinCollection" target="L02635">Schnitzler an Goldmann, 19. 3. 1899</ref>
                <ref subtype="next_letter" type="withinCollection" target="L02870">Goldmann an Schnitzler, 20. 3. [1899]</ref>
-               <ref subtype="previous_letter" type="withinCorrespondence" source="correspondence_11485" target="L02635">Schnitzler an Goldmann, 19. 3. 1899</ref>
-               <ref subtype="next_letter" type="withinCorrespondence" source="correspondence_11485" target="L02870">Goldmann an Schnitzler, 20. 3. [1899]</ref>
-            </correspContext></correspDesc>
+               <ref subtype="previous_letter"
+                    type="withinCorrespondence"
+                    source="correspondence_11485"
+                    target="L02635">Schnitzler an Goldmann, 19. 3. 1899</ref>
+               <ref subtype="next_letter"
+                    type="withinCorrespondence"
+                    source="correspondence_11485"
+                    target="L02870">Goldmann an Schnitzler, 20. 3. [1899]</ref>
+            </correspContext>
+         </correspDesc>
       </profileDesc>
       <revisionDesc status="approved">
          <change who="MAM" when="2022-06-07">Angelegt</change>
@@ -176,45 +188,124 @@
             </p>
          </div>
       </body>
-      <back><listPerson><person xml:id="pmb11485"><persName>
-      <forename>Paul</forename>
-      <surname>Goldmann</surname>
-  </persName><birth>
-    <date when="1865-01-31">1865-01-31</date>
-      <settlement ref="pmb677">
-        <placeName type="pref">Breslau</placeName>
-        <location><geo>51,10773 17,03533</geo></location>
-      </settlement>
-  </birth><death>
-    <date when="1935-09-25">1935-09-25</date>
-      <settlement ref="pmb50">
-        <placeName type="pref">Wien</placeName>
-        <location><geo>48,208333 16,373056</geo></location>
-      </settlement>
-  </death></person><person xml:id="pmb2121"><persName><surname>Schnitzler</surname><forename>Arthur</forename></persName><birth><date when="1862-05-15">15. 5. 1862</date><settlement ref="pmb50"><placeName type="pref">Wien</placeName><location><geo>48,208333 16,373056</geo></location></settlement></birth><death><date when="1931-10-21">21. 10. 1931</date><settlement ref="pmb50"><placeName type="pref">Wien</placeName><location><geo>48,208333 16,373056</geo></location></settlement></death><sex value="male"/><occupation ref="pmb90">Schriftsteller/Schriftstellerin</occupation><occupation ref="pmb97">Mediziner/Medizinerin</occupation><idno type="gnd">https://d-nb.info/gnd/118609807/</idno></person><person xml:id="pmb88956"><persName>
-      <surname>Ulrich</surname>
-  </persName></person></listPerson><listPlace><place xml:id="pmb146"><placeName>Frankfurt am Main</placeName><placeName type="ort_namensvariante">Frankfurt a. Main</placeName><placeName type="ort_namensvariante">Frankfurt/Main</placeName><location type="coords">
-  <geo>50,11552 8,68417</geo>
-</location><location type="located_in_place">
-  <placeName ref="pmb151">Deutschland</placeName>
-  <geo>51,5 10,5</geo>
-</location></place><place xml:id="pmb168934"><placeName>Frankgasse 1</placeName><location type="coords">
-  <geo>48,21533 16,35736</geo>
-</location><location type="located_in_place">
-  <placeName ref="pmb59">IX., Alsergrund</placeName>
-  <geo>48,22387 16,35641</geo>
-</location><location type="located_in_place">
-  <placeName ref="pmb397">Frankgasse</placeName>
-  <geo>48,215516628628 16,356475515829</geo>
-</location></place><place xml:id="pmb50"><placeName>Wien</placeName><placeName type="ort_fruherer-name">K.K. Reichshaupt- und Residenzstadt Wien</placeName><placeName type="legacy-name-merge">Wien</placeName><placeName type="alternative-name">Bécs</placeName><placeName type="alternative-name">Land Wien</placeName><placeName type="alternative-name">Vídeň</placeName><placeName type="alternative-name">Wenia</placeName><placeName type="alternative-name">Beč</placeName><placeName type="ort_fruherer-name">Vindobona</placeName><placeName type="legacy-name-merge">Vindobona</placeName><placeName type="alternative-name">Vienna</placeName><placeName type="legacy-name-merge">Vienna</placeName><placeName type="alternative-name">Vienna</placeName><location type="coords">
-  <geo>48,208333 16,373056</geo>
-</location><location type="located_in_place">
-  <placeName ref="pmb41240">Österreich</placeName>
-  <geo>47,33333 13,33333</geo>
-</location></place><place xml:id="pmb59"><placeName>IX., Alsergrund</placeName><placeName type="legacy-name-merge">Thurygrund</placeName><placeName type="legacy-name-merge">Wien-Alsergrund</placeName><location type="coords">
-  <geo>48,22387 16,35641</geo>
-</location><location type="located_in_place">
-  <placeName ref="pmb50">Wien</placeName>
-  <geo>48,208333 16,373056</geo>
-</location></place></listPlace></back></text>
+      <back>
+         <listPerson>
+            <person xml:id="pmb11485">
+               <persName>
+                  <forename>Paul</forename>
+                  <surname>Goldmann</surname>
+               </persName>
+               <birth>
+                  <date when="1865-01-31">1865-01-31</date>
+                  <settlement ref="pmb677">
+                     <placeName type="pref">Breslau</placeName>
+                     <location>
+                        <geo>51,10773 17,03533</geo>
+                     </location>
+                  </settlement>
+               </birth>
+               <death>
+                  <date when="1935-09-25">1935-09-25</date>
+                  <settlement ref="pmb50">
+                     <placeName type="pref">Wien</placeName>
+                     <location>
+                        <geo>48,208333 16,373056</geo>
+                     </location>
+                  </settlement>
+               </death>
+            </person>
+            <person xml:id="pmb88956">
+               <persName>
+                  <surname>Ulrich</surname>
+               </persName>
+            </person>
+            <person xml:id="pmb2121">
+               <persName>
+                  <surname>Schnitzler</surname>
+                  <forename>Arthur</forename>
+               </persName>
+               <birth>
+                  <date when="1862-05-15">15. 5. 1862</date>
+                  <settlement ref="pmb50">
+                     <placeName type="pref">Wien</placeName>
+                     <location>
+                        <geo>48,208333 16,373056</geo>
+                     </location>
+                  </settlement>
+               </birth>
+               <death>
+                  <date when="1931-10-21">21. 10. 1931</date>
+                  <settlement ref="pmb50">
+                     <placeName type="pref">Wien</placeName>
+                     <location>
+                        <geo>48,208333 16,373056</geo>
+                     </location>
+                  </settlement>
+               </death>
+            </person>
+         </listPerson>
+         <listPlace>
+            <place xml:id="pmb59">
+               <placeName>IX., Alsergrund</placeName>
+               <placeName type="legacy-name-merge">Thurygrund</placeName>
+               <placeName type="legacy-name-merge">Wien-Alsergrund</placeName>
+               <location type="coords">
+                  <geo>48,22387 16,35641</geo>
+               </location>
+               <location type="located_in_place">
+                  <placeName ref="pmb50">Wien</placeName>
+                  <geo>48,208333 16,373056</geo>
+               </location>
+            </place>
+            <place xml:id="pmb146">
+               <placeName>Frankfurt am Main</placeName>
+               <placeName type="ort_namensvariante">Frankfurt a. Main</placeName>
+               <placeName type="ort_namensvariante">Frankfurt/Main</placeName>
+               <location type="coords">
+                  <geo>50,11552 8,68417</geo>
+               </location>
+               <location type="located_in_place">
+                  <placeName ref="pmb151">Deutschland</placeName>
+                  <geo>51,5 10,5</geo>
+               </location>
+            </place>
+            <place xml:id="pmb50">
+               <placeName>Wien</placeName>
+               <placeName type="ort_fruherer-name">K.K. Reichshaupt- und Residenzstadt Wien</placeName>
+               <placeName type="alternative-name">Bécs</placeName>
+               <placeName type="alternative-name">Land Wien</placeName>
+               <placeName type="alternative-name">Vídeň</placeName>
+               <placeName type="alternative-name">Wenia</placeName>
+               <placeName type="alternative-name">Beč</placeName>
+               <placeName type="ort_fruherer-name">Vindobona</placeName>
+               <placeName type="alternative-name">Vienna</placeName>
+               <location type="coords">
+                  <geo>48,208333 16,373056</geo>
+               </location>
+               <location type="located_in_place">
+                  <placeName ref="pmb41240">Österreich</placeName>
+                  <geo>47,33333 13,33333</geo>
+               </location>
+               <location type="located_in_place">
+                  <placeName ref="pmb235218">Windmühlhöhe</placeName>
+                  <geo>48,24077 16,32092</geo>
+               </location>
+            </place>
+            <place xml:id="pmb168934">
+               <placeName>Frankgasse 1</placeName>
+               <location type="coords">
+                  <geo>48,21533 16,35736</geo>
+               </location>
+               <location type="located_in_place">
+                  <placeName ref="pmb59">IX., Alsergrund</placeName>
+                  <geo>48,22387 16,35641</geo>
+               </location>
+               <location type="located_in_place">
+                  <placeName ref="pmb397">Frankgasse</placeName>
+                  <geo>48,215516628628 16,356475515829</geo>
+               </location>
+            </place>
+         </listPlace>
+      </back>
+   </text>
 </TEI>

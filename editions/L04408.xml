@@ -1,6 +1,10 @@
-<?xml version='1.0' encoding='UTF-8'?>
+<?xml version="1.0" encoding="UTF-8"?>
 <?xml-model href="../meta/schnitzler-briefe-schematron.sch" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
-<TEI xmlns="http://www.tei-c.org/ns/1.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.tei-c.org/ns/1.0 ../meta/schnitzler-briefe-schema.xsd" xml:base="https://id.acdh.oeaw.ac.at/schnitzler/schnitzler-briefe/editions" xml:id="L04408">
+<TEI xmlns="http://www.tei-c.org/ns/1.0"
+     xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+     xsi:schemaLocation="http://www.tei-c.org/ns/1.0 ../meta/schnitzler-briefe-schema.xsd"
+     xml:base="https://id.acdh.oeaw.ac.at/schnitzler/schnitzler-briefe/editions"
+     xml:id="L04408">
    <teiHeader>
       <fileDesc>
          <titleStmt>
@@ -122,7 +126,7 @@
          <correspDesc>
             <correspAction type="sent">
                <persName ref="#pmb2121">Schnitzler, Arthur</persName>
-               <date n="01" notBefore="1900-03-03" notAfter="1900-03-04">[3. oder 4]. 3. 1900</date>
+               <date notBefore="1900-03-03" notAfter="1900-03-04" n="01">[3. oder 4]. 3. 1900</date>
                <placeName ref="#pmb714">Hotel Edlacherhof</placeName>
             </correspAction>
             <correspAction type="transmitted">
@@ -138,12 +142,20 @@
                <date when="1900-03-05">5. 3. 1900</date>
                <placeName ref="#pmb207296">Tiefer Graben 23</placeName>
             </correspAction>
-            <correspContext><ref type="belongsToCorrespondence" target="correspondence_12740">Schwarzkopf, Gustav</ref>
+            <correspContext>
+               <ref type="belongsToCorrespondence" target="correspondence_12740">Schwarzkopf, Gustav</ref>
                <ref subtype="previous_letter" type="withinCollection" target="L01017">Schnitzler an Beer-Hofmann, 2. 3. 1900</ref>
                <ref subtype="next_letter" type="withinCollection" target="L02906">Goldmann an Schnitzler, 4. 3. 1900</ref>
-               <ref subtype="previous_letter" type="withinCorrespondence" source="correspondence_12740" target="L04085">Schnitzler an Schwarzkopf, 11. 2. 1900</ref>
-               <ref subtype="next_letter" type="withinCorrespondence" source="correspondence_12740" target="L04396">Schnitzler an Schwarzkopf, 29. 3. 1900</ref>
-            </correspContext></correspDesc>
+               <ref subtype="previous_letter"
+                    type="withinCorrespondence"
+                    source="correspondence_12740"
+                    target="L04085">Schnitzler an Schwarzkopf, 11. 2. 1900</ref>
+               <ref subtype="next_letter"
+                    type="withinCorrespondence"
+                    source="correspondence_12740"
+                    target="L04396">Schnitzler an Schwarzkopf, 29. 3. 1900</ref>
+            </correspContext>
+         </correspDesc>
       </profileDesc>
       <revisionDesc status="proposed">
          <change who="MAM" when="2026-06-11">Export aus Transkribus</change>
@@ -262,6 +274,34 @@
                   <geo>48,33333 15,75</geo>
                </location>
             </place>
+            <place xml:id="pmb365214">
+               <placeName>1/1 Post- und Telegraphenamt 1</placeName>
+               <location type="coords">
+                  <geo>48,210359 16,378357</geo>
+               </location>
+               <location type="located_in_place">
+                  <placeName ref="pmb51">I., Innere Stadt</placeName>
+                  <geo>48,20769 16,37049</geo>
+               </location>
+               <location type="located_in_place">
+                  <placeName ref="pmb50667">Fleischmarkt</placeName>
+                  <geo>48,211117 16,376627</geo>
+               </location>
+            </place>
+            <place xml:id="pmb714">
+               <placeName>Hotel Edlacherhof</placeName>
+               <location type="coords">
+                  <geo>47,689132 15,805582</geo>
+               </location>
+               <location type="located_in_place">
+                  <placeName ref="pmb483">Reichenau an der Rax</placeName>
+                  <geo>47,7 15,83333</geo>
+               </location>
+               <location type="located_in_place">
+                  <placeName ref="pmb470">Edlach</placeName>
+                  <geo>47,69255 15,80915</geo>
+               </location>
+            </place>
             <place xml:id="pmb51">
                <placeName>I., Innere Stadt</placeName>
                <placeName type="alternative-name">Inner city</placeName>
@@ -278,20 +318,6 @@
                <location type="located_in_place">
                   <placeName ref="pmb50">Wien</placeName>
                   <geo>48,208333 16,373056</geo>
-               </location>
-            </place>
-            <place xml:id="pmb714">
-               <placeName>Hotel Edlacherhof</placeName>
-               <location type="coords">
-                  <geo>47,689132 15,805582</geo>
-               </location>
-               <location type="located_in_place">
-                  <placeName ref="pmb483">Reichenau an der Rax</placeName>
-                  <geo>47,7 15,83333</geo>
-               </location>
-               <location type="located_in_place">
-                  <placeName ref="pmb470">Edlach</placeName>
-                  <geo>47,69255 15,80915</geo>
                </location>
             </place>
             <place xml:id="pmb207296">

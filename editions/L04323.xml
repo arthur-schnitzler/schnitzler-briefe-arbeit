@@ -1,6 +1,10 @@
-<?xml version='1.0' encoding='UTF-8'?>
+<?xml version="1.0" encoding="UTF-8"?>
 <?xml-model href="../meta/schnitzler-briefe-schematron.sch" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
-<TEI xmlns="http://www.tei-c.org/ns/1.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.tei-c.org/ns/1.0 ../meta/schnitzler-briefe-schema.xsd" xml:base="https://id.acdh.oeaw.ac.at/schnitzler/schnitzler-briefe/editions" xml:id="L04323">
+<TEI xmlns="http://www.tei-c.org/ns/1.0"
+     xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+     xsi:schemaLocation="http://www.tei-c.org/ns/1.0 ../meta/schnitzler-briefe-schema.xsd"
+     xml:base="https://id.acdh.oeaw.ac.at/schnitzler/schnitzler-briefe/editions"
+     xml:id="L04323">
    <teiHeader>
       <fileDesc>
          <titleStmt>
@@ -118,18 +122,23 @@
             </correspAction>
             <correspAction type="transmitted">
                <date notBefore="1891-05-13" notAfter="1891-12-31">[zwischen 13. 5. und 31. 12. 1891?]</date>
-               <placeName ref="#pmb462">Venezia</placeName>
+               <placeName ref="#pmb462">Venedig</placeName>
             </correspAction>
             <correspAction type="received">
                <persName ref="#pmb2121">Schnitzler, Arthur</persName>
                <date notBefore="1891-05-14" notAfter="1892-01-01">[zwischen 14. 5. und 1. 1. 1892?]</date>
                <placeName ref="#pmb167805">Kärntnerring 12/Bösendorferstraße 11</placeName>
             </correspAction>
-            <correspContext><ref type="belongsToCorrespondence" target="correspondence_26121">Torresani, Carl von</ref>
+            <correspContext>
+               <ref type="belongsToCorrespondence" target="correspondence_26121">Torresani, Carl von</ref>
                <ref subtype="previous_letter" type="withinCollection" target="L02662">Goldmann an Schnitzler, 11. 5. 1891</ref>
                <ref subtype="next_letter" type="withinCollection" target="L02663">Goldmann an Schnitzler, 16. 5. 1891</ref>
-               <ref subtype="next_letter" type="withinCorrespondence" source="correspondence_26121" target="L04327">Torresani an Schnitzler, 6. 2. 1892</ref>
-            </correspContext></correspDesc>
+               <ref subtype="next_letter"
+                    type="withinCorrespondence"
+                    source="correspondence_26121"
+                    target="L04327">Torresani an Schnitzler, 6. 2. 1892</ref>
+            </correspContext>
+         </correspDesc>
       </profileDesc>
       <revisionDesc status="proposed">
          <change who="MAM" when="2026-03-04">Export aus Transkribus</change>
@@ -205,26 +214,26 @@
       </body>
       <back>
          <listPerson>
-            <person xml:id="pmb18870">
+            <person xml:id="pmb26121">
                <persName>
-                  <forename>Jaques</forename>
-                  <surname>Joachim</surname>
+                  <forename>Carl von</forename>
+                  <surname>Torresani-Lanzenfeld</surname>
                </persName>
                <birth>
-                  <date when="1866-11-24">1866-11-24</date>
-                  <settlement ref="pmb50">
-                     <placeName type="pref">Wien</placeName>
+                  <date when="1846-04-19">1846-04-19</date>
+                  <settlement ref="pmb886">
+                     <placeName type="pref">Mailand</placeName>
                      <location>
-                        <geo>48,208333 16,373056</geo>
+                        <geo>45,46427 9,18951</geo>
                      </location>
                   </settlement>
                </birth>
                <death>
-                  <date when="1925-11-07">1925-11-07</date>
-                  <settlement ref="pmb50">
-                     <placeName type="pref">Wien</placeName>
+                  <date when="1907-04-16">1907-04-16</date>
+                  <settlement ref="pmb36469">
+                     <placeName type="pref">Nago-Torbole</placeName>
                      <location>
-                        <geo>48,208333 16,373056</geo>
+                        <geo>45,87594 10,89106</geo>
                      </location>
                   </settlement>
                </death>
@@ -235,7 +244,7 @@
                   <forename>Arthur</forename>
                </persName>
                <birth>
-                  <date when="1862-05-15">15. 5. 1862</date>
+                  <date when="1862-05-15">15. 5. 1862</date>
                   <settlement ref="pmb50">
                      <placeName type="pref">Wien</placeName>
                      <location>
@@ -244,7 +253,7 @@
                   </settlement>
                </birth>
                <death>
-                  <date when="1931-10-21">21. 10. 1931</date>
+                  <date when="1931-10-21">21. 10. 1931</date>
                   <settlement ref="pmb50">
                      <placeName type="pref">Wien</placeName>
                      <location>
@@ -252,10 +261,6 @@
                      </location>
                   </settlement>
                </death>
-               <sex value="male"/>
-               <occupation ref="pmb90">Schriftsteller/Schriftstellerin</occupation>
-               <occupation ref="pmb97">Mediziner/Medizinerin</occupation>
-               <idno type="gnd">https://d-nb.info/gnd/118609807/</idno>
             </person>
             <person xml:id="pmb2167">
                <persName>
@@ -305,67 +310,90 @@
                   </settlement>
                </death>
             </person>
-            <person xml:id="pmb26121">
+            <person xml:id="pmb18870">
                <persName>
-                  <forename>Carl von</forename>
-                  <surname>Torresani-Lanzenfeld</surname>
+                  <forename>Jaques</forename>
+                  <surname>Joachim</surname>
                </persName>
                <birth>
-                  <date when="1846-04-19">1846-04-19</date>
-                  <settlement ref="pmb886">
-                     <placeName type="pref">Mailand</placeName>
+                  <date when="1866-11-24">1866-11-24</date>
+                  <settlement ref="pmb50">
+                     <placeName type="pref">Wien</placeName>
                      <location>
-                        <geo>45,46427 9,18951</geo>
+                        <geo>48,208333 16,373056</geo>
                      </location>
                   </settlement>
                </birth>
                <death>
-                  <date when="1907-04-16">1907-04-16</date>
-                  <settlement ref="pmb36469">
-                     <placeName type="pref">Nago-Torbole</placeName>
+                  <date when="1925-11-07">1925-11-07</date>
+                  <settlement ref="pmb50">
+                     <placeName type="pref">Wien</placeName>
                      <location>
-                        <geo>45,87594 10,89106</geo>
+                        <geo>48,208333 16,373056</geo>
+                     </location>
+                  </settlement>
+               </death>
+            </person>
+            <person xml:id="pmb12654">
+               <persName>
+                  <forename>Friedrich von</forename>
+                  <surname>Schiller</surname>
+               </persName>
+               <birth>
+                  <date when="1759-11-10">1759-11-10</date>
+                  <settlement ref="pmb39585">
+                     <placeName type="pref">Marbach am Neckar</placeName>
+                     <location>
+                        <geo>48,93964 9,25995</geo>
+                     </location>
+                  </settlement>
+               </birth>
+               <death>
+                  <date when="1805-05-09">1805-05-09</date>
+                  <settlement ref="pmb197">
+                     <placeName type="pref">Weimar</placeName>
+                     <location>
+                        <geo>50,97361 11,33806</geo>
                      </location>
                   </settlement>
                </death>
             </person>
          </listPerson>
          <listBibl>
-            <bibl xml:id="pmb31655" ana="comment">
-               <title type="main">Die Juckercomtesse. Roman aus der Gesellschaft</title>
-               <author role="hat-geschaffen" ref="pmb26121">Torresani-Lanzenfeld, Carl von</author>
-            </bibl>
-            <bibl xml:id="pmb33243" ana="comment">
-               <title type="main">Tagebuch</title>
-               <title type="werk_link">https://schnitzler-tagebuch.acdh.oeaw.ac.at</title>
-               <author role="hat-geschaffen" ref="pmb2121">Schnitzler, Arthur</author>
-            </bibl>
-            <bibl xml:id="pmb336737" ana="comment">
-               <title type="main">Der Ring des Polykrates</title>
-               <author role="hat-geschaffen" ref="pmb12654">Schiller, Friedrich von</author>
-            </bibl>
-            <bibl xml:id="pmb35950" ana="comment">
-               <title type="main">Moderne Dichtung. Monatsschrift für Literatur und Kritik</title>
-               <title type="werk_link">http://www.digitalniknihovna.cz/nkp/periodical/uuid:76446450-3950-11e7-8881-5ef3fc9ae867</title>
-               <author role="hat-herausgegeben" ref="pmb2563">Kafka, Eduard Michael</author>
-               <author role="hat-herausgegeben" ref="pmb18870">Joachim, Jaques</author>
+            <bibl xml:id="pmb31655" ana="implied">
+               <title>Die Juckercomtesse. Roman aus der Gesellschaft</title>
+               <author ref="pmb26121" role="hat-geschaffen">Torresani-Lanzenfeld, Carl von</author>
             </bibl>
             <bibl xml:id="pmb47979" ana="comment">
-               <title type="main">Börsenblatt für den Deutschen Buchhandel</title>
+               <title>Börsenblatt für den Deutschen Buchhandel</title>
                <title type="werk_link">https://www.boersenblatt-digital.de</title>
+            </bibl>
+            <bibl xml:id="pmb336737" ana="implied">
+               <title>Der Ring des Polykrates</title>
+               <author ref="pmb12654" role="hat-geschaffen">Schiller, Friedrich von</author>
+            </bibl>
+            <bibl xml:id="pmb33243" ana="comment">
+               <title>Tagebuch</title>
+               <title type="werk_link">https://schnitzler-tagebuch.acdh.oeaw.ac.at</title>
+               <author ref="pmb2121" role="hat-geschaffen">Schnitzler, Arthur</author>
+            </bibl>
+            <bibl xml:id="pmb35950" ana="comment">
+               <title>Moderne Dichtung. Monatsschrift für Literatur und Kritik</title>
+               <title type="werk_link">http://www.digitalniknihovna.cz/nkp/periodical/uuid:76446450-3950-11e7-8881-5ef3fc9ae867</title>
+               <author ref="pmb2563" role="hat-herausgegeben">Kafka, Eduard Michael</author>
+               <author ref="pmb18870" role="hat-herausgegeben">Joachim, Jaques</author>
             </bibl>
          </listBibl>
          <listPlace>
-            <place xml:id="pmb148426">
-               <placeName>Albergo Metropole</placeName>
-               <placeName type="ort_fruherer-name">Casa Kirsch</placeName>
-               <placeName type="ort_namensvariante">Hotel Metropole</placeName>
+            <place xml:id="pmb462">
+               <placeName>Venedig</placeName>
+               <placeName type="legacy-name-merge">Venice</placeName>
                <location type="coords">
-                  <geo>45,434 12,34529</geo>
+                  <geo>45,43713 12,33265</geo>
                </location>
                <location type="located_in_place">
-                  <placeName ref="pmb462">Venedig</placeName>
-                  <geo>45,43713 12,33265</geo>
+                  <placeName ref="pmb40306">Italien</placeName>
+                  <geo>42,83333 12,83333</geo>
                </location>
             </place>
             <place xml:id="pmb167805">
@@ -387,12 +415,32 @@
                   <geo>48,201213 16,371141</geo>
                </location>
             </place>
+            <place xml:id="pmb50">
+               <placeName>Wien</placeName>
+               <placeName type="ort_fruherer-name">K.K. Reichshaupt- und Residenzstadt Wien</placeName>
+               <placeName type="alternative-name">Bécs</placeName>
+               <placeName type="alternative-name">Land Wien</placeName>
+               <placeName type="alternative-name">Vídeň</placeName>
+               <placeName type="alternative-name">Wenia</placeName>
+               <placeName type="alternative-name">Beč</placeName>
+               <placeName type="ort_fruherer-name">Vindobona</placeName>
+               <placeName type="alternative-name">Vienna</placeName>
+               <location type="coords">
+                  <geo>48,208333 16,373056</geo>
+               </location>
+               <location type="located_in_place">
+                  <placeName ref="pmb41240">Österreich</placeName>
+                  <geo>47,33333 13,33333</geo>
+               </location>
+               <location type="located_in_place">
+                  <placeName ref="pmb235218">Windmühlhöhe</placeName>
+                  <geo>48,24077 16,32092</geo>
+               </location>
+            </place>
             <place xml:id="pmb41240">
                <placeName>Österreich</placeName>
                <placeName type="alternative-name">Republik Österreich</placeName>
-               <placeName type="legacy-name-merge">Österreich</placeName>
                <placeName type="alternative-name">Republic of Austria</placeName>
-               <placeName type="legacy-name-merge">Österreich</placeName>
                <placeName type="legacy-name-merge">Deutsch Österreich</placeName>
                <placeName type="legacy-name-merge">Altoesterreich</placeName>
                <location type="coords">
@@ -411,39 +459,16 @@
                   <geo>48,4054 16,4887</geo>
                </location>
             </place>
-            <place xml:id="pmb462">
-               <placeName>Venedig</placeName>
-               <placeName type="alternative-name">Venedig</placeName>
-               <placeName type="legacy-name-merge">Venice</placeName>
-               <placeName type="legacy-name-merge">Venedig</placeName>
+            <place xml:id="pmb148426">
+               <placeName>Albergo Metropole</placeName>
+               <placeName type="ort_fruherer-name">Casa Kirsch</placeName>
+               <placeName type="ort_namensvariante">Hotel Metropole</placeName>
                <location type="coords">
+                  <geo>45,434 12,34529</geo>
+               </location>
+               <location type="located_in_place">
+                  <placeName ref="pmb462">Venedig</placeName>
                   <geo>45,43713 12,33265</geo>
-               </location>
-               <location type="located_in_place">
-                  <placeName ref="pmb40306">Italien</placeName>
-                  <geo>42,83333 12,83333</geo>
-               </location>
-            </place>
-            <place xml:id="pmb50">
-               <placeName>Wien</placeName>
-               <placeName type="ort_fruherer-name">K.K. Reichshaupt- und Residenzstadt Wien</placeName>
-               <placeName type="legacy-name-merge">Wien</placeName>
-               <placeName type="alternative-name">Bécs</placeName>
-               <placeName type="alternative-name">Land Wien</placeName>
-               <placeName type="alternative-name">Vídeň</placeName>
-               <placeName type="alternative-name">Wenia</placeName>
-               <placeName type="alternative-name">Beč</placeName>
-               <placeName type="ort_fruherer-name">Vindobona</placeName>
-               <placeName type="legacy-name-merge">Vindobona</placeName>
-               <placeName type="alternative-name">Vienna</placeName>
-               <placeName type="legacy-name-merge">Vienna</placeName>
-               <placeName type="alternative-name">Vienna</placeName>
-               <location type="coords">
-                  <geo>48,208333 16,373056</geo>
-               </location>
-               <location type="located_in_place">
-                  <placeName ref="pmb41240">Österreich</placeName>
-                  <geo>47,33333 13,33333</geo>
                </location>
             </place>
          </listPlace>

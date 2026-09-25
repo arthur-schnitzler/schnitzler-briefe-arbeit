@@ -1,6 +1,10 @@
-<?xml version='1.0' encoding='UTF-8'?>
+<?xml version="1.0" encoding="UTF-8"?>
 <?xml-model href="../meta/schnitzler-briefe-schematron.sch" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
-<TEI xmlns="http://www.tei-c.org/ns/1.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.tei-c.org/ns/1.0 ../meta/schnitzler-briefe-schema.xsd" xml:base="https://id.acdh.oeaw.ac.at/schnitzler/schnitzler-briefe/editions" xml:id="L04179">
+<TEI xmlns="http://www.tei-c.org/ns/1.0"
+     xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+     xsi:schemaLocation="http://www.tei-c.org/ns/1.0 ../meta/schnitzler-briefe-schema.xsd"
+     xml:base="https://id.acdh.oeaw.ac.at/schnitzler/schnitzler-briefe/editions"
+     xml:id="L04179">
    <teiHeader>
       <fileDesc>
          <titleStmt>
@@ -112,12 +116,20 @@
                   – 19. 1. 1902?]</date>
                <placeName ref="#pmb50">Wien</placeName>
             </correspAction>
-            <correspContext><ref type="belongsToCorrespondence" target="correspondence_12740">Schwarzkopf, Gustav</ref>
+            <correspContext>
+               <ref type="belongsToCorrespondence" target="correspondence_12740">Schwarzkopf, Gustav</ref>
                <ref subtype="previous_letter" type="withinCollection" target="L04181">Schnitzler an Schwarzkopf, [15. 1. 1902?]</ref>
                <ref subtype="next_letter" type="withinCollection" target="L03193">Goldmann an Schnitzler, 16. 1. [1902]</ref>
-               <ref subtype="previous_letter" type="withinCorrespondence" source="correspondence_12740" target="L04181">Schnitzler an Schwarzkopf, [15. 1. 1902?]</ref>
-               <ref subtype="next_letter" type="withinCorrespondence" source="correspondence_12740" target="L04074">Schnitzler an Schwarzkopf, 20. 1. 1902</ref>
-            </correspContext></correspDesc>
+               <ref subtype="previous_letter"
+                    type="withinCorrespondence"
+                    source="correspondence_12740"
+                    target="L04181">Schnitzler an Schwarzkopf, [15. 1. 1902?]</ref>
+               <ref subtype="next_letter"
+                    type="withinCorrespondence"
+                    source="correspondence_12740"
+                    target="L04074">Schnitzler an Schwarzkopf, 20. 1. 1902</ref>
+            </correspContext>
+         </correspDesc>
       </profileDesc>
       <revisionDesc status="proposed">
          <change who="MAM" when="2025-12-10">Export aus Transkribus</change>
@@ -168,6 +180,30 @@
       </body>
       <back>
          <listPerson>
+            <person xml:id="pmb2121">
+               <persName>
+                  <surname>Schnitzler</surname>
+                  <forename>Arthur</forename>
+               </persName>
+               <birth>
+                  <date when="1862-05-15">15. 5. 1862</date>
+                  <settlement ref="pmb50">
+                     <placeName type="pref">Wien</placeName>
+                     <location>
+                        <geo>48,208333 16,373056</geo>
+                     </location>
+                  </settlement>
+               </birth>
+               <death>
+                  <date when="1931-10-21">21. 10. 1931</date>
+                  <settlement ref="pmb50">
+                     <placeName type="pref">Wien</placeName>
+                     <location>
+                        <geo>48,208333 16,373056</geo>
+                     </location>
+                  </settlement>
+               </death>
+            </person>
             <person xml:id="pmb12740">
                <persName>
                   <forename>Gustav</forename>
@@ -192,13 +228,13 @@
                   </settlement>
                </death>
             </person>
-            <person xml:id="pmb2121">
+            <person xml:id="pmb2173" ana="comment">
                <persName>
+                  <forename>Olga</forename>
                   <surname>Schnitzler</surname>
-                  <forename>Arthur</forename>
                </persName>
                <birth>
-                  <date when="1862-05-15">15. 5. 1862</date>
+                  <date when="1882-01-17">1882-01-17</date>
                   <settlement ref="pmb50">
                      <placeName type="pref">Wien</placeName>
                      <location>
@@ -207,18 +243,14 @@
                   </settlement>
                </birth>
                <death>
-                  <date when="1931-10-21">21. 10. 1931</date>
-                  <settlement ref="pmb50">
-                     <placeName type="pref">Wien</placeName>
+                  <date when="1970-01-13">1970-01-13</date>
+                  <settlement ref="pmb885">
+                     <placeName type="pref">Lugano</placeName>
                      <location>
-                        <geo>48,208333 16,373056</geo>
+                        <geo>46,01008 8,96004</geo>
                      </location>
                   </settlement>
                </death>
-               <sex value="male"/>
-               <occupation ref="pmb90">Schriftsteller/Schriftstellerin</occupation>
-               <occupation ref="pmb97">Mediziner/Medizinerin</occupation>
-               <idno type="gnd">https://d-nb.info/gnd/118609807/</idno>
             </person>
             <person xml:id="pmb12692" ana="comment">
                <persName>
@@ -274,30 +306,6 @@
                   </settlement>
                </death>
             </person>
-            <person xml:id="pmb2173" ana="comment">
-               <persName>
-                  <forename>Olga</forename>
-                  <surname>Schnitzler</surname>
-               </persName>
-               <birth>
-                  <date when="1882-01-17">1882-01-17</date>
-                  <settlement ref="pmb50">
-                     <placeName type="pref">Wien</placeName>
-                     <location>
-                        <geo>48,208333 16,373056</geo>
-                     </location>
-                  </settlement>
-               </birth>
-               <death>
-                  <date when="1970-01-13">1970-01-13</date>
-                  <settlement ref="pmb885">
-                     <placeName type="pref">Lugano</placeName>
-                     <location>
-                        <geo>46,01008 8,96004</geo>
-                     </location>
-                  </settlement>
-               </death>
-            </person>
             <person xml:id="pmb12701" ana="implied">
                <persName>
                   <forename>Louise</forename>
@@ -324,31 +332,27 @@
             </person>
          </listPerson>
          <listBibl>
-            <bibl xml:id="pmb30255" ana="comment">
-               <title type="main">Die Ehre. Schauspiel in 4 Akten</title>
-               <title type="legacy-name-merge">Die Ehre</title>
-               <author role="hat-geschaffen" ref="pmb12899">Sudermann, Hermann</author>
-            </bibl>
             <bibl xml:id="pmb33243" ana="comment">
-               <title type="main">Tagebuch</title>
+               <title>Tagebuch</title>
                <title type="werk_link">https://schnitzler-tagebuch.acdh.oeaw.ac.at</title>
-               <author role="hat-geschaffen" ref="pmb2121">Schnitzler, Arthur</author>
+               <author ref="pmb2121" role="hat-geschaffen">Schnitzler, Arthur</author>
+            </bibl>
+            <bibl xml:id="pmb30255" ana="implied">
+               <title>Die Ehre. Schauspiel in 4 Akten</title>
+               <title type="legacy-name-merge">Die Ehre</title>
+               <author ref="pmb12899" role="hat-geschaffen">Sudermann, Hermann</author>
             </bibl>
          </listBibl>
          <listPlace>
             <place xml:id="pmb50">
                <placeName>Wien</placeName>
                <placeName type="ort_fruherer-name">K.K. Reichshaupt- und Residenzstadt Wien</placeName>
-               <placeName type="legacy-name-merge">Wien</placeName>
                <placeName type="alternative-name">Bécs</placeName>
                <placeName type="alternative-name">Land Wien</placeName>
                <placeName type="alternative-name">Vídeň</placeName>
                <placeName type="alternative-name">Wenia</placeName>
                <placeName type="alternative-name">Beč</placeName>
                <placeName type="ort_fruherer-name">Vindobona</placeName>
-               <placeName type="legacy-name-merge">Vindobona</placeName>
-               <placeName type="alternative-name">Vienna</placeName>
-               <placeName type="legacy-name-merge">Vienna</placeName>
                <placeName type="alternative-name">Vienna</placeName>
                <location type="coords">
                   <geo>48,208333 16,373056</geo>
@@ -357,28 +361,19 @@
                   <placeName ref="pmb41240">Österreich</placeName>
                   <geo>47,33333 13,33333</geo>
                </location>
+               <location type="located_in_place">
+                  <placeName ref="pmb235218">Windmühlhöhe</placeName>
+                  <geo>48,24077 16,32092</geo>
+               </location>
             </place>
             <place xml:id="pmb968">
                <placeName>Mödling</placeName>
-               <placeName type="alternative-name">Mödling</placeName>
-               <placeName type="legacy-name-merge">Mödling</placeName>
-               <placeName type="legacy-name-merge">Mödling</placeName>
                <location type="coords">
                   <geo>48,08605 16,28921</geo>
                </location>
                <location type="located_in_place">
                   <placeName ref="pmb41240">Österreich</placeName>
                   <geo>47,33333 13,33333</geo>
-               </location>
-            </place>
-            <place xml:id="pmb132" ana="implied">
-               <placeName>Südbahnhof</placeName>
-               <location type="coords">
-                  <geo>48,187455471378 16,379829498031</geo>
-               </location>
-               <location type="located_in_place">
-                  <placeName ref="pmb60">X., Favoriten</placeName>
-                  <geo>48,17111 16,37778</geo>
                </location>
             </place>
             <place xml:id="pmb168934" ana="implied">
@@ -409,6 +404,16 @@
                <location type="located_in_place">
                   <placeName ref="pmb731">Garnisongasse</placeName>
                   <geo>48,216533356678 16,356214321972</geo>
+               </location>
+            </place>
+            <place xml:id="pmb132" ana="implied">
+               <placeName>Südbahnhof</placeName>
+               <location type="coords">
+                  <geo>48,187455471378 16,379829498031</geo>
+               </location>
+               <location type="located_in_place">
+                  <placeName ref="pmb60">X., Favoriten</placeName>
+                  <geo>48,17111 16,37778</geo>
                </location>
             </place>
          </listPlace>

@@ -1,6 +1,10 @@
-<?xml version='1.0' encoding='UTF-8'?>
+<?xml version="1.0" encoding="UTF-8"?>
 <?xml-model href="../meta/schnitzler-briefe-schematron.sch" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
-<TEI xmlns="http://www.tei-c.org/ns/1.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.tei-c.org/ns/1.0 ../meta/schnitzler-briefe-schema.xsd" xml:base="https://id.acdh.oeaw.ac.at/schnitzler/schnitzler-briefe/editions" xml:id="L04174">
+<TEI xmlns="http://www.tei-c.org/ns/1.0"
+     xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+     xsi:schemaLocation="http://www.tei-c.org/ns/1.0 ../meta/schnitzler-briefe-schema.xsd"
+     xml:base="https://id.acdh.oeaw.ac.at/schnitzler/schnitzler-briefe/editions"
+     xml:id="L04174">
    <teiHeader>
       <fileDesc>
          <titleStmt>
@@ -111,12 +115,20 @@
                   19. 1. 1900?]</date>
                <placeName ref="#pmb50" evidence="conjecture">Wien</placeName>
             </correspAction>
-            <correspContext><ref type="belongsToCorrespondence" target="correspondence_12740">Schwarzkopf, Gustav</ref>
+            <correspContext>
+               <ref type="belongsToCorrespondence" target="correspondence_12740">Schwarzkopf, Gustav</ref>
                <ref subtype="previous_letter" type="withinCollection" target="L02902">Goldmann, Glümer, Chlum, Coschell an Schnitzler, 11. 1. 1900</ref>
                <ref subtype="next_letter" type="withinCollection" target="L04342">Schnitzler an Rilke, 20. 1. 1900</ref>
-               <ref subtype="previous_letter" type="withinCorrespondence" source="correspondence_12740" target="L04137">Schnitzler an Schwarzkopf, 11. 12. 1[899?]</ref>
-               <ref subtype="next_letter" type="withinCorrespondence" source="correspondence_12740" target="L04092">Schnitzler an Schwarzkopf, 1. 2. [1900]</ref>
-            </correspContext></correspDesc>
+               <ref subtype="previous_letter"
+                    type="withinCorrespondence"
+                    source="correspondence_12740"
+                    target="L04137">Schnitzler an Schwarzkopf, 11. 12. 1[899?]</ref>
+               <ref subtype="next_letter"
+                    type="withinCorrespondence"
+                    source="correspondence_12740"
+                    target="L04092">Schnitzler an Schwarzkopf, 1. 2. [1900]</ref>
+            </correspContext>
+         </correspDesc>
       </profileDesc>
       <revisionDesc status="proposed">
          <change who="MAM" when="2025-12-10">Export aus Transkribus</change>
@@ -161,6 +173,30 @@
       </body>
       <back>
          <listPerson>
+            <person xml:id="pmb2121">
+               <persName>
+                  <surname>Schnitzler</surname>
+                  <forename>Arthur</forename>
+               </persName>
+               <birth>
+                  <date when="1862-05-15">15. 5. 1862</date>
+                  <settlement ref="pmb50">
+                     <placeName type="pref">Wien</placeName>
+                     <location>
+                        <geo>48,208333 16,373056</geo>
+                     </location>
+                  </settlement>
+               </birth>
+               <death>
+                  <date when="1931-10-21">21. 10. 1931</date>
+                  <settlement ref="pmb50">
+                     <placeName type="pref">Wien</placeName>
+                     <location>
+                        <geo>48,208333 16,373056</geo>
+                     </location>
+                  </settlement>
+               </death>
+            </person>
             <person xml:id="pmb12740">
                <persName>
                   <forename>Gustav</forename>
@@ -184,34 +220,6 @@
                      </location>
                   </settlement>
                </death>
-            </person>
-            <person xml:id="pmb2121">
-               <persName>
-                  <surname>Schnitzler</surname>
-                  <forename>Arthur</forename>
-               </persName>
-               <birth>
-                  <date when="1862-05-15">15. 5. 1862</date>
-                  <settlement ref="pmb50">
-                     <placeName type="pref">Wien</placeName>
-                     <location>
-                        <geo>48,208333 16,373056</geo>
-                     </location>
-                  </settlement>
-               </birth>
-               <death>
-                  <date when="1931-10-21">21. 10. 1931</date>
-                  <settlement ref="pmb50">
-                     <placeName type="pref">Wien</placeName>
-                     <location>
-                        <geo>48,208333 16,373056</geo>
-                     </location>
-                  </settlement>
-               </death>
-               <sex value="male"/>
-               <occupation ref="pmb90">Schriftsteller/Schriftstellerin</occupation>
-               <occupation ref="pmb97">Mediziner/Medizinerin</occupation>
-               <idno type="gnd">https://d-nb.info/gnd/118609807/</idno>
             </person>
             <person xml:id="pmb12877" ana="comment">
                <persName>
@@ -237,26 +245,72 @@
                   </settlement>
                </death>
             </person>
+            <person xml:id="pmb47716" ana="comment">
+               <persName>
+                  <forename>Erich</forename>
+                  <surname>Holm</surname>
+               </persName>
+               <birth>
+                  <date when="1844-01-03">1844-01-03</date>
+                  <settlement ref="pmb652">
+                     <placeName type="pref">Prag</placeName>
+                     <location>
+                        <geo>50,08333 14,46667</geo>
+                     </location>
+                  </settlement>
+               </birth>
+               <death>
+                  <date when="1921-02-01">1921-02-01</date>
+                  <settlement ref="pmb50">
+                     <placeName type="pref">Wien</placeName>
+                     <location>
+                        <geo>48,208333 16,373056</geo>
+                     </location>
+                  </settlement>
+               </death>
+            </person>
          </listPerson>
          <listBibl>
             <bibl xml:id="pmb30749" ana="comment">
-               <title type="main">Die Frage an das Schicksal</title>
+               <title>Die Frage an das Schicksal</title>
                <title type="werk_bibliografische-angabe">Moderne Dichtung, Bd. 1, H. 5, 1. 5. 1890, 299–306</title>
                <title type="werk_bibliografische-angabe">Die Frage an das Schicksal (Ein Sittenbild) In: Budapester Tagblatt, Jg. 7, Nr. 131, 13.5.1890, S. 1–3.</title>
-               <author role="hat-geschaffen" ref="pmb2121">Schnitzler, Arthur</author>
-            </bibl>
-            <bibl xml:id="pmb33243" ana="comment">
-               <title type="main">Tagebuch</title>
-               <title type="werk_link">https://schnitzler-tagebuch.acdh.oeaw.ac.at</title>
-               <author role="hat-geschaffen" ref="pmb2121">Schnitzler, Arthur</author>
+               <author ref="pmb2121" role="hat-geschaffen">Schnitzler, Arthur</author>
             </bibl>
             <bibl xml:id="pmb42614" ana="comment">
-               <title type="main">Gläubiger. Schauspiel in einem Act</title>
-               <author role="hat-geschaffen" ref="pmb12877">Strindberg, August</author>
-               <author role="hat-ubersetzt" ref="pmb47716">Holm, Erich</author>
+               <title>Gläubiger. Schauspiel in einem Act</title>
+               <author ref="pmb12877" role="hat-geschaffen">Strindberg, August</author>
+               <author ref="pmb47716" role="hat-ubersetzt">Holm, Erich</author>
+            </bibl>
+            <bibl xml:id="pmb33243" ana="comment">
+               <title>Tagebuch</title>
+               <title type="werk_link">https://schnitzler-tagebuch.acdh.oeaw.ac.at</title>
+               <author ref="pmb2121" role="hat-geschaffen">Schnitzler, Arthur</author>
             </bibl>
          </listBibl>
          <listPlace>
+            <place xml:id="pmb50">
+               <placeName>Wien</placeName>
+               <placeName type="ort_fruherer-name">K.K. Reichshaupt- und Residenzstadt Wien</placeName>
+               <placeName type="alternative-name">Bécs</placeName>
+               <placeName type="alternative-name">Land Wien</placeName>
+               <placeName type="alternative-name">Vídeň</placeName>
+               <placeName type="alternative-name">Wenia</placeName>
+               <placeName type="alternative-name">Beč</placeName>
+               <placeName type="ort_fruherer-name">Vindobona</placeName>
+               <placeName type="alternative-name">Vienna</placeName>
+               <location type="coords">
+                  <geo>48,208333 16,373056</geo>
+               </location>
+               <location type="located_in_place">
+                  <placeName ref="pmb41240">Österreich</placeName>
+                  <geo>47,33333 13,33333</geo>
+               </location>
+               <location type="located_in_place">
+                  <placeName ref="pmb235218">Windmühlhöhe</placeName>
+                  <geo>48,24077 16,32092</geo>
+               </location>
+            </place>
             <place xml:id="pmb34210">
                <placeName>Café Kaiserhof (Inh. Johann Wortner) [Wien]</placeName>
                <placeName type="namensvariante">Café Wortner</placeName>
@@ -273,29 +327,7 @@
                   <geo>48,2125 16,3588</geo>
                </location>
             </place>
-            <place xml:id="pmb50">
-               <placeName>Wien</placeName>
-               <placeName type="ort_fruherer-name">K.K. Reichshaupt- und Residenzstadt Wien</placeName>
-               <placeName type="legacy-name-merge">Wien</placeName>
-               <placeName type="alternative-name">Bécs</placeName>
-               <placeName type="alternative-name">Land Wien</placeName>
-               <placeName type="alternative-name">Vídeň</placeName>
-               <placeName type="alternative-name">Wenia</placeName>
-               <placeName type="alternative-name">Beč</placeName>
-               <placeName type="ort_fruherer-name">Vindobona</placeName>
-               <placeName type="legacy-name-merge">Vindobona</placeName>
-               <placeName type="alternative-name">Vienna</placeName>
-               <placeName type="legacy-name-merge">Vienna</placeName>
-               <placeName type="alternative-name">Vienna</placeName>
-               <location type="coords">
-                  <geo>48,208333 16,373056</geo>
-               </location>
-               <location type="located_in_place">
-                  <placeName ref="pmb41240">Österreich</placeName>
-                  <geo>47,33333 13,33333</geo>
-               </location>
-            </place>
-            <place xml:id="pmb40" ana="comment">
+            <place xml:id="pmb40" ana="implied">
                <placeName>Theater in der Josefstadt</placeName>
                <placeName type="legacy-name-merge">Josefst.-Th.</placeName>
                <location type="coords">
@@ -312,8 +344,8 @@
             </place>
          </listPlace>
          <listEvent>
-            <event xml:id="pmb209129" ana="comment">
-               <eventName n="Generalprobe">Generalprobe von Frage an das Schicksal, 18.1.1900</eventName>
+            <event xml:id="pmb209130" ana="implied">
+               <eventName n="Theaterpremiere">Literarischer Abend (Premiere von Die Frage an das Schicksal, Gläubiger), 19.1.1900</eventName>
                <listPlace>
                   <place>
                      <placeName role="veranstaltet in" ref="pmb40">Theater in der Josefstadt</placeName>
@@ -323,8 +355,8 @@
                   </place>
                </listPlace>
             </event>
-            <event xml:id="pmb209130" ana="comment">
-               <eventName n="Theaterpremiere">Literarischer Abend (Premiere von Die Frage an das Schicksal, Gläubiger), 19.1.1900</eventName>
+            <event xml:id="pmb209129" ana="implied">
+               <eventName n="Generalprobe">Generalprobe von Frage an das Schicksal, 18.1.1900</eventName>
                <listPlace>
                   <place>
                      <placeName role="veranstaltet in" ref="pmb40">Theater in der Josefstadt</placeName>

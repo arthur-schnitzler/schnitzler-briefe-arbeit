@@ -1,6 +1,10 @@
-<?xml version='1.0' encoding='UTF-8'?>
+<?xml version="1.0" encoding="UTF-8"?>
 <?xml-model href="../meta/schnitzler-briefe-schematron.sch" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
-<TEI xmlns="http://www.tei-c.org/ns/1.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.tei-c.org/ns/1.0 ../meta/schnitzler-briefe-schema.xsd" xml:base="https://id.acdh.oeaw.ac.at/schnitzler/schnitzler-briefe/editions" xml:id="L04541">
+<TEI xmlns="http://www.tei-c.org/ns/1.0"
+     xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+     xsi:schemaLocation="http://www.tei-c.org/ns/1.0 ../meta/schnitzler-briefe-schema.xsd"
+     xml:base="https://id.acdh.oeaw.ac.at/schnitzler/schnitzler-briefe/editions"
+     xml:id="L04541">
    <teiHeader>
       <fileDesc>
          <titleStmt>
@@ -140,19 +144,27 @@
             <correspAction type="sent">
                <persName ref="#pmb9531">Rilke, Rainer Maria</persName>
                <date when="1901-12-31" n="02">[31. 12. 1901]</date>
-               <placeName ref="#pmb364288" evidence="conjecture">?? [Bauernhaus von Clara und Rainer Maria Rilke in Westerwede]</placeName>
+               <placeName ref="#pmb364288" evidence="conjecture">Westerweder Straße 12</placeName>
             </correspAction>
             <correspAction type="received">
                <persName ref="#pmb2121">Schnitzler, Arthur</persName>
                <date evidence="conjecture" when="1902-01-07">[7. 1. 1902?]</date>
                <placeName ref="#pmb168934" evidence="conjecture">Frankgasse 1</placeName>
             </correspAction>
-            <correspContext><ref type="belongsToCorrespondence" target="correspondence_9531">Rilke, Rainer Maria</ref>
+            <correspContext>
+               <ref type="belongsToCorrespondence" target="correspondence_9531">Rilke, Rainer Maria</ref>
                <ref subtype="previous_letter" type="withinCollection" target="L03099">Goldmann an Schnitzler, 31. 12. [1901]</ref>
                <ref subtype="next_letter" type="withinCollection" target="L02550">Schnitzler an Dehmel, [1. 1. 1902?]</ref>
-               <ref subtype="previous_letter" type="withinCorrespondence" source="correspondence_9531" target="L04344">Schnitzler an Rilke, 7. 12. 1901</ref>
-               <ref subtype="next_letter" type="withinCorrespondence" source="correspondence_9531" target="L04542">Rilke an Schnitzler, 14. 1. 1902</ref>
-            </correspContext></correspDesc>
+               <ref subtype="previous_letter"
+                    type="withinCorrespondence"
+                    source="correspondence_9531"
+                    target="L04344">Schnitzler an Rilke, 7. 12. 1901</ref>
+               <ref subtype="next_letter"
+                    type="withinCorrespondence"
+                    source="correspondence_9531"
+                    target="L04542">Rilke an Schnitzler, 14. 1. 1902</ref>
+            </correspContext>
+         </correspDesc>
       </profileDesc>
       <revisionDesc status="proposed">
          <change who="MAM" when="2026-09-02">Angelegt aus Heinrich S. Ausgabe</change>
@@ -335,7 +347,10 @@
          </listPerson>
          <listPlace>
             <place xml:id="pmb364288">
-               <placeName>?? [Bauernhaus von Clara und Rainer Maria Rilke in Westerwede]</placeName>
+               <placeName>Westerweder Straße 12</placeName>
+               <location type="coords">
+                  <geo>53,20177706 8,9298190066</geo>
+               </location>
                <location type="located_in_place">
                   <placeName ref="pmb258929">Westerwede</placeName>
                   <geo>53,19852 8,92013</geo>

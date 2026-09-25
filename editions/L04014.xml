@@ -1,6 +1,10 @@
-<?xml version='1.0' encoding='UTF-8'?>
+<?xml version="1.0" encoding="UTF-8"?>
 <?xml-model href="../meta/schnitzler-briefe-schematron.sch" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
-<TEI xmlns="http://www.tei-c.org/ns/1.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.tei-c.org/ns/1.0 ../meta/schnitzler-briefe-schema.xsd" xml:id="L04014" xml:base="https://id.acdh.oeaw.ac.at/schnitzler/schnitzler-briefe/editions">
+<TEI xmlns="http://www.tei-c.org/ns/1.0"
+     xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+     xsi:schemaLocation="http://www.tei-c.org/ns/1.0 ../meta/schnitzler-briefe-schema.xsd"
+     xml:id="L04014"
+     xml:base="https://id.acdh.oeaw.ac.at/schnitzler/schnitzler-briefe/editions">
    <teiHeader>
       <fileDesc>
          <titleStmt>
@@ -80,12 +84,14 @@
                               <extent>
                                  <measure unit="seite" quantity="1"/>
                                  <measure unit="blatt" quantity="1"/>
-                                 <measure unit="zeichenanzahl" quantity="603"/>
+                                 <measure unit="zeichenanzahl" quantity="632"/>
                               </extent>
                            </supportDesc>
                         </objectDesc>
-                        <handDesc>
-                           <handNote medium="roter-buntstift" style="lateinische-kurrent" corresp="#pmb2121">
+                        <handDesc hands="1">
+                           <handNote medium="roter-buntstift"
+                                     style="lateinische-kurrent"
+                                     corresp="#pmb2121">
                               <p>Vermerk: »<quote>Sternheim</quote>« und vier Unterstreichungen</p>
                            </handNote>
                         </handDesc>
@@ -130,17 +136,25 @@
             1. 1. 1912?]</date>
                <placeName ref="#pmb45258">München</placeName>
             </correspAction>
-            <correspContext><ref type="belongsToCorrespondence" target="correspondence_12848">Sternheim, Carl</ref>
+            <correspContext>
+               <ref type="belongsToCorrespondence" target="correspondence_12848">Sternheim, Carl</ref>
                <ref subtype="previous_letter" type="withinCollection" target="L04013">Sternheim, Wedekind, Eulenberg, Borngräber an Schnitzler, 22. 12. 1911</ref>
                <ref subtype="next_letter" type="withinCollection" target="L02566">Schnitzler an Beer-Hofmann, [1912?]</ref>
-               <ref subtype="previous_letter" type="withinCorrespondence" source="correspondence_12848" target="L04013">Sternheim, Wedekind, Eulenberg, Borngräber an Schnitzler, 22. 12. 1911</ref>
-            </correspContext></correspDesc>
+               <ref subtype="previous_letter"
+                    type="withinCorrespondence"
+                    source="correspondence_12848"
+                    target="L04013">Sternheim, Wedekind, Eulenberg, Borngräber an Schnitzler, 22. 12. 1911</ref>
+            </correspContext>
+         </correspDesc>
       </profileDesc>
       <revisionDesc status="proposed">
          <change who="MAM" when="2025-11-21">Angelegt aus Briefe 1875–1912</change>
          <change who="MAM" when="2026-04-14">Durchsicht mit Faksimile</change>
       </revisionDesc>
    </teiHeader>
+   <facsimile>
+      <graphic url="HS00048838_0001"/>
+   </facsimile>
    <text>
       <body>
          <div type="writingSession" n="1">
@@ -166,26 +180,26 @@
       </body>
       <back>
          <listPerson>
-            <person xml:id="pmb11273">
+            <person xml:id="pmb2121">
                <persName>
-                  <forename>Herbert</forename>
-                  <surname>Eulenberg</surname>
+                  <surname>Schnitzler</surname>
+                  <forename>Arthur</forename>
                </persName>
                <birth>
-                  <date when="1876-01-25">1876-01-25</date>
-                  <settlement ref="pmb116132">
-                     <placeName type="pref">Mülheim [Köln]</placeName>
+                  <date when="1862-05-15">15. 5. 1862</date>
+                  <settlement ref="pmb50">
+                     <placeName type="pref">Wien</placeName>
                      <location>
-                        <geo>50,966388 7,003611</geo>
+                        <geo>48,208333 16,373056</geo>
                      </location>
                   </settlement>
                </birth>
                <death>
-                  <date when="1949-09-04">1949-09-04</date>
-                  <settlement ref="pmb863">
-                     <placeName type="pref">Düsseldorf</placeName>
+                  <date when="1931-10-21">21. 10. 1931</date>
+                  <settlement ref="pmb50">
+                     <placeName type="pref">Wien</placeName>
                      <location>
-                        <geo>51,22172 6,77616</geo>
+                        <geo>48,208333 16,373056</geo>
                      </location>
                   </settlement>
                </death>
@@ -238,33 +252,29 @@
                   </settlement>
                </death>
             </person>
-            <person xml:id="pmb2121">
+            <person xml:id="pmb11273">
                <persName>
-                  <surname>Schnitzler</surname>
-                  <forename>Arthur</forename>
+                  <forename>Herbert</forename>
+                  <surname>Eulenberg</surname>
                </persName>
                <birth>
-                  <date when="1862-05-15">15. 5. 1862</date>
-                  <settlement ref="pmb50">
-                     <placeName type="pref">Wien</placeName>
+                  <date when="1876-01-25">1876-01-25</date>
+                  <settlement ref="pmb116132">
+                     <placeName type="pref">Mülheim [Köln]</placeName>
                      <location>
-                        <geo>48,208333 16,373056</geo>
+                        <geo>50,966388 7,003611</geo>
                      </location>
                   </settlement>
                </birth>
                <death>
-                  <date when="1931-10-21">21. 10. 1931</date>
-                  <settlement ref="pmb50">
-                     <placeName type="pref">Wien</placeName>
+                  <date when="1949-09-04">1949-09-04</date>
+                  <settlement ref="pmb863">
+                     <placeName type="pref">Düsseldorf</placeName>
                      <location>
-                        <geo>48,208333 16,373056</geo>
+                        <geo>51,22172 6,77616</geo>
                      </location>
                   </settlement>
                </death>
-               <sex value="male"/>
-               <occupation ref="pmb90">Schriftsteller/Schriftstellerin</occupation>
-               <occupation ref="pmb97">Mediziner/Medizinerin</occupation>
-               <idno type="gnd">https://d-nb.info/gnd/118609807/</idno>
             </person>
             <person xml:id="pmb300090">
                <persName>
@@ -293,24 +303,41 @@
          </listPerson>
          <listBibl>
             <bibl xml:id="pmb300166" ana="implied">
-               <title type="main">Aufruf [Aus der Mitte des Publikums…]</title>
-               <author role="hat-geschaffen" ref="pmb12848">Sternheim, Carl</author>
-               <author role="hat-geschaffen" ref="pmb13068">Wedekind, Frank</author>
-               <author role="hat-geschaffen" ref="pmb300090">Borngräber, Otto</author>
-               <author role="hat-geschaffen" ref="pmb11273">Eulenberg, Herbert</author>
+               <title>Aufruf [Aus der Mitte des Publikums…]</title>
+               <author ref="pmb12848" role="hat-geschaffen">Sternheim, Carl</author>
+               <author ref="pmb13068" role="hat-geschaffen">Wedekind, Frank</author>
+               <author ref="pmb300090" role="hat-geschaffen">Borngräber, Otto</author>
+               <author ref="pmb11273" role="hat-geschaffen">Eulenberg, Herbert</author>
             </bibl>
          </listBibl>
          <listPlace>
+            <place xml:id="pmb50">
+               <placeName>Wien</placeName>
+               <placeName type="ort_fruherer-name">K.K. Reichshaupt- und Residenzstadt Wien</placeName>
+               <placeName type="alternative-name">Bécs</placeName>
+               <placeName type="alternative-name">Land Wien</placeName>
+               <placeName type="alternative-name">Vídeň</placeName>
+               <placeName type="alternative-name">Wenia</placeName>
+               <placeName type="alternative-name">Beč</placeName>
+               <placeName type="ort_fruherer-name">Vindobona</placeName>
+               <placeName type="alternative-name">Vienna</placeName>
+               <location type="coords">
+                  <geo>48,208333 16,373056</geo>
+               </location>
+               <location type="located_in_place">
+                  <placeName ref="pmb41240">Österreich</placeName>
+                  <geo>47,33333 13,33333</geo>
+               </location>
+               <location type="located_in_place">
+                  <placeName ref="pmb235218">Windmühlhöhe</placeName>
+                  <geo>48,24077 16,32092</geo>
+               </location>
+            </place>
             <place xml:id="pmb45258">
                <placeName>München</placeName>
-               <placeName type="alternative-name">München</placeName>
                <placeName type="legacy-name-merge">München?</placeName>
-               <placeName type="legacy-name-merge">München</placeName>
                <placeName type="legacy-name-merge">Munich</placeName>
                <placeName type="alternative-name">Monacho</placeName>
-               <placeName type="alternative-name">Munich</placeName>
-               <placeName type="legacy-name">München</placeName>
-               <placeName type="legacy-name-merge">München?</placeName>
                <location type="coords">
                   <geo>48,13743 11,57549</geo>
                </location>
@@ -321,28 +348,6 @@
                <location type="located_in_place">
                   <placeName ref="pmb151">Deutschland</placeName>
                   <geo>51,5 10,5</geo>
-               </location>
-            </place>
-            <place xml:id="pmb50">
-               <placeName>Wien</placeName>
-               <placeName type="ort_fruherer-name">K.K. Reichshaupt- und Residenzstadt Wien</placeName>
-               <placeName type="legacy-name-merge">Wien</placeName>
-               <placeName type="alternative-name">Bécs</placeName>
-               <placeName type="alternative-name">Land Wien</placeName>
-               <placeName type="alternative-name">Vídeň</placeName>
-               <placeName type="alternative-name">Wenia</placeName>
-               <placeName type="alternative-name">Beč</placeName>
-               <placeName type="ort_fruherer-name">Vindobona</placeName>
-               <placeName type="legacy-name-merge">Vindobona</placeName>
-               <placeName type="alternative-name">Vienna</placeName>
-               <placeName type="legacy-name-merge">Vienna</placeName>
-               <placeName type="alternative-name">Vienna</placeName>
-               <location type="coords">
-                  <geo>48,208333 16,373056</geo>
-               </location>
-               <location type="located_in_place">
-                  <placeName ref="pmb41240">Österreich</placeName>
-                  <geo>47,33333 13,33333</geo>
                </location>
             </place>
          </listPlace>

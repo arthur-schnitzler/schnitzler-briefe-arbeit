@@ -1,6 +1,10 @@
-<?xml version='1.0' encoding='UTF-8'?>
+<?xml version="1.0" encoding="UTF-8"?>
 <?xml-model href="../meta/schnitzler-briefe-schematron.sch" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
-<TEI xmlns="http://www.tei-c.org/ns/1.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.tei-c.org/ns/1.0 ../meta/schnitzler-briefe-schema.xsd" xml:base="https://id.acdh.oeaw.ac.at/schnitzler/schnitzler-briefe/editions" xml:id="L04184">
+<TEI xmlns="http://www.tei-c.org/ns/1.0"
+     xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+     xsi:schemaLocation="http://www.tei-c.org/ns/1.0 ../meta/schnitzler-briefe-schema.xsd"
+     xml:base="https://id.acdh.oeaw.ac.at/schnitzler/schnitzler-briefe/editions"
+     xml:id="L04184">
    <teiHeader>
       <fileDesc>
          <titleStmt>
@@ -119,19 +123,27 @@
             </correspAction>
             <correspAction type="transmitted">
                <date when="1918-08-31">31. 8. 1918</date>
-               <placeName ref="#pmb667">Garmisch Partenkirchen</placeName>
+               <placeName ref="#pmb667">Garmisch-Partenkirchen</placeName>
             </correspAction>
             <correspAction type="received">
                <persName ref="#pmb12740">Schwarzkopf, Gustav</persName>
                <date evidence="conjecture" notBefore="1918-09-01" notAfter="1918-09-05">[1. 9. 1918 – 5. 9. 1918?]</date>
                <placeName ref="#pmb207301">Tiefer Graben 17</placeName>
             </correspAction>
-            <correspContext><ref type="belongsToCorrespondence" target="correspondence_12740">Schwarzkopf, Gustav</ref>
+            <correspContext>
+               <ref type="belongsToCorrespondence" target="correspondence_12740">Schwarzkopf, Gustav</ref>
                <ref subtype="previous_letter" type="withinCollection" target="L02302">Beer-Hofmann an Schnitzler, 28. 8. 1918</ref>
                <ref subtype="next_letter" type="withinCollection" target="L01255">Schnitzler an Bahr, 14. 9. 1918</ref>
-               <ref subtype="previous_letter" type="withinCorrespondence" source="correspondence_12740" target="L04185">Schnitzler, Schnitzler, Steinrück, Marx an Schwarzkopf, 10. 9. 1917</ref>
-               <ref subtype="next_letter" type="withinCorrespondence" source="correspondence_12740" target="L04526">Schnitzler an Schwarzkopf, 12. 8. 1919</ref>
-            </correspContext></correspDesc>
+               <ref subtype="previous_letter"
+                    type="withinCorrespondence"
+                    source="correspondence_12740"
+                    target="L04185">Schnitzler, Schnitzler, Steinrück, Marx an Schwarzkopf, 10. 9. 1917</ref>
+               <ref subtype="next_letter"
+                    type="withinCorrespondence"
+                    source="correspondence_12740"
+                    target="L04526">Schnitzler an Schwarzkopf, 12. 8. 1919</ref>
+            </correspContext>
+         </correspDesc>
       </profileDesc>
       <revisionDesc status="proposed">
          <change who="MAM" when="2025-12-10">Export aus Transkribus</change>
@@ -194,26 +206,26 @@
       </body>
       <back>
          <listPerson>
-            <person xml:id="pmb12170">
+            <person xml:id="pmb2121">
                <persName>
-                  <forename>Heinrich</forename>
-                  <surname>Mann</surname>
+                  <surname>Schnitzler</surname>
+                  <forename>Arthur</forename>
                </persName>
                <birth>
-                  <date when="1871-03-27">1871-03-27</date>
-                  <settlement ref="pmb884">
-                     <placeName type="pref">Lübeck</placeName>
+                  <date when="1862-05-15">15. 5. 1862</date>
+                  <settlement ref="pmb50">
+                     <placeName type="pref">Wien</placeName>
                      <location>
-                        <geo>53,86893 10,68729</geo>
+                        <geo>48,208333 16,373056</geo>
                      </location>
                   </settlement>
                </birth>
                <death>
-                  <date when="1950-03-11">1950-03-11</date>
-                  <settlement ref="pmb45685">
-                     <placeName type="pref">Santa Monica</placeName>
+                  <date when="1931-10-21">21. 10. 1931</date>
+                  <settlement ref="pmb50">
+                     <placeName type="pref">Wien</placeName>
                      <location>
-                        <geo>34,01945 -118,49119</geo>
+                        <geo>48,208333 16,373056</geo>
                      </location>
                   </settlement>
                </death>
@@ -242,6 +254,24 @@
                   </settlement>
                </death>
             </person>
+            <person xml:id="pmb2315">
+               <persName>
+                  <forename>Elisabeth</forename>
+                  <surname>Steinrück</surname>
+               </persName>
+               <birth>
+                  <date when="1885-11-19">1885-11-19</date>
+               </birth>
+               <death>
+                  <date when="1920-04-07">1920-04-07</date>
+                  <settlement ref="pmb2318">
+                     <placeName type="pref">Partenkirchen</placeName>
+                     <location>
+                        <geo>47,4956 11,1097</geo>
+                     </location>
+                  </settlement>
+               </death>
+            </person>
             <person xml:id="pmb12837">
                <persName>
                   <forename>Albert</forename>
@@ -266,33 +296,29 @@
                   </settlement>
                </death>
             </person>
-            <person xml:id="pmb2121">
+            <person xml:id="pmb12170">
                <persName>
-                  <surname>Schnitzler</surname>
-                  <forename>Arthur</forename>
+                  <forename>Heinrich</forename>
+                  <surname>Mann</surname>
                </persName>
                <birth>
-                  <date when="1862-05-15">15. 5. 1862</date>
-                  <settlement ref="pmb50">
-                     <placeName type="pref">Wien</placeName>
+                  <date when="1871-03-27">1871-03-27</date>
+                  <settlement ref="pmb884">
+                     <placeName type="pref">Lübeck</placeName>
                      <location>
-                        <geo>48,208333 16,373056</geo>
+                        <geo>53,86893 10,68729</geo>
                      </location>
                   </settlement>
                </birth>
                <death>
-                  <date when="1931-10-21">21. 10. 1931</date>
-                  <settlement ref="pmb50">
-                     <placeName type="pref">Wien</placeName>
+                  <date when="1950-03-11">1950-03-11</date>
+                  <settlement ref="pmb45685">
+                     <placeName type="pref">Santa Monica</placeName>
                      <location>
-                        <geo>48,208333 16,373056</geo>
+                        <geo>34,01945 -118,49119</geo>
                      </location>
                   </settlement>
                </death>
-               <sex value="male"/>
-               <occupation ref="pmb90">Schriftsteller/Schriftstellerin</occupation>
-               <occupation ref="pmb97">Mediziner/Medizinerin</occupation>
-               <idno type="gnd">https://d-nb.info/gnd/118609807/</idno>
             </person>
             <person xml:id="pmb2173">
                <persName>
@@ -318,24 +344,6 @@
                   </settlement>
                </death>
             </person>
-            <person xml:id="pmb2315">
-               <persName>
-                  <forename>Elisabeth</forename>
-                  <surname>Steinrück</surname>
-               </persName>
-               <birth>
-                  <date when="1885-11-19">1885-11-19</date>
-               </birth>
-               <death>
-                  <date when="1920-04-07">1920-04-07</date>
-                  <settlement ref="pmb2318">
-                     <placeName type="pref">Partenkirchen</placeName>
-                     <location>
-                        <geo>47,4956 11,1097</geo>
-                     </location>
-                  </settlement>
-               </death>
-            </person>
             <person xml:id="pmb334103" ana="implied">
                <persName>
                   <surname>?? [Pensionsgast Haus Tannenberg, August 1918]</surname>
@@ -343,19 +351,29 @@
             </person>
          </listPerson>
          <listPlace>
-            <place xml:id="pmb182">
-               <placeName>Paris</placeName>
-               <placeName type="alternative-name">P'ariz</placeName>
-               <placeName type="legacy-name-merge">Paris</placeName>
-               <placeName type="alternative-name">Pariž</placeName>
-               <placeName type="alternative-name">Parisius</placeName>
-               <placeName type="alternative-name">Île-de-France</placeName>
+            <place xml:id="pmb667">
+               <placeName>Garmisch-Partenkirchen</placeName>
                <location type="coords">
-                  <geo>48,85341 2,3488</geo>
+                  <geo>47,49209 11,09576</geo>
                </location>
                <location type="located_in_place">
-                  <placeName ref="pmb166">Frankreich</placeName>
-                  <geo>46,0 2,0</geo>
+                  <placeName ref="pmb314">Bayern</placeName>
+                  <geo>49,0 11,5</geo>
+               </location>
+            </place>
+            <place xml:id="pmb808">
+               <placeName>Haus Tannenberg</placeName>
+               <placeName type="ort_namensvariante">Töchterheim Ziegra</placeName>
+               <location type="coords">
+                  <geo>47,48881 11,11289</geo>
+               </location>
+               <location type="located_in_place">
+                  <placeName ref="pmb667">Garmisch-Partenkirchen</placeName>
+                  <geo>47,49209 11,09576</geo>
+               </location>
+               <location type="located_in_place">
+                  <placeName ref="pmb2318">Partenkirchen</placeName>
+                  <geo>47,4956 11,1097</geo>
                </location>
             </place>
             <place xml:id="pmb207301">
@@ -382,6 +400,46 @@
                   <geo>47,49209 11,09576</geo>
                </location>
             </place>
+            <place xml:id="pmb51">
+               <placeName>I., Innere Stadt</placeName>
+               <placeName type="alternative-name">Inner city</placeName>
+               <placeName type="alternative-name">Wien,Innere Stadt</placeName>
+               <placeName type="alternative-name">1. Wiener Gemeindebezirk</placeName>
+               <placeName type="legacy-name-merge">Wien-Innere Stadt</placeName>
+               <location type="coords">
+                  <geo>48,20769 16,37049</geo>
+               </location>
+               <location type="located_in_place">
+                  <placeName ref="pmb41240">Österreich</placeName>
+                  <geo>47,33333 13,33333</geo>
+               </location>
+               <location type="located_in_place">
+                  <placeName ref="pmb50">Wien</placeName>
+                  <geo>48,208333 16,373056</geo>
+               </location>
+            </place>
+            <place xml:id="pmb50">
+               <placeName>Wien</placeName>
+               <placeName type="ort_fruherer-name">K.K. Reichshaupt- und Residenzstadt Wien</placeName>
+               <placeName type="alternative-name">Bécs</placeName>
+               <placeName type="alternative-name">Land Wien</placeName>
+               <placeName type="alternative-name">Vídeň</placeName>
+               <placeName type="alternative-name">Wenia</placeName>
+               <placeName type="alternative-name">Beč</placeName>
+               <placeName type="ort_fruherer-name">Vindobona</placeName>
+               <placeName type="alternative-name">Vienna</placeName>
+               <location type="coords">
+                  <geo>48,208333 16,373056</geo>
+               </location>
+               <location type="located_in_place">
+                  <placeName ref="pmb41240">Österreich</placeName>
+                  <geo>47,33333 13,33333</geo>
+               </location>
+               <location type="located_in_place">
+                  <placeName ref="pmb235218">Windmühlhöhe</placeName>
+                  <geo>48,24077 16,32092</geo>
+               </location>
+            </place>
             <place xml:id="pmb34392">
                <placeName>Villa Zufriedenheit</placeName>
                <location type="coords">
@@ -396,6 +454,20 @@
                   <geo>47,4956 11,1097</geo>
                </location>
             </place>
+            <place xml:id="pmb182">
+               <placeName>Paris</placeName>
+               <placeName type="alternative-name">P'ariz</placeName>
+               <placeName type="alternative-name">Pariž</placeName>
+               <placeName type="alternative-name">Parisius</placeName>
+               <placeName type="alternative-name">Île-de-France</placeName>
+               <location type="coords">
+                  <geo>48,85341 2,3488</geo>
+               </location>
+               <location type="located_in_place">
+                  <placeName ref="pmb166">Frankreich</placeName>
+                  <geo>46,0 2,0</geo>
+               </location>
+            </place>
             <place xml:id="pmb423">
                <placeName>Tirol</placeName>
                <location type="coords">
@@ -408,79 +480,12 @@
             </place>
             <place xml:id="pmb429">
                <placeName>Salzkammergut</placeName>
-               <placeName type="legacy-name-merge">Salzkammergut</placeName>
                <location type="coords">
                   <geo>47,75 13,5</geo>
                </location>
                <location type="located_in_place">
                   <placeName ref="pmb41240">Österreich</placeName>
                   <geo>47,33333 13,33333</geo>
-               </location>
-            </place>
-            <place xml:id="pmb50">
-               <placeName>Wien</placeName>
-               <placeName type="ort_fruherer-name">K.K. Reichshaupt- und Residenzstadt Wien</placeName>
-               <placeName type="legacy-name-merge">Wien</placeName>
-               <placeName type="alternative-name">Bécs</placeName>
-               <placeName type="alternative-name">Land Wien</placeName>
-               <placeName type="alternative-name">Vídeň</placeName>
-               <placeName type="alternative-name">Wenia</placeName>
-               <placeName type="alternative-name">Beč</placeName>
-               <placeName type="ort_fruherer-name">Vindobona</placeName>
-               <placeName type="legacy-name-merge">Vindobona</placeName>
-               <placeName type="alternative-name">Vienna</placeName>
-               <placeName type="legacy-name-merge">Vienna</placeName>
-               <placeName type="alternative-name">Vienna</placeName>
-               <location type="coords">
-                  <geo>48,208333 16,373056</geo>
-               </location>
-               <location type="located_in_place">
-                  <placeName ref="pmb41240">Österreich</placeName>
-                  <geo>47,33333 13,33333</geo>
-               </location>
-            </place>
-            <place xml:id="pmb51">
-               <placeName>I., Innere Stadt</placeName>
-               <placeName type="alternative-name">Inner city</placeName>
-               <placeName type="alternative-name">Wien,Innere Stadt</placeName>
-               <placeName type="alternative-name">1. Wiener Gemeindebezirk</placeName>
-               <placeName type="legacy-name-merge">Wien-Innere Stadt</placeName>
-               <placeName type="legacy-name-merge">Inner city</placeName>
-               <location type="coords">
-                  <geo>48,20769 16,37049</geo>
-               </location>
-               <location type="located_in_place">
-                  <placeName ref="pmb41240">Österreich</placeName>
-                  <geo>47,33333 13,33333</geo>
-               </location>
-               <location type="located_in_place">
-                  <placeName ref="pmb50">Wien</placeName>
-                  <geo>48,208333 16,373056</geo>
-               </location>
-            </place>
-            <place xml:id="pmb667">
-               <placeName>Garmisch-Partenkirchen</placeName>
-               <location type="coords">
-                  <geo>47,49209 11,09576</geo>
-               </location>
-               <location type="located_in_place">
-                  <placeName ref="pmb314">Bayern</placeName>
-                  <geo>49,0 11,5</geo>
-               </location>
-            </place>
-            <place xml:id="pmb808">
-               <placeName>Haus Tannenberg</placeName>
-               <placeName type="ort_namensvariante">Töchterheim Ziegra</placeName>
-               <location type="coords">
-                  <geo>47,48881 11,11289</geo>
-               </location>
-               <location type="located_in_place">
-                  <placeName ref="pmb667">Garmisch-Partenkirchen</placeName>
-                  <geo>47,49209 11,09576</geo>
-               </location>
-               <location type="located_in_place">
-                  <placeName ref="pmb2318">Partenkirchen</placeName>
-                  <geo>47,4956 11,1097</geo>
                </location>
             </place>
          </listPlace>

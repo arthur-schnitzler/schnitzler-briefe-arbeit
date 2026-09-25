@@ -1,6 +1,10 @@
-<?xml version='1.0' encoding='UTF-8'?>
+<?xml version="1.0" encoding="UTF-8"?>
 <?xml-model href="../meta/schnitzler-briefe-schematron.sch" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
-<TEI xmlns="http://www.tei-c.org/ns/1.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.tei-c.org/ns/1.0 ../meta/schnitzler-briefe-schema.xsd" xml:base="https://id.acdh.oeaw.ac.at/schnitzler/schnitzler-briefe/editions" xml:id="L04103">
+<TEI xmlns="http://www.tei-c.org/ns/1.0"
+     xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+     xsi:schemaLocation="http://www.tei-c.org/ns/1.0 ../meta/schnitzler-briefe-schema.xsd"
+     xml:base="https://id.acdh.oeaw.ac.at/schnitzler/schnitzler-briefe/editions"
+     xml:id="L04103">
    <teiHeader>
       <fileDesc>
          <titleStmt>
@@ -145,28 +149,36 @@
             </correspAction>
             <correspAction type="transmitted">
                <date when="1893-09-28">28. 9. 1893</date>
-               <placeName ref="#pmb365217">Wien 1/1 10</placeName>
+               <placeName ref="#pmb365217">1/1 Post- und Telegraphenamt 10</placeName>
             </correspAction>
             <correspAction type="in_transit">
                <date when="1893-09-28">28. 9. 1893</date>
-               <placeName ref="#pmb365217">Wien 1/1 10</placeName>
+               <placeName ref="#pmb365217">1/1 Post- und Telegraphenamt 10</placeName>
             </correspAction>
             <correspAction type="delivered">
                <date when="1893-09-28">28. 9. 1893</date>
-               <placeName ref="#pmb51">Wien 1/1</placeName>
+               <placeName ref="#pmb51">I., Innere Stadt</placeName>
             </correspAction>
             <correspAction type="received">
                <persName ref="#pmb12740">Schwarzkopf, Gustav</persName>
                <date when="1893-09-28" evidence="conjecture">[28. 9. 1893]</date>
                <placeName ref="#pmb207296">Tiefer Graben 23</placeName>
             </correspAction>
-            <correspContext><ref type="belongsToCorrespondence" target="correspondence_12740">Schwarzkopf, Gustav</ref>
+            <correspContext>
+               <ref type="belongsToCorrespondence" target="correspondence_12740">Schwarzkopf, Gustav</ref>
                <ref subtype="previous_letter" type="withinCollection" target="L03906">Schnitzler an Herzl, 28. 9. 1893</ref>
                <ref subtype="next_letter" type="withinCollection" target="L02718">Goldmann an Schnitzler, [zwischen 29. 9. und
                   2. 10. 1893]</ref>
-               <ref subtype="previous_letter" type="withinCorrespondence" source="correspondence_12740" target="L04276">Schwarzkopf an Schnitzler, 25. 9. 1893</ref>
-               <ref subtype="next_letter" type="withinCorrespondence" source="correspondence_12740" target="L04106">Schnitzler an Schwarzkopf, 27. 11. 1893</ref>
-            </correspContext></correspDesc>
+               <ref subtype="previous_letter"
+                    type="withinCorrespondence"
+                    source="correspondence_12740"
+                    target="L04276">Schwarzkopf an Schnitzler, 25. 9. 1893</ref>
+               <ref subtype="next_letter"
+                    type="withinCorrespondence"
+                    source="correspondence_12740"
+                    target="L04106">Schnitzler an Schwarzkopf, 27. 11. 1893</ref>
+            </correspContext>
+         </correspDesc>
       </profileDesc>
       <revisionDesc status="proposed">
          <change who="MAM" when="2025-12-10">Export aus Transkribus</change>
@@ -222,13 +234,13 @@
       </body>
       <back>
          <listPerson>
-            <person xml:id="pmb10863">
+            <person xml:id="pmb2121">
                <persName>
-                  <forename>Richard</forename>
-                  <surname>Beer-Hofmann</surname>
+                  <surname>Schnitzler</surname>
+                  <forename>Arthur</forename>
                </persName>
                <birth>
-                  <date when="1866-07-11">1866-07-11</date>
+                  <date when="1862-05-15">15. 5. 1862</date>
                   <settlement ref="pmb50">
                      <placeName type="pref">Wien</placeName>
                      <location>
@@ -237,11 +249,11 @@
                   </settlement>
                </birth>
                <death>
-                  <date when="1945-09-26">1945-09-26</date>
-                  <settlement ref="pmb44053">
-                     <placeName type="pref">New York City</placeName>
+                  <date when="1931-10-21">21. 10. 1931</date>
+                  <settlement ref="pmb50">
+                     <placeName type="pref">Wien</placeName>
                      <location>
-                        <geo>40,71427 -74,00597</geo>
+                        <geo>48,208333 16,373056</geo>
                      </location>
                   </settlement>
                </death>
@@ -270,13 +282,13 @@
                   </settlement>
                </death>
             </person>
-            <person xml:id="pmb2121">
+            <person xml:id="pmb10863">
                <persName>
-                  <surname>Schnitzler</surname>
-                  <forename>Arthur</forename>
+                  <forename>Richard</forename>
+                  <surname>Beer-Hofmann</surname>
                </persName>
                <birth>
-                  <date when="1862-05-15">15. 5. 1862</date>
+                  <date when="1866-07-11">1866-07-11</date>
                   <settlement ref="pmb50">
                      <placeName type="pref">Wien</placeName>
                      <location>
@@ -285,18 +297,14 @@
                   </settlement>
                </birth>
                <death>
-                  <date when="1931-10-21">21. 10. 1931</date>
-                  <settlement ref="pmb50">
-                     <placeName type="pref">Wien</placeName>
+                  <date when="1945-09-26">1945-09-26</date>
+                  <settlement ref="pmb44053">
+                     <placeName type="pref">New York City</placeName>
                      <location>
-                        <geo>48,208333 16,373056</geo>
+                        <geo>40,71427 -74,00597</geo>
                      </location>
                   </settlement>
                </death>
-               <sex value="male"/>
-               <occupation ref="pmb90">Schriftsteller/Schriftstellerin</occupation>
-               <occupation ref="pmb97">Mediziner/Medizinerin</occupation>
-               <idno type="gnd">https://d-nb.info/gnd/118609807/</idno>
             </person>
             <person xml:id="pmb10815" ana="comment">
                <persName>
@@ -324,26 +332,72 @@
             </person>
          </listPerson>
          <listBibl>
-            <bibl xml:id="pmb29819" ana="comment">
-               <title type="main">Spaziergang</title>
-               <title type="werk_bibliografische-angabe">Deutsche Zeitung, Jg. 23, Nr. 7883, 6. 12. 1893, Morgen-Ausgabe, S. 1–2</title>
-               <author role="hat-geschaffen" ref="pmb2121">Schnitzler, Arthur</author>
-            </bibl>
             <bibl xml:id="pmb33243" ana="comment">
-               <title type="main">Tagebuch</title>
+               <title>Tagebuch</title>
                <title type="werk_link">https://schnitzler-tagebuch.acdh.oeaw.ac.at</title>
-               <author role="hat-geschaffen" ref="pmb2121">Schnitzler, Arthur</author>
+               <author ref="pmb2121" role="hat-geschaffen">Schnitzler, Arthur</author>
             </bibl>
-            <bibl xml:id="pmb333704" ana="comment">
-               <title type="main">Wiener Spaziergänge</title>
-               <author role="hat-herausgegeben" ref="pmb10815">Bahr, Hermann</author>
+            <bibl xml:id="pmb333704" ana="implied">
+               <title>Wiener Spaziergänge</title>
+               <author ref="pmb10815" role="hat-herausgegeben">Bahr, Hermann</author>
             </bibl>
             <bibl xml:id="pmb41471" ana="comment">
-               <title type="main">Deutsche Zeitung</title>
+               <title>Deutsche Zeitung</title>
                <title type="werk_link">http://anno.onb.ac.at/cgi-content/anno?aid=dzg</title>
+            </bibl>
+            <bibl xml:id="pmb29819" ana="comment">
+               <title>Spaziergang</title>
+               <title type="werk_bibliografische-angabe">Deutsche Zeitung, Jg. 23, Nr. 7883, 6. 12. 1893, Morgen-Ausgabe, S. 1–2</title>
+               <author ref="pmb2121" role="hat-geschaffen">Schnitzler, Arthur</author>
             </bibl>
          </listBibl>
          <listPlace>
+            <place xml:id="pmb365217">
+               <placeName>1/1 Post- und Telegraphenamt 10</placeName>
+               <location type="coords">
+                  <geo>48,210234 16,357213</geo>
+               </location>
+               <location type="located_in_place">
+                  <placeName ref="pmb51">I., Innere Stadt</placeName>
+                  <geo>48,20769 16,37049</geo>
+               </location>
+               <location type="located_in_place">
+                  <placeName ref="pmb95">Lichtenfelsgasse</placeName>
+                  <geo>48,210037490674 16,357104381105</geo>
+               </location>
+            </place>
+            <place xml:id="pmb51">
+               <placeName>I., Innere Stadt</placeName>
+               <placeName type="alternative-name">Inner city</placeName>
+               <placeName type="alternative-name">Wien,Innere Stadt</placeName>
+               <placeName type="alternative-name">1. Wiener Gemeindebezirk</placeName>
+               <placeName type="legacy-name-merge">Wien-Innere Stadt</placeName>
+               <location type="coords">
+                  <geo>48,20769 16,37049</geo>
+               </location>
+               <location type="located_in_place">
+                  <placeName ref="pmb41240">Österreich</placeName>
+                  <geo>47,33333 13,33333</geo>
+               </location>
+               <location type="located_in_place">
+                  <placeName ref="pmb50">Wien</placeName>
+                  <geo>48,208333 16,373056</geo>
+               </location>
+            </place>
+            <place xml:id="pmb167782">
+               <placeName>Wohnung und Ordination Arthur Schnitzler Grillparzerstraße 7/3. Stock</placeName>
+               <location type="coords">
+                  <geo>48,212477 16,357233</geo>
+               </location>
+               <location type="located_in_place">
+                  <placeName ref="pmb51">I., Innere Stadt</placeName>
+                  <geo>48,20769 16,37049</geo>
+               </location>
+               <location type="located_in_place">
+                  <placeName ref="pmb412">Grillparzerstraße</placeName>
+                  <geo>48,212643768549 16,357353835756</geo>
+               </location>
+            </place>
             <place xml:id="pmb207296">
                <placeName>Tiefer Graben 23</placeName>
                <location type="coords">
@@ -358,6 +412,28 @@
                   <geo>48,20769 16,37049</geo>
                </location>
             </place>
+            <place xml:id="pmb50">
+               <placeName>Wien</placeName>
+               <placeName type="ort_fruherer-name">K.K. Reichshaupt- und Residenzstadt Wien</placeName>
+               <placeName type="alternative-name">Bécs</placeName>
+               <placeName type="alternative-name">Land Wien</placeName>
+               <placeName type="alternative-name">Vídeň</placeName>
+               <placeName type="alternative-name">Wenia</placeName>
+               <placeName type="alternative-name">Beč</placeName>
+               <placeName type="ort_fruherer-name">Vindobona</placeName>
+               <placeName type="alternative-name">Vienna</placeName>
+               <location type="coords">
+                  <geo>48,208333 16,373056</geo>
+               </location>
+               <location type="located_in_place">
+                  <placeName ref="pmb41240">Österreich</placeName>
+                  <geo>47,33333 13,33333</geo>
+               </location>
+               <location type="located_in_place">
+                  <placeName ref="pmb235218">Windmühlhöhe</placeName>
+                  <geo>48,24077 16,32092</geo>
+               </location>
+            </place>
             <place xml:id="pmb34">
                <placeName>Café Griensteidl</placeName>
                <placeName type="legacy-name-merge">Griensteidl</placeName>
@@ -367,47 +443,6 @@
                <location type="located_in_place">
                   <placeName ref="pmb51">I., Innere Stadt</placeName>
                   <geo>48,20769 16,37049</geo>
-               </location>
-            </place>
-            <place xml:id="pmb50">
-               <placeName>Wien</placeName>
-               <placeName type="ort_fruherer-name">K.K. Reichshaupt- und Residenzstadt Wien</placeName>
-               <placeName type="legacy-name-merge">Wien</placeName>
-               <placeName type="alternative-name">Bécs</placeName>
-               <placeName type="alternative-name">Land Wien</placeName>
-               <placeName type="alternative-name">Vídeň</placeName>
-               <placeName type="alternative-name">Wenia</placeName>
-               <placeName type="alternative-name">Beč</placeName>
-               <placeName type="ort_fruherer-name">Vindobona</placeName>
-               <placeName type="legacy-name-merge">Vindobona</placeName>
-               <placeName type="alternative-name">Vienna</placeName>
-               <placeName type="legacy-name-merge">Vienna</placeName>
-               <placeName type="alternative-name">Vienna</placeName>
-               <location type="coords">
-                  <geo>48,208333 16,373056</geo>
-               </location>
-               <location type="located_in_place">
-                  <placeName ref="pmb41240">Österreich</placeName>
-                  <geo>47,33333 13,33333</geo>
-               </location>
-            </place>
-            <place xml:id="pmb51">
-               <placeName>I., Innere Stadt</placeName>
-               <placeName type="alternative-name">Inner city</placeName>
-               <placeName type="alternative-name">Wien,Innere Stadt</placeName>
-               <placeName type="alternative-name">1. Wiener Gemeindebezirk</placeName>
-               <placeName type="legacy-name-merge">Wien-Innere Stadt</placeName>
-               <placeName type="legacy-name-merge">Inner city</placeName>
-               <location type="coords">
-                  <geo>48,20769 16,37049</geo>
-               </location>
-               <location type="located_in_place">
-                  <placeName ref="pmb41240">Österreich</placeName>
-                  <geo>47,33333 13,33333</geo>
-               </location>
-               <location type="located_in_place">
-                  <placeName ref="pmb50">Wien</placeName>
-                  <geo>48,208333 16,373056</geo>
                </location>
             </place>
          </listPlace>

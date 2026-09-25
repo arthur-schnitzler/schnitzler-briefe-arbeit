@@ -1,6 +1,10 @@
-<?xml version='1.0' encoding='UTF-8'?>
+<?xml version="1.0" encoding="UTF-8"?>
 <?xml-model href="../meta/schnitzler-briefe-schematron.sch" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
-<TEI xmlns="http://www.tei-c.org/ns/1.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.tei-c.org/ns/1.0 ../meta/schnitzler-briefe-schema.xsd" xml:base="https://id.acdh.oeaw.ac.at/schnitzler/schnitzler-briefe/editions" xml:id="L04294">
+<TEI xmlns="http://www.tei-c.org/ns/1.0"
+     xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+     xsi:schemaLocation="http://www.tei-c.org/ns/1.0 ../meta/schnitzler-briefe-schema.xsd"
+     xml:base="https://id.acdh.oeaw.ac.at/schnitzler/schnitzler-briefe/editions"
+     xml:id="L04294">
    <teiHeader>
       <fileDesc>
          <titleStmt>
@@ -103,19 +107,27 @@
             <correspAction type="sent">
                <persName ref="#pmb12740">Schwarzkopf, Gustav</persName>
                <date when="1899-08-31" n="02">31. 8. 1899</date>
-               <placeName ref="#pmb207296" evidence="conjecture">Wien</placeName>
+               <placeName ref="#pmb207296" evidence="conjecture">Tiefer Graben 23</placeName>
             </correspAction>
             <correspAction type="received">
                <persName ref="#pmb2121">Schnitzler, Arthur</persName>
                <date evidence="conjecture" notBefore="1899-09-01" notAfter="1899-09-05">[1. 9. 1899 – 5. 9. 1899?]</date>
                <placeName ref="#pmb213" evidence="conjecture">Bad Ischl</placeName>
             </correspAction>
-            <correspContext><ref type="belongsToCorrespondence" target="correspondence_12740">Schwarzkopf, Gustav</ref>
+            <correspContext>
+               <ref type="belongsToCorrespondence" target="correspondence_12740">Schwarzkopf, Gustav</ref>
                <ref subtype="previous_letter" type="withinCollection" target="L00966">Schnitzler, Hofmannsthal an Beer-Hofmann, 31. 8. 1899</ref>
                <ref subtype="next_letter" type="withinCollection" target="L00967">Beer-Hofmann an Schnitzler, 2. 9. 1899</ref>
-               <ref subtype="previous_letter" type="withinCorrespondence" source="correspondence_12740" target="L04131">Schnitzler an Schwarzkopf, 25. 8. 1899</ref>
-               <ref subtype="next_letter" type="withinCorrespondence" source="correspondence_12740" target="L04142">Schnitzler an Schwarzkopf, 9. 9. 1899</ref>
-            </correspContext></correspDesc>
+               <ref subtype="previous_letter"
+                    type="withinCorrespondence"
+                    source="correspondence_12740"
+                    target="L04131">Schnitzler an Schwarzkopf, 25. 8. 1899</ref>
+               <ref subtype="next_letter"
+                    type="withinCorrespondence"
+                    source="correspondence_12740"
+                    target="L04142">Schnitzler an Schwarzkopf, 9. 9. 1899</ref>
+            </correspContext>
+         </correspDesc>
       </profileDesc>
       <revisionDesc status="proposed">
          <change who="MAM" when="2026-02-20">Export aus Transkribus</change>
@@ -168,30 +180,6 @@
       </body>
       <back>
          <listPerson>
-            <person xml:id="pmb11461">
-               <persName>
-                  <forename>Johann Wolfgang von</forename>
-                  <surname>Goethe</surname>
-               </persName>
-               <birth>
-                  <date when="1749-08-28">1749-08-28</date>
-                  <settlement ref="pmb146">
-                     <placeName type="pref">Frankfurt am Main</placeName>
-                     <location>
-                        <geo>50,11552 8,68417</geo>
-                     </location>
-                  </settlement>
-               </birth>
-               <death>
-                  <date when="1832-03-22">1832-03-22</date>
-                  <settlement ref="pmb197">
-                     <placeName type="pref">Weimar</placeName>
-                     <location>
-                        <geo>50,97361 11,33806</geo>
-                     </location>
-                  </settlement>
-               </death>
-            </person>
             <person xml:id="pmb12740">
                <persName>
                   <forename>Gustav</forename>
@@ -222,7 +210,7 @@
                   <forename>Arthur</forename>
                </persName>
                <birth>
-                  <date when="1862-05-15">15. 5. 1862</date>
+                  <date when="1862-05-15">15. 5. 1862</date>
                   <settlement ref="pmb50">
                      <placeName type="pref">Wien</placeName>
                      <location>
@@ -231,7 +219,7 @@
                   </settlement>
                </birth>
                <death>
-                  <date when="1931-10-21">21. 10. 1931</date>
+                  <date when="1931-10-21">21. 10. 1931</date>
                   <settlement ref="pmb50">
                      <placeName type="pref">Wien</placeName>
                      <location>
@@ -239,25 +227,6 @@
                      </location>
                   </settlement>
                </death>
-               <sex value="male"/>
-               <occupation ref="pmb90">Schriftsteller/Schriftstellerin</occupation>
-               <occupation ref="pmb97">Mediziner/Medizinerin</occupation>
-               <idno type="gnd">https://d-nb.info/gnd/118609807/</idno>
-            </person>
-            <person xml:id="pmb2420">
-               <persName>
-                  <forename>Friedrich</forename>
-                  <surname>Schik</surname>
-               </persName>
-               <birth>
-                  <date when="1857-09-06">1857-09-06</date>
-                  <settlement ref="pmb50">
-                     <placeName type="pref">Wien</placeName>
-                     <location>
-                        <geo>48,208333 16,373056</geo>
-                     </location>
-                  </settlement>
-               </birth>
             </person>
             <person xml:id="pmb4216">
                <persName>
@@ -283,38 +252,209 @@
                   </settlement>
                </death>
             </person>
+            <person xml:id="pmb11461">
+               <persName>
+                  <forename>Johann Wolfgang von</forename>
+                  <surname>Goethe</surname>
+               </persName>
+               <birth>
+                  <date when="1749-08-28">1749-08-28</date>
+                  <settlement ref="pmb146">
+                     <placeName type="pref">Frankfurt am Main</placeName>
+                     <location>
+                        <geo>50,11552 8,68417</geo>
+                     </location>
+                  </settlement>
+               </birth>
+               <death>
+                  <date when="1832-03-22">1832-03-22</date>
+                  <settlement ref="pmb197">
+                     <placeName type="pref">Weimar</placeName>
+                     <location>
+                        <geo>50,97361 11,33806</geo>
+                     </location>
+                  </settlement>
+               </death>
+            </person>
+            <person xml:id="pmb2420">
+               <persName>
+                  <forename>Friedrich</forename>
+                  <surname>Schik</surname>
+               </persName>
+               <birth>
+                  <date when="1857-09-06">1857-09-06</date>
+                  <settlement ref="pmb50">
+                     <placeName type="pref">Wien</placeName>
+                     <location>
+                        <geo>48,208333 16,373056</geo>
+                     </location>
+                  </settlement>
+               </birth>
+            </person>
+            <person xml:id="pmb10809">
+               <persName>
+                  <forename>Eduard</forename>
+                  <surname>Bacher</surname>
+               </persName>
+               <birth>
+                  <date when="1846-03-07">1846-03-07</date>
+                  <settlement ref="pmb44284">
+                     <placeName type="pref">Postoloprty</placeName>
+                     <location>
+                        <geo>50,35979 13,70291</geo>
+                     </location>
+                  </settlement>
+               </birth>
+               <death>
+                  <date when="1908-01-16">1908-01-16</date>
+                  <settlement ref="pmb50">
+                     <placeName type="pref">Wien</placeName>
+                     <location>
+                        <geo>48,208333 16,373056</geo>
+                     </location>
+                  </settlement>
+               </death>
+            </person>
+            <person xml:id="pmb10875">
+               <persName>
+                  <forename>Moriz</forename>
+                  <surname>Benedikt</surname>
+               </persName>
+               <birth>
+                  <date when="1849-05-27">1849-05-27</date>
+                  <settlement ref="pmb43642">
+                     <placeName type="pref">Kvačice</placeName>
+                     <location>
+                        <geo>48,98984 17,41025</geo>
+                     </location>
+                  </settlement>
+               </birth>
+               <death>
+                  <date when="1920-03-18">1920-03-18</date>
+                  <settlement ref="pmb50">
+                     <placeName type="pref">Wien</placeName>
+                     <location>
+                        <geo>48,208333 16,373056</geo>
+                     </location>
+                  </settlement>
+               </death>
+            </person>
+            <person xml:id="pmb10872">
+               <persName>
+                  <forename>Ernst</forename>
+                  <surname>Benedikt</surname>
+               </persName>
+               <birth>
+                  <date when="1882-05-20">1882-05-20</date>
+                  <settlement ref="pmb50">
+                     <placeName type="pref">Wien</placeName>
+                     <location>
+                        <geo>48,208333 16,373056</geo>
+                     </location>
+                  </settlement>
+               </birth>
+               <death>
+                  <date when="1973-12-28">1973-12-28</date>
+                  <settlement ref="pmb50">
+                     <placeName type="pref">Wien</placeName>
+                     <location>
+                        <geo>48,208333 16,373056</geo>
+                     </location>
+                  </settlement>
+               </death>
+            </person>
+            <person xml:id="pmb10772">
+               <persName>
+                  <forename>Ludwig</forename>
+                  <surname>Anzengruber</surname>
+               </persName>
+               <birth>
+                  <date when="1839-11-29">1839-11-29</date>
+                  <settlement ref="pmb50">
+                     <placeName type="pref">Wien</placeName>
+                     <location>
+                        <geo>48,208333 16,373056</geo>
+                     </location>
+                  </settlement>
+               </birth>
+               <death>
+                  <date when="1889-12-10">1889-12-10</date>
+                  <settlement ref="pmb50">
+                     <placeName type="pref">Wien</placeName>
+                     <location>
+                        <geo>48,208333 16,373056</geo>
+                     </location>
+                  </settlement>
+               </death>
+            </person>
+            <person xml:id="pmb13118">
+               <persName>
+                  <forename>Ernst von</forename>
+                  <surname>Wildenbruch</surname>
+               </persName>
+               <birth>
+                  <date when="1845-02-03">1845-02-03</date>
+                  <settlement ref="pmb46759">
+                     <placeName type="pref">Beirut</placeName>
+                     <location>
+                        <geo>33,89332 35,50157</geo>
+                     </location>
+                  </settlement>
+               </birth>
+               <death>
+                  <date when="1909-01-15">1909-01-15</date>
+                  <settlement ref="pmb168">
+                     <placeName type="pref">Berlin</placeName>
+                     <location>
+                        <geo>52,52437 13,41053</geo>
+                     </location>
+                  </settlement>
+               </death>
+            </person>
          </listPerson>
          <listBibl>
-            <bibl xml:id="pmb163105">
-               <title type="main">Der Meineidbauer. Volksstück mit Gesang in drei Acten</title>
-               <title type="werk_unter-diesem-namen-oder-kurzel-veroffentlicht">L. Gruber</title>
-               <author role="hat-unter-pseudonym-geschrieben" ref="pmb10772">Anzengruber, Ludwig</author>
-            </bibl>
             <bibl xml:id="pmb36374">
-               <title type="main">Neue Freie Presse</title>
+               <title>Neue Freie Presse</title>
                <title type="werk_link">http://anno.onb.ac.at/cgi-content/anno?aid=nfp</title>
                <title type="legacy-name-merge">Neue freie Presse (Zeitung, Wien)</title>
-               <author role="hat-herausgegeben" ref="pmb10809">Bacher, Eduard</author>
-               <author role="hat-herausgegeben" ref="pmb10875">Benedikt, Moriz</author>
-               <author role="hat-herausgegeben" ref="pmb10872">Benedikt, Ernst</author>
+               <author ref="pmb10809" role="hat-herausgegeben">Bacher, Eduard</author>
+               <author ref="pmb10875" role="hat-herausgegeben">Benedikt, Moriz</author>
+               <author ref="pmb10872" role="hat-herausgegeben">Benedikt, Ernst</author>
+            </bibl>
+            <bibl xml:id="pmb163105">
+               <title>Der Meineidbauer. Volksstück mit Gesang in drei Acten</title>
+               <title type="werk_unter-diesem-namen-oder-kurzel-veroffentlicht">L. Gruber</title>
+               <author ref="pmb10772" role="hat-unter-pseudonym-geschrieben">Anzengruber, Ludwig</author>
             </bibl>
             <bibl xml:id="pmb78363">
-               <title type="main">Die Haubenlerche. Drama in vier Akten</title>
+               <title>Die Haubenlerche. Drama in vier Akten</title>
                <title type="legacy-name-merge">Die Haubenlerche</title>
-               <author role="hat-geschaffen" ref="pmb13118">Wildenbruch, Ernst von</author>
+               <author ref="pmb13118" role="hat-geschaffen">Wildenbruch, Ernst von</author>
             </bibl>
             <bibl xml:id="pmb31071" ana="comment">
-               <title type="main">Götz von Berlichingen mit der eisernen Hand</title>
+               <title>Götz von Berlichingen mit der eisernen Hand</title>
                <title type="legacy-name-merge">Götz von Berlichingen mit der eisernen Hand</title>
                <title type="legacy-name-merge">Götz von Berlichingen mit der eisernen Hand</title>
-               <author role="hat-anonym-veroffentlicht" ref="pmb11461">Goethe, Johann Wolfgang von</author>
+               <author ref="pmb11461" role="hat-anonym-veroffentlicht">Goethe, Johann Wolfgang von</author>
             </bibl>
          </listBibl>
          <listPlace>
+            <place xml:id="pmb207296">
+               <placeName>Tiefer Graben 23</placeName>
+               <location type="coords">
+                  <geo>48,213038 16,368738</geo>
+               </location>
+               <location type="located_in_place">
+                  <placeName ref="pmb50825">Tiefer Graben</placeName>
+                  <geo>48,2125 16,368333</geo>
+               </location>
+               <location type="located_in_place">
+                  <placeName ref="pmb51">I., Innere Stadt</placeName>
+                  <geo>48,20769 16,37049</geo>
+               </location>
+            </place>
             <place xml:id="pmb213">
                <placeName>Bad Ischl</placeName>
-               <placeName type="legacy-name-merge">Bad Ischl</placeName>
-               <placeName type="legacy-name-merge">Bad Ischl</placeName>
                <location type="coords">
                   <geo>47,71109 13,61893</geo>
                </location>
@@ -323,35 +463,11 @@
                   <geo>47,75 13,5</geo>
                </location>
             </place>
-            <place xml:id="pmb50">
-               <placeName>Wien</placeName>
-               <placeName type="ort_fruherer-name">K.K. Reichshaupt- und Residenzstadt Wien</placeName>
-               <placeName type="legacy-name-merge">Wien</placeName>
-               <placeName type="alternative-name">Bécs</placeName>
-               <placeName type="alternative-name">Land Wien</placeName>
-               <placeName type="alternative-name">Vídeň</placeName>
-               <placeName type="alternative-name">Wenia</placeName>
-               <placeName type="alternative-name">Beč</placeName>
-               <placeName type="ort_fruherer-name">Vindobona</placeName>
-               <placeName type="legacy-name-merge">Vindobona</placeName>
-               <placeName type="alternative-name">Vienna</placeName>
-               <placeName type="legacy-name-merge">Vienna</placeName>
-               <placeName type="alternative-name">Vienna</placeName>
-               <location type="coords">
-                  <geo>48,208333 16,373056</geo>
-               </location>
-               <location type="located_in_place">
-                  <placeName ref="pmb41240">Österreich</placeName>
-                  <geo>47,33333 13,33333</geo>
-               </location>
-            </place>
             <place xml:id="pmb867">
                <placeName>Innsbruck</placeName>
                <placeName type="alternative-name">Oeniponte</placeName>
-               <placeName type="legacy-name-merge">Innsbruck</placeName>
                <placeName type="alternative-name">Stadt Innsbruck</placeName>
                <placeName type="legacy-name-merge">bei Innsbruck</placeName>
-               <placeName type="alternative-name">Innsbruck</placeName>
                <placeName type="legacy-name-merge">Innsbruck?</placeName>
                <location type="coords">
                   <geo>47,272569 11,389534</geo>
@@ -391,7 +507,7 @@
                   <placeName ref="pmb48198">Redoutensaal</placeName>
                   <geo>48,206783 16,366551</geo>
                   <idno type="URL" subtype="pmb">https://pmb.acdh.oeaw.ac.at/entity/48198/</idno>
-                  <idno type="URL" subtype="geschichtewiki">https://www.geschichtewiki.wien.gv.at/Redoutensäle</idno>
+                  <idno type="URL" subtype="www">https://www.geschichtewiki.wien.gv.at/Redoutensäle</idno>
                   <idno type="URL" subtype="wienerschnitzler">https://wienerschnitzler.org/pmb48198.html</idno>
                   <idno type="URL" subtype="schnitzler-kultur">https://schnitzler-kultur.acdh.oeaw.ac.at/pmb48198.html</idno>
                </location>
@@ -403,7 +519,7 @@
                   <idno type="URL" subtype="pmb">https://pmb.acdh.oeaw.ac.at/entity/36789/</idno>
                   <idno type="URL" subtype="pmb">https://pmb.acdh.oeaw.ac.at/entity/51010/</idno>
                   <idno type="URL" subtype="geonames">https://sws.geonames.org/2775259/</idno>
-                  <idno type="URL" subtype="kraus">https://www.kraus.wienbibliothek.at/legalkraus/pmb51.html</idno>
+                  <idno type="URL" subtype="www">https://www.kraus.wienbibliothek.at/legalkraus/pmb51.html</idno>
                   <idno type="URL" subtype="schnitzler-interviews">https://schnitzler-interviews.acdh.oeaw.ac.at/pmb51.html</idno>
                   <idno type="URL" subtype="wikidata">http://www.wikidata.org/entity/Q267329</idno>
                   <idno type="URL" subtype="wikipedia">https://de.wikipedia.org/wiki/Innere_Stadt_(Wien)</idno>
@@ -436,8 +552,8 @@
             </org>
          </listOrg>
          <listEvent>
-            <event xml:id="pmb325852" ana="comment">
-               <eventName n="Theateraufführung">Aufführung von Götz von Berlichingen mit der eisernen Hand, 1.9.1899</eventName>
+            <event xml:id="pmb335166" ana="comment">
+               <eventName n="Theateraufführung">Goethe-Feier, 8.10.1899</eventName>
                <listPlace>
                   <place>
                      <placeName role="veranstaltet in" ref="pmb14">Burgtheater</placeName>
@@ -447,8 +563,8 @@
                   </place>
                </listPlace>
             </event>
-            <event xml:id="pmb335166" ana="comment">
-               <eventName n="Theateraufführung">Goethe-Feier, 8.10.1899</eventName>
+            <event xml:id="pmb325852" ana="comment">
+               <eventName n="Theateraufführung">Aufführung von Götz von Berlichingen mit der eisernen Hand, 1.9.1899</eventName>
                <listPlace>
                   <place>
                      <placeName role="veranstaltet in" ref="pmb14">Burgtheater</placeName>

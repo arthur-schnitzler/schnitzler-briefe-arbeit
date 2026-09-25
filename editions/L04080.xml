@@ -1,6 +1,10 @@
-<?xml version='1.0' encoding='UTF-8'?>
+<?xml version="1.0" encoding="UTF-8"?>
 <?xml-model href="../meta/schnitzler-briefe-schematron.sch" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
-<TEI xmlns="http://www.tei-c.org/ns/1.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.tei-c.org/ns/1.0 ../meta/schnitzler-briefe-schema.xsd" xml:base="https://id.acdh.oeaw.ac.at/schnitzler/schnitzler-briefe/editions" xml:id="L04080">
+<TEI xmlns="http://www.tei-c.org/ns/1.0"
+     xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+     xsi:schemaLocation="http://www.tei-c.org/ns/1.0 ../meta/schnitzler-briefe-schema.xsd"
+     xml:base="https://id.acdh.oeaw.ac.at/schnitzler/schnitzler-briefe/editions"
+     xml:id="L04080">
    <teiHeader>
       <fileDesc>
          <titleStmt>
@@ -127,12 +131,20 @@
                <date evidence="conjecture" notBefore="1900-07-10" notAfter="1900-07-14">[10. 7. 1900 – 14. 7. 1900?]</date>
                <placeName ref="#pmb50" evidence="conjecture">Wien</placeName>
             </correspAction>
-            <correspContext><ref type="belongsToCorrespondence" target="correspondence_12740">Schwarzkopf, Gustav</ref>
+            <correspContext>
+               <ref type="belongsToCorrespondence" target="correspondence_12740">Schwarzkopf, Gustav</ref>
                <ref subtype="previous_letter" type="withinCollection" target="L01052">Schnitzler an Beer-Hofmann, 7. 7. 1900</ref>
                <ref subtype="next_letter" type="withinCollection" target="L03306">Salten an Schnitzler, 12. 7. 1900</ref>
-               <ref subtype="previous_letter" type="withinCorrespondence" source="correspondence_12740" target="L04417">Schnitzler an Schwarzkopf, [4?]. 7. 1900</ref>
-               <ref subtype="next_letter" type="withinCorrespondence" source="correspondence_12740" target="L04304">Schwarzkopf an Schnitzler, 12. 7. 1900</ref>
-            </correspContext></correspDesc>
+               <ref subtype="previous_letter"
+                    type="withinCorrespondence"
+                    source="correspondence_12740"
+                    target="L04417">Schnitzler an Schwarzkopf, [4?]. 7. 1900</ref>
+               <ref subtype="next_letter"
+                    type="withinCorrespondence"
+                    source="correspondence_12740"
+                    target="L04304">Schwarzkopf an Schnitzler, 12. 7. 1900</ref>
+            </correspContext>
+         </correspDesc>
       </profileDesc>
       <revisionDesc status="proposed">
          <change who="MAM" when="2025-12-10">Export aus Transkribus</change>
@@ -203,32 +215,26 @@
       </body>
       <back>
          <listPerson>
-            <person xml:id="pmb10986">
+            <person xml:id="pmb2121">
                <persName>
-                  <forename>Otto</forename>
-                  <surname>Brahm</surname>
+                  <surname>Schnitzler</surname>
+                  <forename>Arthur</forename>
                </persName>
                <birth>
-                  <date when="1856-02-05">1856-02-05</date>
-                  <settlement ref="pmb506">
-                     <placeName type="pref">Hamburg</placeName>
+                  <date when="1862-05-15">15. 5. 1862</date>
+                  <settlement ref="pmb50">
+                     <placeName type="pref">Wien</placeName>
                      <location>
-                        <geo>53,55055 9,993333</geo>
+                        <geo>48,208333 16,373056</geo>
                      </location>
                   </settlement>
                </birth>
                <death>
-                  <date when="1912-11-28">1912-11-28</date>
-                  <settlement ref="pmb168">
-                     <placeName type="pref">Berlin</placeName>
+                  <date when="1931-10-21">21. 10. 1931</date>
+                  <settlement ref="pmb50">
+                     <placeName type="pref">Wien</placeName>
                      <location>
-                        <geo>52,52437 13,41053</geo>
-                     </location>
-                  </settlement>
-                  <settlement ref="pmb253956">
-                     <placeName type="pref">Ungersche Klinik</placeName>
-                     <location>
-                        <geo>52,5037 13,3567</geo>
+                        <geo>48,208333 16,373056</geo>
                      </location>
                   </settlement>
                </death>
@@ -281,35 +287,37 @@
                   </settlement>
                </death>
             </person>
-            <person xml:id="pmb2121">
+            <person xml:id="pmb10986">
                <persName>
-                  <surname>Schnitzler</surname>
-                  <forename>Arthur</forename>
+                  <forename>Otto</forename>
+                  <surname>Brahm</surname>
                </persName>
                <birth>
-                  <date when="1862-05-15">15. 5. 1862</date>
-                  <settlement ref="pmb50">
-                     <placeName type="pref">Wien</placeName>
+                  <date when="1856-02-05">1856-02-05</date>
+                  <settlement ref="pmb506">
+                     <placeName type="pref">Hamburg</placeName>
                      <location>
-                        <geo>48,208333 16,373056</geo>
+                        <geo>53,55055 9,993333</geo>
                      </location>
                   </settlement>
                </birth>
                <death>
-                  <date when="1931-10-21">21. 10. 1931</date>
-                  <settlement ref="pmb50">
-                     <placeName type="pref">Wien</placeName>
+                  <date when="1912-11-28">1912-11-28</date>
+                  <settlement ref="pmb168">
+                     <placeName type="pref">Berlin</placeName>
                      <location>
-                        <geo>48,208333 16,373056</geo>
+                        <geo>52,52437 13,41053</geo>
+                     </location>
+                  </settlement>
+                  <settlement ref="pmb253956">
+                     <placeName type="pref">Ungersche Klinik</placeName>
+                     <location>
+                        <geo>52,5037 13,3567</geo>
                      </location>
                   </settlement>
                </death>
-               <sex value="male"/>
-               <occupation ref="pmb90">Schriftsteller/Schriftstellerin</occupation>
-               <occupation ref="pmb97">Mediziner/Medizinerin</occupation>
-               <idno type="gnd">https://d-nb.info/gnd/118609807/</idno>
             </person>
-            <person xml:id="pmb2173" ana="comment">
+            <person xml:id="pmb2173" ana="implied">
                <persName>
                   <forename>Olga</forename>
                   <surname>Schnitzler</surname>
@@ -357,13 +365,13 @@
                   </settlement>
                </death>
             </person>
-            <person xml:id="pmb24420" ana="implied">
+            <person xml:id="pmb2461" ana="implied">
                <persName>
-                  <forename>Hans</forename>
-                  <surname>Schnitzler</surname>
+                  <forename>Gisela</forename>
+                  <surname>Hajek</surname>
                </persName>
                <birth>
-                  <date when="1895-07-11">1895-07-11</date>
+                  <date when="1867-12-20">1867-12-20</date>
                   <settlement ref="pmb50">
                      <placeName type="pref">Wien</placeName>
                      <location>
@@ -372,11 +380,11 @@
                   </settlement>
                </birth>
                <death>
-                  <date when="1967-03-26">1967-03-26</date>
-                  <settlement ref="pmb880">
-                     <placeName type="pref">Chicago</placeName>
+                  <date when="1953-02-03">1953-02-03</date>
+                  <settlement ref="pmb893">
+                     <placeName type="pref">Cambridge</placeName>
                      <location>
-                        <geo>41,85003 -87,65005</geo>
+                        <geo>52,2 0,11667</geo>
                      </location>
                   </settlement>
                </death>
@@ -405,13 +413,13 @@
                   </settlement>
                </death>
             </person>
-            <person xml:id="pmb2461" ana="implied">
+            <person xml:id="pmb24420" ana="implied">
                <persName>
-                  <forename>Gisela</forename>
-                  <surname>Hajek</surname>
+                  <forename>Hans</forename>
+                  <surname>Schnitzler</surname>
                </persName>
                <birth>
-                  <date when="1867-12-20">1867-12-20</date>
+                  <date when="1895-07-11">1895-07-11</date>
                   <settlement ref="pmb50">
                      <placeName type="pref">Wien</placeName>
                      <location>
@@ -420,11 +428,11 @@
                   </settlement>
                </birth>
                <death>
-                  <date when="1953-02-03">1953-02-03</date>
-                  <settlement ref="pmb893">
-                     <placeName type="pref">Cambridge</placeName>
+                  <date when="1967-03-26">1967-03-26</date>
+                  <settlement ref="pmb880">
+                     <placeName type="pref">Chicago</placeName>
                      <location>
-                        <geo>52,2 0,11667</geo>
+                        <geo>41,85003 -87,65005</geo>
                      </location>
                   </settlement>
                </death>
@@ -432,53 +440,25 @@
          </listPerson>
          <listBibl>
             <bibl xml:id="pmb30625">
-               <title type="main">Die Quellen des Nil</title>
-               <author role="hat-geschaffen" ref="pmb2121">Schnitzler, Arthur</author>
+               <title>Die Quellen des Nil</title>
+               <author ref="pmb2121" role="hat-geschaffen">Schnitzler, Arthur</author>
             </bibl>
             <bibl xml:id="pmb29923" ana="implied">
-               <title type="main">Der Weg ins Freie. Roman</title>
+               <title>Der Weg ins Freie. Roman</title>
                <title type="werk_bibliografische-angabe">Die neue Rundschau, Jg. 19, H. 1–6, Januar–Juni 1908</title>
                <title type="werk_arbeitstitel">Die Entrüsteten</title>
                <title type="werk_bibliografische-angabe">Arthur Schnitzler: Der Weg ins Freie. In: Die neue Rundschau, Jg. 19, H. 1, Januar 1908, S. 31–71.</title>
-               <author role="hat-geschaffen" ref="pmb2121">Schnitzler, Arthur</author>
+               <author ref="pmb2121" role="hat-geschaffen">Schnitzler, Arthur</author>
             </bibl>
             <bibl xml:id="pmb30486" ana="implied">
-               <title type="main">Frau Bertha Garlan. Roman</title>
+               <title>Frau Bertha Garlan. Roman</title>
                <title type="werk_bibliografische-angabe">Neue Deutsche Rundschau, Jg. 12, H. 1, Januar, S. 41–64; H. 2, Februar, S. 181–206; H. 3, März, S. 237–272, 1901</title>
-               <author role="hat-geschaffen" ref="pmb2121">Schnitzler, Arthur</author>
+               <author ref="pmb2121" role="hat-geschaffen">Schnitzler, Arthur</author>
             </bibl>
          </listBibl>
          <listPlace>
-            <place xml:id="pmb34401">
-               <placeName>Altaussee</placeName>
-               <placeName type="legacy-name-merge">Altaussee</placeName>
-               <placeName type="legacy-name-merge">Altaussee</placeName>
-               <placeName type="legacy-name-merge">Altaussee</placeName>
-               <location type="coords">
-                  <geo>47,639444 13,763333</geo>
-               </location>
-               <location type="located_in_place">
-                  <placeName ref="pmb41240">Österreich</placeName>
-                  <geo>47,33333 13,33333</geo>
-               </location>
-               <location type="located_in_place">
-                  <placeName ref="pmb429">Salzkammergut</placeName>
-                  <geo>47,75 13,5</geo>
-               </location>
-            </place>
-            <place xml:id="pmb470">
-               <placeName>Edlach</placeName>
-               <location type="coords">
-                  <geo>47,69255 15,80915</geo>
-               </location>
-               <location type="located_in_place">
-                  <placeName ref="pmb483">Reichenau an der Rax</placeName>
-                  <geo>47,7 15,83333</geo>
-               </location>
-            </place>
             <place xml:id="pmb483">
                <placeName>Reichenau an der Rax</placeName>
-               <placeName type="legacy-name-merge">Reichenau an der Rax</placeName>
                <placeName type="legacy-name-merge">Reichenau im Mühlkreis</placeName>
                <location type="coords">
                   <geo>47,7 15,83333</geo>
@@ -491,16 +471,12 @@
             <place xml:id="pmb50">
                <placeName>Wien</placeName>
                <placeName type="ort_fruherer-name">K.K. Reichshaupt- und Residenzstadt Wien</placeName>
-               <placeName type="legacy-name-merge">Wien</placeName>
                <placeName type="alternative-name">Bécs</placeName>
                <placeName type="alternative-name">Land Wien</placeName>
                <placeName type="alternative-name">Vídeň</placeName>
                <placeName type="alternative-name">Wenia</placeName>
                <placeName type="alternative-name">Beč</placeName>
                <placeName type="ort_fruherer-name">Vindobona</placeName>
-               <placeName type="legacy-name-merge">Vindobona</placeName>
-               <placeName type="alternative-name">Vienna</placeName>
-               <placeName type="legacy-name-merge">Vienna</placeName>
                <placeName type="alternative-name">Vienna</placeName>
                <location type="coords">
                   <geo>48,208333 16,373056</geo>
@@ -508,6 +484,24 @@
                <location type="located_in_place">
                   <placeName ref="pmb41240">Österreich</placeName>
                   <geo>47,33333 13,33333</geo>
+               </location>
+               <location type="located_in_place">
+                  <placeName ref="pmb235218">Windmühlhöhe</placeName>
+                  <geo>48,24077 16,32092</geo>
+               </location>
+            </place>
+            <place xml:id="pmb34401">
+               <placeName>Altaussee</placeName>
+               <location type="coords">
+                  <geo>47,639444 13,763333</geo>
+               </location>
+               <location type="located_in_place">
+                  <placeName ref="pmb41240">Österreich</placeName>
+                  <geo>47,33333 13,33333</geo>
+               </location>
+               <location type="located_in_place">
+                  <placeName ref="pmb429">Salzkammergut</placeName>
+                  <geo>47,75 13,5</geo>
                </location>
             </place>
             <place xml:id="pmb90707">
@@ -524,6 +518,16 @@
                <location type="located_in_place">
                   <placeName ref="pmb1003">Niederösterreich</placeName>
                   <geo>48,33333 15,75</geo>
+               </location>
+            </place>
+            <place xml:id="pmb470">
+               <placeName>Edlach</placeName>
+               <location type="coords">
+                  <geo>47,69255 15,80915</geo>
+               </location>
+               <location type="located_in_place">
+                  <placeName ref="pmb483">Reichenau an der Rax</placeName>
+                  <geo>47,7 15,83333</geo>
                </location>
             </place>
             <place xml:id="pmb44982" ana="implied">

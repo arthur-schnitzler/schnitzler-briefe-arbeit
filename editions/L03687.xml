@@ -1,6 +1,10 @@
-<?xml version='1.0' encoding='UTF-8'?>
+<?xml version="1.0" encoding="UTF-8"?>
 <?xml-model href="../meta/schnitzler-briefe-schematron.sch" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
-<TEI xmlns="http://www.tei-c.org/ns/1.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.tei-c.org/ns/1.0 ../meta/schnitzler-briefe-schema.xsd" xml:id="L03687" xml:base="https://id.acdh.oeaw.ac.at/schnitzler/schnitzler-briefe/editions">
+<TEI xmlns="http://www.tei-c.org/ns/1.0"
+     xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+     xsi:schemaLocation="http://www.tei-c.org/ns/1.0 ../meta/schnitzler-briefe-schema.xsd"
+     xml:id="L03687"
+     xml:base="https://id.acdh.oeaw.ac.at/schnitzler/schnitzler-briefe/editions">
    <teiHeader>
       <fileDesc>
          <titleStmt>
@@ -144,12 +148,20 @@
                <date evidence="external" when="1927-10-15">[15. 10. 1927?]</date>
                <placeName ref="#pmb50" evidence="conjecture">Wien</placeName>
             </correspAction>
-            <correspContext><ref type="belongsToCorrespondence" target="correspondence_13212">Zweig, Stefan</ref>
+            <correspContext>
+               <ref type="belongsToCorrespondence" target="correspondence_13212">Zweig, Stefan</ref>
                <ref subtype="previous_letter" type="withinCollection" target="L03745">Schnitzler an Zweig, 12. 10. 1927</ref>
                <ref subtype="next_letter" type="withinCollection" target="L03740">Schnitzler an Zweig, 15. 10. 1927</ref>
-               <ref subtype="previous_letter" type="withinCorrespondence" source="correspondence_13212" target="L03745">Schnitzler an Zweig, 12. 10. 1927</ref>
-               <ref subtype="next_letter" type="withinCorrespondence" source="correspondence_13212" target="L03740">Schnitzler an Zweig, 15. 10. 1927</ref>
-            </correspContext></correspDesc>
+               <ref subtype="previous_letter"
+                    type="withinCorrespondence"
+                    source="correspondence_13212"
+                    target="L03745">Schnitzler an Zweig, 12. 10. 1927</ref>
+               <ref subtype="next_letter"
+                    type="withinCorrespondence"
+                    source="correspondence_13212"
+                    target="L03740">Schnitzler an Zweig, 15. 10. 1927</ref>
+            </correspContext>
+         </correspDesc>
       </profileDesc>
       <revisionDesc status="approved">
          <change who="MAM" when="2025-06-11">Export aus Transkribus</change>
@@ -194,7 +206,9 @@
             <p>Ihre Handschrift erweckt immer freudiges Gefühl in mir und ich eile mich, Ihnen zu
                antworten, freilich nicht unbeschämt, denn meine Auskunft ist unverantwortlich
                ungenau. Ich bin in allen Honorardingen geradezu tölpisch leichtsinnig, kümmere mich
-               um gar nichts und die Honorare, die ich bislang für <anchor type="commentary" xml:id="K_L03687-1"/>Verfilmungen meiner <rs type="work" subtype="implied" ref="#pmb294768 #pmb294945 #pmb294949">Novellen</rs>
+               um gar nichts und die Honorare, die ich bislang für <anchor type="commentary" xml:id="K_L03687-1"/>Verfilmungen meiner <rs type="work"
+                   subtype="implied"
+                   ref="#pmb294768 #pmb294945 #pmb294949">Novellen</rs>
                <note type="commentary" corresp="K_L03687-1">
                   <date>1923</date> wurde <rs type="person" ref="#pmb13212">Zweigs</rs> Novelle <rs type="work" ref="#pmb294768">Brennendes Geheimnis</rs> unter dem Titel <rs type="work" ref="#pmb294953">Mutter, Dein Kind ruft!</rs> verfilmt,
                      <date>1924</date> sein Schauspiel <rs type="work" ref="#pmb76765">Das Haus am
@@ -233,114 +247,566 @@
             </closer>
          </div>
       </body>
-      <back><listPerson><person xml:id="pmb13212"><persName>
-      <forename>Stefan</forename>
-      <surname>Zweig</surname>
-  </persName><birth>
-    <date when="1881-11-28">1881-11-28</date>
-      <settlement ref="pmb50">
-        <placeName type="pref">Wien</placeName>
-        <location><geo>48,208333 16,373056</geo></location>
-      </settlement>
-  </birth><death>
-    <date when="1942-02-23">1942-02-23</date>
-      <settlement ref="pmb46774">
-        <placeName type="pref">Petrópolis</placeName>
-        <location><geo>-22,505 -43,17861</geo></location>
-      </settlement>
-  </death></person><person xml:id="pmb152062"><persName>
-      <forename>Marceline</forename>
-      <surname>Desbordes-Valmore</surname>
-  </persName><birth>
-    <date when="1786-06-20">1786-06-20</date>
-      <settlement ref="pmb49994">
-        <placeName type="pref">Douai</placeName>
-        <location><geo>50,37069 3,07922</geo></location>
-      </settlement>
-  </birth><death>
-    <date when="1859-07-23">1859-07-23</date>
-      <settlement ref="pmb182">
-        <placeName type="pref">Paris</placeName>
-        <location><geo>48,85341 2,3488</geo></location>
-      </settlement>
-  </death></person><person xml:id="pmb2121"><persName><surname>Schnitzler</surname><forename>Arthur</forename></persName><birth><date when="1862-05-15">15. 5. 1862</date><settlement ref="pmb50"><placeName type="pref">Wien</placeName><location><geo>48,208333 16,373056</geo></location></settlement></birth><death><date when="1931-10-21">21. 10. 1931</date><settlement ref="pmb50"><placeName type="pref">Wien</placeName><location><geo>48,208333 16,373056</geo></location></settlement></death><sex value="male"/><occupation ref="pmb90">Schriftsteller/Schriftstellerin</occupation><occupation ref="pmb97">Mediziner/Medizinerin</occupation><idno type="gnd">https://d-nb.info/gnd/118609807/</idno></person><person xml:id="pmb28568"><persName>
-      <forename>Anatolij W.</forename>
-      <surname>Lunačarski</surname>
-  </persName><birth>
-    <date when="1875-01-01" notAfter="1875-12-31" notBefore="1875-01-01">1875</date>
-      <settlement ref="pmb28569">
-        <placeName type="pref">Poltawa</placeName>
-      </settlement>
-  </birth><death>
-    <date when="1933-01-01" notAfter="1933-12-31">1933</date>
-      <settlement ref="pmb36456">
-        <placeName type="pref">Menton</placeName>
-        <location><geo>43,77649 7,50435</geo></location>
-      </settlement>
-  </death></person><person xml:id="pmb10020" ana="comment"><persName>
-      <forename>Hans</forename>
-      <surname>Steinhoff</surname>
-  </persName><birth>
-    <date when="1882-03-10">1882-03-10</date>
-      <settlement ref="pmb46863">
-        <placeName type="pref">Marienberg</placeName>
-        <location><geo>50,65051 13,16122</geo></location>
-      </settlement>
-  </birth><death>
-    <date when="1945-04-20">1945-04-20</date>
-      <settlement ref="pmb49505">
-        <placeName type="pref">Glienig</placeName>
-        <location><geo>51,94111 13,44282</geo></location>
-      </settlement>
-  </death></person><person xml:id="pmb294960" ana="comment"><persName>
-      <forename>Kote</forename>
-      <surname>Marjanishvili</surname>
-  </persName><death>
-    <date when="1933-04-17">1933-04-17</date>
-      <settlement ref="pmb869">
-        <placeName type="pref">Moskau</placeName>
-        <location><geo>55,76167 37,60667</geo></location>
-      </settlement>
-  </death></person><person xml:id="pmb3739" ana="comment"><persName>
-      <forename>Lew Nikolajewitsch</forename>
-      <surname>Tolstoi</surname>
-  </persName><birth>
-    <date when="1828-09-09">1828-09-09</date>
-      <settlement ref="pmb59327">
-        <placeName type="pref">Yasnaya Polyana</placeName>
-        <location><geo>54,06858 37,52439</geo></location>
-      </settlement>
-  </birth><death>
-    <date when="1910-11-20">1910-11-20</date>
-      <settlement ref="pmb59329">
-        <placeName type="pref">Lev Tolstoy</placeName>
-        <location><geo>53,21344 39,44604</geo></location>
-      </settlement>
-  </death></person></listPerson><listBibl><bibl xml:id="pmb295127"><title type="main">Marceline Desbordes-Valmore. Das Lebensbild einer Dichterin</title><title type="werk_bibliografische-angabe">Stefan Zweig: Marceline Desbordes-Valmore. Lebensbild einer Dicherin. Leipzig: Inselverlag 1920</title><author role="hat-geschaffen" ref="pmb13212">Zweig, Stefan</author><author role="hat-einen-beitrag-geschaffen-zu" ref="pmb295131">Etzel, Gisela</author></bibl><bibl xml:id="pmb294768" ana="comment"><title type="main">Brennendes Geheimnis</title><author role="hat-geschaffen" ref="pmb13212">Zweig, Stefan</author></bibl><bibl xml:id="pmb294945" ana="comment"><title type="main">Angst</title><author role="hat-geschaffen" ref="pmb13212">Zweig, Stefan</author></bibl><bibl xml:id="pmb294949" ana="comment"><title type="main">Der Amokläufer</title><title type="werk_bibliografische-angabe">Stefan Zweig: Der Amokläufer. In: Neue Freie Presse, 4.6.1922, S. 31–40.</title><author role="hat-geschaffen" ref="pmb13212">Zweig, Stefan</author></bibl><bibl xml:id="pmb294953" ana="comment"><title type="main">Mutter, Dein Kind ruft!</title><title type="werk_namensvariante">Auf verbotenen Wegen</title><title type="werk_namensvariante">Das brennende Geheimnis (Mutter, dein Kind ruft!)</title><author role="hat-geschaffen" ref="pmb13212">Zweig, Stefan</author><author role="hat-geschaffen" ref="pmb7427">Gliese, Rochus</author><author role="hat-geschaffen" ref="pmb11284">Eysoldt, Gertrud</author><author role="hat-geschaffen" ref="pmb113715">Deutsch, Ernst</author><author role="hat-geschaffen" ref="pmb119595">Hasselquist, Jenny</author></bibl><bibl xml:id="pmb76765" ana="comment"><title type="main">Das Haus am Meer. Ein Schauspiel in zwei Teilen (drei Aufzügen)</title><author role="hat-geschaffen" ref="pmb13212">Zweig, Stefan</author></bibl><bibl xml:id="pmb81352" ana="comment"><title type="main">Angst</title><author role="hat-geschaffen" ref="pmb10020">Steinhoff, Hans</author><author role="hat-einen-beitrag-geschaffen-zu" ref="pmb13212">Zweig, Stefan</author><author role="hat-einen-beitrag-geschaffen-zu" ref="pmb119209">Fey, Ernst B.</author><author role="hat-einen-beitrag-geschaffen-zu" ref="pmb119679">Brink, Elga</author><author role="hat-einen-beitrag-geschaffen-zu" ref="pmb119583">Boothby, Valery</author><author role="hat-einen-beitrag-geschaffen-zu" ref="pmb119699">Gibson, Vivian</author><author role="hat-einen-beitrag-geschaffen-zu" ref="pmb119585">Manstad, Margit</author><author role="hat-einen-beitrag-geschaffen-zu" ref="pmb121943">Edwards, Henry</author><author role="hat-einen-beitrag-geschaffen-zu" ref="pmb119215">Fröhlich, Gustav</author><author role="hat-einen-beitrag-geschaffen-zu" ref="pmb19175">Kastner, Bruno</author></bibl><bibl xml:id="pmb294825" ana="implied"><title type="main">Sternstunden der Menschheit</title><author role="hat-geschaffen" ref="pmb13212">Zweig, Stefan</author></bibl><bibl xml:id="pmb295117" ana="implied"><title type="main">Smjatenie Chusto</title><author role="hat-ubersetzt" ref="pmb257718">Bernštejn, P. S.</author><author role="hat-geschaffen" ref="pmb13212">Zweig, Stefan</author></bibl><bibl xml:id="pmb30051" ana="implied"><title type="main">Der Geist im Wort und der Geist in der Tat</title><author role="hat-geschaffen" ref="pmb2121">Schnitzler, Arthur</author></bibl></listBibl><listPlace><place xml:id="pmb253003"><placeName>Paschinger Schlössl</placeName><placeName type="ort_namensvariante">Kapuzinerberg 5</placeName><location type="coords">
-  <geo>47,8027 13,0478</geo>
-</location><location type="located_in_place">
-  <placeName ref="pmb297">Kapuzinerberg</placeName>
-  <geo>47,80399 13,05734</geo>
-</location><location type="located_in_place">
-  <placeName ref="pmb30">Salzburg</placeName>
-  <geo>47,80067 13,04532</geo>
-</location></place><place xml:id="pmb30"><placeName>Salzburg</placeName><placeName type="alternative-name">Iuvavum</placeName><placeName type="legacy-name-merge">Salzburg</placeName><placeName type="alternative-name">Salzburg</placeName><placeName type="legacy-name-merge">Salzburg Stadt</placeName><placeName type="legacy-name-merge">Salzburg</placeName><placeName type="legacy-name-merge">Salzburg?</placeName><location type="coords">
-  <geo>47,80067 13,04532</geo>
-</location><location type="located_in_place">
-  <placeName ref="pmb697">Salzburg [Land]</placeName>
-  <geo>47,41667 13,25</geo>
-</location></place><place xml:id="pmb34438"><placeName>Russland</placeName><placeName type="alternative-name">Russische Föderation</placeName><placeName type="legacy-name-merge">Russland</placeName><placeName type="alternative-name">Russian Federation</placeName><placeName type="alternative-name">Russian Soviet Federated Socialist Republic</placeName><placeName type="alternative-name">Russian Soviet Federative Socialist Republic</placeName><placeName type="alternative-name">Russian Socialist Federative Soviet Republic</placeName><placeName type="legacy-name-merge">Russia</placeName><placeName type="legacy-name-merge">Rußland</placeName><placeName type="legacy-name-merge">Russland</placeName><location type="coords">
-  <geo>60,0 100,0</geo>
-</location><location type="located_in_place">
-  <placeName ref="pmb1019">Asien</placeName>
-  <geo>29,84064 89,29688</geo>
-</location></place><place xml:id="pmb50"><placeName>Wien</placeName><placeName type="ort_fruherer-name">K.K. Reichshaupt- und Residenzstadt Wien</placeName><placeName type="legacy-name-merge">Wien</placeName><placeName type="alternative-name">Bécs</placeName><placeName type="alternative-name">Land Wien</placeName><placeName type="alternative-name">Vídeň</placeName><placeName type="alternative-name">Wenia</placeName><placeName type="alternative-name">Beč</placeName><placeName type="ort_fruherer-name">Vindobona</placeName><placeName type="legacy-name-merge">Vindobona</placeName><placeName type="alternative-name">Vienna</placeName><placeName type="legacy-name-merge">Vienna</placeName><placeName type="alternative-name">Vienna</placeName><location type="coords">
-  <geo>48,208333 16,373056</geo>
-</location><location type="located_in_place">
-  <placeName ref="pmb41240">Österreich</placeName>
-  <geo>47,33333 13,33333</geo>
-</location></place></listPlace><listOrg><org xml:id="pmb294981"><orgName>Wremja</orgName><orgName type="institution_namensvariante">время</orgName><orgName type="institution_namensvariante">Vremja</orgName><orgName type="institution_namensvariante">Vremya</orgName><location type="located_in_place">
-  <placeName ref="pmb433">Sankt Petersburg</placeName>
-  <geo>59,93863 30,31413</geo>
-  <idno type="URL" subtype="wikidata">http://www.wikidata.org/entity/Q656</idno><idno type="URL" subtype="schnitzler-bahr">https://schnitzler-bahr.acdh.oeaw.ac.at/pmb433.html</idno><idno type="URL" subtype="d-nb">https://d-nb.info/gnd/4267026-3</idno><idno type="URL" subtype="pmb">https://pmb.acdh.oeaw.ac.at/entity/433/</idno><idno type="URL" subtype="pmb">https://pmb.acdh.oeaw.ac.at/entity/19875/</idno><idno type="URL" subtype="pmb">https://pmb.acdh.oeaw.ac.at/entity/64405/</idno><idno type="URL" subtype="geonames">https://sws.geonames.org/498817/</idno><idno type="URL" subtype="wikipedia">https://de.wikipedia.org/wiki/Sankt_Petersburg</idno><idno type="URL" subtype="schnitzler-interviews">https://schnitzler-interviews.acdh.oeaw.ac.at/pmb433.html</idno><idno type="URL" subtype="schnitzler-tagebuch">https://schnitzler-tagebuch.acdh.oeaw.ac.at/pmb433.html</idno><idno type="URL" subtype="pmb">https://pmb.acdh.oeaw.ac.at/entity/261949/</idno><idno type="URL" subtype="pmb">https://pmb.acdh.oeaw.ac.at/entity/261448/</idno><idno type="URL" subtype="sk">https://sk.acdh.oeaw.ac.at/DWplace00242</idno><idno type="URL" subtype="sk">https://sk.acdh.oeaw.ac.at/fa_place00004120</idno><idno type="URL" subtype="sk">https://sk.acdh.oeaw.ac.at/fa_place00001023</idno><idno type="URL" subtype="sk">https://sk.acdh.oeaw.ac.at/fa_place00002766</idno><idno type="URL" subtype="biblio">https://biblio.ub.uni-freiburg.de/sf/#pmb433</idno><idno type="URL" subtype="schnitzler-briefe">https://schnitzler-briefe.acdh.oeaw.ac.at/pmb433.html</idno><idno type="URL" subtype="schoenberg-ue">https://www.schoenberg-ue.at/ue/places/place.10.2</idno></location></org></listOrg></back></text>
+      <back>
+         <listPerson>
+            <person xml:id="pmb13212">
+               <persName>
+                  <forename>Stefan</forename>
+                  <surname>Zweig</surname>
+               </persName>
+               <birth>
+                  <date when="1881-11-28">1881-11-28</date>
+                  <settlement ref="pmb50">
+                     <placeName type="pref">Wien</placeName>
+                     <location>
+                        <geo>48,208333 16,373056</geo>
+                     </location>
+                  </settlement>
+               </birth>
+               <death>
+                  <date when="1942-02-23">1942-02-23</date>
+                  <settlement ref="pmb46774">
+                     <placeName type="pref">Petrópolis</placeName>
+                     <location>
+                        <geo>-22,505 -43,17861</geo>
+                     </location>
+                  </settlement>
+               </death>
+            </person>
+            <person xml:id="pmb2121">
+               <persName>
+                  <surname>Schnitzler</surname>
+                  <forename>Arthur</forename>
+               </persName>
+               <birth>
+                  <date when="1862-05-15">15. 5. 1862</date>
+                  <settlement ref="pmb50">
+                     <placeName type="pref">Wien</placeName>
+                     <location>
+                        <geo>48,208333 16,373056</geo>
+                     </location>
+                  </settlement>
+               </birth>
+               <death>
+                  <date when="1931-10-21">21. 10. 1931</date>
+                  <settlement ref="pmb50">
+                     <placeName type="pref">Wien</placeName>
+                     <location>
+                        <geo>48,208333 16,373056</geo>
+                     </location>
+                  </settlement>
+               </death>
+            </person>
+            <person xml:id="pmb28568">
+               <persName>
+                  <forename>Anatolij W.</forename>
+                  <surname>Lunačarski</surname>
+               </persName>
+               <birth>
+                  <date notBefore="1875-01-01" when="1875-01-01" notAfter="1875-12-31">1875</date>
+                  <settlement ref="pmb28569">
+                     <placeName type="pref">Poltawa</placeName>
+                  </settlement>
+               </birth>
+               <death>
+                  <date when="1933-01-01" notAfter="1933-12-31">1933</date>
+                  <settlement ref="pmb36456">
+                     <placeName type="pref">Menton</placeName>
+                     <location>
+                        <geo>43,77649 7,50435</geo>
+                     </location>
+                  </settlement>
+               </death>
+            </person>
+            <person xml:id="pmb152062">
+               <persName>
+                  <forename>Marceline</forename>
+                  <surname>Desbordes-Valmore</surname>
+               </persName>
+               <birth>
+                  <date when="1786-06-20">1786-06-20</date>
+                  <settlement ref="pmb49994">
+                     <placeName type="pref">Douai</placeName>
+                     <location>
+                        <geo>50,37069 3,07922</geo>
+                     </location>
+                  </settlement>
+               </birth>
+               <death>
+                  <date when="1859-07-23">1859-07-23</date>
+                  <settlement ref="pmb182">
+                     <placeName type="pref">Paris</placeName>
+                     <location>
+                        <geo>48,85341 2,3488</geo>
+                     </location>
+                  </settlement>
+               </death>
+            </person>
+            <person xml:id="pmb294960" ana="comment">
+               <persName>
+                  <forename>Kote</forename>
+                  <surname>Marjanishvili</surname>
+               </persName>
+               <death>
+                  <date when="1933-04-17">1933-04-17</date>
+                  <settlement ref="pmb869">
+                     <placeName type="pref">Moskau</placeName>
+                     <location>
+                        <geo>55,76167 37,60667</geo>
+                     </location>
+                  </settlement>
+               </death>
+            </person>
+            <person xml:id="pmb10020" ana="comment">
+               <persName>
+                  <forename>Hans</forename>
+                  <surname>Steinhoff</surname>
+               </persName>
+               <birth>
+                  <date when="1882-03-10">1882-03-10</date>
+                  <settlement ref="pmb46863">
+                     <placeName type="pref">Marienberg</placeName>
+                     <location>
+                        <geo>50,65051 13,16122</geo>
+                     </location>
+                  </settlement>
+               </birth>
+               <death>
+                  <date when="1945-04-20">1945-04-20</date>
+                  <settlement ref="pmb49505">
+                     <placeName type="pref">Glienig</placeName>
+                     <location>
+                        <geo>51,94111 13,44282</geo>
+                     </location>
+                  </settlement>
+               </death>
+            </person>
+            <person xml:id="pmb3739" ana="comment">
+               <persName>
+                  <forename>Lew Nikolajewitsch</forename>
+                  <surname>Tolstoi</surname>
+               </persName>
+               <birth>
+                  <date when="1828-09-09">1828-09-09</date>
+                  <settlement ref="pmb59327">
+                     <placeName type="pref">Yasnaya Polyana</placeName>
+                     <location>
+                        <geo>54,06858 37,52439</geo>
+                     </location>
+                  </settlement>
+               </birth>
+               <death>
+                  <date when="1910-11-20">1910-11-20</date>
+                  <settlement ref="pmb59329">
+                     <placeName type="pref">Lev Tolstoy</placeName>
+                     <location>
+                        <geo>53,21344 39,44604</geo>
+                     </location>
+                  </settlement>
+               </death>
+            </person>
+            <person xml:id="pmb295131">
+               <persName>
+                  <forename>Gisela</forename>
+                  <surname>Etzel</surname>
+               </persName>
+               <birth>
+                  <date when="1880-03-31">1880-03-31</date>
+                  <settlement ref="pmb151006">
+                     <placeName type="pref">Bad Kissingen</placeName>
+                     <location>
+                        <geo>50,2 10,066666666666666</geo>
+                     </location>
+                  </settlement>
+               </birth>
+               <death>
+                  <date when="1918-03-01" notAfter="1918-03-31">1918-03</date>
+                  <settlement ref="pmb1223">
+                     <placeName type="pref">Bern</placeName>
+                     <location>
+                        <geo>46,9489 7,4638</geo>
+                     </location>
+                  </settlement>
+               </death>
+            </person>
+            <person xml:id="pmb7427" ana="comment">
+               <persName>
+                  <forename>Rochus</forename>
+                  <surname>Gliese</surname>
+               </persName>
+               <birth>
+                  <date when="1891-01-06">1891-01-06</date>
+                  <settlement ref="pmb168">
+                     <placeName type="pref">Berlin</placeName>
+                     <location>
+                        <geo>52,52437 13,41053</geo>
+                     </location>
+                  </settlement>
+               </birth>
+               <death>
+                  <date when="1978-12-21">1978-12-21</date>
+                  <settlement ref="pmb168">
+                     <placeName type="pref">Berlin</placeName>
+                     <location>
+                        <geo>52,52437 13,41053</geo>
+                     </location>
+                  </settlement>
+               </death>
+            </person>
+            <person xml:id="pmb11284" ana="comment">
+               <persName>
+                  <forename>Gertrud</forename>
+                  <surname>Eysoldt</surname>
+               </persName>
+               <birth>
+                  <date when="1870-11-30">1870-11-30</date>
+                  <settlement ref="pmb58284">
+                     <placeName type="pref">Pirna</placeName>
+                     <location>
+                        <geo>50,95843 13,93702</geo>
+                     </location>
+                  </settlement>
+               </birth>
+               <death>
+                  <date when="1955-01-05">1955-01-05</date>
+                  <settlement ref="pmb61025">
+                     <placeName type="pref">Ohlstadt</placeName>
+                     <location>
+                        <geo>47,63333 11,23333</geo>
+                     </location>
+                  </settlement>
+               </death>
+            </person>
+            <person xml:id="pmb113715" ana="comment">
+               <persName>
+                  <forename>Ernst</forename>
+                  <surname>Deutsch</surname>
+               </persName>
+               <birth>
+                  <date when="1890-09-16">1890-09-16</date>
+                  <settlement ref="pmb652">
+                     <placeName type="pref">Prag</placeName>
+                     <location>
+                        <geo>50,08333 14,46667</geo>
+                     </location>
+                  </settlement>
+               </birth>
+               <death>
+                  <date when="1969-03-22">1969-03-22</date>
+               </death>
+            </person>
+            <person xml:id="pmb119595" ana="comment">
+               <persName>
+                  <forename>Jenny</forename>
+                  <surname>Hasselquist</surname>
+               </persName>
+               <birth>
+                  <date when="1884-07-31">1884-07-31</date>
+                  <settlement ref="pmb1119">
+                     <placeName type="pref">Stockholm</placeName>
+                     <location>
+                        <geo>59,325 18,05</geo>
+                     </location>
+                  </settlement>
+               </birth>
+               <death>
+                  <date when="1978-06-08">1978-06-08</date>
+               </death>
+            </person>
+            <person xml:id="pmb119209" ana="comment">
+               <persName>
+                  <forename>Ernst B.</forename>
+                  <surname>Fey</surname>
+               </persName>
+               <birth>
+                  <date>-</date>
+               </birth>
+               <death>
+                  <date>-</date>
+               </death>
+            </person>
+            <person xml:id="pmb119679" ana="comment">
+               <persName>
+                  <forename>Elga</forename>
+                  <surname>Brink</surname>
+               </persName>
+               <birth>
+                  <date notBefore="1906-01-01" when="1906-01-01" notAfter="1906-12-31">1906</date>
+                  <settlement ref="pmb168">
+                     <placeName type="pref">Berlin</placeName>
+                     <location>
+                        <geo>52,52437 13,41053</geo>
+                     </location>
+                  </settlement>
+               </birth>
+               <death>
+                  <date when="1985-01-01" notAfter="1985-12-31">1985</date>
+               </death>
+            </person>
+            <person xml:id="pmb119583" ana="comment">
+               <persName>
+                  <forename>Valery</forename>
+                  <surname>Boothby</surname>
+               </persName>
+               <birth>
+                  <date when="1906-10-18">1906-10-18</date>
+                  <settlement ref="pmb506">
+                     <placeName type="pref">Hamburg</placeName>
+                     <location>
+                        <geo>53,55055 9,993333</geo>
+                     </location>
+                  </settlement>
+               </birth>
+               <death>
+                  <date when="1982-04-14">1982-04-14</date>
+               </death>
+            </person>
+            <person xml:id="pmb119699" ana="comment">
+               <persName>
+                  <forename>Vivian</forename>
+                  <surname>Gibson</surname>
+               </persName>
+               <birth>
+                  <date when="1893-05-14">1893-05-14</date>
+                  <settlement ref="pmb116472">
+                     <placeName type="pref">Liverpool</placeName>
+                     <location>
+                        <geo>53,41058 -2,977939</geo>
+                     </location>
+                  </settlement>
+               </birth>
+               <death>
+                  <date when="1981-05-09">1981-05-09</date>
+               </death>
+            </person>
+            <person xml:id="pmb119585" ana="comment">
+               <persName>
+                  <forename>Margit</forename>
+                  <surname>Manstad</surname>
+               </persName>
+               <birth>
+                  <date>-</date>
+               </birth>
+               <death>
+                  <date>-</date>
+               </death>
+            </person>
+            <person xml:id="pmb121943" ana="comment">
+               <persName>
+                  <forename>Henry</forename>
+                  <surname>Edwards</surname>
+               </persName>
+            </person>
+            <person xml:id="pmb119215" ana="comment">
+               <persName>
+                  <forename>Gustav</forename>
+                  <surname>Fröhlich</surname>
+               </persName>
+               <birth>
+                  <date when="1902-03-21">1902-03-21</date>
+                  <settlement ref="pmb890">
+                     <placeName type="pref">Hannover</placeName>
+                     <location>
+                        <geo>52,37052 9,73322</geo>
+                     </location>
+                  </settlement>
+               </birth>
+               <death>
+                  <date when="1987-12-22">1987-12-22</date>
+               </death>
+            </person>
+            <person xml:id="pmb19175" ana="comment">
+               <persName>
+                  <forename>Bruno</forename>
+                  <surname>Kastner</surname>
+               </persName>
+               <birth>
+                  <date when="1890-01-03">1890-01-03</date>
+                  <settlement ref="pmb48514">
+                     <placeName type="pref">Forst</placeName>
+                     <location>
+                        <geo>51,73544 14,63971</geo>
+                     </location>
+                  </settlement>
+               </birth>
+               <death>
+                  <date when="1932-06-10">1932-06-10</date>
+                  <settlement ref="pmb64253">
+                     <placeName type="pref">Bad Kreuznach</placeName>
+                     <location>
+                        <geo>49,8414 7,86713</geo>
+                     </location>
+                  </settlement>
+               </death>
+            </person>
+            <person xml:id="pmb257718">
+               <persName>
+                  <forename>P. S.</forename>
+                  <surname>Bernštejn</surname>
+               </persName>
+            </person>
+         </listPerson>
+         <listBibl>
+            <bibl xml:id="pmb295127">
+               <title>Marceline Desbordes-Valmore. Das Lebensbild einer Dichterin</title>
+               <title type="werk_bibliografische-angabe">Stefan Zweig: Marceline Desbordes-Valmore. Lebensbild einer Dicherin. Leipzig: Inselverlag 1920</title>
+               <author ref="pmb13212" role="hat-geschaffen">Zweig, Stefan</author>
+               <author ref="pmb295131" role="hat-einen-beitrag-geschaffen-zu">Etzel, Gisela</author>
+            </bibl>
+            <bibl xml:id="pmb294768" ana="implied">
+               <title>Brennendes Geheimnis</title>
+               <author ref="pmb13212" role="hat-geschaffen">Zweig, Stefan</author>
+            </bibl>
+            <bibl xml:id="pmb294953" ana="comment">
+               <title>Mutter, Dein Kind ruft!</title>
+               <title type="werk_namensvariante">Auf verbotenen Wegen</title>
+               <title type="werk_namensvariante">Das brennende Geheimnis (Mutter, dein Kind ruft!)</title>
+               <author ref="pmb13212" role="hat-geschaffen">Zweig, Stefan</author>
+               <author ref="pmb7427" role="hat-geschaffen">Gliese, Rochus</author>
+               <author ref="pmb11284" role="hat-geschaffen">Eysoldt, Gertrud</author>
+               <author ref="pmb113715" role="hat-geschaffen">Deutsch, Ernst</author>
+               <author ref="pmb119595" role="hat-geschaffen">Hasselquist, Jenny</author>
+            </bibl>
+            <bibl xml:id="pmb76765" ana="comment">
+               <title>Das Haus am Meer. Ein Schauspiel in zwei Teilen (drei Aufzügen)</title>
+               <author ref="pmb13212" role="hat-geschaffen">Zweig, Stefan</author>
+            </bibl>
+            <bibl xml:id="pmb294949" ana="implied">
+               <title>Der Amokläufer</title>
+               <title type="werk_bibliografische-angabe">Stefan Zweig: Der Amokläufer. In: Neue Freie Presse, 4.6.1922, S. 31–40.</title>
+               <author ref="pmb13212" role="hat-geschaffen">Zweig, Stefan</author>
+            </bibl>
+            <bibl xml:id="pmb294945" ana="implied">
+               <title>Angst</title>
+               <author ref="pmb13212" role="hat-geschaffen">Zweig, Stefan</author>
+            </bibl>
+            <bibl xml:id="pmb81352" ana="comment">
+               <title>Angst</title>
+               <author ref="pmb10020" role="hat-geschaffen">Steinhoff, Hans</author>
+               <author ref="pmb13212" role="hat-einen-beitrag-geschaffen-zu">Zweig, Stefan</author>
+               <author ref="pmb119209" role="hat-einen-beitrag-geschaffen-zu">Fey, Ernst B.</author>
+               <author ref="pmb119679" role="hat-einen-beitrag-geschaffen-zu">Brink, Elga</author>
+               <author ref="pmb119583" role="hat-einen-beitrag-geschaffen-zu">Boothby, Valery</author>
+               <author ref="pmb119699" role="hat-einen-beitrag-geschaffen-zu">Gibson, Vivian</author>
+               <author ref="pmb119585" role="hat-einen-beitrag-geschaffen-zu">Manstad, Margit</author>
+               <author ref="pmb121943" role="hat-einen-beitrag-geschaffen-zu">Edwards, Henry</author>
+               <author ref="pmb119215" role="hat-einen-beitrag-geschaffen-zu">Fröhlich, Gustav</author>
+               <author ref="pmb19175" role="hat-einen-beitrag-geschaffen-zu">Kastner, Bruno</author>
+            </bibl>
+            <bibl xml:id="pmb295117" ana="implied">
+               <title>Smjatenie Chusto</title>
+               <author ref="pmb257718" role="hat-ubersetzt">Bernštejn, P. S.</author>
+               <author ref="pmb13212" role="hat-geschaffen">Zweig, Stefan</author>
+            </bibl>
+            <bibl xml:id="pmb30051" ana="implied">
+               <title>Der Geist im Wort und der Geist in der Tat</title>
+               <author ref="pmb2121" role="hat-geschaffen">Schnitzler, Arthur</author>
+            </bibl>
+            <bibl xml:id="pmb294825" ana="implied">
+               <title>Sternstunden der Menschheit</title>
+               <author ref="pmb13212" role="hat-geschaffen">Zweig, Stefan</author>
+            </bibl>
+         </listBibl>
+         <listPlace>
+            <place xml:id="pmb30">
+               <placeName>Salzburg</placeName>
+               <placeName type="alternative-name">Iuvavum</placeName>
+               <placeName type="legacy-name-merge">Salzburg Stadt</placeName>
+               <placeName type="legacy-name-merge">Salzburg?</placeName>
+               <location type="coords">
+                  <geo>47,80067 13,04532</geo>
+               </location>
+               <location type="located_in_place">
+                  <placeName ref="pmb697">Salzburg [Land]</placeName>
+                  <geo>47,41667 13,25</geo>
+               </location>
+            </place>
+            <place xml:id="pmb50">
+               <placeName>Wien</placeName>
+               <placeName type="ort_fruherer-name">K.K. Reichshaupt- und Residenzstadt Wien</placeName>
+               <placeName type="alternative-name">Bécs</placeName>
+               <placeName type="alternative-name">Land Wien</placeName>
+               <placeName type="alternative-name">Vídeň</placeName>
+               <placeName type="alternative-name">Wenia</placeName>
+               <placeName type="alternative-name">Beč</placeName>
+               <placeName type="ort_fruherer-name">Vindobona</placeName>
+               <placeName type="alternative-name">Vienna</placeName>
+               <location type="coords">
+                  <geo>48,208333 16,373056</geo>
+               </location>
+               <location type="located_in_place">
+                  <placeName ref="pmb41240">Österreich</placeName>
+                  <geo>47,33333 13,33333</geo>
+               </location>
+               <location type="located_in_place">
+                  <placeName ref="pmb235218">Windmühlhöhe</placeName>
+                  <geo>48,24077 16,32092</geo>
+               </location>
+            </place>
+            <place xml:id="pmb253003">
+               <placeName>Paschinger Schlössl</placeName>
+               <placeName type="ort_namensvariante">Kapuzinerberg 5</placeName>
+               <location type="coords">
+                  <geo>47,8027 13,0478</geo>
+               </location>
+               <location type="located_in_place">
+                  <placeName ref="pmb297">Kapuzinerberg</placeName>
+                  <geo>47,80399 13,05734</geo>
+               </location>
+               <location type="located_in_place">
+                  <placeName ref="pmb30">Salzburg</placeName>
+                  <geo>47,80067 13,04532</geo>
+               </location>
+            </place>
+            <place xml:id="pmb34438" ana="comment">
+               <placeName>Russland</placeName>
+               <placeName type="alternative-name">Russische Föderation</placeName>
+               <placeName type="alternative-name">Russian Federation</placeName>
+               <placeName type="alternative-name">Russian Soviet Federated Socialist Republic</placeName>
+               <placeName type="alternative-name">Russian Soviet Federative Socialist Republic</placeName>
+               <placeName type="alternative-name">Russian Socialist Federative Soviet Republic</placeName>
+               <placeName type="legacy-name-merge">Russia</placeName>
+               <placeName type="legacy-name-merge">Rußland</placeName>
+               <location type="coords">
+                  <geo>60,0 100,0</geo>
+               </location>
+               <location type="located_in_place">
+                  <placeName ref="pmb1019">Asien</placeName>
+                  <geo>29,84064 89,29688</geo>
+               </location>
+            </place>
+         </listPlace>
+         <listOrg>
+            <org xml:id="pmb294981">
+               <orgName>Wremja</orgName>
+               <orgName type="institution_namensvariante">время</orgName>
+               <orgName type="institution_namensvariante">Vremja</orgName>
+               <orgName type="institution_namensvariante">Vremya</orgName>
+               <location type="located_in_place">
+                  <placeName ref="pmb433">Sankt Petersburg</placeName>
+                  <geo>59,93863 30,31413</geo>
+                  <idno type="URL" subtype="wikidata">http://www.wikidata.org/entity/Q656</idno>
+                  <idno type="URL" subtype="schnitzler-bahr">https://schnitzler-bahr.acdh.oeaw.ac.at/pmb433.html</idno>
+                  <idno type="URL" subtype="d-nb">https://d-nb.info/gnd/4267026-3</idno>
+                  <idno type="URL" subtype="pmb">https://pmb.acdh.oeaw.ac.at/entity/433/</idno>
+                  <idno type="URL" subtype="pmb">https://pmb.acdh.oeaw.ac.at/entity/19875/</idno>
+                  <idno type="URL" subtype="pmb">https://pmb.acdh.oeaw.ac.at/entity/64405/</idno>
+                  <idno type="URL" subtype="geonames">https://sws.geonames.org/498817/</idno>
+                  <idno type="URL" subtype="wikipedia">https://de.wikipedia.org/wiki/Sankt_Petersburg</idno>
+                  <idno type="URL" subtype="schnitzler-interviews">https://schnitzler-interviews.acdh.oeaw.ac.at/pmb433.html</idno>
+                  <idno type="URL" subtype="schnitzler-tagebuch">https://schnitzler-tagebuch.acdh.oeaw.ac.at/pmb433.html</idno>
+                  <idno type="URL" subtype="pmb">https://pmb.acdh.oeaw.ac.at/entity/261949/</idno>
+                  <idno type="URL" subtype="pmb">https://pmb.acdh.oeaw.ac.at/entity/261448/</idno>
+                  <idno type="URL" subtype="sk">https://sk.acdh.oeaw.ac.at/DWplace00242</idno>
+                  <idno type="URL" subtype="sk">https://sk.acdh.oeaw.ac.at/fa_place00004120</idno>
+                  <idno type="URL" subtype="sk">https://sk.acdh.oeaw.ac.at/fa_place00001023</idno>
+                  <idno type="URL" subtype="sk">https://sk.acdh.oeaw.ac.at/fa_place00002766</idno>
+                  <idno type="URL" subtype="biblio">https://biblio.ub.uni-freiburg.de/sf/#pmb433</idno>
+                  <idno type="URL" subtype="schnitzler-briefe">https://schnitzler-briefe.acdh.oeaw.ac.at/pmb433.html</idno>
+                  <idno type="URL" subtype="www">https://www.schoenberg-ue.at/ue/places/place.10.2</idno>
+               </location>
+            </org>
+         </listOrg>
+      </back>
+   </text>
 </TEI>

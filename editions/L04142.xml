@@ -1,6 +1,10 @@
-<?xml version='1.0' encoding='UTF-8'?>
+<?xml version="1.0" encoding="UTF-8"?>
 <?xml-model href="../meta/schnitzler-briefe-schematron.sch" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
-<TEI xmlns="http://www.tei-c.org/ns/1.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.tei-c.org/ns/1.0 ../meta/schnitzler-briefe-schema.xsd" xml:base="https://id.acdh.oeaw.ac.at/schnitzler/schnitzler-briefe/editions" xml:id="L04142">
+<TEI xmlns="http://www.tei-c.org/ns/1.0"
+     xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+     xsi:schemaLocation="http://www.tei-c.org/ns/1.0 ../meta/schnitzler-briefe-schema.xsd"
+     xml:base="https://id.acdh.oeaw.ac.at/schnitzler/schnitzler-briefe/editions"
+     xml:id="L04142">
    <teiHeader>
       <fileDesc>
          <titleStmt>
@@ -83,7 +87,7 @@
                               <extent>
                                  <measure unit="seite" quantity="8"/>
                                  <measure unit="blatt" quantity="2"/>
-                                 <measure unit="zeichenanzahl" quantity="2898"/>
+                                 <measure unit="zeichenanzahl" quantity="2899"/>
                               </extent>
                            </supportDesc>
                         </objectDesc>
@@ -127,12 +131,20 @@
                <date evidence="conjecture" notBefore="1899-09-10" notAfter="1899-09-14">[10. 9. 1899 – 14. 9. 1899?]</date>
                <placeName ref="#pmb50" evidence="conjecture">Wien</placeName>
             </correspAction>
-            <correspContext><ref type="belongsToCorrespondence" target="correspondence_12740">Schwarzkopf, Gustav</ref>
+            <correspContext>
+               <ref type="belongsToCorrespondence" target="correspondence_12740">Schwarzkopf, Gustav</ref>
                <ref subtype="previous_letter" type="withinCollection" target="L00971">Schnitzler an Beer-Hofmann, 9. 9. 1899</ref>
                <ref subtype="next_letter" type="withinCollection" target="L00972">Schnitzler an Beer-Hofmann, 10. 9. 1899</ref>
-               <ref subtype="previous_letter" type="withinCorrespondence" source="correspondence_12740" target="L04294">Schwarzkopf an Schnitzler, 31. 8. 1899</ref>
-               <ref subtype="next_letter" type="withinCorrespondence" source="correspondence_12740" target="L04292">Schwarzkopf an Schnitzler, 12. 9. 1899</ref>
-            </correspContext></correspDesc>
+               <ref subtype="previous_letter"
+                    type="withinCorrespondence"
+                    source="correspondence_12740"
+                    target="L04294">Schwarzkopf an Schnitzler, 31. 8. 1899</ref>
+               <ref subtype="next_letter"
+                    type="withinCorrespondence"
+                    source="correspondence_12740"
+                    target="L04292">Schwarzkopf an Schnitzler, 12. 9. 1899</ref>
+            </correspContext>
+         </correspDesc>
       </profileDesc>
       <revisionDesc status="proposed">
          <change who="MAM" when="2025-12-10">Export aus Transkribus</change>
@@ -263,13 +275,13 @@
       </body>
       <back>
          <listPerson>
-            <person xml:id="pmb10863">
+            <person xml:id="pmb2121">
                <persName>
-                  <forename>Richard</forename>
-                  <surname>Beer-Hofmann</surname>
+                  <surname>Schnitzler</surname>
+                  <forename>Arthur</forename>
                </persName>
                <birth>
-                  <date when="1866-07-11">1866-07-11</date>
+                  <date when="1862-05-15">15. 5. 1862</date>
                   <settlement ref="pmb50">
                      <placeName type="pref">Wien</placeName>
                      <location>
@@ -278,11 +290,122 @@
                   </settlement>
                </birth>
                <death>
-                  <date when="1945-09-26">1945-09-26</date>
-                  <settlement ref="pmb44053">
-                     <placeName type="pref">New York City</placeName>
+                  <date when="1931-10-21">21. 10. 1931</date>
+                  <settlement ref="pmb50">
+                     <placeName type="pref">Wien</placeName>
                      <location>
-                        <geo>40,71427 -74,00597</geo>
+                        <geo>48,208333 16,373056</geo>
+                     </location>
+                  </settlement>
+               </death>
+            </person>
+            <person xml:id="pmb12740">
+               <persName>
+                  <forename>Gustav</forename>
+                  <surname>Schwarzkopf</surname>
+               </persName>
+               <birth>
+                  <date when="1853-11-07">1853-11-07</date>
+                  <settlement ref="pmb50">
+                     <placeName type="pref">Wien</placeName>
+                     <location>
+                        <geo>48,208333 16,373056</geo>
+                     </location>
+                  </settlement>
+               </birth>
+               <death>
+                  <date when="1939-11-13">1939-11-13</date>
+                  <settlement ref="pmb50">
+                     <placeName type="pref">Wien</placeName>
+                     <location>
+                        <geo>48,208333 16,373056</geo>
+                     </location>
+                  </settlement>
+               </death>
+            </person>
+            <person xml:id="pmb11740">
+               <persName>
+                  <forename>Hugo von</forename>
+                  <surname>Hofmannsthal</surname>
+               </persName>
+               <birth>
+                  <date when="1874-02-01">1874-02-01</date>
+                  <settlement ref="pmb50">
+                     <placeName type="pref">Wien</placeName>
+                     <location>
+                        <geo>48,208333 16,373056</geo>
+                     </location>
+                  </settlement>
+               </birth>
+               <death>
+                  <date when="1929-07-15">1929-07-15</date>
+                  <settlement ref="pmb173">
+                     <placeName type="pref">Rodaun</placeName>
+                     <location>
+                        <geo>48,132793312328 16,256152195922</geo>
+                     </location>
+                  </settlement>
+               </death>
+            </person>
+            <person xml:id="pmb2938">
+               <persName>
+                  <forename>Marie</forename>
+                  <surname>Elsinger</surname>
+               </persName>
+               <birth>
+                  <date when="1874-02-28">1874-02-28</date>
+                  <settlement ref="pmb49880">
+                     <placeName type="pref">St. Pölten</placeName>
+                     <location>
+                        <geo>48,2 15,63333</geo>
+                     </location>
+                  </settlement>
+               </birth>
+            </person>
+            <person xml:id="pmb12348">
+               <persName>
+                  <forename>Gilbert Otto</forename>
+                  <surname>Neumann-Hofer</surname>
+               </persName>
+               <birth>
+                  <date when="1857-02-04">1857-02-04</date>
+                  <settlement ref="pmb64661">
+                     <placeName type="pref">Bol’shiye Berezhki</placeName>
+                     <location>
+                        <geo>55,0917 21,41815</geo>
+                     </location>
+                  </settlement>
+               </birth>
+               <death>
+                  <date when="1941-04-14">1941-04-14</date>
+                  <settlement ref="pmb45808">
+                     <placeName type="pref">Detmold</placeName>
+                     <location>
+                        <geo>51,93855 8,87318</geo>
+                     </location>
+                  </settlement>
+               </death>
+            </person>
+            <person xml:id="pmb14953">
+               <persName>
+                  <forename>Marie</forename>
+                  <surname>Glümer</surname>
+               </persName>
+               <birth>
+                  <date when="1867-07-03">1867-07-03</date>
+                  <settlement ref="pmb50">
+                     <placeName type="pref">Wien</placeName>
+                     <location>
+                        <geo>48,208333 16,373056</geo>
+                     </location>
+                  </settlement>
+               </birth>
+               <death>
+                  <date when="1925-11-16">1925-11-16</date>
+                  <settlement ref="pmb45258">
+                     <placeName type="pref">München</placeName>
+                     <location>
+                        <geo>48,13743 11,57549</geo>
                      </location>
                   </settlement>
                </death>
@@ -313,6 +436,198 @@
                      <placeName type="pref">Ungersche Klinik</placeName>
                      <location>
                         <geo>52,5037 13,3567</geo>
+                     </location>
+                  </settlement>
+               </death>
+            </person>
+            <person xml:id="pmb42048">
+               <persName>
+                  <forename>Auguste</forename>
+                  <surname>Mercier</surname>
+               </persName>
+               <birth>
+                  <date when="1833-12-08">1833-12-08</date>
+                  <settlement ref="pmb42051">
+                     <placeName type="pref">Arras</placeName>
+                     <location>
+                        <geo>50,29301 2,78186</geo>
+                     </location>
+                  </settlement>
+               </birth>
+               <death>
+                  <date when="1921-03-03">1921-03-03</date>
+                  <settlement ref="pmb182">
+                     <placeName type="pref">Paris</placeName>
+                     <location>
+                        <geo>48,85341 2,3488</geo>
+                     </location>
+                  </settlement>
+               </death>
+            </person>
+            <person xml:id="pmb2157">
+               <persName>
+                  <forename>Leo</forename>
+                  <surname>Ebermann</surname>
+               </persName>
+               <birth>
+                  <date when="1863-07-16">1863-07-16</date>
+                  <settlement ref="pmb53790">
+                     <placeName type="pref">Draganovka</placeName>
+                     <location>
+                        <geo>48,87709 26,37927</geo>
+                     </location>
+                  </settlement>
+               </birth>
+               <death>
+                  <date when="1914-10-09">1914-10-09</date>
+                  <settlement ref="pmb50">
+                     <placeName type="pref">Wien</placeName>
+                     <location>
+                        <geo>48,208333 16,373056</geo>
+                     </location>
+                  </settlement>
+               </death>
+            </person>
+            <person xml:id="pmb10863">
+               <persName>
+                  <forename>Richard</forename>
+                  <surname>Beer-Hofmann</surname>
+               </persName>
+               <birth>
+                  <date when="1866-07-11">1866-07-11</date>
+                  <settlement ref="pmb50">
+                     <placeName type="pref">Wien</placeName>
+                     <location>
+                        <geo>48,208333 16,373056</geo>
+                     </location>
+                  </settlement>
+               </birth>
+               <death>
+                  <date when="1945-09-26">1945-09-26</date>
+                  <settlement ref="pmb44053">
+                     <placeName type="pref">New York City</placeName>
+                     <location>
+                        <geo>40,71427 -74,00597</geo>
+                     </location>
+                  </settlement>
+               </death>
+            </person>
+            <person xml:id="pmb11617">
+               <persName>
+                  <forename>Gerhart</forename>
+                  <surname>Hauptmann</surname>
+               </persName>
+               <birth>
+                  <date when="1862-11-15">1862-11-15</date>
+                  <settlement ref="pmb64427">
+                     <placeName type="pref">Szczawno-Zdrój</placeName>
+                     <location>
+                        <geo>50,79512 16,22375</geo>
+                     </location>
+                  </settlement>
+               </birth>
+               <death>
+                  <date when="1946-06-06">1946-06-06</date>
+                  <settlement ref="pmb735">
+                     <placeName type="pref">Jagniątków</placeName>
+                     <location>
+                        <geo>50,816944 15,609444</geo>
+                     </location>
+                  </settlement>
+               </death>
+            </person>
+            <person xml:id="pmb12179">
+               <persName>
+                  <forename>Gustav</forename>
+                  <surname>Maran</surname>
+               </persName>
+               <birth>
+                  <date when="1854-01-08">1854-01-08</date>
+                  <settlement ref="pmb50">
+                     <placeName type="pref">Wien</placeName>
+                     <location>
+                        <geo>48,208333 16,373056</geo>
+                     </location>
+                  </settlement>
+               </birth>
+               <death>
+                  <date when="1917-05-18">1917-05-18</date>
+                  <settlement ref="pmb19055">
+                     <placeName type="pref">Sulz im Wienerwald</placeName>
+                     <location>
+                        <geo>48,1008317 16,1374028</geo>
+                     </location>
+                  </settlement>
+               </death>
+            </person>
+            <person xml:id="pmb11988">
+               <persName>
+                  <forename>Karl</forename>
+                  <surname>Kraus</surname>
+               </persName>
+               <birth>
+                  <date when="1874-04-28">1874-04-28</date>
+                  <settlement ref="pmb41660">
+                     <placeName type="pref">Jičín</placeName>
+                     <location>
+                        <geo>50,43723 15,35162</geo>
+                     </location>
+                  </settlement>
+               </birth>
+               <death>
+                  <date when="1936-06-12">1936-06-12</date>
+                  <settlement ref="pmb50">
+                     <placeName type="pref">Wien</placeName>
+                     <location>
+                        <geo>48,208333 16,373056</geo>
+                     </location>
+                  </settlement>
+               </death>
+            </person>
+            <person xml:id="pmb9131">
+               <persName>
+                  <forename>Jacques</forename>
+                  <surname>Offenbach</surname>
+               </persName>
+               <birth>
+                  <date when="1819-06-20">1819-06-20</date>
+                  <settlement ref="pmb145">
+                     <placeName type="pref">Köln</placeName>
+                     <location>
+                        <geo>50,93835 6,95427</geo>
+                     </location>
+                  </settlement>
+               </birth>
+               <death>
+                  <date when="1880-10-05">1880-10-05</date>
+                  <settlement ref="pmb182">
+                     <placeName type="pref">Paris</placeName>
+                     <location>
+                        <geo>48,85341 2,3488</geo>
+                     </location>
+                  </settlement>
+               </death>
+            </person>
+            <person xml:id="pmb3561">
+               <persName>
+                  <forename>Karl</forename>
+                  <surname>Lueger</surname>
+               </persName>
+               <birth>
+                  <date when="1844-10-24">1844-10-24</date>
+                  <settlement ref="pmb50">
+                     <placeName type="pref">Wien</placeName>
+                     <location>
+                        <geo>48,208333 16,373056</geo>
+                     </location>
+                  </settlement>
+               </birth>
+               <death>
+                  <date when="1910-03-10">1910-03-10</date>
+                  <settlement ref="pmb50">
+                     <placeName type="pref">Wien</placeName>
+                     <location>
+                        <geo>48,208333 16,373056</geo>
                      </location>
                   </settlement>
                </death>
@@ -365,305 +680,22 @@
                   </settlement>
                </death>
             </person>
-            <person xml:id="pmb11617">
+            <person xml:id="pmb4216" ana="comment">
                <persName>
-                  <forename>Gerhart</forename>
-                  <surname>Hauptmann</surname>
+                  <forename>Alfred</forename>
+                  <surname>Dreyfus</surname>
                </persName>
                <birth>
-                  <date when="1862-11-15">1862-11-15</date>
-                  <settlement ref="pmb64427">
-                     <placeName type="pref">Szczawno-Zdrój</placeName>
+                  <date when="1859-10-09">1859-10-09</date>
+                  <settlement ref="pmb58763">
+                     <placeName type="pref">Mulhouse</placeName>
                      <location>
-                        <geo>50,79512 16,22375</geo>
+                        <geo>47,75205 7,32866</geo>
                      </location>
                   </settlement>
                </birth>
                <death>
-                  <date when="1946-06-06">1946-06-06</date>
-                  <settlement ref="pmb735">
-                     <placeName type="pref">Jagniątków</placeName>
-                     <location>
-                        <geo>50,816944 15,609444</geo>
-                     </location>
-                  </settlement>
-               </death>
-            </person>
-            <person xml:id="pmb11740">
-               <persName>
-                  <forename>Hugo von</forename>
-                  <surname>Hofmannsthal</surname>
-               </persName>
-               <birth>
-                  <date when="1874-02-01">1874-02-01</date>
-                  <settlement ref="pmb50">
-                     <placeName type="pref">Wien</placeName>
-                     <location>
-                        <geo>48,208333 16,373056</geo>
-                     </location>
-                  </settlement>
-               </birth>
-               <death>
-                  <date when="1929-07-15">1929-07-15</date>
-                  <settlement ref="pmb173">
-                     <placeName type="pref">Rodaun</placeName>
-                     <location>
-                        <geo>48,132793312328 16,256152195922</geo>
-                     </location>
-                  </settlement>
-               </death>
-            </person>
-            <person xml:id="pmb11988">
-               <persName>
-                  <forename>Karl</forename>
-                  <surname>Kraus</surname>
-               </persName>
-               <birth>
-                  <date when="1874-04-28">1874-04-28</date>
-                  <settlement ref="pmb41660">
-                     <placeName type="pref">Jičín</placeName>
-                     <location>
-                        <geo>50,43723 15,35162</geo>
-                     </location>
-                  </settlement>
-               </birth>
-               <death>
-                  <date when="1936-06-12">1936-06-12</date>
-                  <settlement ref="pmb50">
-                     <placeName type="pref">Wien</placeName>
-                     <location>
-                        <geo>48,208333 16,373056</geo>
-                     </location>
-                  </settlement>
-               </death>
-            </person>
-            <person xml:id="pmb12179">
-               <persName>
-                  <forename>Gustav</forename>
-                  <surname>Maran</surname>
-               </persName>
-               <birth>
-                  <date when="1854-01-08">1854-01-08</date>
-                  <settlement ref="pmb50">
-                     <placeName type="pref">Wien</placeName>
-                     <location>
-                        <geo>48,208333 16,373056</geo>
-                     </location>
-                  </settlement>
-               </birth>
-               <death>
-                  <date when="1917-05-18">1917-05-18</date>
-                  <settlement ref="pmb19055">
-                     <placeName type="pref">Sulz im Wienerwald</placeName>
-                     <location>
-                        <geo>48,1008317 16,1374028</geo>
-                     </location>
-                  </settlement>
-               </death>
-            </person>
-            <person xml:id="pmb12348">
-               <persName>
-                  <forename>Gilbert Otto</forename>
-                  <surname>Neumann-Hofer</surname>
-               </persName>
-               <birth>
-                  <date when="1857-02-04">1857-02-04</date>
-                  <settlement ref="pmb64661">
-                     <placeName type="pref">Bol’shiye Berezhki</placeName>
-                     <location>
-                        <geo>55,0917 21,41815</geo>
-                     </location>
-                  </settlement>
-               </birth>
-               <death>
-                  <date when="1941-04-14">1941-04-14</date>
-                  <settlement ref="pmb45808">
-                     <placeName type="pref">Detmold</placeName>
-                     <location>
-                        <geo>51,93855 8,87318</geo>
-                     </location>
-                  </settlement>
-               </death>
-            </person>
-            <person xml:id="pmb12740">
-               <persName>
-                  <forename>Gustav</forename>
-                  <surname>Schwarzkopf</surname>
-               </persName>
-               <birth>
-                  <date when="1853-11-07">1853-11-07</date>
-                  <settlement ref="pmb50">
-                     <placeName type="pref">Wien</placeName>
-                     <location>
-                        <geo>48,208333 16,373056</geo>
-                     </location>
-                  </settlement>
-               </birth>
-               <death>
-                  <date when="1939-11-13">1939-11-13</date>
-                  <settlement ref="pmb50">
-                     <placeName type="pref">Wien</placeName>
-                     <location>
-                        <geo>48,208333 16,373056</geo>
-                     </location>
-                  </settlement>
-               </death>
-            </person>
-            <person xml:id="pmb14953">
-               <persName>
-                  <forename>Marie</forename>
-                  <surname>Glümer</surname>
-               </persName>
-               <birth>
-                  <date when="1867-07-03">1867-07-03</date>
-                  <settlement ref="pmb50">
-                     <placeName type="pref">Wien</placeName>
-                     <location>
-                        <geo>48,208333 16,373056</geo>
-                     </location>
-                  </settlement>
-               </birth>
-               <death>
-                  <date when="1925-11-16">1925-11-16</date>
-                  <settlement ref="pmb45258">
-                     <placeName type="pref">München</placeName>
-                     <location>
-                        <geo>48,13743 11,57549</geo>
-                     </location>
-                  </settlement>
-               </death>
-            </person>
-            <person xml:id="pmb2121">
-               <persName>
-                  <surname>Schnitzler</surname>
-                  <forename>Arthur</forename>
-               </persName>
-               <birth>
-                  <date when="1862-05-15">15. 5. 1862</date>
-                  <settlement ref="pmb50">
-                     <placeName type="pref">Wien</placeName>
-                     <location>
-                        <geo>48,208333 16,373056</geo>
-                     </location>
-                  </settlement>
-               </birth>
-               <death>
-                  <date when="1931-10-21">21. 10. 1931</date>
-                  <settlement ref="pmb50">
-                     <placeName type="pref">Wien</placeName>
-                     <location>
-                        <geo>48,208333 16,373056</geo>
-                     </location>
-                  </settlement>
-               </death>
-               <sex value="male"/>
-               <occupation ref="pmb90">Schriftsteller/Schriftstellerin</occupation>
-               <occupation ref="pmb97">Mediziner/Medizinerin</occupation>
-               <idno type="gnd">https://d-nb.info/gnd/118609807/</idno>
-            </person>
-            <person xml:id="pmb2157">
-               <persName>
-                  <forename>Leo</forename>
-                  <surname>Ebermann</surname>
-               </persName>
-               <birth>
-                  <date when="1863-07-16">1863-07-16</date>
-                  <settlement ref="pmb53790">
-                     <placeName type="pref">Draganovka</placeName>
-                     <location>
-                        <geo>48,87709 26,37927</geo>
-                     </location>
-                  </settlement>
-               </birth>
-               <death>
-                  <date when="1914-10-09">1914-10-09</date>
-                  <settlement ref="pmb50">
-                     <placeName type="pref">Wien</placeName>
-                     <location>
-                        <geo>48,208333 16,373056</geo>
-                     </location>
-                  </settlement>
-               </death>
-            </person>
-            <person xml:id="pmb2938">
-               <persName>
-                  <forename>Marie</forename>
-                  <surname>Elsinger</surname>
-               </persName>
-               <birth>
-                  <date when="1874-02-28">1874-02-28</date>
-                  <settlement ref="pmb49880">
-                     <placeName type="pref">St. Pölten</placeName>
-                     <location>
-                        <geo>48,2 15,63333</geo>
-                     </location>
-                  </settlement>
-               </birth>
-            </person>
-            <person xml:id="pmb3561">
-               <persName>
-                  <forename>Karl</forename>
-                  <surname>Lueger</surname>
-               </persName>
-               <birth>
-                  <date when="1844-10-24">1844-10-24</date>
-                  <settlement ref="pmb50">
-                     <placeName type="pref">Wien</placeName>
-                     <location>
-                        <geo>48,208333 16,373056</geo>
-                     </location>
-                  </settlement>
-               </birth>
-               <death>
-                  <date when="1910-03-10">1910-03-10</date>
-                  <settlement ref="pmb50">
-                     <placeName type="pref">Wien</placeName>
-                     <location>
-                        <geo>48,208333 16,373056</geo>
-                     </location>
-                  </settlement>
-               </death>
-            </person>
-            <person xml:id="pmb42048">
-               <persName>
-                  <forename>Auguste</forename>
-                  <surname>Mercier</surname>
-               </persName>
-               <birth>
-                  <date when="1833-12-08">1833-12-08</date>
-                  <settlement ref="pmb42051">
-                     <placeName type="pref">Arras</placeName>
-                     <location>
-                        <geo>50,29301 2,78186</geo>
-                     </location>
-                  </settlement>
-               </birth>
-               <death>
-                  <date when="1921-03-03">1921-03-03</date>
-                  <settlement ref="pmb182">
-                     <placeName type="pref">Paris</placeName>
-                     <location>
-                        <geo>48,85341 2,3488</geo>
-                     </location>
-                  </settlement>
-               </death>
-            </person>
-            <person xml:id="pmb9131">
-               <persName>
-                  <forename>Jacques</forename>
-                  <surname>Offenbach</surname>
-               </persName>
-               <birth>
-                  <date when="1819-06-20">1819-06-20</date>
-                  <settlement ref="pmb145">
-                     <placeName type="pref">Köln</placeName>
-                     <location>
-                        <geo>50,93835 6,95427</geo>
-                     </location>
-                  </settlement>
-               </birth>
-               <death>
-                  <date when="1880-10-05">1880-10-05</date>
+                  <date when="1935-07-12">1935-07-12</date>
                   <settlement ref="pmb182">
                      <placeName type="pref">Paris</placeName>
                      <location>
@@ -696,54 +728,6 @@
                   </settlement>
                </death>
             </person>
-            <person xml:id="pmb12201" ana="comment">
-               <persName>
-                  <forename>Guy de</forename>
-                  <surname>Maupassant</surname>
-               </persName>
-               <birth>
-                  <date when="1850-08-05">1850-08-05</date>
-                  <settlement ref="pmb39903">
-                     <placeName type="pref">Tourville-sur-Arques</placeName>
-                     <location>
-                        <geo>49,85926 1,10238</geo>
-                     </location>
-                  </settlement>
-               </birth>
-               <death>
-                  <date when="1893-07-07">1893-07-07</date>
-                  <settlement ref="pmb182">
-                     <placeName type="pref">Paris</placeName>
-                     <location>
-                        <geo>48,85341 2,3488</geo>
-                     </location>
-                  </settlement>
-               </death>
-            </person>
-            <person xml:id="pmb4216" ana="comment">
-               <persName>
-                  <forename>Alfred</forename>
-                  <surname>Dreyfus</surname>
-               </persName>
-               <birth>
-                  <date when="1859-10-09">1859-10-09</date>
-                  <settlement ref="pmb58763">
-                     <placeName type="pref">Mulhouse</placeName>
-                     <location>
-                        <geo>47,75205 7,32866</geo>
-                     </location>
-                  </settlement>
-               </birth>
-               <death>
-                  <date when="1935-07-12">1935-07-12</date>
-                  <settlement ref="pmb182">
-                     <placeName type="pref">Paris</placeName>
-                     <location>
-                        <geo>48,85341 2,3488</geo>
-                     </location>
-                  </settlement>
-               </death>
-            </person>
             <person xml:id="pmb94876" ana="comment">
                <persName>
                   <forename>Maria von</forename>
@@ -768,26 +752,26 @@
                   </settlement>
                </death>
             </person>
-            <person xml:id="pmb102199" ana="implied">
+            <person xml:id="pmb12201" ana="comment">
                <persName>
-                  <forename>Rudolf</forename>
-                  <surname>Raimann</surname>
+                  <forename>Guy de</forename>
+                  <surname>Maupassant</surname>
                </persName>
                <birth>
-                  <date when="1861-05-07">1861-05-07</date>
-                  <settlement ref="pmb53812">
-                     <placeName type="pref">Veszprém</placeName>
+                  <date when="1850-08-05">1850-08-05</date>
+                  <settlement ref="pmb39903">
+                     <placeName type="pref">Tourville-sur-Arques</placeName>
                      <location>
-                        <geo>47,09327 17,91149</geo>
+                        <geo>49,85926 1,10238</geo>
                      </location>
                   </settlement>
                </birth>
                <death>
-                  <date when="1913-09-26">1913-09-26</date>
-                  <settlement ref="pmb50">
-                     <placeName type="pref">Wien</placeName>
+                  <date when="1893-07-07">1893-07-07</date>
+                  <settlement ref="pmb182">
+                     <placeName type="pref">Paris</placeName>
                      <location>
-                        <geo>48,208333 16,373056</geo>
+                        <geo>48,85341 2,3488</geo>
                      </location>
                   </settlement>
                </death>
@@ -834,76 +818,107 @@
                   <date when="1945-01-01">vor 1945</date>
                </death>
             </person>
+            <person xml:id="pmb102199" ana="implied">
+               <persName>
+                  <forename>Rudolf</forename>
+                  <surname>Raimann</surname>
+               </persName>
+               <birth>
+                  <date when="1861-05-07">1861-05-07</date>
+                  <settlement ref="pmb53812">
+                     <placeName type="pref">Veszprém</placeName>
+                     <location>
+                        <geo>47,09327 17,91149</geo>
+                     </location>
+                  </settlement>
+               </birth>
+               <death>
+                  <date when="1913-09-26">1913-09-26</date>
+                  <settlement ref="pmb50">
+                     <placeName type="pref">Wien</placeName>
+                     <location>
+                        <geo>48,208333 16,373056</geo>
+                     </location>
+                  </settlement>
+               </death>
+            </person>
+            <person xml:id="pmb25793" ana="comment">
+               <persName>
+                  <forename>Julius</forename>
+                  <surname>Szeps</surname>
+               </persName>
+               <birth>
+                  <date when="1867-10-27">1867-10-27</date>
+                  <settlement ref="pmb50">
+                     <placeName type="pref">Wien</placeName>
+                     <location>
+                        <geo>48,208333 16,373056</geo>
+                     </location>
+                  </settlement>
+               </birth>
+               <death>
+                  <date when="1924-10-27">1924-10-27</date>
+                  <settlement ref="pmb50">
+                     <placeName type="pref">Wien</placeName>
+                     <location>
+                        <geo>48,208333 16,373056</geo>
+                     </location>
+                  </settlement>
+               </death>
+            </person>
          </listPerson>
          <listBibl>
             <bibl xml:id="pmb33037">
-               <title type="main">Fuhrmann Henschel. Schauspiel in 5 Akten</title>
+               <title>Fuhrmann Henschel. Schauspiel in 5 Akten</title>
                <title type="legacy-name-merge">Fuhrmann Henschel</title>
-               <author role="hat-geschaffen" ref="pmb11617">Hauptmann, Gerhart</author>
+               <author ref="pmb11617" role="hat-geschaffen">Hauptmann, Gerhart</author>
             </bibl>
             <bibl xml:id="pmb333867">
-               <title type="main">Muschelkinder. Schauspiel in vier Acten nach einem Roman von Guy de Maupassant</title>
-               <author role="hat-geschaffen" ref="pmb94876">Berks, Maria von</author>
+               <title>Muschelkinder. Schauspiel in vier Acten nach einem Roman von Guy de Maupassant</title>
+               <author ref="pmb94876" role="hat-geschaffen">Berks, Maria von</author>
             </bibl>
             <bibl xml:id="pmb33243" ana="comment">
-               <title type="main">Tagebuch</title>
+               <title>Tagebuch</title>
                <title type="werk_link">https://schnitzler-tagebuch.acdh.oeaw.ac.at</title>
-               <author role="hat-geschaffen" ref="pmb2121">Schnitzler, Arthur</author>
+               <author ref="pmb2121" role="hat-geschaffen">Schnitzler, Arthur</author>
             </bibl>
             <bibl xml:id="pmb39950" ana="comment">
-               <title type="main">Wiener Allgemeine Zeitung</title>
+               <title>Wiener Allgemeine Zeitung</title>
                <title type="werk_link">https://anno.onb.ac.at/cgi-content/anno?aid=waz</title>
-               <author role="hat-herausgegeben" ref="pmb25793">Szeps, Julius</author>
+               <author ref="pmb25793" role="hat-herausgegeben">Szeps, Julius</author>
             </bibl>
             <bibl xml:id="pmb77872" ana="comment">
-               <title type="main">Pierre &amp; Jean</title>
+               <title>Pierre &amp; Jean</title>
                <title type="werk_bibliografische-angabe">Pierre &amp; Jean. Paris: Paul Ollendorff 1888.</title>
                <title type="werk_namensvariante">Pierre et Jean</title>
-               <author role="hat-geschaffen" ref="pmb12201">Maupassant, Guy de</author>
+               <author ref="pmb12201" role="hat-geschaffen">Maupassant, Guy de</author>
             </bibl>
             <bibl xml:id="pmb29857" ana="implied">
-               <title type="main">Der Schleier der Beatrice. Schauspiel in fünf Akten</title>
+               <title>Der Schleier der Beatrice. Schauspiel in fünf Akten</title>
                <title type="werk_arbeitstitel">Shawl</title>
                <title type="werk_link">http://anno.onb.ac.at/cgi-content/anno-buch?apm=0&amp;aid=601&amp;teil=0111&amp;seite=00000001&amp;zoom=2</title>
                <title type="legacy-name-merge">Der Schleier der Beatrice</title>
-               <author role="hat-geschaffen" ref="pmb2121">Schnitzler, Arthur</author>
+               <author ref="pmb2121" role="hat-geschaffen">Schnitzler, Arthur</author>
             </bibl>
             <bibl xml:id="pmb30005" ana="implied">
-               <title type="main">Abschiedssouper</title>
-               <author role="hat-geschaffen" ref="pmb2121">Schnitzler, Arthur</author>
+               <title>Abschiedssouper</title>
+               <author ref="pmb2121" role="hat-geschaffen">Schnitzler, Arthur</author>
+            </bibl>
+            <bibl xml:id="pmb333854" ana="implied">
+               <title>?? [Versdrama für Josef Kainz]</title>
+               <author ref="pmb2157" role="hat-geschaffen">Ebermann, Leo</author>
             </bibl>
             <bibl xml:id="pmb30233" ana="implied">
-               <title type="main">Der Graf von Charolais. Ein Trauerspiel</title>
+               <title>Der Graf von Charolais. Ein Trauerspiel</title>
                <title type="werk_arbeitstitel">Die unseelige Mitgift</title>
                <title type="legacy-name-merge">Der Graf von Charolais</title>
                <title type="legacy-name-merge">Der Graf von Charolais</title>
-               <author role="hat-geschaffen" ref="pmb10863">Beer-Hofmann, Richard</author>
-            </bibl>
-            <bibl xml:id="pmb333854" ana="implied">
-               <title type="main">?? [Versdrama für Josef Kainz]</title>
-               <author role="hat-geschaffen" ref="pmb2157">Ebermann, Leo</author>
+               <author ref="pmb10863" role="hat-geschaffen">Beer-Hofmann, Richard</author>
             </bibl>
          </listBibl>
          <listPlace>
-            <place xml:id="pmb168">
-               <placeName>Berlin</placeName>
-               <placeName type="alternative-name">Hauptstadt Berlin</placeName>
-               <placeName type="alternative-name">Barlīn</placeName>
-               <placeName type="alternative-name">Reichshauptstadt Berlin</placeName>
-               <placeName type="alternative-name">Berolino</placeName>
-               <placeName type="legacy-name-merge">B-n</placeName>
-               <location type="coords">
-                  <geo>52,52437 13,41053</geo>
-               </location>
-               <location type="located_in_place">
-                  <placeName ref="pmb151">Deutschland</placeName>
-                  <geo>51,5 10,5</geo>
-               </location>
-            </place>
             <place xml:id="pmb213">
                <placeName>Bad Ischl</placeName>
-               <placeName type="legacy-name-merge">Bad Ischl</placeName>
-               <placeName type="legacy-name-merge">Bad Ischl</placeName>
                <location type="coords">
                   <geo>47,71109 13,61893</geo>
                </location>
@@ -912,21 +927,26 @@
                   <geo>47,75 13,5</geo>
                </location>
             </place>
-            <place xml:id="pmb34401">
-               <placeName>Altaussee</placeName>
-               <placeName type="legacy-name-merge">Altaussee</placeName>
-               <placeName type="legacy-name-merge">Altaussee</placeName>
-               <placeName type="legacy-name-merge">Altaussee</placeName>
+            <place xml:id="pmb50" ana="comment">
+               <placeName>Wien</placeName>
+               <placeName type="ort_fruherer-name">K.K. Reichshaupt- und Residenzstadt Wien</placeName>
+               <placeName type="alternative-name">Bécs</placeName>
+               <placeName type="alternative-name">Land Wien</placeName>
+               <placeName type="alternative-name">Vídeň</placeName>
+               <placeName type="alternative-name">Wenia</placeName>
+               <placeName type="alternative-name">Beč</placeName>
+               <placeName type="ort_fruherer-name">Vindobona</placeName>
+               <placeName type="alternative-name">Vienna</placeName>
                <location type="coords">
-                  <geo>47,639444 13,763333</geo>
+                  <geo>48,208333 16,373056</geo>
                </location>
                <location type="located_in_place">
                   <placeName ref="pmb41240">Österreich</placeName>
                   <geo>47,33333 13,33333</geo>
                </location>
                <location type="located_in_place">
-                  <placeName ref="pmb429">Salzkammergut</placeName>
-                  <geo>47,75 13,5</geo>
+                  <placeName ref="pmb235218">Windmühlhöhe</placeName>
+                  <geo>48,24077 16,32092</geo>
                </location>
             </place>
             <place xml:id="pmb414">
@@ -944,16 +964,25 @@
                   <geo>47,69778 13,60913</geo>
                </location>
             </place>
+            <place xml:id="pmb34401">
+               <placeName>Altaussee</placeName>
+               <location type="coords">
+                  <geo>47,639444 13,763333</geo>
+               </location>
+               <location type="located_in_place">
+                  <placeName ref="pmb41240">Österreich</placeName>
+                  <geo>47,33333 13,33333</geo>
+               </location>
+               <location type="located_in_place">
+                  <placeName ref="pmb429">Salzkammergut</placeName>
+                  <geo>47,75 13,5</geo>
+               </location>
+            </place>
             <place xml:id="pmb45258">
                <placeName>München</placeName>
-               <placeName type="alternative-name">München</placeName>
                <placeName type="legacy-name-merge">München?</placeName>
-               <placeName type="legacy-name-merge">München</placeName>
                <placeName type="legacy-name-merge">Munich</placeName>
                <placeName type="alternative-name">Monacho</placeName>
-               <placeName type="alternative-name">Munich</placeName>
-               <placeName type="legacy-name">München</placeName>
-               <placeName type="legacy-name-merge">München?</placeName>
                <location type="coords">
                   <geo>48,13743 11,57549</geo>
                </location>
@@ -966,34 +995,24 @@
                   <geo>51,5 10,5</geo>
                </location>
             </place>
-            <place xml:id="pmb50">
-               <placeName>Wien</placeName>
-               <placeName type="ort_fruherer-name">K.K. Reichshaupt- und Residenzstadt Wien</placeName>
-               <placeName type="legacy-name-merge">Wien</placeName>
-               <placeName type="alternative-name">Bécs</placeName>
-               <placeName type="alternative-name">Land Wien</placeName>
-               <placeName type="alternative-name">Vídeň</placeName>
-               <placeName type="alternative-name">Wenia</placeName>
-               <placeName type="alternative-name">Beč</placeName>
-               <placeName type="ort_fruherer-name">Vindobona</placeName>
-               <placeName type="legacy-name-merge">Vindobona</placeName>
-               <placeName type="alternative-name">Vienna</placeName>
-               <placeName type="legacy-name-merge">Vienna</placeName>
-               <placeName type="alternative-name">Vienna</placeName>
+            <place xml:id="pmb168" ana="comment">
+               <placeName>Berlin</placeName>
+               <placeName type="alternative-name">Hauptstadt Berlin</placeName>
+               <placeName type="alternative-name">Barlīn</placeName>
+               <placeName type="alternative-name">Reichshauptstadt Berlin</placeName>
+               <placeName type="alternative-name">Berolino</placeName>
+               <placeName type="legacy-name-merge">B-n</placeName>
                <location type="coords">
-                  <geo>48,208333 16,373056</geo>
+                  <geo>52,52437 13,41053</geo>
                </location>
                <location type="located_in_place">
-                  <placeName ref="pmb41240">Österreich</placeName>
-                  <geo>47,33333 13,33333</geo>
+                  <placeName ref="pmb151">Deutschland</placeName>
+                  <geo>51,5 10,5</geo>
                </location>
             </place>
             <place xml:id="pmb166" ana="comment">
                <placeName>Frankreich</placeName>
                <placeName type="alternative-name">France</placeName>
-               <placeName type="alternative-name">Frankreich</placeName>
-               <placeName type="legacy-name-merge">Frankreich</placeName>
-               <placeName type="legacy-name-merge">France</placeName>
                <location type="coords">
                   <geo>46,0 2,0</geo>
                </location>
@@ -1036,7 +1055,7 @@
                   <idno type="URL" subtype="pmb">https://pmb.acdh.oeaw.ac.at/entity/20954/</idno>
                   <idno type="URL" subtype="pmb">https://pmb.acdh.oeaw.ac.at/entity/65221/</idno>
                   <idno type="URL" subtype="pmb">https://pmb.acdh.oeaw.ac.at/entity/65223/</idno>
-                  <idno type="URL" subtype="kraus">https://www.kraus.wienbibliothek.at/legalkraus/pmb50.html</idno>
+                  <idno type="URL" subtype="www">https://www.kraus.wienbibliothek.at/legalkraus/pmb50.html</idno>
                   <idno type="URL" subtype="wikidata">http://www.wikidata.org/entity/Q1741</idno>
                   <idno type="URL" subtype="wikipedia">https://de.wikipedia.org/wiki/Wien</idno>
                   <idno type="URL" subtype="schnitzler-interviews">https://schnitzler-interviews.acdh.oeaw.ac.at/pmb50.html</idno>
@@ -1050,7 +1069,7 @@
                   <idno type="URL" subtype="sk">https://sk.acdh.oeaw.ac.at/DWplace00085</idno>
                   <idno type="URL" subtype="biblio">https://biblio.ub.uni-freiburg.de/sf/#pmb50</idno>
                   <idno type="URL" subtype="schnitzler-briefe">https://schnitzler-briefe.acdh.oeaw.ac.at/pmb50.html</idno>
-                  <idno type="URL" subtype="schoenberg-ue">https://www.schoenberg-ue.at/ue/places/place.9.11</idno>
+                  <idno type="URL" subtype="www">https://www.schoenberg-ue.at/ue/places/place.9.11</idno>
                </location>
                <location type="located_in_place">
                   <placeName ref="pmb63189">Schubertring</placeName>
@@ -1082,7 +1101,7 @@
                   <idno type="URL" subtype="pmb">https://pmb.acdh.oeaw.ac.at/entity/20954/</idno>
                   <idno type="URL" subtype="pmb">https://pmb.acdh.oeaw.ac.at/entity/65221/</idno>
                   <idno type="URL" subtype="pmb">https://pmb.acdh.oeaw.ac.at/entity/65223/</idno>
-                  <idno type="URL" subtype="kraus">https://www.kraus.wienbibliothek.at/legalkraus/pmb50.html</idno>
+                  <idno type="URL" subtype="www">https://www.kraus.wienbibliothek.at/legalkraus/pmb50.html</idno>
                   <idno type="URL" subtype="wikidata">http://www.wikidata.org/entity/Q1741</idno>
                   <idno type="URL" subtype="wikipedia">https://de.wikipedia.org/wiki/Wien</idno>
                   <idno type="URL" subtype="schnitzler-interviews">https://schnitzler-interviews.acdh.oeaw.ac.at/pmb50.html</idno>
@@ -1096,31 +1115,31 @@
                   <idno type="URL" subtype="sk">https://sk.acdh.oeaw.ac.at/DWplace00085</idno>
                   <idno type="URL" subtype="biblio">https://biblio.ub.uni-freiburg.de/sf/#pmb50</idno>
                   <idno type="URL" subtype="schnitzler-briefe">https://schnitzler-briefe.acdh.oeaw.ac.at/pmb50.html</idno>
-                  <idno type="URL" subtype="schoenberg-ue">https://www.schoenberg-ue.at/ue/places/place.9.11</idno>
+                  <idno type="URL" subtype="www">https://www.schoenberg-ue.at/ue/places/place.9.11</idno>
                </location>
                <location type="located_in_place">
                   <placeName ref="pmb20">Volkstheater</placeName>
                   <geo>48,205142 16,3566</geo>
                   <idno type="URL" subtype="schnitzler-bahr">https://schnitzler-bahr.acdh.oeaw.ac.at/pmb20.html</idno>
                   <idno type="URL" subtype="pmb">https://pmb.acdh.oeaw.ac.at/entity/20/</idno>
-                  <idno type="URL" subtype="kraus">https://www.kraus.wienbibliothek.at/legalkraus/pmb20.html</idno>
+                  <idno type="URL" subtype="www">https://www.kraus.wienbibliothek.at/legalkraus/pmb20.html</idno>
                   <idno type="URL" subtype="pmb">https://pmb.acdh.oeaw.ac.at/entity/92202/</idno>
                   <idno type="URL" subtype="wikidata">http://www.wikidata.org/entity/Q688555</idno>
                   <idno type="URL" subtype="wikipedia">https://de.wikipedia.org/wiki/Volkstheater_(Wien)</idno>
-                  <idno type="URL" subtype="geschichtewiki">https://www.geschichtewiki.wien.gv.at/Special:URIResolver/?curid=6125</idno>
+                  <idno type="URL" subtype="www">https://www.geschichtewiki.wien.gv.at/Special:URIResolver/?curid=6125</idno>
                   <idno type="URL" subtype="schnitzler-interviews">https://schnitzler-interviews.acdh.oeaw.ac.at/pmb20.html</idno>
                   <idno type="URL" subtype="schnitzler-tagebuch">https://schnitzler-tagebuch.acdh.oeaw.ac.at/pmb20.html</idno>
                   <idno type="URL" subtype="wienerschnitzler">https://wienerschnitzler.org/pmb20.html</idno>
                   <idno type="URL" subtype="schnitzler-kultur">https://schnitzler-kultur.acdh.oeaw.ac.at/pmb20.html</idno>
                   <idno type="URL" subtype="schnitzler-briefe">https://schnitzler-briefe.acdh.oeaw.ac.at/pmb20.html</idno>
-                  <idno type="URL" subtype="dla-marbach">https://www.dla-marbach.de/find/opac/id/KS00004119</idno>
+                  <idno type="URL" subtype="www">https://www.dla-marbach.de/find/opac/id/KS00004119</idno>
                </location>
                <location type="located_in_place">
                   <placeName ref="pmb57">VII., Neubau</placeName>
                   <geo>48,2 16,35</geo>
                   <idno type="URL" subtype="geonames">https://sws.geonames.org/2770853/</idno>
                   <idno type="URL" subtype="pmb">https://pmb.acdh.oeaw.ac.at/entity/57/</idno>
-                  <idno type="URL" subtype="kraus">https://www.kraus.wienbibliothek.at/legalkraus/pmb57.html</idno>
+                  <idno type="URL" subtype="www">https://www.kraus.wienbibliothek.at/legalkraus/pmb57.html</idno>
                   <idno type="URL" subtype="pmb">https://pmb.acdh.oeaw.ac.at/entity/147180/</idno>
                   <idno type="URL" subtype="schnitzler-interviews">https://schnitzler-interviews.acdh.oeaw.ac.at/pmb57.html</idno>
                   <idno type="URL" subtype="geonames">https://sws.geonames.org/12214072/</idno>
@@ -1130,7 +1149,7 @@
                   <idno type="URL" subtype="wienerschnitzler">https://wienerschnitzler.org/pmb57.html</idno>
                   <idno type="URL" subtype="sk">https://sk.acdh.oeaw.ac.at/DWplace00397</idno>
                   <idno type="URL" subtype="schnitzler-briefe">https://schnitzler-briefe.acdh.oeaw.ac.at/pmb57.html</idno>
-                  <idno type="URL" subtype="schoenberg-ue">https://www.schoenberg-ue.at/ue/places/place.9.11.11</idno>
+                  <idno type="URL" subtype="www">https://www.schoenberg-ue.at/ue/places/place.9.11.11</idno>
                </location>
             </org>
             <org xml:id="pmb35053" ana="implied">
@@ -1140,7 +1159,7 @@
                   <placeName ref="pmb34999">Kapelle-Ufer</placeName>
                   <geo>52,52315 13,374789</geo>
                   <idno type="URL" subtype="pmb">https://pmb.acdh.oeaw.ac.at/entity/34999/</idno>
-                  <idno type="URL" subtype="kraus">https://www.kraus.wienbibliothek.at/legalkraus/pmb34999.html</idno>
+                  <idno type="URL" subtype="www">https://www.kraus.wienbibliothek.at/legalkraus/pmb34999.html</idno>
                   <idno type="URL" subtype="schnitzler-interviews">https://schnitzler-interviews.acdh.oeaw.ac.at/pmb34999.html</idno>
                   <idno type="URL" subtype="schnitzler-briefe">https://schnitzler-briefe.acdh.oeaw.ac.at/pmb34999.html</idno>
                </location>
@@ -1161,7 +1180,7 @@
                   <idno type="URL" subtype="schnitzler-bahr">https://schnitzler-bahr.acdh.oeaw.ac.at/pmb168.html</idno>
                   <idno type="URL" subtype="d-nb">https://d-nb.info/gnd/4005728-8</idno>
                   <idno type="URL" subtype="pmb">https://pmb.acdh.oeaw.ac.at/entity/168/</idno>
-                  <idno type="URL" subtype="kraus">https://www.kraus.wienbibliothek.at/legalkraus/pmb168.html</idno>
+                  <idno type="URL" subtype="www">https://www.kraus.wienbibliothek.at/legalkraus/pmb168.html</idno>
                   <idno type="URL" subtype="pmb">https://pmb.acdh.oeaw.ac.at/entity/92171/</idno>
                   <idno type="URL" subtype="wikidata">http://www.wikidata.org/entity/Q64</idno>
                   <idno type="URL" subtype="wikipedia">https://de.wikipedia.org/wiki/Berlin</idno>
@@ -1176,7 +1195,7 @@
                   <idno type="URL" subtype="sk">https://sk.acdh.oeaw.ac.at/fa_place00004523</idno>
                   <idno type="URL" subtype="biblio">https://biblio.ub.uni-freiburg.de/sf/#pmb168</idno>
                   <idno type="URL" subtype="schnitzler-briefe">https://schnitzler-briefe.acdh.oeaw.ac.at/pmb168.html</idno>
-                  <idno type="URL" subtype="schoenberg-ue">https://www.schoenberg-ue.at/ue/places/place.2.3</idno>
+                  <idno type="URL" subtype="www">https://www.schoenberg-ue.at/ue/places/place.2.3</idno>
                </location>
             </org>
          </listOrg>

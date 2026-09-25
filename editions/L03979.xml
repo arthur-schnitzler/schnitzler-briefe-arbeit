@@ -1,6 +1,10 @@
-<?xml version='1.0' encoding='UTF-8'?>
+<?xml version="1.0" encoding="UTF-8"?>
 <?xml-model href="../meta/schnitzler-briefe-schematron.sch" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
-<TEI xmlns="http://www.tei-c.org/ns/1.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.tei-c.org/ns/1.0 ../meta/schnitzler-briefe-schema.xsd" xml:base="https://id.acdh.oeaw.ac.at/schnitzler/schnitzler-briefe/editions" xml:id="L03979">
+<TEI xmlns="http://www.tei-c.org/ns/1.0"
+     xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+     xsi:schemaLocation="http://www.tei-c.org/ns/1.0 ../meta/schnitzler-briefe-schema.xsd"
+     xml:base="https://id.acdh.oeaw.ac.at/schnitzler/schnitzler-briefe/editions"
+     xml:id="L03979">
    <teiHeader>
       <fileDesc>
          <titleStmt>
@@ -88,7 +92,9 @@
                            </supportDesc>
                         </objectDesc>
                         <handDesc hands="1">
-                           <handNote medium="roter-buntstift" style="lateinische-kurrent" corresp="#pmb2121">
+                           <handNote medium="roter-buntstift"
+                                     style="lateinische-kurrent"
+                                     corresp="#pmb2121">
                               <p>beschriftet: »<quote>
                                     <hi rend="underline" n="1">Zuckerkandl</hi>
                                  </quote>«, »<quote>Reigen</quote>«, »<quote>Remon</quote>« und »<quote>
@@ -121,12 +127,20 @@
                <date evidence="conjecture" notBefore="1929-12-03" notAfter="1929-12-07">[3. 12. 1929 – 7. 12. 1929?]</date>
                <placeName ref="#pmb182">Paris</placeName>
             </correspAction>
-            <correspContext><ref type="belongsToCorrespondence" target="correspondence_2312">Zuckerkandl, Berta</ref>
+            <correspContext>
+               <ref type="belongsToCorrespondence" target="correspondence_2312">Zuckerkandl, Berta</ref>
                <ref subtype="previous_letter" type="withinCollection" target="L02526">Schnitzler an Hauptmann, 27. 11. 1929</ref>
                <ref subtype="next_letter" type="withinCollection" target="L03735">Schnitzler an Zweig, 5. 12. 1929</ref>
-               <ref subtype="previous_letter" type="withinCorrespondence" source="correspondence_2312" target="L03978">Schnitzler an Zuckerkandl, 7. 11. 1929</ref>
-               <ref subtype="next_letter" type="withinCorrespondence" source="correspondence_2312" target="L03990">Schnitzler an Zuckerkandl, 30. 1. 1930</ref>
-            </correspContext></correspDesc>
+               <ref subtype="previous_letter"
+                    type="withinCorrespondence"
+                    source="correspondence_2312"
+                    target="L03978">Schnitzler an Zuckerkandl, 7. 11. 1929</ref>
+               <ref subtype="next_letter"
+                    type="withinCorrespondence"
+                    source="correspondence_2312"
+                    target="L03990">Schnitzler an Zuckerkandl, 30. 1. 1930</ref>
+            </correspContext>
+         </correspDesc>
       </profileDesc>
       <revisionDesc status="proposed">
          <change who="MAM" when="2025-10-31">Export aus Transkribus</change>
@@ -157,61 +171,13 @@
       </body>
       <back>
          <listPerson>
-            <person xml:id="pmb14156">
-               <persName>
-                  <forename>Lucien</forename>
-                  <surname>Besnard</surname>
-               </persName>
-               <birth>
-                  <date when="1872-01-19">1872-01-19</date>
-                  <settlement ref="pmb48655">
-                     <placeName type="pref">Nonancourt</placeName>
-                     <location>
-                        <geo>48,77086 1,19799</geo>
-                     </location>
-                  </settlement>
-               </birth>
-               <death>
-                  <date when="1955-01-01" notAfter="1955-12-31">1955</date>
-                  <settlement ref="pmb182">
-                     <placeName type="pref">Paris</placeName>
-                     <location>
-                        <geo>48,85341 2,3488</geo>
-                     </location>
-                  </settlement>
-               </death>
-            </person>
-            <person xml:id="pmb15015">
-               <persName>
-                  <forename>Suzanne</forename>
-                  <surname>Clauser</surname>
-               </persName>
-               <birth>
-                  <date when="1898-05-16">1898-05-16</date>
-                  <settlement ref="pmb50">
-                     <placeName type="pref">Wien</placeName>
-                     <location>
-                        <geo>48,208333 16,373056</geo>
-                     </location>
-                  </settlement>
-               </birth>
-               <death>
-                  <date when="1981-09-11">1981-09-11</date>
-                  <settlement ref="pmb182">
-                     <placeName type="pref">Paris</placeName>
-                     <location>
-                        <geo>48,85341 2,3488</geo>
-                     </location>
-                  </settlement>
-               </death>
-            </person>
             <person xml:id="pmb2121">
                <persName>
                   <surname>Schnitzler</surname>
                   <forename>Arthur</forename>
                </persName>
                <birth>
-                  <date when="1862-05-15">15. 5. 1862</date>
+                  <date when="1862-05-15">15. 5. 1862</date>
                   <settlement ref="pmb50">
                      <placeName type="pref">Wien</placeName>
                      <location>
@@ -220,7 +186,7 @@
                   </settlement>
                </birth>
                <death>
-                  <date when="1931-10-21">21. 10. 1931</date>
+                  <date when="1931-10-21">21. 10. 1931</date>
                   <settlement ref="pmb50">
                      <placeName type="pref">Wien</placeName>
                      <location>
@@ -228,10 +194,6 @@
                      </location>
                   </settlement>
                </death>
-               <sex value="male"/>
-               <occupation ref="pmb90">Schriftsteller/Schriftstellerin</occupation>
-               <occupation ref="pmb97">Mediziner/Medizinerin</occupation>
-               <idno type="gnd">https://d-nb.info/gnd/118609807/</idno>
             </person>
             <person xml:id="pmb2312">
                <persName>
@@ -281,6 +243,30 @@
                   </settlement>
                </death>
             </person>
+            <person xml:id="pmb14156">
+               <persName>
+                  <forename>Lucien</forename>
+                  <surname>Besnard</surname>
+               </persName>
+               <birth>
+                  <date when="1872-01-19">1872-01-19</date>
+                  <settlement ref="pmb48655">
+                     <placeName type="pref">Nonancourt</placeName>
+                     <location>
+                        <geo>48,77086 1,19799</geo>
+                     </location>
+                  </settlement>
+               </birth>
+               <death>
+                  <date when="1955-01-01" notAfter="1955-12-31">1955</date>
+                  <settlement ref="pmb182">
+                     <placeName type="pref">Paris</placeName>
+                     <location>
+                        <geo>48,85341 2,3488</geo>
+                     </location>
+                  </settlement>
+               </death>
+            </person>
             <person xml:id="pmb3138">
                <persName>
                   <forename>Paul</forename>
@@ -305,28 +291,73 @@
                   </settlement>
                </death>
             </person>
+            <person xml:id="pmb15015">
+               <persName>
+                  <forename>Suzanne</forename>
+                  <surname>Clauser</surname>
+               </persName>
+               <birth>
+                  <date when="1898-05-16">1898-05-16</date>
+                  <settlement ref="pmb50">
+                     <placeName type="pref">Wien</placeName>
+                     <location>
+                        <geo>48,208333 16,373056</geo>
+                     </location>
+                  </settlement>
+               </birth>
+               <death>
+                  <date when="1981-09-11">1981-09-11</date>
+                  <settlement ref="pmb182">
+                     <placeName type="pref">Paris</placeName>
+                     <location>
+                        <geo>48,85341 2,3488</geo>
+                     </location>
+                  </settlement>
+               </death>
+            </person>
          </listPerson>
          <listBibl>
             <bibl xml:id="pmb30819">
-               <title type="main">Die Schwestern oder Casanova in Spa. Lustspiel in Versen</title>
+               <title>Die Schwestern oder Casanova in Spa. Lustspiel in Versen</title>
                <title type="werk_bibliografische-angabe">Deutsche Rundschau, Jg. 46, H. 1, Oktober 1919</title>
                <title type="werk_arbeitstitel">Eifersucht</title>
                <title type="werk_arbeitstitel">Die Wiederkehr</title>
                <title type="werk_arbeitstitel">Spion</title>
                <title type="werk_link">https://www.schnitzler-edition.net/genetisch</title>
-               <author role="hat-geschaffen" ref="pmb2121">Schnitzler, Arthur</author>
+               <author ref="pmb2121" role="hat-geschaffen">Schnitzler, Arthur</author>
             </bibl>
             <bibl xml:id="pmb334670" ana="implied">
-               <title type="main">?? [französische Übersetzung von Die Schwestern oder Casanova in Spa. Lustspiel in Versen]</title>
-               <author role="hat-ubersetzt" ref="pmb15015">Clauser, Suzanne</author>
-               <author role="hat-geschaffen" ref="pmb2121">Schnitzler, Arthur</author>
+               <title>?? [französische Übersetzung von Die Schwestern oder Casanova in Spa. Lustspiel in Versen]</title>
+               <author ref="pmb15015" role="hat-ubersetzt">Clauser, Suzanne</author>
+               <author ref="pmb2121" role="hat-geschaffen">Schnitzler, Arthur</author>
             </bibl>
          </listBibl>
          <listPlace>
+            <place xml:id="pmb50">
+               <placeName>Wien</placeName>
+               <placeName type="ort_fruherer-name">K.K. Reichshaupt- und Residenzstadt Wien</placeName>
+               <placeName type="alternative-name">Bécs</placeName>
+               <placeName type="alternative-name">Land Wien</placeName>
+               <placeName type="alternative-name">Vídeň</placeName>
+               <placeName type="alternative-name">Wenia</placeName>
+               <placeName type="alternative-name">Beč</placeName>
+               <placeName type="ort_fruherer-name">Vindobona</placeName>
+               <placeName type="alternative-name">Vienna</placeName>
+               <location type="coords">
+                  <geo>48,208333 16,373056</geo>
+               </location>
+               <location type="located_in_place">
+                  <placeName ref="pmb41240">Österreich</placeName>
+                  <geo>47,33333 13,33333</geo>
+               </location>
+               <location type="located_in_place">
+                  <placeName ref="pmb235218">Windmühlhöhe</placeName>
+                  <geo>48,24077 16,32092</geo>
+               </location>
+            </place>
             <place xml:id="pmb182">
                <placeName>Paris</placeName>
                <placeName type="alternative-name">P'ariz</placeName>
-               <placeName type="legacy-name-merge">Paris</placeName>
                <placeName type="alternative-name">Pariž</placeName>
                <placeName type="alternative-name">Parisius</placeName>
                <placeName type="alternative-name">Île-de-France</placeName>
@@ -336,28 +367,6 @@
                <location type="located_in_place">
                   <placeName ref="pmb166">Frankreich</placeName>
                   <geo>46,0 2,0</geo>
-               </location>
-            </place>
-            <place xml:id="pmb50">
-               <placeName>Wien</placeName>
-               <placeName type="ort_fruherer-name">K.K. Reichshaupt- und Residenzstadt Wien</placeName>
-               <placeName type="legacy-name-merge">Wien</placeName>
-               <placeName type="alternative-name">Bécs</placeName>
-               <placeName type="alternative-name">Land Wien</placeName>
-               <placeName type="alternative-name">Vídeň</placeName>
-               <placeName type="alternative-name">Wenia</placeName>
-               <placeName type="alternative-name">Beč</placeName>
-               <placeName type="ort_fruherer-name">Vindobona</placeName>
-               <placeName type="legacy-name-merge">Vindobona</placeName>
-               <placeName type="alternative-name">Vienna</placeName>
-               <placeName type="legacy-name-merge">Vienna</placeName>
-               <placeName type="alternative-name">Vienna</placeName>
-               <location type="coords">
-                  <geo>48,208333 16,373056</geo>
-               </location>
-               <location type="located_in_place">
-                  <placeName ref="pmb41240">Österreich</placeName>
-                  <geo>47,33333 13,33333</geo>
                </location>
             </place>
          </listPlace>

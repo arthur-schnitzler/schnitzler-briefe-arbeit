@@ -1,6 +1,10 @@
-<?xml version='1.0' encoding='UTF-8'?>
+<?xml version="1.0" encoding="UTF-8"?>
 <?xml-model href="../meta/schnitzler-briefe-schematron.sch" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
-<TEI xmlns="http://www.tei-c.org/ns/1.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.tei-c.org/ns/1.0 ../meta/schnitzler-briefe-schema.xsd" xml:base="https://id.acdh.oeaw.ac.at/schnitzler/schnitzler-briefe/editions" xml:id="L04434">
+<TEI xmlns="http://www.tei-c.org/ns/1.0"
+     xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+     xsi:schemaLocation="http://www.tei-c.org/ns/1.0 ../meta/schnitzler-briefe-schema.xsd"
+     xml:base="https://id.acdh.oeaw.ac.at/schnitzler/schnitzler-briefe/editions"
+     xml:id="L04434">
    <teiHeader>
       <fileDesc>
          <titleStmt>
@@ -124,12 +128,20 @@
                   – 10. 9. 1902?]</date>
                <placeName ref="#pmb207296">Tiefer Graben 23</placeName>
             </correspAction>
-            <correspContext><ref type="belongsToCorrespondence" target="correspondence_12740">Schwarzkopf, Gustav</ref>
+            <correspContext>
+               <ref type="belongsToCorrespondence" target="correspondence_12740">Schwarzkopf, Gustav</ref>
                <ref subtype="previous_letter" type="withinCollection" target="L03334">Salten an Schnitzler, 4. 9. 1902</ref>
                <ref subtype="next_letter" type="withinCollection" target="L04412">Schnitzler an Schwarzkopf, 6. 9. 1902</ref>
-               <ref subtype="previous_letter" type="withinCorrespondence" source="correspondence_12740" target="L04075">Schnitzler an Schwarzkopf, 19. 8. 1902</ref>
-               <ref subtype="next_letter" type="withinCorrespondence" source="correspondence_12740" target="L04412">Schnitzler an Schwarzkopf, 6. 9. 1902</ref>
-            </correspContext></correspDesc>
+               <ref subtype="previous_letter"
+                    type="withinCorrespondence"
+                    source="correspondence_12740"
+                    target="L04075">Schnitzler an Schwarzkopf, 19. 8. 1902</ref>
+               <ref subtype="next_letter"
+                    type="withinCorrespondence"
+                    source="correspondence_12740"
+                    target="L04412">Schnitzler an Schwarzkopf, 6. 9. 1902</ref>
+            </correspContext>
+         </correspDesc>
       </profileDesc>
       <revisionDesc status="proposed">
          <change who="MAM" when="2026-06-11">Export aus Transkribus</change>
@@ -160,8 +172,8 @@
                <rs type="person" ref="#pmb364523">
                   <hi rend="pre-print">
                      <hi rend="bold">
-                        <anchor type="commentary" xml:id="K_L04434-55"/>Fr.
-                           Hochreiter<note type="commentary" corresp="K_L04434-55">Möglicherweise
+                        <anchor type="commentary" xml:id="K_L04434-1"/>Fr.
+                           Hochreiter<note type="commentary" corresp="K_L04434-1">Möglicherweise
                            ließ sich <rs type="person" ref="#pmb2121">Schnitzler</rs> vom Namen des
                            (lokal durchaus bekannten) Fotografen <rs type="person" ref="#pmb364523">Friedrich Hochreiter</rs> zum Namen des Fabrikaten »<quote>Friedrich
                               Hofreiter</quote>« in <rs type="work" ref="#pmb300236">Das weite
@@ -175,7 +187,7 @@
                   <rs type="place" ref="#pmb39930">
                      <hi rend="pre-print">
                         <hi rend="bold">
-                           <anchor type="commentary" xml:id="K_L04434-1"/>Windischgarsten<note type="commentary" corresp="K_L04434-1">Nur zwei
+                           <anchor type="commentary" xml:id="K_L04434-2"/>Windischgarsten<note type="commentary" corresp="K_L04434-2">Nur zwei
                               Aufenthalte <rs type="person" ref="#pmb2121">Schnitzlers</rs> in <rs type="place" ref="#pmb39930">Windischgarsten</rs> sind nachweisbar
                                  (<date>1902</date>, <date>1928</date>). Durch die verwendete
                               Briefmarke ist gesichert, dass die Karte vom ersten stammt. Insgesamt blieb
@@ -271,9 +283,40 @@
                   </settlement>
                </death>
             </person>
+            <person xml:id="pmb2312" ana="comment">
+               <persName>
+                  <forename>Berta</forename>
+                  <surname>Zuckerkandl</surname>
+               </persName>
+               <birth>
+                  <date when="1864-04-13">1864-04-13</date>
+                  <settlement ref="pmb50">
+                     <placeName type="pref">Wien</placeName>
+                     <location>
+                        <geo>48,208333 16,373056</geo>
+                     </location>
+                  </settlement>
+               </birth>
+               <death>
+                  <date when="1945-10-16">1945-10-16</date>
+                  <settlement ref="pmb182">
+                     <placeName type="pref">Paris</placeName>
+                     <location>
+                        <geo>48,85341 2,3488</geo>
+                     </location>
+                  </settlement>
+               </death>
+            </person>
          </listPerson>
+         <listBibl>
+            <bibl xml:id="pmb300236" ana="comment">
+               <title>Das weite Land. Tragikomödie von Artur Schnitzler. (Burgtheater)</title>
+               <title type="werk_bibliografische-angabe">B. Z.: Das weite Land. Tragikomödie von Artur Schnitzler. (Burgtheater). In: Wiener Allgemeine Zeitung, Nr. 10061, 16.10.1911, 6-Uhr-Blatt, S. 2–4.</title>
+               <author ref="pmb2312" role="hat-geschaffen">Zuckerkandl, Berta</author>
+            </bibl>
+         </listBibl>
          <listPlace>
-            <place xml:id="pmb39930">
+            <place xml:id="pmb39930" ana="comment">
                <placeName>Windischgarsten</placeName>
                <placeName type="legacy-name">Windischgarsten, Oberösterreich</placeName>
                <location type="coords">
@@ -288,10 +331,23 @@
                   <geo>47,84346 14,21346</geo>
                </location>
             </place>
+            <place xml:id="pmb207296">
+               <placeName>Tiefer Graben 23</placeName>
+               <location type="coords">
+                  <geo>48,213038 16,368738</geo>
+               </location>
+               <location type="located_in_place">
+                  <placeName ref="pmb50825">Tiefer Graben</placeName>
+                  <geo>48,2125 16,368333</geo>
+               </location>
+               <location type="located_in_place">
+                  <placeName ref="pmb51">I., Innere Stadt</placeName>
+                  <geo>48,20769 16,37049</geo>
+               </location>
+            </place>
             <place xml:id="pmb50">
                <placeName>Wien</placeName>
-               <placeName type="ort_fruherer-name">K.K. Reichshaupt- und Residenzstadt
-                  Wien</placeName>
+               <placeName type="ort_fruherer-name">K.K. Reichshaupt- und Residenzstadt Wien</placeName>
                <placeName type="alternative-name">Bécs</placeName>
                <placeName type="alternative-name">Land Wien</placeName>
                <placeName type="alternative-name">Vídeň</placeName>
@@ -309,20 +365,6 @@
                <location type="located_in_place">
                   <placeName ref="pmb235218">Windmühlhöhe</placeName>
                   <geo>48,24077 16,32092</geo>
-               </location>
-            </place>
-            <place xml:id="pmb207296">
-               <placeName>Tiefer Graben 23</placeName>
-               <location type="coords">
-                  <geo>48,213038 16,368738</geo>
-               </location>
-               <location type="located_in_place">
-                  <placeName ref="pmb50825">Tiefer Graben</placeName>
-                  <geo>48,2125 16,368333</geo>
-               </location>
-               <location type="located_in_place">
-                  <placeName ref="pmb51">I., Innere Stadt</placeName>
-                  <geo>48,20769 16,37049</geo>
                </location>
             </place>
          </listPlace>

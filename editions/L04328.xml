@@ -1,6 +1,10 @@
-<?xml version='1.0' encoding='UTF-8'?>
+<?xml version="1.0" encoding="UTF-8"?>
 <?xml-model href="../meta/schnitzler-briefe-schematron.sch" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
-<TEI xmlns="http://www.tei-c.org/ns/1.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.tei-c.org/ns/1.0 ../meta/schnitzler-briefe-schema.xsd" xml:id="L04328" xml:base="https://id.acdh.oeaw.ac.at/schnitzler/schnitzler-briefe/editions">
+<TEI xmlns="http://www.tei-c.org/ns/1.0"
+     xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+     xsi:schemaLocation="http://www.tei-c.org/ns/1.0 ../meta/schnitzler-briefe-schema.xsd"
+     xml:id="L04328"
+     xml:base="https://id.acdh.oeaw.ac.at/schnitzler/schnitzler-briefe/editions">
    <teiHeader>
       <fileDesc>
          <titleStmt>
@@ -157,7 +161,7 @@
             </correspAction>
             <correspAction type="in_transit">
                <date when="1896-08-19">19. 8. 96</date>
-               <placeName ref="#pmb36300">Kjobenhavn</placeName>
+               <placeName ref="#pmb36300">Kopenhagen</placeName>
             </correspAction>
             <correspAction type="delivered">
                <date when="1896-08-27">27. 8. 1896</date>
@@ -168,12 +172,20 @@
                <date when="1896-08-27">27. 8. 1896</date>
                <placeName ref="#pmb46000">Grundlsee [Gemeinde]</placeName>
             </correspAction>
-            <correspContext><ref type="belongsToCorrespondence" target="correspondence_11666">Herzfeld, Marie</ref>
+            <correspContext>
+               <ref type="belongsToCorrespondence" target="correspondence_11666">Herzfeld, Marie</ref>
                <ref subtype="previous_letter" type="withinCollection" target="L03178">Salten an Schnitzler, 8. 8. 1896</ref>
                <ref subtype="next_letter" type="withinCollection" target="L00580">Hofmannsthal, Benedict an Schnitzler, 21. [8. 1896]</ref>
-               <ref subtype="previous_letter" type="withinCorrespondence" source="correspondence_11666" target="L02590">Herzfeld an Schnitzler, 7. 8. 1896</ref>
-               <ref subtype="next_letter" type="withinCorrespondence" source="correspondence_11666" target="L02591">Herzfeld an Schnitzler, 23. 8. 1899</ref>
-            </correspContext></correspDesc>
+               <ref subtype="previous_letter"
+                    type="withinCorrespondence"
+                    source="correspondence_11666"
+                    target="L02590">Herzfeld an Schnitzler, 7. 8. 1896</ref>
+               <ref subtype="next_letter"
+                    type="withinCorrespondence"
+                    source="correspondence_11666"
+                    target="L02591">Herzfeld an Schnitzler, 23. 8. 1899</ref>
+            </correspContext>
+         </correspDesc>
       </profileDesc>
       <revisionDesc status="proposed">
          <change who="MAM" when="2026-04-06">Angelegt mit Stargardt-Anzeige</change>
@@ -263,26 +275,26 @@
       </body>
       <back>
          <listPerson>
-            <person xml:id="pmb10992">
+            <person xml:id="pmb2121">
                <persName>
-                  <forename>Georg</forename>
-                  <surname>Brandes</surname>
+                  <surname>Schnitzler</surname>
+                  <forename>Arthur</forename>
                </persName>
                <birth>
-                  <date when="1842-02-04">1842-02-04</date>
-                  <settlement ref="pmb36300">
-                     <placeName type="pref">Kopenhagen</placeName>
+                  <date when="1862-05-15">15. 5. 1862</date>
+                  <settlement ref="pmb50">
+                     <placeName type="pref">Wien</placeName>
                      <location>
-                        <geo>55,67594 12,56553</geo>
+                        <geo>48,208333 16,373056</geo>
                      </location>
                   </settlement>
                </birth>
                <death>
-                  <date when="1927-02-19">1927-02-19</date>
-                  <settlement ref="pmb36300">
-                     <placeName type="pref">Kopenhagen</placeName>
+                  <date when="1931-10-21">21. 10. 1931</date>
+                  <settlement ref="pmb50">
+                     <placeName type="pref">Wien</placeName>
                      <location>
-                        <geo>55,67594 12,56553</geo>
+                        <geo>48,208333 16,373056</geo>
                      </location>
                   </settlement>
                </death>
@@ -311,54 +323,94 @@
                   </settlement>
                </death>
             </person>
-            <person xml:id="pmb2121">
+            <person xml:id="pmb10992">
                <persName>
-                  <surname>Schnitzler</surname>
-                  <forename>Arthur</forename>
+                  <forename>Georg</forename>
+                  <surname>Brandes</surname>
                </persName>
                <birth>
-                  <date when="1862-05-15">15. 5. 1862</date>
-                  <settlement ref="pmb50">
-                     <placeName type="pref">Wien</placeName>
+                  <date when="1842-02-04">1842-02-04</date>
+                  <settlement ref="pmb36300">
+                     <placeName type="pref">Kopenhagen</placeName>
                      <location>
-                        <geo>48,208333 16,373056</geo>
+                        <geo>55,67594 12,56553</geo>
                      </location>
                   </settlement>
                </birth>
                <death>
-                  <date when="1931-10-21">21. 10. 1931</date>
-                  <settlement ref="pmb50">
-                     <placeName type="pref">Wien</placeName>
+                  <date when="1927-02-19">1927-02-19</date>
+                  <settlement ref="pmb36300">
+                     <placeName type="pref">Kopenhagen</placeName>
                      <location>
-                        <geo>48,208333 16,373056</geo>
+                        <geo>55,67594 12,56553</geo>
                      </location>
                   </settlement>
                </death>
-               <sex value="male"/>
-               <occupation ref="pmb90">Schriftsteller/Schriftstellerin</occupation>
-               <occupation ref="pmb97">Mediziner/Medizinerin</occupation>
-               <idno type="gnd">https://d-nb.info/gnd/118609807/</idno>
             </person>
          </listPerson>
          <listBibl>
             <bibl xml:id="pmb29917">
-               <title type="main">Liebelei. Schauspiel in drei Akten</title>
+               <title>Liebelei. Schauspiel in drei Akten</title>
                <title type="werk_link">https://www.deutschestextarchiv.de/book/show/schnitzler_liebelei_1896</title>
                <title type="werk_arbeitstitel">Das arme Mädl</title>
-               <author role="hat-geschaffen" ref="pmb2121">Schnitzler, Arthur</author>
+               <author ref="pmb2121" role="hat-geschaffen">Schnitzler, Arthur</author>
             </bibl>
             <bibl xml:id="pmb33243" ana="comment">
-               <title type="main">Tagebuch</title>
+               <title>Tagebuch</title>
                <title type="werk_link">https://schnitzler-tagebuch.acdh.oeaw.ac.at</title>
-               <author role="hat-geschaffen" ref="pmb2121">Schnitzler, Arthur</author>
+               <author ref="pmb2121" role="hat-geschaffen">Schnitzler, Arthur</author>
             </bibl>
             <bibl xml:id="pmb33339" ana="implied">
-               <title type="main">To Forestillinger af Henrik IV</title>
+               <title>To Forestillinger af Henrik IV</title>
                <title type="werk_bibliografische-angabe">Politiken, Nr. 218, 5.8.1896, S. 1–2.</title>
-               <author role="hat-geschaffen" ref="pmb10992">Brandes, Georg</author>
+               <author ref="pmb10992" role="hat-geschaffen">Brandes, Georg</author>
             </bibl>
          </listBibl>
          <listPlace>
+            <place xml:id="pmb958">
+               <placeName>Skodsborg</placeName>
+               <location type="coords">
+                  <geo>55,8225 12,57324</geo>
+               </location>
+               <location type="located_in_place">
+                  <placeName ref="pmb43570">Dänemark</placeName>
+                  <geo>56,0 10,0</geo>
+               </location>
+            </place>
+            <place xml:id="pmb36300">
+               <placeName>Kopenhagen</placeName>
+               <placeName type="alternative-name">Copenhagen</placeName>
+               <location type="coords">
+                  <geo>55,67594 12,56553</geo>
+               </location>
+               <location type="located_in_place">
+                  <placeName ref="pmb43570">Dänemark</placeName>
+                  <geo>56,0 10,0</geo>
+               </location>
+            </place>
+            <place xml:id="pmb46000">
+               <placeName>Grundlsee [Gemeinde]</placeName>
+               <placeName type="legacy-name">Grundlsee</placeName>
+               <location type="coords">
+                  <geo>47,61667 13,81667</geo>
+               </location>
+               <location type="located_in_place">
+                  <placeName ref="pmb41240">Österreich</placeName>
+                  <geo>47,33333 13,33333</geo>
+               </location>
+            </place>
+            <place xml:id="pmb59">
+               <placeName>IX., Alsergrund</placeName>
+               <placeName type="legacy-name-merge">Thurygrund</placeName>
+               <placeName type="legacy-name-merge">Wien-Alsergrund</placeName>
+               <location type="coords">
+                  <geo>48,22387 16,35641</geo>
+               </location>
+               <location type="located_in_place">
+                  <placeName ref="pmb50">Wien</placeName>
+                  <geo>48,208333 16,373056</geo>
+               </location>
+            </place>
             <place xml:id="pmb168934">
                <placeName>Frankgasse 1</placeName>
                <location type="coords">
@@ -383,46 +435,15 @@
                   <geo>47,33333 13,33333</geo>
                </location>
             </place>
-            <place xml:id="pmb36300">
-               <placeName>Kopenhagen</placeName>
-               <placeName type="alternative-name">Kopenhagen</placeName>
-               <placeName type="legacy-name">Kopenhagen</placeName>
-               <placeName type="legacy-name-merge">Kopenhagen</placeName>
-               <placeName type="alternative-name">Copenhagen</placeName>
-               <placeName type="legacy-name-merge">Copenhagen</placeName>
-               <location type="coords">
-                  <geo>55,67594 12,56553</geo>
-               </location>
-               <location type="located_in_place">
-                  <placeName ref="pmb43570">Dänemark</placeName>
-                  <geo>56,0 10,0</geo>
-               </location>
-            </place>
-            <place xml:id="pmb46000">
-               <placeName>Grundlsee [Gemeinde]</placeName>
-               <placeName type="legacy-name">Grundlsee</placeName>
-               <placeName type="legacy-name-merge">Grundlsee</placeName>
-               <location type="coords">
-                  <geo>47,61667 13,81667</geo>
-               </location>
-               <location type="located_in_place">
-                  <placeName ref="pmb41240">Österreich</placeName>
-                  <geo>47,33333 13,33333</geo>
-               </location>
-            </place>
             <place xml:id="pmb50">
                <placeName>Wien</placeName>
                <placeName type="ort_fruherer-name">K.K. Reichshaupt- und Residenzstadt Wien</placeName>
-               <placeName type="legacy-name-merge">Wien</placeName>
                <placeName type="alternative-name">Bécs</placeName>
                <placeName type="alternative-name">Land Wien</placeName>
                <placeName type="alternative-name">Vídeň</placeName>
                <placeName type="alternative-name">Wenia</placeName>
                <placeName type="alternative-name">Beč</placeName>
                <placeName type="ort_fruherer-name">Vindobona</placeName>
-               <placeName type="legacy-name-merge">Vindobona</placeName>
-               <placeName type="alternative-name">Vienna</placeName>
-               <placeName type="legacy-name-merge">Vienna</placeName>
                <placeName type="alternative-name">Vienna</placeName>
                <location type="coords">
                   <geo>48,208333 16,373056</geo>
@@ -431,27 +452,9 @@
                   <placeName ref="pmb41240">Österreich</placeName>
                   <geo>47,33333 13,33333</geo>
                </location>
-            </place>
-            <place xml:id="pmb59">
-               <placeName>IX., Alsergrund</placeName>
-               <placeName type="legacy-name-merge">Thurygrund</placeName>
-               <placeName type="legacy-name-merge">Wien-Alsergrund</placeName>
-               <location type="coords">
-                  <geo>48,22387 16,35641</geo>
-               </location>
                <location type="located_in_place">
-                  <placeName ref="pmb50">Wien</placeName>
-                  <geo>48,208333 16,373056</geo>
-               </location>
-            </place>
-            <place xml:id="pmb958">
-               <placeName>Skodsborg</placeName>
-               <location type="coords">
-                  <geo>55,8225 12,57324</geo>
-               </location>
-               <location type="located_in_place">
-                  <placeName ref="pmb43570">Dänemark</placeName>
-                  <geo>56,0 10,0</geo>
+                  <placeName ref="pmb235218">Windmühlhöhe</placeName>
+                  <geo>48,24077 16,32092</geo>
                </location>
             </place>
          </listPlace>

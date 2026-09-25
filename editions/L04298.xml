@@ -1,6 +1,10 @@
-<?xml version='1.0' encoding='UTF-8'?>
+<?xml version="1.0" encoding="UTF-8"?>
 <?xml-model href="../meta/schnitzler-briefe-schematron.sch" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
-<TEI xmlns="http://www.tei-c.org/ns/1.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.tei-c.org/ns/1.0 ../meta/schnitzler-briefe-schema.xsd" xml:base="https://id.acdh.oeaw.ac.at/schnitzler/schnitzler-briefe/editions" xml:id="L04298">
+<TEI xmlns="http://www.tei-c.org/ns/1.0"
+     xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+     xsi:schemaLocation="http://www.tei-c.org/ns/1.0 ../meta/schnitzler-briefe-schema.xsd"
+     xml:base="https://id.acdh.oeaw.ac.at/schnitzler/schnitzler-briefe/editions"
+     xml:id="L04298">
    <teiHeader>
       <fileDesc>
          <titleStmt>
@@ -133,7 +137,7 @@
                <persName ref="#pmb24700">Chiavacci, Malvine</persName>
                <persName ref="#pmb2154">Chiavacci, Vincenz</persName>
                <date when="1899-02-20" n="01">20. 2. 1899</date>
-               <placeName ref="#pmb335089">Nürnberger Bratwurst Glöckl am Dom, München</placeName>
+               <placeName ref="#pmb335089">Nürnberger Bratwurst Glöckl am Dom</placeName>
             </correspAction>
             <correspAction type="transmitted">
                <date when="1899-02-20">20. 2. 1899</date>
@@ -148,12 +152,20 @@
                <date when="1899-02-21">21. 2. 1899</date>
                <placeName ref="#pmb168934">Frankgasse 1</placeName>
             </correspAction>
-            <correspContext><ref type="belongsToCorrespondence" target="correspondence_12740">Schwarzkopf, Gustav</ref>
+            <correspContext>
+               <ref type="belongsToCorrespondence" target="correspondence_12740">Schwarzkopf, Gustav</ref>
                <ref subtype="previous_letter" type="withinCollection" target="L00891">Hofmannsthal an Schnitzler, [17. 2. 1899]</ref>
                <ref subtype="next_letter" type="withinCollection" target="L00892">Schnitzler an Brandes, 24. 2. 1899</ref>
-               <ref subtype="previous_letter" type="withinCorrespondence" source="correspondence_12740" target="L04132">Schnitzler an Schwarzkopf, 1. 1. 1899</ref>
-               <ref subtype="next_letter" type="withinCorrespondence" source="correspondence_12740" target="L04177">Schnitzler an Schwarzkopf, [zwischen März 1899 und 1931?]</ref>
-            </correspContext></correspDesc>
+               <ref subtype="previous_letter"
+                    type="withinCorrespondence"
+                    source="correspondence_12740"
+                    target="L04132">Schnitzler an Schwarzkopf, 1. 1. 1899</ref>
+               <ref subtype="next_letter"
+                    type="withinCorrespondence"
+                    source="correspondence_12740"
+                    target="L04177">Schnitzler an Schwarzkopf, [zwischen März 1899 und 1931?]</ref>
+            </correspContext>
+         </correspDesc>
       </profileDesc>
       <revisionDesc status="proposed">
          <change who="MAM" when="2026-02-20">Export aus Transkribus</change>
@@ -242,13 +254,13 @@
                   </settlement>
                </death>
             </person>
-            <person xml:id="pmb2121">
+            <person xml:id="pmb24700">
                <persName>
-                  <surname>Schnitzler</surname>
-                  <forename>Arthur</forename>
+                  <forename>Malvine</forename>
+                  <surname>Schönherr</surname>
                </persName>
                <birth>
-                  <date when="1862-05-15">15. 5. 1862</date>
+                  <date when="1867-11-19">1867-11-19</date>
                   <settlement ref="pmb50">
                      <placeName type="pref">Wien</placeName>
                      <location>
@@ -257,7 +269,7 @@
                   </settlement>
                </birth>
                <death>
-                  <date when="1931-10-21">21. 10. 1931</date>
+                  <date when="1956-02-07">1956-02-07</date>
                   <settlement ref="pmb50">
                      <placeName type="pref">Wien</placeName>
                      <location>
@@ -265,10 +277,6 @@
                      </location>
                   </settlement>
                </death>
-               <sex value="male"/>
-               <occupation ref="pmb90">Schriftsteller/Schriftstellerin</occupation>
-               <occupation ref="pmb97">Mediziner/Medizinerin</occupation>
-               <idno type="gnd">https://d-nb.info/gnd/118609807/</idno>
             </person>
             <person xml:id="pmb2154">
                <persName>
@@ -294,13 +302,13 @@
                   </settlement>
                </death>
             </person>
-            <person xml:id="pmb24700">
+            <person xml:id="pmb2121">
                <persName>
-                  <forename>Malvine</forename>
-                  <surname>Schönherr</surname>
+                  <surname>Schnitzler</surname>
+                  <forename>Arthur</forename>
                </persName>
                <birth>
-                  <date when="1867-11-19">1867-11-19</date>
+                  <date when="1862-05-15">15. 5. 1862</date>
                   <settlement ref="pmb50">
                      <placeName type="pref">Wien</placeName>
                      <location>
@@ -309,7 +317,7 @@
                   </settlement>
                </birth>
                <death>
-                  <date when="1956-02-07">1956-02-07</date>
+                  <date when="1931-10-21">21. 10. 1931</date>
                   <settlement ref="pmb50">
                      <placeName type="pref">Wien</placeName>
                      <location>
@@ -320,18 +328,43 @@
             </person>
          </listPerson>
          <listPlace>
-            <place xml:id="pmb168934">
-               <placeName>Frankgasse 1</placeName>
+            <place xml:id="pmb45258">
+               <placeName>München</placeName>
+               <placeName type="legacy-name-merge">München?</placeName>
+               <placeName type="legacy-name-merge">Munich</placeName>
+               <placeName type="alternative-name">Monacho</placeName>
                <location type="coords">
-                  <geo>48,21533 16,35736</geo>
+                  <geo>48,13743 11,57549</geo>
                </location>
                <location type="located_in_place">
-                  <placeName ref="pmb59">IX., Alsergrund</placeName>
-                  <geo>48,22387 16,35641</geo>
+                  <placeName ref="pmb314">Bayern</placeName>
+                  <geo>49,0 11,5</geo>
                </location>
                <location type="located_in_place">
-                  <placeName ref="pmb397">Frankgasse</placeName>
-                  <geo>48,215516628628 16,356475515829</geo>
+                  <placeName ref="pmb151">Deutschland</placeName>
+                  <geo>51,5 10,5</geo>
+               </location>
+            </place>
+            <place xml:id="pmb50">
+               <placeName>Wien</placeName>
+               <placeName type="ort_fruherer-name">K.K. Reichshaupt- und Residenzstadt Wien</placeName>
+               <placeName type="alternative-name">Bécs</placeName>
+               <placeName type="alternative-name">Land Wien</placeName>
+               <placeName type="alternative-name">Vídeň</placeName>
+               <placeName type="alternative-name">Wenia</placeName>
+               <placeName type="alternative-name">Beč</placeName>
+               <placeName type="ort_fruherer-name">Vindobona</placeName>
+               <placeName type="alternative-name">Vienna</placeName>
+               <location type="coords">
+                  <geo>48,208333 16,373056</geo>
+               </location>
+               <location type="located_in_place">
+                  <placeName ref="pmb41240">Österreich</placeName>
+                  <geo>47,33333 13,33333</geo>
+               </location>
+               <location type="located_in_place">
+                  <placeName ref="pmb235218">Windmühlhöhe</placeName>
+                  <geo>48,24077 16,32092</geo>
                </location>
             </place>
             <place xml:id="pmb335089">
@@ -348,6 +381,20 @@
                   <geo>48,138095 11,574083</geo>
                </location>
             </place>
+            <place xml:id="pmb168934">
+               <placeName>Frankgasse 1</placeName>
+               <location type="coords">
+                  <geo>48,21533 16,35736</geo>
+               </location>
+               <location type="located_in_place">
+                  <placeName ref="pmb59">IX., Alsergrund</placeName>
+                  <geo>48,22387 16,35641</geo>
+               </location>
+               <location type="located_in_place">
+                  <placeName ref="pmb397">Frankgasse</placeName>
+                  <geo>48,215516628628 16,356475515829</geo>
+               </location>
+            </place>
             <place xml:id="pmb335091">
                <placeName>Frauenplatz 9</placeName>
                <location type="coords">
@@ -356,50 +403,6 @@
                <location type="located_in_place">
                   <placeName ref="pmb45258">München</placeName>
                   <geo>48,13743 11,57549</geo>
-               </location>
-            </place>
-            <place xml:id="pmb45258">
-               <placeName>München</placeName>
-               <placeName type="alternative-name">München</placeName>
-               <placeName type="legacy-name-merge">München?</placeName>
-               <placeName type="legacy-name-merge">München</placeName>
-               <placeName type="legacy-name-merge">Munich</placeName>
-               <placeName type="alternative-name">Monacho</placeName>
-               <placeName type="alternative-name">Munich</placeName>
-               <placeName type="legacy-name">München</placeName>
-               <placeName type="legacy-name-merge">München?</placeName>
-               <location type="coords">
-                  <geo>48,13743 11,57549</geo>
-               </location>
-               <location type="located_in_place">
-                  <placeName ref="pmb314">Bayern</placeName>
-                  <geo>49,0 11,5</geo>
-               </location>
-               <location type="located_in_place">
-                  <placeName ref="pmb151">Deutschland</placeName>
-                  <geo>51,5 10,5</geo>
-               </location>
-            </place>
-            <place xml:id="pmb50">
-               <placeName>Wien</placeName>
-               <placeName type="ort_fruherer-name">K.K. Reichshaupt- und Residenzstadt Wien</placeName>
-               <placeName type="legacy-name-merge">Wien</placeName>
-               <placeName type="alternative-name">Bécs</placeName>
-               <placeName type="alternative-name">Land Wien</placeName>
-               <placeName type="alternative-name">Vídeň</placeName>
-               <placeName type="alternative-name">Wenia</placeName>
-               <placeName type="alternative-name">Beč</placeName>
-               <placeName type="ort_fruherer-name">Vindobona</placeName>
-               <placeName type="legacy-name-merge">Vindobona</placeName>
-               <placeName type="alternative-name">Vienna</placeName>
-               <placeName type="legacy-name-merge">Vienna</placeName>
-               <placeName type="alternative-name">Vienna</placeName>
-               <location type="coords">
-                  <geo>48,208333 16,373056</geo>
-               </location>
-               <location type="located_in_place">
-                  <placeName ref="pmb41240">Österreich</placeName>
-                  <geo>47,33333 13,33333</geo>
                </location>
             </place>
          </listPlace>

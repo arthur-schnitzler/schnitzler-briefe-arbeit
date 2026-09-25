@@ -1,6 +1,10 @@
-<?xml version='1.0' encoding='UTF-8'?>
+<?xml version="1.0" encoding="UTF-8"?>
 <?xml-model href="../meta/schnitzler-briefe-schematron.sch" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
-<TEI xmlns="http://www.tei-c.org/ns/1.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.tei-c.org/ns/1.0 ../meta/schnitzler-briefe-schema.xsd" xml:id="L03765" xml:base="https://id.acdh.oeaw.ac.at/schnitzler/schnitzler-briefe/editions">
+<TEI xmlns="http://www.tei-c.org/ns/1.0"
+     xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+     xsi:schemaLocation="http://www.tei-c.org/ns/1.0 ../meta/schnitzler-briefe-schema.xsd"
+     xml:id="L03765"
+     xml:base="https://id.acdh.oeaw.ac.at/schnitzler/schnitzler-briefe/editions">
    <teiHeader>
       <fileDesc>
          <titleStmt>
@@ -167,12 +171,20 @@
                <date evidence="conjecture" notBefore="1901-11-26" notAfter="1901-11-30">[26. 11. 1901 – 30. 11. 1901?]</date>
                <placeName ref="#pmb50" evidence="conjecture">Wien</placeName>
             </correspAction>
-            <correspContext><ref type="belongsToCorrespondence" target="correspondence_11673">Herzl, Theodor</ref>
+            <correspContext>
+               <ref type="belongsToCorrespondence" target="correspondence_11673">Herzl, Theodor</ref>
                <ref subtype="previous_letter" type="withinCollection" target="L01188">Schnitzler an Beer-Hofmann, 25. 11. 1901</ref>
                <ref subtype="next_letter" type="withinCollection" target="L03092">Goldmann an Schnitzler, 29. 11. [1901]</ref>
-               <ref subtype="previous_letter" type="withinCorrespondence" source="correspondence_11673" target="L03828">Herzl an Schnitzler, 3. 5. 1901</ref>
-               <ref subtype="next_letter" type="withinCorrespondence" source="correspondence_11673" target="L03899">Herzl an Schnitzler, 28. 2. 1902</ref>
-            </correspContext></correspDesc>
+               <ref subtype="previous_letter"
+                    type="withinCorrespondence"
+                    source="correspondence_11673"
+                    target="L03828">Herzl an Schnitzler, 3. 5. 1901</ref>
+               <ref subtype="next_letter"
+                    type="withinCorrespondence"
+                    source="correspondence_11673"
+                    target="L03899">Herzl an Schnitzler, 28. 2. 1902</ref>
+            </correspContext>
+         </correspDesc>
       </profileDesc>
       <revisionDesc status="proposed">
          <change who="MAM" when="2025-08-12">Export aus
@@ -220,7 +232,7 @@
       nicht erhalten. <rs type="person" ref="#pmb2121">Schnitzler</rs> dürfte abgesagt haben und eine Einreichung
          für <date>Ostern 1902</date> versprochen haben, <ref type="schnitzler-briefe" subtype="cf" target="L03899"/>.
                   <!-- TH an AS, 28.2.1902 --> Zu <date>Pfingsten 1902</date> erschien schließlich die Erzählung <rs type="work" ref="#pmb33776">Dämmerseele</rs> (<bibl>
-                     <rs type="person" ref="#pmb2121">Arthur Schnitzler</rs>: <rs type="work" ref="#pmb33776">Dämmerseele</rs>. In: <rs type="work" ref="#pmb36374">Neue Freie Presse</rs>, Nr. 13.553, <date>18. 5. 1902</date>, Morgenblatt, Pfingstbeilage, S. 31–33</bibl>).
+                     <rs type="person" ref="#pmb2121">Arthur Schnitzler</rs>: <rs type="work" ref="#pmb33776">Dämmerseele</rs>. In: <rs type="work" ref="#pmb36374">Neue Freie Presse</rs>, Nr. 13.553, <date>18. 5. 1902</date>, Morgenblatt, Pfingstbeilage, S. 31–33</bibl>).
                </note> (nicht über 1200 Zeilen
       lang) für unsre neue
       Sonntagsnovellen-Rubrik
@@ -238,33 +250,184 @@
             </postscript>
          </div>
       </body>
-      <back><listPerson><person xml:id="pmb11673"><persName>
-      <forename>Theodor</forename>
-      <surname>Herzl</surname>
-  </persName><birth>
-    <date when="1860-05-02">1860-05-02</date>
-      <settlement ref="pmb43471">
-        <placeName type="pref">Budapest</placeName>
-        <location><geo>47,49835 19,04045</geo></location>
-      </settlement>
-  </birth><death>
-    <date when="1904-07-03">1904-07-03</date>
-      <settlement ref="pmb470">
-        <placeName type="pref">Edlach</placeName>
-        <location><geo>47,69255 15,80915</geo></location>
-      </settlement>
-  </death></person><person xml:id="pmb2121"><persName><surname>Schnitzler</surname><forename>Arthur</forename></persName><birth><date when="1862-05-15">15. 5. 1862</date><settlement ref="pmb50"><placeName type="pref">Wien</placeName><location><geo>48,208333 16,373056</geo></location></settlement></birth><death><date when="1931-10-21">21. 10. 1931</date><settlement ref="pmb50"><placeName type="pref">Wien</placeName><location><geo>48,208333 16,373056</geo></location></settlement></death><sex value="male"/><occupation ref="pmb90">Schriftsteller/Schriftstellerin</occupation><occupation ref="pmb97">Mediziner/Medizinerin</occupation><idno type="gnd">https://d-nb.info/gnd/118609807/</idno></person></listPerson><listBibl><bibl xml:id="pmb36374"><title type="main">Neue Freie Presse</title><title type="werk_link">http://anno.onb.ac.at/cgi-content/anno?aid=nfp</title><title type="legacy-name-merge">Neue freie Presse (Zeitung, Wien)</title><author role="hat-herausgegeben" ref="pmb10809">Bacher, Eduard</author><author role="hat-herausgegeben" ref="pmb10875">Benedikt, Moriz</author><author role="hat-herausgegeben" ref="pmb10872">Benedikt, Ernst</author></bibl><bibl xml:id="pmb33776" ana="comment"><title type="main">Dämmerseele</title><title type="namensvariante">Die Fremde</title><title type="werk_bibliografische-angabe">Arthur Schnitzler: Dämmerseele. In: Neue Freie Presse, Nr. 13.553, 18. 5. 1902, Morgenblatt, Pfingstbeilage, S. 31–33</title><title type="werk_link">https://anno.onb.ac.at/cgi-content/anno?aid=nfp&amp;datum=19020518&amp;seite=31&amp;zoom=33</title><author role="hat-geschaffen" ref="pmb2121">Schnitzler, Arthur</author></bibl></listBibl><listPlace><place xml:id="pmb237534"><placeName>Fichtegasse 11</placeName><location type="coords">
-  <geo>48,202628 16,37689</geo>
-</location><location type="located_in_place">
-  <placeName ref="pmb51">I., Innere Stadt</placeName>
-  <geo>48,20769 16,37049</geo>
-</location><location type="located_in_place">
-  <placeName ref="pmb716">Fichtegasse</placeName>
-  <geo>48,203009170069 16,375663258442</geo>
-</location></place><place xml:id="pmb50"><placeName>Wien</placeName><placeName type="ort_fruherer-name">K.K. Reichshaupt- und Residenzstadt Wien</placeName><placeName type="legacy-name-merge">Wien</placeName><placeName type="alternative-name">Bécs</placeName><placeName type="alternative-name">Land Wien</placeName><placeName type="alternative-name">Vídeň</placeName><placeName type="alternative-name">Wenia</placeName><placeName type="alternative-name">Beč</placeName><placeName type="ort_fruherer-name">Vindobona</placeName><placeName type="legacy-name-merge">Vindobona</placeName><placeName type="alternative-name">Vienna</placeName><placeName type="legacy-name-merge">Vienna</placeName><placeName type="alternative-name">Vienna</placeName><location type="coords">
-  <geo>48,208333 16,373056</geo>
-</location><location type="located_in_place">
-  <placeName ref="pmb41240">Österreich</placeName>
-  <geo>47,33333 13,33333</geo>
-</location></place></listPlace></back></text>
+      <back>
+         <listPerson>
+            <person xml:id="pmb11673">
+               <persName>
+                  <forename>Theodor</forename>
+                  <surname>Herzl</surname>
+               </persName>
+               <birth>
+                  <date when="1860-05-02">1860-05-02</date>
+                  <settlement ref="pmb43471">
+                     <placeName type="pref">Budapest</placeName>
+                     <location>
+                        <geo>47,49835 19,04045</geo>
+                     </location>
+                  </settlement>
+               </birth>
+               <death>
+                  <date when="1904-07-03">1904-07-03</date>
+                  <settlement ref="pmb470">
+                     <placeName type="pref">Edlach</placeName>
+                     <location>
+                        <geo>47,69255 15,80915</geo>
+                     </location>
+                  </settlement>
+               </death>
+            </person>
+            <person xml:id="pmb2121">
+               <persName>
+                  <surname>Schnitzler</surname>
+                  <forename>Arthur</forename>
+               </persName>
+               <birth>
+                  <date when="1862-05-15">15. 5. 1862</date>
+                  <settlement ref="pmb50">
+                     <placeName type="pref">Wien</placeName>
+                     <location>
+                        <geo>48,208333 16,373056</geo>
+                     </location>
+                  </settlement>
+               </birth>
+               <death>
+                  <date when="1931-10-21">21. 10. 1931</date>
+                  <settlement ref="pmb50">
+                     <placeName type="pref">Wien</placeName>
+                     <location>
+                        <geo>48,208333 16,373056</geo>
+                     </location>
+                  </settlement>
+               </death>
+            </person>
+            <person xml:id="pmb10809">
+               <persName>
+                  <forename>Eduard</forename>
+                  <surname>Bacher</surname>
+               </persName>
+               <birth>
+                  <date when="1846-03-07">1846-03-07</date>
+                  <settlement ref="pmb44284">
+                     <placeName type="pref">Postoloprty</placeName>
+                     <location>
+                        <geo>50,35979 13,70291</geo>
+                     </location>
+                  </settlement>
+               </birth>
+               <death>
+                  <date when="1908-01-16">1908-01-16</date>
+                  <settlement ref="pmb50">
+                     <placeName type="pref">Wien</placeName>
+                     <location>
+                        <geo>48,208333 16,373056</geo>
+                     </location>
+                  </settlement>
+               </death>
+            </person>
+            <person xml:id="pmb10875">
+               <persName>
+                  <forename>Moriz</forename>
+                  <surname>Benedikt</surname>
+               </persName>
+               <birth>
+                  <date when="1849-05-27">1849-05-27</date>
+                  <settlement ref="pmb43642">
+                     <placeName type="pref">Kvačice</placeName>
+                     <location>
+                        <geo>48,98984 17,41025</geo>
+                     </location>
+                  </settlement>
+               </birth>
+               <death>
+                  <date when="1920-03-18">1920-03-18</date>
+                  <settlement ref="pmb50">
+                     <placeName type="pref">Wien</placeName>
+                     <location>
+                        <geo>48,208333 16,373056</geo>
+                     </location>
+                  </settlement>
+               </death>
+            </person>
+            <person xml:id="pmb10872">
+               <persName>
+                  <forename>Ernst</forename>
+                  <surname>Benedikt</surname>
+               </persName>
+               <birth>
+                  <date when="1882-05-20">1882-05-20</date>
+                  <settlement ref="pmb50">
+                     <placeName type="pref">Wien</placeName>
+                     <location>
+                        <geo>48,208333 16,373056</geo>
+                     </location>
+                  </settlement>
+               </birth>
+               <death>
+                  <date when="1973-12-28">1973-12-28</date>
+                  <settlement ref="pmb50">
+                     <placeName type="pref">Wien</placeName>
+                     <location>
+                        <geo>48,208333 16,373056</geo>
+                     </location>
+                  </settlement>
+               </death>
+            </person>
+         </listPerson>
+         <listBibl>
+            <bibl xml:id="pmb36374">
+               <title>Neue Freie Presse</title>
+               <title type="werk_link">http://anno.onb.ac.at/cgi-content/anno?aid=nfp</title>
+               <title type="legacy-name-merge">Neue freie Presse (Zeitung, Wien)</title>
+               <author ref="pmb10809" role="hat-herausgegeben">Bacher, Eduard</author>
+               <author ref="pmb10875" role="hat-herausgegeben">Benedikt, Moriz</author>
+               <author ref="pmb10872" role="hat-herausgegeben">Benedikt, Ernst</author>
+            </bibl>
+            <bibl xml:id="pmb33776" ana="comment">
+               <title>Dämmerseele</title>
+               <title type="namensvariante">Die Fremde</title>
+               <title type="werk_bibliografische-angabe">Arthur Schnitzler: Dämmerseele. In: Neue Freie Presse, Nr. 13.553, 18. 5. 1902, Morgenblatt, Pfingstbeilage, S. 31–33</title>
+               <title type="werk_link">https://anno.onb.ac.at/cgi-content/anno?aid=nfp&amp;datum=19020518&amp;seite=31&amp;zoom=33</title>
+               <author ref="pmb2121" role="hat-geschaffen">Schnitzler, Arthur</author>
+            </bibl>
+         </listBibl>
+         <listPlace>
+            <place xml:id="pmb50">
+               <placeName>Wien</placeName>
+               <placeName type="ort_fruherer-name">K.K. Reichshaupt- und Residenzstadt Wien</placeName>
+               <placeName type="alternative-name">Bécs</placeName>
+               <placeName type="alternative-name">Land Wien</placeName>
+               <placeName type="alternative-name">Vídeň</placeName>
+               <placeName type="alternative-name">Wenia</placeName>
+               <placeName type="alternative-name">Beč</placeName>
+               <placeName type="ort_fruherer-name">Vindobona</placeName>
+               <placeName type="alternative-name">Vienna</placeName>
+               <location type="coords">
+                  <geo>48,208333 16,373056</geo>
+               </location>
+               <location type="located_in_place">
+                  <placeName ref="pmb41240">Österreich</placeName>
+                  <geo>47,33333 13,33333</geo>
+               </location>
+               <location type="located_in_place">
+                  <placeName ref="pmb235218">Windmühlhöhe</placeName>
+                  <geo>48,24077 16,32092</geo>
+               </location>
+            </place>
+            <place xml:id="pmb237534">
+               <placeName>Fichtegasse 11</placeName>
+               <location type="coords">
+                  <geo>48,202628 16,37689</geo>
+               </location>
+               <location type="located_in_place">
+                  <placeName ref="pmb51">I., Innere Stadt</placeName>
+                  <geo>48,20769 16,37049</geo>
+               </location>
+               <location type="located_in_place">
+                  <placeName ref="pmb716">Fichtegasse</placeName>
+                  <geo>48,203009170069 16,375663258442</geo>
+               </location>
+            </place>
+         </listPlace>
+      </back>
+   </text>
 </TEI>

@@ -1,6 +1,10 @@
-<?xml version='1.0' encoding='UTF-8'?>
+<?xml version="1.0" encoding="UTF-8"?>
 <?xml-model href="../meta/schnitzler-briefe-schematron.sch" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
-<TEI xmlns="http://www.tei-c.org/ns/1.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.tei-c.org/ns/1.0 ../meta/schnitzler-briefe-schema.xsd" xml:base="https://id.acdh.oeaw.ac.at/schnitzler/schnitzler-briefe/editions" xml:id="L04491">
+<TEI xmlns="http://www.tei-c.org/ns/1.0"
+     xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+     xsi:schemaLocation="http://www.tei-c.org/ns/1.0 ../meta/schnitzler-briefe-schema.xsd"
+     xml:base="https://id.acdh.oeaw.ac.at/schnitzler/schnitzler-briefe/editions"
+     xml:id="L04491">
    <teiHeader>
       <fileDesc>
          <titleStmt>
@@ -113,7 +117,7 @@
          <correspDesc>
             <correspAction type="sent">
                <persName ref="#pmb2121">Schnitzler, Arthur</persName>
-               <date n="01" notBefore="1914-07-05" notAfter="1914-07-06">[5. oder 6]. 7. 1914</date>
+               <date notBefore="1914-07-05" notAfter="1914-07-06" n="01">[5. oder 6]. 7. 1914</date>
                <placeName ref="#pmb50">Wien</placeName>
             </correspAction>
             <correspAction type="transmitted">
@@ -126,12 +130,20 @@
                   – 11. 7. 1914?]</date>
                <placeName ref="#pmb34344">Weißenbach am Attersee</placeName>
             </correspAction>
-            <correspContext><ref type="belongsToCorrespondence" target="correspondence_12740">Schwarzkopf, Gustav</ref>
+            <correspContext>
+               <ref type="belongsToCorrespondence" target="correspondence_12740">Schwarzkopf, Gustav</ref>
                <ref subtype="previous_letter" type="withinCollection" target="L04249">Schwarzkopf an Schnitzler, 3. 7. 1914</ref>
                <ref subtype="next_letter" type="withinCollection" target="L02186">Schnitzler, Schnitzler, Schmidl, Schmidl an Beer-Hofmann, 15. 7. 1914</ref>
-               <ref subtype="previous_letter" type="withinCorrespondence" source="correspondence_12740" target="L04249">Schwarzkopf an Schnitzler, 3. 7. 1914</ref>
-               <ref subtype="next_letter" type="withinCorrespondence" source="correspondence_12740" target="L02187">Hofmannsthal, Hofmannsthal, Beer-Hofmann, Beer-Hofmann, Schwarzkopf an Schnitzler, 15. [7. 1914]</ref>
-            </correspContext></correspDesc>
+               <ref subtype="previous_letter"
+                    type="withinCorrespondence"
+                    source="correspondence_12740"
+                    target="L04249">Schwarzkopf an Schnitzler, 3. 7. 1914</ref>
+               <ref subtype="next_letter"
+                    type="withinCorrespondence"
+                    source="correspondence_12740"
+                    target="L02187">Hofmannsthal, Hofmannsthal, Beer-Hofmann, Beer-Hofmann, Schwarzkopf an Schnitzler, 15. [7. 1914]</ref>
+            </correspContext>
+         </correspDesc>
       </profileDesc>
       <revisionDesc status="proposed">
          <change who="MAM" when="2026-06-11">Export aus Transkribus</change>
@@ -187,13 +199,13 @@
       </body>
       <back>
          <listPerson>
-            <person xml:id="pmb10860">
+            <person xml:id="pmb2121" ana="comment">
                <persName>
-                  <forename>Paula</forename>
-                  <surname>Beer-Hofmann</surname>
+                  <surname>Schnitzler</surname>
+                  <forename>Arthur</forename>
                </persName>
                <birth>
-                  <date when="1879-02-25">1879-02-25</date>
+                  <date when="1862-05-15">15. 5. 1862</date>
                   <settlement ref="pmb50">
                      <placeName type="pref">Wien</placeName>
                      <location>
@@ -202,35 +214,11 @@
                   </settlement>
                </birth>
                <death>
-                  <date when="1939-10-30">1939-10-30</date>
-                  <settlement ref="pmb484">
-                     <placeName type="pref">Zürich</placeName>
-                     <location>
-                        <geo>47,37174 8,54226</geo>
-                     </location>
-                  </settlement>
-               </death>
-            </person>
-            <person xml:id="pmb10863">
-               <persName>
-                  <forename>Richard</forename>
-                  <surname>Beer-Hofmann</surname>
-               </persName>
-               <birth>
-                  <date when="1866-07-11">1866-07-11</date>
+                  <date when="1931-10-21">21. 10. 1931</date>
                   <settlement ref="pmb50">
                      <placeName type="pref">Wien</placeName>
                      <location>
                         <geo>48,208333 16,373056</geo>
-                     </location>
-                  </settlement>
-               </birth>
-               <death>
-                  <date when="1945-09-26">1945-09-26</date>
-                  <settlement ref="pmb44053">
-                     <placeName type="pref">New York City</placeName>
-                     <location>
-                        <geo>40,71427 -74,00597</geo>
                      </location>
                   </settlement>
                </death>
@@ -259,7 +247,55 @@
                   </settlement>
                </death>
             </person>
-            <person xml:id="pmb13923">
+            <person xml:id="pmb10863" ana="comment">
+               <persName>
+                  <forename>Richard</forename>
+                  <surname>Beer-Hofmann</surname>
+               </persName>
+               <birth>
+                  <date when="1866-07-11">1866-07-11</date>
+                  <settlement ref="pmb50">
+                     <placeName type="pref">Wien</placeName>
+                     <location>
+                        <geo>48,208333 16,373056</geo>
+                     </location>
+                  </settlement>
+               </birth>
+               <death>
+                  <date when="1945-09-26">1945-09-26</date>
+                  <settlement ref="pmb44053">
+                     <placeName type="pref">New York City</placeName>
+                     <location>
+                        <geo>40,71427 -74,00597</geo>
+                     </location>
+                  </settlement>
+               </death>
+            </person>
+            <person xml:id="pmb10860" ana="comment">
+               <persName>
+                  <forename>Paula</forename>
+                  <surname>Beer-Hofmann</surname>
+               </persName>
+               <birth>
+                  <date when="1879-02-25">1879-02-25</date>
+                  <settlement ref="pmb50">
+                     <placeName type="pref">Wien</placeName>
+                     <location>
+                        <geo>48,208333 16,373056</geo>
+                     </location>
+                  </settlement>
+               </birth>
+               <death>
+                  <date when="1939-10-30">1939-10-30</date>
+                  <settlement ref="pmb484">
+                     <placeName type="pref">Zürich</placeName>
+                     <location>
+                        <geo>47,37174 8,54226</geo>
+                     </location>
+                  </settlement>
+               </death>
+            </person>
+            <person xml:id="pmb13923" ana="comment">
                <persName>
                   <forename>Gabriel</forename>
                   <surname>Beer-Hofmann</surname>
@@ -283,35 +319,7 @@
                   </settlement>
                </death>
             </person>
-            <person xml:id="pmb2121">
-               <persName>
-                  <surname>Schnitzler</surname>
-                  <forename>Arthur</forename>
-               </persName>
-               <birth>
-                  <date when="1862-05-15">15. 5. 1862</date>
-                  <settlement ref="pmb50">
-                     <placeName type="pref">Wien</placeName>
-                     <location>
-                        <geo>48,208333 16,373056</geo>
-                     </location>
-                  </settlement>
-               </birth>
-               <death>
-                  <date when="1931-10-21">21. 10. 1931</date>
-                  <settlement ref="pmb50">
-                     <placeName type="pref">Wien</placeName>
-                     <location>
-                        <geo>48,208333 16,373056</geo>
-                     </location>
-                  </settlement>
-               </death>
-               <sex value="male"/>
-               <occupation ref="pmb90">Schriftsteller/Schriftstellerin</occupation>
-               <occupation ref="pmb97">Mediziner/Medizinerin</occupation>
-               <idno type="gnd">https://d-nb.info/gnd/118609807/</idno>
-            </person>
-            <person xml:id="pmb2534">
+            <person xml:id="pmb2534" ana="comment">
                <persName>
                   <forename>Naëmah</forename>
                   <surname>Beer-Hofmann</surname>
@@ -359,6 +367,30 @@
                   </settlement>
                </death>
             </person>
+            <person xml:id="pmb2173" ana="comment">
+               <persName>
+                  <forename>Olga</forename>
+                  <surname>Schnitzler</surname>
+               </persName>
+               <birth>
+                  <date when="1882-01-17">1882-01-17</date>
+                  <settlement ref="pmb50">
+                     <placeName type="pref">Wien</placeName>
+                     <location>
+                        <geo>48,208333 16,373056</geo>
+                     </location>
+                  </settlement>
+               </birth>
+               <death>
+                  <date when="1970-01-13">1970-01-13</date>
+                  <settlement ref="pmb885">
+                     <placeName type="pref">Lugano</placeName>
+                     <location>
+                        <geo>46,01008 8,96004</geo>
+                     </location>
+                  </settlement>
+               </death>
+            </person>
             <person xml:id="pmb12692" ana="comment">
                <persName>
                   <forename>Heinrich</forename>
@@ -389,30 +421,6 @@
                   </settlement>
                </death>
             </person>
-            <person xml:id="pmb2173" ana="comment">
-               <persName>
-                  <forename>Olga</forename>
-                  <surname>Schnitzler</surname>
-               </persName>
-               <birth>
-                  <date when="1882-01-17">1882-01-17</date>
-                  <settlement ref="pmb50">
-                     <placeName type="pref">Wien</placeName>
-                     <location>
-                        <geo>48,208333 16,373056</geo>
-                     </location>
-                  </settlement>
-               </birth>
-               <death>
-                  <date when="1970-01-13">1970-01-13</date>
-                  <settlement ref="pmb885">
-                     <placeName type="pref">Lugano</placeName>
-                     <location>
-                        <geo>46,01008 8,96004</geo>
-                     </location>
-                  </settlement>
-               </death>
-            </person>
             <person xml:id="pmb2238" ana="comment">
                <persName>
                   <forename>Lili</forename>
@@ -439,6 +447,74 @@
             </person>
          </listPerson>
          <listPlace>
+            <place xml:id="pmb51">
+               <placeName>I., Innere Stadt</placeName>
+               <placeName type="alternative-name">Inner city</placeName>
+               <placeName type="alternative-name">Wien,Innere Stadt</placeName>
+               <placeName type="alternative-name">1. Wiener Gemeindebezirk</placeName>
+               <placeName type="legacy-name-merge">Wien-Innere Stadt</placeName>
+               <location type="coords">
+                  <geo>48,20769 16,37049</geo>
+               </location>
+               <location type="located_in_place">
+                  <placeName ref="pmb41240">Österreich</placeName>
+                  <geo>47,33333 13,33333</geo>
+               </location>
+               <location type="located_in_place">
+                  <placeName ref="pmb50">Wien</placeName>
+                  <geo>48,208333 16,373056</geo>
+               </location>
+            </place>
+            <place xml:id="pmb50">
+               <placeName>Wien</placeName>
+               <placeName type="ort_fruherer-name">K.K. Reichshaupt- und Residenzstadt Wien</placeName>
+               <placeName type="alternative-name">Bécs</placeName>
+               <placeName type="alternative-name">Land Wien</placeName>
+               <placeName type="alternative-name">Vídeň</placeName>
+               <placeName type="alternative-name">Wenia</placeName>
+               <placeName type="alternative-name">Beč</placeName>
+               <placeName type="ort_fruherer-name">Vindobona</placeName>
+               <placeName type="alternative-name">Vienna</placeName>
+               <location type="coords">
+                  <geo>48,208333 16,373056</geo>
+               </location>
+               <location type="located_in_place">
+                  <placeName ref="pmb41240">Österreich</placeName>
+                  <geo>47,33333 13,33333</geo>
+               </location>
+               <location type="located_in_place">
+                  <placeName ref="pmb235218">Windmühlhöhe</placeName>
+                  <geo>48,24077 16,32092</geo>
+               </location>
+            </place>
+            <place xml:id="pmb34344" ana="comment">
+               <placeName>Weißenbach am Attersee</placeName>
+               <location type="coords">
+                  <geo>47,8004 13,5358</geo>
+               </location>
+               <location type="located_in_place">
+                  <placeName ref="pmb41240">Österreich</placeName>
+                  <geo>47,33333 13,33333</geo>
+               </location>
+               <location type="located_in_place">
+                  <placeName ref="pmb429">Salzkammergut</placeName>
+                  <geo>47,75 13,5</geo>
+               </location>
+            </place>
+            <place xml:id="pmb237">
+               <placeName>Schloss Leopoldskron</placeName>
+               <location type="coords">
+                  <geo>47,788333 13,038611</geo>
+               </location>
+               <location type="located_in_place">
+                  <placeName ref="pmb30">Salzburg</placeName>
+                  <geo>47,80067 13,04532</geo>
+               </location>
+               <location type="located_in_place">
+                  <placeName ref="pmb34839">Salzburg-Leopoldskron</placeName>
+                  <geo>47,786389 13,030556</geo>
+               </location>
+            </place>
             <place xml:id="pmb168815">
                <placeName>Sternwartestraße 71</placeName>
                <location type="coords">
@@ -457,38 +533,18 @@
                   <geo>48,23099349198 16,340117830625</geo>
                </location>
             </place>
-            <place xml:id="pmb237">
-               <placeName>Schloss Leopoldskron</placeName>
+            <place xml:id="pmb941" ana="comment">
+               <placeName>Lunz am See</placeName>
                <location type="coords">
-                  <geo>47,788333 13,038611</geo>
+                  <geo>47,8612 15,02998</geo>
                </location>
                <location type="located_in_place">
-                  <placeName ref="pmb30">Salzburg</placeName>
-                  <geo>47,80067 13,04532</geo>
-               </location>
-               <location type="located_in_place">
-                  <placeName ref="pmb34839">Salzburg-Leopoldskron</placeName>
-                  <geo>47,786389 13,030556</geo>
+                  <placeName ref="pmb1003">Niederösterreich</placeName>
+                  <geo>48,33333 15,75</geo>
                </location>
             </place>
-            <place xml:id="pmb34344">
-               <placeName>Weißenbach am Attersee</placeName>
-               <placeName type="legacy-name-merge">Weißenbach am Attersee</placeName>
-               <location type="coords">
-                  <geo>47,8004 13,5358</geo>
-               </location>
-               <location type="located_in_place">
-                  <placeName ref="pmb41240">Österreich</placeName>
-                  <geo>47,33333 13,33333</geo>
-               </location>
-               <location type="located_in_place">
-                  <placeName ref="pmb429">Salzkammergut</placeName>
-                  <geo>47,75 13,5</geo>
-               </location>
-            </place>
-            <place xml:id="pmb34946">
+            <place xml:id="pmb34946" ana="comment">
                <placeName>Pontresina</placeName>
-               <placeName type="alternative-name">Pontresina</placeName>
                <location type="coords">
                   <geo>46,4955 9,90126</geo>
                </location>
@@ -501,36 +557,14 @@
                   <geo>47,00016 8,01427</geo>
                </location>
             </place>
-            <place xml:id="pmb50">
-               <placeName>Wien</placeName>
-               <placeName type="ort_fruherer-name">K.K. Reichshaupt- und Residenzstadt Wien</placeName>
-               <placeName type="legacy-name-merge">Wien</placeName>
-               <placeName type="alternative-name">Bécs</placeName>
-               <placeName type="alternative-name">Land Wien</placeName>
-               <placeName type="alternative-name">Vídeň</placeName>
-               <placeName type="alternative-name">Wenia</placeName>
-               <placeName type="alternative-name">Beč</placeName>
-               <placeName type="ort_fruherer-name">Vindobona</placeName>
-               <placeName type="legacy-name-merge">Vindobona</placeName>
-               <placeName type="alternative-name">Vienna</placeName>
-               <placeName type="legacy-name-merge">Vienna</placeName>
-               <placeName type="alternative-name">Vienna</placeName>
+            <place xml:id="pmb20650" ana="comment">
+               <placeName>Thusis</placeName>
                <location type="coords">
-                  <geo>48,208333 16,373056</geo>
+                  <geo>46,69729 9,43908</geo>
                </location>
                <location type="located_in_place">
-                  <placeName ref="pmb41240">Österreich</placeName>
-                  <geo>47,33333 13,33333</geo>
-               </location>
-            </place>
-            <place xml:id="pmb941">
-               <placeName>Lunz am See</placeName>
-               <location type="coords">
-                  <geo>47,8612 15,02998</geo>
-               </location>
-               <location type="located_in_place">
-                  <placeName ref="pmb1003">Niederösterreich</placeName>
-                  <geo>48,33333 15,75</geo>
+                  <placeName ref="pmb43435">Schweiz</placeName>
+                  <geo>47,00016 8,01427</geo>
                </location>
             </place>
             <place xml:id="pmb12589" ana="comment">
@@ -542,19 +576,6 @@
                <location type="located_in_place">
                   <placeName ref="pmb1061">Engadin</placeName>
                   <geo>46,601337 9,965973</geo>
-               </location>
-            </place>
-            <place xml:id="pmb20650" ana="comment">
-               <placeName>Thusis</placeName>
-               <placeName type="alternative-name">Thusis</placeName>
-               <placeName type="legacy-name-merge">Thusis</placeName>
-               <placeName type="legacy-name-merge">Thusis</placeName>
-               <location type="coords">
-                  <geo>46,69729 9,43908</geo>
-               </location>
-               <location type="located_in_place">
-                  <placeName ref="pmb43435">Schweiz</placeName>
-                  <geo>47,00016 8,01427</geo>
                </location>
             </place>
          </listPlace>

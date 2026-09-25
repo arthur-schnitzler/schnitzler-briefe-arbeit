@@ -1,6 +1,10 @@
-<?xml version='1.0' encoding='UTF-8'?>
+<?xml version="1.0" encoding="UTF-8"?>
 <?xml-model href="../meta/schnitzler-briefe-schematron.sch" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
-<TEI xmlns="http://www.tei-c.org/ns/1.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.tei-c.org/ns/1.0 ../meta/schnitzler-briefe-schema.xsd" xml:base="https://id.acdh.oeaw.ac.at/schnitzler/schnitzler-briefe/editions" xml:id="L04275">
+<TEI xmlns="http://www.tei-c.org/ns/1.0"
+     xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+     xsi:schemaLocation="http://www.tei-c.org/ns/1.0 ../meta/schnitzler-briefe-schema.xsd"
+     xml:base="https://id.acdh.oeaw.ac.at/schnitzler/schnitzler-briefe/editions"
+     xml:id="L04275">
    <teiHeader>
       <fileDesc>
          <titleStmt>
@@ -112,12 +116,20 @@
                   – 22. 6. 1893?]</date>
                <placeName ref="#pmb50" evidence="conjecture">Wien</placeName>
             </correspAction>
-            <correspContext><ref type="belongsToCorrespondence" target="correspondence_12740">Schwarzkopf, Gustav</ref>
+            <correspContext>
+               <ref type="belongsToCorrespondence" target="correspondence_12740">Schwarzkopf, Gustav</ref>
                <ref subtype="previous_letter" type="withinCollection" target="L00224">Conrad an Schnitzler, 21. 6. 1893</ref>
                <ref subtype="next_letter" type="withinCollection" target="L00226">Schnitzler an Beer-Hofmann, 22. 6. 1893</ref>
-               <ref subtype="previous_letter" type="withinCorrespondence" source="correspondence_12740" target="L04102">Schnitzler an Schwarzkopf, 10. 6. 1893</ref>
-               <ref subtype="next_letter" type="withinCorrespondence" source="correspondence_12740" target="L04193">Schnitzler an Schwarzkopf, [22. 6. 1893?]</ref>
-            </correspContext></correspDesc>
+               <ref subtype="previous_letter"
+                    type="withinCorrespondence"
+                    source="correspondence_12740"
+                    target="L04102">Schnitzler an Schwarzkopf, 10. 6. 1893</ref>
+               <ref subtype="next_letter"
+                    type="withinCorrespondence"
+                    source="correspondence_12740"
+                    target="L04193">Schnitzler an Schwarzkopf, [22. 6. 1893?]</ref>
+            </correspContext>
+         </correspDesc>
       </profileDesc>
       <revisionDesc status="proposed">
          <change who="MAM" when="2026-02-20">Export aus Transkribus</change>
@@ -207,7 +219,7 @@
                   <forename>Arthur</forename>
                </persName>
                <birth>
-                  <date when="1862-05-15">15. 5. 1862</date>
+                  <date when="1862-05-15">15. 5. 1862</date>
                   <settlement ref="pmb50">
                      <placeName type="pref">Wien</placeName>
                      <location>
@@ -216,7 +228,7 @@
                   </settlement>
                </birth>
                <death>
-                  <date when="1931-10-21">21. 10. 1931</date>
+                  <date when="1931-10-21">21. 10. 1931</date>
                   <settlement ref="pmb50">
                      <placeName type="pref">Wien</placeName>
                      <location>
@@ -224,10 +236,6 @@
                      </location>
                   </settlement>
                </death>
-               <sex value="male"/>
-               <occupation ref="pmb90">Schriftsteller/Schriftstellerin</occupation>
-               <occupation ref="pmb97">Mediziner/Medizinerin</occupation>
-               <idno type="gnd">https://d-nb.info/gnd/118609807/</idno>
             </person>
             <person xml:id="pmb54776">
                <persName>
@@ -243,18 +251,46 @@
             </person>
          </listPerson>
          <listPlace>
-            <place xml:id="pmb192771">
-               <placeName>Hotel Hajek</placeName>
+            <place xml:id="pmb44413">
+               <placeName>Brühl</placeName>
                <location type="coords">
-                  <geo>48,080769 16,2652</geo>
+                  <geo>48,08509 16,24801</geo>
                </location>
                <location type="located_in_place">
-                  <placeName ref="pmb968">Mödling</placeName>
+                  <placeName ref="pmb1003">Niederösterreich</placeName>
+                  <geo>48,33333 15,75</geo>
+               </location>
+            </place>
+            <place xml:id="pmb50">
+               <placeName>Wien</placeName>
+               <placeName type="ort_fruherer-name">K.K. Reichshaupt- und Residenzstadt Wien</placeName>
+               <placeName type="alternative-name">Bécs</placeName>
+               <placeName type="alternative-name">Land Wien</placeName>
+               <placeName type="alternative-name">Vídeň</placeName>
+               <placeName type="alternative-name">Wenia</placeName>
+               <placeName type="alternative-name">Beč</placeName>
+               <placeName type="ort_fruherer-name">Vindobona</placeName>
+               <placeName type="alternative-name">Vienna</placeName>
+               <location type="coords">
+                  <geo>48,208333 16,373056</geo>
+               </location>
+               <location type="located_in_place">
+                  <placeName ref="pmb41240">Österreich</placeName>
+                  <geo>47,33333 13,33333</geo>
+               </location>
+               <location type="located_in_place">
+                  <placeName ref="pmb235218">Windmühlhöhe</placeName>
+                  <geo>48,24077 16,32092</geo>
+               </location>
+            </place>
+            <place xml:id="pmb968" ana="comment">
+               <placeName>Mödling</placeName>
+               <location type="coords">
                   <geo>48,08605 16,28921</geo>
                </location>
                <location type="located_in_place">
-                  <placeName ref="pmb957">Vorderbrühl</placeName>
-                  <geo>48,08153 16,26108</geo>
+                  <placeName ref="pmb41240">Österreich</placeName>
+                  <geo>47,33333 13,33333</geo>
                </location>
             </place>
             <place xml:id="pmb334846">
@@ -275,6 +311,20 @@
                <location type="located_in_place">
                   <placeName ref="pmb968">Mödling</placeName>
                   <geo>48,08605 16,28921</geo>
+               </location>
+            </place>
+            <place xml:id="pmb192771" ana="comment">
+               <placeName>Hotel Hajek</placeName>
+               <location type="coords">
+                  <geo>48,080769 16,2652</geo>
+               </location>
+               <location type="located_in_place">
+                  <placeName ref="pmb968">Mödling</placeName>
+                  <geo>48,08605 16,28921</geo>
+               </location>
+               <location type="located_in_place">
+                  <placeName ref="pmb957">Vorderbrühl</placeName>
+                  <geo>48,08153 16,26108</geo>
                </location>
             </place>
             <place xml:id="pmb334850">
@@ -317,51 +367,6 @@
                <location type="located_in_place">
                   <placeName ref="pmb44084">Hauptstraße [Hinterbrühl]</placeName>
                   <geo>48,08744 16,24924</geo>
-               </location>
-            </place>
-            <place xml:id="pmb44413">
-               <placeName>Brühl</placeName>
-               <location type="coords">
-                  <geo>48,08509 16,24801</geo>
-               </location>
-               <location type="located_in_place">
-                  <placeName ref="pmb1003">Niederösterreich</placeName>
-                  <geo>48,33333 15,75</geo>
-               </location>
-            </place>
-            <place xml:id="pmb50">
-               <placeName>Wien</placeName>
-               <placeName type="ort_fruherer-name">K.K. Reichshaupt- und Residenzstadt Wien</placeName>
-               <placeName type="legacy-name-merge">Wien</placeName>
-               <placeName type="alternative-name">Bécs</placeName>
-               <placeName type="alternative-name">Land Wien</placeName>
-               <placeName type="alternative-name">Vídeň</placeName>
-               <placeName type="alternative-name">Wenia</placeName>
-               <placeName type="alternative-name">Beč</placeName>
-               <placeName type="ort_fruherer-name">Vindobona</placeName>
-               <placeName type="legacy-name-merge">Vindobona</placeName>
-               <placeName type="alternative-name">Vienna</placeName>
-               <placeName type="legacy-name-merge">Vienna</placeName>
-               <placeName type="alternative-name">Vienna</placeName>
-               <location type="coords">
-                  <geo>48,208333 16,373056</geo>
-               </location>
-               <location type="located_in_place">
-                  <placeName ref="pmb41240">Österreich</placeName>
-                  <geo>47,33333 13,33333</geo>
-               </location>
-            </place>
-            <place xml:id="pmb968">
-               <placeName>Mödling</placeName>
-               <placeName type="alternative-name">Mödling</placeName>
-               <placeName type="legacy-name-merge">Mödling</placeName>
-               <placeName type="legacy-name-merge">Mödling</placeName>
-               <location type="coords">
-                  <geo>48,08605 16,28921</geo>
-               </location>
-               <location type="located_in_place">
-                  <placeName ref="pmb41240">Österreich</placeName>
-                  <geo>47,33333 13,33333</geo>
                </location>
             </place>
             <place xml:id="pmb625" ana="implied">

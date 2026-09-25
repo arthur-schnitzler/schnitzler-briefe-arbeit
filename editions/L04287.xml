@@ -1,6 +1,10 @@
-<?xml version='1.0' encoding='UTF-8'?>
+<?xml version="1.0" encoding="UTF-8"?>
 <?xml-model href="../meta/schnitzler-briefe-schematron.sch" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
-<TEI xmlns="http://www.tei-c.org/ns/1.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.tei-c.org/ns/1.0 ../meta/schnitzler-briefe-schema.xsd" xml:base="https://id.acdh.oeaw.ac.at/schnitzler/schnitzler-briefe/editions" xml:id="L04287">
+<TEI xmlns="http://www.tei-c.org/ns/1.0"
+     xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+     xsi:schemaLocation="http://www.tei-c.org/ns/1.0 ../meta/schnitzler-briefe-schema.xsd"
+     xml:base="https://id.acdh.oeaw.ac.at/schnitzler/schnitzler-briefe/editions"
+     xml:id="L04287">
    <teiHeader>
       <fileDesc>
          <titleStmt>
@@ -103,7 +107,7 @@
             <correspAction type="sent">
                <persName ref="#pmb12740">Schwarzkopf, Gustav</persName>
                <date when="1896-07-31" n="02">31. 7. 1896</date>
-               <placeName ref="#pmb207296" evidence="internal">Wien</placeName>
+               <placeName ref="#pmb207296" evidence="internal">Tiefer Graben 23</placeName>
             </correspAction>
             <correspAction type="delivered">
                <placeName ref="#pmb36300">Kopenhagen</placeName>
@@ -114,12 +118,20 @@
                   – 5. 8. 1896?]</date>
                <placeName ref="#pmb36300">Kopenhagen</placeName>
             </correspAction>
-            <correspContext><ref type="belongsToCorrespondence" target="correspondence_12740">Schwarzkopf, Gustav</ref>
+            <correspContext>
+               <ref type="belongsToCorrespondence" target="correspondence_12740">Schwarzkopf, Gustav</ref>
                <ref subtype="previous_letter" type="withinCollection" target="L00575">Schnitzler an Beer-Hofmann, 31. 7. 1896</ref>
                <ref subtype="next_letter" type="withinCollection" target="L00576">Hofmannsthal, Salten an Schnitzler, Beer-Hofmann, 1. 8. 1896</ref>
-               <ref subtype="previous_letter" type="withinCorrespondence" source="correspondence_12740" target="L04116">Schnitzler an Schwarzkopf, 17. 7. 1896</ref>
-               <ref subtype="next_letter" type="withinCorrespondence" source="correspondence_12740" target="L04286">Schwarzkopf an Schnitzler, 6. 12. 1896</ref>
-            </correspContext></correspDesc>
+               <ref subtype="previous_letter"
+                    type="withinCorrespondence"
+                    source="correspondence_12740"
+                    target="L04116">Schnitzler an Schwarzkopf, 17. 7. 1896</ref>
+               <ref subtype="next_letter"
+                    type="withinCorrespondence"
+                    source="correspondence_12740"
+                    target="L04286">Schwarzkopf an Schnitzler, 6. 12. 1896</ref>
+            </correspContext>
+         </correspDesc>
       </profileDesc>
       <revisionDesc status="proposed">
          <change who="MAM" when="2026-02-20">Export aus Transkribus</change>
@@ -184,6 +196,159 @@
       </body>
       <back>
          <listPerson>
+            <person xml:id="pmb12740">
+               <persName>
+                  <forename>Gustav</forename>
+                  <surname>Schwarzkopf</surname>
+               </persName>
+               <birth>
+                  <date when="1853-11-07">1853-11-07</date>
+                  <settlement ref="pmb50">
+                     <placeName type="pref">Wien</placeName>
+                     <location>
+                        <geo>48,208333 16,373056</geo>
+                     </location>
+                  </settlement>
+               </birth>
+               <death>
+                  <date when="1939-11-13">1939-11-13</date>
+                  <settlement ref="pmb50">
+                     <placeName type="pref">Wien</placeName>
+                     <location>
+                        <geo>48,208333 16,373056</geo>
+                     </location>
+                  </settlement>
+               </death>
+            </person>
+            <person xml:id="pmb2121">
+               <persName>
+                  <surname>Schnitzler</surname>
+                  <forename>Arthur</forename>
+               </persName>
+               <birth>
+                  <date when="1862-05-15">15. 5. 1862</date>
+                  <settlement ref="pmb50">
+                     <placeName type="pref">Wien</placeName>
+                     <location>
+                        <geo>48,208333 16,373056</geo>
+                     </location>
+                  </settlement>
+               </birth>
+               <death>
+                  <date when="1931-10-21">21. 10. 1931</date>
+                  <settlement ref="pmb50">
+                     <placeName type="pref">Wien</placeName>
+                     <location>
+                        <geo>48,208333 16,373056</geo>
+                     </location>
+                  </settlement>
+               </death>
+            </person>
+            <person xml:id="pmb2154">
+               <persName>
+                  <forename>Vincenz</forename>
+                  <surname>Chiavacci</surname>
+               </persName>
+               <birth>
+                  <date when="1847-06-15">1847-06-15</date>
+                  <settlement ref="pmb50">
+                     <placeName type="pref">Wien</placeName>
+                     <location>
+                        <geo>48,208333 16,373056</geo>
+                     </location>
+                  </settlement>
+               </birth>
+               <death>
+                  <date when="1916-02-02">1916-02-02</date>
+                  <settlement ref="pmb50">
+                     <placeName type="pref">Wien</placeName>
+                     <location>
+                        <geo>48,208333 16,373056</geo>
+                     </location>
+                  </settlement>
+               </death>
+            </person>
+            <person xml:id="pmb13082">
+               <persName>
+                  <forename>Carl</forename>
+                  <surname>Karlweis</surname>
+               </persName>
+               <birth>
+                  <date when="1850-11-23">1850-11-23</date>
+                  <settlement ref="pmb50">
+                     <placeName type="pref">Wien</placeName>
+                     <location>
+                        <geo>48,208333 16,373056</geo>
+                     </location>
+                  </settlement>
+               </birth>
+               <death>
+                  <date when="1901-10-27">1901-10-27</date>
+                  <settlement ref="pmb50">
+                     <placeName type="pref">Wien</placeName>
+                     <location>
+                        <geo>48,208333 16,373056</geo>
+                     </location>
+                  </settlement>
+               </death>
+            </person>
+            <person xml:id="pmb14943">
+               <persName>
+                  <forename>Ludwig</forename>
+                  <surname>Chiavacci</surname>
+               </persName>
+               <birth>
+                  <date when="1896-07-09">1896-07-09</date>
+                  <settlement ref="pmb50">
+                     <placeName type="pref">Wien</placeName>
+                     <location>
+                        <geo>48,208333 16,373056</geo>
+                     </location>
+                  </settlement>
+               </birth>
+               <death>
+                  <date when="1970-08-14">1970-08-14</date>
+                  <settlement ref="pmb44053">
+                     <placeName type="pref">New York City</placeName>
+                     <location>
+                        <geo>40,71427 -74,00597</geo>
+                     </location>
+                  </settlement>
+               </death>
+            </person>
+            <person xml:id="pmb144115">
+               <persName>
+                  <forename>Franz</forename>
+                  <surname>Hirschfeld</surname>
+               </persName>
+               <birth>
+                  <date when="1896-07-27">1896-07-27</date>
+               </birth>
+            </person>
+            <person xml:id="pmb12064">
+               <persName>
+                  <forename>Georg Christoph</forename>
+                  <surname>Lichtenberg</surname>
+               </persName>
+               <birth>
+                  <date when="1742-07-01">1742-07-01</date>
+                  <settlement ref="pmb64680">
+                     <placeName type="pref">Ober-Ramstadt</placeName>
+                     <location>
+                        <geo>49,83078 8,74887</geo>
+                     </location>
+                  </settlement>
+               </birth>
+               <death>
+                  <date when="1799-02-24">1799-02-24</date>
+                  <settlement ref="pmb42325">
+                     <placeName type="pref">Göttingen</placeName>
+                     <location>
+                        <geo>51,53443 9,93228</geo>
+                     </location>
+                  </settlement>
+               </death>
+            </person>
             <person xml:id="pmb10863">
                <persName>
                   <forename>Richard</forename>
@@ -232,54 +397,6 @@
                   </settlement>
                </death>
             </person>
-            <person xml:id="pmb12064">
-               <persName>
-                  <forename>Georg Christoph</forename>
-                  <surname>Lichtenberg</surname>
-               </persName>
-               <birth>
-                  <date when="1742-07-01">1742-07-01</date>
-                  <settlement ref="pmb64680">
-                     <placeName type="pref">Ober-Ramstadt</placeName>
-                     <location>
-                        <geo>49,83078 8,74887</geo>
-                     </location>
-                  </settlement>
-               </birth>
-               <death>
-                  <date when="1799-02-24">1799-02-24</date>
-                  <settlement ref="pmb42325">
-                     <placeName type="pref">Göttingen</placeName>
-                     <location>
-                        <geo>51,53443 9,93228</geo>
-                     </location>
-                  </settlement>
-               </death>
-            </person>
-            <person xml:id="pmb12081">
-               <persName>
-                  <forename>Anton</forename>
-                  <surname>Lindner</surname>
-               </persName>
-               <birth>
-                  <date when="1874-12-14">1874-12-14</date>
-                  <settlement ref="pmb46224">
-                     <placeName type="pref">Lviv</placeName>
-                     <location>
-                        <geo>49,83826 24,02324</geo>
-                     </location>
-                  </settlement>
-               </birth>
-               <death>
-                  <date when="1928-12-30">1928-12-30</date>
-                  <settlement ref="pmb12083">
-                     <placeName type="pref">Wandsbek</placeName>
-                     <location>
-                        <geo>53,582033 10,084261</geo>
-                     </location>
-                  </settlement>
-               </death>
-            </person>
             <person xml:id="pmb12614">
                <persName>
                   <forename>Marcell</forename>
@@ -300,139 +417,6 @@
                      <placeName type="pref">Berlin</placeName>
                      <location>
                         <geo>52,52437 13,41053</geo>
-                     </location>
-                  </settlement>
-               </death>
-            </person>
-            <person xml:id="pmb12740">
-               <persName>
-                  <forename>Gustav</forename>
-                  <surname>Schwarzkopf</surname>
-               </persName>
-               <birth>
-                  <date when="1853-11-07">1853-11-07</date>
-                  <settlement ref="pmb50">
-                     <placeName type="pref">Wien</placeName>
-                     <location>
-                        <geo>48,208333 16,373056</geo>
-                     </location>
-                  </settlement>
-               </birth>
-               <death>
-                  <date when="1939-11-13">1939-11-13</date>
-                  <settlement ref="pmb50">
-                     <placeName type="pref">Wien</placeName>
-                     <location>
-                        <geo>48,208333 16,373056</geo>
-                     </location>
-                  </settlement>
-               </death>
-            </person>
-            <person xml:id="pmb13082">
-               <persName>
-                  <forename>Carl</forename>
-                  <surname>Karlweis</surname>
-               </persName>
-               <birth>
-                  <date when="1850-11-23">1850-11-23</date>
-                  <settlement ref="pmb50">
-                     <placeName type="pref">Wien</placeName>
-                     <location>
-                        <geo>48,208333 16,373056</geo>
-                     </location>
-                  </settlement>
-               </birth>
-               <death>
-                  <date when="1901-10-27">1901-10-27</date>
-                  <settlement ref="pmb50">
-                     <placeName type="pref">Wien</placeName>
-                     <location>
-                        <geo>48,208333 16,373056</geo>
-                     </location>
-                  </settlement>
-               </death>
-            </person>
-            <person xml:id="pmb144115">
-               <persName>
-                  <forename>Franz</forename>
-                  <surname>Hirschfeld</surname>
-               </persName>
-               <birth>
-                  <date when="1896-07-27">1896-07-27</date>
-               </birth>
-            </person>
-            <person xml:id="pmb14943">
-               <persName>
-                  <forename>Ludwig</forename>
-                  <surname>Chiavacci</surname>
-               </persName>
-               <birth>
-                  <date when="1896-07-09">1896-07-09</date>
-                  <settlement ref="pmb50">
-                     <placeName type="pref">Wien</placeName>
-                     <location>
-                        <geo>48,208333 16,373056</geo>
-                     </location>
-                  </settlement>
-               </birth>
-               <death>
-                  <date when="1970-08-14">1970-08-14</date>
-                  <settlement ref="pmb44053">
-                     <placeName type="pref">New York City</placeName>
-                     <location>
-                        <geo>40,71427 -74,00597</geo>
-                     </location>
-                  </settlement>
-               </death>
-            </person>
-            <person xml:id="pmb2121">
-               <persName>
-                  <surname>Schnitzler</surname>
-                  <forename>Arthur</forename>
-               </persName>
-               <birth>
-                  <date when="1862-05-15">15. 5. 1862</date>
-                  <settlement ref="pmb50">
-                     <placeName type="pref">Wien</placeName>
-                     <location>
-                        <geo>48,208333 16,373056</geo>
-                     </location>
-                  </settlement>
-               </birth>
-               <death>
-                  <date when="1931-10-21">21. 10. 1931</date>
-                  <settlement ref="pmb50">
-                     <placeName type="pref">Wien</placeName>
-                     <location>
-                        <geo>48,208333 16,373056</geo>
-                     </location>
-                  </settlement>
-               </death>
-               <sex value="male"/>
-               <occupation ref="pmb90">Schriftsteller/Schriftstellerin</occupation>
-               <occupation ref="pmb97">Mediziner/Medizinerin</occupation>
-               <idno type="gnd">https://d-nb.info/gnd/118609807/</idno>
-            </person>
-            <person xml:id="pmb2154">
-               <persName>
-                  <forename>Vincenz</forename>
-                  <surname>Chiavacci</surname>
-               </persName>
-               <birth>
-                  <date when="1847-06-15">1847-06-15</date>
-                  <settlement ref="pmb50">
-                     <placeName type="pref">Wien</placeName>
-                     <location>
-                        <geo>48,208333 16,373056</geo>
-                     </location>
-                  </settlement>
-               </birth>
-               <death>
-                  <date when="1916-02-02">1916-02-02</date>
-                  <settlement ref="pmb50">
-                     <placeName type="pref">Wien</placeName>
-                     <location>
-                        <geo>48,208333 16,373056</geo>
                      </location>
                   </settlement>
                </death>
@@ -461,60 +445,86 @@
                   </settlement>
                </death>
             </person>
+            <person xml:id="pmb12081">
+               <persName>
+                  <forename>Anton</forename>
+                  <surname>Lindner</surname>
+               </persName>
+               <birth>
+                  <date when="1874-12-14">1874-12-14</date>
+                  <settlement ref="pmb46224">
+                     <placeName type="pref">Lviv</placeName>
+                     <location>
+                        <geo>49,83826 24,02324</geo>
+                     </location>
+                  </settlement>
+               </birth>
+               <death>
+                  <date when="1928-12-30">1928-12-30</date>
+                  <settlement ref="pmb12083">
+                     <placeName type="pref">Wandsbek</placeName>
+                     <location>
+                        <geo>53,582033 10,084261</geo>
+                     </location>
+                  </settlement>
+               </death>
+            </person>
+            <person xml:id="pmb154784">
+               <persName>
+                  <forename>Eugen</forename>
+                  <surname>Reichel</surname>
+               </persName>
+               <birth>
+                  <date notBefore="1853-01-01" when="1853-01-01" notAfter="1853-12-31">1853</date>
+               </birth>
+               <death>
+                  <date when="1916-01-01" notAfter="1916-12-31">1916</date>
+               </death>
+            </person>
          </listPerson>
          <listBibl>
             <bibl xml:id="pmb30145">
-               <title type="main">Denksteine</title>
+               <title>Denksteine</title>
                <title type="werk_bibliografische-angabe">Arthur Schnitzler: Denksteine. In: Moderne Rundschau, Bd. 3, H. 4, 15. 5. 1891, S. 151–154</title>
-               <author role="hat-geschaffen" ref="pmb2121">Schnitzler, Arthur</author>
+               <author ref="pmb2121" role="hat-geschaffen">Schnitzler, Arthur</author>
             </bibl>
             <bibl xml:id="pmb333764" ana="implied">
-               <title type="main">Georg Christ. Lichtenbergs ausgewählte Schriften</title>
+               <title>Georg Christ. Lichtenbergs ausgewählte Schriften</title>
                <title type="werk_link">https://archive.org/details/georgchristlicht00lich/page/n3/mode/2up</title>
-               <author role="hat-herausgegeben" ref="pmb154784">Reichel, Eugen</author>
-               <author role="hat-geschaffen" ref="pmb12064">Lichtenberg, Georg Christoph</author>
+               <author ref="pmb154784" role="hat-herausgegeben">Reichel, Eugen</author>
+               <author ref="pmb12064" role="hat-geschaffen">Lichtenberg, Georg Christoph</author>
             </bibl>
             <bibl xml:id="pmb334874" ana="implied">
-               <title type="main">Mutterliebe</title>
-               <author role="hat-geschaffen" ref="pmb4884">Sonnenthal, Hermine von</author>
+               <title>Mutterliebe</title>
+               <author ref="pmb4884" role="hat-geschaffen">Sonnenthal, Hermine von</author>
             </bibl>
             <bibl xml:id="pmb334877" ana="implied">
-               <title type="main">Fern von Wien</title>
-               <author role="hat-geschaffen" ref="pmb12081">Lindner, Anton</author>
+               <title>Fern von Wien</title>
+               <author ref="pmb12081" role="hat-geschaffen">Lindner, Anton</author>
             </bibl>
             <bibl xml:id="pmb334883" ana="implied">
-               <title type="main">Das Rütli am Thury</title>
-               <author role="hat-geschaffen" ref="pmb2154">Chiavacci, Vincenz</author>
+               <title>Das Rütli am Thury</title>
+               <author ref="pmb2154" role="hat-geschaffen">Chiavacci, Vincenz</author>
             </bibl>
          </listBibl>
          <listPlace>
-            <place xml:id="pmb294370">
-               <placeName>Pertl’s Drittes Kaffeehaus</placeName>
-               <placeName type="legacy-name-merge">3. Kaffeehaus</placeName>
-               <placeName type="ort_namensvariante">Pertls 3. Kaffeehaus</placeName>
+            <place xml:id="pmb207296">
+               <placeName>Tiefer Graben 23</placeName>
                <location type="coords">
-                  <geo>48,21108 16,405</geo>
+                  <geo>48,213038 16,368738</geo>
                </location>
                <location type="located_in_place">
-                  <placeName ref="pmb8">Prater</placeName>
-                  <geo>48,194558 16,430054</geo>
+                  <placeName ref="pmb50825">Tiefer Graben</placeName>
+                  <geo>48,2125 16,368333</geo>
                </location>
                <location type="located_in_place">
-                  <placeName ref="pmb52">II., Leopoldstadt</placeName>
-                  <geo>48,21667 16,4</geo>
-               </location>
-               <location type="located_in_place">
-                  <placeName ref="pmb53159">Hauptallee</placeName>
-                  <geo>48,20508551408161 16,41575606941028</geo>
+                  <placeName ref="pmb51">I., Innere Stadt</placeName>
+                  <geo>48,20769 16,37049</geo>
                </location>
             </place>
             <place xml:id="pmb36300">
                <placeName>Kopenhagen</placeName>
-               <placeName type="alternative-name">Kopenhagen</placeName>
-               <placeName type="legacy-name">Kopenhagen</placeName>
-               <placeName type="legacy-name-merge">Kopenhagen</placeName>
                <placeName type="alternative-name">Copenhagen</placeName>
-               <placeName type="legacy-name-merge">Copenhagen</placeName>
                <location type="coords">
                   <geo>55,67594 12,56553</geo>
                </location>
@@ -527,13 +537,23 @@
                <placeName>Lago di Garda</placeName>
                <placeName type="alternative-name">Gardasee</placeName>
                <placeName type="alternative-name">Lake Garda</placeName>
-               <placeName type="legacy-name-merge">Gardasee</placeName>
                <location type="coords">
                   <geo>45,6316 10,660517</geo>
                </location>
                <location type="located_in_place">
                   <placeName ref="pmb142864">Oberitalienische Seen</placeName>
                   <geo>45,716 10,083</geo>
+               </location>
+               <location type="located_in_place">
+                  <placeName ref="pmb40306">Italien</placeName>
+                  <geo>42,83333 12,83333</geo>
+               </location>
+            </place>
+            <place xml:id="pmb41945">
+               <placeName>Stilfser Joch</placeName>
+               <placeName type="legacy-name-merge">Stelvio, Giogo dello</placeName>
+               <location type="coords">
+                  <geo>46,528333 10,453333</geo>
                </location>
                <location type="located_in_place">
                   <placeName ref="pmb40306">Italien</placeName>
@@ -559,45 +579,43 @@
                   <geo>42,83333 12,83333</geo>
                </location>
             </place>
-            <place xml:id="pmb41945">
-               <placeName>Stilfser Joch</placeName>
-               <placeName type="legacy-name-merge">Stelvio, Giogo dello</placeName>
+            <place xml:id="pmb294370">
+               <placeName>Pertl’s Drittes Kaffeehaus</placeName>
+               <placeName type="legacy-name-merge">3. Kaffeehaus</placeName>
+               <placeName type="ort_namensvariante">Pertls 3. Kaffeehaus</placeName>
                <location type="coords">
-                  <geo>46,528333 10,453333</geo>
+                  <geo>48,21108 16,405</geo>
                </location>
                <location type="located_in_place">
-                  <placeName ref="pmb40306">Italien</placeName>
-                  <geo>42,83333 12,83333</geo>
+                  <placeName ref="pmb8">Prater</placeName>
+                  <geo>48,194558 16,430054</geo>
+               </location>
+               <location type="located_in_place">
+                  <placeName ref="pmb52">II., Leopoldstadt</placeName>
+                  <geo>48,21667 16,4</geo>
+               </location>
+               <location type="located_in_place">
+                  <placeName ref="pmb53159">Hauptallee</placeName>
+                  <geo>48,20508551408161 16,41575606941028</geo>
                </location>
             </place>
-            <place xml:id="pmb50">
-               <placeName>Wien</placeName>
-               <placeName type="ort_fruherer-name">K.K. Reichshaupt- und Residenzstadt Wien</placeName>
-               <placeName type="legacy-name-merge">Wien</placeName>
-               <placeName type="alternative-name">Bécs</placeName>
-               <placeName type="alternative-name">Land Wien</placeName>
-               <placeName type="alternative-name">Vídeň</placeName>
-               <placeName type="alternative-name">Wenia</placeName>
-               <placeName type="alternative-name">Beč</placeName>
-               <placeName type="ort_fruherer-name">Vindobona</placeName>
-               <placeName type="legacy-name-merge">Vindobona</placeName>
-               <placeName type="alternative-name">Vienna</placeName>
-               <placeName type="legacy-name-merge">Vienna</placeName>
-               <placeName type="alternative-name">Vienna</placeName>
+            <place xml:id="pmb8">
+               <placeName>Prater</placeName>
                <location type="coords">
-                  <geo>48,208333 16,373056</geo>
+                  <geo>48,194558 16,430054</geo>
                </location>
                <location type="located_in_place">
                   <placeName ref="pmb41240">Österreich</placeName>
                   <geo>47,33333 13,33333</geo>
                </location>
+               <location type="located_in_place">
+                  <placeName ref="pmb52">II., Leopoldstadt</placeName>
+                  <geo>48,21667 16,4</geo>
+               </location>
             </place>
             <place xml:id="pmb662">
                <placeName>Baden bei Wien</placeName>
                <placeName type="alternative-name">Baden</placeName>
-               <placeName type="legacy-name-merge">Baden</placeName>
-               <placeName type="legacy-name-merge">Baden bei Wien</placeName>
-               <placeName type="alternative-name">Baden bei Wien</placeName>
                <placeName type="legacy-name-merge">Baden (Niederösterreich)</placeName>
                <location type="coords">
                   <geo>48,00543 16,23264</geo>
@@ -609,21 +627,6 @@
                <location type="located_in_place">
                   <placeName ref="pmb1003">Niederösterreich</placeName>
                   <geo>48,33333 15,75</geo>
-               </location>
-            </place>
-            <place xml:id="pmb8">
-               <placeName>Prater</placeName>
-               <placeName type="legacy-name-merge">Prater</placeName>
-               <location type="coords">
-                  <geo>48,194558 16,430054</geo>
-               </location>
-               <location type="located_in_place">
-                  <placeName ref="pmb41240">Österreich</placeName>
-                  <geo>47,33333 13,33333</geo>
-               </location>
-               <location type="located_in_place">
-                  <placeName ref="pmb52">II., Leopoldstadt</placeName>
-                  <geo>48,21667 16,4</geo>
                </location>
             </place>
             <place xml:id="pmb239736" ana="comment">
@@ -659,7 +662,7 @@
                   <idno type="URL" subtype="pmb">https://pmb.acdh.oeaw.ac.at/entity/20954/</idno>
                   <idno type="URL" subtype="pmb">https://pmb.acdh.oeaw.ac.at/entity/65221/</idno>
                   <idno type="URL" subtype="pmb">https://pmb.acdh.oeaw.ac.at/entity/65223/</idno>
-                  <idno type="URL" subtype="kraus">https://www.kraus.wienbibliothek.at/legalkraus/pmb50.html</idno>
+                  <idno type="URL" subtype="www">https://www.kraus.wienbibliothek.at/legalkraus/pmb50.html</idno>
                   <idno type="URL" subtype="wikidata">http://www.wikidata.org/entity/Q1741</idno>
                   <idno type="URL" subtype="wikipedia">https://de.wikipedia.org/wiki/Wien</idno>
                   <idno type="URL" subtype="schnitzler-interviews">https://schnitzler-interviews.acdh.oeaw.ac.at/pmb50.html</idno>
@@ -673,7 +676,7 @@
                   <idno type="URL" subtype="sk">https://sk.acdh.oeaw.ac.at/DWplace00085</idno>
                   <idno type="URL" subtype="biblio">https://biblio.ub.uni-freiburg.de/sf/#pmb50</idno>
                   <idno type="URL" subtype="schnitzler-briefe">https://schnitzler-briefe.acdh.oeaw.ac.at/pmb50.html</idno>
-                  <idno type="URL" subtype="schoenberg-ue">https://www.schoenberg-ue.at/ue/places/place.9.11</idno>
+                  <idno type="URL" subtype="www">https://www.schoenberg-ue.at/ue/places/place.9.11</idno>
                </location>
             </org>
             <org xml:id="pmb41943" ana="comment">
@@ -683,7 +686,7 @@
                   <geo>47,33333 13,33333</geo>
                   <idno type="URL" subtype="geonames">https://sws.geonames.org/2782113/</idno>
                   <idno type="URL" subtype="pmb">https://pmb.acdh.oeaw.ac.at/entity/41240/</idno>
-                  <idno type="URL" subtype="kraus">https://www.kraus.wienbibliothek.at/legalkraus/pmb41240.html</idno>
+                  <idno type="URL" subtype="www">https://www.kraus.wienbibliothek.at/legalkraus/pmb41240.html</idno>
                   <idno type="URL" subtype="pmb">https://pmb.acdh.oeaw.ac.at/entity/92143/</idno>
                   <idno type="URL" subtype="pmb">https://pmb.acdh.oeaw.ac.at/entity/92203/</idno>
                   <idno type="URL" subtype="schnitzler-interviews">https://schnitzler-interviews.acdh.oeaw.ac.at/pmb41240.html</idno>
@@ -694,12 +697,12 @@
                   <idno type="URL" subtype="d-nb">https://d-nb.info/gnd/4043271-3</idno>
                   <idno type="URL" subtype="schnitzler-briefe">https://schnitzler-briefe.acdh.oeaw.ac.at/pmb41240.html</idno>
                   <idno type="URL" subtype="biblio">https://biblio.ub.uni-freiburg.de/sf/#pmb41240</idno>
-                  <idno type="URL" subtype="schoenberg-ue">https://www.schoenberg-ue.at/ue/places/place.9</idno>
+                  <idno type="URL" subtype="www">https://www.schoenberg-ue.at/ue/places/place.9</idno>
                </location>
             </org>
          </listOrg>
          <listEvent>
-            <event xml:id="pmb334867" ana="comment">
+            <event xml:id="pmb334867" ana="implied">
                <eventName n="Lesung">Lesung von Marcell Salzer, 5.8.1896</eventName>
                <listPlace>
                   <place>

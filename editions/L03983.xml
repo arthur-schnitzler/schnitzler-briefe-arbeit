@@ -1,6 +1,10 @@
-<?xml version='1.0' encoding='UTF-8'?>
+<?xml version="1.0" encoding="UTF-8"?>
 <?xml-model href="../meta/schnitzler-briefe-schematron.sch" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
-<TEI xmlns="http://www.tei-c.org/ns/1.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.tei-c.org/ns/1.0 ../meta/schnitzler-briefe-schema.xsd" xml:base="https://id.acdh.oeaw.ac.at/schnitzler/schnitzler-briefe/editions" xml:id="L03983">
+<TEI xmlns="http://www.tei-c.org/ns/1.0"
+     xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+     xsi:schemaLocation="http://www.tei-c.org/ns/1.0 ../meta/schnitzler-briefe-schema.xsd"
+     xml:base="https://id.acdh.oeaw.ac.at/schnitzler/schnitzler-briefe/editions"
+     xml:id="L03983">
    <teiHeader>
       <fileDesc>
          <titleStmt>
@@ -113,14 +117,22 @@
                   – 8. 9. 1929?]</date>
                <placeName ref="#pmb50" evidence="conjecture">Wien</placeName>
             </correspAction>
-            <correspContext><ref type="belongsToCorrespondence" target="correspondence_2312">Zuckerkandl, Berta</ref>
+            <correspContext>
+               <ref type="belongsToCorrespondence" target="correspondence_2312">Zuckerkandl, Berta</ref>
                <ref subtype="previous_letter" type="withinCollection" target="L03985">Schnitzler an Zuckerkandl, [zwischen 28. und
             29. 8. 1929?]</ref>
                <ref subtype="next_letter" type="withinCollection" target="L02522">Hofmannsthal an Schnitzler, 3. 9. 1929</ref>
-               <ref subtype="previous_letter" type="withinCorrespondence" source="correspondence_2312" target="L03985">Schnitzler an Zuckerkandl, [zwischen 28. und
+               <ref subtype="previous_letter"
+                    type="withinCorrespondence"
+                    source="correspondence_2312"
+                    target="L03985">Schnitzler an Zuckerkandl, [zwischen 28. und
             29. 8. 1929?]</ref>
-               <ref subtype="next_letter" type="withinCorrespondence" source="correspondence_2312" target="L03978">Schnitzler an Zuckerkandl, 7. 11. 1929</ref>
-            </correspContext></correspDesc>
+               <ref subtype="next_letter"
+                    type="withinCorrespondence"
+                    source="correspondence_2312"
+                    target="L03978">Schnitzler an Zuckerkandl, 7. 11. 1929</ref>
+            </correspContext>
+         </correspDesc>
       </profileDesc>
       <revisionDesc status="proposed">
          <change who="MAM" when="2025-11-03">Export aus Transkribus</change>
@@ -173,61 +185,13 @@
       </body>
       <back>
          <listPerson>
-            <person xml:id="pmb12435">
-               <persName>
-                  <forename>Clara Katharina</forename>
-                  <surname>Pollaczek</surname>
-               </persName>
-               <birth>
-                  <date when="1875-01-15">1875-01-15</date>
-                  <settlement ref="pmb50">
-                     <placeName type="pref">Wien</placeName>
-                     <location>
-                        <geo>48,208333 16,373056</geo>
-                     </location>
-                  </settlement>
-               </birth>
-               <death>
-                  <date when="1951-07-22">1951-07-22</date>
-                  <settlement ref="pmb50">
-                     <placeName type="pref">Wien</placeName>
-                     <location>
-                        <geo>48,208333 16,373056</geo>
-                     </location>
-                  </settlement>
-               </death>
-            </person>
-            <person xml:id="pmb14442">
-               <persName>
-                  <forename>Édouard</forename>
-                  <surname>Bourdet</surname>
-               </persName>
-               <birth>
-                  <date when="1887-10-26">1887-10-26</date>
-                  <settlement ref="pmb982">
-                     <placeName type="pref">Saint-Germain-en-Laye</placeName>
-                     <location>
-                        <geo>48,9 2,08333</geo>
-                     </location>
-                  </settlement>
-               </birth>
-               <death>
-                  <date when="1945-01-17">1945-01-17</date>
-                  <settlement ref="pmb182">
-                     <placeName type="pref">Paris</placeName>
-                     <location>
-                        <geo>48,85341 2,3488</geo>
-                     </location>
-                  </settlement>
-               </death>
-            </person>
             <person xml:id="pmb2121">
                <persName>
                   <surname>Schnitzler</surname>
                   <forename>Arthur</forename>
                </persName>
                <birth>
-                  <date when="1862-05-15">15. 5. 1862</date>
+                  <date when="1862-05-15">15. 5. 1862</date>
                   <settlement ref="pmb50">
                      <placeName type="pref">Wien</placeName>
                      <location>
@@ -236,7 +200,7 @@
                   </settlement>
                </birth>
                <death>
-                  <date when="1931-10-21">21. 10. 1931</date>
+                  <date when="1931-10-21">21. 10. 1931</date>
                   <settlement ref="pmb50">
                      <placeName type="pref">Wien</placeName>
                      <location>
@@ -244,10 +208,6 @@
                      </location>
                   </settlement>
                </death>
-               <sex value="male"/>
-               <occupation ref="pmb90">Schriftsteller/Schriftstellerin</occupation>
-               <occupation ref="pmb97">Mediziner/Medizinerin</occupation>
-               <idno type="gnd">https://d-nb.info/gnd/118609807/</idno>
             </person>
             <person xml:id="pmb2312">
                <persName>
@@ -279,7 +239,7 @@
                   <surname>Mauget</surname>
                </persName>
                <birth>
-                  <date when="1881-01-01" notAfter="1881-12-31" notBefore="1881-01-01">1881</date>
+                  <date notBefore="1881-01-01" when="1881-01-01" notAfter="1881-12-31">1881</date>
                   <settlement ref="pmb49874">
                      <placeName type="pref">Angoulême</placeName>
                      <location>
@@ -289,6 +249,54 @@
                </birth>
                <death>
                   <date when="1976-01-01" notAfter="1976-12-31">1976</date>
+               </death>
+            </person>
+            <person xml:id="pmb14442">
+               <persName>
+                  <forename>Édouard</forename>
+                  <surname>Bourdet</surname>
+               </persName>
+               <birth>
+                  <date when="1887-10-26">1887-10-26</date>
+                  <settlement ref="pmb982">
+                     <placeName type="pref">Saint-Germain-en-Laye</placeName>
+                     <location>
+                        <geo>48,9 2,08333</geo>
+                     </location>
+                  </settlement>
+               </birth>
+               <death>
+                  <date when="1945-01-17">1945-01-17</date>
+                  <settlement ref="pmb182">
+                     <placeName type="pref">Paris</placeName>
+                     <location>
+                        <geo>48,85341 2,3488</geo>
+                     </location>
+                  </settlement>
+               </death>
+            </person>
+            <person xml:id="pmb12435">
+               <persName>
+                  <forename>Clara Katharina</forename>
+                  <surname>Pollaczek</surname>
+               </persName>
+               <birth>
+                  <date when="1875-01-15">1875-01-15</date>
+                  <settlement ref="pmb50">
+                     <placeName type="pref">Wien</placeName>
+                     <location>
+                        <geo>48,208333 16,373056</geo>
+                     </location>
+                  </settlement>
+               </birth>
+               <death>
+                  <date when="1951-07-22">1951-07-22</date>
+                  <settlement ref="pmb50">
+                     <placeName type="pref">Wien</placeName>
+                     <location>
+                        <geo>48,208333 16,373056</geo>
+                     </location>
+                  </settlement>
                </death>
             </person>
             <person xml:id="pmb2173" ana="comment">
@@ -318,37 +326,14 @@
          </listPerson>
          <listBibl>
             <bibl xml:id="pmb33243" ana="comment">
-               <title type="main">Tagebuch</title>
+               <title>Tagebuch</title>
                <title type="werk_link">https://schnitzler-tagebuch.acdh.oeaw.ac.at</title>
-               <author role="hat-geschaffen" ref="pmb2121">Schnitzler, Arthur</author>
+               <author ref="pmb2121" role="hat-geschaffen">Schnitzler, Arthur</author>
             </bibl>
          </listBibl>
          <listPlace>
-            <place xml:id="pmb50">
-               <placeName>Wien</placeName>
-               <placeName type="ort_fruherer-name">K.K. Reichshaupt- und Residenzstadt Wien</placeName>
-               <placeName type="legacy-name-merge">Wien</placeName>
-               <placeName type="alternative-name">Bécs</placeName>
-               <placeName type="alternative-name">Land Wien</placeName>
-               <placeName type="alternative-name">Vídeň</placeName>
-               <placeName type="alternative-name">Wenia</placeName>
-               <placeName type="alternative-name">Beč</placeName>
-               <placeName type="ort_fruherer-name">Vindobona</placeName>
-               <placeName type="legacy-name-merge">Vindobona</placeName>
-               <placeName type="alternative-name">Vienna</placeName>
-               <placeName type="legacy-name-merge">Vienna</placeName>
-               <placeName type="alternative-name">Vienna</placeName>
-               <location type="coords">
-                  <geo>48,208333 16,373056</geo>
-               </location>
-               <location type="located_in_place">
-                  <placeName ref="pmb41240">Österreich</placeName>
-                  <geo>47,33333 13,33333</geo>
-               </location>
-            </place>
-            <place xml:id="pmb52051">
+            <place xml:id="pmb52051" ana="comment">
                <placeName>Territet</placeName>
-               <placeName type="legacy-name-merge">Territet</placeName>
                <location type="coords">
                   <geo>46,42863 6,92122</geo>
                </location>
@@ -357,15 +342,58 @@
                   <geo>47,00016 8,01427</geo>
                </location>
             </place>
+            <place xml:id="pmb50" ana="comment">
+               <placeName>Wien</placeName>
+               <placeName type="ort_fruherer-name">K.K. Reichshaupt- und Residenzstadt Wien</placeName>
+               <placeName type="alternative-name">Bécs</placeName>
+               <placeName type="alternative-name">Land Wien</placeName>
+               <placeName type="alternative-name">Vídeň</placeName>
+               <placeName type="alternative-name">Wenia</placeName>
+               <placeName type="alternative-name">Beč</placeName>
+               <placeName type="ort_fruherer-name">Vindobona</placeName>
+               <placeName type="alternative-name">Vienna</placeName>
+               <location type="coords">
+                  <geo>48,208333 16,373056</geo>
+               </location>
+               <location type="located_in_place">
+                  <placeName ref="pmb41240">Österreich</placeName>
+                  <geo>47,33333 13,33333</geo>
+               </location>
+               <location type="located_in_place">
+                  <placeName ref="pmb235218">Windmühlhöhe</placeName>
+                  <geo>48,24077 16,32092</geo>
+               </location>
+            </place>
             <place xml:id="pmb90607">
                <placeName>Évian-les-Bains</placeName>
-               <placeName type="alternative-name">Évian-les-Bains</placeName>
                <location type="coords">
                   <geo>46,40111 6,58793</geo>
                </location>
                <location type="located_in_place">
                   <placeName ref="pmb166">Frankreich</placeName>
                   <geo>46,0 2,0</geo>
+               </location>
+            </place>
+            <place xml:id="pmb90460" ana="comment">
+               <placeName>Caux</placeName>
+               <location type="coords">
+                  <geo>46,43241 6,93855</geo>
+               </location>
+               <location type="located_in_place">
+                  <placeName ref="pmb43435">Schweiz</placeName>
+                  <geo>47,00016 8,01427</geo>
+               </location>
+            </place>
+            <place xml:id="pmb772" ana="comment">
+               <placeName>Marienbad</placeName>
+               <placeName type="alternative-name">Mariánské Lázně</placeName>
+               <placeName type="legacy-name-merge">Výhledy [Mariánské Lázně-Úšovice]</placeName>
+               <location type="coords">
+                  <geo>49,964444 12,701944</geo>
+               </location>
+               <location type="located_in_place">
+                  <placeName ref="pmb43430">Tschechien</placeName>
+                  <geo>49,75 15,0</geo>
                </location>
             </place>
             <place xml:id="pmb390" ana="comment">
@@ -393,31 +421,6 @@
                   <geo>46,2 6,15</geo>
                </location>
             </place>
-            <place xml:id="pmb772" ana="comment">
-               <placeName>Marienbad</placeName>
-               <placeName type="alternative-name">Mariánské Lázně</placeName>
-               <placeName type="legacy-name-merge">Marienbad</placeName>
-               <placeName type="alternative-name">Marienbad</placeName>
-               <placeName type="legacy-name-merge">Mariánské Lázně</placeName>
-               <placeName type="legacy-name-merge">Výhledy [Mariánské Lázně-Úšovice]</placeName>
-               <location type="coords">
-                  <geo>49,964444 12,701944</geo>
-               </location>
-               <location type="located_in_place">
-                  <placeName ref="pmb43430">Tschechien</placeName>
-                  <geo>49,75 15,0</geo>
-               </location>
-            </place>
-            <place xml:id="pmb90460" ana="comment">
-               <placeName>Caux</placeName>
-               <location type="coords">
-                  <geo>46,43241 6,93855</geo>
-               </location>
-               <location type="located_in_place">
-                  <placeName ref="pmb43435">Schweiz</placeName>
-                  <geo>47,00016 8,01427</geo>
-               </location>
-            </place>
             <place xml:id="pmb512" ana="implied">
                <placeName>Genfer See</placeName>
                <location type="coords">
@@ -434,7 +437,7 @@
             </place>
          </listPlace>
          <listOrg>
-            <org xml:id="pmb334649">
+            <org xml:id="pmb334649" ana="comment">
                <orgName>Völkerbund</orgName>
                <orgName type="institution_namensvariante">League of Nations</orgName>
                <orgName type="institution_namensvariante">Société des Nations</orgName>
@@ -454,7 +457,7 @@
                   <idno type="URL" subtype="pmb">https://pmb.acdh.oeaw.ac.at/entity/22973/</idno>
                   <idno type="URL" subtype="pmb">https://pmb.acdh.oeaw.ac.at/entity/64309/</idno>
                   <idno type="URL" subtype="geonames">https://sws.geonames.org/2660646/</idno>
-                  <idno type="URL" subtype="kraus">https://www.kraus.wienbibliothek.at/legalkraus/pmb562.html</idno>
+                  <idno type="URL" subtype="www">https://www.kraus.wienbibliothek.at/legalkraus/pmb562.html</idno>
                   <idno type="URL" subtype="pmb">https://pmb.acdh.oeaw.ac.at/entity/99397/</idno>
                   <idno type="URL" subtype="d-nb">https://d-nb.info/gnd/4020137-5</idno>
                   <idno type="URL" subtype="wikipedia">https://de.wikipedia.org/wiki/Genf</idno>
@@ -464,12 +467,12 @@
                   <idno type="URL" subtype="sk">https://sk.acdh.oeaw.ac.at/DWplace00220</idno>
                   <idno type="URL" subtype="biblio">https://biblio.ub.uni-freiburg.de/sf/#pmb562</idno>
                   <idno type="URL" subtype="schnitzler-briefe">https://schnitzler-briefe.acdh.oeaw.ac.at/pmb562.html</idno>
-                  <idno type="URL" subtype="schoenberg-ue">https://www.schoenberg-ue.at/ue/places/place.11.2</idno>
+                  <idno type="URL" subtype="www">https://www.schoenberg-ue.at/ue/places/place.11.2</idno>
                </location>
             </org>
          </listOrg>
          <listEvent>
-            <event xml:id="pmb334653" ana="comment">
+            <event xml:id="pmb334653" ana="implied">
                <eventName n="Konferenz">X. Vollversammlung des Völkerbundes</eventName>
                <listPlace>
                   <place>

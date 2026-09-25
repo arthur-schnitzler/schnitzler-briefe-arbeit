@@ -1,6 +1,10 @@
-<?xml version='1.0' encoding='UTF-8'?>
+<?xml version="1.0" encoding="UTF-8"?>
 <?xml-model href="../meta/schnitzler-briefe-schematron.sch" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
-<TEI xmlns="http://www.tei-c.org/ns/1.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.tei-c.org/ns/1.0 ../meta/schnitzler-briefe-schema.xsd" xml:base="https://id.acdh.oeaw.ac.at/schnitzler/schnitzler-briefe/editions" xml:id="L03999">
+<TEI xmlns="http://www.tei-c.org/ns/1.0"
+     xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+     xsi:schemaLocation="http://www.tei-c.org/ns/1.0 ../meta/schnitzler-briefe-schema.xsd"
+     xml:base="https://id.acdh.oeaw.ac.at/schnitzler/schnitzler-briefe/editions"
+     xml:id="L03999">
    <teiHeader>
       <fileDesc>
          <titleStmt>
@@ -87,7 +91,7 @@
                               </extent>
                            </supportDesc>
                         </objectDesc>
-                        <handDesc hands="0">
+                        <handDesc hands="1">
                            <handNote medium="schwarze-tinte" style="lateinische-kurrent"/>
                         </handDesc>
                         <additions>
@@ -119,12 +123,20 @@
                <date notBefore="1911-09-10" notAfter="1911-09-11">[10. 9. 1911 – 11. 9. 1911?]</date>
                <placeName ref="#pmb50" evidence="conjecture">Wien</placeName>
             </correspAction>
-            <correspContext><ref type="belongsToCorrespondence" target="correspondence_2312">Zuckerkandl, Berta</ref>
+            <correspContext>
+               <ref type="belongsToCorrespondence" target="correspondence_2312">Zuckerkandl, Berta</ref>
                <ref subtype="previous_letter" type="withinCollection" target="L03476">Goldmann an Schnitzler, 10. 9. 1911</ref>
                <ref subtype="next_letter" type="withinCollection" target="L02027">Hofmannsthal an Schnitzler, 11. 9. 1911</ref>
-               <ref subtype="previous_letter" type="withinCorrespondence" source="correspondence_2312" target="L04009">Zuckerkandl an Schnitzler, 25. 7. [1911]</ref>
-               <ref subtype="next_letter" type="withinCorrespondence" source="correspondence_2312" target="L04005">Zuckerkandl an Schnitzler, [9. 10. 1911?]</ref>
-            </correspContext></correspDesc>
+               <ref subtype="previous_letter"
+                    type="withinCorrespondence"
+                    source="correspondence_2312"
+                    target="L04009">Zuckerkandl an Schnitzler, 25. 7. [1911]</ref>
+               <ref subtype="next_letter"
+                    type="withinCorrespondence"
+                    source="correspondence_2312"
+                    target="L04005">Zuckerkandl an Schnitzler, [9. 10. 1911?]</ref>
+            </correspContext>
+         </correspDesc>
       </profileDesc>
       <revisionDesc status="candidate">
          <change who="MAM" when="2025-11-11">Export aus Transkribus</change>
@@ -161,34 +173,6 @@
       </body>
       <back>
          <listPerson>
-            <person xml:id="pmb2121">
-               <persName>
-                  <surname>Schnitzler</surname>
-                  <forename>Arthur</forename>
-               </persName>
-               <birth>
-                  <date when="1862-05-15">15. 5. 1862</date>
-                  <settlement ref="pmb50">
-                     <placeName type="pref">Wien</placeName>
-                     <location>
-                        <geo>48,208333 16,373056</geo>
-                     </location>
-                  </settlement>
-               </birth>
-               <death>
-                  <date when="1931-10-21">21. 10. 1931</date>
-                  <settlement ref="pmb50">
-                     <placeName type="pref">Wien</placeName>
-                     <location>
-                        <geo>48,208333 16,373056</geo>
-                     </location>
-                  </settlement>
-               </death>
-               <sex value="male"/>
-               <occupation ref="pmb90">Schriftsteller/Schriftstellerin</occupation>
-               <occupation ref="pmb97">Mediziner/Medizinerin</occupation>
-               <idno type="gnd">https://d-nb.info/gnd/118609807/</idno>
-            </person>
             <person xml:id="pmb2312">
                <persName>
                   <forename>Berta</forename>
@@ -213,7 +197,31 @@
                   </settlement>
                </death>
             </person>
-            <person xml:id="pmb12701" ana="comment">
+            <person xml:id="pmb2121">
+               <persName>
+                  <surname>Schnitzler</surname>
+                  <forename>Arthur</forename>
+               </persName>
+               <birth>
+                  <date when="1862-05-15">15. 5. 1862</date>
+                  <settlement ref="pmb50">
+                     <placeName type="pref">Wien</placeName>
+                     <location>
+                        <geo>48,208333 16,373056</geo>
+                     </location>
+                  </settlement>
+               </birth>
+               <death>
+                  <date when="1931-10-21">21. 10. 1931</date>
+                  <settlement ref="pmb50">
+                     <placeName type="pref">Wien</placeName>
+                     <location>
+                        <geo>48,208333 16,373056</geo>
+                     </location>
+                  </settlement>
+               </death>
+            </person>
+            <person xml:id="pmb12701" ana="implied">
                <persName>
                   <forename>Louise</forename>
                   <surname>Schnitzler</surname>
@@ -237,31 +245,99 @@
                   </settlement>
                </death>
             </person>
+            <person xml:id="pmb10809" ana="comment">
+               <persName>
+                  <forename>Eduard</forename>
+                  <surname>Bacher</surname>
+               </persName>
+               <birth>
+                  <date when="1846-03-07">1846-03-07</date>
+                  <settlement ref="pmb44284">
+                     <placeName type="pref">Postoloprty</placeName>
+                     <location>
+                        <geo>50,35979 13,70291</geo>
+                     </location>
+                  </settlement>
+               </birth>
+               <death>
+                  <date when="1908-01-16">1908-01-16</date>
+                  <settlement ref="pmb50">
+                     <placeName type="pref">Wien</placeName>
+                     <location>
+                        <geo>48,208333 16,373056</geo>
+                     </location>
+                  </settlement>
+               </death>
+            </person>
+            <person xml:id="pmb10875" ana="comment">
+               <persName>
+                  <forename>Moriz</forename>
+                  <surname>Benedikt</surname>
+               </persName>
+               <birth>
+                  <date when="1849-05-27">1849-05-27</date>
+                  <settlement ref="pmb43642">
+                     <placeName type="pref">Kvačice</placeName>
+                     <location>
+                        <geo>48,98984 17,41025</geo>
+                     </location>
+                  </settlement>
+               </birth>
+               <death>
+                  <date when="1920-03-18">1920-03-18</date>
+                  <settlement ref="pmb50">
+                     <placeName type="pref">Wien</placeName>
+                     <location>
+                        <geo>48,208333 16,373056</geo>
+                     </location>
+                  </settlement>
+               </death>
+            </person>
+            <person xml:id="pmb10872" ana="comment">
+               <persName>
+                  <forename>Ernst</forename>
+                  <surname>Benedikt</surname>
+               </persName>
+               <birth>
+                  <date when="1882-05-20">1882-05-20</date>
+                  <settlement ref="pmb50">
+                     <placeName type="pref">Wien</placeName>
+                     <location>
+                        <geo>48,208333 16,373056</geo>
+                     </location>
+                  </settlement>
+               </birth>
+               <death>
+                  <date when="1973-12-28">1973-12-28</date>
+                  <settlement ref="pmb50">
+                     <placeName type="pref">Wien</placeName>
+                     <location>
+                        <geo>48,208333 16,373056</geo>
+                     </location>
+                  </settlement>
+               </death>
+            </person>
          </listPerson>
          <listBibl>
             <bibl xml:id="pmb36374" ana="comment">
-               <title type="main">Neue Freie Presse</title>
+               <title>Neue Freie Presse</title>
                <title type="werk_link">http://anno.onb.ac.at/cgi-content/anno?aid=nfp</title>
                <title type="legacy-name-merge">Neue freie Presse (Zeitung, Wien)</title>
-               <author role="hat-herausgegeben" ref="pmb10809">Bacher, Eduard</author>
-               <author role="hat-herausgegeben" ref="pmb10875">Benedikt, Moriz</author>
-               <author role="hat-herausgegeben" ref="pmb10872">Benedikt, Ernst</author>
+               <author ref="pmb10809" role="hat-herausgegeben">Bacher, Eduard</author>
+               <author ref="pmb10875" role="hat-herausgegeben">Benedikt, Moriz</author>
+               <author ref="pmb10872" role="hat-herausgegeben">Benedikt, Ernst</author>
             </bibl>
          </listBibl>
          <listPlace>
             <place xml:id="pmb50">
                <placeName>Wien</placeName>
                <placeName type="ort_fruherer-name">K.K. Reichshaupt- und Residenzstadt Wien</placeName>
-               <placeName type="legacy-name-merge">Wien</placeName>
                <placeName type="alternative-name">Bécs</placeName>
                <placeName type="alternative-name">Land Wien</placeName>
                <placeName type="alternative-name">Vídeň</placeName>
                <placeName type="alternative-name">Wenia</placeName>
                <placeName type="alternative-name">Beč</placeName>
                <placeName type="ort_fruherer-name">Vindobona</placeName>
-               <placeName type="legacy-name-merge">Vindobona</placeName>
-               <placeName type="alternative-name">Vienna</placeName>
-               <placeName type="legacy-name-merge">Vienna</placeName>
                <placeName type="alternative-name">Vienna</placeName>
                <location type="coords">
                   <geo>48,208333 16,373056</geo>
@@ -269,6 +345,10 @@
                <location type="located_in_place">
                   <placeName ref="pmb41240">Österreich</placeName>
                   <geo>47,33333 13,33333</geo>
+               </location>
+               <location type="located_in_place">
+                  <placeName ref="pmb235218">Windmühlhöhe</placeName>
+                  <geo>48,24077 16,32092</geo>
                </location>
             </place>
          </listPlace>

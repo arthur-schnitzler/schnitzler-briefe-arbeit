@@ -1,6 +1,10 @@
-<?xml version='1.0' encoding='UTF-8'?>
+<?xml version="1.0" encoding="UTF-8"?>
 <?xml-model href="../meta/schnitzler-briefe-schematron.sch" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
-<TEI xmlns="http://www.tei-c.org/ns/1.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.tei-c.org/ns/1.0 ../meta/schnitzler-briefe-schema.xsd" xml:base="https://id.acdh.oeaw.ac.at/schnitzler/schnitzler-briefe/editions" xml:id="L03996">
+<TEI xmlns="http://www.tei-c.org/ns/1.0"
+     xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+     xsi:schemaLocation="http://www.tei-c.org/ns/1.0 ../meta/schnitzler-briefe-schema.xsd"
+     xml:base="https://id.acdh.oeaw.ac.at/schnitzler/schnitzler-briefe/editions"
+     xml:id="L03996">
    <teiHeader>
       <fileDesc>
          <titleStmt>
@@ -87,7 +91,7 @@
                               </extent>
                            </supportDesc>
                         </objectDesc>
-                        <handDesc hands="0">
+                        <handDesc hands="1">
                            <handNote medium="schwarze-tinte" style="lateinische-kurrent"/>
                         </handDesc>
                         <additions>
@@ -119,13 +123,21 @@
                <date when="1911-06-13" evidence="conjecture">[13. 6. 1911?]</date>
                <placeName ref="#pmb50">Wien</placeName>
             </correspAction>
-            <correspContext><ref type="belongsToCorrespondence" target="correspondence_2312">Zuckerkandl, Berta</ref>
+            <correspContext>
+               <ref type="belongsToCorrespondence" target="correspondence_2312">Zuckerkandl, Berta</ref>
                <ref subtype="previous_letter" type="withinCollection" target="L03794">Schnitzler an Zweig, 12. 6. 1911</ref>
                <ref subtype="next_letter" type="withinCollection" target="L02022">Schnitzler an Beer-Hofmann, 15. 6. 1911</ref>
-               <ref subtype="previous_letter" type="withinCorrespondence" source="correspondence_2312" target="L03997">Zuckerkandl an Schnitzler, [zwischen 12. 5. 1911 und
+               <ref subtype="previous_letter"
+                    type="withinCorrespondence"
+                    source="correspondence_2312"
+                    target="L03997">Zuckerkandl an Schnitzler, [zwischen 12. 5. 1911 und
                   21. 5. 1911?]</ref>
-               <ref subtype="next_letter" type="withinCorrespondence" source="correspondence_2312" target="L03950">Schnitzler an Zuckerkandl, 20. 6. 1911</ref>
-            </correspContext></correspDesc>
+               <ref subtype="next_letter"
+                    type="withinCorrespondence"
+                    source="correspondence_2312"
+                    target="L03950">Schnitzler an Zuckerkandl, 20. 6. 1911</ref>
+            </correspContext>
+         </correspDesc>
       </profileDesc>
       <revisionDesc status="candidate">
          <change who="MAM" when="2025-11-11">Export aus Transkribus</change>
@@ -179,34 +191,6 @@
       </body>
       <back>
          <listPerson>
-            <person xml:id="pmb2121">
-               <persName>
-                  <surname>Schnitzler</surname>
-                  <forename>Arthur</forename>
-               </persName>
-               <birth>
-                  <date when="1862-05-15">15. 5. 1862</date>
-                  <settlement ref="pmb50">
-                     <placeName type="pref">Wien</placeName>
-                     <location>
-                        <geo>48,208333 16,373056</geo>
-                     </location>
-                  </settlement>
-               </birth>
-               <death>
-                  <date when="1931-10-21">21. 10. 1931</date>
-                  <settlement ref="pmb50">
-                     <placeName type="pref">Wien</placeName>
-                     <location>
-                        <geo>48,208333 16,373056</geo>
-                     </location>
-                  </settlement>
-               </death>
-               <sex value="male"/>
-               <occupation ref="pmb90">Schriftsteller/Schriftstellerin</occupation>
-               <occupation ref="pmb97">Mediziner/Medizinerin</occupation>
-               <idno type="gnd">https://d-nb.info/gnd/118609807/</idno>
-            </person>
             <person xml:id="pmb2312">
                <persName>
                   <forename>Berta</forename>
@@ -231,6 +215,30 @@
                   </settlement>
                </death>
             </person>
+            <person xml:id="pmb2121">
+               <persName>
+                  <surname>Schnitzler</surname>
+                  <forename>Arthur</forename>
+               </persName>
+               <birth>
+                  <date when="1862-05-15">15. 5. 1862</date>
+                  <settlement ref="pmb50">
+                     <placeName type="pref">Wien</placeName>
+                     <location>
+                        <geo>48,208333 16,373056</geo>
+                     </location>
+                  </settlement>
+               </birth>
+               <death>
+                  <date when="1931-10-21">21. 10. 1931</date>
+                  <settlement ref="pmb50">
+                     <placeName type="pref">Wien</placeName>
+                     <location>
+                        <geo>48,208333 16,373056</geo>
+                     </location>
+                  </settlement>
+               </death>
+            </person>
             <person xml:id="pmb15024" ana="implied">
                <persName>
                   <forename>Sophie</forename>
@@ -251,42 +259,49 @@
          </listPerson>
          <listBibl>
             <bibl xml:id="pmb29937">
-               <title type="main">Der junge Medardus. Dramatische Historie in einem Vorspiel und fünf Aufzügen</title>
+               <title>Der junge Medardus. Dramatische Historie in einem Vorspiel und fünf Aufzügen</title>
                <title type="werk_bibliografische-angabe">Der junge Medardus. Dramatische Historie in einem Vorspiel und fünf Aufzügen. Berlin: S. Fischer [26.10.]1910</title>
                <title type="werk_arbeitstitel">Altwiener Stück</title>
                <title type="werk_arbeitstitel">Doppelselbstmord</title>
-               <author role="hat-geschaffen" ref="pmb2121">Schnitzler, Arthur</author>
+               <author ref="pmb2121" role="hat-geschaffen">Schnitzler, Arthur</author>
             </bibl>
             <bibl xml:id="pmb33243" ana="comment">
-               <title type="main">Tagebuch</title>
+               <title>Tagebuch</title>
                <title type="werk_link">https://schnitzler-tagebuch.acdh.oeaw.ac.at</title>
-               <author role="hat-geschaffen" ref="pmb2121">Schnitzler, Arthur</author>
+               <author ref="pmb2121" role="hat-geschaffen">Schnitzler, Arthur</author>
             </bibl>
             <bibl xml:id="pmb334987" ana="implied">
-               <title type="main">Der junge Medardus. (Zur Übersetzung ins Französische)</title>
+               <title>Der junge Medardus. (Zur Übersetzung ins Französische)</title>
                <title type="werk_link">https://schnitzler-mikrofilme.acdh.oeaw.ac.at/1428195_0004.html</title>
-               <author role="hat-geschaffen" ref="pmb2121">Schnitzler, Arthur</author>
+               <author ref="pmb2121" role="hat-geschaffen">Schnitzler, Arthur</author>
             </bibl>
          </listBibl>
          <listPlace>
-            <place xml:id="pmb166">
-               <placeName>Frankreich</placeName>
-               <placeName type="alternative-name">France</placeName>
-               <placeName type="alternative-name">Frankreich</placeName>
-               <placeName type="legacy-name-merge">Frankreich</placeName>
-               <placeName type="legacy-name-merge">France</placeName>
+            <place xml:id="pmb50">
+               <placeName>Wien</placeName>
+               <placeName type="ort_fruherer-name">K.K. Reichshaupt- und Residenzstadt Wien</placeName>
+               <placeName type="alternative-name">Bécs</placeName>
+               <placeName type="alternative-name">Land Wien</placeName>
+               <placeName type="alternative-name">Vídeň</placeName>
+               <placeName type="alternative-name">Wenia</placeName>
+               <placeName type="alternative-name">Beč</placeName>
+               <placeName type="ort_fruherer-name">Vindobona</placeName>
+               <placeName type="alternative-name">Vienna</placeName>
                <location type="coords">
-                  <geo>46,0 2,0</geo>
+                  <geo>48,208333 16,373056</geo>
                </location>
                <location type="located_in_place">
-                  <placeName ref="pmb468">Europa</placeName>
-                  <geo>48,69096 9,14062</geo>
+                  <placeName ref="pmb41240">Österreich</placeName>
+                  <geo>47,33333 13,33333</geo>
+               </location>
+               <location type="located_in_place">
+                  <placeName ref="pmb235218">Windmühlhöhe</placeName>
+                  <geo>48,24077 16,32092</geo>
                </location>
             </place>
-            <place xml:id="pmb182">
+            <place xml:id="pmb182" ana="comment">
                <placeName>Paris</placeName>
                <placeName type="alternative-name">P'ariz</placeName>
-               <placeName type="legacy-name-merge">Paris</placeName>
                <placeName type="alternative-name">Pariž</placeName>
                <placeName type="alternative-name">Parisius</placeName>
                <placeName type="alternative-name">Île-de-France</placeName>
@@ -298,26 +313,15 @@
                   <geo>46,0 2,0</geo>
                </location>
             </place>
-            <place xml:id="pmb50">
-               <placeName>Wien</placeName>
-               <placeName type="ort_fruherer-name">K.K. Reichshaupt- und Residenzstadt Wien</placeName>
-               <placeName type="legacy-name-merge">Wien</placeName>
-               <placeName type="alternative-name">Bécs</placeName>
-               <placeName type="alternative-name">Land Wien</placeName>
-               <placeName type="alternative-name">Vídeň</placeName>
-               <placeName type="alternative-name">Wenia</placeName>
-               <placeName type="alternative-name">Beč</placeName>
-               <placeName type="ort_fruherer-name">Vindobona</placeName>
-               <placeName type="legacy-name-merge">Vindobona</placeName>
-               <placeName type="alternative-name">Vienna</placeName>
-               <placeName type="legacy-name-merge">Vienna</placeName>
-               <placeName type="alternative-name">Vienna</placeName>
+            <place xml:id="pmb166">
+               <placeName>Frankreich</placeName>
+               <placeName type="alternative-name">France</placeName>
                <location type="coords">
-                  <geo>48,208333 16,373056</geo>
+                  <geo>46,0 2,0</geo>
                </location>
                <location type="located_in_place">
-                  <placeName ref="pmb41240">Österreich</placeName>
-                  <geo>47,33333 13,33333</geo>
+                  <placeName ref="pmb468">Europa</placeName>
+                  <geo>48,69096 9,14062</geo>
                </location>
             </place>
          </listPlace>

@@ -1,6 +1,10 @@
-<?xml version='1.0' encoding='UTF-8'?>
+<?xml version="1.0" encoding="UTF-8"?>
 <?xml-model href="../meta/schnitzler-briefe-schematron.sch" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
-<TEI xmlns="http://www.tei-c.org/ns/1.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.tei-c.org/ns/1.0 ../meta/schnitzler-briefe-schema.xsd" xml:base="https://id.acdh.oeaw.ac.at/schnitzler/schnitzler-briefe/editions" xml:id="L04264">
+<TEI xmlns="http://www.tei-c.org/ns/1.0"
+     xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+     xsi:schemaLocation="http://www.tei-c.org/ns/1.0 ../meta/schnitzler-briefe-schema.xsd"
+     xml:base="https://id.acdh.oeaw.ac.at/schnitzler/schnitzler-briefe/editions"
+     xml:id="L04264">
    <teiHeader>
       <fileDesc>
          <titleStmt>
@@ -129,19 +133,27 @@
             </correspAction>
             <correspAction type="transmitted">
                <date when="1912-07-13">13. 7. 1912</date>
-               <placeName ref="#pmb334808">Reifnitz am Wörthersee</placeName>
+               <placeName ref="#pmb334808">Reifnitz [Maria Wörth]</placeName>
             </correspAction>
             <correspAction type="received">
                <persName ref="#pmb2121">Schnitzler, Arthur</persName>
                <date evidence="conjecture" notBefore="1912-07-14" notAfter="1912-07-18">[14. 7. 1912 – 18. 7. 1912?]</date>
                <placeName ref="#pmb50">Wien</placeName>
             </correspAction>
-            <correspContext><ref type="belongsToCorrespondence" target="correspondence_12740">Schwarzkopf, Gustav</ref>
+            <correspContext>
+               <ref type="belongsToCorrespondence" target="correspondence_12740">Schwarzkopf, Gustav</ref>
                <ref subtype="previous_letter" type="withinCollection" target="L02076">Hofmannsthal an Schnitzler, 5. 7. [1912]</ref>
                <ref subtype="next_letter" type="withinCollection" target="L02077">Beer-Hofmann an Schnitzler, 16. 7. 1912</ref>
-               <ref subtype="previous_letter" type="withinCorrespondence" source="correspondence_12740" target="L04453">Schnitzler, Schnitzler an Schwarzkopf, 1[7?]. 5. 1912</ref>
-               <ref subtype="next_letter" type="withinCorrespondence" source="correspondence_12740" target="L04455">Schnitzler an Schwarzkopf, 19. 7. 1912</ref>
-            </correspContext></correspDesc>
+               <ref subtype="previous_letter"
+                    type="withinCorrespondence"
+                    source="correspondence_12740"
+                    target="L04453">Schnitzler, Schnitzler an Schwarzkopf, 1[7?]. 5. 1912</ref>
+               <ref subtype="next_letter"
+                    type="withinCorrespondence"
+                    source="correspondence_12740"
+                    target="L04455">Schnitzler an Schwarzkopf, 19. 7. 1912</ref>
+            </correspContext>
+         </correspDesc>
       </profileDesc>
       <revisionDesc status="proposed">
          <change who="MAM" when="2026-02-20">Export aus
@@ -241,7 +253,7 @@
                   <forename>Arthur</forename>
                </persName>
                <birth>
-                  <date when="1862-05-15">15. 5. 1862</date>
+                  <date when="1862-05-15">15. 5. 1862</date>
                   <settlement ref="pmb50">
                      <placeName type="pref">Wien</placeName>
                      <location>
@@ -250,7 +262,7 @@
                   </settlement>
                </birth>
                <death>
-                  <date when="1931-10-21">21. 10. 1931</date>
+                  <date when="1931-10-21">21. 10. 1931</date>
                   <settlement ref="pmb50">
                      <placeName type="pref">Wien</placeName>
                      <location>
@@ -258,10 +270,6 @@
                      </location>
                   </settlement>
                </death>
-               <sex value="male"/>
-               <occupation ref="pmb90">Schriftsteller/Schriftstellerin</occupation>
-               <occupation ref="pmb97">Mediziner/Medizinerin</occupation>
-               <idno type="gnd">https://d-nb.info/gnd/118609807/</idno>
             </person>
             <person xml:id="pmb2173" ana="implied">
                <persName>
@@ -289,6 +297,59 @@
             </person>
          </listPerson>
          <listPlace>
+            <place xml:id="pmb334808">
+               <placeName>Reifnitz [Maria Wörth]</placeName>
+               <placeName type="ort_namensvariante">Ribnica</placeName>
+               <location type="coords">
+                  <geo>46,6058 14,1814</geo>
+               </location>
+               <location type="located_in_place">
+                  <placeName ref="pmb45266">Maria Wörth</placeName>
+                  <geo>46,61639 14,16306</geo>
+               </location>
+               <location type="located_in_place">
+                  <placeName ref="pmb651">Kärnten</placeName>
+                  <geo>46,75 13,83333</geo>
+               </location>
+            </place>
+            <place xml:id="pmb50">
+               <placeName>Wien</placeName>
+               <placeName type="ort_fruherer-name">K.K. Reichshaupt- und Residenzstadt Wien</placeName>
+               <placeName type="alternative-name">Bécs</placeName>
+               <placeName type="alternative-name">Land Wien</placeName>
+               <placeName type="alternative-name">Vídeň</placeName>
+               <placeName type="alternative-name">Wenia</placeName>
+               <placeName type="alternative-name">Beč</placeName>
+               <placeName type="ort_fruherer-name">Vindobona</placeName>
+               <placeName type="alternative-name">Vienna</placeName>
+               <location type="coords">
+                  <geo>48,208333 16,373056</geo>
+               </location>
+               <location type="located_in_place">
+                  <placeName ref="pmb41240">Österreich</placeName>
+                  <geo>47,33333 13,33333</geo>
+               </location>
+               <location type="located_in_place">
+                  <placeName ref="pmb235218">Windmühlhöhe</placeName>
+                  <geo>48,24077 16,32092</geo>
+               </location>
+            </place>
+            <place xml:id="pmb69">
+               <placeName>XIX., Döbling</placeName>
+               <placeName type="legacy-name-merge">Döbling</placeName>
+               <placeName type="legacy-name-merge">Wien-Döbling</placeName>
+               <location type="coords">
+                  <geo>48,25 16,33306</geo>
+               </location>
+               <location type="located_in_place">
+                  <placeName ref="pmb41240">Österreich</placeName>
+                  <geo>47,33333 13,33333</geo>
+               </location>
+               <location type="located_in_place">
+                  <placeName ref="pmb50">Wien</placeName>
+                  <geo>48,208333 16,373056</geo>
+               </location>
+            </place>
             <place xml:id="pmb168815">
                <placeName>Sternwartestraße 71</placeName>
                <location type="coords">
@@ -307,28 +368,6 @@
                   <geo>48,23099349198 16,340117830625</geo>
                </location>
             </place>
-            <place xml:id="pmb334808">
-               <placeName>Reifnitz [Maria Wörth]</placeName>
-               <placeName type="ort_namensvariante">Ribnica</placeName>
-               <location type="coords">
-                  <geo>46,6058 14,1814</geo>
-               </location>
-               <location type="located_in_place">
-                  <placeName ref="pmb45266">Maria Wörth</placeName>
-                  <geo>46,61639 14,16306</geo>
-               </location>
-               <location type="located_in_place">
-                  <placeName ref="pmb651">Kärnten</placeName>
-                  <geo>46,75 13,83333</geo>
-               </location>
-            </place>
-            <place xml:id="pmb334810">
-               <placeName>Villa Grande</placeName>
-               <location type="located_in_place">
-                  <placeName ref="pmb334808">Reifnitz [Maria Wörth]</placeName>
-                  <geo>46,6058 14,1814</geo>
-               </location>
-            </place>
             <place xml:id="pmb45260">
                <placeName>Brijuni</placeName>
                <placeName type="legacy-name">Brioni</placeName>
@@ -340,48 +379,15 @@
                   <geo>45,16667 15,5</geo>
                </location>
             </place>
-            <place xml:id="pmb50">
-               <placeName>Wien</placeName>
-               <placeName type="ort_fruherer-name">K.K. Reichshaupt- und Residenzstadt Wien</placeName>
-               <placeName type="legacy-name-merge">Wien</placeName>
-               <placeName type="alternative-name">Bécs</placeName>
-               <placeName type="alternative-name">Land Wien</placeName>
-               <placeName type="alternative-name">Vídeň</placeName>
-               <placeName type="alternative-name">Wenia</placeName>
-               <placeName type="alternative-name">Beč</placeName>
-               <placeName type="ort_fruherer-name">Vindobona</placeName>
-               <placeName type="legacy-name-merge">Vindobona</placeName>
-               <placeName type="alternative-name">Vienna</placeName>
-               <placeName type="legacy-name-merge">Vienna</placeName>
-               <placeName type="alternative-name">Vienna</placeName>
-               <location type="coords">
-                  <geo>48,208333 16,373056</geo>
-               </location>
+            <place xml:id="pmb334810">
+               <placeName>Villa Grande</placeName>
                <location type="located_in_place">
-                  <placeName ref="pmb41240">Österreich</placeName>
-                  <geo>47,33333 13,33333</geo>
-               </location>
-            </place>
-            <place xml:id="pmb69">
-               <placeName>XIX., Döbling</placeName>
-               <placeName type="legacy-name-merge">Döbling</placeName>
-               <placeName type="legacy-name-merge">Wien-Döbling</placeName>
-               <placeName type="legacy-name-merge">Döbling</placeName>
-               <location type="coords">
-                  <geo>48,25 16,33306</geo>
-               </location>
-               <location type="located_in_place">
-                  <placeName ref="pmb41240">Österreich</placeName>
-                  <geo>47,33333 13,33333</geo>
-               </location>
-               <location type="located_in_place">
-                  <placeName ref="pmb50">Wien</placeName>
-                  <geo>48,208333 16,373056</geo>
+                  <placeName ref="pmb334808">Reifnitz [Maria Wörth]</placeName>
+                  <geo>46,6058 14,1814</geo>
                </location>
             </place>
             <place xml:id="pmb430" ana="implied">
                <placeName>Wörthersee</placeName>
-               <placeName type="legacy-name-merge">Wörthersee</placeName>
                <location type="coords">
                   <geo>46,62917 14,12306</geo>
                </location>

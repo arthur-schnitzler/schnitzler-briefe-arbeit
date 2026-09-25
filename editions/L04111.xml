@@ -1,6 +1,10 @@
-<?xml version='1.0' encoding='UTF-8'?>
+<?xml version="1.0" encoding="UTF-8"?>
 <?xml-model href="../meta/schnitzler-briefe-schematron.sch" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
-<TEI xmlns="http://www.tei-c.org/ns/1.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.tei-c.org/ns/1.0 ../meta/schnitzler-briefe-schema.xsd" xml:base="https://id.acdh.oeaw.ac.at/schnitzler/schnitzler-briefe/editions" xml:id="L04111">
+<TEI xmlns="http://www.tei-c.org/ns/1.0"
+     xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+     xsi:schemaLocation="http://www.tei-c.org/ns/1.0 ../meta/schnitzler-briefe-schema.xsd"
+     xml:base="https://id.acdh.oeaw.ac.at/schnitzler/schnitzler-briefe/editions"
+     xml:id="L04111">
    <teiHeader>
       <fileDesc>
          <titleStmt>
@@ -83,7 +87,7 @@
                               <extent>
                                  <measure unit="seite" quantity="7"/>
                                  <measure unit="blatt" quantity="2"/>
-                                 <measure unit="zeichenanzahl" quantity="3198"/>
+                                 <measure unit="zeichenanzahl" quantity="3173"/>
                               </extent>
                            </supportDesc>
                         </objectDesc>
@@ -127,12 +131,20 @@
                <date evidence="conjecture" notBefore="1897-05-10" notAfter="1897-05-14">[10. 5. 1897 – 14. 5. 1897?]</date>
                <placeName ref="#pmb50">Wien</placeName>
             </correspAction>
-            <correspContext><ref type="belongsToCorrespondence" target="correspondence_12740">Schwarzkopf, Gustav</ref>
+            <correspContext>
+               <ref type="belongsToCorrespondence" target="correspondence_12740">Schwarzkopf, Gustav</ref>
                <ref subtype="previous_letter" type="withinCollection" target="L02812">Goldmann an Schnitzler, 6. 5. [1897]</ref>
                <ref subtype="next_letter" type="withinCollection" target="L00675">Beer-Hofmann an Schnitzler, 12. 5. 1897</ref>
-               <ref subtype="previous_letter" type="withinCorrespondence" source="correspondence_12740" target="L04283">Schwarzkopf an Schnitzler, 3. 5. 1897</ref>
-               <ref subtype="next_letter" type="withinCorrespondence" source="correspondence_12740" target="L04284">Schwarzkopf an Schnitzler, 14. 5. 1897</ref>
-            </correspContext></correspDesc>
+               <ref subtype="previous_letter"
+                    type="withinCorrespondence"
+                    source="correspondence_12740"
+                    target="L04283">Schwarzkopf an Schnitzler, 3. 5. 1897</ref>
+               <ref subtype="next_letter"
+                    type="withinCorrespondence"
+                    source="correspondence_12740"
+                    target="L04284">Schwarzkopf an Schnitzler, 14. 5. 1897</ref>
+            </correspContext>
+         </correspDesc>
       </profileDesc>
       <revisionDesc status="proposed">
          <change who="MAM" when="2025-12-10">Export aus Transkribus</change>
@@ -261,13 +273,13 @@
       </body>
       <back>
          <listPerson>
-            <person xml:id="pmb11512">
+            <person xml:id="pmb2121">
                <persName>
-                  <forename>Max</forename>
-                  <surname>Graf</surname>
+                  <surname>Schnitzler</surname>
+                  <forename>Arthur</forename>
                </persName>
                <birth>
-                  <date when="1873-10-01">1873-10-01</date>
+                  <date when="1862-05-15">15. 5. 1862</date>
                   <settlement ref="pmb50">
                      <placeName type="pref">Wien</placeName>
                      <location>
@@ -276,35 +288,11 @@
                   </settlement>
                </birth>
                <death>
-                  <date when="1958-06-24">1958-06-24</date>
+                  <date when="1931-10-21">21. 10. 1931</date>
                   <settlement ref="pmb50">
                      <placeName type="pref">Wien</placeName>
                      <location>
                         <geo>48,208333 16,373056</geo>
-                     </location>
-                  </settlement>
-               </death>
-            </person>
-            <person xml:id="pmb12491">
-               <persName>
-                  <forename>Emanuel</forename>
-                  <surname>Reicher</surname>
-               </persName>
-               <birth>
-                  <date when="1849-06-18">1849-06-18</date>
-                  <settlement ref="pmb59412">
-                     <placeName type="pref">Bochnia</placeName>
-                     <location>
-                        <geo>49,96905 20,43028</geo>
-                     </location>
-                  </settlement>
-               </birth>
-               <death>
-                  <date when="1924-05-15">1924-05-15</date>
-                  <settlement ref="pmb168">
-                     <placeName type="pref">Berlin</placeName>
-                     <location>
-                        <geo>52,52437 13,41053</geo>
                      </location>
                   </settlement>
                </death>
@@ -333,13 +321,13 @@
                   </settlement>
                </death>
             </person>
-            <person xml:id="pmb2121">
+            <person xml:id="pmb11512">
                <persName>
-                  <surname>Schnitzler</surname>
-                  <forename>Arthur</forename>
+                  <forename>Max</forename>
+                  <surname>Graf</surname>
                </persName>
                <birth>
-                  <date when="1862-05-15">15. 5. 1862</date>
+                  <date when="1873-10-01">1873-10-01</date>
                   <settlement ref="pmb50">
                      <placeName type="pref">Wien</placeName>
                      <location>
@@ -348,7 +336,7 @@
                   </settlement>
                </birth>
                <death>
-                  <date when="1931-10-21">21. 10. 1931</date>
+                  <date when="1958-06-24">1958-06-24</date>
                   <settlement ref="pmb50">
                      <placeName type="pref">Wien</placeName>
                      <location>
@@ -356,10 +344,6 @@
                      </location>
                   </settlement>
                </death>
-               <sex value="male"/>
-               <occupation ref="pmb90">Schriftsteller/Schriftstellerin</occupation>
-               <occupation ref="pmb97">Mediziner/Medizinerin</occupation>
-               <idno type="gnd">https://d-nb.info/gnd/118609807/</idno>
             </person>
             <person xml:id="pmb4464">
                <persName>
@@ -391,7 +375,7 @@
                   <surname>La Jeunesse</surname>
                </persName>
                <birth>
-                  <date when="1874-01-01" notAfter="1874-12-31" notBefore="1874-01-01">1874</date>
+                  <date notBefore="1874-01-01" when="1874-01-01" notAfter="1874-12-31">1874</date>
                   <settlement ref="pmb182">
                      <placeName type="pref">Paris</placeName>
                      <location>
@@ -405,6 +389,30 @@
                      <placeName type="pref">Paris</placeName>
                      <location>
                         <geo>48,85341 2,3488</geo>
+                     </location>
+                  </settlement>
+               </death>
+            </person>
+            <person xml:id="pmb12491">
+               <persName>
+                  <forename>Emanuel</forename>
+                  <surname>Reicher</surname>
+               </persName>
+               <birth>
+                  <date when="1849-06-18">1849-06-18</date>
+                  <settlement ref="pmb59412">
+                     <placeName type="pref">Bochnia</placeName>
+                     <location>
+                        <geo>49,96905 20,43028</geo>
+                     </location>
+                  </settlement>
+               </birth>
+               <death>
+                  <date when="1924-05-15">1924-05-15</date>
+                  <settlement ref="pmb168">
+                     <placeName type="pref">Berlin</placeName>
+                     <location>
+                        <geo>52,52437 13,41053</geo>
                      </location>
                   </settlement>
                </death>
@@ -433,70 +441,187 @@
                   </settlement>
                </death>
             </person>
+            <person xml:id="pmb12790">
+               <persName>
+                  <forename>Isidor</forename>
+                  <surname>Singer</surname>
+               </persName>
+               <birth>
+                  <date when="1857-01-16">1857-01-16</date>
+                  <settlement ref="pmb43471">
+                     <placeName type="pref">Budapest</placeName>
+                     <location>
+                        <geo>47,49835 19,04045</geo>
+                     </location>
+                  </settlement>
+               </birth>
+               <death>
+                  <date when="1927-12-08">1927-12-08</date>
+                  <settlement ref="pmb50">
+                     <placeName type="pref">Wien</placeName>
+                     <location>
+                        <geo>48,208333 16,373056</geo>
+                     </location>
+                  </settlement>
+               </death>
+            </person>
+            <person xml:id="pmb11867">
+               <persName>
+                  <forename>Heinrich</forename>
+                  <surname>Kanner</surname>
+               </persName>
+               <birth>
+                  <date when="1864-11-09">1864-11-09</date>
+                  <settlement ref="pmb36202">
+                     <placeName type="pref">Galați</placeName>
+                     <location>
+                        <geo>45,43687 28,05028</geo>
+                     </location>
+                  </settlement>
+               </birth>
+               <death>
+                  <date when="1930-02-15">1930-02-15</date>
+                  <settlement ref="pmb50">
+                     <placeName type="pref">Wien</placeName>
+                     <location>
+                        <geo>48,208333 16,373056</geo>
+                     </location>
+                  </settlement>
+               </death>
+            </person>
+            <person xml:id="pmb13801">
+               <persName>
+                  <forename>Henri</forename>
+                  <surname>Bataille</surname>
+               </persName>
+               <birth>
+                  <date when="1872-04-04">1872-04-04</date>
+                  <settlement ref="pmb54129">
+                     <placeName type="pref">Nîmes</placeName>
+                     <location>
+                        <geo>43,83665 4,35788</geo>
+                     </location>
+                  </settlement>
+               </birth>
+               <death>
+                  <date when="1922-03-02">1922-03-02</date>
+                  <settlement ref="pmb54909">
+                     <placeName type="pref">Rueil-Malmaison</placeName>
+                     <location>
+                        <geo>48,8765 2,18967</geo>
+                     </location>
+                  </settlement>
+               </death>
+            </person>
+            <person xml:id="pmb11168">
+               <persName>
+                  <forename>Maurice</forename>
+                  <surname>Donnay</surname>
+               </persName>
+               <birth>
+                  <date when="1859-10-12">1859-10-12</date>
+                  <settlement ref="pmb182">
+                     <placeName type="pref">Paris</placeName>
+                     <location>
+                        <geo>48,85341 2,3488</geo>
+                     </location>
+                  </settlement>
+               </birth>
+               <death>
+                  <date when="1945-03-31">1945-03-31</date>
+                  <settlement ref="pmb182">
+                     <placeName type="pref">Paris</placeName>
+                     <location>
+                        <geo>48,85341 2,3488</geo>
+                     </location>
+                  </settlement>
+               </death>
+            </person>
+            <person xml:id="pmb11657">
+               <persName>
+                  <forename>Abel</forename>
+                  <surname>Hermant</surname>
+               </persName>
+               <birth>
+                  <date when="1862-02-03">1862-02-03</date>
+                  <settlement ref="pmb182">
+                     <placeName type="pref">Paris</placeName>
+                     <location>
+                        <geo>48,85341 2,3488</geo>
+                     </location>
+                  </settlement>
+               </birth>
+               <death>
+                  <date when="1950-09-28">1950-09-28</date>
+               </death>
+            </person>
+            <person xml:id="pmb17522">
+               <persName>
+                  <forename>Gustave</forename>
+                  <surname>Guiches</surname>
+               </persName>
+               <birth>
+                  <date when="1860-06-18">1860-06-18</date>
+               </birth>
+               <death>
+                  <date when="1935-08-03">1935-08-03</date>
+                  <settlement ref="pmb182">
+                     <placeName type="pref">Paris</placeName>
+                     <location>
+                        <geo>48,85341 2,3488</geo>
+                     </location>
+                  </settlement>
+               </death>
+            </person>
          </listPerson>
          <listBibl>
+            <bibl xml:id="pmb36340">
+               <title>Die Zeit. Wiener Wochenschrift</title>
+               <author ref="pmb12790" role="hat-herausgegeben">Singer, Isidor</author>
+               <author ref="pmb11867" role="hat-herausgegeben">Kanner, Heinrich</author>
+               <author ref="pmb10815" role="hat-herausgegeben">Bahr, Hermann</author>
+            </bibl>
             <bibl xml:id="pmb32167">
-               <title type="main">Ton sang</title>
-               <author role="hat-geschaffen" ref="pmb13801">Bataille, Henri</author>
+               <title>Ton sang</title>
+               <author ref="pmb13801" role="hat-geschaffen">Bataille, Henri</author>
             </bibl>
             <bibl xml:id="pmb32169">
-               <title type="main">La Douloureuse</title>
-               <author role="hat-geschaffen" ref="pmb11168">Donnay, Maurice</author>
-            </bibl>
-            <bibl xml:id="pmb32171">
-               <title type="main">Snob</title>
-               <author role="hat-geschaffen" ref="pmb17522">Guiches, Gustave</author>
+               <title>La Douloureuse</title>
+               <author ref="pmb11168" role="hat-geschaffen">Donnay, Maurice</author>
             </bibl>
             <bibl xml:id="pmb32173">
-               <title type="main">La Carrière</title>
-               <author role="hat-geschaffen" ref="pmb11657">Hermant, Abel</author>
+               <title>La Carrière</title>
+               <author ref="pmb11657" role="hat-geschaffen">Hermant, Abel</author>
             </bibl>
-            <bibl xml:id="pmb36340">
-               <title type="main">Die Zeit. Wiener Wochenschrift</title>
-               <author role="hat-herausgegeben" ref="pmb12790">Singer, Isidor</author>
-               <author role="hat-herausgegeben" ref="pmb11867">Kanner, Heinrich</author>
-               <author role="hat-herausgegeben" ref="pmb10815">Bahr, Hermann</author>
+            <bibl xml:id="pmb32171">
+               <title>Snob</title>
+               <author ref="pmb17522" role="hat-geschaffen">Guiches, Gustave</author>
             </bibl>
-            <bibl xml:id="pmb32071" ana="comment">
-               <title type="main">Emanuel Reicher (Als Gast im Carltheater vom 28. April bis zum 3. Mai 1897)</title>
+            <bibl xml:id="pmb32071" ana="implied">
+               <title>Emanuel Reicher (Als Gast im Carltheater vom 28. April bis zum 3. Mai 1897)</title>
                <title type="werk_bibliografische-angabe">Die Zeit, Bd. 11, Nr. 135, 1. 5. 1897</title>
-               <author role="hat-geschaffen" ref="pmb10815">Bahr, Hermann</author>
+               <author ref="pmb10815" role="hat-geschaffen">Bahr, Hermann</author>
             </bibl>
             <bibl xml:id="pmb32434" ana="implied">
-               <title type="main">Pariser Köpfe</title>
+               <title>Pariser Köpfe</title>
                <title type="werk_bibliografische-angabe">Die Zeit, Bd. 11, Nr. 151, 21. 8. 1897</title>
-               <author role="hat-geschaffen" ref="pmb11512">Graf, Max</author>
+               <author ref="pmb11512" role="hat-geschaffen">Graf, Max</author>
             </bibl>
             <bibl xml:id="pmb32436" ana="implied">
-               <title type="main">Pariser Köpfe [II]</title>
+               <title>Pariser Köpfe [II]</title>
                <title type="werk_bibliografische-angabe">Die Zeit, Bd. 11, Nr. 152, 28. 8. 1897</title>
-               <author role="hat-geschaffen" ref="pmb11512">Graf, Max</author>
+               <author ref="pmb11512" role="hat-geschaffen">Graf, Max</author>
             </bibl>
             <bibl xml:id="pmb32438" ana="implied">
-               <title type="main">Pariser Köpfe [III]</title>
+               <title>Pariser Köpfe [III]</title>
                <title type="werk_bibliografische-angabe">Die Zeit, Bd. 11, Nr. 153, 4. 9. 1897</title>
-               <author role="hat-geschaffen" ref="pmb11512">Graf, Max</author>
+               <author ref="pmb11512" role="hat-geschaffen">Graf, Max</author>
             </bibl>
          </listBibl>
          <listPlace>
-            <place xml:id="pmb166">
-               <placeName>Frankreich</placeName>
-               <placeName type="alternative-name">France</placeName>
-               <placeName type="alternative-name">Frankreich</placeName>
-               <placeName type="legacy-name-merge">Frankreich</placeName>
-               <placeName type="legacy-name-merge">France</placeName>
-               <location type="coords">
-                  <geo>46,0 2,0</geo>
-               </location>
-               <location type="located_in_place">
-                  <placeName ref="pmb468">Europa</placeName>
-                  <geo>48,69096 9,14062</geo>
-               </location>
-            </place>
             <place xml:id="pmb182">
                <placeName>Paris</placeName>
                <placeName type="alternative-name">P'ariz</placeName>
-               <placeName type="legacy-name-merge">Paris</placeName>
                <placeName type="alternative-name">Pariž</placeName>
                <placeName type="alternative-name">Parisius</placeName>
                <placeName type="alternative-name">Île-de-France</placeName>
@@ -508,32 +633,15 @@
                   <geo>46,0 2,0</geo>
                </location>
             </place>
-            <place xml:id="pmb224">
-               <placeName>London</placeName>
-               <placeName type="alternative-name">Landan</placeName>
-               <placeName type="legacy-name-merge">London</placeName>
-               <placeName type="alternative-name">London</placeName>
-               <location type="coords">
-                  <geo>51,50853 -0,12574</geo>
-               </location>
-               <location type="located_in_place">
-                  <placeName ref="pmb34523">Vereinigtes Königreich</placeName>
-                  <geo>54,75844 -2,69531</geo>
-               </location>
-            </place>
-            <place xml:id="pmb50">
+            <place xml:id="pmb50" ana="comment">
                <placeName>Wien</placeName>
                <placeName type="ort_fruherer-name">K.K. Reichshaupt- und Residenzstadt Wien</placeName>
-               <placeName type="legacy-name-merge">Wien</placeName>
                <placeName type="alternative-name">Bécs</placeName>
                <placeName type="alternative-name">Land Wien</placeName>
                <placeName type="alternative-name">Vídeň</placeName>
                <placeName type="alternative-name">Wenia</placeName>
                <placeName type="alternative-name">Beč</placeName>
                <placeName type="ort_fruherer-name">Vindobona</placeName>
-               <placeName type="legacy-name-merge">Vindobona</placeName>
-               <placeName type="alternative-name">Vienna</placeName>
-               <placeName type="legacy-name-merge">Vienna</placeName>
                <placeName type="alternative-name">Vienna</placeName>
                <location type="coords">
                   <geo>48,208333 16,373056</geo>
@@ -541,6 +649,10 @@
                <location type="located_in_place">
                   <placeName ref="pmb41240">Österreich</placeName>
                   <geo>47,33333 13,33333</geo>
+               </location>
+               <location type="located_in_place">
+                  <placeName ref="pmb235218">Windmühlhöhe</placeName>
+                  <geo>48,24077 16,32092</geo>
                </location>
             </place>
             <place xml:id="pmb592">
@@ -564,6 +676,28 @@
                   <geo>48,85341 2,3488</geo>
                </location>
             </place>
+            <place xml:id="pmb166">
+               <placeName>Frankreich</placeName>
+               <placeName type="alternative-name">France</placeName>
+               <location type="coords">
+                  <geo>46,0 2,0</geo>
+               </location>
+               <location type="located_in_place">
+                  <placeName ref="pmb468">Europa</placeName>
+                  <geo>48,69096 9,14062</geo>
+               </location>
+            </place>
+            <place xml:id="pmb224">
+               <placeName>London</placeName>
+               <placeName type="alternative-name">Landan</placeName>
+               <location type="coords">
+                  <geo>51,50853 -0,12574</geo>
+               </location>
+               <location type="located_in_place">
+                  <placeName ref="pmb34523">Vereinigtes Königreich</placeName>
+                  <geo>54,75844 -2,69531</geo>
+               </location>
+            </place>
          </listPlace>
          <listOrg>
             <org xml:id="pmb88605">
@@ -576,7 +710,7 @@
                   <idno type="URL" subtype="pmb">https://pmb.acdh.oeaw.ac.at/entity/182/</idno>
                   <idno type="URL" subtype="pmb">https://pmb.acdh.oeaw.ac.at/entity/64183/</idno>
                   <idno type="URL" subtype="geonames">https://sws.geonames.org/2988507/</idno>
-                  <idno type="URL" subtype="kraus">https://www.kraus.wienbibliothek.at/legalkraus/pmb182.html</idno>
+                  <idno type="URL" subtype="www">https://www.kraus.wienbibliothek.at/legalkraus/pmb182.html</idno>
                   <idno type="URL" subtype="wikidata">http://www.wikidata.org/entity/Q90</idno>
                   <idno type="URL" subtype="wikipedia">https://de.wikipedia.org/wiki/Paris</idno>
                   <idno type="URL" subtype="schnitzler-interviews">https://schnitzler-interviews.acdh.oeaw.ac.at/pmb182.html</idno>
@@ -588,7 +722,7 @@
                   <idno type="URL" subtype="sk">https://sk.acdh.oeaw.ac.at/fa_place00003989</idno>
                   <idno type="URL" subtype="biblio">https://biblio.ub.uni-freiburg.de/sf/#pmb182</idno>
                   <idno type="URL" subtype="schnitzler-briefe">https://schnitzler-briefe.acdh.oeaw.ac.at/pmb182.html</idno>
-                  <idno type="URL" subtype="schoenberg-ue">https://www.schoenberg-ue.at/ue/places/place.4.4</idno>
+                  <idno type="URL" subtype="www">https://www.schoenberg-ue.at/ue/places/place.4.4</idno>
                </location>
                <location type="located_in_place">
                   <placeName ref="pmb612">Théâtre de l’Œuvre</placeName>
@@ -603,13 +737,13 @@
             </org>
          </listOrg>
          <listEvent>
-            <event xml:id="pmb208922" ana="implied">
-               <eventName n="Theateraufführung">Aufführung von La Carrière, 17.4.1897</eventName>
+            <event xml:id="pmb208938" ana="implied">
+               <eventName n="Theateraufführung">Aufführung von Ton sang, 7.5.1897</eventName>
                <listPlace>
                   <place>
-                     <placeName role="veranstaltet in" ref="pmb185885">Théâtre du Gymnase Marie Bell</placeName>
+                     <placeName role="veranstaltet in" ref="pmb612">Théâtre de l’Œuvre</placeName>
                      <location>
-                        <geo>48,870833333333 2,3488888888889</geo>
+                        <geo>48,880961 2,3285</geo>
                      </location>
                   </place>
                </listPlace>
@@ -625,6 +759,17 @@
                   </place>
                </listPlace>
             </event>
+            <event xml:id="pmb208922" ana="implied">
+               <eventName n="Theateraufführung">Aufführung von La Carrière, 17.4.1897</eventName>
+               <listPlace>
+                  <place>
+                     <placeName role="veranstaltet in" ref="pmb185885">Théâtre du Gymnase Marie Bell</placeName>
+                     <location>
+                        <geo>48,870833333333 2,3488888888889</geo>
+                     </location>
+                  </place>
+               </listPlace>
+            </event>
             <event xml:id="pmb208928" ana="implied">
                <eventName n="Theateraufführung">Aufführung von Snob, 23.4.1897</eventName>
                <listPlace>
@@ -632,17 +777,6 @@
                      <placeName role="veranstaltet in" ref="pmb93533">Théâtre de la Renaissance</placeName>
                      <location>
                         <geo>48,86911 2,356482</geo>
-                     </location>
-                  </place>
-               </listPlace>
-            </event>
-            <event xml:id="pmb208938" ana="implied">
-               <eventName n="Theateraufführung">Aufführung von Ton sang, 7.5.1897</eventName>
-               <listPlace>
-                  <place>
-                     <placeName role="veranstaltet in" ref="pmb612">Théâtre de l’Œuvre</placeName>
-                     <location>
-                        <geo>48,880961 2,3285</geo>
                      </location>
                   </place>
                </listPlace>

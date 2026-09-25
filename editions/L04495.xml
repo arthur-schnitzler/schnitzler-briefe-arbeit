@@ -1,6 +1,10 @@
-<?xml version='1.0' encoding='UTF-8'?>
+<?xml version="1.0" encoding="UTF-8"?>
 <?xml-model href="../meta/schnitzler-briefe-schematron.sch" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
-<TEI xmlns="http://www.tei-c.org/ns/1.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.tei-c.org/ns/1.0 ../meta/schnitzler-briefe-schema.xsd" xml:base="https://id.acdh.oeaw.ac.at/schnitzler/schnitzler-briefe/editions" xml:id="L04495">
+<TEI xmlns="http://www.tei-c.org/ns/1.0"
+     xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+     xsi:schemaLocation="http://www.tei-c.org/ns/1.0 ../meta/schnitzler-briefe-schema.xsd"
+     xml:base="https://id.acdh.oeaw.ac.at/schnitzler/schnitzler-briefe/editions"
+     xml:id="L04495">
    <teiHeader>
       <fileDesc>
          <titleStmt>
@@ -127,12 +131,20 @@
                   – 23. 5. 1923?]</date>
                <placeName ref="#pmb207301">Tiefer Graben 17</placeName>
             </correspAction>
-            <correspContext><ref type="belongsToCorrespondence" target="correspondence_12740">Schwarzkopf, Gustav</ref>
+            <correspContext>
+               <ref type="belongsToCorrespondence" target="correspondence_12740">Schwarzkopf, Gustav</ref>
                <ref subtype="previous_letter" type="withinCollection" target="L02399">Hofmannsthal an Schnitzler, 15. 5. 1923</ref>
                <ref subtype="next_letter" type="withinCollection" target="L03758">Schnitzler an Zweig, 29. 5. 1923</ref>
-               <ref subtype="previous_letter" type="withinCorrespondence" source="correspondence_12740" target="L04498">Schnitzler an Schwarzkopf, 11. 5. 1923</ref>
-               <ref subtype="next_letter" type="withinCorrespondence" source="correspondence_12740" target="L04499">Schnitzler an Schwarzkopf, 3. 7. 1923</ref>
-            </correspContext></correspDesc>
+               <ref subtype="previous_letter"
+                    type="withinCorrespondence"
+                    source="correspondence_12740"
+                    target="L04498">Schnitzler an Schwarzkopf, 11. 5. 1923</ref>
+               <ref subtype="next_letter"
+                    type="withinCorrespondence"
+                    source="correspondence_12740"
+                    target="L04499">Schnitzler an Schwarzkopf, 3. 7. 1923</ref>
+            </correspContext>
+         </correspDesc>
       </profileDesc>
       <revisionDesc status="proposed">
          <change who="MAM" when="2026-06-11">Export aus Transkribus</change>
@@ -205,7 +217,11 @@
                <note type="commentary" corresp="K_L04495-4">
                   <ref type="schnitzler-kultur" target="pmb62229"/>.</note>.</p>
             <p>– <anchor type="commentary" xml:id="K_L04495-5"/>
-               <rs type="work" ref="#pmb33227 #pmb58627 #pmb58648 #pmb58867 #pmb60058 #pmb58614 #pmb58603 #pmb58606 #pmb58587 #pmb58609 #pmb60065 #pmb60063" subtype="implied">Interviewt</rs> bisher (genau) von 15 <rs type="person" ref="#pmb5375 #pmb23112 #pmb26494 #pmb16086 #pmb60060 #pmb58598 #pmb5985 #pmb58585 #pmb58611" subtype="implied">Personen</rs>
+               <rs type="work"
+                   ref="#pmb33227 #pmb58627 #pmb58648 #pmb58867 #pmb60058 #pmb58614 #pmb58603 #pmb58606 #pmb58587 #pmb58609 #pmb60065 #pmb60063"
+                   subtype="implied">Interviewt</rs> bisher (genau) von 15 <rs type="person"
+                   ref="#pmb5375 #pmb23112 #pmb26494 #pmb16086 #pmb60060 #pmb58598 #pmb5985 #pmb58585 #pmb58611"
+                   subtype="implied">Personen</rs>
                <note type="commentary" corresp="K_L04495-5">Es
                      sind zwölf Interviews aus <rs type="place" ref="#pmb36300">Kopenhagen</rs> und <rs type="place" ref="#pmb1119">Stockholm</rs> dokumentiert, siehe <bibl>
                      <rs type="person" ref="#pmb2121">Arthur Schnitzler</rs>: <title level="m">»Das
@@ -226,6 +242,30 @@
       </body>
       <back>
          <listPerson>
+            <person xml:id="pmb2121">
+               <persName>
+                  <surname>Schnitzler</surname>
+                  <forename>Arthur</forename>
+               </persName>
+               <birth>
+                  <date when="1862-05-15">15. 5. 1862</date>
+                  <settlement ref="pmb50">
+                     <placeName type="pref">Wien</placeName>
+                     <location>
+                        <geo>48,208333 16,373056</geo>
+                     </location>
+                  </settlement>
+               </birth>
+               <death>
+                  <date when="1931-10-21">21. 10. 1931</date>
+                  <settlement ref="pmb50">
+                     <placeName type="pref">Wien</placeName>
+                     <location>
+                        <geo>48,208333 16,373056</geo>
+                     </location>
+                  </settlement>
+               </death>
+            </person>
             <person xml:id="pmb12740">
                <persName>
                   <forename>Gustav</forename>
@@ -246,112 +286,6 @@
                      <placeName type="pref">Wien</placeName>
                      <location>
                         <geo>48,208333 16,373056</geo>
-                     </location>
-                  </settlement>
-               </death>
-            </person>
-            <person xml:id="pmb2121">
-               <persName>
-                  <surname>Schnitzler</surname>
-                  <forename>Arthur</forename>
-               </persName>
-               <birth>
-                  <date when="1862-05-15">15. 5. 1862</date>
-                  <settlement ref="pmb50">
-                     <placeName type="pref">Wien</placeName>
-                     <location>
-                        <geo>48,208333 16,373056</geo>
-                     </location>
-                  </settlement>
-               </birth>
-               <death>
-                  <date when="1931-10-21">21. 10. 1931</date>
-                  <settlement ref="pmb50">
-                     <placeName type="pref">Wien</placeName>
-                     <location>
-                        <geo>48,208333 16,373056</geo>
-                     </location>
-                  </settlement>
-               </death>
-               <sex value="male"/>
-               <occupation ref="pmb90">Schriftsteller/Schriftstellerin</occupation>
-               <occupation ref="pmb97">Mediziner/Medizinerin</occupation>
-               <idno type="gnd">https://d-nb.info/gnd/118609807/</idno>
-            </person>
-            <person xml:id="pmb16086" ana="implied">
-               <persName>
-                  <forename>Haagen</forename>
-                  <surname>Falkenfleth</surname>
-               </persName>
-               <birth>
-                  <date when="1875-02-04">1875-02-04</date>
-                  <settlement ref="pmb36300">
-                     <placeName type="pref">Kopenhagen</placeName>
-                     <location>
-                        <geo>55,67594 12,56553</geo>
-                     </location>
-                  </settlement>
-               </birth>
-               <death>
-                  <date when="1957-12-31">1957-12-31</date>
-                  <settlement ref="pmb36300">
-                     <placeName type="pref">Kopenhagen</placeName>
-                     <location>
-                        <geo>55,67594 12,56553</geo>
-                     </location>
-                  </settlement>
-               </death>
-            </person>
-            <person xml:id="pmb23112" ana="implied">
-               <persName>
-                  <forename>Henrik</forename>
-                  <surname>Rechendorff</surname>
-               </persName>
-            </person>
-            <person xml:id="pmb24648" ana="implied">
-               <persName>
-                  <forename>Max</forename>
-                  <surname>Schwarzkopf</surname>
-               </persName>
-               <birth>
-                  <date when="1857-06-12">1857-06-12</date>
-                  <settlement ref="pmb50">
-                     <placeName type="pref">Wien</placeName>
-                     <location>
-                        <geo>48,208333 16,373056</geo>
-                     </location>
-                  </settlement>
-               </birth>
-               <death>
-                  <date when="1928-04-14">1928-04-14</date>
-                  <settlement ref="pmb50">
-                     <placeName type="pref">Wien</placeName>
-                     <location>
-                        <geo>48,208333 16,373056</geo>
-                     </location>
-                  </settlement>
-               </death>
-            </person>
-            <person xml:id="pmb26494" ana="implied">
-               <persName>
-                  <forename>Torkild</forename>
-                  <surname>Vogel-Jörgensen</surname>
-               </persName>
-               <birth>
-                  <date when="1891-06-29">1891-06-29</date>
-                  <settlement ref="pmb58988">
-                     <placeName type="pref">Svendborg</placeName>
-                     <location>
-                        <geo>55,05982 10,60677</geo>
-                     </location>
-                  </settlement>
-               </birth>
-               <death>
-                  <date when="1972-10-04">1972-10-04</date>
-                  <settlement ref="pmb58986">
-                     <placeName type="pref">Hellerup</placeName>
-                     <location>
-                        <geo>55,73204 12,57093</geo>
                      </location>
                   </settlement>
                </death>
@@ -380,9 +314,63 @@
                   </settlement>
                </death>
             </person>
-            <person xml:id="pmb58585" ana="implied">
+            <person xml:id="pmb23112" ana="implied">
                <persName>
-                  <surname>O. N–ll</surname>
+                  <forename>Henrik</forename>
+                  <surname>Rechendorff</surname>
+               </persName>
+            </person>
+            <person xml:id="pmb26494" ana="implied">
+               <persName>
+                  <forename>Torkild</forename>
+                  <surname>Vogel-Jörgensen</surname>
+               </persName>
+               <birth>
+                  <date when="1891-06-29">1891-06-29</date>
+                  <settlement ref="pmb58988">
+                     <placeName type="pref">Svendborg</placeName>
+                     <location>
+                        <geo>55,05982 10,60677</geo>
+                     </location>
+                  </settlement>
+               </birth>
+               <death>
+                  <date when="1972-10-04">1972-10-04</date>
+                  <settlement ref="pmb58986">
+                     <placeName type="pref">Hellerup</placeName>
+                     <location>
+                        <geo>55,73204 12,57093</geo>
+                     </location>
+                  </settlement>
+               </death>
+            </person>
+            <person xml:id="pmb16086" ana="implied">
+               <persName>
+                  <forename>Haagen</forename>
+                  <surname>Falkenfleth</surname>
+               </persName>
+               <birth>
+                  <date when="1875-02-04">1875-02-04</date>
+                  <settlement ref="pmb36300">
+                     <placeName type="pref">Kopenhagen</placeName>
+                     <location>
+                        <geo>55,67594 12,56553</geo>
+                     </location>
+                  </settlement>
+               </birth>
+               <death>
+                  <date when="1957-12-31">1957-12-31</date>
+                  <settlement ref="pmb36300">
+                     <placeName type="pref">Kopenhagen</placeName>
+                     <location>
+                        <geo>55,67594 12,56553</geo>
+                     </location>
+                  </settlement>
+               </death>
+            </person>
+            <person xml:id="pmb60060" ana="implied">
+               <persName>
+                  <surname>Archi</surname>
                </persName>
             </person>
             <person xml:id="pmb58598" ana="implied">
@@ -409,11 +397,6 @@
                   </settlement>
                </death>
             </person>
-            <person xml:id="pmb58611" ana="implied">
-               <persName>
-                  <surname>Sir Guy</surname>
-               </persName>
-            </person>
             <person xml:id="pmb5985" ana="implied">
                <persName>
                   <forename>Anna Lisa</forename>
@@ -438,77 +421,104 @@
                   </settlement>
                </death>
             </person>
-            <person xml:id="pmb60060" ana="implied">
+            <person xml:id="pmb58585" ana="implied">
                <persName>
-                  <surname>Archi</surname>
+                  <surname>O. N–ll</surname>
                </persName>
+            </person>
+            <person xml:id="pmb58611" ana="implied">
+               <persName>
+                  <surname>Sir Guy</surname>
+               </persName>
+            </person>
+            <person xml:id="pmb24648" ana="implied">
+               <persName>
+                  <forename>Max</forename>
+                  <surname>Schwarzkopf</surname>
+               </persName>
+               <birth>
+                  <date when="1857-06-12">1857-06-12</date>
+                  <settlement ref="pmb50">
+                     <placeName type="pref">Wien</placeName>
+                     <location>
+                        <geo>48,208333 16,373056</geo>
+                     </location>
+                  </settlement>
+               </birth>
+               <death>
+                  <date when="1928-04-14">1928-04-14</date>
+                  <settlement ref="pmb50">
+                     <placeName type="pref">Wien</placeName>
+                     <location>
+                        <geo>48,208333 16,373056</geo>
+                     </location>
+                  </settlement>
+               </death>
             </person>
          </listPerson>
          <listBibl>
+            <bibl xml:id="pmb31429">
+               <title>Große Szene</title>
+               <title type="werk_arbeitstitel">Herbot</title>
+               <author ref="pmb2121" role="hat-geschaffen">Schnitzler, Arthur</author>
+            </bibl>
             <bibl xml:id="pmb29917">
-               <title type="main">Liebelei. Schauspiel in drei Akten</title>
+               <title>Liebelei. Schauspiel in drei Akten</title>
                <title type="werk_link">https://www.deutschestextarchiv.de/book/show/schnitzler_liebelei_1896</title>
                <title type="werk_arbeitstitel">Das arme Mädl</title>
-               <author role="hat-geschaffen" ref="pmb2121">Schnitzler, Arthur</author>
-            </bibl>
-            <bibl xml:id="pmb31429">
-               <title type="main">Große Szene</title>
-               <title type="werk_arbeitstitel">Herbot</title>
-               <author role="hat-geschaffen" ref="pmb2121">Schnitzler, Arthur</author>
+               <author ref="pmb2121" role="hat-geschaffen">Schnitzler, Arthur</author>
             </bibl>
             <bibl xml:id="pmb33227" ana="implied">
-               <title type="main">Der Dichter und Dramatiker Arthur Schnitzler in Kopenhagen</title>
+               <title>Der Dichter und Dramatiker Arthur Schnitzler in Kopenhagen</title>
                <title type="werk_bibliografische-angabe">Politiken, 11. 5. 1923</title>
-               <author role="hat-geschaffen" ref="pmb5375">Bønnelycke, Emil</author>
-            </bibl>
-            <bibl xml:id="pmb58587" ana="implied">
-               <title type="main">Arthur Schnitzler som charmör och som kåsör</title>
-               <author role="hat-unter-einem-kurzel-veroffentlicht" ref="pmb58585">O. N–ll</author>
-            </bibl>
-            <bibl xml:id="pmb58603" ana="implied">
-               <title type="main">Anatols diktare på besök i Stockholm</title>
-               <title type="werk_unter-diesem-namen-oder-kurzel-veroffentlicht">Sminx</title>
-               <author role="hat-unter-pseudonym-geschrieben" ref="pmb58598">Valentin, Guido</author>
-            </bibl>
-            <bibl xml:id="pmb58606" ana="implied">
-               <title type="main">Arthur Schnitzler i Stockholm</title>
-               <author role="hat-anonym-veroffentlicht" ref="pmb5985">Andersson, Anna Lisa</author>
-            </bibl>
-            <bibl xml:id="pmb58609" ana="implied">
-               <title type="main">Arthur Schnitzler, Anatols författare, besöker Stockholm</title>
-               <author role="hat-unter-pseudonym-geschrieben" ref="pmb58611">Sir Guy</author>
-            </bibl>
-            <bibl xml:id="pmb58614" ana="implied">
-               <title type="main">Arthur Schnitzler om »Pandoras ask«</title>
+               <author ref="pmb5375" role="hat-geschaffen">Bønnelycke, Emil</author>
             </bibl>
             <bibl xml:id="pmb58627" ana="implied">
-               <title type="main">En Samtale med Arthur Schnitzler</title>
-               <author role="hat-unter-pseudonym-geschrieben" ref="pmb23112">Rechendorff, Henrik</author>
+               <title>En Samtale med Arthur Schnitzler</title>
+               <author ref="pmb23112" role="hat-unter-pseudonym-geschrieben">Rechendorff, Henrik</author>
             </bibl>
             <bibl xml:id="pmb58648" ana="implied">
-               <title type="main">Arthur Schnitzler. En Samtale med en beremt Wiener [1923]</title>
-               <author role="hat-unter-pseudonym-geschrieben" ref="pmb26494">Vogel-Jörgensen, Torkild</author>
+               <title>Arthur Schnitzler. En Samtale med en beremt Wiener [1923]</title>
+               <author ref="pmb26494" role="hat-unter-pseudonym-geschrieben">Vogel-Jörgensen, Torkild</author>
             </bibl>
             <bibl xml:id="pmb58867" ana="implied">
-               <title type="main">Arthur Schnitzler i København. En Samtale med den berømte østerrigkse Forfatter</title>
-               <author role="hat-geschaffen" ref="pmb16086">Falkenfleth, Haagen</author>
+               <title>Arthur Schnitzler i København. En Samtale med den berømte østerrigkse Forfatter</title>
+               <author ref="pmb16086" role="hat-geschaffen">Falkenfleth, Haagen</author>
             </bibl>
             <bibl xml:id="pmb60058" ana="implied">
-               <title type="main">Arthur Schnitzler nu i Stockholm</title>
-               <author role="hat-geschaffen" ref="pmb60060">Archi</author>
+               <title>Arthur Schnitzler nu i Stockholm</title>
+               <author ref="pmb60060" role="hat-geschaffen">Archi</author>
             </bibl>
-            <bibl xml:id="pmb60063" ana="implied">
-               <title type="main">Även Stockholm är bra</title>
+            <bibl xml:id="pmb58614" ana="implied">
+               <title>Arthur Schnitzler om »Pandoras ask«</title>
+            </bibl>
+            <bibl xml:id="pmb58603" ana="implied">
+               <title>Anatols diktare på besök i Stockholm</title>
+               <title type="werk_unter-diesem-namen-oder-kurzel-veroffentlicht">Sminx</title>
+               <author ref="pmb58598" role="hat-unter-pseudonym-geschrieben">Valentin, Guido</author>
+            </bibl>
+            <bibl xml:id="pmb58606" ana="implied">
+               <title>Arthur Schnitzler i Stockholm</title>
+               <author ref="pmb5985" role="hat-anonym-veroffentlicht">Andersson, Anna Lisa</author>
+            </bibl>
+            <bibl xml:id="pmb58587" ana="implied">
+               <title>Arthur Schnitzler som charmör och som kåsör</title>
+               <author ref="pmb58585" role="hat-unter-einem-kurzel-veroffentlicht">O. N–ll</author>
+            </bibl>
+            <bibl xml:id="pmb58609" ana="implied">
+               <title>Arthur Schnitzler, Anatols författare, besöker Stockholm</title>
+               <author ref="pmb58611" role="hat-unter-pseudonym-geschrieben">Sir Guy</author>
             </bibl>
             <bibl xml:id="pmb60065" ana="implied">
-               <title type="main">Arthur Schnitzler lämnade Stockholm i går</title>
+               <title>Arthur Schnitzler lämnade Stockholm i går</title>
+            </bibl>
+            <bibl xml:id="pmb60063" ana="implied">
+               <title>Även Stockholm är bra</title>
             </bibl>
          </listBibl>
          <listPlace>
-            <place xml:id="pmb1119">
+            <place xml:id="pmb1119" ana="comment">
                <placeName>Stockholm</placeName>
-               <placeName type="alternative-name">Stockholm</placeName>
-               <placeName type="legacy-name-merge">Stockholm</placeName>
                <placeName type="legacy-name-merge">Stockholm City</placeName>
                <location type="coords">
                   <geo>59,325 18,05</geo>
@@ -532,19 +542,22 @@
                   <geo>48,20769 16,37049</geo>
                </location>
             </place>
-            <place xml:id="pmb36300">
-               <placeName>Kopenhagen</placeName>
-               <placeName type="alternative-name">Kopenhagen</placeName>
-               <placeName type="legacy-name">Kopenhagen</placeName>
-               <placeName type="legacy-name-merge">Kopenhagen</placeName>
-               <placeName type="alternative-name">Copenhagen</placeName>
-               <placeName type="legacy-name-merge">Copenhagen</placeName>
+            <place xml:id="pmb51">
+               <placeName>I., Innere Stadt</placeName>
+               <placeName type="alternative-name">Inner city</placeName>
+               <placeName type="alternative-name">Wien,Innere Stadt</placeName>
+               <placeName type="alternative-name">1. Wiener Gemeindebezirk</placeName>
+               <placeName type="legacy-name-merge">Wien-Innere Stadt</placeName>
                <location type="coords">
-                  <geo>55,67594 12,56553</geo>
+                  <geo>48,20769 16,37049</geo>
                </location>
                <location type="located_in_place">
-                  <placeName ref="pmb43570">Dänemark</placeName>
-                  <geo>56,0 10,0</geo>
+                  <placeName ref="pmb41240">Österreich</placeName>
+                  <geo>47,33333 13,33333</geo>
+               </location>
+               <location type="located_in_place">
+                  <placeName ref="pmb50">Wien</placeName>
+                  <geo>48,208333 16,373056</geo>
                </location>
             </place>
             <place xml:id="pmb363487">
@@ -555,6 +568,17 @@
                <location type="located_in_place">
                   <placeName ref="pmb1119">Stockholm</placeName>
                   <geo>59,325 18,05</geo>
+               </location>
+            </place>
+            <place xml:id="pmb36300" ana="comment">
+               <placeName>Kopenhagen</placeName>
+               <placeName type="alternative-name">Copenhagen</placeName>
+               <location type="coords">
+                  <geo>55,67594 12,56553</geo>
+               </location>
+               <location type="located_in_place">
+                  <placeName ref="pmb43570">Dänemark</placeName>
+                  <geo>56,0 10,0</geo>
                </location>
             </place>
             <place xml:id="pmb43406">
@@ -575,60 +599,8 @@
                   <geo>32,530833 -117,02</geo>
                </location>
             </place>
-            <place xml:id="pmb50">
-               <placeName>Wien</placeName>
-               <placeName type="ort_fruherer-name">K.K. Reichshaupt- und Residenzstadt Wien</placeName>
-               <placeName type="legacy-name-merge">Wien</placeName>
-               <placeName type="alternative-name">Bécs</placeName>
-               <placeName type="alternative-name">Land Wien</placeName>
-               <placeName type="alternative-name">Vídeň</placeName>
-               <placeName type="alternative-name">Wenia</placeName>
-               <placeName type="alternative-name">Beč</placeName>
-               <placeName type="ort_fruherer-name">Vindobona</placeName>
-               <placeName type="legacy-name-merge">Vindobona</placeName>
-               <placeName type="alternative-name">Vienna</placeName>
-               <placeName type="legacy-name-merge">Vienna</placeName>
-               <placeName type="alternative-name">Vienna</placeName>
-               <location type="coords">
-                  <geo>48,208333 16,373056</geo>
-               </location>
-               <location type="located_in_place">
-                  <placeName ref="pmb41240">Österreich</placeName>
-                  <geo>47,33333 13,33333</geo>
-               </location>
-            </place>
-            <place xml:id="pmb51">
-               <placeName>I., Innere Stadt</placeName>
-               <placeName type="alternative-name">Inner city</placeName>
-               <placeName type="alternative-name">Wien,Innere Stadt</placeName>
-               <placeName type="alternative-name">1. Wiener Gemeindebezirk</placeName>
-               <placeName type="legacy-name-merge">Wien-Innere Stadt</placeName>
-               <placeName type="legacy-name-merge">Inner city</placeName>
-               <location type="coords">
-                  <geo>48,20769 16,37049</geo>
-               </location>
-               <location type="located_in_place">
-                  <placeName ref="pmb41240">Österreich</placeName>
-                  <geo>47,33333 13,33333</geo>
-               </location>
-               <location type="located_in_place">
-                  <placeName ref="pmb50">Wien</placeName>
-                  <geo>48,208333 16,373056</geo>
-               </location>
-            </place>
          </listPlace>
          <listEvent>
-            <event xml:id="pmb58640" ana="implied">
-               <eventName n="Theateraufführung">Aufführung von Große Szene und Napoli, 15.5.1923</eventName>
-               <listPlace>
-                  <place>
-                     <placeName role="veranstaltet in" ref="pmb1079">Det Kongelige Teater</placeName>
-                     <location>
-                        <geo>55,679629 12,586002</geo>
-                     </location>
-                  </place>
-               </listPlace>
-            </event>
             <event xml:id="pmb62185" ana="implied">
                <eventName n="Lesung">Lesung von Das Schicksal des Freiherrn von Leisenbohg, Weihnachts-Einkäufe, Der grüne Kakadu, 14.5.1923</eventName>
                <listPlace>
@@ -647,6 +619,17 @@
                      <placeName role="veranstaltet in" ref="pmb266201">Kungliga Musikaliska Akademien</placeName>
                      <location>
                         <geo>59,33077 18,07583</geo>
+                     </location>
+                  </place>
+               </listPlace>
+            </event>
+            <event xml:id="pmb58640" ana="implied">
+               <eventName n="Theateraufführung">Aufführung von Große Szene und Napoli, 15.5.1923</eventName>
+               <listPlace>
+                  <place>
+                     <placeName role="veranstaltet in" ref="pmb1079">Det Kongelige Teater</placeName>
+                     <location>
+                        <geo>55,679629 12,586002</geo>
                      </location>
                   </place>
                </listPlace>

@@ -1,6 +1,10 @@
-<?xml version='1.0' encoding='UTF-8'?>
+<?xml version="1.0" encoding="UTF-8"?>
 <?xml-model href="../meta/schnitzler-briefe-schematron.sch" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
-<TEI xmlns="http://www.tei-c.org/ns/1.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.tei-c.org/ns/1.0 ../meta/schnitzler-briefe-schema.xsd" xml:id="L02579" xml:base="https://id.acdh.oeaw.ac.at/schnitzler/schnitzler-briefe/editions">
+<TEI xmlns="http://www.tei-c.org/ns/1.0"
+     xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+     xsi:schemaLocation="http://www.tei-c.org/ns/1.0 ../meta/schnitzler-briefe-schema.xsd"
+     xml:id="L02579"
+     xml:base="https://id.acdh.oeaw.ac.at/schnitzler/schnitzler-briefe/editions">
    <teiHeader>
       <fileDesc>
          <titleStmt>
@@ -125,13 +129,10 @@
                <date when="1905-09-24" n="01">[24. 9.?] 1905</date>
                <placeName ref="#pmb259">Lido</placeName>
             </correspAction>
-           <correspAction type="transmitted">
-             <date when="1905-09-24">2[4?]. 9. 05</date>
-             <placeName ref="#pmb259">S. Elisabett<supplied>a di Lido
-                 (Venezia)</supplied>
-             </placeName>
-             
-           </correspAction>
+            <correspAction type="transmitted">
+               <date when="1905-09-24">2[4?]. 9. 05</date>
+               <placeName ref="#pmb259">Lido</placeName>
+            </correspAction>
             <correspAction type="received">
                <persName ref="#pmb2121">Schnitzler, Arthur</persName>
                <persName ref="#pmb2173">Schnitzler, Olga</persName>
@@ -139,12 +140,20 @@
                   – 29. 9. 1905?]</date>
                <placeName ref="#pmb168940">Edmund-Weiß-Gasse 7</placeName>
             </correspAction>
-            <correspContext><ref type="belongsToCorrespondence" target="correspondence_10863">Beer-Hofmann, Richard</ref>
+            <correspContext>
+               <ref type="belongsToCorrespondence" target="correspondence_10863">Beer-Hofmann, Richard</ref>
                <ref subtype="previous_letter" type="withinCollection" target="L04483">Schnitzler, Schnitzler an Schwarzkopf, [24. oder 25]. 9. 1905</ref>
                <ref subtype="next_letter" type="withinCollection" target="L01552">Schnitzler an Bahr, 28. 9. 1905</ref>
-               <ref subtype="previous_letter" type="withinCorrespondence" source="correspondence_10863" target="L01546">Schnitzler an Beer-Hofmann, 14. 9. 1905</ref>
-               <ref subtype="next_letter" type="withinCorrespondence" source="correspondence_10863" target="L01558">Beer-Hofmann an Schnitzler, [7. 10. 1905]</ref>
-            </correspContext></correspDesc>
+               <ref subtype="previous_letter"
+                    type="withinCorrespondence"
+                    source="correspondence_10863"
+                    target="L01546">Schnitzler an Beer-Hofmann, 14. 9. 1905</ref>
+               <ref subtype="next_letter"
+                    type="withinCorrespondence"
+                    source="correspondence_10863"
+                    target="L01558">Beer-Hofmann an Schnitzler, [7. 10. 1905]</ref>
+            </correspContext>
+         </correspDesc>
       </profileDesc>
       <revisionDesc status="approved">
          <change who="MAM" when="2021-10-07">Angelegt</change>
@@ -153,15 +162,15 @@
       </revisionDesc>
    </teiHeader>
    <facsimile>
-     <graphic url="DA2026-0294_121"/>
-     <graphic url="DA2026-0294_120"/>
+      <graphic url="DA2026-0294_121"/>
+      <graphic url="DA2026-0294_120"/>
    </facsimile>
    <text>
       <body>
          <div type="address">
             <address>
                <addrLine>
-                 <pb facs="DA2026-0294_121"/>Herrn D<hi rend="superscript">r</hi> Arthur
+                  <pb facs="DA2026-0294_121"/>Herrn D<hi rend="superscript">r</hi> Arthur
                   Schnitzler</addrLine>
                <addrLine>
                   <rs type="place" ref="#pmb168940">Wien XVIII. Spöttelgasse 7</rs>.</addrLine>
@@ -175,7 +184,7 @@
          </div>
          <div type="image">
             <p rend="center">
-              <pb facs="DA2026-0294_120"/>
+               <pb facs="DA2026-0294_120"/>
                <hi rend="pre-print">
                   <rs type="place" ref="#pmb462">
                      <hi rend="capitals">Venezia</hi>
@@ -185,7 +194,7 @@
          </div>
          <div type="writingSession" n="1">
             <p>
-              <pb facs="DA2026-0294_120"/>
+               <pb facs="DA2026-0294_120"/>
                <salute>Lieber Arthur,</salute>
                <space unit="chars" quantity="1"/>
                <hi rend="underline" n="1">erst</hi> heute schreib ich Ihnen, aber nicht weil ich an
@@ -197,7 +206,9 @@
                   und <rs type="work" ref="#pmb29905">Der Ruf des Lebens</rs> handeln, die, noch
                   ohne finalen Titel, weitgehend fertig gestellt waren, was in mehreren Zeitungen
                   gemeldet worden war. <rs type="person" ref="#pmb26392">Van-Jung</rs> kannte sie
-                 beide, da <rs type="person" ref="#pmb2121">Schnitzler</rs> sie ihm am <ref type="schnitzler-kultur" subtype="date-only" target="pmb184012"/><space unit="chars" quantity="1"/><rs type="event" subtype="implied" ref="#pmb184012 #pmb184006">vorgelesen</rs>
+                 beide, da <rs type="person" ref="#pmb2121">Schnitzler</rs> sie ihm am <ref type="schnitzler-kultur" subtype="date-only" target="pmb184012"/>
+                  <space unit="chars" quantity="1"/>
+                  <rs type="event" subtype="implied" ref="#pmb184012 #pmb184006">vorgelesen</rs>
                   hatte.</note>« zu hören. Einige Zeitungsnotizen haben mich sehr neugierig gemacht.
                Handkuss der lieben Frau Olga und die allerherzlichsten Grüsse Ihnen von Ihrem</p>
             <closer>
@@ -233,170 +244,402 @@
             </closer>
          </div>
       </body>
-      <back><listPerson><person xml:id="pmb10863"><persName>
-      <forename>Richard</forename>
-      <surname>Beer-Hofmann</surname>
-  </persName><birth>
-    <date when="1866-07-11">1866-07-11</date>
-      <settlement ref="pmb50">
-        <placeName type="pref">Wien</placeName>
-        <location><geo>48,208333 16,373056</geo></location>
-      </settlement>
-  </birth><death>
-    <date when="1945-09-26">1945-09-26</date>
-      <settlement ref="pmb44053">
-        <placeName type="pref">New York City</placeName>
-        <location><geo>40,71427 -74,00597</geo></location>
-      </settlement>
-  </death></person><person xml:id="pmb2121"><persName><surname>Schnitzler</surname><forename>Arthur</forename></persName><birth><date when="1862-05-15">15. 5. 1862</date><settlement ref="pmb50"><placeName type="pref">Wien</placeName><location><geo>48,208333 16,373056</geo></location></settlement></birth><death><date when="1931-10-21">21. 10. 1931</date><settlement ref="pmb50"><placeName type="pref">Wien</placeName><location><geo>48,208333 16,373056</geo></location></settlement></death><sex value="male"/><occupation ref="pmb90">Schriftsteller/Schriftstellerin</occupation><occupation ref="pmb97">Mediziner/Medizinerin</occupation><idno type="gnd">https://d-nb.info/gnd/118609807/</idno></person><person xml:id="pmb2173"><persName>
-      <forename>Olga</forename>
-      <surname>Schnitzler</surname>
-  </persName><birth>
-    <date when="1882-01-17">1882-01-17</date>
-      <settlement ref="pmb50">
-        <placeName type="pref">Wien</placeName>
-        <location><geo>48,208333 16,373056</geo></location>
-      </settlement>
-  </birth><death>
-    <date when="1970-01-13">1970-01-13</date>
-      <settlement ref="pmb885">
-        <placeName type="pref">Lugano</placeName>
-        <location><geo>46,01008 8,96004</geo></location>
-      </settlement>
-  </death></person><person xml:id="pmb21766"><persName>
-      <forename>Franziska</forename>
-      <surname>Mütter</surname>
-  </persName><birth>
-    <date when="1858-05-25">1858-05-25</date>
-      <settlement ref="pmb50">
-        <placeName type="pref">Wien</placeName>
-        <location><geo>48,208333 16,373056</geo></location>
-      </settlement>
-  </birth><death>
-    <date when="1919-02-23">1919-02-23</date>
-      <settlement ref="pmb50">
-        <placeName type="pref">Wien</placeName>
-        <location><geo>48,208333 16,373056</geo></location>
-      </settlement>
-  </death></person><person xml:id="pmb26079"><persName>
-      <surname>Tizian</surname>
-  </persName><birth>
-    <date when="1488-01-01">zwischen 1488 und 1490</date>
-      <settlement ref="pmb34112">
-        <placeName type="pref">Pieve di Cadore</placeName>
-        <location><geo>46,42302 12,361</geo></location>
-      </settlement>
-  </birth><death>
-    <date when="1576-08-27">1576-08-27</date>
-      <settlement ref="pmb462">
-        <placeName type="pref">Venedig</placeName>
-        <location><geo>45,43713 12,33265</geo></location>
-      </settlement>
-  </death></person><person xml:id="pmb26392"><persName>
-      <forename>Leo</forename>
-      <surname>Van-Jung</surname>
-  </persName><birth>
-    <date when="1866-10-15">1866-10-15</date>
-      <settlement ref="pmb420">
-        <placeName type="pref">Odessa</placeName>
-        <location><geo>46,47747 30,73262</geo></location>
-      </settlement>
-  </birth><death>
-    <date when="1939-07-02">1939-07-02</date>
-      <settlement ref="pmb46637">
-        <placeName type="pref">Riga</placeName>
-        <location><geo>56,946 24,10589</geo></location>
-      </settlement>
-  </death></person><person xml:id="pmb2496" ana="comment"><persName>
-      <forename>Arthur</forename>
-      <surname>Kaufmann</surname>
-  </persName><birth>
-    <date when="1872-04-04">1872-04-04</date>
-      <settlement ref="pmb38876">
-        <placeName type="pref">Iași</placeName>
-        <location><geo>47,16667 27,6</geo></location>
-      </settlement>
-  </birth><death>
-    <date when="1938-07-25">1938-07-25</date>
-      <settlement ref="pmb50">
-        <placeName type="pref">Wien</placeName>
-        <location><geo>48,208333 16,373056</geo></location>
-      </settlement>
-  </death></person><person xml:id="pmb3068" ana="comment"><persName>
-      <forename>Isabella</forename>
-      <surname>Vengerova</surname>
-  </persName><birth>
-    <date when="1877-03-01">1877-03-01</date>
-      <settlement ref="pmb49845">
-        <placeName type="pref">Minsk</placeName>
-        <location><geo>53,9 27,56667</geo></location>
-      </settlement>
-  </birth><death>
-    <date when="1956-02-07">1956-02-07</date>
-      <settlement ref="pmb44053">
-        <placeName type="pref">New York City</placeName>
-        <location><geo>40,71427 -74,00597</geo></location>
-      </settlement>
-  </death></person></listPerson><listBibl><bibl xml:id="pmb59953"><title type="main">La presentazione della Vergine al Tempio</title><title type="namensvariante">Die Präsentation der Jungfrau im Tempel</title><author role="hat-geschaffen" ref="pmb26079">Tizian</author></bibl><bibl xml:id="pmb29903" ana="comment"><title type="main">Zwischenspiel. Komödie in drei Akten</title><title type="werk_arbeitstitel">Neue Ehe</title><title type="werk_arbeitstitel">Das leichte Leben</title><title type="werk_arbeitstitel">Cäcilie Adams</title><title type="werk_arbeitstitel">Adagio</title><title type="werk_arbeitstitel">»Nicht mehr zu dir zu gehn …«</title><title type="legacy-name-merge">Zwischenspiel</title><author role="hat-geschaffen" ref="pmb2121">Schnitzler, Arthur</author></bibl><bibl xml:id="pmb29905" ana="comment"><title type="main">Der Ruf des Lebens. Schauspiel in drei Akten</title><title type="werk_link">http://www.literature.at/viewer.alo?objid=12117&amp;page=1&amp;viewmode=fullscreen</title><title type="werk_arbeitstitel">Vatermörderin</title><title type="legacy-name-merge">Der Ruf des Lebens</title><author role="hat-geschaffen" ref="pmb2121">Schnitzler, Arthur</author></bibl></listBibl><listPlace><place xml:id="pmb168940"><placeName>Edmund-Weiß-Gasse 7</placeName><placeName type="ort_fruherer-name">Spöttelgasse 7</placeName><location type="coords">
-  <geo>48,2304 16,33472</geo>
-</location><location type="located_in_place">
-  <placeName ref="pmb68">XVIII., Währing</placeName>
-  <geo>48,23333 16,31667</geo>
-</location><location type="located_in_place">
-  <placeName ref="pmb533">Währinger Cottage</placeName>
-  <geo>48,233056 16,341944</geo>
-</location><location type="located_in_place">
-  <placeName ref="pmb133">Edmund-Weiß-Gasse</placeName>
-  <geo>48,23056 16,3348</geo>
-</location></place><place xml:id="pmb173"><placeName>Rodaun</placeName><placeName type="legacy-name-merge">Rodaun bei Wien</placeName><placeName type="legacy-name-merge">Rodaun</placeName><placeName type="legacy-name-merge">Rodaun</placeName><location type="coords">
-  <geo>48,132793312328 16,256152195922</geo>
-</location><location type="located_in_place">
-  <placeName ref="pmb41240">Österreich</placeName>
-  <geo>47,33333 13,33333</geo>
-</location><location type="located_in_place">
-  <placeName ref="pmb73">XXIII., Liesing</placeName>
-  <geo>48,13333 16,3</geo>
-</location></place><place xml:id="pmb259"><placeName>Lido</placeName><placeName type="legacy-name-merge">Lido</placeName><location type="coords">
-  <geo>45,38333 12,35</geo>
-</location><location type="located_in_place">
-  <placeName ref="pmb40306">Italien</placeName>
-  <geo>42,83333 12,83333</geo>
-</location><location type="located_in_place">
-  <placeName ref="pmb462">Venedig</placeName>
-  <geo>45,43713 12,33265</geo>
-</location></place><place xml:id="pmb41240"><placeName>Österreich</placeName><placeName type="alternative-name">Republik Österreich</placeName><placeName type="legacy-name-merge">Österreich</placeName><placeName type="alternative-name">Republic of Austria</placeName><placeName type="legacy-name-merge">Österreich</placeName><placeName type="legacy-name-merge">Deutsch Österreich</placeName><placeName type="legacy-name-merge">Altoesterreich</placeName><location type="coords">
-  <geo>47,33333 13,33333</geo>
-</location><location type="located_in_place">
-  <placeName ref="pmb468">Europa</placeName>
-  <geo>48,69096 9,14062</geo>
-</location><location type="located_in_place">
-  <placeName ref="pmb298373">Cisleithanien</placeName>
-  <geo>48,5 16,383333333333333</geo>
-</location><location type="located_in_place">
-  <placeName ref="pmb687">Österreich-Ungarn</placeName>
-  <geo>48,4054 16,4887</geo>
-</location></place><place xml:id="pmb462"><placeName>Venedig</placeName><placeName type="alternative-name">Venedig</placeName><placeName type="legacy-name-merge">Venice</placeName><placeName type="legacy-name-merge">Venedig</placeName><location type="coords">
-  <geo>45,43713 12,33265</geo>
-</location><location type="located_in_place">
-  <placeName ref="pmb40306">Italien</placeName>
-  <geo>42,83333 12,83333</geo>
-</location></place><place xml:id="pmb50"><placeName>Wien</placeName><placeName type="ort_fruherer-name">K.K. Reichshaupt- und Residenzstadt Wien</placeName><placeName type="legacy-name-merge">Wien</placeName><placeName type="alternative-name">Bécs</placeName><placeName type="alternative-name">Land Wien</placeName><placeName type="alternative-name">Vídeň</placeName><placeName type="alternative-name">Wenia</placeName><placeName type="alternative-name">Beč</placeName><placeName type="ort_fruherer-name">Vindobona</placeName><placeName type="legacy-name-merge">Vindobona</placeName><placeName type="alternative-name">Vienna</placeName><placeName type="legacy-name-merge">Vienna</placeName><placeName type="alternative-name">Vienna</placeName><location type="coords">
-  <geo>48,208333 16,373056</geo>
-</location><location type="located_in_place">
-  <placeName ref="pmb41240">Österreich</placeName>
-  <geo>47,33333 13,33333</geo>
-</location></place><place xml:id="pmb40260" ana="comment"><placeName>Bozen</placeName><placeName type="ort_namensvariante">Bolzano</placeName><location type="coords">
-  <geo>46,49067 11,33982</geo>
-</location><location type="located_in_place">
-  <placeName ref="pmb40306">Italien</placeName>
-  <geo>42,83333 12,83333</geo>
-</location></place><place xml:id="pmb40983" ana="comment"><placeName>Grand Hotel des Bains</placeName><location type="coords">
-  <geo>45,413333 12,374722</geo>
-</location><location type="located_in_place">
-  <placeName ref="pmb259">Lido</placeName>
-  <geo>45,38333 12,35</geo>
-</location></place></listPlace><listOrg><org xml:id="pmb44602"><orgName>Accademia di belle arti di Venezia</orgName><location type="located_in_place">
-  <placeName ref="pmb462">Venedig</placeName>
-  <geo>45,43713 12,33265</geo>
-  <idno type="URL" subtype="schnitzler-bahr">https://schnitzler-bahr.acdh.oeaw.ac.at/pmb462.html</idno><idno type="URL" subtype="pmb">https://pmb.acdh.oeaw.ac.at/entity/462/</idno><idno type="URL" subtype="pmb">https://pmb.acdh.oeaw.ac.at/entity/64195/</idno><idno type="URL" subtype="geonames">https://sws.geonames.org/3164603/</idno><idno type="URL" subtype="kraus">https://www.kraus.wienbibliothek.at/legalkraus/pmb462.html</idno><idno type="URL" subtype="pmb">https://pmb.acdh.oeaw.ac.at/entity/97045/</idno><idno type="URL" subtype="d-nb">https://d-nb.info/gnd/4062501-1</idno><idno type="URL" subtype="wikidata">http://www.wikidata.org/entity/Q641</idno><idno type="URL" subtype="wikipedia">https://de.wikipedia.org/wiki/Venedig</idno><idno type="URL" subtype="schnitzler-interviews">https://schnitzler-interviews.acdh.oeaw.ac.at/pmb462.html</idno><idno type="URL" subtype="schnitzler-tagebuch">https://schnitzler-tagebuch.acdh.oeaw.ac.at/pmb462.html</idno><idno type="URL" subtype="wienerschnitzler">https://wienerschnitzler.org/pmb462.html</idno><idno type="URL" subtype="schnitzler-kultur">https://schnitzler-kultur.acdh.oeaw.ac.at/pmb462.html</idno><idno type="URL" subtype="sk">https://sk.acdh.oeaw.ac.at/DWplace00167</idno><idno type="URL" subtype="sk">https://sk.acdh.oeaw.ac.at/pmb462</idno><idno type="URL" subtype="sk">https://sk.acdh.oeaw.ac.at/fa_place00000254</idno><idno type="URL" subtype="biblio">https://biblio.ub.uni-freiburg.de/sf/#pmb462</idno><idno type="URL" subtype="schnitzler-briefe">https://schnitzler-briefe.acdh.oeaw.ac.at/pmb462.html</idno><idno type="URL" subtype="schoenberg-ue">https://www.schoenberg-ue.at/ue/places/place.5.6</idno></location></org></listOrg></back></text>
+      <back>
+         <listPerson>
+            <person xml:id="pmb26392">
+               <persName>
+                  <forename>Leo</forename>
+                  <surname>Van-Jung</surname>
+               </persName>
+               <birth>
+                  <date when="1866-10-15">1866-10-15</date>
+                  <settlement ref="pmb420">
+                     <placeName type="pref">Odessa</placeName>
+                     <location>
+                        <geo>46,47747 30,73262</geo>
+                     </location>
+                  </settlement>
+               </birth>
+               <death>
+                  <date when="1939-07-02">1939-07-02</date>
+                  <settlement ref="pmb46637">
+                     <placeName type="pref">Riga</placeName>
+                     <location>
+                        <geo>56,946 24,10589</geo>
+                     </location>
+                  </settlement>
+               </death>
+            </person>
+            <person xml:id="pmb21766">
+               <persName>
+                  <forename>Franziska</forename>
+                  <surname>Mütter</surname>
+               </persName>
+               <birth>
+                  <date when="1858-05-25">1858-05-25</date>
+                  <settlement ref="pmb50">
+                     <placeName type="pref">Wien</placeName>
+                     <location>
+                        <geo>48,208333 16,373056</geo>
+                     </location>
+                  </settlement>
+               </birth>
+               <death>
+                  <date when="1919-02-23">1919-02-23</date>
+                  <settlement ref="pmb50">
+                     <placeName type="pref">Wien</placeName>
+                     <location>
+                        <geo>48,208333 16,373056</geo>
+                     </location>
+                  </settlement>
+               </death>
+            </person>
+            <person xml:id="pmb10863">
+               <persName>
+                  <forename>Richard</forename>
+                  <surname>Beer-Hofmann</surname>
+               </persName>
+               <birth>
+                  <date when="1866-07-11">1866-07-11</date>
+                  <settlement ref="pmb50">
+                     <placeName type="pref">Wien</placeName>
+                     <location>
+                        <geo>48,208333 16,373056</geo>
+                     </location>
+                  </settlement>
+               </birth>
+               <death>
+                  <date when="1945-09-26">1945-09-26</date>
+                  <settlement ref="pmb44053">
+                     <placeName type="pref">New York City</placeName>
+                     <location>
+                        <geo>40,71427 -74,00597</geo>
+                     </location>
+                  </settlement>
+               </death>
+            </person>
+            <person xml:id="pmb2121">
+               <persName>
+                  <surname>Schnitzler</surname>
+                  <forename>Arthur</forename>
+               </persName>
+               <birth>
+                  <date when="1862-05-15">15. 5. 1862</date>
+                  <settlement ref="pmb50">
+                     <placeName type="pref">Wien</placeName>
+                     <location>
+                        <geo>48,208333 16,373056</geo>
+                     </location>
+                  </settlement>
+               </birth>
+               <death>
+                  <date when="1931-10-21">21. 10. 1931</date>
+                  <settlement ref="pmb50">
+                     <placeName type="pref">Wien</placeName>
+                     <location>
+                        <geo>48,208333 16,373056</geo>
+                     </location>
+                  </settlement>
+               </death>
+            </person>
+            <person xml:id="pmb2173">
+               <persName>
+                  <forename>Olga</forename>
+                  <surname>Schnitzler</surname>
+               </persName>
+               <birth>
+                  <date when="1882-01-17">1882-01-17</date>
+                  <settlement ref="pmb50">
+                     <placeName type="pref">Wien</placeName>
+                     <location>
+                        <geo>48,208333 16,373056</geo>
+                     </location>
+                  </settlement>
+               </birth>
+               <death>
+                  <date when="1970-01-13">1970-01-13</date>
+                  <settlement ref="pmb885">
+                     <placeName type="pref">Lugano</placeName>
+                     <location>
+                        <geo>46,01008 8,96004</geo>
+                     </location>
+                  </settlement>
+               </death>
+            </person>
+            <person xml:id="pmb26079">
+               <persName>
+                  <surname>Tizian</surname>
+               </persName>
+               <birth>
+                  <date when="1488-01-01">zwischen 1488 und 1490</date>
+                  <settlement ref="pmb34112">
+                     <placeName type="pref">Pieve di Cadore</placeName>
+                     <location>
+                        <geo>46,42302 12,361</geo>
+                     </location>
+                  </settlement>
+               </birth>
+               <death>
+                  <date when="1576-08-27">1576-08-27</date>
+                  <settlement ref="pmb462">
+                     <placeName type="pref">Venedig</placeName>
+                     <location>
+                        <geo>45,43713 12,33265</geo>
+                     </location>
+                  </settlement>
+               </death>
+            </person>
+            <person xml:id="pmb3068" ana="comment">
+               <persName>
+                  <forename>Isabella</forename>
+                  <surname>Vengerova</surname>
+               </persName>
+               <birth>
+                  <date when="1877-03-01">1877-03-01</date>
+                  <settlement ref="pmb49845">
+                     <placeName type="pref">Minsk</placeName>
+                     <location>
+                        <geo>53,9 27,56667</geo>
+                     </location>
+                  </settlement>
+               </birth>
+               <death>
+                  <date when="1956-02-07">1956-02-07</date>
+                  <settlement ref="pmb44053">
+                     <placeName type="pref">New York City</placeName>
+                     <location>
+                        <geo>40,71427 -74,00597</geo>
+                     </location>
+                  </settlement>
+               </death>
+            </person>
+            <person xml:id="pmb2496" ana="comment">
+               <persName>
+                  <forename>Arthur</forename>
+                  <surname>Kaufmann</surname>
+               </persName>
+               <birth>
+                  <date when="1872-04-04">1872-04-04</date>
+                  <settlement ref="pmb38876">
+                     <placeName type="pref">Iași</placeName>
+                     <location>
+                        <geo>47,16667 27,6</geo>
+                     </location>
+                  </settlement>
+               </birth>
+               <death>
+                  <date when="1938-07-25">1938-07-25</date>
+                  <settlement ref="pmb50">
+                     <placeName type="pref">Wien</placeName>
+                     <location>
+                        <geo>48,208333 16,373056</geo>
+                     </location>
+                  </settlement>
+               </death>
+            </person>
+         </listPerson>
+         <listBibl>
+            <bibl xml:id="pmb59953">
+               <title>La presentazione della Vergine al Tempio</title>
+               <title type="namensvariante">Die Präsentation der Jungfrau im Tempel</title>
+               <author ref="pmb26079" role="hat-geschaffen">Tizian</author>
+            </bibl>
+            <bibl xml:id="pmb29903" ana="implied">
+               <title>Zwischenspiel. Komödie in drei Akten</title>
+               <title type="werk_arbeitstitel">Neue Ehe</title>
+               <title type="werk_arbeitstitel">Das leichte Leben</title>
+               <title type="werk_arbeitstitel">Cäcilie Adams</title>
+               <title type="werk_arbeitstitel">Adagio</title>
+               <title type="werk_arbeitstitel">»Nicht mehr zu dir zu gehn …«</title>
+               <title type="legacy-name-merge">Zwischenspiel</title>
+               <author ref="pmb2121" role="hat-geschaffen">Schnitzler, Arthur</author>
+            </bibl>
+            <bibl xml:id="pmb29905" ana="implied">
+               <title>Der Ruf des Lebens. Schauspiel in drei Akten</title>
+               <title type="werk_link">http://www.literature.at/viewer.alo?objid=12117&amp;page=1&amp;viewmode=fullscreen</title>
+               <title type="werk_arbeitstitel">Vatermörderin</title>
+               <title type="legacy-name-merge">Der Ruf des Lebens</title>
+               <author ref="pmb2121" role="hat-geschaffen">Schnitzler, Arthur</author>
+            </bibl>
+         </listBibl>
+         <listPlace>
+            <place xml:id="pmb259" ana="comment">
+               <placeName>Lido</placeName>
+               <location type="coords">
+                  <geo>45,38333 12,35</geo>
+               </location>
+               <location type="located_in_place">
+                  <placeName ref="pmb40306">Italien</placeName>
+                  <geo>42,83333 12,83333</geo>
+               </location>
+               <location type="located_in_place">
+                  <placeName ref="pmb462">Venedig</placeName>
+                  <geo>45,43713 12,33265</geo>
+               </location>
+            </place>
+            <place xml:id="pmb168940">
+               <placeName>Edmund-Weiß-Gasse 7</placeName>
+               <placeName type="ort_fruherer-name">Spöttelgasse 7</placeName>
+               <location type="coords">
+                  <geo>48,2304 16,33472</geo>
+               </location>
+               <location type="located_in_place">
+                  <placeName ref="pmb68">XVIII., Währing</placeName>
+                  <geo>48,23333 16,31667</geo>
+               </location>
+               <location type="located_in_place">
+                  <placeName ref="pmb533">Währinger Cottage</placeName>
+                  <geo>48,233056 16,341944</geo>
+               </location>
+               <location type="located_in_place">
+                  <placeName ref="pmb133">Edmund-Weiß-Gasse</placeName>
+                  <geo>48,23056 16,3348</geo>
+               </location>
+            </place>
+            <place xml:id="pmb41240">
+               <placeName>Österreich</placeName>
+               <placeName type="alternative-name">Republik Österreich</placeName>
+               <placeName type="alternative-name">Republic of Austria</placeName>
+               <placeName type="legacy-name-merge">Deutsch Österreich</placeName>
+               <placeName type="legacy-name-merge">Altoesterreich</placeName>
+               <location type="coords">
+                  <geo>47,33333 13,33333</geo>
+               </location>
+               <location type="located_in_place">
+                  <placeName ref="pmb468">Europa</placeName>
+                  <geo>48,69096 9,14062</geo>
+               </location>
+               <location type="located_in_place">
+                  <placeName ref="pmb298373">Cisleithanien</placeName>
+                  <geo>48,5 16,383333333333333</geo>
+               </location>
+               <location type="located_in_place">
+                  <placeName ref="pmb687">Österreich-Ungarn</placeName>
+                  <geo>48,4054 16,4887</geo>
+               </location>
+            </place>
+            <place xml:id="pmb50">
+               <placeName>Wien</placeName>
+               <placeName type="ort_fruherer-name">K.K. Reichshaupt- und Residenzstadt Wien</placeName>
+               <placeName type="alternative-name">Bécs</placeName>
+               <placeName type="alternative-name">Land Wien</placeName>
+               <placeName type="alternative-name">Vídeň</placeName>
+               <placeName type="alternative-name">Wenia</placeName>
+               <placeName type="alternative-name">Beč</placeName>
+               <placeName type="ort_fruherer-name">Vindobona</placeName>
+               <placeName type="alternative-name">Vienna</placeName>
+               <location type="coords">
+                  <geo>48,208333 16,373056</geo>
+               </location>
+               <location type="located_in_place">
+                  <placeName ref="pmb41240">Österreich</placeName>
+                  <geo>47,33333 13,33333</geo>
+               </location>
+               <location type="located_in_place">
+                  <placeName ref="pmb235218">Windmühlhöhe</placeName>
+                  <geo>48,24077 16,32092</geo>
+               </location>
+            </place>
+            <place xml:id="pmb462">
+               <placeName>Venedig</placeName>
+               <placeName type="legacy-name-merge">Venice</placeName>
+               <location type="coords">
+                  <geo>45,43713 12,33265</geo>
+               </location>
+               <location type="located_in_place">
+                  <placeName ref="pmb40306">Italien</placeName>
+                  <geo>42,83333 12,83333</geo>
+               </location>
+            </place>
+            <place xml:id="pmb173">
+               <placeName>Rodaun</placeName>
+               <placeName type="legacy-name-merge">Rodaun bei Wien</placeName>
+               <location type="coords">
+                  <geo>48,132793312328 16,256152195922</geo>
+               </location>
+               <location type="located_in_place">
+                  <placeName ref="pmb41240">Österreich</placeName>
+                  <geo>47,33333 13,33333</geo>
+               </location>
+               <location type="located_in_place">
+                  <placeName ref="pmb73">XXIII., Liesing</placeName>
+                  <geo>48,13333 16,3</geo>
+               </location>
+            </place>
+            <place xml:id="pmb40260" ana="comment">
+               <placeName>Bozen</placeName>
+               <placeName type="ort_namensvariante">Bolzano</placeName>
+               <location type="coords">
+                  <geo>46,49067 11,33982</geo>
+               </location>
+               <location type="located_in_place">
+                  <placeName ref="pmb40306">Italien</placeName>
+                  <geo>42,83333 12,83333</geo>
+               </location>
+            </place>
+            <place xml:id="pmb40983" ana="comment">
+               <placeName>Grand Hotel des Bains</placeName>
+               <location type="coords">
+                  <geo>45,413333 12,374722</geo>
+               </location>
+               <location type="located_in_place">
+                  <placeName ref="pmb259">Lido</placeName>
+                  <geo>45,38333 12,35</geo>
+               </location>
+            </place>
+         </listPlace>
+         <listOrg>
+            <org xml:id="pmb44602">
+               <orgName>Accademia di belle arti di Venezia</orgName>
+               <location type="located_in_place">
+                  <placeName ref="pmb462">Venedig</placeName>
+                  <geo>45,43713 12,33265</geo>
+                  <idno type="URL" subtype="schnitzler-bahr">https://schnitzler-bahr.acdh.oeaw.ac.at/pmb462.html</idno>
+                  <idno type="URL" subtype="pmb">https://pmb.acdh.oeaw.ac.at/entity/462/</idno>
+                  <idno type="URL" subtype="pmb">https://pmb.acdh.oeaw.ac.at/entity/64195/</idno>
+                  <idno type="URL" subtype="geonames">https://sws.geonames.org/3164603/</idno>
+                  <idno type="URL" subtype="www">https://www.kraus.wienbibliothek.at/legalkraus/pmb462.html</idno>
+                  <idno type="URL" subtype="pmb">https://pmb.acdh.oeaw.ac.at/entity/97045/</idno>
+                  <idno type="URL" subtype="d-nb">https://d-nb.info/gnd/4062501-1</idno>
+                  <idno type="URL" subtype="wikidata">http://www.wikidata.org/entity/Q641</idno>
+                  <idno type="URL" subtype="wikipedia">https://de.wikipedia.org/wiki/Venedig</idno>
+                  <idno type="URL" subtype="schnitzler-interviews">https://schnitzler-interviews.acdh.oeaw.ac.at/pmb462.html</idno>
+                  <idno type="URL" subtype="schnitzler-tagebuch">https://schnitzler-tagebuch.acdh.oeaw.ac.at/pmb462.html</idno>
+                  <idno type="URL" subtype="wienerschnitzler">https://wienerschnitzler.org/pmb462.html</idno>
+                  <idno type="URL" subtype="schnitzler-kultur">https://schnitzler-kultur.acdh.oeaw.ac.at/pmb462.html</idno>
+                  <idno type="URL" subtype="sk">https://sk.acdh.oeaw.ac.at/DWplace00167</idno>
+                  <idno type="URL" subtype="sk">https://sk.acdh.oeaw.ac.at/pmb462</idno>
+                  <idno type="URL" subtype="sk">https://sk.acdh.oeaw.ac.at/fa_place00000254</idno>
+                  <idno type="URL" subtype="biblio">https://biblio.ub.uni-freiburg.de/sf/#pmb462</idno>
+                  <idno type="URL" subtype="schnitzler-briefe">https://schnitzler-briefe.acdh.oeaw.ac.at/pmb462.html</idno>
+                  <idno type="URL" subtype="www">https://www.schoenberg-ue.at/ue/places/place.5.6</idno>
+               </location>
+            </org>
+         </listOrg>
+         <listEvent>
+            <event xml:id="pmb184012" ana="comment">
+               <eventName n="Private Lesung">Private Lesung von Der Ruf des Lebens, 12.8.1905</eventName>
+               <listPlace>
+                  <place>
+                     <placeName role="veranstaltet in" ref="pmb168940">Edmund-Weiß-Gasse 7</placeName>
+                     <location>
+                        <geo>48,2304 16,33472</geo>
+                     </location>
+                  </place>
+               </listPlace>
+            </event>
+            <event xml:id="pmb184006" ana="comment">
+               <eventName n="Private Lesung">Private Lesung von Zwischenspiel, 12.8.1905</eventName>
+               <listPlace>
+                  <place>
+                     <placeName role="veranstaltet in" ref="pmb168940">Edmund-Weiß-Gasse 7</placeName>
+                     <location>
+                        <geo>48,2304 16,33472</geo>
+                     </location>
+                  </place>
+               </listPlace>
+            </event>
+         </listEvent>
+      </back>
+   </text>
 </TEI>

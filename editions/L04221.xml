@@ -1,6 +1,10 @@
-<?xml version='1.0' encoding='UTF-8'?>
+<?xml version="1.0" encoding="UTF-8"?>
 <?xml-model href="../meta/schnitzler-briefe-schematron.sch" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
-<TEI xmlns="http://www.tei-c.org/ns/1.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.tei-c.org/ns/1.0 ../meta/schnitzler-briefe-schema.xsd" xml:base="https://id.acdh.oeaw.ac.at/schnitzler/schnitzler-briefe/editions" xml:id="L04221">
+<TEI xmlns="http://www.tei-c.org/ns/1.0"
+     xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+     xsi:schemaLocation="http://www.tei-c.org/ns/1.0 ../meta/schnitzler-briefe-schema.xsd"
+     xml:base="https://id.acdh.oeaw.ac.at/schnitzler/schnitzler-briefe/editions"
+     xml:id="L04221">
    <teiHeader>
       <fileDesc>
          <titleStmt>
@@ -92,7 +96,7 @@
                               <extent>
                                  <measure unit="seite" quantity="2"/>
                                  <measure unit="blatt" quantity="1"/>
-                                 <measure unit="zeichenanzahl" quantity="793"/>
+                                 <measure unit="zeichenanzahl" quantity="792"/>
                               </extent>
                            </supportDesc>
                         </objectDesc>
@@ -127,11 +131,16 @@
                <date evidence="conjecture" notBefore="1908-01-18" notAfter="1908-01-22">[18. 1. 1908 – 22. 1. 1908?]</date>
                <placeName ref="#pmb50" evidence="conjecture">Wien</placeName>
             </correspAction>
-            <correspContext><ref type="belongsToCorrespondence" target="correspondence_260732">Holzer, Marie</ref>
+            <correspContext>
+               <ref type="belongsToCorrespondence" target="correspondence_260732">Holzer, Marie</ref>
                <ref subtype="previous_letter" type="withinCollection" target="L01753">Hofmannsthal an Schnitzler, 17. 1. 1908</ref>
                <ref subtype="next_letter" type="withinCollection" target="L01754">Kraus an Schnitzler, 20. 1. 1908</ref>
-               <ref subtype="next_letter" type="withinCorrespondence" source="correspondence_260732" target="L04220">Holzer an Schnitzler, 23. 4. 1908</ref>
-            </correspContext></correspDesc>
+               <ref subtype="next_letter"
+                    type="withinCorrespondence"
+                    source="correspondence_260732"
+                    target="L04220">Holzer an Schnitzler, 23. 4. 1908</ref>
+            </correspContext>
+         </correspDesc>
       </profileDesc>
       <revisionDesc status="candidate">
          <change who="MAM" when="2026-01-12">Export aus
@@ -192,34 +201,6 @@
       </body>
       <back>
          <listPerson>
-            <person xml:id="pmb2121">
-               <persName>
-                  <surname>Schnitzler</surname>
-                  <forename>Arthur</forename>
-               </persName>
-               <birth>
-                  <date when="1862-05-15">15. 5. 1862</date>
-                  <settlement ref="pmb50">
-                     <placeName type="pref">Wien</placeName>
-                     <location>
-                        <geo>48,208333 16,373056</geo>
-                     </location>
-                  </settlement>
-               </birth>
-               <death>
-                  <date when="1931-10-21">21. 10. 1931</date>
-                  <settlement ref="pmb50">
-                     <placeName type="pref">Wien</placeName>
-                     <location>
-                        <geo>48,208333 16,373056</geo>
-                     </location>
-                  </settlement>
-               </death>
-               <sex value="male"/>
-               <occupation ref="pmb90">Schriftsteller/Schriftstellerin</occupation>
-               <occupation ref="pmb97">Mediziner/Medizinerin</occupation>
-               <idno type="gnd">https://d-nb.info/gnd/118609807/</idno>
-            </person>
             <person xml:id="pmb260732">
                <persName>
                   <forename>Marie</forename>
@@ -240,6 +221,30 @@
                      <placeName type="pref">Innsbruck</placeName>
                      <location>
                         <geo>47,272569 11,389534</geo>
+                     </location>
+                  </settlement>
+               </death>
+            </person>
+            <person xml:id="pmb2121">
+               <persName>
+                  <surname>Schnitzler</surname>
+                  <forename>Arthur</forename>
+               </persName>
+               <birth>
+                  <date when="1862-05-15">15. 5. 1862</date>
+                  <settlement ref="pmb50">
+                     <placeName type="pref">Wien</placeName>
+                     <location>
+                        <geo>48,208333 16,373056</geo>
+                     </location>
+                  </settlement>
+               </birth>
+               <death>
+                  <date when="1931-10-21">21. 10. 1931</date>
+                  <settlement ref="pmb50">
+                     <placeName type="pref">Wien</placeName>
+                     <location>
+                        <geo>48,208333 16,373056</geo>
                      </location>
                   </settlement>
                </death>
@@ -265,21 +270,57 @@
          </listPerson>
          <listBibl>
             <bibl xml:id="pmb41507">
-               <title type="main">Prager Tagblatt</title>
+               <title>Prager Tagblatt</title>
                <title type="werk_link">https://anno.onb.ac.at/cgi-content/anno?aid=ptb</title>
             </bibl>
-            <bibl xml:id="pmb333996" ana="comment">
-               <title type="main">Arthur Schnitzler</title>
+            <bibl xml:id="pmb333996" ana="implied">
+               <title>Arthur Schnitzler</title>
                <title type="werk_link">https://anno.onb.ac.at/cgi-content/anno?aid=ptb&amp;datum=19080117&amp;seite=8&amp;zoom=33</title>
                <title type="werk_bibliografische-angabe">Marie Holzer: Arthur Schnitzler. In: Prager Tagblatt, Jg. 32, Nr. 16, 17. 1. 1908, Morgen-Ausgabe, S. 8</title>
-               <author role="hat-geschaffen" ref="pmb260732">Holzer, Marie</author>
+               <author ref="pmb260732" role="hat-geschaffen">Holzer, Marie</author>
             </bibl>
          </listBibl>
          <listPlace>
+            <place xml:id="pmb652">
+               <placeName>Prag</placeName>
+               <placeName type="alternative-name">Hauptstadt Prag</placeName>
+               <placeName type="legacy-name-merge">Prag-Smichow</placeName>
+               <placeName type="legacy-name-merge">Bohnitz bei Prag</placeName>
+               <placeName type="legacy-name-merge">Prag-Dejwitz</placeName>
+               <placeName type="legacy-name-merge">Hlavní město Praha</placeName>
+               <placeName type="legacy-name-merge">Prague</placeName>
+               <location type="coords">
+                  <geo>50,08333 14,46667</geo>
+               </location>
+               <location type="located_in_place">
+                  <placeName ref="pmb43430">Tschechien</placeName>
+                  <geo>49,75 15,0</geo>
+               </location>
+            </place>
+            <place xml:id="pmb50">
+               <placeName>Wien</placeName>
+               <placeName type="ort_fruherer-name">K.K. Reichshaupt- und Residenzstadt Wien</placeName>
+               <placeName type="alternative-name">Bécs</placeName>
+               <placeName type="alternative-name">Land Wien</placeName>
+               <placeName type="alternative-name">Vídeň</placeName>
+               <placeName type="alternative-name">Wenia</placeName>
+               <placeName type="alternative-name">Beč</placeName>
+               <placeName type="ort_fruherer-name">Vindobona</placeName>
+               <placeName type="alternative-name">Vienna</placeName>
+               <location type="coords">
+                  <geo>48,208333 16,373056</geo>
+               </location>
+               <location type="located_in_place">
+                  <placeName ref="pmb41240">Österreich</placeName>
+                  <geo>47,33333 13,33333</geo>
+               </location>
+               <location type="located_in_place">
+                  <placeName ref="pmb235218">Windmühlhöhe</placeName>
+                  <geo>48,24077 16,32092</geo>
+               </location>
+            </place>
             <place xml:id="pmb19912">
                <placeName>Vinohrady</placeName>
-               <placeName type="legacy-name-merge">Vinohrady</placeName>
-               <placeName type="legacy-name-merge">Vinohrady</placeName>
                <placeName type="ort_fruherer-name">Weinberge</placeName>
                <location type="coords">
                   <geo>50,075556 14,445833</geo>
@@ -304,45 +345,6 @@
                   <geo>50,08333 14,46667</geo>
                </location>
             </place>
-            <place xml:id="pmb50">
-               <placeName>Wien</placeName>
-               <placeName type="ort_fruherer-name">K.K. Reichshaupt- und Residenzstadt Wien</placeName>
-               <placeName type="legacy-name-merge">Wien</placeName>
-               <placeName type="alternative-name">Bécs</placeName>
-               <placeName type="alternative-name">Land Wien</placeName>
-               <placeName type="alternative-name">Vídeň</placeName>
-               <placeName type="alternative-name">Wenia</placeName>
-               <placeName type="alternative-name">Beč</placeName>
-               <placeName type="ort_fruherer-name">Vindobona</placeName>
-               <placeName type="legacy-name-merge">Vindobona</placeName>
-               <placeName type="alternative-name">Vienna</placeName>
-               <placeName type="legacy-name-merge">Vienna</placeName>
-               <placeName type="alternative-name">Vienna</placeName>
-               <location type="coords">
-                  <geo>48,208333 16,373056</geo>
-               </location>
-               <location type="located_in_place">
-                  <placeName ref="pmb41240">Österreich</placeName>
-                  <geo>47,33333 13,33333</geo>
-               </location>
-            </place>
-            <place xml:id="pmb652">
-               <placeName>Prag</placeName>
-               <placeName type="alternative-name">Hauptstadt Prag</placeName>
-               <placeName type="legacy-name-merge">Prag</placeName>
-               <placeName type="legacy-name-merge">Prag-Smichow</placeName>
-               <placeName type="legacy-name-merge">Bohnitz bei Prag</placeName>
-               <placeName type="legacy-name-merge">Prag-Dejwitz</placeName>
-               <placeName type="legacy-name-merge">Hlavní město Praha</placeName>
-               <placeName type="legacy-name-merge">Prague</placeName>
-               <location type="coords">
-                  <geo>50,08333 14,46667</geo>
-               </location>
-               <location type="located_in_place">
-                  <placeName ref="pmb43430">Tschechien</placeName>
-                  <geo>49,75 15,0</geo>
-               </location>
-            </place>
          </listPlace>
          <listOrg>
             <org xml:id="pmb29677">
@@ -358,7 +360,7 @@
                   <idno type="URL" subtype="pmb">https://pmb.acdh.oeaw.ac.at/entity/20954/</idno>
                   <idno type="URL" subtype="pmb">https://pmb.acdh.oeaw.ac.at/entity/65221/</idno>
                   <idno type="URL" subtype="pmb">https://pmb.acdh.oeaw.ac.at/entity/65223/</idno>
-                  <idno type="URL" subtype="kraus">https://www.kraus.wienbibliothek.at/legalkraus/pmb50.html</idno>
+                  <idno type="URL" subtype="www">https://www.kraus.wienbibliothek.at/legalkraus/pmb50.html</idno>
                   <idno type="URL" subtype="wikidata">http://www.wikidata.org/entity/Q1741</idno>
                   <idno type="URL" subtype="wikipedia">https://de.wikipedia.org/wiki/Wien</idno>
                   <idno type="URL" subtype="schnitzler-interviews">https://schnitzler-interviews.acdh.oeaw.ac.at/pmb50.html</idno>
@@ -372,7 +374,7 @@
                   <idno type="URL" subtype="sk">https://sk.acdh.oeaw.ac.at/DWplace00085</idno>
                   <idno type="URL" subtype="biblio">https://biblio.ub.uni-freiburg.de/sf/#pmb50</idno>
                   <idno type="URL" subtype="schnitzler-briefe">https://schnitzler-briefe.acdh.oeaw.ac.at/pmb50.html</idno>
-                  <idno type="URL" subtype="schoenberg-ue">https://www.schoenberg-ue.at/ue/places/place.9.11</idno>
+                  <idno type="URL" subtype="www">https://www.schoenberg-ue.at/ue/places/place.9.11</idno>
                </location>
             </org>
          </listOrg>

@@ -1,6 +1,10 @@
-<?xml version='1.0' encoding='UTF-8'?>
+<?xml version="1.0" encoding="UTF-8"?>
 <?xml-model href="../meta/schnitzler-briefe-schematron.sch" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
-<TEI xmlns="http://www.tei-c.org/ns/1.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.tei-c.org/ns/1.0 ../meta/schnitzler-briefe-schema.xsd" xml:base="https://id.acdh.oeaw.ac.at/schnitzler/schnitzler-briefe/editions" xml:id="L04227">
+<TEI xmlns="http://www.tei-c.org/ns/1.0"
+     xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+     xsi:schemaLocation="http://www.tei-c.org/ns/1.0 ../meta/schnitzler-briefe-schema.xsd"
+     xml:base="https://id.acdh.oeaw.ac.at/schnitzler/schnitzler-briefe/editions"
+     xml:id="L04227">
    <teiHeader>
       <fileDesc>
          <titleStmt>
@@ -112,12 +116,20 @@
                   – 27. 6. 1900?]</date>
                <placeName ref="#pmb50" evidence="conjecture">Wien</placeName>
             </correspAction>
-            <correspContext><ref type="belongsToCorrespondence" target="correspondence_9941">Sosnosky, Theodor von</ref>
+            <correspContext>
+               <ref type="belongsToCorrespondence" target="correspondence_9941">Sosnosky, Theodor von</ref>
                <ref subtype="previous_letter" type="withinCollection" target="L02921">Goldmann an Schnitzler, 21. 6. [1900]</ref>
                <ref subtype="next_letter" type="withinCollection" target="L01049">Rodenberg an Schnitzler, 23. 6. 1900</ref>
-               <ref subtype="previous_letter" type="withinCorrespondence" source="correspondence_9941" target="L04226">Sosnosky an Schnitzler, 29. 1. 1900</ref>
-               <ref subtype="next_letter" type="withinCorrespondence" source="correspondence_9941" target="L04228">Sosnosky an Schnitzler, 24. 1. 1901</ref>
-            </correspContext></correspDesc>
+               <ref subtype="previous_letter"
+                    type="withinCorrespondence"
+                    source="correspondence_9941"
+                    target="L04226">Sosnosky an Schnitzler, 29. 1. 1900</ref>
+               <ref subtype="next_letter"
+                    type="withinCorrespondence"
+                    source="correspondence_9941"
+                    target="L04228">Sosnosky an Schnitzler, 24. 1. 1901</ref>
+            </correspContext>
+         </correspDesc>
       </profileDesc>
       <revisionDesc status="proposed">
          <change who="SJ" when="2026-02-17">Export aus Transkribus</change>
@@ -278,6 +290,54 @@
       </body>
       <back>
          <listPerson>
+            <person xml:id="pmb9941">
+               <persName>
+                  <forename>Theodor von</forename>
+                  <surname>Sosnosky</surname>
+               </persName>
+               <birth>
+                  <date when="1866-01-04">1866-01-04</date>
+                  <settlement ref="pmb43471">
+                     <placeName type="pref">Budapest</placeName>
+                     <location>
+                        <geo>47,49835 19,04045</geo>
+                     </location>
+                  </settlement>
+               </birth>
+               <death>
+                  <date when="1943-02-13">1943-02-13</date>
+                  <settlement ref="pmb50">
+                     <placeName type="pref">Wien</placeName>
+                     <location>
+                        <geo>48,208333 16,373056</geo>
+                     </location>
+                  </settlement>
+               </death>
+            </person>
+            <person xml:id="pmb2121">
+               <persName>
+                  <surname>Schnitzler</surname>
+                  <forename>Arthur</forename>
+               </persName>
+               <birth>
+                  <date when="1862-05-15">15. 5. 1862</date>
+                  <settlement ref="pmb50">
+                     <placeName type="pref">Wien</placeName>
+                     <location>
+                        <geo>48,208333 16,373056</geo>
+                     </location>
+                  </settlement>
+               </birth>
+               <death>
+                  <date when="1931-10-21">21. 10. 1931</date>
+                  <settlement ref="pmb50">
+                     <placeName type="pref">Wien</placeName>
+                     <location>
+                        <geo>48,208333 16,373056</geo>
+                     </location>
+                  </settlement>
+               </death>
+            </person>
             <person xml:id="pmb12740">
                <persName>
                   <forename>Gustav</forename>
@@ -298,106 +358,6 @@
                      <placeName type="pref">Wien</placeName>
                      <location>
                         <geo>48,208333 16,373056</geo>
-                     </location>
-                  </settlement>
-               </death>
-            </person>
-            <person xml:id="pmb181519">
-               <persName>
-                  <forename>Alexander von</forename>
-                  <surname>Weismayr</surname>
-               </persName>
-               <birth>
-                  <date when="1867-09-24">1867-09-24</date>
-                  <settlement ref="pmb50">
-                     <placeName type="pref">Wien</placeName>
-                     <location>
-                        <geo>48,208333 16,373056</geo>
-                     </location>
-                  </settlement>
-               </birth>
-               <death>
-                  <date when="1907-03-10">1907-03-10</date>
-                  <settlement ref="pmb50">
-                     <placeName type="pref">Wien</placeName>
-                     <location>
-                        <geo>48,208333 16,373056</geo>
-                     </location>
-                  </settlement>
-               </death>
-            </person>
-            <person xml:id="pmb2121">
-               <persName>
-                  <surname>Schnitzler</surname>
-                  <forename>Arthur</forename>
-               </persName>
-               <birth>
-                  <date when="1862-05-15">15. 5. 1862</date>
-                  <settlement ref="pmb50">
-                     <placeName type="pref">Wien</placeName>
-                     <location>
-                        <geo>48,208333 16,373056</geo>
-                     </location>
-                  </settlement>
-               </birth>
-               <death>
-                  <date when="1931-10-21">21. 10. 1931</date>
-                  <settlement ref="pmb50">
-                     <placeName type="pref">Wien</placeName>
-                     <location>
-                        <geo>48,208333 16,373056</geo>
-                     </location>
-                  </settlement>
-               </death>
-               <sex value="male"/>
-               <occupation ref="pmb90">Schriftsteller/Schriftstellerin</occupation>
-               <occupation ref="pmb97">Mediziner/Medizinerin</occupation>
-               <idno type="gnd">https://d-nb.info/gnd/118609807/</idno>
-            </person>
-            <person xml:id="pmb2780">
-               <persName>
-                  <forename>Margarete von Navarra</forename>
-                  <surname>Navarra</surname>
-               </persName>
-               <birth>
-                  <date when="1492-04-11">1492-04-11</date>
-                  <settlement ref="pmb49874">
-                     <placeName type="pref">Angoulême</placeName>
-                     <location>
-                        <geo>45,64997 0,15345</geo>
-                     </location>
-                  </settlement>
-               </birth>
-               <death>
-                  <date when="1549-12-21">1549-12-21</date>
-                  <settlement ref="pmb54883">
-                     <placeName type="pref">Odos</placeName>
-                     <location>
-                        <geo>43,19575 0,0574</geo>
-                     </location>
-                  </settlement>
-               </death>
-            </person>
-            <person xml:id="pmb3379">
-               <persName>
-                  <forename>Albert</forename>
-                  <surname>Langen</surname>
-               </persName>
-               <birth>
-                  <date when="1869-07-08">1869-07-08</date>
-                  <settlement ref="pmb995">
-                     <placeName type="pref">Antwerpen</placeName>
-                     <location>
-                        <geo>51,2663 4,37077</geo>
-                     </location>
-                  </settlement>
-               </birth>
-               <death>
-                  <date when="1909-04-30">1909-04-30</date>
-                  <settlement ref="pmb45258">
-                     <placeName type="pref">München</placeName>
-                     <location>
-                        <geo>48,13743 11,57549</geo>
                      </location>
                   </settlement>
                </death>
@@ -426,26 +386,74 @@
                   </settlement>
                </death>
             </person>
-            <person xml:id="pmb9941">
+            <person xml:id="pmb2780">
                <persName>
-                  <forename>Theodor von</forename>
-                  <surname>Sosnosky</surname>
+                  <forename>Margarete von Navarra</forename>
+                  <surname>Navarra</surname>
                </persName>
                <birth>
-                  <date when="1866-01-04">1866-01-04</date>
-                  <settlement ref="pmb43471">
-                     <placeName type="pref">Budapest</placeName>
+                  <date when="1492-04-11">1492-04-11</date>
+                  <settlement ref="pmb49874">
+                     <placeName type="pref">Angoulême</placeName>
                      <location>
-                        <geo>47,49835 19,04045</geo>
+                        <geo>45,64997 0,15345</geo>
                      </location>
                   </settlement>
                </birth>
                <death>
-                  <date when="1943-02-13">1943-02-13</date>
+                  <date when="1549-12-21">1549-12-21</date>
+                  <settlement ref="pmb54883">
+                     <placeName type="pref">Odos</placeName>
+                     <location>
+                        <geo>43,19575 0,0574</geo>
+                     </location>
+                  </settlement>
+               </death>
+            </person>
+            <person xml:id="pmb181519">
+               <persName>
+                  <forename>Alexander von</forename>
+                  <surname>Weismayr</surname>
+               </persName>
+               <birth>
+                  <date when="1867-09-24">1867-09-24</date>
                   <settlement ref="pmb50">
                      <placeName type="pref">Wien</placeName>
                      <location>
                         <geo>48,208333 16,373056</geo>
+                     </location>
+                  </settlement>
+               </birth>
+               <death>
+                  <date when="1907-03-10">1907-03-10</date>
+                  <settlement ref="pmb50">
+                     <placeName type="pref">Wien</placeName>
+                     <location>
+                        <geo>48,208333 16,373056</geo>
+                     </location>
+                  </settlement>
+               </death>
+            </person>
+            <person xml:id="pmb3379">
+               <persName>
+                  <forename>Albert</forename>
+                  <surname>Langen</surname>
+               </persName>
+               <birth>
+                  <date when="1869-07-08">1869-07-08</date>
+                  <settlement ref="pmb995">
+                     <placeName type="pref">Antwerpen</placeName>
+                     <location>
+                        <geo>51,2663 4,37077</geo>
+                     </location>
+                  </settlement>
+               </birth>
+               <death>
+                  <date when="1909-04-30">1909-04-30</date>
+                  <settlement ref="pmb45258">
+                     <placeName type="pref">München</placeName>
+                     <location>
+                        <geo>48,13743 11,57549</geo>
                      </location>
                   </settlement>
                </death>
@@ -483,91 +491,76 @@
          </listPerson>
          <listBibl>
             <bibl xml:id="pmb142595">
-               <title type="main">Decamerone</title>
+               <title>Decamerone</title>
                <title type="werk_link">https://it.wikisource.org/wiki/Decameron</title>
-               <author role="hat-geschaffen" ref="pmb60111">Boccaccio, Giovanni</author>
-            </bibl>
-            <bibl xml:id="pmb29855">
-               <title type="main">Reigen. Zehn Dialoge</title>
-               <title type="werk_link">https://www.digital.wienbibliothek.at/wbrobv/content/pageview/2587756</title>
-               <title type="legacy-name-merge">Reigen</title>
-               <author role="hat-geschaffen" ref="pmb2121">Schnitzler, Arthur</author>
+               <author ref="pmb60111" role="hat-geschaffen">Boccaccio, Giovanni</author>
             </bibl>
             <bibl xml:id="pmb30367">
-               <title type="main">Heptameron</title>
+               <title>Heptameron</title>
                <title type="legacy-name-merge">Das Heptameron</title>
-               <author role="hat-geschaffen" ref="pmb2780">Navarra, Margarete von Navarra</author>
+               <author ref="pmb2780" role="hat-geschaffen">Navarra, Margarete von Navarra</author>
             </bibl>
-            <bibl xml:id="pmb334898">
-               <title type="main">Norddeutsche Allgemeine Zeitung</title>
-               <title type="werk_namensvariante">Deutsche Allgemeine Zeitung</title>
+            <bibl xml:id="pmb29855">
+               <title>Reigen. Zehn Dialoge</title>
+               <title type="werk_link">https://www.digital.wienbibliothek.at/wbrobv/content/pageview/2587756</title>
+               <title type="legacy-name-merge">Reigen</title>
+               <author ref="pmb2121" role="hat-geschaffen">Schnitzler, Arthur</author>
+            </bibl>
+            <bibl xml:id="pmb334976">
+               <title>Lettres de femmes</title>
+               <author ref="pmb9386" role="hat-geschaffen">Prévost, Marcel</author>
             </bibl>
             <bibl xml:id="pmb334964">
-               <title type="main">»Jung-Wien«. Studienblätter</title>
+               <title>»Jung-Wien«. Studienblätter</title>
                <title type="werk_bibliografische-angabe">»Jung-Wien«. Studienblätter von Theodor v. Sosnosky. In: Beilage zur Norddeutschen Allgemeinen Zeitung, Jg. 40, Nr. 17a, 20.1.1901, S. [1]–2, Nr. 22, 26.1.1901, S. [1], Nr. 29a, 23.2.1901, S. [1]–2.</title>
                <title type="werk_link">https://www.deutsche-digitale-bibliothek.de/newspaper/item/VYOMCNCDWAG57FOL4KKYEXW5V5VGDRPS?query=Sosnosky&amp;issuepage=3</title>
                <title type="werk_link">https://www.deutsche-digitale-bibliothek.de/newspaper/item/2ESD4RZGARSV54MX5RZODEPAV45MMTBQ?issuepage=5</title>
                <title type="werk_link">https://schnitzler-zeitungen.acdh.oeaw.ac.at/224251_0001.html</title>
-               <author role="hat-geschaffen" ref="pmb9941">Sosnosky, Theodor von</author>
+               <author ref="pmb9941" role="hat-geschaffen">Sosnosky, Theodor von</author>
             </bibl>
-            <bibl xml:id="pmb334976">
-               <title type="main">Lettres de femmes</title>
-               <author role="hat-geschaffen" ref="pmb9386">Prévost, Marcel</author>
+            <bibl xml:id="pmb334898">
+               <title>Norddeutsche Allgemeine Zeitung</title>
+               <title type="werk_namensvariante">Deutsche Allgemeine Zeitung</title>
             </bibl>
             <bibl xml:id="pmb334957" ana="comment">
-               <title type="main">Artur Schnitzler als Lyriker. Ein Gedenkblatt zu seinem 70. Geburtstag</title>
+               <title>Artur Schnitzler als Lyriker. Ein Gedenkblatt zu seinem 70. Geburtstag</title>
                <title type="werk_bibliografische-angabe">Theodor v. Sosnosky: Artur Schnitzler als Lyriker. Ein Gedenkblatt zu seinem 70. Geburtstag. In: Neues Wiener Journal, Nr. 13.825, 18.5.1932, S. 6–7</title>
                <title type="werk_link">https://anno.onb.ac.at/cgi-content/anno?aid=nwj&amp;datum=19320518&amp;seite=6</title>
-               <author role="hat-geschaffen" ref="pmb9941">Sosnosky, Theodor von</author>
-            </bibl>
-            <bibl xml:id="pmb334978" ana="comment">
-               <title type="main">Pariserinnen</title>
-               <title type="werk_bibliografische-angabe">Marcel Prévost: Pariserinnen. Autorisirte Übersetzung aus dem französischen von A.L., Paris und Leipzig: Albert Langen 1895</title>
-               <author role="hat-geschaffen" ref="pmb9386">Prévost, Marcel</author>
+               <author ref="pmb9941" role="hat-geschaffen">Sosnosky, Theodor von</author>
             </bibl>
             <bibl xml:id="pmb36376" ana="comment">
-               <title type="main">Neues Wiener Journal</title>
+               <title>Neues Wiener Journal</title>
                <title type="werk_link">http://anno.onb.ac.at/cgi-content/anno?aid=nwj</title>
             </bibl>
-            <bibl xml:id="pmb30181" ana="implied">
-               <title type="main">Anfang vom Ende</title>
-               <title type="werk_bibliografische-angabe">Deutsche Dichtung, Bd. 12, Nr. 8, 15. 7. 1892, S. 192</title>
-               <title type="werk_link">https://archive.org/details/bub_gb_Pz0VAAAAYAAJ/page/n204/mode/1up</title>
-               <author role="hat-geschaffen" ref="pmb2121">Schnitzler, Arthur</author>
+            <bibl xml:id="pmb334978" ana="comment">
+               <title>Pariserinnen</title>
+               <title type="werk_bibliografische-angabe">Marcel Prévost: Pariserinnen. Autorisirte Übersetzung aus dem französischen von A.L., Paris und Leipzig: Albert Langen 1895</title>
+               <author ref="pmb9386" role="hat-geschaffen">Prévost, Marcel</author>
             </bibl>
             <bibl xml:id="pmb334903" ana="implied">
-               <title type="main">Die deutsche Lyrik des 19. Jahrhunderts. Eine poetische Revue</title>
+               <title>Die deutsche Lyrik des 19. Jahrhunderts. Eine poetische Revue</title>
                <title type="werk_link">https://babel.hathitrust.org/cgi/pt?id=nyp.33433075759476&amp;seq=415</title>
-               <author role="hat-herausgegeben" ref="pmb9941">Sosnosky, Theodor von</author>
+               <author ref="pmb9941" role="hat-herausgegeben">Sosnosky, Theodor von</author>
             </bibl>
             <bibl xml:id="pmb334908" ana="implied">
-               <title type="main">Wie wir so still</title>
-               <author role="hat-geschaffen" ref="pmb2121">Schnitzler, Arthur</author>
+               <title>Wie wir so still</title>
+               <author ref="pmb2121" role="hat-geschaffen">Schnitzler, Arthur</author>
+            </bibl>
+            <bibl xml:id="pmb30181" ana="implied">
+               <title>Anfang vom Ende</title>
+               <title type="werk_bibliografische-angabe">Deutsche Dichtung, Bd. 12, Nr. 8, 15. 7. 1892, S. 192</title>
+               <title type="werk_link">https://archive.org/details/bub_gb_Pz0VAAAAYAAJ/page/n204/mode/1up</title>
+               <author ref="pmb2121" role="hat-geschaffen">Schnitzler, Arthur</author>
             </bibl>
             <bibl xml:id="pmb33560" ana="implied">
-               <title type="main">Ohnmacht</title>
+               <title>Ohnmacht</title>
                <title type="werk_bibliografische-angabe">Die Gesellschaft, Jg. 9, H. 9, 1. 9. 1893</title>
-               <author role="hat-geschaffen" ref="pmb2121">Schnitzler, Arthur</author>
+               <author ref="pmb2121" role="hat-geschaffen">Schnitzler, Arthur</author>
             </bibl>
          </listBibl>
          <listPlace>
-            <place xml:id="pmb166">
-               <placeName>Frankreich</placeName>
-               <placeName type="alternative-name">France</placeName>
-               <placeName type="alternative-name">Frankreich</placeName>
-               <placeName type="legacy-name-merge">Frankreich</placeName>
-               <placeName type="legacy-name-merge">France</placeName>
-               <location type="coords">
-                  <geo>46,0 2,0</geo>
-               </location>
-               <location type="located_in_place">
-                  <placeName ref="pmb468">Europa</placeName>
-                  <geo>48,69096 9,14062</geo>
-               </location>
-            </place>
             <place xml:id="pmb48393">
                <placeName>Kremsmünster</placeName>
-               <placeName type="legacy-name">Kremsmünster</placeName>
                <location type="coords">
                   <geo>48,05301 14,12842</geo>
                </location>
@@ -579,16 +572,12 @@
             <place xml:id="pmb50">
                <placeName>Wien</placeName>
                <placeName type="ort_fruherer-name">K.K. Reichshaupt- und Residenzstadt Wien</placeName>
-               <placeName type="legacy-name-merge">Wien</placeName>
                <placeName type="alternative-name">Bécs</placeName>
                <placeName type="alternative-name">Land Wien</placeName>
                <placeName type="alternative-name">Vídeň</placeName>
                <placeName type="alternative-name">Wenia</placeName>
                <placeName type="alternative-name">Beč</placeName>
                <placeName type="ort_fruherer-name">Vindobona</placeName>
-               <placeName type="legacy-name-merge">Vindobona</placeName>
-               <placeName type="alternative-name">Vienna</placeName>
-               <placeName type="legacy-name-merge">Vienna</placeName>
                <placeName type="alternative-name">Vienna</placeName>
                <location type="coords">
                   <geo>48,208333 16,373056</geo>
@@ -597,21 +586,12 @@
                   <placeName ref="pmb41240">Österreich</placeName>
                   <geo>47,33333 13,33333</geo>
                </location>
-            </place>
-            <place xml:id="pmb90217">
-               <placeName>Alland</placeName>
-               <placeName type="legacy-name">Alland, Niederöst.</placeName>
-               <placeName type="legacy-name-merge">Alland</placeName>
-               <placeName type="legacy-name-merge">Alland</placeName>
-               <location type="coords">
-                  <geo>48,03953 16,08085</geo>
-               </location>
                <location type="located_in_place">
-                  <placeName ref="pmb41240">Österreich</placeName>
-                  <geo>47,33333 13,33333</geo>
+                  <placeName ref="pmb235218">Windmühlhöhe</placeName>
+                  <geo>48,24077 16,32092</geo>
                </location>
             </place>
-            <place xml:id="pmb92585">
+            <place xml:id="pmb92585" ana="comment">
                <placeName>Volksgartenrestaurant</placeName>
                <placeName type="ort_namensvariante">Volksgarten-Café</placeName>
                <placeName type="ort_namensvariante">Café-Restaurant J. Seidl</placeName>
@@ -625,6 +605,28 @@
                <location type="located_in_place">
                   <placeName ref="pmb103">Volksgarten</placeName>
                   <geo>48,20809 16,36157</geo>
+               </location>
+            </place>
+            <place xml:id="pmb90217">
+               <placeName>Alland</placeName>
+               <placeName type="legacy-name">Alland, Niederöst.</placeName>
+               <location type="coords">
+                  <geo>48,03953 16,08085</geo>
+               </location>
+               <location type="located_in_place">
+                  <placeName ref="pmb41240">Österreich</placeName>
+                  <geo>47,33333 13,33333</geo>
+               </location>
+            </place>
+            <place xml:id="pmb166">
+               <placeName>Frankreich</placeName>
+               <placeName type="alternative-name">France</placeName>
+               <location type="coords">
+                  <geo>46,0 2,0</geo>
+               </location>
+               <location type="located_in_place">
+                  <placeName ref="pmb468">Europa</placeName>
+                  <geo>48,69096 9,14062</geo>
                </location>
             </place>
             <place xml:id="pmb103" ana="comment">
@@ -660,7 +662,7 @@
                   <idno type="URL" subtype="sk">https://sk.acdh.oeaw.ac.at/fa_place00005087</idno>
                   <idno type="URL" subtype="biblio">https://biblio.ub.uni-freiburg.de/sf/#pmb872</idno>
                   <idno type="URL" subtype="schnitzler-briefe">https://schnitzler-briefe.acdh.oeaw.ac.at/pmb872.html</idno>
-                  <idno type="URL" subtype="schoenberg-ue">https://www.schoenberg-ue.at/ue/places/place.2.42</idno>
+                  <idno type="URL" subtype="www">https://www.schoenberg-ue.at/ue/places/place.2.42</idno>
                </location>
                <location type="located_in_place">
                   <placeName ref="pmb168">Berlin</placeName>
@@ -669,7 +671,7 @@
                   <idno type="URL" subtype="schnitzler-bahr">https://schnitzler-bahr.acdh.oeaw.ac.at/pmb168.html</idno>
                   <idno type="URL" subtype="d-nb">https://d-nb.info/gnd/4005728-8</idno>
                   <idno type="URL" subtype="pmb">https://pmb.acdh.oeaw.ac.at/entity/168/</idno>
-                  <idno type="URL" subtype="kraus">https://www.kraus.wienbibliothek.at/legalkraus/pmb168.html</idno>
+                  <idno type="URL" subtype="www">https://www.kraus.wienbibliothek.at/legalkraus/pmb168.html</idno>
                   <idno type="URL" subtype="pmb">https://pmb.acdh.oeaw.ac.at/entity/92171/</idno>
                   <idno type="URL" subtype="wikidata">http://www.wikidata.org/entity/Q64</idno>
                   <idno type="URL" subtype="wikipedia">https://de.wikipedia.org/wiki/Berlin</idno>
@@ -684,10 +686,10 @@
                   <idno type="URL" subtype="sk">https://sk.acdh.oeaw.ac.at/fa_place00004523</idno>
                   <idno type="URL" subtype="biblio">https://biblio.ub.uni-freiburg.de/sf/#pmb168</idno>
                   <idno type="URL" subtype="schnitzler-briefe">https://schnitzler-briefe.acdh.oeaw.ac.at/pmb168.html</idno>
-                  <idno type="URL" subtype="schoenberg-ue">https://www.schoenberg-ue.at/ue/places/place.2.3</idno>
+                  <idno type="URL" subtype="www">https://www.schoenberg-ue.at/ue/places/place.2.3</idno>
                </location>
             </org>
-            <org xml:id="pmb29654" ana="comment">
+            <org xml:id="pmb29654" ana="implied">
                <orgName>Albert Langen</orgName>
                <location type="located_in_place">
                   <placeName ref="pmb145">Köln</placeName>
@@ -706,10 +708,10 @@
                   <idno type="URL" subtype="sk">https://sk.acdh.oeaw.ac.at/pmb145</idno>
                   <idno type="URL" subtype="sk">https://sk.acdh.oeaw.ac.at/fa_place00000746</idno>
                   <idno type="URL" subtype="sk">https://sk.acdh.oeaw.ac.at/fa_place00001730</idno>
-                  <idno type="URL" subtype="kraus">https://www.kraus.wienbibliothek.at/legalkraus/pmb145.html</idno>
+                  <idno type="URL" subtype="www">https://www.kraus.wienbibliothek.at/legalkraus/pmb145.html</idno>
                   <idno type="URL" subtype="biblio">https://biblio.ub.uni-freiburg.de/sf/#pmb145</idno>
                   <idno type="URL" subtype="schnitzler-briefe">https://schnitzler-briefe.acdh.oeaw.ac.at/pmb145.html</idno>
-                  <idno type="URL" subtype="schoenberg-ue">https://www.schoenberg-ue.at/ue/places/place.2.18</idno>
+                  <idno type="URL" subtype="www">https://www.schoenberg-ue.at/ue/places/place.2.18</idno>
                </location>
                <location type="located_in_place">
                   <placeName ref="pmb182">Paris</placeName>
@@ -719,7 +721,7 @@
                   <idno type="URL" subtype="pmb">https://pmb.acdh.oeaw.ac.at/entity/182/</idno>
                   <idno type="URL" subtype="pmb">https://pmb.acdh.oeaw.ac.at/entity/64183/</idno>
                   <idno type="URL" subtype="geonames">https://sws.geonames.org/2988507/</idno>
-                  <idno type="URL" subtype="kraus">https://www.kraus.wienbibliothek.at/legalkraus/pmb182.html</idno>
+                  <idno type="URL" subtype="www">https://www.kraus.wienbibliothek.at/legalkraus/pmb182.html</idno>
                   <idno type="URL" subtype="wikidata">http://www.wikidata.org/entity/Q90</idno>
                   <idno type="URL" subtype="wikipedia">https://de.wikipedia.org/wiki/Paris</idno>
                   <idno type="URL" subtype="schnitzler-interviews">https://schnitzler-interviews.acdh.oeaw.ac.at/pmb182.html</idno>
@@ -731,7 +733,7 @@
                   <idno type="URL" subtype="sk">https://sk.acdh.oeaw.ac.at/fa_place00003989</idno>
                   <idno type="URL" subtype="biblio">https://biblio.ub.uni-freiburg.de/sf/#pmb182</idno>
                   <idno type="URL" subtype="schnitzler-briefe">https://schnitzler-briefe.acdh.oeaw.ac.at/pmb182.html</idno>
-                  <idno type="URL" subtype="schoenberg-ue">https://www.schoenberg-ue.at/ue/places/place.4.4</idno>
+                  <idno type="URL" subtype="www">https://www.schoenberg-ue.at/ue/places/place.4.4</idno>
                </location>
                <location type="located_in_place">
                   <placeName ref="pmb45258">München</placeName>
@@ -740,7 +742,7 @@
                   <idno type="URL" subtype="pmb">https://pmb.acdh.oeaw.ac.at/entity/38129/</idno>
                   <idno type="URL" subtype="pmb">https://pmb.acdh.oeaw.ac.at/entity/45258/</idno>
                   <idno type="URL" subtype="geonames">https://sws.geonames.org/2867714/</idno>
-                  <idno type="URL" subtype="kraus">https://www.kraus.wienbibliothek.at/legalkraus/pmb45258.html</idno>
+                  <idno type="URL" subtype="www">https://www.kraus.wienbibliothek.at/legalkraus/pmb45258.html</idno>
                   <idno type="URL" subtype="wikidata">http://www.wikidata.org/entity/Q1726</idno>
                   <idno type="URL" subtype="wikipedia">https://de.wikipedia.org/wiki/M%C3%BCnchen</idno>
                   <idno type="URL" subtype="schnitzler-interviews">https://schnitzler-interviews.acdh.oeaw.ac.at/pmb45258.html</idno>

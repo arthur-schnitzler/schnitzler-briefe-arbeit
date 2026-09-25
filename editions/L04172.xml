@@ -1,6 +1,10 @@
-<?xml version='1.0' encoding='UTF-8'?>
+<?xml version="1.0" encoding="UTF-8"?>
 <?xml-model href="../meta/schnitzler-briefe-schematron.sch" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
-<TEI xmlns="http://www.tei-c.org/ns/1.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.tei-c.org/ns/1.0 ../meta/schnitzler-briefe-schema.xsd" xml:base="https://id.acdh.oeaw.ac.at/schnitzler/schnitzler-briefe/editions" xml:id="L04172">
+<TEI xmlns="http://www.tei-c.org/ns/1.0"
+     xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+     xsi:schemaLocation="http://www.tei-c.org/ns/1.0 ../meta/schnitzler-briefe-schema.xsd"
+     xml:base="https://id.acdh.oeaw.ac.at/schnitzler/schnitzler-briefe/editions"
+     xml:id="L04172">
    <teiHeader>
       <fileDesc>
          <titleStmt>
@@ -111,12 +115,20 @@
                <date when="1897-09-24" evidence="conjecture">[24. 9. 1897?]</date>
                <placeName ref="#pmb50">Wien</placeName>
             </correspAction>
-            <correspContext><ref type="belongsToCorrespondence" target="correspondence_12740">Schwarzkopf, Gustav</ref>
+            <correspContext>
+               <ref type="belongsToCorrespondence" target="correspondence_12740">Schwarzkopf, Gustav</ref>
                <ref subtype="previous_letter" type="withinCollection" target="L02825">Goldmann an Schnitzler, [17./18.?] 9. 1897</ref>
                <ref subtype="next_letter" type="withinCollection" target="L00723">Schnitzler an Beer-Hofmann, 25. 9. 1897</ref>
-               <ref subtype="previous_letter" type="withinCorrespondence" source="correspondence_12740" target="L04121">Schnitzler an Schwarzkopf, 15. 7. 1897</ref>
-               <ref subtype="next_letter" type="withinCorrespondence" source="correspondence_12740" target="L04186">Schnitzler an Schwarzkopf, [zwischen 11. und 18. 12. 1897?]</ref>
-            </correspContext></correspDesc>
+               <ref subtype="previous_letter"
+                    type="withinCorrespondence"
+                    source="correspondence_12740"
+                    target="L04121">Schnitzler an Schwarzkopf, 15. 7. 1897</ref>
+               <ref subtype="next_letter"
+                    type="withinCorrespondence"
+                    source="correspondence_12740"
+                    target="L04186">Schnitzler an Schwarzkopf, [zwischen 11. und 18. 12. 1897?]</ref>
+            </correspContext>
+         </correspDesc>
       </profileDesc>
       <revisionDesc status="proposed">
          <change who="MAM" when="2025-12-10">Export aus Transkribus</change>
@@ -156,6 +168,30 @@
       </body>
       <back>
          <listPerson>
+            <person xml:id="pmb2121">
+               <persName>
+                  <surname>Schnitzler</surname>
+                  <forename>Arthur</forename>
+               </persName>
+               <birth>
+                  <date when="1862-05-15">15. 5. 1862</date>
+                  <settlement ref="pmb50">
+                     <placeName type="pref">Wien</placeName>
+                     <location>
+                        <geo>48,208333 16,373056</geo>
+                     </location>
+                  </settlement>
+               </birth>
+               <death>
+                  <date when="1931-10-21">21. 10. 1931</date>
+                  <settlement ref="pmb50">
+                     <placeName type="pref">Wien</placeName>
+                     <location>
+                        <geo>48,208333 16,373056</geo>
+                     </location>
+                  </settlement>
+               </death>
+            </person>
             <person xml:id="pmb12740">
                <persName>
                   <forename>Gustav</forename>
@@ -180,33 +216,28 @@
                   </settlement>
                </death>
             </person>
-            <person xml:id="pmb2121">
+            <person xml:id="pmb42794" ana="implied">
                <persName>
-                  <surname>Schnitzler</surname>
-                  <forename>Arthur</forename>
+                  <surname>?? [Totgeborener Sohn von Arthur Schnitzler und Marie Reinhard]</surname>
                </persName>
                <birth>
-                  <date when="1862-05-15">15. 5. 1862</date>
-                  <settlement ref="pmb50">
-                     <placeName type="pref">Wien</placeName>
+                  <date when="1897-09-24">1897-09-24</date>
+                  <settlement ref="pmb200352">
+                     <placeName type="pref">Endresstraße 68</placeName>
                      <location>
-                        <geo>48,208333 16,373056</geo>
+                        <geo>48,14917 16,277425</geo>
                      </location>
                   </settlement>
                </birth>
                <death>
-                  <date when="1931-10-21">21. 10. 1931</date>
-                  <settlement ref="pmb50">
-                     <placeName type="pref">Wien</placeName>
+                  <date when="1897-09-24">1897-09-24</date>
+                  <settlement ref="pmb200352">
+                     <placeName type="pref">Endresstraße 68</placeName>
                      <location>
-                        <geo>48,208333 16,373056</geo>
+                        <geo>48,14917 16,277425</geo>
                      </location>
                   </settlement>
                </death>
-               <sex value="male"/>
-               <occupation ref="pmb90">Schriftsteller/Schriftstellerin</occupation>
-               <occupation ref="pmb97">Mediziner/Medizinerin</occupation>
-               <idno type="gnd">https://d-nb.info/gnd/118609807/</idno>
             </person>
             <person xml:id="pmb2378" ana="comment">
                <persName>
@@ -232,31 +263,30 @@
                   </settlement>
                </death>
             </person>
-            <person xml:id="pmb42794" ana="comment">
-               <persName>
-                  <surname>?? [Totgeborener Sohn von Arthur Schnitzler und Marie Reinhard]</surname>
-               </persName>
-               <birth>
-                  <date when="1897-09-24">1897-09-24</date>
-                  <settlement ref="pmb200352">
-                     <placeName type="pref">Endresstraße 68</placeName>
-                     <location>
-                        <geo>48,14917 16,277425</geo>
-                     </location>
-                  </settlement>
-               </birth>
-               <death>
-                  <date when="1897-09-24">1897-09-24</date>
-                  <settlement ref="pmb200352">
-                     <placeName type="pref">Endresstraße 68</placeName>
-                     <location>
-                        <geo>48,14917 16,277425</geo>
-                     </location>
-                  </settlement>
-               </death>
-            </person>
          </listPerson>
          <listPlace>
+            <place xml:id="pmb50">
+               <placeName>Wien</placeName>
+               <placeName type="ort_fruherer-name">K.K. Reichshaupt- und Residenzstadt Wien</placeName>
+               <placeName type="alternative-name">Bécs</placeName>
+               <placeName type="alternative-name">Land Wien</placeName>
+               <placeName type="alternative-name">Vídeň</placeName>
+               <placeName type="alternative-name">Wenia</placeName>
+               <placeName type="alternative-name">Beč</placeName>
+               <placeName type="ort_fruherer-name">Vindobona</placeName>
+               <placeName type="alternative-name">Vienna</placeName>
+               <location type="coords">
+                  <geo>48,208333 16,373056</geo>
+               </location>
+               <location type="located_in_place">
+                  <placeName ref="pmb41240">Österreich</placeName>
+                  <geo>47,33333 13,33333</geo>
+               </location>
+               <location type="located_in_place">
+                  <placeName ref="pmb235218">Windmühlhöhe</placeName>
+                  <geo>48,24077 16,32092</geo>
+               </location>
+            </place>
             <place xml:id="pmb104">
                <placeName>Café Arkaden</placeName>
                <placeName type="ort_namensvariante">Wiener Arcaden-Café</placeName>
@@ -272,33 +302,10 @@
                   <geo>48,214120366337 16,358756425131</geo>
                </location>
             </place>
-            <place xml:id="pmb50">
-               <placeName>Wien</placeName>
-               <placeName type="ort_fruherer-name">K.K. Reichshaupt- und Residenzstadt Wien</placeName>
-               <placeName type="legacy-name-merge">Wien</placeName>
-               <placeName type="alternative-name">Bécs</placeName>
-               <placeName type="alternative-name">Land Wien</placeName>
-               <placeName type="alternative-name">Vídeň</placeName>
-               <placeName type="alternative-name">Wenia</placeName>
-               <placeName type="alternative-name">Beč</placeName>
-               <placeName type="ort_fruherer-name">Vindobona</placeName>
-               <placeName type="legacy-name-merge">Vindobona</placeName>
-               <placeName type="alternative-name">Vienna</placeName>
-               <placeName type="legacy-name-merge">Vienna</placeName>
-               <placeName type="alternative-name">Vienna</placeName>
-               <location type="coords">
-                  <geo>48,208333 16,373056</geo>
-               </location>
-               <location type="located_in_place">
-                  <placeName ref="pmb41240">Österreich</placeName>
-                  <geo>47,33333 13,33333</geo>
-               </location>
-            </place>
             <place xml:id="pmb7728" ana="comment">
                <placeName>Mauer</placeName>
                <placeName type="alternative-name">Mauer bei Wien</placeName>
                <placeName type="legacy-name-merge">Wien-Mauer</placeName>
-               <placeName type="legacy-name-merge">Mauer bei Wien</placeName>
                <placeName type="legacy-name-merge">Wien Mauer</placeName>
                <location type="coords">
                   <geo>48,150556 16,268889</geo>

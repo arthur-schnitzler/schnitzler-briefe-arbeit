@@ -1,6 +1,10 @@
-<?xml version='1.0' encoding='UTF-8'?>
+<?xml version="1.0" encoding="UTF-8"?>
 <?xml-model href="../meta/schnitzler-briefe-schematron.sch" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
-<TEI xmlns="http://www.tei-c.org/ns/1.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.tei-c.org/ns/1.0 ../meta/schnitzler-briefe-schema.xsd" xml:base="https://id.acdh.oeaw.ac.at/schnitzler/schnitzler-briefe/editions" xml:id="L04389">
+<TEI xmlns="http://www.tei-c.org/ns/1.0"
+     xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+     xsi:schemaLocation="http://www.tei-c.org/ns/1.0 ../meta/schnitzler-briefe-schema.xsd"
+     xml:base="https://id.acdh.oeaw.ac.at/schnitzler/schnitzler-briefe/editions"
+     xml:id="L04389">
    <teiHeader>
       <fileDesc>
          <titleStmt>
@@ -98,7 +102,9 @@
                         </objectDesc>
                         <handDesc hands="2">
                            <handNote corresp="#pmb2121" medium="schwarze-tinte" style="deutsche-kurrent"/>
-                           <handNote corresp="#pmb2173" medium="schwarze-tinte" style="lateinische-kurrent"/>
+                           <handNote corresp="#pmb2173"
+                                     medium="schwarze-tinte"
+                                     style="lateinische-kurrent"/>
                         </handDesc>
                         <additions>
                            <incident type="postal">
@@ -132,19 +138,27 @@
             </correspAction>
             <correspAction type="transmitted">
                <date when="1911-07-18">18. 7. 1911</date>
-               <placeName ref="#pmb68">1/18 Wien</placeName>
+               <placeName ref="#pmb68">XVIII., Währing</placeName>
             </correspAction>
             <correspAction type="received">
                <persName ref="#pmb12740">Schwarzkopf, Gustav</persName>
                <date evidence="conjecture" notBefore="1911-07-19" notAfter="1911-07-22">[19. 7. 1911 – 22. 7. 1911?]</date>
                <placeName ref="#pmb334801">Gasthof Josef Kloßner</placeName>
             </correspAction>
-            <correspContext><ref type="belongsToCorrespondence" target="correspondence_12740">Schwarzkopf, Gustav</ref>
+            <correspContext>
+               <ref type="belongsToCorrespondence" target="correspondence_12740">Schwarzkopf, Gustav</ref>
                <ref subtype="previous_letter" type="withinCollection" target="L04263">Schwarzkopf an Schnitzler, 12. 7. 1911</ref>
                <ref subtype="next_letter" type="withinCollection" target="L04009">Zuckerkandl an Schnitzler, 25. 7. [1911]</ref>
-               <ref subtype="previous_letter" type="withinCorrespondence" source="correspondence_12740" target="L04263">Schwarzkopf an Schnitzler, 12. 7. 1911</ref>
-               <ref subtype="next_letter" type="withinCorrespondence" source="correspondence_12740" target="L04522">Schnitzler, Schnitzler an Schwarzkopf, 8. 8. 1911</ref>
-            </correspContext></correspDesc>
+               <ref subtype="previous_letter"
+                    type="withinCorrespondence"
+                    source="correspondence_12740"
+                    target="L04263">Schwarzkopf an Schnitzler, 12. 7. 1911</ref>
+               <ref subtype="next_letter"
+                    type="withinCorrespondence"
+                    source="correspondence_12740"
+                    target="L04522">Schnitzler, Schnitzler an Schwarzkopf, 8. 8. 1911</ref>
+            </correspContext>
+         </correspDesc>
       </profileDesc>
       <revisionDesc status="proposed">
          <change who="MAM" when="2026-06-11">Export aus
@@ -332,26 +346,29 @@
                   <geo>48,208333 16,373056</geo>
                </location>
             </place>
-            <place xml:id="pmb50">
-               <placeName>Wien</placeName>
-               <placeName type="ort_fruherer-name">K.K. Reichshaupt- und Residenzstadt Wien</placeName>
-               <placeName type="alternative-name">Bécs</placeName>
-               <placeName type="alternative-name">Land Wien</placeName>
-               <placeName type="alternative-name">Vídeň</placeName>
-               <placeName type="alternative-name">Wenia</placeName>
-               <placeName type="alternative-name">Beč</placeName>
-               <placeName type="ort_fruherer-name">Vindobona</placeName>
-               <placeName type="alternative-name">Vienna</placeName>
+            <place xml:id="pmb168815">
+               <placeName>Sternwartestraße 71</placeName>
                <location type="coords">
-                  <geo>48,208333 16,373056</geo>
+                  <geo>48,23188 16,33716</geo>
                </location>
                <location type="located_in_place">
-                  <placeName ref="pmb41240">Österreich</placeName>
-                  <geo>47,33333 13,33333</geo>
+                  <placeName ref="pmb68">XVIII., Währing</placeName>
+                  <geo>48,23333 16,31667</geo>
                </location>
                <location type="located_in_place">
-                  <placeName ref="pmb235218">Windmühlhöhe</placeName>
-                  <geo>48,24077 16,32092</geo>
+                  <placeName ref="pmb533">Währinger Cottage</placeName>
+                  <geo>48,233056 16,341944</geo>
+               </location>
+               <location type="located_in_place">
+                  <placeName ref="pmb150">Sternwartestraße</placeName>
+                  <geo>48,23099349198 16,340117830625</geo>
+               </location>
+            </place>
+            <place xml:id="pmb334801">
+               <placeName>Gasthof Josef Kloßner</placeName>
+               <location type="located_in_place">
+                  <placeName ref="pmb334803">Mautern in Steiermark</placeName>
+                  <geo>47,4 14,833333333333</geo>
                </location>
             </place>
             <place xml:id="pmb334803">
@@ -372,13 +389,6 @@
                <location type="located_in_place">
                   <placeName ref="pmb41240">Österreich</placeName>
                   <geo>47,33333 13,33333</geo>
-               </location>
-            </place>
-            <place xml:id="pmb334801">
-               <placeName>Gasthof Josef Kloßner</placeName>
-               <location type="located_in_place">
-                  <placeName ref="pmb334803">Mautern in Steiermark</placeName>
-                  <geo>47,4 14,833333333333</geo>
                </location>
             </place>
             <place xml:id="pmb113">
@@ -460,6 +470,28 @@
                <location type="located_in_place">
                   <placeName ref="pmb41240">Österreich</placeName>
                   <geo>47,33333 13,33333</geo>
+               </location>
+            </place>
+            <place xml:id="pmb50">
+               <placeName>Wien</placeName>
+               <placeName type="ort_fruherer-name">K.K. Reichshaupt- und Residenzstadt Wien</placeName>
+               <placeName type="alternative-name">Bécs</placeName>
+               <placeName type="alternative-name">Land Wien</placeName>
+               <placeName type="alternative-name">Vídeň</placeName>
+               <placeName type="alternative-name">Wenia</placeName>
+               <placeName type="alternative-name">Beč</placeName>
+               <placeName type="ort_fruherer-name">Vindobona</placeName>
+               <placeName type="alternative-name">Vienna</placeName>
+               <location type="coords">
+                  <geo>48,208333 16,373056</geo>
+               </location>
+               <location type="located_in_place">
+                  <placeName ref="pmb41240">Österreich</placeName>
+                  <geo>47,33333 13,33333</geo>
+               </location>
+               <location type="located_in_place">
+                  <placeName ref="pmb235218">Windmühlhöhe</placeName>
+                  <geo>48,24077 16,32092</geo>
                </location>
             </place>
          </listPlace>

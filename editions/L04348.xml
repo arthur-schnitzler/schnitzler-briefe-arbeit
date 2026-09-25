@@ -1,6 +1,10 @@
-<?xml version='1.0' encoding='UTF-8'?>
+<?xml version="1.0" encoding="UTF-8"?>
 <?xml-model href="../meta/schnitzler-briefe-schematron.sch" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
-<TEI xmlns="http://www.tei-c.org/ns/1.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.tei-c.org/ns/1.0 ../meta/schnitzler-briefe-schema.xsd" xml:base="https://id.acdh.oeaw.ac.at/schnitzler/schnitzler-briefe/editions" xml:id="L04348">
+<TEI xmlns="http://www.tei-c.org/ns/1.0"
+     xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+     xsi:schemaLocation="http://www.tei-c.org/ns/1.0 ../meta/schnitzler-briefe-schema.xsd"
+     xml:base="https://id.acdh.oeaw.ac.at/schnitzler/schnitzler-briefe/editions"
+     xml:id="L04348">
    <teiHeader>
       <fileDesc>
          <titleStmt>
@@ -93,11 +97,21 @@
                         </objectDesc>
                         <handDesc hands="6">
                            <handNote corresp="#pmb2537" style="lateinische-kurrent" medium="blaue-tinte"/>
-                           <handNote corresp="#pmb27074" medium="schwarze-tinte" style="lateinische-kurrent"/>
-                           <handNote corresp="#pmb11485" medium="schwarze-tinte" style="deutsche-kurrent"/>
-                           <handNote corresp="#pmb10879" medium="schwarze-tinte" style="lateinische-kurrent"/>
-                           <handNote corresp="#pmb342708" medium="schwarze-tinte" style="lateinische-kurrent"/>
-                           <handNote corresp="#pmb11391" medium="schwarze-tinte" style="deutsche-kurrent"/>
+                           <handNote corresp="#pmb27074"
+                                     medium="schwarze-tinte"
+                                     style="lateinische-kurrent"/>
+                           <handNote corresp="#pmb11485"
+                                     medium="schwarze-tinte"
+                                     style="deutsche-kurrent"/>
+                           <handNote corresp="#pmb10879"
+                                     medium="schwarze-tinte"
+                                     style="lateinische-kurrent"/>
+                           <handNote corresp="#pmb342708"
+                                     medium="schwarze-tinte"
+                                     style="lateinische-kurrent"/>
+                           <handNote corresp="#pmb11391"
+                                     medium="schwarze-tinte"
+                                     style="deutsche-kurrent"/>
                         </handDesc>
                         <additions>
                            <incident type="postal">
@@ -152,19 +166,27 @@
             </correspAction>
             <correspAction type="delivered">
                <date when="1902-09-19">19. 9. 1902</date>
-               <placeName ref="#pmb365208">9/3 Wien</placeName>
+               <placeName ref="#pmb365208">9/3 Post- und Telegraphenamt 72</placeName>
             </correspAction>
             <correspAction type="received">
                <persName ref="#pmb2121">Schnitzler, Arthur</persName>
                <date when="1902-09-19">[19. 9. 1902]</date>
                <placeName ref="#pmb168934">Frankgasse 1</placeName>
             </correspAction>
-            <correspContext><ref type="belongsToCorrespondence" target="correspondence_11485">Goldmann, Paul</ref>
+            <correspContext>
+               <ref type="belongsToCorrespondence" target="correspondence_11485">Goldmann, Paul</ref>
                <ref subtype="previous_letter" type="withinCollection" target="L03224">Goldmann an Schnitzler, 16. 9. [1902]</ref>
                <ref subtype="next_letter" type="withinCollection" target="L04041">Schnitzler an Schwarzkopf, [25. 9. 1902?]</ref>
-               <ref subtype="previous_letter" type="withinCorrespondence" source="correspondence_11485" target="L03224">Goldmann an Schnitzler, 16. 9. [1902]</ref>
-               <ref subtype="next_letter" type="withinCorrespondence" source="correspondence_11485" target="L03534">Goldmann an Gussmann, 29. 9. [1902]</ref>
-            </correspContext></correspDesc>
+               <ref subtype="previous_letter"
+                    type="withinCorrespondence"
+                    source="correspondence_11485"
+                    target="L03224">Goldmann an Schnitzler, 16. 9. [1902]</ref>
+               <ref subtype="next_letter"
+                    type="withinCorrespondence"
+                    source="correspondence_11485"
+                    target="L03534">Goldmann an Gussmann, 29. 9. [1902]</ref>
+            </correspContext>
+         </correspDesc>
       </profileDesc>
       <revisionDesc status="proposed">
          <change who="MAM" when="2026-05-28">Manuell angelegt</change>
@@ -245,30 +267,6 @@
       </body>
       <back>
          <listPerson>
-            <person xml:id="pmb10879">
-               <persName>
-                  <forename>Henri</forename>
-                  <surname>Berény</surname>
-               </persName>
-               <birth>
-                  <date when="1871-01-01">1871-01-01</date>
-                  <settlement ref="pmb49687">
-                     <placeName type="pref">Košice</placeName>
-                     <location>
-                        <geo>48,71395 21,25808</geo>
-                     </location>
-                  </settlement>
-               </birth>
-               <death>
-                  <date when="1932-03-22">1932-03-22</date>
-                  <settlement ref="pmb43471">
-                     <placeName type="pref">Budapest</placeName>
-                     <location>
-                        <geo>47,49835 19,04045</geo>
-                     </location>
-                  </settlement>
-               </death>
-            </person>
             <person xml:id="pmb11391">
                <persName>
                   <forename>Ludwig</forename>
@@ -316,34 +314,6 @@
                      </location>
                   </settlement>
                </death>
-            </person>
-            <person xml:id="pmb2121">
-               <persName>
-                  <surname>Schnitzler</surname>
-                  <forename>Arthur</forename>
-               </persName>
-               <birth>
-                  <date when="1862-05-15">15. 5. 1862</date>
-                  <settlement ref="pmb50">
-                     <placeName type="pref">Wien</placeName>
-                     <location>
-                        <geo>48,208333 16,373056</geo>
-                     </location>
-                  </settlement>
-               </birth>
-               <death>
-                  <date when="1931-10-21">21. 10. 1931</date>
-                  <settlement ref="pmb50">
-                     <placeName type="pref">Wien</placeName>
-                     <location>
-                        <geo>48,208333 16,373056</geo>
-                     </location>
-                  </settlement>
-               </death>
-               <sex value="male"/>
-               <occupation ref="pmb90">Schriftsteller/Schriftstellerin</occupation>
-               <occupation ref="pmb97">Mediziner/Medizinerin</occupation>
-               <idno type="gnd">https://d-nb.info/gnd/118609807/</idno>
             </person>
             <person xml:id="pmb2537">
                <persName>
@@ -393,6 +363,30 @@
                   </settlement>
                </death>
             </person>
+            <person xml:id="pmb10879">
+               <persName>
+                  <forename>Henri</forename>
+                  <surname>Berény</surname>
+               </persName>
+               <birth>
+                  <date when="1871-01-01">1871-01-01</date>
+                  <settlement ref="pmb49687">
+                     <placeName type="pref">Košice</placeName>
+                     <location>
+                        <geo>48,71395 21,25808</geo>
+                     </location>
+                  </settlement>
+               </birth>
+               <death>
+                  <date when="1932-03-22">1932-03-22</date>
+                  <settlement ref="pmb43471">
+                     <placeName type="pref">Budapest</placeName>
+                     <location>
+                        <geo>47,49835 19,04045</geo>
+                     </location>
+                  </settlement>
+               </death>
+            </person>
             <person xml:id="pmb342708">
                <persName>
                   <forename>Julie</forename>
@@ -402,19 +396,99 @@
                   <date when="1870-05-02">1870-05-02</date>
                </birth>
             </person>
+            <person xml:id="pmb2121">
+               <persName>
+                  <surname>Schnitzler</surname>
+                  <forename>Arthur</forename>
+               </persName>
+               <birth>
+                  <date when="1862-05-15">15. 5. 1862</date>
+                  <settlement ref="pmb50">
+                     <placeName type="pref">Wien</placeName>
+                     <location>
+                        <geo>48,208333 16,373056</geo>
+                     </location>
+                  </settlement>
+               </birth>
+               <death>
+                  <date when="1931-10-21">21. 10. 1931</date>
+                  <settlement ref="pmb50">
+                     <placeName type="pref">Wien</placeName>
+                     <location>
+                        <geo>48,208333 16,373056</geo>
+                     </location>
+                  </settlement>
+               </death>
+            </person>
+            <person xml:id="pmb26414">
+               <persName>
+                  <forename>Maurice</forename>
+                  <surname>Vaucaire</surname>
+               </persName>
+               <birth>
+                  <date when="1863-07-02">1863-07-02</date>
+                  <settlement ref="pmb36549">
+                     <placeName type="pref">Versailles</placeName>
+                     <location>
+                        <geo>48,80359 2,13424</geo>
+                     </location>
+                  </settlement>
+               </birth>
+               <death>
+                  <date when="1918-02-10">1918-02-10</date>
+                  <settlement ref="pmb36749">
+                     <placeName type="pref">Neuilly-sur-Seine</placeName>
+                     <location>
+                        <geo>48,8846 2,26965</geo>
+                     </location>
+                  </settlement>
+               </death>
+            </person>
          </listPerson>
          <listBibl>
-            <bibl xml:id="pmb185653" ana="comment">
-               <title type="main">Souper d’Adieu</title>
-               <author role="hat-geschaffen" ref="pmb2121">Schnitzler, Arthur</author>
-               <author role="hat-ubersetzt" ref="pmb26414">Vaucaire, Maurice</author>
+            <bibl xml:id="pmb185653" ana="implied">
+               <title>Souper d’Adieu</title>
+               <author ref="pmb2121" role="hat-geschaffen">Schnitzler, Arthur</author>
+               <author ref="pmb26414" role="hat-ubersetzt">Vaucaire, Maurice</author>
             </bibl>
             <bibl xml:id="pmb30005" ana="comment">
-               <title type="main">Abschiedssouper</title>
-               <author role="hat-geschaffen" ref="pmb2121">Schnitzler, Arthur</author>
+               <title>Abschiedssouper</title>
+               <author ref="pmb2121" role="hat-geschaffen">Schnitzler, Arthur</author>
             </bibl>
          </listBibl>
          <listPlace>
+            <place xml:id="pmb9925">
+               <placeName>Charlottenburg</placeName>
+               <placeName type="legacy-name-merge">Berlin-Charlottenburg</placeName>
+               <placeName type="legacy-name-merge">Charlottenburg bei Berlin</placeName>
+               <placeName type="alternative-name">Charlottenburg (Potsdam)</placeName>
+               <placeName type="legacy-name-merge">Charlottenburg (Berlin)</placeName>
+               <location type="coords">
+                  <geo>52,516667 13,3</geo>
+               </location>
+               <location type="located_in_place">
+                  <placeName ref="pmb168">Berlin</placeName>
+                  <geo>52,52437 13,41053</geo>
+               </location>
+               <location type="located_in_place">
+                  <placeName ref="pmb151">Deutschland</placeName>
+                  <geo>51,5 10,5</geo>
+               </location>
+            </place>
+            <place xml:id="pmb365208">
+               <placeName>9/3 Post- und Telegraphenamt 72</placeName>
+               <location type="coords">
+                  <geo>48,216197 16,356623</geo>
+               </location>
+               <location type="located_in_place">
+                  <placeName ref="pmb59">IX., Alsergrund</placeName>
+                  <geo>48,22387 16,35641</geo>
+               </location>
+               <location type="located_in_place">
+                  <placeName ref="pmb731">Garnisongasse</placeName>
+                  <geo>48,216533356678 16,356214321972</geo>
+               </location>
+            </place>
             <place xml:id="pmb168">
                <placeName>Berlin</placeName>
                <placeName type="alternative-name">Hauptstadt Berlin</placeName>
@@ -447,16 +521,12 @@
             <place xml:id="pmb50">
                <placeName>Wien</placeName>
                <placeName type="ort_fruherer-name">K.K. Reichshaupt- und Residenzstadt Wien</placeName>
-               <placeName type="legacy-name-merge">Wien</placeName>
                <placeName type="alternative-name">Bécs</placeName>
                <placeName type="alternative-name">Land Wien</placeName>
                <placeName type="alternative-name">Vídeň</placeName>
                <placeName type="alternative-name">Wenia</placeName>
                <placeName type="alternative-name">Beč</placeName>
                <placeName type="ort_fruherer-name">Vindobona</placeName>
-               <placeName type="legacy-name-merge">Vindobona</placeName>
-               <placeName type="alternative-name">Vienna</placeName>
-               <placeName type="legacy-name-merge">Vienna</placeName>
                <placeName type="alternative-name">Vienna</placeName>
                <location type="coords">
                   <geo>48,208333 16,373056</geo>
@@ -465,38 +535,9 @@
                   <placeName ref="pmb41240">Österreich</placeName>
                   <geo>47,33333 13,33333</geo>
                </location>
-            </place>
-            <place xml:id="pmb59">
-               <placeName>IX., Alsergrund</placeName>
-               <placeName type="legacy-name-merge">Thurygrund</placeName>
-               <placeName type="legacy-name-merge">Wien-Alsergrund</placeName>
-               <location type="coords">
-                  <geo>48,22387 16,35641</geo>
-               </location>
                <location type="located_in_place">
-                  <placeName ref="pmb50">Wien</placeName>
-                  <geo>48,208333 16,373056</geo>
-               </location>
-            </place>
-            <place xml:id="pmb9925">
-               <placeName>Charlottenburg</placeName>
-               <placeName type="legacy-name-merge">Berlin-Charlottenburg</placeName>
-               <placeName type="legacy-name-merge">Charlottenburg bei Berlin</placeName>
-               <placeName type="alternative-name">Charlottenburg (Potsdam)</placeName>
-               <placeName type="legacy-name-merge">Charlottenburg (Berlin)</placeName>
-               <placeName type="legacy-name-merge">Charlottenburg (Berlin)</placeName>
-               <placeName type="legacy-name-merge">Berlin-Charlottenburg</placeName>
-               <placeName type="legacy-name-merge">Charlottenburg</placeName>
-               <location type="coords">
-                  <geo>52,516667 13,3</geo>
-               </location>
-               <location type="located_in_place">
-                  <placeName ref="pmb168">Berlin</placeName>
-                  <geo>52,52437 13,41053</geo>
-               </location>
-               <location type="located_in_place">
-                  <placeName ref="pmb151">Deutschland</placeName>
-                  <geo>51,5 10,5</geo>
+                  <placeName ref="pmb235218">Windmühlhöhe</placeName>
+                  <geo>48,24077 16,32092</geo>
                </location>
             </place>
             <place xml:id="pmb77" ana="comment">

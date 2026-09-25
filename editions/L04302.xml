@@ -1,6 +1,10 @@
-<?xml version='1.0' encoding='UTF-8'?>
+<?xml version="1.0" encoding="UTF-8"?>
 <?xml-model href="../meta/schnitzler-briefe-schematron.sch" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
-<TEI xmlns="http://www.tei-c.org/ns/1.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.tei-c.org/ns/1.0 ../meta/schnitzler-briefe-schema.xsd" xml:base="https://id.acdh.oeaw.ac.at/schnitzler/schnitzler-briefe/editions" xml:id="L04302">
+<TEI xmlns="http://www.tei-c.org/ns/1.0"
+     xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+     xsi:schemaLocation="http://www.tei-c.org/ns/1.0 ../meta/schnitzler-briefe-schema.xsd"
+     xml:base="https://id.acdh.oeaw.ac.at/schnitzler/schnitzler-briefe/editions"
+     xml:id="L04302">
    <teiHeader>
       <fileDesc>
          <titleStmt>
@@ -104,19 +108,27 @@
             <correspAction type="sent">
                <persName ref="#pmb12740">Schwarzkopf, Gustav</persName>
                <date when="1900-08-04" n="02">4. 8. 1900</date>
-               <placeName ref="#pmb207296">Wien</placeName>
+               <placeName ref="#pmb207296">Tiefer Graben 23</placeName>
             </correspAction>
             <correspAction type="received">
                <persName ref="#pmb2121">Schnitzler, Arthur</persName>
                <date evidence="conjecture" notBefore="1900-08-05" notAfter="1900-08-09">[5. 8. 1900 – 9. 8. 1900?]</date>
                <placeName ref="#pmb213" evidence="internal">Bad Ischl</placeName>
             </correspAction>
-            <correspContext><ref type="belongsToCorrespondence" target="correspondence_12740">Schwarzkopf, Gustav</ref>
+            <correspContext>
+               <ref type="belongsToCorrespondence" target="correspondence_12740">Schwarzkopf, Gustav</ref>
                <ref subtype="previous_letter" type="withinCollection" target="L01065">Schnitzler an Hofmannsthal, 4. 8. 1900</ref>
                <ref subtype="next_letter" type="withinCollection" target="L01066">Schnitzler an Beer-Hofmann, 5. 8. 1900</ref>
-               <ref subtype="previous_letter" type="withinCorrespondence" source="correspondence_12740" target="L04081">Schnitzler an Schwarzkopf, 30. 7. 1900</ref>
-               <ref subtype="next_letter" type="withinCorrespondence" source="correspondence_12740" target="L04183">Schnitzler an Schwarzkopf, [9. 8. 1900?]</ref>
-            </correspContext></correspDesc>
+               <ref subtype="previous_letter"
+                    type="withinCorrespondence"
+                    source="correspondence_12740"
+                    target="L04081">Schnitzler an Schwarzkopf, 30. 7. 1900</ref>
+               <ref subtype="next_letter"
+                    type="withinCorrespondence"
+                    source="correspondence_12740"
+                    target="L04183">Schnitzler an Schwarzkopf, [9. 8. 1900?]</ref>
+            </correspContext>
+         </correspDesc>
       </profileDesc>
       <revisionDesc status="proposed">
          <change who="MAM" when="2026-02-20">Export aus Transkribus</change>
@@ -156,8 +168,12 @@
                zu ertragen ſein. Sie ſchicken mir von den verſchiedenen Stationen Anſichtskarten und
                   we<c rendition="#gemination-n"/> Sie im September nach <rs type="place" ref="#pmb50">Wien</rs> ko<c rendition="#gemination-m"/>en, werden Sie mir ja
                erzählen, was ich verloren habe, wie lange <pb facs="MS-SCHNITZLER-B-00096-A-000-00132-1"/>Sie bei den verschiedenen Trödlern
-               waren und wie oft die <rs type="person" ref="#pmb10863 #pmb26392 #pmb11910 #pmb11485" subtype="implied">Geſellſchaft</rs> nicht – ganz einig
-               war. Grüßen Sie übrigens alle <rs type="person" ref="#pmb10863 #pmb26392 #pmb11910 #pmb11485" subtype="implied">Teilnehmer</rs>, besondere <hi rend="latintype">
+               waren und wie oft die <rs type="person"
+                   ref="#pmb10863 #pmb26392 #pmb11910 #pmb11485"
+                   subtype="implied">Geſellſchaft</rs> nicht – ganz einig
+               war. Grüßen Sie übrigens alle <rs type="person"
+                   ref="#pmb10863 #pmb26392 #pmb11910 #pmb11485"
+                   subtype="implied">Teilnehmer</rs>, besondere <hi rend="latintype">
                   <rs type="person" ref="#pmb10863">Beer Hofma<c rendition="#gemination-n"/>
                   </rs>
                </hi> und <rs type="person" ref="#pmb11485">Goldma<c rendition="#gemination-n"/>
@@ -180,6 +196,78 @@
       </body>
       <back>
          <listPerson>
+            <person xml:id="pmb12740">
+               <persName>
+                  <forename>Gustav</forename>
+                  <surname>Schwarzkopf</surname>
+               </persName>
+               <birth>
+                  <date when="1853-11-07">1853-11-07</date>
+                  <settlement ref="pmb50">
+                     <placeName type="pref">Wien</placeName>
+                     <location>
+                        <geo>48,208333 16,373056</geo>
+                     </location>
+                  </settlement>
+               </birth>
+               <death>
+                  <date when="1939-11-13">1939-11-13</date>
+                  <settlement ref="pmb50">
+                     <placeName type="pref">Wien</placeName>
+                     <location>
+                        <geo>48,208333 16,373056</geo>
+                     </location>
+                  </settlement>
+               </death>
+            </person>
+            <person xml:id="pmb2121">
+               <persName>
+                  <surname>Schnitzler</surname>
+                  <forename>Arthur</forename>
+               </persName>
+               <birth>
+                  <date when="1862-05-15">15. 5. 1862</date>
+                  <settlement ref="pmb50">
+                     <placeName type="pref">Wien</placeName>
+                     <location>
+                        <geo>48,208333 16,373056</geo>
+                     </location>
+                  </settlement>
+               </birth>
+               <death>
+                  <date when="1931-10-21">21. 10. 1931</date>
+                  <settlement ref="pmb50">
+                     <placeName type="pref">Wien</placeName>
+                     <location>
+                        <geo>48,208333 16,373056</geo>
+                     </location>
+                  </settlement>
+               </death>
+            </person>
+            <person xml:id="pmb24648">
+               <persName>
+                  <forename>Max</forename>
+                  <surname>Schwarzkopf</surname>
+               </persName>
+               <birth>
+                  <date when="1857-06-12">1857-06-12</date>
+                  <settlement ref="pmb50">
+                     <placeName type="pref">Wien</placeName>
+                     <location>
+                        <geo>48,208333 16,373056</geo>
+                     </location>
+                  </settlement>
+               </birth>
+               <death>
+                  <date when="1928-04-14">1928-04-14</date>
+                  <settlement ref="pmb50">
+                     <placeName type="pref">Wien</placeName>
+                     <location>
+                        <geo>48,208333 16,373056</geo>
+                     </location>
+                  </settlement>
+               </death>
+            </person>
             <person xml:id="pmb10863">
                <persName>
                   <forename>Richard</forename>
@@ -228,58 +316,6 @@
                   </settlement>
                </death>
             </person>
-            <person xml:id="pmb12740">
-               <persName>
-                  <forename>Gustav</forename>
-                  <surname>Schwarzkopf</surname>
-               </persName>
-               <birth>
-                  <date when="1853-11-07">1853-11-07</date>
-                  <settlement ref="pmb50">
-                     <placeName type="pref">Wien</placeName>
-                     <location>
-                        <geo>48,208333 16,373056</geo>
-                     </location>
-                  </settlement>
-               </birth>
-               <death>
-                  <date when="1939-11-13">1939-11-13</date>
-                  <settlement ref="pmb50">
-                     <placeName type="pref">Wien</placeName>
-                     <location>
-                        <geo>48,208333 16,373056</geo>
-                     </location>
-                  </settlement>
-               </death>
-            </person>
-            <person xml:id="pmb2121">
-               <persName>
-                  <surname>Schnitzler</surname>
-                  <forename>Arthur</forename>
-               </persName>
-               <birth>
-                  <date when="1862-05-15">15. 5. 1862</date>
-                  <settlement ref="pmb50">
-                     <placeName type="pref">Wien</placeName>
-                     <location>
-                        <geo>48,208333 16,373056</geo>
-                     </location>
-                  </settlement>
-               </birth>
-               <death>
-                  <date when="1931-10-21">21. 10. 1931</date>
-                  <settlement ref="pmb50">
-                     <placeName type="pref">Wien</placeName>
-                     <location>
-                        <geo>48,208333 16,373056</geo>
-                     </location>
-                  </settlement>
-               </death>
-               <sex value="male"/>
-               <occupation ref="pmb90">Schriftsteller/Schriftstellerin</occupation>
-               <occupation ref="pmb97">Mediziner/Medizinerin</occupation>
-               <idno type="gnd">https://d-nb.info/gnd/118609807/</idno>
-            </person>
             <person xml:id="pmb24645">
                <persName>
                   <forename>Emil</forename>
@@ -304,26 +340,31 @@
                   </settlement>
                </death>
             </person>
-            <person xml:id="pmb24648">
+            <person xml:id="pmb335100" ana="implied">
                <persName>
-                  <forename>Max</forename>
-                  <surname>Schwarzkopf</surname>
+                  <surname>?? [Köchin von Gustav und Max Schwarzkopf, 1900]</surname>
+               </persName>
+            </person>
+            <person xml:id="pmb26392" ana="implied">
+               <persName>
+                  <forename>Leo</forename>
+                  <surname>Van-Jung</surname>
                </persName>
                <birth>
-                  <date when="1857-06-12">1857-06-12</date>
-                  <settlement ref="pmb50">
-                     <placeName type="pref">Wien</placeName>
+                  <date when="1866-10-15">1866-10-15</date>
+                  <settlement ref="pmb420">
+                     <placeName type="pref">Odessa</placeName>
                      <location>
-                        <geo>48,208333 16,373056</geo>
+                        <geo>46,47747 30,73262</geo>
                      </location>
                   </settlement>
                </birth>
                <death>
-                  <date when="1928-04-14">1928-04-14</date>
-                  <settlement ref="pmb50">
-                     <placeName type="pref">Wien</placeName>
+                  <date when="1939-07-02">1939-07-02</date>
+                  <settlement ref="pmb46637">
+                     <placeName type="pref">Riga</placeName>
                      <location>
-                        <geo>48,208333 16,373056</geo>
+                        <geo>56,946 24,10589</geo>
                      </location>
                   </settlement>
                </death>
@@ -376,120 +417,64 @@
                   </settlement>
                </death>
             </person>
-            <person xml:id="pmb26392" ana="implied">
+            <person xml:id="pmb335201">
                <persName>
-                  <forename>Leo</forename>
-                  <surname>Van-Jung</surname>
+                  <forename>Ludwig</forename>
+                  <surname>Passarge</surname>
                </persName>
                <birth>
-                  <date when="1866-10-15">1866-10-15</date>
-                  <settlement ref="pmb420">
-                     <placeName type="pref">Odessa</placeName>
+                  <date when="1825-09-06">1825-09-06</date>
+                  <settlement ref="pmb335202">
+                     <placeName type="pref">Primorskoje</placeName>
                      <location>
-                        <geo>46,47747 30,73262</geo>
+                        <geo>54,544222 20,058704</geo>
                      </location>
                   </settlement>
                </birth>
                <death>
-                  <date when="1939-07-02">1939-07-02</date>
-                  <settlement ref="pmb46637">
-                     <placeName type="pref">Riga</placeName>
+                  <date when="1912-09-19">1912-09-19</date>
+                  <settlement ref="pmb335204">
+                     <placeName type="pref">Lindenfels</placeName>
                      <location>
-                        <geo>56,946 24,10589</geo>
+                        <geo>49,684861111111 8,7802777777778</geo>
                      </location>
                   </settlement>
                </death>
             </person>
-            <person xml:id="pmb335100" ana="implied">
+            <person xml:id="pmb11798">
                <persName>
-                  <surname>?? [Köchin von Gustav und Max Schwarzkopf, 1900]</surname>
+                  <forename>Henrik</forename>
+                  <surname>Ibsen</surname>
                </persName>
+               <birth>
+                  <date when="1828-03-20">1828-03-20</date>
+                  <settlement ref="pmb61065">
+                     <placeName type="pref">Skien</placeName>
+                     <location>
+                        <geo>59,20962 9,60897</geo>
+                     </location>
+                  </settlement>
+               </birth>
+               <death>
+                  <date when="1906-05-23">1906-05-23</date>
+                  <settlement ref="pmb36296">
+                     <placeName type="pref">Oslo</placeName>
+                     <location>
+                        <geo>59,91273 10,74609</geo>
+                     </location>
+                  </settlement>
+               </death>
             </person>
          </listPerson>
          <listBibl>
             <bibl xml:id="pmb335199">
-               <title type="main">Brand. Ein dramatisches Gedicht in 5 Aufzügen (9 Bildern)</title>
-               <author role="hat-ubersetzt" ref="pmb335201">Passarge, Ludwig</author>
-               <author role="hat-geschaffen" ref="pmb11798">Ibsen, Henrik</author>
+               <title>Brand. Ein dramatisches Gedicht in 5 Aufzügen (9 Bildern)</title>
+               <author ref="pmb335201" role="hat-ubersetzt">Passarge, Ludwig</author>
+               <author ref="pmb11798" role="hat-geschaffen">Ibsen, Henrik</author>
             </bibl>
          </listBibl>
          <listPlace>
-            <place xml:id="pmb182">
-               <placeName>Paris</placeName>
-               <placeName type="alternative-name">P'ariz</placeName>
-               <placeName type="legacy-name-merge">Paris</placeName>
-               <placeName type="alternative-name">Pariž</placeName>
-               <placeName type="alternative-name">Parisius</placeName>
-               <placeName type="alternative-name">Île-de-France</placeName>
-               <location type="coords">
-                  <geo>48,85341 2,3488</geo>
-               </location>
-               <location type="located_in_place">
-                  <placeName ref="pmb166">Frankreich</placeName>
-                  <geo>46,0 2,0</geo>
-               </location>
-            </place>
-            <place xml:id="pmb184918">
-               <placeName>Westbahnhof</placeName>
-               <location type="coords">
-                  <geo>48,196667 16,337778</geo>
-               </location>
-               <location type="located_in_place">
-                  <placeName ref="pmb65">XV., Rudolfsheim-Fünfhaus</placeName>
-                  <geo>48,19625 16,32749</geo>
-               </location>
-            </place>
-            <place xml:id="pmb213">
-               <placeName>Bad Ischl</placeName>
-               <placeName type="legacy-name-merge">Bad Ischl</placeName>
-               <placeName type="legacy-name-merge">Bad Ischl</placeName>
-               <location type="coords">
-                  <geo>47,71109 13,61893</geo>
-               </location>
-               <location type="located_in_place">
-                  <placeName ref="pmb429">Salzkammergut</placeName>
-                  <geo>47,75 13,5</geo>
-               </location>
-            </place>
-            <place xml:id="pmb30">
-               <placeName>Salzburg</placeName>
-               <placeName type="alternative-name">Iuvavum</placeName>
-               <placeName type="legacy-name-merge">Salzburg</placeName>
-               <placeName type="alternative-name">Salzburg</placeName>
-               <placeName type="legacy-name-merge">Salzburg Stadt</placeName>
-               <placeName type="legacy-name-merge">Salzburg</placeName>
-               <placeName type="legacy-name-merge">Salzburg?</placeName>
-               <location type="coords">
-                  <geo>47,80067 13,04532</geo>
-               </location>
-               <location type="located_in_place">
-                  <placeName ref="pmb697">Salzburg [Land]</placeName>
-                  <geo>47,41667 13,25</geo>
-               </location>
-            </place>
-            <place xml:id="pmb50">
-               <placeName>Wien</placeName>
-               <placeName type="ort_fruherer-name">K.K. Reichshaupt- und Residenzstadt Wien</placeName>
-               <placeName type="legacy-name-merge">Wien</placeName>
-               <placeName type="alternative-name">Bécs</placeName>
-               <placeName type="alternative-name">Land Wien</placeName>
-               <placeName type="alternative-name">Vídeň</placeName>
-               <placeName type="alternative-name">Wenia</placeName>
-               <placeName type="alternative-name">Beč</placeName>
-               <placeName type="ort_fruherer-name">Vindobona</placeName>
-               <placeName type="legacy-name-merge">Vindobona</placeName>
-               <placeName type="alternative-name">Vienna</placeName>
-               <placeName type="legacy-name-merge">Vienna</placeName>
-               <placeName type="alternative-name">Vienna</placeName>
-               <location type="coords">
-                  <geo>48,208333 16,373056</geo>
-               </location>
-               <location type="located_in_place">
-                  <placeName ref="pmb41240">Österreich</placeName>
-                  <geo>47,33333 13,33333</geo>
-               </location>
-            </place>
-            <place xml:id="pmb207296" ana="implied">
+            <place xml:id="pmb207296">
                <placeName>Tiefer Graben 23</placeName>
                <location type="coords">
                   <geo>48,213038 16,368738</geo>
@@ -503,6 +488,75 @@
                   <geo>48,20769 16,37049</geo>
                </location>
             </place>
+            <place xml:id="pmb213">
+               <placeName>Bad Ischl</placeName>
+               <location type="coords">
+                  <geo>47,71109 13,61893</geo>
+               </location>
+               <location type="located_in_place">
+                  <placeName ref="pmb429">Salzkammergut</placeName>
+                  <geo>47,75 13,5</geo>
+               </location>
+            </place>
+            <place xml:id="pmb30">
+               <placeName>Salzburg</placeName>
+               <placeName type="alternative-name">Iuvavum</placeName>
+               <placeName type="legacy-name-merge">Salzburg Stadt</placeName>
+               <placeName type="legacy-name-merge">Salzburg?</placeName>
+               <location type="coords">
+                  <geo>47,80067 13,04532</geo>
+               </location>
+               <location type="located_in_place">
+                  <placeName ref="pmb697">Salzburg [Land]</placeName>
+                  <geo>47,41667 13,25</geo>
+               </location>
+            </place>
+            <place xml:id="pmb50">
+               <placeName>Wien</placeName>
+               <placeName type="ort_fruherer-name">K.K. Reichshaupt- und Residenzstadt Wien</placeName>
+               <placeName type="alternative-name">Bécs</placeName>
+               <placeName type="alternative-name">Land Wien</placeName>
+               <placeName type="alternative-name">Vídeň</placeName>
+               <placeName type="alternative-name">Wenia</placeName>
+               <placeName type="alternative-name">Beč</placeName>
+               <placeName type="ort_fruherer-name">Vindobona</placeName>
+               <placeName type="alternative-name">Vienna</placeName>
+               <location type="coords">
+                  <geo>48,208333 16,373056</geo>
+               </location>
+               <location type="located_in_place">
+                  <placeName ref="pmb41240">Österreich</placeName>
+                  <geo>47,33333 13,33333</geo>
+               </location>
+               <location type="located_in_place">
+                  <placeName ref="pmb235218">Windmühlhöhe</placeName>
+                  <geo>48,24077 16,32092</geo>
+               </location>
+            </place>
+            <place xml:id="pmb184918">
+               <placeName>Westbahnhof</placeName>
+               <location type="coords">
+                  <geo>48,196667 16,337778</geo>
+               </location>
+               <location type="located_in_place">
+                  <placeName ref="pmb65">XV., Rudolfsheim-Fünfhaus</placeName>
+                  <geo>48,19625 16,32749</geo>
+               </location>
+            </place>
+            <place xml:id="pmb182">
+               <placeName>Paris</placeName>
+               <placeName type="alternative-name">P'ariz</placeName>
+               <placeName type="alternative-name">Pariž</placeName>
+               <placeName type="alternative-name">Parisius</placeName>
+               <placeName type="alternative-name">Île-de-France</placeName>
+               <location type="coords">
+                  <geo>48,85341 2,3488</geo>
+               </location>
+               <location type="located_in_place">
+                  <placeName ref="pmb166">Frankreich</placeName>
+                  <geo>46,0 2,0</geo>
+               </location>
+            </place>
          </listPlace>
          <listOrg>
             <org xml:id="pmb142554">
@@ -514,7 +568,7 @@
                   <idno type="URL" subtype="schnitzler-bahr">https://schnitzler-bahr.acdh.oeaw.ac.at/pmb168.html</idno>
                   <idno type="URL" subtype="d-nb">https://d-nb.info/gnd/4005728-8</idno>
                   <idno type="URL" subtype="pmb">https://pmb.acdh.oeaw.ac.at/entity/168/</idno>
-                  <idno type="URL" subtype="kraus">https://www.kraus.wienbibliothek.at/legalkraus/pmb168.html</idno>
+                  <idno type="URL" subtype="www">https://www.kraus.wienbibliothek.at/legalkraus/pmb168.html</idno>
                   <idno type="URL" subtype="pmb">https://pmb.acdh.oeaw.ac.at/entity/92171/</idno>
                   <idno type="URL" subtype="wikidata">http://www.wikidata.org/entity/Q64</idno>
                   <idno type="URL" subtype="wikipedia">https://de.wikipedia.org/wiki/Berlin</idno>
@@ -529,7 +583,7 @@
                   <idno type="URL" subtype="sk">https://sk.acdh.oeaw.ac.at/fa_place00004523</idno>
                   <idno type="URL" subtype="biblio">https://biblio.ub.uni-freiburg.de/sf/#pmb168</idno>
                   <idno type="URL" subtype="schnitzler-briefe">https://schnitzler-briefe.acdh.oeaw.ac.at/pmb168.html</idno>
-                  <idno type="URL" subtype="schoenberg-ue">https://www.schoenberg-ue.at/ue/places/place.2.3</idno>
+                  <idno type="URL" subtype="www">https://www.schoenberg-ue.at/ue/places/place.2.3</idno>
                </location>
                <location type="located_in_place">
                   <placeName ref="pmb231222">Secessionsbühne [1. Spielort]</placeName>
@@ -541,7 +595,7 @@
                   <geo>52,521667 13,386111</geo>
                   <idno type="URL" subtype="pmb">https://pmb.acdh.oeaw.ac.at/entity/142557/</idno>
                   <idno type="URL" subtype="wikipedia">http://www.geonames.org/maps/wikipedia_52.5217_13.3861.html</idno>
-                  <idno type="URL" subtype="d-nb">http://d-nb.info/gnd/118076000X</idno>
+                  <idno type="URL" subtype="">http://d-nb.info/gnd/118076000X</idno>
                   <idno type="URL" subtype="wienerschnitzler">https://wienerschnitzler.org/pmb142557.html</idno>
                   <idno type="URL" subtype="schnitzler-kultur">https://schnitzler-kultur.acdh.oeaw.ac.at/pmb142557.html</idno>
                </location>

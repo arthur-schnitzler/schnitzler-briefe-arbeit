@@ -1,6 +1,10 @@
-<?xml version='1.0' encoding='UTF-8'?>
+<?xml version="1.0" encoding="UTF-8"?>
 <?xml-model href="../meta/schnitzler-briefe-schematron.sch" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
-<TEI xmlns="http://www.tei-c.org/ns/1.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.tei-c.org/ns/1.0 ../meta/schnitzler-briefe-schema.xsd" xml:base="https://id.acdh.oeaw.ac.at/schnitzler/schnitzler-briefe/editions" xml:id="L04265">
+<TEI xmlns="http://www.tei-c.org/ns/1.0"
+     xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+     xsi:schemaLocation="http://www.tei-c.org/ns/1.0 ../meta/schnitzler-briefe-schema.xsd"
+     xml:base="https://id.acdh.oeaw.ac.at/schnitzler/schnitzler-briefe/editions"
+     xml:id="L04265">
    <teiHeader>
       <fileDesc>
          <titleStmt>
@@ -118,19 +122,27 @@
             </correspAction>
             <correspAction type="transmitted">
                <date when="1911-08-10">10. 8. 1911</date>
-               <placeName ref="#pmb51">1/1 Wien 8</placeName>
+               <placeName ref="#pmb51">I., Innere Stadt</placeName>
             </correspAction>
             <correspAction type="received">
                <persName ref="#pmb2121">Schnitzler, Arthur</persName>
                <date evidence="external" notBefore="1911-08-11" notAfter="1911-08-12">[11. 8. 1911 – 12. 8. 1911?]</date>
                <placeName ref="#pmb413">Südbahnhotel [Semmering]</placeName>
             </correspAction>
-            <correspContext><ref type="belongsToCorrespondence" target="correspondence_12740">Schwarzkopf, Gustav</ref>
+            <correspContext>
+               <ref type="belongsToCorrespondence" target="correspondence_12740">Schwarzkopf, Gustav</ref>
                <ref subtype="previous_letter" type="withinCollection" target="L04522">Schnitzler, Schnitzler an Schwarzkopf, 8. 8. 1911</ref>
                <ref subtype="next_letter" type="withinCollection" target="L04388">Schnitzler, Schnitzler an Schwarzkopf, 12. 8. 1911</ref>
-               <ref subtype="previous_letter" type="withinCorrespondence" source="correspondence_12740" target="L04522">Schnitzler, Schnitzler an Schwarzkopf, 8. 8. 1911</ref>
-               <ref subtype="next_letter" type="withinCorrespondence" source="correspondence_12740" target="L04388">Schnitzler, Schnitzler an Schwarzkopf, 12. 8. 1911</ref>
-            </correspContext></correspDesc>
+               <ref subtype="previous_letter"
+                    type="withinCorrespondence"
+                    source="correspondence_12740"
+                    target="L04522">Schnitzler, Schnitzler an Schwarzkopf, 8. 8. 1911</ref>
+               <ref subtype="next_letter"
+                    type="withinCorrespondence"
+                    source="correspondence_12740"
+                    target="L04388">Schnitzler, Schnitzler an Schwarzkopf, 12. 8. 1911</ref>
+            </correspContext>
+         </correspDesc>
       </profileDesc>
       <revisionDesc status="proposed">
          <change who="MAM" when="2026-02-20">Export aus Transkribus</change>
@@ -197,30 +209,6 @@
       </body>
       <back>
          <listPerson>
-            <person xml:id="pmb10863">
-               <persName>
-                  <forename>Richard</forename>
-                  <surname>Beer-Hofmann</surname>
-               </persName>
-               <birth>
-                  <date when="1866-07-11">1866-07-11</date>
-                  <settlement ref="pmb50">
-                     <placeName type="pref">Wien</placeName>
-                     <location>
-                        <geo>48,208333 16,373056</geo>
-                     </location>
-                  </settlement>
-               </birth>
-               <death>
-                  <date when="1945-09-26">1945-09-26</date>
-                  <settlement ref="pmb44053">
-                     <placeName type="pref">New York City</placeName>
-                     <location>
-                        <geo>40,71427 -74,00597</geo>
-                     </location>
-                  </settlement>
-               </death>
-            </person>
             <person xml:id="pmb12740">
                <persName>
                   <forename>Gustav</forename>
@@ -251,7 +239,7 @@
                   <forename>Arthur</forename>
                </persName>
                <birth>
-                  <date when="1862-05-15">15. 5. 1862</date>
+                  <date when="1862-05-15">15. 5. 1862</date>
                   <settlement ref="pmb50">
                      <placeName type="pref">Wien</placeName>
                      <location>
@@ -260,7 +248,7 @@
                   </settlement>
                </birth>
                <death>
-                  <date when="1931-10-21">21. 10. 1931</date>
+                  <date when="1931-10-21">21. 10. 1931</date>
                   <settlement ref="pmb50">
                      <placeName type="pref">Wien</placeName>
                      <location>
@@ -268,10 +256,45 @@
                      </location>
                   </settlement>
                </death>
-               <sex value="male"/>
-               <occupation ref="pmb90">Schriftsteller/Schriftstellerin</occupation>
-               <occupation ref="pmb97">Mediziner/Medizinerin</occupation>
-               <idno type="gnd">https://d-nb.info/gnd/118609807/</idno>
+            </person>
+            <person xml:id="pmb10863">
+               <persName>
+                  <forename>Richard</forename>
+                  <surname>Beer-Hofmann</surname>
+               </persName>
+               <birth>
+                  <date when="1866-07-11">1866-07-11</date>
+                  <settlement ref="pmb50">
+                     <placeName type="pref">Wien</placeName>
+                     <location>
+                        <geo>48,208333 16,373056</geo>
+                     </location>
+                  </settlement>
+               </birth>
+               <death>
+                  <date when="1945-09-26">1945-09-26</date>
+                  <settlement ref="pmb44053">
+                     <placeName type="pref">New York City</placeName>
+                     <location>
+                        <geo>40,71427 -74,00597</geo>
+                     </location>
+                  </settlement>
+               </death>
+            </person>
+            <person xml:id="pmb20562" ana="implied">
+               <persName>
+                  <forename>Anna</forename>
+                  <surname>Loew</surname>
+               </persName>
+               <birth>
+                  <date when="1888-04-11">1888-04-11</date>
+                  <settlement ref="pmb61085">
+                     <placeName type="pref">Ješín</placeName>
+                     <location>
+                        <geo>50,26396 14,19014</geo>
+                     </location>
+                  </settlement>
+               </birth>
             </person>
             <person xml:id="pmb12692" ana="implied">
                <persName>
@@ -303,21 +326,6 @@
                   </settlement>
                </death>
             </person>
-            <person xml:id="pmb20562" ana="implied">
-               <persName>
-                  <forename>Anna</forename>
-                  <surname>Loew</surname>
-               </persName>
-               <birth>
-                  <date when="1888-04-11">1888-04-11</date>
-                  <settlement ref="pmb61085">
-                     <placeName type="pref">Ješín</placeName>
-                     <location>
-                        <geo>50,26396 14,19014</geo>
-                     </location>
-                  </settlement>
-               </birth>
-            </person>
             <person xml:id="pmb2173" ana="implied">
                <persName>
                   <forename>Olga</forename>
@@ -344,22 +352,46 @@
             </person>
          </listPerson>
          <listPlace>
-            <place xml:id="pmb189">
-               <placeName>Semmering</placeName>
-               <placeName type="alternative-name">Gemeinde Semmering</placeName>
-               <placeName type="alternative-name">Semmering-Semmering-Kurort</placeName>
-               <placeName type="alternative-name">Kurort Semmering</placeName>
-               <placeName type="alternative-name">Semmering-Kurort</placeName>
-               <placeName type="alternative-name">Heilklimatischer Höhenluftkurort Semmering</placeName>
-               <placeName type="alternative-name">Semmering- Kurort Semmering</placeName>
-               <placeName type="legacy-name-merge">Semmering</placeName>
-               <placeName type="legacy-name-merge">Semmering</placeName>
+            <place xml:id="pmb51">
+               <placeName>I., Innere Stadt</placeName>
+               <placeName type="alternative-name">Inner city</placeName>
+               <placeName type="alternative-name">Wien,Innere Stadt</placeName>
+               <placeName type="alternative-name">1. Wiener Gemeindebezirk</placeName>
+               <placeName type="legacy-name-merge">Wien-Innere Stadt</placeName>
                <location type="coords">
-                  <geo>47,64224 15,8241</geo>
+                  <geo>48,20769 16,37049</geo>
                </location>
                <location type="located_in_place">
                   <placeName ref="pmb41240">Österreich</placeName>
                   <geo>47,33333 13,33333</geo>
+               </location>
+               <location type="located_in_place">
+                  <placeName ref="pmb50">Wien</placeName>
+                  <geo>48,208333 16,373056</geo>
+               </location>
+            </place>
+            <place xml:id="pmb207296">
+               <placeName>Tiefer Graben 23</placeName>
+               <location type="coords">
+                  <geo>48,213038 16,368738</geo>
+               </location>
+               <location type="located_in_place">
+                  <placeName ref="pmb50825">Tiefer Graben</placeName>
+                  <geo>48,2125 16,368333</geo>
+               </location>
+               <location type="located_in_place">
+                  <placeName ref="pmb51">I., Innere Stadt</placeName>
+                  <geo>48,20769 16,37049</geo>
+               </location>
+            </place>
+            <place xml:id="pmb413">
+               <placeName>Südbahnhotel [Semmering]</placeName>
+               <location type="coords">
+                  <geo>47,647222 15,83</geo>
+               </location>
+               <location type="located_in_place">
+                  <placeName ref="pmb189">Semmering</placeName>
+                  <geo>47,64224 15,8241</geo>
                </location>
             </place>
             <place xml:id="pmb207301">
@@ -376,6 +408,22 @@
                   <geo>48,20769 16,37049</geo>
                </location>
             </place>
+            <place xml:id="pmb189">
+               <placeName>Semmering</placeName>
+               <placeName type="alternative-name">Gemeinde Semmering</placeName>
+               <placeName type="alternative-name">Semmering-Semmering-Kurort</placeName>
+               <placeName type="alternative-name">Kurort Semmering</placeName>
+               <placeName type="alternative-name">Semmering-Kurort</placeName>
+               <placeName type="alternative-name">Heilklimatischer Höhenluftkurort Semmering</placeName>
+               <placeName type="alternative-name">Semmering- Kurort Semmering</placeName>
+               <location type="coords">
+                  <geo>47,64224 15,8241</geo>
+               </location>
+               <location type="located_in_place">
+                  <placeName ref="pmb41240">Österreich</placeName>
+                  <geo>47,33333 13,33333</geo>
+               </location>
+            </place>
             <place xml:id="pmb334803">
                <placeName>Mautern in Steiermark</placeName>
                <location type="coords">
@@ -384,57 +432,6 @@
                <location type="located_in_place">
                   <placeName ref="pmb17">Steiermark</placeName>
                   <geo>47,38 15,7925</geo>
-               </location>
-            </place>
-            <place xml:id="pmb413">
-               <placeName>Südbahnhotel [Semmering]</placeName>
-               <location type="coords">
-                  <geo>47,647222 15,83</geo>
-               </location>
-               <location type="located_in_place">
-                  <placeName ref="pmb189">Semmering</placeName>
-                  <geo>47,64224 15,8241</geo>
-               </location>
-            </place>
-            <place xml:id="pmb50">
-               <placeName>Wien</placeName>
-               <placeName type="ort_fruherer-name">K.K. Reichshaupt- und Residenzstadt Wien</placeName>
-               <placeName type="legacy-name-merge">Wien</placeName>
-               <placeName type="alternative-name">Bécs</placeName>
-               <placeName type="alternative-name">Land Wien</placeName>
-               <placeName type="alternative-name">Vídeň</placeName>
-               <placeName type="alternative-name">Wenia</placeName>
-               <placeName type="alternative-name">Beč</placeName>
-               <placeName type="ort_fruherer-name">Vindobona</placeName>
-               <placeName type="legacy-name-merge">Vindobona</placeName>
-               <placeName type="alternative-name">Vienna</placeName>
-               <placeName type="legacy-name-merge">Vienna</placeName>
-               <placeName type="alternative-name">Vienna</placeName>
-               <location type="coords">
-                  <geo>48,208333 16,373056</geo>
-               </location>
-               <location type="located_in_place">
-                  <placeName ref="pmb41240">Österreich</placeName>
-                  <geo>47,33333 13,33333</geo>
-               </location>
-            </place>
-            <place xml:id="pmb51">
-               <placeName>I., Innere Stadt</placeName>
-               <placeName type="alternative-name">Inner city</placeName>
-               <placeName type="alternative-name">Wien,Innere Stadt</placeName>
-               <placeName type="alternative-name">1. Wiener Gemeindebezirk</placeName>
-               <placeName type="legacy-name-merge">Wien-Innere Stadt</placeName>
-               <placeName type="legacy-name-merge">Inner city</placeName>
-               <location type="coords">
-                  <geo>48,20769 16,37049</geo>
-               </location>
-               <location type="located_in_place">
-                  <placeName ref="pmb41240">Österreich</placeName>
-                  <geo>47,33333 13,33333</geo>
-               </location>
-               <location type="located_in_place">
-                  <placeName ref="pmb50">Wien</placeName>
-                  <geo>48,208333 16,373056</geo>
                </location>
             </place>
             <place xml:id="pmb91729">
@@ -453,6 +450,28 @@
                <location type="located_in_place">
                   <placeName ref="pmb651">Kärnten</placeName>
                   <geo>46,75 13,83333</geo>
+               </location>
+            </place>
+            <place xml:id="pmb50">
+               <placeName>Wien</placeName>
+               <placeName type="ort_fruherer-name">K.K. Reichshaupt- und Residenzstadt Wien</placeName>
+               <placeName type="alternative-name">Bécs</placeName>
+               <placeName type="alternative-name">Land Wien</placeName>
+               <placeName type="alternative-name">Vídeň</placeName>
+               <placeName type="alternative-name">Wenia</placeName>
+               <placeName type="alternative-name">Beč</placeName>
+               <placeName type="ort_fruherer-name">Vindobona</placeName>
+               <placeName type="alternative-name">Vienna</placeName>
+               <location type="coords">
+                  <geo>48,208333 16,373056</geo>
+               </location>
+               <location type="located_in_place">
+                  <placeName ref="pmb41240">Österreich</placeName>
+                  <geo>47,33333 13,33333</geo>
+               </location>
+               <location type="located_in_place">
+                  <placeName ref="pmb235218">Windmühlhöhe</placeName>
+                  <geo>48,24077 16,32092</geo>
                </location>
             </place>
          </listPlace>

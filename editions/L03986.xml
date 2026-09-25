@@ -1,6 +1,10 @@
-<?xml version='1.0' encoding='UTF-8'?>
+<?xml version="1.0" encoding="UTF-8"?>
 <?xml-model href="../meta/schnitzler-briefe-schematron.sch" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
-<TEI xmlns="http://www.tei-c.org/ns/1.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.tei-c.org/ns/1.0 ../meta/schnitzler-briefe-schema.xsd" xml:base="https://id.acdh.oeaw.ac.at/schnitzler/schnitzler-briefe/editions" xml:id="L03986">
+<TEI xmlns="http://www.tei-c.org/ns/1.0"
+     xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+     xsi:schemaLocation="http://www.tei-c.org/ns/1.0 ../meta/schnitzler-briefe-schema.xsd"
+     xml:base="https://id.acdh.oeaw.ac.at/schnitzler/schnitzler-briefe/editions"
+     xml:id="L03986">
    <teiHeader>
       <fileDesc>
          <titleStmt>
@@ -82,7 +86,7 @@
                            <supportDesc>
                               <extent>
                                  <measure unit="karte" quantity="1"/>
-                                 <measure unit="zeichenanzahl" quantity="198"/>
+                                 <measure unit="zeichenanzahl" quantity="197"/>
                               </extent>
                            </supportDesc>
                         </objectDesc>
@@ -119,19 +123,27 @@
             </correspAction>
             <correspAction type="transmitted">
                <date when="1928-04-23">23. 4. 1928</date>
-               <placeName ref="#pmb966">Stamboul</placeName>
+               <placeName ref="#pmb966">Istanbul</placeName>
             </correspAction>
             <correspAction type="received">
                <persName ref="#pmb2312">Zuckerkandl, Berta</persName>
                <date evidence="conjecture" notBefore="1928-04-24" notAfter="1928-04-28">[24. 4. 1928 – 28. 4. 1928?]</date>
                <placeName ref="#pmb235784">Oppolzergasse 6</placeName>
             </correspAction>
-            <correspContext><ref type="belongsToCorrespondence" target="correspondence_2312">Zuckerkandl, Berta</ref>
+            <correspContext>
+               <ref type="belongsToCorrespondence" target="correspondence_2312">Zuckerkandl, Berta</ref>
                <ref subtype="previous_letter" type="withinCollection" target="L02499">Schnitzler an Beer-Hofmann, 23. 4. 1928</ref>
                <ref subtype="next_letter" type="withinCollection" target="L04465">Schnitzler an Schwarzkopf, 26. 4. 1928</ref>
-               <ref subtype="previous_letter" type="withinCorrespondence" source="correspondence_2312" target="L03993">Schnitzler an Zuckerkandl, 17. 12. 1927</ref>
-               <ref subtype="next_letter" type="withinCorrespondence" source="correspondence_2312" target="L03974">Schnitzler an Zuckerkandl, 22. 12. 1928</ref>
-            </correspContext></correspDesc>
+               <ref subtype="previous_letter"
+                    type="withinCorrespondence"
+                    source="correspondence_2312"
+                    target="L03993">Schnitzler an Zuckerkandl, 17. 12. 1927</ref>
+               <ref subtype="next_letter"
+                    type="withinCorrespondence"
+                    source="correspondence_2312"
+                    target="L03974">Schnitzler an Zuckerkandl, 22. 12. 1928</ref>
+            </correspContext>
+         </correspDesc>
       </profileDesc>
       <revisionDesc status="proposed">
          <change who="MAM" when="2025-11-03">Export aus Transkribus</change>
@@ -198,7 +210,7 @@
                   <forename>Arthur</forename>
                </persName>
                <birth>
-                  <date when="1862-05-15">15. 5. 1862</date>
+                  <date when="1862-05-15">15. 5. 1862</date>
                   <settlement ref="pmb50">
                      <placeName type="pref">Wien</placeName>
                      <location>
@@ -207,7 +219,7 @@
                   </settlement>
                </birth>
                <death>
-                  <date when="1931-10-21">21. 10. 1931</date>
+                  <date when="1931-10-21">21. 10. 1931</date>
                   <settlement ref="pmb50">
                      <placeName type="pref">Wien</placeName>
                      <location>
@@ -215,10 +227,6 @@
                      </location>
                   </settlement>
                </death>
-               <sex value="male"/>
-               <occupation ref="pmb90">Schriftsteller/Schriftstellerin</occupation>
-               <occupation ref="pmb97">Mediziner/Medizinerin</occupation>
-               <idno type="gnd">https://d-nb.info/gnd/118609807/</idno>
             </person>
             <person xml:id="pmb2312">
                <persName>
@@ -240,30 +248,6 @@
                      <placeName type="pref">Paris</placeName>
                      <location>
                         <geo>48,85341 2,3488</geo>
-                     </location>
-                  </settlement>
-               </death>
-            </person>
-            <person xml:id="pmb14850" ana="comment">
-               <persName>
-                  <forename>Arnoldo</forename>
-                  <surname>Cappellini</surname>
-               </persName>
-               <birth>
-                  <date when="1889-08-10">1889-08-10</date>
-                  <settlement ref="pmb462">
-                     <placeName type="pref">Venedig</placeName>
-                     <location>
-                        <geo>45,43713 12,33265</geo>
-                     </location>
-                  </settlement>
-               </birth>
-               <death>
-                  <date when="1954-05-08">1954-05-08</date>
-                  <settlement ref="pmb445">
-                     <placeName type="pref">Rom</placeName>
-                     <location>
-                        <geo>41,89193 12,51133</geo>
                      </location>
                   </settlement>
                </death>
@@ -292,15 +276,54 @@
                   </settlement>
                </death>
             </person>
+            <person xml:id="pmb14850" ana="comment">
+               <persName>
+                  <forename>Arnoldo</forename>
+                  <surname>Cappellini</surname>
+               </persName>
+               <birth>
+                  <date when="1889-08-10">1889-08-10</date>
+                  <settlement ref="pmb462">
+                     <placeName type="pref">Venedig</placeName>
+                     <location>
+                        <geo>45,43713 12,33265</geo>
+                     </location>
+                  </settlement>
+               </birth>
+               <death>
+                  <date when="1954-05-08">1954-05-08</date>
+                  <settlement ref="pmb445">
+                     <placeName type="pref">Rom</placeName>
+                     <location>
+                        <geo>41,89193 12,51133</geo>
+                     </location>
+                  </settlement>
+               </death>
+            </person>
          </listPerson>
          <listBibl>
             <bibl xml:id="pmb33243" ana="comment">
-               <title type="main">Tagebuch</title>
+               <title>Tagebuch</title>
                <title type="werk_link">https://schnitzler-tagebuch.acdh.oeaw.ac.at</title>
-               <author role="hat-geschaffen" ref="pmb2121">Schnitzler, Arthur</author>
+               <author ref="pmb2121" role="hat-geschaffen">Schnitzler, Arthur</author>
             </bibl>
          </listBibl>
          <listPlace>
+            <place xml:id="pmb966" ana="comment">
+               <placeName>Istanbul</placeName>
+               <placeName type="legacy-name-merge">Konstantinopel</placeName>
+               <placeName type="alternative-name">Istanbul Province</placeName>
+               <placeName type="alternative-name">Byzantion</placeName>
+               <placeName type="alternative-name">Byzantium</placeName>
+               <placeName type="alternative-name">Constantinople</placeName>
+               <location type="coords">
+                  <geo>41,01384 28,94966</geo>
+               </location>
+               <location type="located_in_place">
+                  <placeName ref="pmb773">Türkei</placeName>
+                  <geo>39,0 35,0</geo>
+               </location>
+            </place>
             <place xml:id="pmb235784">
                <placeName>Oppolzergasse 6</placeName>
                <location type="coords">
@@ -318,9 +341,7 @@
             <place xml:id="pmb41240">
                <placeName>Österreich</placeName>
                <placeName type="alternative-name">Republik Österreich</placeName>
-               <placeName type="legacy-name-merge">Österreich</placeName>
                <placeName type="alternative-name">Republic of Austria</placeName>
-               <placeName type="legacy-name-merge">Österreich</placeName>
                <placeName type="legacy-name-merge">Deutsch Österreich</placeName>
                <placeName type="legacy-name-merge">Altoesterreich</placeName>
                <location type="coords">
@@ -339,35 +360,12 @@
                   <geo>48,4054 16,4887</geo>
                </location>
             </place>
-            <place xml:id="pmb50">
-               <placeName>Wien</placeName>
-               <placeName type="ort_fruherer-name">K.K. Reichshaupt- und Residenzstadt Wien</placeName>
-               <placeName type="legacy-name-merge">Wien</placeName>
-               <placeName type="alternative-name">Bécs</placeName>
-               <placeName type="alternative-name">Land Wien</placeName>
-               <placeName type="alternative-name">Vídeň</placeName>
-               <placeName type="alternative-name">Wenia</placeName>
-               <placeName type="alternative-name">Beč</placeName>
-               <placeName type="ort_fruherer-name">Vindobona</placeName>
-               <placeName type="legacy-name-merge">Vindobona</placeName>
-               <placeName type="alternative-name">Vienna</placeName>
-               <placeName type="legacy-name-merge">Vienna</placeName>
-               <placeName type="alternative-name">Vienna</placeName>
-               <location type="coords">
-                  <geo>48,208333 16,373056</geo>
-               </location>
-               <location type="located_in_place">
-                  <placeName ref="pmb41240">Österreich</placeName>
-                  <geo>47,33333 13,33333</geo>
-               </location>
-            </place>
             <place xml:id="pmb51">
                <placeName>I., Innere Stadt</placeName>
                <placeName type="alternative-name">Inner city</placeName>
                <placeName type="alternative-name">Wien,Innere Stadt</placeName>
                <placeName type="alternative-name">1. Wiener Gemeindebezirk</placeName>
                <placeName type="legacy-name-merge">Wien-Innere Stadt</placeName>
-               <placeName type="legacy-name-merge">Inner city</placeName>
                <location type="coords">
                   <geo>48,20769 16,37049</geo>
                </location>
@@ -382,7 +380,6 @@
             </place>
             <place xml:id="pmb90386">
                <placeName>Bosporus</placeName>
-               <placeName type="alternative-name">Bosporus</placeName>
                <location type="coords">
                   <geo>41,10164 29,06097</geo>
                </location>
@@ -391,31 +388,22 @@
                   <geo>39,0 35,0</geo>
                </location>
             </place>
-            <place xml:id="pmb966">
-               <placeName>Istanbul</placeName>
-               <placeName type="legacy-name-merge">Konstantinopel</placeName>
-               <placeName type="alternative-name">Istanbul Province</placeName>
-               <placeName type="legacy-name-merge">Istanbul</placeName>
-               <placeName type="alternative-name">Byzantion</placeName>
-               <placeName type="alternative-name">Byzantium</placeName>
-               <placeName type="alternative-name">Konstantinopel</placeName>
-               <placeName type="alternative-name">Constantinople</placeName>
+            <place xml:id="pmb873" ana="comment">
+               <placeName>Triest</placeName>
+               <placeName type="alternative-name">Trieste</placeName>
                <location type="coords">
-                  <geo>41,01384 28,94966</geo>
+                  <geo>45,66667 13,76667</geo>
                </location>
                <location type="located_in_place">
-                  <placeName ref="pmb773">Türkei</placeName>
-                  <geo>39,0 35,0</geo>
+                  <placeName ref="pmb40306">Italien</placeName>
+                  <geo>42,83333 12,83333</geo>
                </location>
             </place>
             <place xml:id="pmb41212" ana="comment">
                <placeName>Korfu</placeName>
                <placeName type="alternative-name">Corcyra (Insel)</placeName>
-               <placeName type="legacy-name-merge">Korfu</placeName>
                <placeName type="alternative-name">Corfu</placeName>
-               <placeName type="alternative-name">Korfu</placeName>
                <placeName type="legacy-name-merge">Kerkyra</placeName>
-               <placeName type="legacy-name-merge">Corfu</placeName>
                <location type="coords">
                   <geo>39,598055 19,852222</geo>
                </location>
@@ -424,35 +412,8 @@
                   <geo>39,0 22,0</geo>
                </location>
             </place>
-            <place xml:id="pmb44292" ana="comment">
-               <placeName>Rhodos</placeName>
-               <placeName type="alternative-name">Rhodos</placeName>
-               <placeName type="alternative-name">Rhodes Town</placeName>
-               <placeName type="legacy-name">Rhodos</placeName>
-               <location type="coords">
-                  <geo>36,43556 28,22199</geo>
-               </location>
-               <location type="located_in_place">
-                  <placeName ref="pmb44293">Griechenland</placeName>
-                  <geo>39,0 22,0</geo>
-               </location>
-            </place>
-            <place xml:id="pmb462" ana="comment">
-               <placeName>Venedig</placeName>
-               <placeName type="alternative-name">Venedig</placeName>
-               <placeName type="legacy-name-merge">Venice</placeName>
-               <placeName type="legacy-name-merge">Venedig</placeName>
-               <location type="coords">
-                  <geo>45,43713 12,33265</geo>
-               </location>
-               <location type="located_in_place">
-                  <placeName ref="pmb40306">Italien</placeName>
-                  <geo>42,83333 12,83333</geo>
-               </location>
-            </place>
             <place xml:id="pmb505" ana="comment">
                <placeName>Athen</placeName>
-               <placeName type="legacy-name-merge">Athen</placeName>
                <placeName type="legacy-name-merge">v. Chr., Athen</placeName>
                <placeName type="legacy-name-merge">vor Chr., Athen</placeName>
                <location type="coords">
@@ -463,18 +424,48 @@
                   <geo>39,0 22,0</geo>
                </location>
             </place>
-            <place xml:id="pmb873" ana="comment">
-               <placeName>Triest</placeName>
-               <placeName type="alternative-name">Trieste</placeName>
-               <placeName type="alternative-name">Triest</placeName>
-               <placeName type="legacy-name-merge">Trieste</placeName>
-               <placeName type="legacy-name-merge">Triest</placeName>
+            <place xml:id="pmb44292" ana="comment">
+               <placeName>Rhodos</placeName>
+               <placeName type="alternative-name">Rhodes Town</placeName>
                <location type="coords">
-                  <geo>45,66667 13,76667</geo>
+                  <geo>36,43556 28,22199</geo>
+               </location>
+               <location type="located_in_place">
+                  <placeName ref="pmb44293">Griechenland</placeName>
+                  <geo>39,0 22,0</geo>
+               </location>
+            </place>
+            <place xml:id="pmb462" ana="comment">
+               <placeName>Venedig</placeName>
+               <placeName type="legacy-name-merge">Venice</placeName>
+               <location type="coords">
+                  <geo>45,43713 12,33265</geo>
                </location>
                <location type="located_in_place">
                   <placeName ref="pmb40306">Italien</placeName>
                   <geo>42,83333 12,83333</geo>
+               </location>
+            </place>
+            <place xml:id="pmb50" ana="comment">
+               <placeName>Wien</placeName>
+               <placeName type="ort_fruherer-name">K.K. Reichshaupt- und Residenzstadt Wien</placeName>
+               <placeName type="alternative-name">Bécs</placeName>
+               <placeName type="alternative-name">Land Wien</placeName>
+               <placeName type="alternative-name">Vídeň</placeName>
+               <placeName type="alternative-name">Wenia</placeName>
+               <placeName type="alternative-name">Beč</placeName>
+               <placeName type="ort_fruherer-name">Vindobona</placeName>
+               <placeName type="alternative-name">Vienna</placeName>
+               <location type="coords">
+                  <geo>48,208333 16,373056</geo>
+               </location>
+               <location type="located_in_place">
+                  <placeName ref="pmb41240">Österreich</placeName>
+                  <geo>47,33333 13,33333</geo>
+               </location>
+               <location type="located_in_place">
+                  <placeName ref="pmb235218">Windmühlhöhe</placeName>
+                  <geo>48,24077 16,32092</geo>
                </location>
             </place>
          </listPlace>

@@ -1,6 +1,10 @@
-<?xml version='1.0' encoding='UTF-8'?>
+<?xml version="1.0" encoding="UTF-8"?>
 <?xml-model href="../meta/schnitzler-briefe-schematron.sch" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
-<TEI xmlns="http://www.tei-c.org/ns/1.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.tei-c.org/ns/1.0 ../meta/schnitzler-briefe-schema.xsd" xml:base="https://id.acdh.oeaw.ac.at/schnitzler/schnitzler-briefe/editions" xml:id="L04256">
+<TEI xmlns="http://www.tei-c.org/ns/1.0"
+     xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+     xsi:schemaLocation="http://www.tei-c.org/ns/1.0 ../meta/schnitzler-briefe-schema.xsd"
+     xml:base="https://id.acdh.oeaw.ac.at/schnitzler/schnitzler-briefe/editions"
+     xml:id="L04256">
    <teiHeader>
       <fileDesc>
          <titleStmt>
@@ -82,7 +86,7 @@
                            <supportDesc>
                               <extent>
                                  <measure unit="karte" quantity="1"/>
-                                 <measure unit="zeichenanzahl" quantity="405"/>
+                                 <measure unit="zeichenanzahl" quantity="403"/>
                               </extent>
                            </supportDesc>
                         </objectDesc>
@@ -118,19 +122,27 @@
             </correspAction>
             <correspAction type="transmitted">
                <date when="1913-06-05">[5]. 6. [1913]</date>
-               <placeName ref="#pmb662">Baden</placeName>
+               <placeName ref="#pmb662">Baden bei Wien</placeName>
             </correspAction>
             <correspAction type="received">
                <persName ref="#pmb2121">Schnitzler, Arthur</persName>
                <date evidence="conjecture" notBefore="1913-06-06" notAfter="1913-06-10">[6. 6. 1913 – 10. 6. 1913?]</date>
                <placeName ref="#pmb168815">Sternwartestraße 71</placeName>
             </correspAction>
-            <correspContext><ref type="belongsToCorrespondence" target="correspondence_12740">Schwarzkopf, Gustav</ref>
+            <correspContext>
+               <ref type="belongsToCorrespondence" target="correspondence_12740">Schwarzkopf, Gustav</ref>
                <ref subtype="previous_letter" type="withinCollection" target="L04511">Schnitzler an Schwarzkopf, 3. 6. 1913</ref>
                <ref subtype="next_letter" type="withinCollection" target="L04011">Wedekind an Schnitzler, 11. 6. 1913</ref>
-               <ref subtype="previous_letter" type="withinCorrespondence" source="correspondence_12740" target="L04511">Schnitzler an Schwarzkopf, 3. 6. 1913</ref>
-               <ref subtype="next_letter" type="withinCorrespondence" source="correspondence_12740" target="L04259">Schwarzkopf an Schnitzler, 4. 7. 1913</ref>
-            </correspContext></correspDesc>
+               <ref subtype="previous_letter"
+                    type="withinCorrespondence"
+                    source="correspondence_12740"
+                    target="L04511">Schnitzler an Schwarzkopf, 3. 6. 1913</ref>
+               <ref subtype="next_letter"
+                    type="withinCorrespondence"
+                    source="correspondence_12740"
+                    target="L04259">Schwarzkopf an Schnitzler, 4. 7. 1913</ref>
+            </correspContext>
+         </correspDesc>
       </profileDesc>
       <revisionDesc status="proposed">
          <change who="MAM" when="2026-02-20">Export aus Transkribus</change>
@@ -176,16 +188,17 @@
                <salute>Lieber Arthur!</salute>
             </opener>
             <p>Es iſt zu heiß um nach <rs type="place" ref="#pmb50">Wien</rs> zu fahren, ich will
-               noch einen Tag abwarten. Ihrer freundliche <anchor type="commentary" xml:id="K_L04256-3"/>Einladung<note type="commentary" corresp="K_L04256-3"><ref type="schnitzler-briefe" target="L04511"/>.</note> für <anchor type="commentary" xml:id="K_L04256-1"/>
+               noch einen Tag abwarten. Ihrer freundliche <anchor type="commentary" xml:id="K_L04256-1"/>Einladung<note type="commentary" corresp="K_L04256-1">
+                  <ref type="schnitzler-briefe" target="L04511"/>.</note> für <anchor type="commentary" xml:id="K_L04256-2"/>
                <date>Freitag</date>
                <space unit="chars" quantity="1"/>
                <hi rend="underline" n="1">Abend</hi>
-               <note type="commentary" corresp="K_L04256-1">
+               <note type="commentary" corresp="K_L04256-2">
                   <ref type="schnitzler-tagebuch" target="1913-05-30" subtype="Cf"/>.</note> ko<c rendition="#gemination-n"/>te ich doch
                nicht folgen; gesellschafts<hi rend="underline" n="1">fähig</hi> – ſo für einen
-               größeren Kreis – bin ich doch noch nicht. <anchor type="commentary" xml:id="K_L04256-2"/>
+               größeren Kreis – bin ich doch noch nicht. <anchor type="commentary" xml:id="K_L04256-3"/>
                <date>So<c rendition="#gemination-n"/>tag</date> bin ich
-               gewiß ſchon in <rs type="place" ref="#pmb50">Wien</rs> und ſuche Sie dann Nachmittag<note type="commentary" corresp="K_L04256-2">Es wurde der Abend, <ref type="schnitzler-tagebuch" target="1913-06-08" subtype="cf"/>.</note>
+               gewiß ſchon in <rs type="place" ref="#pmb50">Wien</rs> und ſuche Sie dann Nachmittag<note type="commentary" corresp="K_L04256-3">Es wurde der Abend, <ref type="schnitzler-tagebuch" target="1913-06-08" subtype="cf"/>.</note>
                auf.</p>
             <closer>Ihre <rs type="person" ref="#pmb2173 #pmb2238" subtype="implied">Damen</rs> und<lb/>Sie
                herzlichſt grüßend<lb/>Ihr<lb/>Gustav</closer>
@@ -223,7 +236,7 @@
                   <forename>Arthur</forename>
                </persName>
                <birth>
-                  <date when="1862-05-15">15. 5. 1862</date>
+                  <date when="1862-05-15">15. 5. 1862</date>
                   <settlement ref="pmb50">
                      <placeName type="pref">Wien</placeName>
                      <location>
@@ -232,7 +245,7 @@
                   </settlement>
                </birth>
                <death>
-                  <date when="1931-10-21">21. 10. 1931</date>
+                  <date when="1931-10-21">21. 10. 1931</date>
                   <settlement ref="pmb50">
                      <placeName type="pref">Wien</placeName>
                      <location>
@@ -240,10 +253,6 @@
                      </location>
                   </settlement>
                </death>
-               <sex value="male"/>
-               <occupation ref="pmb90">Schriftsteller/Schriftstellerin</occupation>
-               <occupation ref="pmb97">Mediziner/Medizinerin</occupation>
-               <idno type="gnd">https://d-nb.info/gnd/118609807/</idno>
             </person>
             <person xml:id="pmb2173" ana="implied">
                <persName>
@@ -295,6 +304,22 @@
             </person>
          </listPerson>
          <listPlace>
+            <place xml:id="pmb662">
+               <placeName>Baden bei Wien</placeName>
+               <placeName type="alternative-name">Baden</placeName>
+               <placeName type="legacy-name-merge">Baden (Niederösterreich)</placeName>
+               <location type="coords">
+                  <geo>48,00543 16,23264</geo>
+               </location>
+               <location type="located_in_place">
+                  <placeName ref="pmb41240">Österreich</placeName>
+                  <geo>47,33333 13,33333</geo>
+               </location>
+               <location type="located_in_place">
+                  <placeName ref="pmb1003">Niederösterreich</placeName>
+                  <geo>48,33333 15,75</geo>
+               </location>
+            </place>
             <place xml:id="pmb168815">
                <placeName>Sternwartestraße 71</placeName>
                <location type="coords">
@@ -311,6 +336,21 @@
                <location type="located_in_place">
                   <placeName ref="pmb150">Sternwartestraße</placeName>
                   <geo>48,23099349198 16,340117830625</geo>
+               </location>
+            </place>
+            <place xml:id="pmb68">
+               <placeName>XVIII., Währing</placeName>
+               <placeName type="legacy-name-merge">Währing</placeName>
+               <location type="coords">
+                  <geo>48,23333 16,31667</geo>
+               </location>
+               <location type="located_in_place">
+                  <placeName ref="pmb41240">Österreich</placeName>
+                  <geo>47,33333 13,33333</geo>
+               </location>
+               <location type="located_in_place">
+                  <placeName ref="pmb50">Wien</placeName>
+                  <geo>48,208333 16,373056</geo>
                </location>
             </place>
             <place xml:id="pmb186454">
@@ -330,16 +370,12 @@
             <place xml:id="pmb50">
                <placeName>Wien</placeName>
                <placeName type="ort_fruherer-name">K.K. Reichshaupt- und Residenzstadt Wien</placeName>
-               <placeName type="legacy-name-merge">Wien</placeName>
                <placeName type="alternative-name">Bécs</placeName>
                <placeName type="alternative-name">Land Wien</placeName>
                <placeName type="alternative-name">Vídeň</placeName>
                <placeName type="alternative-name">Wenia</placeName>
                <placeName type="alternative-name">Beč</placeName>
                <placeName type="ort_fruherer-name">Vindobona</placeName>
-               <placeName type="legacy-name-merge">Vindobona</placeName>
-               <placeName type="alternative-name">Vienna</placeName>
-               <placeName type="legacy-name-merge">Vienna</placeName>
                <placeName type="alternative-name">Vienna</placeName>
                <location type="coords">
                   <geo>48,208333 16,373056</geo>
@@ -348,39 +384,9 @@
                   <placeName ref="pmb41240">Österreich</placeName>
                   <geo>47,33333 13,33333</geo>
                </location>
-            </place>
-            <place xml:id="pmb662">
-               <placeName>Baden bei Wien</placeName>
-               <placeName type="alternative-name">Baden</placeName>
-               <placeName type="legacy-name-merge">Baden</placeName>
-               <placeName type="legacy-name-merge">Baden bei Wien</placeName>
-               <placeName type="alternative-name">Baden bei Wien</placeName>
-               <placeName type="legacy-name-merge">Baden (Niederösterreich)</placeName>
-               <location type="coords">
-                  <geo>48,00543 16,23264</geo>
-               </location>
                <location type="located_in_place">
-                  <placeName ref="pmb41240">Österreich</placeName>
-                  <geo>47,33333 13,33333</geo>
-               </location>
-               <location type="located_in_place">
-                  <placeName ref="pmb1003">Niederösterreich</placeName>
-                  <geo>48,33333 15,75</geo>
-               </location>
-            </place>
-            <place xml:id="pmb68">
-               <placeName>XVIII., Währing</placeName>
-               <placeName type="legacy-name-merge">Währing</placeName>
-               <location type="coords">
-                  <geo>48,23333 16,31667</geo>
-               </location>
-               <location type="located_in_place">
-                  <placeName ref="pmb41240">Österreich</placeName>
-                  <geo>47,33333 13,33333</geo>
-               </location>
-               <location type="located_in_place">
-                  <placeName ref="pmb50">Wien</placeName>
-                  <geo>48,208333 16,373056</geo>
+                  <placeName ref="pmb235218">Windmühlhöhe</placeName>
+                  <geo>48,24077 16,32092</geo>
                </location>
             </place>
          </listPlace>

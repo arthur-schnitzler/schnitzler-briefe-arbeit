@@ -1,6 +1,10 @@
-<?xml version='1.0' encoding='UTF-8'?>
+<?xml version="1.0" encoding="UTF-8"?>
 <?xml-model href="../meta/schnitzler-briefe-schematron.sch" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
-<TEI xmlns="http://www.tei-c.org/ns/1.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.tei-c.org/ns/1.0 ../meta/schnitzler-briefe-schema.xsd" xml:base="https://id.acdh.oeaw.ac.at/schnitzler/schnitzler-briefe/editions" xml:id="L04281">
+<TEI xmlns="http://www.tei-c.org/ns/1.0"
+     xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+     xsi:schemaLocation="http://www.tei-c.org/ns/1.0 ../meta/schnitzler-briefe-schema.xsd"
+     xml:base="https://id.acdh.oeaw.ac.at/schnitzler/schnitzler-briefe/editions"
+     xml:id="L04281">
    <teiHeader>
       <fileDesc>
          <titleStmt>
@@ -111,12 +115,20 @@
                <date evidence="conjecture" notBefore="1893-07-09" notAfter="1893-07-13">[9. 7. 1893 – 13. 7. 1893?]</date>
                <placeName ref="#pmb213">Bad Ischl</placeName>
             </correspAction>
-            <correspContext><ref type="belongsToCorrespondence" target="correspondence_12740">Schwarzkopf, Gustav</ref>
+            <correspContext>
+               <ref type="belongsToCorrespondence" target="correspondence_12740">Schwarzkopf, Gustav</ref>
                <ref subtype="previous_letter" type="withinCollection" target="L00235">Hofmannsthal an Schnitzler, Beer-Hofmann, 8. 7. 1893</ref>
                <ref subtype="next_letter" type="withinCollection" target="L02959">Schnitzler an Salten, 9. 7. 1893</ref>
-               <ref subtype="previous_letter" type="withinCorrespondence" source="correspondence_12740" target="L04217">Schnitzler an Schwarzkopf, 5. 7. 1893</ref>
-               <ref subtype="next_letter" type="withinCorrespondence" source="correspondence_12740" target="L04208">Schnitzler an Schwarzkopf, [23. 7. 1893?]</ref>
-            </correspContext></correspDesc>
+               <ref subtype="previous_letter"
+                    type="withinCorrespondence"
+                    source="correspondence_12740"
+                    target="L04217">Schnitzler an Schwarzkopf, 5. 7. 1893</ref>
+               <ref subtype="next_letter"
+                    type="withinCorrespondence"
+                    source="correspondence_12740"
+                    target="L04208">Schnitzler an Schwarzkopf, [23. 7. 1893?]</ref>
+            </correspContext>
+         </correspDesc>
       </profileDesc>
       <revisionDesc status="proposed">
          <change who="MAM" when="2026-02-20">Export aus Transkribus</change>
@@ -185,54 +197,6 @@
       </body>
       <back>
          <listPerson>
-            <person xml:id="pmb10863">
-               <persName>
-                  <forename>Richard</forename>
-                  <surname>Beer-Hofmann</surname>
-               </persName>
-               <birth>
-                  <date when="1866-07-11">1866-07-11</date>
-                  <settlement ref="pmb50">
-                     <placeName type="pref">Wien</placeName>
-                     <location>
-                        <geo>48,208333 16,373056</geo>
-                     </location>
-                  </settlement>
-               </birth>
-               <death>
-                  <date when="1945-09-26">1945-09-26</date>
-                  <settlement ref="pmb44053">
-                     <placeName type="pref">New York City</placeName>
-                     <location>
-                        <geo>40,71427 -74,00597</geo>
-                     </location>
-                  </settlement>
-               </death>
-            </person>
-            <person xml:id="pmb11740">
-               <persName>
-                  <forename>Hugo von</forename>
-                  <surname>Hofmannsthal</surname>
-               </persName>
-               <birth>
-                  <date when="1874-02-01">1874-02-01</date>
-                  <settlement ref="pmb50">
-                     <placeName type="pref">Wien</placeName>
-                     <location>
-                        <geo>48,208333 16,373056</geo>
-                     </location>
-                  </settlement>
-               </birth>
-               <death>
-                  <date when="1929-07-15">1929-07-15</date>
-                  <settlement ref="pmb173">
-                     <placeName type="pref">Rodaun</placeName>
-                     <location>
-                        <geo>48,132793312328 16,256152195922</geo>
-                     </location>
-                  </settlement>
-               </death>
-            </person>
             <person xml:id="pmb12740">
                <persName>
                   <forename>Gustav</forename>
@@ -263,7 +227,7 @@
                   <forename>Arthur</forename>
                </persName>
                <birth>
-                  <date when="1862-05-15">15. 5. 1862</date>
+                  <date when="1862-05-15">15. 5. 1862</date>
                   <settlement ref="pmb50">
                      <placeName type="pref">Wien</placeName>
                      <location>
@@ -272,7 +236,7 @@
                   </settlement>
                </birth>
                <death>
-                  <date when="1931-10-21">21. 10. 1931</date>
+                  <date when="1931-10-21">21. 10. 1931</date>
                   <settlement ref="pmb50">
                      <placeName type="pref">Wien</placeName>
                      <location>
@@ -280,10 +244,30 @@
                      </location>
                   </settlement>
                </death>
-               <sex value="male"/>
-               <occupation ref="pmb90">Schriftsteller/Schriftstellerin</occupation>
-               <occupation ref="pmb97">Mediziner/Medizinerin</occupation>
-               <idno type="gnd">https://d-nb.info/gnd/118609807/</idno>
+            </person>
+            <person xml:id="pmb11740">
+               <persName>
+                  <forename>Hugo von</forename>
+                  <surname>Hofmannsthal</surname>
+               </persName>
+               <birth>
+                  <date when="1874-02-01">1874-02-01</date>
+                  <settlement ref="pmb50">
+                     <placeName type="pref">Wien</placeName>
+                     <location>
+                        <geo>48,208333 16,373056</geo>
+                     </location>
+                  </settlement>
+               </birth>
+               <death>
+                  <date when="1929-07-15">1929-07-15</date>
+                  <settlement ref="pmb173">
+                     <placeName type="pref">Rodaun</placeName>
+                     <location>
+                        <geo>48,132793312328 16,256152195922</geo>
+                     </location>
+                  </settlement>
+               </death>
             </person>
             <person xml:id="pmb24651">
                <persName>
@@ -309,6 +293,18 @@
                   </settlement>
                </death>
             </person>
+            <person xml:id="pmb26537">
+               <persName>
+                  <forename>Felix Viktor</forename>
+                  <surname>Wachtel</surname>
+               </persName>
+               <birth>
+                  <date when="1859-06-15">1859-06-15</date>
+                  <settlement ref="pmb26538">
+                     <placeName type="pref">Lamnitz</placeName>
+                  </settlement>
+               </birth>
+            </person>
             <person xml:id="pmb24686">
                <persName>
                   <forename>Christine</forename>
@@ -327,17 +323,34 @@
                   </settlement>
                </death>
             </person>
-            <person xml:id="pmb26537">
+            <person xml:id="pmb10863">
                <persName>
-                  <forename>Felix Viktor</forename>
-                  <surname>Wachtel</surname>
+                  <forename>Richard</forename>
+                  <surname>Beer-Hofmann</surname>
                </persName>
                <birth>
-                  <date when="1859-06-15">1859-06-15</date>
-                  <settlement ref="pmb26538">
-                     <placeName type="pref">Lamnitz</placeName>
+                  <date when="1866-07-11">1866-07-11</date>
+                  <settlement ref="pmb50">
+                     <placeName type="pref">Wien</placeName>
+                     <location>
+                        <geo>48,208333 16,373056</geo>
+                     </location>
                   </settlement>
                </birth>
+               <death>
+                  <date when="1945-09-26">1945-09-26</date>
+                  <settlement ref="pmb44053">
+                     <placeName type="pref">New York City</placeName>
+                     <location>
+                        <geo>40,71427 -74,00597</geo>
+                     </location>
+                  </settlement>
+               </death>
+            </person>
+            <person xml:id="pmb335138" ana="implied">
+               <persName>
+                  <surname>?? [Köchin von Gustav Schwarzkopf, 1893]</surname>
+               </persName>
             </person>
             <person xml:id="pmb11737" ana="implied">
                <persName>
@@ -387,30 +400,6 @@
                   </settlement>
                </death>
             </person>
-            <person xml:id="pmb24645" ana="implied">
-               <persName>
-                  <forename>Emil</forename>
-                  <surname>Schwarzkopf</surname>
-               </persName>
-               <birth>
-                  <date when="1851-09-17">1851-09-17</date>
-                  <settlement ref="pmb50">
-                     <placeName type="pref">Wien</placeName>
-                     <location>
-                        <geo>48,208333 16,373056</geo>
-                     </location>
-                  </settlement>
-               </birth>
-               <death>
-                  <date when="1928-01-28">1928-01-28</date>
-                  <settlement ref="pmb50">
-                     <placeName type="pref">Wien</placeName>
-                     <location>
-                        <geo>48,208333 16,373056</geo>
-                     </location>
-                  </settlement>
-               </death>
-            </person>
             <person xml:id="pmb24648" ana="implied">
                <persName>
                   <forename>Max</forename>
@@ -435,26 +424,53 @@
                   </settlement>
                </death>
             </person>
-            <person xml:id="pmb335138" ana="implied">
+            <person xml:id="pmb24645" ana="implied">
                <persName>
-                  <surname>?? [Köchin von Gustav Schwarzkopf, 1893]</surname>
+                  <forename>Emil</forename>
+                  <surname>Schwarzkopf</surname>
                </persName>
+               <birth>
+                  <date when="1851-09-17">1851-09-17</date>
+                  <settlement ref="pmb50">
+                     <placeName type="pref">Wien</placeName>
+                     <location>
+                        <geo>48,208333 16,373056</geo>
+                     </location>
+                  </settlement>
+               </birth>
+               <death>
+                  <date when="1928-01-28">1928-01-28</date>
+                  <settlement ref="pmb50">
+                     <placeName type="pref">Wien</placeName>
+                     <location>
+                        <geo>48,208333 16,373056</geo>
+                     </location>
+                  </settlement>
+               </death>
             </person>
          </listPerson>
          <listBibl>
             <bibl xml:id="pmb29935">
-               <title type="main">Anatol</title>
+               <title>Anatol</title>
                <title type="werk_bibliografische-angabe">Arthur Schnitzler: Anatol. Berlin: Bibliographisches Bureau 1892, vordatiert auf 1893</title>
                <title type="legacy-name-merge">Anatol</title>
-               <author role="hat-geschaffen" ref="pmb2121">Schnitzler, Arthur</author>
-               <author role="hat-ein-vorwortnachwort-verfasst-zu" ref="pmb11740">Hofmannsthal, Hugo von</author>
+               <author ref="pmb2121" role="hat-geschaffen">Schnitzler, Arthur</author>
+               <author ref="pmb11740" role="hat-ein-vorwortnachwort-verfasst-zu">Hofmannsthal, Hugo von</author>
             </bibl>
          </listBibl>
          <listPlace>
+            <place xml:id="pmb968">
+               <placeName>Mödling</placeName>
+               <location type="coords">
+                  <geo>48,08605 16,28921</geo>
+               </location>
+               <location type="located_in_place">
+                  <placeName ref="pmb41240">Österreich</placeName>
+                  <geo>47,33333 13,33333</geo>
+               </location>
+            </place>
             <place xml:id="pmb213">
                <placeName>Bad Ischl</placeName>
-               <placeName type="legacy-name-merge">Bad Ischl</placeName>
-               <placeName type="legacy-name-merge">Bad Ischl</placeName>
                <location type="coords">
                   <geo>47,71109 13,61893</geo>
                </location>
@@ -494,16 +510,12 @@
             <place xml:id="pmb50">
                <placeName>Wien</placeName>
                <placeName type="ort_fruherer-name">K.K. Reichshaupt- und Residenzstadt Wien</placeName>
-               <placeName type="legacy-name-merge">Wien</placeName>
                <placeName type="alternative-name">Bécs</placeName>
                <placeName type="alternative-name">Land Wien</placeName>
                <placeName type="alternative-name">Vídeň</placeName>
                <placeName type="alternative-name">Wenia</placeName>
                <placeName type="alternative-name">Beč</placeName>
                <placeName type="ort_fruherer-name">Vindobona</placeName>
-               <placeName type="legacy-name-merge">Vindobona</placeName>
-               <placeName type="alternative-name">Vienna</placeName>
-               <placeName type="legacy-name-merge">Vienna</placeName>
                <placeName type="alternative-name">Vienna</placeName>
                <location type="coords">
                   <geo>48,208333 16,373056</geo>
@@ -512,18 +524,9 @@
                   <placeName ref="pmb41240">Österreich</placeName>
                   <geo>47,33333 13,33333</geo>
                </location>
-            </place>
-            <place xml:id="pmb968">
-               <placeName>Mödling</placeName>
-               <placeName type="alternative-name">Mödling</placeName>
-               <placeName type="legacy-name-merge">Mödling</placeName>
-               <placeName type="legacy-name-merge">Mödling</placeName>
-               <location type="coords">
-                  <geo>48,08605 16,28921</geo>
-               </location>
                <location type="located_in_place">
-                  <placeName ref="pmb41240">Österreich</placeName>
-                  <geo>47,33333 13,33333</geo>
+                  <placeName ref="pmb235218">Windmühlhöhe</placeName>
+                  <geo>48,24077 16,32092</geo>
                </location>
             </place>
          </listPlace>

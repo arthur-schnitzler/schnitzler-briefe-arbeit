@@ -1,6 +1,10 @@
-<?xml version='1.0' encoding='UTF-8'?>
+<?xml version="1.0" encoding="UTF-8"?>
 <?xml-model href="../meta/schnitzler-briefe-schematron.sch" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
-<TEI xmlns="http://www.tei-c.org/ns/1.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.tei-c.org/ns/1.0 ../meta/schnitzler-briefe-schema.xsd" xml:base="https://id.acdh.oeaw.ac.at/schnitzler/schnitzler-briefe/editions" xml:id="L04006">
+<TEI xmlns="http://www.tei-c.org/ns/1.0"
+     xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+     xsi:schemaLocation="http://www.tei-c.org/ns/1.0 ../meta/schnitzler-briefe-schema.xsd"
+     xml:base="https://id.acdh.oeaw.ac.at/schnitzler/schnitzler-briefe/editions"
+     xml:id="L04006">
    <teiHeader>
       <fileDesc>
          <titleStmt>
@@ -112,12 +116,20 @@
                   – 26. 5. 1925?]</date>
                <placeName ref="#pmb50" evidence="conjecture">Wien</placeName>
             </correspAction>
-            <correspContext><ref type="belongsToCorrespondence" target="correspondence_2312">Zuckerkandl, Berta</ref>
+            <correspContext>
+               <ref type="belongsToCorrespondence" target="correspondence_2312">Zuckerkandl, Berta</ref>
                <ref subtype="previous_letter" type="withinCollection" target="L02440">Schnitzler an Rung, 22. 5. 1925</ref>
                <ref subtype="next_letter" type="withinCollection" target="L02441">Rung an Schnitzler, 24. 5. 1925</ref>
-               <ref subtype="previous_letter" type="withinCorrespondence" source="correspondence_2312" target="L03957">Schnitzler an Zuckerkandl, 2. 4. 1925</ref>
-               <ref subtype="next_letter" type="withinCorrespondence" source="correspondence_2312" target="L03959">Schnitzler an Zuckerkandl, 15. 6. 1925</ref>
-            </correspContext></correspDesc>
+               <ref subtype="previous_letter"
+                    type="withinCorrespondence"
+                    source="correspondence_2312"
+                    target="L03957">Schnitzler an Zuckerkandl, 2. 4. 1925</ref>
+               <ref subtype="next_letter"
+                    type="withinCorrespondence"
+                    source="correspondence_2312"
+                    target="L03959">Schnitzler an Zuckerkandl, 15. 6. 1925</ref>
+            </correspContext>
+         </correspDesc>
       </profileDesc>
       <revisionDesc status="proposed">
          <change who="MAM" when="2025-11-11">Export aus Transkribus</change>
@@ -178,34 +190,6 @@
       </body>
       <back>
          <listPerson>
-            <person xml:id="pmb2121">
-               <persName>
-                  <surname>Schnitzler</surname>
-                  <forename>Arthur</forename>
-               </persName>
-               <birth>
-                  <date when="1862-05-15">15. 5. 1862</date>
-                  <settlement ref="pmb50">
-                     <placeName type="pref">Wien</placeName>
-                     <location>
-                        <geo>48,208333 16,373056</geo>
-                     </location>
-                  </settlement>
-               </birth>
-               <death>
-                  <date when="1931-10-21">21. 10. 1931</date>
-                  <settlement ref="pmb50">
-                     <placeName type="pref">Wien</placeName>
-                     <location>
-                        <geo>48,208333 16,373056</geo>
-                     </location>
-                  </settlement>
-               </death>
-               <sex value="male"/>
-               <occupation ref="pmb90">Schriftsteller/Schriftstellerin</occupation>
-               <occupation ref="pmb97">Mediziner/Medizinerin</occupation>
-               <idno type="gnd">https://d-nb.info/gnd/118609807/</idno>
-            </person>
             <person xml:id="pmb2312">
                <persName>
                   <forename>Berta</forename>
@@ -228,6 +212,48 @@
                         <geo>48,85341 2,3488</geo>
                      </location>
                   </settlement>
+               </death>
+            </person>
+            <person xml:id="pmb2121">
+               <persName>
+                  <surname>Schnitzler</surname>
+                  <forename>Arthur</forename>
+               </persName>
+               <birth>
+                  <date when="1862-05-15">15. 5. 1862</date>
+                  <settlement ref="pmb50">
+                     <placeName type="pref">Wien</placeName>
+                     <location>
+                        <geo>48,208333 16,373056</geo>
+                     </location>
+                  </settlement>
+               </birth>
+               <death>
+                  <date when="1931-10-21">21. 10. 1931</date>
+                  <settlement ref="pmb50">
+                     <placeName type="pref">Wien</placeName>
+                     <location>
+                        <geo>48,208333 16,373056</geo>
+                     </location>
+                  </settlement>
+               </death>
+            </person>
+            <person xml:id="pmb3579" ana="implied">
+               <persName>
+                  <forename>Leopold</forename>
+                  <surname>Jacobson</surname>
+               </persName>
+               <birth>
+                  <date when="1878-06-30">1878-06-30</date>
+                  <settlement ref="pmb976">
+                     <placeName type="pref">Czernowitz</placeName>
+                     <location>
+                        <geo>48,29149 25,94034</geo>
+                     </location>
+                  </settlement>
+               </birth>
+               <death>
+                  <date when="1942-01-01" notAfter="1942-12-31">1942</date>
                </death>
             </person>
             <person xml:id="pmb11659" ana="comment">
@@ -254,63 +280,41 @@
                   </settlement>
                </death>
             </person>
-            <person xml:id="pmb3579" ana="comment">
-               <persName>
-                  <forename>Leopold</forename>
-                  <surname>Jacobson</surname>
-               </persName>
-               <birth>
-                  <date when="1878-06-30">1878-06-30</date>
-                  <settlement ref="pmb976">
-                     <placeName type="pref">Czernowitz</placeName>
-                     <location>
-                        <geo>48,29149 25,94034</geo>
-                     </location>
-                  </settlement>
-               </birth>
-               <death>
-                  <date when="1942-01-01" notAfter="1942-12-31">1942</date>
-               </death>
-            </person>
          </listPerson>
          <listBibl>
-            <bibl xml:id="pmb29857" ana="comment">
-               <title type="main">Der Schleier der Beatrice. Schauspiel in fünf Akten</title>
+            <bibl xml:id="pmb29857" ana="implied">
+               <title>Der Schleier der Beatrice. Schauspiel in fünf Akten</title>
                <title type="werk_arbeitstitel">Shawl</title>
                <title type="werk_link">http://anno.onb.ac.at/cgi-content/anno-buch?apm=0&amp;aid=601&amp;teil=0111&amp;seite=00000001&amp;zoom=2</title>
                <title type="legacy-name-merge">Der Schleier der Beatrice</title>
-               <author role="hat-geschaffen" ref="pmb2121">Schnitzler, Arthur</author>
-            </bibl>
-            <bibl xml:id="pmb307528" ana="comment">
-               <title type="main">Burgtheater. Zum erstenmal: »Der Schleier der Beatrice«, Schauspiel in fünf Akten von Artur Schnitzler</title>
-               <title type="werk_bibliografische-angabe">Leopold Jacobson: Burgtheater. Zum erstenmal: »Der Schleier der Beatrice«, Schauspiel in fünf Akten von Artur Schnitzler. In: Neues Wiener Journal, Jg. 33, Nr. 11.317, 24.5.1925, S. 3–4.</title>
-               <title type="werk_link">https://anno.onb.ac.at/cgi-content/anno?aid=nwj&amp;datum=19250524&amp;seite=3</title>
-               <author role="hat-geschaffen" ref="pmb3579">Jacobson, Leopold</author>
-            </bibl>
-            <bibl xml:id="pmb33243" ana="comment">
-               <title type="main">Tagebuch</title>
-               <title type="werk_link">https://schnitzler-tagebuch.acdh.oeaw.ac.at</title>
-               <author role="hat-geschaffen" ref="pmb2121">Schnitzler, Arthur</author>
+               <author ref="pmb2121" role="hat-geschaffen">Schnitzler, Arthur</author>
             </bibl>
             <bibl xml:id="pmb36376" ana="comment">
-               <title type="main">Neues Wiener Journal</title>
+               <title>Neues Wiener Journal</title>
                <title type="werk_link">http://anno.onb.ac.at/cgi-content/anno?aid=nwj</title>
+            </bibl>
+            <bibl xml:id="pmb307528" ana="comment">
+               <title>Burgtheater. Zum erstenmal: »Der Schleier der Beatrice«, Schauspiel in fünf Akten von Artur Schnitzler</title>
+               <title type="werk_bibliografische-angabe">Leopold Jacobson: Burgtheater. Zum erstenmal: »Der Schleier der Beatrice«, Schauspiel in fünf Akten von Artur Schnitzler. In: Neues Wiener Journal, Jg. 33, Nr. 11.317, 24.5.1925, S. 3–4.</title>
+               <title type="werk_link">https://anno.onb.ac.at/cgi-content/anno?aid=nwj&amp;datum=19250524&amp;seite=3</title>
+               <author ref="pmb3579" role="hat-geschaffen">Jacobson, Leopold</author>
+            </bibl>
+            <bibl xml:id="pmb33243" ana="comment">
+               <title>Tagebuch</title>
+               <title type="werk_link">https://schnitzler-tagebuch.acdh.oeaw.ac.at</title>
+               <author ref="pmb2121" role="hat-geschaffen">Schnitzler, Arthur</author>
             </bibl>
          </listBibl>
          <listPlace>
-            <place xml:id="pmb50">
+            <place xml:id="pmb50" ana="comment">
                <placeName>Wien</placeName>
                <placeName type="ort_fruherer-name">K.K. Reichshaupt- und Residenzstadt Wien</placeName>
-               <placeName type="legacy-name-merge">Wien</placeName>
                <placeName type="alternative-name">Bécs</placeName>
                <placeName type="alternative-name">Land Wien</placeName>
                <placeName type="alternative-name">Vídeň</placeName>
                <placeName type="alternative-name">Wenia</placeName>
                <placeName type="alternative-name">Beč</placeName>
                <placeName type="ort_fruherer-name">Vindobona</placeName>
-               <placeName type="legacy-name-merge">Vindobona</placeName>
-               <placeName type="alternative-name">Vienna</placeName>
-               <placeName type="legacy-name-merge">Vienna</placeName>
                <placeName type="alternative-name">Vienna</placeName>
                <location type="coords">
                   <geo>48,208333 16,373056</geo>
@@ -319,13 +323,14 @@
                   <placeName ref="pmb41240">Österreich</placeName>
                   <geo>47,33333 13,33333</geo>
                </location>
+               <location type="located_in_place">
+                  <placeName ref="pmb235218">Windmühlhöhe</placeName>
+                  <geo>48,24077 16,32092</geo>
+               </location>
             </place>
             <place xml:id="pmb166" ana="comment">
                <placeName>Frankreich</placeName>
                <placeName type="alternative-name">France</placeName>
-               <placeName type="alternative-name">Frankreich</placeName>
-               <placeName type="legacy-name-merge">Frankreich</placeName>
-               <placeName type="legacy-name-merge">France</placeName>
                <location type="coords">
                   <geo>46,0 2,0</geo>
                </location>
@@ -336,8 +341,8 @@
             </place>
          </listPlace>
          <listEvent>
-            <event xml:id="pmb143957" ana="comment">
-               <eventName n="Theaterpremiere">Premiere von Der Schleier der Beatrice, 23.5.1925</eventName>
+            <event xml:id="pmb210344" ana="implied">
+               <eventName n="Generalprobe">Generalprobe von Der Schleier der Beatrice, 22.5.1925</eventName>
                <listPlace>
                   <place>
                      <placeName role="veranstaltet in" ref="pmb14">Burgtheater</placeName>
@@ -347,8 +352,8 @@
                   </place>
                </listPlace>
             </event>
-            <event xml:id="pmb210344" ana="comment">
-               <eventName n="Generalprobe">Generalprobe von Der Schleier der Beatrice, 22.5.1925</eventName>
+            <event xml:id="pmb143957" ana="comment">
+               <eventName n="Theaterpremiere">Premiere von Der Schleier der Beatrice, 23.5.1925</eventName>
                <listPlace>
                   <place>
                      <placeName role="veranstaltet in" ref="pmb14">Burgtheater</placeName>

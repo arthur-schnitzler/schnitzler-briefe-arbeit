@@ -1,6 +1,10 @@
-<?xml version='1.0' encoding='UTF-8'?>
+<?xml version="1.0" encoding="UTF-8"?>
 <?xml-model href="../meta/schnitzler-briefe-schematron.sch" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
-<TEI xmlns="http://www.tei-c.org/ns/1.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.tei-c.org/ns/1.0 ../meta/schnitzler-briefe-schema.xsd" xml:base="https://id.acdh.oeaw.ac.at/schnitzler/schnitzler-briefe/editions" xml:id="L04125">
+<TEI xmlns="http://www.tei-c.org/ns/1.0"
+     xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+     xsi:schemaLocation="http://www.tei-c.org/ns/1.0 ../meta/schnitzler-briefe-schema.xsd"
+     xml:base="https://id.acdh.oeaw.ac.at/schnitzler/schnitzler-briefe/editions"
+     xml:id="L04125">
    <teiHeader>
       <fileDesc>
          <titleStmt>
@@ -123,12 +127,12 @@
          <correspDesc>
             <correspAction type="sent">
                <persName ref="#pmb2121">Schnitzler, Arthur</persName>
-               <date n="01" notBefore="1898-07-14" notAfter="1898-07-15">[14. oder 15]. 7. 1898</date>
+               <date notBefore="1898-07-14" notAfter="1898-07-15" n="01">[14. oder 15]. 7. 1898</date>
                <placeName ref="#pmb860">Graz</placeName>
             </correspAction>
             <correspAction type="transmitted">
                <date when="1898-07-15">15. 7. 1898</date>
-               <placeName ref="#pmb860">Graz Murvorstadt</placeName>
+               <placeName ref="#pmb860">Graz</placeName>
             </correspAction>
             <correspAction type="delivered">
                <date when="1898-07-16">16. 7. 1898</date>
@@ -139,12 +143,20 @@
                <date when="1898-07-16">16. 7. 1898</date>
                <placeName ref="#pmb207296">Tiefer Graben 23</placeName>
             </correspAction>
-            <correspContext><ref type="belongsToCorrespondence" target="correspondence_12740">Schwarzkopf, Gustav</ref>
+            <correspContext>
+               <ref type="belongsToCorrespondence" target="correspondence_12740">Schwarzkopf, Gustav</ref>
                <ref subtype="previous_letter" type="withinCollection" target="L00818">Hofmannsthal an Schnitzler, 12. 7. [1898]</ref>
                <ref subtype="next_letter" type="withinCollection" target="L04128">Schnitzler an Schwarzkopf, [14. oder 15]. 7. 1898</ref>
-               <ref subtype="previous_letter" type="withinCorrespondence" source="correspondence_12740" target="L04505">Schnitzler an Schwarzkopf, 6. 6. 1898</ref>
-               <ref subtype="next_letter" type="withinCorrespondence" source="correspondence_12740" target="L04128">Schnitzler an Schwarzkopf, [14. oder 15]. 7. 1898</ref>
-            </correspContext></correspDesc>
+               <ref subtype="previous_letter"
+                    type="withinCorrespondence"
+                    source="correspondence_12740"
+                    target="L04505">Schnitzler an Schwarzkopf, 6. 6. 1898</ref>
+               <ref subtype="next_letter"
+                    type="withinCorrespondence"
+                    source="correspondence_12740"
+                    target="L04128">Schnitzler an Schwarzkopf, [14. oder 15]. 7. 1898</ref>
+            </correspContext>
+         </correspDesc>
       </profileDesc>
       <revisionDesc status="proposed">
          <change who="MAM" when="2025-12-10">Export aus Transkribus</change>
@@ -206,6 +218,30 @@
       </body>
       <back>
          <listPerson>
+            <person xml:id="pmb2121">
+               <persName>
+                  <surname>Schnitzler</surname>
+                  <forename>Arthur</forename>
+               </persName>
+               <birth>
+                  <date when="1862-05-15">15. 5. 1862</date>
+                  <settlement ref="pmb50">
+                     <placeName type="pref">Wien</placeName>
+                     <location>
+                        <geo>48,208333 16,373056</geo>
+                     </location>
+                  </settlement>
+               </birth>
+               <death>
+                  <date when="1931-10-21">21. 10. 1931</date>
+                  <settlement ref="pmb50">
+                     <placeName type="pref">Wien</placeName>
+                     <location>
+                        <geo>48,208333 16,373056</geo>
+                     </location>
+                  </settlement>
+               </death>
+            </person>
             <person xml:id="pmb12740">
                <persName>
                   <forename>Gustav</forename>
@@ -230,36 +266,41 @@
                   </settlement>
                </death>
             </person>
-            <person xml:id="pmb2121">
-               <persName>
-                  <surname>Schnitzler</surname>
-                  <forename>Arthur</forename>
-               </persName>
-               <birth>
-                  <date when="1862-05-15">15. 5. 1862</date>
-                  <settlement ref="pmb50">
-                     <placeName type="pref">Wien</placeName>
-                     <location>
-                        <geo>48,208333 16,373056</geo>
-                     </location>
-                  </settlement>
-               </birth>
-               <death>
-                  <date when="1931-10-21">21. 10. 1931</date>
-                  <settlement ref="pmb50">
-                     <placeName type="pref">Wien</placeName>
-                     <location>
-                        <geo>48,208333 16,373056</geo>
-                     </location>
-                  </settlement>
-               </death>
-               <sex value="male"/>
-               <occupation ref="pmb90">Schriftsteller/Schriftstellerin</occupation>
-               <occupation ref="pmb97">Mediziner/Medizinerin</occupation>
-               <idno type="gnd">https://d-nb.info/gnd/118609807/</idno>
-            </person>
          </listPerson>
          <listPlace>
+            <place xml:id="pmb860">
+               <placeName>Graz</placeName>
+               <placeName type="ort_namensvariante">Grätz</placeName>
+               <location type="coords">
+                  <geo>47,06667 15,43333</geo>
+               </location>
+               <location type="located_in_place">
+                  <placeName ref="pmb41240">Österreich</placeName>
+                  <geo>47,33333 13,33333</geo>
+               </location>
+               <location type="located_in_place">
+                  <placeName ref="pmb17">Steiermark</placeName>
+                  <geo>47,38 15,7925</geo>
+               </location>
+            </place>
+            <place xml:id="pmb51">
+               <placeName>I., Innere Stadt</placeName>
+               <placeName type="alternative-name">Inner city</placeName>
+               <placeName type="alternative-name">Wien,Innere Stadt</placeName>
+               <placeName type="alternative-name">1. Wiener Gemeindebezirk</placeName>
+               <placeName type="legacy-name-merge">Wien-Innere Stadt</placeName>
+               <location type="coords">
+                  <geo>48,20769 16,37049</geo>
+               </location>
+               <location type="located_in_place">
+                  <placeName ref="pmb41240">Österreich</placeName>
+                  <geo>47,33333 13,33333</geo>
+               </location>
+               <location type="located_in_place">
+                  <placeName ref="pmb50">Wien</placeName>
+                  <geo>48,208333 16,373056</geo>
+               </location>
+            </place>
             <place xml:id="pmb207296">
                <placeName>Tiefer Graben 23</placeName>
                <location type="coords">
@@ -272,52 +313,6 @@
                <location type="located_in_place">
                   <placeName ref="pmb51">I., Innere Stadt</placeName>
                   <geo>48,20769 16,37049</geo>
-               </location>
-            </place>
-            <place xml:id="pmb30">
-               <placeName>Salzburg</placeName>
-               <placeName type="alternative-name">Iuvavum</placeName>
-               <placeName type="legacy-name-merge">Salzburg</placeName>
-               <placeName type="alternative-name">Salzburg</placeName>
-               <placeName type="legacy-name-merge">Salzburg Stadt</placeName>
-               <placeName type="legacy-name-merge">Salzburg</placeName>
-               <placeName type="legacy-name-merge">Salzburg?</placeName>
-               <location type="coords">
-                  <geo>47,80067 13,04532</geo>
-               </location>
-               <location type="located_in_place">
-                  <placeName ref="pmb697">Salzburg [Land]</placeName>
-                  <geo>47,41667 13,25</geo>
-               </location>
-            </place>
-            <place xml:id="pmb305739">
-               <placeName>Bad Fusch</placeName>
-               <location type="coords">
-                  <geo>47,19939 12,85366</geo>
-               </location>
-               <location type="located_in_place">
-                  <placeName ref="pmb34194">Fusch an der Großglocknerstraße</placeName>
-                  <geo>47,22729 12,82727</geo>
-               </location>
-            </place>
-            <place xml:id="pmb34014">
-               <placeName>Villa Dr. Wassing</placeName>
-               <location type="coords">
-                  <geo>47,119503 13,140375</geo>
-               </location>
-               <location type="located_in_place">
-                  <placeName ref="pmb521">Bad Gastein</placeName>
-                  <geo>47,11547 13,13467</geo>
-               </location>
-            </place>
-            <place xml:id="pmb34191">
-               <placeName>Bruck an der Großglocknerstraße</placeName>
-               <location type="coords">
-                  <geo>47,286386 12,823857</geo>
-               </location>
-               <location type="located_in_place">
-                  <placeName ref="pmb697">Salzburg [Land]</placeName>
-                  <geo>47,41667 13,25</geo>
                </location>
             </place>
             <place xml:id="pmb35493">
@@ -336,7 +331,6 @@
             </place>
             <place xml:id="pmb35496">
                <placeName>Schladming</placeName>
-               <placeName type="legacy-name-merge">Schladming</placeName>
                <location type="coords">
                   <geo>47,39655 13,67761</geo>
                </location>
@@ -345,10 +339,18 @@
                   <geo>47,33333 13,33333</geo>
                </location>
             </place>
+            <place xml:id="pmb41003">
+               <placeName>Bischofshofen</placeName>
+               <location type="coords">
+                  <geo>47,41667 13,21667</geo>
+               </location>
+               <location type="located_in_place">
+                  <placeName ref="pmb41240">Österreich</placeName>
+                  <geo>47,33333 13,33333</geo>
+               </location>
+            </place>
             <place xml:id="pmb40336">
                <placeName>Zell am See</placeName>
-               <placeName type="alternative-name">Zell am See</placeName>
-               <placeName type="legacy-name">Zell am See</placeName>
                <placeName type="legacy-name-merge">Zell am See?</placeName>
                <location type="coords">
                   <geo>47,32556 12,79444</geo>
@@ -356,6 +358,26 @@
                <location type="located_in_place">
                   <placeName ref="pmb41240">Österreich</placeName>
                   <geo>47,33333 13,33333</geo>
+               </location>
+            </place>
+            <place xml:id="pmb34191">
+               <placeName>Bruck an der Großglocknerstraße</placeName>
+               <location type="coords">
+                  <geo>47,286386 12,823857</geo>
+               </location>
+               <location type="located_in_place">
+                  <placeName ref="pmb697">Salzburg [Land]</placeName>
+                  <geo>47,41667 13,25</geo>
+               </location>
+            </place>
+            <place xml:id="pmb305739">
+               <placeName>Bad Fusch</placeName>
+               <location type="coords">
+                  <geo>47,19939 12,85366</geo>
+               </location>
+               <location type="located_in_place">
+                  <placeName ref="pmb34194">Fusch an der Großglocknerstraße</placeName>
+                  <geo>47,22729 12,82727</geo>
                </location>
             </place>
             <place xml:id="pmb40632">
@@ -372,63 +394,9 @@
                   <geo>47,22729 12,82727</geo>
                </location>
             </place>
-            <place xml:id="pmb41003">
-               <placeName>Bischofshofen</placeName>
-               <placeName type="alternative-name">Bischofshofen</placeName>
-               <location type="coords">
-                  <geo>47,41667 13,21667</geo>
-               </location>
-               <location type="located_in_place">
-                  <placeName ref="pmb41240">Österreich</placeName>
-                  <geo>47,33333 13,33333</geo>
-               </location>
-            </place>
-            <place xml:id="pmb50">
-               <placeName>Wien</placeName>
-               <placeName type="ort_fruherer-name">K.K. Reichshaupt- und Residenzstadt Wien</placeName>
-               <placeName type="legacy-name-merge">Wien</placeName>
-               <placeName type="alternative-name">Bécs</placeName>
-               <placeName type="alternative-name">Land Wien</placeName>
-               <placeName type="alternative-name">Vídeň</placeName>
-               <placeName type="alternative-name">Wenia</placeName>
-               <placeName type="alternative-name">Beč</placeName>
-               <placeName type="ort_fruherer-name">Vindobona</placeName>
-               <placeName type="legacy-name-merge">Vindobona</placeName>
-               <placeName type="alternative-name">Vienna</placeName>
-               <placeName type="legacy-name-merge">Vienna</placeName>
-               <placeName type="alternative-name">Vienna</placeName>
-               <location type="coords">
-                  <geo>48,208333 16,373056</geo>
-               </location>
-               <location type="located_in_place">
-                  <placeName ref="pmb41240">Österreich</placeName>
-                  <geo>47,33333 13,33333</geo>
-               </location>
-            </place>
-            <place xml:id="pmb51">
-               <placeName>I., Innere Stadt</placeName>
-               <placeName type="alternative-name">Inner city</placeName>
-               <placeName type="alternative-name">Wien,Innere Stadt</placeName>
-               <placeName type="alternative-name">1. Wiener Gemeindebezirk</placeName>
-               <placeName type="legacy-name-merge">Wien-Innere Stadt</placeName>
-               <placeName type="legacy-name-merge">Inner city</placeName>
-               <location type="coords">
-                  <geo>48,20769 16,37049</geo>
-               </location>
-               <location type="located_in_place">
-                  <placeName ref="pmb41240">Österreich</placeName>
-                  <geo>47,33333 13,33333</geo>
-               </location>
-               <location type="located_in_place">
-                  <placeName ref="pmb50">Wien</placeName>
-                  <geo>48,208333 16,373056</geo>
-               </location>
-            </place>
             <place xml:id="pmb521">
                <placeName>Bad Gastein</placeName>
                <placeName type="namensvariante">Badgastein</placeName>
-               <placeName type="alternative-name">Badgastein</placeName>
-               <placeName type="legacy-name-merge">Bad Gastein</placeName>
                <location type="coords">
                   <geo>47,11547 13,13467</geo>
                </location>
@@ -441,19 +409,27 @@
                   <geo>47,41667 13,25</geo>
                </location>
             </place>
-            <place xml:id="pmb860">
-               <placeName>Graz</placeName>
-               <placeName type="ort_namensvariante">Grätz</placeName>
+            <place xml:id="pmb30">
+               <placeName>Salzburg</placeName>
+               <placeName type="alternative-name">Iuvavum</placeName>
+               <placeName type="legacy-name-merge">Salzburg Stadt</placeName>
+               <placeName type="legacy-name-merge">Salzburg?</placeName>
                <location type="coords">
-                  <geo>47,06667 15,43333</geo>
+                  <geo>47,80067 13,04532</geo>
                </location>
                <location type="located_in_place">
-                  <placeName ref="pmb41240">Österreich</placeName>
-                  <geo>47,33333 13,33333</geo>
+                  <placeName ref="pmb697">Salzburg [Land]</placeName>
+                  <geo>47,41667 13,25</geo>
+               </location>
+            </place>
+            <place xml:id="pmb34014">
+               <placeName>Villa Dr. Wassing</placeName>
+               <location type="coords">
+                  <geo>47,119503 13,140375</geo>
                </location>
                <location type="located_in_place">
-                  <placeName ref="pmb17">Steiermark</placeName>
-                  <geo>47,38 15,7925</geo>
+                  <placeName ref="pmb521">Bad Gastein</placeName>
+                  <geo>47,11547 13,13467</geo>
                </location>
             </place>
          </listPlace>

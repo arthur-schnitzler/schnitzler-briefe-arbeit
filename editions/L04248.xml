@@ -1,6 +1,10 @@
-<?xml version='1.0' encoding='UTF-8'?>
+<?xml version="1.0" encoding="UTF-8"?>
 <?xml-model href="../meta/schnitzler-briefe-schematron.sch" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
-<TEI xmlns="http://www.tei-c.org/ns/1.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.tei-c.org/ns/1.0 ../meta/schnitzler-briefe-schema.xsd" xml:base="https://id.acdh.oeaw.ac.at/schnitzler/schnitzler-briefe/editions" xml:id="L04248">
+<TEI xmlns="http://www.tei-c.org/ns/1.0"
+     xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+     xsi:schemaLocation="http://www.tei-c.org/ns/1.0 ../meta/schnitzler-briefe-schema.xsd"
+     xml:base="https://id.acdh.oeaw.ac.at/schnitzler/schnitzler-briefe/editions"
+     xml:id="L04248">
    <teiHeader>
       <fileDesc>
          <titleStmt>
@@ -82,11 +86,11 @@
                            <supportDesc>
                               <extent>
                                  <measure unit="karte" quantity="1"/>
-                                 <measure unit="zeichenanzahl" quantity="658"/>
+                                 <measure unit="zeichenanzahl" quantity="660"/>
                               </extent>
                            </supportDesc>
                         </objectDesc>
-                        <handDesc hands="0">
+                        <handDesc hands="1">
                            <handNote medium="schwarze-tinte" style="deutsche-kurrent"/>
                         </handDesc>
                         <additions>
@@ -123,7 +127,8 @@
                            <incident type="postal">
                               <desc>
                                  <stamp n="3" type="delivery">
-                                    <placeName ref="#pmb49990">Rag<supplied>az</supplied></placeName>
+                                    <placeName ref="#pmb49990">Rag<supplied>az</supplied>
+                                    </placeName>
                                  </stamp>
                               </desc>
                            </incident>
@@ -152,26 +157,34 @@
             </correspAction>
             <correspAction type="transmitted">
                <date when="1914-08-06">6. 8. 1914</date>
-               <placeName ref="#pmb51">1/1 Wien 8</placeName>
+               <placeName ref="#pmb51">I., Innere Stadt</placeName>
             </correspAction>
             <correspAction type="redirected">
                <date when="1914-08-11">11. 8. 1914</date>
                <placeName ref="#pmb1138">Cresta Palace</placeName>
             </correspAction>
             <correspAction type="delivered">
-               <placeName ref="#pmb49990">Ragaz</placeName>
+               <placeName ref="#pmb49990">Bad Ragaz</placeName>
             </correspAction>
             <correspAction type="received">
                <persName ref="#pmb2121">Schnitzler, Arthur</persName>
                <date evidence="conjecture" notBefore="1914-08-12" notAfter="1914-08-17">[12. 8. 1914 – 17. 8. 1914?]</date>
                <placeName ref="#pmb50232">Hotel Lattmann</placeName>
             </correspAction>
-            <correspContext><ref type="belongsToCorrespondence" target="correspondence_12740">Schwarzkopf, Gustav</ref>
+            <correspContext>
+               <ref type="belongsToCorrespondence" target="correspondence_12740">Schwarzkopf, Gustav</ref>
                <ref subtype="previous_letter" type="withinCollection" target="L02190">Schnitzler an Brandes, 3. 8. 1914</ref>
                <ref subtype="next_letter" type="withinCollection" target="L02191">Beer-Hofmann an Schnitzler, 10. 8. 1914</ref>
-               <ref subtype="previous_letter" type="withinCorrespondence" source="correspondence_12740" target="L04351">Schnitzler an Schwarzkopf, 2. 8. 1914</ref>
-               <ref subtype="next_letter" type="withinCorrespondence" source="correspondence_12740" target="L04488">Schnitzler, Schnitzler an Schwarzkopf, 20. 8. 1914</ref>
-            </correspContext></correspDesc>
+               <ref subtype="previous_letter"
+                    type="withinCorrespondence"
+                    source="correspondence_12740"
+                    target="L04351">Schnitzler an Schwarzkopf, 2. 8. 1914</ref>
+               <ref subtype="next_letter"
+                    type="withinCorrespondence"
+                    source="correspondence_12740"
+                    target="L04488">Schnitzler, Schnitzler an Schwarzkopf, 20. 8. 1914</ref>
+            </correspContext>
+         </correspDesc>
       </profileDesc>
       <revisionDesc status="proposed">
          <change who="MAM" when="2026-02-20">Export aus Transkribus</change>
@@ -248,30 +261,6 @@
       </body>
       <back>
          <listPerson>
-            <person xml:id="pmb11740">
-               <persName>
-                  <forename>Hugo von</forename>
-                  <surname>Hofmannsthal</surname>
-               </persName>
-               <birth>
-                  <date when="1874-02-01">1874-02-01</date>
-                  <settlement ref="pmb50">
-                     <placeName type="pref">Wien</placeName>
-                     <location>
-                        <geo>48,208333 16,373056</geo>
-                     </location>
-                  </settlement>
-               </birth>
-               <death>
-                  <date when="1929-07-15">1929-07-15</date>
-                  <settlement ref="pmb173">
-                     <placeName type="pref">Rodaun</placeName>
-                     <location>
-                        <geo>48,132793312328 16,256152195922</geo>
-                     </location>
-                  </settlement>
-               </death>
-            </person>
             <person xml:id="pmb12740">
                <persName>
                   <forename>Gustav</forename>
@@ -302,7 +291,7 @@
                   <forename>Arthur</forename>
                </persName>
                <birth>
-                  <date when="1862-05-15">15. 5. 1862</date>
+                  <date when="1862-05-15">15. 5. 1862</date>
                   <settlement ref="pmb50">
                      <placeName type="pref">Wien</placeName>
                      <location>
@@ -311,7 +300,7 @@
                   </settlement>
                </birth>
                <death>
-                  <date when="1931-10-21">21. 10. 1931</date>
+                  <date when="1931-10-21">21. 10. 1931</date>
                   <settlement ref="pmb50">
                      <placeName type="pref">Wien</placeName>
                      <location>
@@ -319,10 +308,6 @@
                      </location>
                   </settlement>
                </death>
-               <sex value="male"/>
-               <occupation ref="pmb90">Schriftsteller/Schriftstellerin</occupation>
-               <occupation ref="pmb97">Mediziner/Medizinerin</occupation>
-               <idno type="gnd">https://d-nb.info/gnd/118609807/</idno>
             </person>
             <person xml:id="pmb24648">
                <persName>
@@ -344,6 +329,30 @@
                      <placeName type="pref">Wien</placeName>
                      <location>
                         <geo>48,208333 16,373056</geo>
+                     </location>
+                  </settlement>
+               </death>
+            </person>
+            <person xml:id="pmb11740">
+               <persName>
+                  <forename>Hugo von</forename>
+                  <surname>Hofmannsthal</surname>
+               </persName>
+               <birth>
+                  <date when="1874-02-01">1874-02-01</date>
+                  <settlement ref="pmb50">
+                     <placeName type="pref">Wien</placeName>
+                     <location>
+                        <geo>48,208333 16,373056</geo>
+                     </location>
+                  </settlement>
+               </birth>
+               <death>
+                  <date when="1929-07-15">1929-07-15</date>
+                  <settlement ref="pmb173">
+                     <placeName type="pref">Rodaun</placeName>
+                     <location>
+                        <geo>48,132793312328 16,256152195922</geo>
                      </location>
                   </settlement>
                </death>
@@ -374,24 +383,22 @@
             </person>
          </listPerson>
          <listPlace>
-            <place xml:id="pmb1061">
-               <placeName>Engadin</placeName>
+            <place xml:id="pmb51">
+               <placeName>I., Innere Stadt</placeName>
+               <placeName type="alternative-name">Inner city</placeName>
+               <placeName type="alternative-name">Wien,Innere Stadt</placeName>
+               <placeName type="alternative-name">1. Wiener Gemeindebezirk</placeName>
+               <placeName type="legacy-name-merge">Wien-Innere Stadt</placeName>
                <location type="coords">
-                  <geo>46,601337 9,965973</geo>
+                  <geo>48,20769 16,37049</geo>
                </location>
                <location type="located_in_place">
-                  <placeName ref="pmb43435">Schweiz</placeName>
-                  <geo>47,00016 8,01427</geo>
-               </location>
-            </place>
-            <place xml:id="pmb1138">
-               <placeName>Cresta Palace</placeName>
-               <location type="coords">
-                  <geo>46,512179 9,85759</geo>
+                  <placeName ref="pmb41240">Österreich</placeName>
+                  <geo>47,33333 13,33333</geo>
                </location>
                <location type="located_in_place">
-                  <placeName ref="pmb12589">Celerina</placeName>
-                  <geo>46,5146 9,8622</geo>
+                  <placeName ref="pmb50">Wien</placeName>
+                  <geo>48,208333 16,373056</geo>
                </location>
             </place>
             <place xml:id="pmb12589">
@@ -403,6 +410,26 @@
                <location type="located_in_place">
                   <placeName ref="pmb1061">Engadin</placeName>
                   <geo>46,601337 9,965973</geo>
+               </location>
+            </place>
+            <place xml:id="pmb50232">
+               <placeName>Hotel Lattmann</placeName>
+               <location type="coords">
+                  <geo>47,0019297 9,5004627</geo>
+               </location>
+               <location type="located_in_place">
+                  <placeName ref="pmb49990">Bad Ragaz</placeName>
+                  <geo>47,00601 9,50266</geo>
+               </location>
+            </place>
+            <place xml:id="pmb49990">
+               <placeName>Bad Ragaz</placeName>
+               <location type="coords">
+                  <geo>47,00601 9,50266</geo>
+               </location>
+               <location type="located_in_place">
+                  <placeName ref="pmb43435">Schweiz</placeName>
+                  <geo>47,00016 8,01427</geo>
                </location>
             </place>
             <place xml:id="pmb207301">
@@ -419,10 +446,28 @@
                   <geo>48,20769 16,37049</geo>
                </location>
             </place>
+            <place xml:id="pmb1138">
+               <placeName>Cresta Palace</placeName>
+               <location type="coords">
+                  <geo>46,512179 9,85759</geo>
+               </location>
+               <location type="located_in_place">
+                  <placeName ref="pmb12589">Celerina</placeName>
+                  <geo>46,5146 9,8622</geo>
+               </location>
+            </place>
+            <place xml:id="pmb1061">
+               <placeName>Engadin</placeName>
+               <location type="coords">
+                  <geo>46,601337 9,965973</geo>
+               </location>
+               <location type="located_in_place">
+                  <placeName ref="pmb43435">Schweiz</placeName>
+                  <geo>47,00016 8,01427</geo>
+               </location>
+            </place>
             <place xml:id="pmb213">
                <placeName>Bad Ischl</placeName>
-               <placeName type="legacy-name-merge">Bad Ischl</placeName>
-               <placeName type="legacy-name-merge">Bad Ischl</placeName>
                <location type="coords">
                   <geo>47,71109 13,61893</geo>
                </location>
@@ -433,7 +478,6 @@
             </place>
             <place xml:id="pmb34344">
                <placeName>Weißenbach am Attersee</placeName>
-               <placeName type="legacy-name-merge">Weißenbach am Attersee</placeName>
                <location type="coords">
                   <geo>47,8004 13,5358</geo>
                </location>
@@ -444,69 +488,6 @@
                <location type="located_in_place">
                   <placeName ref="pmb429">Salzkammergut</placeName>
                   <geo>47,75 13,5</geo>
-               </location>
-            </place>
-            <place xml:id="pmb49990">
-               <placeName>Bad Ragaz</placeName>
-               <placeName type="alternative-name">Bad Ragaz</placeName>
-               <placeName type="legacy-name">Bad Ragaz</placeName>
-               <location type="coords">
-                  <geo>47,00601 9,50266</geo>
-               </location>
-               <location type="located_in_place">
-                  <placeName ref="pmb43435">Schweiz</placeName>
-                  <geo>47,00016 8,01427</geo>
-               </location>
-            </place>
-            <place xml:id="pmb50">
-               <placeName>Wien</placeName>
-               <placeName type="ort_fruherer-name">K.K. Reichshaupt- und Residenzstadt Wien</placeName>
-               <placeName type="legacy-name-merge">Wien</placeName>
-               <placeName type="alternative-name">Bécs</placeName>
-               <placeName type="alternative-name">Land Wien</placeName>
-               <placeName type="alternative-name">Vídeň</placeName>
-               <placeName type="alternative-name">Wenia</placeName>
-               <placeName type="alternative-name">Beč</placeName>
-               <placeName type="ort_fruherer-name">Vindobona</placeName>
-               <placeName type="legacy-name-merge">Vindobona</placeName>
-               <placeName type="alternative-name">Vienna</placeName>
-               <placeName type="legacy-name-merge">Vienna</placeName>
-               <placeName type="alternative-name">Vienna</placeName>
-               <location type="coords">
-                  <geo>48,208333 16,373056</geo>
-               </location>
-               <location type="located_in_place">
-                  <placeName ref="pmb41240">Österreich</placeName>
-                  <geo>47,33333 13,33333</geo>
-               </location>
-            </place>
-            <place xml:id="pmb50232">
-               <placeName>Hotel Lattmann</placeName>
-               <location type="coords">
-                  <geo>47,0019297 9,5004627</geo>
-               </location>
-               <location type="located_in_place">
-                  <placeName ref="pmb49990">Bad Ragaz</placeName>
-                  <geo>47,00601 9,50266</geo>
-               </location>
-            </place>
-            <place xml:id="pmb51">
-               <placeName>I., Innere Stadt</placeName>
-               <placeName type="alternative-name">Inner city</placeName>
-               <placeName type="alternative-name">Wien,Innere Stadt</placeName>
-               <placeName type="alternative-name">1. Wiener Gemeindebezirk</placeName>
-               <placeName type="legacy-name-merge">Wien-Innere Stadt</placeName>
-               <placeName type="legacy-name-merge">Inner city</placeName>
-               <location type="coords">
-                  <geo>48,20769 16,37049</geo>
-               </location>
-               <location type="located_in_place">
-                  <placeName ref="pmb41240">Österreich</placeName>
-                  <geo>47,33333 13,33333</geo>
-               </location>
-               <location type="located_in_place">
-                  <placeName ref="pmb50">Wien</placeName>
-                  <geo>48,208333 16,373056</geo>
                </location>
             </place>
          </listPlace>

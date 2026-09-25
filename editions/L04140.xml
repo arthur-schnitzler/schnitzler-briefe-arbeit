@@ -1,6 +1,10 @@
-<?xml version='1.0' encoding='UTF-8'?>
+<?xml version="1.0" encoding="UTF-8"?>
 <?xml-model href="../meta/schnitzler-briefe-schematron.sch" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
-<TEI xmlns="http://www.tei-c.org/ns/1.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.tei-c.org/ns/1.0 ../meta/schnitzler-briefe-schema.xsd" xml:base="https://id.acdh.oeaw.ac.at/schnitzler/schnitzler-briefe/editions" xml:id="L04140">
+<TEI xmlns="http://www.tei-c.org/ns/1.0"
+     xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+     xsi:schemaLocation="http://www.tei-c.org/ns/1.0 ../meta/schnitzler-briefe-schema.xsd"
+     xml:base="https://id.acdh.oeaw.ac.at/schnitzler/schnitzler-briefe/editions"
+     xml:id="L04140">
    <teiHeader>
       <fileDesc>
          <titleStmt>
@@ -118,19 +122,27 @@
             </correspAction>
             <correspAction type="transmitted">
                <date when="1899-04-28">28. 4. 1899</date>
-               <placeName ref="#pmb168">Berlin N. W.</placeName>
+               <placeName ref="#pmb168">Berlin</placeName>
             </correspAction>
             <correspAction type="received">
                <persName ref="#pmb12740">Schwarzkopf, Gustav</persName>
                <date evidence="conjecture" notBefore="1899-04-29" notAfter="1899-05-03">[29. 4. 1899 – 3. 5. 1899?]</date>
                <placeName ref="#pmb207296">Tiefer Graben 23</placeName>
             </correspAction>
-            <correspContext><ref type="belongsToCorrespondence" target="correspondence_12740">Schwarzkopf, Gustav</ref>
+            <correspContext>
+               <ref type="belongsToCorrespondence" target="correspondence_12740">Schwarzkopf, Gustav</ref>
                <ref subtype="previous_letter" type="withinCollection" target="L04301">Schwarzkopf an Schnitzler, 26. 4. 1899</ref>
                <ref subtype="next_letter" type="withinCollection" target="L00913">Beer-Hofmann an Schnitzler, 28. 4. 1899</ref>
-               <ref subtype="previous_letter" type="withinCorrespondence" source="correspondence_12740" target="L04301">Schwarzkopf an Schnitzler, 26. 4. 1899</ref>
-               <ref subtype="next_letter" type="withinCorrespondence" source="correspondence_12740" target="L04123">Schnitzler an Schwarzkopf, 30. 4. 1899</ref>
-            </correspContext></correspDesc>
+               <ref subtype="previous_letter"
+                    type="withinCorrespondence"
+                    source="correspondence_12740"
+                    target="L04301">Schwarzkopf an Schnitzler, 26. 4. 1899</ref>
+               <ref subtype="next_letter"
+                    type="withinCorrespondence"
+                    source="correspondence_12740"
+                    target="L04123">Schnitzler an Schwarzkopf, 30. 4. 1899</ref>
+            </correspContext>
+         </correspDesc>
       </profileDesc>
       <revisionDesc status="proposed">
          <change who="MAM" when="2025-12-10">Export aus Transkribus</change>
@@ -195,13 +207,13 @@
       </body>
       <back>
          <listPerson>
-            <person xml:id="pmb10863">
+            <person xml:id="pmb2121">
                <persName>
-                  <forename>Richard</forename>
-                  <surname>Beer-Hofmann</surname>
+                  <surname>Schnitzler</surname>
+                  <forename>Arthur</forename>
                </persName>
                <birth>
-                  <date when="1866-07-11">1866-07-11</date>
+                  <date when="1862-05-15">15. 5. 1862</date>
                   <settlement ref="pmb50">
                      <placeName type="pref">Wien</placeName>
                      <location>
@@ -210,11 +222,11 @@
                   </settlement>
                </birth>
                <death>
-                  <date when="1945-09-26">1945-09-26</date>
-                  <settlement ref="pmb44053">
-                     <placeName type="pref">New York City</placeName>
+                  <date when="1931-10-21">21. 10. 1931</date>
+                  <settlement ref="pmb50">
+                     <placeName type="pref">Wien</placeName>
                      <location>
-                        <geo>40,71427 -74,00597</geo>
+                        <geo>48,208333 16,373056</geo>
                      </location>
                   </settlement>
                </death>
@@ -243,6 +255,30 @@
                   </settlement>
                </death>
             </person>
+            <person xml:id="pmb10863">
+               <persName>
+                  <forename>Richard</forename>
+                  <surname>Beer-Hofmann</surname>
+               </persName>
+               <birth>
+                  <date when="1866-07-11">1866-07-11</date>
+                  <settlement ref="pmb50">
+                     <placeName type="pref">Wien</placeName>
+                     <location>
+                        <geo>48,208333 16,373056</geo>
+                     </location>
+                  </settlement>
+               </birth>
+               <death>
+                  <date when="1945-09-26">1945-09-26</date>
+                  <settlement ref="pmb44053">
+                     <placeName type="pref">New York City</placeName>
+                     <location>
+                        <geo>40,71427 -74,00597</geo>
+                     </location>
+                  </settlement>
+               </death>
+            </person>
             <person xml:id="pmb13055">
                <persName>
                   <forename>Jakob</forename>
@@ -266,34 +302,6 @@
                      </location>
                   </settlement>
                </death>
-            </person>
-            <person xml:id="pmb2121">
-               <persName>
-                  <surname>Schnitzler</surname>
-                  <forename>Arthur</forename>
-               </persName>
-               <birth>
-                  <date when="1862-05-15">15. 5. 1862</date>
-                  <settlement ref="pmb50">
-                     <placeName type="pref">Wien</placeName>
-                     <location>
-                        <geo>48,208333 16,373056</geo>
-                     </location>
-                  </settlement>
-               </birth>
-               <death>
-                  <date when="1931-10-21">21. 10. 1931</date>
-                  <settlement ref="pmb50">
-                     <placeName type="pref">Wien</placeName>
-                     <location>
-                        <geo>48,208333 16,373056</geo>
-                     </location>
-                  </settlement>
-               </death>
-               <sex value="male"/>
-               <occupation ref="pmb90">Schriftsteller/Schriftstellerin</occupation>
-               <occupation ref="pmb97">Mediziner/Medizinerin</occupation>
-               <idno type="gnd">https://d-nb.info/gnd/118609807/</idno>
             </person>
             <person xml:id="pmb2167">
                <persName>
@@ -319,21 +327,75 @@
                   </settlement>
                </death>
             </person>
+            <person xml:id="pmb11175">
+               <persName>
+                  <forename>Max</forename>
+                  <surname>Dreyer</surname>
+               </persName>
+               <birth>
+                  <date when="1862-09-25">1862-09-25</date>
+                  <settlement ref="pmb56120">
+                     <placeName type="pref">Rostock</placeName>
+                     <location>
+                        <geo>54,0887 12,14049</geo>
+                     </location>
+                  </settlement>
+               </birth>
+               <death>
+                  <date when="1946-11-27">1946-11-27</date>
+                  <settlement ref="pmb63766">
+                     <placeName type="pref">Göhren</placeName>
+                     <location>
+                        <geo>54,3333 13,7333</geo>
+                     </location>
+                  </settlement>
+               </death>
+            </person>
+            <person xml:id="pmb13562">
+               <persName>
+                  <forename>Edmond</forename>
+                  <surname>Audran</surname>
+               </persName>
+               <birth>
+                  <date when="1842-04-11">1842-04-11</date>
+                  <settlement ref="pmb63779">
+                     <placeName type="pref">Lyon</placeName>
+                     <location>
+                        <geo>45,74846 4,84671</geo>
+                     </location>
+                  </settlement>
+                  <settlement ref="pmb63779">
+                     <placeName type="pref">Lyon</placeName>
+                     <location>
+                        <geo>45,74846 4,84671</geo>
+                     </location>
+                  </settlement>
+               </birth>
+               <death>
+                  <date when="1901-08-17">1901-08-17</date>
+                  <settlement ref="pmb64761">
+                     <placeName type="pref">Tierceville</placeName>
+                     <location>
+                        <geo>49,29317 -0,53205</geo>
+                     </location>
+                  </settlement>
+               </death>
+            </person>
          </listPerson>
          <listBibl>
             <bibl xml:id="pmb77357">
-               <title type="main">Hans. Drama in drei Aufzügen</title>
+               <title>Hans. Drama in drei Aufzügen</title>
                <title type="werk_link">https://books.google.at/books/about/Hans.html?id=fn8PAAAAYAAJ</title>
-               <author role="hat-geschaffen" ref="pmb11175">Dreyer, Max</author>
+               <author ref="pmb11175" role="hat-geschaffen">Dreyer, Max</author>
             </bibl>
             <bibl xml:id="pmb80099">
-               <title type="main">Die Puppe</title>
-               <author role="hat-geschaffen" ref="pmb13562">Audran, Edmond</author>
+               <title>Die Puppe</title>
+               <author ref="pmb13562" role="hat-geschaffen">Audran, Edmond</author>
             </bibl>
             <bibl xml:id="pmb32562" ana="implied">
-               <title type="main">Der grüne Kakadu – Paracelsus – Die Gefährtin. Drei Einakter</title>
+               <title>Der grüne Kakadu – Paracelsus – Die Gefährtin. Drei Einakter</title>
                <title type="werk_link">https://www.digital.wienbibliothek.at/wbrobv/content/titleinfo/1488075</title>
-               <author role="hat-geschaffen" ref="pmb2121">Schnitzler, Arthur</author>
+               <author ref="pmb2121" role="hat-geschaffen">Schnitzler, Arthur</author>
             </bibl>
          </listBibl>
          <listPlace>
@@ -366,35 +428,12 @@
                   <geo>48,20769 16,37049</geo>
                </location>
             </place>
-            <place xml:id="pmb50">
-               <placeName>Wien</placeName>
-               <placeName type="ort_fruherer-name">K.K. Reichshaupt- und Residenzstadt Wien</placeName>
-               <placeName type="legacy-name-merge">Wien</placeName>
-               <placeName type="alternative-name">Bécs</placeName>
-               <placeName type="alternative-name">Land Wien</placeName>
-               <placeName type="alternative-name">Vídeň</placeName>
-               <placeName type="alternative-name">Wenia</placeName>
-               <placeName type="alternative-name">Beč</placeName>
-               <placeName type="ort_fruherer-name">Vindobona</placeName>
-               <placeName type="legacy-name-merge">Vindobona</placeName>
-               <placeName type="alternative-name">Vienna</placeName>
-               <placeName type="legacy-name-merge">Vienna</placeName>
-               <placeName type="alternative-name">Vienna</placeName>
-               <location type="coords">
-                  <geo>48,208333 16,373056</geo>
-               </location>
-               <location type="located_in_place">
-                  <placeName ref="pmb41240">Österreich</placeName>
-                  <geo>47,33333 13,33333</geo>
-               </location>
-            </place>
             <place xml:id="pmb51">
                <placeName>I., Innere Stadt</placeName>
                <placeName type="alternative-name">Inner city</placeName>
                <placeName type="alternative-name">Wien,Innere Stadt</placeName>
                <placeName type="alternative-name">1. Wiener Gemeindebezirk</placeName>
                <placeName type="legacy-name-merge">Wien-Innere Stadt</placeName>
-               <placeName type="legacy-name-merge">Inner city</placeName>
                <location type="coords">
                   <geo>48,20769 16,37049</geo>
                </location>
@@ -407,30 +446,30 @@
                   <geo>48,208333 16,373056</geo>
                </location>
             </place>
+            <place xml:id="pmb50">
+               <placeName>Wien</placeName>
+               <placeName type="ort_fruherer-name">K.K. Reichshaupt- und Residenzstadt Wien</placeName>
+               <placeName type="alternative-name">Bécs</placeName>
+               <placeName type="alternative-name">Land Wien</placeName>
+               <placeName type="alternative-name">Vídeň</placeName>
+               <placeName type="alternative-name">Wenia</placeName>
+               <placeName type="alternative-name">Beč</placeName>
+               <placeName type="ort_fruherer-name">Vindobona</placeName>
+               <placeName type="alternative-name">Vienna</placeName>
+               <location type="coords">
+                  <geo>48,208333 16,373056</geo>
+               </location>
+               <location type="located_in_place">
+                  <placeName ref="pmb41240">Österreich</placeName>
+                  <geo>47,33333 13,33333</geo>
+               </location>
+               <location type="located_in_place">
+                  <placeName ref="pmb235218">Windmühlhöhe</placeName>
+                  <geo>48,24077 16,32092</geo>
+               </location>
+            </place>
          </listPlace>
          <listEvent>
-            <event xml:id="pmb209077" ana="implied">
-               <eventName n="Theateraufführung">Aufführung von Hans, Mutterherz, 25.4.1899</eventName>
-               <listPlace>
-                  <place>
-                     <placeName role="veranstaltet in" ref="pmb3">Deutsches Theater Berlin</placeName>
-                     <location>
-                        <geo>52,524444 13,382222</geo>
-                     </location>
-                  </place>
-               </listPlace>
-            </event>
-            <event xml:id="pmb209078" ana="implied">
-               <eventName n="Theateraufführung">Aufführung von Die Puppe, 26.4.1899</eventName>
-               <listPlace>
-                  <place>
-                     <placeName role="veranstaltet in" ref="pmb185090">Central-Theater</placeName>
-                     <location>
-                        <geo>52,5056929 13,4009142</geo>
-                     </location>
-                  </place>
-               </listPlace>
-            </event>
             <event xml:id="pmb333837" ana="implied">
                <eventName n="Generalprobe">Generalprobe von Der grüne Kakadu, 28.4.1899</eventName>
                <listPlace>
@@ -449,6 +488,28 @@
                      <placeName role="veranstaltet in" ref="pmb3">Deutsches Theater Berlin</placeName>
                      <location>
                         <geo>52,524444 13,382222</geo>
+                     </location>
+                  </place>
+               </listPlace>
+            </event>
+            <event xml:id="pmb209077" ana="implied">
+               <eventName n="Theateraufführung">Aufführung von Hans, Mutterherz, 25.4.1899</eventName>
+               <listPlace>
+                  <place>
+                     <placeName role="veranstaltet in" ref="pmb3">Deutsches Theater Berlin</placeName>
+                     <location>
+                        <geo>52,524444 13,382222</geo>
+                     </location>
+                  </place>
+               </listPlace>
+            </event>
+            <event xml:id="pmb209078" ana="implied">
+               <eventName n="Theateraufführung">Aufführung von Die Puppe, 26.4.1899</eventName>
+               <listPlace>
+                  <place>
+                     <placeName role="veranstaltet in" ref="pmb185090">Central-Theater</placeName>
+                     <location>
+                        <geo>52,5056929 13,4009142</geo>
                      </location>
                   </place>
                </listPlace>

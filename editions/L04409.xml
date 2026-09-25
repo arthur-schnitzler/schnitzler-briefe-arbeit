@@ -1,6 +1,10 @@
-<?xml version='1.0' encoding='UTF-8'?>
+<?xml version="1.0" encoding="UTF-8"?>
 <?xml-model href="../meta/schnitzler-briefe-schematron.sch" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
-<TEI xmlns="http://www.tei-c.org/ns/1.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.tei-c.org/ns/1.0 ../meta/schnitzler-briefe-schema.xsd" xml:base="https://id.acdh.oeaw.ac.at/schnitzler/schnitzler-briefe/editions" xml:id="L04409">
+<TEI xmlns="http://www.tei-c.org/ns/1.0"
+     xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+     xsi:schemaLocation="http://www.tei-c.org/ns/1.0 ../meta/schnitzler-briefe-schema.xsd"
+     xml:base="https://id.acdh.oeaw.ac.at/schnitzler/schnitzler-briefe/editions"
+     xml:id="L04409">
    <teiHeader>
       <fileDesc>
          <titleStmt>
@@ -125,12 +129,20 @@
                <date evidence="conjecture" notBefore="1916-09-22" notAfter="1916-09-26">[22. 9. 1916 – 26. 9. 1916?]</date>
                <placeName ref="#pmb207301">Tiefer Graben 17</placeName>
             </correspAction>
-            <correspContext><ref type="belongsToCorrespondence" target="correspondence_12740">Schwarzkopf, Gustav</ref>
+            <correspContext>
+               <ref type="belongsToCorrespondence" target="correspondence_12740">Schwarzkopf, Gustav</ref>
                <ref subtype="previous_letter" type="withinCollection" target="L04400">Schnitzler an Schwarzkopf, 1. 9. 1916</ref>
                <ref subtype="next_letter" type="withinCollection" target="L02241">Adam an Schnitzler, 24. 9. 1916</ref>
-               <ref subtype="previous_letter" type="withinCorrespondence" source="correspondence_12740" target="L04400">Schnitzler an Schwarzkopf, 1. 9. 1916</ref>
-               <ref subtype="next_letter" type="withinCorrespondence" source="correspondence_12740" target="L04411">Schnitzler, Schnitzler an Schwarzkopf, [10. oder 11]. 6. 1917</ref>
-            </correspContext></correspDesc>
+               <ref subtype="previous_letter"
+                    type="withinCorrespondence"
+                    source="correspondence_12740"
+                    target="L04400">Schnitzler an Schwarzkopf, 1. 9. 1916</ref>
+               <ref subtype="next_letter"
+                    type="withinCorrespondence"
+                    source="correspondence_12740"
+                    target="L04411">Schnitzler, Schnitzler an Schwarzkopf, [10. oder 11]. 6. 1917</ref>
+            </correspContext>
+         </correspDesc>
       </profileDesc>
       <revisionDesc status="proposed">
          <change who="MAM" when="2026-06-11">Export aus Transkribus</change>
@@ -269,6 +281,78 @@
       </body>
       <back>
          <listPerson>
+            <person xml:id="pmb2121">
+               <persName>
+                  <surname>Schnitzler</surname>
+                  <forename>Arthur</forename>
+               </persName>
+               <birth>
+                  <date when="1862-05-15">15. 5. 1862</date>
+                  <settlement ref="pmb50">
+                     <placeName type="pref">Wien</placeName>
+                     <location>
+                        <geo>48,208333 16,373056</geo>
+                     </location>
+                  </settlement>
+               </birth>
+               <death>
+                  <date when="1931-10-21">21. 10. 1931</date>
+                  <settlement ref="pmb50">
+                     <placeName type="pref">Wien</placeName>
+                     <location>
+                        <geo>48,208333 16,373056</geo>
+                     </location>
+                  </settlement>
+               </death>
+            </person>
+            <person xml:id="pmb2173">
+               <persName>
+                  <forename>Olga</forename>
+                  <surname>Schnitzler</surname>
+               </persName>
+               <birth>
+                  <date when="1882-01-17">1882-01-17</date>
+                  <settlement ref="pmb50">
+                     <placeName type="pref">Wien</placeName>
+                     <location>
+                        <geo>48,208333 16,373056</geo>
+                     </location>
+                  </settlement>
+               </birth>
+               <death>
+                  <date when="1970-01-13">1970-01-13</date>
+                  <settlement ref="pmb885">
+                     <placeName type="pref">Lugano</placeName>
+                     <location>
+                        <geo>46,01008 8,96004</geo>
+                     </location>
+                  </settlement>
+               </death>
+            </person>
+            <person xml:id="pmb12740">
+               <persName>
+                  <forename>Gustav</forename>
+                  <surname>Schwarzkopf</surname>
+               </persName>
+               <birth>
+                  <date when="1853-11-07">1853-11-07</date>
+                  <settlement ref="pmb50">
+                     <placeName type="pref">Wien</placeName>
+                     <location>
+                        <geo>48,208333 16,373056</geo>
+                     </location>
+                  </settlement>
+               </birth>
+               <death>
+                  <date when="1939-11-13">1939-11-13</date>
+                  <settlement ref="pmb50">
+                     <placeName type="pref">Wien</placeName>
+                     <location>
+                        <geo>48,208333 16,373056</geo>
+                     </location>
+                  </settlement>
+               </death>
+            </person>
             <person xml:id="pmb12692">
                <persName>
                   <forename>Heinrich</forename>
@@ -291,30 +375,6 @@
                </birth>
                <death>
                   <date when="1982-07-12">1982-07-12</date>
-                  <settlement ref="pmb50">
-                     <placeName type="pref">Wien</placeName>
-                     <location>
-                        <geo>48,208333 16,373056</geo>
-                     </location>
-                  </settlement>
-               </death>
-            </person>
-            <person xml:id="pmb12740">
-               <persName>
-                  <forename>Gustav</forename>
-                  <surname>Schwarzkopf</surname>
-               </persName>
-               <birth>
-                  <date when="1853-11-07">1853-11-07</date>
-                  <settlement ref="pmb50">
-                     <placeName type="pref">Wien</placeName>
-                     <location>
-                        <geo>48,208333 16,373056</geo>
-                     </location>
-                  </settlement>
-               </birth>
-               <death>
-                  <date when="1939-11-13">1939-11-13</date>
                   <settlement ref="pmb50">
                      <placeName type="pref">Wien</placeName>
                      <location>
@@ -347,58 +407,6 @@
                   </settlement>
                </death>
             </person>
-            <person xml:id="pmb2121">
-               <persName>
-                  <surname>Schnitzler</surname>
-                  <forename>Arthur</forename>
-               </persName>
-               <birth>
-                  <date when="1862-05-15">15. 5. 1862</date>
-                  <settlement ref="pmb50">
-                     <placeName type="pref">Wien</placeName>
-                     <location>
-                        <geo>48,208333 16,373056</geo>
-                     </location>
-                  </settlement>
-               </birth>
-               <death>
-                  <date when="1931-10-21">21. 10. 1931</date>
-                  <settlement ref="pmb50">
-                     <placeName type="pref">Wien</placeName>
-                     <location>
-                        <geo>48,208333 16,373056</geo>
-                     </location>
-                  </settlement>
-               </death>
-               <sex value="male"/>
-               <occupation ref="pmb90">Schriftsteller/Schriftstellerin</occupation>
-               <occupation ref="pmb97">Mediziner/Medizinerin</occupation>
-               <idno type="gnd">https://d-nb.info/gnd/118609807/</idno>
-            </person>
-            <person xml:id="pmb2173">
-               <persName>
-                  <forename>Olga</forename>
-                  <surname>Schnitzler</surname>
-               </persName>
-               <birth>
-                  <date when="1882-01-17">1882-01-17</date>
-                  <settlement ref="pmb50">
-                     <placeName type="pref">Wien</placeName>
-                     <location>
-                        <geo>48,208333 16,373056</geo>
-                     </location>
-                  </settlement>
-               </birth>
-               <death>
-                  <date when="1970-01-13">1970-01-13</date>
-                  <settlement ref="pmb885">
-                     <placeName type="pref">Lugano</placeName>
-                     <location>
-                        <geo>46,01008 8,96004</geo>
-                     </location>
-                  </settlement>
-               </death>
-            </person>
             <person xml:id="pmb22487" ana="implied">
                <persName>
                   <forename>Angela-Julianna</forename>
@@ -422,10 +430,10 @@
             </person>
          </listPerson>
          <listPlace>
-            <place xml:id="pmb118878">
-               <placeName>Grundlsee [See]</placeName>
+            <place xml:id="pmb34401">
+               <placeName>Altaussee</placeName>
                <location type="coords">
-                  <geo>47,63333 13,86667</geo>
+                  <geo>47,639444 13,763333</geo>
                </location>
                <location type="located_in_place">
                   <placeName ref="pmb41240">Österreich</placeName>
@@ -434,6 +442,21 @@
                <location type="located_in_place">
                   <placeName ref="pmb429">Salzkammergut</placeName>
                   <geo>47,75 13,5</geo>
+               </location>
+            </place>
+            <place xml:id="pmb34387">
+               <placeName>Villa Annerl</placeName>
+               <placeName type="ort_fruherer-name">Gästehaus Dr. Schachl</placeName>
+               <location type="coords">
+                  <geo>47,6416 13,77095</geo>
+               </location>
+               <location type="located_in_place">
+                  <placeName ref="pmb34401">Altaussee</placeName>
+                  <geo>47,639444 13,763333</geo>
+               </location>
+               <location type="located_in_place">
+                  <placeName ref="pmb34402">Fischerndorf</placeName>
+                  <geo>47,63333 13,76667</geo>
                </location>
             </place>
             <place xml:id="pmb207301">
@@ -450,67 +473,98 @@
                   <geo>48,20769 16,37049</geo>
                </location>
             </place>
-            <place xml:id="pmb213">
-               <placeName>Bad Ischl</placeName>
-               <placeName type="legacy-name-merge">Bad Ischl</placeName>
-               <placeName type="legacy-name-merge">Bad Ischl</placeName>
+            <place xml:id="pmb51">
+               <placeName>I., Innere Stadt</placeName>
+               <placeName type="alternative-name">Inner city</placeName>
+               <placeName type="alternative-name">Wien,Innere Stadt</placeName>
+               <placeName type="alternative-name">1. Wiener Gemeindebezirk</placeName>
+               <placeName type="legacy-name-merge">Wien-Innere Stadt</placeName>
                <location type="coords">
-                  <geo>47,71109 13,61893</geo>
+                  <geo>48,20769 16,37049</geo>
                </location>
                <location type="located_in_place">
-                  <placeName ref="pmb429">Salzkammergut</placeName>
+                  <placeName ref="pmb41240">Österreich</placeName>
+                  <geo>47,33333 13,33333</geo>
+               </location>
+               <location type="located_in_place">
+                  <placeName ref="pmb50">Wien</placeName>
+                  <geo>48,208333 16,373056</geo>
+               </location>
+            </place>
+            <place xml:id="pmb429">
+               <placeName>Salzkammergut</placeName>
+               <location type="coords">
                   <geo>47,75 13,5</geo>
                </location>
-            </place>
-            <place xml:id="pmb263516">
-               <placeName>Bahnhof Bad Aussee</placeName>
-               <location type="coords">
-                  <geo>47,59916666666667 13,776666666666667</geo>
-               </location>
                <location type="located_in_place">
-                  <placeName ref="pmb415">Bad Aussee</placeName>
-                  <geo>47,60998 13,78243</geo>
+                  <placeName ref="pmb41240">Österreich</placeName>
+                  <geo>47,33333 13,33333</geo>
                </location>
             </place>
-            <place xml:id="pmb264803">
-               <placeName>Altausseer See</placeName>
+            <place xml:id="pmb415">
+               <placeName>Bad Aussee</placeName>
+               <placeName type="ort_fruherer-name">Markt Aussee</placeName>
                <location type="coords">
-                  <geo>47,6417 13,7861</geo>
+                  <geo>47,60998 13,78243</geo>
                </location>
                <location type="located_in_place">
                   <placeName ref="pmb17">Steiermark</placeName>
                   <geo>47,38 15,7925</geo>
                </location>
             </place>
-            <place xml:id="pmb264884">
-               <placeName>Wasnerin</placeName>
+            <place xml:id="pmb52428">
+               <placeName>Loser</placeName>
                <location type="coords">
-                  <geo>47,609298 13,760196</geo>
+                  <geo>47,65 13,76667</geo>
                </location>
                <location type="located_in_place">
-                  <placeName ref="pmb34401">Altaussee</placeName>
-                  <geo>47,639444 13,763333</geo>
+                  <placeName ref="pmb41240">Österreich</placeName>
+                  <geo>47,33333 13,33333</geo>
                </location>
             </place>
-            <place xml:id="pmb264982">
-               <placeName>Leonhardkirche Bad Aussee</placeName>
-               <placeName type="legacy-name-merge">Leonhard</placeName>
+            <place xml:id="pmb364227">
+               <placeName>Trisselwand</placeName>
                <location type="coords">
-                  <geo>47,608608 13,801612</geo>
+                  <geo>47,6461 13,8134</geo>
                </location>
                <location type="located_in_place">
-                  <placeName ref="pmb415">Bad Aussee</placeName>
-                  <geo>47,60998 13,78243</geo>
+                  <placeName ref="pmb17">Steiermark</placeName>
+                  <geo>47,38 15,7925</geo>
+               </location>
+               <location type="located_in_place">
+                  <placeName ref="pmb429">Salzkammergut</placeName>
+                  <geo>47,75 13,5</geo>
                </location>
             </place>
-            <place xml:id="pmb291301">
-               <placeName>Schramlgut</placeName>
+            <place xml:id="pmb364229">
+               <placeName>Backenstein</placeName>
                <location type="coords">
-                  <geo>47,6279745 13,8402723</geo>
+                  <geo>47,654943888889 13,867856944444</geo>
                </location>
                <location type="located_in_place">
-                  <placeName ref="pmb46000">Grundlsee [Gemeinde]</placeName>
-                  <geo>47,61667 13,81667</geo>
+                  <placeName ref="pmb17">Steiermark</placeName>
+                  <geo>47,38 15,7925</geo>
+               </location>
+            </place>
+            <place xml:id="pmb90749">
+               <placeName>Gössl</placeName>
+               <location type="coords">
+                  <geo>47,63399 13,90264</geo>
+               </location>
+               <location type="located_in_place">
+                  <placeName ref="pmb41240">Österreich</placeName>
+                  <geo>47,33333 13,33333</geo>
+               </location>
+            </place>
+            <place xml:id="pmb91912">
+               <placeName>Toplitzsee</placeName>
+               <placeName type="alternative-name">Lake Toplitz</placeName>
+               <location type="coords">
+                  <geo>47,64167 13,92778</geo>
+               </location>
+               <location type="located_in_place">
+                  <placeName ref="pmb41240">Österreich</placeName>
+                  <geo>47,33333 13,33333</geo>
                </location>
             </place>
             <place xml:id="pmb293019">
@@ -523,23 +577,30 @@
                   <geo>47,639444 13,763333</geo>
                </location>
             </place>
-            <place xml:id="pmb298723">
-               <placeName>Praunfalk</placeName>
+            <place xml:id="pmb364231">
+               <placeName>Klammkogel</placeName>
                <location type="coords">
-                  <geo>47,6175 13,7748</geo>
+                  <geo>47,6463407 13,8290251</geo>
                </location>
                <location type="located_in_place">
-                  <placeName ref="pmb415">Bad Aussee</placeName>
-                  <geo>47,60998 13,78243</geo>
+                  <placeName ref="pmb17">Steiermark</placeName>
+                  <geo>47,38 15,7925</geo>
                </location>
             </place>
-            <place xml:id="pmb34401">
-               <placeName>Altaussee</placeName>
-               <placeName type="legacy-name-merge">Altaussee</placeName>
-               <placeName type="legacy-name-merge">Altaussee</placeName>
-               <placeName type="legacy-name-merge">Altaussee</placeName>
+            <place xml:id="pmb291301">
+               <placeName>Schramlgut</placeName>
                <location type="coords">
-                  <geo>47,639444 13,763333</geo>
+                  <geo>47,6279745 13,8402723</geo>
+               </location>
+               <location type="located_in_place">
+                  <placeName ref="pmb46000">Grundlsee [Gemeinde]</placeName>
+                  <geo>47,61667 13,81667</geo>
+               </location>
+            </place>
+            <place xml:id="pmb118878">
+               <placeName>Grundlsee [See]</placeName>
+               <location type="coords">
+                  <geo>47,63333 13,86667</geo>
                </location>
                <location type="located_in_place">
                   <placeName ref="pmb41240">Österreich</placeName>
@@ -564,34 +625,28 @@
                   <geo>47,639444 13,763333</geo>
                </location>
             </place>
-            <place xml:id="pmb364227">
-               <placeName>Trisselwand</placeName>
+            <place xml:id="pmb264803">
+               <placeName>Altausseer See</placeName>
                <location type="coords">
-                  <geo>47,6461 13,8134</geo>
+                  <geo>47,6417 13,7861</geo>
                </location>
                <location type="located_in_place">
                   <placeName ref="pmb17">Steiermark</placeName>
                   <geo>47,38 15,7925</geo>
                </location>
             </place>
-            <place xml:id="pmb364229">
-               <placeName>Backenstein</placeName>
+            <place xml:id="pmb91938">
+               <placeName>Tressenstein</placeName>
                <location type="coords">
-                  <geo>47,654943888889 13,867856944444</geo>
+                  <geo>47,62664 13,78914</geo>
                </location>
                <location type="located_in_place">
-                  <placeName ref="pmb17">Steiermark</placeName>
-                  <geo>47,38 15,7925</geo>
-               </location>
-            </place>
-            <place xml:id="pmb364231">
-               <placeName>Klammkogel</placeName>
-               <location type="coords">
-                  <geo>47,6463407 13,8290251</geo>
+                  <placeName ref="pmb41240">Österreich</placeName>
+                  <geo>47,33333 13,33333</geo>
                </location>
                <location type="located_in_place">
-                  <placeName ref="pmb17">Steiermark</placeName>
-                  <geo>47,38 15,7925</geo>
+                  <placeName ref="pmb415">Bad Aussee</placeName>
+                  <geo>47,60998 13,78243</geo>
                </location>
             </place>
             <place xml:id="pmb364233">
@@ -602,6 +657,16 @@
                <location type="located_in_place">
                   <placeName ref="pmb46000">Grundlsee [Gemeinde]</placeName>
                   <geo>47,61667 13,81667</geo>
+               </location>
+            </place>
+            <place xml:id="pmb298723">
+               <placeName>Praunfalk</placeName>
+               <location type="coords">
+                  <geo>47,6175 13,7748</geo>
+               </location>
+               <location type="located_in_place">
+                  <placeName ref="pmb415">Bad Aussee</placeName>
+                  <geo>47,60998 13,78243</geo>
                </location>
             </place>
             <place xml:id="pmb364237">
@@ -618,6 +683,27 @@
                   <geo>47,60998 13,78243</geo>
                </location>
             </place>
+            <place xml:id="pmb264982">
+               <placeName>Leonhardkirche Bad Aussee</placeName>
+               <placeName type="legacy-name-merge">Leonhard</placeName>
+               <location type="coords">
+                  <geo>47,608608 13,801612</geo>
+               </location>
+               <location type="located_in_place">
+                  <placeName ref="pmb415">Bad Aussee</placeName>
+                  <geo>47,60998 13,78243</geo>
+               </location>
+            </place>
+            <place xml:id="pmb264884">
+               <placeName>Wasnerin</placeName>
+               <location type="coords">
+                  <geo>47,609298 13,760196</geo>
+               </location>
+               <location type="located_in_place">
+                  <placeName ref="pmb34401">Altaussee</placeName>
+                  <geo>47,639444 13,763333</geo>
+               </location>
+            </place>
             <place xml:id="pmb364241">
                <placeName>Hohe Radling</placeName>
                <location type="coords">
@@ -628,6 +714,16 @@
                   <geo>47,38 15,7925</geo>
                </location>
             </place>
+            <place xml:id="pmb45945">
+               <placeName>Sarstein</placeName>
+               <location type="coords">
+                  <geo>47,601944 13,698333</geo>
+               </location>
+               <location type="located_in_place">
+                  <placeName ref="pmb429">Salzkammergut</placeName>
+                  <geo>47,75 13,5</geo>
+               </location>
+            </place>
             <place xml:id="pmb364243">
                <placeName>Unterkainisch</placeName>
                <location type="coords">
@@ -636,41 +732,6 @@
                <location type="located_in_place">
                   <placeName ref="pmb415">Bad Aussee</placeName>
                   <geo>47,60998 13,78243</geo>
-               </location>
-            </place>
-            <place xml:id="pmb364247">
-               <placeName>Koppental</placeName>
-               <location type="coords">
-                  <geo>47,57273 13,71643</geo>
-               </location>
-               <location type="located_in_place">
-                  <placeName ref="pmb17">Steiermark</placeName>
-                  <geo>47,38 15,7925</geo>
-               </location>
-            </place>
-            <place xml:id="pmb415">
-               <placeName>Bad Aussee</placeName>
-               <placeName type="ort_fruherer-name">Markt Aussee</placeName>
-               <placeName type="legacy-name-merge">Bad Aussee</placeName>
-               <placeName type="legacy-name-merge">Bad Aussee</placeName>
-               <placeName type="legacy-name-merge">Markt Aussee</placeName>
-               <location type="coords">
-                  <geo>47,60998 13,78243</geo>
-               </location>
-               <location type="located_in_place">
-                  <placeName ref="pmb17">Steiermark</placeName>
-                  <geo>47,38 15,7925</geo>
-               </location>
-            </place>
-            <place xml:id="pmb429">
-               <placeName>Salzkammergut</placeName>
-               <placeName type="legacy-name-merge">Salzkammergut</placeName>
-               <location type="coords">
-                  <geo>47,75 13,5</geo>
-               </location>
-               <location type="located_in_place">
-                  <placeName ref="pmb41240">Österreich</placeName>
-                  <geo>47,33333 13,33333</geo>
                </location>
             </place>
             <place xml:id="pmb45248">
@@ -688,10 +749,30 @@
                   <geo>47,38 15,7925</geo>
                </location>
             </place>
-            <place xml:id="pmb45945">
-               <placeName>Sarstein</placeName>
+            <place xml:id="pmb263516">
+               <placeName>Bahnhof Bad Aussee</placeName>
                <location type="coords">
-                  <geo>47,601944 13,698333</geo>
+                  <geo>47,59916666666667 13,776666666666667</geo>
+               </location>
+               <location type="located_in_place">
+                  <placeName ref="pmb415">Bad Aussee</placeName>
+                  <geo>47,60998 13,78243</geo>
+               </location>
+            </place>
+            <place xml:id="pmb364247">
+               <placeName>Koppental</placeName>
+               <location type="coords">
+                  <geo>47,57273 13,71643</geo>
+               </location>
+               <location type="located_in_place">
+                  <placeName ref="pmb17">Steiermark</placeName>
+                  <geo>47,38 15,7925</geo>
+               </location>
+            </place>
+            <place xml:id="pmb213">
+               <placeName>Bad Ischl</placeName>
+               <location type="coords">
+                  <geo>47,71109 13,61893</geo>
                </location>
                <location type="located_in_place">
                   <placeName ref="pmb429">Salzkammergut</placeName>
@@ -701,16 +782,12 @@
             <place xml:id="pmb50">
                <placeName>Wien</placeName>
                <placeName type="ort_fruherer-name">K.K. Reichshaupt- und Residenzstadt Wien</placeName>
-               <placeName type="legacy-name-merge">Wien</placeName>
                <placeName type="alternative-name">Bécs</placeName>
                <placeName type="alternative-name">Land Wien</placeName>
                <placeName type="alternative-name">Vídeň</placeName>
                <placeName type="alternative-name">Wenia</placeName>
                <placeName type="alternative-name">Beč</placeName>
                <placeName type="ort_fruherer-name">Vindobona</placeName>
-               <placeName type="legacy-name-merge">Vindobona</placeName>
-               <placeName type="alternative-name">Vienna</placeName>
-               <placeName type="legacy-name-merge">Vienna</placeName>
                <placeName type="alternative-name">Vienna</placeName>
                <location type="coords">
                   <geo>48,208333 16,373056</geo>
@@ -719,70 +796,9 @@
                   <placeName ref="pmb41240">Österreich</placeName>
                   <geo>47,33333 13,33333</geo>
                </location>
-            </place>
-            <place xml:id="pmb51">
-               <placeName>I., Innere Stadt</placeName>
-               <placeName type="alternative-name">Inner city</placeName>
-               <placeName type="alternative-name">Wien,Innere Stadt</placeName>
-               <placeName type="alternative-name">1. Wiener Gemeindebezirk</placeName>
-               <placeName type="legacy-name-merge">Wien-Innere Stadt</placeName>
-               <placeName type="legacy-name-merge">Inner city</placeName>
-               <location type="coords">
-                  <geo>48,20769 16,37049</geo>
-               </location>
                <location type="located_in_place">
-                  <placeName ref="pmb41240">Österreich</placeName>
-                  <geo>47,33333 13,33333</geo>
-               </location>
-               <location type="located_in_place">
-                  <placeName ref="pmb50">Wien</placeName>
-                  <geo>48,208333 16,373056</geo>
-               </location>
-            </place>
-            <place xml:id="pmb52428">
-               <placeName>Loser</placeName>
-               <location type="coords">
-                  <geo>47,65 13,76667</geo>
-               </location>
-               <location type="located_in_place">
-                  <placeName ref="pmb41240">Österreich</placeName>
-                  <geo>47,33333 13,33333</geo>
-               </location>
-            </place>
-            <place xml:id="pmb90749">
-               <placeName>Gössl</placeName>
-               <location type="coords">
-                  <geo>47,63399 13,90264</geo>
-               </location>
-               <location type="located_in_place">
-                  <placeName ref="pmb41240">Österreich</placeName>
-                  <geo>47,33333 13,33333</geo>
-               </location>
-            </place>
-            <place xml:id="pmb91912">
-               <placeName>Toplitzsee</placeName>
-               <placeName type="alternative-name">Toplitzsee</placeName>
-               <placeName type="alternative-name">Lake Toplitz</placeName>
-               <location type="coords">
-                  <geo>47,64167 13,92778</geo>
-               </location>
-               <location type="located_in_place">
-                  <placeName ref="pmb41240">Österreich</placeName>
-                  <geo>47,33333 13,33333</geo>
-               </location>
-            </place>
-            <place xml:id="pmb91938">
-               <placeName>Tressenstein</placeName>
-               <location type="coords">
-                  <geo>47,62664 13,78914</geo>
-               </location>
-               <location type="located_in_place">
-                  <placeName ref="pmb41240">Österreich</placeName>
-                  <geo>47,33333 13,33333</geo>
-               </location>
-               <location type="located_in_place">
-                  <placeName ref="pmb415">Bad Aussee</placeName>
-                  <geo>47,60998 13,78243</geo>
+                  <placeName ref="pmb235218">Windmühlhöhe</placeName>
+                  <geo>48,24077 16,32092</geo>
                </location>
             </place>
             <place xml:id="pmb264904" ana="implied">

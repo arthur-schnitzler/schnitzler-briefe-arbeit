@@ -1,6 +1,10 @@
-<?xml version='1.0' encoding='UTF-8'?>
+<?xml version="1.0" encoding="UTF-8"?>
 <?xml-model href="../meta/schnitzler-briefe-schematron.sch" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
-<TEI xmlns="http://www.tei-c.org/ns/1.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.tei-c.org/ns/1.0 ../meta/schnitzler-briefe-schema.xsd" xml:base="https://id.acdh.oeaw.ac.at/schnitzler/schnitzler-briefe/editions" xml:id="L04336">
+<TEI xmlns="http://www.tei-c.org/ns/1.0"
+     xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+     xsi:schemaLocation="http://www.tei-c.org/ns/1.0 ../meta/schnitzler-briefe-schema.xsd"
+     xml:base="https://id.acdh.oeaw.ac.at/schnitzler/schnitzler-briefe/editions"
+     xml:id="L04336">
    <teiHeader>
       <fileDesc>
          <titleStmt>
@@ -132,19 +136,27 @@
             </correspAction>
             <correspAction type="delivered">
                <date when="1902-06-25">25. 6. 1902</date>
-               <placeName ref="#pmb365208">9/3 Wien 72</placeName>
+               <placeName ref="#pmb365208">9/3 Post- und Telegraphenamt 72</placeName>
             </correspAction>
             <correspAction type="received">
                <persName ref="#pmb2121">Schnitzler, Arthur</persName>
                <date when="1902-06-25">25. 6. 1902</date>
                <placeName ref="#pmb168934">Frankgasse 1</placeName>
             </correspAction>
-            <correspContext><ref type="belongsToCorrespondence" target="correspondence_4223">Mataja, Emilie</ref>
+            <correspContext>
+               <ref type="belongsToCorrespondence" target="correspondence_4223">Mataja, Emilie</ref>
                <ref subtype="previous_letter" type="withinCollection" target="L03211">Goldmann an Schnitzler, 16. 6. [1902]</ref>
                <ref subtype="next_letter" type="withinCollection" target="L03531">Goldmann an Gussmann, 20. 6. [1902]</ref>
-               <ref subtype="previous_letter" type="withinCorrespondence" source="correspondence_4223" target="L04335">Marriot an Schnitzler, 9. 5. 1902</ref>
-               <ref subtype="next_letter" type="withinCorrespondence" source="correspondence_4223" target="L04337">Marriot, Kobatsch, Mataja an Schnitzler, 20. 7. 1902</ref>
-            </correspContext></correspDesc>
+               <ref subtype="previous_letter"
+                    type="withinCorrespondence"
+                    source="correspondence_4223"
+                    target="L04335">Marriot an Schnitzler, 9. 5. 1902</ref>
+               <ref subtype="next_letter"
+                    type="withinCorrespondence"
+                    source="correspondence_4223"
+                    target="L04337">Marriot, Kobatsch, Mataja an Schnitzler, 20. 7. 1902</ref>
+            </correspContext>
+         </correspDesc>
       </profileDesc>
       <revisionDesc status="proposed">
          <change who="MAM" when="2026-04-15">Export aus Transkribus</change>
@@ -215,34 +227,6 @@
       </body>
       <back>
          <listPerson>
-            <person xml:id="pmb2121">
-               <persName>
-                  <surname>Schnitzler</surname>
-                  <forename>Arthur</forename>
-               </persName>
-               <birth>
-                  <date when="1862-05-15">15. 5. 1862</date>
-                  <settlement ref="pmb50">
-                     <placeName type="pref">Wien</placeName>
-                     <location>
-                        <geo>48,208333 16,373056</geo>
-                     </location>
-                  </settlement>
-               </birth>
-               <death>
-                  <date when="1931-10-21">21. 10. 1931</date>
-                  <settlement ref="pmb50">
-                     <placeName type="pref">Wien</placeName>
-                     <location>
-                        <geo>48,208333 16,373056</geo>
-                     </location>
-                  </settlement>
-               </death>
-               <sex value="male"/>
-               <occupation ref="pmb90">Schriftsteller/Schriftstellerin</occupation>
-               <occupation ref="pmb97">Mediziner/Medizinerin</occupation>
-               <idno type="gnd">https://d-nb.info/gnd/118609807/</idno>
-            </person>
             <person xml:id="pmb4223">
                <persName>
                   <forename>Emil</forename>
@@ -267,16 +251,68 @@
                   </settlement>
                </death>
             </person>
+            <person xml:id="pmb2121">
+               <persName>
+                  <surname>Schnitzler</surname>
+                  <forename>Arthur</forename>
+               </persName>
+               <birth>
+                  <date when="1862-05-15">15. 5. 1862</date>
+                  <settlement ref="pmb50">
+                     <placeName type="pref">Wien</placeName>
+                     <location>
+                        <geo>48,208333 16,373056</geo>
+                     </location>
+                  </settlement>
+               </birth>
+               <death>
+                  <date when="1931-10-21">21. 10. 1931</date>
+                  <settlement ref="pmb50">
+                     <placeName type="pref">Wien</placeName>
+                     <location>
+                        <geo>48,208333 16,373056</geo>
+                     </location>
+                  </settlement>
+               </death>
+            </person>
          </listPerson>
          <listBibl>
             <bibl xml:id="pmb339427" ana="comment">
-               <title type="main">Anständige Frauen. Roman</title>
+               <title>Anständige Frauen. Roman</title>
                <title type="werk_link">https://viewer.onb.ac.at/13221D74</title>
                <title type="werk_link">https://anno.onb.ac.at/cgi-content/anno?aid=nwg&amp;datum=19060812&amp;seite=44</title>
-               <author role="hat-unter-pseudonym-geschrieben" ref="pmb4223">Marriot, Emil</author>
+               <author ref="pmb4223" role="hat-unter-pseudonym-geschrieben">Marriot, Emil</author>
             </bibl>
          </listBibl>
          <listPlace>
+            <place xml:id="pmb339388">
+               <placeName>Brodzany</placeName>
+               <location type="coords">
+                  <geo>48,60833333 18,34166667</geo>
+               </location>
+               <location type="located_in_place">
+                  <placeName ref="pmb339393">Komitat Bars</placeName>
+                  <geo>48,38333333 18,4</geo>
+               </location>
+               <location type="located_in_place">
+                  <placeName ref="pmb34478">Slowakei</placeName>
+                  <geo>48,66667 19,5</geo>
+               </location>
+            </place>
+            <place xml:id="pmb365208">
+               <placeName>9/3 Post- und Telegraphenamt 72</placeName>
+               <location type="coords">
+                  <geo>48,216197 16,356623</geo>
+               </location>
+               <location type="located_in_place">
+                  <placeName ref="pmb59">IX., Alsergrund</placeName>
+                  <geo>48,22387 16,35641</geo>
+               </location>
+               <location type="located_in_place">
+                  <placeName ref="pmb731">Garnisongasse</placeName>
+                  <geo>48,216533356678 16,356214321972</geo>
+               </location>
+            </place>
             <place xml:id="pmb168934">
                <placeName>Frankgasse 1</placeName>
                <location type="coords">
@@ -291,18 +327,16 @@
                   <geo>48,215516628628 16,356475515829</geo>
                </location>
             </place>
-            <place xml:id="pmb339388">
-               <placeName>Brodzany</placeName>
+            <place xml:id="pmb59">
+               <placeName>IX., Alsergrund</placeName>
+               <placeName type="legacy-name-merge">Thurygrund</placeName>
+               <placeName type="legacy-name-merge">Wien-Alsergrund</placeName>
                <location type="coords">
-                  <geo>48,60833333 18,34166667</geo>
+                  <geo>48,22387 16,35641</geo>
                </location>
                <location type="located_in_place">
-                  <placeName ref="pmb339393">Komitat Bars</placeName>
-                  <geo>48,38333333 18,4</geo>
-               </location>
-               <location type="located_in_place">
-                  <placeName ref="pmb34478">Slowakei</placeName>
-                  <geo>48,66667 19,5</geo>
+                  <placeName ref="pmb50">Wien</placeName>
+                  <geo>48,208333 16,373056</geo>
                </location>
             </place>
             <place xml:id="pmb339390">
@@ -346,9 +380,7 @@
             </place>
             <place xml:id="pmb35512">
                <placeName>Ungarn</placeName>
-               <placeName type="alternative-name">Ungarn</placeName>
                <placeName type="alternative-name">Republic of Hungary</placeName>
-               <placeName type="legacy-name-merge">Ungarn</placeName>
                <placeName type="legacy-name-merge">Hungary</placeName>
                <location type="coords">
                   <geo>47,0 20,0</geo>
@@ -365,16 +397,12 @@
             <place xml:id="pmb50">
                <placeName>Wien</placeName>
                <placeName type="ort_fruherer-name">K.K. Reichshaupt- und Residenzstadt Wien</placeName>
-               <placeName type="legacy-name-merge">Wien</placeName>
                <placeName type="alternative-name">Bécs</placeName>
                <placeName type="alternative-name">Land Wien</placeName>
                <placeName type="alternative-name">Vídeň</placeName>
                <placeName type="alternative-name">Wenia</placeName>
                <placeName type="alternative-name">Beč</placeName>
                <placeName type="ort_fruherer-name">Vindobona</placeName>
-               <placeName type="legacy-name-merge">Vindobona</placeName>
-               <placeName type="alternative-name">Vienna</placeName>
-               <placeName type="legacy-name-merge">Vienna</placeName>
                <placeName type="alternative-name">Vienna</placeName>
                <location type="coords">
                   <geo>48,208333 16,373056</geo>
@@ -383,17 +411,9 @@
                   <placeName ref="pmb41240">Österreich</placeName>
                   <geo>47,33333 13,33333</geo>
                </location>
-            </place>
-            <place xml:id="pmb59">
-               <placeName>IX., Alsergrund</placeName>
-               <placeName type="legacy-name-merge">Thurygrund</placeName>
-               <placeName type="legacy-name-merge">Wien-Alsergrund</placeName>
-               <location type="coords">
-                  <geo>48,22387 16,35641</geo>
-               </location>
                <location type="located_in_place">
-                  <placeName ref="pmb50">Wien</placeName>
-                  <geo>48,208333 16,373056</geo>
+                  <placeName ref="pmb235218">Windmühlhöhe</placeName>
+                  <geo>48,24077 16,32092</geo>
                </location>
             </place>
          </listPlace>

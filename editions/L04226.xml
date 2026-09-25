@@ -1,6 +1,10 @@
-<?xml version='1.0' encoding='UTF-8'?>
+<?xml version="1.0" encoding="UTF-8"?>
 <?xml-model href="../meta/schnitzler-briefe-schematron.sch" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
-<TEI xmlns="http://www.tei-c.org/ns/1.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.tei-c.org/ns/1.0 ../meta/schnitzler-briefe-schema.xsd" xml:base="https://id.acdh.oeaw.ac.at/schnitzler/schnitzler-briefe/editions" xml:id="L04226">
+<TEI xmlns="http://www.tei-c.org/ns/1.0"
+     xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+     xsi:schemaLocation="http://www.tei-c.org/ns/1.0 ../meta/schnitzler-briefe-schema.xsd"
+     xml:base="https://id.acdh.oeaw.ac.at/schnitzler/schnitzler-briefe/editions"
+     xml:id="L04226">
    <teiHeader>
       <fileDesc>
          <titleStmt>
@@ -83,7 +87,7 @@
                               <extent>
                                  <measure unit="seite" quantity="3"/>
                                  <measure unit="blatt" quantity="1"/>
-                                 <measure unit="zeichenanzahl" quantity="1930"/>
+                                 <measure unit="zeichenanzahl" quantity="1929"/>
                               </extent>
                            </supportDesc>
                         </objectDesc>
@@ -117,12 +121,20 @@
                   – 3. 2. 1900?]</date>
                <placeName ref="#pmb50" evidence="conjecture">Wien</placeName>
             </correspAction>
-            <correspContext><ref type="belongsToCorrespondence" target="correspondence_9941">Sosnosky, Theodor von</ref>
+            <correspContext>
+               <ref type="belongsToCorrespondence" target="correspondence_9941">Sosnosky, Theodor von</ref>
                <ref subtype="previous_letter" type="withinCollection" target="L02903">Goldmann an Schnitzler, 23. 1. [1900]</ref>
                <ref subtype="next_letter" type="withinCollection" target="L01009">Schnitzler an Beer-Hofmann, 1. 2. 1900</ref>
-               <ref subtype="previous_letter" type="withinCorrespondence" source="correspondence_9941" target="L04236">Schnitzler an Sosnosky, 30. 12. 1899</ref>
-               <ref subtype="next_letter" type="withinCorrespondence" source="correspondence_9941" target="L04227">Sosnosky an Schnitzler, 22. 6. 1900</ref>
-            </correspContext></correspDesc>
+               <ref subtype="previous_letter"
+                    type="withinCorrespondence"
+                    source="correspondence_9941"
+                    target="L04236">Schnitzler an Sosnosky, 30. 12. 1899</ref>
+               <ref subtype="next_letter"
+                    type="withinCorrespondence"
+                    source="correspondence_9941"
+                    target="L04227">Sosnosky an Schnitzler, 22. 6. 1900</ref>
+            </correspContext>
+         </correspDesc>
       </profileDesc>
       <revisionDesc status="proposed">
          <change who="SJ" when="2026-02-17">Export aus Transkribus</change>
@@ -212,34 +224,6 @@
       </body>
       <back>
          <listPerson>
-            <person xml:id="pmb2121">
-               <persName>
-                  <surname>Schnitzler</surname>
-                  <forename>Arthur</forename>
-               </persName>
-               <birth>
-                  <date when="1862-05-15">15. 5. 1862</date>
-                  <settlement ref="pmb50">
-                     <placeName type="pref">Wien</placeName>
-                     <location>
-                        <geo>48,208333 16,373056</geo>
-                     </location>
-                  </settlement>
-               </birth>
-               <death>
-                  <date when="1931-10-21">21. 10. 1931</date>
-                  <settlement ref="pmb50">
-                     <placeName type="pref">Wien</placeName>
-                     <location>
-                        <geo>48,208333 16,373056</geo>
-                     </location>
-                  </settlement>
-               </death>
-               <sex value="male"/>
-               <occupation ref="pmb90">Schriftsteller/Schriftstellerin</occupation>
-               <occupation ref="pmb97">Mediziner/Medizinerin</occupation>
-               <idno type="gnd">https://d-nb.info/gnd/118609807/</idno>
-            </person>
             <person xml:id="pmb9941">
                <persName>
                   <forename>Theodor von</forename>
@@ -262,6 +246,84 @@
                         <geo>48,208333 16,373056</geo>
                      </location>
                   </settlement>
+               </death>
+            </person>
+            <person xml:id="pmb2121">
+               <persName>
+                  <surname>Schnitzler</surname>
+                  <forename>Arthur</forename>
+               </persName>
+               <birth>
+                  <date when="1862-05-15">15. 5. 1862</date>
+                  <settlement ref="pmb50">
+                     <placeName type="pref">Wien</placeName>
+                     <location>
+                        <geo>48,208333 16,373056</geo>
+                     </location>
+                  </settlement>
+               </birth>
+               <death>
+                  <date when="1931-10-21">21. 10. 1931</date>
+                  <settlement ref="pmb50">
+                     <placeName type="pref">Wien</placeName>
+                     <location>
+                        <geo>48,208333 16,373056</geo>
+                     </location>
+                  </settlement>
+               </death>
+            </person>
+            <person xml:id="pmb63259" ana="comment">
+               <persName>
+                  <forename>Nikolaus</forename>
+                  <surname>Lenau</surname>
+               </persName>
+               <birth>
+                  <date when="1802-08-13">1802-08-13</date>
+                  <settlement ref="pmb63262">
+                     <placeName type="pref">Lenauheim</placeName>
+                     <location>
+                        <geo>45,87194 20,79944</geo>
+                     </location>
+                  </settlement>
+               </birth>
+               <death>
+                  <date when="1850-08-22">1850-08-22</date>
+                  <settlement ref="pmb50">
+                     <placeName type="pref">Wien</placeName>
+                     <location>
+                        <geo>48,208333 16,373056</geo>
+                     </location>
+                  </settlement>
+               </death>
+            </person>
+            <person xml:id="pmb64810" ana="comment">
+               <persName>
+                  <forename>Hermann Ferdinand</forename>
+                  <surname>Freiligrath</surname>
+               </persName>
+               <birth>
+                  <date notBefore="1810-01-01" when="1810-01-01" notAfter="1810-12-31">1810</date>
+                  <settlement ref="pmb45808">
+                     <placeName type="pref">Detmold</placeName>
+                     <location>
+                        <geo>51,93855 8,87318</geo>
+                     </location>
+                  </settlement>
+               </birth>
+               <death>
+                  <date when="1876-01-01" notAfter="1876-12-31">1876</date>
+               </death>
+            </person>
+            <person xml:id="pmb334931" ana="comment">
+               <persName>
+                  <forename>Carl von</forename>
+                  <surname>Cotta</surname>
+               </persName>
+               <birth>
+                  <date when="1835-01-06">1835-01-06</date>
+               </birth>
+               <death>
+                  <date when="1888-09-15">1888-09-15</date>
                </death>
             </person>
             <person xml:id="pmb118961" ana="comment">
@@ -306,112 +368,81 @@
                   </settlement>
                </death>
             </person>
-            <person xml:id="pmb334931" ana="comment">
+            <person xml:id="pmb11740">
                <persName>
-                  <forename>Carl von</forename>
-                  <surname>Cotta</surname>
+                  <forename>Hugo von</forename>
+                  <surname>Hofmannsthal</surname>
                </persName>
                <birth>
-                  <date when="1835-01-06">1835-01-06</date>
-               </birth>
-               <death>
-                  <date when="1888-09-15">1888-09-15</date>
-               </death>
-            </person>
-            <person xml:id="pmb63259" ana="comment">
-               <persName>
-                  <forename>Nikolaus</forename>
-                  <surname>Lenau</surname>
-               </persName>
-               <birth>
-                  <date when="1802-08-13">1802-08-13</date>
-                  <settlement ref="pmb63262">
-                     <placeName type="pref">Lenauheim</placeName>
-                     <location>
-                        <geo>45,87194 20,79944</geo>
-                     </location>
-                  </settlement>
-               </birth>
-               <death>
-                  <date when="1850-08-22">1850-08-22</date>
+                  <date when="1874-02-01">1874-02-01</date>
                   <settlement ref="pmb50">
                      <placeName type="pref">Wien</placeName>
                      <location>
                         <geo>48,208333 16,373056</geo>
                      </location>
                   </settlement>
-               </death>
-            </person>
-            <person xml:id="pmb64810" ana="comment">
-               <persName>
-                  <forename>Hermann Ferdinand</forename>
-                  <surname>Freiligrath</surname>
-               </persName>
-               <birth>
-                  <date when="1810-01-01" notAfter="1810-12-31" notBefore="1810-01-01">1810</date>
-                  <settlement ref="pmb45808">
-                     <placeName type="pref">Detmold</placeName>
-                     <location>
-                        <geo>51,93855 8,87318</geo>
-                     </location>
-                  </settlement>
                </birth>
                <death>
-                  <date when="1876-01-01" notAfter="1876-12-31">1876</date>
+                  <date when="1929-07-15">1929-07-15</date>
+                  <settlement ref="pmb173">
+                     <placeName type="pref">Rodaun</placeName>
+                     <location>
+                        <geo>48,132793312328 16,256152195922</geo>
+                     </location>
+                  </settlement>
                </death>
             </person>
          </listPerson>
          <listBibl>
-            <bibl xml:id="pmb29935">
-               <title type="main">Anatol</title>
-               <title type="werk_bibliografische-angabe">Arthur Schnitzler: Anatol. Berlin: Bibliographisches Bureau 1892, vordatiert auf 1893</title>
-               <title type="legacy-name-merge">Anatol</title>
-               <author role="hat-geschaffen" ref="pmb2121">Schnitzler, Arthur</author>
-               <author role="hat-ein-vorwortnachwort-verfasst-zu" ref="pmb11740">Hofmannsthal, Hugo von</author>
-            </bibl>
-            <bibl xml:id="pmb30151">
-               <title type="main">Morgenandacht</title>
-               <title type="werk_link">https://archive.org/details/bub_gb_3N7NAAAAMAAJ/page/n199</title>
-               <title type="werk_bibliografische-angabe">Die Gesellschaft, Jg. 7, Bd. 1, H. 2, Februar 1891, S. 189–190</title>
-               <author role="hat-geschaffen" ref="pmb2121">Schnitzler, Arthur</author>
+            <bibl xml:id="pmb334908">
+               <title>Wie wir so still</title>
+               <author ref="pmb2121" role="hat-geschaffen">Schnitzler, Arthur</author>
             </bibl>
             <bibl xml:id="pmb30181">
-               <title type="main">Anfang vom Ende</title>
+               <title>Anfang vom Ende</title>
                <title type="werk_bibliografische-angabe">Deutsche Dichtung, Bd. 12, Nr. 8, 15. 7. 1892, S. 192</title>
                <title type="werk_link">https://archive.org/details/bub_gb_Pz0VAAAAYAAJ/page/n204/mode/1up</title>
-               <author role="hat-geschaffen" ref="pmb2121">Schnitzler, Arthur</author>
-            </bibl>
-            <bibl xml:id="pmb334903">
-               <title type="main">Die deutsche Lyrik des 19. Jahrhunderts. Eine poetische Revue</title>
-               <title type="werk_link">https://babel.hathitrust.org/cgi/pt?id=nyp.33433075759476&amp;seq=415</title>
-               <author role="hat-herausgegeben" ref="pmb9941">Sosnosky, Theodor von</author>
-            </bibl>
-            <bibl xml:id="pmb334908">
-               <title type="main">Wie wir so still</title>
-               <author role="hat-geschaffen" ref="pmb2121">Schnitzler, Arthur</author>
-            </bibl>
-            <bibl xml:id="pmb334915">
-               <title type="main">Der Blumen Rache</title>
-               <author role="hat-geschaffen" ref="pmb64810">Freiligrath, Hermann Ferdinand</author>
-            </bibl>
-            <bibl xml:id="pmb334918">
-               <title type="main">Die Heideschenke</title>
-               <author role="hat-geschaffen" ref="pmb63259">Lenau, Nikolaus</author>
+               <author ref="pmb2121" role="hat-geschaffen">Schnitzler, Arthur</author>
             </bibl>
             <bibl xml:id="pmb33560">
-               <title type="main">Ohnmacht</title>
+               <title>Ohnmacht</title>
                <title type="werk_bibliografische-angabe">Die Gesellschaft, Jg. 9, H. 9, 1. 9. 1893</title>
-               <author role="hat-geschaffen" ref="pmb2121">Schnitzler, Arthur</author>
+               <author ref="pmb2121" role="hat-geschaffen">Schnitzler, Arthur</author>
+            </bibl>
+            <bibl xml:id="pmb30151">
+               <title>Morgenandacht</title>
+               <title type="werk_link">https://archive.org/details/bub_gb_3N7NAAAAMAAJ/page/n199</title>
+               <title type="werk_bibliografische-angabe">Die Gesellschaft, Jg. 7, Bd. 1, H. 2, Februar 1891, S. 189–190</title>
+               <author ref="pmb2121" role="hat-geschaffen">Schnitzler, Arthur</author>
+            </bibl>
+            <bibl xml:id="pmb334903">
+               <title>Die deutsche Lyrik des 19. Jahrhunderts. Eine poetische Revue</title>
+               <title type="werk_link">https://babel.hathitrust.org/cgi/pt?id=nyp.33433075759476&amp;seq=415</title>
+               <author ref="pmb9941" role="hat-herausgegeben">Sosnosky, Theodor von</author>
+            </bibl>
+            <bibl xml:id="pmb334918">
+               <title>Die Heideschenke</title>
+               <author ref="pmb63259" role="hat-geschaffen">Lenau, Nikolaus</author>
+            </bibl>
+            <bibl xml:id="pmb334915">
+               <title>Der Blumen Rache</title>
+               <author ref="pmb64810" role="hat-geschaffen">Freiligrath, Hermann Ferdinand</author>
+            </bibl>
+            <bibl xml:id="pmb29935">
+               <title>Anatol</title>
+               <title type="werk_bibliografische-angabe">Arthur Schnitzler: Anatol. Berlin: Bibliographisches Bureau 1892, vordatiert auf 1893</title>
+               <title type="legacy-name-merge">Anatol</title>
+               <author ref="pmb2121" role="hat-geschaffen">Schnitzler, Arthur</author>
+               <author ref="pmb11740" role="hat-ein-vorwortnachwort-verfasst-zu">Hofmannsthal, Hugo von</author>
             </bibl>
             <bibl xml:id="pmb334921" ana="comment">
-               <title type="main">?? [Gedicht von Arthur Schnitzler, das Theodor von Sosnosky nicht in seine Lyrikanthologie aufnimmt]</title>
-               <author role="hat-geschaffen" ref="pmb2121">Schnitzler, Arthur</author>
+               <title>?? [Gedicht von Arthur Schnitzler, das Theodor von Sosnosky nicht in seine Lyrikanthologie aufnimmt]</title>
+               <author ref="pmb2121" role="hat-geschaffen">Schnitzler, Arthur</author>
             </bibl>
          </listBibl>
          <listPlace>
             <place xml:id="pmb48393">
                <placeName>Kremsmünster</placeName>
-               <placeName type="legacy-name">Kremsmünster</placeName>
                <location type="coords">
                   <geo>48,05301 14,12842</geo>
                </location>
@@ -423,16 +454,12 @@
             <place xml:id="pmb50">
                <placeName>Wien</placeName>
                <placeName type="ort_fruherer-name">K.K. Reichshaupt- und Residenzstadt Wien</placeName>
-               <placeName type="legacy-name-merge">Wien</placeName>
                <placeName type="alternative-name">Bécs</placeName>
                <placeName type="alternative-name">Land Wien</placeName>
                <placeName type="alternative-name">Vídeň</placeName>
                <placeName type="alternative-name">Wenia</placeName>
                <placeName type="alternative-name">Beč</placeName>
                <placeName type="ort_fruherer-name">Vindobona</placeName>
-               <placeName type="legacy-name-merge">Vindobona</placeName>
-               <placeName type="alternative-name">Vienna</placeName>
-               <placeName type="legacy-name-merge">Vienna</placeName>
                <placeName type="alternative-name">Vienna</placeName>
                <location type="coords">
                   <geo>48,208333 16,373056</geo>
@@ -441,10 +468,14 @@
                   <placeName ref="pmb41240">Österreich</placeName>
                   <geo>47,33333 13,33333</geo>
                </location>
+               <location type="located_in_place">
+                  <placeName ref="pmb235218">Windmühlhöhe</placeName>
+                  <geo>48,24077 16,32092</geo>
+               </location>
             </place>
          </listPlace>
          <listOrg>
-            <org xml:id="pmb29215">
+            <org xml:id="pmb29215" ana="comment">
                <orgName>J.G. Cotta’sche Buchhandlung Nachfolger</orgName>
                <orgName type="institution_fruherer-name">Cotta’sche Verlagsbuchhandlung</orgName>
                <location type="located_in_place">
@@ -465,7 +496,7 @@
                   <idno type="URL" subtype="sk">https://sk.acdh.oeaw.ac.at/fa_place00005087</idno>
                   <idno type="URL" subtype="biblio">https://biblio.ub.uni-freiburg.de/sf/#pmb872</idno>
                   <idno type="URL" subtype="schnitzler-briefe">https://schnitzler-briefe.acdh.oeaw.ac.at/pmb872.html</idno>
-                  <idno type="URL" subtype="schoenberg-ue">https://www.schoenberg-ue.at/ue/places/place.2.42</idno>
+                  <idno type="URL" subtype="www">https://www.schoenberg-ue.at/ue/places/place.2.42</idno>
                </location>
                <location type="located_in_place">
                   <placeName ref="pmb168">Berlin</placeName>
@@ -474,7 +505,7 @@
                   <idno type="URL" subtype="schnitzler-bahr">https://schnitzler-bahr.acdh.oeaw.ac.at/pmb168.html</idno>
                   <idno type="URL" subtype="d-nb">https://d-nb.info/gnd/4005728-8</idno>
                   <idno type="URL" subtype="pmb">https://pmb.acdh.oeaw.ac.at/entity/168/</idno>
-                  <idno type="URL" subtype="kraus">https://www.kraus.wienbibliothek.at/legalkraus/pmb168.html</idno>
+                  <idno type="URL" subtype="www">https://www.kraus.wienbibliothek.at/legalkraus/pmb168.html</idno>
                   <idno type="URL" subtype="pmb">https://pmb.acdh.oeaw.ac.at/entity/92171/</idno>
                   <idno type="URL" subtype="wikidata">http://www.wikidata.org/entity/Q64</idno>
                   <idno type="URL" subtype="wikipedia">https://de.wikipedia.org/wiki/Berlin</idno>
@@ -489,7 +520,7 @@
                   <idno type="URL" subtype="sk">https://sk.acdh.oeaw.ac.at/fa_place00004523</idno>
                   <idno type="URL" subtype="biblio">https://biblio.ub.uni-freiburg.de/sf/#pmb168</idno>
                   <idno type="URL" subtype="schnitzler-briefe">https://schnitzler-briefe.acdh.oeaw.ac.at/pmb168.html</idno>
-                  <idno type="URL" subtype="schoenberg-ue">https://www.schoenberg-ue.at/ue/places/place.2.3</idno>
+                  <idno type="URL" subtype="www">https://www.schoenberg-ue.at/ue/places/place.2.3</idno>
                </location>
             </org>
          </listOrg>

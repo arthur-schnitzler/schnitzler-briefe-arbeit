@@ -1,6 +1,10 @@
-<?xml version='1.0' encoding='UTF-8'?>
+<?xml version="1.0" encoding="UTF-8"?>
 <?xml-model href="../meta/schnitzler-briefe-schematron.sch" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
-<TEI xmlns="http://www.tei-c.org/ns/1.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.tei-c.org/ns/1.0 ../meta/schnitzler-briefe-schema.xsd" xml:id="L03172" xml:base="https://id.acdh.oeaw.ac.at/schnitzler/schnitzler-briefe/editions">
+<TEI xmlns="http://www.tei-c.org/ns/1.0"
+     xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+     xsi:schemaLocation="http://www.tei-c.org/ns/1.0 ../meta/schnitzler-briefe-schema.xsd"
+     xml:id="L03172"
+     xml:base="https://id.acdh.oeaw.ac.at/schnitzler/schnitzler-briefe/editions">
    <teiHeader>
       <fileDesc>
          <titleStmt>
@@ -121,12 +125,20 @@
                <date when="1896-06-09">[9. 6. 1896?]</date>
                <placeName ref="#pmb50" evidence="internal">Wien</placeName>
             </correspAction>
-            <correspContext><ref type="belongsToCorrespondence" target="correspondence_2167">Salten, Felix</ref>
+            <correspContext>
+               <ref type="belongsToCorrespondence" target="correspondence_2167">Salten, Felix</ref>
                <ref subtype="previous_letter" type="withinCollection" target="L00550">Polgar an Schnitzler, 6. 6. [1896?]</ref>
                <ref subtype="next_letter" type="withinCollection" target="L02777">Goldmann an Schnitzler, 15. 6. [1896]</ref>
-               <ref subtype="previous_letter" type="withinCorrespondence" source="correspondence_2167" target="L03035">Schnitzler an Salten, [14. 5. 1896?]</ref>
-               <ref subtype="next_letter" type="withinCorrespondence" source="correspondence_2167" target="L03173">Salten an Schnitzler, [23. 6. 1896]</ref>
-            </correspContext></correspDesc>
+               <ref subtype="previous_letter"
+                    type="withinCorrespondence"
+                    source="correspondence_2167"
+                    target="L03035">Schnitzler an Salten, [14. 5. 1896?]</ref>
+               <ref subtype="next_letter"
+                    type="withinCorrespondence"
+                    source="correspondence_2167"
+                    target="L03173">Salten an Schnitzler, [23. 6. 1896]</ref>
+            </correspContext>
+         </correspDesc>
       </profileDesc>
       <revisionDesc status="approved">
          <change who="MAM" when="2023-07-10">Export aus Transkribus</change>
@@ -159,54 +171,166 @@
             </closer>
          </div>
       </body>
-      <back><listPerson><person xml:id="pmb2121"><persName><surname>Schnitzler</surname><forename>Arthur</forename></persName><birth><date when="1862-05-15">15. 5. 1862</date><settlement ref="pmb50"><placeName type="pref">Wien</placeName><location><geo>48,208333 16,373056</geo></location></settlement></birth><death><date when="1931-10-21">21. 10. 1931</date><settlement ref="pmb50"><placeName type="pref">Wien</placeName><location><geo>48,208333 16,373056</geo></location></settlement></death><sex value="male"/><occupation ref="pmb90">Schriftsteller/Schriftstellerin</occupation><occupation ref="pmb97">Mediziner/Medizinerin</occupation><idno type="gnd">https://d-nb.info/gnd/118609807/</idno></person><person xml:id="pmb2167"><persName>
-      <forename>Felix</forename>
-      <surname>Salten</surname>
-  </persName><birth>
-    <date when="1869-09-06">1869-09-06</date>
-      <settlement ref="pmb43471">
-        <placeName type="pref">Budapest</placeName>
-        <location><geo>47,49835 19,04045</geo></location>
-      </settlement>
-  </birth><death>
-    <date when="1945-10-08">1945-10-08</date>
-      <settlement ref="pmb484">
-        <placeName type="pref">Zürich</placeName>
-        <location><geo>47,37174 8,54226</geo></location>
-      </settlement>
-  </death></person><person xml:id="pmb27456"><persName>
-      <forename>Alexander</forename>
-      <surname>Zeitlin</surname>
-  </persName><birth>
-    <date when="1872-07-15">1872-07-15</date>
-      <settlement ref="pmb62002">
-        <placeName type="pref">Tiflis</placeName>
-        <location><geo>41,69411 44,83368</geo></location>
-      </settlement>
-  </birth><death>
-    <date when="1946-03-04">1946-03-04</date>
-      <settlement ref="pmb44053">
-        <placeName type="pref">New York City</placeName>
-        <location><geo>40,71427 -74,00597</geo></location>
-      </settlement>
-  </death></person></listPerson><listPlace><place xml:id="pmb14"><placeName>Burgtheater</placeName><location type="coords">
-  <geo>48,210333 16,361139</geo>
-</location><location type="located_in_place">
-  <placeName ref="pmb51">I., Innere Stadt</placeName>
-  <geo>48,20769 16,37049</geo>
-</location><location type="located_in_place">
-  <placeName ref="pmb235695">Universitätsring</placeName>
-  <geo>48,2136 16,3614</geo>
-</location></place><place xml:id="pmb50"><placeName>Wien</placeName><placeName type="ort_fruherer-name">K.K. Reichshaupt- und Residenzstadt Wien</placeName><placeName type="legacy-name-merge">Wien</placeName><placeName type="alternative-name">Bécs</placeName><placeName type="alternative-name">Land Wien</placeName><placeName type="alternative-name">Vídeň</placeName><placeName type="alternative-name">Wenia</placeName><placeName type="alternative-name">Beč</placeName><placeName type="ort_fruherer-name">Vindobona</placeName><placeName type="legacy-name-merge">Vindobona</placeName><placeName type="alternative-name">Vienna</placeName><placeName type="legacy-name-merge">Vienna</placeName><placeName type="alternative-name">Vienna</placeName><location type="coords">
-  <geo>48,208333 16,373056</geo>
-</location><location type="located_in_place">
-  <placeName ref="pmb41240">Österreich</placeName>
-  <geo>47,33333 13,33333</geo>
-</location></place></listPlace><listOrg><org xml:id="pmb60329"><orgName>Akademie der Bildenden Künste Wien</orgName><orgName type="institution_namensvariante">Wiener Akademie der Bildenden Künste</orgName><orgName type="institution_namensvariante">K.K. Akademie der Bildenden Künste</orgName><orgName type="institution_namensvariante">Hochschule Akademie der Bildenden Künste</orgName><orgName type="institution_namensvariante">Accademia delle Belle Arti Vienna</orgName><orgName type="institution_namensvariante">Kaiserlich-Königliche Akademie Bildender Künste</orgName><orgName type="institution_namensvariante">Académie Imp. et Royal des Beaux-Arts</orgName><orgName type="institution_namensvariante">Österreichisch-Kaiserliche Akademie der Vereinigten Bildenden Künste</orgName><orgName type="institution_namensvariante">Östr.-Kaiserl. Akademie der Vereinigten Bildenden Künste</orgName><orgName type="institution_namensvariante">Kaiserlich-Königliche Akademie der Bildenden Künste</orgName><orgName type="institution_namensvariante">Akademie der Bildenden Künste</orgName><orgName type="institution_namensvariante">Akademie der Bildenden Künste in Wien</orgName><orgName type="institution_namensvariante">Die Akademie der Bildenden Künste in Wien</orgName><orgName type="institution_namensvariante">Kaiserl. Königl. Akademie der Bildenden Künste</orgName><orgName type="institution_namensvariante">Österreichisch-Kaiserliche Akademie der Bildenden Künste</orgName><orgName type="institution_namensvariante">Akademie der Künste Wien</orgName><orgName type="institution_namensvariante">Kaiserliche Königliche Akademie der Bildenden Künste (Wien)</orgName><orgName type="institution_namensvariante">Oesterreichisch-Kaiserliche Akademie der Vereinigten Bildenden Künste</orgName><orgName type="institution_namensvariante">K.K. Akademie Bildender Künste</orgName><orgName type="institution_namensvariante">Academy of Fine Arts Vienna</orgName><location type="located_in_place">
-  <placeName ref="pmb51">I., Innere Stadt</placeName>
-  <geo>48,20769 16,37049</geo>
-  <idno type="URL" subtype="schnitzler-bahr">https://schnitzler-bahr.acdh.oeaw.ac.at/pmb51.html</idno><idno type="URL" subtype="pmb">https://pmb.acdh.oeaw.ac.at/entity/51/</idno><idno type="URL" subtype="pmb">https://pmb.acdh.oeaw.ac.at/entity/36789/</idno><idno type="URL" subtype="pmb">https://pmb.acdh.oeaw.ac.at/entity/51010/</idno><idno type="URL" subtype="geonames">https://sws.geonames.org/2775259/</idno><idno type="URL" subtype="kraus">https://www.kraus.wienbibliothek.at/legalkraus/pmb51.html</idno><idno type="URL" subtype="schnitzler-interviews">https://schnitzler-interviews.acdh.oeaw.ac.at/pmb51.html</idno><idno type="URL" subtype="wikidata">http://www.wikidata.org/entity/Q267329</idno><idno type="URL" subtype="wikipedia">https://de.wikipedia.org/wiki/Innere_Stadt_(Wien)</idno><idno type="URL" subtype="wienerschnitzler">https://wienerschnitzler.org/pmb51.html</idno><idno type="URL" subtype="schnitzler-kultur">https://schnitzler-kultur.acdh.oeaw.ac.at/pmb51.html</idno><idno type="URL" subtype="schnitzler-briefe">https://schnitzler-briefe.acdh.oeaw.ac.at/pmb51.html</idno></location><location type="located_in_place">
-  <placeName ref="pmb1045">Akademie der bildenden Künste Wien</placeName>
-  <geo>48,201389 16,365278</geo>
-  <idno type="URL" subtype="pmb">https://pmb.acdh.oeaw.ac.at/entity/1045/</idno><idno type="URL" subtype="schnitzler-interviews">https://schnitzler-interviews.acdh.oeaw.ac.at/pmb1045.html</idno><idno type="URL" subtype="wienerschnitzler">https://wienerschnitzler.org/pmb1045.html</idno></location></org></listOrg></back></text>
+      <back>
+         <listPerson>
+            <person xml:id="pmb2167">
+               <persName>
+                  <forename>Felix</forename>
+                  <surname>Salten</surname>
+               </persName>
+               <birth>
+                  <date when="1869-09-06">1869-09-06</date>
+                  <settlement ref="pmb43471">
+                     <placeName type="pref">Budapest</placeName>
+                     <location>
+                        <geo>47,49835 19,04045</geo>
+                     </location>
+                  </settlement>
+               </birth>
+               <death>
+                  <date when="1945-10-08">1945-10-08</date>
+                  <settlement ref="pmb484">
+                     <placeName type="pref">Zürich</placeName>
+                     <location>
+                        <geo>47,37174 8,54226</geo>
+                     </location>
+                  </settlement>
+               </death>
+            </person>
+            <person xml:id="pmb2121">
+               <persName>
+                  <surname>Schnitzler</surname>
+                  <forename>Arthur</forename>
+               </persName>
+               <birth>
+                  <date when="1862-05-15">15. 5. 1862</date>
+                  <settlement ref="pmb50">
+                     <placeName type="pref">Wien</placeName>
+                     <location>
+                        <geo>48,208333 16,373056</geo>
+                     </location>
+                  </settlement>
+               </birth>
+               <death>
+                  <date when="1931-10-21">21. 10. 1931</date>
+                  <settlement ref="pmb50">
+                     <placeName type="pref">Wien</placeName>
+                     <location>
+                        <geo>48,208333 16,373056</geo>
+                     </location>
+                  </settlement>
+               </death>
+            </person>
+            <person xml:id="pmb27456">
+               <persName>
+                  <forename>Alexander</forename>
+                  <surname>Zeitlin</surname>
+               </persName>
+               <birth>
+                  <date when="1872-07-15">1872-07-15</date>
+                  <settlement ref="pmb62002">
+                     <placeName type="pref">Tiflis</placeName>
+                     <location>
+                        <geo>41,69411 44,83368</geo>
+                     </location>
+                  </settlement>
+               </birth>
+               <death>
+                  <date when="1946-03-04">1946-03-04</date>
+                  <settlement ref="pmb44053">
+                     <placeName type="pref">New York City</placeName>
+                     <location>
+                        <geo>40,71427 -74,00597</geo>
+                     </location>
+                  </settlement>
+               </death>
+            </person>
+         </listPerson>
+         <listPlace>
+            <place xml:id="pmb50">
+               <placeName>Wien</placeName>
+               <placeName type="ort_fruherer-name">K.K. Reichshaupt- und Residenzstadt Wien</placeName>
+               <placeName type="alternative-name">Bécs</placeName>
+               <placeName type="alternative-name">Land Wien</placeName>
+               <placeName type="alternative-name">Vídeň</placeName>
+               <placeName type="alternative-name">Wenia</placeName>
+               <placeName type="alternative-name">Beč</placeName>
+               <placeName type="ort_fruherer-name">Vindobona</placeName>
+               <placeName type="alternative-name">Vienna</placeName>
+               <location type="coords">
+                  <geo>48,208333 16,373056</geo>
+               </location>
+               <location type="located_in_place">
+                  <placeName ref="pmb41240">Österreich</placeName>
+                  <geo>47,33333 13,33333</geo>
+               </location>
+               <location type="located_in_place">
+                  <placeName ref="pmb235218">Windmühlhöhe</placeName>
+                  <geo>48,24077 16,32092</geo>
+               </location>
+            </place>
+            <place xml:id="pmb14">
+               <placeName>Burgtheater</placeName>
+               <location type="coords">
+                  <geo>48,210333 16,361139</geo>
+               </location>
+               <location type="located_in_place">
+                  <placeName ref="pmb51">I., Innere Stadt</placeName>
+                  <geo>48,20769 16,37049</geo>
+               </location>
+               <location type="located_in_place">
+                  <placeName ref="pmb235695">Universitätsring</placeName>
+                  <geo>48,2136 16,3614</geo>
+               </location>
+            </place>
+         </listPlace>
+         <listOrg>
+            <org xml:id="pmb60329">
+               <orgName>Akademie der Bildenden Künste Wien</orgName>
+               <orgName type="institution_namensvariante">Wiener Akademie der Bildenden Künste</orgName>
+               <orgName type="institution_namensvariante">K.K. Akademie der Bildenden Künste</orgName>
+               <orgName type="institution_namensvariante">Hochschule Akademie der Bildenden Künste</orgName>
+               <orgName type="institution_namensvariante">Accademia delle Belle Arti Vienna</orgName>
+               <orgName type="institution_namensvariante">Kaiserlich-Königliche Akademie Bildender Künste</orgName>
+               <orgName type="institution_namensvariante">Académie Imp. et Royal des Beaux-Arts</orgName>
+               <orgName type="institution_namensvariante">Österreichisch-Kaiserliche Akademie der Vereinigten Bildenden Künste</orgName>
+               <orgName type="institution_namensvariante">Östr.-Kaiserl. Akademie der Vereinigten Bildenden Künste</orgName>
+               <orgName type="institution_namensvariante">Kaiserlich-Königliche Akademie der Bildenden Künste</orgName>
+               <orgName type="institution_namensvariante">Akademie der Bildenden Künste</orgName>
+               <orgName type="institution_namensvariante">Akademie der Bildenden Künste in Wien</orgName>
+               <orgName type="institution_namensvariante">Die Akademie der Bildenden Künste in Wien</orgName>
+               <orgName type="institution_namensvariante">Kaiserl. Königl. Akademie der Bildenden Künste</orgName>
+               <orgName type="institution_namensvariante">Österreichisch-Kaiserliche Akademie der Bildenden Künste</orgName>
+               <orgName type="institution_namensvariante">Akademie der Künste Wien</orgName>
+               <orgName type="institution_namensvariante">Kaiserliche Königliche Akademie der Bildenden Künste (Wien)</orgName>
+               <orgName type="institution_namensvariante">Oesterreichisch-Kaiserliche Akademie der Vereinigten Bildenden Künste</orgName>
+               <orgName type="institution_namensvariante">K.K. Akademie Bildender Künste</orgName>
+               <orgName type="institution_namensvariante">Academy of Fine Arts Vienna</orgName>
+               <location type="located_in_place">
+                  <placeName ref="pmb51">I., Innere Stadt</placeName>
+                  <geo>48,20769 16,37049</geo>
+                  <idno type="URL" subtype="schnitzler-bahr">https://schnitzler-bahr.acdh.oeaw.ac.at/pmb51.html</idno>
+                  <idno type="URL" subtype="pmb">https://pmb.acdh.oeaw.ac.at/entity/51/</idno>
+                  <idno type="URL" subtype="pmb">https://pmb.acdh.oeaw.ac.at/entity/36789/</idno>
+                  <idno type="URL" subtype="pmb">https://pmb.acdh.oeaw.ac.at/entity/51010/</idno>
+                  <idno type="URL" subtype="geonames">https://sws.geonames.org/2775259/</idno>
+                  <idno type="URL" subtype="www">https://www.kraus.wienbibliothek.at/legalkraus/pmb51.html</idno>
+                  <idno type="URL" subtype="schnitzler-interviews">https://schnitzler-interviews.acdh.oeaw.ac.at/pmb51.html</idno>
+                  <idno type="URL" subtype="wikidata">http://www.wikidata.org/entity/Q267329</idno>
+                  <idno type="URL" subtype="wikipedia">https://de.wikipedia.org/wiki/Innere_Stadt_(Wien)</idno>
+                  <idno type="URL" subtype="wienerschnitzler">https://wienerschnitzler.org/pmb51.html</idno>
+                  <idno type="URL" subtype="schnitzler-kultur">https://schnitzler-kultur.acdh.oeaw.ac.at/pmb51.html</idno>
+                  <idno type="URL" subtype="schnitzler-briefe">https://schnitzler-briefe.acdh.oeaw.ac.at/pmb51.html</idno>
+               </location>
+               <location type="located_in_place">
+                  <placeName ref="pmb1045">Akademie der bildenden Künste Wien</placeName>
+                  <geo>48,201389 16,365278</geo>
+                  <idno type="URL" subtype="pmb">https://pmb.acdh.oeaw.ac.at/entity/1045/</idno>
+                  <idno type="URL" subtype="schnitzler-interviews">https://schnitzler-interviews.acdh.oeaw.ac.at/pmb1045.html</idno>
+                  <idno type="URL" subtype="wienerschnitzler">https://wienerschnitzler.org/pmb1045.html</idno>
+               </location>
+            </org>
+         </listOrg>
+      </back>
+   </text>
 </TEI>

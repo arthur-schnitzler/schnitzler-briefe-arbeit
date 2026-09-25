@@ -1,6 +1,10 @@
-<?xml version='1.0' encoding='UTF-8'?>
+<?xml version="1.0" encoding="UTF-8"?>
 <?xml-model href="../meta/schnitzler-briefe-schematron.sch" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
-<TEI xmlns="http://www.tei-c.org/ns/1.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.tei-c.org/ns/1.0 ../meta/schnitzler-briefe-schema.xsd" xml:base="https://id.acdh.oeaw.ac.at/schnitzler/schnitzler-briefe/editions" xml:id="L04508">
+<TEI xmlns="http://www.tei-c.org/ns/1.0"
+     xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+     xsi:schemaLocation="http://www.tei-c.org/ns/1.0 ../meta/schnitzler-briefe-schema.xsd"
+     xml:base="https://id.acdh.oeaw.ac.at/schnitzler/schnitzler-briefe/editions"
+     xml:id="L04508">
    <teiHeader>
       <fileDesc>
          <titleStmt>
@@ -144,12 +148,20 @@
                   – 5. 8. 1913?]</date>
                <placeName ref="#pmb334003">Pension Wiener Heim</placeName>
             </correspAction>
-            <correspContext><ref type="belongsToCorrespondence" target="correspondence_12740">Schwarzkopf, Gustav</ref>
+            <correspContext>
+               <ref type="belongsToCorrespondence" target="correspondence_12740">Schwarzkopf, Gustav</ref>
                <ref subtype="previous_letter" type="withinCollection" target="L02145">Schnitzler an Beer-Hofmann, 23. 7. 1913</ref>
                <ref subtype="next_letter" type="withinCollection" target="L02146">Beer-Hofmann an Schnitzler, 4. 8. 1913</ref>
-               <ref subtype="previous_letter" type="withinCorrespondence" source="correspondence_12740" target="L04223">Schnitzler an Schwarzkopf, 18. 7. 1913</ref>
-               <ref subtype="next_letter" type="withinCorrespondence" source="correspondence_12740" target="L04260">Schwarzkopf an Schnitzler, 5. 8. 1913</ref>
-            </correspContext></correspDesc>
+               <ref subtype="previous_letter"
+                    type="withinCorrespondence"
+                    source="correspondence_12740"
+                    target="L04223">Schnitzler an Schwarzkopf, 18. 7. 1913</ref>
+               <ref subtype="next_letter"
+                    type="withinCorrespondence"
+                    source="correspondence_12740"
+                    target="L04260">Schwarzkopf an Schnitzler, 5. 8. 1913</ref>
+            </correspContext>
+         </correspDesc>
       </profileDesc>
       <revisionDesc status="proposed">
          <change who="MAM" when="2026-06-11">Export aus Transkribus</change>
@@ -191,7 +203,9 @@
             <p>
                <salute>lieber Guſtav,</salute> ich weiſs nicht ob Sie <anchor type="commentary" xml:id="K_L04508-1"/>meine letzte Karte<note type="commentary" corresp="K_L04508-1">
                   <ref type="schnitzler-briefe" target="L04223"/>. Offenbar hatte <rs type="person" ref="#pmb12740">Schwarzkopf</rs> die Karte mit der Information zum geplanten
-                  Ankunftsdatums der Familie <rs type="person" ref="#pmb2121 #pmb2173 #pmb12692 #pmb2238" subtype="implied">Schnitzler</rs> in
+                  Ankunftsdatums der Familie <rs type="person"
+                      ref="#pmb2121 #pmb2173 #pmb12692 #pmb2238"
+                      subtype="implied">Schnitzler</rs> in
                      <rs type="place" ref="#pmb19862">Brijuni</rs> erhalten, denn am <ref type="schnitzler-tagebuch" target="1913-07-25" subtype="date-only"/>, dem Tag darauf, traf er
                   selbst dort ein und besuchte sie an den folgenden beiden Tagen. Die vorliegende
                   Karte erreichte ihn dagegen erst nach seiner Rückkehr nach <rs type="place" ref="#pmb50">Wien</rs>, wie aus der Umadressierung zu schließen ist, also erst
@@ -209,6 +223,30 @@
       </body>
       <back>
          <listPerson>
+            <person xml:id="pmb2121" ana="comment">
+               <persName>
+                  <surname>Schnitzler</surname>
+                  <forename>Arthur</forename>
+               </persName>
+               <birth>
+                  <date when="1862-05-15">15. 5. 1862</date>
+                  <settlement ref="pmb50">
+                     <placeName type="pref">Wien</placeName>
+                     <location>
+                        <geo>48,208333 16,373056</geo>
+                     </location>
+                  </settlement>
+               </birth>
+               <death>
+                  <date when="1931-10-21">21. 10. 1931</date>
+                  <settlement ref="pmb50">
+                     <placeName type="pref">Wien</placeName>
+                     <location>
+                        <geo>48,208333 16,373056</geo>
+                     </location>
+                  </settlement>
+               </death>
+            </person>
             <person xml:id="pmb12740">
                <persName>
                   <forename>Gustav</forename>
@@ -225,64 +263,6 @@
                </birth>
                <death>
                   <date when="1939-11-13">1939-11-13</date>
-                  <settlement ref="pmb50">
-                     <placeName type="pref">Wien</placeName>
-                     <location>
-                        <geo>48,208333 16,373056</geo>
-                     </location>
-                  </settlement>
-               </death>
-            </person>
-            <person xml:id="pmb2121">
-               <persName>
-                  <surname>Schnitzler</surname>
-                  <forename>Arthur</forename>
-               </persName>
-               <birth>
-                  <date when="1862-05-15">15. 5. 1862</date>
-                  <settlement ref="pmb50">
-                     <placeName type="pref">Wien</placeName>
-                     <location>
-                        <geo>48,208333 16,373056</geo>
-                     </location>
-                  </settlement>
-               </birth>
-               <death>
-                  <date when="1931-10-21">21. 10. 1931</date>
-                  <settlement ref="pmb50">
-                     <placeName type="pref">Wien</placeName>
-                     <location>
-                        <geo>48,208333 16,373056</geo>
-                     </location>
-                  </settlement>
-               </death>
-               <sex value="male"/>
-               <occupation ref="pmb90">Schriftsteller/Schriftstellerin</occupation>
-               <occupation ref="pmb97">Mediziner/Medizinerin</occupation>
-               <idno type="gnd">https://d-nb.info/gnd/118609807/</idno>
-            </person>
-            <person xml:id="pmb12692" ana="comment">
-               <persName>
-                  <forename>Heinrich</forename>
-                  <surname>Schnitzler</surname>
-               </persName>
-               <birth>
-                  <date when="1902-08-09">1902-08-09</date>
-                  <settlement ref="pmb75">
-                     <placeName type="pref">Hinterbrühl</placeName>
-                     <location>
-                        <geo>48,08611 16,24809</geo>
-                     </location>
-                  </settlement>
-                  <settlement ref="pmb145165">
-                     <placeName type="pref">Hauptstraße 56</placeName>
-                     <location>
-                        <geo>48,08736 16,24924</geo>
-                     </location>
-                  </settlement>
-               </birth>
-               <death>
-                  <date when="1982-07-12">1982-07-12</date>
                   <settlement ref="pmb50">
                      <placeName type="pref">Wien</placeName>
                      <location>
@@ -315,6 +295,36 @@
                   </settlement>
                </death>
             </person>
+            <person xml:id="pmb12692" ana="comment">
+               <persName>
+                  <forename>Heinrich</forename>
+                  <surname>Schnitzler</surname>
+               </persName>
+               <birth>
+                  <date when="1902-08-09">1902-08-09</date>
+                  <settlement ref="pmb75">
+                     <placeName type="pref">Hinterbrühl</placeName>
+                     <location>
+                        <geo>48,08611 16,24809</geo>
+                     </location>
+                  </settlement>
+                  <settlement ref="pmb145165">
+                     <placeName type="pref">Hauptstraße 56</placeName>
+                     <location>
+                        <geo>48,08736 16,24924</geo>
+                     </location>
+                  </settlement>
+               </birth>
+               <death>
+                  <date when="1982-07-12">1982-07-12</date>
+                  <settlement ref="pmb50">
+                     <placeName type="pref">Wien</placeName>
+                     <location>
+                        <geo>48,208333 16,373056</geo>
+                     </location>
+                  </settlement>
+               </death>
+            </person>
             <person xml:id="pmb2238" ana="comment">
                <persName>
                   <forename>Lili</forename>
@@ -341,6 +351,94 @@
             </person>
          </listPerson>
          <listPlace>
+            <place xml:id="pmb365223">
+               <placeName>18/1 Post- und Telegraphenamt 110</placeName>
+               <location type="coords">
+                  <geo>48,22513 16,343276</geo>
+               </location>
+               <location type="located_in_place">
+                  <placeName ref="pmb68">XVIII., Währing</placeName>
+                  <geo>48,23333 16,31667</geo>
+               </location>
+               <location type="located_in_place">
+                  <placeName ref="pmb41463">Schulgasse</placeName>
+                  <geo>47,71222 13,62186</geo>
+               </location>
+            </place>
+            <place xml:id="pmb207301">
+               <placeName>Tiefer Graben 17</placeName>
+               <location type="coords">
+                  <geo>48,212284 16,367725</geo>
+               </location>
+               <location type="located_in_place">
+                  <placeName ref="pmb50825">Tiefer Graben</placeName>
+                  <geo>48,2125 16,368333</geo>
+               </location>
+               <location type="located_in_place">
+                  <placeName ref="pmb51">I., Innere Stadt</placeName>
+                  <geo>48,20769 16,37049</geo>
+               </location>
+            </place>
+            <place xml:id="pmb38096" ana="comment">
+               <placeName>Opatija</placeName>
+               <placeName type="legacy-name">Abbazia</placeName>
+               <placeName type="legacy-name-merge">Grad Opatija</placeName>
+               <location type="coords">
+                  <geo>45,33771 14,30515</geo>
+               </location>
+               <location type="located_in_place">
+                  <placeName ref="pmb38096">Opatija</placeName>
+                  <geo>45,33771 14,30515</geo>
+               </location>
+               <location type="located_in_place">
+                  <placeName ref="pmb34494">Kroatien</placeName>
+                  <geo>45,16667 15,5</geo>
+               </location>
+            </place>
+            <place xml:id="pmb50" ana="comment">
+               <placeName>Wien</placeName>
+               <placeName type="ort_fruherer-name">K.K. Reichshaupt- und Residenzstadt Wien</placeName>
+               <placeName type="alternative-name">Bécs</placeName>
+               <placeName type="alternative-name">Land Wien</placeName>
+               <placeName type="alternative-name">Vídeň</placeName>
+               <placeName type="alternative-name">Wenia</placeName>
+               <placeName type="alternative-name">Beč</placeName>
+               <placeName type="ort_fruherer-name">Vindobona</placeName>
+               <placeName type="alternative-name">Vienna</placeName>
+               <location type="coords">
+                  <geo>48,208333 16,373056</geo>
+               </location>
+               <location type="located_in_place">
+                  <placeName ref="pmb41240">Österreich</placeName>
+                  <geo>47,33333 13,33333</geo>
+               </location>
+               <location type="located_in_place">
+                  <placeName ref="pmb235218">Windmühlhöhe</placeName>
+                  <geo>48,24077 16,32092</geo>
+               </location>
+            </place>
+            <place xml:id="pmb68">
+               <placeName>XVIII., Währing</placeName>
+               <placeName type="legacy-name-merge">Währing</placeName>
+               <location type="coords">
+                  <geo>48,23333 16,31667</geo>
+               </location>
+               <location type="located_in_place">
+                  <placeName ref="pmb41240">Österreich</placeName>
+                  <geo>47,33333 13,33333</geo>
+               </location>
+               <location type="located_in_place">
+                  <placeName ref="pmb50">Wien</placeName>
+                  <geo>48,208333 16,373056</geo>
+               </location>
+            </place>
+            <place xml:id="pmb334003">
+               <placeName>Pension Wiener Heim</placeName>
+               <location type="located_in_place">
+                  <placeName ref="pmb38096">Opatija</placeName>
+                  <geo>45,33771 14,30515</geo>
+               </location>
+            </place>
             <place xml:id="pmb168815">
                <placeName>Sternwartestraße 71</placeName>
                <location type="coords">
@@ -359,46 +457,6 @@
                   <geo>48,23099349198 16,340117830625</geo>
                </location>
             </place>
-            <place xml:id="pmb207301">
-               <placeName>Tiefer Graben 17</placeName>
-               <location type="coords">
-                  <geo>48,212284 16,367725</geo>
-               </location>
-               <location type="located_in_place">
-                  <placeName ref="pmb50825">Tiefer Graben</placeName>
-                  <geo>48,2125 16,368333</geo>
-               </location>
-               <location type="located_in_place">
-                  <placeName ref="pmb51">I., Innere Stadt</placeName>
-                  <geo>48,20769 16,37049</geo>
-               </location>
-            </place>
-            <place xml:id="pmb334003">
-               <placeName>Pension Wiener Heim</placeName>
-               <location type="located_in_place">
-                  <placeName ref="pmb38096">Opatija</placeName>
-                  <geo>45,33771 14,30515</geo>
-               </location>
-            </place>
-            <place xml:id="pmb38096">
-               <placeName>Opatija</placeName>
-               <placeName type="alternative-name">Opatija</placeName>
-               <placeName type="legacy-name">Abbazia</placeName>
-               <placeName type="legacy-name-merge">Opatija</placeName>
-               <placeName type="legacy-name">Opatija</placeName>
-               <placeName type="legacy-name-merge">Grad Opatija</placeName>
-               <location type="coords">
-                  <geo>45,33771 14,30515</geo>
-               </location>
-               <location type="located_in_place">
-                  <placeName ref="pmb38096">Opatija</placeName>
-                  <geo>45,33771 14,30515</geo>
-               </location>
-               <location type="located_in_place">
-                  <placeName ref="pmb34494">Kroatien</placeName>
-                  <geo>45,16667 15,5</geo>
-               </location>
-            </place>
             <place xml:id="pmb45260">
                <placeName>Brijuni</placeName>
                <placeName type="legacy-name">Brioni</placeName>
@@ -410,33 +468,10 @@
                   <geo>45,16667 15,5</geo>
                </location>
             </place>
-            <place xml:id="pmb50">
-               <placeName>Wien</placeName>
-               <placeName type="ort_fruherer-name">K.K. Reichshaupt- und Residenzstadt Wien</placeName>
-               <placeName type="legacy-name-merge">Wien</placeName>
-               <placeName type="alternative-name">Bécs</placeName>
-               <placeName type="alternative-name">Land Wien</placeName>
-               <placeName type="alternative-name">Vídeň</placeName>
-               <placeName type="alternative-name">Wenia</placeName>
-               <placeName type="alternative-name">Beč</placeName>
-               <placeName type="ort_fruherer-name">Vindobona</placeName>
-               <placeName type="legacy-name-merge">Vindobona</placeName>
-               <placeName type="alternative-name">Vienna</placeName>
-               <placeName type="legacy-name-merge">Vienna</placeName>
-               <placeName type="alternative-name">Vienna</placeName>
-               <location type="coords">
-                  <geo>48,208333 16,373056</geo>
-               </location>
-               <location type="located_in_place">
-                  <placeName ref="pmb41240">Österreich</placeName>
-                  <geo>47,33333 13,33333</geo>
-               </location>
-            </place>
             <place xml:id="pmb19862" ana="comment">
                <placeName>Brijuni</placeName>
                <placeName type="legacy-name">Brioni</placeName>
                <placeName type="legacy-name-merge">Veliki Brijun</placeName>
-               <placeName type="ort_fruherer-name">Brioni</placeName>
                <location type="coords">
                   <geo>44,91417 13,76222</geo>
                </location>
@@ -455,7 +490,6 @@
             </place>
             <place xml:id="pmb851" ana="comment">
                <placeName>Pula</placeName>
-               <placeName type="legacy-name-merge">Pula</placeName>
                <placeName type="ort_namensvariante">Pola</placeName>
                <location type="coords">
                   <geo>44,86833 13,84806</geo>

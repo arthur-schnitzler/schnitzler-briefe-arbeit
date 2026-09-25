@@ -1,6 +1,10 @@
-<?xml version='1.0' encoding='UTF-8'?>
+<?xml version="1.0" encoding="UTF-8"?>
 <?xml-model href="../meta/schnitzler-briefe-schematron.sch" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
-<TEI xmlns="http://www.tei-c.org/ns/1.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.tei-c.org/ns/1.0 ../meta/schnitzler-briefe-schema.xsd" xml:base="https://id.acdh.oeaw.ac.at/schnitzler/schnitzler-briefe/editions" xml:id="L04507">
+<TEI xmlns="http://www.tei-c.org/ns/1.0"
+     xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+     xsi:schemaLocation="http://www.tei-c.org/ns/1.0 ../meta/schnitzler-briefe-schema.xsd"
+     xml:base="https://id.acdh.oeaw.ac.at/schnitzler/schnitzler-briefe/editions"
+     xml:id="L04507">
    <teiHeader>
       <fileDesc>
          <titleStmt>
@@ -138,12 +142,20 @@
                   – 22. 8. 1898?]</date>
                <placeName ref="#pmb207296">Tiefer Graben 23</placeName>
             </correspAction>
-            <correspContext><ref type="belongsToCorrespondence" target="correspondence_12740">Schwarzkopf, Gustav</ref>
+            <correspContext>
+               <ref type="belongsToCorrespondence" target="correspondence_12740">Schwarzkopf, Gustav</ref>
                <ref subtype="previous_letter" type="withinCollection" target="L00834">Schnitzler an Beer-Hofmann, 13. 8. 1898</ref>
                <ref subtype="next_letter" type="withinCollection" target="L00835">Hofmannsthal an Schnitzler, 21. 8. 1898</ref>
-               <ref subtype="previous_letter" type="withinCorrespondence" source="correspondence_12740" target="L04432">Schnitzler an Schwarzkopf, 4. 8. 1898</ref>
-               <ref subtype="next_letter" type="withinCorrespondence" source="correspondence_12740" target="L04127">Schnitzler an Schwarzkopf, [23. oder 24]. 8. 1898</ref>
-            </correspContext></correspDesc>
+               <ref subtype="previous_letter"
+                    type="withinCorrespondence"
+                    source="correspondence_12740"
+                    target="L04432">Schnitzler an Schwarzkopf, 4. 8. 1898</ref>
+               <ref subtype="next_letter"
+                    type="withinCorrespondence"
+                    source="correspondence_12740"
+                    target="L04127">Schnitzler an Schwarzkopf, [23. oder 24]. 8. 1898</ref>
+            </correspContext>
+         </correspDesc>
       </profileDesc>
       <revisionDesc status="proposed">
          <change who="MAM" when="2026-06-11">Export aus Transkribus</change>
@@ -215,6 +227,30 @@
       </body>
       <back>
          <listPerson>
+            <person xml:id="pmb2121">
+               <persName>
+                  <surname>Schnitzler</surname>
+                  <forename>Arthur</forename>
+               </persName>
+               <birth>
+                  <date when="1862-05-15">15. 5. 1862</date>
+                  <settlement ref="pmb50">
+                     <placeName type="pref">Wien</placeName>
+                     <location>
+                        <geo>48,208333 16,373056</geo>
+                     </location>
+                  </settlement>
+               </birth>
+               <death>
+                  <date when="1931-10-21">21. 10. 1931</date>
+                  <settlement ref="pmb50">
+                     <placeName type="pref">Wien</placeName>
+                     <location>
+                        <geo>48,208333 16,373056</geo>
+                     </location>
+                  </settlement>
+               </death>
+            </person>
             <person xml:id="pmb11740">
                <persName>
                   <forename>Hugo von</forename>
@@ -235,6 +271,54 @@
                      <placeName type="pref">Rodaun</placeName>
                      <location>
                         <geo>48,132793312328 16,256152195922</geo>
+                     </location>
+                  </settlement>
+               </death>
+            </person>
+            <person xml:id="pmb2461" ana="comment">
+               <persName>
+                  <forename>Gisela</forename>
+                  <surname>Hajek</surname>
+               </persName>
+               <birth>
+                  <date when="1867-12-20">1867-12-20</date>
+                  <settlement ref="pmb50">
+                     <placeName type="pref">Wien</placeName>
+                     <location>
+                        <geo>48,208333 16,373056</geo>
+                     </location>
+                  </settlement>
+               </birth>
+               <death>
+                  <date when="1953-02-03">1953-02-03</date>
+                  <settlement ref="pmb893">
+                     <placeName type="pref">Cambridge</placeName>
+                     <location>
+                        <geo>52,2 0,11667</geo>
+                     </location>
+                  </settlement>
+               </death>
+            </person>
+            <person xml:id="pmb2284">
+               <persName>
+                  <forename>Markus</forename>
+                  <surname>Hajek</surname>
+               </persName>
+               <birth>
+                  <date when="1861-11-25">1861-11-25</date>
+                  <settlement ref="pmb46727">
+                     <placeName type="pref">Vršac</placeName>
+                     <location>
+                        <geo>45,11667 21,30361</geo>
+                     </location>
+                  </settlement>
+               </birth>
+               <death>
+                  <date when="1941-04-04">1941-04-04</date>
+                  <settlement ref="pmb224">
+                     <placeName type="pref">London</placeName>
+                     <location>
+                        <geo>51,50853 -0,12574</geo>
                      </location>
                   </settlement>
                </death>
@@ -263,84 +347,22 @@
                   </settlement>
                </death>
             </person>
-            <person xml:id="pmb2121">
-               <persName>
-                  <surname>Schnitzler</surname>
-                  <forename>Arthur</forename>
-               </persName>
-               <birth>
-                  <date when="1862-05-15">15. 5. 1862</date>
-                  <settlement ref="pmb50">
-                     <placeName type="pref">Wien</placeName>
-                     <location>
-                        <geo>48,208333 16,373056</geo>
-                     </location>
-                  </settlement>
-               </birth>
-               <death>
-                  <date when="1931-10-21">21. 10. 1931</date>
-                  <settlement ref="pmb50">
-                     <placeName type="pref">Wien</placeName>
-                     <location>
-                        <geo>48,208333 16,373056</geo>
-                     </location>
-                  </settlement>
-               </death>
-               <sex value="male"/>
-               <occupation ref="pmb90">Schriftsteller/Schriftstellerin</occupation>
-               <occupation ref="pmb97">Mediziner/Medizinerin</occupation>
-               <idno type="gnd">https://d-nb.info/gnd/118609807/</idno>
-            </person>
-            <person xml:id="pmb2284">
-               <persName>
-                  <forename>Markus</forename>
-                  <surname>Hajek</surname>
-               </persName>
-               <birth>
-                  <date when="1861-11-25">1861-11-25</date>
-                  <settlement ref="pmb46727">
-                     <placeName type="pref">Vršac</placeName>
-                     <location>
-                        <geo>45,11667 21,30361</geo>
-                     </location>
-                  </settlement>
-               </birth>
-               <death>
-                  <date when="1941-04-04">1941-04-04</date>
-                  <settlement ref="pmb224">
-                     <placeName type="pref">London</placeName>
-                     <location>
-                        <geo>51,50853 -0,12574</geo>
-                     </location>
-                  </settlement>
-               </death>
-            </person>
-            <person xml:id="pmb2461">
-               <persName>
-                  <forename>Gisela</forename>
-                  <surname>Hajek</surname>
-               </persName>
-               <birth>
-                  <date when="1867-12-20">1867-12-20</date>
-                  <settlement ref="pmb50">
-                     <placeName type="pref">Wien</placeName>
-                     <location>
-                        <geo>48,208333 16,373056</geo>
-                     </location>
-                  </settlement>
-               </birth>
-               <death>
-                  <date when="1953-02-03">1953-02-03</date>
-                  <settlement ref="pmb893">
-                     <placeName type="pref">Cambridge</placeName>
-                     <location>
-                        <geo>52,2 0,11667</geo>
-                     </location>
-                  </settlement>
-               </death>
-            </person>
          </listPerson>
          <listPlace>
+            <place xml:id="pmb36464" ana="comment">
+               <placeName>Ouchy</placeName>
+               <location type="coords">
+                  <geo>46,50666 6,62493</geo>
+               </location>
+               <location type="located_in_place">
+                  <placeName ref="pmb43435">Schweiz</placeName>
+                  <geo>47,00016 8,01427</geo>
+               </location>
+               <location type="located_in_place">
+                  <placeName ref="pmb50004">Lausanne</placeName>
+                  <geo>46,516 6,63282</geo>
+               </location>
+            </place>
             <place xml:id="pmb207296">
                <placeName>Tiefer Graben 23</placeName>
                <location type="coords">
@@ -355,46 +377,10 @@
                   <geo>48,20769 16,37049</geo>
                </location>
             </place>
-            <place xml:id="pmb363447">
-               <placeName>Jura</placeName>
-               <location type="coords">
-                  <geo>47,2431 6,0219</geo>
-               </location>
-               <location type="located_in_place">
-                  <placeName ref="pmb43435">Schweiz</placeName>
-                  <geo>47,00016 8,01427</geo>
-               </location>
-            </place>
-            <place xml:id="pmb36464">
-               <placeName>Ouchy</placeName>
-               <location type="coords">
-                  <geo>46,50666 6,62493</geo>
-               </location>
-               <location type="located_in_place">
-                  <placeName ref="pmb43435">Schweiz</placeName>
-                  <geo>47,00016 8,01427</geo>
-               </location>
-               <location type="located_in_place">
-                  <placeName ref="pmb50004">Lausanne</placeName>
-                  <geo>46,516 6,63282</geo>
-               </location>
-            </place>
-            <place xml:id="pmb39755">
-               <placeName>Vierwaldstättersee</placeName>
-               <location type="coords">
-                  <geo>47,019444 8,401111</geo>
-               </location>
-               <location type="located_in_place">
-                  <placeName ref="pmb43435">Schweiz</placeName>
-                  <geo>47,00016 8,01427</geo>
-               </location>
-            </place>
             <place xml:id="pmb41240">
                <placeName>Österreich</placeName>
                <placeName type="alternative-name">Republik Österreich</placeName>
-               <placeName type="legacy-name-merge">Österreich</placeName>
                <placeName type="alternative-name">Republic of Austria</placeName>
-               <placeName type="legacy-name-merge">Österreich</placeName>
                <placeName type="legacy-name-merge">Deutsch Österreich</placeName>
                <placeName type="legacy-name-merge">Altoesterreich</placeName>
                <location type="coords">
@@ -416,16 +402,12 @@
             <place xml:id="pmb50">
                <placeName>Wien</placeName>
                <placeName type="ort_fruherer-name">K.K. Reichshaupt- und Residenzstadt Wien</placeName>
-               <placeName type="legacy-name-merge">Wien</placeName>
                <placeName type="alternative-name">Bécs</placeName>
                <placeName type="alternative-name">Land Wien</placeName>
                <placeName type="alternative-name">Vídeň</placeName>
                <placeName type="alternative-name">Wenia</placeName>
                <placeName type="alternative-name">Beč</placeName>
                <placeName type="ort_fruherer-name">Vindobona</placeName>
-               <placeName type="legacy-name-merge">Vindobona</placeName>
-               <placeName type="alternative-name">Vienna</placeName>
-               <placeName type="legacy-name-merge">Vienna</placeName>
                <placeName type="alternative-name">Vienna</placeName>
                <location type="coords">
                   <geo>48,208333 16,373056</geo>
@@ -434,22 +416,12 @@
                   <placeName ref="pmb41240">Österreich</placeName>
                   <geo>47,33333 13,33333</geo>
                </location>
-            </place>
-            <place xml:id="pmb512">
-               <placeName>Genfer See</placeName>
-               <location type="coords">
-                  <geo>46,43774 6,46906</geo>
-               </location>
                <location type="located_in_place">
-                  <placeName ref="pmb43435">Schweiz</placeName>
-                  <geo>47,00016 8,01427</geo>
-               </location>
-               <location type="located_in_place">
-                  <placeName ref="pmb166">Frankreich</placeName>
-                  <geo>46,0 2,0</geo>
+                  <placeName ref="pmb235218">Windmühlhöhe</placeName>
+                  <geo>48,24077 16,32092</geo>
                </location>
             </place>
-            <place xml:id="pmb562">
+            <place xml:id="pmb562" ana="comment">
                <placeName>Genf</placeName>
                <placeName type="ort_namensvariante">Genève</placeName>
                <location type="coords">
@@ -464,12 +436,43 @@
                   <geo>46,2 6,15</geo>
                </location>
             </place>
+            <place xml:id="pmb363447">
+               <placeName>Jura</placeName>
+               <location type="coords">
+                  <geo>47,2431 6,0219</geo>
+               </location>
+               <location type="located_in_place">
+                  <placeName ref="pmb43435">Schweiz</placeName>
+                  <geo>47,00016 8,01427</geo>
+               </location>
+            </place>
+            <place xml:id="pmb512" ana="comment">
+               <placeName>Genfer See</placeName>
+               <location type="coords">
+                  <geo>46,43774 6,46906</geo>
+               </location>
+               <location type="located_in_place">
+                  <placeName ref="pmb43435">Schweiz</placeName>
+                  <geo>47,00016 8,01427</geo>
+               </location>
+               <location type="located_in_place">
+                  <placeName ref="pmb166">Frankreich</placeName>
+                  <geo>46,0 2,0</geo>
+               </location>
+            </place>
+            <place xml:id="pmb39755">
+               <placeName>Vierwaldstättersee</placeName>
+               <location type="coords">
+                  <geo>47,019444 8,401111</geo>
+               </location>
+               <location type="located_in_place">
+                  <placeName ref="pmb43435">Schweiz</placeName>
+                  <geo>47,00016 8,01427</geo>
+               </location>
+            </place>
             <place xml:id="pmb2715" ana="comment">
                <placeName>Montreux</placeName>
-               <placeName type="legacy-name-merge">Montreux</placeName>
-               <placeName type="alternative-name">Montreux</placeName>
                <placeName type="legacy-name-merge">Montreux/Schweiz</placeName>
-               <placeName type="legacy-name-merge">Montreux</placeName>
                <location type="coords">
                   <geo>46,45179 6,94084</geo>
                </location>

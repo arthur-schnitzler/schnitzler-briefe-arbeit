@@ -1,6 +1,10 @@
-<?xml version='1.0' encoding='UTF-8'?>
+<?xml version="1.0" encoding="UTF-8"?>
 <?xml-model href="../meta/schnitzler-briefe-schematron.sch" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
-<TEI xmlns="http://www.tei-c.org/ns/1.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.tei-c.org/ns/1.0 ../meta/schnitzler-briefe-schema.xsd" xml:id="L03716" xml:base="https://id.acdh.oeaw.ac.at/schnitzler/schnitzler-briefe/editions">
+<TEI xmlns="http://www.tei-c.org/ns/1.0"
+     xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+     xsi:schemaLocation="http://www.tei-c.org/ns/1.0 ../meta/schnitzler-briefe-schema.xsd"
+     xml:id="L03716"
+     xml:base="https://id.acdh.oeaw.ac.at/schnitzler/schnitzler-briefe/editions">
    <teiHeader>
       <fileDesc>
          <titleStmt>
@@ -83,7 +87,7 @@
                               <extent>
                                  <measure unit="seite" quantity="2"/>
                                  <measure unit="blatt" quantity="1"/>
-                                 <measure unit="zeichenanzahl" quantity="1080"/>
+                                 <measure unit="zeichenanzahl" quantity="1083"/>
                               </extent>
                            </supportDesc>
                         </objectDesc>
@@ -111,12 +115,20 @@
                <date evidence="conjecture" notBefore="1897-10-24" notAfter="1897-10-28">[24. 10. 1897 – 28. 10. 1897?]</date>
                <placeName ref="#pmb50" evidence="conjecture">Wien</placeName>
             </correspAction>
-            <correspContext><ref type="belongsToCorrespondence" target="correspondence_2128">Plessner, Elsa</ref>
+            <correspContext>
+               <ref type="belongsToCorrespondence" target="correspondence_2128">Plessner, Elsa</ref>
                <ref subtype="previous_letter" type="withinCollection" target="L00733">Schnitzler an Beer-Hofmann, [20. oder 21]. 10. 1897</ref>
                <ref subtype="next_letter" type="withinCollection" target="L00734">Beer-Hofmann an Schnitzler, 27. 10. 1897</ref>
-               <ref subtype="previous_letter" type="withinCorrespondence" source="correspondence_2128" target="L03715">Plessner an Schnitzler, 9. 8. 1897</ref>
-               <ref subtype="next_letter" type="withinCorrespondence" source="correspondence_2128" target="L03717">Plessner an Schnitzler, 22. 10. 1898</ref>
-            </correspContext></correspDesc>
+               <ref subtype="previous_letter"
+                    type="withinCorrespondence"
+                    source="correspondence_2128"
+                    target="L03715">Plessner an Schnitzler, 9. 8. 1897</ref>
+               <ref subtype="next_letter"
+                    type="withinCorrespondence"
+                    source="correspondence_2128"
+                    target="L03717">Plessner an Schnitzler, 22. 10. 1898</ref>
+            </correspContext>
+         </correspDesc>
       </profileDesc>
       <revisionDesc status="approved">
          <change who="MAM" when="2025-07-03">Export aus Transkribus</change>
@@ -152,13 +164,16 @@
                   <anchor type="commentary" xml:id="K_L03716-1"/>grande chose<note type="commentary" corresp="K_L03716-1">französisch: große Sache</note>
                   <space unit="chars" quantity="1"/>
                </foreign>«, allein ich habe seit <hi rend="underline" n="2">¾</hi> Jahren meine
-               Feder überhaupt nur zu Briefen spazieren geführt. Darum ist mir »<anchor type="commentary" xml:id="K_L03716-12"/>
+               Feder überhaupt nur zu Briefen spazieren geführt. Darum ist mir »<anchor type="commentary" xml:id="K_L03716-2"/>
                <rs type="work" ref="#pmb296096">Irmedals Kum<pb facs="HS000409661_0053-2"/>mer</rs>
-               <note type="commentary" corresp="K_L03716-12">Ob das
+               <note type="commentary" corresp="K_L03716-2">Ob das
                Werk unter einem anderen Titel publiziert wurde, ließ sich nicht feststellen.</note>« sehr werth.– – –</p>
             <p>
-               <anchor type="commentary" xml:id="K_L03716-2"/>Ein neues <rs type="work" ref="#pmb295177 #pmb295204" subtype="implied" cert="low">Stück</rs>
-               <note type="commentary" corresp="K_L03716-2">Von <rs type="person" ref="#pmb2128">Plessner</rs> sind
+               <anchor type="commentary" xml:id="K_L03716-3"/>Ein neues <rs type="work"
+                   ref="#pmb295177 #pmb295204"
+                   subtype="implied"
+                   cert="low">Stück</rs>
+               <note type="commentary" corresp="K_L03716-3">Von <rs type="person" ref="#pmb2128">Plessner</rs> sind
                   <rs type="work" subtype="implied" ref="#pmb295177 #pmb295204">zwei Stücke</rs> überliefert, wobei sie zuerst <rs type="work" ref="#pmb295204">Die Ehrlosen</rs> ausgearbeitet 
                   hat. Dessen Entstehung datiert sie im Brief vom <ref type="schnitzler-briefe" target="L03720" subtype="date-only"/> allerdings auf den <date>Herbst 1898</date>, so dass
                es sich um einen nicht realisierten Plan handeln dürfte.</note> liegt auf der Pfanne. <date>Ende Dezember</date> dürften Sie davon
@@ -171,37 +186,119 @@
             </closer>
          </div>
       </body>
-      <back><listPerson><person xml:id="pmb2121"><persName><surname>Schnitzler</surname><forename>Arthur</forename></persName><birth><date when="1862-05-15">15. 5. 1862</date><settlement ref="pmb50"><placeName type="pref">Wien</placeName><location><geo>48,208333 16,373056</geo></location></settlement></birth><death><date when="1931-10-21">21. 10. 1931</date><settlement ref="pmb50"><placeName type="pref">Wien</placeName><location><geo>48,208333 16,373056</geo></location></settlement></death><sex value="male"/><occupation ref="pmb90">Schriftsteller/Schriftstellerin</occupation><occupation ref="pmb97">Mediziner/Medizinerin</occupation><idno type="gnd">https://d-nb.info/gnd/118609807/</idno></person><person xml:id="pmb2128"><persName>
-      <forename>Elsa</forename>
-      <surname>Plessner</surname>
-  </persName><birth>
-    <date when="1875-08-22">1875-08-22</date>
-      <settlement ref="pmb50">
-        <placeName type="pref">Wien</placeName>
-        <location><geo>48,208333 16,373056</geo></location>
-      </settlement>
-  </birth><death>
-    <date when="1932-05-07">1932-05-07</date>
-      <settlement ref="pmb49185">
-        <placeName type="pref">Alicante</placeName>
-        <location><geo>38,34517 -0,48149</geo></location>
-      </settlement>
-      <settlement ref="pmb296401">
-        <placeName type="pref">calle Gravina 15</placeName>
-        <location><geo>38,3456446 -0,47927879</geo></location>
-      </settlement>
-  </death></person></listPerson><listBibl><bibl xml:id="pmb296096"><title type="main">Irmedals Kummer</title><author role="hat-geschaffen" ref="pmb2128">Plessner, Elsa</author></bibl><bibl xml:id="pmb295177" ana="comment"><title type="main">Das erste Kapitel. Schauspiel in drei Akten</title><title type="werk_namensvariante">Das erste Capitel</title><title type="werk_link">https://archive.org/details/daserstekapitels00ples/page/n1</title><author role="hat-geschaffen" ref="pmb2128">Plessner, Elsa</author></bibl><bibl xml:id="pmb295204" ana="comment"><title type="main">Die Ehrlosen. Schauspiel in drei Acten</title><title type="werk_arbeitstitel">Singende Flammen</title><title type="legacy-name-merge">Die Ehrlosen</title><author role="hat-geschaffen" ref="pmb2128">Plessner, Elsa</author></bibl></listBibl><listPlace><place xml:id="pmb295169"><placeName>Spiegelgasse 2</placeName><location type="coords">
-  <geo>48,207796 16,370211</geo>
-</location><location type="located_in_place">
-  <placeName ref="pmb51">I., Innere Stadt</placeName>
-  <geo>48,20769 16,37049</geo>
-</location><location type="located_in_place">
-  <placeName ref="pmb45381">Spiegelgasse</placeName>
-  <geo>48,20804 16,37063</geo>
-</location></place><place xml:id="pmb50"><placeName>Wien</placeName><placeName type="ort_fruherer-name">K.K. Reichshaupt- und Residenzstadt Wien</placeName><placeName type="legacy-name-merge">Wien</placeName><placeName type="alternative-name">Bécs</placeName><placeName type="alternative-name">Land Wien</placeName><placeName type="alternative-name">Vídeň</placeName><placeName type="alternative-name">Wenia</placeName><placeName type="alternative-name">Beč</placeName><placeName type="ort_fruherer-name">Vindobona</placeName><placeName type="legacy-name-merge">Vindobona</placeName><placeName type="alternative-name">Vienna</placeName><placeName type="legacy-name-merge">Vienna</placeName><placeName type="alternative-name">Vienna</placeName><location type="coords">
-  <geo>48,208333 16,373056</geo>
-</location><location type="located_in_place">
-  <placeName ref="pmb41240">Österreich</placeName>
-  <geo>47,33333 13,33333</geo>
-</location></place></listPlace></back></text>
+      <back>
+         <listPerson>
+            <person xml:id="pmb2128">
+               <persName>
+                  <forename>Elsa</forename>
+                  <surname>Plessner</surname>
+               </persName>
+               <birth>
+                  <date when="1875-08-22">1875-08-22</date>
+                  <settlement ref="pmb50">
+                     <placeName type="pref">Wien</placeName>
+                     <location>
+                        <geo>48,208333 16,373056</geo>
+                     </location>
+                  </settlement>
+               </birth>
+               <death>
+                  <date when="1932-05-07">1932-05-07</date>
+                  <settlement ref="pmb49185">
+                     <placeName type="pref">Alicante</placeName>
+                     <location>
+                        <geo>38,34517 -0,48149</geo>
+                     </location>
+                  </settlement>
+                  <settlement ref="pmb296401">
+                     <placeName type="pref">calle Gravina 15</placeName>
+                     <location>
+                        <geo>38,3456446 -0,47927879</geo>
+                     </location>
+                  </settlement>
+               </death>
+            </person>
+            <person xml:id="pmb2121">
+               <persName>
+                  <surname>Schnitzler</surname>
+                  <forename>Arthur</forename>
+               </persName>
+               <birth>
+                  <date when="1862-05-15">15. 5. 1862</date>
+                  <settlement ref="pmb50">
+                     <placeName type="pref">Wien</placeName>
+                     <location>
+                        <geo>48,208333 16,373056</geo>
+                     </location>
+                  </settlement>
+               </birth>
+               <death>
+                  <date when="1931-10-21">21. 10. 1931</date>
+                  <settlement ref="pmb50">
+                     <placeName type="pref">Wien</placeName>
+                     <location>
+                        <geo>48,208333 16,373056</geo>
+                     </location>
+                  </settlement>
+               </death>
+            </person>
+         </listPerson>
+         <listBibl>
+            <bibl xml:id="pmb296096">
+               <title>Irmedals Kummer</title>
+               <author ref="pmb2128" role="hat-geschaffen">Plessner, Elsa</author>
+            </bibl>
+            <bibl xml:id="pmb295177" ana="implied">
+               <title>Das erste Kapitel. Schauspiel in drei Akten</title>
+               <title type="werk_namensvariante">Das erste Capitel</title>
+               <title type="werk_link">https://archive.org/details/daserstekapitels00ples/page/n1</title>
+               <author ref="pmb2128" role="hat-geschaffen">Plessner, Elsa</author>
+            </bibl>
+            <bibl xml:id="pmb295204" ana="implied">
+               <title>Die Ehrlosen. Schauspiel in drei Acten</title>
+               <title type="werk_arbeitstitel">Singende Flammen</title>
+               <title type="legacy-name-merge">Die Ehrlosen</title>
+               <author ref="pmb2128" role="hat-geschaffen">Plessner, Elsa</author>
+            </bibl>
+         </listBibl>
+         <listPlace>
+            <place xml:id="pmb50">
+               <placeName>Wien</placeName>
+               <placeName type="ort_fruherer-name">K.K. Reichshaupt- und Residenzstadt Wien</placeName>
+               <placeName type="alternative-name">Bécs</placeName>
+               <placeName type="alternative-name">Land Wien</placeName>
+               <placeName type="alternative-name">Vídeň</placeName>
+               <placeName type="alternative-name">Wenia</placeName>
+               <placeName type="alternative-name">Beč</placeName>
+               <placeName type="ort_fruherer-name">Vindobona</placeName>
+               <placeName type="alternative-name">Vienna</placeName>
+               <location type="coords">
+                  <geo>48,208333 16,373056</geo>
+               </location>
+               <location type="located_in_place">
+                  <placeName ref="pmb41240">Österreich</placeName>
+                  <geo>47,33333 13,33333</geo>
+               </location>
+               <location type="located_in_place">
+                  <placeName ref="pmb235218">Windmühlhöhe</placeName>
+                  <geo>48,24077 16,32092</geo>
+               </location>
+            </place>
+            <place xml:id="pmb295169">
+               <placeName>Spiegelgasse 2</placeName>
+               <location type="coords">
+                  <geo>48,207796 16,370211</geo>
+               </location>
+               <location type="located_in_place">
+                  <placeName ref="pmb51">I., Innere Stadt</placeName>
+                  <geo>48,20769 16,37049</geo>
+               </location>
+               <location type="located_in_place">
+                  <placeName ref="pmb45381">Spiegelgasse</placeName>
+                  <geo>48,20804 16,37063</geo>
+               </location>
+            </place>
+         </listPlace>
+      </back>
+   </text>
 </TEI>

@@ -1,6 +1,10 @@
-<?xml version='1.0' encoding='UTF-8'?>
+<?xml version="1.0" encoding="UTF-8"?>
 <?xml-model href="../meta/schnitzler-briefe-schematron.sch" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
-<TEI xmlns="http://www.tei-c.org/ns/1.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.tei-c.org/ns/1.0 ../meta/schnitzler-briefe-schema.xsd" xml:base="https://id.acdh.oeaw.ac.at/schnitzler/schnitzler-briefe/editions" xml:id="L04145">
+<TEI xmlns="http://www.tei-c.org/ns/1.0"
+     xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+     xsi:schemaLocation="http://www.tei-c.org/ns/1.0 ../meta/schnitzler-briefe-schema.xsd"
+     xml:base="https://id.acdh.oeaw.ac.at/schnitzler/schnitzler-briefe/editions"
+     xml:id="L04145">
    <teiHeader>
       <fileDesc>
          <titleStmt>
@@ -112,12 +116,20 @@
                   – 15. 3. 1903?]</date>
                <placeName ref="#pmb50" evidence="conjecture">Wien</placeName>
             </correspAction>
-            <correspContext><ref type="belongsToCorrespondence" target="correspondence_12740">Schwarzkopf, Gustav</ref>
+            <correspContext>
+               <ref type="belongsToCorrespondence" target="correspondence_12740">Schwarzkopf, Gustav</ref>
                <ref subtype="previous_letter" type="withinCollection" target="L04331">Schwarzkopf an Schnitzler, [10.? 3. 1903]</ref>
                <ref subtype="next_letter" type="withinCollection" target="L04061">Schnitzler an Schwarzkopf, 14. 3. 1903</ref>
-               <ref subtype="previous_letter" type="withinCorrespondence" source="correspondence_12740" target="L04331">Schwarzkopf an Schnitzler, [10.? 3. 1903]</ref>
-               <ref subtype="next_letter" type="withinCorrespondence" source="correspondence_12740" target="L04061">Schnitzler an Schwarzkopf, 14. 3. 1903</ref>
-            </correspContext></correspDesc>
+               <ref subtype="previous_letter"
+                    type="withinCorrespondence"
+                    source="correspondence_12740"
+                    target="L04331">Schwarzkopf an Schnitzler, [10.? 3. 1903]</ref>
+               <ref subtype="next_letter"
+                    type="withinCorrespondence"
+                    source="correspondence_12740"
+                    target="L04061">Schnitzler an Schwarzkopf, 14. 3. 1903</ref>
+            </correspContext>
+         </correspDesc>
       </profileDesc>
       <revisionDesc status="proposed">
          <change who="MAM" when="2025-12-10">Export aus Transkribus</change>
@@ -174,13 +186,13 @@
       </body>
       <back>
          <listPerson>
-            <person xml:id="pmb10883">
+            <person xml:id="pmb2121">
                <persName>
-                  <forename>Alfred von</forename>
-                  <surname>Berger</surname>
+                  <surname>Schnitzler</surname>
+                  <forename>Arthur</forename>
                </persName>
                <birth>
-                  <date when="1853-04-30">1853-04-30</date>
+                  <date when="1862-05-15">15. 5. 1862</date>
                   <settlement ref="pmb50">
                      <placeName type="pref">Wien</placeName>
                      <location>
@@ -189,7 +201,7 @@
                   </settlement>
                </birth>
                <death>
-                  <date when="1912-08-24">1912-08-24</date>
+                  <date when="1931-10-21">21. 10. 1931</date>
                   <settlement ref="pmb50">
                      <placeName type="pref">Wien</placeName>
                      <location>
@@ -222,13 +234,13 @@
                   </settlement>
                </death>
             </person>
-            <person xml:id="pmb2121">
+            <person xml:id="pmb10883">
                <persName>
-                  <surname>Schnitzler</surname>
-                  <forename>Arthur</forename>
+                  <forename>Alfred von</forename>
+                  <surname>Berger</surname>
                </persName>
                <birth>
-                  <date when="1862-05-15">15. 5. 1862</date>
+                  <date when="1853-04-30">1853-04-30</date>
                   <settlement ref="pmb50">
                      <placeName type="pref">Wien</placeName>
                      <location>
@@ -237,7 +249,7 @@
                   </settlement>
                </birth>
                <death>
-                  <date when="1931-10-21">21. 10. 1931</date>
+                  <date when="1912-08-24">1912-08-24</date>
                   <settlement ref="pmb50">
                      <placeName type="pref">Wien</placeName>
                      <location>
@@ -245,10 +257,6 @@
                      </location>
                   </settlement>
                </death>
-               <sex value="male"/>
-               <occupation ref="pmb90">Schriftsteller/Schriftstellerin</occupation>
-               <occupation ref="pmb97">Mediziner/Medizinerin</occupation>
-               <idno type="gnd">https://d-nb.info/gnd/118609807/</idno>
             </person>
             <person xml:id="pmb24648" ana="comment">
                <persName>
@@ -276,32 +284,28 @@
             </person>
          </listPerson>
          <listBibl>
+            <bibl xml:id="pmb300273" ana="implied">
+               <title>Der reine Tor. Gesellschaftsstück in vier Akten</title>
+               <title type="werk_unter-diesem-namen-oder-kurzel-veroffentlicht">Franz Bergleitner</title>
+               <author ref="pmb24648" role="hat-unter-pseudonym-geschrieben">Schwarzkopf, Max</author>
+            </bibl>
             <bibl xml:id="pmb29863" ana="comment">
-               <title type="main">Lebendige Stunden. Vier Einakter</title>
+               <title>Lebendige Stunden. Vier Einakter</title>
                <title type="werk_link">https://archive.org/details/3490676/page/n4</title>
                <title type="legacy-name-merge">Lebendige Stunden</title>
-               <author role="hat-geschaffen" ref="pmb2121">Schnitzler, Arthur</author>
-            </bibl>
-            <bibl xml:id="pmb300273" ana="comment">
-               <title type="main">Der reine Tor. Gesellschaftsstück in vier Akten</title>
-               <title type="werk_unter-diesem-namen-oder-kurzel-veroffentlicht">Franz Bergleitner</title>
-               <author role="hat-unter-pseudonym-geschrieben" ref="pmb24648">Schwarzkopf, Max</author>
+               <author ref="pmb2121" role="hat-geschaffen">Schnitzler, Arthur</author>
             </bibl>
          </listBibl>
          <listPlace>
             <place xml:id="pmb50">
                <placeName>Wien</placeName>
                <placeName type="ort_fruherer-name">K.K. Reichshaupt- und Residenzstadt Wien</placeName>
-               <placeName type="legacy-name-merge">Wien</placeName>
                <placeName type="alternative-name">Bécs</placeName>
                <placeName type="alternative-name">Land Wien</placeName>
                <placeName type="alternative-name">Vídeň</placeName>
                <placeName type="alternative-name">Wenia</placeName>
                <placeName type="alternative-name">Beč</placeName>
                <placeName type="ort_fruherer-name">Vindobona</placeName>
-               <placeName type="legacy-name-merge">Vindobona</placeName>
-               <placeName type="alternative-name">Vienna</placeName>
-               <placeName type="legacy-name-merge">Vienna</placeName>
                <placeName type="alternative-name">Vienna</placeName>
                <location type="coords">
                   <geo>48,208333 16,373056</geo>
@@ -310,11 +314,14 @@
                   <placeName ref="pmb41240">Österreich</placeName>
                   <geo>47,33333 13,33333</geo>
                </location>
+               <location type="located_in_place">
+                  <placeName ref="pmb235218">Windmühlhöhe</placeName>
+                  <geo>48,24077 16,32092</geo>
+               </location>
             </place>
             <place xml:id="pmb20" ana="comment">
                <placeName>Volkstheater</placeName>
                <placeName type="namensvariante">Deutsches Volkstheater</placeName>
-               <placeName type="legacy-name-merge">Deutsches Volkstheater</placeName>
                <location type="coords">
                   <geo>48,205142 16,3566</geo>
                </location>
@@ -344,7 +351,7 @@
                   <idno type="URL" subtype="d-nb">https://d-nb.info/gnd/4023118-5</idno>
                   <idno type="URL" subtype="pmb">https://pmb.acdh.oeaw.ac.at/entity/64301/</idno>
                   <idno type="URL" subtype="geonames">https://sws.geonames.org/2911298/</idno>
-                  <idno type="URL" subtype="kraus">https://www.kraus.wienbibliothek.at/legalkraus/pmb506.html</idno>
+                  <idno type="URL" subtype="www">https://www.kraus.wienbibliothek.at/legalkraus/pmb506.html</idno>
                   <idno type="URL" subtype="wikipedia">https://de.wikipedia.org/wiki/Hamburg</idno>
                   <idno type="URL" subtype="schnitzler-tagebuch">https://schnitzler-tagebuch.acdh.oeaw.ac.at/pmb506.html</idno>
                   <idno type="URL" subtype="schnitzler-interviews">https://schnitzler-interviews.acdh.oeaw.ac.at/pmb506.html</idno>
@@ -354,7 +361,7 @@
                   <idno type="URL" subtype="sk">https://sk.acdh.oeaw.ac.at/pmb506</idno>
                   <idno type="URL" subtype="biblio">https://biblio.ub.uni-freiburg.de/sf/#pmb506</idno>
                   <idno type="URL" subtype="schnitzler-briefe">https://schnitzler-briefe.acdh.oeaw.ac.at/pmb506.html</idno>
-                  <idno type="URL" subtype="schoenberg-ue">https://www.schoenberg-ue.at/ue/places/place.2.40</idno>
+                  <idno type="URL" subtype="www">https://www.schoenberg-ue.at/ue/places/place.2.40</idno>
                </location>
                <location type="located_in_place">
                   <placeName ref="pmb645">Deutsches Schauspielhaus in Hamburg</placeName>
@@ -374,7 +381,7 @@
             </org>
          </listOrg>
          <listEvent>
-            <event xml:id="pmb35110" ana="comment">
+            <event xml:id="pmb35110" ana="implied">
                <eventName n="Theaterpremiere">Premiere von Lebendige Stunden, 14.3.1903</eventName>
                <listPlace>
                   <place>

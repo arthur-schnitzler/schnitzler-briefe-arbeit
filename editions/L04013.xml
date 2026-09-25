@@ -1,6 +1,10 @@
-<?xml version='1.0' encoding='UTF-8'?>
+<?xml version="1.0" encoding="UTF-8"?>
 <?xml-model href="../meta/schnitzler-briefe-schematron.sch" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
-<TEI xmlns="http://www.tei-c.org/ns/1.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.tei-c.org/ns/1.0 ../meta/schnitzler-briefe-schema.xsd" xml:id="L04013" xml:base="https://id.acdh.oeaw.ac.at/schnitzler/schnitzler-briefe/editions">
+<TEI xmlns="http://www.tei-c.org/ns/1.0"
+     xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+     xsi:schemaLocation="http://www.tei-c.org/ns/1.0 ../meta/schnitzler-briefe-schema.xsd"
+     xml:id="L04013"
+     xml:base="https://id.acdh.oeaw.ac.at/schnitzler/schnitzler-briefe/editions">
    <teiHeader>
       <fileDesc>
          <titleStmt>
@@ -86,12 +90,14 @@
                               <extent>
                                  <measure unit="seite" quantity="2"/>
                                  <measure unit="blatt" quantity="2"/>
-                                 <measure unit="zeichenanzahl" quantity="2435"/>
+                                 <measure unit="zeichenanzahl" quantity="2434"/>
                               </extent>
                            </supportDesc>
                         </objectDesc>
                         <handDesc hands="1">
-                           <handNote medium="schwarze-tinte" style="nicht-anzuwenden" corresp="#pmb12848">
+                           <handNote medium="schwarze-tinte"
+                                     style="nicht-anzuwenden"
+                                     corresp="#pmb12848">
                               <p>Originalunterschrift</p>
                            </handNote>
                            <handNote medium="bleistift" style="lateinische-kurrent" corresp="#pmb12848">
@@ -128,7 +134,8 @@
                      <imprint>
                         <date when="2025-01-24">21. 1. 2025</date>
                      </imprint>
-                     <ref type="URL" target="https://briefedition.wedekind.h-da.de/view/document/single.xhtml?contentType=1&amp;documentId=5771"/>
+                     <ref type="URL"
+                          target="https://briefedition.wedekind.h-da.de/view/document/single.xhtml?contentType=1&amp;documentId=5771"/>
                   </monogr>
                </biblStruct>
             </listBibl>
@@ -152,15 +159,26 @@
                <date evidence="conjecture" notBefore="1911-12-23" notAfter="1911-12-27">[23. 12. 1911 – 27. 12. 1911?]</date>
                <placeName ref="#pmb50">Wien</placeName>
             </correspAction>
-            <correspContext><ref type="belongsToCorrespondence" target="correspondence_12848">Sternheim, Carl</ref>
+            <correspContext>
+               <ref type="belongsToCorrespondence" target="correspondence_12848">Sternheim, Carl</ref>
                <ref type="belongsToCorrespondence" target="correspondence_13068">Wedekind, Frank</ref>
                <ref subtype="previous_letter" type="withinCollection" target="L04166">Schnitzler an Schwarzkopf, [19. oder 20]. 12. 1911</ref>
                <ref subtype="next_letter" type="withinCollection" target="L04014">Schnitzler an Sternheim, 27. 12. 1911</ref>
-               <ref subtype="next_letter" type="withinCorrespondence" source="correspondence_12848" target="L04014">Schnitzler an Sternheim, 27. 12. 1911</ref>
-               <ref subtype="previous_letter" type="withinCorrespondence" source="correspondence_13068" target="L04012">Wedekind an Schnitzler, [zwischen 1.
+               <ref subtype="next_letter"
+                    type="withinCorrespondence"
+                    source="correspondence_12848"
+                    target="L04014">Schnitzler an Sternheim, 27. 12. 1911</ref>
+               <ref subtype="previous_letter"
+                    type="withinCorrespondence"
+                    source="correspondence_13068"
+                    target="L04012">Wedekind an Schnitzler, [zwischen 1.
                   und. 5.] 12. 1911</ref>
-               <ref subtype="next_letter" type="withinCorrespondence" source="correspondence_13068" target="L04011">Wedekind an Schnitzler, 11. 6. 1913</ref>
-            </correspContext></correspDesc>
+               <ref subtype="next_letter"
+                    type="withinCorrespondence"
+                    source="correspondence_13068"
+                    target="L04011">Wedekind an Schnitzler, 11. 6. 1913</ref>
+            </correspContext>
+         </correspDesc>
       </profileDesc>
       <revisionDesc status="candidate">
          <change who="MAM" when="2025-11-20">Angelegt mit Hilfe von Wedekind Korrespondenz
@@ -280,74 +298,50 @@
       </body>
       <back>
          <listPerson>
-            <person xml:id="pmb10815">
+            <person xml:id="pmb12848">
                <persName>
-                  <forename>Hermann</forename>
-                  <surname>Bahr</surname>
+                  <forename>Carl</forename>
+                  <surname>Sternheim</surname>
                </persName>
                <birth>
-                  <date when="1863-07-19">1863-07-19</date>
-                  <settlement ref="pmb332">
-                     <placeName type="pref">Linz</placeName>
+                  <date when="1878-04-01">1878-04-01</date>
+                  <settlement ref="pmb864">
+                     <placeName type="pref">Leipzig</placeName>
                      <location>
-                        <geo>48,3 14,28333</geo>
+                        <geo>51,33962 12,37129</geo>
                      </location>
                   </settlement>
                </birth>
                <death>
-                  <date when="1934-01-15">1934-01-15</date>
+                  <date when="1942-11-03">1942-11-03</date>
+                  <settlement ref="pmb862">
+                     <placeName type="pref">Brüssel</placeName>
+                     <location>
+                        <geo>50,85045 4,34878</geo>
+                     </location>
+                  </settlement>
+               </death>
+            </person>
+            <person xml:id="pmb13068">
+               <persName>
+                  <forename>Frank</forename>
+                  <surname>Wedekind</surname>
+               </persName>
+               <birth>
+                  <date when="1864-07-24">1864-07-24</date>
+                  <settlement ref="pmb890">
+                     <placeName type="pref">Hannover</placeName>
+                     <location>
+                        <geo>52,37052 9,73322</geo>
+                     </location>
+                  </settlement>
+               </birth>
+               <death>
+                  <date when="1918-03-09">1918-03-09</date>
                   <settlement ref="pmb45258">
                      <placeName type="pref">München</placeName>
                      <location>
                         <geo>48,13743 11,57549</geo>
-                     </location>
-                  </settlement>
-               </death>
-            </person>
-            <person xml:id="pmb10955">
-               <persName>
-                  <forename>Franz</forename>
-                  <surname>Blei</surname>
-               </persName>
-               <birth>
-                  <date when="1871-01-18">1871-01-18</date>
-                  <settlement ref="pmb50">
-                     <placeName type="pref">Wien</placeName>
-                     <location>
-                        <geo>48,208333 16,373056</geo>
-                     </location>
-                  </settlement>
-               </birth>
-               <death>
-                  <date when="1942-07-10">1942-07-10</date>
-                  <settlement ref="pmb61006">
-                     <placeName type="pref">Westbury</placeName>
-                     <location>
-                        <geo>40,75566 -73,58763</geo>
-                     </location>
-                  </settlement>
-               </death>
-            </person>
-            <person xml:id="pmb11148">
-               <persName>
-                  <forename>Richard</forename>
-                  <surname>Dehmel</surname>
-               </persName>
-               <birth>
-                  <date when="1863-11-18">1863-11-18</date>
-                  <settlement ref="pmb61014">
-                     <placeName type="pref">Hermsdorf</placeName>
-                     <location>
-                        <geo>52,15843 13,79539</geo>
-                     </location>
-                  </settlement>
-               </birth>
-               <death>
-                  <date when="1920-02-08">1920-02-08</date>
-                  <settlement ref="pmb1226">
-                     <placeName type="pref">Blankenese</placeName>
-                     <location>
-                        <geo>53,5652 9,7972</geo>
                      </location>
                   </settlement>
                </death>
@@ -372,6 +366,126 @@
                      <placeName type="pref">Düsseldorf</placeName>
                      <location>
                         <geo>51,22172 6,77616</geo>
+                     </location>
+                  </settlement>
+               </death>
+            </person>
+            <person xml:id="pmb300090">
+               <persName>
+                  <forename>Otto</forename>
+                  <surname>Borngräber</surname>
+               </persName>
+               <birth>
+                  <date when="1874-11-19">1874-11-19</date>
+                  <settlement ref="pmb116600">
+                     <placeName type="pref">Stendal</placeName>
+                     <location>
+                        <geo>52,6069 11,85867</geo>
+                     </location>
+                  </settlement>
+               </birth>
+               <death>
+                  <date when="1916-10-19">1916-10-19</date>
+                  <settlement ref="pmb885">
+                     <placeName type="pref">Lugano</placeName>
+                     <location>
+                        <geo>46,01008 8,96004</geo>
+                     </location>
+                  </settlement>
+               </death>
+            </person>
+            <person xml:id="pmb2121">
+               <persName>
+                  <surname>Schnitzler</surname>
+                  <forename>Arthur</forename>
+               </persName>
+               <birth>
+                  <date when="1862-05-15">15. 5. 1862</date>
+                  <settlement ref="pmb50">
+                     <placeName type="pref">Wien</placeName>
+                     <location>
+                        <geo>48,208333 16,373056</geo>
+                     </location>
+                  </settlement>
+               </birth>
+               <death>
+                  <date when="1931-10-21">21. 10. 1931</date>
+                  <settlement ref="pmb50">
+                     <placeName type="pref">Wien</placeName>
+                     <location>
+                        <geo>48,208333 16,373056</geo>
+                     </location>
+                  </settlement>
+               </death>
+            </person>
+            <person xml:id="pmb10815">
+               <persName>
+                  <forename>Hermann</forename>
+                  <surname>Bahr</surname>
+               </persName>
+               <birth>
+                  <date when="1863-07-19">1863-07-19</date>
+                  <settlement ref="pmb332">
+                     <placeName type="pref">Linz</placeName>
+                     <location>
+                        <geo>48,3 14,28333</geo>
+                     </location>
+                  </settlement>
+               </birth>
+               <death>
+                  <date when="1934-01-15">1934-01-15</date>
+                  <settlement ref="pmb45258">
+                     <placeName type="pref">München</placeName>
+                     <location>
+                        <geo>48,13743 11,57549</geo>
+                     </location>
+                  </settlement>
+               </death>
+            </person>
+            <person xml:id="pmb9730">
+               <persName>
+                  <forename>Wilhelm</forename>
+                  <surname>Schmidtbonn</surname>
+               </persName>
+               <birth>
+                  <date when="1876-02-06">1876-02-06</date>
+                  <settlement ref="pmb913">
+                     <placeName type="pref">Bonn</placeName>
+                     <location>
+                        <geo>50,73438 7,09549</geo>
+                     </location>
+                  </settlement>
+               </birth>
+               <death>
+                  <date when="1952-07-03">1952-07-03</date>
+                  <settlement ref="pmb61093">
+                     <placeName type="pref">Bad Godesberg</placeName>
+                     <location>
+                        <geo>50,68457 7,15393</geo>
+                     </location>
+                  </settlement>
+               </death>
+            </person>
+            <person xml:id="pmb10955">
+               <persName>
+                  <forename>Franz</forename>
+                  <surname>Blei</surname>
+               </persName>
+               <birth>
+                  <date when="1871-01-18">1871-01-18</date>
+                  <settlement ref="pmb50">
+                     <placeName type="pref">Wien</placeName>
+                     <location>
+                        <geo>48,208333 16,373056</geo>
+                     </location>
+                  </settlement>
+               </birth>
+               <death>
+                  <date when="1942-07-10">1942-07-10</date>
+                  <settlement ref="pmb61006">
+                     <placeName type="pref">Westbury</placeName>
+                     <location>
+                        <geo>40,75566 -73,58763</geo>
                      </location>
                   </settlement>
                </death>
@@ -424,6 +538,30 @@
                   </settlement>
                </death>
             </person>
+            <person xml:id="pmb27849">
+               <persName>
+                  <forename>Max</forename>
+                  <surname>Dauthendey</surname>
+               </persName>
+               <birth>
+                  <date when="1867-07-25">1867-07-25</date>
+                  <settlement ref="pmb852">
+                     <placeName type="pref">Würzburg</placeName>
+                     <location>
+                        <geo>49,79391 9,95121</geo>
+                     </location>
+                  </settlement>
+               </birth>
+               <death>
+                  <date when="1918-08-29">1918-08-29</date>
+                  <settlement ref="pmb45789">
+                     <placeName type="pref">Malang</placeName>
+                     <location>
+                        <geo>-7,9797 112,6304</geo>
+                     </location>
+                  </settlement>
+               </death>
+            </person>
             <person xml:id="pmb12170">
                <persName>
                   <forename>Heinrich</forename>
@@ -444,54 +582,6 @@
                      <placeName type="pref">Santa Monica</placeName>
                      <location>
                         <geo>34,01945 -118,49119</geo>
-                     </location>
-                  </settlement>
-               </death>
-            </person>
-            <person xml:id="pmb12176">
-               <persName>
-                  <forename>Thomas</forename>
-                  <surname>Mann</surname>
-               </persName>
-               <birth>
-                  <date when="1875-06-06">1875-06-06</date>
-                  <settlement ref="pmb884">
-                     <placeName type="pref">Lübeck</placeName>
-                     <location>
-                        <geo>53,86893 10,68729</geo>
-                     </location>
-                  </settlement>
-               </birth>
-               <death>
-                  <date when="1955-08-12">1955-08-12</date>
-                  <settlement ref="pmb484">
-                     <placeName type="pref">Zürich</placeName>
-                     <location>
-                        <geo>47,37174 8,54226</geo>
-                     </location>
-                  </settlement>
-               </death>
-            </person>
-            <person xml:id="pmb12848">
-               <persName>
-                  <forename>Carl</forename>
-                  <surname>Sternheim</surname>
-               </persName>
-               <birth>
-                  <date when="1878-04-01">1878-04-01</date>
-                  <settlement ref="pmb864">
-                     <placeName type="pref">Leipzig</placeName>
-                     <location>
-                        <geo>51,33962 12,37129</geo>
-                     </location>
-                  </settlement>
-               </birth>
-               <death>
-                  <date when="1942-11-03">1942-11-03</date>
-                  <settlement ref="pmb862">
-                     <placeName type="pref">Brüssel</placeName>
-                     <location>
-                        <geo>50,85045 4,34878</geo>
                      </location>
                   </settlement>
                </death>
@@ -520,126 +610,50 @@
                   </settlement>
                </death>
             </person>
-            <person xml:id="pmb13068">
+            <person xml:id="pmb11148">
                <persName>
-                  <forename>Frank</forename>
-                  <surname>Wedekind</surname>
+                  <forename>Richard</forename>
+                  <surname>Dehmel</surname>
                </persName>
                <birth>
-                  <date when="1864-07-24">1864-07-24</date>
-                  <settlement ref="pmb890">
-                     <placeName type="pref">Hannover</placeName>
+                  <date when="1863-11-18">1863-11-18</date>
+                  <settlement ref="pmb61014">
+                     <placeName type="pref">Hermsdorf</placeName>
                      <location>
-                        <geo>52,37052 9,73322</geo>
+                        <geo>52,15843 13,79539</geo>
                      </location>
                   </settlement>
                </birth>
                <death>
-                  <date when="1918-03-09">1918-03-09</date>
-                  <settlement ref="pmb45258">
-                     <placeName type="pref">München</placeName>
+                  <date when="1920-02-08">1920-02-08</date>
+                  <settlement ref="pmb1226">
+                     <placeName type="pref">Blankenese</placeName>
                      <location>
-                        <geo>48,13743 11,57549</geo>
+                        <geo>53,5652 9,7972</geo>
                      </location>
                   </settlement>
                </death>
             </person>
-            <person xml:id="pmb2121">
+            <person xml:id="pmb12176">
                <persName>
-                  <surname>Schnitzler</surname>
-                  <forename>Arthur</forename>
+                  <forename>Thomas</forename>
+                  <surname>Mann</surname>
                </persName>
                <birth>
-                  <date when="1862-05-15">15. 5. 1862</date>
-                  <settlement ref="pmb50">
-                     <placeName type="pref">Wien</placeName>
+                  <date when="1875-06-06">1875-06-06</date>
+                  <settlement ref="pmb884">
+                     <placeName type="pref">Lübeck</placeName>
                      <location>
-                        <geo>48,208333 16,373056</geo>
+                        <geo>53,86893 10,68729</geo>
                      </location>
                   </settlement>
                </birth>
                <death>
-                  <date when="1931-10-21">21. 10. 1931</date>
-                  <settlement ref="pmb50">
-                     <placeName type="pref">Wien</placeName>
+                  <date when="1955-08-12">1955-08-12</date>
+                  <settlement ref="pmb484">
+                     <placeName type="pref">Zürich</placeName>
                      <location>
-                        <geo>48,208333 16,373056</geo>
-                     </location>
-                  </settlement>
-               </death>
-               <sex value="male"/>
-               <occupation ref="pmb90">Schriftsteller/Schriftstellerin</occupation>
-               <occupation ref="pmb97">Mediziner/Medizinerin</occupation>
-               <idno type="gnd">https://d-nb.info/gnd/118609807/</idno>
-            </person>
-            <person xml:id="pmb27849">
-               <persName>
-                  <forename>Max</forename>
-                  <surname>Dauthendey</surname>
-               </persName>
-               <birth>
-                  <date when="1867-07-25">1867-07-25</date>
-                  <settlement ref="pmb852">
-                     <placeName type="pref">Würzburg</placeName>
-                     <location>
-                        <geo>49,79391 9,95121</geo>
-                     </location>
-                  </settlement>
-               </birth>
-               <death>
-                  <date when="1918-08-29">1918-08-29</date>
-                  <settlement ref="pmb45789">
-                     <placeName type="pref">Malang</placeName>
-                     <location>
-                        <geo>-7,9797 112,6304</geo>
-                     </location>
-                  </settlement>
-               </death>
-            </person>
-            <person xml:id="pmb300090">
-               <persName>
-                  <forename>Otto</forename>
-                  <surname>Borngräber</surname>
-               </persName>
-               <birth>
-                  <date when="1874-11-19">1874-11-19</date>
-                  <settlement ref="pmb116600">
-                     <placeName type="pref">Stendal</placeName>
-                     <location>
-                        <geo>52,6069 11,85867</geo>
-                     </location>
-                  </settlement>
-               </birth>
-               <death>
-                  <date when="1916-10-19">1916-10-19</date>
-                  <settlement ref="pmb885">
-                     <placeName type="pref">Lugano</placeName>
-                     <location>
-                        <geo>46,01008 8,96004</geo>
-                     </location>
-                  </settlement>
-               </death>
-            </person>
-            <person xml:id="pmb9730">
-               <persName>
-                  <forename>Wilhelm</forename>
-                  <surname>Schmidtbonn</surname>
-               </persName>
-               <birth>
-                  <date when="1876-02-06">1876-02-06</date>
-                  <settlement ref="pmb913">
-                     <placeName type="pref">Bonn</placeName>
-                     <location>
-                        <geo>50,73438 7,09549</geo>
-                     </location>
-                  </settlement>
-               </birth>
-               <death>
-                  <date when="1952-07-03">1952-07-03</date>
-                  <settlement ref="pmb61093">
-                     <placeName type="pref">Bad Godesberg</placeName>
-                     <location>
-                        <geo>50,68457 7,15393</geo>
+                        <geo>47,37174 8,54226</geo>
                      </location>
                   </settlement>
                </death>
@@ -647,26 +661,50 @@
          </listPerson>
          <listBibl>
             <bibl xml:id="pmb300166" ana="implied">
-               <title type="main">Aufruf [Aus der Mitte des Publikums…]</title>
-               <author role="hat-geschaffen" ref="pmb12848">Sternheim, Carl</author>
-               <author role="hat-geschaffen" ref="pmb13068">Wedekind, Frank</author>
-               <author role="hat-geschaffen" ref="pmb300090">Borngräber, Otto</author>
-               <author role="hat-geschaffen" ref="pmb11273">Eulenberg, Herbert</author>
+               <title>Aufruf [Aus der Mitte des Publikums…]</title>
+               <author ref="pmb12848" role="hat-geschaffen">Sternheim, Carl</author>
+               <author ref="pmb13068" role="hat-geschaffen">Wedekind, Frank</author>
+               <author ref="pmb300090" role="hat-geschaffen">Borngräber, Otto</author>
+               <author ref="pmb11273" role="hat-geschaffen">Eulenberg, Herbert</author>
             </bibl>
          </listBibl>
          <listPlace>
-            <place xml:id="pmb300093">
-               <placeName>Höllriegelskreuth</placeName>
+            <place xml:id="pmb60017">
+               <placeName>Pullach im Isartal</placeName>
+               <placeName type="legacy-name-merge">Pullach</placeName>
+               <placeName type="legacy-name-merge">Pullach i.Isartal</placeName>
                <location type="coords">
-                  <geo>48,0431 11,5094</geo>
-               </location>
-               <location type="located_in_place">
-                  <placeName ref="pmb60017">Pullach im Isartal</placeName>
                   <geo>48,06122 11,52148</geo>
                </location>
                <location type="located_in_place">
                   <placeName ref="pmb314">Bayern</placeName>
                   <geo>49,0 11,5</geo>
+               </location>
+               <location type="located_in_place">
+                  <placeName ref="pmb151">Deutschland</placeName>
+                  <geo>51,5 10,5</geo>
+               </location>
+            </place>
+            <place xml:id="pmb50">
+               <placeName>Wien</placeName>
+               <placeName type="ort_fruherer-name">K.K. Reichshaupt- und Residenzstadt Wien</placeName>
+               <placeName type="alternative-name">Bécs</placeName>
+               <placeName type="alternative-name">Land Wien</placeName>
+               <placeName type="alternative-name">Vídeň</placeName>
+               <placeName type="alternative-name">Wenia</placeName>
+               <placeName type="alternative-name">Beč</placeName>
+               <placeName type="ort_fruherer-name">Vindobona</placeName>
+               <placeName type="alternative-name">Vienna</placeName>
+               <location type="coords">
+                  <geo>48,208333 16,373056</geo>
+               </location>
+               <location type="located_in_place">
+                  <placeName ref="pmb41240">Österreich</placeName>
+                  <geo>47,33333 13,33333</geo>
+               </location>
+               <location type="located_in_place">
+                  <placeName ref="pmb235218">Windmühlhöhe</placeName>
+                  <geo>48,24077 16,32092</geo>
                </location>
             </place>
             <place xml:id="pmb300132">
@@ -683,43 +721,18 @@
                   <geo>48,0431 11,5094</geo>
                </location>
             </place>
-            <place xml:id="pmb50">
-               <placeName>Wien</placeName>
-               <placeName type="ort_fruherer-name">K.K. Reichshaupt- und Residenzstadt Wien</placeName>
-               <placeName type="legacy-name-merge">Wien</placeName>
-               <placeName type="alternative-name">Bécs</placeName>
-               <placeName type="alternative-name">Land Wien</placeName>
-               <placeName type="alternative-name">Vídeň</placeName>
-               <placeName type="alternative-name">Wenia</placeName>
-               <placeName type="alternative-name">Beč</placeName>
-               <placeName type="ort_fruherer-name">Vindobona</placeName>
-               <placeName type="legacy-name-merge">Vindobona</placeName>
-               <placeName type="alternative-name">Vienna</placeName>
-               <placeName type="legacy-name-merge">Vienna</placeName>
-               <placeName type="alternative-name">Vienna</placeName>
+            <place xml:id="pmb300093">
+               <placeName>Höllriegelskreuth</placeName>
                <location type="coords">
-                  <geo>48,208333 16,373056</geo>
+                  <geo>48,0431 11,5094</geo>
                </location>
                <location type="located_in_place">
-                  <placeName ref="pmb41240">Österreich</placeName>
-                  <geo>47,33333 13,33333</geo>
-               </location>
-            </place>
-            <place xml:id="pmb60017">
-               <placeName>Pullach im Isartal</placeName>
-               <placeName type="legacy-name-merge">Pullach</placeName>
-               <placeName type="legacy-name-merge">Pullach i.Isartal</placeName>
-               <placeName type="legacy-name-merge">Pullach</placeName>
-               <location type="coords">
+                  <placeName ref="pmb60017">Pullach im Isartal</placeName>
                   <geo>48,06122 11,52148</geo>
                </location>
                <location type="located_in_place">
                   <placeName ref="pmb314">Bayern</placeName>
                   <geo>49,0 11,5</geo>
-               </location>
-               <location type="located_in_place">
-                  <placeName ref="pmb151">Deutschland</placeName>
-                  <geo>51,5 10,5</geo>
                </location>
             </place>
          </listPlace>

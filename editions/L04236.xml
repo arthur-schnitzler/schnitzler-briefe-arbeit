@@ -1,6 +1,10 @@
-<?xml version='1.0' encoding='UTF-8'?>
+<?xml version="1.0" encoding="UTF-8"?>
 <?xml-model href="../meta/schnitzler-briefe-schematron.sch" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
-<TEI xmlns="http://www.tei-c.org/ns/1.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.tei-c.org/ns/1.0 ../meta/schnitzler-briefe-schema.xsd" xml:base="https://id.acdh.oeaw.ac.at/schnitzler/schnitzler-briefe/editions" xml:id="L04236">
+<TEI xmlns="http://www.tei-c.org/ns/1.0"
+     xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+     xsi:schemaLocation="http://www.tei-c.org/ns/1.0 ../meta/schnitzler-briefe-schema.xsd"
+     xml:base="https://id.acdh.oeaw.ac.at/schnitzler/schnitzler-briefe/editions"
+     xml:id="L04236">
    <teiHeader>
       <fileDesc>
          <titleStmt>
@@ -103,12 +107,20 @@
                <persName ref="#pmb9941">Sosnosky, Theodor von</persName>
                <date evidence="conjecture" notBefore="1899-12-31" notAfter="1900-01-04">[31. 12. 1899 – 4. 1. 1900?]</date>
             </correspAction>
-            <correspContext><ref type="belongsToCorrespondence" target="correspondence_9941">Sosnosky, Theodor von</ref>
+            <correspContext>
+               <ref type="belongsToCorrespondence" target="correspondence_9941">Sosnosky, Theodor von</ref>
                <ref subtype="previous_letter" type="withinCollection" target="L03032">Schnitzler an Salten, 30. 12. [1899?]</ref>
                <ref subtype="next_letter" type="withinCollection" target="L03030">Schnitzler an Salten, [31. 12. 1899?]</ref>
-               <ref subtype="previous_letter" type="withinCorrespondence" source="correspondence_9941" target="L04225">Sosnosky an Schnitzler, 27. 12. 1899</ref>
-               <ref subtype="next_letter" type="withinCorrespondence" source="correspondence_9941" target="L04226">Sosnosky an Schnitzler, 29. 1. 1900</ref>
-            </correspContext></correspDesc>
+               <ref subtype="previous_letter"
+                    type="withinCorrespondence"
+                    source="correspondence_9941"
+                    target="L04225">Sosnosky an Schnitzler, 27. 12. 1899</ref>
+               <ref subtype="next_letter"
+                    type="withinCorrespondence"
+                    source="correspondence_9941"
+                    target="L04226">Sosnosky an Schnitzler, 29. 1. 1900</ref>
+            </correspContext>
+         </correspDesc>
       </profileDesc>
       <revisionDesc status="proposed">
          <change who="MAM" when="2026-02-17">Angelegt</change>
@@ -145,7 +157,7 @@
                   <forename>Arthur</forename>
                </persName>
                <birth>
-                  <date when="1862-05-15">15. 5. 1862</date>
+                  <date when="1862-05-15">15. 5. 1862</date>
                   <settlement ref="pmb50">
                      <placeName type="pref">Wien</placeName>
                      <location>
@@ -154,7 +166,7 @@
                   </settlement>
                </birth>
                <death>
-                  <date when="1931-10-21">21. 10. 1931</date>
+                  <date when="1931-10-21">21. 10. 1931</date>
                   <settlement ref="pmb50">
                      <placeName type="pref">Wien</placeName>
                      <location>
@@ -162,10 +174,6 @@
                      </location>
                   </settlement>
                </death>
-               <sex value="male"/>
-               <occupation ref="pmb90">Schriftsteller/Schriftstellerin</occupation>
-               <occupation ref="pmb97">Mediziner/Medizinerin</occupation>
-               <idno type="gnd">https://d-nb.info/gnd/118609807/</idno>
             </person>
             <person xml:id="pmb9941">
                <persName>
@@ -193,36 +201,32 @@
             </person>
          </listPerson>
          <listBibl>
+            <bibl xml:id="pmb33560" ana="implied">
+               <title>Ohnmacht</title>
+               <title type="werk_bibliografische-angabe">Die Gesellschaft, Jg. 9, H. 9, 1. 9. 1893</title>
+               <author ref="pmb2121" role="hat-geschaffen">Schnitzler, Arthur</author>
+            </bibl>
             <bibl xml:id="pmb30181" ana="implied">
-               <title type="main">Anfang vom Ende</title>
+               <title>Anfang vom Ende</title>
                <title type="werk_bibliografische-angabe">Deutsche Dichtung, Bd. 12, Nr. 8, 15. 7. 1892, S. 192</title>
                <title type="werk_link">https://archive.org/details/bub_gb_Pz0VAAAAYAAJ/page/n204/mode/1up</title>
-               <author role="hat-geschaffen" ref="pmb2121">Schnitzler, Arthur</author>
+               <author ref="pmb2121" role="hat-geschaffen">Schnitzler, Arthur</author>
             </bibl>
             <bibl xml:id="pmb334908" ana="implied">
-               <title type="main">Wie wir so still</title>
-               <author role="hat-geschaffen" ref="pmb2121">Schnitzler, Arthur</author>
-            </bibl>
-            <bibl xml:id="pmb33560" ana="implied">
-               <title type="main">Ohnmacht</title>
-               <title type="werk_bibliografische-angabe">Die Gesellschaft, Jg. 9, H. 9, 1. 9. 1893</title>
-               <author role="hat-geschaffen" ref="pmb2121">Schnitzler, Arthur</author>
+               <title>Wie wir so still</title>
+               <author ref="pmb2121" role="hat-geschaffen">Schnitzler, Arthur</author>
             </bibl>
          </listBibl>
          <listPlace>
             <place xml:id="pmb50">
                <placeName>Wien</placeName>
                <placeName type="ort_fruherer-name">K.K. Reichshaupt- und Residenzstadt Wien</placeName>
-               <placeName type="legacy-name-merge">Wien</placeName>
                <placeName type="alternative-name">Bécs</placeName>
                <placeName type="alternative-name">Land Wien</placeName>
                <placeName type="alternative-name">Vídeň</placeName>
                <placeName type="alternative-name">Wenia</placeName>
                <placeName type="alternative-name">Beč</placeName>
                <placeName type="ort_fruherer-name">Vindobona</placeName>
-               <placeName type="legacy-name-merge">Vindobona</placeName>
-               <placeName type="alternative-name">Vienna</placeName>
-               <placeName type="legacy-name-merge">Vienna</placeName>
                <placeName type="alternative-name">Vienna</placeName>
                <location type="coords">
                   <geo>48,208333 16,373056</geo>
@@ -230,6 +234,10 @@
                <location type="located_in_place">
                   <placeName ref="pmb41240">Österreich</placeName>
                   <geo>47,33333 13,33333</geo>
+               </location>
+               <location type="located_in_place">
+                  <placeName ref="pmb235218">Windmühlhöhe</placeName>
+                  <geo>48,24077 16,32092</geo>
                </location>
             </place>
          </listPlace>

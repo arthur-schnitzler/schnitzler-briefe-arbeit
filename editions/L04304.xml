@@ -1,6 +1,10 @@
-<?xml version='1.0' encoding='UTF-8'?>
+<?xml version="1.0" encoding="UTF-8"?>
 <?xml-model href="../meta/schnitzler-briefe-schematron.sch" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
-<TEI xmlns="http://www.tei-c.org/ns/1.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.tei-c.org/ns/1.0 ../meta/schnitzler-briefe-schema.xsd" xml:base="https://id.acdh.oeaw.ac.at/schnitzler/schnitzler-briefe/editions" xml:id="L04304">
+<TEI xmlns="http://www.tei-c.org/ns/1.0"
+     xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+     xsi:schemaLocation="http://www.tei-c.org/ns/1.0 ../meta/schnitzler-briefe-schema.xsd"
+     xml:base="https://id.acdh.oeaw.ac.at/schnitzler/schnitzler-briefe/editions"
+     xml:id="L04304">
    <teiHeader>
       <fileDesc>
          <titleStmt>
@@ -103,7 +107,7 @@
             <correspAction type="sent">
                <persName ref="#pmb12740">Schwarzkopf, Gustav</persName>
                <date when="1900-07-12" n="02">12. 7. 1900</date>
-               <placeName ref="#pmb207296" evidence="conjecture">Wien</placeName>
+               <placeName ref="#pmb207296" evidence="conjecture">Tiefer Graben 23</placeName>
             </correspAction>
             <correspAction type="received">
                <persName ref="#pmb2121">Schnitzler, Arthur</persName>
@@ -111,12 +115,20 @@
                   – 17. 7. 1900?]</date>
                <placeName evidence="conjecture" ref="#pmb483">Reichenau an der Rax</placeName>
             </correspAction>
-            <correspContext><ref type="belongsToCorrespondence" target="correspondence_12740">Schwarzkopf, Gustav</ref>
+            <correspContext>
+               <ref type="belongsToCorrespondence" target="correspondence_12740">Schwarzkopf, Gustav</ref>
                <ref subtype="previous_letter" type="withinCollection" target="L03306">Salten an Schnitzler, 12. 7. 1900</ref>
                <ref subtype="next_letter" type="withinCollection" target="L01053">Beer-Hofmann an Schnitzler, 13. 7. 1900</ref>
-               <ref subtype="previous_letter" type="withinCorrespondence" source="correspondence_12740" target="L04080">Schnitzler an Schwarzkopf, 9. 7. 1900</ref>
-               <ref subtype="next_letter" type="withinCorrespondence" source="correspondence_12740" target="L04081">Schnitzler an Schwarzkopf, 30. 7. 1900</ref>
-            </correspContext></correspDesc>
+               <ref subtype="previous_letter"
+                    type="withinCorrespondence"
+                    source="correspondence_12740"
+                    target="L04080">Schnitzler an Schwarzkopf, 9. 7. 1900</ref>
+               <ref subtype="next_letter"
+                    type="withinCorrespondence"
+                    source="correspondence_12740"
+                    target="L04081">Schnitzler an Schwarzkopf, 30. 7. 1900</ref>
+            </correspContext>
+         </correspDesc>
       </profileDesc>
       <revisionDesc status="proposed">
          <change who="MAM" when="2026-02-20">Export aus Transkribus</change>
@@ -166,6 +178,78 @@
       </body>
       <back>
          <listPerson>
+            <person xml:id="pmb12740">
+               <persName>
+                  <forename>Gustav</forename>
+                  <surname>Schwarzkopf</surname>
+               </persName>
+               <birth>
+                  <date when="1853-11-07">1853-11-07</date>
+                  <settlement ref="pmb50">
+                     <placeName type="pref">Wien</placeName>
+                     <location>
+                        <geo>48,208333 16,373056</geo>
+                     </location>
+                  </settlement>
+               </birth>
+               <death>
+                  <date when="1939-11-13">1939-11-13</date>
+                  <settlement ref="pmb50">
+                     <placeName type="pref">Wien</placeName>
+                     <location>
+                        <geo>48,208333 16,373056</geo>
+                     </location>
+                  </settlement>
+               </death>
+            </person>
+            <person xml:id="pmb2121">
+               <persName>
+                  <surname>Schnitzler</surname>
+                  <forename>Arthur</forename>
+               </persName>
+               <birth>
+                  <date when="1862-05-15">15. 5. 1862</date>
+                  <settlement ref="pmb50">
+                     <placeName type="pref">Wien</placeName>
+                     <location>
+                        <geo>48,208333 16,373056</geo>
+                     </location>
+                  </settlement>
+               </birth>
+               <death>
+                  <date when="1931-10-21">21. 10. 1931</date>
+                  <settlement ref="pmb50">
+                     <placeName type="pref">Wien</placeName>
+                     <location>
+                        <geo>48,208333 16,373056</geo>
+                     </location>
+                  </settlement>
+               </death>
+            </person>
+            <person xml:id="pmb24648">
+               <persName>
+                  <forename>Max</forename>
+                  <surname>Schwarzkopf</surname>
+               </persName>
+               <birth>
+                  <date when="1857-06-12">1857-06-12</date>
+                  <settlement ref="pmb50">
+                     <placeName type="pref">Wien</placeName>
+                     <location>
+                        <geo>48,208333 16,373056</geo>
+                     </location>
+                  </settlement>
+               </birth>
+               <death>
+                  <date when="1928-04-14">1928-04-14</date>
+                  <settlement ref="pmb50">
+                     <placeName type="pref">Wien</placeName>
+                     <location>
+                        <geo>48,208333 16,373056</geo>
+                     </location>
+                  </settlement>
+               </death>
+            </person>
             <person xml:id="pmb11402">
                <persName>
                   <forename>Ludwig</forename>
@@ -190,22 +274,46 @@
                   </settlement>
                </death>
             </person>
-            <person xml:id="pmb11406">
+            <person xml:id="pmb335064">
                <persName>
-                  <forename>Julius von</forename>
-                  <surname>Gans-Ludassy</surname>
+                  <forename>Katharina</forename>
+                  <surname>Ganghofer</surname>
                </persName>
                <birth>
-                  <date when="1858-04-13">1858-04-13</date>
-                  <settlement ref="pmb50">
-                     <placeName type="pref">Wien</placeName>
+                  <date when="1856-07-07">1856-07-07</date>
+                  <settlement ref="pmb151079">
+                     <placeName type="pref">Pest</placeName>
                      <location>
-                        <geo>48,208333 16,373056</geo>
+                        <geo>47,5 19,1</geo>
                      </location>
                   </settlement>
                </birth>
                <death>
-                  <date when="1922-09-30">1922-09-30</date>
+                  <date when="1930-04-08">1930-04-08</date>
+                  <settlement ref="pmb45258">
+                     <placeName type="pref">München</placeName>
+                     <location>
+                        <geo>48,13743 11,57549</geo>
+                     </location>
+                  </settlement>
+               </death>
+            </person>
+            <person xml:id="pmb2157">
+               <persName>
+                  <forename>Leo</forename>
+                  <surname>Ebermann</surname>
+               </persName>
+               <birth>
+                  <date when="1863-07-16">1863-07-16</date>
+                  <settlement ref="pmb53790">
+                     <placeName type="pref">Draganovka</placeName>
+                     <location>
+                        <geo>48,87709 26,37927</geo>
+                     </location>
+                  </settlement>
+               </birth>
+               <death>
+                  <date when="1914-10-09">1914-10-09</date>
                   <settlement ref="pmb50">
                      <placeName type="pref">Wien</placeName>
                      <location>
@@ -262,13 +370,13 @@
                   </settlement>
                </death>
             </person>
-            <person xml:id="pmb12740">
+            <person xml:id="pmb11406">
                <persName>
-                  <forename>Gustav</forename>
-                  <surname>Schwarzkopf</surname>
+                  <forename>Julius von</forename>
+                  <surname>Gans-Ludassy</surname>
                </persName>
                <birth>
-                  <date when="1853-11-07">1853-11-07</date>
+                  <date when="1858-04-13">1858-04-13</date>
                   <settlement ref="pmb50">
                      <placeName type="pref">Wien</placeName>
                      <location>
@@ -277,111 +385,11 @@
                   </settlement>
                </birth>
                <death>
-                  <date when="1939-11-13">1939-11-13</date>
+                  <date when="1922-09-30">1922-09-30</date>
                   <settlement ref="pmb50">
                      <placeName type="pref">Wien</placeName>
                      <location>
                         <geo>48,208333 16,373056</geo>
-                     </location>
-                  </settlement>
-               </death>
-            </person>
-            <person xml:id="pmb2121">
-               <persName>
-                  <surname>Schnitzler</surname>
-                  <forename>Arthur</forename>
-               </persName>
-               <birth>
-                  <date when="1862-05-15">15. 5. 1862</date>
-                  <settlement ref="pmb50">
-                     <placeName type="pref">Wien</placeName>
-                     <location>
-                        <geo>48,208333 16,373056</geo>
-                     </location>
-                  </settlement>
-               </birth>
-               <death>
-                  <date when="1931-10-21">21. 10. 1931</date>
-                  <settlement ref="pmb50">
-                     <placeName type="pref">Wien</placeName>
-                     <location>
-                        <geo>48,208333 16,373056</geo>
-                     </location>
-                  </settlement>
-               </death>
-               <sex value="male"/>
-               <occupation ref="pmb90">Schriftsteller/Schriftstellerin</occupation>
-               <occupation ref="pmb97">Mediziner/Medizinerin</occupation>
-               <idno type="gnd">https://d-nb.info/gnd/118609807/</idno>
-            </person>
-            <person xml:id="pmb2157">
-               <persName>
-                  <forename>Leo</forename>
-                  <surname>Ebermann</surname>
-               </persName>
-               <birth>
-                  <date when="1863-07-16">1863-07-16</date>
-                  <settlement ref="pmb53790">
-                     <placeName type="pref">Draganovka</placeName>
-                     <location>
-                        <geo>48,87709 26,37927</geo>
-                     </location>
-                  </settlement>
-               </birth>
-               <death>
-                  <date when="1914-10-09">1914-10-09</date>
-                  <settlement ref="pmb50">
-                     <placeName type="pref">Wien</placeName>
-                     <location>
-                        <geo>48,208333 16,373056</geo>
-                     </location>
-                  </settlement>
-               </death>
-            </person>
-            <person xml:id="pmb24648">
-               <persName>
-                  <forename>Max</forename>
-                  <surname>Schwarzkopf</surname>
-               </persName>
-               <birth>
-                  <date when="1857-06-12">1857-06-12</date>
-                  <settlement ref="pmb50">
-                     <placeName type="pref">Wien</placeName>
-                     <location>
-                        <geo>48,208333 16,373056</geo>
-                     </location>
-                  </settlement>
-               </birth>
-               <death>
-                  <date when="1928-04-14">1928-04-14</date>
-                  <settlement ref="pmb50">
-                     <placeName type="pref">Wien</placeName>
-                     <location>
-                        <geo>48,208333 16,373056</geo>
-                     </location>
-                  </settlement>
-               </death>
-            </person>
-            <person xml:id="pmb335064">
-               <persName>
-                  <forename>Katharina</forename>
-                  <surname>Ganghofer</surname>
-               </persName>
-               <birth>
-                  <date when="1856-07-07">1856-07-07</date>
-                  <settlement ref="pmb151079">
-                     <placeName type="pref">Pest</placeName>
-                     <location>
-                        <geo>47,5 19,1</geo>
-                     </location>
-                  </settlement>
-               </birth>
-               <death>
-                  <date when="1930-04-08">1930-04-08</date>
-                  <settlement ref="pmb45258">
-                     <placeName type="pref">München</placeName>
-                     <location>
-                        <geo>48,13743 11,57549</geo>
                      </location>
                   </settlement>
                </death>
@@ -410,30 +418,6 @@
                   </settlement>
                </death>
             </person>
-            <person xml:id="pmb24423" ana="implied">
-               <persName>
-                  <forename>Helene</forename>
-                  <surname>Schnitzler</surname>
-               </persName>
-               <birth>
-                  <date when="1871-07-16">1871-07-16</date>
-                  <settlement ref="pmb43471">
-                     <placeName type="pref">Budapest</placeName>
-                     <location>
-                        <geo>47,49835 19,04045</geo>
-                     </location>
-                  </settlement>
-               </birth>
-               <death>
-                  <date when="1941-09-01">September 1941</date>
-                  <settlement ref="pmb12376">
-                     <placeName type="pref">Atlantischer Ozean</placeName>
-                     <location>
-                        <geo>7,0 -31,0</geo>
-                     </location>
-                  </settlement>
-               </death>
-            </person>
             <person xml:id="pmb2461" ana="implied">
                <persName>
                   <forename>Gisela</forename>
@@ -458,23 +442,60 @@
                   </settlement>
                </death>
             </person>
+            <person xml:id="pmb24423" ana="implied">
+               <persName>
+                  <forename>Helene</forename>
+                  <surname>Schnitzler</surname>
+               </persName>
+               <birth>
+                  <date when="1871-07-16">1871-07-16</date>
+                  <settlement ref="pmb43471">
+                     <placeName type="pref">Budapest</placeName>
+                     <location>
+                        <geo>47,49835 19,04045</geo>
+                     </location>
+                  </settlement>
+               </birth>
+               <death>
+                  <date when="1941-09-01">September 1941</date>
+                  <settlement ref="pmb12376">
+                     <placeName type="pref">Atlantischer Ozean</placeName>
+                     <location>
+                        <geo>7,0 -31,0</geo>
+                     </location>
+                  </settlement>
+               </death>
+            </person>
          </listPerson>
          <listBibl>
             <bibl xml:id="pmb31867">
-               <title type="main">Der letzte Knopf. Volksstück in drei Aufzügen</title>
+               <title>Der letzte Knopf. Volksstück in drei Aufzügen</title>
                <title type="legacy-name-merge">Der letzte Knopf</title>
-               <author role="hat-geschaffen" ref="pmb11406">Gans-Ludassy, Julius von</author>
+               <author ref="pmb11406" role="hat-geschaffen">Gans-Ludassy, Julius von</author>
             </bibl>
             <bibl xml:id="pmb30486" ana="implied">
-               <title type="main">Frau Bertha Garlan. Roman</title>
+               <title>Frau Bertha Garlan. Roman</title>
                <title type="werk_bibliografische-angabe">Neue Deutsche Rundschau, Jg. 12, H. 1, Januar, S. 41–64; H. 2, Februar, S. 181–206; H. 3, März, S. 237–272, 1901</title>
-               <author role="hat-geschaffen" ref="pmb2121">Schnitzler, Arthur</author>
+               <author ref="pmb2121" role="hat-geschaffen">Schnitzler, Arthur</author>
             </bibl>
          </listBibl>
          <listPlace>
+            <place xml:id="pmb207296">
+               <placeName>Tiefer Graben 23</placeName>
+               <location type="coords">
+                  <geo>48,213038 16,368738</geo>
+               </location>
+               <location type="located_in_place">
+                  <placeName ref="pmb50825">Tiefer Graben</placeName>
+                  <geo>48,2125 16,368333</geo>
+               </location>
+               <location type="located_in_place">
+                  <placeName ref="pmb51">I., Innere Stadt</placeName>
+                  <geo>48,20769 16,37049</geo>
+               </location>
+            </place>
             <place xml:id="pmb483">
                <placeName>Reichenau an der Rax</placeName>
-               <placeName type="legacy-name-merge">Reichenau an der Rax</placeName>
                <placeName type="legacy-name-merge">Reichenau im Mühlkreis</placeName>
                <location type="coords">
                   <geo>47,7 15,83333</geo>
@@ -487,16 +508,12 @@
             <place xml:id="pmb50">
                <placeName>Wien</placeName>
                <placeName type="ort_fruherer-name">K.K. Reichshaupt- und Residenzstadt Wien</placeName>
-               <placeName type="legacy-name-merge">Wien</placeName>
                <placeName type="alternative-name">Bécs</placeName>
                <placeName type="alternative-name">Land Wien</placeName>
                <placeName type="alternative-name">Vídeň</placeName>
                <placeName type="alternative-name">Wenia</placeName>
                <placeName type="alternative-name">Beč</placeName>
                <placeName type="ort_fruherer-name">Vindobona</placeName>
-               <placeName type="legacy-name-merge">Vindobona</placeName>
-               <placeName type="alternative-name">Vienna</placeName>
-               <placeName type="legacy-name-merge">Vienna</placeName>
                <placeName type="alternative-name">Vienna</placeName>
                <location type="coords">
                   <geo>48,208333 16,373056</geo>
@@ -504,6 +521,10 @@
                <location type="located_in_place">
                   <placeName ref="pmb41240">Österreich</placeName>
                   <geo>47,33333 13,33333</geo>
+               </location>
+               <location type="located_in_place">
+                  <placeName ref="pmb235218">Windmühlhöhe</placeName>
+                  <geo>48,24077 16,32092</geo>
                </location>
             </place>
          </listPlace>

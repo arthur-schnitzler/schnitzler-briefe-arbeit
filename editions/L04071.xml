@@ -1,6 +1,10 @@
-<?xml version='1.0' encoding='UTF-8'?>
+<?xml version="1.0" encoding="UTF-8"?>
 <?xml-model href="../meta/schnitzler-briefe-schematron.sch" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
-<TEI xmlns="http://www.tei-c.org/ns/1.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.tei-c.org/ns/1.0 ../meta/schnitzler-briefe-schema.xsd" xml:base="https://id.acdh.oeaw.ac.at/schnitzler/schnitzler-briefe/editions" xml:id="L04071">
+<TEI xmlns="http://www.tei-c.org/ns/1.0"
+     xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+     xsi:schemaLocation="http://www.tei-c.org/ns/1.0 ../meta/schnitzler-briefe-schema.xsd"
+     xml:base="https://id.acdh.oeaw.ac.at/schnitzler/schnitzler-briefe/editions"
+     xml:id="L04071">
    <teiHeader>
       <fileDesc>
          <titleStmt>
@@ -114,12 +118,20 @@
                <date evidence="external" when="1904-05-11">[11. 5. 1904]</date>
                <placeName ref="#pmb50">Wien</placeName>
             </correspAction>
-            <correspContext><ref type="belongsToCorrespondence" target="correspondence_12740">Schwarzkopf, Gustav</ref>
+            <correspContext>
+               <ref type="belongsToCorrespondence" target="correspondence_12740">Schwarzkopf, Gustav</ref>
                <ref subtype="previous_letter" type="withinCollection" target="L01399">Schnitzler, Schnitzler an Hofmannsthal, 7. 5. 1904</ref>
                <ref subtype="next_letter" type="withinCollection" target="L04313">Schwarzkopf, Schwarzkopf an Schnitzler, 11. 5. 1904</ref>
-               <ref subtype="previous_letter" type="withinCorrespondence" source="correspondence_12740" target="L04315">Schwarzkopf, Schwarzkopf an Schnitzler, 6. 5. 1904</ref>
-               <ref subtype="next_letter" type="withinCorrespondence" source="correspondence_12740" target="L04313">Schwarzkopf, Schwarzkopf an Schnitzler, 11. 5. 1904</ref>
-            </correspContext></correspDesc>
+               <ref subtype="previous_letter"
+                    type="withinCorrespondence"
+                    source="correspondence_12740"
+                    target="L04315">Schwarzkopf, Schwarzkopf an Schnitzler, 6. 5. 1904</ref>
+               <ref subtype="next_letter"
+                    type="withinCorrespondence"
+                    source="correspondence_12740"
+                    target="L04313">Schwarzkopf, Schwarzkopf an Schnitzler, 11. 5. 1904</ref>
+            </correspContext>
+         </correspDesc>
       </profileDesc>
       <revisionDesc status="proposed">
          <change who="MAM" when="2025-12-10">Export aus Transkribus</change>
@@ -194,61 +206,13 @@
       </body>
       <back>
          <listPerson>
-            <person xml:id="pmb12341">
-               <persName>
-                  <forename>Angelo</forename>
-                  <surname>Neumann</surname>
-               </persName>
-               <birth>
-                  <date when="1838-08-18">1838-08-18</date>
-                  <settlement ref="pmb44578">
-                     <placeName type="pref">Stupava</placeName>
-                     <location>
-                        <geo>48,27474 17,03173</geo>
-                     </location>
-                  </settlement>
-               </birth>
-               <death>
-                  <date when="1910-12-20">1910-12-20</date>
-                  <settlement ref="pmb652">
-                     <placeName type="pref">Prag</placeName>
-                     <location>
-                        <geo>50,08333 14,46667</geo>
-                     </location>
-                  </settlement>
-               </death>
-            </person>
-            <person xml:id="pmb12740">
-               <persName>
-                  <forename>Gustav</forename>
-                  <surname>Schwarzkopf</surname>
-               </persName>
-               <birth>
-                  <date when="1853-11-07">1853-11-07</date>
-                  <settlement ref="pmb50">
-                     <placeName type="pref">Wien</placeName>
-                     <location>
-                        <geo>48,208333 16,373056</geo>
-                     </location>
-                  </settlement>
-               </birth>
-               <death>
-                  <date when="1939-11-13">1939-11-13</date>
-                  <settlement ref="pmb50">
-                     <placeName type="pref">Wien</placeName>
-                     <location>
-                        <geo>48,208333 16,373056</geo>
-                     </location>
-                  </settlement>
-               </death>
-            </person>
             <person xml:id="pmb2121">
                <persName>
                   <surname>Schnitzler</surname>
                   <forename>Arthur</forename>
                </persName>
                <birth>
-                  <date when="1862-05-15">15. 5. 1862</date>
+                  <date when="1862-05-15">15. 5. 1862</date>
                   <settlement ref="pmb50">
                      <placeName type="pref">Wien</placeName>
                      <location>
@@ -257,7 +221,7 @@
                   </settlement>
                </birth>
                <death>
-                  <date when="1931-10-21">21. 10. 1931</date>
+                  <date when="1931-10-21">21. 10. 1931</date>
                   <settlement ref="pmb50">
                      <placeName type="pref">Wien</placeName>
                      <location>
@@ -265,10 +229,6 @@
                      </location>
                   </settlement>
                </death>
-               <sex value="male"/>
-               <occupation ref="pmb90">Schriftsteller/Schriftstellerin</occupation>
-               <occupation ref="pmb97">Mediziner/Medizinerin</occupation>
-               <idno type="gnd">https://d-nb.info/gnd/118609807/</idno>
             </person>
             <person xml:id="pmb2173">
                <persName>
@@ -294,13 +254,13 @@
                   </settlement>
                </death>
             </person>
-            <person xml:id="pmb24648">
+            <person xml:id="pmb12740">
                <persName>
-                  <forename>Max</forename>
+                  <forename>Gustav</forename>
                   <surname>Schwarzkopf</surname>
                </persName>
                <birth>
-                  <date when="1857-06-12">1857-06-12</date>
+                  <date when="1853-11-07">1853-11-07</date>
                   <settlement ref="pmb50">
                      <placeName type="pref">Wien</placeName>
                      <location>
@@ -309,7 +269,7 @@
                   </settlement>
                </birth>
                <death>
-                  <date when="1928-04-14">1928-04-14</date>
+                  <date when="1939-11-13">1939-11-13</date>
                   <settlement ref="pmb50">
                      <placeName type="pref">Wien</placeName>
                      <location>
@@ -342,19 +302,100 @@
                   </settlement>
                </death>
             </person>
+            <person xml:id="pmb12341">
+               <persName>
+                  <forename>Angelo</forename>
+                  <surname>Neumann</surname>
+               </persName>
+               <birth>
+                  <date when="1838-08-18">1838-08-18</date>
+                  <settlement ref="pmb44578">
+                     <placeName type="pref">Stupava</placeName>
+                     <location>
+                        <geo>48,27474 17,03173</geo>
+                     </location>
+                  </settlement>
+               </birth>
+               <death>
+                  <date when="1910-12-20">1910-12-20</date>
+                  <settlement ref="pmb652">
+                     <placeName type="pref">Prag</placeName>
+                     <location>
+                        <geo>50,08333 14,46667</geo>
+                     </location>
+                  </settlement>
+               </death>
+            </person>
+            <person xml:id="pmb24648">
+               <persName>
+                  <forename>Max</forename>
+                  <surname>Schwarzkopf</surname>
+               </persName>
+               <birth>
+                  <date when="1857-06-12">1857-06-12</date>
+                  <settlement ref="pmb50">
+                     <placeName type="pref">Wien</placeName>
+                     <location>
+                        <geo>48,208333 16,373056</geo>
+                     </location>
+                  </settlement>
+               </birth>
+               <death>
+                  <date when="1928-04-14">1928-04-14</date>
+                  <settlement ref="pmb50">
+                     <placeName type="pref">Wien</placeName>
+                     <location>
+                        <geo>48,208333 16,373056</geo>
+                     </location>
+                  </settlement>
+               </death>
+            </person>
          </listPerson>
          <listBibl>
-            <bibl xml:id="pmb300273" ana="comment">
-               <title type="main">Der reine Tor. Gesellschaftsstück in vier Akten</title>
+            <bibl xml:id="pmb300273" ana="implied">
+               <title>Der reine Tor. Gesellschaftsstück in vier Akten</title>
                <title type="werk_unter-diesem-namen-oder-kurzel-veroffentlicht">Franz Bergleitner</title>
-               <author role="hat-unter-pseudonym-geschrieben" ref="pmb24648">Schwarzkopf, Max</author>
+               <author ref="pmb24648" role="hat-unter-pseudonym-geschrieben">Schwarzkopf, Max</author>
             </bibl>
             <bibl xml:id="pmb41507" ana="comment">
-               <title type="main">Prager Tagblatt</title>
+               <title>Prager Tagblatt</title>
                <title type="werk_link">https://anno.onb.ac.at/cgi-content/anno?aid=ptb</title>
             </bibl>
          </listBibl>
          <listPlace>
+            <place xml:id="pmb595">
+               <placeName>Neapel</placeName>
+               <placeName type="alternative-name">Naples</placeName>
+               <location type="coords">
+                  <geo>40,85216 14,26811</geo>
+               </location>
+               <location type="located_in_place">
+                  <placeName ref="pmb40306">Italien</placeName>
+                  <geo>42,83333 12,83333</geo>
+               </location>
+            </place>
+            <place xml:id="pmb50">
+               <placeName>Wien</placeName>
+               <placeName type="ort_fruherer-name">K.K. Reichshaupt- und Residenzstadt Wien</placeName>
+               <placeName type="alternative-name">Bécs</placeName>
+               <placeName type="alternative-name">Land Wien</placeName>
+               <placeName type="alternative-name">Vídeň</placeName>
+               <placeName type="alternative-name">Wenia</placeName>
+               <placeName type="alternative-name">Beč</placeName>
+               <placeName type="ort_fruherer-name">Vindobona</placeName>
+               <placeName type="alternative-name">Vienna</placeName>
+               <location type="coords">
+                  <geo>48,208333 16,373056</geo>
+               </location>
+               <location type="located_in_place">
+                  <placeName ref="pmb41240">Österreich</placeName>
+                  <geo>47,33333 13,33333</geo>
+               </location>
+               <location type="located_in_place">
+                  <placeName ref="pmb235218">Windmühlhöhe</placeName>
+                  <geo>48,24077 16,32092</geo>
+               </location>
+            </place>
             <place xml:id="pmb168940">
                <placeName>Edmund-Weiß-Gasse 7</placeName>
                <placeName type="ort_fruherer-name">Spöttelgasse 7</placeName>
@@ -374,11 +415,10 @@
                   <geo>48,23056 16,3348</geo>
                </location>
             </place>
-            <place xml:id="pmb445">
+            <place xml:id="pmb445" ana="comment">
                <placeName>Rom</placeName>
                <placeName type="legacy-name-merge">bei Rom</placeName>
                <placeName type="legacy-name-merge">Roma</placeName>
-               <placeName type="legacy-name-merge">Rom</placeName>
                <location type="coords">
                   <geo>41,89193 12,51133</geo>
                </location>
@@ -387,45 +427,8 @@
                   <geo>42,83333 12,83333</geo>
                </location>
             </place>
-            <place xml:id="pmb50">
-               <placeName>Wien</placeName>
-               <placeName type="ort_fruherer-name">K.K. Reichshaupt- und Residenzstadt Wien</placeName>
-               <placeName type="legacy-name-merge">Wien</placeName>
-               <placeName type="alternative-name">Bécs</placeName>
-               <placeName type="alternative-name">Land Wien</placeName>
-               <placeName type="alternative-name">Vídeň</placeName>
-               <placeName type="alternative-name">Wenia</placeName>
-               <placeName type="alternative-name">Beč</placeName>
-               <placeName type="ort_fruherer-name">Vindobona</placeName>
-               <placeName type="legacy-name-merge">Vindobona</placeName>
-               <placeName type="alternative-name">Vienna</placeName>
-               <placeName type="legacy-name-merge">Vienna</placeName>
-               <placeName type="alternative-name">Vienna</placeName>
-               <location type="coords">
-                  <geo>48,208333 16,373056</geo>
-               </location>
-               <location type="located_in_place">
-                  <placeName ref="pmb41240">Österreich</placeName>
-                  <geo>47,33333 13,33333</geo>
-               </location>
-            </place>
-            <place xml:id="pmb595">
-               <placeName>Neapel</placeName>
-               <placeName type="alternative-name">Naples</placeName>
-               <placeName type="alternative-name">Neapel</placeName>
-               <placeName type="legacy-name-merge">Naples</placeName>
-               <placeName type="legacy-name-merge">Neapel</placeName>
-               <location type="coords">
-                  <geo>40,85216 14,26811</geo>
-               </location>
-               <location type="located_in_place">
-                  <placeName ref="pmb40306">Italien</placeName>
-                  <geo>42,83333 12,83333</geo>
-               </location>
-            </place>
             <place xml:id="pmb901">
                <placeName>Palermo</placeName>
-               <placeName type="legacy-name-merge">Palermo</placeName>
                <location type="coords">
                   <geo>38,13205 13,33561</geo>
                </location>
@@ -468,7 +471,7 @@
                   <idno type="URL" subtype="pmb">https://pmb.acdh.oeaw.ac.at/entity/43722/</idno>
                   <idno type="URL" subtype="pmb">https://pmb.acdh.oeaw.ac.at/entity/64237/</idno>
                   <idno type="URL" subtype="geonames">https://sws.geonames.org/3067695/</idno>
-                  <idno type="URL" subtype="kraus">https://www.kraus.wienbibliothek.at/legalkraus/pmb652.html</idno>
+                  <idno type="URL" subtype="www">https://www.kraus.wienbibliothek.at/legalkraus/pmb652.html</idno>
                   <idno type="URL" subtype="pmb">https://pmb.acdh.oeaw.ac.at/entity/91524/</idno>
                   <idno type="URL" subtype="geonames">https://sws.geonames.org/3067696/</idno>
                   <idno type="URL" subtype="wikidata">http://www.wikidata.org/entity/Q1085</idno>
@@ -480,7 +483,7 @@
                   <idno type="URL" subtype="sk">https://sk.acdh.oeaw.ac.at/DWplace00194</idno>
                   <idno type="URL" subtype="biblio">https://biblio.ub.uni-freiburg.de/sf/#pmb652</idno>
                   <idno type="URL" subtype="schnitzler-briefe">https://schnitzler-briefe.acdh.oeaw.ac.at/pmb652.html</idno>
-                  <idno type="URL" subtype="schoenberg-ue">https://www.schoenberg-ue.at/ue/places/place.13.1</idno>
+                  <idno type="URL" subtype="www">https://www.schoenberg-ue.at/ue/places/place.13.1</idno>
                </location>
             </org>
          </listOrg>

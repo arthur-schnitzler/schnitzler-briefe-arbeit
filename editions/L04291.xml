@@ -1,6 +1,10 @@
-<?xml version='1.0' encoding='UTF-8'?>
+<?xml version="1.0" encoding="UTF-8"?>
 <?xml-model href="../meta/schnitzler-briefe-schematron.sch" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
-<TEI xmlns="http://www.tei-c.org/ns/1.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.tei-c.org/ns/1.0 ../meta/schnitzler-briefe-schema.xsd" xml:base="https://id.acdh.oeaw.ac.at/schnitzler/schnitzler-briefe/editions" xml:id="L04291">
+<TEI xmlns="http://www.tei-c.org/ns/1.0"
+     xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+     xsi:schemaLocation="http://www.tei-c.org/ns/1.0 ../meta/schnitzler-briefe-schema.xsd"
+     xml:base="https://id.acdh.oeaw.ac.at/schnitzler/schnitzler-briefe/editions"
+     xml:id="L04291">
    <teiHeader>
       <fileDesc>
          <titleStmt>
@@ -83,7 +87,7 @@
                               <extent>
                                  <measure unit="seite" quantity="4"/>
                                  <measure unit="blatt" quantity="1"/>
-                                 <measure unit="zeichenanzahl" quantity="1540"/>
+                                 <measure unit="zeichenanzahl" quantity="1542"/>
                               </extent>
                            </supportDesc>
                         </objectDesc>
@@ -104,19 +108,27 @@
             <correspAction type="sent">
                <persName ref="#pmb12740">Schwarzkopf, Gustav</persName>
                <date when="1899-10-03" n="04">3. 10. 1899</date>
-               <placeName ref="#pmb207296">Wien</placeName>
+               <placeName ref="#pmb207296">Tiefer Graben 23</placeName>
             </correspAction>
             <correspAction type="received">
                <persName ref="#pmb2121">Schnitzler, Arthur</persName>
                <date evidence="conjecture" notBefore="1899-10-04" notAfter="1899-10-08">[4. 10. 1899 – 8. 10. 1899?]</date>
                <placeName ref="#pmb168" evidence="conjecture">Berlin</placeName>
             </correspAction>
-            <correspContext><ref type="belongsToCorrespondence" target="correspondence_12740">Schwarzkopf, Gustav</ref>
+            <correspContext>
+               <ref type="belongsToCorrespondence" target="correspondence_12740">Schwarzkopf, Gustav</ref>
                <ref subtype="previous_letter" type="withinCollection" target="L03300">Salten an Schnitzler, 3. 10. 189[9?]</ref>
                <ref subtype="next_letter" type="withinCollection" target="L00989">Schnitzler an Beer-Hofmann, 8. 10. 1899</ref>
-               <ref subtype="previous_letter" type="withinCorrespondence" source="correspondence_12740" target="L04093">Schnitzler an Schwarzkopf, 29. 9. 1899</ref>
-               <ref subtype="next_letter" type="withinCorrespondence" source="correspondence_12740" target="L04082">Schnitzler an Schwarzkopf, 8. 10. 1899</ref>
-            </correspContext></correspDesc>
+               <ref subtype="previous_letter"
+                    type="withinCorrespondence"
+                    source="correspondence_12740"
+                    target="L04093">Schnitzler an Schwarzkopf, 29. 9. 1899</ref>
+               <ref subtype="next_letter"
+                    type="withinCorrespondence"
+                    source="correspondence_12740"
+                    target="L04082">Schnitzler an Schwarzkopf, 8. 10. 1899</ref>
+            </correspContext>
+         </correspDesc>
       </profileDesc>
       <revisionDesc status="proposed">
          <change who="MAM" when="2026-02-20">Export aus Transkribus</change>
@@ -180,30 +192,6 @@
       </body>
       <back>
          <listPerson>
-            <person xml:id="pmb11988">
-               <persName>
-                  <forename>Karl</forename>
-                  <surname>Kraus</surname>
-               </persName>
-               <birth>
-                  <date when="1874-04-28">1874-04-28</date>
-                  <settlement ref="pmb41660">
-                     <placeName type="pref">Jičín</placeName>
-                     <location>
-                        <geo>50,43723 15,35162</geo>
-                     </location>
-                  </settlement>
-               </birth>
-               <death>
-                  <date when="1936-06-12">1936-06-12</date>
-                  <settlement ref="pmb50">
-                     <placeName type="pref">Wien</placeName>
-                     <location>
-                        <geo>48,208333 16,373056</geo>
-                     </location>
-                  </settlement>
-               </death>
-            </person>
             <person xml:id="pmb12740">
                <persName>
                   <forename>Gustav</forename>
@@ -224,6 +212,54 @@
                      <placeName type="pref">Wien</placeName>
                      <location>
                         <geo>48,208333 16,373056</geo>
+                     </location>
+                  </settlement>
+               </death>
+            </person>
+            <person xml:id="pmb2121">
+               <persName>
+                  <surname>Schnitzler</surname>
+                  <forename>Arthur</forename>
+               </persName>
+               <birth>
+                  <date when="1862-05-15">15. 5. 1862</date>
+                  <settlement ref="pmb50">
+                     <placeName type="pref">Wien</placeName>
+                     <location>
+                        <geo>48,208333 16,373056</geo>
+                     </location>
+                  </settlement>
+               </birth>
+               <death>
+                  <date when="1931-10-21">21. 10. 1931</date>
+                  <settlement ref="pmb50">
+                     <placeName type="pref">Wien</placeName>
+                     <location>
+                        <geo>48,208333 16,373056</geo>
+                     </location>
+                  </settlement>
+               </death>
+            </person>
+            <person xml:id="pmb2167">
+               <persName>
+                  <forename>Felix</forename>
+                  <surname>Salten</surname>
+               </persName>
+               <birth>
+                  <date when="1869-09-06">1869-09-06</date>
+                  <settlement ref="pmb43471">
+                     <placeName type="pref">Budapest</placeName>
+                     <location>
+                        <geo>47,49835 19,04045</geo>
+                     </location>
+                  </settlement>
+               </birth>
+               <death>
+                  <date when="1945-10-08">1945-10-08</date>
+                  <settlement ref="pmb484">
+                     <placeName type="pref">Zürich</placeName>
+                     <location>
+                        <geo>47,37174 8,54226</geo>
                      </location>
                   </settlement>
                </death>
@@ -252,22 +288,52 @@
                   </settlement>
                </death>
             </person>
-            <person xml:id="pmb14948">
+            <person xml:id="pmb4216">
                <persName>
-                  <forename>Auguste</forename>
-                  <surname>Glümer</surname>
+                  <forename>Alfred</forename>
+                  <surname>Dreyfus</surname>
                </persName>
                <birth>
-                  <date when="1862-03-16">1862-03-16</date>
+                  <date when="1859-10-09">1859-10-09</date>
+                  <settlement ref="pmb58763">
+                     <placeName type="pref">Mulhouse</placeName>
+                     <location>
+                        <geo>47,75205 7,32866</geo>
+                     </location>
+                  </settlement>
+               </birth>
+               <death>
+                  <date when="1935-07-12">1935-07-12</date>
+                  <settlement ref="pmb182">
+                     <placeName type="pref">Paris</placeName>
+                     <location>
+                        <geo>48,85341 2,3488</geo>
+                     </location>
+                  </settlement>
+               </death>
+            </person>
+            <person xml:id="pmb11988">
+               <persName>
+                  <forename>Karl</forename>
+                  <surname>Kraus</surname>
+               </persName>
+               <birth>
+                  <date when="1874-04-28">1874-04-28</date>
+                  <settlement ref="pmb41660">
+                     <placeName type="pref">Jičín</placeName>
+                     <location>
+                        <geo>50,43723 15,35162</geo>
+                     </location>
+                  </settlement>
+               </birth>
+               <death>
+                  <date when="1936-06-12">1936-06-12</date>
                   <settlement ref="pmb50">
                      <placeName type="pref">Wien</placeName>
                      <location>
                         <geo>48,208333 16,373056</geo>
                      </location>
                   </settlement>
-               </birth>
-               <death>
-                  <date when="1956-01-01" notAfter="1956-12-31">1956</date>
                </death>
             </person>
             <person xml:id="pmb14953">
@@ -294,13 +360,13 @@
                   </settlement>
                </death>
             </person>
-            <person xml:id="pmb2121">
+            <person xml:id="pmb14948">
                <persName>
-                  <surname>Schnitzler</surname>
-                  <forename>Arthur</forename>
+                  <forename>Auguste</forename>
+                  <surname>Glümer</surname>
                </persName>
                <birth>
-                  <date when="1862-05-15">15. 5. 1862</date>
+                  <date when="1862-03-16">1862-03-16</date>
                   <settlement ref="pmb50">
                      <placeName type="pref">Wien</placeName>
                      <location>
@@ -309,65 +375,7 @@
                   </settlement>
                </birth>
                <death>
-                  <date when="1931-10-21">21. 10. 1931</date>
-                  <settlement ref="pmb50">
-                     <placeName type="pref">Wien</placeName>
-                     <location>
-                        <geo>48,208333 16,373056</geo>
-                     </location>
-                  </settlement>
-               </death>
-               <sex value="male"/>
-               <occupation ref="pmb90">Schriftsteller/Schriftstellerin</occupation>
-               <occupation ref="pmb97">Mediziner/Medizinerin</occupation>
-               <idno type="gnd">https://d-nb.info/gnd/118609807/</idno>
-            </person>
-            <person xml:id="pmb2167">
-               <persName>
-                  <forename>Felix</forename>
-                  <surname>Salten</surname>
-               </persName>
-               <birth>
-                  <date when="1869-09-06">1869-09-06</date>
-                  <settlement ref="pmb43471">
-                     <placeName type="pref">Budapest</placeName>
-                     <location>
-                        <geo>47,49835 19,04045</geo>
-                     </location>
-                  </settlement>
-               </birth>
-               <death>
-                  <date when="1945-10-08">1945-10-08</date>
-                  <settlement ref="pmb484">
-                     <placeName type="pref">Zürich</placeName>
-                     <location>
-                        <geo>47,37174 8,54226</geo>
-                     </location>
-                  </settlement>
-               </death>
-            </person>
-            <person xml:id="pmb4216">
-               <persName>
-                  <forename>Alfred</forename>
-                  <surname>Dreyfus</surname>
-               </persName>
-               <birth>
-                  <date when="1859-10-09">1859-10-09</date>
-                  <settlement ref="pmb58763">
-                     <placeName type="pref">Mulhouse</placeName>
-                     <location>
-                        <geo>47,75205 7,32866</geo>
-                     </location>
-                  </settlement>
-               </birth>
-               <death>
-                  <date when="1935-07-12">1935-07-12</date>
-                  <settlement ref="pmb182">
-                     <placeName type="pref">Paris</placeName>
-                     <location>
-                        <geo>48,85341 2,3488</geo>
-                     </location>
-                  </settlement>
+                  <date when="1956-01-01" notAfter="1956-12-31">1956</date>
                </death>
             </person>
             <person xml:id="pmb12671" ana="implied">
@@ -409,44 +417,132 @@
                   </settlement>
                </birth>
             </person>
+            <person xml:id="pmb12438">
+               <persName>
+                  <forename>Robert</forename>
+                  <surname>Adam</surname>
+               </persName>
+               <birth>
+                  <date when="1877-04-20">1877-04-20</date>
+                  <settlement ref="pmb50">
+                     <placeName type="pref">Wien</placeName>
+                     <location>
+                        <geo>48,208333 16,373056</geo>
+                     </location>
+                  </settlement>
+               </birth>
+               <death>
+                  <date when="1961-10-16">1961-10-16</date>
+                  <settlement ref="pmb662">
+                     <placeName type="pref">Baden bei Wien</placeName>
+                     <location>
+                        <geo>48,00543 16,23264</geo>
+                     </location>
+                  </settlement>
+               </death>
+            </person>
+            <person xml:id="pmb10364">
+               <persName>
+                  <forename>Berthold</forename>
+                  <surname>Viertel</surname>
+               </persName>
+               <birth>
+                  <date when="1885-06-28">1885-06-28</date>
+                  <settlement ref="pmb50">
+                     <placeName type="pref">Wien</placeName>
+                     <location>
+                        <geo>48,208333 16,373056</geo>
+                     </location>
+                  </settlement>
+               </birth>
+               <death>
+                  <date when="1953-09-24">1953-09-24</date>
+                  <settlement ref="pmb50">
+                     <placeName type="pref">Wien</placeName>
+                     <location>
+                        <geo>48,208333 16,373056</geo>
+                     </location>
+                  </settlement>
+               </death>
+            </person>
+            <person xml:id="pmb11230">
+               <persName>
+                  <forename>Albert</forename>
+                  <surname>Ehrenstein</surname>
+               </persName>
+               <birth>
+                  <date when="1886-12-23">1886-12-23</date>
+                  <settlement ref="pmb50">
+                     <placeName type="pref">Wien</placeName>
+                     <location>
+                        <geo>48,208333 16,373056</geo>
+                     </location>
+                  </settlement>
+               </birth>
+               <death>
+                  <date when="1950-04-08">1950-04-08</date>
+                  <settlement ref="pmb44053">
+                     <placeName type="pref">New York City</placeName>
+                     <location>
+                        <geo>40,71427 -74,00597</geo>
+                     </location>
+                  </settlement>
+               </death>
+            </person>
+            <person xml:id="pmb10574">
+               <persName>
+                  <forename>Fritz</forename>
+                  <surname>Wittels</surname>
+               </persName>
+               <birth>
+                  <date when="1880-11-14">1880-11-14</date>
+                  <settlement ref="pmb50">
+                     <placeName type="pref">Wien</placeName>
+                     <location>
+                        <geo>48,208333 16,373056</geo>
+                     </location>
+                  </settlement>
+               </birth>
+               <death>
+                  <date when="1950-10-16">1950-10-16</date>
+                  <settlement ref="pmb44053">
+                     <placeName type="pref">New York City</placeName>
+                     <location>
+                        <geo>40,71427 -74,00597</geo>
+                     </location>
+                  </settlement>
+               </death>
+            </person>
          </listPerson>
          <listBibl>
             <bibl xml:id="pmb41244">
-               <title type="main">Die Fackel</title>
+               <title>Die Fackel</title>
                <title type="werk_link">https://fackel.oeaw.ac.at</title>
-               <author role="hat-herausgegeben" ref="pmb11988">Kraus, Karl</author>
-               <author role="hat-einen-beitrag-geschaffen-zu" ref="pmb12438">Adam, Robert</author>
-               <author role="hat-einen-beitrag-geschaffen-zu" ref="pmb10364">Viertel, Berthold</author>
-               <author role="hat-einen-beitrag-geschaffen-zu" ref="pmb11230">Ehrenstein, Albert</author>
-               <author role="hat-einen-beitrag-geschaffen-zu" ref="pmb10574">Wittels, Fritz</author>
+               <author ref="pmb11988" role="hat-herausgegeben">Kraus, Karl</author>
+               <author ref="pmb12438" role="hat-einen-beitrag-geschaffen-zu">Adam, Robert</author>
+               <author ref="pmb10364" role="hat-einen-beitrag-geschaffen-zu">Viertel, Berthold</author>
+               <author ref="pmb11230" role="hat-einen-beitrag-geschaffen-zu">Ehrenstein, Albert</author>
+               <author ref="pmb10574" role="hat-einen-beitrag-geschaffen-zu">Wittels, Fritz</author>
             </bibl>
             <bibl xml:id="pmb32562" ana="implied">
-               <title type="main">Der grüne Kakadu – Paracelsus – Die Gefährtin. Drei Einakter</title>
+               <title>Der grüne Kakadu – Paracelsus – Die Gefährtin. Drei Einakter</title>
                <title type="werk_link">https://www.digital.wienbibliothek.at/wbrobv/content/titleinfo/1488075</title>
-               <author role="hat-geschaffen" ref="pmb2121">Schnitzler, Arthur</author>
+               <author ref="pmb2121" role="hat-geschaffen">Schnitzler, Arthur</author>
             </bibl>
          </listBibl>
          <listPlace>
-            <place xml:id="pmb100693">
-               <placeName>Polná</placeName>
+            <place xml:id="pmb207296">
+               <placeName>Tiefer Graben 23</placeName>
                <location type="coords">
-                  <geo>49,488611 15,716111</geo>
+                  <geo>48,213038 16,368738</geo>
                </location>
                <location type="located_in_place">
-                  <placeName ref="pmb43430">Tschechien</placeName>
-                  <geo>49,75 15,0</geo>
-               </location>
-            </place>
-            <place xml:id="pmb146">
-               <placeName>Frankfurt am Main</placeName>
-               <placeName type="ort_namensvariante">Frankfurt a. Main</placeName>
-               <placeName type="ort_namensvariante">Frankfurt/Main</placeName>
-               <location type="coords">
-                  <geo>50,11552 8,68417</geo>
+                  <placeName ref="pmb50825">Tiefer Graben</placeName>
+                  <geo>48,2125 16,368333</geo>
                </location>
                <location type="located_in_place">
-                  <placeName ref="pmb151">Deutschland</placeName>
-                  <geo>51,5 10,5</geo>
+                  <placeName ref="pmb51">I., Innere Stadt</placeName>
+                  <geo>48,20769 16,37049</geo>
                </location>
             </place>
             <place xml:id="pmb168">
@@ -464,21 +560,6 @@
                   <geo>51,5 10,5</geo>
                </location>
             </place>
-            <place xml:id="pmb39599">
-               <placeName>Graben</placeName>
-               <placeName type="legacy-name-merge">Graben</placeName>
-               <location type="coords">
-                  <geo>48,208613 16,369913</geo>
-               </location>
-               <location type="located_in_place">
-                  <placeName ref="pmb336">Frick am Graben</placeName>
-                  <geo>48,208806 16,36975</geo>
-               </location>
-               <location type="located_in_place">
-                  <placeName ref="pmb51">I., Innere Stadt</placeName>
-                  <geo>48,20769 16,37049</geo>
-               </location>
-            </place>
             <place xml:id="pmb44413">
                <placeName>Brühl</placeName>
                <location type="coords">
@@ -489,34 +570,9 @@
                   <geo>48,33333 15,75</geo>
                </location>
             </place>
-            <place xml:id="pmb50">
-               <placeName>Wien</placeName>
-               <placeName type="ort_fruherer-name">K.K. Reichshaupt- und Residenzstadt Wien</placeName>
-               <placeName type="legacy-name-merge">Wien</placeName>
-               <placeName type="alternative-name">Bécs</placeName>
-               <placeName type="alternative-name">Land Wien</placeName>
-               <placeName type="alternative-name">Vídeň</placeName>
-               <placeName type="alternative-name">Wenia</placeName>
-               <placeName type="alternative-name">Beč</placeName>
-               <placeName type="ort_fruherer-name">Vindobona</placeName>
-               <placeName type="legacy-name-merge">Vindobona</placeName>
-               <placeName type="alternative-name">Vienna</placeName>
-               <placeName type="legacy-name-merge">Vienna</placeName>
-               <placeName type="alternative-name">Vienna</placeName>
-               <location type="coords">
-                  <geo>48,208333 16,373056</geo>
-               </location>
-               <location type="located_in_place">
-                  <placeName ref="pmb41240">Österreich</placeName>
-                  <geo>47,33333 13,33333</geo>
-               </location>
-            </place>
             <place xml:id="pmb662">
                <placeName>Baden bei Wien</placeName>
                <placeName type="alternative-name">Baden</placeName>
-               <placeName type="legacy-name-merge">Baden</placeName>
-               <placeName type="legacy-name-merge">Baden bei Wien</placeName>
-               <placeName type="alternative-name">Baden bei Wien</placeName>
                <placeName type="legacy-name-merge">Baden (Niederösterreich)</placeName>
                <location type="coords">
                   <geo>48,00543 16,23264</geo>
@@ -530,27 +586,10 @@
                   <geo>48,33333 15,75</geo>
                </location>
             </place>
-            <place xml:id="pmb883">
-               <placeName>Wiesbaden</placeName>
-               <placeName type="alternative-name">Aquae Mattiacorum</placeName>
-               <placeName type="alternative-name">Landeshauptstadt Wiesbaden</placeName>
-               <placeName type="alternative-name">Wisibada</placeName>
-               <placeName type="alternative-name">Stadt Wiesbaden</placeName>
-               <placeName type="legacy-name-merge">Wiesbaden</placeName>
-               <location type="coords">
-                  <geo>50,08258 8,24932</geo>
-               </location>
-               <location type="located_in_place">
-                  <placeName ref="pmb151">Deutschland</placeName>
-                  <geo>51,5 10,5</geo>
-               </location>
-            </place>
             <place xml:id="pmb992">
                <placeName>Bad Vöslau</placeName>
                <placeName type="legacy-name">Vöslau</placeName>
                <placeName type="legacy-name-merge">Vöslau, Niederösterreich</placeName>
-               <placeName type="legacy-name-merge">Bad Vöslau</placeName>
-               <placeName type="legacy-name-merge">Bad Vöslau</placeName>
                <location type="coords">
                   <geo>47,96533 16,21359</geo>
                </location>
@@ -559,10 +598,56 @@
                   <geo>47,33333 13,33333</geo>
                </location>
             </place>
+            <place xml:id="pmb50">
+               <placeName>Wien</placeName>
+               <placeName type="ort_fruherer-name">K.K. Reichshaupt- und Residenzstadt Wien</placeName>
+               <placeName type="alternative-name">Bécs</placeName>
+               <placeName type="alternative-name">Land Wien</placeName>
+               <placeName type="alternative-name">Vídeň</placeName>
+               <placeName type="alternative-name">Wenia</placeName>
+               <placeName type="alternative-name">Beč</placeName>
+               <placeName type="ort_fruherer-name">Vindobona</placeName>
+               <placeName type="alternative-name">Vienna</placeName>
+               <location type="coords">
+                  <geo>48,208333 16,373056</geo>
+               </location>
+               <location type="located_in_place">
+                  <placeName ref="pmb41240">Österreich</placeName>
+                  <geo>47,33333 13,33333</geo>
+               </location>
+               <location type="located_in_place">
+                  <placeName ref="pmb235218">Windmühlhöhe</placeName>
+                  <geo>48,24077 16,32092</geo>
+               </location>
+            </place>
+            <place xml:id="pmb146">
+               <placeName>Frankfurt am Main</placeName>
+               <placeName type="ort_namensvariante">Frankfurt a. Main</placeName>
+               <placeName type="ort_namensvariante">Frankfurt/Main</placeName>
+               <location type="coords">
+                  <geo>50,11552 8,68417</geo>
+               </location>
+               <location type="located_in_place">
+                  <placeName ref="pmb151">Deutschland</placeName>
+                  <geo>51,5 10,5</geo>
+               </location>
+            </place>
+            <place xml:id="pmb883">
+               <placeName>Wiesbaden</placeName>
+               <placeName type="alternative-name">Aquae Mattiacorum</placeName>
+               <placeName type="alternative-name">Landeshauptstadt Wiesbaden</placeName>
+               <placeName type="alternative-name">Wisibada</placeName>
+               <placeName type="alternative-name">Stadt Wiesbaden</placeName>
+               <location type="coords">
+                  <geo>50,08258 8,24932</geo>
+               </location>
+               <location type="located_in_place">
+                  <placeName ref="pmb151">Deutschland</placeName>
+                  <geo>51,5 10,5</geo>
+               </location>
+            </place>
             <place xml:id="pmb993">
                <placeName>Bukarest</placeName>
-               <placeName type="alternative-name">Bukarest</placeName>
-               <placeName type="legacy-name-merge">Bukarest</placeName>
                <placeName type="legacy-name-merge">Bucharest</placeName>
                <location type="coords">
                   <geo>44,432 26,106</geo>
@@ -570,6 +655,30 @@
                <location type="located_in_place">
                   <placeName ref="pmb378">Rumänien</placeName>
                   <geo>46,0 25,0</geo>
+               </location>
+            </place>
+            <place xml:id="pmb39599">
+               <placeName>Graben</placeName>
+               <location type="coords">
+                  <geo>48,208613 16,369913</geo>
+               </location>
+               <location type="located_in_place">
+                  <placeName ref="pmb336">Frick am Graben</placeName>
+                  <geo>48,208806 16,36975</geo>
+               </location>
+               <location type="located_in_place">
+                  <placeName ref="pmb51">I., Innere Stadt</placeName>
+                  <geo>48,20769 16,37049</geo>
+               </location>
+            </place>
+            <place xml:id="pmb100693">
+               <placeName>Polná</placeName>
+               <location type="coords">
+                  <geo>49,488611 15,716111</geo>
+               </location>
+               <location type="located_in_place">
+                  <placeName ref="pmb43430">Tschechien</placeName>
+                  <geo>49,75 15,0</geo>
                </location>
             </place>
          </listPlace>

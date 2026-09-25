@@ -1,6 +1,10 @@
-<?xml version='1.0' encoding='UTF-8'?>
+<?xml version="1.0" encoding="UTF-8"?>
 <?xml-model href="../meta/schnitzler-briefe-schematron.sch" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
-<TEI xmlns="http://www.tei-c.org/ns/1.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.tei-c.org/ns/1.0 ../meta/schnitzler-briefe-schema.xsd" xml:base="https://id.acdh.oeaw.ac.at/schnitzler/schnitzler-briefe/editions" xml:id="L04098">
+<TEI xmlns="http://www.tei-c.org/ns/1.0"
+     xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+     xsi:schemaLocation="http://www.tei-c.org/ns/1.0 ../meta/schnitzler-briefe-schema.xsd"
+     xml:base="https://id.acdh.oeaw.ac.at/schnitzler/schnitzler-briefe/editions"
+     xml:id="L04098">
    <teiHeader>
       <fileDesc>
          <titleStmt>
@@ -129,23 +133,31 @@
             </correspAction>
             <correspAction type="transmitted">
                <date when="1893-08-12">12. 8. 1893</date>
-               <placeName ref="#pmb365208">Wien 9/3 72</placeName>
+               <placeName ref="#pmb365208">9/3 Post- und Telegraphenamt 72</placeName>
             </correspAction>
             <correspAction type="delivered">
                <date when="1893-08-12">12. 8. 1893</date>
-               <placeName ref="#pmb968">Mödling Stadt</placeName>
+               <placeName ref="#pmb968">Mödling</placeName>
             </correspAction>
             <correspAction type="received">
                <persName ref="#pmb12740">Schwarzkopf, Gustav</persName>
                <date when="1893-08-12">12. 8. 1893</date>
                <placeName ref="#pmb625">Zum goldenen Stern</placeName>
             </correspAction>
-            <correspContext><ref type="belongsToCorrespondence" target="correspondence_12740">Schwarzkopf, Gustav</ref>
+            <correspContext>
+               <ref type="belongsToCorrespondence" target="correspondence_12740">Schwarzkopf, Gustav</ref>
                <ref subtype="previous_letter" type="withinCollection" target="L00251">Schnitzler an Hofmannsthal, 11. 8. 1893</ref>
                <ref subtype="next_letter" type="withinCollection" target="L00252">Bahr an Schnitzler, [12. 8. 1893]</ref>
-               <ref subtype="previous_letter" type="withinCorrespondence" source="correspondence_12740" target="L04208">Schnitzler an Schwarzkopf, [23. 7. 1893?]</ref>
-               <ref subtype="next_letter" type="withinCorrespondence" source="correspondence_12740" target="L04097">Schnitzler, Salten an Schwarzkopf, 27. 8. 1893</ref>
-            </correspContext></correspDesc>
+               <ref subtype="previous_letter"
+                    type="withinCorrespondence"
+                    source="correspondence_12740"
+                    target="L04208">Schnitzler an Schwarzkopf, [23. 7. 1893?]</ref>
+               <ref subtype="next_letter"
+                    type="withinCorrespondence"
+                    source="correspondence_12740"
+                    target="L04097">Schnitzler, Salten an Schwarzkopf, 27. 8. 1893</ref>
+            </correspContext>
+         </correspDesc>
       </profileDesc>
       <revisionDesc status="proposed">
          <change who="MAM" when="2025-12-10">Export aus Transkribus</change>
@@ -207,6 +219,30 @@
       </body>
       <back>
          <listPerson>
+            <person xml:id="pmb2121">
+               <persName>
+                  <surname>Schnitzler</surname>
+                  <forename>Arthur</forename>
+               </persName>
+               <birth>
+                  <date when="1862-05-15">15. 5. 1862</date>
+                  <settlement ref="pmb50">
+                     <placeName type="pref">Wien</placeName>
+                     <location>
+                        <geo>48,208333 16,373056</geo>
+                     </location>
+                  </settlement>
+               </birth>
+               <death>
+                  <date when="1931-10-21">21. 10. 1931</date>
+                  <settlement ref="pmb50">
+                     <placeName type="pref">Wien</placeName>
+                     <location>
+                        <geo>48,208333 16,373056</geo>
+                     </location>
+                  </settlement>
+               </death>
+            </person>
             <person xml:id="pmb12740">
                <persName>
                   <forename>Gustav</forename>
@@ -223,58 +259,6 @@
                </birth>
                <death>
                   <date when="1939-11-13">1939-11-13</date>
-                  <settlement ref="pmb50">
-                     <placeName type="pref">Wien</placeName>
-                     <location>
-                        <geo>48,208333 16,373056</geo>
-                     </location>
-                  </settlement>
-               </death>
-            </person>
-            <person xml:id="pmb2121">
-               <persName>
-                  <surname>Schnitzler</surname>
-                  <forename>Arthur</forename>
-               </persName>
-               <birth>
-                  <date when="1862-05-15">15. 5. 1862</date>
-                  <settlement ref="pmb50">
-                     <placeName type="pref">Wien</placeName>
-                     <location>
-                        <geo>48,208333 16,373056</geo>
-                     </location>
-                  </settlement>
-               </birth>
-               <death>
-                  <date when="1931-10-21">21. 10. 1931</date>
-                  <settlement ref="pmb50">
-                     <placeName type="pref">Wien</placeName>
-                     <location>
-                        <geo>48,208333 16,373056</geo>
-                     </location>
-                  </settlement>
-               </death>
-               <sex value="male"/>
-               <occupation ref="pmb90">Schriftsteller/Schriftstellerin</occupation>
-               <occupation ref="pmb97">Mediziner/Medizinerin</occupation>
-               <idno type="gnd">https://d-nb.info/gnd/118609807/</idno>
-            </person>
-            <person xml:id="pmb14056" ana="implied">
-               <persName>
-                  <forename>Else</forename>
-                  <surname>Berger</surname>
-               </persName>
-               <birth>
-                  <date when="1874-10-20">1874-10-20</date>
-                  <settlement ref="pmb50">
-                     <placeName type="pref">Wien</placeName>
-                     <location>
-                        <geo>48,208333 16,373056</geo>
-                     </location>
-                  </settlement>
-               </birth>
-               <death>
-                  <date when="1956-11-24">1956-11-24</date>
                   <settlement ref="pmb50">
                      <placeName type="pref">Wien</placeName>
                      <location>
@@ -331,6 +315,30 @@
                   </settlement>
                </death>
             </person>
+            <person xml:id="pmb14056" ana="implied">
+               <persName>
+                  <forename>Else</forename>
+                  <surname>Berger</surname>
+               </persName>
+               <birth>
+                  <date when="1874-10-20">1874-10-20</date>
+                  <settlement ref="pmb50">
+                     <placeName type="pref">Wien</placeName>
+                     <location>
+                        <geo>48,208333 16,373056</geo>
+                     </location>
+                  </settlement>
+               </birth>
+               <death>
+                  <date when="1956-11-24">1956-11-24</date>
+                  <settlement ref="pmb50">
+                     <placeName type="pref">Wien</placeName>
+                     <location>
+                        <geo>48,208333 16,373056</geo>
+                     </location>
+                  </settlement>
+               </death>
+            </person>
             <person xml:id="pmb24648" ana="implied">
                <persName>
                   <forename>Max</forename>
@@ -357,38 +365,42 @@
             </person>
          </listPerson>
          <listPlace>
-            <place xml:id="pmb50">
-               <placeName>Wien</placeName>
-               <placeName type="ort_fruherer-name">K.K. Reichshaupt- und Residenzstadt Wien</placeName>
-               <placeName type="legacy-name-merge">Wien</placeName>
-               <placeName type="alternative-name">Bécs</placeName>
-               <placeName type="alternative-name">Land Wien</placeName>
-               <placeName type="alternative-name">Vídeň</placeName>
-               <placeName type="alternative-name">Wenia</placeName>
-               <placeName type="alternative-name">Beč</placeName>
-               <placeName type="ort_fruherer-name">Vindobona</placeName>
-               <placeName type="legacy-name-merge">Vindobona</placeName>
-               <placeName type="alternative-name">Vienna</placeName>
-               <placeName type="legacy-name-merge">Vienna</placeName>
-               <placeName type="alternative-name">Vienna</placeName>
+            <place xml:id="pmb365208">
+               <placeName>9/3 Post- und Telegraphenamt 72</placeName>
                <location type="coords">
-                  <geo>48,208333 16,373056</geo>
+                  <geo>48,216197 16,356623</geo>
+               </location>
+               <location type="located_in_place">
+                  <placeName ref="pmb59">IX., Alsergrund</placeName>
+                  <geo>48,22387 16,35641</geo>
+               </location>
+               <location type="located_in_place">
+                  <placeName ref="pmb731">Garnisongasse</placeName>
+                  <geo>48,216533356678 16,356214321972</geo>
+               </location>
+            </place>
+            <place xml:id="pmb968">
+               <placeName>Mödling</placeName>
+               <location type="coords">
+                  <geo>48,08605 16,28921</geo>
                </location>
                <location type="located_in_place">
                   <placeName ref="pmb41240">Österreich</placeName>
                   <geo>47,33333 13,33333</geo>
                </location>
             </place>
-            <place xml:id="pmb59">
-               <placeName>IX., Alsergrund</placeName>
-               <placeName type="legacy-name-merge">Thurygrund</placeName>
-               <placeName type="legacy-name-merge">Wien-Alsergrund</placeName>
+            <place xml:id="pmb167782">
+               <placeName>Wohnung und Ordination Arthur Schnitzler Grillparzerstraße 7/3. Stock</placeName>
                <location type="coords">
-                  <geo>48,22387 16,35641</geo>
+                  <geo>48,212477 16,357233</geo>
                </location>
                <location type="located_in_place">
-                  <placeName ref="pmb50">Wien</placeName>
-                  <geo>48,208333 16,373056</geo>
+                  <placeName ref="pmb51">I., Innere Stadt</placeName>
+                  <geo>48,20769 16,37049</geo>
+               </location>
+               <location type="located_in_place">
+                  <placeName ref="pmb412">Grillparzerstraße</placeName>
+                  <geo>48,212643768549 16,357353835756</geo>
                </location>
             </place>
             <place xml:id="pmb625">
@@ -406,28 +418,8 @@
                   <geo>48,08153 16,26108</geo>
                </location>
             </place>
-            <place xml:id="pmb662">
-               <placeName>Baden bei Wien</placeName>
-               <placeName type="alternative-name">Baden</placeName>
-               <placeName type="legacy-name-merge">Baden</placeName>
-               <placeName type="legacy-name-merge">Baden bei Wien</placeName>
-               <placeName type="alternative-name">Baden bei Wien</placeName>
-               <placeName type="legacy-name-merge">Baden (Niederösterreich)</placeName>
-               <location type="coords">
-                  <geo>48,00543 16,23264</geo>
-               </location>
-               <location type="located_in_place">
-                  <placeName ref="pmb41240">Österreich</placeName>
-                  <geo>47,33333 13,33333</geo>
-               </location>
-               <location type="located_in_place">
-                  <placeName ref="pmb1003">Niederösterreich</placeName>
-                  <geo>48,33333 15,75</geo>
-               </location>
-            </place>
             <place xml:id="pmb957">
                <placeName>Vorderbrühl</placeName>
-               <placeName type="legacy-name-merge">Vorderbrühl</placeName>
                <location type="coords">
                   <geo>48,08153 16,26108</geo>
                </location>
@@ -444,17 +436,20 @@
                   <geo>48,08509 16,24801</geo>
                </location>
             </place>
-            <place xml:id="pmb968">
-               <placeName>Mödling</placeName>
-               <placeName type="alternative-name">Mödling</placeName>
-               <placeName type="legacy-name-merge">Mödling</placeName>
-               <placeName type="legacy-name-merge">Mödling</placeName>
+            <place xml:id="pmb662">
+               <placeName>Baden bei Wien</placeName>
+               <placeName type="alternative-name">Baden</placeName>
+               <placeName type="legacy-name-merge">Baden (Niederösterreich)</placeName>
                <location type="coords">
-                  <geo>48,08605 16,28921</geo>
+                  <geo>48,00543 16,23264</geo>
                </location>
                <location type="located_in_place">
                   <placeName ref="pmb41240">Österreich</placeName>
                   <geo>47,33333 13,33333</geo>
+               </location>
+               <location type="located_in_place">
+                  <placeName ref="pmb1003">Niederösterreich</placeName>
+                  <geo>48,33333 15,75</geo>
                </location>
             </place>
          </listPlace>

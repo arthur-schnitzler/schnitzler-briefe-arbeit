@@ -1,6 +1,10 @@
-<?xml version='1.0' encoding='UTF-8'?>
+<?xml version="1.0" encoding="UTF-8"?>
 <?xml-model href="../meta/schnitzler-briefe-schematron.sch" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
-<TEI xmlns="http://www.tei-c.org/ns/1.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.tei-c.org/ns/1.0 ../meta/schnitzler-briefe-schema.xsd" xml:id="L00527" xml:base="https://id.acdh.oeaw.ac.at/schnitzler/schnitzler-briefe/editions">
+<TEI xmlns="http://www.tei-c.org/ns/1.0"
+     xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+     xsi:schemaLocation="http://www.tei-c.org/ns/1.0 ../meta/schnitzler-briefe-schema.xsd"
+     xml:id="L00527"
+     xml:base="https://id.acdh.oeaw.ac.at/schnitzler/schnitzler-briefe/editions">
    <teiHeader>
       <fileDesc>
          <titleStmt>
@@ -128,12 +132,20 @@
                   – 13. 1. 1896?]</date>
                <placeName ref="#pmb50">Wien</placeName>
             </correspAction>
-            <correspContext><ref type="belongsToCorrespondence" target="correspondence_10762">Andreas-Salomé, Lou</ref>
+            <correspContext>
+               <ref type="belongsToCorrespondence" target="correspondence_10762">Andreas-Salomé, Lou</ref>
                <ref subtype="previous_letter" type="withinCollection" target="L00526">Schnitzler an Beer-Hofmann, [1896?]</ref>
                <ref subtype="next_letter" type="withinCollection" target="L02762">Goldmann an Schnitzler, 11. 1. [1896]</ref>
-               <ref subtype="previous_letter" type="withinCorrespondence" source="correspondence_10762" target="L00524">Andreas-Salomé an Schnitzler, [26. oder 27]. 12. 1895</ref>
-               <ref subtype="next_letter" type="withinCorrespondence" source="correspondence_10762" target="L00529">Andreas-Salomé an Schnitzler, 18. 1. 1896</ref>
-            </correspContext></correspDesc>
+               <ref subtype="previous_letter"
+                    type="withinCorrespondence"
+                    source="correspondence_10762"
+                    target="L00524">Andreas-Salomé an Schnitzler, [26. oder 27]. 12. 1895</ref>
+               <ref subtype="next_letter"
+                    type="withinCorrespondence"
+                    source="correspondence_10762"
+                    target="L00529">Andreas-Salomé an Schnitzler, 18. 1. 1896</ref>
+            </correspContext>
+         </correspDesc>
       </profileDesc>
       <revisionDesc status="approved">
          <change who="GHS" when="2018-08-02">Angelegt</change>
@@ -203,152 +215,388 @@
             </closer>
          </div>
       </body>
-      <back><listPerson><person xml:id="pmb10762"><persName>
-      <forename>Lou</forename>
-      <surname>Andreas-Salomé</surname>
-  </persName><birth>
-    <date when="1861-02-12">1861-02-12</date>
-      <settlement ref="pmb433">
-        <placeName type="pref">Sankt Petersburg</placeName>
-        <location><geo>59,93863 30,31413</geo></location>
-      </settlement>
-  </birth><death>
-    <date when="1937-02-05">1937-02-05</date>
-      <settlement ref="pmb42325">
-        <placeName type="pref">Göttingen</placeName>
-        <location><geo>51,53443 9,93228</geo></location>
-      </settlement>
-  </death></person><person xml:id="pmb11485"><persName>
-      <forename>Paul</forename>
-      <surname>Goldmann</surname>
-  </persName><birth>
-    <date when="1865-01-31">1865-01-31</date>
-      <settlement ref="pmb677">
-        <placeName type="pref">Breslau</placeName>
-        <location><geo>51,10773 17,03533</geo></location>
-      </settlement>
-  </birth><death>
-    <date when="1935-09-25">1935-09-25</date>
-      <settlement ref="pmb50">
-        <placeName type="pref">Wien</placeName>
-        <location><geo>48,208333 16,373056</geo></location>
-      </settlement>
-  </death></person><person xml:id="pmb11565"><persName>
-      <forename>Max</forename>
-      <surname>Halbe</surname>
-  </persName><birth>
-    <date when="1865-10-04">1865-10-04</date>
-      <settlement ref="pmb63993">
-        <placeName type="pref">Gmina Suchy Dąb</placeName>
-        <location><geo>54,2046 18,7945</geo></location>
-      </settlement>
-  </birth><death>
-    <date when="1944-11-30">1944-11-30</date>
-      <settlement ref="pmb63812">
-        <placeName type="pref">Neuötting</placeName>
-        <location><geo>48,24102 12,68998</geo></location>
-      </settlement>
-  </death></person><person xml:id="pmb11617"><persName>
-      <forename>Gerhart</forename>
-      <surname>Hauptmann</surname>
-  </persName><birth>
-    <date when="1862-11-15">1862-11-15</date>
-      <settlement ref="pmb64427">
-        <placeName type="pref">Szczawno-Zdrój</placeName>
-        <location><geo>50,79512 16,22375</geo></location>
-      </settlement>
-  </birth><death>
-    <date when="1946-06-06">1946-06-06</date>
-      <settlement ref="pmb735">
-        <placeName type="pref">Jagniątków</placeName>
-        <location><geo>50,816944 15,609444</geo></location>
-      </settlement>
-  </death></person><person xml:id="pmb2121"><persName><surname>Schnitzler</surname><forename>Arthur</forename></persName><birth><date when="1862-05-15">15. 5. 1862</date><settlement ref="pmb50"><placeName type="pref">Wien</placeName><location><geo>48,208333 16,373056</geo></location></settlement></birth><death><date when="1931-10-21">21. 10. 1931</date><settlement ref="pmb50"><placeName type="pref">Wien</placeName><location><geo>48,208333 16,373056</geo></location></settlement></death><sex value="male"/><occupation ref="pmb90">Schriftsteller/Schriftstellerin</occupation><occupation ref="pmb97">Mediziner/Medizinerin</occupation><idno type="gnd">https://d-nb.info/gnd/118609807/</idno></person><person xml:id="pmb23593" ana="comment"><persName>
-      <forename>Josef</forename>
-      <surname>Rosengart</surname>
-  </persName><birth>
-    <date when="1860-02-08">1860-02-08</date>
-      <settlement ref="pmb64559">
-        <placeName type="pref">Laupheim</placeName>
-        <location><geo>48,22786 9,87874</geo></location>
-      </settlement>
-  </birth><death>
-    <date when="1927-08-04">1927-08-04</date>
-      <settlement ref="pmb146">
-        <placeName type="pref">Frankfurt am Main</placeName>
-        <location><geo>50,11552 8,68417</geo></location>
-      </settlement>
-  </death></person><person xml:id="pmb34971" ana="comment"><persName>
-      <forename>Vally</forename>
-      <surname>Rosengart</surname>
-  </persName><birth>
-    <date when="1866-12-29">1866-12-29</date>
-      <settlement ref="pmb677">
-        <placeName type="pref">Breslau</placeName>
-        <location><geo>51,10773 17,03533</geo></location>
-      </settlement>
-  </birth><death>
-    <date when="1926-12-31">nach 1926</date>
-  </death></person><person xml:id="pmb4986" ana="implied"><persName>
-      <forename>Fedor</forename>
-      <surname>Mamroth</surname>
-  </persName><birth>
-    <date when="1851-02-21">1851-02-21</date>
-      <settlement ref="pmb677">
-        <placeName type="pref">Breslau</placeName>
-        <location><geo>51,10773 17,03533</geo></location>
-      </settlement>
-  </birth><death>
-    <date when="1907-06-25">1907-06-25</date>
-      <settlement ref="pmb146">
-        <placeName type="pref">Frankfurt am Main</placeName>
-        <location><geo>50,11552 8,68417</geo></location>
-      </settlement>
-  </death></person></listPerson><listBibl><bibl xml:id="pmb29917"><title type="main">Liebelei. Schauspiel in drei Akten</title><title type="werk_link">https://www.deutschestextarchiv.de/book/show/schnitzler_liebelei_1896</title><title type="werk_arbeitstitel">Das arme Mädl</title><author role="hat-geschaffen" ref="pmb2121">Schnitzler, Arthur</author></bibl><bibl xml:id="pmb33273" ana="comment"><title type="main">Florian Geyer. Die Tragödie des Bauernkrieges</title><author role="hat-geschaffen" ref="pmb11617">Hauptmann, Gerhart</author></bibl><bibl xml:id="pmb33275" ana="comment"><title type="main">Lebenswende. Tragikomödie in 5 Akten</title><title type="legacy-name-merge">Lebenswende</title><author role="hat-geschaffen" ref="pmb11565">Halbe, Max</author></bibl></listBibl><listPlace><place xml:id="pmb146"><placeName>Frankfurt am Main</placeName><placeName type="ort_namensvariante">Frankfurt a. Main</placeName><placeName type="ort_namensvariante">Frankfurt/Main</placeName><location type="coords">
-  <geo>50,11552 8,68417</geo>
-</location><location type="located_in_place">
-  <placeName ref="pmb151">Deutschland</placeName>
-  <geo>51,5 10,5</geo>
-</location></place><place xml:id="pmb168"><placeName>Berlin</placeName><placeName type="alternative-name">Hauptstadt Berlin</placeName><placeName type="alternative-name">Barlīn</placeName><placeName type="alternative-name">Reichshauptstadt Berlin</placeName><placeName type="alternative-name">Berolino</placeName><placeName type="legacy-name-merge">B-n</placeName><location type="coords">
-  <geo>52,52437 13,41053</geo>
-</location><location type="located_in_place">
-  <placeName ref="pmb151">Deutschland</placeName>
-  <geo>51,5 10,5</geo>
-</location></place><place xml:id="pmb34"><placeName>Café Griensteidl</placeName><placeName type="legacy-name-merge">Griensteidl</placeName><location type="coords">
-  <geo>48,208258 16,366111</geo>
-</location><location type="located_in_place">
-  <placeName ref="pmb51">I., Innere Stadt</placeName>
-  <geo>48,20769 16,37049</geo>
-</location></place><place xml:id="pmb50"><placeName>Wien</placeName><placeName type="ort_fruherer-name">K.K. Reichshaupt- und Residenzstadt Wien</placeName><placeName type="legacy-name-merge">Wien</placeName><placeName type="alternative-name">Bécs</placeName><placeName type="alternative-name">Land Wien</placeName><placeName type="alternative-name">Vídeň</placeName><placeName type="alternative-name">Wenia</placeName><placeName type="alternative-name">Beč</placeName><placeName type="ort_fruherer-name">Vindobona</placeName><placeName type="legacy-name-merge">Vindobona</placeName><placeName type="alternative-name">Vienna</placeName><placeName type="legacy-name-merge">Vienna</placeName><placeName type="alternative-name">Vienna</placeName><location type="coords">
-  <geo>48,208333 16,373056</geo>
-</location><location type="located_in_place">
-  <placeName ref="pmb41240">Österreich</placeName>
-  <geo>47,33333 13,33333</geo>
-</location></place><place xml:id="pmb145" ana="comment"><placeName>Köln</placeName><placeName type="alternative-name">Colonia</placeName><placeName type="alternative-name">Stadt Köln</placeName><placeName type="alternative-name">Colonia (Köln)</placeName><placeName type="alternative-name">Ara Ubiorum</placeName><placeName type="alternative-name">Colonia ad Rhenum</placeName><placeName type="alternative-name">Keulen</placeName><placeName type="alternative-name">Colonia Claudia Ara Agrippinensium</placeName><placeName type="alternative-name">Colonia Agrippina</placeName><placeName type="alternative-name">Hansestadt Köln</placeName><placeName type="alternative-name">Kölln am Rheine</placeName><placeName type="alternative-name">Cöllen</placeName><placeName type="alternative-name">Cölln</placeName><placeName type="alternative-name">Kūlūniyā</placeName><placeName type="alternative-name">Stadtverwaltung (Köln)</placeName><placeName type="alternative-name">Cölln (Köln)</placeName><placeName type="alternative-name">Nachrichtenamt der Stadt Köln</placeName><placeName type="alternative-name">Oppidum Ubiorum</placeName><placeName type="alternative-name">Colonia Ubiorum</placeName><placeName type="alternative-name">Keln</placeName><placeName type="alternative-name">Kerun</placeName><placeName type="alternative-name">Colonia Agrippinensis</placeName><placeName type="alternative-name">Cöln</placeName><placeName type="alternative-name">Gross-Köln</placeName><placeName type="alternative-name">Groß-Köln</placeName><placeName type="alternative-name">Cologne</placeName><placeName type="legacy-name-merge">Köln</placeName><placeName type="legacy-name-merge">Cologne</placeName><location type="coords">
-  <geo>50,93835 6,95427</geo>
-</location><location type="located_in_place">
-  <placeName ref="pmb247043">Nordrhein-Westfahlen</placeName>
-  <geo>51,466666666667 7,55</geo>
-</location><location type="located_in_place">
-  <placeName ref="pmb151">Deutschland</placeName>
-  <geo>51,5 10,5</geo>
-</location></place></listPlace><listOrg><org xml:id="pmb35597" ana="comment"><orgName>Deutsches Theater Berlin</orgName><orgName type="institution_namensvariante">Deutsches Theater</orgName><location type="located_in_place">
-  <placeName ref="pmb168">Berlin</placeName>
-  <geo>52,52437 13,41053</geo>
-  <idno type="URL" subtype="geonames">https://sws.geonames.org/2950159/</idno><idno type="URL" subtype="schnitzler-bahr">https://schnitzler-bahr.acdh.oeaw.ac.at/pmb168.html</idno><idno type="URL" subtype="d-nb">https://d-nb.info/gnd/4005728-8</idno><idno type="URL" subtype="pmb">https://pmb.acdh.oeaw.ac.at/entity/168/</idno><idno type="URL" subtype="kraus">https://www.kraus.wienbibliothek.at/legalkraus/pmb168.html</idno><idno type="URL" subtype="pmb">https://pmb.acdh.oeaw.ac.at/entity/92171/</idno><idno type="URL" subtype="wikidata">http://www.wikidata.org/entity/Q64</idno><idno type="URL" subtype="wikipedia">https://de.wikipedia.org/wiki/Berlin</idno><idno type="URL" subtype="schnitzler-interviews">https://schnitzler-interviews.acdh.oeaw.ac.at/pmb168.html</idno><idno type="URL" subtype="schnitzler-tagebuch">https://schnitzler-tagebuch.acdh.oeaw.ac.at/pmb168.html</idno><idno type="URL" subtype="wienerschnitzler">https://wienerschnitzler.org/pmb168.html</idno><idno type="URL" subtype="schnitzler-kultur">https://schnitzler-kultur.acdh.oeaw.ac.at/pmb168.html</idno><idno type="URL" subtype="sk">https://sk.acdh.oeaw.ac.at/DWplace00313</idno><idno type="URL" subtype="sk">https://sk.acdh.oeaw.ac.at/DWplace00093</idno><idno type="URL" subtype="sk">https://sk.acdh.oeaw.ac.at/pmb168</idno><idno type="URL" subtype="sk">https://sk.acdh.oeaw.ac.at/fa_place00001836</idno><idno type="URL" subtype="sk">https://sk.acdh.oeaw.ac.at/fa_place00004523</idno><idno type="URL" subtype="biblio">https://biblio.ub.uni-freiburg.de/sf/#pmb168</idno><idno type="URL" subtype="schnitzler-briefe">https://schnitzler-briefe.acdh.oeaw.ac.at/pmb168.html</idno><idno type="URL" subtype="schoenberg-ue">https://www.schoenberg-ue.at/ue/places/place.2.3</idno></location><location type="located_in_place">
-  <placeName ref="pmb3">Deutsches Theater Berlin</placeName>
-  <geo>52,524444 13,382222</geo>
-  <idno type="URL" subtype="schnitzler-bahr">https://schnitzler-bahr.acdh.oeaw.ac.at/pmb3.html</idno><idno type="URL" subtype="pmb">https://pmb.acdh.oeaw.ac.at/entity/3/</idno><idno type="URL" subtype="schnitzler-interviews">https://schnitzler-interviews.acdh.oeaw.ac.at/pmb3.html</idno><idno type="URL" subtype="wienerschnitzler">https://wienerschnitzler.org/pmb3.html</idno><idno type="URL" subtype="schnitzler-kultur">https://schnitzler-kultur.acdh.oeaw.ac.at/pmb3.html</idno><idno type="URL" subtype="schnitzler-briefe">https://schnitzler-briefe.acdh.oeaw.ac.at/pmb3.html</idno></location></org></listOrg><listEvent><event xml:id="pmb118337" ana="comment"><eventName n="Theateruraufführung">Uraufführung von Lebenswende, 21.1.1896</eventName><listPlace>
-            <place><placeName role="veranstaltet in" ref="pmb3">Deutsches Theater Berlin</placeName><location>
-                    <geo>52,524444 13,382222</geo>
-                </location></place>
-        </listPlace></event><event xml:id="pmb296513" ana="comment"><eventName n="Theateruraufführung">Uraufführung von Florian Geyer, 4.1.1896</eventName><listPlace>
-            <place><placeName role="veranstaltet in" ref="pmb3">Deutsches Theater Berlin</placeName><location>
-                    <geo>52,524444 13,382222</geo>
-                </location></place>
-        </listPlace></event><event xml:id="pmb35206" ana="comment"><eventName n="Theaterpremiere">Premiere von Liebelei, Der zerbrochene Krug, 4.2.1896</eventName><listPlace>
-            <place><placeName role="veranstaltet in" ref="pmb3">Deutsches Theater Berlin</placeName><location>
-                    <geo>52,524444 13,382222</geo>
-                </location></place>
-        </listPlace></event></listEvent></back></text>
+      <back>
+         <listPerson>
+            <person xml:id="pmb10762">
+               <persName>
+                  <forename>Lou</forename>
+                  <surname>Andreas-Salomé</surname>
+               </persName>
+               <birth>
+                  <date when="1861-02-12">1861-02-12</date>
+                  <settlement ref="pmb433">
+                     <placeName type="pref">Sankt Petersburg</placeName>
+                     <location>
+                        <geo>59,93863 30,31413</geo>
+                     </location>
+                  </settlement>
+               </birth>
+               <death>
+                  <date when="1937-02-05">1937-02-05</date>
+                  <settlement ref="pmb42325">
+                     <placeName type="pref">Göttingen</placeName>
+                     <location>
+                        <geo>51,53443 9,93228</geo>
+                     </location>
+                  </settlement>
+               </death>
+            </person>
+            <person xml:id="pmb2121">
+               <persName>
+                  <surname>Schnitzler</surname>
+                  <forename>Arthur</forename>
+               </persName>
+               <birth>
+                  <date when="1862-05-15">15. 5. 1862</date>
+                  <settlement ref="pmb50">
+                     <placeName type="pref">Wien</placeName>
+                     <location>
+                        <geo>48,208333 16,373056</geo>
+                     </location>
+                  </settlement>
+               </birth>
+               <death>
+                  <date when="1931-10-21">21. 10. 1931</date>
+                  <settlement ref="pmb50">
+                     <placeName type="pref">Wien</placeName>
+                     <location>
+                        <geo>48,208333 16,373056</geo>
+                     </location>
+                  </settlement>
+               </death>
+            </person>
+            <person xml:id="pmb11617">
+               <persName>
+                  <forename>Gerhart</forename>
+                  <surname>Hauptmann</surname>
+               </persName>
+               <birth>
+                  <date when="1862-11-15">1862-11-15</date>
+                  <settlement ref="pmb64427">
+                     <placeName type="pref">Szczawno-Zdrój</placeName>
+                     <location>
+                        <geo>50,79512 16,22375</geo>
+                     </location>
+                  </settlement>
+               </birth>
+               <death>
+                  <date when="1946-06-06">1946-06-06</date>
+                  <settlement ref="pmb735">
+                     <placeName type="pref">Jagniątków</placeName>
+                     <location>
+                        <geo>50,816944 15,609444</geo>
+                     </location>
+                  </settlement>
+               </death>
+            </person>
+            <person xml:id="pmb11565">
+               <persName>
+                  <forename>Max</forename>
+                  <surname>Halbe</surname>
+               </persName>
+               <birth>
+                  <date when="1865-10-04">1865-10-04</date>
+                  <settlement ref="pmb63993">
+                     <placeName type="pref">Gmina Suchy Dąb</placeName>
+                     <location>
+                        <geo>54,2046 18,7945</geo>
+                     </location>
+                  </settlement>
+               </birth>
+               <death>
+                  <date when="1944-11-30">1944-11-30</date>
+                  <settlement ref="pmb63812">
+                     <placeName type="pref">Neuötting</placeName>
+                     <location>
+                        <geo>48,24102 12,68998</geo>
+                     </location>
+                  </settlement>
+               </death>
+            </person>
+            <person xml:id="pmb11485">
+               <persName>
+                  <forename>Paul</forename>
+                  <surname>Goldmann</surname>
+               </persName>
+               <birth>
+                  <date when="1865-01-31">1865-01-31</date>
+                  <settlement ref="pmb677">
+                     <placeName type="pref">Breslau</placeName>
+                     <location>
+                        <geo>51,10773 17,03533</geo>
+                     </location>
+                  </settlement>
+               </birth>
+               <death>
+                  <date when="1935-09-25">1935-09-25</date>
+                  <settlement ref="pmb50">
+                     <placeName type="pref">Wien</placeName>
+                     <location>
+                        <geo>48,208333 16,373056</geo>
+                     </location>
+                  </settlement>
+               </death>
+            </person>
+            <person xml:id="pmb23593" ana="comment">
+               <persName>
+                  <forename>Josef</forename>
+                  <surname>Rosengart</surname>
+               </persName>
+               <birth>
+                  <date when="1860-02-08">1860-02-08</date>
+                  <settlement ref="pmb64559">
+                     <placeName type="pref">Laupheim</placeName>
+                     <location>
+                        <geo>48,22786 9,87874</geo>
+                     </location>
+                  </settlement>
+               </birth>
+               <death>
+                  <date when="1927-08-04">1927-08-04</date>
+                  <settlement ref="pmb146">
+                     <placeName type="pref">Frankfurt am Main</placeName>
+                     <location>
+                        <geo>50,11552 8,68417</geo>
+                     </location>
+                  </settlement>
+               </death>
+            </person>
+            <person xml:id="pmb34971" ana="comment">
+               <persName>
+                  <forename>Vally</forename>
+                  <surname>Rosengart</surname>
+               </persName>
+               <birth>
+                  <date when="1866-12-29">1866-12-29</date>
+                  <settlement ref="pmb677">
+                     <placeName type="pref">Breslau</placeName>
+                     <location>
+                        <geo>51,10773 17,03533</geo>
+                     </location>
+                  </settlement>
+               </birth>
+               <death>
+                  <date when="1926-12-31">nach 1926</date>
+               </death>
+            </person>
+            <person xml:id="pmb4986" ana="implied">
+               <persName>
+                  <forename>Fedor</forename>
+                  <surname>Mamroth</surname>
+               </persName>
+               <birth>
+                  <date when="1851-02-21">1851-02-21</date>
+                  <settlement ref="pmb677">
+                     <placeName type="pref">Breslau</placeName>
+                     <location>
+                        <geo>51,10773 17,03533</geo>
+                     </location>
+                  </settlement>
+               </birth>
+               <death>
+                  <date when="1907-06-25">1907-06-25</date>
+                  <settlement ref="pmb146">
+                     <placeName type="pref">Frankfurt am Main</placeName>
+                     <location>
+                        <geo>50,11552 8,68417</geo>
+                     </location>
+                  </settlement>
+               </death>
+            </person>
+         </listPerson>
+         <listBibl>
+            <bibl xml:id="pmb29917">
+               <title>Liebelei. Schauspiel in drei Akten</title>
+               <title type="werk_link">https://www.deutschestextarchiv.de/book/show/schnitzler_liebelei_1896</title>
+               <title type="werk_arbeitstitel">Das arme Mädl</title>
+               <author ref="pmb2121" role="hat-geschaffen">Schnitzler, Arthur</author>
+            </bibl>
+            <bibl xml:id="pmb33273" ana="implied">
+               <title>Florian Geyer. Die Tragödie des Bauernkrieges</title>
+               <author ref="pmb11617" role="hat-geschaffen">Hauptmann, Gerhart</author>
+            </bibl>
+            <bibl xml:id="pmb33275" ana="implied">
+               <title>Lebenswende. Tragikomödie in 5 Akten</title>
+               <title type="legacy-name-merge">Lebenswende</title>
+               <author ref="pmb11565" role="hat-geschaffen">Halbe, Max</author>
+            </bibl>
+         </listBibl>
+         <listPlace>
+            <place xml:id="pmb50">
+               <placeName>Wien</placeName>
+               <placeName type="ort_fruherer-name">K.K. Reichshaupt- und Residenzstadt Wien</placeName>
+               <placeName type="alternative-name">Bécs</placeName>
+               <placeName type="alternative-name">Land Wien</placeName>
+               <placeName type="alternative-name">Vídeň</placeName>
+               <placeName type="alternative-name">Wenia</placeName>
+               <placeName type="alternative-name">Beč</placeName>
+               <placeName type="ort_fruherer-name">Vindobona</placeName>
+               <placeName type="alternative-name">Vienna</placeName>
+               <location type="coords">
+                  <geo>48,208333 16,373056</geo>
+               </location>
+               <location type="located_in_place">
+                  <placeName ref="pmb41240">Österreich</placeName>
+                  <geo>47,33333 13,33333</geo>
+               </location>
+               <location type="located_in_place">
+                  <placeName ref="pmb235218">Windmühlhöhe</placeName>
+                  <geo>48,24077 16,32092</geo>
+               </location>
+            </place>
+            <place xml:id="pmb34">
+               <placeName>Café Griensteidl</placeName>
+               <placeName type="legacy-name-merge">Griensteidl</placeName>
+               <location type="coords">
+                  <geo>48,208258 16,366111</geo>
+               </location>
+               <location type="located_in_place">
+                  <placeName ref="pmb51">I., Innere Stadt</placeName>
+                  <geo>48,20769 16,37049</geo>
+               </location>
+            </place>
+            <place xml:id="pmb168" ana="comment">
+               <placeName>Berlin</placeName>
+               <placeName type="alternative-name">Hauptstadt Berlin</placeName>
+               <placeName type="alternative-name">Barlīn</placeName>
+               <placeName type="alternative-name">Reichshauptstadt Berlin</placeName>
+               <placeName type="alternative-name">Berolino</placeName>
+               <placeName type="legacy-name-merge">B-n</placeName>
+               <location type="coords">
+                  <geo>52,52437 13,41053</geo>
+               </location>
+               <location type="located_in_place">
+                  <placeName ref="pmb151">Deutschland</placeName>
+                  <geo>51,5 10,5</geo>
+               </location>
+            </place>
+            <place xml:id="pmb146" ana="comment">
+               <placeName>Frankfurt am Main</placeName>
+               <placeName type="ort_namensvariante">Frankfurt a. Main</placeName>
+               <placeName type="ort_namensvariante">Frankfurt/Main</placeName>
+               <location type="coords">
+                  <geo>50,11552 8,68417</geo>
+               </location>
+               <location type="located_in_place">
+                  <placeName ref="pmb151">Deutschland</placeName>
+                  <geo>51,5 10,5</geo>
+               </location>
+            </place>
+            <place xml:id="pmb145" ana="comment">
+               <placeName>Köln</placeName>
+               <placeName type="alternative-name">Colonia</placeName>
+               <placeName type="alternative-name">Stadt Köln</placeName>
+               <placeName type="alternative-name">Colonia (Köln)</placeName>
+               <placeName type="alternative-name">Ara Ubiorum</placeName>
+               <placeName type="alternative-name">Colonia ad Rhenum</placeName>
+               <placeName type="alternative-name">Keulen</placeName>
+               <placeName type="alternative-name">Colonia Claudia Ara Agrippinensium</placeName>
+               <placeName type="alternative-name">Colonia Agrippina</placeName>
+               <placeName type="alternative-name">Hansestadt Köln</placeName>
+               <placeName type="alternative-name">Kölln am Rheine</placeName>
+               <placeName type="alternative-name">Cöllen</placeName>
+               <placeName type="alternative-name">Cölln</placeName>
+               <placeName type="alternative-name">Kūlūniyā</placeName>
+               <placeName type="alternative-name">Stadtverwaltung (Köln)</placeName>
+               <placeName type="alternative-name">Cölln (Köln)</placeName>
+               <placeName type="alternative-name">Nachrichtenamt der Stadt Köln</placeName>
+               <placeName type="alternative-name">Oppidum Ubiorum</placeName>
+               <placeName type="alternative-name">Colonia Ubiorum</placeName>
+               <placeName type="alternative-name">Keln</placeName>
+               <placeName type="alternative-name">Kerun</placeName>
+               <placeName type="alternative-name">Colonia Agrippinensis</placeName>
+               <placeName type="alternative-name">Cöln</placeName>
+               <placeName type="alternative-name">Gross-Köln</placeName>
+               <placeName type="alternative-name">Groß-Köln</placeName>
+               <placeName type="alternative-name">Cologne</placeName>
+               <location type="coords">
+                  <geo>50,93835 6,95427</geo>
+               </location>
+               <location type="located_in_place">
+                  <placeName ref="pmb247043">Nordrhein-Westfahlen</placeName>
+                  <geo>51,466666666667 7,55</geo>
+               </location>
+               <location type="located_in_place">
+                  <placeName ref="pmb151">Deutschland</placeName>
+                  <geo>51,5 10,5</geo>
+               </location>
+            </place>
+         </listPlace>
+         <listOrg>
+            <org xml:id="pmb35597" ana="comment">
+               <orgName>Deutsches Theater Berlin</orgName>
+               <orgName type="institution_namensvariante">Deutsches Theater</orgName>
+               <location type="located_in_place">
+                  <placeName ref="pmb168">Berlin</placeName>
+                  <geo>52,52437 13,41053</geo>
+                  <idno type="URL" subtype="geonames">https://sws.geonames.org/2950159/</idno>
+                  <idno type="URL" subtype="schnitzler-bahr">https://schnitzler-bahr.acdh.oeaw.ac.at/pmb168.html</idno>
+                  <idno type="URL" subtype="d-nb">https://d-nb.info/gnd/4005728-8</idno>
+                  <idno type="URL" subtype="pmb">https://pmb.acdh.oeaw.ac.at/entity/168/</idno>
+                  <idno type="URL" subtype="www">https://www.kraus.wienbibliothek.at/legalkraus/pmb168.html</idno>
+                  <idno type="URL" subtype="pmb">https://pmb.acdh.oeaw.ac.at/entity/92171/</idno>
+                  <idno type="URL" subtype="wikidata">http://www.wikidata.org/entity/Q64</idno>
+                  <idno type="URL" subtype="wikipedia">https://de.wikipedia.org/wiki/Berlin</idno>
+                  <idno type="URL" subtype="schnitzler-interviews">https://schnitzler-interviews.acdh.oeaw.ac.at/pmb168.html</idno>
+                  <idno type="URL" subtype="schnitzler-tagebuch">https://schnitzler-tagebuch.acdh.oeaw.ac.at/pmb168.html</idno>
+                  <idno type="URL" subtype="wienerschnitzler">https://wienerschnitzler.org/pmb168.html</idno>
+                  <idno type="URL" subtype="schnitzler-kultur">https://schnitzler-kultur.acdh.oeaw.ac.at/pmb168.html</idno>
+                  <idno type="URL" subtype="sk">https://sk.acdh.oeaw.ac.at/DWplace00313</idno>
+                  <idno type="URL" subtype="sk">https://sk.acdh.oeaw.ac.at/DWplace00093</idno>
+                  <idno type="URL" subtype="sk">https://sk.acdh.oeaw.ac.at/pmb168</idno>
+                  <idno type="URL" subtype="sk">https://sk.acdh.oeaw.ac.at/fa_place00001836</idno>
+                  <idno type="URL" subtype="sk">https://sk.acdh.oeaw.ac.at/fa_place00004523</idno>
+                  <idno type="URL" subtype="biblio">https://biblio.ub.uni-freiburg.de/sf/#pmb168</idno>
+                  <idno type="URL" subtype="schnitzler-briefe">https://schnitzler-briefe.acdh.oeaw.ac.at/pmb168.html</idno>
+                  <idno type="URL" subtype="www">https://www.schoenberg-ue.at/ue/places/place.2.3</idno>
+               </location>
+               <location type="located_in_place">
+                  <placeName ref="pmb3">Deutsches Theater Berlin</placeName>
+                  <geo>52,524444 13,382222</geo>
+                  <idno type="URL" subtype="schnitzler-bahr">https://schnitzler-bahr.acdh.oeaw.ac.at/pmb3.html</idno>
+                  <idno type="URL" subtype="pmb">https://pmb.acdh.oeaw.ac.at/entity/3/</idno>
+                  <idno type="URL" subtype="schnitzler-interviews">https://schnitzler-interviews.acdh.oeaw.ac.at/pmb3.html</idno>
+                  <idno type="URL" subtype="wienerschnitzler">https://wienerschnitzler.org/pmb3.html</idno>
+                  <idno type="URL" subtype="schnitzler-kultur">https://schnitzler-kultur.acdh.oeaw.ac.at/pmb3.html</idno>
+                  <idno type="URL" subtype="schnitzler-briefe">https://schnitzler-briefe.acdh.oeaw.ac.at/pmb3.html</idno>
+               </location>
+            </org>
+         </listOrg>
+         <listEvent>
+            <event xml:id="pmb296513" ana="comment">
+               <eventName n="Theateruraufführung">Uraufführung von Florian Geyer, 4.1.1896</eventName>
+               <listPlace>
+                  <place>
+                     <placeName role="veranstaltet in" ref="pmb3">Deutsches Theater Berlin</placeName>
+                     <location>
+                        <geo>52,524444 13,382222</geo>
+                     </location>
+                  </place>
+               </listPlace>
+            </event>
+            <event xml:id="pmb118337" ana="comment">
+               <eventName n="Theateruraufführung">Uraufführung von Lebenswende, 21.1.1896</eventName>
+               <listPlace>
+                  <place>
+                     <placeName role="veranstaltet in" ref="pmb3">Deutsches Theater Berlin</placeName>
+                     <location>
+                        <geo>52,524444 13,382222</geo>
+                     </location>
+                  </place>
+               </listPlace>
+            </event>
+            <event xml:id="pmb35206" ana="comment">
+               <eventName n="Theaterpremiere">Premiere von Liebelei, Der zerbrochene Krug, 4.2.1896</eventName>
+               <listPlace>
+                  <place>
+                     <placeName role="veranstaltet in" ref="pmb3">Deutsches Theater Berlin</placeName>
+                     <location>
+                        <geo>52,524444 13,382222</geo>
+                     </location>
+                  </place>
+               </listPlace>
+            </event>
+         </listEvent>
+      </back>
+   </text>
 </TEI>
