@@ -481,6 +481,11 @@
                     (matches(@target, '^L\d{5}'))"> Wenn @type = "schnitzler-briefe",
                 muss @target vom Aufbau her »L01234« sein. </sch:assert>
             <sch:assert test="
+                    not(@type = 'schnitzler-briefe') or
+                    not(@target = ancestor::tei:TEI/@xml:id)"> Ein ref[@type='schnitzler-briefe']
+                darf im @target nicht auf die aktuelle Datei selbst verweisen (Wert von
+                tei:TEI/@xml:id). </sch:assert>
+            <sch:assert test="
                     not(@type = 'schnitzler-lektueren') or
                     (@target = 'Deutschsprachige-Literatur' or @target = 'Polen-Czechen' or @target = 'Ungarn-etc.' or @target = 'Frankreich' or @target = 'Italien' or @target = 'Spanien'
                     or @target = 'England' or @target = 'Norden' or @target = 'Russland' or @target = 'Griechenland'

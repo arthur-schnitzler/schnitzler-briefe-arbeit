@@ -36,6 +36,7 @@ import re
 import subprocess
 import sys
 import tempfile
+import threading
 import webbrowser
 from datetime import date
 from http.server import BaseHTTPRequestHandler, ThreadingHTTPServer
@@ -1111,6 +1112,13 @@ class Handler(BaseHTTPRequestHandler):
                     self._send_json({"ok": True})
                 else:
                     self._send_json({"ok": False, "error": "Datei nicht gefunden"}, 404)
+            elif path == "/api/shutdown":
+                self._send_json({"ok": True})
+                # server.shutdown() blockiert, bis serve_forever() die Schleife
+                # verlässt - darf daher nicht im selben Thread laufen, der
+                # gerade diesen Request bearbeitet (der ihn sonst blockieren
+                # würde, bevor die obige Antwort rausgeschrieben ist)
+                threading.Thread(target=self.server.shutdown, daemon=True).start()
             else:
                 self.send_error(404)
         except FileNotFoundError as e:
@@ -1181,13 +1189,15 @@ def main():
 
     server = ThreadingHTTPServer(("127.0.0.1", args.port), Handler)
     url = f"http://127.0.0.1:{args.port}/"
-    print(f"Stempel-Abgleich läuft auf {url}  (Strg-C zum Beenden)")
+    print(f"Stempel-Abgleich läuft auf {url}  (Strg-C oder 'Beenden'-Knopf zum Beenden)")
     if not args.no_open:
         webbrowser.open(url)
     try:
         server.serve_forever()
     except KeyboardInterrupt:
-        print("\nBeendet.")
+        pass
+    server.server_close()
+    print("\nBeendet.")
 
 
 if __name__ == "__main__":

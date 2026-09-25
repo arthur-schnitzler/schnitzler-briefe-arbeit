@@ -833,6 +833,19 @@ function wireToolbar() {
       toast(e.message, true);
     }
   });
+  el("quitBtn").addEventListener("click", async () => {
+    if (!window.confirm("Server wirklich beenden?")) return;
+    try {
+      await apiGet("/api/shutdown");
+    } catch {
+      // Server ist mit dem Beenden schon beschäftigt und antwortet ggf.
+      // nicht mehr rechtzeitig - kein Fehlerfall
+    }
+    document.body.innerHTML =
+      '<div style="padding:40px;font:14px -apple-system,sans-serif;color:#8a857a;">' +
+      "Server beendet. Dieses Fenster kann geschlossen werden.</div>";
+    window.close();
+  });
 }
 
 async function init() {
