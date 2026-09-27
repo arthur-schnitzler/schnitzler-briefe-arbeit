@@ -1,6 +1,10 @@
-<?xml version='1.0' encoding='UTF-8'?>
+<?xml version="1.0" encoding="UTF-8"?>
 <?xml-model href="../meta/schnitzler-briefe-schematron.sch" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
-<TEI xmlns="http://www.tei-c.org/ns/1.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.tei-c.org/ns/1.0 ../meta/schnitzler-briefe-schema.xsd" xml:id="L01921" xml:base="https://id.acdh.oeaw.ac.at/schnitzler/schnitzler-briefe/editions">
+<TEI xmlns="http://www.tei-c.org/ns/1.0"
+     xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+     xsi:schemaLocation="http://www.tei-c.org/ns/1.0 ../meta/schnitzler-briefe-schema.xsd"
+     xml:id="L01921"
+     xml:base="https://id.acdh.oeaw.ac.at/schnitzler/schnitzler-briefe/editions">
    <teiHeader>
       <fileDesc>
          <titleStmt>
@@ -115,20 +119,28 @@
             <correspAction type="sent">
                <persName ref="#pmb11527">Großmann, Stefan</persName>
                <date when="1910-04-02" n="01">2. 4. 1910</date>
-               <placeName ref="#pmb50">Wien</placeName>
+               <placeName ref="#pmb365446">Mariahilfer Straße 89</placeName>
             </correspAction>
             <correspAction type="received">
                <persName ref="#pmb2121">Schnitzler, Arthur</persName>
                <date evidence="conjecture" notBefore="1910-04-02" notAfter="1910-04-04">[2. 4. 1910
                   – 6. 4. 1910?]</date>
-               <placeName ref="#pmb50">Wien</placeName>
+               <placeName ref="#pmb168940">Edmund-Weiß-Gasse 7</placeName>
             </correspAction>
-            <correspContext><ref type="belongsToCorrespondence" target="correspondence_11527">Grossmann, Stefan</ref>
+            <correspContext>
+               <ref type="belongsToCorrespondence" target="correspondence_11527">Grossmann, Stefan</ref>
                <ref subtype="previous_letter" type="withinCollection" target="L01920">Großmann an Schnitzler, 31. 3. 1910</ref>
                <ref subtype="next_letter" type="withinCollection" target="L03547">Salten an Schnitzler, [2. oder 3]. 4. 1910</ref>
-               <ref subtype="previous_letter" type="withinCorrespondence" source="correspondence_11527" target="L01920">Großmann an Schnitzler, 31. 3. 1910</ref>
-               <ref subtype="next_letter" type="withinCorrespondence" source="correspondence_11527" target="L02005">Großmann an Schnitzler, [7.] 2. 1911</ref>
-            </correspContext></correspDesc>
+               <ref subtype="previous_letter"
+                    type="withinCorrespondence"
+                    source="correspondence_11527"
+                    target="L01920">Großmann an Schnitzler, 31. 3. 1910</ref>
+               <ref subtype="next_letter"
+                    type="withinCorrespondence"
+                    source="correspondence_11527"
+                    target="L02005">Großmann an Schnitzler, [7.] 2. 1911</ref>
+            </correspContext>
+         </correspDesc>
       </profileDesc>
       <revisionDesc status="approved">
          <change who="GHS" when="2020-06-12">Angelegt</change>
@@ -155,7 +167,7 @@
                <seg type="letterhead">
                   <seg rend="left">
                      <hi rend="pre-print">
-                        <rs type="place" ref="#pmb50">Wien</rs>, VI/1, <rs ref="#pmb302" type="place">Mariahilferstrasse 89</rs>
+                        <rs type="place" ref="#pmb50">Wien</rs>, VI/1, <rs ref="#pmb365446" type="place">Mariahilferstrasse 89</rs>
                      </hi>
                   </seg>
                   <seg rend="right">
@@ -336,6 +348,20 @@
             </bibl>
          </listBibl>
          <listPlace>
+            <place xml:id="pmb365446">
+               <placeName>Mariahilfer Straße 89</placeName>
+               <location type="coords">
+                  <geo>48,197408 16,348053</geo>
+               </location>
+               <location type="located_in_place">
+                  <placeName ref="pmb56">VI., Mariahilf</placeName>
+                  <geo>48,19522 16,35032</geo>
+               </location>
+               <location type="located_in_place">
+                  <placeName ref="pmb302">Mariahilfer Straße</placeName>
+                  <geo>48,2007 16,3574</geo>
+               </location>
+            </place>
             <place xml:id="pmb50">
                <placeName>Wien</placeName>
                <placeName type="ort_fruherer-name">K.K. Reichshaupt- und Residenzstadt Wien</placeName>
@@ -356,16 +382,6 @@
                <location type="located_in_place">
                   <placeName ref="pmb235218">Windmühlhöhe</placeName>
                   <geo>48,24077 16,32092</geo>
-               </location>
-            </place>
-            <place xml:id="pmb302">
-               <placeName>Mariahilfer Straße</placeName>
-               <location type="coords">
-                  <geo>48,2007 16,3574</geo>
-               </location>
-               <location type="located_in_place">
-                  <placeName ref="pmb56">VI., Mariahilf</placeName>
-                  <geo>48,19522 16,35032</geo>
                </location>
             </place>
          </listPlace>
