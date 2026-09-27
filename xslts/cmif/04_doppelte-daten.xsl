@@ -10,7 +10,10 @@
             <xsl:variable name="datum" select="@ana"/>
             <xsl:if test="preceding-sibling::tei:correspDesc/@ana = $datum">
                 <xsl:attribute name="doppelter-tag">
-                    <xsl:value-of select="$datum"/>
+                    <xsl:value-of select="substring-before($datum, '_')"/>
+                </xsl:attribute>
+                <xsl:attribute name="n">
+                    <xsl:value-of select="substring-after($datum, '_')"/>
                 </xsl:attribute>
             </xsl:if>
             <xsl:copy-of select="@* | *"/>
