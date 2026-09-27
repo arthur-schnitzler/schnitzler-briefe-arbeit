@@ -224,8 +224,7 @@ async function loadFile(id) {
     state.openRaw = { stamp: new Set(), correspAction: new Set() };
     state.pendingRaw = {};
     el("jumpInput").value = fid;
-    el("browserBtn").href = data.htmlUrl;
-    el("browserBtn").textContent = `${fid} im Browser öffnen ↗`;
+    el("openBtn").textContent = `${fid} öffnen ↗`;
     render();
     updatePosIndicator();
     setStatus(`${fid}: ${data.stamps.length} Stempel, ${data.correspActions.length} correspAction.`, "ok");
@@ -825,8 +824,9 @@ function wireToolbar() {
     state.mismatchOnly = ev.target.checked;
     applyFilter();
   });
-  el("oxygenBtn").addEventListener("click", async () => {
-    if (!state.currentId) return;
+  el("openBtn").addEventListener("click", async () => {
+    if (!state.currentId || !state.file) return;
+    window.open(state.file.htmlUrl, "_blank", "noopener");
     try {
       await apiGet(`/api/open-oxygen/${state.currentId}`);
     } catch (e) {

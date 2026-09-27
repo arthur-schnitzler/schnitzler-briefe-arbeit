@@ -1,6 +1,10 @@
-<?xml version='1.0' encoding='UTF-8'?>
+<?xml version="1.0" encoding="UTF-8"?>
 <?xml-model href="../meta/schnitzler-briefe-schematron.sch" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
-<TEI xmlns="http://www.tei-c.org/ns/1.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.tei-c.org/ns/1.0 ../meta/schnitzler-briefe-schema.xsd" xml:id="L00382" xml:base="https://id.acdh.oeaw.ac.at/schnitzler/schnitzler-briefe/editions">
+<TEI xmlns="http://www.tei-c.org/ns/1.0"
+     xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+     xsi:schemaLocation="http://www.tei-c.org/ns/1.0 ../meta/schnitzler-briefe-schema.xsd"
+     xml:id="L00382"
+     xml:base="https://id.acdh.oeaw.ac.at/schnitzler/schnitzler-briefe/editions">
    <teiHeader>
       <fileDesc>
          <titleStmt>
@@ -93,15 +97,9 @@
                         </handDesc>
                         <additions>
                            <incident type="postal">
-                              <desc>nachgesandt nach <rs ref="#pmb623" type="place">
-                                    <hi rend="latintype">Hotel Hassler</hi>
-                                 </rs>
-                              </desc>
-                           </incident>
-                           <incident type="postal">
                               <desc>
                                  <stamp n="1" type="transmission">
-                                    <placeName ref="#pmb51">Wien 1/1</placeName>
+                                    <placeName ref="#pmb365214">Wien 1/1 1</placeName>
                                     <date when="1894-10-15">15. 10. 94</date>
                                     <time>11<unclear>–12</unclear>N</time>
                                  </stamp>
@@ -115,6 +113,12 @@
                                        <unclear>7</unclear> 10–94</date>
                                     <time>8 S</time>
                                  </stamp>
+                              </desc>
+                           </incident>
+                           <incident type="postal">
+                              <desc>nachgesandt nach <rs ref="#pmb364923" type="place">
+                                    <hi rend="latintype">Hotel Hassler</hi>
+                                 </rs>
                               </desc>
                            </incident>
                         </additions>
@@ -166,7 +170,11 @@
             </correspAction>
             <correspAction type="transmitted">
                <date when="1894-10-15">15. 10. 1894</date>
-               <placeName ref="#pmb51">I., Innere Stadt</placeName>
+               <placeName ref="#pmb365214">1/1 Post- und Telegraphenamt 1</placeName>
+            </correspAction>
+            <correspAction type="redirected">
+               <date when="1894-10-17">17. 10. 1894</date>
+               <placeName ref="#pmb365452">Palazzo Orsini di Gravina</placeName>
             </correspAction>
             <correspAction type="delivered">
                <date when="1894-10-17">17. 10. 1894</date>
@@ -177,12 +185,20 @@
                <date when="1894-10-17">17. 10. 1894</date>
                <placeName ref="#pmb364923">Hotel Hassler [Neapel]</placeName>
             </correspAction>
-            <correspContext><ref type="belongsToCorrespondence" target="correspondence_10863">Beer-Hofmann, Richard</ref>
+            <correspContext>
+               <ref type="belongsToCorrespondence" target="correspondence_10863">Beer-Hofmann, Richard</ref>
                <ref subtype="previous_letter" type="withinCollection" target="L00383">Beer-Hofmann an Schnitzler, 14. 10. 1894</ref>
                <ref subtype="next_letter" type="withinCollection" target="L00385">Beer-Hofmann an Schnitzler, 17. 10. 1894</ref>
-               <ref subtype="previous_letter" type="withinCorrespondence" source="correspondence_10863" target="L00383">Beer-Hofmann an Schnitzler, 14. 10. 1894</ref>
-               <ref subtype="next_letter" type="withinCorrespondence" source="correspondence_10863" target="L00385">Beer-Hofmann an Schnitzler, 17. 10. 1894</ref>
-            </correspContext></correspDesc>
+               <ref subtype="previous_letter"
+                    type="withinCorrespondence"
+                    source="correspondence_10863"
+                    target="L00383">Beer-Hofmann an Schnitzler, 14. 10. 1894</ref>
+               <ref subtype="next_letter"
+                    type="withinCorrespondence"
+                    source="correspondence_10863"
+                    target="L00385">Beer-Hofmann an Schnitzler, 17. 10. 1894</ref>
+            </correspContext>
+         </correspDesc>
       </profileDesc>
       <revisionDesc status="approved">
          <change who="MAM" when="2019-06-12">Automatisch angelegt aus Buchausgabe</change>
@@ -224,7 +240,9 @@
                   <hi rend="latintype">(<rs ref="#pmb595" type="place">Napoli</rs>)</hi>
                </addrLine>
                <addrLine>
-                  <hi rend="latintype">a poste ferma</hi>
+                  <hi rend="latintype">
+                     <rs type="place" ref="#pmb365452" subtype="implied">a poste ferma</rs>
+                  </hi>
                </addrLine>
                <addrLine>
                   <hi rend="latintype">
@@ -600,32 +618,14 @@
             </bibl>
          </listBibl>
          <listPlace>
-            <place xml:id="pmb623">
-               <placeName>Hôtel Hassler</placeName>
+            <place xml:id="pmb365214">
+               <placeName>1/1 Post- und Telegraphenamt 1</placeName>
                <location type="coords">
-                  <geo>41,90627 12,4829</geo>
+                  <geo>48,209928 16,379065</geo>
                </location>
                <location type="located_in_place">
-                  <placeName ref="pmb445">Rom</placeName>
-                  <geo>41,89193 12,51133</geo>
-               </location>
-            </place>
-            <place xml:id="pmb51">
-               <placeName>I., Innere Stadt</placeName>
-               <placeName type="alternative-name">Inner city</placeName>
-               <placeName type="alternative-name">Wien,Innere Stadt</placeName>
-               <placeName type="alternative-name">1. Wiener Gemeindebezirk</placeName>
-               <placeName type="legacy-name-merge">Wien-Innere Stadt</placeName>
-               <location type="coords">
+                  <placeName ref="pmb51">I., Innere Stadt</placeName>
                   <geo>48,20769 16,37049</geo>
-               </location>
-               <location type="located_in_place">
-                  <placeName ref="pmb41240">Österreich</placeName>
-                  <geo>47,33333 13,33333</geo>
-               </location>
-               <location type="located_in_place">
-                  <placeName ref="pmb50">Wien</placeName>
-                  <geo>48,208333 16,373056</geo>
                </location>
             </place>
             <place xml:id="pmb595">
@@ -637,6 +637,16 @@
                <location type="located_in_place">
                   <placeName ref="pmb40306">Italien</placeName>
                   <geo>42,83333 12,83333</geo>
+               </location>
+            </place>
+            <place xml:id="pmb364923">
+               <placeName>Hotel Hassler [Neapel]</placeName>
+               <location type="coords">
+                  <geo>40,8302153354582 14,246194459892541</geo>
+               </location>
+               <location type="located_in_place">
+                  <placeName ref="pmb595">Neapel</placeName>
+                  <geo>40,85216 14,26811</geo>
                </location>
             </place>
             <place xml:id="pmb168934">
@@ -653,10 +663,10 @@
                   <geo>48,215516628628 16,356475515829</geo>
                </location>
             </place>
-            <place xml:id="pmb364923">
-               <placeName>Hotel Hassler [Neapel]</placeName>
+            <place xml:id="pmb365452">
+               <placeName>Palazzo Orsini di Gravina</placeName>
                <location type="coords">
-                  <geo>40,8302153354582 14,246194459892541</geo>
+                  <geo>40,845237 14,251462</geo>
                </location>
                <location type="located_in_place">
                   <placeName ref="pmb595">Neapel</placeName>
