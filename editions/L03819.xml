@@ -1,6 +1,10 @@
-<?xml version='1.0' encoding='UTF-8'?>
+<?xml version="1.0" encoding="UTF-8"?>
 <?xml-model href="../meta/schnitzler-briefe-schematron.sch" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
-<TEI xmlns="http://www.tei-c.org/ns/1.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.tei-c.org/ns/1.0 ../meta/schnitzler-briefe-schema.xsd" xml:id="L03819" xml:base="https://id.acdh.oeaw.ac.at/schnitzler/schnitzler-briefe/editions">
+<TEI xmlns="http://www.tei-c.org/ns/1.0"
+     xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+     xsi:schemaLocation="http://www.tei-c.org/ns/1.0 ../meta/schnitzler-briefe-schema.xsd"
+     xml:id="L03819"
+     xml:base="https://id.acdh.oeaw.ac.at/schnitzler/schnitzler-briefe/editions">
    <teiHeader>
       <fileDesc>
          <titleStmt>
@@ -137,7 +141,8 @@
                      <imprint>
                         <date when="2014">2014–2025</date>
                      </imprint>
-                     <ref type="URL" target="https://www.freudedition.net/briefe/freud-sigmund/schnitzler-arthur/1906/05/08"/>
+                     <ref type="URL"
+                          target="https://www.freudedition.net/briefe/freud-sigmund/schnitzler-arthur/1906/05/08"/>
                   </monogr>
                </biblStruct>
             </listBibl>
@@ -151,20 +156,32 @@
             <correspAction type="sent">
                <persName ref="#pmb11370">Freud, Sigmund</persName>
                <date when="1906-05-08" n="01">8. 5. 1906</date>
-               <placeName ref="#pmb253790">Berggasse 19</placeName>
+               <placeName ref="#pmb253790">
+                  <error type="placeName-nicht-bezogen">253790</error>
+               </placeName>
             </correspAction>
             <correspAction type="received">
                <persName ref="#pmb2121">Schnitzler, Arthur</persName>
                <date evidence="conjecture" notBefore="1906-05-08" notAfter="1906-05-11">[8. 5. 1906
                   – 11. 5. 1906?]</date>
-               <placeName ref="#pmb168940">Edmund-Weiß-Gasse 7</placeName>
+               <placeName ref="#pmb168940">
+                  <error type="placeName-nicht-bezogen">168940</error>
+               </placeName>
             </correspAction>
-            <correspContext><ref type="belongsToCorrespondence" target="correspondence_11370">Freud, Sigmund</ref>
+            <correspContext>
+               <ref type="belongsToCorrespondence" target="correspondence_11370">Freud, Sigmund</ref>
                <ref subtype="previous_letter" type="withinCollection" target="L01596">Hofmannsthal an Schnitzler, 7. 5. 1906</ref>
                <ref subtype="next_letter" type="withinCollection" target="L03423">Salten, Lindau, Barthel an Schnitzler, [8. oder 9]. 5. 1906</ref>
-               <ref subtype="previous_letter" type="withinCorrespondence" source="correspondence_11370" target="L03815">Schnitzler an Freud, 6. 5. 1906</ref>
-               <ref subtype="next_letter" type="withinCorrespondence" source="correspondence_11370" target="L03886">Freud an Schnitzler, 14. 5. 1912</ref>
-            </correspContext></correspDesc>
+               <ref subtype="previous_letter"
+                    type="withinCorrespondence"
+                    source="correspondence_11370"
+                    target="L03815">Schnitzler an Freud, 6. 5. 1906</ref>
+               <ref subtype="next_letter"
+                    type="withinCorrespondence"
+                    source="correspondence_11370"
+                    target="L03886">Freud an Schnitzler, 14. 5. 1912</ref>
+            </correspContext>
+         </correspDesc>
       </profileDesc>
       <revisionDesc status="proposed">
          <change who="MAM" when="2025-07-30">Export aus Transkribus</change>

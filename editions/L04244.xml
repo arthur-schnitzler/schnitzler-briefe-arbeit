@@ -1,6 +1,10 @@
-<?xml version='1.0' encoding='UTF-8'?>
+<?xml version="1.0" encoding="UTF-8"?>
 <?xml-model href="../meta/schnitzler-briefe-schematron.sch" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
-<TEI xmlns="http://www.tei-c.org/ns/1.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.tei-c.org/ns/1.0 ../meta/schnitzler-briefe-schema.xsd" xml:base="https://id.acdh.oeaw.ac.at/schnitzler/schnitzler-briefe/editions" xml:id="L04244">
+<TEI xmlns="http://www.tei-c.org/ns/1.0"
+     xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+     xsi:schemaLocation="http://www.tei-c.org/ns/1.0 ../meta/schnitzler-briefe-schema.xsd"
+     xml:base="https://id.acdh.oeaw.ac.at/schnitzler/schnitzler-briefe/editions"
+     xml:id="L04244">
    <teiHeader>
       <fileDesc>
          <titleStmt>
@@ -117,22 +121,33 @@
             <correspAction type="sent">
                <persName ref="#pmb12740">Schwarzkopf, Gustav</persName>
                <date when="1929-08-27" n="01">27. 8. 1929</date>
-               <placeName ref="#pmb207301">Tiefer Graben 17</placeName>
+               <placeName ref="#pmb207301">
+                  <error type="placeName-nicht-bezogen">207301</error>
+               </placeName>
             </correspAction>
             <correspAction type="transmitted">
                <date when="1929-08-27">27. 8. 1929</date>
-               <placeName ref="#pmb51">I., Innere Stadt</placeName>
+               <placeName ref="#pmb51">
+                  <error type="placeName-nicht-bezogen">51</error>
+               </placeName>
             </correspAction>
             <correspAction type="received">
                <persName ref="#pmb2121">Schnitzler, Arthur</persName>
                <date evidence="conjecture" notBefore="1929-08-28" notAfter="1929-09-01">[28. 8. 1929 – 1. 9. 1929?]</date>
-               <placeName ref="#pmb90460">Caux</placeName>
+               <placeName ref="#pmb90460">
+                  <error type="placeName-nicht-bezogen">90460</error>
+               </placeName>
             </correspAction>
-            <correspContext><ref type="belongsToCorrespondence" target="correspondence_12740">Schwarzkopf, Gustav</ref>
+            <correspContext>
+               <ref type="belongsToCorrespondence" target="correspondence_12740">Schwarzkopf, Gustav</ref>
                <ref subtype="previous_letter" type="withinCollection" target="L02520">Schnitzler an Adam, 14. 8. 1929</ref>
                <ref subtype="next_letter" type="withinCollection" target="L02521">Beer-Hofmann an Schnitzler, 28. 8. 1929</ref>
-               <ref subtype="previous_letter" type="withinCorrespondence" source="correspondence_12740" target="L04352">Schnitzler an Schwarzkopf, 2. 1. 1929</ref>
-            </correspContext></correspDesc>
+               <ref subtype="previous_letter"
+                    type="withinCorrespondence"
+                    source="correspondence_12740"
+                    target="L04352">Schnitzler an Schwarzkopf, 2. 1. 1929</ref>
+            </correspContext>
+         </correspDesc>
       </profileDesc>
       <revisionDesc status="proposed">
          <change who="MAM" when="2026-02-20">Export aus Transkribus</change>

@@ -1,6 +1,10 @@
-<?xml version='1.0' encoding='UTF-8'?>
+<?xml version="1.0" encoding="UTF-8"?>
 <?xml-model href="../meta/schnitzler-briefe-schematron.sch" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
-<TEI xmlns="http://www.tei-c.org/ns/1.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.tei-c.org/ns/1.0 ../meta/schnitzler-briefe-schema.xsd" xml:base="https://id.acdh.oeaw.ac.at/schnitzler/schnitzler-briefe/editions" xml:id="L04465">
+<TEI xmlns="http://www.tei-c.org/ns/1.0"
+     xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+     xsi:schemaLocation="http://www.tei-c.org/ns/1.0 ../meta/schnitzler-briefe-schema.xsd"
+     xml:base="https://id.acdh.oeaw.ac.at/schnitzler/schnitzler-briefe/editions"
+     xml:id="L04465">
    <teiHeader>
       <fileDesc>
          <titleStmt>
@@ -114,23 +118,37 @@
             <correspAction type="sent">
                <persName ref="#pmb2121">Schnitzler, Arthur</persName>
                <date when="1928-04-26" n="01">26. 4. 1928</date>
-               <placeName ref="#pmb44292" evidence="conjecture">Rhodos</placeName>
+               <placeName ref="#pmb44292" evidence="conjecture">
+                  <error type="placeName-nicht-bezogen">44292</error>
+               </placeName>
             </correspAction>
             <correspAction type="transmitted">
                <date when="1928-04-30">30. 4. 1928</date>
-               <placeName ref="#pmb341319">Triest</placeName>
+               <placeName ref="#pmb341319">
+                  <error type="placeName-nicht-bezogen">341319</error>
+               </placeName>
             </correspAction>
             <correspAction type="received">
                <persName ref="#pmb12740">Schwarzkopf, Gustav</persName>
                <date evidence="conjecture" notBefore="1928-05-01" notAfter="1928-05-04">[1. 5. 1928 – 4. 5. 1928?]</date>
-               <placeName ref="#pmb207301">Tiefer Graben 17</placeName>
+               <placeName ref="#pmb207301">
+                  <error type="placeName-nicht-bezogen">207301</error>
+               </placeName>
             </correspAction>
-            <correspContext><ref type="belongsToCorrespondence" target="correspondence_12740">Schwarzkopf, Gustav</ref>
+            <correspContext>
+               <ref type="belongsToCorrespondence" target="correspondence_12740">Schwarzkopf, Gustav</ref>
                <ref subtype="previous_letter" type="withinCollection" target="L03986">Schnitzler an Zuckerkandl, 23. 4. 1928</ref>
                <ref subtype="next_letter" type="withinCollection" target="L03516">Goldmann an Schnitzler, 3. 5. 1928</ref>
-               <ref subtype="previous_letter" type="withinCorrespondence" source="correspondence_12740" target="L04460">Schnitzler, Cappellini, Cappellini an Schwarzkopf, 23. 4. 1928</ref>
-               <ref subtype="next_letter" type="withinCorrespondence" source="correspondence_12740" target="L04479">Schnitzler an Schwarzkopf, 13. 6. 1928</ref>
-            </correspContext></correspDesc>
+               <ref subtype="previous_letter"
+                    type="withinCorrespondence"
+                    source="correspondence_12740"
+                    target="L04460">Schnitzler, Cappellini, Cappellini an Schwarzkopf, 23. 4. 1928</ref>
+               <ref subtype="next_letter"
+                    type="withinCorrespondence"
+                    source="correspondence_12740"
+                    target="L04479">Schnitzler an Schwarzkopf, 13. 6. 1928</ref>
+            </correspContext>
+         </correspDesc>
       </profileDesc>
       <revisionDesc status="proposed">
          <change who="MAM" when="2026-06-11">Export aus Transkribus</change>

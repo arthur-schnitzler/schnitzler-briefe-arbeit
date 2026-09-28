@@ -1,6 +1,10 @@
-<?xml version='1.0' encoding='UTF-8'?>
+<?xml version="1.0" encoding="UTF-8"?>
 <?xml-model href="../meta/schnitzler-briefe-schematron.sch" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
-<TEI xmlns="http://www.tei-c.org/ns/1.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.tei-c.org/ns/1.0 ../meta/schnitzler-briefe-schema.xsd" xml:id="L03504" xml:base="https://id.acdh.oeaw.ac.at/schnitzler/schnitzler-briefe/editions">
+<TEI xmlns="http://www.tei-c.org/ns/1.0"
+     xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+     xsi:schemaLocation="http://www.tei-c.org/ns/1.0 ../meta/schnitzler-briefe-schema.xsd"
+     xml:id="L03504"
+     xml:base="https://id.acdh.oeaw.ac.at/schnitzler/schnitzler-briefe/editions">
    <teiHeader>
       <fileDesc>
          <titleStmt>
@@ -144,23 +148,37 @@
                <persName ref="#pmb11324">Fischer, Samuel</persName>
                <persName ref="#pmb2657">Fischer, Hedwig</persName>
                <date notBefore="1909-07-19" notAfter="1909-07-30" n="01">[zwischen 19. und 30. 7.? 1909]</date>
-               <placeName ref="#pmb147834">Hôtel Dürrenstein</placeName>
+               <placeName ref="#pmb147834">
+                  <error type="placeName-nicht-bezogen">147834</error>
+               </placeName>
             </correspAction>
             <correspAction type="transmitted">
                <date notBefore="1909-07-19" notAfter="1909-07-30">[zwischen 19. und 30. 7.? 1909]</date>
-               <placeName ref="#pmb758">Höhlenstein</placeName>
+               <placeName ref="#pmb758">
+                  <error type="placeName-nicht-bezogen">758</error>
+               </placeName>
             </correspAction>
             <correspAction type="received">
                <persName ref="#pmb2121">Schnitzler, Arthur</persName>
                <date notBefore="1909-07-20" notAfter="1909-07-31">[zwischen 20. und 31. 7.? 1909]</date>
-               <placeName ref="#pmb470">Edlach an der Rax</placeName>
+               <placeName ref="#pmb470">
+                  <error type="placeName-nicht-bezogen">470</error>
+               </placeName>
             </correspAction>
-            <correspContext><ref type="belongsToCorrespondence" target="correspondence_2167">Salten, Felix</ref>
+            <correspContext>
+               <ref type="belongsToCorrespondence" target="correspondence_2167">Salten, Felix</ref>
                <ref subtype="previous_letter" type="withinCollection" target="L03503">Salten an Schnitzler, 18. 7. 1909</ref>
                <ref subtype="next_letter" type="withinCollection" target="L01859">Schnitzler an Ehrenstein, 24. 7. 1909</ref>
-               <ref subtype="previous_letter" type="withinCorrespondence" source="correspondence_2167" target="L03503">Salten an Schnitzler, 18. 7. 1909</ref>
-               <ref subtype="next_letter" type="withinCorrespondence" source="correspondence_2167" target="L03505">Salten an Schnitzler, 31. 7. 1909</ref>
-            </correspContext></correspDesc>
+               <ref subtype="previous_letter"
+                    type="withinCorrespondence"
+                    source="correspondence_2167"
+                    target="L03503">Salten an Schnitzler, 18. 7. 1909</ref>
+               <ref subtype="next_letter"
+                    type="withinCorrespondence"
+                    source="correspondence_2167"
+                    target="L03505">Salten an Schnitzler, 31. 7. 1909</ref>
+            </correspContext>
+         </correspDesc>
       </profileDesc>
       <revisionDesc status="approved">
          <change who="MAM" when="2023-11-16">Export aus Transkribus</change>

@@ -1,6 +1,10 @@
-<?xml version='1.0' encoding='UTF-8'?>
+<?xml version="1.0" encoding="UTF-8"?>
 <?xml-model href="../meta/schnitzler-briefe-schematron.sch" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
-<TEI xmlns="http://www.tei-c.org/ns/1.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.tei-c.org/ns/1.0 ../meta/schnitzler-briefe-schema.xsd" xml:id="L03885" xml:base="https://id.acdh.oeaw.ac.at/schnitzler/schnitzler-briefe/editions">
+<TEI xmlns="http://www.tei-c.org/ns/1.0"
+     xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+     xsi:schemaLocation="http://www.tei-c.org/ns/1.0 ../meta/schnitzler-briefe-schema.xsd"
+     xml:id="L03885"
+     xml:base="https://id.acdh.oeaw.ac.at/schnitzler/schnitzler-briefe/editions">
    <teiHeader>
       <fileDesc>
          <titleStmt>
@@ -183,24 +187,38 @@
             <correspAction type="sent">
                <persName ref="#pmb2121">Schnitzler, Arthur</persName>
                <date when="1915-01-07" n="01">7. 1. 1915</date>
-               <placeName ref="#pmb168815">Sternwartestraße 71</placeName>
+               <placeName ref="#pmb168815">
+                  <error type="placeName-nicht-bezogen">168815</error>
+               </placeName>
             </correspAction>
             <correspAction type="transmitted">
                <date when="1915-01-07">7. 1. 1915</date>
-               <placeName ref="#pmb51">I., Innere Stadt</placeName>
+               <placeName ref="#pmb51">
+                  <error type="placeName-nicht-bezogen">51</error>
+               </placeName>
             </correspAction>
             <correspAction type="received">
                <persName ref="#pmb12543">Rolland, Romain</persName>
                <date evidence="external" notBefore="1915-01-08" notAfter="1915-01-11">[8. 1. 1915 –
                   11. 1. 1915?]</date>
-               <placeName ref="#pmb294001">Hôtel Beau-Séjour</placeName>
+               <placeName ref="#pmb294001">
+                  <error type="placeName-nicht-bezogen">294001</error>
+               </placeName>
             </correspAction>
-            <correspContext><ref type="belongsToCorrespondence" target="correspondence_12543">Rolland, Romain</ref>
+            <correspContext>
+               <ref type="belongsToCorrespondence" target="correspondence_12543">Rolland, Romain</ref>
                <ref subtype="previous_letter" type="withinCollection" target="L02201">Brandes an Schnitzler, 23. 12. 1914</ref>
                <ref subtype="next_letter" type="withinCollection" target="L02202">Schnitzler an Brandes, 8. 1. 1915</ref>
-               <ref subtype="previous_letter" type="withinCorrespondence" source="correspondence_12543" target="L03882">Rolland an Schnitzler, 19. 12. 1914</ref>
-               <ref subtype="next_letter" type="withinCorrespondence" source="correspondence_12543" target="L04213">Schnitzler an Rolland, 11. 2. 1915</ref>
-            </correspContext></correspDesc>
+               <ref subtype="previous_letter"
+                    type="withinCorrespondence"
+                    source="correspondence_12543"
+                    target="L03882">Rolland an Schnitzler, 19. 12. 1914</ref>
+               <ref subtype="next_letter"
+                    type="withinCorrespondence"
+                    source="correspondence_12543"
+                    target="L04213">Schnitzler an Rolland, 11. 2. 1915</ref>
+            </correspContext>
+         </correspDesc>
       </profileDesc>
       <revisionDesc status="proposed">
          <change who="MAM" when="2025-09-26">Angelegt aus Briefe II</change>

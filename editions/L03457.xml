@@ -1,6 +1,10 @@
-<?xml version='1.0' encoding='UTF-8'?>
+<?xml version="1.0" encoding="UTF-8"?>
 <?xml-model href="../meta/schnitzler-briefe-schematron.sch" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
-<TEI xmlns="http://www.tei-c.org/ns/1.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.tei-c.org/ns/1.0 ../meta/schnitzler-briefe-schema.xsd" xml:id="L03457" xml:base="https://id.acdh.oeaw.ac.at/schnitzler/schnitzler-briefe/editions">
+<TEI xmlns="http://www.tei-c.org/ns/1.0"
+     xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+     xsi:schemaLocation="http://www.tei-c.org/ns/1.0 ../meta/schnitzler-briefe-schema.xsd"
+     xml:id="L03457"
+     xml:base="https://id.acdh.oeaw.ac.at/schnitzler/schnitzler-briefe/editions">
    <teiHeader>
       <fileDesc>
          <titleStmt>
@@ -122,11 +126,15 @@
                <persName ref="#pmb11485">Goldmann, Paul</persName>
                <persName ref="#pmb23593">Rosengart, Josef</persName>
                <date when="1904-09-10" n="02">10. 9. 1904</date>
-               <placeName ref="#pmb60525">Como</placeName>
+               <placeName ref="#pmb60525">
+                  <error type="placeName-nicht-bezogen">60525</error>
+               </placeName>
             </correspAction>
             <correspAction type="transmitted">
                <date when="1904-09-11">11. 9. 1904</date>
-               <placeName ref="#pmb147235" evidence="conjecture">Cernobbio</placeName>
+               <placeName ref="#pmb147235" evidence="conjecture">
+                  <error type="placeName-nicht-bezogen">147235</error>
+               </placeName>
             </correspAction>
             <correspAction type="redirected">
                <date notBefore="1904-09-12" notAfter="1904-09-15">[12. 9. 1904
@@ -137,14 +145,24 @@
                <persName ref="#pmb2121">Schnitzler, Arthur</persName>
                <date evidence="conjecture" notBefore="1904-09-13" notAfter="1904-09-16">[13. 9. 1904
                   – 16. 9. 1904?]</date>
-               <placeName ref="#pmb824" evidence="conjecture">Hotel und Pension Lueg</placeName>
+               <placeName ref="#pmb824" evidence="conjecture">
+                  <error type="placeName-nicht-bezogen">824</error>
+               </placeName>
             </correspAction>
-            <correspContext><ref type="belongsToCorrespondence" target="correspondence_11485">Goldmann, Paul</ref>
+            <correspContext>
+               <ref type="belongsToCorrespondence" target="correspondence_11485">Goldmann, Paul</ref>
                <ref subtype="previous_letter" type="withinCollection" target="L01442">Schnitzler an Beer-Hofmann, 10. 9. 1904</ref>
                <ref subtype="next_letter" type="withinCollection" target="L04532">Schnitzler, Schnitzler, Sigmund an Schwarzkopf, 13. 9. 1904</ref>
-               <ref subtype="previous_letter" type="withinCorrespondence" source="correspondence_11485" target="L03455">Goldmann an Schnitzler, 5. 9. 1904</ref>
-               <ref subtype="next_letter" type="withinCorrespondence" source="correspondence_11485" target="L03456">Goldmann an Schnitzler, 18. 11. [1904]</ref>
-            </correspContext></correspDesc>
+               <ref subtype="previous_letter"
+                    type="withinCorrespondence"
+                    source="correspondence_11485"
+                    target="L03455">Goldmann an Schnitzler, 5. 9. 1904</ref>
+               <ref subtype="next_letter"
+                    type="withinCorrespondence"
+                    source="correspondence_11485"
+                    target="L03456">Goldmann an Schnitzler, 18. 11. [1904]</ref>
+            </correspContext>
+         </correspDesc>
       </profileDesc>
       <revisionDesc status="approved">
          <change who="LU" when="2023-11-06">Export aus Transkribus</change>

@@ -1,6 +1,10 @@
-<?xml version='1.0' encoding='UTF-8'?>
+<?xml version="1.0" encoding="UTF-8"?>
 <?xml-model href="../meta/schnitzler-briefe-schematron.sch" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
-<TEI xmlns="http://www.tei-c.org/ns/1.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.tei-c.org/ns/1.0 ../meta/schnitzler-briefe-schema.xsd" xml:base="https://id.acdh.oeaw.ac.at/schnitzler/schnitzler-briefe/editions" xml:id="L04376">
+<TEI xmlns="http://www.tei-c.org/ns/1.0"
+     xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+     xsi:schemaLocation="http://www.tei-c.org/ns/1.0 ../meta/schnitzler-briefe-schema.xsd"
+     xml:base="https://id.acdh.oeaw.ac.at/schnitzler/schnitzler-briefe/editions"
+     xml:id="L04376">
    <teiHeader>
       <fileDesc>
          <titleStmt>
@@ -115,7 +119,9 @@
                <persName ref="#pmb2121">Schnitzler, Arthur</persName>
                <persName ref="#pmb2173">Schnitzler, Olga</persName>
                <date when="1908-04-29" n="03">29. 4. 1908</date>
-               <placeName ref="#pmb40812" evidence="conjecture">Hotel du Lac</placeName>
+               <placeName ref="#pmb40812" evidence="conjecture">
+                  <error type="placeName-nicht-bezogen">40812</error>
+               </placeName>
             </correspAction>
             <correspAction type="transmitted">
                <date when="1908-04-30">30. 4. 1908</date>
@@ -123,14 +129,24 @@
             <correspAction type="received">
                <persName ref="#pmb12740">Schwarzkopf, Gustav</persName>
                <date evidence="conjecture" notBefore="1908-05-01" notAfter="1908-05-05">[1. 5. 1908 – 5. 5. 1908?]</date>
-               <placeName ref="#pmb207296">Tiefer Graben 23</placeName>
+               <placeName ref="#pmb207296">
+                  <error type="placeName-nicht-bezogen">207296</error>
+               </placeName>
             </correspAction>
-            <correspContext><ref type="belongsToCorrespondence" target="correspondence_12740">Schwarzkopf, Gustav</ref>
+            <correspContext>
+               <ref type="belongsToCorrespondence" target="correspondence_12740">Schwarzkopf, Gustav</ref>
                <ref subtype="previous_letter" type="withinCollection" target="L01768">Schnitzler, Schnitzler an Beer-Hofmann, 29. 4. 1908</ref>
                <ref subtype="next_letter" type="withinCollection" target="L01769">Schnitzler an Beer-Hofmann, Beer-Hofmann, 11. 5. 1908</ref>
-               <ref subtype="previous_letter" type="withinCorrespondence" source="correspondence_12740" target="L04199">Schnitzler an Schwarzkopf, [24. 4. 1908?]</ref>
-               <ref subtype="next_letter" type="withinCorrespondence" source="correspondence_12740" target="L04029">Schnitzler an Schwarzkopf, 26. 5. 1908</ref>
-            </correspContext></correspDesc>
+               <ref subtype="previous_letter"
+                    type="withinCorrespondence"
+                    source="correspondence_12740"
+                    target="L04199">Schnitzler an Schwarzkopf, [24. 4. 1908?]</ref>
+               <ref subtype="next_letter"
+                    type="withinCorrespondence"
+                    source="correspondence_12740"
+                    target="L04029">Schnitzler an Schwarzkopf, 26. 5. 1908</ref>
+            </correspContext>
+         </correspDesc>
       </profileDesc>
       <revisionDesc status="proposed">
          <change who="MAM" when="2026-06-11">Export aus Transkribus</change>

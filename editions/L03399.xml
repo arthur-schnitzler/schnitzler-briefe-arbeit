@@ -1,6 +1,10 @@
-<?xml version='1.0' encoding='UTF-8'?>
+<?xml version="1.0" encoding="UTF-8"?>
 <?xml-model href="../meta/schnitzler-briefe-schematron.sch" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
-<TEI xmlns="http://www.tei-c.org/ns/1.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.tei-c.org/ns/1.0 ../meta/schnitzler-briefe-schema.xsd" xml:id="L03399" xml:base="https://id.acdh.oeaw.ac.at/schnitzler/schnitzler-briefe/editions">
+<TEI xmlns="http://www.tei-c.org/ns/1.0"
+     xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+     xsi:schemaLocation="http://www.tei-c.org/ns/1.0 ../meta/schnitzler-briefe-schema.xsd"
+     xml:id="L03399"
+     xml:base="https://id.acdh.oeaw.ac.at/schnitzler/schnitzler-briefe/editions">
    <teiHeader>
       <fileDesc>
          <titleStmt>
@@ -132,27 +136,43 @@
             <correspAction type="sent">
                <persName ref="#pmb2167">Salten, Felix</persName>
                <date when="1904-08-18" n="02">18. 8. 1904</date>
-               <placeName ref="#pmb231945">Porzellangasse 45</placeName>
+               <placeName ref="#pmb231945">
+                  <error type="placeName-nicht-bezogen">231945</error>
+               </placeName>
             </correspAction>
             <correspAction type="transmitted">
                <date when="1904-08-18">18. 8. 1904</date>
-               <placeName ref="#pmb51">I., Innere Stadt</placeName>
+               <placeName ref="#pmb51">
+                  <error type="placeName-nicht-bezogen">51</error>
+               </placeName>
             </correspAction>
             <correspAction type="delivered">
                <date when="1904-08-18">18. 8. 1904</date>
-               <placeName ref="#pmb68">XVIII., Währing</placeName>
+               <placeName ref="#pmb68">
+                  <error type="placeName-nicht-bezogen">68</error>
+               </placeName>
             </correspAction>
             <correspAction type="received">
                <persName ref="#pmb2121">Schnitzler, Arthur</persName>
                <date when="1904-08-18">18. 8. 1904</date>
-               <placeName ref="#pmb168940">Edmund-Weiß-Gasse 7</placeName>
+               <placeName ref="#pmb168940">
+                  <error type="placeName-nicht-bezogen">168940</error>
+               </placeName>
             </correspAction>
-            <correspContext><ref type="belongsToCorrespondence" target="correspondence_2167">Salten, Felix</ref>
+            <correspContext>
+               <ref type="belongsToCorrespondence" target="correspondence_2167">Salten, Felix</ref>
                <ref subtype="previous_letter" type="withinCollection" target="L01429">Hofmannsthal an Schnitzler, 18. 8. 1904</ref>
                <ref subtype="next_letter" type="withinCollection" target="L01430">Schnitzler an Hofmannsthal, 20. 8. 1904</ref>
-               <ref subtype="previous_letter" type="withinCorrespondence" source="correspondence_2167" target="L02992">Schnitzler an Salten, 27. 7. 1904</ref>
-               <ref subtype="next_letter" type="withinCorrespondence" source="correspondence_2167" target="L03053">Salten an Schnitzler, 22. 10. 1904</ref>
-            </correspContext></correspDesc>
+               <ref subtype="previous_letter"
+                    type="withinCorrespondence"
+                    source="correspondence_2167"
+                    target="L02992">Schnitzler an Salten, 27. 7. 1904</ref>
+               <ref subtype="next_letter"
+                    type="withinCorrespondence"
+                    source="correspondence_2167"
+                    target="L03053">Salten an Schnitzler, 22. 10. 1904</ref>
+            </correspContext>
+         </correspDesc>
       </profileDesc>
       <revisionDesc status="approved">
          <change who="MAM" when="2023-10-23">Export aus Transkribus</change>

@@ -1,6 +1,10 @@
-<?xml version='1.0' encoding='UTF-8'?>
+<?xml version="1.0" encoding="UTF-8"?>
 <?xml-model href="../meta/schnitzler-briefe-schematron.sch" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
-<TEI xmlns="http://www.tei-c.org/ns/1.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.tei-c.org/ns/1.0 ../meta/schnitzler-briefe-schema.xsd" xml:base="https://id.acdh.oeaw.ac.at/schnitzler/schnitzler-briefe/editions" xml:id="L04505">
+<TEI xmlns="http://www.tei-c.org/ns/1.0"
+     xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+     xsi:schemaLocation="http://www.tei-c.org/ns/1.0 ../meta/schnitzler-briefe-schema.xsd"
+     xml:base="https://id.acdh.oeaw.ac.at/schnitzler/schnitzler-briefe/editions"
+     xml:id="L04505">
    <teiHeader>
       <fileDesc>
          <titleStmt>
@@ -132,27 +136,43 @@
             <correspAction type="sent">
                <persName ref="#pmb2121">Schnitzler, Arthur</persName>
                <date when="1898-06-06" n="01">6. 6. 1898</date>
-               <placeName ref="#pmb100524">Friesach [Sankt Veit an der Glan]</placeName>
+               <placeName ref="#pmb100524">
+                  <error type="placeName-nicht-bezogen">100524</error>
+               </placeName>
             </correspAction>
             <correspAction type="transmitted">
                <date when="1898-06-06">6. 6. 1898</date>
-               <placeName ref="#pmb100524">Friesach [Sankt Veit an der Glan]</placeName>
+               <placeName ref="#pmb100524">
+                  <error type="placeName-nicht-bezogen">100524</error>
+               </placeName>
             </correspAction>
             <correspAction type="delivered">
                <date when="1898-06-07">7. 6. 98</date>
-               <placeName ref="#pmb51">I., Innere Stadt</placeName>
+               <placeName ref="#pmb51">
+                  <error type="placeName-nicht-bezogen">51</error>
+               </placeName>
             </correspAction>
             <correspAction type="received">
                <persName ref="#pmb12740">Schwarzkopf, Gustav</persName>
                <date when="1898-06-07">7. 6. 1898</date>
-               <placeName ref="#pmb207296">Tiefer Graben 23</placeName>
+               <placeName ref="#pmb207296">
+                  <error type="placeName-nicht-bezogen">207296</error>
+               </placeName>
             </correspAction>
-            <correspContext><ref type="belongsToCorrespondence" target="correspondence_12740">Schwarzkopf, Gustav</ref>
+            <correspContext>
+               <ref type="belongsToCorrespondence" target="correspondence_12740">Schwarzkopf, Gustav</ref>
                <ref subtype="previous_letter" type="withinCollection" target="L00803">Schnitzler, Kramer an Beer-Hofmann, 5. 6. 1898</ref>
                <ref subtype="next_letter" type="withinCollection" target="L00804">Schnitzler, Beer-Hofmann an Hofmannsthal, 10. 6. 1898</ref>
-               <ref subtype="previous_letter" type="withinCorrespondence" source="correspondence_12740" target="L04188">Schnitzler an Schwarzkopf, [27. 5. 1898?]</ref>
-               <ref subtype="next_letter" type="withinCorrespondence" source="correspondence_12740" target="L04125">Schnitzler an Schwarzkopf, [14. oder 15]. 7. 1898</ref>
-            </correspContext></correspDesc>
+               <ref subtype="previous_letter"
+                    type="withinCorrespondence"
+                    source="correspondence_12740"
+                    target="L04188">Schnitzler an Schwarzkopf, [27. 5. 1898?]</ref>
+               <ref subtype="next_letter"
+                    type="withinCorrespondence"
+                    source="correspondence_12740"
+                    target="L04125">Schnitzler an Schwarzkopf, [14. oder 15]. 7. 1898</ref>
+            </correspContext>
+         </correspDesc>
       </profileDesc>
       <revisionDesc status="proposed">
          <change who="MAM" when="2026-06-11">Export aus

@@ -1,6 +1,10 @@
-<?xml version='1.0' encoding='UTF-8'?>
+<?xml version="1.0" encoding="UTF-8"?>
 <?xml-model href="../meta/schnitzler-briefe-schematron.sch" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
-<TEI xmlns="http://www.tei-c.org/ns/1.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.tei-c.org/ns/1.0 ../meta/schnitzler-briefe-schema.xsd" xml:id="L03309" xml:base="https://id.acdh.oeaw.ac.at/schnitzler/schnitzler-briefe/editions">
+<TEI xmlns="http://www.tei-c.org/ns/1.0"
+     xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+     xsi:schemaLocation="http://www.tei-c.org/ns/1.0 ../meta/schnitzler-briefe-schema.xsd"
+     xml:id="L03309"
+     xml:base="https://id.acdh.oeaw.ac.at/schnitzler/schnitzler-briefe/editions">
    <teiHeader>
       <fileDesc>
          <titleStmt>
@@ -109,20 +113,32 @@
             <correspAction type="sent">
                <persName ref="#pmb2167">Salten, Felix</persName>
                <date when="1900-08-08" n="01">8. 8. 1900</date>
-               <placeName ref="#pmb842">Karlsbad</placeName>
+               <placeName ref="#pmb842">
+                  <error type="placeName-nicht-bezogen">842</error>
+               </placeName>
             </correspAction>
             <correspAction type="received">
                <persName ref="#pmb2121">Schnitzler, Arthur</persName>
                <date evidence="conjecture" notBefore="1900-08-09" notAfter="1900-08-13">[9. 8. 1900
                   – 13. 8. 1900?]</date>
-               <placeName ref="#pmb213">Bad Ischl</placeName>
+               <placeName ref="#pmb213">
+                  <error type="placeName-nicht-bezogen">213</error>
+               </placeName>
             </correspAction>
-            <correspContext><ref type="belongsToCorrespondence" target="correspondence_2167">Salten, Felix</ref>
+            <correspContext>
+               <ref type="belongsToCorrespondence" target="correspondence_2167">Salten, Felix</ref>
                <ref subtype="previous_letter" type="withinCollection" target="L03308">Salten an Schnitzler, 7. 8. 1900</ref>
                <ref subtype="next_letter" type="withinCollection" target="L04183">Schnitzler an Schwarzkopf, [9. 8. 1900?]</ref>
-               <ref subtype="previous_letter" type="withinCorrespondence" source="correspondence_2167" target="L03308">Salten an Schnitzler, 7. 8. 1900</ref>
-               <ref subtype="next_letter" type="withinCorrespondence" source="correspondence_2167" target="L03310">Salten an Schnitzler, 14. 8. 1900</ref>
-            </correspContext></correspDesc>
+               <ref subtype="previous_letter"
+                    type="withinCorrespondence"
+                    source="correspondence_2167"
+                    target="L03308">Salten an Schnitzler, 7. 8. 1900</ref>
+               <ref subtype="next_letter"
+                    type="withinCorrespondence"
+                    source="correspondence_2167"
+                    target="L03310">Salten an Schnitzler, 14. 8. 1900</ref>
+            </correspContext>
+         </correspDesc>
       </profileDesc>
       <revisionDesc status="approved">
          <change who="MAM" when="2023-09-20">Export aus Transkribus</change>

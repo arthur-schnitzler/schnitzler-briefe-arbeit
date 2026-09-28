@@ -1,6 +1,10 @@
-<?xml version='1.0' encoding='UTF-8'?>
+<?xml version="1.0" encoding="UTF-8"?>
 <?xml-model href="../meta/schnitzler-briefe-schematron.sch" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
-<TEI xmlns="http://www.tei-c.org/ns/1.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.tei-c.org/ns/1.0 ../meta/schnitzler-briefe-schema.xsd" xml:id="L03751" xml:base="https://id.acdh.oeaw.ac.at/schnitzler/schnitzler-briefe/editions">
+<TEI xmlns="http://www.tei-c.org/ns/1.0"
+     xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+     xsi:schemaLocation="http://www.tei-c.org/ns/1.0 ../meta/schnitzler-briefe-schema.xsd"
+     xml:id="L03751"
+     xml:base="https://id.acdh.oeaw.ac.at/schnitzler/schnitzler-briefe/editions">
    <teiHeader>
       <fileDesc>
          <titleStmt>
@@ -117,23 +121,37 @@
             <correspAction type="sent">
                <persName ref="#pmb2121">Schnitzler, Arthur</persName>
                <date when="1923-07-30" n="01">30. 7. 1923</date>
-               <placeName ref="#pmb168815">Sternwartestraße 71</placeName>
+               <placeName ref="#pmb168815">
+                  <error type="placeName-nicht-bezogen">168815</error>
+               </placeName>
             </correspAction>
             <correspAction type="transmitted">
                <date when="1923-07-30">30. 7. 1923</date>
-               <placeName ref="#pmb365223">18/1 Post- und Telegraphenamt 110</placeName>
+               <placeName ref="#pmb365223">
+                  <error type="placeName-nicht-bezogen">365223</error>
+               </placeName>
             </correspAction>
             <correspAction type="received">
                <persName ref="#pmb13212">Zweig, Stefan</persName>
                <date evidence="conjecture" notBefore="1923-07-31" notAfter="1923-08-01">[31. 7. 1923 – 1. 8. 1923?]</date>
-               <placeName ref="#pmb253003">Paschinger Schlössl</placeName>
+               <placeName ref="#pmb253003">
+                  <error type="placeName-nicht-bezogen">253003</error>
+               </placeName>
             </correspAction>
-            <correspContext><ref type="belongsToCorrespondence" target="correspondence_13212">Zweig, Stefan</ref>
+            <correspContext>
+               <ref type="belongsToCorrespondence" target="correspondence_13212">Zweig, Stefan</ref>
                <ref subtype="previous_letter" type="withinCollection" target="L03686">Zweig an Schnitzler, 28. 7. 1923</ref>
                <ref subtype="next_letter" type="withinCollection" target="L03668">Zweig an Schnitzler, [31. 7. oder 1. 8.]. 1923</ref>
-               <ref subtype="previous_letter" type="withinCorrespondence" source="correspondence_13212" target="L03686">Zweig an Schnitzler, 28. 7. 1923</ref>
-               <ref subtype="next_letter" type="withinCorrespondence" source="correspondence_13212" target="L03668">Zweig an Schnitzler, [31. 7. oder 1. 8.]. 1923</ref>
-            </correspContext></correspDesc>
+               <ref subtype="previous_letter"
+                    type="withinCorrespondence"
+                    source="correspondence_13212"
+                    target="L03686">Zweig an Schnitzler, 28. 7. 1923</ref>
+               <ref subtype="next_letter"
+                    type="withinCorrespondence"
+                    source="correspondence_13212"
+                    target="L03668">Zweig an Schnitzler, [31. 7. oder 1. 8.]. 1923</ref>
+            </correspContext>
+         </correspDesc>
       </profileDesc>
       <revisionDesc status="candidate">
          <change who="MAM" when="2025-07-17">Export aus Transkribus</change>
