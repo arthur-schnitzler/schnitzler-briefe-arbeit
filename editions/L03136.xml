@@ -1,6 +1,10 @@
-<?xml version='1.0' encoding='UTF-8'?>
+<?xml version="1.0" encoding="UTF-8"?>
 <?xml-model href="../meta/schnitzler-briefe-schematron.sch" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
-<TEI xmlns="http://www.tei-c.org/ns/1.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.tei-c.org/ns/1.0 ../meta/schnitzler-briefe-schema.xsd" xml:id="L03136" xml:base="https://id.acdh.oeaw.ac.at/schnitzler/schnitzler-briefe/editions">
+<TEI xmlns="http://www.tei-c.org/ns/1.0"
+     xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+     xsi:schemaLocation="http://www.tei-c.org/ns/1.0 ../meta/schnitzler-briefe-schema.xsd"
+     xml:id="L03136"
+     xml:base="https://id.acdh.oeaw.ac.at/schnitzler/schnitzler-briefe/editions">
    <teiHeader>
       <fileDesc>
          <titleStmt>
@@ -93,7 +97,7 @@
                            <incident type="postal">
                               <desc>
                                  <stamp n="1" type="transmission">
-                                    <placeName ref="#pmb365214">Wien 1/1</placeName>
+                                    <placeName ref="#pmb365357">Wien 1/1 C.R.</placeName>
                                     <date when="1894-05-23">23 V 94</date>
                                     <time>4–N</time>
                                  </stamp>
@@ -131,25 +135,42 @@
             <correspAction type="sent">
                <persName ref="#pmb2167">Salten, Felix</persName>
                <date when="1894-05-23" n="01">23. 5. 1894</date>
-               <placeName ref="#pmb50">Wien</placeName>
+               <placeName ref="#pmb199347">Hörlgasse 16</placeName>
+            </correspAction>
+            <correspAction type="transmitted">
+               <date when="1894-05-23">23. 5. 1894</date>
+               <placeName ref="#pmb365357">1/1 Telegraphen-Central-Station C.R.</placeName>
+            </correspAction>
+            <correspAction type="delivered">
+               <date when="1894-05-23">23. 5. 1894</date>
+               <placeName ref="#pmb365211">9/2 Post- und Telegraphenamt 71</placeName>
             </correspAction>
             <correspAction type="received">
                <persName ref="#pmb2121">Schnitzler, Arthur</persName>
                <date when="1894-05-23">23. 5. 1894</date>
                <placeName ref="#pmb168934">Frankgasse 1</placeName>
             </correspAction>
-            <correspContext><ref type="belongsToCorrespondence" target="correspondence_2167">Salten, Felix</ref>
+            <correspContext>
+               <ref type="belongsToCorrespondence" target="correspondence_2167">Salten, Felix</ref>
                <ref subtype="previous_letter" type="withinCollection" target="L00328">Schnitzler an Beer-Hofmann, 22. 5. 1894</ref>
                <ref subtype="next_letter" type="withinCollection" target="L00329">Fels an Schnitzler, 25. 5. 1894</ref>
-               <ref subtype="previous_letter" type="withinCorrespondence" source="correspondence_2167" target="L03600">Schnitzler an Salten, 8. 5. 94</ref>
-               <ref subtype="next_letter" type="withinCorrespondence" source="correspondence_2167" target="L03138">Salten an Schnitzler, [15.? 6. 1894]</ref>
-            </correspContext></correspDesc>
+               <ref subtype="previous_letter"
+                    type="withinCorrespondence"
+                    source="correspondence_2167"
+                    target="L03600">Schnitzler an Salten, 8. 5. 94</ref>
+               <ref subtype="next_letter"
+                    type="withinCorrespondence"
+                    source="correspondence_2167"
+                    target="L03138">Salten an Schnitzler, [15.? 6. 1894]</ref>
+            </correspContext>
+         </correspDesc>
       </profileDesc>
       <revisionDesc status="approved">
          <change who="MAM" when="2023-07-10">Export aus Transkribus</change>
          <change who="LU" when="2024-02-13">Durchsicht</change>
          <change when="2024-02-14" who="LU">Index check</change>
          <change who="MAM" when="2024-04-04">Durchsicht</change>
+         <change who="SJ" when="2026-09-28">Datierung und Stempel überprüft</change>
       </revisionDesc>
    </teiHeader>
    <facsimile>
@@ -283,18 +304,18 @@
             </person>
          </listPerson>
          <listPlace>
-            <place xml:id="pmb365214">
-               <placeName>1/1 Post- und Telegraphenamt 1</placeName>
+            <place xml:id="pmb365357">
+               <placeName>1/1 Telegraphen-Central-Station C.R.</placeName>
                <location type="coords">
-                  <geo>48,210359 16,378357</geo>
+                  <geo>48,214014 16,366507</geo>
                </location>
                <location type="located_in_place">
                   <placeName ref="pmb51">I., Innere Stadt</placeName>
                   <geo>48,20769 16,37049</geo>
                </location>
                <location type="located_in_place">
-                  <placeName ref="pmb50667">Fleischmarkt</placeName>
-                  <geo>48,211117 16,376627</geo>
+                  <placeName ref="pmb447">Börseplatz</placeName>
+                  <geo>48,214376279077 16,367350918993</geo>
                </location>
             </place>
             <place xml:id="pmb365211">
@@ -311,26 +332,18 @@
                   <geo>48,22387 16,35641</geo>
                </location>
             </place>
-            <place xml:id="pmb50">
-               <placeName>Wien</placeName>
-               <placeName type="ort_fruherer-name">K.K. Reichshaupt- und Residenzstadt Wien</placeName>
-               <placeName type="alternative-name">Bécs</placeName>
-               <placeName type="alternative-name">Land Wien</placeName>
-               <placeName type="alternative-name">Vídeň</placeName>
-               <placeName type="alternative-name">Wenia</placeName>
-               <placeName type="alternative-name">Beč</placeName>
-               <placeName type="ort_fruherer-name">Vindobona</placeName>
-               <placeName type="alternative-name">Vienna</placeName>
+            <place xml:id="pmb199347">
+               <placeName>Hörlgasse 16</placeName>
                <location type="coords">
-                  <geo>48,208333 16,373056</geo>
+                  <geo>48,217035 16,363578</geo>
                </location>
                <location type="located_in_place">
-                  <placeName ref="pmb41240">Österreich</placeName>
-                  <geo>47,33333 13,33333</geo>
+                  <placeName ref="pmb417">Hörlgasse</placeName>
+                  <geo>48,216673655132 16,362433773685</geo>
                </location>
                <location type="located_in_place">
-                  <placeName ref="pmb235218">Windmühlhöhe</placeName>
-                  <geo>48,24077 16,32092</geo>
+                  <placeName ref="pmb59">IX., Alsergrund</placeName>
+                  <geo>48,22387 16,35641</geo>
                </location>
             </place>
             <place xml:id="pmb168934">

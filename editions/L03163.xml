@@ -1,11 +1,9 @@
-<?xml version='1.0' encoding='UTF-8'?>
-<?xml-model href="../meta/schnitzler-briefe-schematron.sch" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
-<TEI xmlns="http://www.tei-c.org/ns/1.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.tei-c.org/ns/1.0 ../meta/schnitzler-briefe-schema.xsd" xml:id="L03163" xml:base="https://id.acdh.oeaw.ac.at/schnitzler/schnitzler-briefe/editions">
+<?xml version="1.0" encoding="UTF-8"?><?xml-model href="../meta/schnitzler-briefe-schematron.sch" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI xmlns="http://www.tei-c.org/ns/1.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.tei-c.org/ns/1.0 ../meta/schnitzler-briefe-schema.xsd" xml:id="L03163" xml:base="https://id.acdh.oeaw.ac.at/schnitzler/schnitzler-briefe/editions">
    <teiHeader>
       <fileDesc>
          <titleStmt>
             <title level="s">Arthur Schnitzler: Briefwechsel mit Autorinnen und Autoren</title>
-            <title level="a">Felix Salten an Arthur Schnitzler, 15. 8. 1895</title>
+            <title level="a">Felix Salten an Arthur Schnitzler, [14. oder 15]. 8. 1895</title>
             <author ref="#pmb2167">Salten, Felix</author>
             <editor>
                <name>Müller, Martin Anton</name>
@@ -93,7 +91,7 @@
                            <incident type="postal">
                               <desc>
                                  <stamp n="1" type="transmission">
-                                    <placeName ref="#pmb51">Wien 1/1 1</placeName>
+                                    <placeName ref="#pmb365214">Wien 1/1 1</placeName>
                                     <date when="1895-08-15">15 8 95</date>
                                     <time>8–9V</time>
                                  </stamp>
@@ -131,26 +129,37 @@
          <correspDesc>
             <correspAction type="sent">
                <persName ref="#pmb2167">Salten, Felix</persName>
-               <date when="1895-08-15" n="01">15. 8. 1895</date>
+               <date n="01" notBefore="1895-08-14" notAfter="1895-08-15">[14. oder 15]. 8. 1895</date>
                <placeName ref="#pmb50">Wien</placeName>
+            </correspAction>
+            <correspAction type="transmitted">
+               <date when="1895-08-15">15. 8. 1895</date>
+               <placeName ref="#pmb365214">1/1 Post- und Telegraphenamt 1</placeName>
+            </correspAction>
+            <correspAction type="delivered">
+               <date when="1895-08-15">15. 8. 1895</date>
+               <placeName ref="#pmb213">Bad Ischl</placeName>
             </correspAction>
             <correspAction type="received">
                <persName ref="#pmb2121">Schnitzler, Arthur</persName>
                <date when="1895-08-15">15. 8. 1895</date>
                <placeName ref="#pmb414">Hotel und Pension Rudolfshöhe (Leopold Petter)</placeName>
             </correspAction>
-            <correspContext><ref type="belongsToCorrespondence" target="correspondence_2167">Salten, Felix</ref>
+            <correspContext>
+               <ref type="belongsToCorrespondence" target="correspondence_2167">Salten, Felix</ref>
                <ref subtype="previous_letter" type="withinCollection" target="L02744">Goldmann an Schnitzler, 13. 8. [1895]</ref>
                <ref subtype="next_letter" type="withinCollection" target="L00473">Andreas-Salomé an Schnitzler, [vor dem 17. 8. 1895]</ref>
                <ref subtype="previous_letter" type="withinCorrespondence" source="correspondence_2167" target="L03162">Salten an Schnitzler, [10.? 8. 1895]</ref>
                <ref subtype="next_letter" type="withinCorrespondence" source="correspondence_2167" target="L03164">Salten an Schnitzler, 30. 8. 1895</ref>
-            </correspContext></correspDesc>
+            </correspContext>
+         </correspDesc>
       </profileDesc>
       <revisionDesc status="approved">
          <change who="MAM" when="2023-07-10">Export aus Transkribus</change>
          <change who="LU" when="2024-02-22">Durchsicht</change>
          <change when="2024-02-23" who="LU">Index check</change>
          <change who="MAM" when="2024-04-16">Durchsicht</change>
+         <change who="SJ" when="2026-09-28">Datierung und Stempel überprüft</change>
       </revisionDesc>
    </teiHeader>
    <facsimile>
@@ -238,22 +247,14 @@
             </person>
          </listPerson>
          <listPlace>
-            <place xml:id="pmb51">
-               <placeName>I., Innere Stadt</placeName>
-               <placeName type="alternative-name">Inner city</placeName>
-               <placeName type="alternative-name">Wien,Innere Stadt</placeName>
-               <placeName type="alternative-name">1. Wiener Gemeindebezirk</placeName>
-               <placeName type="legacy-name-merge">Wien-Innere Stadt</placeName>
+            <place xml:id="pmb365214">
+               <placeName>1/1 Post- und Telegraphenamt 1</placeName>
                <location type="coords">
+                  <geo>48,209928 16,379065</geo>
+               </location>
+               <location type="located_in_place">
+                  <placeName ref="pmb51">I., Innere Stadt</placeName>
                   <geo>48,20769 16,37049</geo>
-               </location>
-               <location type="located_in_place">
-                  <placeName ref="pmb41240">Österreich</placeName>
-                  <geo>47,33333 13,33333</geo>
-               </location>
-               <location type="located_in_place">
-                  <placeName ref="pmb50">Wien</placeName>
-                  <geo>48,208333 16,373056</geo>
                </location>
             </place>
             <place xml:id="pmb213">
