@@ -1,12 +1,10 @@
-<?xml version='1.0' encoding='UTF-8'?>
-<?xml-model href="../meta/schnitzler-briefe-schematron.sch" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
-<TEI xmlns="http://www.tei-c.org/ns/1.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.tei-c.org/ns/1.0 ../meta/schnitzler-briefe-schema.xsd" xml:id="L03061" xml:base="https://id.acdh.oeaw.ac.at/schnitzler/schnitzler-briefe/editions">
+<?xml version="1.0" encoding="UTF-8"?><?xml-model href="../meta/schnitzler-briefe-schematron.sch" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI xmlns="http://www.tei-c.org/ns/1.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.tei-c.org/ns/1.0 ../meta/schnitzler-briefe-schema.xsd" xml:id="L03061" xml:base="https://id.acdh.oeaw.ac.at/schnitzler/schnitzler-briefe/editions">
    <teiHeader>
       <fileDesc>
          <titleStmt>
             <title level="s">Arthur Schnitzler: Briefwechsel mit Autorinnen und Autoren</title>
             <title level="a">Paul Goldmann, Bertha und Rudolf Christians an Arthur
-               Schnitzler, 24. 3. 1901</title>
+               Schnitzler, [23. oder 24]. 3. 1901</title>
             <author ref="#pmb11485">Goldmann, Paul</author>
             <author ref="#pmb11093">Christians, Rudolf</author>
             <author ref="#pmb144060">Christians, Bertha</author>
@@ -131,30 +129,37 @@
                <persName ref="#pmb11485">Goldmann, Paul</persName>
                <persName ref="#pmb11093">Christians, Rudolf</persName>
                <persName ref="#pmb144060">Christians, Bertha</persName>
-               <date when="1901-03-24" n="01">24. 3. 1901</date>
+               <date n="01" notBefore="1901-03-23" notAfter="1901-03-24">[23. oder 24]. 3. 1901</date>
+               <placeName ref="#pmb144055">Lanzsch &amp; Co.</placeName>
+            </correspAction>
+            <correspAction type="transmitted">
+               <date when="1901-03-24">24. 3. 1901</date>
                <placeName ref="#pmb168">Berlin</placeName>
             </correspAction>
             <correspAction type="delivered">
                <date when="1901-03-25">25. 3. 1901</date>
-               <placeName ref="#pmb59">IX., Alsergrund</placeName>
+               <placeName ref="#pmb365208">Wien 9/3 72</placeName>
             </correspAction>
             <correspAction type="received">
                <persName ref="#pmb2121">Schnitzler, Arthur</persName>
                <date when="1901-03-25">25. 3. 1901</date>
                <placeName ref="#pmb168934">Frankgasse 1</placeName>
             </correspAction>
-            <correspContext><ref type="belongsToCorrespondence" target="correspondence_11485">Goldmann, Paul</ref>
+            <correspContext>
+               <ref type="belongsToCorrespondence" target="correspondence_11485">Goldmann, Paul</ref>
                <ref subtype="previous_letter" type="withinCollection" target="L03062">Goldmann an Schnitzler, 21. 3. [1901]</ref>
                <ref subtype="next_letter" type="withinCollection" target="L04501">Schnitzler an Schwarzkopf, 29. 3. 1901</ref>
                <ref subtype="previous_letter" type="withinCorrespondence" source="correspondence_11485" target="L03062">Goldmann an Schnitzler, 21. 3. [1901]</ref>
                <ref subtype="next_letter" type="withinCorrespondence" source="correspondence_11485" target="L03524">Goldmann an Gussmann, 1. 4. [1901]</ref>
-            </correspContext></correspDesc>
+            </correspContext>
+         </correspDesc>
       </profileDesc>
       <revisionDesc status="approved">
          <change who="LU" when="2023-06-22">Export aus Transkribus</change>
          <change who="MAM" when="2023-09-06">Durchsicht</change>
          <change when="2023-09-07" who="MAM">Index check</change>
          <change who="LU" when="2023-10-09">Durchsicht</change>
+         <change who="SJ" when="2026-09-28">Datierung und Stempel überprüft</change>
       </revisionDesc>
    </teiHeader>
    <facsimile>
@@ -198,6 +203,7 @@
                      <hi rend="capitals">
                         <rs type="place" ref="#pmb168">Berlin</rs>
                      </hi>,</hi>
+                  <space unit="chars" quantity="1"/>
                   <rs type="place" ref="#pmb144057">Charlotten-Strasse 56</rs>
                </hi>
             </p>
@@ -429,6 +435,20 @@
                   <geo>48,216533356678 16,356214321972</geo>
                </location>
             </place>
+            <place xml:id="pmb144055">
+               <placeName>Lanzsch &amp; Co.</placeName>
+               <location type="coords">
+                  <geo>52,58777 13,41212</geo>
+               </location>
+               <location type="located_in_place">
+                  <placeName ref="pmb168">Berlin</placeName>
+                  <geo>52,52437 13,41053</geo>
+               </location>
+               <location type="located_in_place">
+                  <placeName ref="pmb144057">Charlottenstraße</placeName>
+                  <geo>52,51164 13,39167</geo>
+               </location>
+            </place>
             <place xml:id="pmb59">
                <placeName>IX., Alsergrund</placeName>
                <placeName type="legacy-name-merge">Thurygrund</placeName>
@@ -475,20 +495,6 @@
                <location type="located_in_place">
                   <placeName ref="pmb235218">Windmühlhöhe</placeName>
                   <geo>48,24077 16,32092</geo>
-               </location>
-            </place>
-            <place xml:id="pmb144055">
-               <placeName>Lanzsch &amp; Co.</placeName>
-               <location type="coords">
-                  <geo>52,58777 13,41212</geo>
-               </location>
-               <location type="located_in_place">
-                  <placeName ref="pmb168">Berlin</placeName>
-                  <geo>52,52437 13,41053</geo>
-               </location>
-               <location type="located_in_place">
-                  <placeName ref="pmb144057">Charlottenstraße</placeName>
-                  <geo>52,51164 13,39167</geo>
                </location>
             </place>
             <place xml:id="pmb144057">
