@@ -1,6 +1,10 @@
-<?xml version='1.0' encoding='UTF-8'?>
+<?xml version="1.0" encoding="UTF-8"?>
 <?xml-model href="../meta/schnitzler-briefe-schematron.sch" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
-<TEI xmlns="http://www.tei-c.org/ns/1.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.tei-c.org/ns/1.0 ../meta/schnitzler-briefe-schema.xsd" xml:id="L02957" xml:base="https://id.acdh.oeaw.ac.at/schnitzler/schnitzler-briefe/editions">
+<TEI xmlns="http://www.tei-c.org/ns/1.0"
+     xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+     xsi:schemaLocation="http://www.tei-c.org/ns/1.0 ../meta/schnitzler-briefe-schema.xsd"
+     xml:id="L02957"
+     xml:base="https://id.acdh.oeaw.ac.at/schnitzler/schnitzler-briefe/editions">
    <teiHeader>
       <fileDesc>
          <titleStmt>
@@ -128,23 +132,35 @@
             <correspAction type="sent">
                <persName ref="#pmb2121">Schnitzler, Arthur</persName>
                <date when="1892-10-08" n="01">8. 10. 1892</date>
-               <placeName ref="#pmb50">Wien</placeName>
+               <placeName ref="#pmb167805">Kärntnerring 12/Bösendorferstraße 11</placeName>
+            </correspAction>
+            <correspAction type="transmitted">
+               <date when="1892-10-08">8. 10. 1892</date>
+               <placeName ref="#pmb365214">1/1 Post- und Telegraphenamt 1</placeName>
             </correspAction>
             <correspAction type="delivered">
                <date when="1892-10-08">8. 10. 1892</date>
-               <placeName ref="#pmb59">IX., Alsergrund</placeName>
+               <placeName ref="#pmb365266">9/1 Post- und Telegraphenamt 66</placeName>
             </correspAction>
             <correspAction type="received">
                <persName ref="#pmb2167">Salten, Felix</persName>
                <date when="1892-10-08">8. 10. 1892</date>
-               <placeName ref="#pmb52510">Berggasse</placeName>
+               <placeName ref="#pmb255105">Berggasse 13</placeName>
             </correspAction>
-            <correspContext><ref type="belongsToCorrespondence" target="correspondence_2167">Salten, Felix</ref>
+            <correspContext>
+               <ref type="belongsToCorrespondence" target="correspondence_2167">Salten, Felix</ref>
                <ref subtype="previous_letter" type="withinCollection" target="L00126">Schnitzler an Beer-Hofmann, 2. 10. 1892</ref>
                <ref subtype="next_letter" type="withinCollection" target="L03115">Salten an Schnitzler, [8. 10. 1892]</ref>
-               <ref subtype="previous_letter" type="withinCorrespondence" source="correspondence_2167" target="L03114">Salten an Schnitzler, [25.? 8. 1892]</ref>
-               <ref subtype="next_letter" type="withinCorrespondence" source="correspondence_2167" target="L03115">Salten an Schnitzler, [8. 10. 1892]</ref>
-            </correspContext></correspDesc>
+               <ref subtype="previous_letter"
+                    type="withinCorrespondence"
+                    source="correspondence_2167"
+                    target="L03114">Salten an Schnitzler, [25.? 8. 1892]</ref>
+               <ref subtype="next_letter"
+                    type="withinCorrespondence"
+                    source="correspondence_2167"
+                    target="L03115">Salten an Schnitzler, [8. 10. 1892]</ref>
+            </correspContext>
+         </correspDesc>
       </profileDesc>
       <revisionDesc status="approved">
          <change who="MAM" when="2023-03-16">Export aus Transkribus</change>
@@ -152,6 +168,7 @@
          <change when="2024-02-07" who="LU">Index check</change>
          <change who="MAM" when="2024-03-21">Durchsicht</change>
          <change who="MAM" when="2024-07-31">Durchsicht</change>
+         <change who="SJ" when="2026-09-29">Datierung und Stempel überprüft</change>
       </revisionDesc>
    </teiHeader>
    <facsimile>
@@ -173,7 +190,7 @@
                </addrLine>
                <addrLine>
                   <hi rend="latintype">
-                     <rs type="place" ref="#pmb52510">IX Berggasse 13</rs>
+                     <rs type="place" ref="#pmb255105">IX Berggasse 13</rs>
                   </hi>
                </addrLine>
             </address>
@@ -304,27 +321,58 @@
             <place xml:id="pmb365214">
                <placeName>1/1 Post- und Telegraphenamt 1</placeName>
                <location type="coords">
-                  <geo>48,210359 16,378357</geo>
+                  <geo>48,209928 16,379065</geo>
+               </location>
+               <location type="located_in_place">
+                  <placeName ref="pmb51">I., Innere Stadt</placeName>
+                  <geo>48,20769 16,37049</geo>
+               </location>
+            </place>
+            <place xml:id="pmb365266">
+               <placeName>9/1 Post- und Telegraphenamt 66</placeName>
+               <location type="coords">
+                  <geo>48,219619 16,3617</geo>
+               </location>
+               <location type="located_in_place">
+                  <placeName ref="pmb59">IX., Alsergrund</placeName>
+                  <geo>48,22387 16,35641</geo>
+               </location>
+               <location type="located_in_place">
+                  <placeName ref="pmb436">Porzellangasse</placeName>
+                  <geo>48,222287836145 16,362457240723</geo>
+               </location>
+            </place>
+            <place xml:id="pmb167805">
+               <placeName>Kärntnerring 12/Bösendorferstraße 11</placeName>
+               <placeName type="ort_fruherer-name">Giselastraße 11</placeName>
+               <location type="coords">
+                  <geo>48,20143 16,37196</geo>
                </location>
                <location type="located_in_place">
                   <placeName ref="pmb51">I., Innere Stadt</placeName>
                   <geo>48,20769 16,37049</geo>
                </location>
                <location type="located_in_place">
-                  <placeName ref="pmb50667">Fleischmarkt</placeName>
-                  <geo>48,211117 16,376627</geo>
+                  <placeName ref="pmb501">Kärntnerring</placeName>
+                  <geo>48,201874800905 16,371985203093</geo>
+               </location>
+               <location type="located_in_place">
+                  <placeName ref="pmb542">Bösendorferstraße</placeName>
+                  <geo>48,201213 16,371141</geo>
                </location>
             </place>
-            <place xml:id="pmb59">
-               <placeName>IX., Alsergrund</placeName>
-               <placeName type="legacy-name-merge">Thurygrund</placeName>
-               <placeName type="legacy-name-merge">Wien-Alsergrund</placeName>
+            <place xml:id="pmb255105">
+               <placeName>Berggasse 13</placeName>
                <location type="coords">
+                  <geo>48,218252 16,361915</geo>
+               </location>
+               <location type="located_in_place">
+                  <placeName ref="pmb59">IX., Alsergrund</placeName>
                   <geo>48,22387 16,35641</geo>
                </location>
                <location type="located_in_place">
-                  <placeName ref="pmb50">Wien</placeName>
-                  <geo>48,208333 16,373056</geo>
+                  <placeName ref="pmb52510">Berggasse</placeName>
+                  <geo>48,218776849348906 16,36345511169916</geo>
                </location>
             </place>
             <place xml:id="pmb50" ana="comment">
