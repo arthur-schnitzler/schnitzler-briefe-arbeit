@@ -56,6 +56,8 @@
                 correspAction[@type='sent'] vorhanden sein. </sch:assert>
             <sch:assert test="count(tei:correspAction[@type = 'received']) le 1"> Es darf nur ein
                 correspAction[@type='received'] vorhanden sein. </sch:assert>
+            <sch:assert test="count(tei:correspAction[@type = 'delivered']) le 1"> Es darf nur ein
+                correspAction[@type='delivered'] vorhanden sein. </sch:assert>
             <sch:assert
                 test="count(//tei:titleStmt/tei:author) &lt;= count(//tei:correspDesc/tei:correspAction/tei:persName)"
                 > Die Anzahl der tei:author in titleStmt darf nicht größer sein als die Anzahl der
@@ -193,6 +195,7 @@
     <!-- stamp -->
     <sch:pattern id="stamp-rules">
         <sch:rule context="tei:stamp">
+            <sch:assert test="@type"> tei:stamp muss ein Attribut @type haben. </sch:assert>
             <sch:assert
                 test="tei:placeName[(starts-with(@ref, '#pmb') and not(@ref = '#pmb') and (string(number(substring-after(@ref, '#pmb'))) != 'NaN') or (tokenize(@ref, ' #pmb')[2]))] or not(child::tei:placeName)"
                 > Wenn placeName vorhanden ist, muss @ref ein gültiger #pmb-Wert sein </sch:assert>
@@ -208,6 +211,8 @@
                     every $i in (1 to count(descendant::tei:stamp) - 1)
                         satisfies xs:integer(descendant::tei:stamp[$i]/@n) lt xs:integer(descendant::tei:stamp[$i + 1]/@n)"
                 > Die @n-Werte von tei:stamp müssen aufsteigend sein. </sch:assert>
+            <sch:assert test="count(descendant::tei:stamp[@type = 'delivery']) le 1"> Es darf nur
+                ein tei:stamp mit @type='delivery' vorhanden sein. </sch:assert>
         </sch:rule>
     </sch:pattern>
     <!-- addSpan -->
