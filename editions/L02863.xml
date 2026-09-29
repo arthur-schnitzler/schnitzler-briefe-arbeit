@@ -1,6 +1,10 @@
-<?xml version='1.0' encoding='UTF-8'?>
+<?xml version="1.0" encoding="UTF-8"?>
 <?xml-model href="../meta/schnitzler-briefe-schematron.sch" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
-<TEI xmlns="http://www.tei-c.org/ns/1.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.tei-c.org/ns/1.0 ../meta/schnitzler-briefe-schema.xsd" xml:id="L02863" xml:base="https://id.acdh.oeaw.ac.at/schnitzler/schnitzler-briefe/editions">
+<TEI xmlns="http://www.tei-c.org/ns/1.0"
+     xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+     xsi:schemaLocation="http://www.tei-c.org/ns/1.0 ../meta/schnitzler-briefe-schema.xsd"
+     xml:id="L02863"
+     xml:base="https://id.acdh.oeaw.ac.at/schnitzler/schnitzler-briefe/editions">
    <teiHeader>
       <fileDesc>
          <titleStmt>
@@ -87,7 +91,9 @@
                            </supportDesc>
                         </objectDesc>
                         <handDesc hands="1">
-                           <handNote medium="schwarze-tinte" style="deutsche-kurrent" corresp="#pmb11485"/>
+                           <handNote medium="schwarze-tinte"
+                                     style="deutsche-kurrent"
+                                     corresp="#pmb11485"/>
                         </handDesc>
                         <additions>
                            <incident type="postal">
@@ -101,7 +107,7 @@
                            </incident>
                            <incident type="postal">
                               <desc>
-                                 <stamp n="2">
+                                 <stamp n="2" type="transit">
                                     <placeName ref="#pmb37885">
                                        <supplied>Shanghai</supplied>
                                     </placeName>
@@ -111,7 +117,7 @@
                            </incident>
                            <incident type="postal">
                               <desc>
-                                 <stamp n="3">
+                                 <stamp n="3" type="transit">
                                     <placeName ref="#pmb37885">
                                        <supplied>S</supplied>hanghai</placeName>
                                     <date when="1898-10-24">Oc 24 98</date>
@@ -120,7 +126,7 @@
                            </incident>
                            <incident type="postal">
                               <desc>
-                                 <stamp n="4">
+                                 <stamp n="4" type="transit">
                                     <placeName ref="#pmb44086">
                                        <unclear>Hong Ko</unclear>
                                        <supplied>ng</supplied>
@@ -160,26 +166,47 @@
                <placeName ref="#pmb118678">Yantai</placeName>
             </correspAction>
             <correspAction type="transmitted">
+               <date when="1898-10-21">21. 10. 1898</date>
+               <placeName ref="#pmb118678">Yantai</placeName>
+            </correspAction>
+            <correspAction type="in_transit">
                <date when="1898-10-23">23. 10. 1898</date>
                <placeName ref="#pmb37885">Shanghai</placeName>
+            </correspAction>
+            <correspAction type="in_transit">
+               <date when="1898-10-27">27. 10. 1898</date>
+               <placeName ref="#pmb44086">Hong Kong</placeName>
+            </correspAction>
+            <correspAction type="delivered">
+               <date when="1898-11-26">26. 11. 1898</date>
+               <placeName ref="#pmb365208">9/3 Post- und Telegraphenamt 72</placeName>
             </correspAction>
             <correspAction type="received">
                <persName ref="#pmb2121">Schnitzler, Arthur</persName>
                <date when="1898-11-26">26. 11. 1898</date>
                <placeName ref="#pmb168934">Frankgasse 1</placeName>
             </correspAction>
-            <correspContext><ref type="belongsToCorrespondence" target="correspondence_11485">Goldmann, Paul</ref>
+            <correspContext>
+               <ref type="belongsToCorrespondence" target="correspondence_11485">Goldmann, Paul</ref>
                <ref subtype="previous_letter" type="withinCollection" target="L02862">Goldmann an Schnitzler, 18. 10. [1898]</ref>
                <ref subtype="next_letter" type="withinCollection" target="L03717">Plessner an Schnitzler, 22. 10. 1898</ref>
-               <ref subtype="previous_letter" type="withinCorrespondence" source="correspondence_11485" target="L02862">Goldmann an Schnitzler, 18. 10. [1898]</ref>
-               <ref subtype="next_letter" type="withinCorrespondence" source="correspondence_11485" target="L02864">Goldmann an Schnitzler, 3. 11. [1898]</ref>
-            </correspContext></correspDesc>
+               <ref subtype="previous_letter"
+                    type="withinCorrespondence"
+                    source="correspondence_11485"
+                    target="L02862">Goldmann an Schnitzler, 18. 10. [1898]</ref>
+               <ref subtype="next_letter"
+                    type="withinCorrespondence"
+                    source="correspondence_11485"
+                    target="L02864">Goldmann an Schnitzler, 3. 11. [1898]</ref>
+            </correspContext>
+         </correspDesc>
       </profileDesc>
       <revisionDesc status="approved">
          <change who="LU" when="2022-12-06">Angelegt</change>
          <change who="MAM" when="2023-02-21">Index check</change>
          <change when="2023-02-22" who="MAM">Durchsicht</change>
          <change who="LU" when="2023-04-05">Durchsicht</change>
+         <change who="SJ" when="2026-09-29">Datierung und Stempel überprüft</change>
       </revisionDesc>
    </teiHeader>
    <facsimile>

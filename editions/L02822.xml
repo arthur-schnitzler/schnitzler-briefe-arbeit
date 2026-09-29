@@ -1,6 +1,10 @@
-<?xml version='1.0' encoding='UTF-8'?>
+<?xml version="1.0" encoding="UTF-8"?>
 <?xml-model href="../meta/schnitzler-briefe-schematron.sch" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
-<TEI xmlns="http://www.tei-c.org/ns/1.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.tei-c.org/ns/1.0 ../meta/schnitzler-briefe-schema.xsd" xml:id="L02822" xml:base="https://id.acdh.oeaw.ac.at/schnitzler/schnitzler-briefe/editions">
+<TEI xmlns="http://www.tei-c.org/ns/1.0"
+     xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+     xsi:schemaLocation="http://www.tei-c.org/ns/1.0 ../meta/schnitzler-briefe-schema.xsd"
+     xml:id="L02822"
+     xml:base="https://id.acdh.oeaw.ac.at/schnitzler/schnitzler-briefe/editions">
    <teiHeader>
       <fileDesc>
          <titleStmt>
@@ -87,7 +91,9 @@
                            </supportDesc>
                         </objectDesc>
                         <handDesc hands="1">
-                           <handNote medium="schwarze-tinte" style="deutsche-kurrent" corresp="#pmb11485"/>
+                           <handNote medium="schwarze-tinte"
+                                     style="deutsche-kurrent"
+                                     corresp="#pmb11485"/>
                         </handDesc>
                         <additions>
                            <incident type="postal">
@@ -134,29 +140,42 @@
             <correspAction type="sent">
                <persName ref="#pmb11485">Goldmann, Paul</persName>
                <date when="1897-09-04" n="01">4. 9. 1897</date>
-               <placeName ref="#pmb45258">München</placeName>
+               <placeName ref="#pmb401">Hotel Marienbad [München]</placeName>
+            </correspAction>
+            <correspAction type="transmitted">
+               <date when="1897-09-04">4.&#160;9.&#160;[1897]</date>
+               <placeName ref="#pmb45258">Muenchen 1</placeName>
             </correspAction>
             <correspAction type="delivered">
                <date when="1897-09-05">5. 9. 1897</date>
-               <placeName ref="#pmb59">IX., Alsergrund</placeName>
+               <placeName ref="#pmb365208">Wien 9/3 72</placeName>
             </correspAction>
             <correspAction type="received">
                <persName ref="#pmb2121">Schnitzler, Arthur</persName>
                <date when="1897-09-05">5. 9. 1897</date>
                <placeName ref="#pmb168934">Frankgasse 1</placeName>
             </correspAction>
-            <correspContext><ref type="belongsToCorrespondence" target="correspondence_11485">Goldmann, Paul</ref>
+            <correspContext>
+               <ref type="belongsToCorrespondence" target="correspondence_11485">Goldmann, Paul</ref>
                <ref subtype="previous_letter" type="withinCollection" target="L03274">Salten an Schnitzler, 3. 9. [1897]</ref>
                <ref subtype="next_letter" type="withinCollection" target="L02823">Goldmann an Schnitzler, 13. 9. 1897</ref>
-               <ref subtype="previous_letter" type="withinCorrespondence" source="correspondence_11485" target="L02632">Goldmann an Schnitzler, 14. 8. 1897</ref>
-               <ref subtype="next_letter" type="withinCorrespondence" source="correspondence_11485" target="L02823">Goldmann an Schnitzler, 13. 9. 1897</ref>
-            </correspContext></correspDesc>
+               <ref subtype="previous_letter"
+                    type="withinCorrespondence"
+                    source="correspondence_11485"
+                    target="L02632">Goldmann an Schnitzler, 14. 8. 1897</ref>
+               <ref subtype="next_letter"
+                    type="withinCorrespondence"
+                    source="correspondence_11485"
+                    target="L02823">Goldmann an Schnitzler, 13. 9. 1897</ref>
+            </correspContext>
+         </correspDesc>
       </profileDesc>
       <revisionDesc status="approved">
          <change who="LU" when="2022-11-17">Angelegt</change>
          <change who="MAM" when="2023-02-14">Durchsicht</change>
          <change when="2023-02-15" who="MAM">Index check</change>
          <change who="LU" when="2023-03-30">Durchsicht</change>
+         <change who="SJ" when="2026-09-29">Datierung und Stempel überprüft</change>
       </revisionDesc>
    </teiHeader>
    <facsimile>
@@ -428,6 +447,16 @@
                   <geo>48,216533356678 16,356214321972</geo>
                </location>
             </place>
+            <place xml:id="pmb401">
+               <placeName>Hotel Marienbad [München]</placeName>
+               <location type="coords">
+                  <geo>48,143964 11,567552</geo>
+               </location>
+               <location type="located_in_place">
+                  <placeName ref="pmb45258">München</placeName>
+                  <geo>48,13743 11,57549</geo>
+               </location>
+            </place>
             <place xml:id="pmb59">
                <placeName>IX., Alsergrund</placeName>
                <placeName type="legacy-name-merge">Thurygrund</placeName>
@@ -496,16 +525,6 @@
                <location type="located_in_place">
                   <placeName ref="pmb146">Frankfurt am Main</placeName>
                   <geo>50,11552 8,68417</geo>
-               </location>
-            </place>
-            <place xml:id="pmb401" ana="implied">
-               <placeName>Hotel Marienbad [München]</placeName>
-               <location type="coords">
-                  <geo>48,143964 11,567552</geo>
-               </location>
-               <location type="located_in_place">
-                  <placeName ref="pmb45258">München</placeName>
-                  <geo>48,13743 11,57549</geo>
                </location>
             </place>
          </listPlace>
