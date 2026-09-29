@@ -1,6 +1,10 @@
-<?xml version='1.0' encoding='UTF-8'?>
+<?xml version="1.0" encoding="UTF-8"?>
 <?xml-model href="../meta/schnitzler-briefe-schematron.sch" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
-<TEI xmlns="http://www.tei-c.org/ns/1.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.tei-c.org/ns/1.0 ../meta/schnitzler-briefe-schema.xsd" xml:id="L02673" xml:base="https://id.acdh.oeaw.ac.at/schnitzler/schnitzler-briefe/editions">
+<TEI xmlns="http://www.tei-c.org/ns/1.0"
+     xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+     xsi:schemaLocation="http://www.tei-c.org/ns/1.0 ../meta/schnitzler-briefe-schema.xsd"
+     xml:id="L02673"
+     xml:base="https://id.acdh.oeaw.ac.at/schnitzler/schnitzler-briefe/editions">
    <teiHeader>
       <fileDesc>
          <titleStmt>
@@ -87,12 +91,14 @@
                            </supportDesc>
                         </objectDesc>
                         <handDesc hands="1">
-                           <handNote medium="schwarze-tinte" style="deutsche-kurrent" corresp="#pmb11485"/>
+                           <handNote medium="schwarze-tinte"
+                                     style="deutsche-kurrent"
+                                     corresp="#pmb11485"/>
                         </handDesc>
                         <additions>
                            <incident type="postal">
                               <desc>
-                                 <stamp n="1">
+                                 <stamp n="1" type="transmission">
                                     <placeName ref="#pmb87780">Paris 1 Pl. de la Bourse</placeName>
                                     <date when="1891-12-03">3 Dec 91</date>
                                     <time>7<hi rend="superscript">E</hi>
@@ -103,7 +109,7 @@
                            <incident type="postal">
                               <desc>
                                  <stamp n="2" type="delivery">
-                                    <placeName ref="#pmb51">Wien <unclear>1/1</unclear>
+                                    <placeName ref="#pmb365214">Wien <unclear>1/1 1</unclear>
                                     </placeName>
                                     <date when="1891-12-05">5<supplied>.</supplied> 12. 91</date>
                                     <time>8–9½V.</time>
@@ -125,25 +131,42 @@
             <correspAction type="sent">
                <persName ref="#pmb11485">Goldmann, Paul</persName>
                <date when="1891-12-03" n="02">3. 12. 1891</date>
-               <placeName ref="#pmb182">Paris</placeName>
+               <placeName ref="#pmb40415">rue Vivienne</placeName>
+            </correspAction>
+            <correspAction type="transmitted">
+               <date when="1891-12-03">3. 12. 1891</date>
+               <placeName ref="#pmb87780">place de la Bourse</placeName>
+            </correspAction>
+            <correspAction type="delivered">
+               <date when="1891-12-05">5. 12. 1891</date>
+               <placeName ref="#pmb365214">1/1 Post- und Telegraphenamt 1</placeName>
             </correspAction>
             <correspAction type="received">
                <persName ref="#pmb2121">Schnitzler, Arthur</persName>
                <date when="1891-12-05">5. 12. 1891</date>
                <placeName ref="#pmb167789">Ordination Arthur Schnitzler [Bösendorferstraße 11]</placeName>
             </correspAction>
-            <correspContext><ref type="belongsToCorrespondence" target="correspondence_11485">Goldmann, Paul</ref>
+            <correspContext>
+               <ref type="belongsToCorrespondence" target="correspondence_11485">Goldmann, Paul</ref>
                <ref subtype="previous_letter" type="withinCollection" target="L00046">Hofmannsthal an Schnitzler, [3. oder 4]. 12. 1891</ref>
                <ref subtype="next_letter" type="withinCollection" target="L00047">Schnitzler an Beer-Hofmann, 5. 12. 1891</ref>
-               <ref subtype="previous_letter" type="withinCorrespondence" source="correspondence_11485" target="L02672">Goldmann an Schnitzler, 29. 11. 1891</ref>
-               <ref subtype="next_letter" type="withinCorrespondence" source="correspondence_11485" target="L02674">Goldmann an Schnitzler, 12. 12. [1891]</ref>
-            </correspContext></correspDesc>
+               <ref subtype="previous_letter"
+                    type="withinCorrespondence"
+                    source="correspondence_11485"
+                    target="L02672">Goldmann an Schnitzler, 29. 11. 1891</ref>
+               <ref subtype="next_letter"
+                    type="withinCorrespondence"
+                    source="correspondence_11485"
+                    target="L02674">Goldmann an Schnitzler, 12. 12. [1891]</ref>
+            </correspContext>
+         </correspDesc>
       </profileDesc>
       <revisionDesc status="approved">
          <change who="LU" when="2022-05-23">Angelegt</change>
          <change who="MAM" when="2022-07-08">Durchsicht</change>
          <change when="2022-07-09" who="MAM">Index check</change>
          <change who="LU" when="2022-07-25">Durchsicht</change>
+         <change who="SJ" when="2026-09-29">Datierung und Stempel überprüft</change>
       </revisionDesc>
    </teiHeader>
    <facsimile>
@@ -361,36 +384,24 @@
                   <geo>48,85341 2,3488</geo>
                </location>
             </place>
-            <place xml:id="pmb51">
-               <placeName>I., Innere Stadt</placeName>
-               <placeName type="alternative-name">Inner city</placeName>
-               <placeName type="alternative-name">Wien,Innere Stadt</placeName>
-               <placeName type="alternative-name">1. Wiener Gemeindebezirk</placeName>
-               <placeName type="legacy-name-merge">Wien-Innere Stadt</placeName>
+            <place xml:id="pmb365214">
+               <placeName>1/1 Post- und Telegraphenamt 1</placeName>
                <location type="coords">
+                  <geo>48,209928 16,379065</geo>
+               </location>
+               <location type="located_in_place">
+                  <placeName ref="pmb51">I., Innere Stadt</placeName>
                   <geo>48,20769 16,37049</geo>
                </location>
-               <location type="located_in_place">
-                  <placeName ref="pmb41240">Österreich</placeName>
-                  <geo>47,33333 13,33333</geo>
-               </location>
-               <location type="located_in_place">
-                  <placeName ref="pmb50">Wien</placeName>
-                  <geo>48,208333 16,373056</geo>
-               </location>
             </place>
-            <place xml:id="pmb182">
-               <placeName>Paris</placeName>
-               <placeName type="alternative-name">P'ariz</placeName>
-               <placeName type="alternative-name">Pariž</placeName>
-               <placeName type="alternative-name">Parisius</placeName>
-               <placeName type="alternative-name">Île-de-France</placeName>
+            <place xml:id="pmb40415">
+               <placeName>rue Vivienne</placeName>
                <location type="coords">
-                  <geo>48,85341 2,3488</geo>
+                  <geo>48,869409 2,340402</geo>
                </location>
                <location type="located_in_place">
-                  <placeName ref="pmb166">Frankreich</placeName>
-                  <geo>46,0 2,0</geo>
+                  <placeName ref="pmb182">Paris</placeName>
+                  <geo>48,85341 2,3488</geo>
                </location>
             </place>
             <place xml:id="pmb167789">
@@ -459,6 +470,20 @@
                   <geo>48,24077 16,32092</geo>
                </location>
             </place>
+            <place xml:id="pmb182">
+               <placeName>Paris</placeName>
+               <placeName type="alternative-name">P'ariz</placeName>
+               <placeName type="alternative-name">Pariž</placeName>
+               <placeName type="alternative-name">Parisius</placeName>
+               <placeName type="alternative-name">Île-de-France</placeName>
+               <location type="coords">
+                  <geo>48,85341 2,3488</geo>
+               </location>
+               <location type="located_in_place">
+                  <placeName ref="pmb166">Frankreich</placeName>
+                  <geo>46,0 2,0</geo>
+               </location>
+            </place>
             <place xml:id="pmb862">
                <placeName>Brüssel</placeName>
                <location type="coords">
@@ -467,16 +492,6 @@
                <location type="located_in_place">
                   <placeName ref="pmb710">Belgien</placeName>
                   <geo>50,75 4,5</geo>
-               </location>
-            </place>
-            <place xml:id="pmb40415">
-               <placeName>rue Vivienne</placeName>
-               <location type="coords">
-                  <geo>48,869409 2,340402</geo>
-               </location>
-               <location type="located_in_place">
-                  <placeName ref="pmb182">Paris</placeName>
-                  <geo>48,85341 2,3488</geo>
                </location>
             </place>
          </listPlace>
