@@ -1,6 +1,10 @@
-<?xml version='1.0' encoding='UTF-8'?>
+<?xml version="1.0" encoding="UTF-8"?>
 <?xml-model href="../meta/schnitzler-briefe-schematron.sch" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
-<TEI xmlns="http://www.tei-c.org/ns/1.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.tei-c.org/ns/1.0 ../meta/schnitzler-briefe-schema.xsd" xml:id="L02553" xml:base="https://id.acdh.oeaw.ac.at/schnitzler/schnitzler-briefe/editions">
+<TEI xmlns="http://www.tei-c.org/ns/1.0"
+     xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+     xsi:schemaLocation="http://www.tei-c.org/ns/1.0 ../meta/schnitzler-briefe-schema.xsd"
+     xml:id="L02553"
+     xml:base="https://id.acdh.oeaw.ac.at/schnitzler/schnitzler-briefe/editions">
    <teiHeader>
       <fileDesc>
          <titleStmt>
@@ -114,20 +118,32 @@
             <correspAction type="sent">
                <persName ref="#pmb2173">Schnitzler, Olga</persName>
                <date when="1910-01-23" n="01">23. 1. 1910</date>
+               <placeName ref="#pmb53107">Hotel Bellevue [Dresden]</placeName>
+            </correspAction>
+            <correspAction type="transmitted">
+               <date when="1910-01-23">23. 1. 1910</date>
                <placeName ref="#pmb866">Dresden</placeName>
             </correspAction>
             <correspAction type="received">
                <persName ref="#pmb10860">Beer-Hofmann, Paula</persName>
                <date evidence="conjecture" notBefore="1910-01-24" notAfter="1910-01-28">[24. 1. 1910
                   – 28. 1. 1910?]</date>
-               <placeName ref="#pmb50">Wien</placeName>
+               <placeName ref="#pmb235251">Hasenauerstrasse 59</placeName>
             </correspAction>
-            <correspContext><ref type="belongsToCorrespondence" target="correspondence_10863">Beer-Hofmann, Richard</ref>
+            <correspContext>
+               <ref type="belongsToCorrespondence" target="correspondence_10863">Beer-Hofmann, Richard</ref>
                <ref subtype="previous_letter" type="withinCollection" target="L02561">Schnitzler an Beer-Hofmann, [19. 1. 1910]</ref>
                <ref subtype="next_letter" type="withinCollection" target="L04165">Schnitzler an Schwarzkopf, 25. 1. 1910</ref>
-               <ref subtype="previous_letter" type="withinCorrespondence" source="correspondence_10863" target="L02561">Schnitzler an Beer-Hofmann, [19. 1. 1910]</ref>
-               <ref subtype="next_letter" type="withinCorrespondence" source="correspondence_10863" target="L01916">Beer-Hofmann an Schnitzler, 6. 3. 1910</ref>
-            </correspContext></correspDesc>
+               <ref subtype="previous_letter"
+                    type="withinCorrespondence"
+                    source="correspondence_10863"
+                    target="L02561">Schnitzler an Beer-Hofmann, [19. 1. 1910]</ref>
+               <ref subtype="next_letter"
+                    type="withinCorrespondence"
+                    source="correspondence_10863"
+                    target="L01916">Beer-Hofmann an Schnitzler, 6. 3. 1910</ref>
+            </correspContext>
+         </correspDesc>
       </profileDesc>
       <revisionDesc status="approved">
          <change who="GHS" when="2021-03-06">Angelegt</change>
@@ -178,7 +194,9 @@
                </rs> u. die <rs type="person" ref="#pmb13923 #pmb2668 #pmb2534" subtype="implied">Kinder</rs>.<lb/>Ihre<signed>Olga.</signed>
             </closer>
             <postscript>
-               <dateline><date>23. 1. 10.</date></dateline>
+               <dateline>
+                  <date>23. 1. 10.</date>
+               </dateline>
             </postscript>
          </div>
       </body>
@@ -441,6 +459,16 @@
                   <geo>51,5 10,5</geo>
                </location>
             </place>
+            <place xml:id="pmb53107">
+               <placeName>Hotel Bellevue [Dresden]</placeName>
+               <location type="coords">
+                  <geo>51,0549041 13,736206</geo>
+               </location>
+               <location type="located_in_place">
+                  <placeName ref="pmb866">Dresden</placeName>
+                  <geo>51,0833 13,7666</geo>
+               </location>
+            </place>
             <place xml:id="pmb50">
                <placeName>Wien</placeName>
                <placeName type="ort_fruherer-name">K.K. Reichshaupt- und Residenzstadt Wien</placeName>
@@ -495,16 +523,6 @@
                <location type="located_in_place">
                   <placeName ref="pmb383">Hasenauerstraße</placeName>
                   <geo>48,233816866614 16,337927920952</geo>
-               </location>
-            </place>
-            <place xml:id="pmb53107">
-               <placeName>Hotel Bellevue [Dresden]</placeName>
-               <location type="coords">
-                  <geo>51,0549041 13,736206</geo>
-               </location>
-               <location type="located_in_place">
-                  <placeName ref="pmb866">Dresden</placeName>
-                  <geo>51,0833 13,7666</geo>
                </location>
             </place>
             <place xml:id="pmb43570">
