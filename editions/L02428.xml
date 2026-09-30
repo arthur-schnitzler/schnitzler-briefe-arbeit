@@ -1,6 +1,10 @@
-<?xml version='1.0' encoding='UTF-8'?>
+<?xml version="1.0" encoding="UTF-8"?>
 <?xml-model href="../meta/schnitzler-briefe-schematron.sch" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
-<TEI xmlns="http://www.tei-c.org/ns/1.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.tei-c.org/ns/1.0 ../meta/schnitzler-briefe-schema.xsd" xml:id="L02428" xml:base="https://id.acdh.oeaw.ac.at/schnitzler/schnitzler-briefe/editions">
+<TEI xmlns="http://www.tei-c.org/ns/1.0"
+     xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+     xsi:schemaLocation="http://www.tei-c.org/ns/1.0 ../meta/schnitzler-briefe-schema.xsd"
+     xml:id="L02428"
+     xml:base="https://id.acdh.oeaw.ac.at/schnitzler/schnitzler-briefe/editions">
    <teiHeader>
       <fileDesc>
          <titleStmt>
@@ -87,14 +91,15 @@
                            </supportDesc>
                         </objectDesc>
                         <handDesc hands="1">
-                           <handNote medium="schwarze-tinte" style="deutsche-kurrent" corresp="#pmb11002"/>
+                           <handNote medium="schwarze-tinte"
+                                     style="deutsche-kurrent"
+                                     corresp="#pmb11002"/>
                         </handDesc>
                         <additions>
                            <incident type="postal">
                               <desc>
                                  <stamp n="1" type="transmission">
-                                    <placeName ref="#pmb66">
-                                       <unclear>16/1</unclear> Wien</placeName>
+                                    <placeName ref="#pmb365640">1<unclear>9</unclear>/1 Wien 117</placeName>
                                     <date when="1924-12-31">31. XII. 2<unclear>4</unclear>
                                     </date>
                                     <time>9</time>
@@ -116,24 +121,37 @@
             <correspAction type="sent">
                <persName ref="#pmb11002">Braun, Felix</persName>
                <date when="1924-12-31" n="01">31. 12. 1924</date>
-               <placeName ref="#pmb50">Wien</placeName>
+               <placeName ref="#pmb365643">Sieveringer Straße 191</placeName>
+            </correspAction>
+            <correspAction type="transmitted">
+               <date when="1924-12-31">31. 12. 1924</date>
+               <placeName ref="#pmb365640">19/1 Post- und Telegraphenamt 117</placeName>
             </correspAction>
             <correspAction type="received">
                <persName ref="#pmb2121">Schnitzler, Arthur</persName>
                <date evidence="conjecture" notBefore="1924-12-31" notAfter="1925-01-02">[31. 12. 1924 – 4. 1. 1925?]</date>
                <placeName ref="#pmb168815">Sternwartestraße 71</placeName>
             </correspAction>
-            <correspContext><ref type="belongsToCorrespondence" target="correspondence_11002">Braun, Felix</ref>
+            <correspContext>
+               <ref type="belongsToCorrespondence" target="correspondence_11002">Braun, Felix</ref>
                <ref subtype="previous_letter" type="withinCollection" target="L02427">Hofmannsthal an Schnitzler, 28. 12. 1924</ref>
                <ref subtype="next_letter" type="withinCollection" target="L03670">Zweig an Schnitzler, 2. 1. 1925</ref>
-               <ref subtype="previous_letter" type="withinCorrespondence" source="correspondence_11002" target="L02426">Schnitzler an Braun, 28. 12. 1924</ref>
-               <ref subtype="next_letter" type="withinCorrespondence" source="correspondence_11002" target="L02458">Braun an Schnitzler, 14. 12. 1925</ref>
-            </correspContext></correspDesc>
+               <ref subtype="previous_letter"
+                    type="withinCorrespondence"
+                    source="correspondence_11002"
+                    target="L02426">Schnitzler an Braun, 28. 12. 1924</ref>
+               <ref subtype="next_letter"
+                    type="withinCorrespondence"
+                    source="correspondence_11002"
+                    target="L02458">Braun an Schnitzler, 14. 12. 1925</ref>
+            </correspContext>
+         </correspDesc>
       </profileDesc>
       <revisionDesc status="approved">
          <change who="MAM" when="2018-12-03">Angelegt</change>
          <change when="2018-12-04" who="MAM">Index check</change>
          <change who="GHS" when="2020-07-20">finalisiert</change>
+         <change who="SJ" when="2026-09-30">Datierung und Stempel überprüft</change>
       </revisionDesc>
    </teiHeader>
    <facsimile>
@@ -250,39 +268,32 @@
             </bibl>
          </listBibl>
          <listPlace>
-            <place xml:id="pmb66">
-               <placeName>XVI., Ottakring</placeName>
-               <placeName type="legacy-name-merge">Wien-Neulerchenfeld</placeName>
-               <placeName type="legacy-name-merge">Ottakring</placeName>
-               <placeName type="legacy-name-merge">Wien-Ottakring</placeName>
+            <place xml:id="pmb365640">
+               <placeName>19/1 Post- und Telegraphenamt 117</placeName>
                <location type="coords">
-                  <geo>48,21667 16,3</geo>
+                  <geo>48,241476341941315 16,35543081276973</geo>
                </location>
                <location type="located_in_place">
-                  <placeName ref="pmb50">Wien</placeName>
-                  <geo>48,208333 16,373056</geo>
+                  <placeName ref="pmb69">XIX., Döbling</placeName>
+                  <geo>48,25 16,33306</geo>
+               </location>
+               <location type="located_in_place">
+                  <placeName ref="pmb50471">Döblinger Hauptstraße</placeName>
+                  <geo>48,24453 16,35564</geo>
                </location>
             </place>
-            <place xml:id="pmb50">
-               <placeName>Wien</placeName>
-               <placeName type="ort_fruherer-name">K.K. Reichshaupt- und Residenzstadt Wien</placeName>
-               <placeName type="alternative-name">Bécs</placeName>
-               <placeName type="alternative-name">Land Wien</placeName>
-               <placeName type="alternative-name">Vídeň</placeName>
-               <placeName type="alternative-name">Wenia</placeName>
-               <placeName type="alternative-name">Beč</placeName>
-               <placeName type="ort_fruherer-name">Vindobona</placeName>
-               <placeName type="alternative-name">Vienna</placeName>
+            <place xml:id="pmb365643">
+               <placeName>Sieveringer Straße 191</placeName>
                <location type="coords">
-                  <geo>48,208333 16,373056</geo>
+                  <geo>48,252261604003735 16,31915855509781</geo>
                </location>
                <location type="located_in_place">
-                  <placeName ref="pmb41240">Österreich</placeName>
-                  <geo>47,33333 13,33333</geo>
+                  <placeName ref="pmb1092">Sieveringer Straße</placeName>
+                  <geo>48,24803 16,32993</geo>
                </location>
                <location type="located_in_place">
-                  <placeName ref="pmb235218">Windmühlhöhe</placeName>
-                  <geo>48,24077 16,32092</geo>
+                  <placeName ref="pmb69">XIX., Döbling</placeName>
+                  <geo>48,25 16,33306</geo>
                </location>
             </place>
             <place xml:id="pmb168815">
@@ -326,6 +337,28 @@
                <location type="located_in_place">
                   <placeName ref="pmb50">Wien</placeName>
                   <geo>48,208333 16,373056</geo>
+               </location>
+            </place>
+            <place xml:id="pmb50">
+               <placeName>Wien</placeName>
+               <placeName type="ort_fruherer-name">K.K. Reichshaupt- und Residenzstadt Wien</placeName>
+               <placeName type="alternative-name">Bécs</placeName>
+               <placeName type="alternative-name">Land Wien</placeName>
+               <placeName type="alternative-name">Vídeň</placeName>
+               <placeName type="alternative-name">Wenia</placeName>
+               <placeName type="alternative-name">Beč</placeName>
+               <placeName type="ort_fruherer-name">Vindobona</placeName>
+               <placeName type="alternative-name">Vienna</placeName>
+               <location type="coords">
+                  <geo>48,208333 16,373056</geo>
+               </location>
+               <location type="located_in_place">
+                  <placeName ref="pmb41240">Österreich</placeName>
+                  <geo>47,33333 13,33333</geo>
+               </location>
+               <location type="located_in_place">
+                  <placeName ref="pmb235218">Windmühlhöhe</placeName>
+                  <geo>48,24077 16,32092</geo>
                </location>
             </place>
          </listPlace>
