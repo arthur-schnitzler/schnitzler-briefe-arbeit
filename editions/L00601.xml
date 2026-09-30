@@ -1,6 +1,10 @@
-<?xml version='1.0' encoding='UTF-8'?>
+<?xml version="1.0" encoding="UTF-8"?>
 <?xml-model href="../meta/schnitzler-briefe-schematron.sch" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
-<TEI xmlns="http://www.tei-c.org/ns/1.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.tei-c.org/ns/1.0 ../meta/schnitzler-briefe-schema.xsd" xml:id="L00601" xml:base="https://id.acdh.oeaw.ac.at/schnitzler/schnitzler-briefe/editions">
+<TEI xmlns="http://www.tei-c.org/ns/1.0"
+     xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+     xsi:schemaLocation="http://www.tei-c.org/ns/1.0 ../meta/schnitzler-briefe-schema.xsd"
+     xml:id="L00601"
+     xml:base="https://id.acdh.oeaw.ac.at/schnitzler/schnitzler-briefe/editions">
    <teiHeader>
       <fileDesc>
          <titleStmt>
@@ -87,7 +91,9 @@
                            </supportDesc>
                         </objectDesc>
                         <handDesc hands="1">
-                           <handNote medium="schwarze-tinte" style="deutsche-kurrent" corresp="#pmb11740"/>
+                           <handNote medium="schwarze-tinte"
+                                     style="deutsche-kurrent"
+                                     corresp="#pmb11740"/>
                         </handDesc>
                         <additions>
                            <incident type="postal">
@@ -96,7 +102,7 @@
                            <incident type="postal">
                               <desc>
                                  <stamp n="1" type="transmission">
-                                    <placeName ref="#pmb53">Wien 3/3</placeName>
+                                    <placeName ref="#pmb365229">Wien 3/3</placeName>
                                     <date when="1896-10-06">6 X 96</date>
                                     <time>11–V</time>
                                  </stamp>
@@ -105,7 +111,7 @@
                            <incident type="postal">
                               <desc>
                                  <stamp n="2" type="delivery">
-                                    <placeName ref="#pmb59">Wien 9/2</placeName>
+                                    <placeName ref="#pmb365211">Wien 9/2 71</placeName>
                                     <date when="1896-10-06">6 X 96</date>
                                     <time>12 30N</time>
                                  </stamp>
@@ -156,23 +162,31 @@
             </correspAction>
             <correspAction type="transmitted">
                <date when="1896-10-06">6. 10. 1896</date>
-               <placeName ref="#pmb53">III., Landstraße</placeName>
+               <placeName ref="#pmb365229">3/3 Post- und Telegraphenamt 49</placeName>
             </correspAction>
             <correspAction type="delivered">
                <date when="1896-10-06">6. 10. 1896</date>
-               <placeName ref="#pmb59">IX., Alsergrund</placeName>
+               <placeName ref="#pmb365211">9/2 Post- und Telegraphenamt 71</placeName>
             </correspAction>
             <correspAction type="received">
                <persName ref="#pmb2121">Schnitzler, Arthur</persName>
                <date when="1896-10-06">6. 10. 1896</date>
                <placeName ref="#pmb168934">Frankgasse 1</placeName>
             </correspAction>
-            <correspContext><ref type="belongsToCorrespondence" target="correspondence_11740">Hofmannsthal, Hugo von</ref>
+            <correspContext>
+               <ref type="belongsToCorrespondence" target="correspondence_11740">Hofmannsthal, Hugo von</ref>
                <ref subtype="previous_letter" type="withinCollection" target="L00600">Brandes an Schnitzler, 6. 10. 1896</ref>
                <ref subtype="next_letter" type="withinCollection" target="L00602">Schnitzler an Brandes, 8. 10. 1896</ref>
-               <ref subtype="previous_letter" type="withinCorrespondence" source="correspondence_11740" target="L00582">Schnitzler an Hofmannsthal, 2. 9. 1896</ref>
-               <ref subtype="next_letter" type="withinCorrespondence" source="correspondence_11740" target="L00605">Hofmannsthal an Schnitzler, [15.? 10. 1896]</ref>
-            </correspContext></correspDesc>
+               <ref subtype="previous_letter"
+                    type="withinCorrespondence"
+                    source="correspondence_11740"
+                    target="L00582">Schnitzler an Hofmannsthal, 2. 9. 1896</ref>
+               <ref subtype="next_letter"
+                    type="withinCorrespondence"
+                    source="correspondence_11740"
+                    target="L00605">Hofmannsthal an Schnitzler, [15.? 10. 1896]</ref>
+            </correspContext>
+         </correspDesc>
       </profileDesc>
       <revisionDesc status="approved">
          <change who="GHS" when="2019-04-06">Angelegt</change>
@@ -325,34 +339,36 @@
             </person>
          </listPerson>
          <listPlace>
-            <place xml:id="pmb53">
-               <placeName>III., Landstraße</placeName>
-               <placeName type="alternative-name">Landstraße</placeName>
-               <placeName type="legacy-name-merge">Landstraßer Hauptstraße</placeName>
-               <placeName type="legacy-name-merge">Wien-Landstraße</placeName>
-               <placeName type="legacy-name-merge">Gemeindebezirk Landstrasse</placeName>
+            <place xml:id="pmb365229">
+               <placeName>3/3 Post- und Telegraphenamt 49</placeName>
                <location type="coords">
+                  <geo>48,198051 16,380626</geo>
+               </location>
+               <location type="located_in_place">
+                  <placeName ref="pmb34016">Strohgasse</placeName>
+                  <geo>48,198222 16,381384</geo>
+               </location>
+               <location type="located_in_place">
+                  <placeName ref="pmb266616">Marokkanergasse</placeName>
+                  <geo>48,198 16,3804</geo>
+               </location>
+               <location type="located_in_place">
+                  <placeName ref="pmb53">III., Landstraße</placeName>
                   <geo>48,19811 16,39482</geo>
                </location>
-               <location type="located_in_place">
-                  <placeName ref="pmb41240">Österreich</placeName>
-                  <geo>47,33333 13,33333</geo>
-               </location>
-               <location type="located_in_place">
-                  <placeName ref="pmb50">Wien</placeName>
-                  <geo>48,208333 16,373056</geo>
-               </location>
             </place>
-            <place xml:id="pmb59">
-               <placeName>IX., Alsergrund</placeName>
-               <placeName type="legacy-name-merge">Thurygrund</placeName>
-               <placeName type="legacy-name-merge">Wien-Alsergrund</placeName>
+            <place xml:id="pmb365211">
+               <placeName>9/2 Post- und Telegraphenamt 71</placeName>
                <location type="coords">
-                  <geo>48,22387 16,35641</geo>
+                  <geo>48,218574 16,35084</geo>
                </location>
                <location type="located_in_place">
-                  <placeName ref="pmb50">Wien</placeName>
-                  <geo>48,208333 16,373056</geo>
+                  <placeName ref="pmb249905">Lazarettgasse</placeName>
+                  <geo>48,217383 16,347426</geo>
+               </location>
+               <location type="located_in_place">
+                  <placeName ref="pmb59">IX., Alsergrund</placeName>
+                  <geo>48,22387 16,35641</geo>
                </location>
             </place>
             <place xml:id="pmb192623">

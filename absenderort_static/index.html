@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="utf-8"/>
+<title>Absenderort</title>
+<style>
+  :root { --bg:#fafafa; --text:#222; --dim:#777; --line:#ddd; --accent:#2a5db0; }
+  * { box-sizing: border-box; }
+  body { margin:0; font:15px/1.5 system-ui, sans-serif; color:var(--text); background:var(--bg); }
+  header { position:sticky; top:0; background:#fff; border-bottom:1px solid var(--line); padding:.6em 1em; z-index:2; }
+  .row { display:flex; gap:.6em; align-items:center; flex-wrap:wrap; }
+  .spacer { flex:1; }
+  .dim { color:var(--dim); }
+  button, select, input { font:inherit; padding:.25em .6em; }
+  button.primary { background:var(--accent); color:#fff; border:0; border-radius:4px; }
+  button:disabled { opacity:.4; }
+  main { max-width:60em; margin:1em auto; padding:0 1em; }
+  .card { background:#fff; border:1px solid var(--line); border-radius:6px; padding:.8em 1em; margin-bottom:1em; }
+  .current { font-size:1.15em; font-weight:600; }
+  .current.empty { color:#b00; }
+  #bodyText { background:#fff; border:1px solid var(--line); border-radius:6px; padding:1em; }
+  #bodyText mark.body-place { background:#e53935; color:#fff; padding:0 .15em; border-radius:2px; }
+  #bodyText .body-p, #bodyText .body-div { margin:0 0 .9em; }
+  #bodyText .body-addrLine { display:block; }
+  #bodyText .body-del { text-decoration:line-through; color:var(--dim); }
+  #bodyText .body-note { color:var(--dim); }
+  #toast { position:fixed; bottom:1em; left:50%; transform:translateX(-50%); background:#222; color:#fff; padding:.5em 1em; border-radius:4px; display:none; }
+</style>
+</head>
+<body>
+<header>
+  <div class="row">
+    <label>Brief <input id="jumpInput" size="8" placeholder="L01933"/></label>
+    <button id="jumpBtn">Laden</button>
+    <button id="prevBtn">&#8592;</button>
+    <button id="nextBtn">&#8594;</button>
+    <span id="pos" class="dim"></span>
+    <label><input type="checkbox" id="emptyOnly"/> nur ohne Ort</label>
+    <button id="reindexBtn" title="Orte-Liste aus allen correspAction neu erstellen (dauert etwas)">Orte-Liste neu erstellen</button>
+    <span class="spacer"></span>
+    <button id="openBtn" title="Webseite und Datei in Oxygen öffnen">Öffnen (Web + Oxygen) ↗</button>
+    <button id="quitBtn">Beenden</button>
+  </div>
+</header>
+<main>
+  <h2 id="title"></h2>
+  <div class="card" id="card-sent">
+    <h3 style="margin:0 0 .3em">Absendeort (sent)</h3>
+    <div class="dim" id="info-sent"></div>
+    <div>Eingetragener Ort: <span id="current-sent" class="current"></span></div>
+    <div class="row" style="margin-top:.6em">
+      <select id="select-sent"></select>
+      <button id="save-sent" class="primary" disabled>Übernehmen</button>
+      <button id="saveNext-sent" disabled>Übernehmen &amp; weiter</button>
+    </div>
+    <div class="row" style="margin-top:.4em">
+      <span class="dim">oder PMB-Nummer:</span>
+      <input id="pmb-sent" size="10" placeholder="pmb50"/>
+      <input id="pmbName-sent" size="18" placeholder="Name (optional)"/>
+      <button id="savePmb-sent">Eintragen</button>
+    </div>
+  </div>
+  <div class="card" id="card-received">
+    <h3 style="margin:0 0 .3em">Empfangsort (received)</h3>
+    <div class="dim" id="info-received"></div>
+    <div>Eingetragener Ort: <span id="current-received" class="current"></span></div>
+    <div class="row" style="margin-top:.6em">
+      <select id="select-received"></select>
+      <button id="save-received" class="primary" disabled>Übernehmen</button>
+      <button id="saveNext-received" disabled>Übernehmen &amp; weiter</button>
+    </div>
+    <div class="row" style="margin-top:.4em">
+      <span class="dim">oder PMB-Nummer:</span>
+      <input id="pmb-received" size="10" placeholder="pmb50"/>
+      <input id="pmbName-received" size="18" placeholder="Name (optional)"/>
+      <button id="savePmb-received">Eintragen</button>
+    </div>
+  </div>
+  <div class="dim" style="margin-bottom:.6em">Rot hinterlegt im Text: Orte (placeName / rs[@type='place']); ★ = Ort kommt im Brieftext vor.</div>
+  <div id="bodyText"></div>
+</main>
+<div id="toast"></div>
+<script>
+let files = [], visible = [], cur = null, data = null;
+const $ = id => document.getElementById(id);
+const KINDS = {brief: "Orte im Brief (back/listPlace)", aufenthalt: "Aufenthalt Schnitzlers (nur Absendeort)", wohnadresse: "Wohnadresse", korrespondenz: "Orte laut anderen Briefen desselben Jahres"};
+
+function toast(msg) { const t = $("toast"); t.textContent = msg; t.style.display = "block"; setTimeout(() => t.style.display = "none", 2500); }
+async function api(url, body) {
+  const r = await fetch(url, body ? {method: "POST", body: JSON.stringify(body)} : undefined);
+  const j = await r.json();
+  if (!r.ok) throw new Error(j.error || r.status);
+  return j;
+}
+function applyFilter() {
+  visible = $("emptyOnly").checked ? files.filter(f => !f.place) : files;
+  updatePos();
+}
+function updatePos() {
+  const i = visible.findIndex(f => f.id === cur);
+  $("pos").textContent = `${i >= 0 ? i + 1 : "–"} / ${visible.length} (gesamt ${files.length}, ohne Ort ${files.filter(f => !f.place).length})`;
+}
+async function load(fid) {
+  try { data = await api("/api/file/" + fid); } catch (e) { toast(e.message); return; }
+  cur = fid; render();
+}
+function render() {
+  $("title").textContent = data.id + " – " + (data.title || "");
+    ["sent", "received"].forEach(renderCard);
+  $("bodyText").innerHTML = data.bodyHtml;
+  updatePos();
+  location.hash = data.id;
+}
+function renderCard(k) {
+  const a = data[k];
+  $("card-" + k).style.display = a ? "" : "none";
+  if (!a) return;
+  $("info-" + k).textContent = a.persons.map(p => p.text).join("; ") + (a.date ? " · " + a.date.text : "");
+  const c = $("current-" + k);
+  c.textContent = a.place ? a.place.text + (a.place.ref ? " (" + a.place.ref + ")" : "") : "kein Ort eingetragen";
+  c.classList.toggle("empty", !a.place);
+  const sel = $("select-" + k); sel.innerHTML = "";
+  sel.add(new Option("– Ort wählen –", ""));
+  const groups = {};
+  a.options.forEach((o, i) => {
+    const g = groups[o.kind] || (groups[o.kind] = Object.assign(document.createElement("optgroup"), {label: KINDS[o.kind] || o.kind}));
+    const opt = new Option((o.inBody ? "★ " : "") + (o.label || o.text) + " (" + o.ref + ")", i);
+    if (a.place && a.place.ref === o.ref) opt.selected = true;
+    g.appendChild(opt);
+  });
+  ["brief", "aufenthalt", "wohnadresse", "korrespondenz"].forEach(x => groups[x] && sel.appendChild(groups[x]));
+  $("save-" + k).disabled = $("saveNext-" + k).disabled = true;
+  $("pmb-" + k).value = $("pmbName-" + k).value = "";
+}
+async function save(k, advance, pmb) {
+  let body;
+  if (pmb) {
+    const n = $("pmb-" + k).value.trim(); if (!n) return;
+    body = {type: k, pmb: n, text: $("pmbName-" + k).value.trim()};
+  } else {
+    const v = $("select-" + k).value; if (v === "") return;
+    const o = data[k].options[+v];
+    body = {type: k, ref: o.ref, text: o.text};
+  }
+  try {
+    data = await api(`/api/file/${cur}/set-place`, body);
+  } catch (e) { toast(e.message); return; }
+  const row = files.find(f => f.id === cur); if (row) row.place = data.sent.place && data.sent.place.text;
+  toast("Gespeichert");
+  if (advance) step(1); else render();
+}
+function step(d) {
+  const i = visible.findIndex(f => f.id === cur);
+  let j = i >= 0 ? i + d : (d > 0 ? 0 : visible.length - 1);
+  if (i < 0) { j = d > 0 ? visible.findIndex(f => f.id > cur) : visible.length - 1; }
+  if (j >= 0 && j < visible.length) load(visible[j].id);
+}
+["sent", "received"].forEach(k => {
+  $("select-" + k).onchange = () => { $("save-" + k).disabled = $("saveNext-" + k).disabled = $("select-" + k).value === ""; };
+  $("save-" + k).onclick = () => save(k, false);
+  $("saveNext-" + k).onclick = () => save(k, true);
+  $("savePmb-" + k).onclick = () => save(k, false, true);
+  $("pmb-" + k).onkeydown = e => { if (e.key === "Enter") save(k, false, true); };
+});
+$("prevBtn").onclick = () => step(-1);
+$("nextBtn").onclick = () => step(1);
+$("jumpBtn").onclick = () => load($("jumpInput").value.trim());
+$("jumpInput").onkeydown = e => { if (e.key === "Enter") $("jumpBtn").click(); };
+$("emptyOnly").onchange = applyFilter;
+$("reindexBtn").onclick = async () => {
+  $("reindexBtn").disabled = true; toast("Erstelle Liste …");
+  try { const r = await api("/api/rebuild-index", {}); toast(`Liste neu: ${r.entries} Belege aus ${r.files} Briefen`); await load(cur); }
+  catch (e) { toast(e.message); }
+  $("reindexBtn").disabled = false;
+};
+$("openBtn").onclick = async () => {
+  if (!data) return;
+  window.open(data.htmlUrl, "_blank");
+  try { await api("/api/open-oxygen/" + cur); } catch (e) { toast(e.message); }
+};
+$("quitBtn").onclick = async () => { await api("/api/shutdown"); window.close(); };
+(async () => {
+  files = (await api("/api/list")).files; applyFilter();
+  const h = location.hash.slice(1);
+  if (h) load(h); else if (visible.length) load(visible[0].id);
+})();
+</script>
+</body>
+</html>

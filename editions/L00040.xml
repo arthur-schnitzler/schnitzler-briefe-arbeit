@@ -1,6 +1,10 @@
-<?xml version='1.0' encoding='UTF-8'?>
+<?xml version="1.0" encoding="UTF-8"?>
 <?xml-model href="../meta/schnitzler-briefe-schematron.sch" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
-<TEI xmlns="http://www.tei-c.org/ns/1.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.tei-c.org/ns/1.0 ../meta/schnitzler-briefe-schema.xsd" xml:id="L00040" xml:base="https://id.acdh.oeaw.ac.at/schnitzler/schnitzler-briefe/editions">
+<TEI xmlns="http://www.tei-c.org/ns/1.0"
+     xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+     xsi:schemaLocation="http://www.tei-c.org/ns/1.0 ../meta/schnitzler-briefe-schema.xsd"
+     xml:id="L00040"
+     xml:base="https://id.acdh.oeaw.ac.at/schnitzler/schnitzler-briefe/editions">
    <teiHeader>
       <fileDesc>
          <titleStmt>
@@ -94,7 +98,9 @@
                            <incident type="postal">
                               <desc>
                                  <stamp n="1" type="transmission">
-                                    <placeName ref="#pmb58">Wien 8</placeName>
+                                    <placeName ref="#pmb365633">
+                                       <pb facs="1891_AS_RBH_00016"/>Wien <unclear>61</unclear>
+                                    </placeName>
                                     <date when="1891-09-16">16 9 91</date>
                                     <time>
                                        <unclear>5</unclear> N</time>
@@ -104,7 +110,7 @@
                            <incident type="postal">
                               <desc>
                                  <stamp n="2" type="delivery">
-                                    <placeName ref="#pmb53">Wien 3/2</placeName>
+                                    <placeName ref="#pmb365287">Wien 3/2 45</placeName>
                                     <date when="1891-09-16">16-9 91</date>
                                     <time>5 7. N</time>
                                     <addSpan>Bestellt</addSpan>
@@ -130,23 +136,31 @@
             </correspAction>
             <correspAction type="transmitted">
                <date when="1891-09-16">16. 9. 1891</date>
-               <placeName ref="#pmb58">VIII., Josefstadt</placeName>
+               <placeName ref="#pmb365633">7/2 Post- und Telegraphenamt 61</placeName>
             </correspAction>
             <correspAction type="delivered">
                <date when="1891-09-16">16. 9. 1891</date>
-               <placeName ref="#pmb53">III., Landstraße</placeName>
+               <placeName ref="#pmb365287">3/2 Post- und Telegraphenamt 45</placeName>
             </correspAction>
             <correspAction type="received">
                <persName ref="#pmb10863">Beer-Hofmann, Richard</persName>
                <date when="1891-09-16">16. 9. 1891</date>
                <placeName ref="#pmb730">Seidlgasse</placeName>
             </correspAction>
-            <correspContext><ref type="belongsToCorrespondence" target="correspondence_10863">Beer-Hofmann, Richard</ref>
+            <correspContext>
+               <ref type="belongsToCorrespondence" target="correspondence_10863">Beer-Hofmann, Richard</ref>
                <ref subtype="previous_letter" type="withinCollection" target="L02952">Schnitzler an Salten, 14. 9. 1891</ref>
                <ref subtype="next_letter" type="withinCollection" target="L00041">Schnitzler an Beer-Hofmann, [21. oder 22]. 9. 1891</ref>
-               <ref subtype="previous_letter" type="withinCorrespondence" source="correspondence_10863" target="L00036">Schnitzler an Beer-Hofmann, [22.? 8. 1891]</ref>
-               <ref subtype="next_letter" type="withinCorrespondence" source="correspondence_10863" target="L00041">Schnitzler an Beer-Hofmann, [21. oder 22]. 9. 1891</ref>
-            </correspContext></correspDesc>
+               <ref subtype="previous_letter"
+                    type="withinCorrespondence"
+                    source="correspondence_10863"
+                    target="L00036">Schnitzler an Beer-Hofmann, [22.? 8. 1891]</ref>
+               <ref subtype="next_letter"
+                    type="withinCorrespondence"
+                    source="correspondence_10863"
+                    target="L00041">Schnitzler an Beer-Hofmann, [21. oder 22]. 9. 1891</ref>
+            </correspContext>
+         </correspDesc>
       </profileDesc>
       <revisionDesc status="approved">
          <change who="GHS" when="2019-09-10">angelegt</change>
@@ -248,34 +262,32 @@
             </person>
          </listPerson>
          <listPlace>
-            <place xml:id="pmb58">
-               <placeName>VIII., Josefstadt</placeName>
-               <placeName type="alternative-name">Josefstadt (Wien-Josefstadt)</placeName>
-               <placeName type="legacy-name-merge">Josefstadt</placeName>
+            <place xml:id="pmb365633">
+               <placeName>7/2 Post- und Telegraphenamt 61</placeName>
                <location type="coords">
-                  <geo>48,21126 16,34706</geo>
+                  <geo>48,205488 16,349528</geo>
                </location>
                <location type="located_in_place">
-                  <placeName ref="pmb50">Wien</placeName>
-                  <geo>48,208333 16,373056</geo>
+                  <placeName ref="pmb50568">Neustiftgasse</placeName>
+                  <geo>48,20541 16,35096</geo>
+               </location>
+               <location type="located_in_place">
+                  <placeName ref="pmb57">VII., Neubau</placeName>
+                  <geo>48,2 16,35</geo>
                </location>
             </place>
-            <place xml:id="pmb53">
-               <placeName>III., Landstraße</placeName>
-               <placeName type="alternative-name">Landstraße</placeName>
-               <placeName type="legacy-name-merge">Landstraßer Hauptstraße</placeName>
-               <placeName type="legacy-name-merge">Wien-Landstraße</placeName>
-               <placeName type="legacy-name-merge">Gemeindebezirk Landstrasse</placeName>
+            <place xml:id="pmb365287">
+               <placeName>3/2 Post- und Telegraphenamt 45</placeName>
                <location type="coords">
+                  <geo>48,208497 16,392674</geo>
+               </location>
+               <location type="located_in_place">
+                  <placeName ref="pmb53648">Hetzgasse</placeName>
+                  <geo>48,20863025214525 16,391119727082845</geo>
+               </location>
+               <location type="located_in_place">
+                  <placeName ref="pmb53">III., Landstraße</placeName>
                   <geo>48,19811 16,39482</geo>
-               </location>
-               <location type="located_in_place">
-                  <placeName ref="pmb41240">Österreich</placeName>
-                  <geo>47,33333 13,33333</geo>
-               </location>
-               <location type="located_in_place">
-                  <placeName ref="pmb50">Wien</placeName>
-                  <geo>48,208333 16,373056</geo>
                </location>
             </place>
             <place xml:id="pmb50">
@@ -303,6 +315,20 @@
             <place xml:id="pmb730">
                <placeName>Seidlgasse</placeName>
                <location type="coords">
+                  <geo>48,206786325191 16,389660949005</geo>
+               </location>
+               <location type="located_in_place">
+                  <placeName ref="pmb53">III., Landstraße</placeName>
+                  <geo>48,19811 16,39482</geo>
+               </location>
+            </place>
+            <place xml:id="pmb364746">
+               <placeName>Seidlgasse 30</placeName>
+               <location type="coords">
+                  <geo>48,205599 16,388584</geo>
+               </location>
+               <location type="located_in_place">
+                  <placeName ref="pmb730">Seidlgasse</placeName>
                   <geo>48,206786325191 16,389660949005</geo>
                </location>
                <location type="located_in_place">
