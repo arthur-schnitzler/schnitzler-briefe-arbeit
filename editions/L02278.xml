@@ -1,11 +1,15 @@
-<?xml version='1.0' encoding='UTF-8'?>
+<?xml version="1.0" encoding="UTF-8"?>
 <?xml-model href="../meta/schnitzler-briefe-schematron.sch" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
-<TEI xmlns="http://www.tei-c.org/ns/1.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.tei-c.org/ns/1.0 ../meta/schnitzler-briefe-schema.xsd" xml:id="L02278" xml:base="https://id.acdh.oeaw.ac.at/schnitzler/schnitzler-briefe/editions">
+<TEI xmlns="http://www.tei-c.org/ns/1.0"
+     xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+     xsi:schemaLocation="http://www.tei-c.org/ns/1.0 ../meta/schnitzler-briefe-schema.xsd"
+     xml:id="L02278"
+     xml:base="https://id.acdh.oeaw.ac.at/schnitzler/schnitzler-briefe/editions">
    <teiHeader>
       <fileDesc>
          <titleStmt>
             <title level="s">Arthur Schnitzler: Briefwechsel mit Autorinnen und Autoren</title>
-            <title level="a">Arthur Schnitzler an Robert Adam, 27. 10. 1917</title>
+            <title level="a">Arthur Schnitzler an Robert Adam, 2[6]. 10. 1917</title>
             <author ref="#pmb2121">Schnitzler, Arthur</author>
             <editor>
                <name>Müller, Martin Anton</name>
@@ -83,7 +87,7 @@
                               <extent>
                                  <measure unit="karte" quantity="1"/>
                                  <measure unit="kuvert" quantity="1"/>
-                                 <measure unit="zeichenanzahl" quantity="592"/>
+                                 <measure unit="zeichenanzahl" quantity="590"/>
                               </extent>
                            </supportDesc>
                         </objectDesc>
@@ -98,7 +102,8 @@
                         <additions>
                            <incident type="postal">
                               <desc>
-                                 <stamp n="1">
+                                 <stamp n="1" type="transmission">
+                                    <placeName ref="#pmb405244">1/1 Wien 13</placeName>
                                     <date when="1917-10-26">26. X. 17</date>
                                  </stamp>
                               </desc>
@@ -117,20 +122,32 @@
          <correspDesc>
             <correspAction type="sent">
                <persName ref="#pmb2121">Schnitzler, Arthur</persName>
-               <date when="1917-10-27" n="01">27. 10. 1917</date>
-               <placeName ref="#pmb50">Wien</placeName>
+               <date when="1917-10-26" n="01">2[6]. 10. 1917</date>
+               <placeName ref="#pmb168815">Sternwartestraße 71</placeName>
+            </correspAction>
+            <correspAction type="transmitted">
+               <date when="1917-10-26">26. 10. 1917</date>
+               <placeName ref="#pmb405244">1/1 Telegraphenamt 13</placeName>
             </correspAction>
             <correspAction type="received">
                <persName ref="#pmb12438">Adam, Robert</persName>
-               <date evidence="conjecture" notBefore="1917-10-27" notAfter="1917-10-29">[27. 10. 1917 – 31. 10. 1917?]</date>
-               <placeName ref="#pmb365563">Meidlinger Hauptstraße</placeName>
+               <date evidence="conjecture" notBefore="1917-10-26" notAfter="1917-10-29">[26. 10. 1917 – 31. 10. 1917?]</date>
+               <placeName ref="#pmb365563">Meidlinger Hauptstraße 56</placeName>
             </correspAction>
-            <correspContext><ref type="belongsToCorrespondence" target="correspondence_12438">Adam, Robert</ref>
+            <correspContext>
+               <ref type="belongsToCorrespondence" target="correspondence_12438">Adam, Robert</ref>
                <ref subtype="previous_letter" type="withinCollection" target="L02277">Schnitzler an Adam, 22. 10. 1917</ref>
                <ref subtype="next_letter" type="withinCollection" target="L02279">Adam an Schnitzler, 5. 11. 1917</ref>
-               <ref subtype="previous_letter" type="withinCorrespondence" source="correspondence_12438" target="L02277">Schnitzler an Adam, 22. 10. 1917</ref>
-               <ref subtype="next_letter" type="withinCorrespondence" source="correspondence_12438" target="L02279">Adam an Schnitzler, 5. 11. 1917</ref>
-            </correspContext></correspDesc>
+               <ref subtype="previous_letter"
+                    type="withinCorrespondence"
+                    source="correspondence_12438"
+                    target="L02277">Schnitzler an Adam, 22. 10. 1917</ref>
+               <ref subtype="next_letter"
+                    type="withinCorrespondence"
+                    source="correspondence_12438"
+                    target="L02279">Adam an Schnitzler, 5. 11. 1917</ref>
+            </correspContext>
+         </correspDesc>
       </profileDesc>
       <revisionDesc status="approved">
          <change who="MAM" when="2019-05-15">Angelegt</change>
@@ -171,7 +188,15 @@
             <opener>
                <dateline rend="right">
                   <pb facs="96.34.2_0013"/>
-                  <date>27. 10. 1917</date>.</dateline>
+                  <date>
+                     <anchor type="commentary" xml:id="K_L02278-1"/>27. 10. 1917<note type="commentary" corresp="K_L02278-1">
+                        <rs type="person" ref="#pmb2121">Schnitzler</rs> irrte sich um einen Tag im
+                        Datum, wie auch der Poststempel anzeigt: die im Brief für den Vortag
+                        erwähnte Besprechung von <rs type="person" ref="#pmb12438">Adams</rs>
+                        Dramenentwurf <rs type="work" ref="#pmb33608">Das Ende des Judas</rs> fand
+                        laut <rs type="work" ref="#pmb33243">Tagebuch</rs> am <ref type="schnitzler-tagebuch" target="1917-10-25" subtype="date-only"/> statt. Der Brief entstand am <date>26. 10. 1917</date>.
+                     </note>
+                  </date>.</dateline>
                <seg type="letterhead">
                   <hi rend="pre-print">Dr. Arthur Schnitzler</hi>
                   <lb/>
@@ -182,7 +207,7 @@
                <salute rend="center">Verehrter Herr Doktor.</salute>
             </opener>
             <p>Das <rs type="work" ref="#pmb33608" subtype="implied">Manuscript</rs> geht soeben an
-               Sie zurück. Eines vergass ich gestern noch zu erwähnen. Gewisse Schnoddrigkeiten der
+               Sie zurück. Eines vergass ich <date>gestern</date> noch zu erwähnen. Gewisse Schnoddrigkeiten der
                Sprache (ich weiss wohl, dass sie künstlerische Absicht waren), Worte, wie arrogant
                und dergleichen, wären vielleicht doch besser zu eliminieren; wie Sie überhaupt bei
                neuer Durchsicht gewiss noch Gelegenheit haben werden allerlei sprachliche
@@ -250,38 +275,25 @@
                <title>Das Ende des Judas</title>
                <author ref="pmb12438" role="hat-geschaffen">Adam, Robert</author>
             </bibl>
+            <bibl xml:id="pmb33243" ana="comment">
+               <title>Tagebuch</title>
+               <title type="werk_link">https://schnitzler-tagebuch.acdh.oeaw.ac.at</title>
+               <author ref="pmb2121" role="hat-geschaffen">Schnitzler, Arthur</author>
+            </bibl>
          </listBibl>
          <listPlace>
-            <place xml:id="pmb50">
-               <placeName>Wien</placeName>
-               <placeName type="ort_fruherer-name">K.K. Reichshaupt- und Residenzstadt Wien</placeName>
-               <placeName type="alternative-name">Bécs</placeName>
-               <placeName type="alternative-name">Land Wien</placeName>
-               <placeName type="alternative-name">Vídeň</placeName>
-               <placeName type="alternative-name">Wenia</placeName>
-               <placeName type="alternative-name">Beč</placeName>
-               <placeName type="ort_fruherer-name">Vindobona</placeName>
-               <placeName type="alternative-name">Vienna</placeName>
+            <place xml:id="pmb405244">
+               <placeName>1/1 Telegraphenamt 13</placeName>
                <location type="coords">
-                  <geo>48,208333 16,373056</geo>
+                  <geo>48,20820548131752 16,369043377981647</geo>
                </location>
                <location type="located_in_place">
-                  <placeName ref="pmb41240">Österreich</placeName>
-                  <geo>47,33333 13,33333</geo>
+                  <placeName ref="pmb51">I., Innere Stadt</placeName>
+                  <geo>48,20769 16,37049</geo>
                </location>
                <location type="located_in_place">
-                  <placeName ref="pmb235218">Windmühlhöhe</placeName>
-                  <geo>48,24077 16,32092</geo>
-               </location>
-            </place>
-            <place xml:id="pmb1239">
-               <placeName>Meidlinger Hauptstraße</placeName>
-               <location type="coords">
-                  <geo>48,178825 16,329918</geo>
-               </location>
-               <location type="located_in_place">
-                  <placeName ref="pmb62">XII., Meidling</placeName>
-                  <geo>48,17192 16,32586</geo>
+                  <placeName ref="pmb281723">Bräunerstraße</placeName>
+                  <geo>48,207938 16,368912</geo>
                </location>
             </place>
             <place xml:id="pmb168815">
@@ -300,6 +312,20 @@
                <location type="located_in_place">
                   <placeName ref="pmb150">Sternwartestraße</placeName>
                   <geo>48,23099349198 16,340117830625</geo>
+               </location>
+            </place>
+            <place xml:id="pmb365563">
+               <placeName>Meidlinger Hauptstraße 56</placeName>
+               <location type="coords">
+                  <geo>48,177598 16,329723</geo>
+               </location>
+               <location type="located_in_place">
+                  <placeName ref="pmb62">XII., Meidling</placeName>
+                  <geo>48,17192 16,32586</geo>
+               </location>
+               <location type="located_in_place">
+                  <placeName ref="pmb1239">Meidlinger Hauptstraße</placeName>
+                  <geo>48,178825 16,329918</geo>
                </location>
             </place>
             <place xml:id="pmb62">
