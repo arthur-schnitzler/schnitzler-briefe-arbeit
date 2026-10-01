@@ -1,9 +1,9 @@
 <!DOCTYPE html>
-<html lang="de">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="de" xml:lang="de">
 <head>
 <meta charset="utf-8"/>
 <title>Absenderort</title>
-<style>
+<style type="text/css"><![CDATA[
   :root { --bg:#fafafa; --text:#222; --dim:#777; --line:#ddd; --accent:#2a5db0; }
   * { box-sizing: border-box; }
   body { margin:0; font:15px/1.5 system-ui, sans-serif; color:var(--text); background:var(--bg); }
@@ -25,7 +25,7 @@
   #bodyText .body-del { text-decoration:line-through; color:var(--dim); }
   #bodyText .body-note { color:var(--dim); }
   #toast { position:fixed; bottom:1em; left:50%; transform:translateX(-50%); background:#222; color:#fff; padding:.5em 1em; border-radius:4px; display:none; }
-</style>
+]]></style>
 </head>
 <body>
 <header>
@@ -50,8 +50,8 @@
     <div>Eingetragener Ort: <span id="current-sent" class="current"></span></div>
     <div class="row" style="margin-top:.6em">
       <select id="select-sent"></select>
-      <button id="save-sent" class="primary" disabled>Übernehmen</button>
-      <button id="saveNext-sent" disabled>Übernehmen &amp; weiter</button>
+      <button id="save-sent" class="primary" disabled="disabled">Übernehmen</button>
+      <button id="saveNext-sent" disabled="disabled">Übernehmen &amp; weiter</button>
     </div>
     <div class="row" style="margin-top:.4em">
       <span class="dim">oder PMB-Nummer:</span>
@@ -66,8 +66,8 @@
     <div>Eingetragener Ort: <span id="current-received" class="current"></span></div>
     <div class="row" style="margin-top:.6em">
       <select id="select-received"></select>
-      <button id="save-received" class="primary" disabled>Übernehmen</button>
-      <button id="saveNext-received" disabled>Übernehmen &amp; weiter</button>
+      <button id="save-received" class="primary" disabled="disabled">Übernehmen</button>
+      <button id="saveNext-received" disabled="disabled">Übernehmen &amp; weiter</button>
     </div>
     <div class="row" style="margin-top:.4em">
       <span class="dim">oder PMB-Nummer:</span>
@@ -80,7 +80,7 @@
   <div id="bodyText"></div>
 </main>
 <div id="toast"></div>
-<script>
+<script type="text/javascript">//<![CDATA[
 let files = [], visible = [], cur = null, data = null;
 const $ = id => document.getElementById(id);
 const KINDS = {brief: "Orte im Brief (back/listPlace)", aufenthalt: "Aufenthalt Schnitzlers (nur Absendeort)", wohnadresse: "Wohnadresse", korrespondenz: "Orte laut anderen Briefen desselben Jahres"};
@@ -184,6 +184,6 @@ $("quitBtn").onclick = async () => { await api("/api/shutdown"); window.close();
   const h = location.hash.slice(1);
   if (h) load(h); else if (visible.length) load(visible[0].id);
 })();
-</script>
+//]]></script>
 </body>
 </html>
