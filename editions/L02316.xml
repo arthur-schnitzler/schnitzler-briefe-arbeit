@@ -1,11 +1,9 @@
-<?xml version='1.0' encoding='UTF-8'?>
-<?xml-model href="../meta/schnitzler-briefe-schematron.sch" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
-<TEI xmlns="http://www.tei-c.org/ns/1.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.tei-c.org/ns/1.0 ../meta/schnitzler-briefe-schema.xsd" xml:id="L02316" xml:base="https://id.acdh.oeaw.ac.at/schnitzler/schnitzler-briefe/editions">
+<?xml version="1.0" encoding="UTF-8"?><?xml-model href="../meta/schnitzler-briefe-schematron.sch" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI xmlns="http://www.tei-c.org/ns/1.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.tei-c.org/ns/1.0 ../meta/schnitzler-briefe-schema.xsd" xml:id="L02316" xml:base="https://id.acdh.oeaw.ac.at/schnitzler/schnitzler-briefe/editions">
    <teiHeader>
       <fileDesc>
          <titleStmt>
             <title level="s">Arthur Schnitzler: Briefwechsel mit Autorinnen und Autoren</title>
-            <title level="a">Arthur Schnitzler an Robert Adam, 20. 12. [1918]</title>
+            <title level="a">Arthur Schnitzler an Robert Adam, [19. oder 20]. 12. [1918]</title>
             <author ref="#pmb2121">Schnitzler, Arthur</author>
             <editor>
                <name>Müller, Martin Anton</name>
@@ -93,22 +91,13 @@
                            <incident type="postal">
                               <desc>
                                  <stamp n="1" type="transmission">
-                                    <placeName ref="#pmb50">
-                                       <unclear>W</unclear>ien</placeName>
-                                    <date when="1918-12-20">20. <supplied>XII. 18</supplied>
-                                    </date>
+                                    <placeName ref="#pmb365555">1/1 <unclear>W</unclear>ien <unclear>8</unclear></placeName>
+                                    <date when="1918-12-20">20. XII. 1<unclear>8</unclear></date>
+                                       <time>5</time>
                                  </stamp>
                               </desc>
                            </incident>
-                           <incident type="postal">
-                              <desc>
-                                 <stamp n="2">
-                                    <date when="1918-12-20">20. XII. 1<unclear>8</unclear>
-                                    </date>
-                                    <time>5</time>
-                                 </stamp>
-                              </desc>
-                           </incident>
+                           
                         </additions>
                      </physDesc>
                   </msDesc>
@@ -123,8 +112,12 @@
          <correspDesc>
             <correspAction type="sent">
                <persName ref="#pmb2121">Schnitzler, Arthur</persName>
-               <date when="1918-12-20" n="01">20. 12. [1918]</date>
+               <date n="01" notBefore="1918-12-19" notAfter="1918-12-20">[19. oder 20]. 12. [1918]</date>
                <placeName ref="#pmb168815">Sternwartestraße 71</placeName>
+            </correspAction>
+            <correspAction type="transmitted">
+               <date when="1918-12-20">20. 12. [1918]</date>
+               <placeName ref="#pmb365555">1/1 Wien 8</placeName>
             </correspAction>
             <correspAction type="received">
                <persName ref="#pmb12438">Adam, Robert</persName>
@@ -143,6 +136,7 @@
          <change when="2019-05-17" who="MAM">Index check</change>
          <change who="GHS" when="2020-08-03">Durchsicht</change>
          <change who="GHS" when="2020-08-25">finalisiert</change>
+         <change who="SJ" when="2026-10-01">Datierung und Stempel überprüft</change>
       </revisionDesc>
    </teiHeader>
    <facsimile>
