@@ -1,11 +1,15 @@
-<?xml version='1.0' encoding='UTF-8'?>
+<?xml version="1.0" encoding="UTF-8"?>
 <?xml-model href="../meta/schnitzler-briefe-schematron.sch" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
-<TEI xmlns="http://www.tei-c.org/ns/1.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.tei-c.org/ns/1.0 ../meta/schnitzler-briefe-schema.xsd" xml:id="L02262" xml:base="https://id.acdh.oeaw.ac.at/schnitzler/schnitzler-briefe/editions">
+<TEI xmlns="http://www.tei-c.org/ns/1.0"
+     xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+     xsi:schemaLocation="http://www.tei-c.org/ns/1.0 ../meta/schnitzler-briefe-schema.xsd"
+     xml:id="L02262"
+     xml:base="https://id.acdh.oeaw.ac.at/schnitzler/schnitzler-briefe/editions">
    <teiHeader>
       <fileDesc>
          <titleStmt>
             <title level="s">Arthur Schnitzler: Briefwechsel mit Autorinnen und Autoren</title>
-            <title level="a">Arthur und Olga Schnitzler an Richard Beer-Hofmann, 1[1]. 6. 1917</title>
+            <title level="a">Arthur und Olga Schnitzler an Richard Beer-Hofmann, [10. oder 11]. 6. 1917</title>
             <author ref="#pmb2121">Schnitzler, Arthur</author>
             <author ref="#pmb2173">Schnitzler, Olga</author>
             <editor>
@@ -122,8 +126,8 @@
             <correspAction type="sent">
                <persName ref="#pmb2121">Schnitzler, Arthur</persName>
                <persName ref="#pmb2173">Schnitzler, Olga</persName>
-               <date when="1917-06-11" n="01">1[1]. 6. 1917</date>
-               <placeName ref="#pmb521">Bad Gastein</placeName>
+               <date notBefore="1917-06-10" notAfter="1917-06-11" n="01">[10. oder 11]. 6. 1917</date>
+               <placeName ref="#pmb34014">Villa Dr. Wassing</placeName>
             </correspAction>
             <correspAction type="transmitted">
                <date when="1917-06-11">11. 6. 1917</date>
@@ -135,17 +139,26 @@
                   – 16. 6. 1917?]</date>
                <placeName ref="#pmb383">Hasenauerstraße</placeName>
             </correspAction>
-            <correspContext><ref type="belongsToCorrespondence" target="correspondence_10863">Beer-Hofmann, Richard</ref>
+            <correspContext>
+               <ref type="belongsToCorrespondence" target="correspondence_10863">Beer-Hofmann, Richard</ref>
                <ref subtype="previous_letter" type="withinCollection" target="L04411">Schnitzler, Schnitzler an Schwarzkopf, [10. oder 11]. 6. 1917</ref>
                <ref subtype="next_letter" type="withinCollection" target="L02263">Schnitzler an Adam, 15. 6. 1917</ref>
-               <ref subtype="previous_letter" type="withinCorrespondence" source="correspondence_10863" target="L02242">Beer-Hofmann an Schnitzler, 8. 10. 1916</ref>
-               <ref subtype="next_letter" type="withinCorrespondence" source="correspondence_10863" target="L02265">Schnitzler an Beer-Hofmann, 29. 6. 1917</ref>
-            </correspContext></correspDesc>
+               <ref subtype="previous_letter"
+                    type="withinCorrespondence"
+                    source="correspondence_10863"
+                    target="L02242">Beer-Hofmann an Schnitzler, 8. 10. 1916</ref>
+               <ref subtype="next_letter"
+                    type="withinCorrespondence"
+                    source="correspondence_10863"
+                    target="L02265">Schnitzler an Beer-Hofmann, 29. 6. 1917</ref>
+            </correspContext>
+         </correspDesc>
       </profileDesc>
       <revisionDesc status="approved">
          <change who="MAM" when="2021-02-09">Angelegt</change>
          <change who="MAM" when="2021-02-12">Index check</change>
          <change who="GHS" when="2021-05-01">Finalisiert</change>
+         <change who="SJ" when="2026-10-01">Datierung und Stempel überprüft</change>
       </revisionDesc>
    </teiHeader>
    <facsimile>
@@ -182,7 +195,9 @@
          </div>
          <div type="writingSession" n="1">
             <p>
-               <pb facs="1917_AS_RBH_1_00017"/>Herzliche Grüße Ihnen <rs type="person" ref="#pmb13923 #pmb10860 #pmb2668 #pmb2534" subtype="implied">Allen</rs>. Es
+               <pb facs="1917_AS_RBH_1_00017"/>Herzliche Grüße Ihnen <rs type="person"
+                   ref="#pmb13923 #pmb10860 #pmb2668 #pmb2534"
+                   subtype="implied">Allen</rs>. Es
                ſcheint ja wir treffen Sie noch in <rs type="place" ref="#pmb50">Wien</rs> an? So hab
                auch ich einmal Grund <rs type="person" ref="#pmb12504">Reinhardt</rs> dankbar zu
                ſein! Rutſchen Sie vielleicht auch auf ein paar Tage her? <pb facs="1917_AS_RBH_1_00016"/>Ganz abgeſehen von uns – es wäre der Mühe werth. Wir
@@ -407,6 +422,16 @@
                <location type="located_in_place">
                   <placeName ref="pmb697">Salzburg [Land]</placeName>
                   <geo>47,41667 13,25</geo>
+               </location>
+            </place>
+            <place xml:id="pmb34014">
+               <placeName>Villa Dr. Wassing</placeName>
+               <location type="coords">
+                  <geo>47,119503 13,140375</geo>
+               </location>
+               <location type="located_in_place">
+                  <placeName ref="pmb521">Bad Gastein</placeName>
+                  <geo>47,11547 13,13467</geo>
                </location>
             </place>
             <place xml:id="pmb383">
