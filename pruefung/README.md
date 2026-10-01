@@ -7,27 +7,34 @@ Sprachmodell oder von Hand abgearbeitet werden kann.
 
 ## Ablauf
 
+Die Briefe liegen bereits in `editions/` (das Verschieben aus `temp/` geschieht
+von Hand). Dann genügt ein Befehl mit Briefnummer oder Nummernbereich:
+
 ```bash
-# 1. Brief verschieben
-git mv temp/L03971.xml editions/
-
-# 2. Maschinelle Vorprüfung (Bericht nach pruefung/berichte/)
-python3 pruefung/pruefe_brief.py L03971 --out pruefung/berichte/L03971.md
-
-# 3. Kritische Lektüre: dem Sprachmodell diese drei Dinge geben
-#    – pruefung/ANWEISUNG.md
-#    – pruefung/berichte/L03971.md
-#    – editions/L03971.xml
+python3 pruefung/lektoriere.py 3971               # ein Brief
+python3 pruefung/lektoriere.py 3971-3980          # Bereich (fehlende Nummern werden übergangen)
+python3 pruefung/lektoriere.py 3971 4002 4010-4015
+python3 pruefung/lektoriere.py 3971-3980 -j 4     # vier Briefe parallel (Standard: 3)
+python3 pruefung/lektoriere.py 3971 --model opus  # anderes Modell
+python3 pruefung/lektoriere.py 3971 --neu         # vorhandene Befunde überschreiben
+python3 pruefung/lektoriere.py 3971 --nur-bericht # nur maschinelle Vorprüfung
 ```
 
-Als Prompt genügt:
+Je Brief geschieht automatisch:
 
-> Lektoriere `editions/L03971.xml` nach `pruefung/ANWEISUNG.md`.
-> Der maschinelle Prüfbericht liegt in `pruefung/berichte/L03971.md`.
+1. maschinelle Vorprüfung → `pruefung/berichte/L#####.md`
+2. kritische Lektüre durch `claude -p` nach `ANWEISUNG.md`
+   → `pruefung/befunde/L#####.md`
 
-Die Anweisung enthält den vollständigen Fehlerkatalog, die Abgrenzung dessen,
-was **kein** Fehler ist, und das Ausgabeformat. Es wird kein Wissen über
-frühere Sitzungen vorausgesetzt.
+Alle Befundlisten eines Laufs werden zusätzlich in
+`pruefung/befunde/_lauf-<Zeitstempel>.md` zusammengefasst. Bereits lektorierte
+Briefe werden übersprungen. Voraussetzung: das `claude`-CLI ist installiert und
+angemeldet. Berichte und Befunde stehen in `.gitignore`.
+
+Die Einzelschritte (`pruefe_brief.py`, `ANWEISUNG.md`) lassen sich weiterhin
+von Hand oder mit einem beliebigen anderen Sprachmodell nutzen; die Anweisung
+enthält den vollständigen Fehlerkatalog, die Abgrenzung dessen, was **kein**
+Fehler ist, und das Ausgabeformat.
 
 ## Ergebnis weiterverarbeiten
 
