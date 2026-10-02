@@ -1,6 +1,10 @@
-<?xml version='1.0' encoding='UTF-8'?>
+<?xml version="1.0" encoding="UTF-8"?>
 <?xml-model href="../meta/schnitzler-briefe-schematron.sch" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
-<TEI xmlns="http://www.tei-c.org/ns/1.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.tei-c.org/ns/1.0 ../meta/schnitzler-briefe-schema.xsd" xml:id="L02634" xml:base="https://id.acdh.oeaw.ac.at/schnitzler/schnitzler-briefe/editions">
+<TEI xmlns="http://www.tei-c.org/ns/1.0"
+     xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+     xsi:schemaLocation="http://www.tei-c.org/ns/1.0 ../meta/schnitzler-briefe-schema.xsd"
+     xml:id="L02634"
+     xml:base="https://id.acdh.oeaw.ac.at/schnitzler/schnitzler-briefe/editions">
    <teiHeader>
       <fileDesc>
          <titleStmt>
@@ -103,7 +107,8 @@
                            <incident type="postal">
                               <desc>
                                  <stamp n="2" type="delivery">
-                                    <placeName ref="#pmb365211"><supplied>Wien</supplied> 71</placeName>
+                                    <placeName ref="#pmb365211">
+                                       <supplied>Wien</supplied> 71</placeName>
                                     <time>12 40</time>
                                  </stamp>
                               </desc>
@@ -140,23 +145,31 @@
             </correspAction>
             <correspAction type="arrived">
                <date when="1902-04-26">26. 4. 1902</date>
-               <placeName ref="#pmb50">wien</placeName>
+               <placeName ref="#pmb50">Wien</placeName>
             </correspAction>
             <correspAction type="delivered">
                <date when="1902-04-26">26. 4. 1902</date>
-               <placeName ref="#pmb365211">Wien 71</placeName>
+               <placeName ref="#pmb365211">9/2 Post- und Telegraphenamt 71</placeName>
             </correspAction>
             <correspAction type="received">
                <persName ref="#pmb2121">Schnitzler, Arthur</persName>
                <date when="1902-04-26">26. 4. 1902</date>
                <placeName ref="#pmb168934">Frankgasse 1</placeName>
             </correspAction>
-            <correspContext><ref type="belongsToCorrespondence" target="correspondence_11485">Goldmann, Paul</ref>
+            <correspContext>
+               <ref type="belongsToCorrespondence" target="correspondence_11485">Goldmann, Paul</ref>
                <ref subtype="previous_letter" type="withinCollection" target="L03204">Goldmann an Schnitzler, 17. 4. [1902]</ref>
                <ref subtype="next_letter" type="withinCollection" target="L02633">Goldmann an Schnitzler, 27. 4. [1902?]</ref>
-               <ref subtype="previous_letter" type="withinCorrespondence" source="correspondence_11485" target="L03204">Goldmann an Schnitzler, 17. 4. [1902]</ref>
-               <ref subtype="next_letter" type="withinCorrespondence" source="correspondence_11485" target="L02633">Goldmann an Schnitzler, 27. 4. [1902?]</ref>
-            </correspContext></correspDesc>
+               <ref subtype="previous_letter"
+                    type="withinCorrespondence"
+                    source="correspondence_11485"
+                    target="L03204">Goldmann an Schnitzler, 17. 4. [1902]</ref>
+               <ref subtype="next_letter"
+                    type="withinCorrespondence"
+                    source="correspondence_11485"
+                    target="L02633">Goldmann an Schnitzler, 27. 4. [1902?]</ref>
+            </correspContext>
+         </correspDesc>
       </profileDesc>
       <revisionDesc status="approved">
          <change who="MAM" when="2022-04-07">Angelegt</change>
@@ -340,6 +353,20 @@
             </bibl>
          </listBibl>
          <listPlace>
+            <place xml:id="pmb365211">
+               <placeName>9/2 Post- und Telegraphenamt 71</placeName>
+               <location type="coords">
+                  <geo>48,218574 16,35084</geo>
+               </location>
+               <location type="located_in_place">
+                  <placeName ref="pmb249905">Lazarettgasse</placeName>
+                  <geo>48,217383 16,347426</geo>
+               </location>
+               <location type="located_in_place">
+                  <placeName ref="pmb59">IX., Alsergrund</placeName>
+                  <geo>48,22387 16,35641</geo>
+               </location>
+            </place>
             <place xml:id="pmb168">
                <placeName>Berlin</placeName>
                <placeName type="alternative-name">Hauptstadt Berlin</placeName>
@@ -353,6 +380,16 @@
                <location type="located_in_place">
                   <placeName ref="pmb151">Deutschland</placeName>
                   <geo>51,5 10,5</geo>
+               </location>
+            </place>
+            <place xml:id="pmb40583">
+               <placeName>Dessauer Straße</placeName>
+               <location type="coords">
+                  <geo>52,504956 13,378587</geo>
+               </location>
+               <location type="located_in_place">
+                  <placeName ref="pmb168">Berlin</placeName>
+                  <geo>52,52437 13,41053</geo>
                </location>
             </place>
             <place xml:id="pmb50">

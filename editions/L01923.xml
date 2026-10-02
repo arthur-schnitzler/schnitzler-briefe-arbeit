@@ -1,6 +1,10 @@
-<?xml version='1.0' encoding='UTF-8'?>
+<?xml version="1.0" encoding="UTF-8"?>
 <?xml-model href="../meta/schnitzler-briefe-schematron.sch" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
-<TEI xmlns="http://www.tei-c.org/ns/1.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xml:id="L01923" xsi:schemaLocation="http://www.tei-c.org/ns/1.0 ../meta/schnitzler-briefe-schema.xsd" xml:base="https://id.acdh.oeaw.ac.at/schnitzler/schnitzler-briefe/editions">
+<TEI xmlns="http://www.tei-c.org/ns/1.0"
+     xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+     xml:id="L01923"
+     xsi:schemaLocation="http://www.tei-c.org/ns/1.0 ../meta/schnitzler-briefe-schema.xsd"
+     xml:base="https://id.acdh.oeaw.ac.at/schnitzler/schnitzler-briefe/editions">
    <teiHeader>
       <fileDesc>
          <titleStmt>
@@ -87,7 +91,9 @@
                            </supportDesc>
                         </objectDesc>
                         <handDesc hands="1">
-                           <handNote medium="schwarze-tinte" style="deutsche-kurrent" corresp="#pmb11740"/>
+                           <handNote medium="schwarze-tinte"
+                                     style="deutsche-kurrent"
+                                     corresp="#pmb11740"/>
                         </handDesc>
                         <additions>
                            <incident type="postal">
@@ -148,11 +154,11 @@
             <correspAction type="sent">
                <persName ref="#pmb11740">Hofmannsthal, Hugo von</persName>
                <date when="1910-04-08" n="02">8. 4. 1910</date>
-               <placeName ref="#pmb89">Wien</placeName>
+               <placeName ref="#pmb89">Sanatorium Loew</placeName>
             </correspAction>
             <correspAction type="transmitted">
                <date when="1910-04-08">8. 4. 1910</date>
-               <placeName ref="#pmb365615">Wien</placeName>
+               <placeName ref="#pmb365615">9/4 Post- und Telegraphenamt 68</placeName>
             </correspAction>
             <correspAction type="received">
                <persName ref="#pmb2121">Schnitzler, Arthur</persName>
@@ -160,12 +166,20 @@
                   – 12. 4. 1910?]</date>
                <placeName ref="#pmb168940">Edmund-Weiß-Gasse 7</placeName>
             </correspAction>
-            <correspContext><ref type="belongsToCorrespondence" target="correspondence_11740">Hofmannsthal, Hugo von</ref>
+            <correspContext>
+               <ref type="belongsToCorrespondence" target="correspondence_11740">Hofmannsthal, Hugo von</ref>
                <ref subtype="previous_letter" type="withinCollection" target="L01922">Burckhard an Schnitzler, 8. 4. 1910</ref>
                <ref subtype="next_letter" type="withinCollection" target="L01924">Schnitzler an Hofmannsthal, 10. 4. 1910</ref>
-               <ref subtype="previous_letter" type="withinCorrespondence" source="correspondence_11740" target="L01915">Hofmannsthal an Schnitzler, 1. 3. 1910</ref>
-               <ref subtype="next_letter" type="withinCorrespondence" source="correspondence_11740" target="L01924">Schnitzler an Hofmannsthal, 10. 4. 1910</ref>
-            </correspContext></correspDesc>
+               <ref subtype="previous_letter"
+                    type="withinCorrespondence"
+                    source="correspondence_11740"
+                    target="L01915">Hofmannsthal an Schnitzler, 1. 3. 1910</ref>
+               <ref subtype="next_letter"
+                    type="withinCorrespondence"
+                    source="correspondence_11740"
+                    target="L01924">Schnitzler an Hofmannsthal, 10. 4. 1910</ref>
+            </correspContext>
+         </correspDesc>
       </profileDesc>
       <revisionDesc status="approved">
          <change who="MAM" when="2019-07-31">Angelegt aus Buchausgabe</change>
@@ -345,16 +359,38 @@
             </person>
          </listPerson>
          <listPlace>
-            <place xml:id="pmb59">
-               <placeName>IX., Alsergrund</placeName>
-               <placeName type="legacy-name-merge">Thurygrund</placeName>
-               <placeName type="legacy-name-merge">Wien-Alsergrund</placeName>
+            <error type="place">365615</error>
+            <place xml:id="pmb89">
+               <placeName>Sanatorium Loew</placeName>
                <location type="coords">
+                  <geo>48,216264483348 16,347492624475</geo>
+               </location>
+               <location type="located_in_place">
+                  <placeName ref="pmb59">IX., Alsergrund</placeName>
                   <geo>48,22387 16,35641</geo>
                </location>
                <location type="located_in_place">
-                  <placeName ref="pmb50">Wien</placeName>
-                  <geo>48,208333 16,373056</geo>
+                  <placeName ref="pmb198">Pelikangasse</placeName>
+                  <geo>48,216323686182 16,348107467953</geo>
+               </location>
+            </place>
+            <place xml:id="pmb168940">
+               <placeName>Edmund-Weiß-Gasse 7</placeName>
+               <placeName type="ort_fruherer-name">Spöttelgasse 7</placeName>
+               <location type="coords">
+                  <geo>48,2304 16,33472</geo>
+               </location>
+               <location type="located_in_place">
+                  <placeName ref="pmb68">XVIII., Währing</placeName>
+                  <geo>48,23333 16,31667</geo>
+               </location>
+               <location type="located_in_place">
+                  <placeName ref="pmb533">Währinger Cottage</placeName>
+                  <geo>48,233056 16,341944</geo>
+               </location>
+               <location type="located_in_place">
+                  <placeName ref="pmb133">Edmund-Weiß-Gasse</placeName>
+                  <geo>48,23056 16,3348</geo>
                </location>
             </place>
             <place xml:id="pmb50">
@@ -377,39 +413,6 @@
                <location type="located_in_place">
                   <placeName ref="pmb235218">Windmühlhöhe</placeName>
                   <geo>48,24077 16,32092</geo>
-               </location>
-            </place>
-            <place xml:id="pmb168940">
-               <placeName>Edmund-Weiß-Gasse 7</placeName>
-               <placeName type="ort_fruherer-name">Spöttelgasse 7</placeName>
-               <location type="coords">
-                  <geo>48,2304 16,33472</geo>
-               </location>
-               <location type="located_in_place">
-                  <placeName ref="pmb68">XVIII., Währing</placeName>
-                  <geo>48,23333 16,31667</geo>
-               </location>
-               <location type="located_in_place">
-                  <placeName ref="pmb533">Währinger Cottage</placeName>
-                  <geo>48,233056 16,341944</geo>
-               </location>
-               <location type="located_in_place">
-                  <placeName ref="pmb133">Edmund-Weiß-Gasse</placeName>
-                  <geo>48,23056 16,3348</geo>
-               </location>
-            </place>
-            <place xml:id="pmb89">
-               <placeName>Sanatorium Loew</placeName>
-               <location type="coords">
-                  <geo>48,216264483348 16,347492624475</geo>
-               </location>
-               <location type="located_in_place">
-                  <placeName ref="pmb59">IX., Alsergrund</placeName>
-                  <geo>48,22387 16,35641</geo>
-               </location>
-               <location type="located_in_place">
-                  <placeName ref="pmb198">Pelikangasse</placeName>
-                  <geo>48,216323686182 16,348107467953</geo>
                </location>
             </place>
             <place xml:id="pmb198">

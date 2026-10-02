@@ -1,6 +1,10 @@
-<?xml version='1.0' encoding='UTF-8'?>
+<?xml version="1.0" encoding="UTF-8"?>
 <?xml-model href="../meta/schnitzler-briefe-schematron.sch" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
-<TEI xmlns="http://www.tei-c.org/ns/1.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.tei-c.org/ns/1.0 ../meta/schnitzler-briefe-schema.xsd" xml:base="https://id.acdh.oeaw.ac.at/schnitzler/schnitzler-briefe/editions" xml:id="L04429">
+<TEI xmlns="http://www.tei-c.org/ns/1.0"
+     xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+     xsi:schemaLocation="http://www.tei-c.org/ns/1.0 ../meta/schnitzler-briefe-schema.xsd"
+     xml:base="https://id.acdh.oeaw.ac.at/schnitzler/schnitzler-briefe/editions"
+     xml:id="L04429">
    <teiHeader>
       <fileDesc>
          <titleStmt>
@@ -145,12 +149,20 @@
                <date when="1901-04-19">19. 4. 1901</date>
                <placeName ref="#pmb207296">Tiefer Graben 23</placeName>
             </correspAction>
-            <correspContext><ref type="belongsToCorrespondence" target="correspondence_12740">Schwarzkopf, Gustav</ref>
+            <correspContext>
+               <ref type="belongsToCorrespondence" target="correspondence_12740">Schwarzkopf, Gustav</ref>
                <ref subtype="previous_letter" type="withinCollection" target="L01109">Schnitzler an Beer-Hofmann, [17. oder 18]. 4. 1901</ref>
                <ref subtype="next_letter" type="withinCollection" target="L01110">Schnitzler an Bahr, 19. 4. 1901</ref>
-               <ref subtype="previous_letter" type="withinCorrespondence" source="correspondence_12740" target="L04519">Schnitzler an Schwarzkopf, 14. 4. 1901</ref>
-               <ref subtype="next_letter" type="withinCorrespondence" source="correspondence_12740" target="L04502">Schnitzler, Gussmann an Schwarzkopf, [16. oder 17]. 6. 1901</ref>
-            </correspContext></correspDesc>
+               <ref subtype="previous_letter"
+                    type="withinCorrespondence"
+                    source="correspondence_12740"
+                    target="L04519">Schnitzler an Schwarzkopf, 14. 4. 1901</ref>
+               <ref subtype="next_letter"
+                    type="withinCorrespondence"
+                    source="correspondence_12740"
+                    target="L04502">Schnitzler, Gussmann an Schwarzkopf, [16. oder 17]. 6. 1901</ref>
+            </correspContext>
+         </correspDesc>
       </profileDesc>
       <revisionDesc status="proposed">
          <change who="MAM" when="2026-06-11">Export aus Transkribus</change>
@@ -283,6 +295,30 @@
             </person>
          </listPerson>
          <listPlace>
+            <place xml:id="pmb364532">
+               <placeName>Bahnhof Bologna Centrale</placeName>
+               <location type="coords">
+                  <geo>44,505833333333 11,341666666667</geo>
+               </location>
+               <location type="located_in_place">
+                  <placeName ref="pmb896">Bologna</placeName>
+                  <geo>44,49381 11,33875</geo>
+               </location>
+            </place>
+            <place xml:id="pmb365214">
+               <placeName>1/1 Post- und Telegraphenamt 1</placeName>
+               <location type="coords">
+                  <geo>48,209928 16,379065</geo>
+               </location>
+               <location type="located_in_place">
+                  <placeName ref="pmb51">I., Innere Stadt</placeName>
+                  <geo>48,20769 16,37049</geo>
+               </location>
+               <location type="located_in_place">
+                  <placeName ref="pmb405263">Postbestellbezirk 1/1</placeName>
+                  <geo>48,208742 16,378142</geo>
+               </location>
+            </place>
             <place xml:id="pmb896">
                <placeName>Bologna</placeName>
                <location type="coords">
@@ -291,20 +327,6 @@
                <location type="located_in_place">
                   <placeName ref="pmb40306">Italien</placeName>
                   <geo>42,83333 12,83333</geo>
-               </location>
-            </place>
-            <place xml:id="pmb365214">
-               <placeName>1/1 Post- und Telegraphenamt 1</placeName>
-               <location type="coords">
-                  <geo>48,210359 16,378357</geo>
-               </location>
-               <location type="located_in_place">
-                  <placeName ref="pmb51">I., Innere Stadt</placeName>
-                  <geo>48,20769 16,37049</geo>
-               </location>
-               <location type="located_in_place">
-                  <placeName ref="pmb50667">Fleischmarkt</placeName>
-                  <geo>48,211117 16,376627</geo>
                </location>
             </place>
             <place xml:id="pmb207296">

@@ -1,6 +1,10 @@
-<?xml version='1.0' encoding='UTF-8'?>
+<?xml version="1.0" encoding="UTF-8"?>
 <?xml-model href="../meta/schnitzler-briefe-schematron.sch" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
-<TEI xmlns="http://www.tei-c.org/ns/1.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.tei-c.org/ns/1.0 ../meta/schnitzler-briefe-schema.xsd" xml:id="L01649" xml:base="https://id.acdh.oeaw.ac.at/schnitzler/schnitzler-briefe/editions">
+<TEI xmlns="http://www.tei-c.org/ns/1.0"
+     xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+     xsi:schemaLocation="http://www.tei-c.org/ns/1.0 ../meta/schnitzler-briefe-schema.xsd"
+     xml:id="L01649"
+     xml:base="https://id.acdh.oeaw.ac.at/schnitzler/schnitzler-briefe/editions">
    <teiHeader>
       <fileDesc>
          <titleStmt>
@@ -86,7 +90,9 @@
                            </supportDesc>
                         </objectDesc>
                         <handDesc hands="1">
-                           <handNote medium="bleistift" style="lateinische-kurrent" corresp="schreibkraft"/>
+                           <handNote medium="bleistift"
+                                     style="lateinische-kurrent"
+                                     corresp="schreibkraft"/>
                         </handDesc>
                         <additions>
                            <incident type="postal">
@@ -176,12 +182,20 @@
                <date when="1907-01-10">10. 1. 1907</date>
                <placeName ref="#pmb207274">Haus Bahr</placeName>
             </correspAction>
-            <correspContext><ref type="belongsToCorrespondence" target="correspondence_10815">Bahr, Hermann</ref>
+            <correspContext>
+               <ref type="belongsToCorrespondence" target="correspondence_10815">Bahr, Hermann</ref>
                <ref subtype="previous_letter" type="withinCollection" target="L01648">Burckhard an Schnitzler, 3. 1. 1907</ref>
                <ref subtype="next_letter" type="withinCollection" target="L01650">Bahr an Schnitzler, 11. 1. 1907</ref>
-               <ref subtype="previous_letter" type="withinCorrespondence" source="correspondence_10815" target="L01634">Schnitzler an Bahr, 18. 10. 1906</ref>
-               <ref subtype="next_letter" type="withinCorrespondence" source="correspondence_10815" target="L01650">Bahr an Schnitzler, 11. 1. 1907</ref>
-            </correspContext></correspDesc>
+               <ref subtype="previous_letter"
+                    type="withinCorrespondence"
+                    source="correspondence_10815"
+                    target="L01634">Schnitzler an Bahr, 18. 10. 1906</ref>
+               <ref subtype="next_letter"
+                    type="withinCorrespondence"
+                    source="correspondence_10815"
+                    target="L01650">Bahr an Schnitzler, 11. 1. 1907</ref>
+            </correspContext>
+         </correspDesc>
       </profileDesc>
       <revisionDesc status="approved">
          <change who="KI MAM" when="2015-10-01">Kollationiert</change>
@@ -295,14 +309,16 @@
                   <geo>48,24077 16,32092</geo>
                </location>
             </place>
-            <place xml:id="pmb220">
-               <placeName>Veitlissengasse</placeName>
+            <place xml:id="pmb207274">
+               <placeName>Haus Bahr</placeName>
+               <placeName type="ort_fruherer-name">Veitlissengasse 5a</placeName>
+               <placeName type="ort_namensvariante">Winzergasse 22</placeName>
                <location type="coords">
-                  <geo>48,186622327678 16,259712159437</geo>
+                  <geo>48,186771 16,261305</geo>
                </location>
                <location type="located_in_place">
-                  <placeName ref="pmb165">Ober Sankt Veit</placeName>
-                  <geo>48,188056 16,266389</geo>
+                  <placeName ref="pmb220">Veitlissengasse</placeName>
+                  <geo>48,186622327678 16,259712159437</geo>
                </location>
                <location type="located_in_place">
                   <placeName ref="pmb63">XIII., Hietzing</placeName>

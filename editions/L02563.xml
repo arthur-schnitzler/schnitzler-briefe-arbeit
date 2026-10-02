@@ -1,6 +1,10 @@
-<?xml version='1.0' encoding='UTF-8'?>
+<?xml version="1.0" encoding="UTF-8"?>
 <?xml-model href="../meta/schnitzler-briefe-schematron.sch" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
-<TEI xmlns="http://www.tei-c.org/ns/1.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.tei-c.org/ns/1.0 ../meta/schnitzler-briefe-schema.xsd" xml:id="L02563" xml:base="https://id.acdh.oeaw.ac.at/schnitzler/schnitzler-briefe/editions">
+<TEI xmlns="http://www.tei-c.org/ns/1.0"
+     xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+     xsi:schemaLocation="http://www.tei-c.org/ns/1.0 ../meta/schnitzler-briefe-schema.xsd"
+     xml:id="L02563"
+     xml:base="https://id.acdh.oeaw.ac.at/schnitzler/schnitzler-briefe/editions">
    <teiHeader>
       <fileDesc>
          <titleStmt>
@@ -125,14 +129,22 @@
                <persName ref="#pmb10860">Beer-Hofmann, Paula</persName>
                <date evidence="conjecture" notBefore="1913-04-23" notAfter="1913-04-27">[23. 4. 1913
                   – 27. 4. 1913?]</date>
-               <placeName ref="#pmb235251">Hasenauerstrasse 59</placeName>
+               <placeName ref="#pmb235251">Hasenauerstraße 59</placeName>
             </correspAction>
-            <correspContext><ref type="belongsToCorrespondence" target="correspondence_10863">Beer-Hofmann, Richard</ref>
+            <correspContext>
+               <ref type="belongsToCorrespondence" target="correspondence_10863">Beer-Hofmann, Richard</ref>
                <ref subtype="previous_letter" type="withinCollection" target="L02129">Schnitzler an Bahr, 22. 4. 1913</ref>
                <ref subtype="next_letter" type="withinCollection" target="L02130">Bahr an Schnitzler, 23. 4. 1913</ref>
-               <ref subtype="previous_letter" type="withinCorrespondence" source="correspondence_10863" target="L02115">Beer-Hofmann, Beer-Hofmann an Schnitzler, 28. 2. 1913</ref>
-               <ref subtype="next_letter" type="withinCorrespondence" source="correspondence_10863" target="L02140">Beer-Hofmann an Schnitzler, 5. 7. 1913</ref>
-            </correspContext></correspDesc>
+               <ref subtype="previous_letter"
+                    type="withinCorrespondence"
+                    source="correspondence_10863"
+                    target="L02115">Beer-Hofmann, Beer-Hofmann an Schnitzler, 28. 2. 1913</ref>
+               <ref subtype="next_letter"
+                    type="withinCorrespondence"
+                    source="correspondence_10863"
+                    target="L02140">Beer-Hofmann an Schnitzler, 5. 7. 1913</ref>
+            </correspContext>
+         </correspDesc>
       </profileDesc>
       <revisionDesc status="approved">
          <change who="GHS" when="2021-04-17">Angelegt</change>
@@ -261,44 +273,6 @@
                   <geo>48,00543 16,23264</geo>
                </location>
             </place>
-            <place xml:id="pmb50">
-               <placeName>Wien</placeName>
-               <placeName type="ort_fruherer-name">K.K. Reichshaupt- und Residenzstadt Wien</placeName>
-               <placeName type="alternative-name">Bécs</placeName>
-               <placeName type="alternative-name">Land Wien</placeName>
-               <placeName type="alternative-name">Vídeň</placeName>
-               <placeName type="alternative-name">Wenia</placeName>
-               <placeName type="alternative-name">Beč</placeName>
-               <placeName type="ort_fruherer-name">Vindobona</placeName>
-               <placeName type="alternative-name">Vienna</placeName>
-               <location type="coords">
-                  <geo>48,208333 16,373056</geo>
-               </location>
-               <location type="located_in_place">
-                  <placeName ref="pmb41240">Österreich</placeName>
-                  <geo>47,33333 13,33333</geo>
-               </location>
-               <location type="located_in_place">
-                  <placeName ref="pmb235218">Windmühlhöhe</placeName>
-                  <geo>48,24077 16,32092</geo>
-               </location>
-            </place>
-            <place xml:id="pmb69">
-               <placeName>XIX., Döbling</placeName>
-               <placeName type="legacy-name-merge">Döbling</placeName>
-               <placeName type="legacy-name-merge">Wien-Döbling</placeName>
-               <location type="coords">
-                  <geo>48,25 16,33306</geo>
-               </location>
-               <location type="located_in_place">
-                  <placeName ref="pmb41240">Österreich</placeName>
-                  <geo>47,33333 13,33333</geo>
-               </location>
-               <location type="located_in_place">
-                  <placeName ref="pmb50">Wien</placeName>
-                  <geo>48,208333 16,373056</geo>
-               </location>
-            </place>
             <place xml:id="pmb235251">
                <placeName>Hasenauerstraße 59</placeName>
                <location type="coords">
@@ -315,6 +289,22 @@
                <location type="located_in_place">
                   <placeName ref="pmb383">Hasenauerstraße</placeName>
                   <geo>48,233816866614 16,337927920952</geo>
+               </location>
+            </place>
+            <place xml:id="pmb69">
+               <placeName>XIX., Döbling</placeName>
+               <placeName type="legacy-name-merge">Döbling</placeName>
+               <placeName type="legacy-name-merge">Wien-Döbling</placeName>
+               <location type="coords">
+                  <geo>48,25 16,33306</geo>
+               </location>
+               <location type="located_in_place">
+                  <placeName ref="pmb41240">Österreich</placeName>
+                  <geo>47,33333 13,33333</geo>
+               </location>
+               <location type="located_in_place">
+                  <placeName ref="pmb50">Wien</placeName>
+                  <geo>48,208333 16,373056</geo>
                </location>
             </place>
             <place xml:id="pmb53848">

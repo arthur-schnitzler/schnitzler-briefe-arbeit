@@ -1,6 +1,10 @@
-<?xml version='1.0' encoding='UTF-8'?>
+<?xml version="1.0" encoding="UTF-8"?>
 <?xml-model href="../meta/schnitzler-briefe-schematron.sch" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
-<TEI xmlns="http://www.tei-c.org/ns/1.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.tei-c.org/ns/1.0 ../meta/schnitzler-briefe-schema.xsd" xml:id="L01365" xml:base="https://id.acdh.oeaw.ac.at/schnitzler/schnitzler-briefe/editions">
+<TEI xmlns="http://www.tei-c.org/ns/1.0"
+     xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+     xsi:schemaLocation="http://www.tei-c.org/ns/1.0 ../meta/schnitzler-briefe-schema.xsd"
+     xml:id="L01365"
+     xml:base="https://id.acdh.oeaw.ac.at/schnitzler/schnitzler-briefe/editions">
    <teiHeader>
       <fileDesc>
          <titleStmt>
@@ -170,23 +174,31 @@
             </correspAction>
             <correspAction type="transmitted">
                <date when="1904-01-27">27. 1. 1904</date>
-               <placeName ref="#pmb365223">18/1 Wien 110</placeName>
+               <placeName ref="#pmb365223">18/1 Post- und Telegraphenamt 110</placeName>
             </correspAction>
             <correspAction type="delivered">
                <date when="1904-01-29">29. 1. 1904</date>
-               <placeName ref="#pmb846">Wangen</placeName>
+               <placeName ref="#pmb846">Wangen im Allgäu</placeName>
             </correspAction>
             <correspAction type="received">
                <persName ref="#pmb10815">Bahr, Hermann</persName>
                <date when="1904-01-29">29./1. 04</date>
-               <placeName ref="#pmb219">Marbach (Sanatorium)</placeName>
+               <placeName ref="#pmb219">Sanatorium Schloss Marbach am Bodensee</placeName>
             </correspAction>
-            <correspContext><ref type="belongsToCorrespondence" target="correspondence_10815">Bahr, Hermann</ref>
+            <correspContext>
+               <ref type="belongsToCorrespondence" target="correspondence_10815">Bahr, Hermann</ref>
                <ref subtype="previous_letter" type="withinCollection" target="L01364">Hofmannsthal an Schnitzler, 26. 1. 1904</ref>
                <ref subtype="next_letter" type="withinCollection" target="L01366">Hofmannsthal an Schnitzler, 28. 1. 1904</ref>
-               <ref subtype="previous_letter" type="withinCorrespondence" source="correspondence_10815" target="L01359">Schnitzler an Bahr, 8. 1. 1904</ref>
-               <ref subtype="next_letter" type="withinCorrespondence" source="correspondence_10815" target="L01367">Bahr an Schnitzler, 29. 1. 1904</ref>
-            </correspContext></correspDesc>
+               <ref subtype="previous_letter"
+                    type="withinCorrespondence"
+                    source="correspondence_10815"
+                    target="L01359">Schnitzler an Bahr, 8. 1. 1904</ref>
+               <ref subtype="next_letter"
+                    type="withinCorrespondence"
+                    source="correspondence_10815"
+                    target="L01367">Bahr an Schnitzler, 29. 1. 1904</ref>
+            </correspContext>
+         </correspDesc>
       </profileDesc>
       <revisionDesc status="approved">
          <change who="KI MAM" when="2015-10-01">Kollationiert</change>
@@ -330,21 +342,7 @@
             </bibl>
          </listBibl>
          <listPlace>
-            <place xml:id="pmb68">
-               <placeName>XVIII., Währing</placeName>
-               <placeName type="legacy-name-merge">Währing</placeName>
-               <location type="coords">
-                  <geo>48,23333 16,31667</geo>
-               </location>
-               <location type="located_in_place">
-                  <placeName ref="pmb41240">Österreich</placeName>
-                  <geo>47,33333 13,33333</geo>
-               </location>
-               <location type="located_in_place">
-                  <placeName ref="pmb50">Wien</placeName>
-                  <geo>48,208333 16,373056</geo>
-               </location>
-            </place>
+            <error type="place">365223</error>
             <place xml:id="pmb846">
                <placeName>Wangen im Allgäu</placeName>
                <location type="coords">
@@ -355,26 +353,33 @@
                   <geo>47,58333 10,16667</geo>
                </location>
             </place>
-            <place xml:id="pmb50">
-               <placeName>Wien</placeName>
-               <placeName type="ort_fruherer-name">K.K. Reichshaupt- und Residenzstadt Wien</placeName>
-               <placeName type="alternative-name">Bécs</placeName>
-               <placeName type="alternative-name">Land Wien</placeName>
-               <placeName type="alternative-name">Vídeň</placeName>
-               <placeName type="alternative-name">Wenia</placeName>
-               <placeName type="alternative-name">Beč</placeName>
-               <placeName type="ort_fruherer-name">Vindobona</placeName>
-               <placeName type="alternative-name">Vienna</placeName>
+            <place xml:id="pmb168940">
+               <placeName>Edmund-Weiß-Gasse 7</placeName>
+               <placeName type="ort_fruherer-name">Spöttelgasse 7</placeName>
                <location type="coords">
-                  <geo>48,208333 16,373056</geo>
+                  <geo>48,2304 16,33472</geo>
                </location>
                <location type="located_in_place">
-                  <placeName ref="pmb41240">Österreich</placeName>
-                  <geo>47,33333 13,33333</geo>
+                  <placeName ref="pmb68">XVIII., Währing</placeName>
+                  <geo>48,23333 16,31667</geo>
                </location>
                <location type="located_in_place">
-                  <placeName ref="pmb235218">Windmühlhöhe</placeName>
-                  <geo>48,24077 16,32092</geo>
+                  <placeName ref="pmb533">Währinger Cottage</placeName>
+                  <geo>48,233056 16,341944</geo>
+               </location>
+               <location type="located_in_place">
+                  <placeName ref="pmb133">Edmund-Weiß-Gasse</placeName>
+                  <geo>48,23056 16,3348</geo>
+               </location>
+            </place>
+            <place xml:id="pmb219">
+               <placeName>Sanatorium Schloss Marbach am Bodensee</placeName>
+               <location type="coords">
+                  <geo>47,66985 8,950347</geo>
+               </location>
+               <location type="located_in_place">
+                  <placeName ref="pmb218">Öhningen</placeName>
+                  <geo>47,6667 8,9</geo>
                </location>
             </place>
             <place xml:id="pmb845">
@@ -386,16 +391,6 @@
                <location type="located_in_place">
                   <placeName ref="pmb169373">Baden-Württemberg</placeName>
                   <geo>48,537777777778 9,0411111111111</geo>
-               </location>
-            </place>
-            <place xml:id="pmb219">
-               <placeName>Sanatorium Schloss Marbach am Bodensee</placeName>
-               <location type="coords">
-                  <geo>47,66985 8,950347</geo>
-               </location>
-               <location type="located_in_place">
-                  <placeName ref="pmb218">Öhningen</placeName>
-                  <geo>47,6667 8,9</geo>
                </location>
             </place>
             <place xml:id="pmb218">

@@ -1,6 +1,10 @@
-<?xml version='1.0' encoding='UTF-8'?>
+<?xml version="1.0" encoding="UTF-8"?>
 <?xml-model href="../meta/schnitzler-briefe-schematron.sch" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
-<TEI xmlns="http://www.tei-c.org/ns/1.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.tei-c.org/ns/1.0 ../meta/schnitzler-briefe-schema.xsd" xml:id="L03674" xml:base="https://id.acdh.oeaw.ac.at/schnitzler/schnitzler-briefe/editions">
+<TEI xmlns="http://www.tei-c.org/ns/1.0"
+     xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+     xsi:schemaLocation="http://www.tei-c.org/ns/1.0 ../meta/schnitzler-briefe-schema.xsd"
+     xml:id="L03674"
+     xml:base="https://id.acdh.oeaw.ac.at/schnitzler/schnitzler-briefe/editions">
    <teiHeader>
       <fileDesc>
          <titleStmt>
@@ -153,12 +157,20 @@
                <date evidence="conjecture" when="1927-05-21">[21. 5. 1927?]</date>
                <placeName ref="#pmb50" evidence="conjecture">Wien</placeName>
             </correspAction>
-            <correspContext><ref type="belongsToCorrespondence" target="correspondence_13212">Zweig, Stefan</ref>
+            <correspContext>
+               <ref type="belongsToCorrespondence" target="correspondence_13212">Zweig, Stefan</ref>
                <ref subtype="previous_letter" type="withinCollection" target="L03970">Schnitzler an Zuckerkandl, 14. 5. 1927</ref>
                <ref subtype="next_letter" type="withinCollection" target="L02487">Schnitzler an Braun, 28. 5. 1927</ref>
-               <ref subtype="previous_letter" type="withinCorrespondence" source="correspondence_13212" target="L03748">Schnitzler an Zweig, 21. 2. 1927</ref>
-               <ref subtype="next_letter" type="withinCorrespondence" source="correspondence_13212" target="L03744">Schnitzler an Zweig, 28. 5. 1927</ref>
-            </correspContext></correspDesc>
+               <ref subtype="previous_letter"
+                    type="withinCorrespondence"
+                    source="correspondence_13212"
+                    target="L03748">Schnitzler an Zweig, 21. 2. 1927</ref>
+               <ref subtype="next_letter"
+                    type="withinCorrespondence"
+                    source="correspondence_13212"
+                    target="L03744">Schnitzler an Zweig, 28. 5. 1927</ref>
+            </correspContext>
+         </correspDesc>
       </profileDesc>
       <revisionDesc status="approved">
          <change who="MAM" when="2025-05-21">Export aus Transkribus</change>
@@ -353,17 +365,19 @@
             </bibl>
          </listBibl>
          <listPlace>
-            <place xml:id="pmb30">
-               <placeName>Salzburg</placeName>
-               <placeName type="alternative-name">Iuvavum</placeName>
-               <placeName type="legacy-name-merge">Salzburg Stadt</placeName>
-               <placeName type="legacy-name-merge">Salzburg?</placeName>
+            <place xml:id="pmb253003">
+               <placeName>Paschinger Schlössl</placeName>
+               <placeName type="ort_namensvariante">Kapuzinerberg 5</placeName>
                <location type="coords">
-                  <geo>47,80067 13,04532</geo>
+                  <geo>47,8027 13,0478</geo>
                </location>
                <location type="located_in_place">
-                  <placeName ref="pmb697">Salzburg [Land]</placeName>
-                  <geo>47,41667 13,25</geo>
+                  <placeName ref="pmb297">Kapuzinerberg</placeName>
+                  <geo>47,80399 13,05734</geo>
+               </location>
+               <location type="located_in_place">
+                  <placeName ref="pmb30">Salzburg</placeName>
+                  <geo>47,80067 13,04532</geo>
                </location>
             </place>
             <place xml:id="pmb50">
@@ -388,19 +402,17 @@
                   <geo>48,24077 16,32092</geo>
                </location>
             </place>
-            <place xml:id="pmb253003">
-               <placeName>Paschinger Schlössl</placeName>
-               <placeName type="ort_namensvariante">Kapuzinerberg 5</placeName>
+            <place xml:id="pmb30">
+               <placeName>Salzburg</placeName>
+               <placeName type="alternative-name">Iuvavum</placeName>
+               <placeName type="legacy-name-merge">Salzburg Stadt</placeName>
+               <placeName type="legacy-name-merge">Salzburg?</placeName>
                <location type="coords">
-                  <geo>47,8027 13,0478</geo>
-               </location>
-               <location type="located_in_place">
-                  <placeName ref="pmb297">Kapuzinerberg</placeName>
-                  <geo>47,80399 13,05734</geo>
-               </location>
-               <location type="located_in_place">
-                  <placeName ref="pmb30">Salzburg</placeName>
                   <geo>47,80067 13,04532</geo>
+               </location>
+               <location type="located_in_place">
+                  <placeName ref="pmb697">Salzburg [Land]</placeName>
+                  <geo>47,41667 13,25</geo>
                </location>
             </place>
             <place xml:id="pmb63">

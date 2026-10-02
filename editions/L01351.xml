@@ -1,6 +1,10 @@
-<?xml version='1.0' encoding='UTF-8'?>
+<?xml version="1.0" encoding="UTF-8"?>
 <?xml-model href="../meta/schnitzler-briefe-schematron.sch" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
-<TEI xmlns="http://www.tei-c.org/ns/1.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.tei-c.org/ns/1.0 ../meta/schnitzler-briefe-schema.xsd" xml:id="L01351" xml:base="https://id.acdh.oeaw.ac.at/schnitzler/schnitzler-briefe/editions">
+<TEI xmlns="http://www.tei-c.org/ns/1.0"
+     xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+     xsi:schemaLocation="http://www.tei-c.org/ns/1.0 ../meta/schnitzler-briefe-schema.xsd"
+     xml:id="L01351"
+     xml:base="https://id.acdh.oeaw.ac.at/schnitzler/schnitzler-briefe/editions">
    <teiHeader>
       <fileDesc>
          <titleStmt>
@@ -173,28 +177,36 @@
                <persName ref="#pmb2292">Hofmannsthal, Gerty von</persName>
                <persName ref="#pmb10863">Beer-Hofmann, Richard</persName>
                <date when="1903-12-14" n="02">14. 12. 1903</date>
-               <placeName ref="#pmb304">Auhofstraße</placeName>
+               <placeName ref="#pmb304">Ottakringer Bräu</placeName>
             </correspAction>
             <correspAction type="transmitted">
                <date when="1903-12-15">15. 12. 1903</date>
-               <placeName ref="#pmb365223">18/1 Wien 110</placeName>
+               <placeName ref="#pmb365223">18/1 Post- und Telegraphenamt 110</placeName>
             </correspAction>
             <correspAction type="delivered">
                <date when="1903-12-15">15. 12. 1903</date>
-               <placeName ref="#pmb365275">Wien 13/7 94</placeName>
+               <placeName ref="#pmb365275">13/7 Post- und Telegraphenamt 94</placeName>
             </correspAction>
             <correspAction type="received">
                <persName ref="#pmb10815">Bahr, Hermann</persName>
                <date when="1903-12-15">15. 12. 03</date>
                <placeName ref="#pmb207274">Haus Bahr</placeName>
             </correspAction>
-            <correspContext><ref type="belongsToCorrespondence" target="correspondence_10815">Bahr, Hermann</ref>
+            <correspContext>
+               <ref type="belongsToCorrespondence" target="correspondence_10815">Bahr, Hermann</ref>
                <ref subtype="previous_letter" type="withinCollection" target="L01330">Hofmannsthal an Schnitzler, [zwischen 14. und
                   23. 12. 1903?]</ref>
                <ref subtype="next_letter" type="withinCollection" target="L01352">Bahr an Schnitzler, 16. 12. [1903]</ref>
-               <ref subtype="previous_letter" type="withinCorrespondence" source="correspondence_10815" target="L01350">Schnitzler an Bahr, 13. 12. 1903</ref>
-               <ref subtype="next_letter" type="withinCorrespondence" source="correspondence_10815" target="L01352">Bahr an Schnitzler, 16. 12. [1903]</ref>
-            </correspContext></correspDesc>
+               <ref subtype="previous_letter"
+                    type="withinCorrespondence"
+                    source="correspondence_10815"
+                    target="L01350">Schnitzler an Bahr, 13. 12. 1903</ref>
+               <ref subtype="next_letter"
+                    type="withinCorrespondence"
+                    source="correspondence_10815"
+                    target="L01352">Bahr an Schnitzler, 16. 12. [1903]</ref>
+            </correspContext>
+         </correspDesc>
       </profileDesc>
       <revisionDesc status="approved">
          <change who="KI MAM" when="2015-10-01">Kollationiert</change>
@@ -243,17 +255,23 @@
          <div type="writingSession" n="1">
             <p>
                <pb facs="https://www.theatermuseum.at/de/object/eb5249560c/"/>
-               <rs type="event" ref="#pmb35263" subtype="implied"><rs ref="#pmb29983" type="work">Dem Meister</rs></rs>. – 10<c rendition="#prozent"/>!</p>
+               <rs type="event" ref="#pmb35263" subtype="implied">
+                  <rs ref="#pmb29983" type="work">Dem Meister</rs>
+               </rs>. – 10<c rendition="#prozent"/>!</p>
             <p>
                <date>14. 12. 03</date>
             </p>
             <p>
                <anchor type="commentary" xml:id="K_L01351-1"/>
-               <rs type="event" subtype="implied" ref="#pmb35191"><rs ref="#pmb29909" type="work">Unter sich</rs></rs>
+               <rs type="event" subtype="implied" ref="#pmb35191">
+                  <rs ref="#pmb29909" type="work">Unter sich</rs>
+               </rs>
                <note type="commentary" corresp="K_L01351-1">Die <rs ref="#pmb29779" type="org">11
                      Scharfrichter</rs> hatten <rs ref="#pmb10815" type="person">Bahrs</rs>
-                  <space unit="chars" quantity="1"/>Schauspiel <rs type="event" subtype="implied" ref="#pmb35191"><rs ref="#pmb29909" type="work">Unter
-                     sich</rs> am <date>9. 12. 1903</date> in <rs ref="#pmb50" type="place">Wien</rs></rs> gegeben.</note>:</p>
+                  <space unit="chars" quantity="1"/>Schauspiel <rs type="event" subtype="implied" ref="#pmb35191">
+                     <rs ref="#pmb29909" type="work">Unter
+                     sich</rs> am <date>9. 12. 1903</date> in <rs ref="#pmb50" type="place">Wien</rs>
+                  </rs> gegeben.</note>:</p>
             <closer>
                <signed>Arthur</signed>
             </closer>
@@ -443,62 +461,30 @@
             </bibl>
          </listBibl>
          <listPlace>
-            <place xml:id="pmb68">
-               <placeName>XVIII., Währing</placeName>
-               <placeName type="legacy-name-merge">Währing</placeName>
+            <error type="place">365223</error>
+            <error type="place">365275</error>
+            <place xml:id="pmb304">
+               <placeName>Ottakringer Bräu</placeName>
+               <placeName type="namensvariante">Hietzinger Restaurant</placeName>
+               <placeName type="namensvariante">Kuffner</placeName>
                <location type="coords">
-                  <geo>48,23333 16,31667</geo>
+                  <geo>48,18636 16,30202</geo>
                </location>
                <location type="located_in_place">
-                  <placeName ref="pmb41240">Österreich</placeName>
-                  <geo>47,33333 13,33333</geo>
-               </location>
-               <location type="located_in_place">
-                  <placeName ref="pmb50">Wien</placeName>
-                  <geo>48,208333 16,373056</geo>
-               </location>
-            </place>
-            <place xml:id="pmb63">
-               <placeName>XIII., Hietzing</placeName>
-               <placeName type="legacy-name-merge">Hietzing</placeName>
-               <location type="coords">
+                  <placeName ref="pmb63">XIII., Hietzing</placeName>
                   <geo>48,17547 16,29101</geo>
                </location>
-               <location type="located_in_place">
-                  <placeName ref="pmb50">Wien</placeName>
-                  <geo>48,208333 16,373056</geo>
-               </location>
             </place>
-            <place xml:id="pmb50" ana="comment">
-               <placeName>Wien</placeName>
-               <placeName type="ort_fruherer-name">K.K. Reichshaupt- und Residenzstadt Wien</placeName>
-               <placeName type="alternative-name">Bécs</placeName>
-               <placeName type="alternative-name">Land Wien</placeName>
-               <placeName type="alternative-name">Vídeň</placeName>
-               <placeName type="alternative-name">Wenia</placeName>
-               <placeName type="alternative-name">Beč</placeName>
-               <placeName type="ort_fruherer-name">Vindobona</placeName>
-               <placeName type="alternative-name">Vienna</placeName>
+            <place xml:id="pmb207274">
+               <placeName>Haus Bahr</placeName>
+               <placeName type="ort_fruherer-name">Veitlissengasse 5a</placeName>
+               <placeName type="ort_namensvariante">Winzergasse 22</placeName>
                <location type="coords">
-                  <geo>48,208333 16,373056</geo>
+                  <geo>48,186771 16,261305</geo>
                </location>
                <location type="located_in_place">
-                  <placeName ref="pmb41240">Österreich</placeName>
-                  <geo>47,33333 13,33333</geo>
-               </location>
-               <location type="located_in_place">
-                  <placeName ref="pmb235218">Windmühlhöhe</placeName>
-                  <geo>48,24077 16,32092</geo>
-               </location>
-            </place>
-            <place xml:id="pmb220">
-               <placeName>Veitlissengasse</placeName>
-               <location type="coords">
+                  <placeName ref="pmb220">Veitlissengasse</placeName>
                   <geo>48,186622327678 16,259712159437</geo>
-               </location>
-               <location type="located_in_place">
-                  <placeName ref="pmb165">Ober Sankt Veit</placeName>
-                  <geo>48,188056 16,266389</geo>
                </location>
                <location type="located_in_place">
                   <placeName ref="pmb63">XIII., Hietzing</placeName>
@@ -550,16 +536,26 @@
                   <geo>48,17547 16,29101</geo>
                </location>
             </place>
-            <place xml:id="pmb304">
-               <placeName>Ottakringer Bräu</placeName>
-               <placeName type="namensvariante">Hietzinger Restaurant</placeName>
-               <placeName type="namensvariante">Kuffner</placeName>
+            <place xml:id="pmb50" ana="comment">
+               <placeName>Wien</placeName>
+               <placeName type="ort_fruherer-name">K.K. Reichshaupt- und Residenzstadt Wien</placeName>
+               <placeName type="alternative-name">Bécs</placeName>
+               <placeName type="alternative-name">Land Wien</placeName>
+               <placeName type="alternative-name">Vídeň</placeName>
+               <placeName type="alternative-name">Wenia</placeName>
+               <placeName type="alternative-name">Beč</placeName>
+               <placeName type="ort_fruherer-name">Vindobona</placeName>
+               <placeName type="alternative-name">Vienna</placeName>
                <location type="coords">
-                  <geo>48,18636 16,30202</geo>
+                  <geo>48,208333 16,373056</geo>
                </location>
                <location type="located_in_place">
-                  <placeName ref="pmb63">XIII., Hietzing</placeName>
-                  <geo>48,17547 16,29101</geo>
+                  <placeName ref="pmb41240">Österreich</placeName>
+                  <geo>47,33333 13,33333</geo>
+               </location>
+               <location type="located_in_place">
+                  <placeName ref="pmb235218">Windmühlhöhe</placeName>
+                  <geo>48,24077 16,32092</geo>
                </location>
             </place>
          </listPlace>
@@ -598,6 +594,30 @@
                </location>
             </org>
          </listOrg>
+         <listEvent>
+            <event xml:id="pmb35191" ana="implied">
+               <eventName n="Theaterpremiere">Premiere von Unter sich, 9.12.1903</eventName>
+               <listPlace>
+                  <place>
+                     <placeName role="veranstaltet in" ref="pmb50">Wien</placeName>
+                     <location>
+                        <geo>48,208333 16,373056</geo>
+                     </location>
+                  </place>
+               </listPlace>
+            </event>
+            <event xml:id="pmb35263" ana="implied">
+               <eventName n="Theateruraufführung">Uraufführung von Der Meister, 12.12.1903</eventName>
+               <listPlace>
+                  <place>
+                     <placeName role="veranstaltet in" ref="pmb3">Deutsches Theater Berlin</placeName>
+                     <location>
+                        <geo>52,524444 13,382222</geo>
+                     </location>
+                  </place>
+               </listPlace>
+            </event>
+         </listEvent>
       </back>
    </text>
 </TEI>

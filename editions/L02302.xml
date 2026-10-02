@@ -1,6 +1,10 @@
-<?xml version='1.0' encoding='UTF-8'?>
+<?xml version="1.0" encoding="UTF-8"?>
 <?xml-model href="../meta/schnitzler-briefe-schematron.sch" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
-<TEI xmlns="http://www.tei-c.org/ns/1.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.tei-c.org/ns/1.0 ../meta/schnitzler-briefe-schema.xsd" xml:id="L02302" xml:base="https://id.acdh.oeaw.ac.at/schnitzler/schnitzler-briefe/editions">
+<TEI xmlns="http://www.tei-c.org/ns/1.0"
+     xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+     xsi:schemaLocation="http://www.tei-c.org/ns/1.0 ../meta/schnitzler-briefe-schema.xsd"
+     xml:id="L02302"
+     xml:base="https://id.acdh.oeaw.ac.at/schnitzler/schnitzler-briefe/editions">
    <teiHeader>
       <fileDesc>
          <titleStmt>
@@ -134,7 +138,7 @@
             <correspAction type="sent">
                <persName ref="#pmb10863">Beer-Hofmann, Richard</persName>
                <date when="1918-08-28" n="01">28. 8. 1918</date>
-               <placeName ref="#pmb43462">Bad Ischl</placeName>
+               <placeName ref="#pmb43462">Villa Kupferschmied</placeName>
             </correspAction>
             <correspAction type="transmitted">
                <date when="1918-08-29">29. 8. 1918</date>
@@ -146,12 +150,20 @@
                   – 2. 9. 1918?]</date>
                <placeName ref="#pmb808">Haus Tannenberg</placeName>
             </correspAction>
-            <correspContext><ref type="belongsToCorrespondence" target="correspondence_10863">Beer-Hofmann, Richard</ref>
+            <correspContext>
+               <ref type="belongsToCorrespondence" target="correspondence_10863">Beer-Hofmann, Richard</ref>
                <ref subtype="previous_letter" type="withinCollection" target="L02301">Schnitzler an Beer-Hofmann, 26. 8. 1918</ref>
                <ref subtype="next_letter" type="withinCollection" target="L04184">Schnitzler an Schwarzkopf, 31. 8. 1918</ref>
-               <ref subtype="previous_letter" type="withinCorrespondence" source="correspondence_10863" target="L02301">Schnitzler an Beer-Hofmann, 26. 8. 1918</ref>
-               <ref subtype="next_letter" type="withinCorrespondence" source="correspondence_10863" target="L02329">Beer-Hofmann an Schnitzler, 27. 10. 1919</ref>
-            </correspContext></correspDesc>
+               <ref subtype="previous_letter"
+                    type="withinCorrespondence"
+                    source="correspondence_10863"
+                    target="L02301">Schnitzler an Beer-Hofmann, 26. 8. 1918</ref>
+               <ref subtype="next_letter"
+                    type="withinCorrespondence"
+                    source="correspondence_10863"
+                    target="L02329">Beer-Hofmann an Schnitzler, 27. 10. 1919</ref>
+            </correspContext>
+         </correspDesc>
       </profileDesc>
       <revisionDesc status="approved">
          <change who="MAM" when="2019-06-12">Automatisch angelegt aus Buchausgabe</change>
@@ -363,6 +375,23 @@
                <location type="located_in_place">
                   <placeName ref="pmb429">Salzkammergut</placeName>
                   <geo>47,75 13,5</geo>
+               </location>
+            </place>
+            <place xml:id="pmb43462">
+               <placeName>Villa Kupferschmid</placeName>
+               <placeName type="ort_namensvariante">Grazerstraße 52</placeName>
+               <placeName type="ort_fruherer-name">Reiterndorf 110</placeName>
+               <placeName type="ort_fruherer-name">Reiterndorf 121</placeName>
+               <location type="coords">
+                  <geo>47,705435 13,626622</geo>
+               </location>
+               <location type="located_in_place">
+                  <placeName ref="pmb1220">Grazer Straße [Bad Ischl]</placeName>
+                  <geo>47,70918 13,62156</geo>
+               </location>
+               <location type="located_in_place">
+                  <placeName ref="pmb213">Bad Ischl</placeName>
+                  <geo>47,71109 13,61893</geo>
                </location>
             </place>
             <place xml:id="pmb808">

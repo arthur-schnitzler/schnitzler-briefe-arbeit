@@ -1,6 +1,10 @@
-<?xml version='1.0' encoding='UTF-8'?>
+<?xml version="1.0" encoding="UTF-8"?>
 <?xml-model href="../meta/schnitzler-briefe-schematron.sch" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
-<TEI xmlns="http://www.tei-c.org/ns/1.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.tei-c.org/ns/1.0 ../meta/schnitzler-briefe-schema.xsd" xml:id="L02532" xml:base="https://id.acdh.oeaw.ac.at/schnitzler/schnitzler-briefe/editions">
+<TEI xmlns="http://www.tei-c.org/ns/1.0"
+     xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+     xsi:schemaLocation="http://www.tei-c.org/ns/1.0 ../meta/schnitzler-briefe-schema.xsd"
+     xml:id="L02532"
+     xml:base="https://id.acdh.oeaw.ac.at/schnitzler/schnitzler-briefe/editions">
    <teiHeader>
       <fileDesc>
          <titleStmt>
@@ -129,7 +133,7 @@
             <correspAction type="sent">
                <persName ref="#pmb10815">Bahr, Hermann</persName>
                <date when="1930-02-18" n="01">18. 2. 1930</date>
-               <placeName ref="#pmb405283">München</placeName>
+               <placeName ref="#pmb405283">Barer Straße 50</placeName>
             </correspAction>
             <correspAction type="received">
                <persName ref="#pmb2121">Schnitzler, Arthur</persName>
@@ -137,12 +141,20 @@
                   – 23. 2. 1930?]</date>
                <placeName ref="#pmb168815">Sternwartestraße 71</placeName>
             </correspAction>
-            <correspContext><ref type="belongsToCorrespondence" target="correspondence_10815">Bahr, Hermann</ref>
+            <correspContext>
+               <ref type="belongsToCorrespondence" target="correspondence_10815">Bahr, Hermann</ref>
                <ref subtype="previous_letter" type="withinCollection" target="L02531">Schnitzler an Bahr, 16. 2. 1930</ref>
                <ref subtype="next_letter" type="withinCollection" target="L02533">Schnitzler an Bahr, 17. 3. 1930</ref>
-               <ref subtype="previous_letter" type="withinCorrespondence" source="correspondence_10815" target="L02531">Schnitzler an Bahr, 16. 2. 1930</ref>
-               <ref subtype="next_letter" type="withinCorrespondence" source="correspondence_10815" target="L02533">Schnitzler an Bahr, 17. 3. 1930</ref>
-            </correspContext></correspDesc>
+               <ref subtype="previous_letter"
+                    type="withinCorrespondence"
+                    source="correspondence_10815"
+                    target="L02531">Schnitzler an Bahr, 16. 2. 1930</ref>
+               <ref subtype="next_letter"
+                    type="withinCorrespondence"
+                    source="correspondence_10815"
+                    target="L02533">Schnitzler an Bahr, 17. 3. 1930</ref>
+            </correspContext>
+         </correspDesc>
       </profileDesc>
       <revisionDesc status="approved">
          <change who="KI MAM" when="2015-12-17">Kollationiert</change>
@@ -304,21 +316,36 @@
             </bibl>
          </listBibl>
          <listPlace>
-            <place xml:id="pmb45258">
-               <placeName>München</placeName>
-               <placeName type="legacy-name-merge">München?</placeName>
-               <placeName type="legacy-name-merge">Munich</placeName>
-               <placeName type="alternative-name">Monacho</placeName>
+            <place xml:id="pmb405283">
+               <placeName>Barer Straße 50</placeName>
                <location type="coords">
+                  <geo>48,149644 11,572946</geo>
+               </location>
+               <location type="located_in_place">
+                  <placeName ref="pmb161">Barer Straße</placeName>
+                  <geo>48,15205 11,57392</geo>
+               </location>
+               <location type="located_in_place">
+                  <placeName ref="pmb45258">München</placeName>
                   <geo>48,13743 11,57549</geo>
                </location>
-               <location type="located_in_place">
-                  <placeName ref="pmb314">Bayern</placeName>
-                  <geo>49,0 11,5</geo>
+            </place>
+            <place xml:id="pmb168815">
+               <placeName>Sternwartestraße 71</placeName>
+               <location type="coords">
+                  <geo>48,23188 16,33716</geo>
                </location>
                <location type="located_in_place">
-                  <placeName ref="pmb151">Deutschland</placeName>
-                  <geo>51,5 10,5</geo>
+                  <placeName ref="pmb68">XVIII., Währing</placeName>
+                  <geo>48,23333 16,31667</geo>
+               </location>
+               <location type="located_in_place">
+                  <placeName ref="pmb533">Währinger Cottage</placeName>
+                  <geo>48,233056 16,341944</geo>
+               </location>
+               <location type="located_in_place">
+                  <placeName ref="pmb150">Sternwartestraße</placeName>
+                  <geo>48,23099349198 16,340117830625</geo>
                </location>
             </place>
             <place xml:id="pmb50">
@@ -341,16 +368,6 @@
                <location type="located_in_place">
                   <placeName ref="pmb235218">Windmühlhöhe</placeName>
                   <geo>48,24077 16,32092</geo>
-               </location>
-            </place>
-            <place xml:id="pmb161">
-               <placeName>Barerstraße</placeName>
-               <location type="coords">
-                  <geo>48,15205 11,57392</geo>
-               </location>
-               <location type="located_in_place">
-                  <placeName ref="pmb45258">München</placeName>
-                  <geo>48,13743 11,57549</geo>
                </location>
             </place>
          </listPlace>

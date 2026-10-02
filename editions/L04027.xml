@@ -1,6 +1,10 @@
-<?xml version='1.0' encoding='UTF-8'?>
+<?xml version="1.0" encoding="UTF-8"?>
 <?xml-model href="../meta/schnitzler-briefe-schematron.sch" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
-<TEI xmlns="http://www.tei-c.org/ns/1.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.tei-c.org/ns/1.0 ../meta/schnitzler-briefe-schema.xsd" xml:base="https://id.acdh.oeaw.ac.at/schnitzler/schnitzler-briefe/editions" xml:id="L04027">
+<TEI xmlns="http://www.tei-c.org/ns/1.0"
+     xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+     xsi:schemaLocation="http://www.tei-c.org/ns/1.0 ../meta/schnitzler-briefe-schema.xsd"
+     xml:base="https://id.acdh.oeaw.ac.at/schnitzler/schnitzler-briefe/editions"
+     xml:id="L04027">
    <teiHeader>
       <fileDesc>
          <titleStmt>
@@ -104,7 +108,8 @@
                            <incident type="postal">
                               <desc>
                                  <stamp n="2" type="delivery">
-                                    <placeName ref="#pmb365214">Wien <unclear>1/1 1</unclear></placeName>
+                                    <placeName ref="#pmb365214">Wien <unclear>1/1 1</unclear>
+                                    </placeName>
                                     <date when="1906-08-24">2<unclear>4</unclear>. 8. 06</date>
                                     <time>
                                        <unclear>8</unclear>
@@ -135,19 +140,27 @@
             </correspAction>
             <correspAction type="delivered">
                <date when="1906-08-24">24. 8. 1906</date>
-               <placeName ref="#pmb365214">Wien 1/1 1</placeName>
+               <placeName ref="#pmb365214">1/1 Post- und Telegraphenamt 1</placeName>
             </correspAction>
             <correspAction type="received">
                <persName ref="#pmb12740">Schwarzkopf, Gustav</persName>
                <date when="1906-08-24">24. 8. 1906</date>
                <placeName ref="#pmb207296">Tiefer Graben 23</placeName>
             </correspAction>
-            <correspContext><ref type="belongsToCorrespondence" target="correspondence_12740">Schwarzkopf, Gustav</ref>
+            <correspContext>
+               <ref type="belongsToCorrespondence" target="correspondence_12740">Schwarzkopf, Gustav</ref>
                <ref subtype="previous_letter" type="withinCollection" target="L04202">Schnitzler an Schwarzkopf, [23. oder 24]. 8. 1906</ref>
                <ref subtype="next_letter" type="withinCollection" target="L04032">Schnitzler an Schwarzkopf, 26. 8. 1906</ref>
-               <ref subtype="previous_letter" type="withinCorrespondence" source="correspondence_12740" target="L04202">Schnitzler an Schwarzkopf, [23. oder 24]. 8. 1906</ref>
-               <ref subtype="next_letter" type="withinCorrespondence" source="correspondence_12740" target="L04032">Schnitzler an Schwarzkopf, 26. 8. 1906</ref>
-            </correspContext></correspDesc>
+               <ref subtype="previous_letter"
+                    type="withinCorrespondence"
+                    source="correspondence_12740"
+                    target="L04202">Schnitzler an Schwarzkopf, [23. oder 24]. 8. 1906</ref>
+               <ref subtype="next_letter"
+                    type="withinCorrespondence"
+                    source="correspondence_12740"
+                    target="L04032">Schnitzler an Schwarzkopf, 26. 8. 1906</ref>
+            </correspContext>
+         </correspDesc>
       </profileDesc>
       <revisionDesc status="proposed">
          <change who="MAM" when="2025-12-10">Export aus Transkribus</change>
@@ -319,34 +332,30 @@
                   <geo>48,22513 16,343276</geo>
                </location>
                <location type="located_in_place">
+                  <placeName ref="pmb365281">Schulgasse [Wien]</placeName>
+                  <geo>48,226495 16,336654</geo>
+               </location>
+               <location type="located_in_place">
                   <placeName ref="pmb68">XVIII., Währing</placeName>
                   <geo>48,23333 16,31667</geo>
                </location>
                <location type="located_in_place">
-                  <placeName ref="pmb41463">Schulgasse</placeName>
-                  <geo>47,71222 13,62186</geo>
+                  <placeName ref="pmb405253">Postbestellbezirk 18/1</placeName>
+                  <geo>48,231941 16,335645</geo>
                </location>
             </place>
-            <place xml:id="pmb50">
-               <placeName>Wien</placeName>
-               <placeName type="ort_fruherer-name">K.K. Reichshaupt- und Residenzstadt Wien</placeName>
-               <placeName type="alternative-name">Bécs</placeName>
-               <placeName type="alternative-name">Land Wien</placeName>
-               <placeName type="alternative-name">Vídeň</placeName>
-               <placeName type="alternative-name">Wenia</placeName>
-               <placeName type="alternative-name">Beč</placeName>
-               <placeName type="ort_fruherer-name">Vindobona</placeName>
-               <placeName type="alternative-name">Vienna</placeName>
+            <place xml:id="pmb365214">
+               <placeName>1/1 Post- und Telegraphenamt 1</placeName>
                <location type="coords">
-                  <geo>48,208333 16,373056</geo>
+                  <geo>48,209928 16,379065</geo>
                </location>
                <location type="located_in_place">
-                  <placeName ref="pmb41240">Österreich</placeName>
-                  <geo>47,33333 13,33333</geo>
+                  <placeName ref="pmb51">I., Innere Stadt</placeName>
+                  <geo>48,20769 16,37049</geo>
                </location>
                <location type="located_in_place">
-                  <placeName ref="pmb235218">Windmühlhöhe</placeName>
-                  <geo>48,24077 16,32092</geo>
+                  <placeName ref="pmb405263">Postbestellbezirk 1/1</placeName>
+                  <geo>48,208742 16,378142</geo>
                </location>
             </place>
             <place xml:id="pmb168940">

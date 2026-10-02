@@ -1,6 +1,10 @@
-<?xml version='1.0' encoding='UTF-8'?>
+<?xml version="1.0" encoding="UTF-8"?>
 <?xml-model href="../meta/schnitzler-briefe-schematron.sch" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
-<TEI xmlns="http://www.tei-c.org/ns/1.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.tei-c.org/ns/1.0 ../meta/schnitzler-briefe-schema.xsd" xml:id="L01427" xml:base="https://id.acdh.oeaw.ac.at/schnitzler/schnitzler-briefe/editions">
+<TEI xmlns="http://www.tei-c.org/ns/1.0"
+     xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+     xsi:schemaLocation="http://www.tei-c.org/ns/1.0 ../meta/schnitzler-briefe-schema.xsd"
+     xml:id="L01427"
+     xml:base="https://id.acdh.oeaw.ac.at/schnitzler/schnitzler-briefe/editions">
    <teiHeader>
       <fileDesc>
          <titleStmt>
@@ -100,7 +104,8 @@
                            <incident type="postal">
                               <desc>
                                  <stamp n="2" type="delivery">
-                                    <placeName ref="#pmb365275">Wien 13/7 <unclear>94</unclear></placeName>
+                                    <placeName ref="#pmb365275">Wien 13/7 <unclear>94</unclear>
+                                    </placeName>
                                     <date when="1904-08-18">18. 8. 04</date>
                                     <time>8. V</time>
                                     <addSpan>Bestellt</addSpan>
@@ -167,23 +172,31 @@
             </correspAction>
             <correspAction type="transmitted">
                <date when="1904-08-17">17. 8. 1904</date>
-               <placeName ref="#pmb365223">18/1 Wien 110</placeName>
+               <placeName ref="#pmb365223">18/1 Post- und Telegraphenamt 110</placeName>
             </correspAction>
             <correspAction type="delivered">
                <date when="1904-08-18">18. 8. 1904</date>
-               <placeName ref="#pmb365275">XIII., Hietzing</placeName>
+               <placeName ref="#pmb365275">13/7 Post- und Telegraphenamt 94</placeName>
             </correspAction>
             <correspAction type="received">
                <persName ref="#pmb10815">Bahr, Hermann</persName>
                <date when="1904-08-18">18. 8. 1904</date>
                <placeName ref="#pmb207274">Haus Bahr</placeName>
             </correspAction>
-            <correspContext><ref type="belongsToCorrespondence" target="correspondence_10815">Bahr, Hermann</ref>
+            <correspContext>
+               <ref type="belongsToCorrespondence" target="correspondence_10815">Bahr, Hermann</ref>
                <ref subtype="previous_letter" type="withinCollection" target="L01428">Beer-Hofmann an Schnitzler, [16. oder 17]. 8. 1904</ref>
                <ref subtype="next_letter" type="withinCollection" target="L01429">Hofmannsthal an Schnitzler, 18. 8. 1904</ref>
-               <ref subtype="previous_letter" type="withinCorrespondence" source="correspondence_10815" target="L01425">Bahr an Schnitzler, 11. 8. [1904?]</ref>
-               <ref subtype="next_letter" type="withinCorrespondence" source="correspondence_10815" target="L01438">Schnitzler, Schnitzler, Hofmannsthal, Hofmannsthal, Burckhard, Hofmannsthal an Bahr, 7. 9. 1904</ref>
-            </correspContext></correspDesc>
+               <ref subtype="previous_letter"
+                    type="withinCorrespondence"
+                    source="correspondence_10815"
+                    target="L01425">Bahr an Schnitzler, 11. 8. [1904?]</ref>
+               <ref subtype="next_letter"
+                    type="withinCorrespondence"
+                    source="correspondence_10815"
+                    target="L01438">Schnitzler, Schnitzler, Hofmannsthal, Hofmannsthal, Burckhard, Hofmannsthal an Bahr, 7. 9. 1904</ref>
+            </correspContext>
+         </correspDesc>
       </profileDesc>
       <revisionDesc status="approved">
          <change who="KI MAM" when="2015-10-01">Kollationiert</change>
@@ -310,62 +323,37 @@
             </person>
          </listPerson>
          <listPlace>
-            <place xml:id="pmb68">
-               <placeName>XVIII., Währing</placeName>
-               <placeName type="legacy-name-merge">Währing</placeName>
+            <error type="place">365223</error>
+            <error type="place">365275</error>
+            <place xml:id="pmb168940">
+               <placeName>Edmund-Weiß-Gasse 7</placeName>
+               <placeName type="ort_fruherer-name">Spöttelgasse 7</placeName>
                <location type="coords">
+                  <geo>48,2304 16,33472</geo>
+               </location>
+               <location type="located_in_place">
+                  <placeName ref="pmb68">XVIII., Währing</placeName>
                   <geo>48,23333 16,31667</geo>
                </location>
                <location type="located_in_place">
-                  <placeName ref="pmb41240">Österreich</placeName>
-                  <geo>47,33333 13,33333</geo>
+                  <placeName ref="pmb533">Währinger Cottage</placeName>
+                  <geo>48,233056 16,341944</geo>
                </location>
                <location type="located_in_place">
-                  <placeName ref="pmb50">Wien</placeName>
-                  <geo>48,208333 16,373056</geo>
+                  <placeName ref="pmb133">Edmund-Weiß-Gasse</placeName>
+                  <geo>48,23056 16,3348</geo>
                </location>
             </place>
-            <place xml:id="pmb63">
-               <placeName>XIII., Hietzing</placeName>
-               <placeName type="legacy-name-merge">Hietzing</placeName>
+            <place xml:id="pmb207274">
+               <placeName>Haus Bahr</placeName>
+               <placeName type="ort_fruherer-name">Veitlissengasse 5a</placeName>
+               <placeName type="ort_namensvariante">Winzergasse 22</placeName>
                <location type="coords">
-                  <geo>48,17547 16,29101</geo>
+                  <geo>48,186771 16,261305</geo>
                </location>
                <location type="located_in_place">
-                  <placeName ref="pmb50">Wien</placeName>
-                  <geo>48,208333 16,373056</geo>
-               </location>
-            </place>
-            <place xml:id="pmb50" ana="comment">
-               <placeName>Wien</placeName>
-               <placeName type="ort_fruherer-name">K.K. Reichshaupt- und Residenzstadt Wien</placeName>
-               <placeName type="alternative-name">Bécs</placeName>
-               <placeName type="alternative-name">Land Wien</placeName>
-               <placeName type="alternative-name">Vídeň</placeName>
-               <placeName type="alternative-name">Wenia</placeName>
-               <placeName type="alternative-name">Beč</placeName>
-               <placeName type="ort_fruherer-name">Vindobona</placeName>
-               <placeName type="alternative-name">Vienna</placeName>
-               <location type="coords">
-                  <geo>48,208333 16,373056</geo>
-               </location>
-               <location type="located_in_place">
-                  <placeName ref="pmb41240">Österreich</placeName>
-                  <geo>47,33333 13,33333</geo>
-               </location>
-               <location type="located_in_place">
-                  <placeName ref="pmb235218">Windmühlhöhe</placeName>
-                  <geo>48,24077 16,32092</geo>
-               </location>
-            </place>
-            <place xml:id="pmb220">
-               <placeName>Veitlissengasse</placeName>
-               <location type="coords">
+                  <placeName ref="pmb220">Veitlissengasse</placeName>
                   <geo>48,186622327678 16,259712159437</geo>
-               </location>
-               <location type="located_in_place">
-                  <placeName ref="pmb165">Ober Sankt Veit</placeName>
-                  <geo>48,188056 16,266389</geo>
                </location>
                <location type="located_in_place">
                   <placeName ref="pmb63">XIII., Hietzing</placeName>
@@ -402,6 +390,39 @@
                <location type="located_in_place">
                   <placeName ref="pmb63">XIII., Hietzing</placeName>
                   <geo>48,17547 16,29101</geo>
+               </location>
+            </place>
+            <place xml:id="pmb63">
+               <placeName>XIII., Hietzing</placeName>
+               <placeName type="legacy-name-merge">Hietzing</placeName>
+               <location type="coords">
+                  <geo>48,17547 16,29101</geo>
+               </location>
+               <location type="located_in_place">
+                  <placeName ref="pmb50">Wien</placeName>
+                  <geo>48,208333 16,373056</geo>
+               </location>
+            </place>
+            <place xml:id="pmb50" ana="comment">
+               <placeName>Wien</placeName>
+               <placeName type="ort_fruherer-name">K.K. Reichshaupt- und Residenzstadt Wien</placeName>
+               <placeName type="alternative-name">Bécs</placeName>
+               <placeName type="alternative-name">Land Wien</placeName>
+               <placeName type="alternative-name">Vídeň</placeName>
+               <placeName type="alternative-name">Wenia</placeName>
+               <placeName type="alternative-name">Beč</placeName>
+               <placeName type="ort_fruherer-name">Vindobona</placeName>
+               <placeName type="alternative-name">Vienna</placeName>
+               <location type="coords">
+                  <geo>48,208333 16,373056</geo>
+               </location>
+               <location type="located_in_place">
+                  <placeName ref="pmb41240">Österreich</placeName>
+                  <geo>47,33333 13,33333</geo>
+               </location>
+               <location type="located_in_place">
+                  <placeName ref="pmb235218">Windmühlhöhe</placeName>
+                  <geo>48,24077 16,32092</geo>
                </location>
             </place>
             <place xml:id="pmb66" ana="comment">

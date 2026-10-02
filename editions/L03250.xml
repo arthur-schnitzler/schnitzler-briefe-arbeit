@@ -1,6 +1,10 @@
-<?xml version='1.0' encoding='UTF-8'?>
+<?xml version="1.0" encoding="UTF-8"?>
 <?xml-model href="../meta/schnitzler-briefe-schematron.sch" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
-<TEI xmlns="http://www.tei-c.org/ns/1.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.tei-c.org/ns/1.0 ../meta/schnitzler-briefe-schema.xsd" xml:id="L03250" xml:base="https://id.acdh.oeaw.ac.at/schnitzler/schnitzler-briefe/editions">
+<TEI xmlns="http://www.tei-c.org/ns/1.0"
+     xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+     xsi:schemaLocation="http://www.tei-c.org/ns/1.0 ../meta/schnitzler-briefe-schema.xsd"
+     xml:id="L03250"
+     xml:base="https://id.acdh.oeaw.ac.at/schnitzler/schnitzler-briefe/editions">
    <teiHeader>
       <fileDesc>
          <titleStmt>
@@ -87,7 +91,9 @@
                            </supportDesc>
                         </objectDesc>
                         <handDesc hands="1">
-                           <handNote medium="schwarze-tinte" style="deutsche-kurrent" corresp="#pmb11485"/>
+                           <handNote medium="schwarze-tinte"
+                                     style="deutsche-kurrent"
+                                     corresp="#pmb11485"/>
                         </handDesc>
                         <additions>
                            <incident type="postal">
@@ -102,7 +108,8 @@
                            <incident type="postal">
                               <desc>
                                  <stamp n="2" type="delivery">
-                                    <placeName ref="#pmb405253">18/<hi rend="subscript">1</hi> Wien</placeName><!-- so -->
+                                    <placeName ref="#pmb405253">18/<hi rend="subscript">1</hi> Wien</placeName>
+                                    <!-- so -->
                                     <date when="1905-09-15">15. IX. 06</date>
                                     <addSpan>Be<supplied>stellt</supplied>
                                     </addSpan>
@@ -137,19 +144,27 @@
             </correspAction>
             <correspAction type="delivered">
                <date when="1906-09-15">15. 9. 1906</date>
-               <placeName ref="#pmb405253">XVIII., Währing</placeName>
+               <placeName ref="#pmb405253">Postbestellbezirk 18/1</placeName>
             </correspAction>
             <correspAction type="received">
                <persName ref="#pmb2121">Schnitzler, Arthur</persName>
                <date when="1906-09-15">15. 9. 1906</date>
                <placeName ref="#pmb168940">Edmund-Weiß-Gasse 7</placeName>
             </correspAction>
-            <correspContext><ref type="belongsToCorrespondence" target="correspondence_11485">Goldmann, Paul</ref>
+            <correspContext>
+               <ref type="belongsToCorrespondence" target="correspondence_11485">Goldmann, Paul</ref>
                <ref subtype="previous_letter" type="withinCollection" target="L01628">Hofmannsthal an Schnitzler, [12. 9. 1906]</ref>
                <ref subtype="next_letter" type="withinCollection" target="L01629">Schnitzler an Bahr, 17. 9. 1906</ref>
-               <ref subtype="previous_letter" type="withinCorrespondence" source="correspondence_11485" target="L03249">Goldmann an Schnitzler, 3. 8. 1906</ref>
-               <ref subtype="next_letter" type="withinCorrespondence" source="correspondence_11485" target="L03251">Goldmann an Schnitzler, 18. 9. [1906]</ref>
-            </correspContext></correspDesc>
+               <ref subtype="previous_letter"
+                    type="withinCorrespondence"
+                    source="correspondence_11485"
+                    target="L03249">Goldmann an Schnitzler, 3. 8. 1906</ref>
+               <ref subtype="next_letter"
+                    type="withinCorrespondence"
+                    source="correspondence_11485"
+                    target="L03251">Goldmann an Schnitzler, 18. 9. [1906]</ref>
+            </correspContext>
+         </correspDesc>
       </profileDesc>
       <revisionDesc status="approved">
          <change who="KSK" when="2023-09-05">Export aus Transkribus</change>
@@ -269,20 +284,19 @@
                   <placeName ref="pmb53775">Seilerstätte</placeName>
                   <geo>48,205327604596654 16,374796288594265</geo>
                </location>
+               <location type="located_in_place">
+                  <placeName ref="pmb405263">Postbestellbezirk 1/1</placeName>
+                  <geo>48,208742 16,378142</geo>
+               </location>
             </place>
-            <place xml:id="pmb68">
-               <placeName>XVIII., Währing</placeName>
-               <placeName type="legacy-name-merge">Währing</placeName>
+            <place xml:id="pmb405253">
+               <placeName>Postbestellbezirk 18/1</placeName>
                <location type="coords">
+                  <geo>48,231941 16,335645</geo>
+               </location>
+               <location type="located_in_place">
+                  <placeName ref="pmb68">XVIII., Währing</placeName>
                   <geo>48,23333 16,31667</geo>
-               </location>
-               <location type="located_in_place">
-                  <placeName ref="pmb41240">Österreich</placeName>
-                  <geo>47,33333 13,33333</geo>
-               </location>
-               <location type="located_in_place">
-                  <placeName ref="pmb50">Wien</placeName>
-                  <geo>48,208333 16,373056</geo>
                </location>
             </place>
             <place xml:id="pmb255">

@@ -1,6 +1,10 @@
-<?xml version='1.0' encoding='UTF-8'?>
+<?xml version="1.0" encoding="UTF-8"?>
 <?xml-model href="../meta/schnitzler-briefe-schematron.sch" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
-<TEI xmlns="http://www.tei-c.org/ns/1.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.tei-c.org/ns/1.0 ../meta/schnitzler-briefe-schema.xsd" xml:id="L02370" xml:base="https://id.acdh.oeaw.ac.at/schnitzler/schnitzler-briefe/editions">
+<TEI xmlns="http://www.tei-c.org/ns/1.0"
+     xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+     xsi:schemaLocation="http://www.tei-c.org/ns/1.0 ../meta/schnitzler-briefe-schema.xsd"
+     xml:id="L02370"
+     xml:base="https://id.acdh.oeaw.ac.at/schnitzler/schnitzler-briefe/editions">
    <teiHeader>
       <fileDesc>
          <titleStmt>
@@ -129,11 +133,11 @@
             <correspAction type="sent">
                <persName ref="#pmb2121">Schnitzler, Arthur</persName>
                <date when="1921-08-08" n="01">8. 8. 1921</date>
-               <placeName ref="#pmb106">Seewirth</placeName>
+               <placeName ref="#pmb106">Hotel am See</placeName>
             </correspAction>
             <correspAction type="transmitted">
                <date when="1921-08-08">8. 8. 1921</date>
-               <placeName ref="#pmb34401">Alt Aussee</placeName>
+               <placeName ref="#pmb34401">Altaussee</placeName>
             </correspAction>
             <correspAction type="received">
                <persName ref="#pmb10863">Beer-Hofmann, Richard</persName>
@@ -141,12 +145,20 @@
                   – 13. 8. 1921?]</date>
                <placeName ref="#pmb53548">Mallnitz</placeName>
             </correspAction>
-            <correspContext><ref type="belongsToCorrespondence" target="correspondence_10863">Beer-Hofmann, Richard</ref>
+            <correspContext>
+               <ref type="belongsToCorrespondence" target="correspondence_10863">Beer-Hofmann, Richard</ref>
                <ref subtype="previous_letter" type="withinCollection" target="L04463">Schnitzler an Schwarzkopf, 7. 8. 1921</ref>
                <ref subtype="next_letter" type="withinCollection" target="L03574">Salten, Salten an Schnitzler, 17. [8.?] 1921</ref>
-               <ref subtype="previous_letter" type="withinCorrespondence" source="correspondence_10863" target="L02366">Schnitzler an Beer-Hofmann, 8. 5. 1921</ref>
-               <ref subtype="next_letter" type="withinCorrespondence" source="correspondence_10863" target="L02379">Schnitzler an Beer-Hofmann, 4. 5. 1922</ref>
-            </correspContext></correspDesc>
+               <ref subtype="previous_letter"
+                    type="withinCorrespondence"
+                    source="correspondence_10863"
+                    target="L02366">Schnitzler an Beer-Hofmann, 8. 5. 1921</ref>
+               <ref subtype="next_letter"
+                    type="withinCorrespondence"
+                    source="correspondence_10863"
+                    target="L02379">Schnitzler an Beer-Hofmann, 4. 5. 1922</ref>
+            </correspContext>
+         </correspDesc>
       </profileDesc>
       <revisionDesc status="approved">
          <change who="MAM" when="2019-06-12">Automatisch angelegt aus Buchausgabe</change>
@@ -355,6 +367,17 @@
                   <geo>47,75 13,5</geo>
                </location>
             </place>
+            <place xml:id="pmb106">
+               <placeName>Hotel am See</placeName>
+               <placeName type="ort_fruherer-name">Seewirt</placeName>
+               <location type="coords">
+                  <geo>47,6417 13,77189</geo>
+               </location>
+               <location type="located_in_place">
+                  <placeName ref="pmb34401">Altaussee</placeName>
+                  <geo>47,639444 13,763333</geo>
+               </location>
+            </place>
             <place xml:id="pmb53548">
                <placeName>Mallnitz</placeName>
                <location type="coords">
@@ -429,17 +452,6 @@
                <location type="located_in_place">
                   <placeName ref="pmb429">Salzkammergut</placeName>
                   <geo>47,75 13,5</geo>
-               </location>
-            </place>
-            <place xml:id="pmb106">
-               <placeName>Hotel am See</placeName>
-               <placeName type="ort_fruherer-name">Seewirt</placeName>
-               <location type="coords">
-                  <geo>47,6417 13,77189</geo>
-               </location>
-               <location type="located_in_place">
-                  <placeName ref="pmb34401">Altaussee</placeName>
-                  <geo>47,639444 13,763333</geo>
                </location>
             </place>
             <place xml:id="pmb568">

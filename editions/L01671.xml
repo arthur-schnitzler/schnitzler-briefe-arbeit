@@ -1,6 +1,10 @@
-<?xml version='1.0' encoding='UTF-8'?>
+<?xml version="1.0" encoding="UTF-8"?>
 <?xml-model href="../meta/schnitzler-briefe-schematron.sch" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
-<TEI xmlns="http://www.tei-c.org/ns/1.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.tei-c.org/ns/1.0 ../meta/schnitzler-briefe-schema.xsd" xml:id="L01671" xml:base="https://id.acdh.oeaw.ac.at/schnitzler/schnitzler-briefe/editions">
+<TEI xmlns="http://www.tei-c.org/ns/1.0"
+     xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+     xsi:schemaLocation="http://www.tei-c.org/ns/1.0 ../meta/schnitzler-briefe-schema.xsd"
+     xml:id="L01671"
+     xml:base="https://id.acdh.oeaw.ac.at/schnitzler/schnitzler-briefe/editions">
    <teiHeader>
       <fileDesc>
          <titleStmt>
@@ -149,12 +153,20 @@
                <date when="1907-04-28">28. IV. 07</date>
                <placeName ref="#pmb168940">Edmund-Weiß-Gasse 7</placeName>
             </correspAction>
-            <correspContext><ref type="belongsToCorrespondence" target="correspondence_10815">Bahr, Hermann</ref>
+            <correspContext>
+               <ref type="belongsToCorrespondence" target="correspondence_10815">Bahr, Hermann</ref>
                <ref subtype="previous_letter" type="withinCollection" target="L01670">Bahr an Schnitzler, 26. 4. 1907</ref>
                <ref subtype="next_letter" type="withinCollection" target="L01672">Hofmannsthal an Schnitzler, 29. 4. 1907</ref>
-               <ref subtype="previous_letter" type="withinCorrespondence" source="correspondence_10815" target="L01670">Bahr an Schnitzler, 26. 4. 1907</ref>
-               <ref subtype="next_letter" type="withinCorrespondence" source="correspondence_10815" target="L01673">Schnitzler an Bahr, 18. 5. 1907</ref>
-            </correspContext></correspDesc>
+               <ref subtype="previous_letter"
+                    type="withinCorrespondence"
+                    source="correspondence_10815"
+                    target="L01670">Bahr an Schnitzler, 26. 4. 1907</ref>
+               <ref subtype="next_letter"
+                    type="withinCorrespondence"
+                    source="correspondence_10815"
+                    target="L01673">Schnitzler an Bahr, 18. 5. 1907</ref>
+            </correspContext>
+         </correspDesc>
       </profileDesc>
       <revisionDesc status="approved">
          <change who="KI MAM" when="2015-12-15">Kollationiert</change>
@@ -287,34 +299,8 @@
             </person>
          </listPerson>
          <listPlace>
-            <place xml:id="pmb365402">
-               <placeName>10/2 Post- und Telegraphenamt 76</placeName>
-               <location type="coords">
-                  <geo>48,18666 16,37984</geo>
-               </location>
-               <location type="located_in_place">
-                  <placeName ref="pmb132">Südbahnhof</placeName>
-                  <geo>48,187455471378 16,379829498031</geo>
-               </location>
-               <location type="located_in_place">
-                  <placeName ref="pmb60">X., Favoriten</placeName>
-                  <geo>48,17111 16,37778</geo>
-               </location>
-            </place>
-            <place xml:id="pmb365223">
-               <placeName>18/1 Post- und Telegraphenamt 110</placeName>
-               <location type="coords">
-                  <geo>48,22513 16,343276</geo>
-               </location>
-               <location type="located_in_place">
-                  <placeName ref="pmb365281">Schulgasse [Wien]</placeName>
-                  <geo>48,226495 16,336654</geo>
-               </location>
-               <location type="located_in_place">
-                  <placeName ref="pmb68">XVIII., Währing</placeName>
-                  <geo>48,23333 16,31667</geo>
-               </location>
-            </place>
+            <error type="place">365402</error>
+            <error type="place">365223</error>
             <place xml:id="pmb132">
                <placeName>Südbahnhof</placeName>
                <location type="coords">

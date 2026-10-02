@@ -1,6 +1,10 @@
-<?xml version='1.0' encoding='UTF-8'?>
+<?xml version="1.0" encoding="UTF-8"?>
 <?xml-model href="../meta/schnitzler-briefe-schematron.sch" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
-<TEI xmlns="http://www.tei-c.org/ns/1.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xml:id="L01930" xsi:schemaLocation="http://www.tei-c.org/ns/1.0 ../meta/schnitzler-briefe-schema.xsd" xml:base="https://id.acdh.oeaw.ac.at/schnitzler/schnitzler-briefe/editions">
+<TEI xmlns="http://www.tei-c.org/ns/1.0"
+     xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+     xml:id="L01930"
+     xsi:schemaLocation="http://www.tei-c.org/ns/1.0 ../meta/schnitzler-briefe-schema.xsd"
+     xml:base="https://id.acdh.oeaw.ac.at/schnitzler/schnitzler-briefe/editions">
    <teiHeader>
       <fileDesc>
          <titleStmt>
@@ -146,14 +150,22 @@
                <persName ref="#pmb11740">Hofmannsthal, Hugo von</persName>
                <date evidence="conjecture" notBefore="1910-05-16" notAfter="1910-05-20">[16. 5. 1910
                   – 20. 5. 1910?]</date>
-               <placeName ref="#pmb40297">Rodaun</placeName>
+               <placeName ref="#pmb40297">Hofmannsthal-Schlössl</placeName>
             </correspAction>
-            <correspContext><ref type="belongsToCorrespondence" target="correspondence_11740">Hofmannsthal, Hugo von</ref>
+            <correspContext>
+               <ref type="belongsToCorrespondence" target="correspondence_11740">Hofmannsthal, Hugo von</ref>
                <ref subtype="previous_letter" type="withinCollection" target="L01929">Beer-Hofmann an Schnitzler, 14. 5. 1910</ref>
                <ref subtype="next_letter" type="withinCollection" target="L01931">Schnitzler an Beer-Hofmann, [17. 5. 1910?]</ref>
-               <ref subtype="previous_letter" type="withinCorrespondence" source="correspondence_11740" target="L01928">Hofmannsthal an Schnitzler, [9. 5. 1910]</ref>
-               <ref subtype="next_letter" type="withinCorrespondence" source="correspondence_11740" target="L01938">Hofmannsthal, Hofmannsthal an Schnitzler, 25. 6. 1910</ref>
-            </correspContext></correspDesc>
+               <ref subtype="previous_letter"
+                    type="withinCorrespondence"
+                    source="correspondence_11740"
+                    target="L01928">Hofmannsthal an Schnitzler, [9. 5. 1910]</ref>
+               <ref subtype="next_letter"
+                    type="withinCorrespondence"
+                    source="correspondence_11740"
+                    target="L01938">Hofmannsthal, Hofmannsthal an Schnitzler, 25. 6. 1910</ref>
+            </correspContext>
+         </correspDesc>
       </profileDesc>
       <revisionDesc status="approved">
          <change who="MAM" when="2019-07-31">Angelegt aus Buchausgabe</change>
@@ -268,18 +280,7 @@
             </bibl>
          </listBibl>
          <listPlace>
-            <place xml:id="pmb59">
-               <placeName>IX., Alsergrund</placeName>
-               <placeName type="legacy-name-merge">Thurygrund</placeName>
-               <placeName type="legacy-name-merge">Wien-Alsergrund</placeName>
-               <location type="coords">
-                  <geo>48,22387 16,35641</geo>
-               </location>
-               <location type="located_in_place">
-                  <placeName ref="pmb50">Wien</placeName>
-                  <geo>48,208333 16,373056</geo>
-               </location>
-            </place>
+            <error type="place">365615</error>
             <place xml:id="pmb173">
                <placeName>Rodaun</placeName>
                <placeName type="legacy-name-merge">Rodaun bei Wien</placeName>
@@ -317,15 +318,22 @@
                   <geo>48,24077 16,32092</geo>
                </location>
             </place>
-            <place xml:id="pmb1006">
-               <placeName>Badgasse</placeName>
-               <placeName type="namensvariante">Ketzergasse</placeName>
+            <place xml:id="pmb40297">
+               <placeName>Hofmannsthal-Schlössl</placeName>
                <location type="coords">
-                  <geo>48,130176324727 16,278871077438</geo>
+                  <geo>48,133611 16,255556</geo>
                </location>
                <location type="located_in_place">
                   <placeName ref="pmb73">XXIII., Liesing</placeName>
                   <geo>48,13333 16,3</geo>
+               </location>
+               <location type="located_in_place">
+                  <placeName ref="pmb173">Rodaun</placeName>
+                  <geo>48,132793312328 16,256152195922</geo>
+               </location>
+               <location type="located_in_place">
+                  <placeName ref="pmb40103">Ketzergasse</placeName>
+                  <geo>48,133896 16,272342</geo>
                </location>
             </place>
             <place xml:id="pmb43435">

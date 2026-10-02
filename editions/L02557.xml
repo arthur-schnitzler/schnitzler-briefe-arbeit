@@ -1,6 +1,10 @@
-<?xml version='1.0' encoding='UTF-8'?>
+<?xml version="1.0" encoding="UTF-8"?>
 <?xml-model href="../meta/schnitzler-briefe-schematron.sch" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
-<TEI xmlns="http://www.tei-c.org/ns/1.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.tei-c.org/ns/1.0 ../meta/schnitzler-briefe-schema.xsd" xml:id="L02557" xml:base="https://id.acdh.oeaw.ac.at/schnitzler/schnitzler-briefe/editions">
+<TEI xmlns="http://www.tei-c.org/ns/1.0"
+     xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+     xsi:schemaLocation="http://www.tei-c.org/ns/1.0 ../meta/schnitzler-briefe-schema.xsd"
+     xml:id="L02557"
+     xml:base="https://id.acdh.oeaw.ac.at/schnitzler/schnitzler-briefe/editions">
    <teiHeader>
       <fileDesc>
          <titleStmt>
@@ -93,7 +97,8 @@
                            <incident type="postal">
                               <desc>
                                  <stamp n="1" type="transmission">
-                                    <placeName ref="#pmb365266">9/<unclear>1</unclear> Wien 6<unclear>6</unclear></placeName>
+                                    <placeName ref="#pmb365266">9/<unclear>1</unclear> Wien 6<unclear>6</unclear>
+                                    </placeName>
                                     <date when="1910-09-12">1<unclear>2. IX</unclear>. 10</date>
                                  </stamp>
                               </desc>
@@ -117,21 +122,29 @@
             </correspAction>
             <correspAction type="transmitted">
                <date when="1910-09-12">12. 9. 1910</date>
-               <placeName ref="#pmb365266">Wien</placeName>
+               <placeName ref="#pmb365266">9/1 Post- und Telegraphenamt 66</placeName>
             </correspAction>
             <correspAction type="received">
                <persName ref="#pmb10863">Beer-Hofmann, Richard</persName>
                <persName ref="#pmb10860">Beer-Hofmann, Paula</persName>
                <date evidence="conjecture" notBefore="1910-09-13" notAfter="1910-09-15">[13. 9. 1910
                   – 15. 9. 1910?]</date>
-               <placeName ref="#pmb250767">Steinfeld 6</placeName>
+               <placeName ref="#pmb250767">Rettenbachweg 5</placeName>
             </correspAction>
-            <correspContext><ref type="belongsToCorrespondence" target="correspondence_10863">Beer-Hofmann, Richard</ref>
+            <correspContext>
+               <ref type="belongsToCorrespondence" target="correspondence_10863">Beer-Hofmann, Richard</ref>
                <ref subtype="previous_letter" type="withinCollection" target="L03813">Schnitzler an Zweig, 10. 9. 1910</ref>
                <ref subtype="next_letter" type="withinCollection" target="L02580">Ebner-Eschenbach an Schnitzler, 13. 9. 1910</ref>
-               <ref subtype="previous_letter" type="withinCorrespondence" source="correspondence_10863" target="L01954">Schnitzler, Schnitzler an Beer-Hofmann, 23. 8. 1910</ref>
-               <ref subtype="next_letter" type="withinCorrespondence" source="correspondence_10863" target="L01955">Schnitzler, Schnitzler an Beer-Hofmann, Beer-Hofmann, 17. 9. 1910</ref>
-            </correspContext></correspDesc>
+               <ref subtype="previous_letter"
+                    type="withinCorrespondence"
+                    source="correspondence_10863"
+                    target="L01954">Schnitzler, Schnitzler an Beer-Hofmann, 23. 8. 1910</ref>
+               <ref subtype="next_letter"
+                    type="withinCorrespondence"
+                    source="correspondence_10863"
+                    target="L01955">Schnitzler, Schnitzler an Beer-Hofmann, Beer-Hofmann, 17. 9. 1910</ref>
+            </correspContext>
+         </correspDesc>
       </profileDesc>
       <revisionDesc status="approved">
          <change who="GHS" when="2021-03-11">Angelegt</change>
@@ -265,53 +278,18 @@
             </person>
          </listPerson>
          <listPlace>
-            <place xml:id="pmb59">
-               <placeName>IX., Alsergrund</placeName>
-               <placeName type="legacy-name-merge">Thurygrund</placeName>
-               <placeName type="legacy-name-merge">Wien-Alsergrund</placeName>
+            <place xml:id="pmb365266">
+               <placeName>9/1 Post- und Telegraphenamt 66</placeName>
                <location type="coords">
+                  <geo>48,219619 16,3617</geo>
+               </location>
+               <location type="located_in_place">
+                  <placeName ref="pmb59">IX., Alsergrund</placeName>
                   <geo>48,22387 16,35641</geo>
                </location>
                <location type="located_in_place">
-                  <placeName ref="pmb50">Wien</placeName>
-                  <geo>48,208333 16,373056</geo>
-               </location>
-            </place>
-            <place xml:id="pmb50">
-               <placeName>Wien</placeName>
-               <placeName type="ort_fruherer-name">K.K. Reichshaupt- und Residenzstadt Wien</placeName>
-               <placeName type="alternative-name">Bécs</placeName>
-               <placeName type="alternative-name">Land Wien</placeName>
-               <placeName type="alternative-name">Vídeň</placeName>
-               <placeName type="alternative-name">Wenia</placeName>
-               <placeName type="alternative-name">Beč</placeName>
-               <placeName type="ort_fruherer-name">Vindobona</placeName>
-               <placeName type="alternative-name">Vienna</placeName>
-               <location type="coords">
-                  <geo>48,208333 16,373056</geo>
-               </location>
-               <location type="located_in_place">
-                  <placeName ref="pmb41240">Österreich</placeName>
-                  <geo>47,33333 13,33333</geo>
-               </location>
-               <location type="located_in_place">
-                  <placeName ref="pmb235218">Windmühlhöhe</placeName>
-                  <geo>48,24077 16,32092</geo>
-               </location>
-            </place>
-            <place xml:id="pmb68">
-               <placeName>XVIII., Währing</placeName>
-               <placeName type="legacy-name-merge">Währing</placeName>
-               <location type="coords">
-                  <geo>48,23333 16,31667</geo>
-               </location>
-               <location type="located_in_place">
-                  <placeName ref="pmb41240">Österreich</placeName>
-                  <geo>47,33333 13,33333</geo>
-               </location>
-               <location type="located_in_place">
-                  <placeName ref="pmb50">Wien</placeName>
-                  <geo>48,208333 16,373056</geo>
+                  <placeName ref="pmb436">Porzellangasse</placeName>
+                  <geo>48,222287836145 16,362457240723</geo>
                </location>
             </place>
             <place xml:id="pmb168815">
@@ -332,6 +310,36 @@
                   <geo>48,23099349198 16,340117830625</geo>
                </location>
             </place>
+            <place xml:id="pmb250767">
+               <placeName>Rettenbachweg 5</placeName>
+               <placeName type="ort_fruherer-name">Steinfeld 6</placeName>
+               <location type="coords">
+                  <geo>47,713869 13,629688</geo>
+               </location>
+               <location type="located_in_place">
+                  <placeName ref="pmb213">Bad Ischl</placeName>
+                  <geo>47,71109 13,61893</geo>
+               </location>
+               <location type="located_in_place">
+                  <placeName ref="pmb405">Steinfeld</placeName>
+                  <geo>47,71254 13,6326</geo>
+               </location>
+            </place>
+            <place xml:id="pmb68">
+               <placeName>XVIII., Währing</placeName>
+               <placeName type="legacy-name-merge">Währing</placeName>
+               <location type="coords">
+                  <geo>48,23333 16,31667</geo>
+               </location>
+               <location type="located_in_place">
+                  <placeName ref="pmb41240">Österreich</placeName>
+                  <geo>47,33333 13,33333</geo>
+               </location>
+               <location type="located_in_place">
+                  <placeName ref="pmb50">Wien</placeName>
+                  <geo>48,208333 16,373056</geo>
+               </location>
+            </place>
             <place xml:id="pmb213">
                <placeName>Bad Ischl</placeName>
                <location type="coords">
@@ -340,16 +348,6 @@
                <location type="located_in_place">
                   <placeName ref="pmb429">Salzkammergut</placeName>
                   <geo>47,75 13,5</geo>
-               </location>
-            </place>
-            <place xml:id="pmb405">
-               <placeName>Steinfeld</placeName>
-               <location type="coords">
-                  <geo>47,71254 13,6326</geo>
-               </location>
-               <location type="located_in_place">
-                  <placeName ref="pmb213">Bad Ischl</placeName>
-                  <geo>47,71109 13,61893</geo>
                </location>
             </place>
             <place xml:id="pmb53759">

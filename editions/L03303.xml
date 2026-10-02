@@ -1,6 +1,10 @@
-<?xml version='1.0' encoding='UTF-8'?>
+<?xml version="1.0" encoding="UTF-8"?>
 <?xml-model href="../meta/schnitzler-briefe-schematron.sch" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
-<TEI xmlns="http://www.tei-c.org/ns/1.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.tei-c.org/ns/1.0 ../meta/schnitzler-briefe-schema.xsd" xml:id="L03303" xml:base="https://id.acdh.oeaw.ac.at/schnitzler/schnitzler-briefe/editions">
+<TEI xmlns="http://www.tei-c.org/ns/1.0"
+     xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+     xsi:schemaLocation="http://www.tei-c.org/ns/1.0 ../meta/schnitzler-briefe-schema.xsd"
+     xml:id="L03303"
+     xml:base="https://id.acdh.oeaw.ac.at/schnitzler/schnitzler-briefe/editions">
    <teiHeader>
       <fileDesc>
          <titleStmt>
@@ -137,7 +141,7 @@
             </correspAction>
             <correspAction type="transmitted">
                <date when="1899-12-25">25. 12. 1899</date>
-               <placeName ref="#pmb365625">Salzburg</placeName>
+               <placeName ref="#pmb365625">Postamt Salzburg Stadt</placeName>
             </correspAction>
             <correspAction type="delivered">
                <placeName ref="#pmb365208">9/3 Post- und Telegraphenamt 72</placeName>
@@ -147,12 +151,20 @@
                <date evidence="conjecture" notBefore="1899-12-26" notAfter="1899-12-30">[26. 12. 1899 – 30. 12. 1899?]</date>
                <placeName ref="#pmb168934">Frankgasse 1</placeName>
             </correspAction>
-            <correspContext><ref type="belongsToCorrespondence" target="correspondence_2167">Salten, Felix</ref>
+            <correspContext>
+               <ref type="belongsToCorrespondence" target="correspondence_2167">Salten, Felix</ref>
                <ref subtype="previous_letter" type="withinCollection" target="L02900">Goldmann an Schnitzler, 23. 12. [1899]</ref>
                <ref subtype="next_letter" type="withinCollection" target="L01007">Schnitzler an Beer-Hofmann, 24. 12. 1899</ref>
-               <ref subtype="previous_letter" type="withinCorrespondence" source="correspondence_2167" target="L03302">Salten an Schnitzler, [18. 11. 1899]</ref>
-               <ref subtype="next_letter" type="withinCorrespondence" source="correspondence_2167" target="L03032">Schnitzler an Salten, 30. 12. [1899?]</ref>
-            </correspContext></correspDesc>
+               <ref subtype="previous_letter"
+                    type="withinCorrespondence"
+                    source="correspondence_2167"
+                    target="L03302">Salten an Schnitzler, [18. 11. 1899]</ref>
+               <ref subtype="next_letter"
+                    type="withinCorrespondence"
+                    source="correspondence_2167"
+                    target="L03032">Schnitzler an Salten, 30. 12. [1899?]</ref>
+            </correspContext>
+         </correspDesc>
       </profileDesc>
       <revisionDesc status="approved">
          <change who="MAM" when="2023-09-20">Export aus Transkribus</change>
@@ -277,17 +289,18 @@
             </person>
          </listPerson>
          <listPlace>
-            <place xml:id="pmb30">
-               <placeName>Salzburg</placeName>
-               <placeName type="alternative-name">Iuvavum</placeName>
-               <placeName type="legacy-name-merge">Salzburg Stadt</placeName>
-               <placeName type="legacy-name-merge">Salzburg?</placeName>
+            <place xml:id="pmb365625">
+               <placeName>Postamt Salzburg Stadt</placeName>
                <location type="coords">
-                  <geo>47,80067 13,04532</geo>
+                  <geo>47,797964 13,047662</geo>
                </location>
                <location type="located_in_place">
-                  <placeName ref="pmb697">Salzburg [Land]</placeName>
-                  <geo>47,41667 13,25</geo>
+                  <placeName ref="pmb365627">Neue Residenz [Salzburg]</placeName>
+                  <geo>47,7984 13,0475</geo>
+               </location>
+               <location type="located_in_place">
+                  <placeName ref="pmb30">Salzburg</placeName>
+                  <geo>47,80067 13,04532</geo>
                </location>
             </place>
             <place xml:id="pmb365208">
@@ -302,6 +315,19 @@
                <location type="located_in_place">
                   <placeName ref="pmb731">Garnisongasse</placeName>
                   <geo>48,216533356678 16,356214321972</geo>
+               </location>
+            </place>
+            <place xml:id="pmb30">
+               <placeName>Salzburg</placeName>
+               <placeName type="alternative-name">Iuvavum</placeName>
+               <placeName type="legacy-name-merge">Salzburg Stadt</placeName>
+               <placeName type="legacy-name-merge">Salzburg?</placeName>
+               <location type="coords">
+                  <geo>47,80067 13,04532</geo>
+               </location>
+               <location type="located_in_place">
+                  <placeName ref="pmb697">Salzburg [Land]</placeName>
+                  <geo>47,41667 13,25</geo>
                </location>
             </place>
             <place xml:id="pmb168934">

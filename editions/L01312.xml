@@ -1,6 +1,10 @@
-<?xml version='1.0' encoding='UTF-8'?>
+<?xml version="1.0" encoding="UTF-8"?>
 <?xml-model href="../meta/schnitzler-briefe-schematron.sch" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
-<TEI xmlns="http://www.tei-c.org/ns/1.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.tei-c.org/ns/1.0 ../meta/schnitzler-briefe-schema.xsd" xml:id="L01312" xml:base="https://id.acdh.oeaw.ac.at/schnitzler/schnitzler-briefe/editions">
+<TEI xmlns="http://www.tei-c.org/ns/1.0"
+     xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+     xsi:schemaLocation="http://www.tei-c.org/ns/1.0 ../meta/schnitzler-briefe-schema.xsd"
+     xml:id="L01312"
+     xml:base="https://id.acdh.oeaw.ac.at/schnitzler/schnitzler-briefe/editions">
    <teiHeader>
       <fileDesc>
          <titleStmt>
@@ -165,12 +169,20 @@
                <date when="1903-08-23">23. 8. 1903</date>
                <placeName ref="#pmb231810">Willergasse 2</placeName>
             </correspAction>
-            <correspContext><ref type="belongsToCorrespondence" target="correspondence_10863">Beer-Hofmann, Richard</ref>
+            <correspContext>
+               <ref type="belongsToCorrespondence" target="correspondence_10863">Beer-Hofmann, Richard</ref>
                <ref subtype="previous_letter" type="withinCollection" target="L01311">Schnitzler an Bahr, 20. 8. 1903</ref>
                <ref subtype="next_letter" type="withinCollection" target="L01313">Schnitzler an Beer-Hofmann, 23. 8. 1903</ref>
-               <ref subtype="previous_letter" type="withinCorrespondence" source="correspondence_10863" target="L01310">Schnitzler an Beer-Hofmann, 19. 8. 1903</ref>
-               <ref subtype="next_letter" type="withinCorrespondence" source="correspondence_10863" target="L01313">Schnitzler an Beer-Hofmann, 23. 8. 1903</ref>
-            </correspContext></correspDesc>
+               <ref subtype="previous_letter"
+                    type="withinCorrespondence"
+                    source="correspondence_10863"
+                    target="L01310">Schnitzler an Beer-Hofmann, 19. 8. 1903</ref>
+               <ref subtype="next_letter"
+                    type="withinCorrespondence"
+                    source="correspondence_10863"
+                    target="L01313">Schnitzler an Beer-Hofmann, 23. 8. 1903</ref>
+            </correspContext>
+         </correspDesc>
       </profileDesc>
       <revisionDesc status="approved">
          <change who="MAM" when="2019-06-12">Automatisch angelegt aus Buchausgabe</change>
@@ -202,9 +214,11 @@
          </div>
          <div type="writingSession" n="1">
             <p>
-               <pb facs="1903_AS_RBH_1_00045"/>Ich bitte Sie allſo <rs type="event" subtype="implied" ref="#pmb44469"><date>Mittwoch</date>
-               <space unit="chars" quantity="1"/>
-               <time>halb eins</time></rs>
+               <pb facs="1903_AS_RBH_1_00045"/>Ich bitte Sie allſo <rs type="event" subtype="implied" ref="#pmb44469">
+                  <date>Mittwoch</date>
+                  <space unit="chars" quantity="1"/>
+                  <time>halb eins</time>
+               </rs>
                <space unit="chars" quantity="1"/>
                <anchor type="commentary" xml:id="K_L01312-1"/>
                <rs type="place" ref="#pmb44464">Schopenhauergaſſe 37</rs>
@@ -315,18 +329,22 @@
                   <geo>48,24077 16,32092</geo>
                </location>
             </place>
-            <place xml:id="pmb40101">
-               <placeName>Liesingerstraße</placeName>
+            <place xml:id="pmb231810">
+               <placeName>Willergasse 2</placeName>
                <location type="coords">
-                  <geo>48,1332 16,25864</geo>
+                  <geo>48,139276 16,257741</geo>
+               </location>
+               <location type="located_in_place">
+                  <placeName ref="pmb41728">Willergasse</placeName>
+                  <geo>48,1393188 16,2577427</geo>
+               </location>
+               <location type="located_in_place">
+                  <placeName ref="pmb73">XXIII., Liesing</placeName>
+                  <geo>48,13333 16,3</geo>
                </location>
                <location type="located_in_place">
                   <placeName ref="pmb173">Rodaun</placeName>
                   <geo>48,132793312328 16,256152195922</geo>
-               </location>
-               <location type="located_in_place">
-                  <placeName ref="pmb40103">Ketzergasse</placeName>
-                  <geo>48,133896 16,272342</geo>
                </location>
             </place>
             <place xml:id="pmb173">
@@ -344,7 +362,7 @@
                   <geo>48,13333 16,3</geo>
                </location>
             </place>
-            <place xml:id="pmb44464" ana="comment">
+            <place xml:id="pmb44464">
                <placeName>Schopenhauerstraße</placeName>
                <location type="coords">
                   <geo>48,22426 16,34098</geo>
@@ -354,47 +372,37 @@
                   <geo>48,23333 16,31667</geo>
                </location>
             </place>
-         </listPlace>
-         <listOrg>
-            <org xml:id="pmb44466" ana="comment">
-               <orgName>Synagoge Währing</orgName>
+            <place xml:id="pmb232701" ana="comment">
+               <placeName>Währinger Tempel</placeName>
+               <location type="coords">
+                  <geo>48,2242 16,3406</geo>
+               </location>
                <location type="located_in_place">
                   <placeName ref="pmb44464">Schopenhauerstraße</placeName>
                   <geo>48,22426 16,34098</geo>
-                  <idno type="URL" subtype="pmb">https://pmb.acdh.oeaw.ac.at/entity/44464/</idno>
-                  <idno type="URL" subtype="pmb">https://pmb.acdh.oeaw.ac.at/entity/92520/</idno>
-                  <idno type="URL" subtype="schnitzler-tagebuch">https://schnitzler-tagebuch.acdh.oeaw.ac.at/pmb92520.html</idno>
-                  <idno type="URL" subtype="wienerschnitzler">https://wienerschnitzler.org/pmb44464.html</idno>
-                  <idno type="URL" subtype="schnitzler-briefe">https://schnitzler-briefe.acdh.oeaw.ac.at/pmb44464.html</idno>
                </location>
                <location type="located_in_place">
                   <placeName ref="pmb68">XVIII., Währing</placeName>
                   <geo>48,23333 16,31667</geo>
-                  <idno type="URL" subtype="geonames">https://sws.geonames.org/2762091/</idno>
-                  <idno type="URL" subtype="schnitzler-bahr">https://schnitzler-bahr.acdh.oeaw.ac.at/pmb68.html</idno>
-                  <idno type="URL" subtype="pmb">https://pmb.acdh.oeaw.ac.at/entity/68/</idno>
-                  <idno type="URL" subtype="www">https://www.kraus.wienbibliothek.at/legalkraus/pmb68.html</idno>
-                  <idno type="URL" subtype="pmb">https://pmb.acdh.oeaw.ac.at/entity/90546/</idno>
-                  <idno type="URL" subtype="geonames">https://sws.geonames.org/2780745/</idno>
-                  <idno type="URL" subtype="schnitzler-interviews">https://schnitzler-interviews.acdh.oeaw.ac.at/pmb68.html</idno>
-                  <idno type="URL" subtype="schnitzler-tagebuch">https://schnitzler-tagebuch.acdh.oeaw.ac.at/pmb68.html</idno>
-                  <idno type="URL" subtype="wikidata">http://www.wikidata.org/entity/Q690417</idno>
-                  <idno type="URL" subtype="wikipedia">https://de.wikipedia.org/wiki/W%C3%A4hring</idno>
-                  <idno type="URL" subtype="wienerschnitzler">https://wienerschnitzler.org/pmb68.html</idno>
-                  <idno type="URL" subtype="schnitzler-briefe">https://schnitzler-briefe.acdh.oeaw.ac.at/pmb68.html</idno>
-                  <idno type="URL" subtype="www">https://www.schoenberg-ue.at/ue/places/place.9.11.15</idno>
                </location>
-               <location type="located_in_place">
-                  <placeName ref="pmb232701">Währinger Tempel</placeName>
-                  <geo>48,2242 16,3406</geo>
-                  <idno type="URL" subtype="pmb">https://pmb.acdh.oeaw.ac.at/entity/232701/</idno>
-                  <idno type="URL" subtype="wikidata">http://www.wikidata.org/entity/Q875578</idno>
-                  <idno type="URL" subtype="wikipedia">https://de.wikipedia.org/wiki/W%C3%A4hringer_Tempel</idno>
-                  <idno type="URL" subtype="wienerschnitzler">https://wienerschnitzler.org/pmb232701.html</idno>
-                  <idno type="URL" subtype="schnitzler-kultur">https://schnitzler-kultur.acdh.oeaw.ac.at/pmb232701.html</idno>
-               </location>
-            </org>
+            </place>
+         </listPlace>
+         <listOrg>
+            <error type="org">232701</error>
          </listOrg>
+         <listEvent>
+            <event xml:id="pmb44469" ana="implied">
+               <eventName n="Hochzeit">Eheschließung von Arthur Schnitzler und Olga Gussmann, 26.8.1903</eventName>
+               <listPlace>
+                  <place>
+                     <placeName role="veranstaltet in" ref="pmb232701">Währinger Tempel</placeName>
+                     <location>
+                        <geo>48,2242 16,3406</geo>
+                     </location>
+                  </place>
+               </listPlace>
+            </event>
+         </listEvent>
       </back>
    </text>
 </TEI>

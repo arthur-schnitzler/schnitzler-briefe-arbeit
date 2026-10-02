@@ -1,6 +1,10 @@
-<?xml version='1.0' encoding='UTF-8'?>
+<?xml version="1.0" encoding="UTF-8"?>
 <?xml-model href="../meta/schnitzler-briefe-schematron.sch" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
-<TEI xmlns="http://www.tei-c.org/ns/1.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.tei-c.org/ns/1.0 ../meta/schnitzler-briefe-schema.xsd" xml:id="L02310" xml:base="https://id.acdh.oeaw.ac.at/schnitzler/schnitzler-briefe/editions">
+<TEI xmlns="http://www.tei-c.org/ns/1.0"
+     xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+     xsi:schemaLocation="http://www.tei-c.org/ns/1.0 ../meta/schnitzler-briefe-schema.xsd"
+     xml:id="L02310"
+     xml:base="https://id.acdh.oeaw.ac.at/schnitzler/schnitzler-briefe/editions">
    <teiHeader>
       <fileDesc>
          <titleStmt>
@@ -129,14 +133,22 @@
             <correspAction type="received">
                <persName ref="#pmb12438">Adam, Robert</persName>
                <date evidence="conjecture" notBefore="1918-11-13" notAfter="1918-11-15">[13. 11. 1918 – 17. 11. 1918?]</date>
-               <placeName ref="#pmb365563">Meidlinger Hauptstraße</placeName>
+               <placeName ref="#pmb365563">Meidlinger Hauptstraße 56</placeName>
             </correspAction>
-            <correspContext><ref type="belongsToCorrespondence" target="correspondence_12438">Adam, Robert</ref>
+            <correspContext>
+               <ref type="belongsToCorrespondence" target="correspondence_12438">Adam, Robert</ref>
                <ref subtype="previous_letter" type="withinCollection" target="L02309">Schnitzler an Adam, 4. 11. 1918</ref>
                <ref subtype="next_letter" type="withinCollection" target="L02311">Adam an Schnitzler, 15. 11. 1918</ref>
-               <ref subtype="previous_letter" type="withinCorrespondence" source="correspondence_12438" target="L02309">Schnitzler an Adam, 4. 11. 1918</ref>
-               <ref subtype="next_letter" type="withinCorrespondence" source="correspondence_12438" target="L02311">Adam an Schnitzler, 15. 11. 1918</ref>
-            </correspContext></correspDesc>
+               <ref subtype="previous_letter"
+                    type="withinCorrespondence"
+                    source="correspondence_12438"
+                    target="L02309">Schnitzler an Adam, 4. 11. 1918</ref>
+               <ref subtype="next_letter"
+                    type="withinCorrespondence"
+                    source="correspondence_12438"
+                    target="L02311">Adam an Schnitzler, 15. 11. 1918</ref>
+            </correspContext>
+         </correspDesc>
       </profileDesc>
       <revisionDesc status="approved">
          <change who="MAM" when="2019-05-16">Angelegt</change>
@@ -279,6 +291,24 @@
             </bibl>
          </listBibl>
          <listPlace>
+            <place xml:id="pmb168815">
+               <placeName>Sternwartestraße 71</placeName>
+               <location type="coords">
+                  <geo>48,23188 16,33716</geo>
+               </location>
+               <location type="located_in_place">
+                  <placeName ref="pmb68">XVIII., Währing</placeName>
+                  <geo>48,23333 16,31667</geo>
+               </location>
+               <location type="located_in_place">
+                  <placeName ref="pmb533">Währinger Cottage</placeName>
+                  <geo>48,233056 16,341944</geo>
+               </location>
+               <location type="located_in_place">
+                  <placeName ref="pmb150">Sternwartestraße</placeName>
+                  <geo>48,23099349198 16,340117830625</geo>
+               </location>
+            </place>
             <place xml:id="pmb50">
                <placeName>Wien</placeName>
                <placeName type="ort_fruherer-name">K.K. Reichshaupt- und Residenzstadt Wien</placeName>
@@ -301,32 +331,18 @@
                   <geo>48,24077 16,32092</geo>
                </location>
             </place>
-            <place xml:id="pmb1239">
-               <placeName>Meidlinger Hauptstraße</placeName>
+            <place xml:id="pmb365563">
+               <placeName>Meidlinger Hauptstraße 56</placeName>
                <location type="coords">
-                  <geo>48,178825 16,329918</geo>
+                  <geo>48,177598 16,329723</geo>
                </location>
                <location type="located_in_place">
                   <placeName ref="pmb62">XII., Meidling</placeName>
                   <geo>48,17192 16,32586</geo>
                </location>
-            </place>
-            <place xml:id="pmb168815">
-               <placeName>Sternwartestraße 71</placeName>
-               <location type="coords">
-                  <geo>48,23188 16,33716</geo>
-               </location>
                <location type="located_in_place">
-                  <placeName ref="pmb68">XVIII., Währing</placeName>
-                  <geo>48,23333 16,31667</geo>
-               </location>
-               <location type="located_in_place">
-                  <placeName ref="pmb533">Währinger Cottage</placeName>
-                  <geo>48,233056 16,341944</geo>
-               </location>
-               <location type="located_in_place">
-                  <placeName ref="pmb150">Sternwartestraße</placeName>
-                  <geo>48,23099349198 16,340117830625</geo>
+                  <placeName ref="pmb1239">Meidlinger Hauptstraße</placeName>
+                  <geo>48,178825 16,329918</geo>
                </location>
             </place>
             <place xml:id="pmb62">

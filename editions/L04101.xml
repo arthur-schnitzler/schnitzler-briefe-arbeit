@@ -1,6 +1,10 @@
-<?xml version='1.0' encoding='UTF-8'?>
+<?xml version="1.0" encoding="UTF-8"?>
 <?xml-model href="../meta/schnitzler-briefe-schematron.sch" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
-<TEI xmlns="http://www.tei-c.org/ns/1.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.tei-c.org/ns/1.0 ../meta/schnitzler-briefe-schema.xsd" xml:base="https://id.acdh.oeaw.ac.at/schnitzler/schnitzler-briefe/editions" xml:id="L04101">
+<TEI xmlns="http://www.tei-c.org/ns/1.0"
+     xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+     xsi:schemaLocation="http://www.tei-c.org/ns/1.0 ../meta/schnitzler-briefe-schema.xsd"
+     xml:base="https://id.acdh.oeaw.ac.at/schnitzler/schnitzler-briefe/editions"
+     xml:id="L04101">
    <teiHeader>
       <fileDesc>
          <titleStmt>
@@ -118,7 +122,7 @@
             </correspAction>
             <correspAction type="transmitted">
                <date when="1893-05-31">31. 5. 1893</date>
-               <placeName ref="#pmb365450">Wien 8/1 64</placeName>
+               <placeName ref="#pmb365450">8/1 Post- und Telegraphenamt 64</placeName>
             </correspAction>
             <correspAction type="received">
                <persName ref="#pmb12740">Schwarzkopf, Gustav</persName>
@@ -126,12 +130,20 @@
                   – 3. 6. 1893?]</date>
                <placeName ref="#pmb207296">Tiefer Graben 23</placeName>
             </correspAction>
-            <correspContext><ref type="belongsToCorrespondence" target="correspondence_12740">Schwarzkopf, Gustav</ref>
+            <correspContext>
+               <ref type="belongsToCorrespondence" target="correspondence_12740">Schwarzkopf, Gustav</ref>
                <ref subtype="previous_letter" type="withinCollection" target="L00214">Hofmannsthal an Schnitzler, 27. 5. 1893</ref>
                <ref subtype="next_letter" type="withinCollection" target="L00215">Schnitzler an Bölsche, 1. 6. 1893</ref>
-               <ref subtype="previous_letter" type="withinCorrespondence" source="correspondence_12740" target="L03971">Schnitzler an Schwarzkopf, [zwischen 1893 und  Mitte 1894?]</ref>
-               <ref subtype="next_letter" type="withinCorrespondence" source="correspondence_12740" target="L04102">Schnitzler an Schwarzkopf, 10. 6. 1893</ref>
-            </correspContext></correspDesc>
+               <ref subtype="previous_letter"
+                    type="withinCorrespondence"
+                    source="correspondence_12740"
+                    target="L03971">Schnitzler an Schwarzkopf, [zwischen 1893 und  Mitte 1894?]</ref>
+               <ref subtype="next_letter"
+                    type="withinCorrespondence"
+                    source="correspondence_12740"
+                    target="L04102">Schnitzler an Schwarzkopf, 10. 6. 1893</ref>
+            </correspContext>
+         </correspDesc>
       </profileDesc>
       <revisionDesc status="proposed">
          <change who="MAM" when="2025-12-10">Export aus Transkribus</change>
@@ -330,16 +342,14 @@
             </person>
          </listPerson>
          <listPlace>
-            <place xml:id="pmb58">
-               <placeName>VIII., Josefstadt</placeName>
-               <placeName type="alternative-name">Josefstadt (Wien-Josefstadt)</placeName>
-               <placeName type="legacy-name-merge">Josefstadt</placeName>
+            <place xml:id="pmb365450">
+               <placeName>8/1 Post- und Telegraphenamt 64</placeName>
                <location type="coords">
-                  <geo>48,21126 16,34706</geo>
+                  <geo>48,210695 16,351186</geo>
                </location>
                <location type="located_in_place">
-                  <placeName ref="pmb50">Wien</placeName>
-                  <geo>48,208333 16,373056</geo>
+                  <placeName ref="pmb58">VIII., Josefstadt</placeName>
+                  <geo>48,21126 16,34706</geo>
                </location>
             </place>
             <place xml:id="pmb167782">

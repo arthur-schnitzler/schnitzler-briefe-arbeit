@@ -1,6 +1,10 @@
-<?xml version='1.0' encoding='UTF-8'?>
+<?xml version="1.0" encoding="UTF-8"?>
 <?xml-model href="../meta/schnitzler-briefe-schematron.sch" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
-<TEI xmlns="http://www.tei-c.org/ns/1.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.tei-c.org/ns/1.0 ../meta/schnitzler-briefe-schema.xsd" xml:base="https://id.acdh.oeaw.ac.at/schnitzler/schnitzler-briefe/editions" xml:id="L04222">
+<TEI xmlns="http://www.tei-c.org/ns/1.0"
+     xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+     xsi:schemaLocation="http://www.tei-c.org/ns/1.0 ../meta/schnitzler-briefe-schema.xsd"
+     xml:base="https://id.acdh.oeaw.ac.at/schnitzler/schnitzler-briefe/editions"
+     xml:id="L04222">
    <teiHeader>
       <fileDesc>
          <titleStmt>
@@ -118,19 +122,27 @@
             </correspAction>
             <correspAction type="transmitted">
                <date when="1913-07-07">7. 7. 1913</date>
-               <placeName ref="#pmb365284">I., Innere Stadt</placeName>
+               <placeName ref="#pmb365284">1/1 Post- und Telegraphenamt 11</placeName>
             </correspAction>
             <correspAction type="received">
                <persName ref="#pmb12740">Schwarzkopf, Gustav</persName>
                <date evidence="conjecture" notBefore="1913-07-08" notAfter="1913-07-12">[8. 7. 1913 – 12. 7. 1913?]</date>
                <placeName ref="#pmb334003">Pension Wiener Heim</placeName>
             </correspAction>
-            <correspContext><ref type="belongsToCorrespondence" target="correspondence_12740">Schwarzkopf, Gustav</ref>
+            <correspContext>
+               <ref type="belongsToCorrespondence" target="correspondence_12740">Schwarzkopf, Gustav</ref>
                <ref subtype="previous_letter" type="withinCollection" target="L02140">Beer-Hofmann an Schnitzler, 5. 7. 1913</ref>
                <ref subtype="next_letter" type="withinCollection" target="L04247">Schwarzkopf an Schnitzler, 14. 7. [1913?]</ref>
-               <ref subtype="previous_letter" type="withinCorrespondence" source="correspondence_12740" target="L04259">Schwarzkopf an Schnitzler, 4. 7. 1913</ref>
-               <ref subtype="next_letter" type="withinCorrespondence" source="correspondence_12740" target="L04247">Schwarzkopf an Schnitzler, 14. 7. [1913?]</ref>
-            </correspContext></correspDesc>
+               <ref subtype="previous_letter"
+                    type="withinCorrespondence"
+                    source="correspondence_12740"
+                    target="L04259">Schwarzkopf an Schnitzler, 4. 7. 1913</ref>
+               <ref subtype="next_letter"
+                    type="withinCorrespondence"
+                    source="correspondence_12740"
+                    target="L04247">Schwarzkopf an Schnitzler, 14. 7. [1913?]</ref>
+            </correspContext>
+         </correspDesc>
       </profileDesc>
       <revisionDesc status="proposed">
          <change who="MAM" when="2025-12-10">Export aus Transkribus</change>
@@ -288,22 +300,22 @@
             </person>
          </listPerson>
          <listPlace>
-            <place xml:id="pmb51">
-               <placeName>I., Innere Stadt</placeName>
-               <placeName type="alternative-name">Inner city</placeName>
-               <placeName type="alternative-name">Wien,Innere Stadt</placeName>
-               <placeName type="alternative-name">1. Wiener Gemeindebezirk</placeName>
-               <placeName type="legacy-name-merge">Wien-Innere Stadt</placeName>
+            <place xml:id="pmb365284">
+               <placeName>1/1 Post- und Telegraphenamt 11</placeName>
                <location type="coords">
+                  <geo>48,207483 16,368355</geo>
+               </location>
+               <location type="located_in_place">
+                  <placeName ref="pmb51">I., Innere Stadt</placeName>
                   <geo>48,20769 16,37049</geo>
                </location>
                <location type="located_in_place">
-                  <placeName ref="pmb41240">Österreich</placeName>
-                  <geo>47,33333 13,33333</geo>
+                  <placeName ref="pmb281723">Bräunerstraße</placeName>
+                  <geo>48,207938 16,368912</geo>
                </location>
                <location type="located_in_place">
-                  <placeName ref="pmb50">Wien</placeName>
-                  <geo>48,208333 16,373056</geo>
+                  <placeName ref="pmb405263">Postbestellbezirk 1/1</placeName>
+                  <geo>48,208742 16,378142</geo>
                </location>
             </place>
             <place xml:id="pmb168815">

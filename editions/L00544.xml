@@ -1,6 +1,10 @@
-<?xml version='1.0' encoding='UTF-8'?>
+<?xml version="1.0" encoding="UTF-8"?>
 <?xml-model href="../meta/schnitzler-briefe-schematron.sch" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
-<TEI xmlns="http://www.tei-c.org/ns/1.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.tei-c.org/ns/1.0 ../meta/schnitzler-briefe-schema.xsd" xml:id="L00544" xml:base="https://id.acdh.oeaw.ac.at/schnitzler/schnitzler-briefe/editions">
+<TEI xmlns="http://www.tei-c.org/ns/1.0"
+     xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+     xsi:schemaLocation="http://www.tei-c.org/ns/1.0 ../meta/schnitzler-briefe-schema.xsd"
+     xml:id="L00544"
+     xml:base="https://id.acdh.oeaw.ac.at/schnitzler/schnitzler-briefe/editions">
    <teiHeader>
       <fileDesc>
          <titleStmt>
@@ -146,23 +150,31 @@
             </correspAction>
             <correspAction type="transmitted">
                <date when="1896-05-15">15. 5. 1896</date>
-               <placeName ref="#pmb365450">VIII., Josefstadt</placeName>
+               <placeName ref="#pmb365450">8/1 Post- und Telegraphenamt 64</placeName>
             </correspAction>
             <correspAction type="delivered">
                <date when="1896-05-15">15. 5. 1896</date>
-               <placeName ref="#pmb365269">Wien 1/1 2</placeName>
+               <placeName ref="#pmb365269">1/1 Telegramm- und Rohrpostamt 2</placeName>
             </correspAction>
             <correspAction type="received">
                <persName ref="#pmb10863">Beer-Hofmann, Richard</persName>
                <date when="1896-05-15">15. 5. 1896</date>
                <placeName ref="#pmb190427">Wollzeile 15 (»Berthahof«)</placeName>
             </correspAction>
-            <correspContext><ref type="belongsToCorrespondence" target="correspondence_10863">Beer-Hofmann, Richard</ref>
+            <correspContext>
+               <ref type="belongsToCorrespondence" target="correspondence_10863">Beer-Hofmann, Richard</ref>
                <ref subtype="previous_letter" type="withinCollection" target="L03035">Schnitzler an Salten, [14. 5. 1896?]</ref>
                <ref subtype="next_letter" type="withinCollection" target="L00545">Hofmannsthal an Schnitzler, 17. 5. [1896]</ref>
-               <ref subtype="previous_letter" type="withinCorrespondence" source="correspondence_10863" target="L00543">Beer-Hofmann an Schnitzler, 14. 5. 1896</ref>
-               <ref subtype="next_letter" type="withinCorrespondence" source="correspondence_10863" target="L00548">Schnitzler an Beer-Hofmann, 2. 6. 1896</ref>
-            </correspContext></correspDesc>
+               <ref subtype="previous_letter"
+                    type="withinCorrespondence"
+                    source="correspondence_10863"
+                    target="L00543">Beer-Hofmann an Schnitzler, 14. 5. 1896</ref>
+               <ref subtype="next_letter"
+                    type="withinCorrespondence"
+                    source="correspondence_10863"
+                    target="L00548">Schnitzler an Beer-Hofmann, 2. 6. 1896</ref>
+            </correspContext>
+         </correspDesc>
       </profileDesc>
       <revisionDesc status="approved">
          <change who="MAM" when="2019-06-12">Automatisch angelegt aus Buchausgabe</change>
@@ -255,34 +267,32 @@
             </person>
          </listPerson>
          <listPlace>
-            <place xml:id="pmb58">
-               <placeName>VIII., Josefstadt</placeName>
-               <placeName type="alternative-name">Josefstadt (Wien-Josefstadt)</placeName>
-               <placeName type="legacy-name-merge">Josefstadt</placeName>
+            <place xml:id="pmb365450">
+               <placeName>8/1 Post- und Telegraphenamt 64</placeName>
                <location type="coords">
-                  <geo>48,21126 16,34706</geo>
+                  <geo>48,210695 16,351186</geo>
                </location>
                <location type="located_in_place">
-                  <placeName ref="pmb50">Wien</placeName>
-                  <geo>48,208333 16,373056</geo>
+                  <placeName ref="pmb58">VIII., Josefstadt</placeName>
+                  <geo>48,21126 16,34706</geo>
                </location>
             </place>
-            <place xml:id="pmb51">
-               <placeName>I., Innere Stadt</placeName>
-               <placeName type="alternative-name">Inner city</placeName>
-               <placeName type="alternative-name">Wien,Innere Stadt</placeName>
-               <placeName type="alternative-name">1. Wiener Gemeindebezirk</placeName>
-               <placeName type="legacy-name-merge">Wien-Innere Stadt</placeName>
+            <place xml:id="pmb365269">
+               <placeName>1/1 Telegramm- und Rohrpostamt 2</placeName>
                <location type="coords">
+                  <geo>48,210441 16,378488</geo>
+               </location>
+               <location type="located_in_place">
+                  <placeName ref="pmb51">I., Innere Stadt</placeName>
                   <geo>48,20769 16,37049</geo>
                </location>
                <location type="located_in_place">
-                  <placeName ref="pmb41240">Österreich</placeName>
-                  <geo>47,33333 13,33333</geo>
+                  <placeName ref="pmb50667">Fleischmarkt</placeName>
+                  <geo>48,211117 16,376627</geo>
                </location>
                <location type="located_in_place">
-                  <placeName ref="pmb50">Wien</placeName>
-                  <geo>48,208333 16,373056</geo>
+                  <placeName ref="pmb405263">Postbestellbezirk 1/1</placeName>
+                  <geo>48,208742 16,378142</geo>
                </location>
             </place>
             <place xml:id="pmb168934">

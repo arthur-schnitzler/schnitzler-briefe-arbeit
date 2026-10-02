@@ -1,6 +1,10 @@
-<?xml version='1.0' encoding='UTF-8'?>
+<?xml version="1.0" encoding="UTF-8"?>
 <?xml-model href="../meta/schnitzler-briefe-schematron.sch" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
-<TEI xmlns="http://www.tei-c.org/ns/1.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.tei-c.org/ns/1.0 ../meta/schnitzler-briefe-schema.xsd" xml:id="L02385" xml:base="https://id.acdh.oeaw.ac.at/schnitzler/schnitzler-briefe/editions">
+<TEI xmlns="http://www.tei-c.org/ns/1.0"
+     xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+     xsi:schemaLocation="http://www.tei-c.org/ns/1.0 ../meta/schnitzler-briefe-schema.xsd"
+     xml:id="L02385"
+     xml:base="https://id.acdh.oeaw.ac.at/schnitzler/schnitzler-briefe/editions">
    <teiHeader>
       <fileDesc>
          <titleStmt>
@@ -92,7 +96,8 @@
                            <incident type="postal">
                               <desc>
                                  <stamp n="1" type="transmission">
-                                    <placeName ref="#pmb50">Wien</placeName><!-- so -->
+                                    <placeName ref="#pmb50">Wien</placeName>
+                                    <!-- so -->
                                     <date when="1922-06-07">7. VI. 22</date>
                                     <time>8</time>
                                  </stamp>
@@ -168,14 +173,22 @@
             <correspAction type="received">
                <persName ref="#pmb10815">Bahr, Hermann</persName>
                <date evidence="conjecture" notBefore="1922-06-07" notAfter="1922-06-09">[7. 6. 1922 – 9. 6. 1922]</date>
-               <placeName ref="#pmb405283">Barerstraße</placeName>
+               <placeName ref="#pmb405283">Barer Straße 50</placeName>
             </correspAction>
-            <correspContext><ref type="belongsToCorrespondence" target="correspondence_10815">Bahr, Hermann</ref>
+            <correspContext>
+               <ref type="belongsToCorrespondence" target="correspondence_10815">Bahr, Hermann</ref>
                <ref subtype="previous_letter" type="withinCollection" target="L03680">Zweig an Schnitzler, 15. 5. [1922]</ref>
                <ref subtype="next_letter" type="withinCollection" target="L02386">Schnitzler an Hauptmann, 6. 6. 1922</ref>
-               <ref subtype="previous_letter" type="withinCorrespondence" source="correspondence_10815" target="L02371">Schnitzler an Bahr, 16. 12. 1921</ref>
-               <ref subtype="next_letter" type="withinCorrespondence" source="correspondence_10815" target="L02388">Bahr an Schnitzler, 9. 6. 1922</ref>
-            </correspContext></correspDesc>
+               <ref subtype="previous_letter"
+                    type="withinCorrespondence"
+                    source="correspondence_10815"
+                    target="L02371">Schnitzler an Bahr, 16. 12. 1921</ref>
+               <ref subtype="next_letter"
+                    type="withinCorrespondence"
+                    source="correspondence_10815"
+                    target="L02388">Bahr an Schnitzler, 9. 6. 1922</ref>
+            </correspContext>
+         </correspDesc>
       </profileDesc>
       <revisionDesc status="approved">
          <change who="KI MAM" when="2015-10-01">Kollationiert</change>
@@ -681,9 +694,31 @@
                   <geo>48,24077 16,32092</geo>
                </location>
             </place>
-            <place xml:id="pmb161">
-               <placeName>Barerstraße</placeName>
+            <place xml:id="pmb168815">
+               <placeName>Sternwartestraße 71</placeName>
                <location type="coords">
+                  <geo>48,23188 16,33716</geo>
+               </location>
+               <location type="located_in_place">
+                  <placeName ref="pmb68">XVIII., Währing</placeName>
+                  <geo>48,23333 16,31667</geo>
+               </location>
+               <location type="located_in_place">
+                  <placeName ref="pmb533">Währinger Cottage</placeName>
+                  <geo>48,233056 16,341944</geo>
+               </location>
+               <location type="located_in_place">
+                  <placeName ref="pmb150">Sternwartestraße</placeName>
+                  <geo>48,23099349198 16,340117830625</geo>
+               </location>
+            </place>
+            <place xml:id="pmb405283">
+               <placeName>Barer Straße 50</placeName>
+               <location type="coords">
+                  <geo>48,149644 11,572946</geo>
+               </location>
+               <location type="located_in_place">
+                  <placeName ref="pmb161">Barer Straße</placeName>
                   <geo>48,15205 11,57392</geo>
                </location>
                <location type="located_in_place">
@@ -704,24 +739,6 @@
                <location type="located_in_place">
                   <placeName ref="pmb50">Wien</placeName>
                   <geo>48,208333 16,373056</geo>
-               </location>
-            </place>
-            <place xml:id="pmb168815">
-               <placeName>Sternwartestraße 71</placeName>
-               <location type="coords">
-                  <geo>48,23188 16,33716</geo>
-               </location>
-               <location type="located_in_place">
-                  <placeName ref="pmb68">XVIII., Währing</placeName>
-                  <geo>48,23333 16,31667</geo>
-               </location>
-               <location type="located_in_place">
-                  <placeName ref="pmb533">Währinger Cottage</placeName>
-                  <geo>48,233056 16,341944</geo>
-               </location>
-               <location type="located_in_place">
-                  <placeName ref="pmb150">Sternwartestraße</placeName>
-                  <geo>48,23099349198 16,340117830625</geo>
                </location>
             </place>
             <place xml:id="pmb45258">

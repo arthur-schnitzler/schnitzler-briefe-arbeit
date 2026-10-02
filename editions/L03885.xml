@@ -1,6 +1,10 @@
-<?xml version='1.0' encoding='UTF-8'?>
+<?xml version="1.0" encoding="UTF-8"?>
 <?xml-model href="../meta/schnitzler-briefe-schematron.sch" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
-<TEI xmlns="http://www.tei-c.org/ns/1.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.tei-c.org/ns/1.0 ../meta/schnitzler-briefe-schema.xsd" xml:id="L03885" xml:base="https://id.acdh.oeaw.ac.at/schnitzler/schnitzler-briefe/editions">
+<TEI xmlns="http://www.tei-c.org/ns/1.0"
+     xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+     xsi:schemaLocation="http://www.tei-c.org/ns/1.0 ../meta/schnitzler-briefe-schema.xsd"
+     xml:id="L03885"
+     xml:base="https://id.acdh.oeaw.ac.at/schnitzler/schnitzler-briefe/editions">
    <teiHeader>
       <fileDesc>
          <titleStmt>
@@ -187,7 +191,7 @@
             </correspAction>
             <correspAction type="transmitted">
                <date when="1915-01-07">7. 1. 1915</date>
-               <placeName ref="#pmb365555">I., Innere Stadt</placeName>
+               <placeName ref="#pmb365555">1/1 Post- und Telegraphenamt 8</placeName>
             </correspAction>
             <correspAction type="received">
                <persName ref="#pmb12543">Rolland, Romain</persName>
@@ -195,12 +199,20 @@
                   11. 1. 1915?]</date>
                <placeName ref="#pmb294001">Hôtel Beau-Séjour</placeName>
             </correspAction>
-            <correspContext><ref type="belongsToCorrespondence" target="correspondence_12543">Rolland, Romain</ref>
+            <correspContext>
+               <ref type="belongsToCorrespondence" target="correspondence_12543">Rolland, Romain</ref>
                <ref subtype="previous_letter" type="withinCollection" target="L02201">Brandes an Schnitzler, 23. 12. 1914</ref>
                <ref subtype="next_letter" type="withinCollection" target="L02202">Schnitzler an Brandes, 8. 1. 1915</ref>
-               <ref subtype="previous_letter" type="withinCorrespondence" source="correspondence_12543" target="L03882">Rolland an Schnitzler, 19. 12. 1914</ref>
-               <ref subtype="next_letter" type="withinCorrespondence" source="correspondence_12543" target="L04213">Schnitzler an Rolland, 11. 2. 1915</ref>
-            </correspContext></correspDesc>
+               <ref subtype="previous_letter"
+                    type="withinCorrespondence"
+                    source="correspondence_12543"
+                    target="L03882">Rolland an Schnitzler, 19. 12. 1914</ref>
+               <ref subtype="next_letter"
+                    type="withinCorrespondence"
+                    source="correspondence_12543"
+                    target="L04213">Schnitzler an Rolland, 11. 2. 1915</ref>
+            </correspContext>
+         </correspDesc>
       </profileDesc>
       <revisionDesc status="proposed">
          <change who="MAM" when="2025-09-26">Angelegt aus Briefe II</change>
@@ -384,6 +396,24 @@
             </bibl>
          </listBibl>
          <listPlace>
+            <place xml:id="pmb365555">
+               <placeName>1/1 Post- und Telegraphenamt 8</placeName>
+               <location type="coords">
+                  <geo>48,214719 16,368323</geo>
+               </location>
+               <location type="located_in_place">
+                  <placeName ref="pmb447">Börseplatz</placeName>
+                  <geo>48,214376279077 16,367350918993</geo>
+               </location>
+               <location type="located_in_place">
+                  <placeName ref="pmb51">I., Innere Stadt</placeName>
+                  <geo>48,20769 16,37049</geo>
+               </location>
+               <location type="located_in_place">
+                  <placeName ref="pmb405263">Postbestellbezirk 1/1</placeName>
+                  <geo>48,208742 16,378142</geo>
+               </location>
+            </place>
             <place xml:id="pmb51">
                <placeName>I., Innere Stadt</placeName>
                <placeName type="alternative-name">Inner city</placeName>

@@ -1,6 +1,10 @@
-<?xml version='1.0' encoding='UTF-8'?>
+<?xml version="1.0" encoding="UTF-8"?>
 <?xml-model href="../meta/schnitzler-briefe-schematron.sch" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
-<TEI xmlns="http://www.tei-c.org/ns/1.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xml:id="L01268" xsi:schemaLocation="http://www.tei-c.org/ns/1.0 ../meta/schnitzler-briefe-schema.xsd" xml:base="https://id.acdh.oeaw.ac.at/schnitzler/schnitzler-briefe/editions">
+<TEI xmlns="http://www.tei-c.org/ns/1.0"
+     xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+     xml:id="L01268"
+     xsi:schemaLocation="http://www.tei-c.org/ns/1.0 ../meta/schnitzler-briefe-schema.xsd"
+     xml:base="https://id.acdh.oeaw.ac.at/schnitzler/schnitzler-briefe/editions">
    <teiHeader>
       <fileDesc>
          <titleStmt>
@@ -87,7 +91,9 @@
                            </supportDesc>
                         </objectDesc>
                         <handDesc hands="1">
-                           <handNote medium="schwarze-tinte" style="deutsche-kurrent" corresp="#pmb11740"/>
+                           <handNote medium="schwarze-tinte"
+                                     style="deutsche-kurrent"
+                                     corresp="#pmb11740"/>
                         </handDesc>
                         <additions>
                            <incident type="postal">
@@ -103,7 +109,8 @@
                            <incident type="postal">
                               <desc>
                                  <stamp n="2" type="delivery">
-                                    <placeName ref="#pmb365208">9/3 Wien <supplied>72</supplied></placeName>
+                                    <placeName ref="#pmb365208">9/3 Wien <supplied>72</supplied>
+                                    </placeName>
                                     <date when="1903-01-27">27. 1. 03</date>
                                     <time>5.N</time>
                                     <addSpan>Bestellt</addSpan>
@@ -164,19 +171,27 @@
             </correspAction>
             <correspAction type="delivered">
                <date when="1903-01-27">27. 1. 1903</date>
-               <placeName ref="#pmb365208">IX., Alsergrund</placeName>
+               <placeName ref="#pmb365208">9/3 Post- und Telegraphenamt 72</placeName>
             </correspAction>
             <correspAction type="received">
                <persName ref="#pmb2121">Schnitzler, Arthur</persName>
                <date when="1903-01-27">27. 1. 1903</date>
                <placeName ref="#pmb168934">Frankgasse 1</placeName>
             </correspAction>
-            <correspContext><ref type="belongsToCorrespondence" target="correspondence_11740">Hofmannsthal, Hugo von</ref>
+            <correspContext>
+               <ref type="belongsToCorrespondence" target="correspondence_11740">Hofmannsthal, Hugo von</ref>
                <ref subtype="previous_letter" type="withinCollection" target="L03529">Goldmann an Gussmann, 21. 1. 1903</ref>
                <ref subtype="next_letter" type="withinCollection" target="L03361">Goldmann an Schnitzler, 27. 1. [1903]</ref>
-               <ref subtype="previous_letter" type="withinCorrespondence" source="correspondence_11740" target="L01264">Hofmannsthal an Schnitzler, 7. 1. [1903]</ref>
-               <ref subtype="next_letter" type="withinCorrespondence" source="correspondence_11740" target="L01269">Hofmannsthal, Beer-Hofmann an Schnitzler, [15. 2. 1903]</ref>
-            </correspContext></correspDesc>
+               <ref subtype="previous_letter"
+                    type="withinCorrespondence"
+                    source="correspondence_11740"
+                    target="L01264">Hofmannsthal an Schnitzler, 7. 1. [1903]</ref>
+               <ref subtype="next_letter"
+                    type="withinCorrespondence"
+                    source="correspondence_11740"
+                    target="L01269">Hofmannsthal, Beer-Hofmann an Schnitzler, [15. 2. 1903]</ref>
+            </correspContext>
+         </correspDesc>
       </profileDesc>
       <revisionDesc status="approved">
          <change who="MAM" when="2019-07-31">Angelegt aus Buchausgabe</change>
@@ -294,30 +309,23 @@
                   <geo>48,13333 16,3</geo>
                </location>
             </place>
-            <place xml:id="pmb365208">
-               <placeName>9/3 Post- und Telegraphenamt 72</placeName>
+            <error type="place">365208</error>
+            <place xml:id="pmb40297">
+               <placeName>Hofmannsthal-Schlössl</placeName>
                <location type="coords">
-                  <geo>48,216197 16,356623</geo>
+                  <geo>48,133611 16,255556</geo>
                </location>
                <location type="located_in_place">
-                  <placeName ref="pmb59">IX., Alsergrund</placeName>
-                  <geo>48,22387 16,35641</geo>
+                  <placeName ref="pmb73">XXIII., Liesing</placeName>
+                  <geo>48,13333 16,3</geo>
                </location>
                <location type="located_in_place">
-                  <placeName ref="pmb731">Garnisongasse</placeName>
-                  <geo>48,216533356678 16,356214321972</geo>
-               </location>
-            </place>
-            <place xml:id="pmb59">
-               <placeName>IX., Alsergrund</placeName>
-               <placeName type="legacy-name-merge">Thurygrund</placeName>
-               <placeName type="legacy-name-merge">Wien-Alsergrund</placeName>
-               <location type="coords">
-                  <geo>48,22387 16,35641</geo>
+                  <placeName ref="pmb173">Rodaun</placeName>
+                  <geo>48,132793312328 16,256152195922</geo>
                </location>
                <location type="located_in_place">
-                  <placeName ref="pmb50">Wien</placeName>
-                  <geo>48,208333 16,373056</geo>
+                  <placeName ref="pmb40103">Ketzergasse</placeName>
+                  <geo>48,133896 16,272342</geo>
                </location>
             </place>
             <place xml:id="pmb168934">

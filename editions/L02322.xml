@@ -1,6 +1,10 @@
-<?xml version='1.0' encoding='UTF-8'?>
+<?xml version="1.0" encoding="UTF-8"?>
 <?xml-model href="../meta/schnitzler-briefe-schematron.sch" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
-<TEI xmlns="http://www.tei-c.org/ns/1.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.tei-c.org/ns/1.0 ../meta/schnitzler-briefe-schema.xsd" xml:id="L02322" xml:base="https://id.acdh.oeaw.ac.at/schnitzler/schnitzler-briefe/editions">
+<TEI xmlns="http://www.tei-c.org/ns/1.0"
+     xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+     xsi:schemaLocation="http://www.tei-c.org/ns/1.0 ../meta/schnitzler-briefe-schema.xsd"
+     xml:id="L02322"
+     xml:base="https://id.acdh.oeaw.ac.at/schnitzler/schnitzler-briefe/editions">
    <teiHeader>
       <fileDesc>
          <titleStmt>
@@ -124,7 +128,7 @@
             </correspAction>
             <correspAction type="transmitted">
                <date when="1919-03-04">4. 3. 1919</date>
-               <placeName ref="#pmb365266">9/1 Wien 66</placeName>
+               <placeName ref="#pmb365266">9/1 Post- und Telegraphenamt 66</placeName>
             </correspAction>
             <correspAction type="received">
                <persName ref="#pmb2260">Engländer, Georg</persName>
@@ -132,11 +136,16 @@
                   – 7. 3. 1919?]</date>
                <placeName ref="#pmb1270">Nussdorfer Straße</placeName>
             </correspAction>
-            <correspContext><ref type="belongsToCorrespondence" target="correspondence_2147">Altenberg, Peter</ref>
+            <correspContext>
+               <ref type="belongsToCorrespondence" target="correspondence_2147">Altenberg, Peter</ref>
                <ref subtype="previous_letter" type="withinCollection" target="L02321">Engländer an Schnitzler, 27. 2. 1919</ref>
                <ref subtype="next_letter" type="withinCollection" target="L03760">Schnitzler an Zweig, 10. 4. 1919</ref>
-               <ref subtype="previous_letter" type="withinCorrespondence" source="correspondence_2147" target="L02321">Engländer an Schnitzler, 27. 2. 1919</ref>
-            </correspContext></correspDesc>
+               <ref subtype="previous_letter"
+                    type="withinCorrespondence"
+                    source="correspondence_2147"
+                    target="L02321">Engländer an Schnitzler, 27. 2. 1919</ref>
+            </correspContext>
+         </correspDesc>
       </profileDesc>
       <revisionDesc status="approved">
          <change who="MAM" when="2019-01-09">Angelegt</change>
@@ -289,49 +298,18 @@
             </person>
          </listPerson>
          <listPlace>
-            <place xml:id="pmb59">
-               <placeName>IX., Alsergrund</placeName>
-               <placeName type="legacy-name-merge">Thurygrund</placeName>
-               <placeName type="legacy-name-merge">Wien-Alsergrund</placeName>
+            <place xml:id="pmb365266">
+               <placeName>9/1 Post- und Telegraphenamt 66</placeName>
                <location type="coords">
-                  <geo>48,22387 16,35641</geo>
-               </location>
-               <location type="located_in_place">
-                  <placeName ref="pmb50">Wien</placeName>
-                  <geo>48,208333 16,373056</geo>
-               </location>
-            </place>
-            <place xml:id="pmb50">
-               <placeName>Wien</placeName>
-               <placeName type="ort_fruherer-name">K.K. Reichshaupt- und Residenzstadt Wien</placeName>
-               <placeName type="alternative-name">Bécs</placeName>
-               <placeName type="alternative-name">Land Wien</placeName>
-               <placeName type="alternative-name">Vídeň</placeName>
-               <placeName type="alternative-name">Wenia</placeName>
-               <placeName type="alternative-name">Beč</placeName>
-               <placeName type="ort_fruherer-name">Vindobona</placeName>
-               <placeName type="alternative-name">Vienna</placeName>
-               <location type="coords">
-                  <geo>48,208333 16,373056</geo>
-               </location>
-               <location type="located_in_place">
-                  <placeName ref="pmb41240">Österreich</placeName>
-                  <geo>47,33333 13,33333</geo>
-               </location>
-               <location type="located_in_place">
-                  <placeName ref="pmb235218">Windmühlhöhe</placeName>
-                  <geo>48,24077 16,32092</geo>
-               </location>
-            </place>
-            <place xml:id="pmb1270">
-               <placeName>Nussdorfer Straße</placeName>
-               <placeName type="legacy-name-merge">Nußdorferstraße</placeName>
-               <location type="coords">
-                  <geo>48,22921 16,35461</geo>
+                  <geo>48,219619 16,3617</geo>
                </location>
                <location type="located_in_place">
                   <placeName ref="pmb59">IX., Alsergrund</placeName>
                   <geo>48,22387 16,35641</geo>
+               </location>
+               <location type="located_in_place">
+                  <placeName ref="pmb436">Porzellangasse</placeName>
+                  <geo>48,222287836145 16,362457240723</geo>
                </location>
             </place>
             <place xml:id="pmb168815">
@@ -350,6 +328,29 @@
                <location type="located_in_place">
                   <placeName ref="pmb150">Sternwartestraße</placeName>
                   <geo>48,23099349198 16,340117830625</geo>
+               </location>
+            </place>
+            <place xml:id="pmb1270">
+               <placeName>Nussdorfer Straße</placeName>
+               <placeName type="legacy-name-merge">Nußdorferstraße</placeName>
+               <location type="coords">
+                  <geo>48,22921 16,35461</geo>
+               </location>
+               <location type="located_in_place">
+                  <placeName ref="pmb59">IX., Alsergrund</placeName>
+                  <geo>48,22387 16,35641</geo>
+               </location>
+            </place>
+            <place xml:id="pmb59">
+               <placeName>IX., Alsergrund</placeName>
+               <placeName type="legacy-name-merge">Thurygrund</placeName>
+               <placeName type="legacy-name-merge">Wien-Alsergrund</placeName>
+               <location type="coords">
+                  <geo>48,22387 16,35641</geo>
+               </location>
+               <location type="located_in_place">
+                  <placeName ref="pmb50">Wien</placeName>
+                  <geo>48,208333 16,373056</geo>
                </location>
             </place>
             <place xml:id="pmb240" ana="comment">

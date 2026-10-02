@@ -1,6 +1,10 @@
-<?xml version='1.0' encoding='UTF-8'?>
+<?xml version="1.0" encoding="UTF-8"?>
 <?xml-model href="../meta/schnitzler-briefe-schematron.sch" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
-<TEI xmlns="http://www.tei-c.org/ns/1.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.tei-c.org/ns/1.0 ../meta/schnitzler-briefe-schema.xsd" xml:id="L02079" xml:base="https://id.acdh.oeaw.ac.at/schnitzler/schnitzler-briefe/editions">
+<TEI xmlns="http://www.tei-c.org/ns/1.0"
+     xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+     xsi:schemaLocation="http://www.tei-c.org/ns/1.0 ../meta/schnitzler-briefe-schema.xsd"
+     xml:id="L02079"
+     xml:base="https://id.acdh.oeaw.ac.at/schnitzler/schnitzler-briefe/editions">
    <teiHeader>
       <fileDesc>
          <titleStmt>
@@ -145,12 +149,20 @@
                   – 24. 7. 1912?]</date>
                <placeName ref="#pmb44374">St. Moritz</placeName>
             </correspAction>
-            <correspContext><ref type="belongsToCorrespondence" target="correspondence_10863">Beer-Hofmann, Richard</ref>
+            <correspContext>
+               <ref type="belongsToCorrespondence" target="correspondence_10863">Beer-Hofmann, Richard</ref>
                <ref subtype="previous_letter" type="withinCollection" target="L02078">Beer-Hofmann, Beer-Hofmann an Schnitzler, 16. 7. 1912</ref>
                <ref subtype="next_letter" type="withinCollection" target="L04455">Schnitzler an Schwarzkopf, 19. 7. 1912</ref>
-               <ref subtype="previous_letter" type="withinCorrespondence" source="correspondence_10863" target="L02078">Beer-Hofmann, Beer-Hofmann an Schnitzler, 16. 7. 1912</ref>
-               <ref subtype="next_letter" type="withinCorrespondence" source="correspondence_10863" target="L02080">Schnitzler, Schnitzler an Beer-Hofmann, 30. 7. 1912</ref>
-            </correspContext></correspDesc>
+               <ref subtype="previous_letter"
+                    type="withinCorrespondence"
+                    source="correspondence_10863"
+                    target="L02078">Beer-Hofmann, Beer-Hofmann an Schnitzler, 16. 7. 1912</ref>
+               <ref subtype="next_letter"
+                    type="withinCorrespondence"
+                    source="correspondence_10863"
+                    target="L02080">Schnitzler, Schnitzler an Beer-Hofmann, 30. 7. 1912</ref>
+            </correspContext>
+         </correspDesc>
       </profileDesc>
       <revisionDesc status="approved">
          <change who="MAM" when="2019-06-12">Automatisch angelegt aus Buchausgabe</change>
@@ -376,16 +388,43 @@
             </bibl>
          </listBibl>
          <listPlace>
-            <place xml:id="pmb59">
-               <placeName>IX., Alsergrund</placeName>
-               <placeName type="legacy-name-merge">Thurygrund</placeName>
-               <placeName type="legacy-name-merge">Wien-Alsergrund</placeName>
+            <error type="place">365615</error>
+            <place xml:id="pmb168815">
+               <placeName>Sternwartestraße 71</placeName>
                <location type="coords">
-                  <geo>48,22387 16,35641</geo>
+                  <geo>48,23188 16,33716</geo>
                </location>
                <location type="located_in_place">
-                  <placeName ref="pmb50">Wien</placeName>
-                  <geo>48,208333 16,373056</geo>
+                  <placeName ref="pmb68">XVIII., Währing</placeName>
+                  <geo>48,23333 16,31667</geo>
+               </location>
+               <location type="located_in_place">
+                  <placeName ref="pmb533">Währinger Cottage</placeName>
+                  <geo>48,233056 16,341944</geo>
+               </location>
+               <location type="located_in_place">
+                  <placeName ref="pmb150">Sternwartestraße</placeName>
+                  <geo>48,23099349198 16,340117830625</geo>
+               </location>
+            </place>
+            <place xml:id="pmb44374">
+               <placeName>St. Moritz</placeName>
+               <placeName type="alternative-name">Sankt Moritz</placeName>
+               <placeName type="alternative-name">Saint Moritz</placeName>
+               <location type="coords">
+                  <geo>46,49937 9,84327</geo>
+               </location>
+               <location type="located_in_place">
+                  <placeName ref="pmb353736">Oberengadin</placeName>
+                  <geo>46,502411734561655 9,86105664321974</geo>
+               </location>
+               <location type="located_in_place">
+                  <placeName ref="pmb43435">Schweiz</placeName>
+                  <geo>47,00016 8,01427</geo>
+               </location>
+               <location type="located_in_place">
+                  <placeName ref="pmb1061">Engadin</placeName>
+                  <geo>46,601337 9,965973</geo>
                </location>
             </place>
             <place xml:id="pmb50">
@@ -410,26 +449,6 @@
                   <geo>48,24077 16,32092</geo>
                </location>
             </place>
-            <place xml:id="pmb44374">
-               <placeName>St. Moritz</placeName>
-               <placeName type="alternative-name">Sankt Moritz</placeName>
-               <placeName type="alternative-name">Saint Moritz</placeName>
-               <location type="coords">
-                  <geo>46,49937 9,84327</geo>
-               </location>
-               <location type="located_in_place">
-                  <placeName ref="pmb353736">Oberengadin</placeName>
-                  <geo>46,502411734561655 9,86105664321974</geo>
-               </location>
-               <location type="located_in_place">
-                  <placeName ref="pmb43435">Schweiz</placeName>
-                  <geo>47,00016 8,01427</geo>
-               </location>
-               <location type="located_in_place">
-                  <placeName ref="pmb1061">Engadin</placeName>
-                  <geo>46,601337 9,965973</geo>
-               </location>
-            </place>
             <place xml:id="pmb51935">
                <placeName>Hotel Waldhaus am See</placeName>
                <location type="coords">
@@ -448,24 +467,6 @@
                <location type="located_in_place">
                   <placeName ref="pmb43435">Schweiz</placeName>
                   <geo>47,00016 8,01427</geo>
-               </location>
-            </place>
-            <place xml:id="pmb168815">
-               <placeName>Sternwartestraße 71</placeName>
-               <location type="coords">
-                  <geo>48,23188 16,33716</geo>
-               </location>
-               <location type="located_in_place">
-                  <placeName ref="pmb68">XVIII., Währing</placeName>
-                  <geo>48,23333 16,31667</geo>
-               </location>
-               <location type="located_in_place">
-                  <placeName ref="pmb533">Währinger Cottage</placeName>
-                  <geo>48,233056 16,341944</geo>
-               </location>
-               <location type="located_in_place">
-                  <placeName ref="pmb150">Sternwartestraße</placeName>
-                  <geo>48,23099349198 16,340117830625</geo>
                </location>
             </place>
             <place xml:id="pmb45260">

@@ -1,6 +1,10 @@
-<?xml version='1.0' encoding='UTF-8'?>
+<?xml version="1.0" encoding="UTF-8"?>
 <?xml-model href="../meta/schnitzler-briefe-schematron.sch" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
-<TEI xmlns="http://www.tei-c.org/ns/1.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.tei-c.org/ns/1.0 ../meta/schnitzler-briefe-schema.xsd" xml:id="L01246" xml:base="https://id.acdh.oeaw.ac.at/schnitzler/schnitzler-briefe/editions">
+<TEI xmlns="http://www.tei-c.org/ns/1.0"
+     xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+     xsi:schemaLocation="http://www.tei-c.org/ns/1.0 ../meta/schnitzler-briefe-schema.xsd"
+     xml:id="L01246"
+     xml:base="https://id.acdh.oeaw.ac.at/schnitzler/schnitzler-briefe/editions">
    <teiHeader>
       <fileDesc>
          <titleStmt>
@@ -95,7 +99,8 @@
                            <incident type="postal">
                               <desc>
                                  <stamp n="1" type="transmission">
-                                    <placeName ref="#pmb365214">Wien <unclear>1/1 1</unclear></placeName>
+                                    <placeName ref="#pmb365214">Wien <unclear>1/1 1</unclear>
+                                    </placeName>
                                     <date when="1902-10-29">
                                        <unclear>29</unclear>. 10. 02</date>
                                     <time>12–1N</time>
@@ -148,7 +153,7 @@
             </correspAction>
             <correspAction type="transmitted">
                <date when="1902-10-29">29. 10. 1902</date>
-               <placeName ref="#pmb365214">Wien 1/1 1</placeName>
+               <placeName ref="#pmb365214">1/1 Post- und Telegraphenamt 1</placeName>
             </correspAction>
             <correspAction type="delivered">
                <date when="1902-10-30">30. 10. 1902</date>
@@ -159,12 +164,20 @@
                <date when="1902-10-30">30. 10. 1902</date>
                <placeName ref="#pmb231810">Willergasse 2</placeName>
             </correspAction>
-            <correspContext><ref type="belongsToCorrespondence" target="correspondence_10863">Beer-Hofmann, Richard</ref>
+            <correspContext>
+               <ref type="belongsToCorrespondence" target="correspondence_10863">Beer-Hofmann, Richard</ref>
                <ref subtype="previous_letter" type="withinCollection" target="L03228">Goldmann an Schnitzler, 26. 10. [1902]</ref>
                <ref subtype="next_letter" type="withinCollection" target="L01247">Beer-Hofmann an Schnitzler, 4. 11. 1902</ref>
-               <ref subtype="previous_letter" type="withinCorrespondence" source="correspondence_10863" target="L01232">Beer-Hofmann an Schnitzler, 17. 7. 1902</ref>
-               <ref subtype="next_letter" type="withinCorrespondence" source="correspondence_10863" target="L01247">Beer-Hofmann an Schnitzler, 4. 11. 1902</ref>
-            </correspContext></correspDesc>
+               <ref subtype="previous_letter"
+                    type="withinCorrespondence"
+                    source="correspondence_10863"
+                    target="L01232">Beer-Hofmann an Schnitzler, 17. 7. 1902</ref>
+               <ref subtype="next_letter"
+                    type="withinCorrespondence"
+                    source="correspondence_10863"
+                    target="L01247">Beer-Hofmann an Schnitzler, 4. 11. 1902</ref>
+            </correspContext>
+         </correspDesc>
       </profileDesc>
       <revisionDesc status="approved">
          <change who="MAM" when="2019-06-12">Automatisch angelegt aus Buchausgabe</change>
@@ -266,24 +279,7 @@
             </person>
          </listPerson>
          <listPlace>
-            <place xml:id="pmb51">
-               <placeName>I., Innere Stadt</placeName>
-               <placeName type="alternative-name">Inner city</placeName>
-               <placeName type="alternative-name">Wien,Innere Stadt</placeName>
-               <placeName type="alternative-name">1. Wiener Gemeindebezirk</placeName>
-               <placeName type="legacy-name-merge">Wien-Innere Stadt</placeName>
-               <location type="coords">
-                  <geo>48,20769 16,37049</geo>
-               </location>
-               <location type="located_in_place">
-                  <placeName ref="pmb41240">Österreich</placeName>
-                  <geo>47,33333 13,33333</geo>
-               </location>
-               <location type="located_in_place">
-                  <placeName ref="pmb50">Wien</placeName>
-                  <geo>48,208333 16,373056</geo>
-               </location>
-            </place>
+            <error type="place">365214</error>
             <place xml:id="pmb173">
                <placeName>Rodaun</placeName>
                <placeName type="legacy-name-merge">Rodaun bei Wien</placeName>
@@ -321,18 +317,22 @@
                   <geo>48,24077 16,32092</geo>
                </location>
             </place>
-            <place xml:id="pmb40101">
-               <placeName>Liesingerstraße</placeName>
+            <place xml:id="pmb231810">
+               <placeName>Willergasse 2</placeName>
                <location type="coords">
-                  <geo>48,1332 16,25864</geo>
+                  <geo>48,139276 16,257741</geo>
+               </location>
+               <location type="located_in_place">
+                  <placeName ref="pmb41728">Willergasse</placeName>
+                  <geo>48,1393188 16,2577427</geo>
+               </location>
+               <location type="located_in_place">
+                  <placeName ref="pmb73">XXIII., Liesing</placeName>
+                  <geo>48,13333 16,3</geo>
                </location>
                <location type="located_in_place">
                   <placeName ref="pmb173">Rodaun</placeName>
                   <geo>48,132793312328 16,256152195922</geo>
-               </location>
-               <location type="located_in_place">
-                  <placeName ref="pmb40103">Ketzergasse</placeName>
-                  <geo>48,133896 16,272342</geo>
                </location>
             </place>
          </listPlace>

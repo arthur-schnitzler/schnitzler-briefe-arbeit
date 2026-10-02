@@ -1,6 +1,10 @@
-<?xml version='1.0' encoding='UTF-8'?>
+<?xml version="1.0" encoding="UTF-8"?>
 <?xml-model href="../meta/schnitzler-briefe-schematron.sch" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
-<TEI xmlns="http://www.tei-c.org/ns/1.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.tei-c.org/ns/1.0 ../meta/schnitzler-briefe-schema.xsd" xml:id="L03270" xml:base="https://id.acdh.oeaw.ac.at/schnitzler/schnitzler-briefe/editions">
+<TEI xmlns="http://www.tei-c.org/ns/1.0"
+     xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+     xsi:schemaLocation="http://www.tei-c.org/ns/1.0 ../meta/schnitzler-briefe-schema.xsd"
+     xml:id="L03270"
+     xml:base="https://id.acdh.oeaw.ac.at/schnitzler/schnitzler-briefe/editions">
    <teiHeader>
       <fileDesc>
          <titleStmt>
@@ -145,7 +149,7 @@
             </correspAction>
             <correspAction type="transmitted">
                <date when="1897-07-23">23. 7. 1897</date>
-               <placeName ref="#pmb365450">VIII., Josefstadt</placeName>
+               <placeName ref="#pmb365450">8/1 Post- und Telegraphenamt 64</placeName>
             </correspAction>
             <correspAction type="delivered">
                <placeName ref="#pmb213">Bad Ischl</placeName>
@@ -155,12 +159,20 @@
                <date when="1897-07-24">24. 7. 1897</date>
                <placeName ref="#pmb414">Hotel und Pension Rudolfshöhe (Leopold Petter)</placeName>
             </correspAction>
-            <correspContext><ref type="belongsToCorrespondence" target="correspondence_2167">Salten, Felix</ref>
+            <correspContext>
+               <ref type="belongsToCorrespondence" target="correspondence_2167">Salten, Felix</ref>
                <ref subtype="previous_letter" type="withinCollection" target="L00710">Schnitzler an Hofmannsthal, 22. 7. 1897</ref>
                <ref subtype="next_letter" type="withinCollection" target="L03271">Salten an Schnitzler, 23. 7. 1897</ref>
-               <ref subtype="previous_letter" type="withinCorrespondence" source="correspondence_2167" target="L03269">Salten an Schnitzler, [16. oder 17]. 7. 1897</ref>
-               <ref subtype="next_letter" type="withinCorrespondence" source="correspondence_2167" target="L03271">Salten an Schnitzler, 23. 7. 1897</ref>
-            </correspContext></correspDesc>
+               <ref subtype="previous_letter"
+                    type="withinCorrespondence"
+                    source="correspondence_2167"
+                    target="L03269">Salten an Schnitzler, [16. oder 17]. 7. 1897</ref>
+               <ref subtype="next_letter"
+                    type="withinCorrespondence"
+                    source="correspondence_2167"
+                    target="L03271">Salten an Schnitzler, 23. 7. 1897</ref>
+            </correspContext>
+         </correspDesc>
       </profileDesc>
       <revisionDesc status="approved">
          <change who="MAM" when="2023-09-20">Export aus Transkribus</change>
@@ -369,16 +381,14 @@
             </bibl>
          </listBibl>
          <listPlace>
-            <place xml:id="pmb58">
-               <placeName>VIII., Josefstadt</placeName>
-               <placeName type="alternative-name">Josefstadt (Wien-Josefstadt)</placeName>
-               <placeName type="legacy-name-merge">Josefstadt</placeName>
+            <place xml:id="pmb365450">
+               <placeName>8/1 Post- und Telegraphenamt 64</placeName>
                <location type="coords">
-                  <geo>48,21126 16,34706</geo>
+                  <geo>48,210695 16,351186</geo>
                </location>
                <location type="located_in_place">
-                  <placeName ref="pmb50">Wien</placeName>
-                  <geo>48,208333 16,373056</geo>
+                  <placeName ref="pmb58">VIII., Josefstadt</placeName>
+                  <geo>48,21126 16,34706</geo>
                </location>
             </place>
             <place xml:id="pmb213">

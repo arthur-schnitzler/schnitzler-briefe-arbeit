@@ -1,6 +1,10 @@
-<?xml version='1.0' encoding='UTF-8'?>
+<?xml version="1.0" encoding="UTF-8"?>
 <?xml-model href="../meta/schnitzler-briefe-schematron.sch" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
-<TEI xmlns="http://www.tei-c.org/ns/1.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.tei-c.org/ns/1.0 ../meta/schnitzler-briefe-schema.xsd" xml:id="L03630" xml:base="https://id.acdh.oeaw.ac.at/schnitzler/schnitzler-briefe/editions">
+<TEI xmlns="http://www.tei-c.org/ns/1.0"
+     xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+     xsi:schemaLocation="http://www.tei-c.org/ns/1.0 ../meta/schnitzler-briefe-schema.xsd"
+     xml:id="L03630"
+     xml:base="https://id.acdh.oeaw.ac.at/schnitzler/schnitzler-briefe/editions">
    <teiHeader>
       <fileDesc>
          <titleStmt>
@@ -93,7 +97,8 @@
                            <incident type="postal">
                               <desc>
                                  <stamp n="1" type="transmission">
-                                    <placeName ref="#pmb365450">8/<unclear>1</unclear> Wien <unclear>64</unclear></placeName>
+                                    <placeName ref="#pmb365450">8/<unclear>1</unclear> Wien <unclear>64</unclear>
+                                    </placeName>
                                     <date when="1911-11-06">6. <unclear>X</unclear>I. 11</date>
                                     <time>5</time>
                                  </stamp>
@@ -137,7 +142,7 @@
             <correspAction type="transmitted">
                <date evidence="conjecture" notBefore="1911-11-06" notAfter="1911-11-07">[6. 11. 1911
                   – 7. 11. 1911?]</date>
-               <placeName ref="#pmb365450">VIII., Josefstadt</placeName>
+               <placeName ref="#pmb365450">8/1 Post- und Telegraphenamt 64</placeName>
             </correspAction>
             <correspAction type="redirected">
                <placeName ref="#pmb168815">Sternwartestraße 71</placeName>
@@ -148,12 +153,20 @@
                   – 9. 11. 1911?]</date>
                <placeName ref="#pmb506" evidence="external">Hamburg</placeName>
             </correspAction>
-            <correspContext><ref type="belongsToCorrespondence" target="correspondence_13212">Zweig, Stefan</ref>
+            <correspContext>
+               <ref type="belongsToCorrespondence" target="correspondence_13212">Zweig, Stefan</ref>
                <ref subtype="previous_letter" type="withinCollection" target="L02042">Bahr an Schnitzler, November 1911</ref>
                <ref subtype="next_letter" type="withinCollection" target="L02043">Schnitzler, Schnitzler an Beer-Hofmann, 7. 11. 1911</ref>
-               <ref subtype="previous_letter" type="withinCorrespondence" source="correspondence_13212" target="L03637">Zweig an Schnitzler, 27. 10. 1911</ref>
-               <ref subtype="next_letter" type="withinCorrespondence" source="correspondence_13212" target="L03789">Schnitzler an Zweig, 9. 11. 1911</ref>
-            </correspContext></correspDesc>
+               <ref subtype="previous_letter"
+                    type="withinCorrespondence"
+                    source="correspondence_13212"
+                    target="L03637">Zweig an Schnitzler, 27. 10. 1911</ref>
+               <ref subtype="next_letter"
+                    type="withinCorrespondence"
+                    source="correspondence_13212"
+                    target="L03789">Schnitzler an Zweig, 9. 11. 1911</ref>
+            </correspContext>
+         </correspDesc>
       </profileDesc>
       <revisionDesc status="approved">
          <change who="MAM" when="2025-05-21">Export aus Transkribus</change>
@@ -472,16 +485,14 @@
             </bibl>
          </listBibl>
          <listPlace>
-            <place xml:id="pmb58">
-               <placeName>VIII., Josefstadt</placeName>
-               <placeName type="alternative-name">Josefstadt (Wien-Josefstadt)</placeName>
-               <placeName type="legacy-name-merge">Josefstadt</placeName>
+            <place xml:id="pmb365450">
+               <placeName>8/1 Post- und Telegraphenamt 64</placeName>
                <location type="coords">
-                  <geo>48,21126 16,34706</geo>
+                  <geo>48,210695 16,351186</geo>
                </location>
                <location type="located_in_place">
-                  <placeName ref="pmb50">Wien</placeName>
-                  <geo>48,208333 16,373056</geo>
+                  <placeName ref="pmb58">VIII., Josefstadt</placeName>
+                  <geo>48,21126 16,34706</geo>
                </location>
             </place>
             <place xml:id="pmb249577">
@@ -496,6 +507,24 @@
                <location type="located_in_place">
                   <placeName ref="pmb58">VIII., Josefstadt</placeName>
                   <geo>48,21126 16,34706</geo>
+               </location>
+            </place>
+            <place xml:id="pmb168815">
+               <placeName>Sternwartestraße 71</placeName>
+               <location type="coords">
+                  <geo>48,23188 16,33716</geo>
+               </location>
+               <location type="located_in_place">
+                  <placeName ref="pmb68">XVIII., Währing</placeName>
+                  <geo>48,23333 16,31667</geo>
+               </location>
+               <location type="located_in_place">
+                  <placeName ref="pmb533">Währinger Cottage</placeName>
+                  <geo>48,233056 16,341944</geo>
+               </location>
+               <location type="located_in_place">
+                  <placeName ref="pmb150">Sternwartestraße</placeName>
+                  <geo>48,23099349198 16,340117830625</geo>
                </location>
             </place>
             <place xml:id="pmb506" ana="comment">
@@ -516,24 +545,6 @@
                <location type="located_in_place">
                   <placeName ref="pmb68">XVIII., Währing</placeName>
                   <geo>48,23333 16,31667</geo>
-               </location>
-            </place>
-            <place xml:id="pmb168815">
-               <placeName>Sternwartestraße 71</placeName>
-               <location type="coords">
-                  <geo>48,23188 16,33716</geo>
-               </location>
-               <location type="located_in_place">
-                  <placeName ref="pmb68">XVIII., Währing</placeName>
-                  <geo>48,23333 16,31667</geo>
-               </location>
-               <location type="located_in_place">
-                  <placeName ref="pmb533">Währinger Cottage</placeName>
-                  <geo>48,233056 16,341944</geo>
-               </location>
-               <location type="located_in_place">
-                  <placeName ref="pmb150">Sternwartestraße</placeName>
-                  <geo>48,23099349198 16,340117830625</geo>
                </location>
             </place>
             <place xml:id="pmb50" ana="comment">

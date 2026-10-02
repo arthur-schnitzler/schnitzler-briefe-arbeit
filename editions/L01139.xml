@@ -1,6 +1,10 @@
-<?xml version='1.0' encoding='UTF-8'?>
+<?xml version="1.0" encoding="UTF-8"?>
 <?xml-model href="../meta/schnitzler-briefe-schematron.sch" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
-<TEI xmlns="http://www.tei-c.org/ns/1.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.tei-c.org/ns/1.0 ../meta/schnitzler-briefe-schema.xsd" xml:id="L01139" xml:base="https://id.acdh.oeaw.ac.at/schnitzler/schnitzler-briefe/editions">
+<TEI xmlns="http://www.tei-c.org/ns/1.0"
+     xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+     xsi:schemaLocation="http://www.tei-c.org/ns/1.0 ../meta/schnitzler-briefe-schema.xsd"
+     xml:id="L01139"
+     xml:base="https://id.acdh.oeaw.ac.at/schnitzler/schnitzler-briefe/editions">
    <teiHeader>
       <fileDesc>
          <titleStmt>
@@ -174,19 +178,27 @@
             </correspAction>
             <correspAction type="delivered">
                <date when="1901-07-05">5. 7. 1901</date>
-               <placeName ref="#pmb365275">XIII., Hietzing</placeName>
+               <placeName ref="#pmb365275">13/7 Post- und Telegraphenamt 94</placeName>
             </correspAction>
             <correspAction type="received">
                <persName ref="#pmb10815">Bahr, Hermann</persName>
                <date when="1901-07-05">5. 7. 1901</date>
                <placeName ref="#pmb207274">Haus Bahr</placeName>
             </correspAction>
-            <correspContext><ref type="belongsToCorrespondence" target="correspondence_10815">Bahr, Hermann</ref>
+            <correspContext>
+               <ref type="belongsToCorrespondence" target="correspondence_10815">Bahr, Hermann</ref>
                <ref subtype="previous_letter" type="withinCollection" target="L03317">Salten an Schnitzler, 2. 7. 1901</ref>
                <ref subtype="next_letter" type="withinCollection" target="L04076">Schnitzler, Gussmann, Gussmann an Schwarzkopf, 3. 7. 1901</ref>
-               <ref subtype="previous_letter" type="withinCorrespondence" source="correspondence_10815" target="L01138">Schnitzler an Bahr, 1. 7. 1901</ref>
-               <ref subtype="next_letter" type="withinCorrespondence" source="correspondence_10815" target="L01143">Bahr an Schnitzler, 5. 7. 1901</ref>
-            </correspContext></correspDesc>
+               <ref subtype="previous_letter"
+                    type="withinCorrespondence"
+                    source="correspondence_10815"
+                    target="L01138">Schnitzler an Bahr, 1. 7. 1901</ref>
+               <ref subtype="next_letter"
+                    type="withinCorrespondence"
+                    source="correspondence_10815"
+                    target="L01143">Bahr an Schnitzler, 5. 7. 1901</ref>
+            </correspContext>
+         </correspDesc>
       </profileDesc>
       <revisionDesc status="approved">
          <change who="KI MAM" when="2015-10-01">Kollationiert</change>
@@ -312,17 +324,7 @@
                   <geo>47,33333 13,33333</geo>
                </location>
             </place>
-            <place xml:id="pmb63">
-               <placeName>XIII., Hietzing</placeName>
-               <placeName type="legacy-name-merge">Hietzing</placeName>
-               <location type="coords">
-                  <geo>48,17547 16,29101</geo>
-               </location>
-               <location type="located_in_place">
-                  <placeName ref="pmb50">Wien</placeName>
-                  <geo>48,208333 16,373056</geo>
-               </location>
-            </place>
+            <error type="place">365275</error>
             <place xml:id="pmb207274">
                <placeName>Haus Bahr</placeName>
                <placeName type="ort_fruherer-name">Veitlissengasse 5a</placeName>
@@ -353,20 +355,6 @@
                <location type="located_in_place">
                   <placeName ref="pmb665">Sankt Veit</placeName>
                   <geo>48,18805 16,26638</geo>
-               </location>
-               <location type="located_in_place">
-                  <placeName ref="pmb63">XIII., Hietzing</placeName>
-                  <geo>48,17547 16,29101</geo>
-               </location>
-            </place>
-            <place xml:id="pmb220">
-               <placeName>Veitlissengasse</placeName>
-               <location type="coords">
-                  <geo>48,186622327678 16,259712159437</geo>
-               </location>
-               <location type="located_in_place">
-                  <placeName ref="pmb165">Ober Sankt Veit</placeName>
-                  <geo>48,188056 16,266389</geo>
                </location>
                <location type="located_in_place">
                   <placeName ref="pmb63">XIII., Hietzing</placeName>

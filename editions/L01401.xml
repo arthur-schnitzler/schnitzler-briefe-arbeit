@@ -1,6 +1,10 @@
-<?xml version='1.0' encoding='UTF-8'?>
+<?xml version="1.0" encoding="UTF-8"?>
 <?xml-model href="../meta/schnitzler-briefe-schematron.sch" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
-<TEI xmlns="http://www.tei-c.org/ns/1.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xml:id="L01401" xsi:schemaLocation="http://www.tei-c.org/ns/1.0 ../meta/schnitzler-briefe-schema.xsd" xml:base="https://id.acdh.oeaw.ac.at/schnitzler/schnitzler-briefe/editions">
+<TEI xmlns="http://www.tei-c.org/ns/1.0"
+     xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+     xml:id="L01401"
+     xsi:schemaLocation="http://www.tei-c.org/ns/1.0 ../meta/schnitzler-briefe-schema.xsd"
+     xml:base="https://id.acdh.oeaw.ac.at/schnitzler/schnitzler-briefe/editions">
    <teiHeader>
       <fileDesc>
          <titleStmt>
@@ -145,7 +149,7 @@
             </correspAction>
             <correspAction type="transmitted">
                <date when="1904-05-16">16. 5. 1904</date>
-               <placeName ref="#pmb365442">Palermo Ferrovia</placeName>
+               <placeName ref="#pmb365442">Bahnhof Palermo Centrale</placeName>
             </correspAction>
             <correspAction type="delivered">
                <placeName ref="#pmb173">Rodaun</placeName>
@@ -156,12 +160,20 @@
                   – 21. 5. 1904?]</date>
                <placeName ref="#pmb173">Rodaun</placeName>
             </correspAction>
-            <correspContext><ref type="belongsToCorrespondence" target="correspondence_11740">Hofmannsthal, Hugo von</ref>
+            <correspContext>
+               <ref type="belongsToCorrespondence" target="correspondence_11740">Hofmannsthal, Hugo von</ref>
                <ref subtype="previous_letter" type="withinCollection" target="L01400">Schnitzler, Schnitzler an Beer-Hofmann, 16. 5. 1904</ref>
                <ref subtype="next_letter" type="withinCollection" target="L04415">Schnitzler, Schnitzler an Schwarzkopf, 16. 5. 1904</ref>
-               <ref subtype="previous_letter" type="withinCorrespondence" source="correspondence_11740" target="L01399">Schnitzler, Schnitzler an Hofmannsthal, 7. 5. 1904</ref>
-               <ref subtype="next_letter" type="withinCorrespondence" source="correspondence_11740" target="L01403">Schnitzler, Schnitzler an Hofmannsthal, 22. 5. 1904</ref>
-            </correspContext></correspDesc>
+               <ref subtype="previous_letter"
+                    type="withinCorrespondence"
+                    source="correspondence_11740"
+                    target="L01399">Schnitzler, Schnitzler an Hofmannsthal, 7. 5. 1904</ref>
+               <ref subtype="next_letter"
+                    type="withinCorrespondence"
+                    source="correspondence_11740"
+                    target="L01403">Schnitzler, Schnitzler an Hofmannsthal, 22. 5. 1904</ref>
+            </correspContext>
+         </correspDesc>
       </profileDesc>
       <revisionDesc status="approved">
          <change who="MAM" when="2019-07-31">Angelegt aus Buchausgabe</change>
@@ -299,20 +311,7 @@
             </person>
          </listPerson>
          <listPlace>
-            <place xml:id="pmb901">
-               <placeName>Palermo</placeName>
-               <location type="coords">
-                  <geo>38,13205 13,33561</geo>
-               </location>
-               <location type="located_in_place">
-                  <placeName ref="pmb40306">Italien</placeName>
-                  <geo>42,83333 12,83333</geo>
-               </location>
-               <location type="located_in_place">
-                  <placeName ref="pmb451">Sizilien</placeName>
-                  <geo>37,75 14,25</geo>
-               </location>
-            </place>
+            <error type="place">365442</error>
             <place xml:id="pmb173">
                <placeName>Rodaun</placeName>
                <placeName type="legacy-name-merge">Rodaun bei Wien</placeName>
@@ -364,15 +363,22 @@
                   <geo>48,4054 16,4887</geo>
                </location>
             </place>
-            <place xml:id="pmb1006">
-               <placeName>Badgasse</placeName>
-               <placeName type="namensvariante">Ketzergasse</placeName>
+            <place xml:id="pmb40297">
+               <placeName>Hofmannsthal-Schlössl</placeName>
                <location type="coords">
-                  <geo>48,130176324727 16,278871077438</geo>
+                  <geo>48,133611 16,255556</geo>
                </location>
                <location type="located_in_place">
                   <placeName ref="pmb73">XXIII., Liesing</placeName>
                   <geo>48,13333 16,3</geo>
+               </location>
+               <location type="located_in_place">
+                  <placeName ref="pmb173">Rodaun</placeName>
+                  <geo>48,132793312328 16,256152195922</geo>
+               </location>
+               <location type="located_in_place">
+                  <placeName ref="pmb40103">Ketzergasse</placeName>
+                  <geo>48,133896 16,272342</geo>
                </location>
             </place>
             <place xml:id="pmb43262">

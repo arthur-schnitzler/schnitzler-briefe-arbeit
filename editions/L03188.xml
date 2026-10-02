@@ -1,6 +1,10 @@
-<?xml version='1.0' encoding='UTF-8'?>
+<?xml version="1.0" encoding="UTF-8"?>
 <?xml-model href="../meta/schnitzler-briefe-schematron.sch" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
-<TEI xmlns="http://www.tei-c.org/ns/1.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.tei-c.org/ns/1.0 ../meta/schnitzler-briefe-schema.xsd" xml:id="L03188" xml:base="https://id.acdh.oeaw.ac.at/schnitzler/schnitzler-briefe/editions">
+<TEI xmlns="http://www.tei-c.org/ns/1.0"
+     xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+     xsi:schemaLocation="http://www.tei-c.org/ns/1.0 ../meta/schnitzler-briefe-schema.xsd"
+     xml:id="L03188"
+     xml:base="https://id.acdh.oeaw.ac.at/schnitzler/schnitzler-briefe/editions">
    <teiHeader>
       <fileDesc>
          <titleStmt>
@@ -127,7 +131,7 @@
             </correspAction>
             <correspAction type="transmitted">
                <date when="1900-07-01">1. 7. 1900</date>
-               <placeName ref="#pmb46000">Grundlsee</placeName>
+               <placeName ref="#pmb46000">Grundlsee [Gemeinde]</placeName>
             </correspAction>
             <correspAction type="delivered">
                <date when="1900-07-08">8. 7. 1900</date>
@@ -138,12 +142,20 @@
                <date when="1900-07-08">8. 7. 1900</date>
                <placeName ref="#pmb40583">Dessauer Straße</placeName>
             </correspAction>
-            <correspContext><ref type="belongsToCorrespondence" target="correspondence_11485">Goldmann, Paul</ref>
+            <correspContext>
+               <ref type="belongsToCorrespondence" target="correspondence_11485">Goldmann, Paul</ref>
                <ref subtype="previous_letter" type="withinCollection" target="L02922">Goldmann an Schnitzler, 27. 6. [1900]</ref>
                <ref subtype="next_letter" type="withinCollection" target="L01051">Schnitzler an Beer-Hofmann, 4. 7. 1900</ref>
-               <ref subtype="previous_letter" type="withinCorrespondence" source="correspondence_11485" target="L02922">Goldmann an Schnitzler, 27. 6. [1900]</ref>
-               <ref subtype="next_letter" type="withinCorrespondence" source="correspondence_11485" target="L02923">Goldmann an Schnitzler, 5. 7. [1900]</ref>
-            </correspContext></correspDesc>
+               <ref subtype="previous_letter"
+                    type="withinCorrespondence"
+                    source="correspondence_11485"
+                    target="L02922">Goldmann an Schnitzler, 27. 6. [1900]</ref>
+               <ref subtype="next_letter"
+                    type="withinCorrespondence"
+                    source="correspondence_11485"
+                    target="L02923">Goldmann an Schnitzler, 5. 7. [1900]</ref>
+            </correspContext>
+         </correspDesc>
       </profileDesc>
       <revisionDesc status="approved">
          <change who="MAM" when="2023-07-25">Angelegt</change>
@@ -350,16 +362,6 @@
                   <geo>47,33333 13,33333</geo>
                </location>
             </place>
-            <place xml:id="pmb40583">
-               <placeName>Dessauer Straße</placeName>
-               <location type="coords">
-                  <geo>52,504956 13,378587</geo>
-               </location>
-               <location type="located_in_place">
-                  <placeName ref="pmb168">Berlin</placeName>
-                  <geo>52,52437 13,41053</geo>
-               </location>
-            </place>
             <place xml:id="pmb168">
                <placeName>Berlin</placeName>
                <placeName type="alternative-name">Hauptstadt Berlin</placeName>
@@ -373,6 +375,16 @@
                <location type="located_in_place">
                   <placeName ref="pmb151">Deutschland</placeName>
                   <geo>51,5 10,5</geo>
+               </location>
+            </place>
+            <place xml:id="pmb40583">
+               <placeName>Dessauer Straße</placeName>
+               <location type="coords">
+                  <geo>52,504956 13,378587</geo>
+               </location>
+               <location type="located_in_place">
+                  <placeName ref="pmb168">Berlin</placeName>
+                  <geo>52,52437 13,41053</geo>
                </location>
             </place>
             <place xml:id="pmb34401" ana="comment">
