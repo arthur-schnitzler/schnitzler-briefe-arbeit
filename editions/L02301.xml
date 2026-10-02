@@ -1,11 +1,15 @@
-<?xml version='1.0' encoding='UTF-8'?>
+<?xml version="1.0" encoding="UTF-8"?>
 <?xml-model href="../meta/schnitzler-briefe-schematron.sch" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
-<TEI xmlns="http://www.tei-c.org/ns/1.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.tei-c.org/ns/1.0 ../meta/schnitzler-briefe-schema.xsd" xml:id="L02301" xml:base="https://id.acdh.oeaw.ac.at/schnitzler/schnitzler-briefe/editions">
+<TEI xmlns="http://www.tei-c.org/ns/1.0"
+     xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+     xsi:schemaLocation="http://www.tei-c.org/ns/1.0 ../meta/schnitzler-briefe-schema.xsd"
+     xml:id="L02301"
+     xml:base="https://id.acdh.oeaw.ac.at/schnitzler/schnitzler-briefe/editions">
    <teiHeader>
       <fileDesc>
          <titleStmt>
             <title level="s">Arthur Schnitzler: Briefwechsel mit Autorinnen und Autoren</title>
-            <title level="a">Arthur Schnitzler an Richard Beer-Hofmann, 26. 8. 1918</title>
+            <title level="a">Arthur Schnitzler an Richard Beer-Hofmann, 25. 8. 1918</title>
             <author ref="#pmb2121">Schnitzler, Arthur</author>
             <editor>
                <name>Müller, Martin Anton</name>
@@ -96,6 +100,7 @@
                                     <placeName ref="#pmb50">
                                        <unclear>Wien</unclear>
                                     </placeName>
+                                    <!-- so -->
                                     <date when="1918-08-26">26. VIII. 18</date>
                                  </stamp>
                               </desc>
@@ -141,7 +146,7 @@
          <correspDesc>
             <correspAction type="sent">
                <persName ref="#pmb2121">Schnitzler, Arthur</persName>
-               <date n="01" notBefore="1918-08-25" notAfter="1918-08-26">26. 8. 1918</date>
+               <date when="1918-08-25"  n="01">25. 8. 1918</date>
                <placeName ref="#pmb168815">Sternwartestraße 71</placeName>
             </correspAction>
             <correspAction type="transmitted">
@@ -151,14 +156,22 @@
             <correspAction type="received">
                <persName ref="#pmb10863">Beer-Hofmann, Richard</persName>
                <date evidence="conjecture" notBefore="1918-08-26" notAfter="1918-08-28">[26. 8. 1918 – 28. 8. 1918]</date>
-               <placeName ref="#pmb43462">Grazer Straße [Bad Ischl]</placeName>
+               <placeName ref="#pmb43462">Villa Kupferschmied</placeName>
             </correspAction>
-            <correspContext><ref type="belongsToCorrespondence" target="correspondence_10863">Beer-Hofmann, Richard</ref>
+            <correspContext>
+               <ref type="belongsToCorrespondence" target="correspondence_10863">Beer-Hofmann, Richard</ref>
                <ref subtype="previous_letter" type="withinCollection" target="L02300">Bahr an Schnitzler, 25. 8. 1918</ref>
                <ref subtype="next_letter" type="withinCollection" target="L02302">Beer-Hofmann an Schnitzler, 28. 8. 1918</ref>
-               <ref subtype="previous_letter" type="withinCorrespondence" source="correspondence_10863" target="L02296">Beer-Hofmann an Schnitzler, 13. 8. 1918</ref>
-               <ref subtype="next_letter" type="withinCorrespondence" source="correspondence_10863" target="L02302">Beer-Hofmann an Schnitzler, 28. 8. 1918</ref>
-            </correspContext></correspDesc>
+               <ref subtype="previous_letter"
+                    type="withinCorrespondence"
+                    source="correspondence_10863"
+                    target="L02296">Beer-Hofmann an Schnitzler, 13. 8. 1918</ref>
+               <ref subtype="next_letter"
+                    type="withinCorrespondence"
+                    source="correspondence_10863"
+                    target="L02302">Beer-Hofmann an Schnitzler, 28. 8. 1918</ref>
+            </correspContext>
+         </correspDesc>
       </profileDesc>
       <revisionDesc status="approved">
          <change who="MAM" when="2019-06-12">Automatisch angelegt aus Buchausgabe</change>
@@ -183,10 +196,13 @@
                   <rs ref="#pmb213" type="place">Bad Ischl</rs>
                </addrLine>
                <addrLine>
-                  <rs ref="#pmb43462" type="place"><anchor type="commentary" xml:id="K_L02301-10"/>Grazerstr. 56<note type="commentary" corresp="K_L02301-10"><rs type="person" ref="#pmb2121">Schnitzler</rs> irrte sich in der
+                  <rs ref="#pmb43462" type="place">
+                     <anchor type="commentary" xml:id="K_L02301-1"/>Grazerstr. 56<note type="commentary" corresp="K_L02301-1">
+                        <rs type="person" ref="#pmb2121">Schnitzler</rs> irrte sich in der
                         Hausnummer: die <rs type="place" ref="#pmb43462">Villa Kupferschmied</rs>,
                         in die sich <rs type="person" ref="#pmb10863">Beer-Hofmann</rs> zwischen <date>1916</date> und <date>1919</date>
-                        mehrfach einquartierte, hatte die Anschrift <rs type="place" ref="#pmb43462">Grazerstraße 52</rs>.</note></rs>
+                        mehrfach einquartierte, hatte die Anschrift <rs type="place" ref="#pmb43462">Grazerstraße 52</rs>.</note>
+                  </rs>
                </addrLine>
             </address>
          </div>
@@ -201,18 +217,18 @@
          </div>
          <div type="writingSession" n="1">
             <opener>
-               
-               <seg rend="right"><pb facs="1918_AS_RBH_1_00011"/>A. S.</seg>
+               <seg rend="right">
+                  <pb facs="1918_AS_RBH_1_00011"/>A. S.</seg>
             </opener>
             <p>
                <salute>lieber Richard,</salute> aus <rs ref="#pmb30" type="place">Salzburg</rs> ist
                nun doch nichts geworden; ich fahre morgen, möglichst direct <rs ref="#pmb45258" type="place">München</rs> – <rs ref="#pmb2318" type="place">Partenkirchen</rs>; es
                scheint meiner <rs type="person" ref="#pmb2315" subtype="implied">Schwägerin</rs>
                wieder schlechter zu gehn. Bitte um ein Wort nach <rs ref="#pmb2318" type="place">P.</rs> (<rs ref="#pmb808" type="place">Haus Tannenberg</rs>.) Hat der <rs type="person" ref="#pmb12504" subtype="implied">Herzog von <rs ref="#pmb34839" type="place">Leopoldskron</rs>
-               </rs> Ihnen einen besti<c rendition="#gemination-m"/>ten <anchor type="commentary" xml:id="K_L02301-1"/>
+               </rs> Ihnen einen besti<c rendition="#gemination-m"/>ten <anchor type="commentary" xml:id="K_L02301-2"/>
                <rs type="work" ref="#pmb31595" subtype="implied">Termin</rs>
-               <note type="commentary" corresp="K_L02301-1">Die <rs type="place" ref="#pmb168">Berlin</rs>er Premiere verzögerte sich bis zum
-                  <date>7. 11. 1919</date>.</note> gegeben? Ihnen ev. auch etwas über den <anchor type="commentary" xml:id="K_L02301-2"/>Termin der »<rs ref="#pmb30819" type="work">Schwestern</rs>«<note type="commentary" corresp="K_L02301-2">Trotz eines
+               <note type="commentary" corresp="K_L02301-2">Die <rs type="place" ref="#pmb168">Berlin</rs>er Premiere verzögerte sich bis zum
+                  <date>7. 11. 1919</date>.</note> gegeben? Ihnen ev. auch etwas über den <anchor type="commentary" xml:id="K_L02301-3"/>Termin der »<rs ref="#pmb30819" type="work">Schwestern</rs>«<note type="commentary" corresp="K_L02301-3">Trotz eines
                   Vorvertrags vom <date>20. 12. 1917</date> kam keine Inszenierung am von <rs type="person" ref="#pmb12504">Max Reinhardt</rs> geleiteten <rs type="org" ref="#pmb35597">Deutschen Theater</rs> zustande.</note> verrathen?
                Herzlichst</p>
             <closer>
@@ -457,26 +473,6 @@
                   <geo>48,24077 16,32092</geo>
                </location>
             </place>
-            <place xml:id="pmb1220">
-               <placeName>Grazer Straße [Bad Ischl]</placeName>
-               <location type="coords">
-                  <geo>47,70918 13,62156</geo>
-               </location>
-               <location type="located_in_place">
-                  <placeName ref="pmb213">Bad Ischl</placeName>
-                  <geo>47,71109 13,61893</geo>
-               </location>
-            </place>
-            <place xml:id="pmb213">
-               <placeName>Bad Ischl</placeName>
-               <location type="coords">
-                  <geo>47,71109 13,61893</geo>
-               </location>
-               <location type="located_in_place">
-                  <placeName ref="pmb429">Salzkammergut</placeName>
-                  <geo>47,75 13,5</geo>
-               </location>
-            </place>
             <place xml:id="pmb168815">
                <placeName>Sternwartestraße 71</placeName>
                <location type="coords">
@@ -493,6 +489,33 @@
                <location type="located_in_place">
                   <placeName ref="pmb150">Sternwartestraße</placeName>
                   <geo>48,23099349198 16,340117830625</geo>
+               </location>
+            </place>
+            <place xml:id="pmb43462" ana="comment">
+               <placeName>Villa Kupferschmid</placeName>
+               <placeName type="ort_namensvariante">Grazerstraße 52</placeName>
+               <placeName type="ort_fruherer-name">Reiterndorf 110</placeName>
+               <placeName type="ort_fruherer-name">Reiterndorf 121</placeName>
+               <location type="coords">
+                  <geo>47,705435 13,626622</geo>
+               </location>
+               <location type="located_in_place">
+                  <placeName ref="pmb1220">Grazer Straße [Bad Ischl]</placeName>
+                  <geo>47,70918 13,62156</geo>
+               </location>
+               <location type="located_in_place">
+                  <placeName ref="pmb213">Bad Ischl</placeName>
+                  <geo>47,71109 13,61893</geo>
+               </location>
+            </place>
+            <place xml:id="pmb213">
+               <placeName>Bad Ischl</placeName>
+               <location type="coords">
+                  <geo>47,71109 13,61893</geo>
+               </location>
+               <location type="located_in_place">
+                  <placeName ref="pmb429">Salzkammergut</placeName>
+                  <geo>47,75 13,5</geo>
                </location>
             </place>
             <place xml:id="pmb30">

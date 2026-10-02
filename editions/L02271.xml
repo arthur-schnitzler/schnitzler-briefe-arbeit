@@ -1,6 +1,10 @@
-<?xml version='1.0' encoding='UTF-8'?>
+<?xml version="1.0" encoding="UTF-8"?>
 <?xml-model href="../meta/schnitzler-briefe-schematron.sch" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
-<TEI xmlns="http://www.tei-c.org/ns/1.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.tei-c.org/ns/1.0 ../meta/schnitzler-briefe-schema.xsd" xml:id="L02271" xml:base="https://id.acdh.oeaw.ac.at/schnitzler/schnitzler-briefe/editions">
+<TEI xmlns="http://www.tei-c.org/ns/1.0"
+     xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+     xsi:schemaLocation="http://www.tei-c.org/ns/1.0 ../meta/schnitzler-briefe-schema.xsd"
+     xml:id="L02271"
+     xml:base="https://id.acdh.oeaw.ac.at/schnitzler/schnitzler-briefe/editions">
    <teiHeader>
       <fileDesc>
          <titleStmt>
@@ -93,7 +97,9 @@
                            <incident type="postal">
                               <desc>
                                  <stamp n="1" type="transmission">
-                                    <placeName ref="#pmb50">Wien</placeName>
+                                    <placeName ref="#pmb365223">
+                                       <unclear>18/1 Wien 110</unclear>
+                                    </placeName>
                                     <date when="1917-09-02">2. IX. 17</date>
                                     <time>X</time>
                                  </stamp>
@@ -123,19 +129,27 @@
             </correspAction>
             <correspAction type="transmitted">
                <date when="1917-09-02">2. 9. 1917</date>
-               <placeName ref="#pmb50">Wien</placeName>
+               <placeName ref="#pmb365223">18/1 Post- und Telegraphenamt 110</placeName>
             </correspAction>
             <correspAction type="received">
                <persName ref="#pmb10863">Beer-Hofmann, Richard</persName>
                <date when="1917-09-04" evidence="external">4. 9. 1917</date>
-               <placeName ref="#pmb43462">Grazer Straße [Bad Ischl]</placeName>
+               <placeName ref="#pmb43462">Villa Kupferschmied</placeName>
             </correspAction>
-            <correspContext><ref type="belongsToCorrespondence" target="correspondence_10863">Beer-Hofmann, Richard</ref>
+            <correspContext>
+               <ref type="belongsToCorrespondence" target="correspondence_10863">Beer-Hofmann, Richard</ref>
                <ref subtype="previous_letter" type="withinCollection" target="L02270">Mann an Schnitzler, 27. 8. 1917</ref>
                <ref subtype="next_letter" type="withinCollection" target="L02272">Beer-Hofmann an Schnitzler, 3. 9. 1917</ref>
-               <ref subtype="previous_letter" type="withinCorrespondence" source="correspondence_10863" target="L02267">Schnitzler an Beer-Hofmann, 23. 7. 1917</ref>
-               <ref subtype="next_letter" type="withinCorrespondence" source="correspondence_10863" target="L02272">Beer-Hofmann an Schnitzler, 3. 9. 1917</ref>
-            </correspContext></correspDesc>
+               <ref subtype="previous_letter"
+                    type="withinCorrespondence"
+                    source="correspondence_10863"
+                    target="L02267">Schnitzler an Beer-Hofmann, 23. 7. 1917</ref>
+               <ref subtype="next_letter"
+                    type="withinCorrespondence"
+                    source="correspondence_10863"
+                    target="L02272">Beer-Hofmann an Schnitzler, 3. 9. 1917</ref>
+            </correspContext>
+         </correspDesc>
       </profileDesc>
       <revisionDesc status="approved">
          <change who="MAM" when="2021-02-08">Angelegt</change>
@@ -174,10 +188,13 @@
                </addrLine>
                <addrLine>
                   <hi rend="latintype">
-                     <rs type="place" ref="#pmb43462"><anchor type="commentary" xml:id="K_L02271-10"/>Grazerstr 56<note type="commentary" corresp="K_L02271-10"><rs type="person" ref="#pmb2121">Schnitzler</rs> irrte sich in der
+                     <rs type="place" ref="#pmb43462">
+                        <anchor type="commentary" xml:id="K_L02271-1"/>Grazerstr 56<note type="commentary" corresp="K_L02271-1">
+                           <rs type="person" ref="#pmb2121">Schnitzler</rs> irrte sich in der
                            Hausnummer: die <rs type="place" ref="#pmb43462">Villa Kupferschmied</rs>,
                            in die sich <rs type="person" ref="#pmb10863">Beer-Hofmann</rs> zwischen <date>1916</date> und <date>1919</date>
-                           mehrfach einquartierte, hatte die Anschrift <rs type="place" ref="#pmb43462">Grazerstraße 52</rs>.</note></rs>
+                           mehrfach einquartierte, hatte die Anschrift <rs type="place" ref="#pmb43462">Grazerstraße 52</rs>.</note>
+                     </rs>
                   </hi>
                </addrLine>
             </address>
@@ -194,7 +211,7 @@
                <space unit="chars" quantity="1"/>
                <rs type="person" ref="#pmb12740">Gustav</rs> erzählt mir dſs Sie vielleicht nach <rs type="place" ref="#pmb168">Berlin</rs> fahren. Bitte ſchreiben Sie mir nach <rs type="place" ref="#pmb2318">Partenkirchen</rs> (<rs type="place" ref="#pmb808">Haus Tannenberg</rs>) wohin ich <date>Montag</date> meiner <rs type="person" subtype="implied" ref="#pmb2173">Frau</rs> nachreiſe, wann Sie etwa in <rs type="place" ref="#pmb168">Berlin</rs> sein dürften.</p>
             <p>Haben Sie meinen letzten (zweiten) <pb facs="1917_AS_RBH_1_00002"/>
-               <anchor type="commentary" xml:id="K_L02271-1"/>Brief<note type="commentary" corresp="K_L02271-1">
+               <anchor type="commentary" xml:id="K_L02271-2"/>Brief<note type="commentary" corresp="K_L02271-2">
                   <ref target="L02267" subtype="See" type="schnitzler-briefe"/>.
                </note> erhalten?</p>
             <closer>Herzliche Grüße Ihnen und den Ihrigen<lb/>Ihr<lb/>
@@ -302,41 +319,52 @@
             </person>
          </listPerson>
          <listPlace>
-            <place xml:id="pmb50">
-               <placeName>Wien</placeName>
-               <placeName type="ort_fruherer-name">K.K. Reichshaupt- und Residenzstadt Wien</placeName>
-               <placeName type="alternative-name">Bécs</placeName>
-               <placeName type="alternative-name">Land Wien</placeName>
-               <placeName type="alternative-name">Vídeň</placeName>
-               <placeName type="alternative-name">Wenia</placeName>
-               <placeName type="alternative-name">Beč</placeName>
-               <placeName type="ort_fruherer-name">Vindobona</placeName>
-               <placeName type="alternative-name">Vienna</placeName>
+            <place xml:id="pmb365223">
+               <placeName>18/1 Post- und Telegraphenamt 110</placeName>
                <location type="coords">
-                  <geo>48,208333 16,373056</geo>
+                  <geo>48,22513 16,343276</geo>
                </location>
                <location type="located_in_place">
-                  <placeName ref="pmb41240">Österreich</placeName>
-                  <geo>47,33333 13,33333</geo>
+                  <placeName ref="pmb365281">Schulgasse [Wien]</placeName>
+                  <geo>48,226495 16,336654</geo>
                </location>
                <location type="located_in_place">
-                  <placeName ref="pmb235218">Windmühlhöhe</placeName>
-                  <geo>48,24077 16,32092</geo>
+                  <placeName ref="pmb68">XVIII., Währing</placeName>
+                  <geo>48,23333 16,31667</geo>
+               </location>
+               <location type="located_in_place">
+                  <placeName ref="pmb405253">Postbestellbezirk 18/1</placeName>
+                  <geo>48,231941 16,335645</geo>
                </location>
             </place>
-            <place xml:id="pmb213">
-               <placeName>Bad Ischl</placeName>
+            <place xml:id="pmb168815">
+               <placeName>Sternwartestraße 71</placeName>
                <location type="coords">
-                  <geo>47,71109 13,61893</geo>
+                  <geo>48,23188 16,33716</geo>
                </location>
                <location type="located_in_place">
-                  <placeName ref="pmb429">Salzkammergut</placeName>
-                  <geo>47,75 13,5</geo>
+                  <placeName ref="pmb68">XVIII., Währing</placeName>
+                  <geo>48,23333 16,31667</geo>
+               </location>
+               <location type="located_in_place">
+                  <placeName ref="pmb533">Währinger Cottage</placeName>
+                  <geo>48,233056 16,341944</geo>
+               </location>
+               <location type="located_in_place">
+                  <placeName ref="pmb150">Sternwartestraße</placeName>
+                  <geo>48,23099349198 16,340117830625</geo>
                </location>
             </place>
-            <place xml:id="pmb1220">
-               <placeName>Grazer Straße [Bad Ischl]</placeName>
+            <place xml:id="pmb43462" ana="comment">
+               <placeName>Villa Kupferschmid</placeName>
+               <placeName type="ort_namensvariante">Grazerstraße 52</placeName>
+               <placeName type="ort_fruherer-name">Reiterndorf 110</placeName>
+               <placeName type="ort_fruherer-name">Reiterndorf 121</placeName>
                <location type="coords">
+                  <geo>47,705435 13,626622</geo>
+               </location>
+               <location type="located_in_place">
+                  <placeName ref="pmb1220">Grazer Straße [Bad Ischl]</placeName>
                   <geo>47,70918 13,62156</geo>
                </location>
                <location type="located_in_place">
@@ -359,22 +387,14 @@
                   <geo>48,208333 16,373056</geo>
                </location>
             </place>
-            <place xml:id="pmb168815">
-               <placeName>Sternwartestraße 71</placeName>
+            <place xml:id="pmb213">
+               <placeName>Bad Ischl</placeName>
                <location type="coords">
-                  <geo>48,23188 16,33716</geo>
+                  <geo>47,71109 13,61893</geo>
                </location>
                <location type="located_in_place">
-                  <placeName ref="pmb68">XVIII., Währing</placeName>
-                  <geo>48,23333 16,31667</geo>
-               </location>
-               <location type="located_in_place">
-                  <placeName ref="pmb533">Währinger Cottage</placeName>
-                  <geo>48,233056 16,341944</geo>
-               </location>
-               <location type="located_in_place">
-                  <placeName ref="pmb150">Sternwartestraße</placeName>
-                  <geo>48,23099349198 16,340117830625</geo>
+                  <placeName ref="pmb429">Salzkammergut</placeName>
+                  <geo>47,75 13,5</geo>
                </location>
             </place>
             <place xml:id="pmb168">
