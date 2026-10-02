@@ -1,6 +1,8 @@
-<?xml version='1.0' encoding='UTF-8'?>
+<?xml version="1.0" encoding="UTF-8"?>
 <?xml-model href="../meta/schnitzler-briefe-schematron.sch" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
-<TEI xmlns="http://www.tei-c.org/ns/1.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.tei-c.org/ns/1.0 ../meta/schnitzler-briefe-schema.xsd" xml:id="L01607" xml:base="https://id.acdh.oeaw.ac.at/schnitzler/schnitzler-briefe/editions">
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+   xsi:schemaLocation="http://www.tei-c.org/ns/1.0 ../meta/schnitzler-briefe-schema.xsd"
+   xml:id="L01607" xml:base="https://id.acdh.oeaw.ac.at/schnitzler/schnitzler-briefe/editions">
    <teiHeader>
       <fileDesc>
          <titleStmt>
@@ -81,12 +83,13 @@
                            <supportDesc>
                               <extent>
                                  <measure unit="karte" quantity="1"/>
-                                 <measure unit="zeichenanzahl" quantity="466"/>
+                                 <measure unit="zeichenanzahl" quantity="464"/>
                               </extent>
                            </supportDesc>
                         </objectDesc>
                         <handDesc hands="1">
-                           <handNote medium="bleistift" style="deutsche-kurrent" corresp="#pmb10815"/>
+                           <handNote medium="bleistift" style="deutsche-kurrent" corresp="#pmb10815"
+                           />
                         </handDesc>
                         <additions>
                            <incident type="postal">
@@ -101,7 +104,7 @@
                            </incident>
                            <incident type="postal">
                               <desc>
-                                 <stamp n="2" type="delivery">
+                                 <stamp n="2" type="redirection">
                                     <placeName ref="#pmb365223">18/1 Wien 110</placeName>
                                     <date when="1906-07-06">6. VII. 06</date>
                                     <addSpan>Bestellt</addSpan>
@@ -109,8 +112,7 @@
                               </desc>
                            </incident>
                            <incident type="archival" rend="bleistift">
-                              <desc>von unbekannter Hand nummeriert:
-                                    »<quote>140</quote>«</desc>
+                              <desc>von unbekannter Hand nummeriert: »<quote>140</quote>«</desc>
                            </incident>
                         </additions>
                      </physDesc>
@@ -144,23 +146,40 @@
             <correspAction type="sent">
                <persName ref="#pmb10815">Bahr, Hermann</persName>
                <date when="1906-07-04" n="02">4. 7. 1906</date>
-               <placeName ref="#pmb462">Venedig</placeName>
+               <placeName ref="#pmb305">Casa Petrarca</placeName>
             </correspAction>
-            <correspAction type="delivered">
+            <correspAction type="transmitted">
+               <date when="1906-07-04">[4. 7]. 1906</date>
+               <placeName ref="#pmb365444">Verona Porta Nuova</placeName>
+            </correspAction>
+            <correspAction type="in_transit">
                <date when="1906-07-06">6. 7. 1906</date>
                <placeName ref="#pmb365223">18/1 Post- und Telegraphenamt 110</placeName>
             </correspAction>
+            <correspAction type="redirected">
+               <date evidence="conjecture" notBefore="1906-07-06" notAfter="1906-07-12">[6. 7. 1906
+                  – 12. 7. 1906?]</date>
+               <placeName ref="#pmb168815">Sternwartestraße 71</placeName>
+            </correspAction>
             <correspAction type="received">
                <persName ref="#pmb2121">Schnitzler, Arthur</persName>
-               <date evidence="conjecture" notBefore="1906-07-07" notAfter="1906-07-14">[5. 7. 1906 – 14. 7. 1906?]</date>
-               <placeName ref="#pmb959">Marienlyst</placeName>
+               <date evidence="conjecture" notBefore="1906-07-07" notAfter="1906-07-14">[7. 7. 1906
+                  – 14. 7. 1906?]</date>
+               <placeName ref="#pmb41010">Kurhotellet</placeName>
             </correspAction>
-            <correspContext><ref type="belongsToCorrespondence" target="correspondence_10815">Bahr, Hermann</ref>
-               <ref subtype="previous_letter" type="withinCollection" target="L04385">Schnitzler, Schnitzler an Schwarzkopf, 4. 7. 1906</ref>
-               <ref subtype="next_letter" type="withinCollection" target="L03430">Salten an Schnitzler, 6. 7. 1906</ref>
-               <ref subtype="previous_letter" type="withinCorrespondence" source="correspondence_10815" target="L01604">Schnitzler an Bahr, 24. – 25. 6. 1906</ref>
-               <ref subtype="next_letter" type="withinCorrespondence" source="correspondence_10815" target="L01612">Schnitzler, Schnitzler an Bahr, 14. 7. 1906</ref>
-            </correspContext></correspDesc>
+            <correspContext>
+               <ref type="belongsToCorrespondence" target="correspondence_10815">Bahr, Hermann</ref>
+               <ref subtype="previous_letter" type="withinCollection" target="L04385">Schnitzler,
+                  Schnitzler an Schwarzkopf, 4. 7. 1906</ref>
+               <ref subtype="next_letter" type="withinCollection" target="L03430">Salten an
+                  Schnitzler, 6. 7. 1906</ref>
+               <ref subtype="previous_letter" type="withinCorrespondence"
+                  source="correspondence_10815" target="L01604">Schnitzler an Bahr,
+                  24. – 25. 6. 1906</ref>
+               <ref subtype="next_letter" type="withinCorrespondence" source="correspondence_10815"
+                  target="L01612">Schnitzler, Schnitzler an Bahr, 14. 7. 1906</ref>
+            </correspContext>
+         </correspDesc>
       </profileDesc>
       <revisionDesc status="approved">
          <change who="KI MAM" when="2015-12-15">Kollationiert</change>
@@ -168,6 +187,7 @@
          <change who="MAM" when="2018-07-15">Überführt aus Bahr–Schnitzler-Daten</change>
          <change who="MAM" when="2019-01-20">Index check</change>
          <change who="GHS" when="2020-02-05">finalisiert</change>
+         <change who="MAM" when="2026-10-02">Datierung und Stempel überprüft</change>
       </revisionDesc>
    </teiHeader>
    <facsimile>
@@ -181,7 +201,7 @@
                <addrLine>
                   <hi rend="latintype">
                      <pb facs="MS-B-00005-B-000-00245"/>D<hi rend="superscript">r</hi> Artur
-                  Schnitzler</hi>
+                     Schnitzler</hi>
                </addrLine>
                <addrLine>
                   <hi rend="latintype">
@@ -211,14 +231,17 @@
                   <date>4. 7. 06</date>
                   <lb/>
                   <hi rend="latintype">
-                     <rs ref="#pmb305" type="place">Casa</rs>
-                     <space unit="chars" quantity="1"/>
-                     <rs type="person" ref="#pmb2975" subtype="implied">Petrarca</rs>
+                     <rs ref="#pmb305" type="place">Casa <rs type="person" ref="#pmb2975"
+                           subtype="implied">Petrarca</rs></rs>
                   </hi>
                </dateline>
             </opener>
-            <p>Dank ſchön, <salute>lieber Artur.</salute> Dein Brief hat mir eine große Freude
-               gemacht, und Luſt, ſolchen zweiten und dritten <rs type="work" ref="#pmb29913" subtype="implied">Akt</rs> wirklich zu ſchreiben. Neugierig, was <rs ref="#pmb10986" type="person">Brahm</rs>
+            <p>Dank ſchön, <salute>lieber Artur.</salute> Dein <anchor type="commentary"
+                  xml:id="K_L01607-1"/>Brief<note type="commentary" corresp="K_L01607-1">
+                  <ref type="schnitzler-briefe" target="L01604"/>.</note> hat mir eine große Freude
+               gemacht, und Luſt, ſolchen zweiten und dritten <rs type="work" ref="#pmb29913"
+                  subtype="implied">Akt</rs> wirklich zu ſchreiben. Neugierig, was <rs
+                  ref="#pmb10986" type="person">Brahm</rs>
                <space unit="chars" quantity="1"/>ſagen wird. – Hier herrlichſt, obwol mir die Sonne
                die Beine ſo verbrannt hat, daß ſie zwei Tage in Bleiwaſſer gelegt werden mußten. –
                Grüß Frau <rs ref="#pmb2173" type="person">Olga</rs> herzlichſt und laßt es Euch gut
@@ -362,11 +385,16 @@
          <listBibl>
             <bibl xml:id="pmb29913" ana="implied">
                <title>Der Faun. Ein Akt</title>
-               <title type="werk_bibliografische-angabe">Hermann Bahr: Der Faun. Ein Akt. (Schluß) [VI]. In: Die Schaubühne, Jg. 2, 8.11.1906, S. 451–456.</title>
-               <title type="werk_bibliografische-angabe">Hermann Bahr: Der Faun. Ein Akt. [V]. In: Die Schaubühne, Jg. 2, 1.11.1906, S. 426–431.</title>
-               <title type="werk_bibliografische-angabe">Hermann Bahr: Der Faun. Ein Akt. [IV]. In: Die Schaubühne, Jg. 2, 25.10.1906, S. 406–411.</title>
-               <title type="werk_bibliografische-angabe">Hermann Bahr: Der Faun. Ein Akt. [III]. In: Die Schaubühne, Jg. 2, 18.10.1906, S. 366–370.</title>
-               <title type="werk_bibliografische-angabe">Hermann Bahr: Der Faun. Ein Akt. [II]. In: Die Schaubühne, Jg. 2, 11.10.1906, S. 343–349.</title>
+               <title type="werk_bibliografische-angabe">Hermann Bahr: Der Faun. Ein Akt. (Schluß)
+                  [VI]. In: Die Schaubühne, Jg. 2, 8.11.1906, S. 451–456.</title>
+               <title type="werk_bibliografische-angabe">Hermann Bahr: Der Faun. Ein Akt. [V]. In:
+                  Die Schaubühne, Jg. 2, 1.11.1906, S. 426–431.</title>
+               <title type="werk_bibliografische-angabe">Hermann Bahr: Der Faun. Ein Akt. [IV]. In:
+                  Die Schaubühne, Jg. 2, 25.10.1906, S. 406–411.</title>
+               <title type="werk_bibliografische-angabe">Hermann Bahr: Der Faun. Ein Akt. [III]. In:
+                  Die Schaubühne, Jg. 2, 18.10.1906, S. 366–370.</title>
+               <title type="werk_bibliografische-angabe">Hermann Bahr: Der Faun. Ein Akt. [II]. In:
+                  Die Schaubühne, Jg. 2, 11.10.1906, S. 343–349.</title>
                <title type="legacy-name-merge">Der Faun. Ein Akt. [II]</title>
                <title type="legacy-name-merge">Der Faun. Ein Akt. [III]</title>
                <title type="legacy-name-merge">Der Faun. Ein Akt. [IV]</title>
@@ -404,29 +432,43 @@
                   <geo>48,231941 16,335645</geo>
                </location>
             </place>
-            <place xml:id="pmb462">
-               <placeName>Venedig</placeName>
-               <placeName type="legacy-name-merge">Venice</placeName>
+            <place xml:id="pmb305">
+               <placeName>Casa Petrarca</placeName>
                <location type="coords">
+                  <geo>45,43507 12,33541</geo>
+               </location>
+               <location type="located_in_place">
+                  <placeName ref="pmb462">Venedig</placeName>
                   <geo>45,43713 12,33265</geo>
                </location>
+            </place>
+            <place xml:id="pmb168815">
+               <placeName>Sternwartestraße 71</placeName>
+               <location type="coords">
+                  <geo>48,23188 16,33716</geo>
+               </location>
                <location type="located_in_place">
-                  <placeName ref="pmb40306">Italien</placeName>
-                  <geo>42,83333 12,83333</geo>
+                  <placeName ref="pmb68">XVIII., Währing</placeName>
+                  <geo>48,23333 16,31667</geo>
+               </location>
+               <location type="located_in_place">
+                  <placeName ref="pmb533">Währinger Cottage</placeName>
+                  <geo>48,233056 16,341944</geo>
+               </location>
+               <location type="located_in_place">
+                  <placeName ref="pmb150">Sternwartestraße</placeName>
+                  <geo>48,23099349198 16,340117830625</geo>
                </location>
             </place>
-            <place xml:id="pmb959">
-               <placeName>Marienlyst</placeName>
+            <place xml:id="pmb41010">
+               <placeName>Kurhotellet</placeName>
+               <placeName type="ort_namensvariante">Kurhaus</placeName>
                <location type="coords">
+                  <geo>56,044988 12,603924</geo>
+               </location>
+               <location type="located_in_place">
+                  <placeName ref="pmb959">Marienlyst</placeName>
                   <geo>56,042028 12,601917</geo>
-               </location>
-               <location type="located_in_place">
-                  <placeName ref="pmb43570">Dänemark</placeName>
-                  <geo>56,0 10,0</geo>
-               </location>
-               <location type="located_in_place">
-                  <placeName ref="pmb726">Helsingør</placeName>
-                  <geo>56,03606 12,6136</geo>
                </location>
             </place>
             <place xml:id="pmb68">
@@ -446,7 +488,8 @@
             </place>
             <place xml:id="pmb50">
                <placeName>Wien</placeName>
-               <placeName type="ort_fruherer-name">K.K. Reichshaupt- und Residenzstadt Wien</placeName>
+               <placeName type="ort_fruherer-name">K.K. Reichshaupt- und Residenzstadt
+                  Wien</placeName>
                <placeName type="alternative-name">Bécs</placeName>
                <placeName type="alternative-name">Land Wien</placeName>
                <placeName type="alternative-name">Vídeň</placeName>
@@ -488,14 +531,15 @@
                   <geo>48,4054 16,4887</geo>
                </location>
             </place>
-            <place xml:id="pmb305">
-               <placeName>Casa Petrarca</placeName>
+            <place xml:id="pmb462">
+               <placeName>Venedig</placeName>
+               <placeName type="legacy-name-merge">Venice</placeName>
                <location type="coords">
-                  <geo>45,43507 12,33541</geo>
+                  <geo>45,43713 12,33265</geo>
                </location>
                <location type="located_in_place">
-                  <placeName ref="pmb462">Venedig</placeName>
-                  <geo>45,43713 12,33265</geo>
+                  <placeName ref="pmb40306">Italien</placeName>
+                  <geo>42,83333 12,83333</geo>
                </location>
             </place>
          </listPlace>

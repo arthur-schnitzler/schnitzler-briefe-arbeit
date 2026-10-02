@@ -1,6 +1,9 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <?xml-model href="../meta/schnitzler-briefe-schematron.sch" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
-<TEI xmlns="http://www.tei-c.org/ns/1.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xml:id="L01646" xsi:schemaLocation="http://www.tei-c.org/ns/1.0 ../meta/schnitzler-briefe-schema.xsd" xml:base="https://id.acdh.oeaw.ac.at/schnitzler/schnitzler-briefe/editions">
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+   xml:id="L01646"
+   xsi:schemaLocation="http://www.tei-c.org/ns/1.0 ../meta/schnitzler-briefe-schema.xsd"
+   xml:base="https://id.acdh.oeaw.ac.at/schnitzler/schnitzler-briefe/editions">
    <teiHeader>
       <fileDesc>
          <titleStmt>
@@ -129,8 +132,7 @@
                                  </quote>«</desc>
                            </incident>
                            <incident type="archival" rend="bleistift">
-                              <desc>von unbekannter Hand nummeriert:
-                                    »<quote>269</quote>«</desc>
+                              <desc>von unbekannter Hand nummeriert: »<quote>269</quote>«</desc>
                            </incident>
                         </additions>
                      </physDesc>
@@ -164,18 +166,37 @@
             <correspAction type="sent">
                <persName ref="#pmb11740">Hofmannsthal, Hugo von</persName>
                <date when="1906-12-28" n="01">28. 12. 1906</date>
-               <placeName ref="#pmb50">Wien</placeName>
+               <placeName ref="#pmb40297">Hofmannsthal-Schlössl</placeName>
+            </correspAction>
+            <correspAction type="transmitted">
+               <date when="1906-12-29">29.&#160;12.&#160;1906</date>
+               <placeName ref="#pmb365561">14/2 Wien 127</placeName>
+            </correspAction>
+            <correspAction type="arrived">
+               <date when="1906-12-29">29.&#160;12.&#160;1906</date>
+               <placeName ref="#pmb365226">18/1 Wien 111</placeName>
+            </correspAction>
+            <correspAction type="delivered">
+               <date when="1906-12-29">29.&#160;12.&#160;1906</date>
+               <placeName ref="#pmb365223">18/1 Wien 110</placeName>
             </correspAction>
             <correspAction type="received">
                <persName ref="#pmb2121">Schnitzler, Arthur</persName>
                <date when="1906-12-28">29. 12. 1906</date>
                <placeName ref="#pmb168940">Edmund-Weiß-Gasse 7</placeName>
             </correspAction>
-            <correspContext><ref type="belongsToCorrespondence" target="correspondence_11740">Hofmannsthal, Hugo von</ref>
-               <ref subtype="previous_letter" type="withinCollection" target="L01645">Burckhard an Schnitzler, 2[2?]. 12. 1906</ref>
-               <ref subtype="next_letter" type="withinCollection" target="L01647">Dehmel an Schnitzler, [1907]</ref>
-               <ref subtype="previous_letter" type="withinCorrespondence" source="correspondence_11740" target="L01639">Hofmannsthal an Schnitzler, 29. 11. 1906</ref>
-               <ref subtype="next_letter" type="withinCorrespondence" source="correspondence_11740" target="L01651">Hofmannsthal an Schnitzler, [14. 1. 1907]</ref>
+            <correspContext>
+               <ref type="belongsToCorrespondence" target="correspondence_11740">Hofmannsthal, Hugo
+                  von</ref>
+               <ref subtype="previous_letter" type="withinCollection" target="L01645">Burckhard an
+                  Schnitzler, 2[2?]. 12. 1906</ref>
+               <ref subtype="next_letter" type="withinCollection" target="L01647">Dehmel an
+                  Schnitzler, [1907]</ref>
+               <ref subtype="previous_letter" type="withinCorrespondence"
+                  source="correspondence_11740" target="L01639">Hofmannsthal an Schnitzler,
+                  29. 11. 1906</ref>
+               <ref subtype="next_letter" type="withinCorrespondence" source="correspondence_11740"
+                  target="L01651">Hofmannsthal an Schnitzler, [14. 1. 1907]</ref>
             </correspContext></correspDesc>
       </profileDesc>
       <revisionDesc status="approved">
@@ -183,6 +204,7 @@
          <change who="GHS" when="2020-04-25">Durchsicht</change>
          <change who="MAM" when="2020-06-23">Durchsicht</change>
          <change when="2020-06-24" who="MAM">Index check</change>
+         <change who="MAM" when="2026-10-02">Datierung und Stempel überprüft</change>
       </revisionDesc>
    </teiHeader>
    <facsimile>
@@ -194,7 +216,8 @@
          <div type="address">
             <address>
                <addrLine>
-                  <pb facs="MS-SCHNITZLER-B-00043-B-00002-000-00279"/>Herrn D<hi rend="superscript">r</hi> Arthur Schnitzler</addrLine>
+                  <pb facs="MS-SCHNITZLER-B-00043-B-00002-000-00279"/>Herrn D<hi rend="superscript"
+                     >r</hi> Arthur Schnitzler</addrLine>
                <addrLine>
                   <rs type="place" ref="#pmb50">Wien</rs>
                </addrLine>
@@ -210,17 +233,23 @@
                </dateline>
             </opener>
             <p>
-               <salute>lieber,</salute> ſehr lieb und gut daſs Sie ko<c rendition="#gemination-m"/>en wollen, aber unter dieſen Umſtänden erwarten wir Sie <hi n="2" rend="underline">nicht</hi>, denn gerade Allein-herüber-fahren iſt das Langweilige und
+               <salute>lieber,</salute> ſehr lieb und gut daſs Sie ko<c rendition="#gemination-m"
+               />en wollen, aber unter dieſen Umſtänden erwarten wir Sie <hi n="2" rend="underline"
+                  >nicht</hi>, denn gerade Allein-herüber-fahren iſt das Langweilige und
                Unerfreuliche, beſonders in der Dunkelheit, das wollen wir nicht, alſo bald ein
                andres Mal Ihr beide.</p>
             <p>Bitte den Abend des <date>
                   <hi rend="underline" n="1">17</hi>
                   <hi rend="superscript">ten</hi> Jänner</date> freihalten für meinen
                (nicht-öffentlichen) <anchor type="commentary" xml:id="K_L01646-1"/>
-               <rs type="work" ref="#pmb43900">Vortrag</rs>
-               <note type="commentary" corresp="K_L01646-1">Am <date>17. 1. 1907</date> hielt <rs type="person" ref="#pmb11740">Hofmannsthal</rs> den Vortrag <rs type="work" ref="#pmb43900">Der Dichter und diese Zeit</rs> im <rs type="org" ref="#pmb43902">Kunstsalon Miethke</rs> vor geladenen, zehn Kronen zahlenden
-                  Gästen.</note>. Ihr beko<c rendition="#gemination-m"/>t Eure Plätze direct von
-               mir.</p>
+               <rs type="event" subtype="implied" ref="#pmb43905"><rs type="work" ref="#pmb43900"
+                     >Vortrag</rs></rs>
+               <note type="commentary" corresp="K_L01646-1">Am <ref type="schnitzler-kultur"
+                     subtype="date-only" target="pmb43905"/> hielt <rs type="person" ref="#pmb11740"
+                     >Hofmannsthal</rs> den Vortrag <rs type="work" ref="#pmb43900">Der Dichter und
+                     diese Zeit</rs> im <rs type="org" ref="#pmb43902">Kunstsalon Miethke</rs> vor
+                  geladenen, zehn Kronen zahlenden Gästen.</note>. Ihr beko<c
+                  rendition="#gemination-m"/>t Eure Plätze direct von mir.</p>
             <closer>Ihr <signed>Hugo</signed>
             </closer>
             <postscript>
@@ -334,7 +363,8 @@
             </place>
             <place xml:id="pmb50">
                <placeName>Wien</placeName>
-               <placeName type="ort_fruherer-name">K.K. Reichshaupt- und Residenzstadt Wien</placeName>
+               <placeName type="ort_fruherer-name">K.K. Reichshaupt- und Residenzstadt
+                  Wien</placeName>
                <placeName type="alternative-name">Bécs</placeName>
                <placeName type="alternative-name">Land Wien</placeName>
                <placeName type="alternative-name">Vídeň</placeName>
@@ -381,43 +411,58 @@
                   <placeName ref="pmb234823">Galerie Miethke</placeName>
                   <geo>48,207163 16,369299</geo>
                   <idno type="URL" subtype="pmb">https://pmb.acdh.oeaw.ac.at/entity/234823/</idno>
-                  <idno type="URL" subtype="wienerschnitzler">https://wienerschnitzler.org/pmb234823.html</idno>
-                  <idno type="URL" subtype="schnitzler-kultur">https://schnitzler-kultur.acdh.oeaw.ac.at/pmb234823.html</idno>
+                  <idno type="URL" subtype="wienerschnitzler"
+                     >https://wienerschnitzler.org/pmb234823.html</idno>
+                  <idno type="URL" subtype="schnitzler-kultur"
+                     >https://schnitzler-kultur.acdh.oeaw.ac.at/pmb234823.html</idno>
                </location>
                <location type="located_in_place">
                   <placeName ref="pmb39599">Graben</placeName>
                   <geo>48,208613 16,369913</geo>
                   <idno type="URL" subtype="pmb">https://pmb.acdh.oeaw.ac.at/entity/39599/</idno>
-                  <idno type="URL" subtype="www">https://www.kraus.wienbibliothek.at/legalkraus/pmb39599.html</idno>
+                  <idno type="URL" subtype="www"
+                     >https://www.kraus.wienbibliothek.at/legalkraus/pmb39599.html</idno>
                   <idno type="URL" subtype="pmb">https://pmb.acdh.oeaw.ac.at/entity/90753/</idno>
                   <idno type="URL" subtype="geonames">https://sws.geonames.org/10346420/</idno>
-                  <idno type="URL" subtype="schnitzler-tagebuch">https://schnitzler-tagebuch.acdh.oeaw.ac.at/pmb90753.html</idno>
+                  <idno type="URL" subtype="schnitzler-tagebuch"
+                     >https://schnitzler-tagebuch.acdh.oeaw.ac.at/pmb90753.html</idno>
                   <idno type="URL" subtype="wikidata">http://www.wikidata.org/entity/Q699937</idno>
-                  <idno type="URL" subtype="wikipedia">https://de.wikipedia.org/wiki/Graben_(Wien)</idno>
-                  <idno type="URL" subtype="wienerschnitzler">https://wienerschnitzler.org/pmb39599.html</idno>
-                  <idno type="URL" subtype="schnitzler-briefe">https://schnitzler-briefe.acdh.oeaw.ac.at/pmb39599.html</idno>
+                  <idno type="URL" subtype="wikipedia"
+                     >https://de.wikipedia.org/wiki/Graben_(Wien)</idno>
+                  <idno type="URL" subtype="wienerschnitzler"
+                     >https://wienerschnitzler.org/pmb39599.html</idno>
+                  <idno type="URL" subtype="schnitzler-briefe"
+                     >https://schnitzler-briefe.acdh.oeaw.ac.at/pmb39599.html</idno>
                </location>
                <location type="located_in_place">
                   <placeName ref="pmb234832">Graben 17</placeName>
                   <geo>48,209156 16,368658</geo>
                   <idno type="URL" subtype="pmb">https://pmb.acdh.oeaw.ac.at/entity/234832/</idno>
-                  <idno type="URL" subtype="wienerschnitzler">https://wienerschnitzler.org/pmb234832.html</idno>
+                  <idno type="URL" subtype="wienerschnitzler"
+                     >https://wienerschnitzler.org/pmb234832.html</idno>
                </location>
                <location type="located_in_place">
                   <placeName ref="pmb51">I., Innere Stadt</placeName>
                   <geo>48,20769 16,37049</geo>
-                  <idno type="URL" subtype="schnitzler-bahr">https://schnitzler-bahr.acdh.oeaw.ac.at/pmb51.html</idno>
+                  <idno type="URL" subtype="schnitzler-bahr"
+                     >https://schnitzler-bahr.acdh.oeaw.ac.at/pmb51.html</idno>
                   <idno type="URL" subtype="pmb">https://pmb.acdh.oeaw.ac.at/entity/51/</idno>
                   <idno type="URL" subtype="pmb">https://pmb.acdh.oeaw.ac.at/entity/36789/</idno>
                   <idno type="URL" subtype="pmb">https://pmb.acdh.oeaw.ac.at/entity/51010/</idno>
                   <idno type="URL" subtype="geonames">https://sws.geonames.org/2775259/</idno>
-                  <idno type="URL" subtype="www">https://www.kraus.wienbibliothek.at/legalkraus/pmb51.html</idno>
-                  <idno type="URL" subtype="schnitzler-interviews">https://schnitzler-interviews.acdh.oeaw.ac.at/pmb51.html</idno>
+                  <idno type="URL" subtype="www"
+                     >https://www.kraus.wienbibliothek.at/legalkraus/pmb51.html</idno>
+                  <idno type="URL" subtype="schnitzler-interviews"
+                     >https://schnitzler-interviews.acdh.oeaw.ac.at/pmb51.html</idno>
                   <idno type="URL" subtype="wikidata">http://www.wikidata.org/entity/Q267329</idno>
-                  <idno type="URL" subtype="wikipedia">https://de.wikipedia.org/wiki/Innere_Stadt_(Wien)</idno>
-                  <idno type="URL" subtype="wienerschnitzler">https://wienerschnitzler.org/pmb51.html</idno>
-                  <idno type="URL" subtype="schnitzler-kultur">https://schnitzler-kultur.acdh.oeaw.ac.at/pmb51.html</idno>
-                  <idno type="URL" subtype="schnitzler-briefe">https://schnitzler-briefe.acdh.oeaw.ac.at/pmb51.html</idno>
+                  <idno type="URL" subtype="wikipedia"
+                     >https://de.wikipedia.org/wiki/Innere_Stadt_(Wien)</idno>
+                  <idno type="URL" subtype="wienerschnitzler"
+                     >https://wienerschnitzler.org/pmb51.html</idno>
+                  <idno type="URL" subtype="schnitzler-kultur"
+                     >https://schnitzler-kultur.acdh.oeaw.ac.at/pmb51.html</idno>
+                  <idno type="URL" subtype="schnitzler-briefe"
+                     >https://schnitzler-briefe.acdh.oeaw.ac.at/pmb51.html</idno>
                </location>
             </org>
          </listOrg>
