@@ -1,6 +1,10 @@
-<?xml version='1.0' encoding='UTF-8'?>
+<?xml version="1.0" encoding="UTF-8"?>
 <?xml-model href="../meta/schnitzler-briefe-schematron.sch" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
-<TEI xmlns="http://www.tei-c.org/ns/1.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.tei-c.org/ns/1.0 ../meta/schnitzler-briefe-schema.xsd" xml:id="L02192" xml:base="https://id.acdh.oeaw.ac.at/schnitzler/schnitzler-briefe/editions">
+<TEI xmlns="http://www.tei-c.org/ns/1.0"
+     xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+     xsi:schemaLocation="http://www.tei-c.org/ns/1.0 ../meta/schnitzler-briefe-schema.xsd"
+     xml:id="L02192"
+     xml:base="https://id.acdh.oeaw.ac.at/schnitzler/schnitzler-briefe/editions">
    <teiHeader>
       <fileDesc>
          <titleStmt>
@@ -89,7 +93,9 @@
                         </objectDesc>
                         <handDesc hands="2">
                            <handNote medium="bleistift" corresp="#pmb2121" style="deutsche-kurrent"/>
-                           <handNote medium="schwarze-tinte" corresp="#pmb2173" style="lateinische-kurrent"/>
+                           <handNote medium="schwarze-tinte"
+                                     corresp="#pmb2173"
+                                     style="lateinische-kurrent"/>
                         </handDesc>
                         <additions>
                            <incident type="postal">
@@ -125,6 +131,10 @@
                <persName ref="#pmb2121">Schnitzler, Arthur</persName>
                <persName ref="#pmb2173">Schnitzler, Olga</persName>
                <date when="1914-08-20" n="01">20. 8. 1914</date>
+               <placeName ref="#pmb230">Österreichischer Hof</placeName>
+            </correspAction>
+            <correspAction type="transmitted">
+               <date when="1914-08-20">20. 8. 1914</date>
                <placeName ref="#pmb30">Salzburg</placeName>
             </correspAction>
             <correspAction type="received">
@@ -133,18 +143,27 @@
                   – 25. 8. 1914?]</date>
                <placeName ref="#pmb34344">Weißenbach am Attersee</placeName>
             </correspAction>
-            <correspContext><ref type="belongsToCorrespondence" target="correspondence_10863">Beer-Hofmann, Richard</ref>
+            <correspContext>
+               <ref type="belongsToCorrespondence" target="correspondence_10863">Beer-Hofmann, Richard</ref>
                <ref subtype="previous_letter" type="withinCollection" target="L03565">Salten an Schnitzler, 10. 8. 1914</ref>
                <ref subtype="next_letter" type="withinCollection" target="L04488">Schnitzler, Schnitzler an Schwarzkopf, 20. 8. 1914</ref>
-               <ref subtype="previous_letter" type="withinCorrespondence" source="correspondence_10863" target="L02191">Beer-Hofmann an Schnitzler, 10. 8. 1914</ref>
-               <ref subtype="next_letter" type="withinCorrespondence" source="correspondence_10863" target="L02193">Schnitzler an Beer-Hofmann, 21. 8. 1914</ref>
-            </correspContext></correspDesc>
+               <ref subtype="previous_letter"
+                    type="withinCorrespondence"
+                    source="correspondence_10863"
+                    target="L02191">Beer-Hofmann an Schnitzler, 10. 8. 1914</ref>
+               <ref subtype="next_letter"
+                    type="withinCorrespondence"
+                    source="correspondence_10863"
+                    target="L02193">Schnitzler an Beer-Hofmann, 21. 8. 1914</ref>
+            </correspContext>
+         </correspDesc>
       </profileDesc>
       <revisionDesc status="approved">
          <change who="MAM" when="2021-02-08">Angelegt</change>
          <change who="MAM" when="2021-02-12">Index check</change>
          <change who="MAM" when="2021-05-04">Durchsicht</change>
          <change who="GHS" when="2021-07-06">Durchsicht</change>
+         <change who="SJ" when="2026-10-05">Datierung und Stempel überprüft</change>
       </revisionDesc>
    </teiHeader>
    <facsimile>
@@ -296,6 +315,17 @@
                <location type="located_in_place">
                   <placeName ref="pmb697">Salzburg [Land]</placeName>
                   <geo>47,41667 13,25</geo>
+               </location>
+            </place>
+            <place xml:id="pmb230">
+               <placeName>Österreichischer Hof</placeName>
+               <placeName type="legacy-name-merge">Hotel Englischer Hof [Salzburg]</placeName>
+               <location type="coords">
+                  <geo>47,802045 13,043401</geo>
+               </location>
+               <location type="located_in_place">
+                  <placeName ref="pmb30">Salzburg</placeName>
+                  <geo>47,80067 13,04532</geo>
                </location>
             </place>
             <place xml:id="pmb34344">
