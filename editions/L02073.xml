@@ -1,11 +1,15 @@
-<?xml version='1.0' encoding='UTF-8'?>
+<?xml version="1.0" encoding="UTF-8"?>
 <?xml-model href="../meta/schnitzler-briefe-schematron.sch" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
-<TEI xmlns="http://www.tei-c.org/ns/1.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.tei-c.org/ns/1.0 ../meta/schnitzler-briefe-schema.xsd" xml:id="L02073" xml:base="https://id.acdh.oeaw.ac.at/schnitzler/schnitzler-briefe/editions">
+<TEI xmlns="http://www.tei-c.org/ns/1.0"
+     xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+     xsi:schemaLocation="http://www.tei-c.org/ns/1.0 ../meta/schnitzler-briefe-schema.xsd"
+     xml:id="L02073"
+     xml:base="https://id.acdh.oeaw.ac.at/schnitzler/schnitzler-briefe/editions">
    <teiHeader>
       <fileDesc>
          <titleStmt>
             <title level="s">Arthur Schnitzler: Briefwechsel mit Autorinnen und Autoren</title>
-            <title level="a">Arthur Schnitzler an Robert Adam, 4. 6. 1912</title>
+            <title level="a">Arthur Schnitzler an Robert Adam, [23. oder 24]. 5. 1912</title>
             <author ref="#pmb2121">Schnitzler, Arthur</author>
             <editor>
                <name>Müller, Martin Anton</name>
@@ -100,8 +104,7 @@
                               <desc>
                                  <stamp n="1" type="transmission">
                                     <placeName ref="#pmb405253">18/1 Wien</placeName>
-                                    <!-- so -->
-                                    <date when="1912-06-04">4. VI. <supplied>1912</supplied>
+                                    <date when="1912-05-04"><supplied>2</supplied>4. V. <supplied>12</supplied>
                                     </date>
                                  </stamp>
                               </desc>
@@ -125,27 +128,38 @@
          <correspDesc>
             <correspAction type="sent">
                <persName ref="#pmb2121">Schnitzler, Arthur</persName>
-               <date when="1912-06-04" n="01">4. 6. 1912</date>
+               <date n="01" notBefore="1912-05-23" notAfter="1912-05-24">[23. oder 24]. 5. 1912</date>
                <placeName ref="#pmb168815">Sternwartestraße 71</placeName>
+            </correspAction>
+            <correspAction type="transmitted">
+               <date when="1912-05-24">24. 5. [1912]</date>
+               <placeName ref="#pmb405253">Postbestellbezirk 18/1</placeName>
             </correspAction>
             <correspAction type="received">
                <persName ref="#pmb12438">Adam, Robert</persName>
-               <date evidence="conjecture" notBefore="1912-06-05" notAfter="1912-06-09">[5. 6. 1912
-                  – 9. 6. 1912?]</date>
                <placeName ref="#pmb44400">Zistersdorf</placeName>
             </correspAction>
-            <correspContext><ref type="belongsToCorrespondence" target="correspondence_12438">Adam, Robert</ref>
+            <correspContext>
+               <ref type="belongsToCorrespondence" target="correspondence_12438">Adam, Robert</ref>
                <ref subtype="previous_letter" type="withinCollection" target="L02072">Bahr an Schnitzler, 2. 6. 1912</ref>
                <ref subtype="next_letter" type="withinCollection" target="L02074">Hofmannsthal an Schnitzler, 12. 6. 1912</ref>
-               <ref subtype="previous_letter" type="withinCorrespondence" source="correspondence_12438" target="L02030">Schnitzler, Schnitzler an Adam, 2[2?]. 9. 1911</ref>
-               <ref subtype="next_letter" type="withinCorrespondence" source="correspondence_12438" target="L02117">Adam an Schnitzler, 2. 4. 1913</ref>
-            </correspContext></correspDesc>
+               <ref subtype="previous_letter"
+                    type="withinCorrespondence"
+                    source="correspondence_12438"
+                    target="L02030">Schnitzler, Schnitzler an Adam, 2[2?]. 9. 1911</ref>
+               <ref subtype="next_letter"
+                    type="withinCorrespondence"
+                    source="correspondence_12438"
+                    target="L02117">Adam an Schnitzler, 2. 4. 1913</ref>
+            </correspContext>
+         </correspDesc>
       </profileDesc>
       <revisionDesc status="approved">
          <change who="MAM" when="2019-04-18">Angelegt</change>
          <change who="MAM" when="2019-06-12">Index check</change>
          <change who="GHS" when="2020-04-07">Durchsicht</change>
          <change who="GHS" when="2020-08-24">finalisiert</change>
+         <change who="MAM" when="2026-10-05">Datierung und Stempel überprüft</change>
       </revisionDesc>
    </teiHeader>
    <facsimile>
