@@ -1,11 +1,13 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <?xml-model href="../meta/schnitzler-briefe-schematron.sch" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
-<TEI xmlns="http://www.tei-c.org/ns/1.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.tei-c.org/ns/1.0 ../meta/schnitzler-briefe-schema.xsd" xml:id="L01881" xml:base="https://id.acdh.oeaw.ac.at/schnitzler/schnitzler-briefe/editions">
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+   xsi:schemaLocation="http://www.tei-c.org/ns/1.0 ../meta/schnitzler-briefe-schema.xsd"
+   xml:id="L01881" xml:base="https://id.acdh.oeaw.ac.at/schnitzler/schnitzler-briefe/editions">
    <teiHeader>
       <fileDesc>
          <titleStmt>
             <title level="s">Arthur Schnitzler: Briefwechsel mit Autorinnen und Autoren</title>
-            <title level="a">Arthur Schnitzler an Richard Beer-Hofmann, 27. 10. 1909</title>
+            <title level="a">Arthur Schnitzler an Richard Beer-Hofmann, [26. oder 27].&#160;10.&#160;1909</title>
             <author ref="#pmb2121">Schnitzler, Arthur</author>
             <editor>
                <name>Müller, Martin Anton</name>
@@ -87,7 +89,8 @@
                            </supportDesc>
                         </objectDesc>
                         <handDesc hands="1">
-                           <handNote medium="bleistift" style="deutsche-kurrent" corresp="#pmb2121"/>
+                           <handNote medium="bleistift" style="deutsche-kurrent" corresp="#pmb2121"
+                           />
                         </handDesc>
                         <additions>
                            <incident type="postal">
@@ -142,19 +145,34 @@
          <correspDesc>
             <correspAction type="sent">
                <persName ref="#pmb2121">Schnitzler, Arthur</persName>
-               <date when="1909-10-27" n="01">27. 10. 1909</date>
-               <placeName ref="#pmb50">Wien</placeName>
+               <date n="01" notBefore="1909-10-26" notAfter="1909-10-27">[26. oder 27].&#160;10.&#160;1909</date>
+               <placeName ref="#pmb168940">Edmund-Weiß-Gasse 7</placeName>
+            </correspAction>
+            <correspAction type="transmitted">
+               <date when="1909-10-27">27.&#160;10.&#160;1909</date>
+               <placeName ref="#pmb365217">1/1 Wien 10</placeName>
+            </correspAction>
+            <correspAction type="delivered">
+               <date when="1909-10-27">27.&#160;10.&#160;1909</date>
+               <placeName ref="#pmb365223">18/1 Wien 110</placeName>
             </correspAction>
             <correspAction type="received">
                <persName ref="#pmb10863">Beer-Hofmann, Richard</persName>
                <date when="1909-10-27">27. 10. 1909</date>
                <placeName ref="#pmb235251">Hasenauerstraße 59</placeName>
             </correspAction>
-            <correspContext><ref type="belongsToCorrespondence" target="correspondence_10863">Beer-Hofmann, Richard</ref>
-               <ref subtype="previous_letter" type="withinCollection" target="L01880">Ehrenstein an Schnitzler, 17. 10. 1909</ref>
-               <ref subtype="next_letter" type="withinCollection" target="L04148">Schnitzler an Schwarzkopf, 27. 10. 1909</ref>
-               <ref subtype="previous_letter" type="withinCorrespondence" source="correspondence_10863" target="L01878">Beer-Hofmann an Schnitzler, 21. 9. 1909</ref>
-               <ref subtype="next_letter" type="withinCorrespondence" source="correspondence_10863" target="L01883">Schnitzler an Beer-Hofmann, [6. 11. 1909?]</ref>
+            <correspContext>
+               <ref type="belongsToCorrespondence" target="correspondence_10863">Beer-Hofmann,
+                  Richard</ref>
+               <ref subtype="previous_letter" type="withinCollection" target="L01880">Ehrenstein an
+                  Schnitzler, 17. 10. 1909</ref>
+               <ref subtype="next_letter" type="withinCollection" target="L04148">Schnitzler an
+                  Schwarzkopf, 27. 10. 1909</ref>
+               <ref subtype="previous_letter" type="withinCorrespondence"
+                  source="correspondence_10863" target="L01878">Beer-Hofmann an Schnitzler,
+                  21. 9. 1909</ref>
+               <ref subtype="next_letter" type="withinCorrespondence" source="correspondence_10863"
+                  target="L01883">Schnitzler an Beer-Hofmann, [6. 11. 1909?]</ref>
             </correspContext></correspDesc>
       </profileDesc>
       <revisionDesc status="approved">
@@ -162,6 +180,7 @@
          <change who="GHS" when="2020-10-28">Durchsicht mit Abschrift</change>
          <change who="MAM" when="2021-01-25">Durchsicht mit Faksimile des Originals</change>
          <change when="2021-01-26" who="MAM">Index check</change>
+         <change who="MAM" when="2026-10-05">Datierung und Stempel überprüft</change>
       </revisionDesc>
    </teiHeader>
    <facsimile>
@@ -192,14 +211,15 @@
          <div type="writingSession" n="1">
             <p>
                <pb facs="1909_AS_RBH_2_00006"/>
-               <date>
-                  <anchor type="commentary" xml:id="K_L01881-1"/>Montag <hi rend="latintype">ersten</hi>
+               
+                  <anchor type="commentary" xml:id="K_L01881-1"/><rs type="event" subtype="implied"
+                     ref="#pmb46528"><date>Montag <hi rend="latintype">ersten</hi></date></rs>
                   <note type="commentary" corresp="K_L01881-1">
-                     <ref target="pmb46528" subtype="See" type="schnitzler-kultur"/>.
-                  </note>
-               </date>, <time>Nm. 5 ½</time> möcht ich <rs ref="#pmb29937" type="work">Medardus</rs>
+                     <ref target="pmb46528" subtype="See" type="schnitzler-kultur"/>. </note>
+               , <time>Nm. 5 ½</time> möcht ich <rs ref="#pmb29937" type="work">Medardus</rs>
                <space unit="chars" quantity="1"/>
-               <rs type="event" subtype="implied" ref="#pmb46528">vorleſen</rs>. Bitte Mittheilg, recht bald, ob<damage>
+               <rs type="event" subtype="implied" ref="#pmb46528">vorleſen</rs>. Bitte Mittheilg,
+               recht bald, ob<damage>
                   <unclear>’s</unclear>
                </damage> Ihnen paſſt.</p>
             <closer>Herzlichſt Ihr<lb/>
@@ -260,8 +280,10 @@
          </listPerson>
          <listBibl>
             <bibl xml:id="pmb29937">
-               <title>Der junge Medardus. Dramatische Historie in einem Vorspiel und fünf Aufzügen</title>
-               <title type="werk_bibliografische-angabe">Der junge Medardus. Dramatische Historie in einem Vorspiel und fünf Aufzügen. Berlin: S. Fischer [26.10.]1910</title>
+               <title>Der junge Medardus. Dramatische Historie in einem Vorspiel und fünf
+                  Aufzügen</title>
+               <title type="werk_bibliografische-angabe">Der junge Medardus. Dramatische Historie in
+                  einem Vorspiel und fünf Aufzügen. Berlin: S. Fischer [26.10.]1910</title>
                <title type="werk_arbeitstitel">Altwiener Stück</title>
                <title type="werk_arbeitstitel">Doppelselbstmord</title>
                <author ref="pmb2121" role="hat-geschaffen">Schnitzler, Arthur</author>
@@ -306,7 +328,8 @@
             </place>
             <place xml:id="pmb50">
                <placeName>Wien</placeName>
-               <placeName type="ort_fruherer-name">K.K. Reichshaupt- und Residenzstadt Wien</placeName>
+               <placeName type="ort_fruherer-name">K.K. Reichshaupt- und Residenzstadt
+                  Wien</placeName>
                <placeName type="alternative-name">Bécs</placeName>
                <placeName type="alternative-name">Land Wien</placeName>
                <placeName type="alternative-name">Vídeň</placeName>
@@ -365,7 +388,8 @@
                <eventName n="Private Lesung">Private Lesung von Der junge Medardus, 1.11.1909</eventName>
                <listPlace>
                   <place>
-                     <placeName role="veranstaltet in" ref="pmb168940">Edmund-Weiß-Gasse 7</placeName>
+                     <placeName role="veranstaltet in" ref="pmb168940">Edmund-Weiß-Gasse
+                        7</placeName>
                      <location>
                         <geo>48,2304 16,33472</geo>
                      </location>
