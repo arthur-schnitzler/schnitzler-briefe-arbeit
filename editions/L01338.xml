@@ -1,6 +1,10 @@
-<?xml version='1.0' encoding='UTF-8'?>
+<?xml version="1.0" encoding="UTF-8"?>
 <?xml-model href="../meta/schnitzler-briefe-schematron.sch" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
-<TEI xmlns="http://www.tei-c.org/ns/1.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.tei-c.org/ns/1.0 ../meta/schnitzler-briefe-schema.xsd" xml:id="L01338" xml:base="https://id.acdh.oeaw.ac.at/schnitzler/schnitzler-briefe/editions">
+<TEI xmlns="http://www.tei-c.org/ns/1.0"
+     xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+     xsi:schemaLocation="http://www.tei-c.org/ns/1.0 ../meta/schnitzler-briefe-schema.xsd"
+     xml:id="L01338"
+     xml:base="https://id.acdh.oeaw.ac.at/schnitzler/schnitzler-briefe/editions">
    <teiHeader>
       <fileDesc>
          <titleStmt>
@@ -82,7 +86,7 @@
                               <extent>
                                  <measure unit="seite" quantity="6"/>
                                  <measure unit="blatt" quantity="2"/>
-                                 <measure unit="zeichenanzahl" quantity="2537"/>
+                                 <measure unit="zeichenanzahl" quantity="2535"/>
                               </extent>
                            </supportDesc>
                         </objectDesc>
@@ -168,19 +172,27 @@
             <correspAction type="sent">
                <persName ref="#pmb2121">Schnitzler, Arthur</persName>
                <date when="1903-11-10" n="01">10. 11. 1903</date>
-               <placeName ref="#pmb50">Wien</placeName>
+               <placeName ref="#pmb168940">Edmund-Weiß-Gasse 7</placeName>
             </correspAction>
             <correspAction type="received">
                <persName ref="#pmb10815">Bahr, Hermann</persName>
-               <date evidence="conjecture" notBefore="1903-11-10" notAfter="1903-11-12">[10. 11. 1903 – 14. 11. 1903?]</date>
-               <placeName ref="#pmb50">Wien</placeName>
+               <date evidence="conjecture" notBefore="1903-11-11" notAfter="1903-11-15">[11. 11. 1903 – 15. 11. 1903?]</date>
+               <placeName ref="#pmb207274">Haus Bahr</placeName>
             </correspAction>
-            <correspContext><ref type="belongsToCorrespondence" target="correspondence_10815">Bahr, Hermann</ref>
+            <correspContext>
+               <ref type="belongsToCorrespondence" target="correspondence_10815">Bahr, Hermann</ref>
                <ref subtype="previous_letter" type="withinCollection" target="L03353">Salten an Schnitzler, [9. 11. 1903]</ref>
                <ref subtype="next_letter" type="withinCollection" target="L02989">Schnitzler an Salten, 10. 11. 1903</ref>
-               <ref subtype="previous_letter" type="withinCorrespondence" source="correspondence_10815" target="L01337">Bahr an Schnitzler, 9. 11. 1903</ref>
-               <ref subtype="next_letter" type="withinCorrespondence" source="correspondence_10815" target="L01340">Bahr an Schnitzler, 10. 11. 1903</ref>
-            </correspContext></correspDesc>
+               <ref subtype="previous_letter"
+                    type="withinCorrespondence"
+                    source="correspondence_10815"
+                    target="L01337">Bahr an Schnitzler, 9. 11. 1903</ref>
+               <ref subtype="next_letter"
+                    type="withinCorrespondence"
+                    source="correspondence_10815"
+                    target="L01340">Bahr an Schnitzler, 10. 11. 1903</ref>
+            </correspContext>
+         </correspDesc>
       </profileDesc>
       <revisionDesc status="approved">
          <change who="KI MAM" when="2015-10-01">Kollationiert</change>
@@ -211,7 +223,7 @@
                   <rs ref="#pmb29893" type="work">Exc.</rs>
                </hi> zu <damage agent="hole">
                   <supplied>e</supplied>
-               </damage>inem ſo ſchönen Erfolg gebracht ha<supplied>ſ</supplied>t u gratulire dir zu
+               </damage>inem ſo ſchönen <rs type="event" subtype="implied" ref="#pmb405344">Erfolg</rs> gebracht ha<supplied>ſ</supplied>t u gratulire dir zu
                dem ganzen Abend. Ich war mit <rs ref="#pmb2173" type="person">Olga</rs> auf d <rs ref="#pmb189" type="place">Semmering</rs>; darum haben wir dich nicht um Karten
                gebeten. Ich ſelbſt wäre übrigens keineswegs <subst>
                   <del rend="strikethrough">dort</del>
@@ -558,6 +570,41 @@
             </bibl>
          </listBibl>
          <listPlace>
+            <place xml:id="pmb168940">
+               <placeName>Edmund-Weiß-Gasse 7</placeName>
+               <placeName type="ort_fruherer-name">Spöttelgasse 7</placeName>
+               <location type="coords">
+                  <geo>48,2304 16,33472</geo>
+               </location>
+               <location type="located_in_place">
+                  <placeName ref="pmb68">XVIII., Währing</placeName>
+                  <geo>48,23333 16,31667</geo>
+               </location>
+               <location type="located_in_place">
+                  <placeName ref="pmb533">Währinger Cottage</placeName>
+                  <geo>48,233056 16,341944</geo>
+               </location>
+               <location type="located_in_place">
+                  <placeName ref="pmb133">Edmund-Weiß-Gasse</placeName>
+                  <geo>48,23056 16,3348</geo>
+               </location>
+            </place>
+            <place xml:id="pmb207274">
+               <placeName>Haus Bahr</placeName>
+               <placeName type="ort_fruherer-name">Veitlissengasse 5a</placeName>
+               <placeName type="ort_namensvariante">Winzergasse 22</placeName>
+               <location type="coords">
+                  <geo>48,186771 16,261305</geo>
+               </location>
+               <location type="located_in_place">
+                  <placeName ref="pmb220">Veitlissengasse</placeName>
+                  <geo>48,186622327678 16,259712159437</geo>
+               </location>
+               <location type="located_in_place">
+                  <placeName ref="pmb63">XIII., Hietzing</placeName>
+                  <geo>48,17547 16,29101</geo>
+               </location>
+            </place>
             <place xml:id="pmb50" ana="comment">
                <placeName>Wien</placeName>
                <placeName type="ort_fruherer-name">K.K. Reichshaupt- und Residenzstadt Wien</placeName>
@@ -738,6 +785,19 @@
                </location>
             </org>
          </listOrg>
+         <listEvent>
+            <event xml:id="pmb405344" ana="implied">
+               <eventName n="Lesung">Lesung von Hermann Bahr, 8.11.1903</eventName>
+               <listPlace>
+                  <place>
+                     <placeName role="veranstaltet in" ref="pmb4">Bösendorfer Saal</placeName>
+                     <location>
+                        <geo>48,209167 16,366111</geo>
+                     </location>
+                  </place>
+               </listPlace>
+            </event>
+         </listEvent>
       </back>
    </text>
 </TEI>
