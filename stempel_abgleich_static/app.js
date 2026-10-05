@@ -565,6 +565,29 @@ function wireRawEditor(card, kind, idx, raw) {
   });
 }
 
+// Stempel-Datum mit einer Lücke (gap): statt automatisch zu normieren (das
+// Datum könnte ja gerade deshalb unsicher sein) vorher nachfragen. Liefert
+// den eingegebenen Text oder null (Feld leer/Abbrechen = kein Datum).
+function askGapDate(stamp, message) {
+  const entered = window.prompt(message, stamp.dateNormalizedPreview || "");
+  return (entered == null || entered.trim() === "") ? null : entered.trim();
+}
+
+// Request-Body für "Datum/Ort aus Stempel in bestehende correspAction
+// übernehmen". Das Datum wird serverseitig normiert (nicht die
+// Stempel-Transkription kopiert); nur bei gap wird vorher nachgefragt.
+function buildUpdateBody(stamp, actionIndex) {
+  const body = { stampIndex: stamp.index, actionIndex };
+  if (stamp.dateHasGap) {
+    body.dateOverride = askGapDate(
+      stamp,
+      "Der Stempel hat eine Lücke (gap) im Datum. Datum für die correspAction eingeben, " +
+      "oder Feld leeren/Abbrechen, um das bisherige Datum der correspAction zu behalten:"
+    );
+  }
+  return body;
+}
+
 function createStampCard(s) {
   const card = document.createElement("div");
   card.className = "card stamp-card" + (state.activeStamp === s.index ? " active" : "");
@@ -612,16 +635,13 @@ function createStampCard(s) {
     const targetType = select.value;
     const btn = ev.currentTarget;
 
-    // Stempel-Datum mit einer Lücke (gap): statt automatisch zu normieren
-    // (das Datum könnte ja gerade deshalb unsicher sein) vorher nachfragen.
     const body = { stampIndex: s.index, targetType };
     if (s.dateHasGap) {
-      const entered = window.prompt(
+      body.dateOverride = askGapDate(
+        s,
         "Der Stempel hat eine Lücke (gap) im Datum. Datum für die neue correspAction eingeben, " +
-        "oder Feld leeren/Abbrechen für kein <date>-Element:",
-        s.dateNormalizedPreview || ""
+        "oder Feld leeren/Abbrechen für kein <date>-Element:"
       );
-      body.dateOverride = (entered == null || entered.trim() === "") ? null : entered.trim();
     }
 
     btn.disabled = true;
@@ -725,10 +745,8 @@ function createActionCard(a) {
     card.addEventListener("click", async (ev) => {
       if (ev.target.closest(".card-actions, .raw-editor, .place-select")) return;
       try {
-        const data = await apiPost(`/api/file/${state.currentId}/update`, {
-          stampIndex: activeStamp.index,
-          actionIndex: a.index,
-        });
+        const data = await apiPost(
+          `/api/file/${state.currentId}/update`, buildUpdateBody(activeStamp, a.index));
         state.file = data;
         state.activeStamp = null;
         render();
@@ -745,10 +763,9 @@ function createActionCard(a) {
       ev.stopPropagation();
       quickBtn.disabled = true;
       try {
-        const data = await apiPost(`/api/file/${state.currentId}/update`, {
-          stampIndex: Number(quickBtn.dataset.stamp),
-          actionIndex: a.index,
-        });
+        const quickStamp = state.file.stamps.find((s) => s.index === Number(quickBtn.dataset.stamp));
+        const data = await apiPost(
+          `/api/file/${state.currentId}/update`, buildUpdateBody(quickStamp, a.index));
         state.file = data;
         render();
         toast(`correspAction[@type="${a.type}"] aktualisiert.`);

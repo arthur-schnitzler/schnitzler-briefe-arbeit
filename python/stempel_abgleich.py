@@ -698,16 +698,35 @@ def build_place_elem(place):
 _AUTO_DATE = object()  # Sentinel: automatische Normierung (Default)
 
 
-def insert_corresp_action(fid, stamp_index, target_type, date_override=_AUTO_DATE):
-    """date_override steuert, was als <date> in die neue correspAction
-    kommt:
+def stamp_date_elem_xml(root, stamp, stamp_index, date_override=_AUTO_DATE):
+    """<date>-Element (als XML-Text) für eine correspAction, die ihr Datum
+    aus dem Stempel stamp_index bekommt - gemeinsam genutzt von
+    insert_corresp_action und update_corresp_action, damit im Text von
+    correspAction/date nie die Stempel-Transkription ("7 7 09") landet,
+    sondern die normierte Wiedergabe ("7.&#160;7.&#160;1909").
+
+    date_override steuert, was als <date> geliefert wird:
     - _AUTO_DATE (Default): automatisch normierte Wiedergabe aus dem
       Stempel (siehe format_normalized_stamp_date).
-    - None: kein <date>-Element (z. B. wenn der Stempel eine Lücke/gap
-      hat und im Frontend "kein Datum" gewählt wurde).
-    - ein String: dieser Text wird wörtlich übernommen (freie Eingabe im
-      Frontend-Popup), @when/@notBefore/@notAfter bleiben trotzdem vom
-      Stempel erhalten, sofern vorhanden."""
+    - None oder leerer String: kein <date>-Element (z. B. wenn der Stempel
+      eine Lücke/gap hat und im Frontend "kein Datum" gewählt wurde).
+    - ein anderer String: dieser Text wird wörtlich übernommen (freie
+      Eingabe im Frontend-Popup), @when/@notBefore/@notAfter bleiben
+      trotzdem vom Stempel erhalten, sofern vorhanden."""
+    if date_override is _AUTO_DATE:
+        stamp_els = list(root.iter(q("stamp")))
+        date_el = stamp_els[stamp_index].find(q("date")) if stamp_index < len(stamp_els) else None
+        return build_date_elem(stamp.get("date"), date_el=date_el, normalize=True)
+    if date_override is None or not str(date_override).strip():
+        return None
+    override_date = dict(stamp.get("date") or {})
+    override_date["text"] = str(date_override).strip()
+    return build_date_elem(override_date)
+
+
+def insert_corresp_action(fid, stamp_index, target_type, date_override=_AUTO_DATE):
+    """Fügt aus dem Stempel stamp_index eine neue correspAction vom Typ
+    target_type ein; zu date_override siehe stamp_date_elem_xml."""
     if target_type not in ACTION_RANK:
         raise ValueError(f"unbekannter correspAction-Typ: {target_type}")
     text = load_text(fid)
@@ -716,8 +735,6 @@ def insert_corresp_action(fid, stamp_index, target_type, date_override=_AUTO_DAT
     if not (0 <= stamp_index < len(stamps)):
         raise ValueError("ungültiger Stempel-Index")
     stamp = stamps[stamp_index]
-    stamp_els = list(root.iter(q("stamp")))
-    stamp_date_el = stamp_els[stamp_index].find(q("date")) if stamp_index < len(stamp_els) else None
 
     desc_m = CORRESP_DESC_RE.search(text)
     if not desc_m:
@@ -749,14 +766,7 @@ def insert_corresp_action(fid, stamp_index, target_type, date_override=_AUTO_DAT
     child_indent = child_m.group(1) if child_m else indent + "   "
 
     lines = [f'{indent}<correspAction type="{escape_attr(target_type)}">']
-    if date_override is _AUTO_DATE:
-        date_elem = build_date_elem(stamp.get("date"), date_el=stamp_date_el, normalize=True)
-    elif date_override is None or not str(date_override).strip():
-        date_elem = None
-    else:
-        override_date = dict(stamp.get("date") or {})
-        override_date["text"] = str(date_override).strip()
-        date_elem = build_date_elem(override_date)
+    date_elem = stamp_date_elem_xml(root, stamp, stamp_index, date_override)
     if date_elem:
         lines.append(f'{child_indent}{date_elem}')
     place_elem = build_place_elem(stamp.get("place"))
@@ -772,7 +782,12 @@ def insert_corresp_action(fid, stamp_index, target_type, date_override=_AUTO_DAT
     return build_file_payload(fid)
 
 
-def update_corresp_action(fid, stamp_index, action_index):
+def update_corresp_action(fid, stamp_index, action_index, date_override=_AUTO_DATE):
+    """Übernimmt Datum und Ort des Stempels stamp_index in die bestehende
+    correspAction action_index. Das Datum kommt wie beim Einfügen normiert
+    (nicht als Stempel-Transkription) in die correspAction; ergibt
+    stamp_date_elem_xml kein <date> (date_override None/leer), bleibt das
+    bisherige Datum der correspAction unverändert."""
     text = load_text(fid)
     root = parse_root(text)
     stamps = extract_stamps(root)
@@ -795,7 +810,7 @@ def update_corresp_action(fid, stamp_index, action_index):
 
     new_block_text = block_text
 
-    new_date_elem = build_date_elem(stamp.get("date"))
+    new_date_elem = stamp_date_elem_xml(root, stamp, stamp_index, date_override)
     if new_date_elem:
         if DATE_CHILD_RE.search(new_block_text):
             new_block_text = DATE_CHILD_RE.sub(lambda m: new_date_elem, new_block_text, count=1)
@@ -1152,8 +1167,11 @@ class Handler(BaseHTTPRequestHandler):
                 result = insert_corresp_action(
                     fid, int(payload["stampIndex"]), payload["targetType"], **kwargs)
             elif action == "update":
+                kwargs = {}
+                if "dateOverride" in payload:
+                    kwargs["date_override"] = payload["dateOverride"]
                 result = update_corresp_action(
-                    fid, int(payload["stampIndex"]), int(payload["actionIndex"]))
+                    fid, int(payload["stampIndex"]), int(payload["actionIndex"]), **kwargs)
             elif action == "set-place":
                 result = set_action_place(
                     fid, int(payload["actionIndex"]), int(payload["placeIndex"]),
