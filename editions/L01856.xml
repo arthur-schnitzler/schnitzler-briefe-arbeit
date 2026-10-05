@@ -1,6 +1,10 @@
-<?xml version='1.0' encoding='UTF-8'?>
+<?xml version="1.0" encoding="UTF-8"?>
 <?xml-model href="../meta/schnitzler-briefe-schematron.sch" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
-<TEI xmlns="http://www.tei-c.org/ns/1.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.tei-c.org/ns/1.0 ../meta/schnitzler-briefe-schema.xsd" xml:id="L01856" xml:base="https://id.acdh.oeaw.ac.at/schnitzler/schnitzler-briefe/editions">
+<TEI xmlns="http://www.tei-c.org/ns/1.0"
+     xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+     xsi:schemaLocation="http://www.tei-c.org/ns/1.0 ../meta/schnitzler-briefe-schema.xsd"
+     xml:id="L01856"
+     xml:base="https://id.acdh.oeaw.ac.at/schnitzler/schnitzler-briefe/editions">
    <teiHeader>
       <fileDesc>
          <titleStmt>
@@ -82,24 +86,26 @@
                            <supportDesc>
                               <extent>
                                  <measure unit="karte" quantity="1"/>
-                                 <measure unit="zeichenanzahl" quantity="356"/>
+                                 <measure unit="zeichenanzahl" quantity="355"/>
                               </extent>
                            </supportDesc>
                         </objectDesc>
                         <handDesc hands="1">
-                           <handNote medium="schwarze-tinte" style="deutsche-kurrent" corresp="#pmb11036"/>
+                           <handNote medium="schwarze-tinte"
+                                     style="deutsche-kurrent"
+                                     corresp="#pmb11036"/>
                         </handDesc>
                         <additions>
                            <incident type="postal">
                               <desc>
-                                 <stamp n="1">
+                                 <stamp n="1" type="transmission">
                                     <placeName ref="#pmb186">Lueg (St. Gilgen)</placeName>
                                  </stamp>
                               </desc>
                            </incident>
                            <incident type="postal">
                               <desc>
-                                 <stamp n="2">
+                                 <stamp n="2" type="transit">
                                     <placeName ref="#pmb30">Salzburg</placeName>
                                     <date when="1909-07-12">12. 7. 09</date>
                                  </stamp>
@@ -124,7 +130,14 @@
             <correspAction type="sent">
                <persName ref="#pmb11036">Burckhard, Max</persName>
                <date when="1909-07-12" n="02">12. 7. 1909</date>
-               <placeName ref="#pmb33">St. Gilgen</placeName>
+               <placeName ref="#pmb234399">Franzosenschanze 4</placeName>
+            </correspAction>
+            <correspAction type="transmitted">
+               <placeName ref="#pmb186">Lueg</placeName>
+            </correspAction>
+            <correspAction type="in_transit">
+               <date when="1909-07-12">12. 7. 1909</date>
+               <placeName ref="#pmb30">Salzburg</placeName>
             </correspAction>
             <correspAction type="received">
                <persName ref="#pmb2121">Schnitzler, Arthur</persName>
@@ -132,17 +145,26 @@
                   – 17. 7. 1909?]</date>
                <placeName ref="#pmb168940">Edmund-Weiß-Gasse 7</placeName>
             </correspAction>
-            <correspContext><ref type="belongsToCorrespondence" target="correspondence_11036">Burckhard, Max Eugen</ref>
+            <correspContext>
+               <ref type="belongsToCorrespondence" target="correspondence_11036">Burckhard, Max Eugen</ref>
                <ref subtype="previous_letter" type="withinCollection" target="L01855">Beer-Hofmann an Schnitzler, 12. 7. 1909</ref>
                <ref subtype="next_letter" type="withinCollection" target="L03502">Salten an Schnitzler, 12. 7. 1909</ref>
-               <ref subtype="previous_letter" type="withinCorrespondence" source="correspondence_11036" target="L01847">Burckhard an Schnitzler, 20. 6. 1909</ref>
-               <ref subtype="next_letter" type="withinCorrespondence" source="correspondence_11036" target="L01861">Burckhard an Schnitzler, 29. 7. 1909</ref>
-            </correspContext></correspDesc>
+               <ref subtype="previous_letter"
+                    type="withinCorrespondence"
+                    source="correspondence_11036"
+                    target="L01847">Burckhard an Schnitzler, 20. 6. 1909</ref>
+               <ref subtype="next_letter"
+                    type="withinCorrespondence"
+                    source="correspondence_11036"
+                    target="L01861">Burckhard an Schnitzler, 29. 7. 1909</ref>
+            </correspContext>
+         </correspDesc>
       </profileDesc>
       <revisionDesc status="approved">
          <change who="GHS" when="2018-10-17">Angelegt</change>
          <change when="2018-10-18" who="MAM">Index check</change>
          <change who="MAM" when="2020-04-08">Durchsicht</change>
+         <change who="MAM" when="2026-10-05">Datierung und Stempel überprüft</change>
       </revisionDesc>
    </teiHeader>
    <facsimile>
@@ -173,7 +195,8 @@
          <div type="image">
             <p rend="center">
                <pb facs="MS-SCHNITZLER-B-00020-000-00064"/>
-               <supplied type="image-description">Burckhards Haus auf der <rs type="place" ref="#pmb44453">Franzosenschanze</rs> in <rs ref="#pmb33" type="place">St. Gilgen</rs>
+               <supplied type="image-description">
+                  <rs type="place" ref="#pmb234399" subtype="implied">Burckhards Haus</rs> auf der <rs type="place" ref="#pmb44453">Franzosenschanze</rs> in <rs ref="#pmb33" type="place">St. Gilgen</rs>
                </supplied>
             </p>
          </div>
@@ -322,15 +345,22 @@
                   <geo>47,41667 13,25</geo>
                </location>
             </place>
-            <place xml:id="pmb33">
-               <placeName>St. Gilgen</placeName>
-               <placeName type="legacy-name-merge">Sankt Gilgen</placeName>
+            <place xml:id="pmb234399">
+               <placeName>Franzosenschanze 4</placeName>
                <location type="coords">
+                  <geo>47,74443 13,385272</geo>
+               </location>
+               <location type="located_in_place">
+                  <placeName ref="pmb33">St. Gilgen</placeName>
                   <geo>47,76667 13,36667</geo>
                </location>
                <location type="located_in_place">
-                  <placeName ref="pmb429">Salzkammergut</placeName>
-                  <geo>47,75 13,5</geo>
+                  <placeName ref="pmb186">Lueg</placeName>
+                  <geo>47,754041 13,372211</geo>
+               </location>
+               <location type="located_in_place">
+                  <placeName ref="pmb44453">Franzosenschanze</placeName>
+                  <geo>47,7444 13,3852</geo>
                </location>
             </place>
             <place xml:id="pmb168940">
@@ -386,6 +416,17 @@
                <location type="located_in_place">
                   <placeName ref="pmb186">Lueg</placeName>
                   <geo>47,754041 13,372211</geo>
+               </location>
+            </place>
+            <place xml:id="pmb33">
+               <placeName>St. Gilgen</placeName>
+               <placeName type="legacy-name-merge">Sankt Gilgen</placeName>
+               <location type="coords">
+                  <geo>47,76667 13,36667</geo>
+               </location>
+               <location type="located_in_place">
+                  <placeName ref="pmb429">Salzkammergut</placeName>
+                  <geo>47,75 13,5</geo>
                </location>
             </place>
          </listPlace>
