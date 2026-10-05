@@ -1,11 +1,13 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <?xml-model href="../meta/schnitzler-briefe-schematron.sch" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
-<TEI xmlns="http://www.tei-c.org/ns/1.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.tei-c.org/ns/1.0 ../meta/schnitzler-briefe-schema.xsd" xml:id="L01954" xml:base="https://id.acdh.oeaw.ac.at/schnitzler/schnitzler-briefe/editions">
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+   xsi:schemaLocation="http://www.tei-c.org/ns/1.0 ../meta/schnitzler-briefe-schema.xsd"
+   xml:id="L01954" xml:base="https://id.acdh.oeaw.ac.at/schnitzler/schnitzler-briefe/editions">
    <teiHeader>
       <fileDesc>
          <titleStmt>
             <title level="s">Arthur Schnitzler: Briefwechsel mit Autorinnen und Autoren</title>
-            <title level="a">Arthur und Olga Schnitzler an Richard Beer-Hofmann, 23. 8. 1910</title>
+            <title level="a">Arthur und Olga Schnitzler an Richard Beer-Hofmann, [22. oder 23].&#160;8.&#160;1910</title>
             <author ref="#pmb2121">Schnitzler, Arthur</author>
             <author ref="#pmb2173">Schnitzler, Olga</author>
             <editor>
@@ -89,12 +91,13 @@
                         </objectDesc>
                         <handDesc hands="2">
                            <handNote medium="bleistift" corresp="#pmb2121" style="deutsche-kurrent"/>
-                           <handNote medium="bleistift" corresp="#pmb2173" style="lateinische-kurrent"/>
+                           <handNote medium="bleistift" corresp="#pmb2173"
+                              style="lateinische-kurrent"/>
                         </handDesc>
                         <additions>
                            <incident type="postal">
                               <desc>
-                                 <stamp n="1">
+                                 <stamp n="1" type="transmission">
                                     <placeName ref="#pmb2318">Parten<unclear>kirchen</unclear>
                                     </placeName>
                                     <date when="1910-08-23">
@@ -134,8 +137,12 @@
             <correspAction type="sent">
                <persName ref="#pmb2121">Schnitzler, Arthur</persName>
                <persName ref="#pmb2173">Schnitzler, Olga</persName>
-               <date when="1910-08-23" n="01">23. 8. 1910</date>
-               <placeName ref="#pmb667">Garmisch-Partenkirchen</placeName>
+               <date n="01" notBefore="1910-08-22" notAfter="1910-08-23">[22. oder 23].&#160;8.&#160;1910</date>
+               <placeName ref="#pmb250702">Garmisch-Partenkirchen</placeName>
+            </correspAction>
+            <correspAction type="transmitted">
+               <date when="1910-08-23">[23.&#160;8].&#160;1910</date>
+               <placeName ref="#pmb2318">Partenkirchen</placeName>
             </correspAction>
             <correspAction type="received">
                <persName ref="#pmb10863">Beer-Hofmann, Richard</persName>
@@ -143,11 +150,18 @@
                   – 28. 8. 1910?]</date>
                <placeName ref="#pmb250767">Rettenbachweg 5</placeName>
             </correspAction>
-            <correspContext><ref type="belongsToCorrespondence" target="correspondence_10863">Beer-Hofmann, Richard</ref>
-               <ref subtype="previous_letter" type="withinCollection" target="L03551">Salten an Schnitzler, 17. 8. 1910</ref>
-               <ref subtype="next_letter" type="withinCollection" target="L03017">Schnitzler an Salten, 30. 8. 1910</ref>
-               <ref subtype="previous_letter" type="withinCorrespondence" source="correspondence_10863" target="L01953">Schnitzler an Beer-Hofmann, 23. 7. 1910</ref>
-               <ref subtype="next_letter" type="withinCorrespondence" source="correspondence_10863" target="L02557">Schnitzler an Beer-Hofmann, Beer-Hofmann, 11. 9. 1910</ref>
+            <correspContext>
+               <ref type="belongsToCorrespondence" target="correspondence_10863">Beer-Hofmann,
+                  Richard</ref>
+               <ref subtype="previous_letter" type="withinCollection" target="L03551">Salten an
+                  Schnitzler, 17. 8. 1910</ref>
+               <ref subtype="next_letter" type="withinCollection" target="L03017">Schnitzler an
+                  Salten, 30. 8. 1910</ref>
+               <ref subtype="previous_letter" type="withinCorrespondence"
+                  source="correspondence_10863" target="L01953">Schnitzler an Beer-Hofmann,
+                  23. 7. 1910</ref>
+               <ref subtype="next_letter" type="withinCorrespondence" source="correspondence_10863"
+                  target="L02557">Schnitzler an Beer-Hofmann, Beer-Hofmann, 11. 9. 1910</ref>
             </correspContext></correspDesc>
       </profileDesc>
       <revisionDesc status="approved">
@@ -155,6 +169,7 @@
          <change who="MAM" when="2020-07-15">Index check</change>
          <change who="MAM" when="2021-01-26">Durchsicht</change>
          <change who="GHS" when="2021-07-04">Durchsicht</change>
+         <change who="MAM" when="2026-10-05">Datierung und Stempel überprüft</change>
       </revisionDesc>
    </teiHeader>
    <facsimile>
@@ -186,7 +201,9 @@
             <p rend="center">
                <pb facs="1910_AS_RBH_1_00033"/>
                <hi rend="pre-print">
-                  <rs type="place" ref="#pmb2318">Partenkirchen</rs>. <rs type="place" ref="#pmb52102">St. Anton</rs> mit Blick auf <rs type="place" ref="#pmb52104">Dreithorspitze</rs>.</hi>
+                  <rs type="place" ref="#pmb2318">Partenkirchen</rs>. <rs type="place"
+                     ref="#pmb52102">St. Anton</rs> mit Blick auf <rs type="place" ref="#pmb52104"
+                     >Dreithorspitze</rs>.</hi>
             </p>
          </div>
          <div type="writingSession" n="1">
@@ -202,15 +219,19 @@
          </div>
          <div type="writingSession" n="2">
             <p>
-               <handShift scribe="#pmb2173"/>Heute wurde am Krankenbett meiner <rs type="person" ref="#pmb2315" subtype="implied">Schwester</rs> viel von Ihnen gesprochen. Sie
-               sagt immer wieder: »B.-H. ist von Euch allen der merscht Begabte!«</p>
-            <p>Von hier fahren wir <hi rend="underline" n="1">nicht</hi> nach <rs ref="#pmb213" type="place">Ischl</rs>, sondern <rs ref="#pmb146" type="place">Frankfurt</rs>
+               <handShift scribe="#pmb2173"/>Heute wurde am <rs type="place" ref="#pmb250697"
+                  subtype="implied">Krankenbett</rs> meiner <rs type="person" ref="#pmb2315"
+                  subtype="implied">Schwester</rs> viel von Ihnen gesprochen. Sie sagt immer wieder:
+               »B.-H. ist von Euch allen der merscht Begabte!«</p>
+            <p>Von hier fahren wir <hi rend="underline" n="1">nicht</hi> nach <rs ref="#pmb213"
+                  type="place">Ischl</rs>, sondern <rs ref="#pmb146" type="place">Frankfurt</rs>
                <space unit="chars" quantity="1"/>
                <anchor type="commentary" xml:id="K_L01954-1"/>
-               <rs ref="#pmb31311" type="work">Liebelei Opern-Première</rs>
+               <rs type="event" subtype="implied" ref="#pmb46947"><rs ref="#pmb31311" type="work"
+                     >Liebelei Opern-Première</rs></rs>
                <note type="commentary" corresp="K_L01954-1">
-                  <ref target="1910-09-18" type="schnitzler-tagebuch" subtype="See"/>.
-               </note>, vorher <rs ref="#pmb882" type="place">Heidelberg</rs>.</p>
+                  <ref target="pmb46947" type="schnitzler-kultur" subtype="See"/>. </note>, vorher
+                  <rs ref="#pmb882" type="place">Heidelberg</rs>.</p>
             <closer>Herzlichste Grüsse Ihnen Allen! <signed>O. S.</signed>
             </closer>
          </div>
