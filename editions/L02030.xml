@@ -1,11 +1,9 @@
-<?xml version='1.0' encoding='UTF-8'?>
-<?xml-model href="../meta/schnitzler-briefe-schematron.sch" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
-<TEI xmlns="http://www.tei-c.org/ns/1.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.tei-c.org/ns/1.0 ../meta/schnitzler-briefe-schema.xsd" xml:id="L02030" xml:base="https://id.acdh.oeaw.ac.at/schnitzler/schnitzler-briefe/editions">
+<?xml version="1.0" encoding="UTF-8"?><?xml-model href="../meta/schnitzler-briefe-schematron.sch" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI xmlns="http://www.tei-c.org/ns/1.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.tei-c.org/ns/1.0 ../meta/schnitzler-briefe-schema.xsd" xml:id="L02030" xml:base="https://id.acdh.oeaw.ac.at/schnitzler/schnitzler-briefe/editions">
    <teiHeader>
       <fileDesc>
          <titleStmt>
             <title level="s">Arthur Schnitzler: Briefwechsel mit Autorinnen und Autoren</title>
-            <title level="a">Arthur und Olga Schnitzler an Robert Adam, 2[2?]. 9. 1911</title>
+            <title level="a">Arthur und Olga Schnitzler an Robert Adam, [20. oder 21?]. 9. 1911</title>
             <author ref="#pmb2121">Schnitzler, Arthur</author>
             <author ref="#pmb2173">Schnitzler, Olga</author>
             <editor>
@@ -101,7 +99,7 @@
                                     <placeName ref="#pmb365284">1/1 Wien <unclear>11</unclear>
                                     </placeName>
                                     <!-- nicht genauer -->
-                                    <date when="1911-09-02">2<gap quantity="1" reason="illegible" unit="chars"/>. IX. 11</date>
+                                    <date when="1911-09-21">2<unclear>1</unclear>. IX. 11</date>
                                  </stamp>
                               </desc>
                            </incident>
@@ -120,12 +118,16 @@
             <correspAction type="sent">
                <persName ref="#pmb2121">Schnitzler, Arthur</persName>
                <persName ref="#pmb2173">Schnitzler, Olga</persName>
-               <date when="1911-09-22" n="01">2[2?]. 9. 1911</date>
+               <date n="01" notBefore="1911-09-21" notAfter="1911-09-22">[20. oder 21?]. 9. 1911</date>
                <placeName ref="#pmb168815">Sternwartestraße 71</placeName>
+            </correspAction>
+            <correspAction type="transmitted">
+               <placeName ref="#pmb365284">1/1 Wien 11</placeName>
+               <date when="1911-09-21">2[1?]. 9. 1911</date>
             </correspAction>
             <correspAction type="received">
                <persName ref="#pmb12438">Adam, Robert</persName>
-               <date evidence="conjecture" notBefore="1911-09-22" notAfter="1911-09-24">[22. 9. 1911
+               <date evidence="conjecture" notBefore="1911-09-21" notAfter="1911-09-24">[21. 9. 1911
                   – 26. 9. 1911?]</date>
                <placeName ref="#pmb365563">Meidlinger Hauptstraße 56</placeName>
             </correspAction>
@@ -141,6 +143,7 @@
          <change when="2019-05-22" who="MAM">Index check</change>
          <change who="GHS" when="2020-06-12">Durchsicht</change>
          <change who="GHS" when="2020-08-24">finalisiert</change>
+         <change who="MAM" when="2026-10-05">Datierung und Stempel überprüft</change>
       </revisionDesc>
    </teiHeader>
    <facsimile>
