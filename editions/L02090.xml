@@ -1,11 +1,9 @@
-<?xml version='1.0' encoding='UTF-8'?>
-<?xml-model href="../meta/schnitzler-briefe-schematron.sch" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
-<TEI xmlns="http://www.tei-c.org/ns/1.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.tei-c.org/ns/1.0 ../meta/schnitzler-briefe-schema.xsd" xml:id="L02090" xml:base="https://id.acdh.oeaw.ac.at/schnitzler/schnitzler-briefe/editions">
+<?xml version="1.0" encoding="UTF-8"?><?xml-model href="../meta/schnitzler-briefe-schematron.sch" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI xmlns="http://www.tei-c.org/ns/1.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.tei-c.org/ns/1.0 ../meta/schnitzler-briefe-schema.xsd" xml:id="L02090" xml:base="https://id.acdh.oeaw.ac.at/schnitzler/schnitzler-briefe/editions">
    <teiHeader>
       <fileDesc>
          <titleStmt>
             <title level="s">Arthur Schnitzler: Briefwechsel mit Autorinnen und Autoren</title>
-            <title level="a">Arthur Schnitzler an Hermann Bahr, 25. 9. 1912</title>
+            <title level="a">Arthur Schnitzler an Hermann Bahr, [25. oder 26.] 9. 1912</title>
             <author ref="#pmb2121">Schnitzler, Arthur</author>
             <editor>
                <name>Müller, Martin Anton</name>
@@ -169,21 +167,30 @@
          <correspDesc>
             <correspAction type="sent">
                <persName ref="#pmb2121">Schnitzler, Arthur</persName>
-               <date when="1912-09-25" n="01">[25./26.] 9. 1912</date>
+               <date n="01" notBefore="1912-09-25" notAfter="1912-09-25">[25. oder 26.] 9. 1912</date>
                <placeName ref="#pmb50">Wien</placeName>
+            </correspAction>
+            <correspAction type="transmitted">
+               <date notBefore="1912-09-25" notAfter="1912-09-25">[25. oder 26.] 9. 1912</date>
+               <placeName ref="#pmb365555">1/1 Post- und Telegraphenamt 8</placeName>
+            </correspAction>
+            <correspAction type="redirected">
+               <placeName ref="#pmb207274">Haus Bahr</placeName>
             </correspAction>
             <correspAction type="received">
                <persName ref="#pmb10815">Bahr, Hermann</persName>
-               <date evidence="conjecture" notBefore="1912-09-26" notAfter="1912-09-30">[26. 9. 1912
-                  – 30. 9. 1912?]</date>
-               <placeName ref="#pmb189">Semmering</placeName>
+               <date evidence="conjecture" notBefore="1912-09-27" notAfter="1912-09-28">[27. 9. 1912
+                  – 28. 9. 1912?]</date>
+               <placeName ref="#pmb144">Villa Mauthner-Markhof</placeName>
             </correspAction>
-            <correspContext><ref type="belongsToCorrespondence" target="correspondence_10815">Bahr, Hermann</ref>
+            <correspContext>
+               <ref type="belongsToCorrespondence" target="correspondence_10815">Bahr, Hermann</ref>
                <ref subtype="previous_letter" type="withinCollection" target="L02089">Hofmannsthal an Schnitzler, 21. 9. 1912</ref>
                <ref subtype="next_letter" type="withinCollection" target="L02091">Brandes an Schnitzler, 26. 9. 1912</ref>
                <ref subtype="previous_letter" type="withinCorrespondence" source="correspondence_10815" target="L02072">Bahr an Schnitzler, 2. 6. 1912</ref>
                <ref subtype="next_letter" type="withinCorrespondence" source="correspondence_10815" target="L02092">Bahr an Schnitzler, 28. 9. 1912</ref>
-            </correspContext></correspDesc>
+            </correspContext>
+         </correspDesc>
       </profileDesc>
       <revisionDesc status="approved">
          <change who="KI MAM" when="2015-10-01">Kollationiert</change>
@@ -191,6 +198,7 @@
          <change who="MAM" when="2018-07-15">Überführt aus Bahr–Schnitzler-Daten</change>
          <change who="MAM" when="2019-01-20">Index check</change>
          <change who="GHS" when="2020-03-19">finalisiert</change>
+         <change who="MAM" when="2026-10-05">Datierung und Stempel überprüft</change>
       </revisionDesc>
    </teiHeader>
    <facsimile>
@@ -472,20 +480,20 @@
                   <geo>48,24077 16,32092</geo>
                </location>
             </place>
-            <place xml:id="pmb189">
-               <placeName>Semmering</placeName>
-               <placeName type="alternative-name">Gemeinde Semmering</placeName>
-               <placeName type="alternative-name">Semmering-Semmering-Kurort</placeName>
-               <placeName type="alternative-name">Kurort Semmering</placeName>
-               <placeName type="alternative-name">Semmering-Kurort</placeName>
-               <placeName type="alternative-name">Heilklimatischer Höhenluftkurort Semmering</placeName>
-               <placeName type="alternative-name">Semmering- Kurort Semmering</placeName>
+            <place xml:id="pmb207274">
+               <placeName>Haus Bahr</placeName>
+               <placeName type="ort_fruherer-name">Veitlissengasse 5a</placeName>
+               <placeName type="ort_namensvariante">Winzergasse 22</placeName>
                <location type="coords">
-                  <geo>47,64224 15,8241</geo>
+                  <geo>48,186771 16,261305</geo>
                </location>
                <location type="located_in_place">
-                  <placeName ref="pmb41240">Österreich</placeName>
-                  <geo>47,33333 13,33333</geo>
+                  <placeName ref="pmb220">Veitlissengasse</placeName>
+                  <geo>48,186622327678 16,259712159437</geo>
+               </location>
+               <location type="located_in_place">
+                  <placeName ref="pmb63">XIII., Hietzing</placeName>
+                  <geo>48,17547 16,29101</geo>
                </location>
             </place>
             <place xml:id="pmb165">
@@ -502,22 +510,6 @@
                <location type="located_in_place">
                   <placeName ref="pmb665">Sankt Veit</placeName>
                   <geo>48,18805 16,26638</geo>
-               </location>
-               <location type="located_in_place">
-                  <placeName ref="pmb63">XIII., Hietzing</placeName>
-                  <geo>48,17547 16,29101</geo>
-               </location>
-            </place>
-            <place xml:id="pmb207274">
-               <placeName>Haus Bahr</placeName>
-               <placeName type="ort_fruherer-name">Veitlissengasse 5a</placeName>
-               <placeName type="ort_namensvariante">Winzergasse 22</placeName>
-               <location type="coords">
-                  <geo>48,186771 16,261305</geo>
-               </location>
-               <location type="located_in_place">
-                  <placeName ref="pmb220">Veitlissengasse</placeName>
-                  <geo>48,186622327678 16,259712159437</geo>
                </location>
                <location type="located_in_place">
                   <placeName ref="pmb63">XIII., Hietzing</placeName>

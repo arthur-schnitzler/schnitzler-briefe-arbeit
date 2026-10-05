@@ -1,6 +1,10 @@
-<?xml version='1.0' encoding='UTF-8'?>
+<?xml version="1.0" encoding="UTF-8"?>
 <?xml-model href="../meta/schnitzler-briefe-schematron.sch" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
-<TEI xmlns="http://www.tei-c.org/ns/1.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xml:id="L02089" xsi:schemaLocation="http://www.tei-c.org/ns/1.0 ../meta/schnitzler-briefe-schema.xsd" xml:base="https://id.acdh.oeaw.ac.at/schnitzler/schnitzler-briefe/editions">
+<TEI xmlns="http://www.tei-c.org/ns/1.0"
+     xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+     xml:id="L02089"
+     xsi:schemaLocation="http://www.tei-c.org/ns/1.0 ../meta/schnitzler-briefe-schema.xsd"
+     xml:base="https://id.acdh.oeaw.ac.at/schnitzler/schnitzler-briefe/editions">
    <teiHeader>
       <fileDesc>
          <titleStmt>
@@ -92,7 +96,7 @@
                         <additions>
                            <incident type="postal">
                               <desc>
-                                 <stamp n="1">
+                                 <stamp n="1" type="transmission">
                                     <placeName ref="#pmb40832">St. Michael in Eppan</placeName>
                                     <date when="1912-09-22">22. IX. 12</date>
                                  </stamp>
@@ -144,7 +148,7 @@
             <correspAction type="sent">
                <persName ref="#pmb11740">Hofmannsthal, Hugo von</persName>
                <date when="1912-09-21" n="01">21. 9. 1912</date>
-               <placeName ref="#pmb36485">Eppan an der Weinstraße</placeName>
+               <placeName ref="#pmb36482">Schloss Gandegg</placeName>
             </correspAction>
             <correspAction type="transmitted">
                <date when="1912-09-21">22. 9. 1912</date>
@@ -156,18 +160,27 @@
                   – 26. 9. 1912?]</date>
                <placeName ref="#pmb168815">Sternwartestraße 71</placeName>
             </correspAction>
-            <correspContext><ref type="belongsToCorrespondence" target="correspondence_11740">Hofmannsthal, Hugo von</ref>
+            <correspContext>
+               <ref type="belongsToCorrespondence" target="correspondence_11740">Hofmannsthal, Hugo von</ref>
                <ref subtype="previous_letter" type="withinCollection" target="L04456">Schnitzler, Steinrück, Schnitzler, Mann an Schwarzkopf, 7. 9. [1912?]</ref>
                <ref subtype="next_letter" type="withinCollection" target="L02090">Schnitzler an Bahr, [25./26.] 9. 1912</ref>
-               <ref subtype="previous_letter" type="withinCorrespondence" source="correspondence_11740" target="L02083">Hofmannsthal an Schnitzler, 5. 8. [1912]</ref>
-               <ref subtype="next_letter" type="withinCorrespondence" source="correspondence_11740" target="L02093">Hofmannsthal an Schnitzler, 6. 11. 1912</ref>
-            </correspContext></correspDesc>
+               <ref subtype="previous_letter"
+                    type="withinCorrespondence"
+                    source="correspondence_11740"
+                    target="L02083">Hofmannsthal an Schnitzler, 5. 8. [1912]</ref>
+               <ref subtype="next_letter"
+                    type="withinCorrespondence"
+                    source="correspondence_11740"
+                    target="L02093">Hofmannsthal an Schnitzler, 6. 11. 1912</ref>
+            </correspContext>
+         </correspDesc>
       </profileDesc>
       <revisionDesc status="approved">
          <change who="MAM" when="2019-07-31">Angelegt aus Buchausgabe</change>
          <change who="GHS" when="2020-04-30">Durchsicht</change>
          <change who="MAM" when="2020-08-14">Index check</change>
          <change when="2020-08-15" who="MAM">Durchsicht</change>
+         <change who="MAM" when="2026-10-05">Datierung und Stempel überprüft</change>
       </revisionDesc>
    </teiHeader>
    <facsimile>
@@ -291,6 +304,16 @@
                   <geo>46,45472 11,26178</geo>
                </location>
             </place>
+            <place xml:id="pmb36482">
+               <placeName>Schloss Gandegg</placeName>
+               <location type="coords">
+                  <geo>46,44967 11,25306</geo>
+               </location>
+               <location type="located_in_place">
+                  <placeName ref="pmb36485">Eppan an der Weinstraße</placeName>
+                  <geo>46,45472 11,26178</geo>
+               </location>
+            </place>
             <place xml:id="pmb36485">
                <placeName>Eppan an der Weinstraße</placeName>
                <placeName type="legacy-name">Eppan</placeName>
@@ -344,16 +367,6 @@
                <location type="located_in_place">
                   <placeName ref="pmb235218">Windmühlhöhe</placeName>
                   <geo>48,24077 16,32092</geo>
-               </location>
-            </place>
-            <place xml:id="pmb36482">
-               <placeName>Schloss Gandegg</placeName>
-               <location type="coords">
-                  <geo>46,44967 11,25306</geo>
-               </location>
-               <location type="located_in_place">
-                  <placeName ref="pmb36485">Eppan an der Weinstraße</placeName>
-                  <geo>46,45472 11,26178</geo>
                </location>
             </place>
             <place xml:id="pmb969">
