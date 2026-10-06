@@ -101,6 +101,18 @@
                 Dubletten). </sch:assert>
         </sch:rule>
     </sch:pattern>
+    <sch:pattern id="correspAction-has-child">
+        <sch:rule context="tei:correspAction">
+            <sch:assert test="child::*"> tei:correspAction muss mindestens ein Kind-Element haben
+                (z.B. tei:persName, tei:date, tei:placeName). </sch:assert>
+        </sch:rule>
+    </sch:pattern>
+    <sch:pattern id="correspAction-children-text-only">
+        <sch:rule context="tei:correspAction/*">
+            <sch:assert test="not(child::*)"> Kinder von tei:correspAction dürfen nur Textinhalt
+                haben, keine weiteren Kind-Elemente. </sch:assert>
+        </sch:rule>
+    </sch:pattern>
     <sch:pattern id="correspAction-date-n">
         <sch:rule context="tei:correspAction[1]/tei:date">
             <sch:assert test="@n">
