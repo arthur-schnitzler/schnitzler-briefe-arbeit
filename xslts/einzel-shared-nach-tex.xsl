@@ -5748,9 +5748,9 @@
             <xsl:text>Vgl. </xsl:text>
          </xsl:when>
       </xsl:choose>
-      <xsl:text>Arthur Schnitzler: \emph{Mikrofilme}, \url{https://schnitzler\_mikrofilme.acdh.oeaw.ac.at/</xsl:text>
-      <xsl:value-of select="replace(@target, '_', '\\_')"/>
-      <xsl:text>}</xsl:text>
+      <xsl:text>Arthur Schnitzler: \emph{Mikrofilme}, \url{https://schnitzler-mikrofilme.acdh.oeaw.ac.at/</xsl:text>
+      <xsl:value-of select="@target"/>
+      <xsl:text>.html}</xsl:text>
    </xsl:template>
    <xsl:template match="tei:ref[@type = 'schnitzler-zeitungen']">
       <xsl:choose>
@@ -5767,9 +5767,9 @@
             <xsl:text>Vgl. </xsl:text>
          </xsl:when>
       </xsl:choose>
-      <xsl:text>Arthur Schnitzler: \emph{Archiv der Zeitungsausschnitte}, \url{https://schnitzler\_zeitungen.acdh.oeaw.ac.at/</xsl:text>
-      <xsl:value-of select="replace(@target, '_', '\\_')"/>
-      <xsl:text>}</xsl:text>
+      <xsl:text>Arthur Schnitzler: \emph{Archiv der Zeitungsausschnitte}, \url{https://schnitzler-zeitungen.acdh.oeaw.ac.at/</xsl:text>
+      <xsl:value-of select="@target"/>
+      <xsl:text>.html}</xsl:text>
    </xsl:template>
    <xsl:template match="tei:ref[@type = 'schnitzler-bahr']">
       <xsl:if test="not(@subtype = 'date-only')">
