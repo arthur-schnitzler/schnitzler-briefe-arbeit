@@ -1,6 +1,10 @@
-<?xml version='1.0' encoding='UTF-8'?>
+<?xml version="1.0" encoding="UTF-8"?>
 <?xml-model href="../meta/schnitzler-briefe-schematron.sch" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
-<TEI xmlns="http://www.tei-c.org/ns/1.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.tei-c.org/ns/1.0 ../meta/schnitzler-briefe-schema.xsd" xml:base="https://id.acdh.oeaw.ac.at/schnitzler/schnitzler-briefe/editions" xml:id="L03981">
+<TEI xmlns="http://www.tei-c.org/ns/1.0"
+     xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+     xsi:schemaLocation="http://www.tei-c.org/ns/1.0 ../meta/schnitzler-briefe-schema.xsd"
+     xml:base="https://id.acdh.oeaw.ac.at/schnitzler/schnitzler-briefe/editions"
+     xml:id="L03981">
    <teiHeader>
       <fileDesc>
          <titleStmt>
@@ -104,21 +108,29 @@
             <correspAction type="sent">
                <persName ref="#pmb2121">Schnitzler, Arthur</persName>
                <date when="1911-04-18" n="02">18. 4. 1911</date>
-               <placeName ref="#pmb36456">Menton</placeName>
+               <placeName ref="#pmb251927" evidence="external">Grand Hôtel National [Menton]</placeName>
             </correspAction>
             <correspAction type="received">
                <persName ref="#pmb2312">Zuckerkandl, Berta</persName>
                <date evidence="conjecture" notBefore="1911-04-19" notAfter="1911-04-23">[19. 4. 1911
                   – 23. 4. 1911?]</date>
-               <placeName ref="#pmb50" evidence="conjecture">Wien</placeName>
+               <placeName ref="#pmb238485">Nusswaldgasse 22</placeName>
             </correspAction>
-            <correspContext><ref type="belongsToCorrespondence" target="correspondence_2312">Zuckerkandl, Berta</ref>
+            <correspContext>
+               <ref type="belongsToCorrespondence" target="correspondence_2312">Zuckerkandl, Berta</ref>
                <ref subtype="previous_letter" type="withinCollection" target="L04446">Schnitzler, Schnitzler an Schwarzkopf, 18. 4. 1911</ref>
                <ref subtype="next_letter" type="withinCollection" target="L04448">Schnitzler an Schwarzkopf, [22. oder 23. 4. 1911]</ref>
-               <ref subtype="previous_letter" type="withinCorrespondence" source="correspondence_2312" target="L03998">Zuckerkandl an Schnitzler, [14. 4. 1911?]</ref>
-               <ref subtype="next_letter" type="withinCorrespondence" source="correspondence_2312" target="L03997">Zuckerkandl an Schnitzler, [zwischen 12. 5. 1911 und
+               <ref subtype="previous_letter"
+                    type="withinCorrespondence"
+                    source="correspondence_2312"
+                    target="L03998">Zuckerkandl an Schnitzler, [14. 4. 1911?]</ref>
+               <ref subtype="next_letter"
+                    type="withinCorrespondence"
+                    source="correspondence_2312"
+                    target="L03997">Zuckerkandl an Schnitzler, [zwischen 12. 5. 1911 und
                   21. 5. 1911?]</ref>
-            </correspContext></correspDesc>
+            </correspContext>
+         </correspDesc>
       </profileDesc>
       <revisionDesc status="candidate">
          <change who="MAM" when="2025-11-03">Export aus Transkribus</change>
@@ -213,7 +225,7 @@
                <pb facs="Literaturarchiv_AS-an-BZ_00000010-1"/>Jedenfalls werde ich bitten, in <rs type="place" ref="#pmb50">Wien</rs> (wo ich <anchor type="commentary" xml:id="K_L03981-4"/>
                <date>Anfang Mai</date>
                <note type="commentary" corresp="K_L03981-4">
-                  <rs type="person" ref="#pmb2121">Schnitzler</rs> hatte <rs type="place" ref="#pmb50">Wien</rs> am <ref type="schnitzler-tagebuch" target="1911-04-10" subtype="date-only"/> verlassen zu einer Reise über <rs type="place" ref="#pmb45258">München</rs> und <rs type="place" ref="#pmb667">Garmisch-Partenkirchen</rs> nach <rs type="place" ref="#pmb43180">Ligurien</rs> und <rs type="place" ref="#pmb36456">Menton</rs> mit Abstechern
+                  <rs type="person" ref="#pmb2121">Schnitzler</rs> hatte <rs type="place" ref="#pmb50">Wien</rs> am <ref type="schnitzler-tagebuch" target="1911-04-10" subtype="date-only"/> für eine Reise über <rs type="place" ref="#pmb45258">München</rs> und <rs type="place" ref="#pmb667">Garmisch-Partenkirchen</rs> nach <rs type="place" ref="#pmb43180">Ligurien</rs> und <rs type="place" ref="#pmb36456">Menton</rs> verlassen, mit Abstechern
                   nach <rs type="place" ref="#pmb5862">Monte Carlo</rs> und <rs type="place" ref="#pmb926">Nizza</rs>. Am <ref type="wienerschnitzler" target="1911-05-03" subtype="date-only"/> kehrte er nach <rs type="place" ref="#pmb50">Wien</rs> zurück, wo es
                   laut <rs type="work" ref="#pmb33243">Tagebuch</rs> am <ref type="schnitzler-tagebuch" target="1911-05-10" subtype="date-only"/> zur
                   persönlichen Besprechung kam: »<quote>Bei der Hofr. <rs type="person" ref="#pmb2312">Zuckerkandl</rs> (die mir wegen <rs type="person" ref="#pmb2211">Antoine</rs> – <rs ref="#pmb29937" type="work">Medardus</rs>
@@ -571,6 +583,30 @@
             </bibl>
          </listBibl>
          <listPlace>
+            <place xml:id="pmb251927">
+               <placeName>Grand Hôtel National [Menton]</placeName>
+               <location type="coords">
+                  <geo>43,777129 7,497536</geo>
+               </location>
+               <location type="located_in_place">
+                  <placeName ref="pmb36456">Menton</placeName>
+                  <geo>43,77649 7,50435</geo>
+               </location>
+            </place>
+            <place xml:id="pmb238485">
+               <placeName>Nusswaldgasse 22</placeName>
+               <location type="coords">
+                  <geo>48,24422 16,353139</geo>
+               </location>
+               <location type="located_in_place">
+                  <placeName ref="pmb371">Nusswaldgasse</placeName>
+                  <geo>48,244309229889 16,352414101304</geo>
+               </location>
+               <location type="located_in_place">
+                  <placeName ref="pmb69">XIX., Döbling</placeName>
+                  <geo>48,25 16,33306</geo>
+               </location>
+            </place>
             <place xml:id="pmb36456" ana="comment">
                <placeName>Menton</placeName>
                <placeName type="legacy-name">Mentone</placeName>
@@ -580,6 +616,17 @@
                <location type="located_in_place">
                   <placeName ref="pmb166">Frankreich</placeName>
                   <geo>46,0 2,0</geo>
+               </location>
+            </place>
+            <place xml:id="pmb166" ana="comment">
+               <placeName>Frankreich</placeName>
+               <placeName type="alternative-name">France</placeName>
+               <location type="coords">
+                  <geo>46,0 2,0</geo>
+               </location>
+               <location type="located_in_place">
+                  <placeName ref="pmb468">Europa</placeName>
+                  <geo>48,69096 9,14062</geo>
                </location>
             </place>
             <place xml:id="pmb50" ana="comment">
@@ -602,27 +649,6 @@
                <location type="located_in_place">
                   <placeName ref="pmb235218">Windmühlhöhe</placeName>
                   <geo>48,24077 16,32092</geo>
-               </location>
-            </place>
-            <place xml:id="pmb251927">
-               <placeName>Grand Hôtel National [Menton]</placeName>
-               <location type="coords">
-                  <geo>43,777129 7,497536</geo>
-               </location>
-               <location type="located_in_place">
-                  <placeName ref="pmb36456">Menton</placeName>
-                  <geo>43,77649 7,50435</geo>
-               </location>
-            </place>
-            <place xml:id="pmb166" ana="comment">
-               <placeName>Frankreich</placeName>
-               <placeName type="alternative-name">France</placeName>
-               <location type="coords">
-                  <geo>46,0 2,0</geo>
-               </location>
-               <location type="located_in_place">
-                  <placeName ref="pmb468">Europa</placeName>
-                  <geo>48,69096 9,14062</geo>
                </location>
             </place>
             <place xml:id="pmb254">

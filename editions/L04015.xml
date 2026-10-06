@@ -1,6 +1,10 @@
-<?xml version='1.0' encoding='UTF-8'?>
+<?xml version="1.0" encoding="UTF-8"?>
 <?xml-model href="../meta/schnitzler-briefe-schematron.sch" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
-<TEI xmlns="http://www.tei-c.org/ns/1.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.tei-c.org/ns/1.0 ../meta/schnitzler-briefe-schema.xsd" xml:base="https://id.acdh.oeaw.ac.at/schnitzler/schnitzler-briefe/editions" xml:id="L04015">
+<TEI xmlns="http://www.tei-c.org/ns/1.0"
+     xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+     xsi:schemaLocation="http://www.tei-c.org/ns/1.0 ../meta/schnitzler-briefe-schema.xsd"
+     xml:base="https://id.acdh.oeaw.ac.at/schnitzler/schnitzler-briefe/editions"
+     xml:id="L04015">
    <teiHeader>
       <fileDesc>
          <titleStmt>
@@ -111,24 +115,30 @@
             <correspAction type="sent">
                <persName ref="#pmb2312">Zuckerkandl, Berta</persName>
                <date when="1897-03-29" n="01">[29. 3. 1897?]</date>
-               <placeName ref="#pmb50" evidence="conjecture">Wien</placeName>
+               <placeName ref="#pmb232250" evidence="conjecture">Alserbachstraße 20</placeName>
             </correspAction>
             <correspAction type="received">
                <persName ref="#pmb2121">Schnitzler, Arthur</persName>
                <date evidence="conjecture" notBefore="1897-03-29" notAfter="1897-04-01">[29. 3. 1897 – 1. 4. 1897?]</date>
-               <placeName ref="#pmb50" evidence="conjecture">Wien</placeName>
+               <placeName ref="#pmb168934">Frankgasse 1</placeName>
             </correspAction>
-            <correspContext><ref type="belongsToCorrespondence" target="correspondence_2312">Zuckerkandl, Berta</ref>
+            <correspContext>
+               <ref type="belongsToCorrespondence" target="correspondence_2312">Zuckerkandl, Berta</ref>
                <ref subtype="previous_letter" type="withinCollection" target="L00663">Hofmannsthal an Schnitzler, 25. 3. 1897</ref>
                <ref subtype="next_letter" type="withinCollection" target="L02807">Goldmann an Schnitzler, 4. 4. [1897]</ref>
-               <ref subtype="next_letter" type="withinCorrespondence" source="correspondence_2312" target="L03998">Zuckerkandl an Schnitzler, [14. 4. 1911?]</ref>
-            </correspContext></correspDesc>
+               <ref subtype="next_letter"
+                    type="withinCorrespondence"
+                    source="correspondence_2312"
+                    target="L03998">Zuckerkandl an Schnitzler, [14. 4. 1911?]</ref>
+            </correspContext>
+         </correspDesc>
       </profileDesc>
-      <revisionDesc status="candidate">
+      <revisionDesc status="approved">
          <change who="MAM" when="2025-11-11">Export aus Transkribus</change>
          <change who="SJ" when="2025-11-26">Durchsicht</change>
          <change who="MAM" when="2026-03-02">Durchsicht und umdatiert</change>
          <change who="MAM" when="2026-03-02">Index check</change>
+         <change who="MAM" when="2026-10-06">Durchsicht</change>
       </revisionDesc>
    </teiHeader>
    <facsimile>
@@ -152,7 +162,7 @@
                      Am <ref type="schnitzler-kultur" subtype="date-only" target="pmb59292"/> trug 
                      <rs type="person" ref="#pmb2121">Schnitzler</rs> den 1. Akt von
                      <rs type="work" ref="#pmb29899">Freiwild</rs> bei
-                      einer gemeinsamen <rs type="event" ref="#pmb59292">Lesung</rs> mit <rs type="person" ref="#pmb11701">Georg Hirschfeld</rs>,
+                     einer gemeinsamen <rs type="event" ref="#pmb59292">Lesung</rs> mit <rs type="person" ref="#pmb11701">Georg Hirschfeld</rs>,
                      <rs type="person" ref="#pmb11740">Hugo von Hofmannsthal</rs> und <rs type="person" ref="#pmb10815">Hermann Bahr</rs> vor.
                      Das geschah für einen wohltätigen Zweck und wurde von <rs type="person" ref="#pmb2312">Berta Zuckerkandl</rs>
                      organisiert, wie das <rs type="work" ref="#pmb41484">Illustrirte Wiener Extrablatt</rs> implizierte: »<quote>
@@ -163,7 +173,7 @@
                   Beim vorliegenden Brief handelt es sich dementsprechend um das Dankschreiben, das am Folgetag verfasst sein dürfte.</note> auszusprechen. Sie haben
                mit der edelsten Bereitwilligkeit Ihr grosses Talent<supplied>,</supplied> Ihre grosse Zugkraft uns zur
                Verfügung gestellt. Ich bin wirklich ganz be<pb facs="MS-SCHNITZLER-B-00200-000-00050"/>schämt, und hoffe nun dass der <hi rend="underline" n="1">kolossale</hi> Erfolg den ihr geradezu verblüffend
-               geschauter <rs type="event" ref="#pmb209635" subtype="implied" cert="low">
+               geschauter <rs type="event" ref="#pmb59292" subtype="implied" cert="low">
                   <rs type="work" ref="#pmb29899" subtype="implied">Akt</rs>
                </rs> errungen hat, Sie einigermaassen für die grosse Mühe
                entschädig<subst>
@@ -392,48 +402,43 @@
             </bibl>
          </listBibl>
          <listPlace>
-            <place xml:id="pmb50">
-               <placeName>Wien</placeName>
-               <placeName type="ort_fruherer-name">K.K. Reichshaupt- und Residenzstadt Wien</placeName>
-               <placeName type="alternative-name">Bécs</placeName>
-               <placeName type="alternative-name">Land Wien</placeName>
-               <placeName type="alternative-name">Vídeň</placeName>
-               <placeName type="alternative-name">Wenia</placeName>
-               <placeName type="alternative-name">Beč</placeName>
-               <placeName type="ort_fruherer-name">Vindobona</placeName>
-               <placeName type="alternative-name">Vienna</placeName>
+            <place xml:id="pmb232250">
+               <placeName>Alserbachstraße 20</placeName>
                <location type="coords">
-                  <geo>48,208333 16,373056</geo>
+                  <geo>48,225984 16,362937</geo>
                </location>
                <location type="located_in_place">
-                  <placeName ref="pmb41240">Österreich</placeName>
-                  <geo>47,33333 13,33333</geo>
+                  <placeName ref="pmb59">IX., Alsergrund</placeName>
+                  <geo>48,22387 16,35641</geo>
                </location>
                <location type="located_in_place">
-                  <placeName ref="pmb235218">Windmühlhöhe</placeName>
-                  <geo>48,24077 16,32092</geo>
+                  <placeName ref="pmb232247">Alserbachstraße</placeName>
+                  <geo>48,226252 16,363178</geo>
+               </location>
+            </place>
+            <place xml:id="pmb168934">
+               <placeName>Frankgasse 1</placeName>
+               <location type="coords">
+                  <geo>48,21533 16,35736</geo>
+               </location>
+               <location type="located_in_place">
+                  <placeName ref="pmb59">IX., Alsergrund</placeName>
+                  <geo>48,22387 16,35641</geo>
+               </location>
+               <location type="located_in_place">
+                  <placeName ref="pmb397">Frankgasse</placeName>
+                  <geo>48,215516628628 16,356475515829</geo>
                </location>
             </place>
          </listPlace>
          <listEvent>
-            <event xml:id="pmb59292" ana="comment">
+            <event xml:id="pmb59292" ana="implied">
                <eventName n="Vorlesung">Lesung von Hirschfeld, Hofmannsthal, Schnitzler und Bahr, 28.3.1897</eventName>
                <listPlace>
                   <place>
                      <placeName role="veranstaltet in" ref="pmb4">Bösendorfer Saal</placeName>
                      <location>
                         <geo>48,209167 16,366111</geo>
-                     </location>
-                  </place>
-               </listPlace>
-            </event>
-            <event xml:id="pmb209635" ana="implied">
-               <eventName n="Theaterpremiere">Premiere von Der Schleier der Pierrette, 16.3.1912</eventName>
-               <listPlace>
-                  <place>
-                     <placeName role="veranstaltet in" ref="pmb186034">Urania Theater</placeName>
-                     <location>
-                        <geo>48,207691 16,378158</geo>
                      </location>
                   </place>
                </listPlace>
