@@ -1,6 +1,10 @@
-<?xml version='1.0' encoding='UTF-8'?>
+<?xml version="1.0" encoding="UTF-8"?>
 <?xml-model href="../meta/schnitzler-briefe-schematron.sch" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
-<TEI xmlns="http://www.tei-c.org/ns/1.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.tei-c.org/ns/1.0 ../meta/schnitzler-briefe-schema.xsd" xml:base="https://id.acdh.oeaw.ac.at/schnitzler/schnitzler-briefe/editions" xml:id="L03995">
+<TEI xmlns="http://www.tei-c.org/ns/1.0"
+     xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+     xsi:schemaLocation="http://www.tei-c.org/ns/1.0 ../meta/schnitzler-briefe-schema.xsd"
+     xml:base="https://id.acdh.oeaw.ac.at/schnitzler/schnitzler-briefe/editions"
+     xml:id="L03995">
    <teiHeader>
       <fileDesc>
          <titleStmt>
@@ -117,26 +121,35 @@
             <correspAction type="sent">
                <persName ref="#pmb2312">Zuckerkandl, Berta</persName>
                <date when="1911-06-23" n="01">[23. 6. 1911?]</date>
-               <placeName ref="#pmb182">Paris</placeName>
+               <placeName ref="#pmb300061">84, rue de Longchamp</placeName>
             </correspAction>
             <correspAction type="received">
                <persName ref="#pmb2121">Schnitzler, Arthur</persName>
                <date evidence="conjecture" notBefore="1911-06-24" notAfter="1911-06-28">[24. 6. 1911
                   – 28. 6. 1911?]</date>
-               <placeName ref="#pmb50" evidence="conjecture">Wien</placeName>
+               <placeName ref="#pmb168815">Sternwartestraße 71</placeName>
             </correspAction>
-            <correspContext><ref type="belongsToCorrespondence" target="correspondence_2312">Zuckerkandl, Berta</ref>
+            <correspContext>
+               <ref type="belongsToCorrespondence" target="correspondence_2312">Zuckerkandl, Berta</ref>
                <ref subtype="previous_letter" type="withinCollection" target="L03950">Schnitzler an Zuckerkandl, 20. 6. 1911</ref>
                <ref subtype="next_letter" type="withinCollection" target="L03635">Zweig an Schnitzler, [24. 6. 1911?]</ref>
-               <ref subtype="previous_letter" type="withinCorrespondence" source="correspondence_2312" target="L03950">Schnitzler an Zuckerkandl, 20. 6. 1911</ref>
-               <ref subtype="next_letter" type="withinCorrespondence" source="correspondence_2312" target="L04009">Zuckerkandl an Schnitzler, 25. 7. [1911]</ref>
-            </correspContext></correspDesc>
+               <ref subtype="previous_letter"
+                    type="withinCorrespondence"
+                    source="correspondence_2312"
+                    target="L03950">Schnitzler an Zuckerkandl, 20. 6. 1911</ref>
+               <ref subtype="next_letter"
+                    type="withinCorrespondence"
+                    source="correspondence_2312"
+                    target="L04009">Zuckerkandl an Schnitzler, 25. 7. [1911]</ref>
+            </correspContext>
+         </correspDesc>
       </profileDesc>
-      <revisionDesc status="candidate">
+      <revisionDesc status="approved">
          <change who="MAM" when="2025-11-11">Export aus Transkribus</change>
          <change who="SJ" when="2025-11-12">Durchsicht</change>
          <change who="MAM" when="2026-02-23">Durchsicht</change>
          <change who="MAM" when="2026-02-23">Index check</change>
+         <change who="MAM" when="2026-10-06">Durchsicht</change>
       </revisionDesc>
    </teiHeader>
    <facsimile>
@@ -160,7 +173,7 @@
                      </date>.</seg>
                   <seg rend="right" type="letterhead">
                      <rs type="place" ref="#pmb300061">
-                        <hi rend="pre-print">84 <hi rend="capitals">Rue de Longchamp</hi>
+                        <hi rend="pre-print"><hi rend="capitals">84 Rue de Longchamp</hi>
                         </hi>
                      </rs>
                   </seg>
@@ -386,42 +399,6 @@
             </bibl>
          </listBibl>
          <listPlace>
-            <place xml:id="pmb182" ana="comment">
-               <placeName>Paris</placeName>
-               <placeName type="alternative-name">P'ariz</placeName>
-               <placeName type="alternative-name">Pariž</placeName>
-               <placeName type="alternative-name">Parisius</placeName>
-               <placeName type="alternative-name">Île-de-France</placeName>
-               <location type="coords">
-                  <geo>48,85341 2,3488</geo>
-               </location>
-               <location type="located_in_place">
-                  <placeName ref="pmb166">Frankreich</placeName>
-                  <geo>46,0 2,0</geo>
-               </location>
-            </place>
-            <place xml:id="pmb50" ana="comment">
-               <placeName>Wien</placeName>
-               <placeName type="ort_fruherer-name">K.K. Reichshaupt- und Residenzstadt Wien</placeName>
-               <placeName type="alternative-name">Bécs</placeName>
-               <placeName type="alternative-name">Land Wien</placeName>
-               <placeName type="alternative-name">Vídeň</placeName>
-               <placeName type="alternative-name">Wenia</placeName>
-               <placeName type="alternative-name">Beč</placeName>
-               <placeName type="ort_fruherer-name">Vindobona</placeName>
-               <placeName type="alternative-name">Vienna</placeName>
-               <location type="coords">
-                  <geo>48,208333 16,373056</geo>
-               </location>
-               <location type="located_in_place">
-                  <placeName ref="pmb41240">Österreich</placeName>
-                  <geo>47,33333 13,33333</geo>
-               </location>
-               <location type="located_in_place">
-                  <placeName ref="pmb235218">Windmühlhöhe</placeName>
-                  <geo>48,24077 16,32092</geo>
-               </location>
-            </place>
             <place xml:id="pmb300061">
                <placeName>84, rue de Longchamp</placeName>
                <location type="coords">
@@ -434,6 +411,38 @@
                <location type="located_in_place">
                   <placeName ref="pmb182">Paris</placeName>
                   <geo>48,85341 2,3488</geo>
+               </location>
+            </place>
+            <place xml:id="pmb168815">
+               <placeName>Sternwartestraße 71</placeName>
+               <location type="coords">
+                  <geo>48,23188 16,33716</geo>
+               </location>
+               <location type="located_in_place">
+                  <placeName ref="pmb68">XVIII., Währing</placeName>
+                  <geo>48,23333 16,31667</geo>
+               </location>
+               <location type="located_in_place">
+                  <placeName ref="pmb533">Währinger Cottage</placeName>
+                  <geo>48,233056 16,341944</geo>
+               </location>
+               <location type="located_in_place">
+                  <placeName ref="pmb150">Sternwartestraße</placeName>
+                  <geo>48,23099349198 16,340117830625</geo>
+               </location>
+            </place>
+            <place xml:id="pmb182" ana="comment">
+               <placeName>Paris</placeName>
+               <placeName type="alternative-name">P'ariz</placeName>
+               <placeName type="alternative-name">Pariž</placeName>
+               <placeName type="alternative-name">Parisius</placeName>
+               <placeName type="alternative-name">Île-de-France</placeName>
+               <location type="coords">
+                  <geo>48,85341 2,3488</geo>
+               </location>
+               <location type="located_in_place">
+                  <placeName ref="pmb166">Frankreich</placeName>
+                  <geo>46,0 2,0</geo>
                </location>
             </place>
             <place xml:id="pmb166" ana="comment">
@@ -456,6 +465,28 @@
                <location type="located_in_place">
                   <placeName ref="pmb468">Europa</placeName>
                   <geo>48,69096 9,14062</geo>
+               </location>
+            </place>
+            <place xml:id="pmb50" ana="comment">
+               <placeName>Wien</placeName>
+               <placeName type="ort_fruherer-name">K.K. Reichshaupt- und Residenzstadt Wien</placeName>
+               <placeName type="alternative-name">Bécs</placeName>
+               <placeName type="alternative-name">Land Wien</placeName>
+               <placeName type="alternative-name">Vídeň</placeName>
+               <placeName type="alternative-name">Wenia</placeName>
+               <placeName type="alternative-name">Beč</placeName>
+               <placeName type="ort_fruherer-name">Vindobona</placeName>
+               <placeName type="alternative-name">Vienna</placeName>
+               <location type="coords">
+                  <geo>48,208333 16,373056</geo>
+               </location>
+               <location type="located_in_place">
+                  <placeName ref="pmb41240">Österreich</placeName>
+                  <geo>47,33333 13,33333</geo>
+               </location>
+               <location type="located_in_place">
+                  <placeName ref="pmb235218">Windmühlhöhe</placeName>
+                  <geo>48,24077 16,32092</geo>
                </location>
             </place>
          </listPlace>

@@ -668,4 +668,12 @@
             </sch:assert>
         </sch:rule>
     </sch:pattern>
+    <sch:pattern id="hi-rend-nicht-verschachtelt">
+        <sch:rule context="tei:hi[@rend]">
+            <sch:let name="r" value="@rend"/>
+            <sch:assert test="not(ancestor::tei:hi[@rend = $r])">hi[@rend='<sch:value-of select="$r"/>']
+                darf nicht innerhalb eines anderen hi[@rend='<sch:value-of select="$r"/>'] stehen.
+            </sch:assert>
+        </sch:rule>
+    </sch:pattern>
 </sch:schema>
