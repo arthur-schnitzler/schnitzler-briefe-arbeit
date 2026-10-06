@@ -1,6 +1,10 @@
-<?xml version='1.0' encoding='UTF-8'?>
+<?xml version="1.0" encoding="UTF-8"?>
 <?xml-model href="../meta/schnitzler-briefe-schematron.sch" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
-<TEI xmlns="http://www.tei-c.org/ns/1.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.tei-c.org/ns/1.0 ../meta/schnitzler-briefe-schema.xsd" xml:base="https://id.acdh.oeaw.ac.at/schnitzler/schnitzler-briefe/editions" xml:id="L03999">
+<TEI xmlns="http://www.tei-c.org/ns/1.0"
+     xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+     xsi:schemaLocation="http://www.tei-c.org/ns/1.0 ../meta/schnitzler-briefe-schema.xsd"
+     xml:base="https://id.acdh.oeaw.ac.at/schnitzler/schnitzler-briefe/editions"
+     xml:id="L03999">
    <teiHeader>
       <fileDesc>
          <titleStmt>
@@ -93,8 +97,7 @@
                         <additions>
                            <incident type="receiver" rend="bleistift">
                               <desc>Vermerk: »<quote>
-                                    <hi rend="latintype">Zuckerkand</hi>
-                                    <unclear>l</unclear>
+                                    <hi rend="latintype">Zuckerkandl</hi>
                                  </quote>«</desc>
                            </incident>
                         </additions>
@@ -112,24 +115,34 @@
             <correspAction type="sent">
                <persName ref="#pmb2312">Zuckerkandl, Berta</persName>
                <date when="1911-09-10" n="03">[10. 9. 1911?]</date>
-               <placeName ref="#pmb50" evidence="conjecture">Wien</placeName>
+               <placeName ref="#pmb238485">Nusswaldgasse 22</placeName>
             </correspAction>
             <correspAction type="received">
                <persName ref="#pmb2121">Schnitzler, Arthur</persName>
                <date notBefore="1911-09-10" notAfter="1911-09-11">[10. 9. 1911 – 11. 9. 1911?]</date>
-               <placeName ref="#pmb50" evidence="conjecture">Wien</placeName>
+               <placeName ref="#pmb168815">Sternwartestraße 71</placeName>
             </correspAction>
-            <correspContext><ref type="belongsToCorrespondence" target="correspondence_2312">Zuckerkandl, Berta</ref>
+            <correspContext>
+               <ref type="belongsToCorrespondence" target="correspondence_2312">Zuckerkandl, Berta</ref>
                <ref subtype="previous_letter" type="withinCollection" target="L03476">Goldmann an Schnitzler, 10. 9. 1911</ref>
                <ref subtype="next_letter" type="withinCollection" target="L02027">Hofmannsthal an Schnitzler, 11. 9. 1911</ref>
-               <ref subtype="previous_letter" type="withinCorrespondence" source="correspondence_2312" target="L04009">Zuckerkandl an Schnitzler, 25. 7. [1911]</ref>
-               <ref subtype="next_letter" type="withinCorrespondence" source="correspondence_2312" target="L04005">Zuckerkandl an Schnitzler, [9. 10. 1911?]</ref>
-            </correspContext></correspDesc>
+               <ref subtype="previous_letter"
+                    type="withinCorrespondence"
+                    source="correspondence_2312"
+                    target="L04009">Zuckerkandl an Schnitzler, 25. 7. [1911]</ref>
+               <ref subtype="next_letter"
+                    type="withinCorrespondence"
+                    source="correspondence_2312"
+                    target="L04005">Zuckerkandl an Schnitzler, [9. 10. 1911?]</ref>
+            </correspContext>
+         </correspDesc>
       </profileDesc>
-      <revisionDesc status="candidate">
+      <revisionDesc status="approved">
          <change who="MAM" when="2025-11-11">Export aus Transkribus</change>
          <change who="SJ" when="2025-11-24">Durchsicht</change>
          <change who="MAM" when="2026-02-24">Durchsicht</change>
+         <change who="MAM" when="2026-10-06">Index check</change>
+         <change who="MAM" when="2026-10-06">Durchsicht</change>
       </revisionDesc>
    </teiHeader>
    <facsimile>
@@ -146,7 +159,7 @@
             <p>Darf ich Ihnen mein <anchor type="commentary" xml:id="K_L03999-1"/>innigstes
                   Mitfühlen<note type="commentary" corresp="K_L03999-1">
                   <rs type="person" ref="#pmb2121">Schnitzlers</rs> Mutter <rs type="person" ref="#pmb12701">Louise Schnitzer</rs> (gebürtige <rs type="person" ref="#pmb12701">Markbreiter</rs>) war am <ref type="schnitzler-tagebuch" target="1911-09-09" subtype="date-only"/>
-                     nachmittags gegen <time>15.30 h</time> gestorben. Die Morgenausgabe der <rs type="work" ref="#pmb36374">Neuen Freien Presse</rs> vom
+                     nachmittags gegen <time>15 Uhr 30</time> gestorben. Die Morgenausgabe der <rs type="work" ref="#pmb36374">Neuen Freien Presse</rs> vom
                      <date>10. 9. 1911</date> brachte die Todesanzeige (<bibl>Nr. 16.901, Morgenblatt, S. 30</bibl>.) Das Begräbnis fand am
                      <ref type="schnitzler-tagebuch" target="1911-09-11" subtype="date-only"/>
                   statt. Der undatierte Kondolenzbrief hat den Charakter einer spontanen Beileidsbekundung,
@@ -317,26 +330,36 @@
             </bibl>
          </listBibl>
          <listPlace>
-            <place xml:id="pmb50">
-               <placeName>Wien</placeName>
-               <placeName type="ort_fruherer-name">K.K. Reichshaupt- und Residenzstadt Wien</placeName>
-               <placeName type="alternative-name">Bécs</placeName>
-               <placeName type="alternative-name">Land Wien</placeName>
-               <placeName type="alternative-name">Vídeň</placeName>
-               <placeName type="alternative-name">Wenia</placeName>
-               <placeName type="alternative-name">Beč</placeName>
-               <placeName type="ort_fruherer-name">Vindobona</placeName>
-               <placeName type="alternative-name">Vienna</placeName>
+            <place xml:id="pmb238485">
+               <placeName>Nusswaldgasse 22</placeName>
                <location type="coords">
-                  <geo>48,208333 16,373056</geo>
+                  <geo>48,24422 16,353139</geo>
                </location>
                <location type="located_in_place">
-                  <placeName ref="pmb41240">Österreich</placeName>
-                  <geo>47,33333 13,33333</geo>
+                  <placeName ref="pmb371">Nusswaldgasse</placeName>
+                  <geo>48,244309229889 16,352414101304</geo>
                </location>
                <location type="located_in_place">
-                  <placeName ref="pmb235218">Windmühlhöhe</placeName>
-                  <geo>48,24077 16,32092</geo>
+                  <placeName ref="pmb69">XIX., Döbling</placeName>
+                  <geo>48,25 16,33306</geo>
+               </location>
+            </place>
+            <place xml:id="pmb168815">
+               <placeName>Sternwartestraße 71</placeName>
+               <location type="coords">
+                  <geo>48,23188 16,33716</geo>
+               </location>
+               <location type="located_in_place">
+                  <placeName ref="pmb68">XVIII., Währing</placeName>
+                  <geo>48,23333 16,31667</geo>
+               </location>
+               <location type="located_in_place">
+                  <placeName ref="pmb533">Währinger Cottage</placeName>
+                  <geo>48,233056 16,341944</geo>
+               </location>
+               <location type="located_in_place">
+                  <placeName ref="pmb150">Sternwartestraße</placeName>
+                  <geo>48,23099349198 16,340117830625</geo>
                </location>
             </place>
          </listPlace>
