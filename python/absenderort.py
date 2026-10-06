@@ -52,6 +52,8 @@ INDEX_PATH = sa.REPO / "meta" / "orte_aus_correspaction.json"
 WITNESS_RE = re.compile(r'<witness\b.*?</witness>', re.S)
 OBJECT_TYPE_RE = re.compile(r'<objectType\b[^>]*>')
 ANA_RE = re.compile(r'\bana="([^"]*)"')
+CHANGE_ABSENDERORT_TEXT = "Absenderort überprüft"
+REVIEWED_MARKER_RE = re.compile(re.escape(f">{CHANGE_ABSENDERORT_TEXT}</change>"))
 PLACENAME_IN_ACTION_RE = re.compile(r'<placeName\b[^>]*>(.*?)</placeName>', re.S)
 
 
@@ -93,7 +95,7 @@ def _row(fid, text):
         pm = PLACENAME_IN_ACTION_RE.search(m.group(0))
         if pm:
             place = re.sub(r"\s+", " ", re.sub(r"<[^>]+>", "", pm.group(1))).strip() or None
-    return {"id": fid, "place": place}
+    return {"id": fid, "place": place, "reviewed": bool(REVIEWED_MARKER_RE.search(text))}
 
 
 def get_candidates():
@@ -396,6 +398,22 @@ def set_action_place_by_type(fid, action_type, ref, name, pmb=None):
     return build_payload(fid)
 
 
+def add_revision_change(fid, who):
+    """Trägt in revisionDesc einen change "Absenderort überprüft" ein (wie
+    stempel_abgleich.py); ein bereits vorhandener Eintrag desselben
+    Bearbeiters wird nicht doppelt gesetzt."""
+    if who not in sa.EDITORS:
+        raise ValueError(f"unbekannter Bearbeiter: {who}")
+    text = sa.load_text(fid)
+    already = re.search(
+        r'<change\b(?=[^>]*\bwho="%s")[^>]*>%s</change>' % (re.escape(who), re.escape(CHANGE_ABSENDERORT_TEXT)),
+        text)
+    if not already:
+        sa.append_revision_change(fid, who, CHANGE_ABSENDERORT_TEXT)
+    refresh_candidate(fid)
+    return {"ok": True, "added": not already}
+
+
 # ---------------------------------------------------------------------------
 # HTTP-Server
 # ---------------------------------------------------------------------------
@@ -447,6 +465,10 @@ class Handler(BaseHTTPRequestHandler):
             payload = json.loads(self.rfile.read(length).decode("utf-8")) if length else {}
             if path == "/api/rebuild-index":
                 self._json(build_corresp_index())
+                return
+            m = re.match(r"^/api/file/([^/]+)/revision-change$", path)
+            if m:
+                self._json(add_revision_change(m.group(1), payload["who"]))
                 return
             m = re.match(r"^/api/file/([^/]+)/set-place$", path)
             if not m:
