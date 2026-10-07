@@ -671,8 +671,15 @@
     <sch:pattern id="hi-rend-nicht-verschachtelt">
         <sch:rule context="tei:hi[@rend]">
             <sch:let name="r" value="@rend"/>
-            <sch:assert test="not(ancestor::tei:hi[@rend = $r])">hi[@rend='<sch:value-of select="$r"/>']
-                darf nicht innerhalb eines anderen hi[@rend='<sch:value-of select="$r"/>'] stehen.
+            <!-- Ausnahme: hi[@rend='xyz']//note[@type='footnote']//hi[@rend='xyz'] ist erlaubt.
+                 Es zählen nur gleichartige Vorfahren-hi innerhalb der nächsten Fußnote
+                 (bzw. alle, wenn das hi nicht in einer Fußnote steht). -->
+            <sch:let name="fn" value="ancestor::tei:note[@type = 'footnote'][1]"/>
+            <sch:assert
+                test="not(ancestor::tei:hi[@rend = $r][empty($fn) or (ancestor::* intersect $fn)])"
+                >hi[@rend='<sch:value-of select="$r"/>']
+                darf nicht innerhalb eines anderen hi[@rend='<sch:value-of select="$r"/>'] stehen
+                (Ausnahme: dazwischen liegt eine note[@type='footnote']).
             </sch:assert>
         </sch:rule>
     </sch:pattern>
