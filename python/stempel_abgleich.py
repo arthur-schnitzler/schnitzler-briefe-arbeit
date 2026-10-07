@@ -1035,6 +1035,12 @@ def apply_date_uncertain(fid):
 
 
 def add_revision_change(fid, who, change_text=CHANGE_DATIERUNG_STEMPEL_TEXT):
+    """Wie append_revision_change, liefert aber das Stempel-Payload zurück."""
+    append_revision_change(fid, who, change_text)
+    return build_file_payload(fid)
+
+
+def append_revision_change(fid, who, change_text=CHANGE_DATIERUNG_STEMPEL_TEXT):
     """Ergänzt teiHeader/revisionDesc um einen neuen change-Eintrag, ans
     Ende der bestehenden change-Liste angehängt (chronologisch, wie in der
     Edition üblich)."""
@@ -1065,7 +1071,6 @@ def add_revision_change(fid, who, change_text=CHANGE_DATIERUNG_STEMPEL_TEXT):
 
     new_text = text[:rd_m.start()] + new_block + text[rd_m.end():]
     validate_and_save(fid, text, new_text)
-    return build_file_payload(fid)
 
 
 # ---------------------------------------------------------------------------
