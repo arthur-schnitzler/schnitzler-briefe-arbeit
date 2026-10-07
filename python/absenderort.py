@@ -11,9 +11,11 @@ Pro Brief wird der aktuell eingetragene Ort angezeigt; per Dropdown lässt
 sich ein anderer wählen:
   - Orte aus tei:back/tei:listPlace/tei:place (die im Brieftext
     vorkommenden zuerst),
-  - Aufenthaltsorte Schnitzlers am Datum des Briefs (nur, wenn pmb2121 in
-    correspDesc vorkommt),
-  - Wohnadressen der beteiligten Personen zum Datum des Briefs.
+  - Wohnadressen der beteiligten Personen zum Datum des Briefs,
+  - Orte aus anderen correspAction desselben Jahres.
+In der correspAction, in der pmb2121 vorkommt, werden stattdessen nur
+Schnitzlers Wohnadressen und seine Aufenthaltsorte am Datum des Briefs
+angeboten.
 Auch der Empfangsort (correspAction[@type='received']) lässt sich setzen; Aufenthalte
 Schnitzlers werden nur für den Absenderort angeboten, und nur, wenn er dort steht.
 Zusätzlich gibt es eine Liste der Orte, an denen die Person(en) laut anderen
@@ -273,24 +275,36 @@ def action_index(text, action_type):
     return None
 
 
+def has_schnitzler(action):
+    return any(p.get("ref") == sa.ARTHUR_SCHNITZLER_REF for p in action["persons"])
+
+
 def person_options(root, action, sent_action):
-    """Wohnadressen aller in correspDesc genannten Personen zum Datum der
-    Aktion (bei fehlendem Datum: Datum der sent-Aktion). Aufenthalte
-    Schnitzlers nur für die sent-Aktion und nur, wenn er dort selbst
-    steht."""
+    """Wohnadressen der Personen zum Datum der Aktion (bei fehlendem Datum:
+    Datum der sent-Aktion). Steht Schnitzler in der Aktion, nur seine
+    Wohnadressen (plus seine Aufenthalte, s. u.); sonst die Wohnadressen aller
+    in correspDesc genannten Personen. Aufenthalte Schnitzlers nur für die
+    sent-Aktion und nur, wenn er dort selbst steht."""
     persons = []
-    for a in root.iter(q("correspAction")):
-        persons.extend({"text": norm_text(p), "ref": p.get("ref")} for p in a.findall(q("persName")))
+    if has_schnitzler(action):
+        persons = [{"text": p.get("text"), "ref": p.get("ref")} for p in action["persons"]
+                   if p.get("ref") == sa.ARTHUR_SCHNITZLER_REF]
+    else:
+        for a in root.iter(q("correspAction")):
+            persons.extend({"text": norm_text(p), "ref": p.get("ref")} for p in a.findall(q("persName")))
     date = action["date"] if (action["date"] or {}).get("when") or (action["date"] or {}).get("notBefore") \
         or (action["date"] or {}).get("notAfter") else sent_action["date"]
     opts = sa.residence_options_for_action(persons, date)
-    if action is not sent_action or not any(
-            p["ref"] == sa.ARTHUR_SCHNITZLER_REF for p in action["persons"]):
+    if action is not sent_action or not has_schnitzler(action):
         opts = [o for o in opts if o["kind"] != "aufenthalt"]
     return opts
 
 
 def options_for(root, action, sent_action, in_body, fid):
+    if has_schnitzler(action):
+        # Schnitzlers Aktion: nur seine Wohnadressen und Aufenthaltsorte am Tag
+        return [{**o, "inBody": _ref_key(o["ref"]) in in_body}
+                for o in person_options(root, action, sent_action)]
     options = list_place_options(root, in_body)
     seen = {o["ref"] for o in options}
     for o in person_options(root, action, sent_action):
