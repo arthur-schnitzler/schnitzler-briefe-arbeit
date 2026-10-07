@@ -1,6 +1,10 @@
-<?xml version='1.0' encoding='UTF-8'?>
+<?xml version="1.0" encoding="UTF-8"?>
 <?xml-model href="../meta/schnitzler-briefe-schematron.sch" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
-<TEI xmlns="http://www.tei-c.org/ns/1.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.tei-c.org/ns/1.0 ../meta/schnitzler-briefe-schema.xsd" xml:base="https://id.acdh.oeaw.ac.at/schnitzler/schnitzler-briefe/editions" xml:id="L04220">
+<TEI xmlns="http://www.tei-c.org/ns/1.0"
+     xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+     xsi:schemaLocation="http://www.tei-c.org/ns/1.0 ../meta/schnitzler-briefe-schema.xsd"
+     xml:base="https://id.acdh.oeaw.ac.at/schnitzler/schnitzler-briefe/editions"
+     xml:id="L04220">
    <teiHeader>
       <fileDesc>
          <titleStmt>
@@ -83,7 +87,7 @@
                               <extent>
                                  <measure unit="seite" quantity="4"/>
                                  <measure unit="blatt" quantity="1"/>
-                                 <measure unit="zeichenanzahl" quantity="2127"/>
+                                 <measure unit="zeichenanzahl" quantity="2134"/>
                               </extent>
                            </supportDesc>
                         </objectDesc>
@@ -95,6 +99,9 @@
                               <desc>Vermerk »<quote>Abſch.</quote>« und »<quote>
                                     <hi rend="latintype">Marie Holzer</hi>
                                  </quote>«</desc>
+                           </incident>
+                           <incident type="receiver" rend="roter-buntstift">
+                              <desc>zwei Unterstreichungen</desc>
                            </incident>
                            <incident type="archival" rend="bleistift">
                               <desc>von unbekannter Hand: »<quote>Marie H</quote>«</desc>
@@ -114,24 +121,32 @@
             <correspAction type="sent">
                <persName ref="#pmb260732">Holzer, Marie</persName>
                <date when="1908-04-23" n="01">23. 4. 1908</date>
-               <placeName ref="#pmb652">Prag</placeName>
+               <placeName ref="#pmb333990">Korunní 1153/78</placeName>
             </correspAction>
             <correspAction type="received">
                <persName ref="#pmb2121">Schnitzler, Arthur</persName>
                <date evidence="conjecture" notBefore="1908-04-24" notAfter="1908-04-28">[24. 4. 1908
                   – 28. 4. 1908?]</date>
-               <placeName ref="#pmb50" evidence="conjecture">Wien</placeName>
+               <placeName ref="#pmb168934" evidence="conjecture">Frankgasse 1</placeName>
             </correspAction>
-            <correspContext><ref type="belongsToCorrespondence" target="correspondence_260732">Holzer, Marie</ref>
+            <correspContext>
+               <ref type="belongsToCorrespondence" target="correspondence_260732">Holzer, Marie</ref>
                <ref subtype="previous_letter" type="withinCollection" target="L03496">Salten an Schnitzler, [zwischen 19. und 21. 4. 1908]</ref>
                <ref subtype="next_letter" type="withinCollection" target="L04199">Schnitzler an Schwarzkopf, [24. 4. 1908?]</ref>
-               <ref subtype="previous_letter" type="withinCorrespondence" source="correspondence_260732" target="L04221">Holzer an Schnitzler, 17. 1. 1908</ref>
-               <ref subtype="next_letter" type="withinCorrespondence" source="correspondence_260732" target="L04329">Schnitzler an Holzer, 25. 4. 1908</ref>
-            </correspContext></correspDesc>
+               <ref subtype="previous_letter"
+                    type="withinCorrespondence"
+                    source="correspondence_260732"
+                    target="L04221">Holzer an Schnitzler, 17. 1. 1908</ref>
+               <ref subtype="next_letter"
+                    type="withinCorrespondence"
+                    source="correspondence_260732"
+                    target="L04329">Schnitzler an Holzer, 25. 4. 1908</ref>
+            </correspContext>
+         </correspDesc>
       </profileDesc>
       <revisionDesc status="candidate">
          <change who="MAM" when="2026-01-12">Export aus Transkribus</change>
-         <change who="SJ" when="2026-03-03">Durchsicht</change>
+         <change who="SJ" when="2026-03-03">Durchsicht</change><change who="SJ" when="2026-10-07">Durchsicht</change>
       </revisionDesc>
    </teiHeader>
    <facsimile>
@@ -161,25 +176,24 @@
                      S. 19–26</bibl>.</note>, die ich dreimal geleſen und jedesmal von neuem
                miterlebt.</p>
             <p>
-               <anchor type="commentary" xml:id="K_L04220-2"/>Das ſchreibt man, aber das tut man
+               <anchor type="commentary" xml:id="K_L04220-2"/>»Das ſchreibt man, aber das tut man
                   nicht<note type="commentary" corresp="K_L04220-2">In der Novelle erfahren drei
                   Männer davon, dass ein gerade Verstorbener sie mit ihren jeweiligen Ehefrauen
-                  betrogen hat.</note>! ſagte ein temperamentvoller Ehemann, ein Pflichtenmenſch,
+                  betrogen hat.</note>!« ſagte ein temperamentvoller Ehemann, ein Pflichtenmenſch,
                deſſen Gefühle ſich nur in der Skala des Erlaubten bewegen. »Künstler und
                Menſch ſind ſo grundverſchiedene Elemente, die man haarscharf auseinanderhalten muß,«
                ſagte eine Malerin.</p>
-            <p>
-               <rs type="work" ref="#pmb33758" subtype="implied">Er</rs> würde gewiß nicht so
+            <p>»<rs type="work" ref="#pmb33758" subtype="implied">Er</rs> würde gewiß nicht so
                handeln, wenn die Frau <pb facs="MS-SCHNITZLER-B-00045-000-00020-0"/>die er liebte
-               – – – – </p>
-            <p>Im Affekt iſt man niemals Herr ſeiner ſelbst! ſo ſagten – alle – alle –</p>
+               – – – – «</p>
+            <p>»Im Affekt iſt man niemals Herr ſeiner ſelbst,« ſo ſagten – alle – alle –</p>
             <p>Und ich drang mit meiner Verteidigung nicht durch, daß man ſich kraft ſeines Weſens,
                kraft ſeiner Überzeugung zu einem Standpunkt durchgerungen, den man unter allen
                Umſtänden einnimmt.</p>
-            <p>Man <anchor type="commentary" xml:id="K_L04220-3"/>verwies auf »<rs type="work" ref="#pmb29823">Das Märchen</rs>
+            <p>Man <anchor type="commentary" xml:id="K_L04220-3"/>verwies auf »<rs type="work" ref="#pmb29823">das Märchen</rs>
                <note type="commentary" corresp="K_L04220-3">In
-                     <rs type="person" ref="#pmb2121">Schnitzlers</rs> frühem Theaterstück kommt der
-                  Protagonist nicht damit klar, dass seine Geliebte schon vor ihm sexuell aktiv
+                     <rs type="person" ref="#pmb2121">Schnitzlers</rs> frühem Theaterstück hadert der
+                  Protagonist damit, dass seine Geliebte schon vor der Beziehung zu ihm sexuell aktiv
                   war.</note>«.</p>
             <p>Daß Sie der Welt und dem landläufigen Empfindungsvermögen, das in tief eingewurzelten
                Vorurteilen ſeine Begründung hat im <rs type="work" ref="#pmb29823">Märchen</rs>
@@ -192,7 +206,7 @@
                Nächſten haben. Daß gerade Sie ein reifes Verſtehen für die ſchlagenden Wetter, tief
                drunten im dunkleſten Schacht der menſchlichen Pſyche haben, die Sie ſehen und
                begreifen, trotz des Vorſchutzes von Kultur und Beherrſchung, trotz jahrtauſende
-               alter Vorurteile. <pb facs="MS-SCHNITZLER-B-00045-000-00019-0"/>Und daß gerade indem
+               alter Vorurteile. <pb facs="MS-SCHNITZLER-B-00045-000-00019-0"/>Und daß gerade in dem
                einen Punkt, Menſch und Künſtler dieſelbe Sprache ſprechen. Ja, daß Sie der Apoſtel
                dieses wunderlichen Gedankens ſind, zu dem die andern erſt langſam, langſam finden
                müſſen.</p>
@@ -381,44 +395,6 @@
             </bibl>
          </listBibl>
          <listPlace>
-            <place xml:id="pmb652">
-               <placeName>Prag</placeName>
-               <placeName type="alternative-name">Hauptstadt Prag</placeName>
-               <placeName type="legacy-name-merge">Prag-Smichow</placeName>
-               <placeName type="legacy-name-merge">Bohnitz bei Prag</placeName>
-               <placeName type="legacy-name-merge">Prag-Dejwitz</placeName>
-               <placeName type="legacy-name-merge">Hlavní město Praha</placeName>
-               <placeName type="legacy-name-merge">Prague</placeName>
-               <location type="coords">
-                  <geo>50,08333 14,46667</geo>
-               </location>
-               <location type="located_in_place">
-                  <placeName ref="pmb43430">Tschechien</placeName>
-                  <geo>49,75 15,0</geo>
-               </location>
-            </place>
-            <place xml:id="pmb50">
-               <placeName>Wien</placeName>
-               <placeName type="ort_fruherer-name">K.K. Reichshaupt- und Residenzstadt Wien</placeName>
-               <placeName type="alternative-name">Bécs</placeName>
-               <placeName type="alternative-name">Land Wien</placeName>
-               <placeName type="alternative-name">Vídeň</placeName>
-               <placeName type="alternative-name">Wenia</placeName>
-               <placeName type="alternative-name">Beč</placeName>
-               <placeName type="ort_fruherer-name">Vindobona</placeName>
-               <placeName type="alternative-name">Vienna</placeName>
-               <location type="coords">
-                  <geo>48,208333 16,373056</geo>
-               </location>
-               <location type="located_in_place">
-                  <placeName ref="pmb41240">Österreich</placeName>
-                  <geo>47,33333 13,33333</geo>
-               </location>
-               <location type="located_in_place">
-                  <placeName ref="pmb235218">Windmühlhöhe</placeName>
-                  <geo>48,24077 16,32092</geo>
-               </location>
-            </place>
             <place xml:id="pmb333990">
                <placeName>Korunní 1153/78</placeName>
                <placeName type="ort_namensvariante">Kronengasse 78</placeName>
@@ -432,6 +408,20 @@
                <location type="located_in_place">
                   <placeName ref="pmb652">Prag</placeName>
                   <geo>50,08333 14,46667</geo>
+               </location>
+            </place>
+            <place xml:id="pmb168934">
+               <placeName>Frankgasse 1</placeName>
+               <location type="coords">
+                  <geo>48,21533 16,35736</geo>
+               </location>
+               <location type="located_in_place">
+                  <placeName ref="pmb59">IX., Alsergrund</placeName>
+                  <geo>48,22387 16,35641</geo>
+               </location>
+               <location type="located_in_place">
+                  <placeName ref="pmb397">Frankgasse</placeName>
+                  <geo>48,215516628628 16,356475515829</geo>
                </location>
             </place>
          </listPlace>
