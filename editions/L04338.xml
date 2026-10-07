@@ -1,6 +1,10 @@
-<?xml version='1.0' encoding='UTF-8'?>
+<?xml version="1.0" encoding="UTF-8"?>
 <?xml-model href="../meta/schnitzler-briefe-schematron.sch" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
-<TEI xmlns="http://www.tei-c.org/ns/1.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.tei-c.org/ns/1.0 ../meta/schnitzler-briefe-schema.xsd" xml:base="https://id.acdh.oeaw.ac.at/schnitzler/schnitzler-briefe/editions" xml:id="L04338">
+<TEI xmlns="http://www.tei-c.org/ns/1.0"
+     xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+     xsi:schemaLocation="http://www.tei-c.org/ns/1.0 ../meta/schnitzler-briefe-schema.xsd"
+     xml:base="https://id.acdh.oeaw.ac.at/schnitzler/schnitzler-briefe/editions"
+     xml:id="L04338">
    <teiHeader>
       <fileDesc>
          <titleStmt>
@@ -123,22 +127,28 @@
             <correspAction type="sent">
                <persName ref="#pmb4223">Marriot, Emil</persName>
                <date when="1903-02-09" n="01">9. 2. 1903</date>
-               <placeName ref="#pmb50">Wien</placeName>
+               <placeName ref="#pmb231967">Schüttelstraße 31</placeName>
             </correspAction>
             <correspAction type="received">
                <persName ref="#pmb2121">Schnitzler, Arthur</persName>
-               <date evidence="conjecture" notBefore="1903-02-10" notAfter="1903-02-14">[10. 2. 1903 – 14. 2. 1903?]</date>
-               <placeName ref="#pmb50" evidence="conjecture">Wien</placeName>
+               <date evidence="conjecture" notBefore="1903-02-09" notAfter="1903-02-14">[09. 2. 1903 – 14. 2. 1903?]</date>
+               <placeName ref="#pmb168934" evidence="conjecture">Frankgasse 1</placeName>
             </correspAction>
-            <correspContext><ref type="belongsToCorrespondence" target="correspondence_4223">Mataja, Emilie</ref>
+            <correspContext>
+               <ref type="belongsToCorrespondence" target="correspondence_4223">Mataja, Emilie</ref>
                <ref subtype="previous_letter" type="withinCollection" target="L02657">Goldmann an Schnitzler, [6.?] 2. 1903</ref>
                <ref subtype="next_letter" type="withinCollection" target="L04144">Schnitzler an Schwarzkopf, 15. 2. 1903</ref>
-               <ref subtype="previous_letter" type="withinCorrespondence" source="correspondence_4223" target="L04337">Marriot, Kobatsch, Mataja an Schnitzler, 20. 7. 1902</ref>
-            </correspContext></correspDesc>
+               <ref subtype="previous_letter"
+                    type="withinCorrespondence"
+                    source="correspondence_4223"
+                    target="L04337">Marriot, Kobatsch, Mataja an Schnitzler, 20. 7. 1902</ref>
+            </correspContext>
+         </correspDesc>
       </profileDesc>
-      <revisionDesc status="proposed">
+      <revisionDesc status="approved">
          <change who="MAM" when="2026-04-15">Export aus
                                 Transkribus</change>
+         <change who="SJ" when="2026-10-07">Durchsicht</change>
       </revisionDesc>
    </teiHeader>
    <facsimile>
@@ -310,6 +320,34 @@
             </bibl>
          </listBibl>
          <listPlace>
+            <place xml:id="pmb231967">
+               <placeName>Schüttelstraße 31</placeName>
+               <location type="coords">
+                  <geo>48,207773 16,397985</geo>
+               </location>
+               <location type="located_in_place">
+                  <placeName ref="pmb52">II., Leopoldstadt</placeName>
+                  <geo>48,21667 16,4</geo>
+               </location>
+               <location type="located_in_place">
+                  <placeName ref="pmb65711">Schüttelstraße</placeName>
+                  <geo>48,203163146972656 16,401124954223633</geo>
+               </location>
+            </place>
+            <place xml:id="pmb168934">
+               <placeName>Frankgasse 1</placeName>
+               <location type="coords">
+                  <geo>48,21533 16,35736</geo>
+               </location>
+               <location type="located_in_place">
+                  <placeName ref="pmb59">IX., Alsergrund</placeName>
+                  <geo>48,22387 16,35641</geo>
+               </location>
+               <location type="located_in_place">
+                  <placeName ref="pmb397">Frankgasse</placeName>
+                  <geo>48,215516628628 16,356475515829</geo>
+               </location>
+            </place>
             <place xml:id="pmb50">
                <placeName>Wien</placeName>
                <placeName type="ort_fruherer-name">K.K. Reichshaupt- und Residenzstadt Wien</placeName>
@@ -330,20 +368,6 @@
                <location type="located_in_place">
                   <placeName ref="pmb235218">Windmühlhöhe</placeName>
                   <geo>48,24077 16,32092</geo>
-               </location>
-            </place>
-            <place xml:id="pmb231967">
-               <placeName>Schüttelstraße 31</placeName>
-               <location type="coords">
-                  <geo>48,207773 16,397985</geo>
-               </location>
-               <location type="located_in_place">
-                  <placeName ref="pmb52">II., Leopoldstadt</placeName>
-                  <geo>48,21667 16,4</geo>
-               </location>
-               <location type="located_in_place">
-                  <placeName ref="pmb65711">Schüttelstraße</placeName>
-                  <geo>48,203163146972656 16,401124954223633</geo>
                </location>
             </place>
             <place xml:id="pmb168900">
