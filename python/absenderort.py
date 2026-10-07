@@ -15,7 +15,7 @@ sich ein anderer wählen:
   - Orte aus anderen correspAction desselben Jahres.
 In der correspAction, in der pmb2121 vorkommt, werden stattdessen nur
 Schnitzlers Wohnadressen und seine Aufenthaltsorte am Datum des Briefs
-angeboten.
+angeboten (bei notBefore/notAfter alle Aufenthaltsorte des Zeitraums).
 Auch der Empfangsort (correspAction[@type='received']) lässt sich setzen; Aufenthalte
 Schnitzlers werden nur für den Absenderort angeboten, und nur, wenn er dort steht.
 Zusätzlich gibt es eine Liste der Orte, an denen die Person(en) laut anderen

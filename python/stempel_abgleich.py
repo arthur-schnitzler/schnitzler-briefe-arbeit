@@ -38,7 +38,7 @@ import sys
 import tempfile
 import threading
 import webbrowser
-from datetime import date
+from datetime import date, timedelta
 from http.server import BaseHTTPRequestHandler, ThreadingHTTPServer
 from pathlib import Path
 from urllib.parse import urlparse
@@ -226,14 +226,29 @@ def _best_date_for_filter(date_dict):
     return date_dict.get("when") or date_dict.get("notBefore") or date_dict.get("notAfter")
 
 
+def _aufenthalt_days(date_dict):
+    """ISO-Tage, für die Aufenthalte nachgeschlagen werden: das exakte @when,
+    sonst alle Tage von @notBefore bis @notAfter (beide Grenzen einschließlich).
+    Mit nur einer Grenze oder ohne lesbare Daten: keine Tage."""
+    d = date_dict or {}
+    if d.get("when"):
+        return [d["when"]]
+    try:
+        start = date.fromisoformat(d.get("notBefore") or "")
+        end = date.fromisoformat(d.get("notAfter") or "")
+    except ValueError:
+        return []
+    return [(start + timedelta(days=i)).isoformat() for i in range((end - start).days + 1)]
+
+
 def residence_options_for_action(persons, date_dict):
     """Wohnadressen der genannten Personen (persName/@ref), deren Zeitraum
     das Datum der correspAction plausibel einschließt - "nur
     berücksichtigen, wenn der Brief tatsächlich aus dem Ort versandt wurde"
     (siehe meta/wohnadressen_aus_relations.py). Ist Arthur Schnitzler unter
-    den genannten Personen und gibt es ein exaktes @when, kommen zusätzlich
-    (zuerst, weil genauer) seine an diesem Tag verzeichneten Aufenthalte
-    außerhalb Wiens dazu (siehe meta/aufenthalte_aus_wienerschnitzler.py).
+    den genannten Personen und gibt es ein exaktes @when (oder @notBefore und
+    @notAfter), kommen zusätzlich (zuerst, weil genauer) seine an diesem Tag
+    bzw. in diesem Zeitraum verzeichneten Aufenthalte außerhalb Wiens dazu (siehe meta/aufenthalte_aus_wienerschnitzler.py).
     Ohne brauchbares Datum oder ohne genannte Person(en) wird nichts
     vorgeschlagen; fehlender Beginn/Ende einer Wohnadresse in den Daten
     gilt als offene Grenze."""
@@ -243,14 +258,15 @@ def residence_options_for_action(persons, date_dict):
     seen = set()
     options = []
 
-    exact_when = (date_dict or {}).get("when")
-    if exact_when and any(p.get("ref") == ARTHUR_SCHNITZLER_REF for p in persons):
-        for entry in load_aufenthalte().get(exact_when, []):
-            key = entry["ref"]
-            if key in seen:
-                continue
-            seen.add(key)
-            options.append({"ref": entry["ref"], "text": entry["text"], "kind": "aufenthalt"})
+    if any(p.get("ref") == ARTHUR_SCHNITZLER_REF for p in persons):
+        aufenthalte = load_aufenthalte()
+        for day in _aufenthalt_days(date_dict):
+            for entry in aufenthalte.get(day, []):
+                key = entry["ref"]
+                if key in seen:
+                    continue
+                seen.add(key)
+                options.append({"ref": entry["ref"], "text": entry["text"], "kind": "aufenthalt"})
 
     addresses = load_wohnadressen()
     for p in persons:

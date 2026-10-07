@@ -1,6 +1,10 @@
-<?xml version='1.0' encoding='UTF-8'?>
+<?xml version="1.0" encoding="UTF-8"?>
 <?xml-model href="../meta/schnitzler-briefe-schematron.sch" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
-<TEI xmlns="http://www.tei-c.org/ns/1.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xml:id="L01646" xsi:schemaLocation="http://www.tei-c.org/ns/1.0 ../meta/schnitzler-briefe-schema.xsd" xml:base="https://id.acdh.oeaw.ac.at/schnitzler/schnitzler-briefe/editions">
+<TEI xmlns="http://www.tei-c.org/ns/1.0"
+     xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+     xml:id="L01646"
+     xsi:schemaLocation="http://www.tei-c.org/ns/1.0 ../meta/schnitzler-briefe-schema.xsd"
+     xml:base="https://id.acdh.oeaw.ac.at/schnitzler/schnitzler-briefe/editions">
    <teiHeader>
       <fileDesc>
          <titleStmt>
@@ -167,27 +171,35 @@
             </correspAction>
             <correspAction type="transmitted">
                <date when="1906-12-29">29. 12. 1906</date>
-               <placeName ref="#pmb365561">14/2 Wien 127</placeName>
+               <placeName ref="#pmb365561">14/2 Post- und Telegraphenamt 127</placeName>
             </correspAction>
             <correspAction type="arrived">
                <date when="1906-12-29">29. 12. 1906</date>
-               <placeName ref="#pmb365226">18/1 Wien 111</placeName>
+               <placeName ref="#pmb365226">18/1 Post- und Telegraphenamt 111</placeName>
             </correspAction>
             <correspAction type="delivered">
                <date when="1906-12-29">29. 12. 1906</date>
-               <placeName ref="#pmb365223">18/1 Wien 110</placeName>
+               <placeName ref="#pmb365223">18/1 Post- und Telegraphenamt 110</placeName>
             </correspAction>
             <correspAction type="received">
                <persName ref="#pmb2121">Schnitzler, Arthur</persName>
-               <date when="1906-12-28">29. 12. 1906</date>
+               <date when="1906-12-28" error="Zeitabfolge Fehler 1">29. 12. 1906</date>
                <placeName ref="#pmb168940">Edmund-Weiß-Gasse 7</placeName>
             </correspAction>
-            <correspContext><ref type="belongsToCorrespondence" target="correspondence_11740">Hofmannsthal, Hugo von</ref>
+            <correspContext>
+               <ref type="belongsToCorrespondence" target="correspondence_11740">Hofmannsthal, Hugo von</ref>
                <ref subtype="previous_letter" type="withinCollection" target="L01645">Burckhard an Schnitzler, 2[2?]. 12. 1906</ref>
                <ref subtype="next_letter" type="withinCollection" target="L01647">Dehmel an Schnitzler, [1907]</ref>
-               <ref subtype="previous_letter" type="withinCorrespondence" source="correspondence_11740" target="L01639">Hofmannsthal an Schnitzler, 29. 11. 1906</ref>
-               <ref subtype="next_letter" type="withinCorrespondence" source="correspondence_11740" target="L01651">Hofmannsthal an Schnitzler, [14. 1. 1907]</ref>
-            </correspContext></correspDesc>
+               <ref subtype="previous_letter"
+                    type="withinCorrespondence"
+                    source="correspondence_11740"
+                    target="L01639">Hofmannsthal an Schnitzler, 29. 11. 1906</ref>
+               <ref subtype="next_letter"
+                    type="withinCorrespondence"
+                    source="correspondence_11740"
+                    target="L01651">Hofmannsthal an Schnitzler, [14. 1. 1907]</ref>
+            </correspContext>
+         </correspDesc>
       </profileDesc>
       <revisionDesc status="approved">
          <change who="MAM" when="2019-07-31">Angelegt aus Buchausgabe</change>
@@ -229,7 +241,9 @@
                   <hi rend="underline" n="1">17</hi>
                   <hi rend="superscript">ten</hi> Jänner</date> freihalten für meinen
                (nicht-öffentlichen) <anchor type="commentary" xml:id="K_L01646-1"/>
-               <rs type="event" subtype="implied" ref="#pmb43905"><rs type="work" ref="#pmb43900">Vortrag</rs></rs>
+               <rs type="event" subtype="implied" ref="#pmb43905">
+                  <rs type="work" ref="#pmb43900">Vortrag</rs>
+               </rs>
                <note type="commentary" corresp="K_L01646-1">Am <ref type="schnitzler-kultur" subtype="date-only" target="pmb43905"/> hielt <rs type="person" ref="#pmb11740">Hofmannsthal</rs> den Vortrag <rs type="work" ref="#pmb43900">Der Dichter und
                      diese Zeit</rs> im <rs type="org" ref="#pmb43902">Kunstsalon Miethke</rs> vor
                   geladenen, zehn Kronen zahlenden Gästen.</note>. Ihr beko<c rendition="#gemination-m"/>t Eure Plätze direct von mir.</p>

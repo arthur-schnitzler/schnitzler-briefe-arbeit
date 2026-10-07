@@ -1,6 +1,10 @@
-<?xml version='1.0' encoding='UTF-8'?>
+<?xml version="1.0" encoding="UTF-8"?>
 <?xml-model href="../meta/schnitzler-briefe-schematron.sch" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
-<TEI xmlns="http://www.tei-c.org/ns/1.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.tei-c.org/ns/1.0 ../meta/schnitzler-briefe-schema.xsd" xml:id="L00090" xml:base="https://id.acdh.oeaw.ac.at/schnitzler/schnitzler-briefe/editions">
+<TEI xmlns="http://www.tei-c.org/ns/1.0"
+     xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+     xsi:schemaLocation="http://www.tei-c.org/ns/1.0 ../meta/schnitzler-briefe-schema.xsd"
+     xml:id="L00090"
+     xml:base="https://id.acdh.oeaw.ac.at/schnitzler/schnitzler-briefe/editions">
    <teiHeader>
       <fileDesc>
          <titleStmt>
@@ -135,7 +139,7 @@
             <correspAction type="sent">
                <persName ref="#pmb2121">Schnitzler, Arthur</persName>
                <date when="1892-03-27" n="02">27. 3. 1892</date>
-               <placeName ref="#pmb167789">Ordination Arthur Schnitzler [Bösendorferstraße 11]</placeName>
+               <placeName ref="#pmb167789">Wohnung und Ordination Arthur Schnitzler, Bösendorferstraße 11</placeName>
             </correspAction>
             <correspAction type="received">
                <persName ref="#pmb11740">Hofmannsthal, Hugo von</persName>
@@ -143,12 +147,20 @@
                   – 31. 3. 1892?]</date>
                <placeName ref="#pmb192623">Salesianergasse 12</placeName>
             </correspAction>
-            <correspContext><ref type="belongsToCorrespondence" target="correspondence_11740">Hofmannsthal, Hugo von</ref>
+            <correspContext>
+               <ref type="belongsToCorrespondence" target="correspondence_11740">Hofmannsthal, Hugo von</ref>
                <ref subtype="previous_letter" type="withinCollection" target="L00089">Schnitzler an Bölsche, 27. 3. 1892</ref>
                <ref subtype="next_letter" type="withinCollection" target="L03108">Salten an Schnitzler, [31. 3. 1892]</ref>
-               <ref subtype="previous_letter" type="withinCorrespondence" source="correspondence_11740" target="L00088">Hofmannsthal an Schnitzler, 26. 3. 1892</ref>
-               <ref subtype="next_letter" type="withinCorrespondence" source="correspondence_11740" target="L00092">Hofmannsthal an Schnitzler, [4. 4. 1892?]</ref>
-            </correspContext></correspDesc>
+               <ref subtype="previous_letter"
+                    type="withinCorrespondence"
+                    source="correspondence_11740"
+                    target="L00088">Hofmannsthal an Schnitzler, 26. 3. 1892</ref>
+               <ref subtype="next_letter"
+                    type="withinCorrespondence"
+                    source="correspondence_11740"
+                    target="L00092">Hofmannsthal an Schnitzler, [4. 4. 1892?]</ref>
+            </correspContext>
+         </correspDesc>
       </profileDesc>
       <revisionDesc status="approved">
          <change who="MAM" when="2016-03-04">Angelegt aus OCR</change>
@@ -176,7 +188,8 @@
             </opener>
             <p>es war mir ſehr leid, daſs Sie heute nicht kamen. <rs ref="#pmb11061" type="person">
                   <hi rend="latintype">Bölsche</hi>
-            </rs> hat auch mir <anchor type="commentary" xml:id="K_L00090-67"/>geſchrieben<note type='commentary' corresp="K_L00090-67"><ref type="schnitzler-briefe" target="L00087"/>.</note> – auf eine Anfrage, ob man Gedichte einſenden kann u
+               </rs> hat auch mir <anchor type="commentary" xml:id="K_L00090-67"/>geſchrieben<note type="commentary" corresp="K_L00090-67">
+                  <ref type="schnitzler-briefe" target="L00087"/>.</note> – auf eine Anfrage, ob man Gedichte einſenden kann u
                was mit meinen »<rs ref="#pmb31965" type="work">Elixiren</rs>« los ſei. – Er will die
                   <rs ref="#pmb31965" type="work">Elixire</rs> bringen »ſobald es geht«, aber »offen
                geſtanden ſind ſie ihm nicht ſo lieb <pb facs="Hs-30885,19_002"/>wie die erſte <rs type="work" ref="#pmb30257" subtype="implied">Novelle</rs>, ſie ſind lange nicht
@@ -188,7 +201,9 @@
                </rs>
                <space unit="chars" quantity="1"/>ſchicken. – <anchor type="commentary" xml:id="K_L00090-113"/>Geſtern ſprach ich Herrn <rs ref="#pmb28530" type="person">
                   <hi rend="latintype">Leo Geiringer</hi>
-               </rs><note type='commentary' corresp="K_L00090-113"><ref type="schnitzler-tagebuch" subtype="Cf" target="1892-03-26"/>.</note>, den Dramaturgen des <rs ref="#pmb20" type="place">Dtſch Volksth.</rs>, der
+               </rs>
+               <note type="commentary" corresp="K_L00090-113">
+                  <ref type="schnitzler-tagebuch" subtype="Cf" target="1892-03-26"/>.</note>, den Dramaturgen des <rs ref="#pmb20" type="place">Dtſch Volksth.</rs>, der
                mich um mein <rs ref="#pmb29823" type="work">Märchen</rs> gebeten hatte – ich ſandte
                es ihm <pb facs="Hs-30885,19_002"/>als »Privatmann«. – Er ſagte: »Wirklich ein
                hübſches Talent, ich muſs nur bedauern, daß Sie ſich <hi rend="underline" n="1">dieſer</hi> Richtung zugewandt haben!<supplied>«</supplied>
@@ -223,10 +238,13 @@
             <p>
                <anchor type="textConst" xml:id="T_L00090-1"/>!!.Ich.<note type="textConst" corresp="T_L00090-1">kopfüber zum Text</note>
             </p>
-            <p>Herzlichſt der Ihre, und ko<c rendition="#gemination-m"/>en Sie <date>Dienſtag</date> gef. zur <anchor type="commentary" xml:id="K_L00090-1"/><rs type="event" subtype="implied" ref="#pmb89338"><rs ref="#pmb10815" type="person">
-                  <hi rend="latintype">Bahr</hi>
-               </rs>’ſchen Myſtik</rs><note type="commentary" corresp="K_L00090-1">Gemeint ist <rs ref="#pmb10815" type="person">Bahrs</rs> Vortrag über »Moderne Mystik«, den er am
-                  <ref type="schnitzler-kultur" subtype="date-only" target="pmb89338"></ref> bei einer Veranstaltung der <rs ref="#pmb29781" type="org">Freien Bühne</rs> hielt. <rs type="person" ref="#pmb2121">Schnitzlers</rs> Teilnahme ist
+            <p>Herzlichſt der Ihre, und ko<c rendition="#gemination-m"/>en Sie <date>Dienſtag</date> gef. zur <anchor type="commentary" xml:id="K_L00090-1"/>
+               <rs type="event" subtype="implied" ref="#pmb89338">
+                  <rs ref="#pmb10815" type="person">
+                     <hi rend="latintype">Bahr</hi>
+                  </rs>’ſchen Myſtik</rs>
+               <note type="commentary" corresp="K_L00090-1">Gemeint ist <rs ref="#pmb10815" type="person">Bahrs</rs> Vortrag über »Moderne Mystik«, den er am
+                  <ref type="schnitzler-kultur" subtype="date-only" target="pmb89338"/> bei einer Veranstaltung der <rs ref="#pmb29781" type="org">Freien Bühne</rs> hielt. <rs type="person" ref="#pmb2121">Schnitzlers</rs> Teilnahme ist
                nicht im <rs type="work" ref="#pmb33243">Tagebuch</rs> vermerkt, aber durch diese Briefstelle anzunehmen.</note>!</p>
          </div>
       </body>

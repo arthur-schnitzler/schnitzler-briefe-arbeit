@@ -1,6 +1,10 @@
-<?xml version='1.0' encoding='UTF-8'?>
+<?xml version="1.0" encoding="UTF-8"?>
 <?xml-model href="../meta/schnitzler-briefe-schematron.sch" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
-<TEI xmlns="http://www.tei-c.org/ns/1.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.tei-c.org/ns/1.0 ../meta/schnitzler-briefe-schema.xsd" xml:id="L00082" xml:base="https://id.acdh.oeaw.ac.at/schnitzler/schnitzler-briefe/editions">
+<TEI xmlns="http://www.tei-c.org/ns/1.0"
+     xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+     xsi:schemaLocation="http://www.tei-c.org/ns/1.0 ../meta/schnitzler-briefe-schema.xsd"
+     xml:id="L00082"
+     xml:base="https://id.acdh.oeaw.ac.at/schnitzler/schnitzler-briefe/editions">
    <teiHeader>
       <fileDesc>
          <titleStmt>
@@ -131,7 +135,7 @@
             <correspAction type="sent">
                <persName ref="#pmb2121">Schnitzler, Arthur</persName>
                <date when="1892-03-16" n="01">16. 3. 1892</date>
-               <placeName ref="#pmb167789">Ordination Arthur Schnitzler [Bösendorferstraße 11]</placeName>
+               <placeName ref="#pmb167789">Wohnung und Ordination Arthur Schnitzler, Bösendorferstraße 11</placeName>
             </correspAction>
             <correspAction type="received">
                <persName ref="#pmb11740">Hofmannsthal, Hugo von</persName>
@@ -139,12 +143,20 @@
                   – 20. 3. 1892?]</date>
                <placeName ref="#pmb192623">Salesianergasse 12</placeName>
             </correspAction>
-            <correspContext><ref type="belongsToCorrespondence" target="correspondence_11740">Hofmannsthal, Hugo von</ref>
+            <correspContext>
+               <ref type="belongsToCorrespondence" target="correspondence_11740">Hofmannsthal, Hugo von</ref>
                <ref subtype="previous_letter" type="withinCollection" target="L00081">Bahr an Schnitzler, [13. 3. 1892]</ref>
                <ref subtype="next_letter" type="withinCollection" target="L00083">Hofmannsthal an Schnitzler, [17. 3. 1892]</ref>
-               <ref subtype="previous_letter" type="withinCorrespondence" source="correspondence_11740" target="L00080">Schnitzler an Hofmannsthal, [12. 3. 1892]</ref>
-               <ref subtype="next_letter" type="withinCorrespondence" source="correspondence_11740" target="L00083">Hofmannsthal an Schnitzler, [17. 3. 1892]</ref>
-            </correspContext></correspDesc>
+               <ref subtype="previous_letter"
+                    type="withinCorrespondence"
+                    source="correspondence_11740"
+                    target="L00080">Schnitzler an Hofmannsthal, [12. 3. 1892]</ref>
+               <ref subtype="next_letter"
+                    type="withinCorrespondence"
+                    source="correspondence_11740"
+                    target="L00083">Hofmannsthal an Schnitzler, [17. 3. 1892]</ref>
+            </correspContext>
+         </correspDesc>
       </profileDesc>
       <revisionDesc status="approved">
          <change who="GHS" when="2018-11-30">Angelegt</change>
@@ -172,9 +184,12 @@
                <rs ref="#pmb14756" type="person">Bèraton</rs>
                <space unit="chars" quantity="1"/>ſprach dieſer Tage mit mir über die materielle
                Seite des <anchor type="commentary" xml:id="K_L00082-1"/>
-               <rs type="event" subtype="implied" ref="#pmb89342"><rs ref="#pmb12156" type="person">
-                  <hi rend="latintype">Maeterlinck</hi>
-               </rs>-Abends</rs><note type="commentary" corresp="K_L00082-1"><ref target="pmb89342" subtype="Cf" type="schnitzler-kultur"/>.</note>. Vorläufig habe ich ihm zehn Gulden geſchickt. Ueber dieſen Abend wäre
+               <rs type="event" subtype="implied" ref="#pmb89342">
+                  <rs ref="#pmb12156" type="person">
+                     <hi rend="latintype">Maeterlinck</hi>
+                  </rs>-Abends</rs>
+               <note type="commentary" corresp="K_L00082-1">
+                  <ref target="pmb89342" subtype="Cf" type="schnitzler-kultur"/>.</note>. Vorläufig habe ich ihm zehn Gulden geſchickt. Ueber dieſen Abend wäre
                manches <pb facs="Hs-30885,18_002"/>zu ſprechen.</p>
             <p>Möchten Sie mir die <rs type="place" subtype="implied" ref="#pmb207296">Adreſſe</rs> von <rs ref="#pmb12740" type="person">
                   <hi rend="latintype">Schwarzkopf</hi>

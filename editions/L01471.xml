@@ -1,6 +1,10 @@
-<?xml version='1.0' encoding='UTF-8'?>
+<?xml version="1.0" encoding="UTF-8"?>
 <?xml-model href="../meta/schnitzler-briefe-schematron.sch" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
-<TEI xmlns="http://www.tei-c.org/ns/1.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.tei-c.org/ns/1.0 ../meta/schnitzler-briefe-schema.xsd" xml:id="L01471" xml:base="https://id.acdh.oeaw.ac.at/schnitzler/schnitzler-briefe/editions">
+<TEI xmlns="http://www.tei-c.org/ns/1.0"
+     xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+     xsi:schemaLocation="http://www.tei-c.org/ns/1.0 ../meta/schnitzler-briefe-schema.xsd"
+     xml:id="L01471"
+     xml:base="https://id.acdh.oeaw.ac.at/schnitzler/schnitzler-briefe/editions">
    <teiHeader>
       <fileDesc>
          <titleStmt>
@@ -169,11 +173,11 @@
             <correspAction type="sent">
                <persName ref="#pmb2121">Schnitzler, Arthur</persName>
                <date when="1904-11-15" n="01">15. 11. 1904</date>
-               <placeName ref="#pmb127">Hotel Bristol</placeName>
+               <placeName ref="#pmb127">Hotel Bristol Berlin</placeName>
             </correspAction>
             <correspAction type="transmitted">
                <date when="1904-11-15">15. 11. 1904</date>
-               <placeName ref="#pmb168">Berlin W 64</placeName>
+               <placeName ref="#pmb168">Berlin</placeName>
             </correspAction>
             <correspAction type="delivered">
                <date when="1904-11-16">16. 11. 1904</date>
@@ -184,12 +188,20 @@
                <date when="1904-11-16">16. 11. 1904</date>
                <placeName ref="#pmb231810">Willergasse 2</placeName>
             </correspAction>
-            <correspContext><ref type="belongsToCorrespondence" target="correspondence_10863">Beer-Hofmann, Richard</ref>
+            <correspContext>
+               <ref type="belongsToCorrespondence" target="correspondence_10863">Beer-Hofmann, Richard</ref>
                <ref subtype="previous_letter" type="withinCollection" target="L01470">Beer-Hofmann an Schnitzler, 12. 11. 1904</ref>
                <ref subtype="next_letter" type="withinCollection" target="L03456">Goldmann an Schnitzler, 18. 11. [1904]</ref>
-               <ref subtype="previous_letter" type="withinCorrespondence" source="correspondence_10863" target="L01470">Beer-Hofmann an Schnitzler, 12. 11. 1904</ref>
-               <ref subtype="next_letter" type="withinCorrespondence" source="correspondence_10863" target="L01472">Schnitzler an Beer-Hofmann, 28. 11. 1904</ref>
-            </correspContext></correspDesc>
+               <ref subtype="previous_letter"
+                    type="withinCorrespondence"
+                    source="correspondence_10863"
+                    target="L01470">Beer-Hofmann an Schnitzler, 12. 11. 1904</ref>
+               <ref subtype="next_letter"
+                    type="withinCorrespondence"
+                    source="correspondence_10863"
+                    target="L01472">Schnitzler an Beer-Hofmann, 28. 11. 1904</ref>
+            </correspContext>
+         </correspDesc>
       </profileDesc>
       <revisionDesc status="approved">
          <change who="MAM" when="2019-06-12">Automatisch angelegt aus Buchausgabe</change>
@@ -281,11 +293,17 @@
                </seg>
             </opener>
             <p>
-               <salute>lieber Richard,</salute><space unit="chars" quantity="1"/><anchor type="commentary" xml:id="K_L01471-55"/>telegram<note type="commentary" corresp="K_L01471-55">nicht überliefert</note> haben Sie wohl vom Theater aus bekommen:
+               <salute>lieber Richard,</salute>
+               <space unit="chars" quantity="1"/>
+               <anchor type="commentary" xml:id="K_L01471-55"/>telegram<note type="commentary" corresp="K_L01471-55">nicht überliefert</note> haben Sie wohl vom Theater aus bekommen:
                   <date>Freitag</date>
                <space unit="chars" quantity="1"/>
-               <date>Samſtag</date><space unit="chars" quantity="1"/><rs type="event" subtype="implied" ref="#pmb234626">Arrangirprobe</rs>. Meine <rs type="work" ref="#pmb30217" subtype="implied">
-                  <rs type="event" subtype="implied" ref="#pmb35379"><hi rend="latintype">Premiere</hi></rs>
+               <date>Samſtag</date>
+               <space unit="chars" quantity="1"/>
+               <rs type="event" subtype="implied" ref="#pmb234626">Arrangirprobe</rs>. Meine <rs type="work" ref="#pmb30217" subtype="implied">
+                  <rs type="event" subtype="implied" ref="#pmb35379">
+                     <hi rend="latintype">Premiere</hi>
+                  </rs>
                </rs>
                <space unit="chars" quantity="1"/>
                <date>Dinſtag</date>; ich lieſs es Ihnen auch telegraphiren weil Sie am Ende, wenn es
