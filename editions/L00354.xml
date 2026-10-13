@@ -1,6 +1,10 @@
-<?xml version='1.0' encoding='UTF-8'?>
+<?xml version="1.0" encoding="UTF-8"?>
 <?xml-model href="../meta/schnitzler-briefe-schematron.sch" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
-<TEI xmlns="http://www.tei-c.org/ns/1.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.tei-c.org/ns/1.0 ../meta/schnitzler-briefe-schema.xsd" xml:id="L00354" xml:base="https://id.acdh.oeaw.ac.at/schnitzler/schnitzler-briefe/editions">
+<TEI xmlns="http://www.tei-c.org/ns/1.0"
+     xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+     xsi:schemaLocation="http://www.tei-c.org/ns/1.0 ../meta/schnitzler-briefe-schema.xsd"
+     xml:id="L00354"
+     xml:base="https://id.acdh.oeaw.ac.at/schnitzler/schnitzler-briefe/editions">
    <teiHeader>
       <fileDesc>
          <titleStmt>
@@ -116,20 +120,27 @@
             <correspAction type="sent">
                <persName ref="#pmb10863">Beer-Hofmann, Richard</persName>
                <date when="1894-07-18" n="01">[18. 7. 1894]</date>
-               <placeName ref="#pmb213">Bad Ischl</placeName>
+               <placeName ref="#pmb364910">Bad Ischl</placeName>
             </correspAction>
             <correspAction type="received">
                <persName ref="#pmb2121">Schnitzler, Arthur</persName>
-               <date evidence="conjecture" notBefore="1894-07-18" notAfter="1894-07-20">[18. 7. 1894
-                  – 22. 7. 1894?]</date>
-               <placeName ref="#pmb213">Bad Ischl</placeName>
+               <date evidence="conjecture" when="1894-07-18" >[18. 7. 1894?]</date>
+               <placeName ref="#pmb414">Hotel und Pension Rudolfshöhe (Leopold Petter)</placeName>
             </correspAction>
-            <correspContext><ref type="belongsToCorrespondence" target="correspondence_10863">Beer-Hofmann, Richard</ref>
+            <correspContext>
+               <ref type="belongsToCorrespondence" target="correspondence_10863">Beer-Hofmann, Richard</ref>
                <ref subtype="previous_letter" type="withinCollection" target="L00353">Bahr an Schnitzler, [17.? 7. 1894]</ref>
                <ref subtype="next_letter" type="withinCollection" target="L00355">Beer-Hofmann an Schnitzler, [18. 7. 1894]</ref>
-               <ref subtype="previous_letter" type="withinCorrespondence" source="correspondence_10863" target="L00352">Schnitzler an Beer-Hofmann, [16. 7. 1894?]</ref>
-               <ref subtype="next_letter" type="withinCorrespondence" source="correspondence_10863" target="L00355">Beer-Hofmann an Schnitzler, [18. 7. 1894]</ref>
-            </correspContext></correspDesc>
+               <ref subtype="previous_letter"
+                    type="withinCorrespondence"
+                    source="correspondence_10863"
+                    target="L00352">Schnitzler an Beer-Hofmann, [16. 7. 1894?]</ref>
+               <ref subtype="next_letter"
+                    type="withinCorrespondence"
+                    source="correspondence_10863"
+                    target="L00355">Beer-Hofmann an Schnitzler, [18. 7. 1894]</ref>
+            </correspContext>
+         </correspDesc>
       </profileDesc>
       <revisionDesc status="approved">
          <change who="GHS" when="2019-10-07">angelegt aus Faksimile</change>
@@ -147,7 +158,7 @@
             <p>
                <pb facs="MS-SCHNITZLER-B-0008-B-00001-000-00081"/>
                <salute>Lieber!</salute> Bin Abends im
-               Theater, dann zu Hause. Wegen <rs ref="#pmb30" type="place">Salzburg</rs> kann ich
+               <rs type="event" subtype="implied" ref="#pmb405551">Theater</rs>, dann zu Hause. Wegen <rs ref="#pmb30" type="place">Salzburg</rs> kann ich
                nicht zusagen da ich <hi n="1" rend="underline">
                   <hi rend="capitals">Ihr</hi>
                </hi>etwegen <pb facs="MS-SCHNITZLER-B-0008-B-00001-000-00082"/>noch keine Nachricht
@@ -217,6 +228,21 @@
                <location type="located_in_place">
                   <placeName ref="pmb429">Salzkammergut</placeName>
                   <geo>47,75 13,5</geo>
+               </location>
+            </place>
+            <place xml:id="pmb414">
+               <placeName>Hotel und Pension Rudolfshöhe (Leopold Petter)</placeName>
+               <placeName type="legacy-name-merge">Rudolfshöhe</placeName>
+               <location type="coords">
+                  <geo>47,706537 13,609575</geo>
+               </location>
+               <location type="located_in_place">
+                  <placeName ref="pmb213">Bad Ischl</placeName>
+                  <geo>47,71109 13,61893</geo>
+               </location>
+               <location type="located_in_place">
+                  <placeName ref="pmb43015">Kaltenbach</placeName>
+                  <geo>47,69778 13,60913</geo>
                </location>
             </place>
             <place xml:id="pmb30">

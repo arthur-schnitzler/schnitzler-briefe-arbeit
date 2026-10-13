@@ -1,6 +1,10 @@
-<?xml version='1.0' encoding='UTF-8'?>
+<?xml version="1.0" encoding="UTF-8"?>
 <?xml-model href="../meta/schnitzler-briefe-schematron.sch" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
-<TEI xmlns="http://www.tei-c.org/ns/1.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.tei-c.org/ns/1.0 ../meta/schnitzler-briefe-schema.xsd" xml:id="L00355" xml:base="https://id.acdh.oeaw.ac.at/schnitzler/schnitzler-briefe/editions">
+<TEI xmlns="http://www.tei-c.org/ns/1.0"
+     xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+     xsi:schemaLocation="http://www.tei-c.org/ns/1.0 ../meta/schnitzler-briefe-schema.xsd"
+     xml:id="L00355"
+     xml:base="https://id.acdh.oeaw.ac.at/schnitzler/schnitzler-briefe/editions">
    <teiHeader>
       <fileDesc>
          <titleStmt>
@@ -82,7 +86,7 @@
                               <extent>
                                  <measure unit="blatt" quantity="1"/>
                                  <measure unit="seite" quantity="1"/>
-                                 <measure unit="zeichenanzahl" quantity="321"/>
+                                 <measure unit="zeichenanzahl" quantity="319"/>
                               </extent>
                            </supportDesc>
                         </objectDesc>
@@ -126,20 +130,28 @@
             <correspAction type="sent">
                <persName ref="#pmb10863">Beer-Hofmann, Richard</persName>
                <date when="1894-07-18" n="02">[18. 7. 1894]</date>
-               <placeName ref="#pmb213">Bad Ischl</placeName>
+               <placeName ref="#pmb364910">Bad Ischl</placeName>
             </correspAction>
             <correspAction type="received">
                <persName ref="#pmb2121">Schnitzler, Arthur</persName>
                <date evidence="conjecture" notBefore="1894-07-18" notAfter="1894-07-20">[18. 7. 1894
                   – 22. 7. 1894?]</date>
-               <placeName ref="#pmb213">Bad Ischl</placeName>
+               <placeName ref="#pmb414">Hotel und Pension Rudolfshöhe (Leopold Petter)</placeName>
             </correspAction>
-            <correspContext><ref type="belongsToCorrespondence" target="correspondence_10863">Beer-Hofmann, Richard</ref>
+            <correspContext>
+               <ref type="belongsToCorrespondence" target="correspondence_10863">Beer-Hofmann, Richard</ref>
                <ref subtype="previous_letter" type="withinCollection" target="L00354">Beer-Hofmann an Schnitzler, [18. 7. 1894]</ref>
                <ref subtype="next_letter" type="withinCollection" target="L00356">Schnitzler an Beer-Hofmann, [18. 7. 1894?]</ref>
-               <ref subtype="previous_letter" type="withinCorrespondence" source="correspondence_10863" target="L00354">Beer-Hofmann an Schnitzler, [18. 7. 1894]</ref>
-               <ref subtype="next_letter" type="withinCorrespondence" source="correspondence_10863" target="L00356">Schnitzler an Beer-Hofmann, [18. 7. 1894?]</ref>
-            </correspContext></correspDesc>
+               <ref subtype="previous_letter"
+                    type="withinCorrespondence"
+                    source="correspondence_10863"
+                    target="L00354">Beer-Hofmann an Schnitzler, [18. 7. 1894]</ref>
+               <ref subtype="next_letter"
+                    type="withinCorrespondence"
+                    source="correspondence_10863"
+                    target="L00356">Schnitzler an Beer-Hofmann, [18. 7. 1894?]</ref>
+            </correspContext>
+         </correspDesc>
       </profileDesc>
       <revisionDesc status="approved">
          <change who="MAM" when="2017-05-22">Angelegt</change>
@@ -158,8 +170,8 @@
             <p>
                <pb facs="MS-SCHNITZLER-B-0008-B-00001-000-00077"/>
                <salute>Lieber Arthur!</salute> Habe
-               den Brief irrthümlich geöffnet <del rend="strikethrough">B</del> sie <del rend="strikethrough">A</del> antworten wol <rs ref="#pmb10815" type="person">Bahr</rs> dass er <date>Samstag</date> hieher kommen soll? Mit <rs ref="#pmb30" type="place">Salzburg</rs> wird es vorläufig nichts sein: <rs ref="#pmb11740" type="person">Hugo</rs> wird <anchor type="commentary" xml:id="K_L00355-1"/>auch
-               nicht<note type="commentary" corresp="K_L00355-1">
+               den <anchor type="commentary" xml:id="K_L00355-1"/>Brief<note type="commentary" corresp="K_L00355-1">Mutmaßlich handelt es sich um <ref type="schnitzler-briefe" target="L00353"/>.</note> irrthümlich geöffnet <del rend="strikethrough">B</del> sie <del rend="strikethrough">A</del> antworten wol <rs ref="#pmb10815" type="person">Bahr</rs> dass er <date>Samstag</date> hieher kommen soll? Mit <rs ref="#pmb30" type="place">Salzburg</rs> wird es vorläufig nichts sein: <rs ref="#pmb11740" type="person">Hugo</rs> wird <anchor type="commentary" xml:id="K_L00355-2"/>auch
+               nicht<note type="commentary" corresp="K_L00355-2">
                   <rs ref="#pmb11740" type="person">Hofmannsthal</rs> trauerte um <rs ref="#pmb4980" type="person">Josefine Wertheimstein</rs>, die am
                      <date>16. 7. 1894</date> gestorben war.</note> von <rs ref="#pmb305739" type="place">Fusch</rs> wo er seit ein paar Tagen ist kommen wollen. Verschieben
                wir also die Sache</p>
@@ -300,6 +312,21 @@
                <location type="located_in_place">
                   <placeName ref="pmb429">Salzkammergut</placeName>
                   <geo>47,75 13,5</geo>
+               </location>
+            </place>
+            <place xml:id="pmb414">
+               <placeName>Hotel und Pension Rudolfshöhe (Leopold Petter)</placeName>
+               <placeName type="legacy-name-merge">Rudolfshöhe</placeName>
+               <location type="coords">
+                  <geo>47,706537 13,609575</geo>
+               </location>
+               <location type="located_in_place">
+                  <placeName ref="pmb213">Bad Ischl</placeName>
+                  <geo>47,71109 13,61893</geo>
+               </location>
+               <location type="located_in_place">
+                  <placeName ref="pmb43015">Kaltenbach</placeName>
+                  <geo>47,69778 13,60913</geo>
                </location>
             </place>
             <place xml:id="pmb30">
