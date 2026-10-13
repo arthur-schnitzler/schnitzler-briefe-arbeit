@@ -8,7 +8,7 @@
         select="document('https://raw.githubusercontent.com/arthur-schnitzler/schnitzler-orte/refs/heads/main/editions/schnitzler_places.xml')"/>
     <!-- Wiener Schnitzler in der verschachtelten Fassung (Ort > Hotel usw.) -->
     <xsl:param name="nested"
-        select="document('https://raw.githubusercontent.com/wiener-moderne-verein/wienerschnitzler-data/refs/heads/main/data/editions/xml/wienerschnitzler_complete_nested.xml')"/>
+        select="document('https://raw.githubusercontent.com/wiener-moderne-verein/wienerschnitzler-data/refs/heads/data/data/editions/xml/wienerschnitzler_complete_nested.xml')"/>
     <!-- Schnitzlers Wohnadressen (JSON aus meta/wohnadressen_aus_relations.py), relativ zu diesem XSLT -->
     <xsl:param name="wohnadressen"
         select="json-doc(resolve-uri('../../meta/wohnadressen.json', static-base-uri()))"/>

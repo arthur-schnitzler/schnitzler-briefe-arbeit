@@ -45,9 +45,8 @@ REPO = Path(__file__).resolve().parent.parent
 EDITIONS = REPO / "editions"
 LISTPLACE = REPO / "indices" / "listplace.xml"
 WOHNADRESSEN = REPO / "meta" / "wohnadressen.json"
-DEFAULT_NESTED = REPO.parent / "wienerschnitzler-data" / "data" / "editions" / "xml" / "wienerschnitzler_complete_nested.xml"
 NESTED_URL = ("https://raw.githubusercontent.com/wiener-moderne-verein/wienerschnitzler-data/"
-              "refs/heads/main/data/editions/xml/wienerschnitzler_complete_nested.xml")
+              "refs/heads/data/data/editions/xml/wienerschnitzler_complete_nested.xml")
 
 NS = {"tei": "http://www.tei-c.org/ns/1.0"}
 T = "{http://www.tei-c.org/ns/1.0}"
@@ -86,9 +85,9 @@ def tage(d):
 # ---------------------------------------------------------------------------
 
 def load_nested(path):
-    if path and Path(path).exists():
+    if path:
         return etree.parse(str(path)).getroot()
-    print(f"{path} nicht gefunden, lade {NESTED_URL} ...", file=sys.stderr)
+    print(f"Lade {NESTED_URL} ...", file=sys.stderr)
     with urlopen(NESTED_URL) as r:
         return etree.fromstring(r.read())
 
@@ -232,8 +231,10 @@ def namen_der_tage(tag_liste, aufenthalte, limit=6):
 
 def main():
     ap = argparse.ArgumentParser(description=__doc__, formatter_class=argparse.RawDescriptionHelpFormatter)
-    ap.add_argument("--nested", default=str(DEFAULT_NESTED),
-                    help="Pfad zu wienerschnitzler_complete_nested.xml (sonst Download)")
+    ap.add_argument("--nested",
+                    help="Pfad zu wienerschnitzler_complete_nested.xml (Standard: aktuelle Fassung vom "
+                         "Branch 'data' auf GitHub; ein lokaler Klon ist oft veraltet, die Datei ist dort "
+                         "nicht versioniert)")
     ap.add_argument("--max-tage", type=int, default=10, help="längere Zeiträume überspringen (Standard 10)")
     ap.add_argument("--csv", help="Befunde zusätzlich als CSV schreiben")
     ap.add_argument("--nur", nargs="*", help="nur diese Briefe, z. B. L04318 oder 4318")
