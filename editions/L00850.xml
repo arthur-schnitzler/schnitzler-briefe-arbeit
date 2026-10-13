@@ -1,6 +1,10 @@
-<?xml version='1.0' encoding='UTF-8'?>
+<?xml version="1.0" encoding="UTF-8"?>
 <?xml-model href="../meta/schnitzler-briefe-schematron.sch" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
-<TEI xmlns="http://www.tei-c.org/ns/1.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.tei-c.org/ns/1.0 ../meta/schnitzler-briefe-schema.xsd" xml:id="L00850" xml:base="https://id.acdh.oeaw.ac.at/schnitzler/schnitzler-briefe/editions">
+<TEI xmlns="http://www.tei-c.org/ns/1.0"
+     xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+     xsi:schemaLocation="http://www.tei-c.org/ns/1.0 ../meta/schnitzler-briefe-schema.xsd"
+     xml:id="L00850"
+     xml:base="https://id.acdh.oeaw.ac.at/schnitzler/schnitzler-briefe/editions">
    <teiHeader>
       <fileDesc>
          <titleStmt>
@@ -83,7 +87,7 @@
                               <extent>
                                  <measure unit="blatt" quantity="1"/>
                                  <measure unit="seite" quantity="4"/>
-                                 <measure unit="zeichenanzahl" quantity="1187"/>
+                                 <measure unit="zeichenanzahl" quantity="1183"/>
                               </extent>
                            </supportDesc>
                         </objectDesc>
@@ -121,20 +125,28 @@
             <correspAction type="sent">
                <persName ref="#pmb2121">Schnitzler, Arthur</persName>
                <date when="1898-10-04" n="01">4. 10. 1898</date>
-               <placeName ref="#pmb168">Berlin</placeName>
+               <placeName ref="#pmb545">Hotel Savoy [Berlin]</placeName>
             </correspAction>
             <correspAction type="received">
                <persName ref="#pmb11740">Hofmannsthal, Hugo von</persName>
                <date evidence="conjecture" notBefore="1898-10-05" notAfter="1898-10-09">[5. 10. 1898
                   – 9. 10. 1898?]</date>
-               <placeName ref="#pmb50">Wien</placeName>
+               <placeName ref="#pmb34050">Hotel de l’Europe [Venedig]</placeName>
             </correspAction>
-            <correspContext><ref type="belongsToCorrespondence" target="correspondence_11740">Hofmannsthal, Hugo von</ref>
+            <correspContext>
+               <ref type="belongsToCorrespondence" target="correspondence_11740">Hofmannsthal, Hugo von</ref>
                <ref subtype="previous_letter" type="withinCollection" target="L00849">Hofmannsthal an Schnitzler, 2. 10. [1898]</ref>
                <ref subtype="next_letter" type="withinCollection" target="L00851">Hofmannsthal an Schnitzler, 12. 10. [1898]</ref>
-               <ref subtype="previous_letter" type="withinCorrespondence" source="correspondence_11740" target="L00849">Hofmannsthal an Schnitzler, 2. 10. [1898]</ref>
-               <ref subtype="next_letter" type="withinCorrespondence" source="correspondence_11740" target="L00851">Hofmannsthal an Schnitzler, 12. 10. [1898]</ref>
-            </correspContext></correspDesc>
+               <ref subtype="previous_letter"
+                    type="withinCorrespondence"
+                    source="correspondence_11740"
+                    target="L00849">Hofmannsthal an Schnitzler, 2. 10. [1898]</ref>
+               <ref subtype="next_letter"
+                    type="withinCorrespondence"
+                    source="correspondence_11740"
+                    target="L00851">Hofmannsthal an Schnitzler, 12. 10. [1898]</ref>
+            </correspContext>
+         </correspDesc>
       </profileDesc>
       <revisionDesc status="approved">
          <change who="MAM" when="2019-07-15">Angelegt aus Buchausgabe</change>
@@ -151,12 +163,13 @@
       <body>
          <div type="writingSession" n="1">
             <opener>
-               <dateline>
+               <dateline rend="right">
                   <pb facs="Hs-30885,77_001"/>
                   <date>Dinſtag 4. X. 98</date>.</dateline>
             </opener>
             <p>
-               <salute>Mein lieber Hugo,</salute> heut vor der Probe hat mir <rs ref="#pmb10986" type="person">Brahm</rs> Ihren Brief gegeben; er hat mir große Freude gemacht. Von
+               <salute>Mein lieber Hugo,</salute> heut vor der <rs type="event" subtype="implied" ref="#pmb209028">Probe</rs> hat mir <rs ref="#pmb10986" type="person">Brahm</rs> Ihren <anchor type="commentary" xml:id="K_L00850-1"/>Brief<note type="commentary" corresp="K_L00850-1">
+                  <ref type="schnitzler-briefe" target="L00849"/>.</note> gegeben; er hat mir große Freude gemacht. Von
                dem <rs ref="#pmb30219" type="work">Vermächtnis</rs> hab ich nicht viel Spaſs; die
                Sache iſt die: Das Stück iſt nur solang gut, als die »Heldin« nicht auf der Bühne
                iſt. Erster Akt – und der dritte wieder, ſobald ſich das Frauenzi<c rendition="#gemination-m"/>er ins <pb facs="Hs-30885,77_002"/>Waſſer ſtürzt. Da
@@ -270,19 +283,29 @@
             </bibl>
          </listBibl>
          <listPlace>
-            <place xml:id="pmb168">
-               <placeName>Berlin</placeName>
-               <placeName type="alternative-name">Hauptstadt Berlin</placeName>
-               <placeName type="alternative-name">Barlīn</placeName>
-               <placeName type="alternative-name">Reichshauptstadt Berlin</placeName>
-               <placeName type="alternative-name">Berolino</placeName>
-               <placeName type="legacy-name-merge">B-n</placeName>
+            <place xml:id="pmb545">
+               <placeName>Hotel Savoy [Berlin]</placeName>
                <location type="coords">
+                  <geo>52,521572 13,388194</geo>
+               </location>
+               <location type="located_in_place">
+                  <placeName ref="pmb168">Berlin</placeName>
                   <geo>52,52437 13,41053</geo>
                </location>
                <location type="located_in_place">
-                  <placeName ref="pmb151">Deutschland</placeName>
-                  <geo>51,5 10,5</geo>
+                  <placeName ref="pmb482">Friedrichstraße [Berlin]</placeName>
+                  <geo>52,50319 13,39108</geo>
+               </location>
+            </place>
+            <place xml:id="pmb34050">
+               <placeName>Hotel de l’Europe [Venedig]</placeName>
+               <placeName type="legacy-name-merge">Hotel Europe</placeName>
+               <location type="coords">
+                  <geo>45,432304 12,336899</geo>
+               </location>
+               <location type="located_in_place">
+                  <placeName ref="pmb462">Venedig</placeName>
+                  <geo>45,43713 12,33265</geo>
                </location>
             </place>
             <place xml:id="pmb50">
@@ -328,6 +351,19 @@
                </location>
             </place>
          </listPlace>
+         <listEvent>
+            <event xml:id="pmb209028" ana="implied">
+               <eventName n="Probe">Probe von Das Vermächtnis, 4.10.1898</eventName>
+               <listPlace>
+                  <place>
+                     <placeName role="veranstaltet in" ref="pmb3">Deutsches Theater Berlin</placeName>
+                     <location>
+                        <geo>52,524444 13,382222</geo>
+                     </location>
+                  </place>
+               </listPlace>
+            </event>
+         </listEvent>
       </back>
    </text>
 </TEI>
