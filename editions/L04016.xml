@@ -1,6 +1,10 @@
-<?xml version='1.0' encoding='UTF-8'?>
+<?xml version="1.0" encoding="UTF-8"?>
 <?xml-model href="../meta/schnitzler-briefe-schematron.sch" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
-<TEI xmlns="http://www.tei-c.org/ns/1.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.tei-c.org/ns/1.0 ../meta/schnitzler-briefe-schema.xsd" xml:id="L04016" xml:base="https://id.acdh.oeaw.ac.at/schnitzler/schnitzler-briefe/editions">
+<TEI xmlns="http://www.tei-c.org/ns/1.0"
+     xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+     xsi:schemaLocation="http://www.tei-c.org/ns/1.0 ../meta/schnitzler-briefe-schema.xsd"
+     xml:id="L04016"
+     xml:base="https://id.acdh.oeaw.ac.at/schnitzler/schnitzler-briefe/editions">
    <teiHeader>
       <fileDesc>
          <titleStmt>
@@ -104,25 +108,38 @@
             <correspAction type="sent">
                <persName ref="#pmb2128">Plessner, Elsa</persName>
                <date when="1912-05-10" n="02">10. 5. 1912</date>
-               <placeName ref="#pmb140">Halle (Saale)</placeName>
+               <placeName ref="#pmb300422">Lafontainestraße 36</placeName>
+            </correspAction>
+            <correspAction type="redirected">
+               <date notBefore="1912-05-11" notAfter="1912-05-14" evidence="conjecture">[11. 5. 1912 – 14. 5. 1912?]</date>
+               <placeName ref="#pmb168815">Sternwartestraße 71</placeName>
             </correspAction>
             <correspAction type="received">
                <persName ref="#pmb2121">Schnitzler, Arthur</persName>
-               <date evidence="conjecture" notBefore="1912-05-11" notAfter="1912-05-15">[11. 5. 1912 – 15. 5. 1912?]</date>
-               <placeName ref="#pmb50" evidence="conjecture">Wien</placeName>
+               <date evidence="conjecture" when="1912-05-15">[15. 5. 1912?]</date>
+               <placeName ref="#pmb34050" evidence="conjecture">Hotel de l’Europe [Venedig]</placeName>
             </correspAction>
-            <correspContext><ref type="belongsToCorrespondence" target="correspondence_2128">Plessner, Elsa</ref>
+            <correspContext>
+               <ref type="belongsToCorrespondence" target="correspondence_2128">Plessner, Elsa</ref>
                <ref subtype="previous_letter" type="withinCollection" target="L02062">Altenberg an Schnitzler, [10.? 5. 1912]</ref>
                <ref subtype="next_letter" type="withinCollection" target="L02063">Schnitzler an Beer-Hofmann, 13. 5. 1912</ref>
-               <ref subtype="previous_letter" type="withinCorrespondence" source="correspondence_2128" target="L03728">Plessner an Schnitzler, 12. 10. 1900</ref>
-               <ref subtype="next_letter" type="withinCorrespondence" source="correspondence_2128" target="L03733">Plessner an Schnitzler, 6. 12. 1912</ref>
-            </correspContext></correspDesc>
+               <ref subtype="previous_letter"
+                    type="withinCorrespondence"
+                    source="correspondence_2128"
+                    target="L03728">Plessner an Schnitzler, 12. 10. 1900</ref>
+               <ref subtype="next_letter"
+                    type="withinCorrespondence"
+                    source="correspondence_2128"
+                    target="L03733">Plessner an Schnitzler, 6. 12. 1912</ref>
+            </correspContext>
+         </correspDesc>
       </profileDesc>
       <revisionDesc status="approved">
          <change who="MAM" when="2025-12-04">Angelegt</change>
          <change who="MAM" when="2026-02-09">Durchsicht</change>
          <change who="MAM" when="2026-02-09">Index check</change>
          <change who="SJ" when="2026-03-16">Durchsicht</change>
+         <change who="SJ" when="2026-10-13">approved</change>
       </revisionDesc>
    </teiHeader>
    <facsimile>
@@ -257,6 +274,45 @@
             </person>
          </listPerson>
          <listPlace>
+            <place xml:id="pmb300422">
+               <placeName>Lafontainestraße 36</placeName>
+               <location type="coords">
+                  <geo>51,496369 11,963698</geo>
+               </location>
+               <location type="located_in_place">
+                  <placeName ref="pmb140">Halle (Saale)</placeName>
+                  <geo>51,48158 11,97947</geo>
+               </location>
+            </place>
+            <place xml:id="pmb168815">
+               <placeName>Sternwartestraße 71</placeName>
+               <location type="coords">
+                  <geo>48,23188 16,33716</geo>
+               </location>
+               <location type="located_in_place">
+                  <placeName ref="pmb68">XVIII., Währing</placeName>
+                  <geo>48,23333 16,31667</geo>
+               </location>
+               <location type="located_in_place">
+                  <placeName ref="pmb533">Währinger Cottage</placeName>
+                  <geo>48,233056 16,341944</geo>
+               </location>
+               <location type="located_in_place">
+                  <placeName ref="pmb150">Sternwartestraße</placeName>
+                  <geo>48,23099349198 16,340117830625</geo>
+               </location>
+            </place>
+            <place xml:id="pmb34050">
+               <placeName>Hotel de l’Europe [Venedig]</placeName>
+               <placeName type="legacy-name-merge">Hotel Europe</placeName>
+               <location type="coords">
+                  <geo>45,432304 12,336899</geo>
+               </location>
+               <location type="located_in_place">
+                  <placeName ref="pmb462">Venedig</placeName>
+                  <geo>45,43713 12,33265</geo>
+               </location>
+            </place>
             <place xml:id="pmb140">
                <placeName>Halle (Saale)</placeName>
                <placeName type="ort_fruherer-name">Halle an der Saale</placeName>
@@ -267,38 +323,6 @@
                <location type="located_in_place">
                   <placeName ref="pmb209">Sachsen</placeName>
                   <geo>51,0 13,25</geo>
-               </location>
-            </place>
-            <place xml:id="pmb50">
-               <placeName>Wien</placeName>
-               <placeName type="ort_fruherer-name">K.K. Reichshaupt- und Residenzstadt Wien</placeName>
-               <placeName type="alternative-name">Bécs</placeName>
-               <placeName type="alternative-name">Land Wien</placeName>
-               <placeName type="alternative-name">Vídeň</placeName>
-               <placeName type="alternative-name">Wenia</placeName>
-               <placeName type="alternative-name">Beč</placeName>
-               <placeName type="ort_fruherer-name">Vindobona</placeName>
-               <placeName type="alternative-name">Vienna</placeName>
-               <location type="coords">
-                  <geo>48,208333 16,373056</geo>
-               </location>
-               <location type="located_in_place">
-                  <placeName ref="pmb41240">Österreich</placeName>
-                  <geo>47,33333 13,33333</geo>
-               </location>
-               <location type="located_in_place">
-                  <placeName ref="pmb235218">Windmühlhöhe</placeName>
-                  <geo>48,24077 16,32092</geo>
-               </location>
-            </place>
-            <place xml:id="pmb300422">
-               <placeName>Lafontainestraße 36</placeName>
-               <location type="coords">
-                  <geo>51,496369 11,963698</geo>
-               </location>
-               <location type="located_in_place">
-                  <placeName ref="pmb140">Halle (Saale)</placeName>
-                  <geo>51,48158 11,97947</geo>
                </location>
             </place>
          </listPlace>
