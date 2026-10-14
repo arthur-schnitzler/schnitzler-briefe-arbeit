@@ -1,6 +1,10 @@
-<?xml version='1.0' encoding='UTF-8'?>
+<?xml version="1.0" encoding="UTF-8"?>
 <?xml-model href="../meta/schnitzler-briefe-schematron.sch" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
-<TEI xmlns="http://www.tei-c.org/ns/1.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.tei-c.org/ns/1.0 ../meta/schnitzler-briefe-schema.xsd" xml:id="L01523" xml:base="https://id.acdh.oeaw.ac.at/schnitzler/schnitzler-briefe/editions">
+<TEI xmlns="http://www.tei-c.org/ns/1.0"
+     xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+     xsi:schemaLocation="http://www.tei-c.org/ns/1.0 ../meta/schnitzler-briefe-schema.xsd"
+     xml:id="L01523"
+     xml:base="https://id.acdh.oeaw.ac.at/schnitzler/schnitzler-briefe/editions">
    <teiHeader>
       <fileDesc>
          <titleStmt>
@@ -155,14 +159,22 @@
                <persName ref="#pmb10815">Bahr, Hermann</persName>
                <date evidence="conjecture" notBefore="1905-06-06" notAfter="1905-06-08">[6. 6. 1905
                   – 10. 6. 1905?]</date>
-               <placeName ref="#pmb50">Wien</placeName>
+               <placeName ref="#pmb207274">Haus Bahr</placeName>
             </correspAction>
-            <correspContext><ref type="belongsToCorrespondence" target="correspondence_10815">Bahr, Hermann</ref>
+            <correspContext>
+               <ref type="belongsToCorrespondence" target="correspondence_10815">Bahr, Hermann</ref>
                <ref subtype="previous_letter" type="withinCollection" target="L03409">Salten, Salten an Schnitzler, Schnitzler, 3. 6. [1905?]</ref>
                <ref subtype="next_letter" type="withinCollection" target="L04024">Schnitzler an Schwarzkopf, 7. 6. 1905</ref>
-               <ref subtype="previous_letter" type="withinCorrespondence" source="correspondence_10815" target="L01513">Schnitzler, Schnitzler an Bahr, 5. 5. 1905</ref>
-               <ref subtype="next_letter" type="withinCorrespondence" source="correspondence_10815" target="L01525">Bahr an Schnitzler, 14. 6. 1905</ref>
-            </correspContext></correspDesc>
+               <ref subtype="previous_letter"
+                    type="withinCorrespondence"
+                    source="correspondence_10815"
+                    target="L01513">Schnitzler, Schnitzler an Bahr, 5. 5. 1905</ref>
+               <ref subtype="next_letter"
+                    type="withinCorrespondence"
+                    source="correspondence_10815"
+                    target="L01525">Bahr an Schnitzler, 14. 6. 1905</ref>
+            </correspContext>
+         </correspDesc>
       </profileDesc>
       <revisionDesc status="approved">
          <change who="KI MAM" when="2015-10-01">Kollationiert</change>
@@ -191,7 +203,9 @@
                <salute>lieber Hermann</salute>
             </opener>
             <p>ich gratulire dir herzlich zum geſtrigen Erfolg von <hi rend="latintype">
-                  <rs ref="#pmb29901" type="work">Sanna</rs>
+                  <rs type="event" ref="#pmb35170" subtype="implied">
+                     <rs ref="#pmb29901" type="work">Sanna</rs>
+                  </rs>
                </hi>. Einiges was mir nach der erſten Lectüre des Stücks nicht ganz eingeleuchtet,
                iſt mir geſtern, ſchön und ergreifend aufgegangen. Die Aufführung war etwas ganz
                einziges, und die <rs ref="#pmb11791" type="person">Höflich</rs>
@@ -336,6 +350,41 @@
             </bibl>
          </listBibl>
          <listPlace>
+            <place xml:id="pmb168940">
+               <placeName>Edmund-Weiß-Gasse 7</placeName>
+               <placeName type="ort_fruherer-name">Spöttelgasse 7</placeName>
+               <location type="coords">
+                  <geo>48,2304 16,33472</geo>
+               </location>
+               <location type="located_in_place">
+                  <placeName ref="pmb68">XVIII., Währing</placeName>
+                  <geo>48,23333 16,31667</geo>
+               </location>
+               <location type="located_in_place">
+                  <placeName ref="pmb533">Währinger Cottage</placeName>
+                  <geo>48,233056 16,341944</geo>
+               </location>
+               <location type="located_in_place">
+                  <placeName ref="pmb133">Edmund-Weiß-Gasse</placeName>
+                  <geo>48,23056 16,3348</geo>
+               </location>
+            </place>
+            <place xml:id="pmb207274">
+               <placeName>Haus Bahr</placeName>
+               <placeName type="ort_fruherer-name">Veitlissengasse 5a</placeName>
+               <placeName type="ort_namensvariante">Winzergasse 22</placeName>
+               <location type="coords">
+                  <geo>48,186771 16,261305</geo>
+               </location>
+               <location type="located_in_place">
+                  <placeName ref="pmb220">Veitlissengasse</placeName>
+                  <geo>48,186622327678 16,259712159437</geo>
+               </location>
+               <location type="located_in_place">
+                  <placeName ref="pmb63">XIII., Hietzing</placeName>
+                  <geo>48,17547 16,29101</geo>
+               </location>
+            </place>
             <place xml:id="pmb50">
                <placeName>Wien</placeName>
                <placeName type="ort_fruherer-name">K.K. Reichshaupt- und Residenzstadt Wien</placeName>
@@ -359,6 +408,19 @@
                </location>
             </place>
          </listPlace>
+         <listEvent>
+            <event xml:id="pmb35170" ana="implied">
+               <eventName n="Theaterpremiere">Premiere von Sanna, 5.6.1906</eventName>
+               <listPlace>
+                  <place>
+                     <placeName role="veranstaltet in" ref="pmb37">Theater an der Wien</placeName>
+                     <location>
+                        <geo>48,19941 16,3642</geo>
+                     </location>
+                  </place>
+               </listPlace>
+            </event>
+         </listEvent>
       </back>
    </text>
 </TEI>
