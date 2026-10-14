@@ -1,11 +1,15 @@
-<?xml version='1.0' encoding='UTF-8'?>
+<?xml version="1.0" encoding="UTF-8"?>
 <?xml-model href="../meta/schnitzler-briefe-schematron.sch" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
-<TEI xmlns="http://www.tei-c.org/ns/1.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.tei-c.org/ns/1.0 ../meta/schnitzler-briefe-schema.xsd" xml:id="L01193" xml:base="https://id.acdh.oeaw.ac.at/schnitzler/schnitzler-briefe/editions">
+<TEI xmlns="http://www.tei-c.org/ns/1.0"
+     xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+     xsi:schemaLocation="http://www.tei-c.org/ns/1.0 ../meta/schnitzler-briefe-schema.xsd"
+     xml:id="L01193"
+     xml:base="https://id.acdh.oeaw.ac.at/schnitzler/schnitzler-briefe/editions">
    <teiHeader>
       <fileDesc>
          <titleStmt>
             <title level="s">Arthur Schnitzler: Briefwechsel mit Autorinnen und Autoren</title>
-            <title level="a">Arthur Schnitzler an Richard Beer-Hofmann, [16. 6. 1902?]</title>
+            <title level="a">Arthur Schnitzler an Richard Beer-Hofmann, [16. oder 17. 6. 1902?]</title>
             <author ref="#pmb2121">Schnitzler, Arthur</author>
             <editor>
                <name>Müller, Martin Anton</name>
@@ -83,7 +87,7 @@
                               <extent>
                                  <measure unit="blatt" quantity="1"/>
                                  <measure unit="seite" quantity="1"/>
-                                 <measure unit="zeichenanzahl" quantity="34"/>
+                                 <measure unit="zeichenanzahl" quantity="33"/>
                               </extent>
                            </supportDesc>
                         </objectDesc>
@@ -103,21 +107,29 @@
          <correspDesc>
             <correspAction type="sent">
                <persName ref="#pmb2121">Schnitzler, Arthur</persName>
-               <date when="1902-06-16" n="01">[16. 6. 1902?]</date>
+               <date notBefore="1902-06-16" notAfter="1902-06-17" n="01">[16. oder 17. 6. 1902?]</date>
                <placeName ref="#pmb168934">Frankgasse 1</placeName>
             </correspAction>
             <correspAction type="received">
                <persName ref="#pmb10863">Beer-Hofmann, Richard</persName>
-               <date evidence="conjecture" notBefore="1902-06-17" notAfter="1902-06-21">[17. 6. 1902
+               <date evidence="conjecture" notBefore="1902-06-15" notAfter="1902-06-21">[17. 6. 1902
                   – 21. 6. 1902?]</date>
-               <placeName ref="#pmb189">Semmering</placeName>
+               <placeName ref="#pmb231810" evidence="conjecture">Willergasse 2</placeName>
             </correspAction>
-            <correspContext><ref type="belongsToCorrespondence" target="correspondence_10863">Beer-Hofmann, Richard</ref>
+            <correspContext>
+               <ref type="belongsToCorrespondence" target="correspondence_10863">Beer-Hofmann, Richard</ref>
                <ref subtype="previous_letter" type="withinCollection" target="L02975">Schnitzler an Salten, 14. 6. 1902</ref>
                <ref subtype="next_letter" type="withinCollection" target="L03211">Goldmann an Schnitzler, 16. 6. [1902]</ref>
-               <ref subtype="previous_letter" type="withinCorrespondence" source="correspondence_10863" target="L01223">Schnitzler an Beer-Hofmann, [12. oder 13]. 6. 1902</ref>
-               <ref subtype="next_letter" type="withinCorrespondence" source="correspondence_10863" target="L01226">Hofmannsthal, Schnitzler an Beer-Hofmann, 30. 6. 1902</ref>
-            </correspContext></correspDesc>
+               <ref subtype="previous_letter"
+                    type="withinCorrespondence"
+                    source="correspondence_10863"
+                    target="L01223">Schnitzler an Beer-Hofmann, [12. oder 13]. 6. 1902</ref>
+               <ref subtype="next_letter"
+                    type="withinCorrespondence"
+                    source="correspondence_10863"
+                    target="L01226">Hofmannsthal, Schnitzler an Beer-Hofmann, 30. 6. 1902</ref>
+            </correspContext>
+         </correspDesc>
       </profileDesc>
       <revisionDesc status="approved">
          <change who="MAM" when="2020-11-24">Angelegt</change>
@@ -125,6 +137,7 @@
          <change who="MAM" when="2021-03-15">Durchsicht</change>
          <change who="GHS" when="2021-05-01">Finalisiert</change>
          <change who="MAM" when="2021-05-03">Neu datiert nach Vorschlag GHS</change>
+         <change who="MAM" when="2026-10-14">Neu datiert</change>
       </revisionDesc>
    </teiHeader>
    <facsimile>
@@ -135,7 +148,8 @@
          <div type="writingSession" n="1">
             <p>
                <pb facs="1902_AS_RBH_1_00053"/>
-               <anchor type="commentary" xml:id="K_L01193-1"/>Auf Wiederſehen<note type="commentary" corresp="K_L01193-1">Das undatierte gefaltete Blatt wird unter den
+               <anchor type="commentary" xml:id="K_L01193-1"/>Auf <rs type="event" ref="#pmb50054" subtype="implied" cert="low">Wiederſehen</rs>
+               <note type="commentary" corresp="K_L01193-1">Das undatierte gefaltete Blatt wird unter den
                   Korrespondenzstücken des Jahres <date>1902</date> aufbewahrt. Der Falz in der
                   Mitte könnte darauf hinweisen, dass es sich um eine Art Umschlag handelte, in den
                   etwas eingelegt war. Innerhalb des betreffenden Jahres fügt es sich in der
@@ -198,45 +212,52 @@
             </person>
          </listPerson>
          <listPlace>
-            <place xml:id="pmb50">
-               <placeName>Wien</placeName>
-               <placeName type="ort_fruherer-name">K.K. Reichshaupt- und Residenzstadt Wien</placeName>
-               <placeName type="alternative-name">Bécs</placeName>
-               <placeName type="alternative-name">Land Wien</placeName>
-               <placeName type="alternative-name">Vídeň</placeName>
-               <placeName type="alternative-name">Wenia</placeName>
-               <placeName type="alternative-name">Beč</placeName>
-               <placeName type="ort_fruherer-name">Vindobona</placeName>
-               <placeName type="alternative-name">Vienna</placeName>
+            <place xml:id="pmb168934">
+               <placeName>Frankgasse 1</placeName>
                <location type="coords">
-                  <geo>48,208333 16,373056</geo>
+                  <geo>48,21533 16,35736</geo>
                </location>
                <location type="located_in_place">
-                  <placeName ref="pmb41240">Österreich</placeName>
-                  <geo>47,33333 13,33333</geo>
+                  <placeName ref="pmb59">IX., Alsergrund</placeName>
+                  <geo>48,22387 16,35641</geo>
                </location>
                <location type="located_in_place">
-                  <placeName ref="pmb235218">Windmühlhöhe</placeName>
-                  <geo>48,24077 16,32092</geo>
+                  <placeName ref="pmb397">Frankgasse</placeName>
+                  <geo>48,215516628628 16,356475515829</geo>
                </location>
             </place>
-            <place xml:id="pmb189">
-               <placeName>Semmering</placeName>
-               <placeName type="alternative-name">Gemeinde Semmering</placeName>
-               <placeName type="alternative-name">Semmering-Semmering-Kurort</placeName>
-               <placeName type="alternative-name">Kurort Semmering</placeName>
-               <placeName type="alternative-name">Semmering-Kurort</placeName>
-               <placeName type="alternative-name">Heilklimatischer Höhenluftkurort Semmering</placeName>
-               <placeName type="alternative-name">Semmering- Kurort Semmering</placeName>
+            <place xml:id="pmb231810">
+               <placeName>Willergasse 2</placeName>
                <location type="coords">
-                  <geo>47,64224 15,8241</geo>
+                  <geo>48,139276 16,257741</geo>
                </location>
                <location type="located_in_place">
-                  <placeName ref="pmb41240">Österreich</placeName>
-                  <geo>47,33333 13,33333</geo>
+                  <placeName ref="pmb41728">Willergasse</placeName>
+                  <geo>48,1393188 16,2577427</geo>
+               </location>
+               <location type="located_in_place">
+                  <placeName ref="pmb73">XXIII., Liesing</placeName>
+                  <geo>48,13333 16,3</geo>
+               </location>
+               <location type="located_in_place">
+                  <placeName ref="pmb173">Rodaun</placeName>
+                  <geo>48,132793312328 16,256152195922</geo>
                </location>
             </place>
          </listPlace>
+         <listEvent>
+            <event xml:id="pmb50054" ana="implied">
+               <eventName n="Schulaufführung">Schulaufführung von Sappho, Faust, Liebelei und Die berühmte Frau, 17.6.1902</eventName>
+               <listPlace>
+                  <place>
+                     <placeName role="veranstaltet in" ref="pmb516">Musikverein</placeName>
+                     <location>
+                        <geo>48,201265597319 16,372564182283</geo>
+                     </location>
+                  </place>
+               </listPlace>
+            </event>
+         </listEvent>
       </back>
    </text>
 </TEI>

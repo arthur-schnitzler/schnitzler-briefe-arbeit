@@ -1,6 +1,10 @@
-<?xml version='1.0' encoding='UTF-8'?>
+<?xml version="1.0" encoding="UTF-8"?>
 <?xml-model href="../meta/schnitzler-briefe-schematron.sch" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
-<TEI xmlns="http://www.tei-c.org/ns/1.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.tei-c.org/ns/1.0 ../meta/schnitzler-briefe-schema.xsd" xml:id="L02157" xml:base="https://id.acdh.oeaw.ac.at/schnitzler/schnitzler-briefe/editions">
+<TEI xmlns="http://www.tei-c.org/ns/1.0"
+     xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+     xsi:schemaLocation="http://www.tei-c.org/ns/1.0 ../meta/schnitzler-briefe-schema.xsd"
+     xml:id="L02157"
+     xml:base="https://id.acdh.oeaw.ac.at/schnitzler/schnitzler-briefe/editions">
    <teiHeader>
       <fileDesc>
          <titleStmt>
@@ -131,19 +135,27 @@
             <correspAction type="sent">
                <persName ref="#pmb11148">Dehmel, Richard</persName>
                <date when="1913-11-18" n="01">[18. 11. 1913?]</date>
-               <placeName ref="#pmb506">Hamburg</placeName>
+               <placeName ref="#pmb405602">Richard-Dehmel-Haus</placeName>
             </correspAction>
             <correspAction type="received">
                <persName ref="#pmb2121">Schnitzler, Arthur</persName>
                <date evidence="conjecture" notBefore="1913-11-19" notAfter="1913-11-23">[19. 11. 1913 – 23. 11. 1913?]</date>
-               <placeName ref="#pmb168815">Wien</placeName>
+               <placeName ref="#pmb168815">Sternwartestraße 71</placeName>
             </correspAction>
-            <correspContext><ref type="belongsToCorrespondence" target="correspondence_11148">Dehmel, Richard</ref>
+            <correspContext>
+               <ref type="belongsToCorrespondence" target="correspondence_11148">Dehmel, Richard</ref>
                <ref subtype="previous_letter" type="withinCollection" target="L02156">Suttner an Schnitzler, 4. 11. 1913</ref>
                <ref subtype="next_letter" type="withinCollection" target="L02158">Großmann an Schnitzler, 30. 11. 1913</ref>
-               <ref subtype="previous_letter" type="withinCorrespondence" source="correspondence_11148" target="L02086">Schnitzler an Dehmel, 19. 8. 1912</ref>
-               <ref subtype="next_letter" type="withinCorrespondence" source="correspondence_11148" target="L02337">Schnitzler an Dehmel, 25. 2. 1920</ref>
-            </correspContext></correspDesc>
+               <ref subtype="previous_letter"
+                    type="withinCorrespondence"
+                    source="correspondence_11148"
+                    target="L02086">Schnitzler an Dehmel, 19. 8. 1912</ref>
+               <ref subtype="next_letter"
+                    type="withinCorrespondence"
+                    source="correspondence_11148"
+                    target="L02337">Schnitzler an Dehmel, 25. 2. 1920</ref>
+            </correspContext>
+         </correspDesc>
       </profileDesc>
       <revisionDesc status="approved">
          <change who="MAM" when="2018-12-04">Angelegt</change>
@@ -164,7 +176,9 @@
             <p rend="center">
                <pb facs="MS-SCHNITZLER-B-00026-000-00019"/>
                <rs ref="#pmb33570" type="work">
-                  <hi rend="bold">Das Haus des Dichters</hi>
+                  <hi rend="bold">
+                     <rs type="place" ref="#pmb405602">Das Haus des Dichters</rs>
+                  </hi>
                </rs>
             </p>
             <p rend="center">*</p>
@@ -479,36 +493,36 @@
                   <geo>51,5 10,5</geo>
                </location>
             </place>
-            <place xml:id="pmb506">
-               <placeName>Hamburg</placeName>
+            <place xml:id="pmb405602">
+               <placeName>Richard-Dehmel-Haus</placeName>
                <location type="coords">
+                  <geo>53,56552777777778 9,798416666666666</geo>
+               </location>
+               <location type="located_in_place">
+                  <placeName ref="pmb1226">Blankenese</placeName>
+                  <geo>53,5652 9,7972</geo>
+               </location>
+               <location type="located_in_place">
+                  <placeName ref="pmb506">Hamburg</placeName>
                   <geo>53,55055 9,993333</geo>
                </location>
-               <location type="located_in_place">
-                  <placeName ref="pmb151">Deutschland</placeName>
-                  <geo>51,5 10,5</geo>
-               </location>
             </place>
-            <place xml:id="pmb50">
-               <placeName>Wien</placeName>
-               <placeName type="ort_fruherer-name">K.K. Reichshaupt- und Residenzstadt Wien</placeName>
-               <placeName type="alternative-name">Bécs</placeName>
-               <placeName type="alternative-name">Land Wien</placeName>
-               <placeName type="alternative-name">Vídeň</placeName>
-               <placeName type="alternative-name">Wenia</placeName>
-               <placeName type="alternative-name">Beč</placeName>
-               <placeName type="ort_fruherer-name">Vindobona</placeName>
-               <placeName type="alternative-name">Vienna</placeName>
+            <place xml:id="pmb168815">
+               <placeName>Sternwartestraße 71</placeName>
                <location type="coords">
-                  <geo>48,208333 16,373056</geo>
+                  <geo>48,23188 16,33716</geo>
                </location>
                <location type="located_in_place">
-                  <placeName ref="pmb41240">Österreich</placeName>
-                  <geo>47,33333 13,33333</geo>
+                  <placeName ref="pmb68">XVIII., Währing</placeName>
+                  <geo>48,23333 16,31667</geo>
                </location>
                <location type="located_in_place">
-                  <placeName ref="pmb235218">Windmühlhöhe</placeName>
-                  <geo>48,24077 16,32092</geo>
+                  <placeName ref="pmb533">Währinger Cottage</placeName>
+                  <geo>48,233056 16,341944</geo>
+               </location>
+               <location type="located_in_place">
+                  <placeName ref="pmb150">Sternwartestraße</placeName>
+                  <geo>48,23099349198 16,340117830625</geo>
                </location>
             </place>
          </listPlace>
