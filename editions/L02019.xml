@@ -1,6 +1,8 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <?xml-model href="../meta/schnitzler-briefe-schematron.sch" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
-<TEI xmlns="http://www.tei-c.org/ns/1.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.tei-c.org/ns/1.0 ../meta/schnitzler-briefe-schema.xsd" xml:id="L02019" xml:base="https://id.acdh.oeaw.ac.at/schnitzler/schnitzler-briefe/editions">
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+   xsi:schemaLocation="http://www.tei-c.org/ns/1.0 ../meta/schnitzler-briefe-schema.xsd"
+   xml:id="L02019" xml:base="https://id.acdh.oeaw.ac.at/schnitzler/schnitzler-briefe/editions">
    <teiHeader>
       <fileDesc>
          <titleStmt>
@@ -120,7 +122,8 @@
                            </supportDesc>
                         </objectDesc>
                         <handDesc hands="1">
-                           <handNote medium="roter-buntstift" corresp="#pmb2121" style="lateinische-kurrent">
+                           <handNote medium="roter-buntstift" corresp="#pmb2121"
+                              style="lateinische-kurrent">
                               <p>Beschriftung: »<quote>
                                     <hi rend="underline" n="1">Ehrenstein</hi>
                                  </quote>« und Ergänzung: »<quote>auch</quote>«</p>
@@ -165,14 +168,20 @@
                <persName ref="#pmb11230">Ehrenstein, Albert</persName>
                <date evidence="conjecture" notBefore="1911-05-06" notAfter="1911-05-08">[6. 5. 1911
                   – 10. 5. 1911?]</date>
-               <placeName ref="#pmb50">Wien</placeName>
+               <placeName ref="#pmb386">Universität Wien</placeName>
             </correspAction>
-            <correspContext><ref type="belongsToCorrespondence" target="correspondence_11230">Ehrenstein, Albert</ref>
-               <ref subtype="previous_letter" type="withinCollection" target="L02018">Schnitzler an Brandes, 29. 4. 1911</ref>
-               <ref subtype="next_letter" type="withinCollection" target="L03997">Zuckerkandl an Schnitzler, [zwischen 12. 5. 1911 und
-                  21. 5. 1911?]</ref>
-               <ref subtype="previous_letter" type="withinCorrespondence" source="correspondence_11230" target="L02017">Ehrenstein an Schnitzler, 27. 4. 1911</ref>
-               <ref subtype="next_letter" type="withinCorrespondence" source="correspondence_11230" target="L02020">Ehrenstein an Schnitzler, 17. 5. 1911</ref>
+            <correspContext>
+               <ref type="belongsToCorrespondence" target="correspondence_11230">Ehrenstein,
+                  Albert</ref>
+               <ref subtype="previous_letter" type="withinCollection" target="L02018">Schnitzler an
+                  Brandes, 29. 4. 1911</ref>
+               <ref subtype="next_letter" type="withinCollection" target="L03997">Zuckerkandl an
+                  Schnitzler, [zwischen 12. 5. 1911 und 21. 5. 1911?]</ref>
+               <ref subtype="previous_letter" type="withinCorrespondence"
+                  source="correspondence_11230" target="L02017">Ehrenstein an Schnitzler,
+                  27. 4. 1911</ref>
+               <ref subtype="next_letter" type="withinCorrespondence" source="correspondence_11230"
+                  target="L02020">Ehrenstein an Schnitzler, 17. 5. 1911</ref>
             </correspContext></correspDesc>
       </profileDesc>
       <revisionDesc status="approved">
@@ -194,11 +203,14 @@
       <body>
          <div type="writingSession" n="1">
             <opener>
-               <dateline rend="right">
-                  <pb facs="NLJ0020-1"/>
-                  <date>6. 5. 1911</date>.</dateline>
+               <seg>
+                  <seg rend="left" type="letterhead">
+                     <pb facs="NLJ0020-1"/><hi rend="pre-print">Dr. Arthur Schnitzler</hi>
+                  </seg>
+                  <seg rend="right">
+                     <date>6. 5. 1911</date>.</seg>
+               </seg>
                <seg type="letterhead">
-                  <hi rend="pre-print">Dr. Arthur Schnitzler</hi>
                   <lb/>
                   <hi rend="pre-print">
                      <rs ref="#pmb168815" type="place">Wien XVIII. Sternwartestrasse 71</rs>
@@ -206,8 +218,10 @@
                </seg>
                <salute>Sehr geehrter Herr Doktor.</salute>
             </opener>
-            <p>Auch für mich war die Angelegenheit erledigt, woran mein letzter Brief an Sie einen
-               Zweifel überhaupt nicht zuliess. Ich <subst>
+            <p>Auch für mich war die Angelegenheit erledigt, woran mein letzter <anchor
+                  type="commentary" xml:id="K_L02019-1"/>Brief<note type="commentary"
+                  corresp="K_L02019-1"><ref type="schnitzler-briefe" target="L02017"/>.</note> an
+               Sie einen Zweifel überhaupt nicht zuliess. Ich <subst>
                   <del rend="strikethrough">hätte</del>
                   <add place="above">könnte</add>
                </subst> die Sache auch weiterhin auf sich beruhen lassen, umso mehr als Sie selbst
@@ -223,30 +237,35 @@
                richtigen <pb facs="NLJ0020-2"/>Weg gewählt ihm diesen Umstand zur Kenntnis zu
                bringen. Ich zweifle auch nicht daran, dass er meine Gefühle erwidert. Niemals aber –
                ich wiederhole es – haben Sie mir gegenüber eine Aeusserung getan, die auch nur so
-               hätte gedeutet werden können, als benütze Herr <rs ref="#pmb11527" type="person">Grossmann</rs> seine Stellung zur Erreichung erotischer Vorteile bei
+               hätte gedeutet werden können, als benütze Herr <rs ref="#pmb11527" type="person"
+                  >Grossmann</rs> seine Stellung zur Erreichung erotischer Vorteile bei
                Schauspielerinnen. Dass Sie dergleichen zu mir geäussert hätten ist eine
                Erinnerungstäuschung von Ihnen, die nun freilich im Laufe der Wochen, während deren
-               diese ganze Angelegenheit <add place="above">auch</add>
-                für Sie erledigt
-               schien, Zeit genug hatte, in Ihnen unausrottbare Wurzeln zu fassen; und es ist eine
+               diese ganze Angelegenheit <add place="above">auch</add> für Sie erledigt schien, Zeit
+               genug hatte, in Ihnen unausrottbare Wurzeln zu fassen; und es ist eine
                Erinnerungstäuschung noch gröberer Art, dass ich Ihnen den Inhalt einer solchen
                Aeusserung auch nur mit einer Silbe bestätigt hätte. Ich erkläre hier nochmals auf
                das Allerdezidierteste, dass ich von der Existenz eines solchen Gerüchtes erst aus
                dem Brief des Herrn <rs ref="#pmb11527" type="person">Grossmann</rs> Kenntnis
                erhalten habe, in dem er mir die überraschende Mitteilung machte, dass Sie sich zu
-               verschiedenen Leuten, unter denen er Herrn <rs ref="#pmb11988" type="person">Kraus</rs> nannte, geäussert hätten, von mir sei Ih<pb facs="NLJ0020-3"/>nen
-               jenes Gerücht bestätigt worden. (Da nun Herr <rs ref="#pmb11527" type="person">Grossmann</rs> ausdrücklich Herrn <rs ref="#pmb11988" type="person">Kraus</rs>
+               verschiedenen Leuten, unter denen er Herrn <rs ref="#pmb11988" type="person"
+                  >Kraus</rs> nannte, geäussert hätten, von mir sei Ih<pb facs="NLJ0020-3"/>nen
+               jenes Gerücht bestätigt worden. (Da nun Herr <rs ref="#pmb11527" type="person"
+                  >Grossmann</rs> ausdrücklich Herrn <rs ref="#pmb11988" type="person">Kraus</rs>
                als denjenigen nannte, vor dem Sie mich fälschlicherweise als Bestätiger eines
                Tratsches angegeben haben, so war es natürlich nicht zu vermeiden in einem Brief, der
-               Sie deswegen zur Rede stellte, den Namen des von Herrn <rs ref="#pmb11527" type="person">Grossmann</rs> geführten Zeugen zu <subst>
+               Sie deswegen zur Rede stellte, den Namen des von Herrn <rs ref="#pmb11527"
+                  type="person">Grossmann</rs> geführten Zeugen zu <subst>
                   <del rend="strikethrough">übergeben.</del>
                   <add place="above">
-                     <anchor type="textConst" xml:id="T_L02019-1"/>nennen.<note type="textConst" corresp="T_L02019-1">eigentlich »zu« nochmals eingefügt, aber die Doppelung
+                     <anchor type="textConst" xml:id="T_L02019-1"/>nennen.<note type="textConst"
+                        corresp="T_L02019-1">eigentlich »zu« nochmals eingefügt, aber die Doppelung
                         analog zum richtig korrigierten Durchschlag behoben</note>
                   </add>
                </subst>
             </p>
-            <p>Ihr kniffiger Versuch mich irgendwie dafür verantwortlich zu machen, dass Herr <rs ref="#pmb11988" type="person">Kraus</rs> in dieser Sache genannt werden musste,
+            <p>Ihr kniffiger Versuch mich irgendwie dafür verantwortlich zu machen, dass Herr <rs
+                  ref="#pmb11988" type="person">Kraus</rs> in dieser Sache genannt werden musste,
                bedeutet am Ende nichts mehr als einen Strich mehr zu Ihrer Charakterphysiognomie,
                der nicht fehlen durfte.) Hätte ich vermuten können, dass Privatgespräche zwischen
                Ihnen und mir von Ihnen überhaupt weitergetragen werden, so hätte ich vielleicht,
@@ -289,11 +308,10 @@
                entstehende Fol<pb facs="NLJ0020-6"/>gen zu kümmern. Und absolut keine Lust verspür
                ich mich auch nur eine Minute länger mit einem widerwärtigen Klatsch zu beschäftigen,
                in den, meines Wissens zum ersten Mal in meinem Leben, <add place="above">mir
-                  durch</add> Ihre,
-               ausschliesslich Ihre Schuld, mein Name hineingezerrt wurde. In den Ekel, den ich
-               dieser Tatsache gegenüber empfinde lassen Sie mich heute meinen endgiltigen Abschied
-               von Ihnen den Ausdruck meines lebhaften Bedauerns hinzufügen, dass sich die Türe
-               meiner Wohnung Ihnen jemals aufgetan hat.</p>
+                  durch</add> Ihre, ausschliesslich Ihre Schuld, mein Name hineingezerrt wurde. In
+               den Ekel, den ich dieser Tatsache gegenüber empfinde lassen Sie mich heute meinen
+               endgiltigen Abschied von Ihnen den Ausdruck meines lebhaften Bedauerns hinzufügen,
+               dass sich die Türe meiner Wohnung Ihnen jemals aufgetan hat.</p>
             <closer>Hochachtungsvoll<lb/>
                <signed>Dr Arthur Schnitzler</signed>
             </closer>
@@ -404,7 +422,8 @@
          <listPlace>
             <place xml:id="pmb50">
                <placeName>Wien</placeName>
-               <placeName type="ort_fruherer-name">K.K. Reichshaupt- und Residenzstadt Wien</placeName>
+               <placeName type="ort_fruherer-name">K.K. Reichshaupt- und Residenzstadt
+                  Wien</placeName>
                <placeName type="alternative-name">Bécs</placeName>
                <placeName type="alternative-name">Land Wien</placeName>
                <placeName type="alternative-name">Vídeň</placeName>

@@ -1,6 +1,10 @@
-<?xml version='1.0' encoding='UTF-8'?>
+<?xml version="1.0" encoding="UTF-8"?>
 <?xml-model href="../meta/schnitzler-briefe-schematron.sch" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
-<TEI xmlns="http://www.tei-c.org/ns/1.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.tei-c.org/ns/1.0 ../meta/schnitzler-briefe-schema.xsd" xml:id="L00208" xml:base="https://id.acdh.oeaw.ac.at/schnitzler/schnitzler-briefe/editions">
+<TEI xmlns="http://www.tei-c.org/ns/1.0"
+     xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+     xsi:schemaLocation="http://www.tei-c.org/ns/1.0 ../meta/schnitzler-briefe-schema.xsd"
+     xml:id="L00208"
+     xml:base="https://id.acdh.oeaw.ac.at/schnitzler/schnitzler-briefe/editions">
    <teiHeader>
       <fileDesc>
          <titleStmt>
@@ -102,7 +106,7 @@
                                        <hi rend="capitals">Söhne</hi>
                                     </rs>
                                     <space unit="chars" quantity="1"/>
-                                    <rs ref="#pmb95" type="place">
+                                    <rs ref="#pmb405623" type="place">
                                        <hi rend="capitals">Wien, 1., Lichtenfelsgasse 9</hi>
                                     </rs>
                                  </quote>«</p>
@@ -145,13 +149,21 @@
                   – 7. 5. 1893?]</date>
                <placeName ref="#pmb190427">Wollzeile 15 (»Berthahof«)</placeName>
             </correspAction>
-            <correspContext><ref type="belongsToCorrespondence" target="correspondence_10863">Beer-Hofmann, Richard</ref>
+            <correspContext>
+               <ref type="belongsToCorrespondence" target="correspondence_10863">Beer-Hofmann, Richard</ref>
                <ref subtype="previous_letter" type="withinCollection" target="L03122">Salten an Schnitzler, [2. 5. 1893]</ref>
                <ref subtype="next_letter" type="withinCollection" target="L00209">Suttner an Schnitzler, 3. 5. 1893</ref>
-               <ref subtype="previous_letter" type="withinCorrespondence" source="correspondence_10863" target="L00205">Schnitzler an Beer-Hofmann, 30. 4. 1893</ref>
-               <ref subtype="next_letter" type="withinCorrespondence" source="correspondence_10863" target="L00213">Schnitzler an Beer-Hofmann, [zwischen 5. 5. 1893 und
+               <ref subtype="previous_letter"
+                    type="withinCorrespondence"
+                    source="correspondence_10863"
+                    target="L00205">Schnitzler an Beer-Hofmann, 30. 4. 1893</ref>
+               <ref subtype="next_letter"
+                    type="withinCorrespondence"
+                    source="correspondence_10863"
+                    target="L00213">Schnitzler an Beer-Hofmann, [zwischen 5. 5. 1893 und
                   2. 5. 1894]</ref>
-            </correspContext></correspDesc>
+            </correspContext>
+         </correspDesc>
       </profileDesc>
       <revisionDesc status="approved">
          <change who="MAM" when="2019-09-27">angelegt</change>
@@ -429,10 +441,15 @@
             </person>
          </listPerson>
          <listPlace>
-            <place xml:id="pmb95">
-               <placeName>Lichtenfelsgasse</placeName>
+            <place xml:id="pmb405623">
+               <placeName>Friedrich-Schmidt-Platz 2</placeName>
+               <placeName type="ort_fruherer-name">Lichtenfelsgasse 9</placeName>
                <location type="coords">
-                  <geo>48,210037490674 16,357104381105</geo>
+                  <geo>48,21003 16,355799</geo>
+               </location>
+               <location type="located_in_place">
+                  <placeName ref="pmb236585">Friedrich-Schmidt-Platz</placeName>
+                  <geo>48,211 16,3563</geo>
                </location>
                <location type="located_in_place">
                   <placeName ref="pmb51">I., Innere Stadt</placeName>

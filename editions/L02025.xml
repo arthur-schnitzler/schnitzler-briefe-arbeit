@@ -1,6 +1,10 @@
-<?xml version='1.0' encoding='UTF-8'?>
+<?xml version="1.0" encoding="UTF-8"?>
 <?xml-model href="../meta/schnitzler-briefe-schematron.sch" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
-<TEI xmlns="http://www.tei-c.org/ns/1.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.tei-c.org/ns/1.0 ../meta/schnitzler-briefe-schema.xsd" xml:id="L02025" xml:base="https://id.acdh.oeaw.ac.at/schnitzler/schnitzler-briefe/editions">
+<TEI xmlns="http://www.tei-c.org/ns/1.0"
+     xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+     xsi:schemaLocation="http://www.tei-c.org/ns/1.0 ../meta/schnitzler-briefe-schema.xsd"
+     xml:id="L02025"
+     xml:base="https://id.acdh.oeaw.ac.at/schnitzler/schnitzler-briefe/editions">
    <teiHeader>
       <fileDesc>
          <titleStmt>
@@ -118,20 +122,33 @@
             <correspAction type="sent">
                <persName ref="#pmb11036">Burckhard, Max</persName>
                <date when="1911-08-23" n="01">23. 8. 1911</date>
-               <placeName ref="#pmb33">St. Gilgen</placeName>
+               <placeName ref="#pmb234399">Franzosenschanze 4</placeName>
+            </correspAction>
+            <correspAction type="redirected">
+               <date evidence="conjecture" notBefore="1911-08-24" notAfter="1911-08-28">[24. 8. 1911
+                  – 28. 8. 1911?]</date>
+               <placeName ref="#pmb168815">Sternwartestraße 71</placeName>
             </correspAction>
             <correspAction type="received">
                <persName ref="#pmb2121">Schnitzler, Arthur</persName>
-               <date evidence="conjecture" notBefore="1911-08-24" notAfter="1911-08-28">[24. 8. 1911
-                  – 28. 8. 1911?]</date>
-               <placeName ref="#pmb168815">Wien</placeName>
+               <date evidence="conjecture" notBefore="1911-08-25" notAfter="1911-08-29">[25. 8. 1911
+                  – 29. 8. 1911?]</date>
+               <placeName ref="#pmb252271">Waldhof, Dependance des Südbahnhotels Semmering</placeName>
             </correspAction>
-            <correspContext><ref type="belongsToCorrespondence" target="correspondence_11036">Burckhard, Max Eugen</ref>
+            <correspContext>
+               <ref type="belongsToCorrespondence" target="correspondence_11036">Burckhard, Max Eugen</ref>
                <ref subtype="previous_letter" type="withinCollection" target="L03553">Salten an Schnitzler, 16. 8. 1911</ref>
                <ref subtype="next_letter" type="withinCollection" target="L03633">Zweig an Schnitzler, [28. oder 29]. 8. 1911</ref>
-               <ref subtype="previous_letter" type="withinCorrespondence" source="correspondence_11036" target="L01987">Burckhard an Schnitzler, 25. 11. 1910</ref>
-               <ref subtype="next_letter" type="withinCorrespondence" source="correspondence_11036" target="L02028">Burckhard an Schnitzler, 12. 9. 1911</ref>
-            </correspContext></correspDesc>
+               <ref subtype="previous_letter"
+                    type="withinCorrespondence"
+                    source="correspondence_11036"
+                    target="L01987">Burckhard an Schnitzler, 25. 11. 1910</ref>
+               <ref subtype="next_letter"
+                    type="withinCorrespondence"
+                    source="correspondence_11036"
+                    target="L02028">Burckhard an Schnitzler, 12. 9. 1911</ref>
+            </correspContext>
+         </correspDesc>
       </profileDesc>
       <revisionDesc status="approved">
          <change who="MAM" when="2018-10-17">Angelegt</change>
@@ -156,7 +173,7 @@
                   </seg>
                   <seg rend="right">
                      <hi rend="pre-print">
-                        <rs ref="#pmb95" type="place">Wien, I. Lichtenfelsgasse 7</rs>
+                        <rs ref="#pmb234454" type="place">Wien, I. Lichtenfelsgasse 7</rs>
                      </hi>
                   </seg>
                </seg>
@@ -299,6 +316,66 @@
             </bibl>
          </listBibl>
          <listPlace>
+            <place xml:id="pmb234399">
+               <placeName>Franzosenschanze 4</placeName>
+               <location type="coords">
+                  <geo>47,74443 13,385272</geo>
+               </location>
+               <location type="located_in_place">
+                  <placeName ref="pmb33">St. Gilgen</placeName>
+                  <geo>47,76667 13,36667</geo>
+               </location>
+               <location type="located_in_place">
+                  <placeName ref="pmb186">Lueg</placeName>
+                  <geo>47,754041 13,372211</geo>
+               </location>
+               <location type="located_in_place">
+                  <placeName ref="pmb44453">Franzosenschanze</placeName>
+                  <geo>47,7444 13,3852</geo>
+               </location>
+            </place>
+            <place xml:id="pmb168815">
+               <placeName>Sternwartestraße 71</placeName>
+               <location type="coords">
+                  <geo>48,23188 16,33716</geo>
+               </location>
+               <location type="located_in_place">
+                  <placeName ref="pmb68">XVIII., Währing</placeName>
+                  <geo>48,23333 16,31667</geo>
+               </location>
+               <location type="located_in_place">
+                  <placeName ref="pmb533">Währinger Cottage</placeName>
+                  <geo>48,233056 16,341944</geo>
+               </location>
+               <location type="located_in_place">
+                  <placeName ref="pmb150">Sternwartestraße</placeName>
+                  <geo>48,23099349198 16,340117830625</geo>
+               </location>
+            </place>
+            <place xml:id="pmb252271">
+               <placeName>Waldhof, Dependance des Südbahnhotels Semmering</placeName>
+               <location type="coords">
+                  <geo>47,64618171 15,8246089</geo>
+               </location>
+               <location type="located_in_place">
+                  <placeName ref="pmb189">Semmering</placeName>
+                  <geo>47,64224 15,8241</geo>
+               </location>
+            </place>
+            <place xml:id="pmb234454">
+               <placeName>Lichtenfelsgasse 7</placeName>
+               <location type="coords">
+                  <geo>48,209934 16,356392</geo>
+               </location>
+               <location type="located_in_place">
+                  <placeName ref="pmb51">I., Innere Stadt</placeName>
+                  <geo>48,20769 16,37049</geo>
+               </location>
+               <location type="located_in_place">
+                  <placeName ref="pmb95">Lichtenfelsgasse</placeName>
+                  <geo>48,210037490674 16,357104381105</geo>
+               </location>
+            </place>
             <place xml:id="pmb33">
                <placeName>St. Gilgen</placeName>
                <placeName type="legacy-name-merge">Sankt Gilgen</placeName>
@@ -308,38 +385,6 @@
                <location type="located_in_place">
                   <placeName ref="pmb429">Salzkammergut</placeName>
                   <geo>47,75 13,5</geo>
-               </location>
-            </place>
-            <place xml:id="pmb50">
-               <placeName>Wien</placeName>
-               <placeName type="ort_fruherer-name">K.K. Reichshaupt- und Residenzstadt Wien</placeName>
-               <placeName type="alternative-name">Bécs</placeName>
-               <placeName type="alternative-name">Land Wien</placeName>
-               <placeName type="alternative-name">Vídeň</placeName>
-               <placeName type="alternative-name">Wenia</placeName>
-               <placeName type="alternative-name">Beč</placeName>
-               <placeName type="ort_fruherer-name">Vindobona</placeName>
-               <placeName type="alternative-name">Vienna</placeName>
-               <location type="coords">
-                  <geo>48,208333 16,373056</geo>
-               </location>
-               <location type="located_in_place">
-                  <placeName ref="pmb41240">Österreich</placeName>
-                  <geo>47,33333 13,33333</geo>
-               </location>
-               <location type="located_in_place">
-                  <placeName ref="pmb235218">Windmühlhöhe</placeName>
-                  <geo>48,24077 16,32092</geo>
-               </location>
-            </place>
-            <place xml:id="pmb95">
-               <placeName>Lichtenfelsgasse</placeName>
-               <location type="coords">
-                  <geo>48,210037490674 16,357104381105</geo>
-               </location>
-               <location type="located_in_place">
-                  <placeName ref="pmb51">I., Innere Stadt</placeName>
-                  <geo>48,20769 16,37049</geo>
                </location>
             </place>
          </listPlace>

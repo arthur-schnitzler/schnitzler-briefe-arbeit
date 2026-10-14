@@ -1,11 +1,15 @@
-<?xml version='1.0' encoding='UTF-8'?>
+<?xml version="1.0" encoding="UTF-8"?>
 <?xml-model href="../meta/schnitzler-briefe-schematron.sch" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
-<TEI xmlns="http://www.tei-c.org/ns/1.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.tei-c.org/ns/1.0 ../meta/schnitzler-briefe-schema.xsd" xml:id="L02062" xml:base="https://id.acdh.oeaw.ac.at/schnitzler/schnitzler-briefe/editions">
+<TEI xmlns="http://www.tei-c.org/ns/1.0"
+     xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+     xsi:schemaLocation="http://www.tei-c.org/ns/1.0 ../meta/schnitzler-briefe-schema.xsd"
+     xml:id="L02062"
+     xml:base="https://id.acdh.oeaw.ac.at/schnitzler/schnitzler-briefe/editions">
    <teiHeader>
       <fileDesc>
          <titleStmt>
             <title level="s">Arthur Schnitzler: Briefwechsel mit Autorinnen und Autoren</title>
-            <title level="a">Peter Altenberg an Arthur Schnitzler, [10.? 5. 1912]</title>
+            <title level="a">Peter Altenberg an Arthur Schnitzler, [zwischen 10. und 31. 5. 1912]</title>
             <author ref="#pmb2147">Altenberg, Peter</author>
             <editor>
                <name>Müller, Martin Anton</name>
@@ -114,22 +118,30 @@
          <correspDesc>
             <correspAction type="sent">
                <persName ref="#pmb2147">Altenberg, Peter</persName>
-               <date when="1912-05-10" n="01">[10.? 5. 1912]</date>
-               <placeName ref="#pmb189">Semmering</placeName>
+               <date notBefore="1912-05-10" notAfter="1912-05-31" n="01">[zwischen 10. und 31. 5. 1912]</date>
+               <placeName ref="#pmb204">Hotel Panhans</placeName>
             </correspAction>
             <correspAction type="received">
                <persName ref="#pmb2121">Schnitzler, Arthur</persName>
-               <date evidence="conjecture" notBefore="1912-05-10" notAfter="1912-05-12">[10. 5. 1912
-                  – 14. 5. 1912?]</date>
-               <placeName ref="#pmb189">Semmering</placeName>
+               <date evidence="conjecture" notBefore="1912-05-10" notAfter="1912-05-30">[10. 5. 1912
+                  – 30. 5. 1912?]</date>
+               <placeName ref="#pmb168815" evidence="conjecture">Sternwartestraße 71</placeName>
             </correspAction>
-            <correspContext><ref type="belongsToCorrespondence" target="correspondence_2147">Altenberg, Peter</ref>
+            <correspContext>
+               <ref type="belongsToCorrespondence" target="correspondence_2147">Altenberg, Peter</ref>
                <ref subtype="previous_letter" type="withinCollection" target="L02060">Bahr an Schnitzler, 27. 4. 1912</ref>
                <ref subtype="next_letter" type="withinCollection" target="L04016">Plessner an Schnitzler, 10. 5. 1912</ref>
-               <ref subtype="previous_letter" type="withinCorrespondence" source="correspondence_2147" target="L02061">Altenberg an Schnitzler, [zwischen April und Oktober
+               <ref subtype="previous_letter"
+                    type="withinCorrespondence"
+                    source="correspondence_2147"
+                    target="L02061">Altenberg an Schnitzler, [zwischen April und Oktober
                   1912]</ref>
-               <ref subtype="next_letter" type="withinCorrespondence" source="correspondence_2147" target="L02094">Altenberg an Schnitzler, [7. 11. 1912]</ref>
-            </correspContext></correspDesc>
+               <ref subtype="next_letter"
+                    type="withinCorrespondence"
+                    source="correspondence_2147"
+                    target="L02094">Altenberg an Schnitzler, [7. 11. 1912]</ref>
+            </correspContext>
+         </correspDesc>
       </profileDesc>
       <revisionDesc status="approved">
          <change who="GHS" when="2018-09-01">Angelegt</change>
@@ -138,6 +150,7 @@
          <change who="GHS" when="2019-07-19">facs aktualisiert, korrigiert, finalisiert</change>
          <change who="MAM" when="2021-03-19">Wieder geöffnet. Der Briefkopf ergänzt</change>
          <change who="MAM" when="2021-04-14">Durchsicht</change>
+         <change who="MAM" when="2026-10-14">Datierung überarbeitet</change>
       </revisionDesc>
    </teiHeader>
    <facsimile>
@@ -258,10 +271,8 @@
                </rs>« in ſeinem <anchor type="commentary" xml:id="K_L02062-1"/>neuen Buche<note type="commentary" corresp="K_L02062-1">
                   <rs ref="#pmb2121" type="person">Schnitzler</rs> hatte am <ref type="schnitzler-tagebuch" subtype="date-only" target="1912-05-06"/>
                   sein erstes Exemplar von <rs type="work" ref="#pmb32816">Masken und Wunder. Novellen</rs> in der Hand. Da er im <date>Mai</date> keinen Aufenthalt
-                  am <rs ref="#pmb189" type="place">Semmering</rs> im <rs ref="#pmb33243" type="work">Tagebuch</rs> erwähnt, bietet sich nur die Reise vom
-                  <ref type="schnitzler-tagebuch" target="1912-05-10" subtype="date-only"/> bis zum <ref type="schnitzler-tagebuch" target="1912-05-11" subtype="date-only"/> nach <rs ref="#pmb873" type="place">Triest</rs> an, auf
-                  der er den <rs ref="#pmb189" type="place">Semmering</rs> passierte und
-                  möglicherweise Zwischenstation eingelegt hatte und ein Exemplar »<quote>an Tisch</quote>« überbringen ließ.</note>: »<rs ref="#pmb32816" type="work">
+                  am <rs ref="#pmb189" type="place">Semmering</rs> im <rs ref="#pmb33243" type="work">Tagebuch</rs> erwähnt, ist
+                  unklar, auf welchem Weg er das Buch »<quote>an Tisch</quote>« bringen ließ.</note>: »<rs ref="#pmb32816" type="work">
                   <hi n="1" rend="underline">
                      <hi rend="latintype">Masken und Wunder</hi>
                   </hi>
@@ -474,22 +485,6 @@
             </bibl>
          </listBibl>
          <listPlace>
-            <place xml:id="pmb189" ana="comment">
-               <placeName>Semmering</placeName>
-               <placeName type="alternative-name">Gemeinde Semmering</placeName>
-               <placeName type="alternative-name">Semmering-Semmering-Kurort</placeName>
-               <placeName type="alternative-name">Kurort Semmering</placeName>
-               <placeName type="alternative-name">Semmering-Kurort</placeName>
-               <placeName type="alternative-name">Heilklimatischer Höhenluftkurort Semmering</placeName>
-               <placeName type="alternative-name">Semmering- Kurort Semmering</placeName>
-               <location type="coords">
-                  <geo>47,64224 15,8241</geo>
-               </location>
-               <location type="located_in_place">
-                  <placeName ref="pmb41240">Österreich</placeName>
-                  <geo>47,33333 13,33333</geo>
-               </location>
-            </place>
             <place xml:id="pmb204">
                <placeName>Hotel Panhans</placeName>
                <location type="coords">
@@ -498,6 +493,24 @@
                <location type="located_in_place">
                   <placeName ref="pmb189">Semmering</placeName>
                   <geo>47,64224 15,8241</geo>
+               </location>
+            </place>
+            <place xml:id="pmb168815">
+               <placeName>Sternwartestraße 71</placeName>
+               <location type="coords">
+                  <geo>48,23188 16,33716</geo>
+               </location>
+               <location type="located_in_place">
+                  <placeName ref="pmb68">XVIII., Währing</placeName>
+                  <geo>48,23333 16,31667</geo>
+               </location>
+               <location type="located_in_place">
+                  <placeName ref="pmb533">Währinger Cottage</placeName>
+                  <geo>48,233056 16,341944</geo>
+               </location>
+               <location type="located_in_place">
+                  <placeName ref="pmb150">Sternwartestraße</placeName>
+                  <geo>48,23099349198 16,340117830625</geo>
                </location>
             </place>
             <place xml:id="pmb634">
@@ -630,15 +643,20 @@
                   <geo>47,00016 8,01427</geo>
                </location>
             </place>
-            <place xml:id="pmb873" ana="comment">
-               <placeName>Triest</placeName>
-               <placeName type="alternative-name">Trieste</placeName>
+            <place xml:id="pmb189" ana="comment">
+               <placeName>Semmering</placeName>
+               <placeName type="alternative-name">Gemeinde Semmering</placeName>
+               <placeName type="alternative-name">Semmering-Semmering-Kurort</placeName>
+               <placeName type="alternative-name">Kurort Semmering</placeName>
+               <placeName type="alternative-name">Semmering-Kurort</placeName>
+               <placeName type="alternative-name">Heilklimatischer Höhenluftkurort Semmering</placeName>
+               <placeName type="alternative-name">Semmering- Kurort Semmering</placeName>
                <location type="coords">
-                  <geo>45,66667 13,76667</geo>
+                  <geo>47,64224 15,8241</geo>
                </location>
                <location type="located_in_place">
-                  <placeName ref="pmb40306">Italien</placeName>
-                  <geo>42,83333 12,83333</geo>
+                  <placeName ref="pmb41240">Österreich</placeName>
+                  <geo>47,33333 13,33333</geo>
                </location>
             </place>
          </listPlace>
