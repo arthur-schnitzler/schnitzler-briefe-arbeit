@@ -2751,7 +2751,9 @@
          </xsl:otherwise>
       </xsl:choose>
       <xsl:if test="$analytic/tei:editor">
+         <xsl:text> </xsl:text>
          <xsl:value-of select="foo:herausgeber-ordnen($analytic/tei:editor)"/>
+         <xsl:text>.</xsl:text>
       </xsl:if>
       <xsl:if test="$analytic/tei:respStmt">
          <!-- Der Titel schließt bereits mit Punkt (oder !/?) ab -->
