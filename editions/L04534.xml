@@ -1,6 +1,10 @@
-<?xml version='1.0' encoding='UTF-8'?>
+<?xml version="1.0" encoding="UTF-8"?>
 <?xml-model href="../meta/schnitzler-briefe-schematron.sch" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
-<TEI xmlns="http://www.tei-c.org/ns/1.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.tei-c.org/ns/1.0 ../meta/schnitzler-briefe-schema.xsd" xml:base="https://id.acdh.oeaw.ac.at/schnitzler/schnitzler-briefe/editions" xml:id="L04534">
+<TEI xmlns="http://www.tei-c.org/ns/1.0"
+     xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+     xsi:schemaLocation="http://www.tei-c.org/ns/1.0 ../meta/schnitzler-briefe-schema.xsd"
+     xml:base="https://id.acdh.oeaw.ac.at/schnitzler/schnitzler-briefe/editions"
+     xml:id="L04534">
    <teiHeader>
       <fileDesc>
          <titleStmt>
@@ -83,7 +87,7 @@
                               <extent>
                                  <measure unit="seite" quantity="2"/>
                                  <measure unit="blatt" quantity="1"/>
-                                 <measure unit="zeichenanzahl" quantity="1714"/>
+                                 <measure unit="zeichenanzahl" quantity="1716"/>
                               </extent>
                            </supportDesc>
                         </objectDesc>
@@ -95,6 +99,9 @@
                               <desc>Vermerk: »<quote>
                                     <hi rend="latintype">Rilke</hi>
                                  </quote>«</desc>
+                           </incident>
+                           <incident type="receiver" rend="roter-buntstift">
+                              <desc>eine Unterstreichung</desc>
                            </incident>
                         </additions>
                      </physDesc>
@@ -131,20 +138,27 @@
             <correspAction type="sent">
                <persName ref="#pmb9531">Rilke, Rainer Maria</persName>
                <date notBefore="1896-04-01" notAfter="1896-04-10" n="02">[Anfang?] April 1896</date>
-               <placeName ref="#pmb652" evidence="conjecture">Prag</placeName>
+               <placeName ref="#pmb340520">Vodičkova 15B</placeName>
             </correspAction>
             <correspAction type="received">
                <persName ref="#pmb2121">Schnitzler, Arthur</persName>
-               <placeName ref="#pmb50" evidence="conjecture">Wien</placeName>
+               <date evidence="conjecture" notBefore="1896-04-02" notAfter="1896-04-11">[2. 4. 1896 – 11. 4. 1896?]</date>
+               <placeName ref="#pmb168934" evidence="conjecture">Frankgasse 1</placeName>
             </correspAction>
-            <correspContext><ref type="belongsToCorrespondence" target="correspondence_9531">Rilke, Rainer Maria</ref>
+            <correspContext>
+               <ref type="belongsToCorrespondence" target="correspondence_9531">Rilke, Rainer Maria</ref>
                <ref subtype="previous_letter" type="withinCollection" target="L02769">Goldmann an Schnitzler, 1. 4. [1896]</ref>
                <ref subtype="next_letter" type="withinCollection" target="L04539">Rilke an Schnitzler, 1. 4. 1896</ref>
-               <ref subtype="next_letter" type="withinCorrespondence" source="correspondence_9531" target="L04539">Rilke an Schnitzler, 1. 4. 1896</ref>
-            </correspContext></correspDesc>
+               <ref subtype="next_letter"
+                    type="withinCorrespondence"
+                    source="correspondence_9531"
+                    target="L04539">Rilke an Schnitzler, 1. 4. 1896</ref>
+            </correspContext>
+         </correspDesc>
       </profileDesc>
-      <revisionDesc status="proposed">
+      <revisionDesc status="approved">
          <change who="MAM" when="2026-08-28">Export aus Transkribus</change>
+         <change who="SJ" when="2026-10-14">Durchsicht</change>
       </revisionDesc>
    </teiHeader>
    <facsimile>
@@ -207,9 +221,11 @@
                </hi> an werden die »<hi rend="latintype">
                   <rs type="work" ref="#pmb340524">Wegwarten</rs>
                </hi>« Organ eines Bundes »<hi rend="latintype">Moderner</hi>
+               <space unit="chars" quantity="1"/>
                <hi rend="latintype">Fantasie Künstler</hi>«, oder wie ich den Bund nennen werde. Die
                gemeinſchaftliche Idee der Mitglieder iſt: Modernes Schaffen, Unterwerfung unter die
                Macht der »Stimmung«, der <hi rend="underline" n="1">intimen</hi>
+               <space unit="chars" quantity="1"/>
                <hi rend="latintype">fantasie</hi>vollen Sti<c rendition="#gemination-m"/>ung! –</p>
             <p>Mitglieder ſind <hi rend="latintype">Dichter</hi> und auch bildende <hi rend="latintype">Künstler</hi>. Wenn Sie, Herr <hi rend="latintype">Doctor</hi>,
                dieſer Idee, dieſem Leitmotiv nicht ferne ſtehen, dann werde ich Sie von dem
@@ -331,6 +347,34 @@
             </bibl>
          </listBibl>
          <listPlace>
+            <place xml:id="pmb340520">
+               <placeName>Vodičkova 15B</placeName>
+               <location type="coords">
+                  <geo>50,080264 14,423297</geo>
+               </location>
+               <location type="located_in_place">
+                  <placeName ref="pmb51737">Vodičkova</placeName>
+                  <geo>50,08054451186242 14,423749627149396</geo>
+               </location>
+               <location type="located_in_place">
+                  <placeName ref="pmb652">Prag</placeName>
+                  <geo>50,08333 14,46667</geo>
+               </location>
+            </place>
+            <place xml:id="pmb168934">
+               <placeName>Frankgasse 1</placeName>
+               <location type="coords">
+                  <geo>48,21533 16,35736</geo>
+               </location>
+               <location type="located_in_place">
+                  <placeName ref="pmb59">IX., Alsergrund</placeName>
+                  <geo>48,22387 16,35641</geo>
+               </location>
+               <location type="located_in_place">
+                  <placeName ref="pmb397">Frankgasse</placeName>
+                  <geo>48,215516628628 16,356475515829</geo>
+               </location>
+            </place>
             <place xml:id="pmb652">
                <placeName>Prag</placeName>
                <placeName type="alternative-name">Hauptstadt Prag</placeName>
@@ -345,42 +389,6 @@
                <location type="located_in_place">
                   <placeName ref="pmb43430">Tschechien</placeName>
                   <geo>49,75 15,0</geo>
-               </location>
-            </place>
-            <place xml:id="pmb50">
-               <placeName>Wien</placeName>
-               <placeName type="ort_fruherer-name">K.K. Reichshaupt- und Residenzstadt Wien</placeName>
-               <placeName type="alternative-name">Bécs</placeName>
-               <placeName type="alternative-name">Land Wien</placeName>
-               <placeName type="alternative-name">Vídeň</placeName>
-               <placeName type="alternative-name">Wenia</placeName>
-               <placeName type="alternative-name">Beč</placeName>
-               <placeName type="ort_fruherer-name">Vindobona</placeName>
-               <placeName type="alternative-name">Vienna</placeName>
-               <location type="coords">
-                  <geo>48,208333 16,373056</geo>
-               </location>
-               <location type="located_in_place">
-                  <placeName ref="pmb41240">Österreich</placeName>
-                  <geo>47,33333 13,33333</geo>
-               </location>
-               <location type="located_in_place">
-                  <placeName ref="pmb235218">Windmühlhöhe</placeName>
-                  <geo>48,24077 16,32092</geo>
-               </location>
-            </place>
-            <place xml:id="pmb340520">
-               <placeName>Vodičkova 15B</placeName>
-               <location type="coords">
-                  <geo>50,080264 14,423297</geo>
-               </location>
-               <location type="located_in_place">
-                  <placeName ref="pmb51737">Vodičkova</placeName>
-                  <geo>50,08054451186242 14,423749627149396</geo>
-               </location>
-               <location type="located_in_place">
-                  <placeName ref="pmb652">Prag</placeName>
-                  <geo>50,08333 14,46667</geo>
                </location>
             </place>
          </listPlace>

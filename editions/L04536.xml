@@ -1,6 +1,10 @@
-<?xml version='1.0' encoding='UTF-8'?>
+<?xml version="1.0" encoding="UTF-8"?>
 <?xml-model href="../meta/schnitzler-briefe-schematron.sch" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
-<TEI xmlns="http://www.tei-c.org/ns/1.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.tei-c.org/ns/1.0 ../meta/schnitzler-briefe-schema.xsd" xml:base="https://id.acdh.oeaw.ac.at/schnitzler/schnitzler-briefe/editions" xml:id="L04536">
+<TEI xmlns="http://www.tei-c.org/ns/1.0"
+     xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+     xsi:schemaLocation="http://www.tei-c.org/ns/1.0 ../meta/schnitzler-briefe-schema.xsd"
+     xml:base="https://id.acdh.oeaw.ac.at/schnitzler/schnitzler-briefe/editions"
+     xml:id="L04536">
    <teiHeader>
       <fileDesc>
          <titleStmt>
@@ -130,22 +134,31 @@
             <correspAction type="sent">
                <persName ref="#pmb9531">Rilke, Rainer Maria</persName>
                <date when="1899-03-30" n="01">30. 3. 1899</date>
-               <placeName ref="#pmb61048">Schmargendorf</placeName>
+               <placeName ref="#pmb340535">Villa Waldfrieden</placeName>
             </correspAction>
             <correspAction type="received">
                <persName ref="#pmb2121">Schnitzler, Arthur</persName>
                <date evidence="conjecture" notBefore="1899-03-31" notAfter="1899-04-04">[31. 3. 1899 – 4. 4. 1899?]</date>
-               <placeName ref="#pmb168934" evidence="conjecture">Wien</placeName>
+               <placeName ref="#pmb168934" evidence="conjecture">Frankgasse 1</placeName>
             </correspAction>
-            <correspContext><ref type="belongsToCorrespondence" target="correspondence_9531">Rilke, Rainer Maria</ref>
+            <correspContext>
+               <ref type="belongsToCorrespondence" target="correspondence_9531">Rilke, Rainer Maria</ref>
                <ref subtype="previous_letter" type="withinCollection" target="L00911">Hofmannsthal an Schnitzler, 26. 3. 1899</ref>
                <ref subtype="next_letter" type="withinCollection" target="L02871">Goldmann an Schnitzler, 31. 3. [1899]</ref>
-               <ref subtype="previous_letter" type="withinCorrespondence" source="correspondence_9531" target="L04539">Rilke an Schnitzler, 1. 4. 1896</ref>
-               <ref subtype="next_letter" type="withinCorrespondence" source="correspondence_9531" target="L04341">Schnitzler an Rilke, 13. 4. 1899</ref>
-            </correspContext></correspDesc>
+               <ref subtype="previous_letter"
+                    type="withinCorrespondence"
+                    source="correspondence_9531"
+                    target="L04539">Rilke an Schnitzler, 1. 4. 1896</ref>
+               <ref subtype="next_letter"
+                    type="withinCorrespondence"
+                    source="correspondence_9531"
+                    target="L04341">Schnitzler an Rilke, 13. 4. 1899</ref>
+            </correspContext>
+         </correspDesc>
       </profileDesc>
-      <revisionDesc status="proposed">
+      <revisionDesc status="approved">
          <change who="MAM" when="2026-08-28">Export aus Transkribus</change>
+         <change who="SJ" when="2026-10-14">Durchsicht</change>
       </revisionDesc>
    </teiHeader>
    <facsimile>
@@ -173,7 +186,7 @@
                      <rs type="place" ref="#pmb340535">Villa Waldfrieden</rs>
                   </hi>
                </seg>
-               <dateline>am <date>30. März. 99</date>.</dateline>
+               <dateline>am <date>30. <hi rend="latintype">märz</hi>. 99</date>.</dateline>
                <salute>Sehr verehrter lieber Herr Doctor,</salute>
             </opener>
             <p>wie ungeladene Gäſte, Ihrer Güte aufs Wort glaubend, ſo ſind meine beiden <rs type="work" ref="#pmb340532 #pmb340529" subtype="implied">Prosabücher</rs> zu
@@ -185,6 +198,8 @@
                und täglich iſt es gewachſen an Macht und Muth.</p>
             <p>Und nun iſt es ſoweit, daſs ich meine Schande nichtmehr verbergen kann<c rendition="#dots" n="3"/>
                <space unit="chars" quantity="1"/>
+            </p>
+            <p>
                <pb facs="MS-SCHNITZLER-B-00084-000-00008-1"/>Irgendein Vertrauen muſs ich zu Ihnen
                haben, irgendwie die kurze Stunde ausbreiten und ihre Falten breitſtreichen, und mit
                mehreren Farben den Contur dieser lieben Erinnerung füllen: Und darum geb’ ich Ihnen
@@ -206,6 +221,7 @@
                <rs type="event" ref="#pmb207041" subtype="implied">Premiere</rs>
                <note type="commentary" corresp="K_L04536-3">
                   <ref type="schnitzler-kultur" target="pmb207041"/>.</note>
+               <space unit="chars" quantity="1"/>
                <hi rend="latintype">
                   <rs type="person" ref="#pmb11740">Loris</rs>
                </hi>’ aus, reich und rauſchend in dieſen Verſen ſchäumend über den Rand der Zeit.</p>
@@ -254,7 +270,7 @@
                      <rs type="person" ref="#pmb11740">Hugo von
                         Hofmannsthal</rs>, <rs type="person" ref="#pmb9531">Rainer Maria Rilke</rs>:
                         <title level="m">Briefwechsel</title>. Herausgegeben von Rudolf Hirsch und
-                     Ingerborg Schnack. <pubPlace>Frankfurt am Main</pubPlace>:
+                     Ingeborg Schnack. <pubPlace>Frankfurt am Main</pubPlace>:
                         <publisher>Suhrkamp</publisher>
                      <space unit="chars" quantity="1"/>
                      <date>1978</date>, S. 41–42</bibl>.)</note> mit ungewiſſer Adreſſe –
@@ -417,6 +433,34 @@
             </bibl>
          </listBibl>
          <listPlace>
+            <place xml:id="pmb340535">
+               <placeName>Villa Waldfrieden</placeName>
+               <location type="coords">
+                  <geo>52,476027 13,287052</geo>
+               </location>
+               <location type="located_in_place">
+                  <placeName ref="pmb61048">Schmargendorf</placeName>
+                  <geo>52,47517 13,29071</geo>
+               </location>
+               <location type="located_in_place">
+                  <placeName ref="pmb168">Berlin</placeName>
+                  <geo>52,52437 13,41053</geo>
+               </location>
+            </place>
+            <place xml:id="pmb168934">
+               <placeName>Frankgasse 1</placeName>
+               <location type="coords">
+                  <geo>48,21533 16,35736</geo>
+               </location>
+               <location type="located_in_place">
+                  <placeName ref="pmb59">IX., Alsergrund</placeName>
+                  <geo>48,22387 16,35641</geo>
+               </location>
+               <location type="located_in_place">
+                  <placeName ref="pmb397">Frankgasse</placeName>
+                  <geo>48,215516628628 16,356475515829</geo>
+               </location>
+            </place>
             <place xml:id="pmb61048">
                <placeName>Schmargendorf</placeName>
                <placeName type="alternative-name">Berlin-Schmargendorf</placeName>
@@ -452,20 +496,6 @@
                <location type="located_in_place">
                   <placeName ref="pmb235218">Windmühlhöhe</placeName>
                   <geo>48,24077 16,32092</geo>
-               </location>
-            </place>
-            <place xml:id="pmb340535">
-               <placeName>Villa Waldfrieden</placeName>
-               <location type="coords">
-                  <geo>52,476027 13,287052</geo>
-               </location>
-               <location type="located_in_place">
-                  <placeName ref="pmb61048">Schmargendorf</placeName>
-                  <geo>52,47517 13,29071</geo>
-               </location>
-               <location type="located_in_place">
-                  <placeName ref="pmb168">Berlin</placeName>
-                  <geo>52,52437 13,41053</geo>
                </location>
             </place>
             <place xml:id="pmb652">
