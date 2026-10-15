@@ -1,6 +1,10 @@
-<?xml version='1.0' encoding='UTF-8'?>
+<?xml version="1.0" encoding="UTF-8"?>
 <?xml-model href="../meta/schnitzler-briefe-schematron.sch" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
-<TEI xmlns="http://www.tei-c.org/ns/1.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.tei-c.org/ns/1.0 ../meta/schnitzler-briefe-schema.xsd" xml:base="https://id.acdh.oeaw.ac.at/schnitzler/schnitzler-briefe/editions" xml:id="L04399">
+<TEI xmlns="http://www.tei-c.org/ns/1.0"
+     xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+     xsi:schemaLocation="http://www.tei-c.org/ns/1.0 ../meta/schnitzler-briefe-schema.xsd"
+     xml:base="https://id.acdh.oeaw.ac.at/schnitzler/schnitzler-briefe/editions"
+     xml:id="L04399">
    <teiHeader>
       <fileDesc>
          <titleStmt>
@@ -181,7 +185,7 @@
             <correspAction type="sent">
                <persName ref="#pmb9531">Rilke, Rainer Maria</persName>
                <date when="1901-06-24" n="02">24. 6. 1901</date>
-               <placeName ref="#pmb258929">Westerwede</placeName>
+               <placeName ref="#pmb364288">Westerweder Straße 12</placeName>
             </correspAction>
             <correspAction type="in_transit">
                <placeName ref="#pmb168934">Frankgasse 1</placeName>
@@ -191,13 +195,21 @@
                <date notBefore="1901-06-26" notAfter="1901-07-04">[zwischen 26. 6. 1901 und 4. 7. 1901]</date>
                <placeName ref="#pmb212" evidence="conjecture">St. Anton am Arlberg</placeName>
             </correspAction>
-            <correspContext><ref type="belongsToCorrespondence" target="correspondence_9531">Rilke, Rainer Maria</ref>
+            <correspContext>
+               <ref type="belongsToCorrespondence" target="correspondence_9531">Rilke, Rainer Maria</ref>
                <ref subtype="previous_letter" type="withinCollection" target="L01132">Hofmannsthal an Schnitzler, 24. 6. 1901</ref>
                <ref subtype="next_letter" type="withinCollection" target="L01133">Schnitzler an Beer-Hofmann, 25. 6. 1901</ref>
-               <ref subtype="previous_letter" type="withinCorrespondence" source="correspondence_9531" target="L04346">Schnitzler an Rilke, [zwischen 18. 5. und
+               <ref subtype="previous_letter"
+                    type="withinCorrespondence"
+                    source="correspondence_9531"
+                    target="L04346">Schnitzler an Rilke, [zwischen 18. 5. und
                   20. 6. 1901?]</ref>
-               <ref subtype="next_letter" type="withinCorrespondence" source="correspondence_9531" target="L04343">Schnitzler an Rilke, 4. 7. 1901</ref>
-            </correspContext></correspDesc>
+               <ref subtype="next_letter"
+                    type="withinCorrespondence"
+                    source="correspondence_9531"
+                    target="L04343">Schnitzler an Rilke, 4. 7. 1901</ref>
+            </correspContext>
+         </correspDesc>
       </profileDesc>
       <revisionDesc status="proposed">
          <change who="MAM" when="2026-08-28">Export aus Transkribus</change>
@@ -256,7 +268,7 @@
                </hi>« etwas zum Ausdruck, was man in <hi rend="latintype">
                   <rs type="place" ref="#pmb41240">Oesterreich</rs>
                </hi> ſchwer verträgt: eine Verurtheilung jeder Lebensſpielerei und ein<del rend="strikethrough">e</del> Bedürfnis nach Ernſt, welches den bevorzugten Ständen
-               jedesmal, wo es auch auftreten mag, als Gefahr er <pb facs="MS-SCHNITZLER-B-00084-000-00010-2"/>ſcheint und als Angriff. Wenn eine
+               jedesmal, wo es auch auftreten mag, als Gefahr er<pb facs="MS-SCHNITZLER-B-00084-000-00010-2"/>ſcheint und als Angriff. Wenn eine
                Gemeinſchaft, die ſich ſo eng faſst und ſo ängstlich ſchließt, ſchließlich merkt,
                daſs man außerhalb ihres Kreiſes ſteht und das laut erklärt, iſt das für ſie auch ein
                Fortſchritt, eine Zunahme an Einſicht, über welche jeder unbetheiligte Beobachter
@@ -446,32 +458,28 @@
             </bibl>
          </listBibl>
          <listPlace>
-            <place xml:id="pmb258929">
-               <placeName>Westerwede</placeName>
+            <place xml:id="pmb364288">
+               <placeName>Westerweder Straße 12</placeName>
                <location type="coords">
+                  <geo>53,20177706 8,9298190066</geo>
+               </location>
+               <location type="located_in_place">
+                  <placeName ref="pmb258929">Westerwede</placeName>
                   <geo>53,19852 8,92013</geo>
                </location>
             </place>
-            <place xml:id="pmb50">
-               <placeName>Wien</placeName>
-               <placeName type="ort_fruherer-name">K.K. Reichshaupt- und Residenzstadt Wien</placeName>
-               <placeName type="alternative-name">Bécs</placeName>
-               <placeName type="alternative-name">Land Wien</placeName>
-               <placeName type="alternative-name">Vídeň</placeName>
-               <placeName type="alternative-name">Wenia</placeName>
-               <placeName type="alternative-name">Beč</placeName>
-               <placeName type="ort_fruherer-name">Vindobona</placeName>
-               <placeName type="alternative-name">Vienna</placeName>
+            <place xml:id="pmb168934">
+               <placeName>Frankgasse 1</placeName>
                <location type="coords">
-                  <geo>48,208333 16,373056</geo>
+                  <geo>48,21533 16,35736</geo>
                </location>
                <location type="located_in_place">
-                  <placeName ref="pmb41240">Österreich</placeName>
-                  <geo>47,33333 13,33333</geo>
+                  <placeName ref="pmb59">IX., Alsergrund</placeName>
+                  <geo>48,22387 16,35641</geo>
                </location>
                <location type="located_in_place">
-                  <placeName ref="pmb235218">Windmühlhöhe</placeName>
-                  <geo>48,24077 16,32092</geo>
+                  <placeName ref="pmb397">Frankgasse</placeName>
+                  <geo>48,215516628628 16,356475515829</geo>
                </location>
             </place>
             <place xml:id="pmb212">
@@ -485,6 +493,12 @@
                <location type="located_in_place">
                   <placeName ref="pmb41240">Österreich</placeName>
                   <geo>47,33333 13,33333</geo>
+               </location>
+            </place>
+            <place xml:id="pmb258929">
+               <placeName>Westerwede</placeName>
+               <location type="coords">
+                  <geo>53,19852 8,92013</geo>
                </location>
             </place>
             <place xml:id="pmb41240">
