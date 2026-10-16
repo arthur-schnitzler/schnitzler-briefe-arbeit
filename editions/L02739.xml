@@ -1,6 +1,10 @@
-<?xml version='1.0' encoding='UTF-8'?>
+<?xml version="1.0" encoding="UTF-8"?>
 <?xml-model href="../meta/schnitzler-briefe-schematron.sch" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
-<TEI xmlns="http://www.tei-c.org/ns/1.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.tei-c.org/ns/1.0 ../meta/schnitzler-briefe-schema.xsd" xml:id="L02739" xml:base="https://id.acdh.oeaw.ac.at/schnitzler/schnitzler-briefe/editions">
+<TEI xmlns="http://www.tei-c.org/ns/1.0"
+     xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+     xsi:schemaLocation="http://www.tei-c.org/ns/1.0 ../meta/schnitzler-briefe-schema.xsd"
+     xml:id="L02739"
+     xml:base="https://id.acdh.oeaw.ac.at/schnitzler/schnitzler-briefe/editions">
    <teiHeader>
       <fileDesc>
          <titleStmt>
@@ -114,20 +118,28 @@
             <correspAction type="sent">
                <persName ref="#pmb11485">Goldmann, Paul</persName>
                <date when="1895-07-06" n="01">6. 7. [1895]</date>
-               <placeName ref="#pmb182">Paris</placeName>
+               <placeName ref="#pmb42671">Paris</placeName>
             </correspAction>
             <correspAction type="received">
                <persName ref="#pmb2121">Schnitzler, Arthur</persName>
                <date evidence="conjecture" notBefore="1895-07-07" notAfter="1895-07-11">[7. 7. 1895
                   – 11. 7. 1895?]</date>
-               <placeName ref="#pmb168934">Frankgasse 1</placeName>
+               <placeName ref="#pmb772" evidence="conjecture">Mariánské Lázně</placeName>
             </correspAction>
-            <correspContext><ref type="belongsToCorrespondence" target="correspondence_11485">Goldmann, Paul</ref>
+            <correspContext>
+               <ref type="belongsToCorrespondence" target="correspondence_11485">Goldmann, Paul</ref>
                <ref subtype="previous_letter" type="withinCollection" target="L03932">Schnitzler an Herzl, 30. 6. 1895</ref>
                <ref subtype="next_letter" type="withinCollection" target="L00460">Beer-Hofmann an Schnitzler, 9. 7. 1895</ref>
-               <ref subtype="previous_letter" type="withinCorrespondence" source="correspondence_11485" target="L02738">Goldmann an Schnitzler, 29. 6. [1895]</ref>
-               <ref subtype="next_letter" type="withinCorrespondence" source="correspondence_11485" target="L02740">Goldmann an Schnitzler, 9. 7. 1895</ref>
-            </correspContext></correspDesc>
+               <ref subtype="previous_letter"
+                    type="withinCorrespondence"
+                    source="correspondence_11485"
+                    target="L02738">Goldmann an Schnitzler, 29. 6. [1895]</ref>
+               <ref subtype="next_letter"
+                    type="withinCorrespondence"
+                    source="correspondence_11485"
+                    target="L02740">Goldmann an Schnitzler, 9. 7. 1895</ref>
+            </correspContext>
+         </correspDesc>
       </profileDesc>
       <revisionDesc status="approved">
          <change who="LU" when="2022-08-16">Angelegt</change>
@@ -322,37 +334,13 @@
                   </settlement>
                </death>
             </person>
-            <person xml:id="pmb13897">
-               <persName>
-                  <forename>Henry</forename>
-                  <surname>Becque</surname>
-               </persName>
-               <birth>
-                  <date when="1837-04-09">1837-04-09</date>
-                  <settlement ref="pmb182">
-                     <placeName type="pref">Paris</placeName>
-                     <location>
-                        <geo>48,85341 2,3488</geo>
-                     </location>
-                  </settlement>
-               </birth>
-               <death>
-                  <date when="1899-05-12">1899-05-12</date>
-                  <settlement ref="pmb36749">
-                     <placeName type="pref">Neuilly-sur-Seine</placeName>
-                     <location>
-                        <geo>48,8846 2,26965</geo>
-                     </location>
-                  </settlement>
-               </death>
-            </person>
             <person xml:id="pmb2121">
                <persName>
                   <surname>Schnitzler</surname>
                   <forename>Arthur</forename>
                </persName>
                <birth>
-                  <date when="1862-05-15">15. 5. 1862</date>
+                  <date when="1862-05-15">15. 5. 1862</date>
                   <settlement ref="pmb50">
                      <placeName type="pref">Wien</placeName>
                      <location>
@@ -361,7 +349,7 @@
                   </settlement>
                </birth>
                <death>
-                  <date when="1931-10-21">21. 10. 1931</date>
+                  <date when="1931-10-21">21. 10. 1931</date>
                   <settlement ref="pmb50">
                      <placeName type="pref">Wien</placeName>
                      <location>
@@ -369,10 +357,6 @@
                      </location>
                   </settlement>
                </death>
-               <sex value="male"/>
-               <occupation ref="pmb90">Schriftsteller/Schriftstellerin</occupation>
-               <occupation ref="pmb97">Mediziner/Medizinerin</occupation>
-               <idno type="gnd">https://d-nb.info/gnd/118609807/</idno>
             </person>
             <person xml:id="pmb87771">
                <persName>
@@ -398,11 +382,29 @@
                   </settlement>
                </death>
             </person>
-            <person xml:id="pmb14842" ana="comment">
+            <person xml:id="pmb13897">
                <persName>
-                  <forename>Regina</forename>
-                  <surname>Candiani</surname>
+                  <forename>Henry</forename>
+                  <surname>Becque</surname>
                </persName>
+               <birth>
+                  <date when="1837-04-09">1837-04-09</date>
+                  <settlement ref="pmb182">
+                     <placeName type="pref">Paris</placeName>
+                     <location>
+                        <geo>48,85341 2,3488</geo>
+                     </location>
+                  </settlement>
+               </birth>
+               <death>
+                  <date when="1899-05-12">1899-05-12</date>
+                  <settlement ref="pmb36749">
+                     <placeName type="pref">Neuilly-sur-Seine</placeName>
+                     <location>
+                        <geo>48,8846 2,26965</geo>
+                     </location>
+                  </settlement>
+               </death>
             </person>
             <person xml:id="pmb2378" ana="comment">
                <persName>
@@ -424,6 +426,36 @@
                      <placeName type="pref">Wien</placeName>
                      <location>
                         <geo>48,208333 16,373056</geo>
+                     </location>
+                  </settlement>
+               </death>
+            </person>
+            <person xml:id="pmb14842" ana="implied">
+               <persName>
+                  <forename>Regina</forename>
+                  <surname>Candiani</surname>
+               </persName>
+            </person>
+            <person xml:id="pmb3739" ana="comment">
+               <persName>
+                  <forename>Lew Nikolajewitsch</forename>
+                  <surname>Tolstoi</surname>
+               </persName>
+               <birth>
+                  <date when="1828-09-09">1828-09-09</date>
+                  <settlement ref="pmb59327">
+                     <placeName type="pref">Yasnaya Polyana</placeName>
+                     <location>
+                        <geo>54,06858 37,52439</geo>
+                     </location>
+                  </settlement>
+               </birth>
+               <death>
+                  <date when="1910-11-20">1910-11-20</date>
+                  <settlement ref="pmb59329">
+                     <placeName type="pref">Lev Tolstoy</placeName>
+                     <location>
+                        <geo>53,21344 39,44604</geo>
                      </location>
                   </settlement>
                </death>
@@ -452,26 +484,26 @@
                   </settlement>
                </death>
             </person>
-            <person xml:id="pmb3739" ana="comment">
+            <person xml:id="pmb40665">
                <persName>
-                  <forename>Lew Nikolajewitsch</forename>
-                  <surname>Tolstoi</surname>
+                  <forename>Gaspard</forename>
+                  <surname>Vallette</surname>
                </persName>
                <birth>
-                  <date when="1828-09-09">1828-09-09</date>
-                  <settlement ref="pmb59327">
-                     <placeName type="pref">Yasnaya Polyana</placeName>
+                  <date when="1865-05-13">1865-05-13</date>
+                  <settlement ref="pmb40668">
+                     <placeName type="pref">Jussy</placeName>
                      <location>
-                        <geo>54,06858 37,52439</geo>
+                        <geo>46,23712 6,27913</geo>
                      </location>
                   </settlement>
                </birth>
                <death>
-                  <date when="1910-11-20">1910-11-20</date>
-                  <settlement ref="pmb59329">
-                     <placeName type="pref">Lev Tolstoy</placeName>
+                  <date when="1911-08-06">1911-08-06</date>
+                  <settlement ref="pmb40673">
+                     <placeName type="pref">La Tène</placeName>
                      <location>
-                        <geo>53,21344 39,44604</geo>
+                        <geo>47,01367 7,01648</geo>
                      </location>
                   </settlement>
                </death>
@@ -479,43 +511,28 @@
          </listPerson>
          <listBibl>
             <bibl xml:id="pmb30117">
-               <title type="main">Sterben. Novelle</title>
+               <title>Sterben. Novelle</title>
                <title type="werk_bibliografische-angabe">Neue Deutsche Rundschau, Jg. 5, H. 10–12, Oktober–Dezember 1894</title>
                <title type="legacy-name-merge">Sterben</title>
                <title type="werk_link">https://babel.hathitrust.org/cgi/pt?id=coo.31924069263006&amp;seq=325</title>
-               <author role="hat-geschaffen" ref="pmb2121">Schnitzler, Arthur</author>
+               <author ref="pmb2121" role="hat-geschaffen">Schnitzler, Arthur</author>
             </bibl>
             <bibl xml:id="pmb33243" ana="comment">
-               <title type="main">Tagebuch</title>
+               <title>Tagebuch</title>
                <title type="werk_link">https://schnitzler-tagebuch.acdh.oeaw.ac.at</title>
-               <author role="hat-geschaffen" ref="pmb2121">Schnitzler, Arthur</author>
+               <author ref="pmb2121" role="hat-geschaffen">Schnitzler, Arthur</author>
             </bibl>
             <bibl xml:id="pmb40662" ana="implied">
-               <title type="main">Mourir. Roman</title>
+               <title>Mourir. Roman</title>
                <title type="werk_link">https://babel.hathitrust.org/cgi/pt?id=mdp.39015036650417&amp;view=1up&amp;seq=201&amp;q1=schnitzler</title>
-               <author role="hat-ubersetzt" ref="pmb40665">Vallette, Gaspard</author>
-               <author role="hat-geschaffen" ref="pmb2121">Schnitzler, Arthur</author>
+               <author ref="pmb40665" role="hat-ubersetzt">Vallette, Gaspard</author>
+               <author ref="pmb2121" role="hat-geschaffen">Schnitzler, Arthur</author>
             </bibl>
          </listBibl>
          <listPlace>
-            <place xml:id="pmb168934">
-               <placeName>Frankgasse 1</placeName>
-               <location type="coords">
-                  <geo>48,21533 16,35736</geo>
-               </location>
-               <location type="located_in_place">
-                  <placeName ref="pmb59">IX., Alsergrund</placeName>
-                  <geo>48,22387 16,35641</geo>
-               </location>
-               <location type="located_in_place">
-                  <placeName ref="pmb397">Frankgasse</placeName>
-                  <geo>48,215516628628 16,356475515829</geo>
-               </location>
-            </place>
             <place xml:id="pmb182">
                <placeName>Paris</placeName>
                <placeName type="alternative-name">P'ariz</placeName>
-               <placeName type="legacy-name-merge">Paris</placeName>
                <placeName type="alternative-name">Pariž</placeName>
                <placeName type="alternative-name">Parisius</placeName>
                <placeName type="alternative-name">Île-de-France</placeName>
@@ -525,6 +542,18 @@
                <location type="located_in_place">
                   <placeName ref="pmb166">Frankreich</placeName>
                   <geo>46,0 2,0</geo>
+               </location>
+            </place>
+            <place xml:id="pmb772" ana="comment">
+               <placeName>Marienbad</placeName>
+               <placeName type="alternative-name">Mariánské Lázně</placeName>
+               <placeName type="legacy-name-merge">Výhledy [Mariánské Lázně-Úšovice]</placeName>
+               <location type="coords">
+                  <geo>49,964444 12,701944</geo>
+               </location>
+               <location type="located_in_place">
+                  <placeName ref="pmb43430">Tschechien</placeName>
+                  <geo>49,75 15,0</geo>
                </location>
             </place>
             <place xml:id="pmb42671">
@@ -537,10 +566,9 @@
                   <geo>48,85341 2,3488</geo>
                </location>
             </place>
-            <place xml:id="pmb652">
+            <place xml:id="pmb652" ana="comment">
                <placeName>Prag</placeName>
                <placeName type="alternative-name">Hauptstadt Prag</placeName>
-               <placeName type="legacy-name-merge">Prag</placeName>
                <placeName type="legacy-name-merge">Prag-Smichow</placeName>
                <placeName type="legacy-name-merge">Bohnitz bei Prag</placeName>
                <placeName type="legacy-name-merge">Prag-Dejwitz</placeName>
@@ -554,59 +582,17 @@
                   <geo>49,75 15,0</geo>
                </location>
             </place>
-            <place xml:id="pmb166" ana="comment">
-               <placeName>Frankreich</placeName>
-               <placeName type="alternative-name">France</placeName>
-               <placeName type="alternative-name">Frankreich</placeName>
-               <placeName type="legacy-name-merge">Frankreich</placeName>
-               <placeName type="legacy-name-merge">France</placeName>
+            <place xml:id="pmb842" ana="comment">
+               <placeName>Karlsbad</placeName>
+               <placeName type="alternative-name">Karlovy Vary</placeName>
+               <placeName type="legacy-name">Edlitz</placeName>
+               <placeName type="legacy-name-merge">bei Karlsbad</placeName>
                <location type="coords">
-                  <geo>46,0 2,0</geo>
+                  <geo>50,23271 12,87117</geo>
                </location>
                <location type="located_in_place">
-                  <placeName ref="pmb468">Europa</placeName>
-                  <geo>48,69096 9,14062</geo>
-               </location>
-            </place>
-            <place xml:id="pmb213" ana="comment">
-               <placeName>Bad Ischl</placeName>
-               <placeName type="legacy-name-merge">Bad Ischl</placeName>
-               <placeName type="legacy-name-merge">Bad Ischl</placeName>
-               <location type="coords">
-                  <geo>47,71109 13,61893</geo>
-               </location>
-               <location type="located_in_place">
-                  <placeName ref="pmb429">Salzkammergut</placeName>
-                  <geo>47,75 13,5</geo>
-               </location>
-            </place>
-            <place xml:id="pmb33913" ana="comment">
-               <placeName>Alter Jüdischer Friedhof</placeName>
-               <location type="coords">
-                  <geo>50,089722 14,417222</geo>
-               </location>
-               <location type="located_in_place">
-                  <placeName ref="pmb652">Prag</placeName>
-                  <geo>50,08333 14,46667</geo>
-               </location>
-            </place>
-            <place xml:id="pmb34438" ana="comment">
-               <placeName>Russland</placeName>
-               <placeName type="alternative-name">Russische Föderation</placeName>
-               <placeName type="legacy-name-merge">Russland</placeName>
-               <placeName type="alternative-name">Russian Federation</placeName>
-               <placeName type="alternative-name">Russian Soviet Federated Socialist Republic</placeName>
-               <placeName type="alternative-name">Russian Soviet Federative Socialist Republic</placeName>
-               <placeName type="alternative-name">Russian Socialist Federative Soviet Republic</placeName>
-               <placeName type="legacy-name-merge">Russia</placeName>
-               <placeName type="legacy-name-merge">Rußland</placeName>
-               <placeName type="legacy-name-merge">Russland</placeName>
-               <location type="coords">
-                  <geo>60,0 100,0</geo>
-               </location>
-               <location type="located_in_place">
-                  <placeName ref="pmb1019">Asien</placeName>
-                  <geo>29,84064 89,29688</geo>
+                  <placeName ref="pmb43430">Tschechien</placeName>
+                  <geo>49,75 15,0</geo>
                </location>
             </place>
             <place xml:id="pmb390" ana="comment">
@@ -622,8 +608,6 @@
             <place xml:id="pmb44172" ana="comment">
                <placeName>Nürnberg</placeName>
                <placeName type="alternative-name">Nürenberg</placeName>
-               <placeName type="legacy-name-merge">Nürnberg</placeName>
-               <placeName type="legacy-name">Nürnberg</placeName>
                <location type="coords">
                   <geo>49,45421 11,07752</geo>
                </location>
@@ -632,35 +616,52 @@
                   <geo>51,5 10,5</geo>
                </location>
             </place>
-            <place xml:id="pmb772" ana="comment">
-               <placeName>Marienbad</placeName>
-               <placeName type="alternative-name">Mariánské Lázně</placeName>
-               <placeName type="legacy-name-merge">Marienbad</placeName>
-               <placeName type="alternative-name">Marienbad</placeName>
-               <placeName type="legacy-name-merge">Mariánské Lázně</placeName>
-               <placeName type="legacy-name-merge">Výhledy [Mariánské Lázně-Úšovice]</placeName>
+            <place xml:id="pmb213" ana="comment">
+               <placeName>Bad Ischl</placeName>
                <location type="coords">
-                  <geo>49,964444 12,701944</geo>
+                  <geo>47,71109 13,61893</geo>
                </location>
                <location type="located_in_place">
-                  <placeName ref="pmb43430">Tschechien</placeName>
-                  <geo>49,75 15,0</geo>
+                  <placeName ref="pmb429">Salzkammergut</placeName>
+                  <geo>47,75 13,5</geo>
                </location>
             </place>
-            <place xml:id="pmb842" ana="comment">
-               <placeName>Karlsbad</placeName>
-               <placeName type="alternative-name">Karlsbad</placeName>
-               <placeName type="alternative-name">Karlovy Vary</placeName>
-               <placeName type="legacy-name">Edlitz</placeName>
-               <placeName type="legacy-name-merge">Karlovy Vary</placeName>
-               <placeName type="legacy-name-merge">bei Karlsbad</placeName>
-               <placeName type="legacy-name-merge">Karlsbad</placeName>
+            <place xml:id="pmb33913" ana="implied">
+               <placeName>Alter Jüdischer Friedhof</placeName>
                <location type="coords">
-                  <geo>50,23271 12,87117</geo>
+                  <geo>50,089722 14,417222</geo>
                </location>
                <location type="located_in_place">
-                  <placeName ref="pmb43430">Tschechien</placeName>
-                  <geo>49,75 15,0</geo>
+                  <placeName ref="pmb652">Prag</placeName>
+                  <geo>50,08333 14,46667</geo>
+               </location>
+            </place>
+            <place xml:id="pmb34438" ana="comment">
+               <placeName>Russland</placeName>
+               <placeName type="alternative-name">Russische Föderation</placeName>
+               <placeName type="alternative-name">Russian Federation</placeName>
+               <placeName type="alternative-name">Russian Soviet Federated Socialist Republic</placeName>
+               <placeName type="alternative-name">Russian Soviet Federative Socialist Republic</placeName>
+               <placeName type="alternative-name">Russian Socialist Federative Soviet Republic</placeName>
+               <placeName type="legacy-name-merge">Russia</placeName>
+               <placeName type="legacy-name-merge">Rußland</placeName>
+               <location type="coords">
+                  <geo>60,0 100,0</geo>
+               </location>
+               <location type="located_in_place">
+                  <placeName ref="pmb1019">Asien</placeName>
+                  <geo>29,84064 89,29688</geo>
+               </location>
+            </place>
+            <place xml:id="pmb166" ana="comment">
+               <placeName>Frankreich</placeName>
+               <placeName type="alternative-name">France</placeName>
+               <location type="coords">
+                  <geo>46,0 2,0</geo>
+               </location>
+               <location type="located_in_place">
+                  <placeName ref="pmb468">Europa</placeName>
+                  <geo>48,69096 9,14062</geo>
                </location>
             </place>
             <place xml:id="pmb92927" ana="implied">
@@ -694,7 +695,7 @@
                   <idno type="URL" subtype="pmb">https://pmb.acdh.oeaw.ac.at/entity/64493/</idno>
                   <idno type="URL" subtype="pmb">https://pmb.acdh.oeaw.ac.at/entity/64501/</idno>
                   <idno type="URL" subtype="pmb">https://pmb.acdh.oeaw.ac.at/entity/64503/</idno>
-                  <idno type="URL" subtype="kraus">https://www.kraus.wienbibliothek.at/legalkraus/pmb146.html</idno>
+                  <idno type="URL" subtype="www">https://www.kraus.wienbibliothek.at/legalkraus/pmb146.html</idno>
                   <idno type="URL" subtype="wikipedia">https://de.wikipedia.org/wiki/Frankfurt_am_Main</idno>
                   <idno type="URL" subtype="schnitzler-interviews">https://schnitzler-interviews.acdh.oeaw.ac.at/pmb146.html</idno>
                   <idno type="URL" subtype="schnitzler-tagebuch">https://schnitzler-tagebuch.acdh.oeaw.ac.at/pmb146.html</idno>
@@ -709,7 +710,7 @@
                   <idno type="URL" subtype="sk">https://sk.acdh.oeaw.ac.at/fa_place00004069</idno>
                   <idno type="URL" subtype="biblio">https://biblio.ub.uni-freiburg.de/sf/#pmb146</idno>
                   <idno type="URL" subtype="schnitzler-briefe">https://schnitzler-briefe.acdh.oeaw.ac.at/pmb146.html</idno>
-                  <idno type="URL" subtype="schoenberg-ue">https://www.schoenberg-ue.at/ue/places/place.2.13</idno>
+                  <idno type="URL" subtype="www">https://www.schoenberg-ue.at/ue/places/place.2.13</idno>
                </location>
                <location type="located_in_place">
                   <placeName ref="pmb144603">Redaktion der Frankfurter Zeitung</placeName>
