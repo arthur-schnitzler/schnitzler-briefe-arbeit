@@ -109,11 +109,16 @@
                <persName ref="#pmb2292">Hofmannsthal, Gerty</persName>
                <date when="1931-08-12" n="01">12. 8. 1931</date>
             </correspAction>
-            <correspAction type="received">
-               <persName ref="#pmb2121">Schnitzler, Arthur</persName>
+            <correspAction type="redirected">
                <date evidence="conjecture" notBefore="1931-08-12" notAfter="1931-08-16">[12. 8. 1931
                   – 16. 8. 1931?]</date>
                <placeName ref="#pmb168815">Sternwartestraße 71</placeName>
+            </correspAction>
+            <correspAction type="received">
+               <persName ref="#pmb2121">Schnitzler, Arthur</persName>
+               <date evidence="conjecture" notBefore="1931-08-13" notAfter="1931-08-17">[13. 8. 1931
+                  – 17. 8. 1931?]</date>
+               <placeName ref="#pmb245236" evidence="conjecture">Hotel Austria [Gmunden]</placeName>
             </correspAction>
             <correspContext>
                <ref type="belongsToCorrespondence" target="correspondence_11740">Hofmannsthal, Hugo von</ref>
@@ -151,13 +156,12 @@
                <salute>Lieber Arthur,</salute> Ihre Teilnahme hat mir so wohl getan, vielen Dank! Es
                ist ein grosser Schmerz für mich, das <anchor type="commentary" xml:id="K_L02545-1"/>
                <rs type="person" ref="#pmb27503" subtype="implied">Kinderl</rs>
-               <note type="commentary" corresp="K_L02545-1">Ihr Enkel, <rs type="person" ref="#pmb3220">Christiane Zimmers</rs> erstes Kind <rs type="person" ref="#pmb27503">Christoph</rs>, war am <date>26. 7. 1929</date> im Alter von
-                  zwei Jahren gestorben.</note> zu verlieren – es war für alle meine traurigen
-               Gedanken sonst der einzige glückliche Ruhepunkt zu wissen dass <rs type="person" ref="#pmb3220">Christiane</rs> glücklich ist und mit viel Hoffnungen begleitet man
-               so ein kleines Wesen! Seit <rs type="person" ref="#pmb3220">Christiane</rs> mit dem
-               lieben kl. <rs type="person" ref="#pmb50129">Andreas</rs> da ist, bin ich viel
-               ruhiger und wir versuchen gegenseitig unsern Kummer zu verstecken. Also nochmals Dank
-               für Ihre Freundschaft, die so wohl tut.</p>
+               <note type="commentary" corresp="K_L02545-1">Ihr Enkel <rs type="person" ref="#pmb27503">Christoph Zimmer</rs> (das erste Kind der Tochter <rs type="person" ref="#pmb3220">Christiane</rs>) war am <date>26. 7. 1929</date>
+                  im Alter von zwei Jahren gestorben.</note> zu verlieren – es war für alle meine
+               traurigen Gedanken sonst der einzige glückliche Ruhepunkt zu wissen dass <rs type="person" ref="#pmb3220">Christiane</rs> glücklich ist und mit viel Hoffnungen
+               begleitet man so ein kleines Wesen! Seit <rs type="person" ref="#pmb3220">Christiane</rs> mit dem lieben kl. <rs type="person" ref="#pmb50129">Andreas</rs>
+               da ist, bin ich viel ruhiger und wir versuchen gegenseitig unsern Kummer zu
+               verstecken. Also nochmals Dank für Ihre Freundschaft, die so wohl tut.</p>
             <closer>
                <signed>Gerty.</signed>
             </closer>
@@ -165,34 +169,6 @@
       </body>
       <back>
          <listPerson>
-            <person xml:id="pmb2121">
-               <persName>
-                  <surname>Schnitzler</surname>
-                  <forename>Arthur</forename>
-               </persName>
-               <birth>
-                  <date when="1862-05-15">15. 5. 1862</date>
-                  <settlement ref="pmb50">
-                     <placeName type="pref">Wien</placeName>
-                     <location>
-                        <geo>48,208333 16,373056</geo>
-                     </location>
-                  </settlement>
-               </birth>
-               <death>
-                  <date when="1931-10-21">21. 10. 1931</date>
-                  <settlement ref="pmb50">
-                     <placeName type="pref">Wien</placeName>
-                     <location>
-                        <geo>48,208333 16,373056</geo>
-                     </location>
-                  </settlement>
-               </death>
-               <sex value="male"/>
-               <occupation ref="pmb90">Schriftsteller/Schriftstellerin</occupation>
-               <occupation ref="pmb97">Mediziner/Medizinerin</occupation>
-               <idno type="gnd">https://d-nb.info/gnd/118609807/</idno>
-            </person>
             <person xml:id="pmb2292">
                <persName>
                   <forename>Gertrude von</forename>
@@ -219,6 +195,30 @@
                      <placeName type="pref">Paddington</placeName>
                      <location>
                         <geo>51,51558 -0,1763</geo>
+                     </location>
+                  </settlement>
+               </death>
+            </person>
+            <person xml:id="pmb2121">
+               <persName>
+                  <surname>Schnitzler</surname>
+                  <forename>Arthur</forename>
+               </persName>
+               <birth>
+                  <date when="1862-05-15">15. 5. 1862</date>
+                  <settlement ref="pmb50">
+                     <placeName type="pref">Wien</placeName>
+                     <location>
+                        <geo>48,208333 16,373056</geo>
+                     </location>
+                  </settlement>
+               </birth>
+               <death>
+                  <date when="1931-10-21">21. 10. 1931</date>
+                  <settlement ref="pmb50">
+                     <placeName type="pref">Wien</placeName>
+                     <location>
+                        <geo>48,208333 16,373056</geo>
                      </location>
                   </settlement>
                </death>
@@ -265,7 +265,7 @@
                   <date when="2003-06-21">2003-06-21</date>
                </death>
             </person>
-            <person xml:id="pmb27503" ana="comment">
+            <person xml:id="pmb27503" ana="implied">
                <persName>
                   <forename>Christoph</forename>
                   <surname>Zimmer</surname>
@@ -307,6 +307,16 @@
                <location type="located_in_place">
                   <placeName ref="pmb150">Sternwartestraße</placeName>
                   <geo>48,23099349198 16,340117830625</geo>
+               </location>
+            </place>
+            <place xml:id="pmb245236">
+               <placeName>Hotel Austria [Gmunden]</placeName>
+               <location type="coords">
+                  <geo>47,91762 13,79877</geo>
+               </location>
+               <location type="located_in_place">
+                  <placeName ref="pmb874">Gmunden</placeName>
+                  <geo>47,91839 13,79933</geo>
                </location>
             </place>
          </listPlace>
