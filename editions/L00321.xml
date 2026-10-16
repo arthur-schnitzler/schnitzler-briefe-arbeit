@@ -1,6 +1,10 @@
-<?xml version='1.0' encoding='UTF-8'?>
+<?xml version="1.0" encoding="UTF-8"?>
 <?xml-model href="../meta/schnitzler-briefe-schematron.sch" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
-<TEI xmlns="http://www.tei-c.org/ns/1.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.tei-c.org/ns/1.0 ../meta/schnitzler-briefe-schema.xsd" xml:id="L00321" xml:base="https://id.acdh.oeaw.ac.at/schnitzler/schnitzler-briefe/editions">
+<TEI xmlns="http://www.tei-c.org/ns/1.0"
+     xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+     xsi:schemaLocation="http://www.tei-c.org/ns/1.0 ../meta/schnitzler-briefe-schema.xsd"
+     xml:id="L00321"
+     xml:base="https://id.acdh.oeaw.ac.at/schnitzler/schnitzler-briefe/editions">
    <teiHeader>
       <fileDesc>
          <titleStmt>
@@ -110,13 +114,18 @@
                <persName ref="#pmb2121">Schnitzler, Arthur</persName>
                <date evidence="conjecture" notBefore="1894-05-08" notAfter="1894-05-12">[8. 5. 1894
                   – 12. 5. 1894?]</date>
-               <placeName ref="#pmb168934">Wien</placeName>
+               <placeName ref="#pmb168934">Frankgasse 1</placeName>
             </correspAction>
-            <correspContext><ref type="belongsToCorrespondence" target="correspondence_12071">Liliencron, Detlev von</ref>
+            <correspContext>
+               <ref type="belongsToCorrespondence" target="correspondence_12071">Liliencron, Detlev von</ref>
                <ref subtype="previous_letter" type="withinCollection" target="L03040">Schnitzler an Salten, [2. 5. 1894?]</ref>
                <ref subtype="next_letter" type="withinCollection" target="L03133">Salten an Schnitzler, [7.? 5. 1894]</ref>
-               <ref subtype="next_letter" type="withinCorrespondence" source="correspondence_12071" target="L00626">Liliencron, Salzer an Schnitzler, 7. 12. 1896</ref>
-            </correspContext></correspDesc>
+               <ref subtype="next_letter"
+                    type="withinCorrespondence"
+                    source="correspondence_12071"
+                    target="L00626">Liliencron, Salzer an Schnitzler, 7. 12. 1896</ref>
+            </correspContext>
+         </correspDesc>
       </profileDesc>
       <revisionDesc status="approved">
          <change who="MAM" when="2018-12-18">Angelegt aus Abschrift</change>
@@ -150,52 +159,103 @@
             </closer>
          </div>
       </body>
-      <back><listPerson><person xml:id="pmb12071"><persName>
-      <forename>Detlev von</forename>
-      <surname>Liliencron</surname>
-  </persName><birth>
-    <date when="1844-06-03">1844-06-03</date>
-      <settlement ref="pmb907">
-        <placeName type="pref">Kiel</placeName>
-        <location><geo>54,32133 10,13489</geo></location>
-      </settlement>
-  </birth><death>
-    <date when="1909-07-22">1909-07-22</date>
-      <settlement ref="pmb61082">
-        <placeName type="pref">Rahlstedt</placeName>
-        <location><geo>53,60194 10,15667</geo></location>
-      </settlement>
-  </death></person><person xml:id="pmb2121"><persName><surname>Schnitzler</surname><forename>Arthur</forename></persName><birth><date when="1862-05-15">15. 5. 1862</date><settlement ref="pmb50"><placeName type="pref">Wien</placeName><location><geo>48,208333 16,373056</geo></location></settlement></birth><death><date when="1931-10-21">21. 10. 1931</date><settlement ref="pmb50"><placeName type="pref">Wien</placeName><location><geo>48,208333 16,373056</geo></location></settlement></death><sex value="male"/><occupation ref="pmb90">Schriftsteller/Schriftstellerin</occupation><occupation ref="pmb97">Mediziner/Medizinerin</occupation><idno type="gnd">https://d-nb.info/gnd/118609807/</idno></person></listPerson><listBibl><bibl xml:id="pmb29823"><title type="main">Das Märchen. Schauspiel in drei Aufzügen</title><title type="werk_bibliografische-angabe">Arthur Schnitzler: Das Märchen. Schauspiel in drei Aufzügen. Dresden, Leipzig: E. Pierson’s Verlag 1894.</title><title type="werk_link">https://babel.hathitrust.org/cgi/pt?id=coo.31924026341598&amp;view=1up&amp;seq=5</title><author role="hat-geschaffen" ref="pmb2121">Schnitzler, Arthur</author></bibl></listBibl><listPlace><place xml:id="pmb168934"><placeName>Frankgasse 1</placeName><location type="coords">
-  <geo>48,21533 16,35736</geo>
-</location><location type="located_in_place">
-  <placeName ref="pmb59">IX., Alsergrund</placeName>
-  <geo>48,22387 16,35641</geo>
-</location><location type="located_in_place">
-  <placeName ref="pmb397">Frankgasse</placeName>
-  <geo>48,215516628628 16,356475515829</geo>
-</location></place><place xml:id="pmb365128"><placeName>Palmaille 5</placeName>
-
-
-  <location type="coords">
-  <geo>53,545996 9,945167</geo>
-</location>
-
-
-<location type="located_in_place">
-  <placeName ref="pmb506">Hamburg</placeName>
-  <geo>53,55055 9,993333</geo>
-</location>
-
-<location type="located_in_place">
-  <placeName ref="pmb1258">Palmaille</placeName>
-  <geo>53,546111 9,938889</geo>
-</location>
-
-<location type="located_in_place">
-  <placeName ref="pmb1259">Altona</placeName>
-  <geo>53,5725 9,8262</geo>
-</location>
-
-
-  </place></listPlace></back></text>
+      <back>
+         <listPerson>
+            <person xml:id="pmb12071">
+               <persName>
+                  <forename>Detlev von</forename>
+                  <surname>Liliencron</surname>
+               </persName>
+               <birth>
+                  <date when="1844-06-03">1844-06-03</date>
+                  <settlement ref="pmb907">
+                     <placeName type="pref">Kiel</placeName>
+                     <location>
+                        <geo>54,32133 10,13489</geo>
+                     </location>
+                  </settlement>
+               </birth>
+               <death>
+                  <date when="1909-07-22">1909-07-22</date>
+                  <settlement ref="pmb61082">
+                     <placeName type="pref">Rahlstedt</placeName>
+                     <location>
+                        <geo>53,60194 10,15667</geo>
+                     </location>
+                  </settlement>
+               </death>
+            </person>
+            <person xml:id="pmb2121">
+               <persName>
+                  <surname>Schnitzler</surname>
+                  <forename>Arthur</forename>
+               </persName>
+               <birth>
+                  <date when="1862-05-15">15. 5. 1862</date>
+                  <settlement ref="pmb50">
+                     <placeName type="pref">Wien</placeName>
+                     <location>
+                        <geo>48,208333 16,373056</geo>
+                     </location>
+                  </settlement>
+               </birth>
+               <death>
+                  <date when="1931-10-21">21. 10. 1931</date>
+                  <settlement ref="pmb50">
+                     <placeName type="pref">Wien</placeName>
+                     <location>
+                        <geo>48,208333 16,373056</geo>
+                     </location>
+                  </settlement>
+               </death>
+               <sex value="male"/>
+               <occupation ref="pmb90">Schriftsteller/Schriftstellerin</occupation>
+               <occupation ref="pmb97">Mediziner/Medizinerin</occupation>
+               <idno type="gnd">https://d-nb.info/gnd/118609807/</idno>
+            </person>
+         </listPerson>
+         <listBibl>
+            <bibl xml:id="pmb29823">
+               <title type="main">Das Märchen. Schauspiel in drei Aufzügen</title>
+               <title type="werk_bibliografische-angabe">Arthur Schnitzler: Das Märchen. Schauspiel in drei Aufzügen. Dresden, Leipzig: E. Pierson’s Verlag 1894.</title>
+               <title type="werk_link">https://babel.hathitrust.org/cgi/pt?id=coo.31924026341598&amp;view=1up&amp;seq=5</title>
+               <author role="hat-geschaffen" ref="pmb2121">Schnitzler, Arthur</author>
+            </bibl>
+         </listBibl>
+         <listPlace>
+            <place xml:id="pmb168934">
+               <placeName>Frankgasse 1</placeName>
+               <location type="coords">
+                  <geo>48,21533 16,35736</geo>
+               </location>
+               <location type="located_in_place">
+                  <placeName ref="pmb59">IX., Alsergrund</placeName>
+                  <geo>48,22387 16,35641</geo>
+               </location>
+               <location type="located_in_place">
+                  <placeName ref="pmb397">Frankgasse</placeName>
+                  <geo>48,215516628628 16,356475515829</geo>
+               </location>
+            </place>
+            <place xml:id="pmb365128">
+               <placeName>Palmaille 5</placeName>
+               <location type="coords">
+                  <geo>53,545996 9,945167</geo>
+               </location>
+               <location type="located_in_place">
+                  <placeName ref="pmb506">Hamburg</placeName>
+                  <geo>53,55055 9,993333</geo>
+               </location>
+               <location type="located_in_place">
+                  <placeName ref="pmb1258">Palmaille</placeName>
+                  <geo>53,546111 9,938889</geo>
+               </location>
+               <location type="located_in_place">
+                  <placeName ref="pmb1259">Altona</placeName>
+                  <geo>53,5725 9,8262</geo>
+               </location>
+            </place>
+         </listPlace>
+      </back>
+   </text>
 </TEI>
