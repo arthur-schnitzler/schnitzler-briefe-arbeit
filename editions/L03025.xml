@@ -1,11 +1,15 @@
-<?xml version='1.0' encoding='UTF-8'?>
+<?xml version="1.0" encoding="UTF-8"?>
 <?xml-model href="../meta/schnitzler-briefe-schematron.sch" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
-<TEI xmlns="http://www.tei-c.org/ns/1.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.tei-c.org/ns/1.0 ../meta/schnitzler-briefe-schema.xsd" xml:id="L03025" xml:base="https://id.acdh.oeaw.ac.at/schnitzler/schnitzler-briefe/editions">
+<TEI xmlns="http://www.tei-c.org/ns/1.0"
+     xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+     xsi:schemaLocation="http://www.tei-c.org/ns/1.0 ../meta/schnitzler-briefe-schema.xsd"
+     xml:id="L03025"
+     xml:base="https://id.acdh.oeaw.ac.at/schnitzler/schnitzler-briefe/editions">
    <teiHeader>
       <fileDesc>
          <titleStmt>
             <title level="s">Arthur Schnitzler: Briefwechsel mit Autorinnen und Autoren</title>
-            <title level="a">Arthur Schnitzler an Felix Salten, 30. 12. 19[29?]</title>
+            <title level="a">Arthur Schnitzler an Felix Salten, 30. 12. 1930</title>
             <author ref="#pmb2121">Schnitzler, Arthur</author>
             <editor>
                <name>Müller, Martin Anton</name>
@@ -83,7 +87,7 @@
                               <extent>
                                  <measure unit="blatt" quantity="1"/>
                                  <measure unit="seite" quantity="1"/>
-                                 <measure unit="zeichenanzahl" quantity="286"/>
+                                 <measure unit="zeichenanzahl" quantity="284"/>
                               </extent>
                            </supportDesc>
                         </objectDesc>
@@ -108,26 +112,35 @@
          <correspDesc>
             <correspAction type="sent">
                <persName ref="#pmb2121">Schnitzler, Arthur</persName>
-               <date when="1929-12-30" n="01">30. 12. 19[29?]</date>
+               <date when="1930-12-30" n="01">30. 12. 1930</date>
                <placeName ref="#pmb168815">Sternwartestraße 71</placeName>
             </correspAction>
             <correspAction type="received">
                <persName ref="#pmb2167">Salten, Felix</persName>
-               <date evidence="conjecture" notBefore="1929-12-30" notAfter="1930-01-02">[30. 12. 1929 – 2. 1. 1930?]</date>
+               <date evidence="conjecture" notBefore="1930-12-30" notAfter="1931-01-02">[30. 12. 1930 – 2. 1. 1931?]</date>
                <placeName ref="#pmb50" evidence="conjecture">Wien</placeName>
             </correspAction>
-            <correspContext><ref type="belongsToCorrespondence" target="correspondence_2167">Salten, Felix</ref>
+            <correspContext>
+               <ref type="belongsToCorrespondence" target="correspondence_2167">Salten, Felix</ref>
                <ref subtype="previous_letter" type="withinCollection" target="L03590">Salten an Schnitzler, 24. 12. [1929?]</ref>
                <ref subtype="next_letter" type="withinCollection" target="L03891">Freud an Schnitzler, [1. 1.? 1930]</ref>
-               <ref subtype="previous_letter" type="withinCorrespondence" source="correspondence_2167" target="L03590">Salten an Schnitzler, 24. 12. [1929?]</ref>
-               <ref subtype="next_letter" type="withinCorrespondence" source="correspondence_2167" target="L03533">Salten an Schnitzler, 17. 5. 1930</ref>
-            </correspContext></correspDesc>
+               <ref subtype="previous_letter"
+                    type="withinCorrespondence"
+                    source="correspondence_2167"
+                    target="L03590">Salten an Schnitzler, 24. 12. [1929?]</ref>
+               <ref subtype="next_letter"
+                    type="withinCorrespondence"
+                    source="correspondence_2167"
+                    target="L03533">Salten an Schnitzler, 17. 5. 1930</ref>
+            </correspContext>
+         </correspDesc>
       </profileDesc>
       <revisionDesc status="approved">
          <change who="MAM" when="2023-03-16">Export aus Transkribus</change>
          <change who="LU" when="2024-06-13">Durchsicht</change>
          <change when="2024-06-14" who="LU">Index check</change>
          <change who="MAM" when="2024-06-28">Durchsicht</change>
+         <change who="MAM" when="2026-10-17">umdatiert</change>
       </revisionDesc>
    </teiHeader>
    <facsimile>
@@ -141,19 +154,14 @@
                   <pb facs="Wienbibliothek_AS_FS_2823284"/>
                   <rs type="place" ref="#pmb50">Wien</rs>
                   <space unit="chars" quantity="1"/>
-                  <anchor type="commentary" xml:id="K_L03025-1"/>
                   <date when="1930-12-30">30/12 930</date>
-                  <note type="commentary" corresp="K_L03025-1">Es dürfte sich bei der Datierung um
-                     eine Verwechslung handeln, womöglich motiviert durch den bevorstehenden
-                     Jahreswechsel. Am <ref type="schnitzler-tagebuch" subtype="date-only" target="1929-12-27"/> hatte <rs type="person" ref="#pmb2121">Schnitzler</rs>
-                     die Neuerscheinung <rs type="work" ref="#pmb76515">Fünfzehn Hasen. Schicksale
-                        in Wald und Feld</rs> gelesen.</note>
                </dateline>
             </opener>
             <p>
                <salute>lieber,</salute> lassen Sie mich Ihnen sehr herzlich für Ihr erquickendes
-               neues <rs type="work" ref="#pmb76515" subtype="implied">Thierbuch</rs> danken, das
-               ich erst vor wenig<unclear>en</unclear> Tagen zu Ende gelesen habe. Es ist so
+               neues <rs type="work" ref="#pmb76516" subtype="implied">Thierbuch</rs> danken, das
+               ich erst <anchor type="commentary" xml:id="K_L03025-1"/>vor wenig<unclear>en</unclear> Tagen<note type="commentary" corresp="K_L03025-1">
+                  <ref type="schnitzler-tagebuch" subtype="Cf" target="1930-12-18"/>.</note> zu Ende gelesen habe. Es ist so
                naturnah und so jung.</p>
             <closer>Auf Wiedersehen – aber wirklich – und alles gute zum neuen <date when="1930">Jahr</date> Ihnen und den Ihren. <lb/>Immer Ihr <lb/>
                <signed>Arth Schnitz</signed>
@@ -168,7 +176,7 @@
                   <forename>Arthur</forename>
                </persName>
                <birth>
-                  <date when="1862-05-15">15. 5. 1862</date>
+                  <date when="1862-05-15">15. 5. 1862</date>
                   <settlement ref="pmb50">
                      <placeName type="pref">Wien</placeName>
                      <location>
@@ -177,7 +185,7 @@
                   </settlement>
                </birth>
                <death>
-                  <date when="1931-10-21">21. 10. 1931</date>
+                  <date when="1931-10-21">21. 10. 1931</date>
                   <settlement ref="pmb50">
                      <placeName type="pref">Wien</placeName>
                      <location>
@@ -185,10 +193,6 @@
                      </location>
                   </settlement>
                </death>
-               <sex value="male"/>
-               <occupation ref="pmb90">Schriftsteller/Schriftstellerin</occupation>
-               <occupation ref="pmb97">Mediziner/Medizinerin</occupation>
-               <idno type="gnd">https://d-nb.info/gnd/118609807/</idno>
             </person>
             <person xml:id="pmb2167">
                <persName>
@@ -216,9 +220,9 @@
             </person>
          </listPerson>
          <listBibl>
-            <bibl xml:id="pmb76515" ana="comment">
-               <title type="main">Fünfzehn Hasen. Schicksale in Wald und Feld</title>
-               <author role="hat-geschaffen" ref="pmb2167">Salten, Felix</author>
+            <bibl xml:id="pmb76516" ana="implied">
+               <title>Gute Gesellschaft</title>
+               <author ref="pmb2167" role="hat-geschaffen">Salten, Felix</author>
             </bibl>
          </listBibl>
          <listPlace>
@@ -243,16 +247,12 @@
             <place xml:id="pmb50">
                <placeName>Wien</placeName>
                <placeName type="ort_fruherer-name">K.K. Reichshaupt- und Residenzstadt Wien</placeName>
-               <placeName type="legacy-name-merge">Wien</placeName>
                <placeName type="alternative-name">Bécs</placeName>
                <placeName type="alternative-name">Land Wien</placeName>
                <placeName type="alternative-name">Vídeň</placeName>
                <placeName type="alternative-name">Wenia</placeName>
                <placeName type="alternative-name">Beč</placeName>
                <placeName type="ort_fruherer-name">Vindobona</placeName>
-               <placeName type="legacy-name-merge">Vindobona</placeName>
-               <placeName type="alternative-name">Vienna</placeName>
-               <placeName type="legacy-name-merge">Vienna</placeName>
                <placeName type="alternative-name">Vienna</placeName>
                <location type="coords">
                   <geo>48,208333 16,373056</geo>
@@ -260,6 +260,10 @@
                <location type="located_in_place">
                   <placeName ref="pmb41240">Österreich</placeName>
                   <geo>47,33333 13,33333</geo>
+               </location>
+               <location type="located_in_place">
+                  <placeName ref="pmb235218">Windmühlhöhe</placeName>
+                  <geo>48,24077 16,32092</geo>
                </location>
             </place>
          </listPlace>
