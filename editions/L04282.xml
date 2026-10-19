@@ -1,6 +1,10 @@
-<?xml version='1.0' encoding='UTF-8'?>
+<?xml version="1.0" encoding="UTF-8"?>
 <?xml-model href="../meta/schnitzler-briefe-schematron.sch" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
-<TEI xmlns="http://www.tei-c.org/ns/1.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.tei-c.org/ns/1.0 ../meta/schnitzler-briefe-schema.xsd" xml:base="https://id.acdh.oeaw.ac.at/schnitzler/schnitzler-briefe/editions" xml:id="L04282">
+<TEI xmlns="http://www.tei-c.org/ns/1.0"
+     xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+     xsi:schemaLocation="http://www.tei-c.org/ns/1.0 ../meta/schnitzler-briefe-schema.xsd"
+     xml:base="https://id.acdh.oeaw.ac.at/schnitzler/schnitzler-briefe/editions"
+     xml:id="L04282">
    <teiHeader>
       <fileDesc>
          <titleStmt>
@@ -109,14 +113,22 @@
             <correspAction type="received">
                <persName ref="#pmb2121">Schnitzler, Arthur</persName>
                <date evidence="conjecture" notBefore="1895-07-25" notAfter="1895-07-29">[25. 7. 1895 – 29. 7. 1895?]</date>
-               <placeName ref="#pmb168934" evidence="conjecture">Frankgasse 1</placeName>
+               <placeName ref="#pmb414" evidence="conjecture">Hotel und Pension Rudolfshöhe (Leopold Petter)</placeName>
             </correspAction>
-            <correspContext><ref type="belongsToCorrespondence" target="correspondence_12740">Schwarzkopf, Gustav</ref>
+            <correspContext>
+               <ref type="belongsToCorrespondence" target="correspondence_12740">Schwarzkopf, Gustav</ref>
                <ref subtype="previous_letter" type="withinCollection" target="L00465">Bahr an Schnitzler, 23. 7. 1895</ref>
                <ref subtype="next_letter" type="withinCollection" target="L00466">Schnitzler an Beer-Hofmann, [25. 7. 1895?]</ref>
-               <ref subtype="previous_letter" type="withinCorrespondence" source="correspondence_12740" target="L04109">Schnitzler an Schwarzkopf, 19. 7. 1895</ref>
-               <ref subtype="next_letter" type="withinCorrespondence" source="correspondence_12740" target="L04110">Schnitzler an Schwarzkopf, 28. 7. 1895</ref>
-            </correspContext></correspDesc>
+               <ref subtype="previous_letter"
+                    type="withinCorrespondence"
+                    source="correspondence_12740"
+                    target="L04109">Schnitzler an Schwarzkopf, 19. 7. 1895</ref>
+               <ref subtype="next_letter"
+                    type="withinCorrespondence"
+                    source="correspondence_12740"
+                    target="L04110">Schnitzler an Schwarzkopf, 28. 7. 1895</ref>
+            </correspContext>
+         </correspDesc>
       </profileDesc>
       <revisionDesc status="proposed">
          <change who="MAM" when="2026-02-20">Export aus Transkribus</change>
@@ -376,6 +388,21 @@
                <location type="located_in_place">
                   <placeName ref="pmb51">I., Innere Stadt</placeName>
                   <geo>48,20769 16,37049</geo>
+               </location>
+            </place>
+            <place xml:id="pmb414">
+               <placeName>Hotel und Pension Rudolfshöhe (Leopold Petter)</placeName>
+               <placeName type="legacy-name-merge">Rudolfshöhe</placeName>
+               <location type="coords">
+                  <geo>47,706537 13,609575</geo>
+               </location>
+               <location type="located_in_place">
+                  <placeName ref="pmb213">Bad Ischl</placeName>
+                  <geo>47,71109 13,61893</geo>
+               </location>
+               <location type="located_in_place">
+                  <placeName ref="pmb43015">Kaltenbach</placeName>
+                  <geo>47,69778 13,60913</geo>
                </location>
             </place>
             <place xml:id="pmb50">

@@ -1,6 +1,10 @@
-<?xml version='1.0' encoding='UTF-8'?>
+<?xml version="1.0" encoding="UTF-8"?>
 <?xml-model href="../meta/schnitzler-briefe-schematron.sch" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
-<TEI xmlns="http://www.tei-c.org/ns/1.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.tei-c.org/ns/1.0 ../meta/schnitzler-briefe-schema.xsd" xml:base="https://id.acdh.oeaw.ac.at/schnitzler/schnitzler-briefe/editions" xml:id="L04415">
+<TEI xmlns="http://www.tei-c.org/ns/1.0"
+     xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+     xsi:schemaLocation="http://www.tei-c.org/ns/1.0 ../meta/schnitzler-briefe-schema.xsd"
+     xml:base="https://id.acdh.oeaw.ac.at/schnitzler/schnitzler-briefe/editions"
+     xml:id="L04415">
    <teiHeader>
       <fileDesc>
          <titleStmt>
@@ -83,7 +87,7 @@
                            <supportDesc>
                               <extent>
                                  <measure unit="karte" quantity="1"/>
-                                 <measure unit="zeichenanzahl" quantity="269"/>
+                                 <measure unit="zeichenanzahl" quantity="268"/>
                               </extent>
                            </supportDesc>
                         </objectDesc>
@@ -145,12 +149,20 @@
                <date when="1904-05-19">19. 5. 1904</date>
                <placeName ref="#pmb207296">Tiefer Graben 23</placeName>
             </correspAction>
-            <correspContext><ref type="belongsToCorrespondence" target="correspondence_12740">Schwarzkopf, Gustav</ref>
+            <correspContext>
+               <ref type="belongsToCorrespondence" target="correspondence_12740">Schwarzkopf, Gustav</ref>
                <ref subtype="previous_letter" type="withinCollection" target="L01401">Schnitzler, Schnitzler an Hofmannsthal, 16. 5. 1904</ref>
                <ref subtype="next_letter" type="withinCollection" target="L03443">Goldmann an Schnitzler, 1[7?]. 5. [1904]</ref>
-               <ref subtype="previous_letter" type="withinCorrespondence" source="correspondence_12740" target="L04313">Schwarzkopf, Schwarzkopf an Schnitzler, 11. 5. 1904</ref>
-               <ref subtype="next_letter" type="withinCorrespondence" source="correspondence_12740" target="L04371">Schnitzler, Schnitzler an Schwarzkopf, 22. 5. 1904</ref>
-            </correspContext></correspDesc>
+               <ref subtype="previous_letter"
+                    type="withinCorrespondence"
+                    source="correspondence_12740"
+                    target="L04313">Schwarzkopf, Schwarzkopf an Schnitzler, 11. 5. 1904</ref>
+               <ref subtype="next_letter"
+                    type="withinCorrespondence"
+                    source="correspondence_12740"
+                    target="L04371">Schnitzler, Schnitzler an Schwarzkopf, 22. 5. 1904</ref>
+            </correspContext>
+         </correspDesc>
       </profileDesc>
       <revisionDesc status="proposed">
          <change who="MAM" when="2026-06-11">Export aus Transkribus</change>
@@ -216,11 +228,11 @@
                      <hi rend="latintype">Première</hi>
                   </rs>
                </rs> ſein?</p>
-            <p>Nachricht nach <rs type="place" ref="#pmb906">Taormina</rs>
-               <space unit="chars" quantity="1"/>
+            <p>Nachricht nach <rs type="place" ref="#pmb407256">Taormina
                <anchor type="commentary" xml:id="K_L04415-2"/>
-               <hi rend="latintype">postrest</hi>
-               <note type="commentary" corresp="K_L04415-2">poste restante: postlagernd</note> erbeten. –</p>
+                  <hi rend="latintype">postrest</hi>
+                  <note type="commentary" corresp="K_L04415-2">poste restante: postlagernd</note>
+               </rs> erbeten. –</p>
             <closer>Herzlich<lb/>Ihr <signed>A.</signed>
             </closer>
          </div>
@@ -449,14 +461,15 @@
                   <geo>38,08125 13,28947</geo>
                </location>
             </place>
-            <place xml:id="pmb906">
-               <placeName>Taormina</placeName>
+            <place xml:id="pmb407256">
+               <placeName>Ufficio della Posta Centrale di Taormina [aufgelassen]</placeName>
+               <placeName type="ort_namensvariante">Palazzo Corvaja</placeName>
                <location type="coords">
-                  <geo>37,85358 15,28851</geo>
+                  <geo>37,8538952 15,2884125</geo>
                </location>
                <location type="located_in_place">
-                  <placeName ref="pmb40306">Italien</placeName>
-                  <geo>42,83333 12,83333</geo>
+                  <placeName ref="pmb906">Taormina</placeName>
+                  <geo>37,85358 15,28851</geo>
                </location>
             </place>
          </listPlace>
