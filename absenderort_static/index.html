@@ -24,12 +24,21 @@
   #bodyText .body-addrLine { display:block; }
   #bodyText .body-del { text-decoration:line-through; color:var(--dim); }
   #bodyText .body-note { color:var(--dim); }
+  .reviewed-banner { display:none; background:#c8e6c9; color:#1b5e20; border:1px solid #81c784; border-radius:4px; padding:.15em .6em; font-size:.9em; }
+  h2.reviewed { background:#e8f5e9; box-shadow:0 0 0 .3em #e8f5e9; border-radius:3px; }
+  h2.reviewed .reviewed-banner { display:inline-block; margin-left:.6em; vertical-align:middle; }
+  #letters { display:flex; flex-wrap:wrap; gap:3px; max-height:9em; overflow-y:auto; margin-top:.4em; }
+  #letters button { padding:.05em .35em; font-size:.8em; background:#fff; border:1px solid var(--line); border-radius:3px; cursor:pointer; }
+  #letters button.reviewed { background:#c8e6c9; border-color:#81c784; }
+  #letters button.noplace { color:#b00; }
+  #letters button.current { outline:2px solid var(--accent); font-weight:700; }
   #toast { position:fixed; bottom:1em; left:50%; transform:translateX(-50%); background:#222; color:#fff; padding:.5em 1em; border-radius:4px; display:none; }
 </style>
 </head>
 <body>
 <header>
   <div class="row">
+    <label>Korrespondenz <select id="corrSelect" style="max-width:22em"></select></label>
     <label>Brief <input id="jumpInput" size="8" placeholder="L01933"/></label>
     <button id="jumpBtn">Laden</button>
     <label>Bearbeiter
@@ -50,6 +59,10 @@
   </div>
 </header>
 <main>
+  <details id="lettersBox" open="open">
+    <summary class="dim">Briefe der Korrespondenz (chronologisch; grün = mit dem Tool überprüft, rot = ohne Absenderort)</summary>
+    <div id="letters"></div>
+  </details>
   <h2 id="title"></h2>
   <div class="card" id="card-sent">
     <h3 style="margin:0 0 .3em">Absendeort (sent)</h3>
@@ -92,7 +105,7 @@
 </main>
 <div id="toast"></div>
 <script type="text/javascript">//<![CDATA[
-let files = [], visible = [], cur = null, data = null;
+let files = [], corrs = [], curCorr = null, visible = [], cur = null, data = null;
 const EDITOR_KEY = "absenderort.editor", CHANGE_TEXT = "Absenderort überprüft";
 let editor = "";
 try { editor = localStorage.getItem(EDITOR_KEY) || ""; } catch (e) { /* ohne Speicher weiter */ }
@@ -106,25 +119,64 @@ async function api(url, body) {
   if (!r.ok) throw new Error(j.error || r.status);
   return j;
 }
+// Briefe stammen chronologisch sortiert vom Server; die Auswahl erfolgt pro Korrespondenz.
+// Die Korrespondenzen sind nach Nummer geordnet: MAM arbeitet von den niedrigen Nummern
+// aufwärts, SJ von den höchsten abwärts (innerhalb einer Korrespondenz immer chronologisch).
+function corrFiles(c) { return files.filter(f => f.corr.includes(c)); }
+function corrOrder() { return editor === "SJ" ? corrs.slice().reverse() : corrs; }
+function corrName(c) { return (corrs.find(x => x.id === c) || {}).name || ""; }
+function fillCorrSelect() {
+  const sel = $("corrSelect"); sel.innerHTML = "";
+  corrOrder().forEach(c => {
+    const fs = corrFiles(c.id), r = fs.filter(f => f.reviewed).length;
+    const o = new Option(`${c.name} (${c.id}) · ${r}/${fs.length}${r === fs.length ? " ✓" : ""}`, c.id);
+    o.selected = c.id === curCorr; sel.add(o);
+  });
+}
 function applyFilter() {
-  // Alle Briefe bleiben in der Liste (zum Zurückblättern); vorwärts werden bereits
-  // überprüfte ("Absenderort überprüft") übersprungen, siehe step().
-  // SJ arbeitet von den höchsten Nummern nach unten, MAM (oder niemand) von unten nach oben
-  const list = $("emptyOnly").checked ? files.filter(f => !f.place) : files;
-  visible = editor === "SJ" ? list.slice().reverse() : list;
-  updatePos();
+  // Alle Briefe der Korrespondenz bleiben in der Liste (zum Zurückblättern); vorwärts werden
+  // bereits überprüfte ("Absenderort überprüft") übersprungen, siehe step().
+  const list = corrFiles(curCorr);
+  visible = $("emptyOnly").checked ? list.filter(f => !f.place) : list;
+  fillCorrSelect(); renderLetters(); updatePos();
+}
+function renderLetters() {
+  const box = $("letters"); box.innerHTML = "";
+  corrFiles(curCorr).forEach(f => {
+    const b = document.createElement("button");
+    b.textContent = f.id.replace(/^L0*/, "");
+    b.title = `${f.id} · ${f.date || "ohne Datum"} · ${f.place || "kein Ort"}${f.reviewed ? " · überprüft" : ""}`;
+    b.className = (f.reviewed ? "reviewed " : "") + (f.place ? "" : "noplace ") + (f.id === cur ? "current" : "");
+    b.onclick = () => load(f.id);
+    box.appendChild(b);
+  });
+  const c = box.querySelector(".current"); if (c) c.scrollIntoView({block: "nearest"});
 }
 function firstOpen() { return visible.find(f => !f.reviewed) || visible[0]; }
 function updatePos() {
-  const i = visible.findIndex(f => f.id === cur);
-  $("pos").textContent = `${i >= 0 ? i + 1 : "–"} / ${visible.length} (gesamt ${files.length}, überprüft ${files.filter(f => f.reviewed).length}, ohne Ort ${files.filter(f => !f.place).length})`;
+  const i = visible.findIndex(f => f.id === cur), all = corrFiles(curCorr);
+  $("pos").textContent = `${i >= 0 ? i + 1 : "–"} / ${visible.length} (Korrespondenz ${all.length}, überprüft ${all.filter(f => f.reviewed).length}, ohne Ort ${all.filter(f => !f.place).length})`;
+}
+function selectCorr(c) { curCorr = c; applyFilter(); }
+// Startpunkt je Bearbeiter: erste Korrespondenz in dessen Reihenfolge mit offenen Briefen
+function openCorr(after) {
+  const order = corrOrder().map(c => c.id);
+  const from = after == null ? 0 : order.indexOf(after) + 1;
+  return order.slice(from).find(c => corrFiles(c).some(f => !f.reviewed));
 }
 async function load(fid) {
   try { data = await api("/api/file/" + fid); } catch (e) { toast(e.message); return; }
-  cur = fid; render();
+  cur = fid;
+  const row = files.find(f => f.id === fid);
+  if (row && !row.corr.includes(curCorr)) selectCorr(row.corr[0]); // Sprung in andere Korrespondenz
+  render();
 }
 function render() {
   $("title").textContent = data.id + " – " + (data.title || "");
+  const rv = files.find(f => f.id === data.id);
+  $("title").classList.toggle("reviewed", !!(rv && rv.reviewed));
+  const bn = document.createElement("span"); bn.className = "reviewed-banner"; bn.textContent = "✓ Absenderort überprüft";
+  $("title").appendChild(bn); renderLetters();
     ["sent", "received"].forEach(renderCard);
   $("bodyText").innerHTML = data.bodyHtml;
   updatePos();
@@ -169,21 +221,23 @@ async function save(k, andNext, pmb) {
   if (andNext) await advance(); else render();
 }
 function step(d) {
-  const i = visible.findIndex(f => f.id === cur);
+  const all = corrFiles(curCorr), i = all.findIndex(f => f.id === cur);
   const curRow = files.find(f => f.id === cur);
   // vorwärts überspringen, zurück blättern zeigt auch überprüfte Briefe; wer gerade
   // bei einem überprüften Brief steht, geht vorwärts Brief für Brief weiter
   const skip = d > 0 && !(curRow && curRow.reviewed);
-  let j;
-  if (i < 0) {
-    // aktueller Brief steht nicht in der Liste (Filter): an seiner Stelle in Laufrichtung weitermachen
-    const past = f => editor === "SJ" ? f.id < cur : f.id > cur;
-    const firstPast = visible.findIndex(past);
-    j = d > 0 ? firstPast : (firstPast < 0 ? visible.length : firstPast) - 1;
-  } else j = i + d;
-  while (skip && j >= 0 && j < visible.length && visible[j].reviewed) j += d;
-  if (j >= 0 && j < visible.length) load(visible[j].id);
-  else toast(d > 0 ? "Keine weiteren Briefe." : "Am Anfang der Liste.");
+  const ok = new Set(visible.map(f => f.id));
+  let j = i + d;
+  while (j >= 0 && j < all.length && (!ok.has(all[j].id) || (skip && all[j].reviewed))) j += d;
+  if (j >= 0 && j < all.length) { load(all[j].id); return; }
+  if (d > 0) {
+    const next = openCorr(curCorr);
+    if (next != null) {
+      selectCorr(next);
+      if (visible.length) { toast(`Korrespondenz abgeschlossen – weiter mit ${corrName(next)}`); load(firstOpen().id); return; }
+    }
+  }
+  toast(d > 0 ? "Keine weiteren Briefe." : "Am Anfang der Korrespondenz.");
 }
 async function markReviewed() {
   if (!editor || !cur) return;
@@ -192,7 +246,7 @@ async function markReviewed() {
   try { await api(`/api/file/${cur}/revision-change`, {who: editor}); }
   catch (e) { toast(e.message); return; }
   if (row) row.reviewed = true;
-  applyFilter();
+  applyFilter(); render();
   toast(`${cur}: revisionDesc ergänzt ("${CHANGE_TEXT}", ${editor})`);
 }
 async function advance() { await markReviewed(); step(1); }
@@ -209,8 +263,13 @@ $("editorSelect").value = editor;
 $("editorSelect").onchange = e => {
   editor = e.target.value;
   try { localStorage.setItem(EDITOR_KEY, editor); } catch (err) { /* egal */ }
-  applyFilter();
-  if (visible.length) load(firstOpen().id); // SJ: höchste Nummer, MAM: niedrigste
+  const c = openCorr();
+  selectCorr(c != null ? c : corrOrder()[0].id); // MAM: niedrigste, SJ: höchste Nummer mit offenen Briefen
+  if (visible.length) load(firstOpen().id);
+};
+$("corrSelect").onchange = e => {
+  selectCorr(+e.target.value);
+  if (visible.length) load(firstOpen().id);
 };
 $("jumpBtn").onclick = () => load($("jumpInput").value.trim());
 $("jumpInput").onkeydown = e => { if (e.key === "Enter") $("jumpBtn").click(); };
@@ -233,9 +292,12 @@ $("quitBtn").onclick = async () => {
   window.close();
 };
 (async () => {
-  files = (await api("/api/list")).files; applyFilter();
+  const l = await api("/api/list");
+  files = l.files; corrs = l.correspondences;
   const h = location.hash.slice(1);
   const hr = files.find(f => f.id === h);
+  const c = openCorr();
+  selectCorr(hr ? hr.corr[0] : (c != null ? c : corrOrder()[0].id));
   // ein per Adresse angesprungener, bereits überprüfter Brief zählt nicht als Startpunkt
   if (h && !(hr && hr.reviewed)) load(h); else if (visible.length) load(firstOpen().id);
 })();

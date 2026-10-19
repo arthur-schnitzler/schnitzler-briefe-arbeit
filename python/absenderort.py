@@ -24,6 +24,13 @@ neu erstellen per Knopf im Tool oder mit --rebuild-index).
 Im Brieftext sind alle vorkommenden Orte (placeName, rs[@type='place'])
 rot hinterlegt.
 
+Gearbeitet wird korrespondenzweise (correspContext/ref[@type='belongsToCorrespondence']):
+Innerhalb der gewählten Korrespondenz wird chronologisch (nach dem Absendedatum)
+aufwärts geblättert. MAM bekommt die Korrespondenzen mit niedriger, SJ die mit
+hoher Nummer (Reihenfolge der Auswahlliste bzw. Startpunkt je Bearbeiter). Bereits
+mit dem Tool gesichtete Briefe (change "Absenderort überprüft") sind in der
+Briefliste der Korrespondenz und im Kopf des Briefs farbig hinterlegt.
+
 Baut auf stempel_abgleich.py auf (Lesen/Schreiben, Wohnadressen).
 
 Aufruf (aus dem Repo-Wurzelverzeichnis):
@@ -57,6 +64,9 @@ ANA_RE = re.compile(r'\bana="([^"]*)"')
 CHANGE_ABSENDERORT_TEXT = "Absenderort überprüft"
 REVIEWED_MARKER_RE = re.compile(re.escape(f">{CHANGE_ABSENDERORT_TEXT}</change>"))
 PLACENAME_IN_ACTION_RE = re.compile(r'<placeName\b[^>]*>(.*?)</placeName>', re.S)
+CORRESP_REF_RE = re.compile(r'<ref\b(?=[^>]*\btype="belongsToCorrespondence")[^>]*>(.*?)</ref>', re.S)
+TARGET_ATTR_RE = re.compile(r'\btarget="correspondence_(\d+)"')
+DATE_EL_RE = re.compile(r'<date\b[^>]*>')
 
 
 def is_postkarte(text):
@@ -90,14 +100,43 @@ def sent_index(text):
 _list_cache = None
 
 
+def _sent_date(block_text):
+    """(Datum, n) des Absendedatums für die chronologische Sortierung."""
+    dm = DATE_EL_RE.search(block_text)
+    if not dm:
+        return "", ""
+    attrs = dm.group(0)
+    for attr in ("when", "notBefore", "notAfter"):
+        m = re.search(r'\b%s="([^"]*)"' % attr, attrs)
+        if m:
+            n = re.search(r'\bn="([^"]*)"', attrs)
+            return m.group(1), n.group(1) if n else ""
+    return "", ""
+
+
+def _correspondences(text):
+    """[(Nummer, Name)] der Korrespondenzen, zu denen der Brief gehört."""
+    out = []
+    for m in CORRESP_REF_RE.finditer(text):
+        t = TARGET_ATTR_RE.search(m.group(0))
+        if t:
+            name = re.sub(r"\s+", " ", re.sub(r"<[^>]+>", "", m.group(1))).strip()
+            out.append((int(t.group(1)), name))
+    return out
+
+
 def _row(fid, text):
     m = sent_block(text)
     place = None
+    date = n = ""
     if m:
         pm = PLACENAME_IN_ACTION_RE.search(m.group(0))
         if pm:
             place = re.sub(r"\s+", " ", re.sub(r"<[^>]+>", "", pm.group(1))).strip() or None
-    return {"id": fid, "place": place, "reviewed": bool(REVIEWED_MARKER_RE.search(text))}
+        date, n = _sent_date(m.group(0))
+    names = dict(_correspondences(text)) or {0: "(ohne Korrespondenz)"}
+    return {"id": fid, "place": place, "reviewed": bool(REVIEWED_MARKER_RE.search(text)),
+            "date": date, "n": n, "corr": list(names), "_names": names}
 
 
 def get_candidates():
@@ -109,7 +148,24 @@ def get_candidates():
             if is_postkarte(text) or not sent_block(text):
                 continue
             _list_cache.append(_row(path.stem, text))
+        _list_cache.sort(key=_chrono_key)
     return _list_cache
+
+
+def _chrono_key(row):
+    return (row["date"] or "9999", row["n"], row["id"])
+
+
+def get_list_payload():
+    """Briefe (chronologisch sortiert) und Korrespondenzen (nach Nummer aufsteigend)."""
+    files = get_candidates()
+    names = {}
+    for r in files:
+        for c in r["corr"]:
+            names.setdefault(c, r["_names"].get(c, ""))
+    corrs = [{"id": c, "name": names[c]} for c in sorted(names, key=lambda c: (c == 0, c))]
+    return {"files": [{k: v for k, v in r.items() if k != "_names"} for r in files],
+            "correspondences": corrs}
 
 
 def refresh_candidate(fid):
@@ -119,6 +175,7 @@ def refresh_candidate(fid):
     for i, r in enumerate(_list_cache):
         if r["id"] == fid:
             _list_cache[i] = row
+    _list_cache.sort(key=_chrono_key)
 
 
 # ---------------------------------------------------------------------------
@@ -452,7 +509,7 @@ class Handler(BaseHTTPRequestHandler):
             if path in ("/", "/index.html"):
                 self._send((STATIC_DIR / "index.html").read_bytes(), "text/html; charset=utf-8")
             elif path == "/api/list":
-                self._json({"files": get_candidates()})
+                self._json(get_list_payload())
             elif path.startswith("/api/file/"):
                 self._json(build_payload(path[len("/api/file/"):]))
             elif path.startswith("/api/open-oxygen/"):
