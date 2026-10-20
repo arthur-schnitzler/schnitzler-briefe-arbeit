@@ -123,7 +123,7 @@ const EDITOR_KEY = "absenderort.editor", HIDE_DONE_KEY = "absenderort.hideDone",
 let editor = "", hideDone = false;
 try { editor = localStorage.getItem(EDITOR_KEY) || ""; hideDone = localStorage.getItem(HIDE_DONE_KEY) === "1"; } catch (e) { /* ohne Speicher weiter */ }
 const $ = id => document.getElementById(id);
-const KINDS = {brief: "Orte im Brief (back/listPlace)", aufenthalt: "Aufenthalt Schnitzlers (nur Absendeort)", wohnadresse: "Wohnadresse", korrespondenz: "Orte laut anderen Briefen desselben Jahres"};
+const KINDS = {brief: "Orte im Brief (back/listPlace)", aufenthalt: "Aufenthalt Schnitzlers", wohnadresse: "Wohnadresse", korrespondenz: "Orte laut anderen Briefen desselben Jahres"};
 
 function toast(msg) { const t = $("toast"); t.textContent = msg; t.style.display = "block"; setTimeout(() => t.style.display = "none", 2500); }
 async function api(url, body) {
