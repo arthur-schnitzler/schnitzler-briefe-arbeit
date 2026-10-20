@@ -63,27 +63,34 @@
    <xsl:function name="foo:index-sortiert">
       <xsl:param name="index-sortieren" as="xs:string"/>
       <xsl:param name="shape" as="xs:string"/>
+      <xsl:value-of select="foo:index-sortiert($index-sortieren, $index-sortieren, $shape)"/>
+   </xsl:function>
+   <!-- Wie oben, aber mit getrenntem Sortierwert und Anzeigewert (z.B. wenn der Anzeigewert TeX-Makros aus tei:c enthält) -->
+   <xsl:function name="foo:index-sortiert">
+      <xsl:param name="index-sortieren" as="xs:string"/>
+      <xsl:param name="anzeige" as="xs:string"/>
+      <xsl:param name="shape" as="xs:string"/>
       <!-- werte sc, it, bf -->
       <xsl:value-of select="foo:umlaute-entfernen(foo:werk-um-artikel-kuerzen($index-sortieren))"/>
       <xsl:text>@</xsl:text>
       <xsl:choose>
          <xsl:when test="$shape = 'sc'">
             <xsl:text>\textsc{</xsl:text>
-            <xsl:value-of select="foo:sonderzeichen-ersetzen($index-sortieren)"/>
+            <xsl:value-of select="foo:sonderzeichen-ersetzen($anzeige)"/>
             <xsl:text>}</xsl:text>
          </xsl:when>
          <xsl:when test="$shape = 'it'">
             <xsl:text>\emph{</xsl:text>
-            <xsl:value-of select="foo:sonderzeichen-ersetzen($index-sortieren)"/>
+            <xsl:value-of select="foo:sonderzeichen-ersetzen($anzeige)"/>
             <xsl:text>}</xsl:text>
          </xsl:when>
          <xsl:when test="$shape = 'bf'">
             <xsl:text>\textbf{</xsl:text>
-            <xsl:value-of select="foo:sonderzeichen-ersetzen($index-sortieren)"/>
+            <xsl:value-of select="foo:sonderzeichen-ersetzen($anzeige)"/>
             <xsl:text>}</xsl:text>
          </xsl:when>
          <xsl:otherwise>
-            <xsl:value-of select="foo:sonderzeichen-ersetzen($index-sortieren)"/>
+            <xsl:value-of select="foo:sonderzeichen-ersetzen($anzeige)"/>
          </xsl:otherwise>
       </xsl:choose>
    </xsl:function>
@@ -2616,6 +2623,21 @@
          </xsl:otherwise>
       </xsl:choose>
    </xsl:function>
+   <!-- Autorenname als String; tei:c wird über die tei:c-Templates ausgegeben (TeX), im Modus lemma als Klartext für Sortierwerte -->
+   <xsl:function name="foo:autor-text" as="xs:string">
+      <xsl:param name="autor" as="element()"/>
+      <xsl:variable name="tex">
+         <xsl:apply-templates select="$autor/node()"/>
+      </xsl:variable>
+      <xsl:value-of select="string($tex)"/>
+   </xsl:function>
+   <xsl:function name="foo:autor-text-sortierung" as="xs:string">
+      <xsl:param name="autor" as="element()"/>
+      <xsl:variable name="klartext">
+         <xsl:apply-templates select="$autor/node()" mode="lemma"/>
+      </xsl:variable>
+      <xsl:value-of select="string($klartext)"/>
+   </xsl:function>
    <xsl:function name="foo:autor-rekursion">
       <xsl:param name="monogr" as="node()"/>
       <xsl:param name="autor-count" as="xs:integer"/>
@@ -2644,12 +2666,12 @@
             <xsl:choose>
                <xsl:when test="$vorname-vor-nachname">
                   <xsl:value-of
-                     select="foo:vorname-vor-nachname($autor[$autor-count-gesamt - $autor-count + 1])"
+                     select="foo:vorname-vor-nachname(foo:autor-text($autor[$autor-count-gesamt - $autor-count + 1]))"
                   />
                </xsl:when>
                <xsl:otherwise>
                   <xsl:value-of
-                     select="foo:index-sortiert($autor[$autor-count-gesamt - $autor-count + 1], 'sc')"
+                     select="foo:index-sortiert(foo:autor-text-sortierung($autor[$autor-count-gesamt - $autor-count + 1]), foo:autor-text($autor[$autor-count-gesamt - $autor-count + 1]), 'sc')"
                   />
                </xsl:otherwise>
             </xsl:choose>

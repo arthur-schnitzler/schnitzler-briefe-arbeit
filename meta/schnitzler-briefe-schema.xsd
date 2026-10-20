@@ -1708,6 +1708,9 @@
    </xs:element>
    <xs:element name="author">
       <xs:complexType mixed="true">
+         <xs:sequence>
+            <xs:element ref="tei:c" minOccurs="0" maxOccurs="unbounded"/>
+         </xs:sequence>
          <xs:attribute name="ref" type="xs:string"/>
          <xs:attribute name="role" type="xs:string"/>
       </xs:complexType>
