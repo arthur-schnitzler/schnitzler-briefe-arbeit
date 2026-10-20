@@ -47,9 +47,18 @@ entstehen Duplikate! -->
                 </xsl:variable>
                 <xsl:variable name="partner" as="node()">
                     <xsl:choose>
+                        <!-- 1. Ist Arthur Schnitzler Absender oder Empfänger? Dann zählen die Personen der jeweils anderen Seite -->
                         <xsl:when
-                            test="tei:correspAction[@type = 'sent']/tei:persName/@ref = '#pmb2121' or tei:correspAction[@type = 'sent']/tei:persName/@ref = '#pmb2173' or tei:correspAction[@type = 'sent']/tei:persName/@ref = '#pmb12695' or tei:correspAction[@type = 'sent']/tei:persName/@ref = '#pmb12701'">
-                            <!-- Briefe von Arthur Schnitzler, Olga Schnitzler, Johann Schnitzler und Louise Schnitzler sind die eine Seite der Korrespondenz -->
+                            test="tei:correspAction[@type = 'sent']/tei:persName/@ref = '#pmb2121'">
+                            <xsl:copy-of select="tei:correspAction[@type = 'received']"/>
+                        </xsl:when>
+                        <xsl:when
+                            test="tei:correspAction[@type = 'received']/tei:persName/@ref = '#pmb2121'">
+                            <xsl:copy-of select="tei:correspAction[@type = 'sent']"/>
+                        </xsl:when>
+                        <!-- 2. Umfeldbriefe (Arthur weder Absender noch Empfänger): Briefe von Olga, Johann und Louise Schnitzler sind die eine Seite der Korrespondenz -->
+                        <xsl:when
+                            test="tei:correspAction[@type = 'sent']/tei:persName/@ref = '#pmb2173' or tei:correspAction[@type = 'sent']/tei:persName/@ref = '#pmb12695' or tei:correspAction[@type = 'sent']/tei:persName/@ref = '#pmb12701'">
                             <xsl:copy-of select="tei:correspAction[@type = 'received']"/>
                         </xsl:when>
                         <xsl:otherwise>
