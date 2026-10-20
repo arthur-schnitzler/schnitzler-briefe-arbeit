@@ -71,6 +71,12 @@
     <div>Eingetragener Ort: <span id="current-sent" class="current"></span></div>
     <div style="margin-top:.6em">
       <select id="select-sent"></select>
+      <label>evidence <select id="evidence-sent">
+        <option value="">–</option>
+        <option value="conjecture">conjecture</option>
+        <option value="external">external</option>
+        <option value="internal">internal</option>
+      </select></label>
     </div>
     <div class="row" style="margin-top:.4em">
       <button id="save-sent" class="primary" disabled="disabled">Übernehmen</button>
@@ -89,6 +95,12 @@
     <div>Eingetragener Ort: <span id="current-received" class="current"></span></div>
     <div style="margin-top:.6em">
       <select id="select-received"></select>
+      <label>evidence <select id="evidence-received">
+        <option value="">–</option>
+        <option value="conjecture">conjecture</option>
+        <option value="external">external</option>
+        <option value="internal">internal</option>
+      </select></label>
     </div>
     <div class="row" style="margin-top:.4em">
       <button id="save-received" class="primary" disabled="disabled">Übernehmen</button>
@@ -210,6 +222,7 @@ function renderCard(k) {
     g.appendChild(opt);
   });
   ["brief", "aufenthalt", "wohnadresse", "korrespondenz"].forEach(x => groups[x] && sel.appendChild(groups[x]));
+  $("evidence-" + k).value = (a.place && a.place.evidence) || "";
   $("save-" + k).disabled = $("saveNext-" + k).disabled = true;
   $("pmb-" + k).value = $("pmbName-" + k).value = "";
 }
@@ -219,10 +232,12 @@ async function save(k, andNext, pmb) {
     const n = $("pmb-" + k).value.trim(); if (!n) return;
     body = {type: k, pmb: n, text: $("pmbName-" + k).value.trim()};
   } else {
-    const v = $("select-" + k).value; if (v === "") return;
-    const o = data[k].options[+v];
+    const v = $("select-" + k).value;
+    const o = v !== "" ? data[k].options[+v] : data[k].place; // ohne neue Auswahl: eingetragenen Ort behalten (nur evidence ändern)
+    if (!o) return;
     body = {type: k, ref: o.ref, text: o.text};
   }
+  body.evidence = $("evidence-" + k).value;
   try {
     data = await api(`/api/file/${cur}/set-place`, body);
   } catch (e) { toast(e.message); return; }
@@ -261,7 +276,14 @@ async function markReviewed() {
 }
 async function advance() { await markReviewed(); step(1); }
 ["sent", "received"].forEach(k => {
-  $("select-" + k).onchange = () => { $("save-" + k).disabled = $("saveNext-" + k).disabled = $("select-" + k).value === ""; };
+  const updateSaveState = () => {
+    const a = data && data[k];
+    const ok = $("select-" + k).value !== "" ||
+      (a && a.place && $("evidence-" + k).value !== (a.place.evidence || ""));
+    $("save-" + k).disabled = $("saveNext-" + k).disabled = !ok;
+  };
+  $("select-" + k).onchange = updateSaveState;
+  $("evidence-" + k).onchange = updateSaveState;
   $("save-" + k).onclick = () => save(k, false);
   $("saveNext-" + k).onclick = () => save(k, true);
   $("savePmb-" + k).onclick = () => save(k, false, true);

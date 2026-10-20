@@ -443,9 +443,15 @@ def resolve_pmb_place(fid, number, root=None):
     raise ValueError(f"PMB-Ort {num} hat keinen Namen - bitte Namen selbst eintragen")
 
 
-def set_action_place_by_type(fid, action_type, ref, name, pmb=None):
+EVIDENCE_VALUES = ("conjecture", "external", "internal")
+
+
+def set_action_place_by_type(fid, action_type, ref, name, pmb=None, evidence=None):
     if action_type not in ("sent", "received"):
         raise ValueError(f"unbekannter Typ: {action_type}")
+    evidence = (evidence or "").strip() or None
+    if evidence and evidence not in EVIDENCE_VALUES:
+        raise ValueError(f"unbekannter evidence-Wert: {evidence}")
     if pmb:
         ref, resolved = resolve_pmb_place(fid, pmb)
         name = (name or "").strip() or resolved
@@ -461,7 +467,7 @@ def set_action_place_by_type(fid, action_type, ref, name, pmb=None):
     indent = sa.indent_of(text, block.start())
     child_m = re.search(r'\n([ \t]+)<\w', block_text)
     child_indent = child_m.group(1) if child_m else indent + "   "
-    place_elem = sa.build_place_elem({"text": name, "ref": ref or None})
+    place_elem = sa.build_place_elem({"text": name, "ref": ref or None, "evidence": evidence})
     new_block = sa.apply_place_to_block(block_text, child_indent, place_elem)
     new_text = text[:block.start()] + new_block + text[block.end():]
     sa.validate_and_save(fid, text, new_text)
@@ -547,7 +553,7 @@ class Handler(BaseHTTPRequestHandler):
                 return
             self._json(set_action_place_by_type(
                 m.group(1), payload.get("type", "sent"), payload.get("ref"), payload.get("text"),
-                pmb=payload.get("pmb")))
+                pmb=payload.get("pmb"), evidence=payload.get("evidence")))
         except (KeyError, ValueError, TypeError, json.JSONDecodeError) as e:
             self._json({"error": str(e)}, 400)
         except FileNotFoundError as e:

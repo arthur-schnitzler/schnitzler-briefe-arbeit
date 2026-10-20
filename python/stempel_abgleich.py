@@ -137,7 +137,7 @@ def extract_date(elem):
 def extract_place(elem):
     if elem is None:
         return None
-    return {"text": norm_text(elem), "ref": elem.get("ref")}
+    return {"text": norm_text(elem), "ref": elem.get("ref"), "evidence": elem.get("evidence")}
 
 
 def extract_stamps(root):
@@ -708,6 +708,8 @@ def build_place_elem(place):
     if not place or not place.get("text"):
         return None
     ref_attr = f' ref="{escape_attr(place["ref"])}"' if place.get("ref") else ""
+    if place.get("evidence"):
+        ref_attr += f' evidence="{escape_attr(place["evidence"])}"'
     return f'<placeName{ref_attr}>{escape_text(place["text"])}</placeName>'
 
 
