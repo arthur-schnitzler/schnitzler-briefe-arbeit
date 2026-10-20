@@ -128,13 +128,20 @@ function corrOrder() { return editor === "SJ" ? corrs.slice().reverse() : corrs;
 function corrName(c) { return (corrs.find(x => x.id === c) || {}).name || ""; }
 function fillCorrSelect() {
   const sel = $("corrSelect"); sel.innerHTML = "";
+  // offene Korrespondenzen zuerst, vollständig erledigte unterhalb eines Trennstrichs
+  const open = [], done = [];
   corrOrder().forEach(c => {
-    const fs = corrFiles(c.id), r = fs.filter(f => f.reviewed).length;
+    const fs = corrFiles(c.id), r = fs.filter(f => f.reviewed).length, isDone = r === fs.length;
     // vollständig erledigte Korrespondenzen ausblenden - außer der gerade geöffneten
-    if (hideDone && r === fs.length && c.id !== curCorr) return;
-    const o = new Option(`${c.name} (${c.id}) · ${r}/${fs.length}${r === fs.length ? " ✓" : ""}`, c.id);
-    o.selected = c.id === curCorr; sel.add(o);
+    if (hideDone && isDone && c.id !== curCorr) return;
+    const o = new Option(`${c.name} (${c.id}) · ${r}/${fs.length}${isDone ? " ✓" : ""}`, c.id);
+    o.selected = c.id === curCorr; (isDone ? done : open).push(o);
   });
+  open.forEach(o => sel.add(o));
+  if (open.length && done.length) {
+    const sep = new Option("────────── erledigt ──────────", ""); sep.disabled = true; sel.add(sep);
+  }
+  done.forEach(o => sel.add(o));
 }
 function applyFilter() {
   // Alle Briefe der Korrespondenz bleiben in der Liste (zum Zurückblättern); vorwärts werden
