@@ -39,6 +39,7 @@
 <header>
   <div class="row">
     <label>Korrespondenz <select id="corrSelect" style="max-width:22em"></select></label>
+    <label title="Korrespondenzen, in denen alle Briefe überprüft sind, nicht in der Auswahlliste anzeigen"><input type="checkbox" id="hideDone"/> erledigte ausblenden</label>
     <label>Brief <input id="jumpInput" size="8" placeholder="L01933"/></label>
     <button id="jumpBtn">Laden</button>
     <label>Bearbeiter
@@ -106,9 +107,9 @@
 <div id="toast"></div>
 <script type="text/javascript">//<![CDATA[
 let files = [], corrs = [], curCorr = null, visible = [], cur = null, data = null;
-const EDITOR_KEY = "absenderort.editor", CHANGE_TEXT = "Absenderort überprüft";
-let editor = "";
-try { editor = localStorage.getItem(EDITOR_KEY) || ""; } catch (e) { /* ohne Speicher weiter */ }
+const EDITOR_KEY = "absenderort.editor", HIDE_DONE_KEY = "absenderort.hideDone", CHANGE_TEXT = "Absenderort überprüft";
+let editor = "", hideDone = false;
+try { editor = localStorage.getItem(EDITOR_KEY) || ""; hideDone = localStorage.getItem(HIDE_DONE_KEY) === "1"; } catch (e) { /* ohne Speicher weiter */ }
 const $ = id => document.getElementById(id);
 const KINDS = {brief: "Orte im Brief (back/listPlace)", aufenthalt: "Aufenthalt Schnitzlers (nur Absendeort)", wohnadresse: "Wohnadresse", korrespondenz: "Orte laut anderen Briefen desselben Jahres"};
 
@@ -129,6 +130,8 @@ function fillCorrSelect() {
   const sel = $("corrSelect"); sel.innerHTML = "";
   corrOrder().forEach(c => {
     const fs = corrFiles(c.id), r = fs.filter(f => f.reviewed).length;
+    // vollständig erledigte Korrespondenzen ausblenden - außer der gerade geöffneten
+    if (hideDone && r === fs.length && c.id !== curCorr) return;
     const o = new Option(`${c.name} (${c.id}) · ${r}/${fs.length}${r === fs.length ? " ✓" : ""}`, c.id);
     o.selected = c.id === curCorr; sel.add(o);
   });
@@ -274,6 +277,12 @@ $("corrSelect").onchange = e => {
 $("jumpBtn").onclick = () => load($("jumpInput").value.trim());
 $("jumpInput").onkeydown = e => { if (e.key === "Enter") $("jumpBtn").click(); };
 $("emptyOnly").onchange = applyFilter;
+$("hideDone").checked = hideDone;
+$("hideDone").onchange = e => {
+  hideDone = e.target.checked;
+  try { localStorage.setItem(HIDE_DONE_KEY, hideDone ? "1" : "0"); } catch (err) { /* egal */ }
+  fillCorrSelect();
+};
 $("reindexBtn").onclick = async () => {
   $("reindexBtn").disabled = true; toast("Erstelle Liste …");
   try { const r = await api("/api/rebuild-index", {}); toast(`Liste neu: ${r.entries} Belege aus ${r.files} Briefen`); await load(cur); }
