@@ -1,6 +1,10 @@
-<?xml version='1.0' encoding='UTF-8'?>
+<?xml version="1.0" encoding="UTF-8"?>
 <?xml-model href="../meta/schnitzler-briefe-schematron.sch" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
-<TEI xmlns="http://www.tei-c.org/ns/1.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.tei-c.org/ns/1.0 ../meta/schnitzler-briefe-schema.xsd" xml:id="L03546" xml:base="https://id.acdh.oeaw.ac.at/schnitzler/schnitzler-briefe/editions">
+<TEI xmlns="http://www.tei-c.org/ns/1.0"
+     xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+     xsi:schemaLocation="http://www.tei-c.org/ns/1.0 ../meta/schnitzler-briefe-schema.xsd"
+     xml:id="L03546"
+     xml:base="https://id.acdh.oeaw.ac.at/schnitzler/schnitzler-briefe/editions">
    <teiHeader>
       <fileDesc>
          <titleStmt>
@@ -115,18 +119,27 @@
                <date evidence="conjecture" notBefore="1910-11-22" notAfter="1910-11-25">[22. 11. 1910 – 25. 11. 1910?]</date>
                <placeName ref="#pmb168815">Sternwartestraße 71</placeName>
             </correspAction>
-            <correspContext><ref type="belongsToCorrespondence" target="correspondence_2167">Salten, Felix</ref>
+            <correspContext>
+               <ref type="belongsToCorrespondence" target="correspondence_2167">Salten, Felix</ref>
                <ref subtype="previous_letter" type="withinCollection" target="L01986">Mann an Schnitzler, 22. 11. 1910</ref>
                <ref subtype="next_letter" type="withinCollection" target="L01987">Burckhard an Schnitzler, 25. 11. 1910</ref>
-               <ref subtype="previous_letter" type="withinCorrespondence" source="correspondence_2167" target="L03552">Salten an Schnitzler, 14. 10. 1910</ref>
-               <ref subtype="next_letter" type="withinCorrespondence" source="correspondence_2167" target="L03553">Salten an Schnitzler, 16. 8. 1911</ref>
-            </correspContext></correspDesc>
+               <ref subtype="previous_letter"
+                    type="withinCorrespondence"
+                    source="correspondence_2167"
+                    target="L03552">Salten an Schnitzler, 14. 10. 1910</ref>
+               <ref subtype="next_letter"
+                    type="withinCorrespondence"
+                    source="correspondence_2167"
+                    target="L03553">Salten an Schnitzler, 16. 8. 1911</ref>
+            </correspContext>
+         </correspDesc>
       </profileDesc>
       <revisionDesc status="approved">
          <change who="MAM" when="2024-01-09">Export aus Transkribus</change>
          <change who="LU" when="2024-05-28">Durchsicht</change>
          <change when="2024-05-29" who="LU">Index check</change>
          <change who="MAM" when="2024-06-24">Durchsicht</change>
+         <change who="MAM" when="2026-10-21">Absenderort überprüft</change>
       </revisionDesc>
    </teiHeader>
    <facsimile>
@@ -145,14 +158,16 @@
                <salute>Lieber,</salute>
             </opener>
             <p>darf ich Sie fragen, wann <anchor type="commentary" xml:id="K_L03546-1"/>
-               <date when="1910-11-23">morgen</date> die <rs type="work" subtype="implied" ref="#pmb29937">Generalprobe</rs>
+               <date when="1910-11-23">morgen</date> die <rs type="event" subtype="implied" ref="#pmb47048">
+                  <rs type="work" subtype="implied" ref="#pmb29937">Generalprobe</rs>
+               </rs>
                <note type="commentary" corresp="K_L03546-1">Die Karte ist undatiert. Der gedruckte Briefkopf entspricht der im
                   Korrespondenzstück von <ref type="schnitzler-briefe" target="L03552"/> erstmals belegten Gestalt, die sich
                   bis zum <ref type="schnitzler-briefe" subtype="date-only" target="L03558"/> nachweisen lässt. Das
                   wiederum kann als Indiz genommen werden, dass die im Nachlass vorzufindende Einordung unter die Korrespondenzstücke
                   des Jahres <date when="1910">1910</date> zutrifft. Folglich dürfte es sich um die
-                  Generalprobe zur Uraufführung von <rs type="work" ref="#pmb29937">Der junge
-                     Medardus</rs> gehandelt haben und die Karte auf den <date when="1910-11-22">Vortag</date> der Generalprobe zu datieren sein. Diese fand
+                  <rs type="event" subtype="implied" ref="#pmb47048">Generalprobe</rs> zur <rs type="event" subtype="implied" ref="#pmb35251">Uraufführung</rs> von <rs type="work" ref="#pmb29937">Der junge
+                     Medardus</rs> gehandelt haben und die Karte auf den <date when="1910-11-22">Vortag</date> der <rs type="event" subtype="implied" ref="#pmb47048">Generalprobe</rs> zu datieren sein. Diese fand
                   am <ref type="schnitzler-tagebuch" target="1910-11-23" subtype="date-only"/>
                   statt.</note> beginnt? D<hi rend="superscript">r</hi>
                <space unit="chars" quantity="1"/>
@@ -163,54 +178,148 @@
             </closer>
          </div>
       </body>
-      <back><listPerson><person xml:id="pmb12556"><persName>
-      <forename>Richard</forename>
-      <surname>Rosenbaum</surname>
-  </persName><birth>
-    <date when="1867-11-04">1867-11-04</date>
-      <settlement ref="pmb46918">
-        <placeName type="pref">Žikov</placeName>
-        <location><geo>49,2319 13,45724</geo></location>
-      </settlement>
-  </birth><death>
-    <date when="1942-06-25">1942-06-25</date>
-      <settlement ref="pmb2258">
-        <placeName type="pref">Ghetto Theresienstadt</placeName>
-        <location><geo>50,513639 14,164694</geo></location>
-      </settlement>
-  </death></person><person xml:id="pmb2121"><persName><surname>Schnitzler</surname><forename>Arthur</forename></persName><birth><date when="1862-05-15">15. 5. 1862</date><settlement ref="pmb50"><placeName type="pref">Wien</placeName><location><geo>48,208333 16,373056</geo></location></settlement></birth><death><date when="1931-10-21">21. 10. 1931</date><settlement ref="pmb50"><placeName type="pref">Wien</placeName><location><geo>48,208333 16,373056</geo></location></settlement></death><sex value="male"/><occupation ref="pmb90">Schriftsteller/Schriftstellerin</occupation><occupation ref="pmb97">Mediziner/Medizinerin</occupation><idno type="gnd">https://d-nb.info/gnd/118609807/</idno></person><person xml:id="pmb2167"><persName>
-      <forename>Felix</forename>
-      <surname>Salten</surname>
-  </persName><birth>
-    <date when="1869-09-06">1869-09-06</date>
-      <settlement ref="pmb43471">
-        <placeName type="pref">Budapest</placeName>
-        <location><geo>47,49835 19,04045</geo></location>
-      </settlement>
-  </birth><death>
-    <date when="1945-10-08">1945-10-08</date>
-      <settlement ref="pmb484">
-        <placeName type="pref">Zürich</placeName>
-        <location><geo>47,37174 8,54226</geo></location>
-      </settlement>
-  </death></person></listPerson><listBibl><bibl xml:id="pmb29937" ana="comment"><title type="main">Der junge Medardus. Dramatische Historie in einem Vorspiel und fünf Aufzügen</title><title type="werk_bibliografische-angabe">Der junge Medardus. Dramatische Historie in einem Vorspiel und fünf Aufzügen. Berlin: S. Fischer [26.10.]1910</title><title type="werk_arbeitstitel">Altwiener Stück</title><title type="werk_arbeitstitel">Doppelselbstmord</title><author role="hat-geschaffen" ref="pmb2121">Schnitzler, Arthur</author></bibl></listBibl><listPlace><place xml:id="pmb168815"><placeName>Sternwartestraße 71</placeName><location type="coords">
-  <geo>48,23188 16,33716</geo>
-</location><location type="located_in_place">
-  <placeName ref="pmb68">XVIII., Währing</placeName>
-  <geo>48,23333 16,31667</geo>
-</location><location type="located_in_place">
-  <placeName ref="pmb533">Währinger Cottage</placeName>
-  <geo>48,233056 16,341944</geo>
-</location><location type="located_in_place">
-  <placeName ref="pmb150">Sternwartestraße</placeName>
-  <geo>48,23099349198 16,340117830625</geo>
-</location></place><place xml:id="pmb235812"><placeName>Cottagegasse 37</placeName><location type="coords">
-  <geo>48,233004 16,34167</geo>
-</location><location type="located_in_place">
-  <placeName ref="pmb63834">Cottagegasse</placeName>
-  <geo>48,2400114 16,3437542</geo>
-</location><location type="located_in_place">
-  <placeName ref="pmb68">XVIII., Währing</placeName>
-  <geo>48,23333 16,31667</geo>
-</location></place></listPlace></back></text>
+      <back>
+         <listPerson>
+            <person xml:id="pmb2167">
+               <persName>
+                  <forename>Felix</forename>
+                  <surname>Salten</surname>
+               </persName>
+               <birth>
+                  <date when="1869-09-06">1869-09-06</date>
+                  <settlement ref="pmb43471">
+                     <placeName type="pref">Budapest</placeName>
+                     <location>
+                        <geo>47,49835 19,04045</geo>
+                     </location>
+                  </settlement>
+               </birth>
+               <death>
+                  <date when="1945-10-08">1945-10-08</date>
+                  <settlement ref="pmb484">
+                     <placeName type="pref">Zürich</placeName>
+                     <location>
+                        <geo>47,37174 8,54226</geo>
+                     </location>
+                  </settlement>
+               </death>
+            </person>
+            <person xml:id="pmb2121">
+               <persName>
+                  <surname>Schnitzler</surname>
+                  <forename>Arthur</forename>
+               </persName>
+               <birth>
+                  <date when="1862-05-15">15. 5. 1862</date>
+                  <settlement ref="pmb50">
+                     <placeName type="pref">Wien</placeName>
+                     <location>
+                        <geo>48,208333 16,373056</geo>
+                     </location>
+                  </settlement>
+               </birth>
+               <death>
+                  <date when="1931-10-21">21. 10. 1931</date>
+                  <settlement ref="pmb50">
+                     <placeName type="pref">Wien</placeName>
+                     <location>
+                        <geo>48,208333 16,373056</geo>
+                     </location>
+                  </settlement>
+               </death>
+            </person>
+            <person xml:id="pmb12556">
+               <persName>
+                  <forename>Richard</forename>
+                  <surname>Rosenbaum</surname>
+               </persName>
+               <birth>
+                  <date when="1867-11-04">1867-11-04</date>
+                  <settlement ref="pmb46918">
+                     <placeName type="pref">Žikov</placeName>
+                     <location>
+                        <geo>49,2319 13,45724</geo>
+                     </location>
+                  </settlement>
+               </birth>
+               <death>
+                  <date when="1942-06-25">1942-06-25</date>
+                  <settlement ref="pmb2258">
+                     <placeName type="pref">Ghetto Theresienstadt</placeName>
+                     <location>
+                        <geo>50,513639 14,164694</geo>
+                     </location>
+                  </settlement>
+               </death>
+            </person>
+         </listPerson>
+         <listBibl>
+            <bibl xml:id="pmb29937" ana="implied">
+               <title>Der junge Medardus. Dramatische Historie in einem Vorspiel und fünf Aufzügen</title>
+               <title type="werk_bibliografische-angabe">Der junge Medardus. Dramatische Historie in einem Vorspiel und fünf Aufzügen. Berlin: S. Fischer [26.10.]1910</title>
+               <title type="werk_arbeitstitel">Altwiener Stück</title>
+               <title type="werk_arbeitstitel">Doppelselbstmord</title>
+               <author ref="pmb2121" role="hat-geschaffen">Schnitzler, Arthur</author>
+            </bibl>
+         </listBibl>
+         <listPlace>
+            <place xml:id="pmb235812">
+               <placeName>Cottagegasse 37</placeName>
+               <location type="coords">
+                  <geo>48,233004 16,34167</geo>
+               </location>
+               <location type="located_in_place">
+                  <placeName ref="pmb63834">Cottagegasse</placeName>
+                  <geo>48,2400114 16,3437542</geo>
+               </location>
+               <location type="located_in_place">
+                  <placeName ref="pmb68">XVIII., Währing</placeName>
+                  <geo>48,23333 16,31667</geo>
+               </location>
+            </place>
+            <place xml:id="pmb168815">
+               <placeName>Sternwartestraße 71</placeName>
+               <location type="coords">
+                  <geo>48,23188 16,33716</geo>
+               </location>
+               <location type="located_in_place">
+                  <placeName ref="pmb68">XVIII., Währing</placeName>
+                  <geo>48,23333 16,31667</geo>
+               </location>
+               <location type="located_in_place">
+                  <placeName ref="pmb533">Währinger Cottage</placeName>
+                  <geo>48,233056 16,341944</geo>
+               </location>
+               <location type="located_in_place">
+                  <placeName ref="pmb150">Sternwartestraße</placeName>
+                  <geo>48,23099349198 16,340117830625</geo>
+               </location>
+            </place>
+         </listPlace>
+         <listEvent>
+            <event xml:id="pmb47048" ana="implied">
+               <eventName n="Generalprobe">Generalprobe Der junge Medardus, 23.11.1910</eventName>
+               <listPlace>
+                  <place>
+                     <placeName role="veranstaltet in" ref="pmb14">Burgtheater</placeName>
+                     <location>
+                        <geo>48,210333 16,361139</geo>
+                     </location>
+                  </place>
+               </listPlace>
+            </event>
+            <event xml:id="pmb35251" ana="comment">
+               <eventName n="Theateruraufführung">Uraufführung von Der junge Medardus, 24.11.1910</eventName>
+               <listPlace>
+                  <place>
+                     <placeName role="veranstaltet in" ref="pmb14">Burgtheater</placeName>
+                     <location>
+                        <geo>48,210333 16,361139</geo>
+                     </location>
+                  </place>
+               </listPlace>
+            </event>
+         </listEvent>
+      </back>
+   </text>
 </TEI>
