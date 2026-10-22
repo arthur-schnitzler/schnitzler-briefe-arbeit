@@ -2,8 +2,11 @@ name: Download PMB Listen
 
 on:
   schedule:
-    # Läuft jeden zweiten Mittwoch um 3 Uhr morgens UTC
-    - cron: '0 3 */14 * 3'
+    # Läuft jeden Mittwoch um 3 Uhr morgens UTC. (Ein 14-Tage-Rhythmus ist mit Cron
+    # nicht möglich: '*/14' im Tag-des-Monats-Feld ergibt 1./15./29. eines Monats, und
+    # zusammen mit dem Wochentag-Feld feuert GitHub nur, wenn beides zutrifft.)
+    # Es wird nur committet, wenn sich die Listen geändert haben.
+    - cron: '0 3 * * 3'
   workflow_dispatch: # Ermöglicht manuelles Auslösen
 
 jobs:
