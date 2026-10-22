@@ -942,18 +942,27 @@ class PMBProcessor:
         if back_elem is None:
             return
         
-        # Convert note[@type='IDNO'] to idno elements
-        for note in back_elem.findall(".//tei:note[@type='IDNO']", self.ns):
-            # Find parent and replace
-            for parent in back_elem.iter():
-                if note in parent:
-                    idno = ET.Element(f"{{{self.tei_ns}}}idno")
-                    idno.set("type", "URL")
-                    idno.set("subtype", self._get_url_subtype(note.text or ""))
-                    idno.text = note.text
-                    parent.remove(note)
-                    parent.append(idno)
-                    break
+        # Convert note[@type='IDNO'] to idno elements.
+        # Match by local element name (namespace-agnostic): entities fetched from the PMB API
+        # arrive WITHOUT the TEI namespace, so a namespaced XPath like "tei:note[@type='IDNO']"
+        # silently misses them and the notes survive into the output (and only turn into
+        # TEI-namespaced notes when the file is parsed again).
+        notes = [
+            elem for elem in back_elem.iter()
+            if isinstance(elem.tag, str)
+            and elem.tag.split('}')[-1] == "note"
+            and elem.get("type") == "IDNO"
+        ]
+        for note in notes:
+            parent = note.getparent()
+            if parent is None:
+                continue
+            idno = ET.Element(f"{{{self.tei_ns}}}idno")
+            idno.set("type", "URL")
+            idno.set("subtype", self._get_url_subtype(note.text or ""))
+            idno.text = note.text
+            parent.remove(note)
+            parent.append(idno)
 
     def _get_url_subtype(self, url: str) -> str:
         """Determine URL subtype based on domain"""

@@ -93,6 +93,14 @@ jobs:
                 if collections_notes:
                     issues.append(f"{len(collections_notes)} invalid note[@type='collections'] element(s)")
 
+                # Check for note[@type='IDNO'] in the back. They must be idno elements;
+                # the normalizer misses them when an entity comes from the PMB API
+                # (no namespace), so match both namespaced and un-namespaced variants.
+                idno_notes = tree.xpath("//tei:text/tei:back//tei:note[@type='IDNO']", namespaces=ns)
+                idno_notes += tree.xpath("//text/back//note[@type='IDNO']")
+                if idno_notes:
+                    issues.append(f"{len(idno_notes)} unconverted note[@type='IDNO'] element(s)")
+
                 return issues
 
             except Exception as e:
@@ -286,6 +294,7 @@ jobs:
           echo "- \`<error>\` elements from failed PMB lookups" >> $GITHUB_STEP_SUMMARY
           echo "- Empty \`<birth>\` elements without children" >> $GITHUB_STEP_SUMMARY
           echo "- Empty \`<idno>\` elements without attributes" >> $GITHUB_STEP_SUMMARY
+          echo "- Unconverted \`<note type=\"IDNO\">\` elements" >> $GITHUB_STEP_SUMMARY
         else
           echo "**Validation passed:** All back elements are valid" >> $GITHUB_STEP_SUMMARY
         fi

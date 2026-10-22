@@ -29,6 +29,12 @@ def validate_file(file_path):
         if empty_idnos:
             issues.append(f"Found {len(empty_idnos)} empty idno element(s) without attributes")
         
+        # Check for note[@type='IDNO'] in the back (namespaced and un-namespaced)
+        idno_notes = tree.xpath("//tei:text/tei:back//tei:note[@type='IDNO']", namespaces=namespaces)
+        idno_notes += tree.xpath("//text/back//note[@type='IDNO']")
+        if idno_notes:
+            issues.append(f"Found {len(idno_notes)} unconverted note[@type='IDNO'] element(s)")
+        
         return issues
         
     except Exception as e:
