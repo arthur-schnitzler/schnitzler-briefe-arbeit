@@ -4380,11 +4380,26 @@
    <xsl:template match="tei:c[@rendition = '#dollar']">
       <xsl:text>{\$}</xsl:text>
    </xsl:template>
+   <!-- Ist das hi[underline] (n = 1 oder 2, ohne @hand) reiner Umschlag um genau ein Indexelement? -->
+   <xsl:function name="foo:ul-wrapper" as="xs:boolean">
+      <xsl:param name="hi" as="element()"/>
+      <xsl:sequence
+         select="exists($hi/@n[. = ('1', '2')]) and not($hi/@hand)
+                 and count($hi/*) = 1
+                 and exists($hi/tei:*[self::tei:rs or self::tei:persName or self::tei:workName or self::tei:orgName or self::tei:placeName][@ref])
+                 and not(normalize-space(string-join($hi/text(), '')))"
+      />
+   </xsl:function>
    <!-- Unterstreichung -->
    <xsl:template match="tei:hi[@rend = 'underline']">
       <xsl:choose>
          <xsl:when
             test="parent::tei:hi[@rend = 'superscript'] | parent::tei:hi[parent::tei:signed and @rend = 'overline'] | ancestor::tei:addrLine">
+            <xsl:apply-templates/>
+         </xsl:when>
+         <!-- Umschließt das hi nur ein Indexelement (rs, persName ...), übernimmt dieses die Unterstreichung
+              (ulem verliert sonst \textsc u. ä. innerhalb von \textcolor-Gruppen) -->
+         <xsl:when test="foo:ul-wrapper(.)">
             <xsl:apply-templates/>
          </xsl:when>
          <xsl:when test="not(@n)">
@@ -6099,6 +6114,16 @@
       <xsl:variable name="emph"
          select="not(@subtype = 'implied') and $kommentar-herausgeber and (@type = 'work' or @type = 'org')"/>
       <xsl:variable name="cert" as="xs:boolean" select="(@cert = 'low') or (@cert = 'medium')"/>
+      <!-- Unterstreichung, die vom umschließenden hi hierher verlagert wurde -->
+      <xsl:variable name="ul-open" as="xs:string">
+         <xsl:choose>
+            <xsl:when test="parent::tei:hi[@rend = 'underline'][foo:ul-wrapper(.)][not(parent::tei:hi[@rend = 'superscript'] | parent::tei:hi[parent::tei:signed and @rend = 'overline'] | ancestor::tei:addrLine)]">
+               <xsl:value-of select="if (parent::tei:hi/@n = '2') then '\uuline{' else '\uline{'"/>
+            </xsl:when>
+            <xsl:otherwise><xsl:text/></xsl:otherwise>
+         </xsl:choose>
+      </xsl:variable>
+      <xsl:variable name="ul-close" as="xs:string" select="if ($ul-open != '') then '}' else ''"/>
       <xsl:variable name="endung-index" as="xs:string">
          <xsl:choose>
             <xsl:when test="$cert and $verweis and $kommentar-herausgeber">
@@ -6139,7 +6164,9 @@
                   <xsl:if test="$emph">
                      <xsl:text>\emph{</xsl:text>
                   </xsl:if>
+                  <xsl:value-of select="$ul-open"/>
                   <xsl:apply-templates/>
+                  <xsl:value-of select="$ul-close"/>
                   <xsl:if test="$emph">
                      <xsl:text>}</xsl:text>
                   </xsl:if>
@@ -6174,7 +6201,9 @@
                         <xsl:text>\textcolor{violet}{</xsl:text>
                      </xsl:when>
                   </xsl:choose>
+                  <xsl:value-of select="$ul-open"/>
                   <xsl:apply-templates/>
+                  <xsl:value-of select="$ul-close"/>
                   <xsl:text>}</xsl:text>
                   <xsl:value-of
                      select="foo:indexName-Routine(@type, tokenize(@ref, ' ')[1], substring-after(@ref, ' '), $endung-index)"/>
