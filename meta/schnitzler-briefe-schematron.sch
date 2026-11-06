@@ -52,12 +52,10 @@
         <sch:rule context="tei:correspDesc">
             <sch:assert test="not(descendant::tei:supplied)"> Kein &lt;supplied&gt;-Element erlaubt
                 in correspDesc. </sch:assert>
-            <sch:assert test="count(tei:correspAction[@type = 'sent']) le 1"> Es darf nur ein
+            <sch:assert test="count(tei:correspAction[@type = 'sent']) eq 1"> Es muss genau ein
                 correspAction[@type='sent'] vorhanden sein. </sch:assert>
-            <sch:assert test="count(tei:correspAction[@type = 'received']) le 1"> Es darf nur ein
+            <sch:assert test="count(tei:correspAction[@type = 'received']) eq 1"> Es muss genau ein
                 correspAction[@type='received'] vorhanden sein. </sch:assert>
-            <sch:assert test="count(tei:correspAction[@type = 'delivered']) le 1"> Es darf nur ein
-                correspAction[@type='delivered'] vorhanden sein. </sch:assert>
             <sch:assert
                 test="count(//tei:titleStmt/tei:author) &lt;= count(//tei:correspDesc/tei:correspAction/tei:persName)"
                 > Die Anzahl der tei:author in titleStmt darf nicht größer sein als die Anzahl der
