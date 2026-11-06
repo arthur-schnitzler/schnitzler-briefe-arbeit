@@ -1,6 +1,10 @@
-<?xml version='1.0' encoding='UTF-8'?>
+<?xml version="1.0" encoding="UTF-8"?>
 <?xml-model href="../meta/schnitzler-briefe-schematron.sch" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
-<TEI xmlns="http://www.tei-c.org/ns/1.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.tei-c.org/ns/1.0 ../meta/schnitzler-briefe-schema.xsd" xml:id="L02203" xml:base="https://id.acdh.oeaw.ac.at/schnitzler/schnitzler-briefe/editions">
+<TEI xmlns="http://www.tei-c.org/ns/1.0"
+     xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+     xsi:schemaLocation="http://www.tei-c.org/ns/1.0 ../meta/schnitzler-briefe-schema.xsd"
+     xml:id="L02203"
+     xml:base="https://id.acdh.oeaw.ac.at/schnitzler/schnitzler-briefe/editions">
    <teiHeader>
       <fileDesc>
          <titleStmt>
@@ -81,7 +85,7 @@
                            <supportDesc>
                               <extent>
                                  <measure unit="karte" quantity="1"/>
-                                 <measure unit="zeichenanzahl" quantity="753"/>
+                                 <measure unit="zeichenanzahl" quantity="752"/>
                               </extent>
                            </supportDesc>
                         </objectDesc>
@@ -149,15 +153,23 @@
                <persName ref="#pmb10815">Bahr, Hermann</persName>
                <date evidence="conjecture" notBefore="1915-02-10" notAfter="1915-02-14">[10. 2. 1915
                   – 14. 2. 1915?]</date>
-               <placeName ref="#pmb30">Salzburg</placeName>
+               <placeName ref="#pmb160" evidence="conjecture">Schloss Arenberg</placeName>
             </correspAction>
-            <correspContext><ref type="belongsToCorrespondence" target="correspondence_10815">Bahr, Hermann</ref>
+            <correspContext>
+               <ref type="belongsToCorrespondence" target="correspondence_10815">Bahr, Hermann</ref>
                <ref subtype="previous_letter" type="withinCollection" target="L03651">Zweig an Schnitzler, [zwischen 7. und
                   10. 2. 1915?]</ref>
                <ref subtype="next_letter" type="withinCollection" target="L02204">Bahr an Schnitzler, 10. 2. 1915</ref>
-               <ref subtype="previous_letter" type="withinCorrespondence" source="correspondence_10815" target="L02183">Bahr an Schnitzler, 14. 6. 1914</ref>
-               <ref subtype="next_letter" type="withinCorrespondence" source="correspondence_10815" target="L02204">Bahr an Schnitzler, 10. 2. 1915</ref>
-            </correspContext></correspDesc>
+               <ref subtype="previous_letter"
+                    type="withinCorrespondence"
+                    source="correspondence_10815"
+                    target="L02183">Bahr an Schnitzler, 14. 6. 1914</ref>
+               <ref subtype="next_letter"
+                    type="withinCorrespondence"
+                    source="correspondence_10815"
+                    target="L02204">Bahr an Schnitzler, 10. 2. 1915</ref>
+            </correspContext>
+         </correspDesc>
       </profileDesc>
       <revisionDesc status="approved">
          <change who="KI MAM" when="2015-10-01">Kollationiert</change>
@@ -165,6 +177,7 @@
          <change who="MAM" when="2018-07-15">Überführt aus Bahr–Schnitzler-Daten</change>
          <change who="MAM" when="2019-01-20">Index check</change>
          <change who="GHS" when="2020-03-24">finalisiert</change>
+         <change who="MAM" when="2026-11-06">Absenderort überprüft</change>
       </revisionDesc>
    </teiHeader>
    <facsimile>
@@ -202,7 +215,8 @@
                   <ref target="pmb48822" type="schnitzler-kultur" subtype="Cf"/>.
                </note>
                <space unit="chars" quantity="1"/>
-               <rs ref="#pmb12729" type="person">Schubert</rs> Lieder ſingen möchte – und da ich
+               <rs type="event" subtype="implied" ref="#pmb48822">
+                  <rs ref="#pmb12729" type="person">Schubert</rs> Lieder ſingen</rs> möchte – und da ich
                daraufhin mich begreiflicherweiſe äußerte: das möcht ich gern hören, – bittet er
                mich, <del rend="strikethrough">als</del> dieſen Wunſch, dieſe Sehnſucht <pb facs="Arthur-Schnitzler_an_Hermann-Bahr_00185"/>(ich theile ſie
                wahrſcheinlich mit vielen) dir direct zu übermitteln. Das thu ich – in der Empfindung
@@ -215,81 +229,173 @@
             </closer>
          </div>
       </body>
-      <back><listPerson><person xml:id="pmb10815"><persName>
-      <forename>Hermann</forename>
-      <surname>Bahr</surname>
-  </persName><birth>
-    <date when="1863-07-19">1863-07-19</date>
-      <settlement ref="pmb332">
-        <placeName type="pref">Linz</placeName>
-        <location><geo>48,3 14,28333</geo></location>
-      </settlement>
-  </birth><death>
-    <date when="1934-01-15">1934-01-15</date>
-      <settlement ref="pmb45258">
-        <placeName type="pref">München</placeName>
-        <location><geo>48,13743 11,57549</geo></location>
-      </settlement>
-  </death></person><person xml:id="pmb11646"><persName>
-      <forename>Hugo</forename>
-      <surname>Heller</surname>
-  </persName><birth>
-    <date when="1870-05-08">1870-05-08</date>
-      <settlement ref="pmb54127">
-        <placeName type="pref">Székesfehérvár</placeName>
-        <location><geo>47,18995 18,41034</geo></location>
-      </settlement>
-  </birth><death>
-    <date when="1923-11-29">1923-11-29</date>
-      <settlement ref="pmb50">
-        <placeName type="pref">Wien</placeName>
-        <location><geo>48,208333 16,373056</geo></location>
-      </settlement>
-  </death></person><person xml:id="pmb12729"><persName>
-      <forename>Franz Peter</forename>
-      <surname>Schubert</surname>
-  </persName><birth>
-    <date when="1797-01-31">1797-01-31</date>
-      <settlement ref="pmb244990">
-        <placeName type="pref">Lichtental [Wien]</placeName>
-        <location><geo>48,2281 16,3578</geo></location>
-      </settlement>
-  </birth><death>
-    <date when="1828-11-19">1828-11-19</date>
-      <settlement ref="pmb50">
-        <placeName type="pref">Wien</placeName>
-        <location><geo>48,208333 16,373056</geo></location>
-      </settlement>
-  </death></person><person xml:id="pmb2121"><persName><surname>Schnitzler</surname><forename>Arthur</forename></persName><birth><date when="1862-05-15">15. 5. 1862</date><settlement ref="pmb50"><placeName type="pref">Wien</placeName><location><geo>48,208333 16,373056</geo></location></settlement></birth><death><date when="1931-10-21">21. 10. 1931</date><settlement ref="pmb50"><placeName type="pref">Wien</placeName><location><geo>48,208333 16,373056</geo></location></settlement></death><sex value="male"/><occupation ref="pmb90">Schriftsteller/Schriftstellerin</occupation><occupation ref="pmb97">Mediziner/Medizinerin</occupation><idno type="gnd">https://d-nb.info/gnd/118609807/</idno></person><person xml:id="pmb10818" ana="implied"><persName>
-      <forename>Anna</forename>
-      <surname>Bahr-Mildenburg</surname>
-  </persName><birth>
-    <date when="1872-11-29">1872-11-29</date>
-      <settlement ref="pmb50">
-        <placeName type="pref">Wien</placeName>
-        <location><geo>48,208333 16,373056</geo></location>
-      </settlement>
-  </birth><death>
-    <date when="1947-01-27">1947-01-27</date>
-      <settlement ref="pmb50">
-        <placeName type="pref">Wien</placeName>
-        <location><geo>48,208333 16,373056</geo></location>
-      </settlement>
-  </death></person></listPerson><listPlace><place xml:id="pmb168815"><placeName>Sternwartestraße 71</placeName><location type="coords">
-  <geo>48,23188 16,33716</geo>
-</location><location type="located_in_place">
-  <placeName ref="pmb68">XVIII., Währing</placeName>
-  <geo>48,23333 16,31667</geo>
-</location><location type="located_in_place">
-  <placeName ref="pmb533">Währinger Cottage</placeName>
-  <geo>48,233056 16,341944</geo>
-</location><location type="located_in_place">
-  <placeName ref="pmb150">Sternwartestraße</placeName>
-  <geo>48,23099349198 16,340117830625</geo>
-</location></place><place xml:id="pmb30"><placeName>Salzburg</placeName><placeName type="alternative-name">Iuvavum</placeName><placeName type="legacy-name-merge">Salzburg</placeName><placeName type="alternative-name">Salzburg</placeName><placeName type="legacy-name-merge">Salzburg Stadt</placeName><placeName type="legacy-name-merge">Salzburg</placeName><placeName type="legacy-name-merge">Salzburg?</placeName><placeName type="legacy-name-merge">Salzburg</placeName><location type="coords">
-  <geo>47,80067 13,04532</geo>
-</location><location type="located_in_place">
-  <placeName ref="pmb697">Salzburg [Land]</placeName>
-  <geo>47,41667 13,25</geo>
-</location></place></listPlace></back></text>
+      <back>
+         <listPerson>
+            <person xml:id="pmb2121">
+               <persName>
+                  <surname>Schnitzler</surname>
+                  <forename>Arthur</forename>
+               </persName>
+               <birth>
+                  <date when="1862-05-15">15. 5. 1862</date>
+                  <settlement ref="pmb50">
+                     <placeName type="pref">Wien</placeName>
+                     <location>
+                        <geo>48,208333 16,373056</geo>
+                     </location>
+                  </settlement>
+               </birth>
+               <death>
+                  <date when="1931-10-21">21. 10. 1931</date>
+                  <settlement ref="pmb50">
+                     <placeName type="pref">Wien</placeName>
+                     <location>
+                        <geo>48,208333 16,373056</geo>
+                     </location>
+                  </settlement>
+               </death>
+            </person>
+            <person xml:id="pmb10815">
+               <persName>
+                  <forename>Hermann</forename>
+                  <surname>Bahr</surname>
+               </persName>
+               <birth>
+                  <date when="1863-07-19">1863-07-19</date>
+                  <settlement ref="pmb332">
+                     <placeName type="pref">Linz</placeName>
+                     <location>
+                        <geo>48,3 14,28333</geo>
+                     </location>
+                  </settlement>
+               </birth>
+               <death>
+                  <date when="1934-01-15">1934-01-15</date>
+                  <settlement ref="pmb45258">
+                     <placeName type="pref">München</placeName>
+                     <location>
+                        <geo>48,13743 11,57549</geo>
+                     </location>
+                  </settlement>
+               </death>
+            </person>
+            <person xml:id="pmb11646">
+               <persName>
+                  <forename>Hugo</forename>
+                  <surname>Heller</surname>
+               </persName>
+               <birth>
+                  <date when="1870-05-08">1870-05-08</date>
+                  <settlement ref="pmb54127">
+                     <placeName type="pref">Székesfehérvár</placeName>
+                     <location>
+                        <geo>47,18995 18,41034</geo>
+                     </location>
+                  </settlement>
+               </birth>
+               <death>
+                  <date when="1923-11-29">1923-11-29</date>
+                  <settlement ref="pmb50">
+                     <placeName type="pref">Wien</placeName>
+                     <location>
+                        <geo>48,208333 16,373056</geo>
+                     </location>
+                  </settlement>
+               </death>
+            </person>
+            <person xml:id="pmb12729">
+               <persName>
+                  <forename>Franz</forename>
+                  <surname>Schubert</surname>
+               </persName>
+               <birth>
+                  <date when="1797-01-31">1797-01-31</date>
+                  <settlement ref="pmb244990">
+                     <placeName type="pref">Lichtental [Wien]</placeName>
+                     <location>
+                        <geo>48,2281 16,3578</geo>
+                     </location>
+                  </settlement>
+               </birth>
+               <death>
+                  <date when="1828-11-19">1828-11-19</date>
+                  <settlement ref="pmb50">
+                     <placeName type="pref">Wien</placeName>
+                     <location>
+                        <geo>48,208333 16,373056</geo>
+                     </location>
+                  </settlement>
+               </death>
+            </person>
+            <person xml:id="pmb10818" ana="implied">
+               <persName>
+                  <forename>Anna</forename>
+                  <surname>Bahr-Mildenburg</surname>
+               </persName>
+               <birth>
+                  <date when="1872-11-29">1872-11-29</date>
+                  <settlement ref="pmb50">
+                     <placeName type="pref">Wien</placeName>
+                     <location>
+                        <geo>48,208333 16,373056</geo>
+                     </location>
+                  </settlement>
+               </birth>
+               <death>
+                  <date when="1947-01-27">1947-01-27</date>
+                  <settlement ref="pmb50">
+                     <placeName type="pref">Wien</placeName>
+                     <location>
+                        <geo>48,208333 16,373056</geo>
+                     </location>
+                  </settlement>
+               </death>
+            </person>
+         </listPerson>
+         <listPlace>
+            <place xml:id="pmb168815">
+               <placeName>Sternwartestraße 71</placeName>
+               <location type="coords">
+                  <geo>48,23188 16,33716</geo>
+               </location>
+               <location type="located_in_place">
+                  <placeName ref="pmb68">XVIII., Währing</placeName>
+                  <geo>48,23333 16,31667</geo>
+               </location>
+               <location type="located_in_place">
+                  <placeName ref="pmb533">Währinger Cottage</placeName>
+                  <geo>48,233056 16,341944</geo>
+               </location>
+               <location type="located_in_place">
+                  <placeName ref="pmb150">Sternwartestraße</placeName>
+                  <geo>48,23099349198 16,340117830625</geo>
+               </location>
+            </place>
+            <place xml:id="pmb160">
+               <placeName>Schloss Arenberg</placeName>
+               <placeName type="ort_fruherer-name">Schloss Bürgelstein</placeName>
+               <location type="coords">
+                  <geo>47,80003 13,05858</geo>
+               </location>
+               <location type="located_in_place">
+                  <placeName ref="pmb30">Salzburg</placeName>
+                  <geo>47,80067 13,04532</geo>
+               </location>
+            </place>
+         </listPlace>
+         <listEvent>
+            <event xml:id="pmb48822" ana="implied">
+               <eventName n="Konzert">Wohltätigkeitskonzert von Carreno und Bahr-Mildenburg, 13.12.1915</eventName>
+               <listPlace>
+                  <place>
+                     <placeName role="veranstaltet in" ref="pmb516">Musikverein</placeName>
+                     <location>
+                        <geo>48,201265597319 16,372564182283</geo>
+                     </location>
+                  </place>
+               </listPlace>
+            </event>
+         </listEvent>
+      </back>
+   </text>
 </TEI>
