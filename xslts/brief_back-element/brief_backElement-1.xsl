@@ -271,7 +271,7 @@
                         <xsl:when test="$tei-root/descendant::tei:rs/@ref[contains(., '#')][1]">
                             <!-- rs mit Raute -->
                             <xsl:variable name="place-in-text"><xsl:for-each
-                                select="distinct-values($tei-root/descendant::tei:*[(@type = 'place' or name() = 'placeName') and not(@subtype = 'implied') and not(ancestor::tei:back) and not(ancestor::tei:note[@type = ('commentary', 'textConst')])]/@ref/tokenize(., '#'))">
+                                select="distinct-values($tei-root/descendant::tei:*[(@type = 'place' or name() = 'placeName') and not(@subtype = 'implied') and not(ancestor::tei:back) and not(ancestor::tei:correspAction) and not(ancestor::tei:note[@type = ('commentary', 'textConst')])]/@ref/tokenize(., '#'))">
                                 <xsl:if test="normalize-space(.) != ''">
                                     <xsl:element name="place"
                                         namespace="http://www.tei-c.org/ns/1.0">
@@ -324,11 +324,28 @@
                                     </xsl:element>
                                 </xsl:if>
                             </xsl:for-each>
+                            <!-- Versand- und Empfangsorte (correspAction), die sonst nirgends vorkommen -->
+                            <xsl:variable name="place-comment-ids" select="distinct-values(for $r in $tei-root/tei:text[1]/tei:body[1]/descendant::tei:note[@type=('commentary', 'textConst')]/descendant::tei:rs[@type = 'place']/@ref, $t in tokenize($r, '#') return normalize-space(replace($t, '#', '')))"/>
+                            <xsl:for-each
+                                select="distinct-values(for $r in $tei-root/tei:teiHeader/descendant::tei:correspAction/descendant::tei:placeName/@ref, $t in tokenize($r, '#') return normalize-space(replace($t, '#', '')))[. != '']">
+                                <xsl:variable name="current" select="."/>
+                                <xsl:if test="not($place-in-text//tei:place/@xml:id = $current) and not($place-comment-ids = $current) and not($place-implied//tei:place/@xml:id = $current)">
+                                    <xsl:element name="place"
+                                        namespace="http://www.tei-c.org/ns/1.0">
+                                        <xsl:attribute name="xml:id">
+                                            <xsl:value-of select="$current"/>
+                                        </xsl:attribute>
+                                        <xsl:attribute name="ana">
+                                            <xsl:text>correspPlace</xsl:text>
+                                        </xsl:attribute>
+                                    </xsl:element>
+                                </xsl:if>
+                            </xsl:for-each>
                         </xsl:when>
                         <xsl:otherwise>
                             <xsl:variable name="place-in-text">
                                 <xsl:for-each
-                                select="distinct-values($tei-root/descendant::tei:*[(@type = 'place' or name() = 'placeName') and not(ancestor::tei:back) and not(ancestor::tei:note[@type = ('commentary', 'textConst')])]/@ref/tokenize(., ' '))">
+                                select="distinct-values($tei-root/descendant::tei:*[(@type = 'place' or name() = 'placeName') and not(ancestor::tei:back) and not(ancestor::tei:correspAction) and not(ancestor::tei:note[@type = ('commentary', 'textConst')])]/@ref/tokenize(., ' '))">
                                 <xsl:if test="normalize-space(.) != ''">
                                     <xsl:element name="place"
                                         namespace="http://www.tei-c.org/ns/1.0">
@@ -377,6 +394,23 @@
                                         </xsl:attribute>
                                         <xsl:attribute name="ana">
                                             <xsl:text>implied</xsl:text>
+                                        </xsl:attribute>
+                                    </xsl:element>
+                                </xsl:if>
+                            </xsl:for-each>
+                            <!-- Versand- und Empfangsorte (correspAction), die sonst nirgends vorkommen -->
+                            <xsl:variable name="place-comment-ids" select="distinct-values(for $r in $tei-root/tei:text[1]/tei:body[1]/descendant::tei:note[@type=('commentary', 'textConst')]/descendant::tei:rs[@type = 'place']/@ref, $t in tokenize($r, ' ') return normalize-space(replace($t, '#', '')))"/>
+                            <xsl:for-each
+                                select="distinct-values(for $r in $tei-root/tei:teiHeader/descendant::tei:correspAction/descendant::tei:placeName/@ref, $t in tokenize($r, ' ') return normalize-space(replace($t, '#', '')))[. != '']">
+                                <xsl:variable name="current" select="."/>
+                                <xsl:if test="not($place-in-text//tei:place/@xml:id = $current) and not($place-comment-ids = $current) and not($place-implied//tei:place/@xml:id = $current)">
+                                    <xsl:element name="place"
+                                        namespace="http://www.tei-c.org/ns/1.0">
+                                        <xsl:attribute name="xml:id">
+                                            <xsl:value-of select="$current"/>
+                                        </xsl:attribute>
+                                        <xsl:attribute name="ana">
+                                            <xsl:text>correspPlace</xsl:text>
                                         </xsl:attribute>
                                     </xsl:element>
                                 </xsl:if>

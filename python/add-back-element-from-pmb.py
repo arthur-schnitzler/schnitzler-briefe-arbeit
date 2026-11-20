@@ -211,12 +211,13 @@ class PMBProcessor:
 
     def _extract_refs(self, root: ET.Element) -> Dict[str, Dict[str, Set[str]]]:
         """Extract all references from the TEI document (Step 1 of XSLT 1)
-        Returns: Dict with entity types, each containing 'in_text', 'in_commentary', and 'implied' sets
+        Returns: Dict with entity types, each containing 'in_text', 'in_commentary', and 'implied' sets;
+        "place" additionally has 'corresp_place' (placeName in correspDesc/correspAction)
         """
         refs = {
             "person": {"in_text": set(), "in_commentary": set(), "implied": set()},
             "bibl": {"in_text": set(), "in_commentary": set(), "implied": set()},
-            "place": {"in_text": set(), "in_commentary": set(), "implied": set()},
+            "place": {"in_text": set(), "in_commentary": set(), "implied": set(), "corresp_place": set()},
             "org": {"in_text": set(), "in_commentary": set(), "implied": set()},
             "event": {"in_text": set(), "in_commentary": set(), "implied": set()}
         }
@@ -232,6 +233,16 @@ class PMBProcessor:
                 if current.tag == f"{{{self.tei_ns}}}note" and current.get("type") in ("commentary", "textConst"):
                     return True
                 current = current.getparent() if hasattr(current, 'getparent') else None
+            return False
+
+        # Helper function to check if element is inside correspDesc/correspAction
+        def is_in_corresp_action(elem):
+            """Check if element is inside a correspAction (sending/receiving place)"""
+            current = elem.getparent()
+            while current is not None:
+                if current.tag == f"{{{self.tei_ns}}}correspAction":
+                    return True
+                current = current.getparent()
             return False
 
         # Extract person references
@@ -320,8 +331,13 @@ class PMBProcessor:
                     in_commentary = is_in_commentary(elem)
                     is_implied = elem.get("subtype") == "implied"
 
-                    # Collect references into appropriate sets
-                    if in_commentary:
+                    # Collect references into appropriate sets.
+                    # Sending/receiving places (correspAction) get their own set,
+                    # so a place that is only a corresp place is not treated as
+                    # mentioned in the text. @evidence is irrelevant here.
+                    if is_in_corresp_action(elem):
+                        ref_set = refs["place"]["corresp_place"]
+                    elif in_commentary:
                         ref_set = refs["place"]["in_commentary"]
                     elif is_implied:
                         ref_set = refs["place"]["implied"]
@@ -428,7 +444,8 @@ class PMBProcessor:
             in_text_refs = ref_dict.get("in_text", set())
             in_commentary_refs = ref_dict.get("in_commentary", set())
             implied_refs = ref_dict.get("implied", set())
-            all_refs = in_text_refs | in_commentary_refs | implied_refs
+            corresp_place_refs = ref_dict.get("corresp_place", set())
+            all_refs = in_text_refs | in_commentary_refs | implied_refs | corresp_place_refs
 
             if all_refs:  # Only create if there are references
                 if list_type == "person":
@@ -490,6 +507,12 @@ class PMBProcessor:
                             place_elem = ET.SubElement(list_elem, f"{{{self.tei_ns}}}place")
                             place_elem.set("{http://www.w3.org/XML/1998/namespace}id", ref_id.replace("#", ""))
                             place_elem.set("ana", "implied")
+                    # Then add refs only as sending/receiving place (with ana="correspPlace")
+                    for ref_id in sorted(corresp_place_refs - in_text_refs - in_commentary_refs - implied_refs):
+                        if ref_id.strip():
+                            place_elem = ET.SubElement(list_elem, f"{{{self.tei_ns}}}place")
+                            place_elem.set("{http://www.w3.org/XML/1998/namespace}id", ref_id.replace("#", ""))
+                            place_elem.set("ana", "correspPlace")
 
                 elif list_type == "org":
                     list_elem = ET.SubElement(back_elem, f"{{{self.tei_ns}}}listOrg")
